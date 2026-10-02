@@ -1,7 +1,8 @@
 {
 	"skybox": {
-		"path": "belfast_sunset_puresky_2k.jpg",
-		"yaw": 180
+		"path": "rogland_clear_night_4k.jpg",
+		"yaw": -142,
+		"tilt": 38
 	},
 	"lights": [
 		{
@@ -9,7 +10,33 @@
 				-0.4,
 				-1,
 				-1.2
-			]
+			],
+			"color": "#ffffff",
+			"intensity": 1,
+			"shadow": true
+		},
+		{
+			"dir": [
+				-1,
+				0.3,
+				-0.4
+			],
+			"color": "#ffd2a0",
+			"intensity": 0.3,
+			"shadow": false
+		},
+		{
+			"dir": [
+				0.6,
+				0.6,
+				-1
+			],
+			"color": "#a9c4ff",
+			"intensity": 0.2,
+			"shadow": false
 		}
-	]
+	],
+	"floor": {
+		"enabled": true
+	}
 }
