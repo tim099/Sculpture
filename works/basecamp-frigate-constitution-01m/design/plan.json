@@ -1,0 +1,57 @@
+{
+  "title": "USS Constitution（1797）新圖紙 01：側面 v1 —— 龍骨・艏柱・艉柱",
+  "author": "basecamp",
+  "date": "2026-10-10",
+  "task": "TASK-0482（傘 TASK-0478）",
+  "units": "格（1 格 = 0.1 m）；X 船長方向、船頭朝 +X；Z 朝上、0 = 護龍骨底面（基線）；Y 船寬、中線 y=160",
+  "meters_per_cell": 0.1,
+  "note": "參考 NARA RG 19 02 號側面圖（1849，NAID 75841356）重新設計，不是描圖：原圖是多張拼貼、接縫錯位，線條只取形狀，以平滑圓弧／直線重畫。每個數字在 provenance 標明是「原圖讀數」還是「設計決定」。",
+
+  "reference": {
+    "image": "references/uss-constitution-1927/RG19_ALPHA_Constitution_1797_02.JPG",
+    "ref_scale": [[1037.5, 4297.4], [14143.5, 4177.8], 53.6448],
+    "ref_anchor": [1273.0, 4138.0],
+    "work_anchor": [140.0, 6.5],
+    "bow_sheet_shift_px": [24.0, 12.0],
+    "seam": "膠帶接縫：原圖像素 x = 11800 + 0.2866 × (y − 1184) 以右是船頭那張",
+    "provenance": "原圖讀數：比例尺刻度兩側各自每英尺 74.5 px；船頭那張的 20 ft 刻度外插在 12654、船身那張在 12630 ⇒ 右移 24；比例尺框線兩側各差 12 px ⇒ 下移 12；兩張都沒有量到旋轉"
+  },
+
+  "existing": {
+    "shoe": {"label": "護龍骨 Shoe", "x": [130, 598], "z": [0, 1], "color": 104},
+    "keel": {"label": "龍骨 Keel", "x_from": 130, "z": [2, 7], "color": 177,
+             "front_by_layer": {"7": 584, "6": 586, "5": 588, "4": 595, "3": 598, "2": 598},
+             "hook": {"z": 5, "x": [591, 592]},
+             "provenance": "階段一（TASK-0481）已鋪；斜接口照 02 號圖逐層收"}
+  },
+
+  "curves": {
+    "T": {"label": "rabbet（艏柱內緣，龍骨上緣的延續）", "type": "biarc_tangent",
+          "base_z": 8.0, "tangent_x": 585.0, "center2": [488.2, 135.0], "r2": 185.0,
+          "provenance": "原圖讀數擬合（rms 0.30 格）後取整：切點 585.2→585、上段圓心 (488.3,135.2)→(488.2,135)、R 184.9→185；下段半徑由兩段相切推出（設計決定：兩條艏柱線共用上段圓心）"},
+    "F": {"label": "艏柱前緣（龍骨底面的延續）", "type": "biarc_tangent",
+          "base_z": 2.0, "tangent_x": 585.0, "center2": [488.2, 135.0], "r2": 189.0,
+          "provenance": "原圖讀數擬合（rms 0.31 格）：切點 584.5、上段圓心 (488.1,134.7)、R 189.0 ⇒ 上段與 rabbet 同心、厚 4 格（設計決定：取同心）"},
+    "O": {"label": "gripe 外緣（護龍骨底面的延續）", "type": "arc_line_tangent",
+          "base_z": 0.0, "tangent_x": 605.2, "r": 47.4, "phi_deg": -32.7,
+          "provenance": "原圖讀數擬合（rms 0.42 格）：圓弧接切線直線（上段擬合半徑頂到 2000 ⇒ 就是直線）"},
+    "A": {"label": "apron（示意，下一階段）", "type": "arc", "center": [488.2, 135.0], "r": 179.0, "z": [30.0, 112.0], "style": "dashed",
+          "provenance": "原圖讀數：上半段在 rabbet 內側 5.8–6.6 格 ⇒ 示意取 6 格同心；正式形狀下一階段再設計"},
+    "SPa": {"label": "艉柱後緣", "type": "line", "through": [130.0, 8.0], "rake_deg": 4.3,
+            "provenance": "原圖讀數擬合直線（rms 0.22 格，傾 4.31°）；過 (130, 8) 是設計決定：跟龍骨後端齊平"},
+    "SPf": {"label": "艉柱前緣", "type": "line", "through": [140.0, 6.5], "rake_deg": 8.7,
+            "provenance": "原圖讀數擬合直線（rms 0.06 格，傾 8.71°）；過校準錨點 (140, 6.5)"}
+  },
+
+  "parts": {
+    "stem": {"label": "艏柱＋前腳 Stem & forefoot", "between": ["F", "T"], "back_x": 580.0, "head_z": 124.0,
+             "sided_y": [158, 162], "color": 177,
+             "provenance": "head_z 124（12.4 m）＝原圖兩條線停在船首欄杆那一帶（設計決定取整）；sided 5 格（18\"）＝與龍骨同（設計決定，未查原船尺寸）"},
+    "gripe": {"label": "Gripe（前腳外側的假艏柱）", "between": ["O", "F"], "back_x": 580.0, "top_z": 68.0,
+              "sided_y": [158, 162], "color": 104,
+              "provenance": "top_z 68 約吃水線（設計決定，未查證）；之上是船首 knee of the head，另一階段；sided 與護龍骨同 5 格"},
+    "sternpost": {"label": "艉柱 Sternpost", "between": ["SPa", "SPf"], "heel_z": 8.0, "head_z": 88.0,
+                  "sided_y": [158, 162], "color": 177,
+                  "provenance": "heel 8 ＝ 龍骨上緣（作品）；head 88 ＝ 原圖後緣接 counter 的位置（Z≈87.5，取整）；sided 5 格與龍骨同（設計決定，未查證）"}
+  }
+}

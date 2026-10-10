@@ -1,0 +1,144 @@
+{
+ "curves": {
+  "T": {
+   "r1": 75.222,
+   "junction": [
+    651.33,
+    47.74
+   ]
+  },
+  "F": {
+   "r1": 77.337,
+   "junction": [
+    652.04,
+    40.79
+   ]
+  },
+  "O": {
+   "junction": [
+    645.09,
+    21.79
+   ],
+   "line_angle_deg": 57.3
+  },
+  "T_rabbet": {
+   "n": 167,
+   "rms": 0.331,
+   "p95": 0.425,
+   "max": 2.074
+  },
+  "F_foreface": {
+   "n": 169,
+   "rms": 0.318,
+   "p95": 0.478,
+   "max": 0.973
+  },
+  "O_gripe": {
+   "n": 135,
+   "rms": 0.424,
+   "p95": 0.95,
+   "max": 1.458
+  },
+  "SP_aft": {
+   "n": 97,
+   "rms": 0.13,
+   "max": 0.254
+  },
+  "SP_fwd": {
+   "n": 96,
+   "rms": 0.069,
+   "max": 0.274
+  }
+ },
+ "parts": {
+  "stem": {
+   "cells_xz": 794,
+   "overlap_keel_xz": 72,
+   "bbox_x": [
+    580,
+    676
+   ],
+   "bbox_z": [
+    2,
+    123
+   ],
+   "voxels_if_empty": 3970
+  },
+  "gripe": {
+   "cells_xz": 666,
+   "overlap_keel_xz": 5,
+   "bbox_x": [
+    580,
+    673
+   ],
+   "bbox_z": [
+    0,
+    67
+   ],
+   "voxels_if_empty": 3330
+  },
+  "sternpost": {
+   "cells_xz": 533,
+   "overlap_keel_xz": 0,
+   "bbox_x": [
+    124,
+    139
+   ],
+   "bbox_z": [
+    8,
+    87
+   ],
+   "voxels_if_empty": 2665
+  }
+ },
+ "keel_conflicts": [
+  [
+   594,
+   2,
+   "gripe"
+  ],
+  [
+   595,
+   2,
+   "gripe"
+  ],
+  [
+   596,
+   2,
+   "gripe"
+  ],
+  [
+   597,
+   2,
+   "gripe"
+  ],
+  [
+   598,
+   2,
+   "gripe"
+  ]
+ ],
+ "stamp": {
+  "stem": {
+   "png": "design/masks/stem.png",
+   "at": "580,158,2",
+   "facing": "y+",
+   "thickness": 5,
+   "expect_pixels": 794
+  },
+  "gripe": {
+   "png": "design/masks/gripe.png",
+   "at": "580,158,0",
+   "facing": "y+",
+   "thickness": 5,
+   "expect_pixels": 666
+  },
+  "sternpost": {
+   "png": "design/masks/sternpost.png",
+   "at": "124,158,8",
+   "facing": "y+",
+   "thickness": 5,
+   "expect_pixels": 533
+  }
+ }
+}
