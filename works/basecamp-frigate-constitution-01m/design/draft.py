@@ -107,6 +107,80 @@ class Arc:
         return out
 
 
+class ArcT:
+    """單一圓弧：在 x=a 與水平線 z=base 相切，往 dir（+1 ＝ 船頭、-1 ＝ 船尾）升起。"""
+    def __init__(s, c):
+        s.base, s.a, s.R, s.dir = c['base_z'], c['tangent_x'], c['r'], c.get('dir', 1)
+
+    def z(s, x):
+        d = (x - s.a) * s.dir
+        return s.base if d <= 0 else s.base + s.R - math.sqrt(max(0.0, s.R ** 2 - d * d))
+
+    def points(s, x0, x1, step=0.1):
+        n = max(2, int(abs(x1 - x0) / step))
+        return [(x0 + (x1 - x0) * i / n, s.z(x0 + (x1 - x0) * i / n)) for i in range(n + 1)]
+
+
+class BiarcFree:
+    """雙圓弧（四個參數）：下弧在 x=a 與 z=base 相切、往 dir 升起，到角度 phi 接上半徑 r2 的上弧。"""
+    def __init__(s, c):
+        s.base, s.a, s.R1, s.R2, s.dir = c['base_z'], c['tangent_x'], c['r1'], c['r2'], c.get('dir', 1)
+        s.phi = math.radians(c['phi_deg'])
+        s.C1 = np.array([s.a, s.base + s.R1])
+        u = np.array([s.dir * math.cos(s.phi), math.sin(s.phi)])
+        s.J = s.C1 + s.R1 * u
+        s.C2 = s.J - s.R2 * u
+
+    def points(s, x_back, z_top, step=0.1):
+        pts = [(x_back, s.base), (s.a, s.base)]
+        n = max(8, int(s.R1 * (s.phi + math.pi / 2) / step))
+        for i in range(1, n + 1):
+            t = -math.pi / 2 + (s.phi + math.pi / 2) * i / n
+            pts.append((s.C1[0] + s.dir * s.R1 * math.cos(t), s.C1[1] + s.R1 * math.sin(t)))
+        t_end = math.asin(max(-1.0, min(1.0, (z_top + 1 - s.C2[1]) / s.R2)))
+        n = max(8, int(s.R2 * max(0.0, t_end - s.phi) / step))
+        for i in range(1, n + 1):
+            t = s.phi + (t_end - s.phi) * i / n
+            pts.append((s.C2[0] + s.dir * s.R2 * math.cos(t), s.C2[1] + s.R2 * math.sin(t)))
+        return cut_at(pts, z_top)
+
+
+def from_x(pts, x0, d):
+    """沿曲線（x 朝 d 單調）從 x=x0 開始取（交點內插）。"""
+    out = []
+    for p, q in zip(pts, pts[1:]):
+        if (q[0] - x0) * d < 0:
+            continue
+        if not out:
+            t = 0.0 if q[0] == p[0] else (x0 - p[0]) / (q[0] - p[0])
+            t = min(1.0, max(0.0, t))
+            out.append((x0, p[1] + t * (q[1] - p[1])))
+        out.append(q)
+    return out
+
+
+def z_on(pts, x):
+    """曲線（x 單調遞增）在 x 的 z。"""
+    for p, q in zip(pts, pts[1:]):
+        if p[0] <= x <= q[0] and q[0] != p[0]:
+            return p[1] + (q[1] - p[1]) * (x - p[0]) / (q[0] - p[0])
+    raise ValueError('x=%g 不在曲線範圍內' % x)
+
+
+def meet(f, g, lo, hi):
+    """二分法：f(x) − g(x) 在 [lo, hi] 變號的那一點。"""
+    a, b = lo, hi
+    fa = f(a) - g(a)
+    for _ in range(80):
+        m = (a + b) / 2
+        fm = f(m) - g(m)
+        if (fm > 0) == (fa > 0):
+            a, fa = m, fm
+        else:
+            b = m
+    return (a + b) / 2
+
+
 def build(plan):
     cv = plan['curves']
     C = {'T': Biarc(cv['T']), 'F': Biarc(cv['F']), 'O': ArcLine(cv['O']), 'A': Arc(cv['A']),
@@ -119,6 +193,25 @@ def build(plan):
         'sternpost': [(C['SPa'].x(sp['heel_z']), sp['heel_z']), (C['SPf'].x(sp['heel_z']), sp['heel_z']),
                       (C['SPf'].x(sp['head_z']), sp['head_z']), (C['SPa'].x(sp['head_z']), sp['head_z'])],
     }
+    if 'inner_post' in P:           # 階段三（新圖紙 v2）
+        C['Bf'], C['Af'] = Biarc(cv['Bf']), ArcT(cv['Af'])
+        C['Ba'], C['Aa'] = BiarcFree(cv['Ba']), ArcT(cv['Aa'])
+        C['IP'] = Line(cv['IP'])
+        ip, ad, fd, ap = P['inner_post'], P['aft_deadwood'], P['fore_deadwood'], P['apron']
+        polys['inner_post'] = [(C['SPf'].x(ip['heel_z']), ip['heel_z']), (C['IP'].x(ip['heel_z']), ip['heel_z']),
+                               (C['IP'].x(ip['head_z']), ip['head_z']), (C['SPf'].x(ip['head_z']), ip['head_z'])]
+        b_aft = from_x(C['Ba'].points(C['Ba'].a + 200, ad['cap_z']), ad['fwd_x'], -1)   # 平直段在切點的船頭側
+        polys['aft_deadwood'] = ([(C['IP'].x(8.0), 8.0), (ad['fwd_x'], 8.0)] + b_aft
+                                 + [(C['IP'].x(ad['cap_z']), ad['cap_z'])])
+        Tp = C['T'].points(fd['aft_x'], 130)
+        x_meet = meet(lambda x: z_on(Tp, x), C['Af'].z, C['T'].a + 1, C['T'].a + 80)
+        z_meet = C['Af'].z(x_meet)
+        C['meet_AT'] = (x_meet, z_meet)
+        t_low = C['T'].points(C['T'].a, z_meet)
+        a_pts = C['Af'].points(fd['aft_x'], x_meet)
+        polys['fore_deadwood'] = [(fd['aft_x'], 8.0)] + t_low + a_pts[::-1]
+        polys['apron'] = (a_pts + C['T'].points(C['T'].a, ap['top_z'])[len(t_low) - 1:]
+                          + C['Bf'].points(ap['aft_x'], ap['top_z'])[::-1])
     return C, polys
 
 
@@ -303,11 +396,43 @@ def draw_construction(pn, C):
     pn.cross(*C['O'].J, color=RED, r=4)
 
 
-def title_block(sh, x, y, w, plan, sub):
+DEADWOOD = (240, 224, 192)
+INNER = (206, 162, 128)
+
+
+def next_stage_lines(plan, C):
+    """下一階段（肋骨）的示意虛線：cutting-down line（底肋頂）與 keelson 頂，船中段接起兩頭的區塊。"""
+    P = plan['parts']
+    ad, fd = P['aft_deadwood'], P['fore_deadwood']
+    ba = C['Ba'].points(C['Ba'].a + 200, ad['cap_z'])
+    head = from_x(ba, ad['fwd_x'], -1)[0]
+    b_line = [(fd['aft_x'], C['Bf'].base)] + [p for p in ba if ad['fwd_x'] <= p[0] <= fd['aft_x']] + [head]
+    a_line = C['Af'].points(fd['aft_x'], C['Af'].a) + C['Aa'].points(C['Aa'].a, ad['fwd_x'])
+    return a_line, b_line
+
+
+def draw_parts_v2(pn, plan, C, polys, tint=True, ink=INK, width=2.2, dashed=True):
+    E = plan['existing']
+    sh = E['shoe']
+    shoe = [(sh['x'][0], sh['z'][0]), (sh['x'][1] + 1, sh['z'][0]), (sh['x'][1] + 1, sh['z'][1] + 1), (sh['x'][0], sh['z'][1] + 1)]
+    keel = keel_outline(plan)
+    order = ((shoe, DARK), (keel, OAK), (polys['aft_deadwood'], DEADWOOD), (polys['fore_deadwood'], DEADWOOD),
+             (polys['gripe'], DARK), (polys['stem'], OAK), (polys['sternpost'], OAK), (polys['inner_post'], INNER), (polys['apron'], INNER))
+    for pts, fill in order:
+        pn.poly(pts, fill=fill if tint else None)
+    for pts, _ in order:
+        pn.line(pts + [pts[0]], ink, width)
+    if dashed:
+        a_line, b_line = next_stage_lines(plan, C)
+        pn.line(a_line, ink, 1.4, dash=(9, 6))
+        pn.line(b_line, ink, 1.4, dash=(9, 6))
+
+
+def title_block(sh, x, y, w, plan, sub, title=None, task=None):
     sh.d.rectangle([x * SS, y * SS, (x + w) * SS, (y + 88) * SS], outline=INK, width=2 * SS)
-    sh.text(x + 12, y + 10, plan['title'], 19, bold=True)
+    sh.text(x + 12, y + 10, title or plan['title'], 19, bold=True)
     sh.text(x + 12, y + 38, sub, 14)
-    sh.text(x + 12, y + 60, '設計：%s　%s　%s　｜參考 NARA RG 19 02 號側面圖（1849）重新設計，非描圖' % (plan['author'], plan['date'], plan['task']), 13, color=CONSTR)
+    sh.text(x + 12, y + 60, '設計：%s　%s　%s　｜參考 NARA RG 19 02 號側面圖（1849）重新設計，非描圖' % (plan['author'], plan.get('date_v2', plan['date']) if task else plan['date'], task or plan['task']), 13, color=CONSTR)
 
 
 def scale_bar(sh, x, y, s_px_per_cell, meters=10, mpc=0.1):
@@ -377,6 +502,105 @@ def dist_to_polyline(pts, poly):
         q = a + t[:, None] * ab
         best = np.minimum(best, np.hypot(*(P - q).T))
     return best
+
+
+def stage3(design, ref, plan, C, polys, cells, out):
+    """新圖紙 v2（TASK-0483）：apron・內艉柱・船頭／船尾 deadwood 的讀數與圖紙。v1 的產出不經過這裡。"""
+    P = plan['parts']
+    T3 = plan['title_v2']
+    ad, fd, ap, ip = P['aft_deadwood'], P['fore_deadwood'], P['apron'], P['inner_post']
+    s3 = {'curves': {}, 'parts': {}}
+    s3['curves']['Bf'] = {'r1': round(C['Bf'].R1, 3), 'junction': [round(v, 2) for v in C['Bf'].J]}
+    s3['curves']['Ba'] = {'junction': [round(v, 2) for v in C['Ba'].J], 'center2': [round(v, 2) for v in C['Ba'].C2]}
+    s3['curves']['A_meets_T'] = [round(v, 2) for v in C['meet_AT']]
+    sp = os.path.join(design, 'source_points.json')
+    S = json.load(open(sp, encoding='utf-8'))['points'] if os.path.exists(sp) else {}
+    pairs = {'B_fore_src': C['Bf'].points(480, 115), 'A_fore_src': C['Af'].points(480, 640),
+             'B_aft_src': C['Ba'].points(C['Ba'].a + 200, 60), 'A_aft_src': C['Aa'].points(420, 150)}
+    for k, poly in pairs.items():
+        if k in S:
+            d = dist_to_polyline(S[k], poly)
+            s3['curves'][k] = {'n': len(d), 'rms': round(float(np.sqrt((d ** 2).mean())), 3), 'p95': round(float(np.percentile(d, 95)), 3), 'max': round(float(d.max()), 3)}
+    if 'IP_src' in S:
+        d = np.array([abs(p[0] - C['IP'].x(p[1])) for p in S['IP_src']])
+        s3['curves']['IP_src'] = {'n': len(d), 'rms': round(float(np.sqrt((d ** 2).mean())), 3), 'max': round(float(d.max()), 3)}
+    # 跟階段一、二已經雕好的格子重疊幾格（貼合處共用同一條線 ⇒ 應該是 0）
+    E = plan['existing']
+    carved = {tuple(c) for c in E['keel'].get('carved_xz', [])}
+    existing = {c for c in keel_cells(plan) if c not in carved}
+    existing |= {(x, z) for x in range(E['shoe']['x'][0], E['shoe']['x'][1] + 1) for z in range(E['shoe']['z'][0], E['shoe']['z'][1] + 1)}
+    for k in ('stem', 'gripe', 'sternpost'):
+        existing |= cells[k]
+    new = ('inner_post', 'aft_deadwood', 'fore_deadwood', 'apron')
+    for k in new:
+        others = set().union(*[cells[o] for o in new if o != k])
+        s3['parts'][k] = {'cells_xz': len(cells[k]), 'overlap_existing_xz': len(cells[k] & existing), 'overlap_other_new_xz': len(cells[k] & others)}
+    out['stage3'] = s3
+
+    a_line, b_line = next_stage_lines(plan, C)
+    Tp, Bp = C['T'].points(570, 124), C['Bf'].points(570, 124)
+
+    # 圖紙 02：側面全圖 v2
+    sh = Sheet(2520, 860)
+    pn = Panel(sh, 70, 92, 110, 710, -14, 136, 4)
+    pn.grid(label_x=50, label_z=20)
+    draw_parts_v2(pn, plan, C, polys)
+    sh.text(70, 22, '新圖紙 02　側面 v2（Profile）', 26, bold=True)
+    sh.text(70, 58, '加上 apron・內艉柱・船頭與船尾的 deadwood（淺色＝deadwood、紅褐＝apron／內艉柱）｜虛線：cutting-down line 與 keelson 頂，肋骨階段再做', 15, color=CONSTR)
+    pn.label(360, 5, '龍骨 Keel', dx=0, dy=-40, anchor='ma')
+    pn.label(170, 22, 'Deadwood（船尾，含 sternson）', dx=40, dy=-90)
+    pn.label((C['SPf'].x(60) + C['IP'].x(60)) / 2, 60, '內艉柱 Inner post', dx=30, dy=-50)
+    pn.label((x_at(Tp, 95) + x_at(Bp, 95)) / 2, 95, 'Apron', dx=-70, dy=-20, anchor='ra')
+    pn.label(605, 14, 'Deadwood（船頭）', dx=-80, dy=-70, anchor='ra')
+    pn.label(430, C['Af'].base, 'cutting-down line（底肋頂）', dx=0, dy=26, anchor='ma', color=CONSTR, leader=False)
+    pn.label(430, 17, 'keelson 頂', dx=0, dy=-22, anchor='ma', color=CONSTR, leader=False)
+    pn.commit()
+    scale_bar(sh, 70, 790, 4)
+    title_block(sh, 1560, 752, 930, plan, '側面全圖　每格 4 px（1 m ＝ 40 px）', title=T3, task=plan['task_v2'])
+    sh.save(os.path.join(design, 'sheet02_profile_v2.png'))
+
+    def detail(tint, ink, width, orig=None):
+        sh = Sheet(1960, 1200)
+        ps = Panel(sh, 80, 100, 112, 206, -6, 96, 8)
+        pb = Panel(sh, 900, 100, 566, 706, -6, 132, 7)
+        for pn in (ps, pb):
+            if orig is not None:
+                pn.paste(orig.raster(pn, pn.s * 1.0))
+            pn.grid(minor=10, major=50, label_x=10, label_z=10)
+            draw_parts_v2(pn, plan, C, polys, tint=tint, ink=ink, width=width)
+        return sh, ps, pb
+
+    sh, ps, pb = detail(True, INK, 2.2)
+    sh.text(80, 24, '新圖紙 02b　船尾・船頭內側構件細部 v2', 26, bold=True)
+    sh.text(80, 62, '數字單位：格（0.1 m）｜內艉柱與 apron 照原圖讀數；deadwood 的頂（keelson 頂那條線）與 cutting-down line 照原圖形狀、高度對齊作品龍骨', 15, color=CONSTR)
+    ipx = lambda z: C['IP'].x(z)
+    ps.label((C['SPf'].x(30) + ipx(30)) / 2, 30, '內艉柱 傾 %.1f°，厚 %.1f→%.1f' % (plan['curves']['IP']['rake_deg'], ipx(8) - C['SPf'].x(8), ipx(ip['head_z']) - C['SPf'].x(ip['head_z'])), dx=40, dy=-120)
+    ps.label((C['SPf'].x(ip['head_z']) + ipx(ip['head_z'])) / 2, ip['head_z'], '頂 Z %g' % ip['head_z'], dx=40, dy=-20)
+    bj = C['Ba'].J
+    ps.label(bj[0], bj[1], 'keelson 頂線 R%g → R%g' % (plan['curves']['Ba']['r1'], plan['curves']['Ba']['r2']), dx=-20, dy=-70, anchor='ra')
+    ps.label(ad['fwd_x'], 14, '前端 X %g（40 號站位，keelson 從這裡接）' % ad['fwd_x'], dx=-10, dy=60, anchor='ra')
+    ps.label((ipx(ad['cap_z']) + C['Ba'].C2[0] - C['Ba'].R2) / 2, ad['cap_z'], '頂 Z %g' % ad['cap_z'], dx=60, dy=-30)
+    ps.label(165, 20, 'Deadwood', dx=0, dy=0, leader=False)
+    mx, mz = C['meet_AT']
+    pb.label(mx, mz, 'cutting-down line R%g 與 rabbet 交於 (%.1f, %.1f)' % (plan['curves']['Af']['r'], mx, mz), dx=40, dy=60)
+    pb.label(*C['Bf'].J, 'apron 內緣 R%.1f → R%g（與艏柱同心，厚 6）' % (C['Bf'].R1, plan['curves']['Bf']['r2']), dx=-40, dy=-30, anchor='ra')
+    pb.label(fd['aft_x'], 15, '後端 X %g（keelson 從這裡接）' % fd['aft_x'], dx=10, dy=-110)
+    pb.label((x_at(Tp, ap['top_z']) + x_at(Bp, ap['top_z'])) / 2, ap['top_z'], 'apron 頂 Z %g' % ap['top_z'], dx=-30, dy=-24, anchor='ra')
+    pb.label(605, 14, 'Deadwood', dx=-60, dy=40, anchor='ra')
+    ps.commit()
+    pb.commit()
+    title_block(sh, 900, 1095, 990, plan, '細部　船尾每格 8 px／船頭每格 7 px', title=T3, task=plan['task_v2'])
+    sh.save(os.path.join(design, 'sheet02b_details_v2.png'))
+
+    if ref:
+        orig = Original(plan, ref)
+        sh, ps, pb = detail(False, RED, 1.6, orig)
+        ps.commit()
+        pb.commit()
+        sh.text(80, 24, '對照　原圖（02 號，已補接縫錯位）＋ 新圖紙 v2（紅線）', 26, bold=True)
+        sh.text(80, 62, '內側構件只求大致符合：形狀照原圖，高度對齊作品的龍骨（原圖龍骨線本身往船頭微升）', 15, color=CONSTR)
+        title_block(sh, 900, 1095, 990, plan, '對照圖　船尾每格 8 px／船頭每格 7 px', title=T3, task=plan['task_v2'])
+        sh.save(os.path.join(design, 'compare02_details_v2.png'))
 
 
 def main():
@@ -499,6 +723,8 @@ def main():
         title_block(sh, 1560, 752, 930, plan, '對照圖　每格 4 px')
         sh.save(os.path.join(design, 'compare01_profile_v1.png'))
 
+    if 'inner_post' in P:
+        stage3(design, ref, plan, C, polys, cells, out)
     json.dump(out, open(os.path.join(design, 'verify.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(json.dumps(out, ensure_ascii=False))
 

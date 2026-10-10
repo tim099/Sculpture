@@ -1,8 +1,10 @@
 {
   "title": "USS Constitution（1797）新圖紙 01：側面 v1 —— 龍骨・艏柱・艉柱",
+  "title_v2": "USS Constitution（1797）新圖紙 02：側面 v2 —— apron・內艉柱・deadwood",
   "author": "basecamp",
   "date": "2026-10-10",
   "task": "TASK-0482（傘 TASK-0478）",
+  "task_v2": "TASK-0483（傘 TASK-0478）",
   "units": "格（1 格 = 0.1 m）；X 船長方向、船頭朝 +X；Z 朝上、0 = 護龍骨底面（基線）；Y 船寬、中線 y=160",
   "meters_per_cell": 0.1,
   "note": "參考 NARA RG 19 02 號側面圖（1849，NAID 75841356）重新設計，不是描圖：原圖是多張拼貼、接縫錯位，線條只取形狀，以平滑圓弧／直線重畫。每個數字在 provenance 標明是「原圖讀數」還是「設計決定」。",
@@ -22,7 +24,8 @@
     "keel": {"label": "龍骨 Keel", "x_from": 130, "z": [2, 7], "color": 177,
              "front_by_layer": {"7": 584, "6": 586, "5": 588, "4": 595, "3": 598, "2": 598},
              "hook": {"z": 5, "x": [591, 592]},
-             "provenance": "階段一（TASK-0481）已鋪；斜接口照 02 號圖逐層收"}
+             "carved_xz": [[594, 2], [595, 2], [596, 2], [597, 2], [598, 2]],
+             "provenance": "階段一（TASK-0481）已鋪；斜接口照 02 號圖逐層收；carved_xz ＝ 階段二削掉、改由 gripe 補的格"}
   },
 
   "curves": {
@@ -40,7 +43,22 @@
     "SPa": {"label": "艉柱後緣", "type": "line", "through": [130.0, 8.0], "rake_deg": 4.3,
             "provenance": "原圖讀數擬合直線（rms 0.22 格，傾 4.31°）；過 (130, 8) 是設計決定：跟龍骨後端齊平"},
     "SPf": {"label": "艉柱前緣", "type": "line", "through": [140.0, 6.5], "rake_deg": 8.7,
-            "provenance": "原圖讀數擬合直線（rms 0.06 格，傾 8.71°）；過校準錨點 (140, 6.5)"}
+            "provenance": "原圖讀數擬合直線（rms 0.06 格，傾 8.71°）；過校準錨點 (140, 6.5)"},
+
+    "Bf": {"label": "keelson 頂線（船頭）＝ apron 內緣", "type": "biarc_tangent", "stage": 3,
+           "base_z": 17.0, "tangent_x": 577.0, "center2": [488.2, 135.0], "r2": 179.0,
+           "provenance": "base 17 ＝ 作品龍骨上緣 8 ＋ 9（原圖船中這條線在龍骨上方 8.7–9.2 格）；上段 R179 與艏柱同心 ⇒ apron 厚 6（原圖上段距 rabbet 5.8–6.6）；切點擬合 576.8（上段 rms 0.36、下段 1.34）"},
+    "Af": {"label": "cutting-down line（船頭）", "type": "arc_tangent", "stage": 3,
+           "base_z": 12.0, "tangent_x": 542.0, "r": 356.0, "dir": 1,
+           "provenance": "base 12 ＝ 龍骨上緣＋4（原圖船中 3.7–4.0）；切點 542.3、R 355.8 擬合（rms 0.27）"},
+    "Ba": {"label": "keelson 頂線（船尾）＝ deadwood／sternson 頂", "type": "biarc_free", "stage": 3,
+           "base_z": 17.0, "tangent_x": 300.0, "r1": 567.0, "phi_deg": -78.2, "r2": 50.3, "dir": -1,
+           "provenance": "原圖讀數擬合（rms 0.27；base 固定 17 與船頭同）：大半徑接小半徑往上掃，X≈144 處轉直立"},
+    "Aa": {"label": "cutting-down line（船尾，示意）", "type": "arc_tangent", "stage": 3,
+           "base_z": 12.0, "tangent_x": 305.0, "r": 714.0, "dir": -1,
+           "provenance": "原圖讀數擬合（rms 0.24）；原圖這條線停在 40 號站位（X≈186）⇒ 之後是 deadwood"},
+    "IP": {"label": "內艉柱前緣", "type": "line", "stage": 3, "through": [146.7, 8.0], "rake_deg": 9.1,
+           "provenance": "原圖讀數擬合直線（Z≤45 那段 rms 0.02，傾 9.08°）；上半段被 transom 擋住，照直線延伸"}
   },
 
   "parts": {
@@ -52,6 +70,19 @@
               "provenance": "top_z 68 約吃水線（設計決定，未查證）；之上是船首 knee of the head，另一階段；sided 與護龍骨同 5 格"},
     "sternpost": {"label": "艉柱 Sternpost", "between": ["SPa", "SPf"], "heel_z": 8.0, "head_z": 88.0,
                   "sided_y": [158, 162], "color": 177,
-                  "provenance": "heel 8 ＝ 龍骨上緣（作品）；head 88 ＝ 原圖後緣接 counter 的位置（Z≈87.5，取整）；sided 5 格與龍骨同（設計決定，未查證）"}
+                  "provenance": "heel 8 ＝ 龍骨上緣（作品）；head 88 ＝ 原圖後緣接 counter 的位置（Z≈87.5，取整）；sided 5 格與龍骨同（設計決定，未查證）"},
+
+    "inner_post": {"label": "內艉柱 Inner post", "stage": 3, "between": ["SPf", "IP"], "heel_z": 8.0, "head_z": 82.0,
+                   "sided_y": [158, 162], "color": 173,
+                   "provenance": "head 82：原圖這條線被 transom 擋住之前一路直上，取到 wing transom 下方（設計決定）；sided 5 格（設計決定）"},
+    "aft_deadwood": {"label": "船尾 deadwood（含 sternson）", "stage": 3, "fwd_x": 186.0, "cap_z": 66.0,
+                     "sided_y": [158, 162], "color": 209,
+                     "provenance": "fwd_x 186 ＝ 原圖 cutting-down line 停的地方（40 號站位）；cap 66 ＝ 原圖這條線往上掃到 bread room 地板那一格（Z≈66）；sternson 併進 deadwood 不另分件（設計決定）"},
+    "fore_deadwood": {"label": "船頭 deadwood", "stage": 3, "aft_x": 577.0,
+                      "sided_y": [158, 162], "color": 209,
+                      "provenance": "aft_x 577 ＝ keelson 頂線起彎處（設計決定，keelson 之後從這裡接）；頂 ＝ cutting-down line，碰到 rabbet 為止"},
+    "apron": {"label": "Apron（含 stemson）", "stage": 3, "aft_x": 577.0, "top_z": 112.0,
+              "sided_y": [158, 162], "color": 173,
+              "provenance": "top 112 ＝ 原圖 apron 線停的高度（111.8）；cutting-down line 與 keelson 頂之間那段（stemson）併進 apron（設計決定）"}
   }
 }

@@ -89,6 +89,58 @@
     87
    ],
    "voxels_if_empty": 2665
+  },
+  "inner_post": {
+   "cells_xz": 491,
+   "overlap_keel_xz": 0,
+   "bbox_x": [
+    129,
+    146
+   ],
+   "bbox_z": [
+    8,
+    81
+   ],
+   "voxels_if_empty": 2455
+  },
+  "aft_deadwood": {
+   "cells_xz": 1487,
+   "overlap_keel_xz": 0,
+   "bbox_x": [
+    137,
+    185
+   ],
+   "bbox_z": [
+    8,
+    65
+   ],
+   "voxels_if_empty": 7435
+  },
+  "fore_deadwood": {
+   "cells_xz": 302,
+   "overlap_keel_xz": 0,
+   "bbox_x": [
+    577,
+    628
+   ],
+   "bbox_z": [
+    8,
+    22
+   ],
+   "voxels_if_empty": 1510
+  },
+  "apron": {
+   "cells_xz": 930,
+   "overlap_keel_xz": 0,
+   "bbox_x": [
+    577,
+    671
+   ],
+   "bbox_z": [
+    14,
+    111
+   ],
+   "voxels_if_empty": 4650
   }
  },
  "keel_conflicts": [
@@ -139,6 +191,110 @@
    "facing": "y+",
    "thickness": 5,
    "expect_pixels": 533
+  },
+  "inner_post": {
+   "png": "design/masks/inner_post.png",
+   "at": "129,158,8",
+   "facing": "y+",
+   "thickness": 5,
+   "expect_pixels": 491
+  },
+  "aft_deadwood": {
+   "png": "design/masks/aft_deadwood.png",
+   "at": "137,158,8",
+   "facing": "y+",
+   "thickness": 5,
+   "expect_pixels": 1487
+  },
+  "fore_deadwood": {
+   "png": "design/masks/fore_deadwood.png",
+   "at": "577,158,8",
+   "facing": "y+",
+   "thickness": 5,
+   "expect_pixels": 302
+  },
+  "apron": {
+   "png": "design/masks/apron.png",
+   "at": "577,158,14",
+   "facing": "y+",
+   "thickness": 5,
+   "expect_pixels": 930
+  }
+ },
+ "stage3": {
+  "curves": {
+   "Bf": {
+    "r1": 83.865,
+    "junction": [
+     655.28,
+     70.77
+    ]
+   },
+   "Ba": {
+    "junction": [
+     184.05,
+     28.98
+    ],
+    "center2": [
+     194.34,
+     78.22
+    ]
+   },
+   "A_meets_T": [
+    630.21,
+    23.1
+   ],
+   "B_fore_src": {
+    "n": 214,
+    "rms": 1.028,
+    "p95": 2.561,
+    "max": 2.883
+   },
+   "A_fore_src": {
+    "n": 100,
+    "rms": 0.266,
+    "p95": 0.355,
+    "max": 1.155
+   },
+   "B_aft_src": {
+    "n": 194,
+    "rms": 0.287,
+    "p95": 0.438,
+    "max": 0.592
+   },
+   "A_aft_src": {
+    "n": 219,
+    "rms": 0.244,
+    "p95": 0.451,
+    "max": 0.872
+   },
+   "IP_src": {
+    "n": 45,
+    "rms": 0.04,
+    "max": 0.074
+   }
+  },
+  "parts": {
+   "inner_post": {
+    "cells_xz": 491,
+    "overlap_existing_xz": 0,
+    "overlap_other_new_xz": 0
+   },
+   "aft_deadwood": {
+    "cells_xz": 1487,
+    "overlap_existing_xz": 0,
+    "overlap_other_new_xz": 0
+   },
+   "fore_deadwood": {
+    "cells_xz": 302,
+    "overlap_existing_xz": 0,
+    "overlap_other_new_xz": 0
+   },
+   "apron": {
+    "cells_xz": 930,
+    "overlap_existing_xz": 0,
+    "overlap_other_new_xz": 0
+   }
   }
  }
 }

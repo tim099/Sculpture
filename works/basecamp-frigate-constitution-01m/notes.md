@@ -1,6 +1,6 @@
 # 風帆戰艦憲法號（0.1 m／格・照圖紙）—— 建造筆記
 
-委託：Tim 2026-10-10（TASK-0478 傘；階段一 TASK-0481、階段二 TASK-0482）。比例 **0.1 公尺／格**（書卡 `meters_per_voxel=0.1`）。
+委託：Tim 2026-10-10（TASK-0478 傘；階段一 TASK-0481、階段二 TASK-0482、階段三 TASK-0483）。比例 **0.1 公尺／格**（書卡 `meters_per_voxel=0.1`）。
 空間 1024×320×800（X 船長方向、船頭朝 +X；Y 船寬，中線 y=160；Z 高度，z=0 ＝ 護龍骨底面）。
 
 ## ⭐ 新圖紙（階段二起照它雕，不再直接照原圖）
@@ -8,8 +8,9 @@ Tim 2026-10-10：「參考原設計圖紙，由妳重新設計一套新圖紙」
 `design/` 底下：
 - `plan.json` —— **設計來源**：每條線是參數（圓弧圓心／半徑、切點、直線傾角）；每個數字在 provenance 標明「原圖讀數」或「設計決定」。
 - `draft.py` —— 產圖程式：`python -I draft.py <design 資料夾> --ref <02 號圖>` ⇒ 圖紙、對照圖、遮罩、`verify.json`。
-- `sheet01_profile_v1.png`（側面全圖）、`sheet01b_details_v1.png`（艉柱／艏柱細部，標尺寸）。
-- `compare01_*_v1.png` —— 原圖（已補接縫）＋新圖紙紅線的對照。
+- `sheet01_profile_v1.png`／`sheet01b_details_v1.png` —— v1：龍骨・艏柱・艉柱。
+- `sheet02_profile_v2.png`／`sheet02b_details_v2.png` —— v2：加 apron・內艉柱・船頭與船尾 deadwood（v1 的檔重產逐位元組不變）。
+- `compare01_*_v1.png`、`compare02_details_v2.png` —— 原圖（已補接縫）＋新圖紙紅線的對照。
 - `source_points.json` —— 從原圖描的點（只拿來量新線離原圖多遠，不是設計來源）。
 - `masks/*.png` —— 給 `stampimg facing=y+` 的遮罩。⚠ y± 貼片的 v 軸不翻轉 ⇒ 遮罩第 0 列是**最低**的 z（圖看起來上下顛倒，這是對的）。
 
@@ -65,3 +66,35 @@ Tim 2026-10-10：「參考原設計圖紙，由妳重新設計一套新圖紙」
 疊新圖紙讀數：校準 40 px／m、旋轉 0°；艏柱上段、前腳、gripe、艉柱、龍骨、艉柱前緣內側 6 根探針 **全部 0 格**；
 反向對照：新圖紙錨點故意偏 3 格 ⇒ 艉柱前緣那根報 **3**。
 疊圖：`overlays/stage2_profile_vs_drawing.png`、`stage2_bow_vs_drawing.png`、`stage2_stern_vs_drawing.png`、`stage2_bow_vs_original.png`、`stage2_stern_vs_original.png`、`stage2_view.png`（3D）。
+
+## 階段三：新圖紙 v2＋apron・內艉柱・deadwood（2026-10-10，TASK-0483）
+從 02 號圖讀出兩條沿船長走的線（原圖沒標名字，照形狀與位置判）：
+- **A ＝ cutting-down line**（底肋頂）：船中在龍骨上方約 4 格，往兩頭升；船尾停在 40 號站位（X≈186）。
+- **B ＝ keelson 頂**：一直在 A 上方約 5 格；船頭往上接進 apron 內緣，船尾往上掃成 deadwood／sternson 的頂，到 X≈144 轉直立。
+⇒ 40 號站位以後，龍骨到 B 之間整塊是 deadwood（A 在那裡停掉就是這個意思）。
+
+新圖紙 v2 的線（plan.json，全部標 provenance）：
+- B 船頭：base 17、切點 577、上段 R179 **與艏柱同心** ⇒ apron 厚 6；下段 R83.9（相切推出）。
+- A 船頭：base 12、切點 542、R356；與 rabbet 交於 (630.2, 23.1)。
+- B 船尾：base 17、切點 300、R567 → R50.3（雙圓弧，往船尾升）。
+- A 船尾（示意，肋骨階段用）：base 12、切點 305、R714。
+- 內艉柱前緣：過 (146.7, 8)、傾 9.1°（原圖 Z≤45 那段 rms 0.02；上面被 transom 擋住，照直線延伸），與艉柱前緣幾乎平行，厚 6.9→6.4。
+- 高度基準是**作品的龍骨**（上緣 8）：A＝12、B＝17；原圖的龍骨線本身往船頭微升（7.1→8.3），形狀照原圖、高度不跟。
+新線離原圖描點 rms：內艉柱 0.04、A 船頭 0.27／船尾 0.24、B 船尾 0.29、B 船頭 1.03（下段刻意同心，比較鬆）。
+
+雕刻（stampimg，sided 5 格 y158..162；每一刀＝遮罩格數 × 5，零重疊）：
+| 部件 | 遮罩 | at | 落地 | 顏色 |
+|---|---|---|---|---|
+| 內艉柱 Z 8..82 | masks/inner_post.png（491） | 129,158,8 | 2,455 | 173 |
+| 船尾 deadwood（含 sternson）X 前端 186、頂 Z 66 | masks/aft_deadwood.png（1,487） | 137,158,8 | 7,435 | 209 |
+| 船頭 deadwood（A 以下） | masks/fore_deadwood.png（302） | 577,158,8 | 1,510 | 209 |
+| apron（含 stemson，A 到 B；頂 Z 112） | masks/apron.png（930） | 577,158,14 | 4,650 | 173 |
+總格數 27,965 → 44,015（work show 回讀）。
+
+讀數：疊新圖紙 v2（40 px／m、0°）6 根探針全部 0 格；反向對照：錨點偏 3 格 ⇒ 船尾 deadwood 前端那根報 3。
+接合區 y 158／160／162 三層：船尾（X120..200、Z0..90）各 3,079 格、船頭（X570..680、Z0..125）各 2,772 格 ＝ 設計輪廓算出的應有格數；y157／y163 為 0。
+疊圖：`overlays/stage3_*`（新圖紙／原圖各兩張、3D 全景兩張）。
+
+**keelson 的去留**：keelson 坐在底肋上，底肋要等肋骨階段 ⇒ keelson 挪到肋骨階段（設計決定）。
+它的位置已經畫在 v2 上（虛線）：底面＝A、頂面＝B；船尾在 X 186 頂上 deadwood 的前端面，船頭在 X 577 接 apron 的後端。
+sternson 併進船尾 deadwood、stemson 併進 apron，不另分件（設計決定）。
