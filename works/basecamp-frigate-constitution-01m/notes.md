@@ -111,10 +111,13 @@ sternson 併進船尾 deadwood、stemson 併進 apron，不另分件（設計決
 新圖紙 03 的船殼：hb(X, z) = 2.5 + (H11(X, z) − 2.5) · s(z)
 - H11 ＝ 11 號 1、2、4–9 號站在每個高度沿船長的自然樣條；s(z) ＝ 讓 Ø 船中剛好等於 15 號的修正係數（Z 9 處 0.29、Z 20 處 0.83、Z 50 以上 ≈1）—— 15 號的船底比 11 號尖（deadrise 大）、舭部瘦約 1.5 ft。
 - 讀數：船中 vs 15 號 rms 0.19 格（最大 0.52）；各站比 11 號描點瘦 2–3 格（刻意的修正，上舷幾乎重合）。
-- 不用 scipy.interpolate（這台的被一個 09-08 留下的舊 `scipy/interpolate/interpnd.cp310-win_amd64.pyd` 擋住，載不起來）；PCHIP 與自然樣條在 `draft_lines.py` 裡自己寫。
+- 寫的時候 scipy.interpolate 載不起來（一個 2023-09-08 留下的舊 `scipy/interpolate/interpnd.cp310-win_amd64.pyd` 擋住）⇒ PCHIP 與自然樣條在 `draft_lines.py` 裡自己寫。2026-10-11 Tim 同意後刪掉那個舊 pyd（＋同組 .dll.a），scipy.interpolate 已恢復。
 
 底肋與 keelson（設計完成，遮罩已產，**還沒 stampimg**）：
 - 底肋 59 片：f −39..+19（X 192.3..573.9），每片 sided 3 格（12"）、置中於肋位；沿 molded 線 moulded 3.6 格（14"）；喉部頂 ＝ cutting-down line A；
   底肋頭 ＝ 沿 molded 線從龍骨側面量 3.6 m（兩張圖都沒畫 ⇒ 設計決定，船中那片全長約 25 ft；往兩頭 V 形船底讓底肋頭自然升高）。顏色 141。
   遮罩 `design/masks/floors/f±NN.png`（facing=x+；at／expect_pixels 在 `verify_lines.json` 的 floors[].stamp）。共 15,496 個 Y-Z 格 × 3 ＝ 46,488 voxel。
 - keelson：A 到 B、X 186..577、sided 5 格、顏色 209；遮罩 `design/masks/keelson.png`（facing=y+）。
+
+**keel drag：不做**（Tim 2026-10-11 交給本小姐決定）。龍骨是直的，drag 只是龍骨與水線不平行（11 號：船尾深約 2.7 ft ≈ 0.85°）＝同一個船殼相對水面轉一個角度。
+已雕的骨架與新圖紙 03 的船殼都以龍骨為基準（11 號橫剖面本身也忽略 drag）⇒ 一致。之後吃水線、甲板、舷弧、砲門這些以水線為基準的，每站高度從側面圖相對龍骨量，drag 自動帶進來；展示時要的話整艘傾 0.85°。

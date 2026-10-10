@@ -12,5 +12,5 @@
 - [ ] 船尾 transom、counter；船首 knee of the head
 
 ## 待確認
-- [ ] 02 號圖龍骨深度船尾 0.47／船頭 0.63 m 的謎：11 號側面顯示真的有 keel drag（船尾深約 2.7 ft）—— 作品的龍骨是平的；要不要做 drag 留給 Tim 決定
+- [x] keel drag：不做（2026-10-11 決定，理由見 notes.md）；⚠ 甲板／舷弧／砲門的高度要逐站相對龍骨量，不要用一條水平線
 - [ ] sided（艏柱／艉柱／deadwood／apron 5 格）仍是設計決定
