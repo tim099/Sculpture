@@ -1,6 +1,6 @@
 # 風帆戰艦憲法號（0.1 m／格・照圖紙）—— 建造筆記
 
-委託：Tim 2026-10-10（TASK-0478 傘；階段一 TASK-0481、階段二 TASK-0482、階段三 TASK-0483、階段四 TASK-0484、階段五 TASK-0485 雕完、待提交）。比例 **0.1 公尺／格**（書卡 `meters_per_voxel=0.1`）。
+委託：Tim 2026-10-10（TASK-0478 傘；階段一 TASK-0481、階段二 TASK-0482、階段三 TASK-0483、階段四 TASK-0484、階段五 TASK-0485 雕完並提交 Sculpture 66023c4；階段六 TASK-0486 設計完成、還沒雕）。比例 **0.1 公尺／格**（書卡 `meters_per_voxel=0.1`）。
 空間 1024×320×800（X 船長方向、船頭朝 +X；Y 船寬，中線 y=160；Z 高度，z=0 ＝ 護龍骨底面）。
 
 ## 📌 範圍備註（Tim 2026-10-11）
@@ -21,6 +21,8 @@ Tim 2026-10-10：「參考原設計圖紙，由妳重新設計一套新圖紙」
 - `compare01_*_v1.png`、`compare02_details_v2.png` —— 原圖（已補接縫）＋新圖紙紅線的對照。
 - `sheet03_lines_v1.png`／`compare03_bodyplan_v1.png` —— 新圖紙 03 線形圖（`draft_lines.py` 產；原圖讀數在 `source_lines.json`，讀數在 `verify_lines.json`）。
 - `sheet04_frames_v1.png` —— 新圖紙 04 肋骨圖（`draft_frames.py` 產；參數在 plan.json `framing`，讀數在 `verify_frames.json`，遮罩在 `masks/frames/f±NN{A,B}.png`，facing=x+）。
+- `sheet03_lines_v2.png` —— 新圖紙 03 v2：船殼延伸到船頭與船尾（`draft_ends.py` 產，class `HullV2`；參數在 plan.json `ends`，原圖描線在 `source_ends_traces.json`，讀數在 `verify_ends.json`）。1–9 號站之間完全照舊。
+- `sheet04_frames_v2.png` —— 新圖紙 04 v2：兩頭的骨架（`draft_frames_ends.py` 產；參數在 plan.json `framing_ends`，讀數在 `verify_frames_ends.json`，每根木料一份 3D 格子清單 `masks/ends/<名>.vox.txt`，給 `sculpture op=stampvox`，at=0,0,0）。
 - `source_points.json` —— 從原圖描的點（只拿來量新線離原圖多遠，不是設計來源）。
 - `masks/*.png` —— 給 `stampimg facing=y+` 的遮罩。⚠ y± 貼片的 v 軸不翻轉 ⇒ 遮罩第 0 列是**最低**的 z（圖看起來上下顛倒，這是對的）。
 
@@ -163,6 +165,7 @@ sternson 併進船尾 deadwood、stemson 併進 apron，不另分件（設計決
 
 **keel drag：不做**（Tim 2026-10-11 交給本小姐決定）。龍骨是直的，drag 只是龍骨與水線不平行（11 號：船尾深約 2.7 ft ≈ 0.85°）＝同一個船殼相對水面轉一個角度。
 已雕的骨架與新圖紙 03 的船殼都以龍骨為基準（11 號橫剖面本身也忽略 drag）⇒ 一致。之後吃水線、甲板、舷弧、砲門這些以水線為基準的，每站高度從側面圖相對龍骨量，drag 自動帶進來；展示時要的話整艘傾 0.85°。
+⚠ **階段六更正（2026-10-11）**：11 號 body plan 其實是**從水線量**的（不是從龍骨），所以本作品的船殼是「不做 drag、從水線量」的框；上一句「每站高度從側面圖相對龍骨量」是錯的 —— sheer plan 的高度要先減 drag（0.01538·(439.2 − X)）才放得進這個框（船尾約 −5 格）。見「階段六」。
 
 過程圖（`overlays/stage4_*`，製作筆記可直接用）：`first_floor_f+00_section`（第一片試貼）、`fix_floor_keelson`（兩個修正的示意）、`profile_vs_drawing`＋`_offset3`（側面疊新圖紙 03、反向對照）、`body_f+15_vs_drawing`／`body_f-30_vs_drawing`＋`_offset3`、`body_f+00_vs_d15`（船中 vs 15 號）、`view`／`view_midship`／`view_stern`／`view_above`（3D）。
 
@@ -200,3 +203,68 @@ sternson 併進船尾 deadwood、stemson 併進 apron，不另分件（設計決
     ② **keelson 兩側的 1 格縫**：plane B 欄、dy=3、z 13–24 一帶（218 格），肋骨根部離 molded 線超過 m(z) 所以沒產，跟 keelson 側面之間空一格。在船艙裡面，之後鋪內板（ceiling）會蓋掉 ⇒ 先不動。
 
 過程圖（`overlays/stage5_*`）：`first_frame_f+00_section`（第一片試貼）、`body_f+00_vs_drawing`、`profile_vs_drawing`＋`_offset3`、`view`／`view_side`／`view_inside`／`view_bow`／`view_stern`（3D）。新圖紙：`design/sheet04_frames_v1.png`。
+
+## 階段六（TASK-0486）：船頭與船尾 —— 新圖紙 03 v2＋04 v2 設計完成、**還沒雕**（存檔點）
+Tim 2026-10-11：「接下來準備告一段落（做到一個存檔點）」⇒ 停在設計完成、雕之前。
+
+### ⚠ 高度的框：body plan 從水線量、sheer plan 從龍骨量
+- 11 號 body plan（與水線半寬圖）的高度是**從水線量的**：各站剖面在水線 A–F 的高度上跟水線半寬圖一致（8／2 號站 F 差 0.02–0.07 格）。sheer plan 是**從龍骨量的**（有 drag 0.88°）。
+- 證據（兩點，⚠ 不是證明）：counter 下緣 sheer 86.5 − drag 4.8 ＝ 81.7 ↔ body 81.2；taffrail sheer 133.4 − 5.1 ＝ 128.3 ↔ body 128.1。
+- 本作品的船殼照 body plan 做 ⇒ 作品的高度是「從水線量」那個框。sheer plan 的讀數要先換：**Z_作品 ＝ Z_sheer × 局部比例 − 0.01538·(439.2 − X)**（局部比例 9.144／(58.38 − 0.000281·x_px)／0.15859；船尾減約 5、船頭加約 3）。
+- ⇒ **砲門、甲板、舷弧不要直接拿 sheer plan 相對龍骨的高度**（上一階段 todo 那樣寫，船尾會高 5 格；已改）。
+- 02 號圖（1849）是相對龍骨畫的 ⇒ 階段二的艉柱頭 Z 88 換到本框約 83；wing transom 上緣 81.2 ⇒ 艉柱頭伸出 wing transom 約 7 格（設計預覽看得到），之後做舵與 counter 外板時再決定要不要削（記在 todo）。
+
+### 新圖紙 03 v2：船殼延伸（`draft_ends.py`）
+- 兩頭每個高度一條水線：11 號水線描線（`source_ends_traces.json`）換成正規化形狀 φ(t)、沿高度 PCHIP；接縫站的半寬取 1–9 號站船殼本身 ⇒ 階段四的 s(z) 修正自動帶到兩頭。
+- 船尾：F、E、D、C、A 收到艉柱／內艉柱／deadwood（原圖收尾點）；B 由 C、A 內插（9.5 號站預測 19.9 ↔ 原圖 19.8，沒拿去擬合）。
+- 船尾 tuck（設計決定，參考 Humphreys 規格）：wing transom 6 格深（Z 75.4–81.2）的橫面在艉柱後緣；它以下 round tuck 收進艉柱（最後 2 格四分之一橢圓）；以上 counter（Z 81.2–91）、船尾面（Z 91–128.5，傾約 22°），平面上都是平的；切口處的半寬照 body plan 船尾正視（⚠ Z 81.2 那條平線是 wing transom 上緣，不是外形 —— 第一版把它當外形，剖面長出水平的台階）。
+- 船頭：水線收到**作品艏柱的 rabbet T(z)**（原圖的 rabbet 在 A 比作品前 2.5 格）；水線 A 以上用 A 與一條甲板高度的設計形狀沿高度 PCHIP（對上 0.5 號站最外那條線 33.7，身分未定）。
+- 接縫 C1：斜率差用 β·L·u(1−u)² 補（兩端是 0）。最大修正船尾 0.75、船頭 1.5（水線 A 以下 ≤ 1.08）；設計後接縫兩側斜率變化 ≤ 0.005（船尾）／0.041（船頭）每格。
+
+讀數（`verify_ends.json`；垂直於船殼的距離是 scratchpad 量的，下面照抄）：
+| | 原始（垂直於船殼） | 扣掉兩個刻意的設計決定之後 |
+|---|---|---|
+| 船尾 A／C／D／E／F | 最大 1.00／0.91／0.77／0.71／0.86 | 0.49／0.21／0.21／0.09／0.13 |
+| 船尾 B（內插） | 0.96 | 0.85 |
+| 船頭 A／B／C／D／E／F | 最大 3.08／2.63／2.32／2.15／1.95／0.72 | 0.93／1.41／0.76／0.85／0.22／0.06 |
+- 9.5 號站（原圖讀數 vs 設計）：A 0.00、B +0.63、C +0.23、D +0.35、E +0.58；0.5 號站：A −0.82、B −1.27、C −1.42。
+- **船頭沒過「≤ 1 格」**：兩個刻意的設計決定 ＝ ① 作品艏柱（02 號）比 11 號的 rabbet 後 1.6–2.8 格（每條水線不同，見 verifier），水線只能收到作品的艏柱；② 1 號站本身比 11 號瘦（階段四照 15 號的修正，接縫縮放比 0.81–0.97）。扣掉之後形狀 ≤ 0.93，只有 B 1.41（接縫補斜率鼓出來的）。⇒ TASK-0486 那一格沒勾，等 Tim 決定接不接受。
+- 收尾點：船尾設計 vs 原圖 ≤ 0.25 格（B 2.05，原圖的 B 收尾點本身是低信心）；船頭設計 vs 作品 rabbet ≤ 0.25 格。
+
+### 新圖紙 04 v2：兩頭的骨架（`draft_frames_ends.py`）
+| 部位 | 木料 | 格數 | 備註 |
+|---|---|---|---|
+| 船尾 | cant 7 對（雙片，各 3 格） | 23,148 | Steel 兩線法：舷寬線 Z 80 每 7.4、deadwood 每 5.0；3.0° → 22.5° |
+| | fashion piece | 1,396 | heel X 146（deadwood 上）、head (126.5, 38)＝wing transom 端；28.8°；moulded 3.8 |
+| | wing transom＋transoms ×3 | 2,414＋1,216 | Z 75–80；70–73、65–68、60–63（艉柱前緣往前 4 格、在 fashion piece 的船尾側） |
+| | counter timbers ×5（dy 6、12、25、36、舷邊） | 3,684 | 站在 wing transom 上，沿 counter／船尾面 3 格厚；空出窗位 |
+| | 窗台、窗楣、taffrail | 736 | Z 93–94、102–103、125–128（被 counter timbers 斷開） |
+| | quarter timbers ×3（X 119、112、105） | 1,028 | 懸出部側面，只取側面那條帶子 |
+| 船頭 | bow timbers 6 根（單片 3 格） | 9,506 | 3.7° → 38.6°；heel 619.5 → 634.8、head 622.3 → 652（Z 80） |
+| | knighthead | 4,312 | dy 3–6、moulded 5、頭伸到 Z 136 |
+| | hawse pieces ×5 | 13,358 | dy 7–10…23–26，跟中線平行、實心牆；第 5 根是填補（設計決定） |
+| 合計 | 42 根（船尾 30、船頭 12） | **60,798** | 全部同色 141 |
+- 同一格只給一根木料（priority 由前往後）：船尾相鄰兩對 cant 在 heel 附近讓 63–89 格（雙片在 deadwood 旁併成一塊，研究說實船也如此）；窗台等橫材在 counter timbers 處斷開。
+- 設計層面的結構檢查（scratchpad，events 重播＋清單）：跟已雕的 363,037 格**重疊 0**；合起來 423,835 格 **1 個 face-connected 元件**、**封閉空腔 0**。⚠ minor：舷邊 counter timber 與 quarter timbers 各有 1–6 格的小碎塊沒跟本體連（整艘仍連通）—— 下一輪設計清掉。
+- 雕刻要用新的 `stampvox`（TASK-0487，Senate／SCP_Core 未提交、未出廠）：舊版 senate.exe 重播不認得 stampvox ⇒ **出廠之前不雕進作品**。
+- 設計預覽（不經引擎，等角投影；灰＝已雕、橘＝新）：`overlays/stage6_design_stern_aft.png`、`stage6_design_stern_quarter.png`、`stage6_design_bow_quarter.png`；原圖疊圖：`overlays/stage6_lines_{stern,bow}_vs_d11.png`。心得與查到的資料：`journal/stage6.md`。
+
+### verifier（雕之前，2026-10-11；workflow 4 個、各自寫程式、被叫去推翻、全部唯讀）—— ⛔ 下面的「現在修」還沒修
+判定：原圖像素 pass_with_minor、高度框 pass_with_minor、木料帳 **fail**、造船／美觀 **fail**。原始結果在 scratchpad（session 專屬），重點抄在這裡：
+- **原圖像素**（自己從 11 號描線、反向對照偏 3 報 3.00）：船尾 A、C–F ≤ 1 格 ✓；船頭的解釋成立 —— 但艏柱位置差**每條水線不同**（A 2.80、B 2.37、C 2.2、D 1.59、E 2.2、F ≈0.3 格），不是一律 2.5；在半寬方向 A 的尖端差到約 5 格。把船頭水線沿 X 拉到原圖收尾點之後，離 rabbet 6 格以外 A 0.86／B 0.63／C 0.91；D、E 的 1.3–2.0 是 1 號站本身（接縫比 0.93／0.85）。⚠ 「垂直於船殼的距離」對 X 方向的偏移是鈍的（偏 3 只報 0.7–1.9）⇒ 船頭要報水平距離。**船尾 B 在 X 158–170 比原圖寬 1.1–1.3 格**（verifier 自己描到了 B，從 x 718 一路描得到 9 號站）⇒ 改用 B 的描線，不要用 C、A 內插。
+- **高度框**（85% 把握成立，兩頭符號相反都對上：船尾 counter ＋4.0..4.8、船頭 hawse 橢圓 −3.6；body plan 的龍骨點確實共點、沒有 drag）：⚠ 我寫的換算式把比例修正**算了兩次**（0.01538 與 439.2 是用均一比例量的，又乘了局部比例）⇒ 最多差 0.6 格。改成一致的形式：Z_作品 ＝ 62.86 ＋（sheer 上「高於水線 A」的高度，局部比例）×3.048。taffrail 單獨不能區分兩種假設（sheer 的第二條欄杆線也對得上）⇒ 證據改引 counter 與 hawse 橢圓。說法：body plan 是「沒畫 drag」（龍骨跟水線平行），不是「從水線量」。
+- **木料帳**：42 根的角度、厚度跟設計一致（船頭 4.2→38.7°、船尾 3.0→22.8°、fashion piece 28.6°，都約 3 格厚）；每格都能從已雕的部分沿面接觸走到；重疊 0。問題：
+  1. **taffrail 只有 1 層（Z 125）**，counter timbers 與船尾 cant 也都停在 125：`HullV2` 船尾在 Z 126 以上是 nan —— `_taper` 在 8 號站頂（126.19）以上量不到 9 號站的斜率（nan），整排水線跟著 nan。⇒ 修 `_taper`（nan ⇒ 0），船尾上部才會長到 128.5。
+  2. knighthead 有 336 格高過船殼頂（設計就是要伸出欄杆，列為明示的例外）；⚠ 船頭的 `hb` 在 z_top 以上不會變 nan（表的 z 索引被夾住）⇒ 船殼內外的判斷要另外檢查 z ≤ top。
+  3. 7 根木料不是一塊：舷邊 counter timber（3 塊）、quarter1–3（1–3 格的碎塊）、三道窗框橫材被 counter timbers 斷開（設計如此）。
+  4. 船尾 cant 3、5 對的根部 4 個針孔（(160,157/163,32)、(170,157/163,28)）；cant 對外側面 118 個缺口（外觀，鋪外板前可補）。
+  5. 文字：provenance 寫 cant 3°→21°，實際 22.5°；hawse5 實際 dy 23–25。
+- **造船／美觀**（現在修）：
+  1. **船尾中線一道 0.5 m 的縫**（Z 88–125）：窗台、窗楣、taffrail、wing transom 都從 dy 3 起，艉柱頭以上沒有東西 ⇒ 從後面看船尾劈成兩半。⇒ 這幾根從 dy 0 起（艉柱頭以下照舊留給艉柱）。
+  2. **艉柱頭伸出 wing transom 7 格**：⇒ 艉柱 head_z 88 → 81、內艉柱 82 → 75，刻掉 Z 81–87 的艉柱（雕兩頭之前）。
+  3. **懸出部側面 8–10 格的洞**（S-quarter1 X 118–120 與 S-cant7-aft X 129–131 之間）⇒ 至少加一片 quarter timber 在 X 126；比較好：quarter timbers 改成接續扇形的斜木（35–45°）。
+  4. **兩根 knighthead 之間只剩 5 格（0.5 m）**，bowsprit（約 0.6–0.8 m，未查證）過不去 ⇒ knighthead dy [5,8]，dy 3–4 在 Z 123 以下加 chock。
+  5. **hawse pieces 規格是每邊 4 根、sided 18"** ⇒ 4 根各 5 格（[9,13]、[14,18]、[19,23]、[24,28]，配合上一條）。
+  6. **船頭 cant 是單片** ⇒ 改雙片（跟其他地方一樣密）。
+  7. transoms 太少，艉柱旁 Z 48–59 從後面看得穿 ⇒ 再加 [55,58]、[50,53]、[45,48]。
+  - 可以等：船尾 cant 根部併成一大塊（要改就把 heel 抬高、deadwood 補上去，或改 5 對）；wing transom 實際約 27.9 ft（provenance 寫「約 25 ft」要改）；fashion piece 規格可能是雙片；counter timbers 間距不勻、第一根吃到窄窗；breast hooks。

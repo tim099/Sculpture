@@ -37,7 +37,7 @@
       "frames": "02 號站位：每標號隔 2 肋位、肋距 6.579 格（25.9\"）；15 號寫 room and space 26\" ⇒ 兩者一致（原圖讀數）；取等距（設計決定，原圖逐站有 ±0.5 格的手繪起伏）",
       "floor": "sided 3 格（15 號：double frames sided 12\"，底肋是雙肋的其中一片）；moulded 3.6 格（15 號 14\"、04 號 15\"）；底肋頭 head_arc：兩張圖都沒畫（15 號註明待取得）⇒ 設計決定：沿 molded 線從龍骨側面量 3.6 m（船中那片全長約 25 ft）；喉部頂 ＝ cutting-down line A（v2）",
       "keelson": "A 到 B（v2 虛線）、X 186..577、sided 5 格（15 號 keelson 18\"x18\"）；04／15 號在 keelson 上還有一條 rider（15\"x18\"）與 Humphreys 的 9\"x24\" deadwood ⇒ 之後再說（設計決定）",
-      "keel_drag": "不做（Tim 2026-10-11 交給 basecamp 決定）：龍骨是直的，drag 只是龍骨與水線不平行（11 號側面：船尾深約 2.7 ft ≈ 0.85°）＝同一個船殼相對水面轉一個角度；船殼與已雕的骨架都以龍骨為基準，11 號橫剖面本身也忽略 drag ⇒ 彼此一致。吃水線、甲板、舷弧、砲門等以水線為基準的東西，之後每站高度一律從側面圖相對龍骨量（drag 自動帶進來）；展示時要的話整艘傾 0.85° 擺",
+      "keel_drag": "不做（Tim 2026-10-11 交給 basecamp 決定）：龍骨是直的，drag 只是龍骨與水線不平行（11 號側面：船尾深約 2.7 ft ≈ 0.85°）＝同一個船殼相對水面轉一個角度；船殼與已雕的骨架都以龍骨為基準，11 號橫剖面本身也忽略 drag ⇒ 彼此一致。吃水線、甲板、舷弧、砲門等以水線為基準的東西，之後每站高度一律從側面圖相對龍骨量（drag 自動帶進來）；展示時要的話整艘傾 0.85° 擺。⚠ 2026-10-11 階段六更正：11 號 body plan 是從水線量的 ⇒ 本作品的船殼是「從水線量」的框，sheer plan（相對龍骨）的高度要減 drag 0.01538·(439.2 − X) 才放得進來（見 ends.provenance.frame_of_heights）；上一句「相對龍骨量」不對",
       "heights": "15 號高度對齊作品龍骨頂（15 號龍骨頂 2.53 ft ↔ 作品 Z 8）；11 號 rabbet 本來就落在 Z 7.8–8.2"
     }
   },
@@ -131,6 +131,72 @@
       "sheer": "舷頂（肋骨頂）＝ 二次曲線擬合 11 號 1、2、5–9 號站的頂與 15 號船中 molded 線的頂（原圖讀數）；4 號站（與被排除的 3 號同值，疑為雙線）不採用；再以船殼有定義的高度封頂（設計決定）",
       "range": "肋位 f −40..+25：船殼（11 號 9 號站 X 181.5 到 1 號站 X 617.1）有定義的範圍；更後面的船尾（transom、counter）與更前面的船頭 cant frames 之後另做（設計決定）",
       "colors": "全部 141（跟底肋同色）—— Tim 2026-10-11：木紋不做，要考慮效能，同色在匯出模型時可以合併。分段與接頭只留在設計與圖紙裡，作品上不分色"
+    }
+  },
+
+  "ends": {
+    "title": "USS Constitution（1797）新圖紙 03 v2：線形圖 —— 船殼延伸到船頭與船尾",
+    "task": "TASK-0486（傘 TASK-0478）",
+    "date": "2026-10-11",
+    "z_top": 128.5,
+    "stern": {
+      "x_min": 95.0, "g_end": 1.6,
+      "use_wl": ["F", "E", "D", "C", "A"],
+      "wl_end_x": {"A": 131.8, "B": 133.0, "C": 138.1, "D": 144.5, "E": 152.4, "F": 158.5},
+      "tuck_z": 75.4, "tuck_post_x": 124.9, "closure_cells": 2.0,
+      "counter_shape": [0.05, 6, 3.0], "quarter_shape": [0.0, 4, 3.0], "knuckle_z": 91.0,
+      "aft_profile_zx": [[75.4, 124.9], [81.2, 124.4], [83.0, 120.6], [86.0, 117.3], [88.6, 114.6], [91.0, 112.3], [92.3, 111.0], [97.6, 108.5],
+                         [102.3, 106.5], [107.8, 105.1], [112.6, 103.2], [117.4, 101.3], [122.2, 99.4], [126.9, 97.4], [128.5, 96.8]],
+      "aft_outline_zhb": [[75.4, 31.0], [81.2, 36.0], [82.0, 38.8], [83.0, 42.2], [84.0, 44.3], [85.0, 45.8], [87.0, 47.44], [88.0, 47.64],
+                          [89.0, 48.2], [91.0, 48.2], [95.0, 47.5], [96.5, 46.97], [100, 45.99], [105, 44.91], [110, 43.96], [115, 43.06],
+                          [120, 42.4], [125, 41.85], [126.5, 41.72], [127.6, 42.0], [128.5, 42.0]]
+    },
+    "bow": {
+      "x_max": 680.0, "g_end": 1.7,
+      "wl_end_x_lines": {"A": 661.1, "B": 656.7, "C": 651.4, "D": 644.4, "E": 635.9, "F": 620.9},
+      "station1_hb_lines": {"B": 40.97, "C": 34.11}, "trace_from_x": {"B": 626.0},
+      "top_shape_z": 126.0, "top_shape_p": 1.9, "top_shape_q": 1.0
+    },
+    "provenance": {
+      "frame_of_heights": "原圖讀數＋推論：11 號 body plan 與水線半寬圖的高度是**從水線量的**（各站剖面在同一組水線高度上跟水線半寬圖一致，到 0.1 格），sheer plan 是**從龍骨量的**（有 drag）。兩者在船尾差約 5 格 ＝ drag：counter 下緣 sheer 86.5 − 4.8 ＝ 81.7 ↔ body plan 81.2、taffrail 133.4 − 5.1 ＝ 128.3 ↔ 128.1。本作品的船殼照 body plan 做（＝不做 drag 的那個框）⇒ sheer plan 的讀數要先換成這個框：Z_作品 ＝ Z_sheer × 局部比例（9.144／(58.38 − 0.000281·x_px)／0.15859）− 0.01538·(439.2 − X)",
+      "waterlines": "原圖讀數：船尾 F、E、D、C、A 與船頭 A–F 的描線（source_ends_traces.json），每條換成正規化形狀 φ(t)（t：接縫站 0 → 收尾 1）、沿高度 PCHIP；接縫站的半寬取 1–9 號站船殼本身（所以 s(z) 的修正自動帶進兩頭）。船尾 B 沒描到 ⇒ 由 C、A 內插（9.5 號站預測 19.9、原圖讀數 19.8，不是擬合出來的）",
+      "ends_stern": "收尾點：A–F 照原圖讀數（F 的收尾點本身 ±3 格）；都落在艉柱、內艉柱或 deadwood 上（|dy| ≤ 2 的實心區）",
+      "ends_bow": "收尾點：照原圖讀數的形狀、但終點移到作品艏柱的 rabbet T(z)（原圖的 rabbet 在水線 A 比作品前 2.5 格；F 剛好在同一點 620.9）",
+      "tuck": "設計決定（參考 Humphreys 1794 規格：wing transom 上緣在 rabbet 上 25'8.5\" ＝ 本框 Z≈81.4；round tuck：船底板往上收到 wing transom 下緣）：wing transom 6 格深（Z 75.4–81.2），後面是一塊橫的平面（X ≈ 艉柱後緣）；它以下的水線收到艉柱，最上面那條跟正上方被橫面切掉的水線同形、只在最後 2 格用四分之一橢圓收進艉柱",
+      "counter_face": "原圖讀數（換到本框）：counter（Z 81.2–91，sheer plan 中線輪廓；Z 87.8 那點照 verifier 改 120.5）與船尾面（Z 91 以上，傾約 22°，taffrail 頂 Z 128.5）；兩者在平面上都是平的（11 號水線半寬圖的 RAIL 在船尾畫成橫線、到半寬約 43.7 才轉向船頭）。切口處的半寬 ＝ body plan 船尾正視的外形（counter 下緣 → name band 端 → transom 側緣），但 Z 81.2–81.6 那段平的線是 wing transom 上緣，不是外形 ⇒ 不用",
+      "quarter": "設計決定：船尾上部（Z 81 以上）從 9 號站往後的水線用 psi 形狀收到船尾外形，收窄量由 9 號站的斜率決定；quarter gallery 不做（裝飾物，之後另做子作品）",
+      "bow_upper": "設計決定：水線 A（Z 62.86）以上到甲板高度的形狀 ＝ A 與一條甲板高度的設計形狀（1 − a·t）(1 − t^1.9) 沿高度 PCHIP；那條形狀對上 11 號 0.5 號站最外那條線（半寬 33.7，身分未定，當作欄杆）",
+      "junction": "設計決定：值在接縫站本來就連續；斜率差用 β·L·u(1−u)² 補（兩端是 0、只改接縫處的斜率，收尾不動）⇒ C1。最大修正 0.74 格（船尾）／1.6 格（船頭水線 A 以上的設計段；A 以下 ≤ 0.74）"
+    }
+  },
+
+  "framing_ends": {
+    "title": "USS Constitution（1797）新圖紙 04 v2：肋骨圖 —— 船頭與船尾的骨架",
+    "task": "TASK-0486（傘 TASK-0478）",
+    "date": "2026-10-11",
+    "color": 141,
+    "stern": {
+      "last_square": -40, "cants": 7, "breadth_z": 80.0, "sheer_cap": 128.4,
+      "fashion_piece": {"heel_x": 146.0, "head_xy": [126.5, 38.0], "sided": 3, "moulded": 3.8},
+      "wing_transom": {"z": [75, 80], "depth_x": 6},
+      "transoms_z": [[70, 73], [65, 68], [60, 63]], "transom_depth_x": 4,
+      "counter_timbers": {"dy": [6, 12, 25, 36], "sided": 3, "moulded": 3},
+      "stern_rails": {"sill": [93, 94], "head": [102, 103], "taffrail": [125, 128]},
+      "quarter_timbers_x": [119.0, 112.0, 105.0], "quarter_min_dy": 30
+    },
+    "bow": {
+      "last_square": 25, "cants": 6, "sided": 3, "breadth_z": 80.0,
+      "foremost_head_x": 652.0, "foremost_heel_x": 634.8,
+      "knighthead": {"dy": [3, 6], "moulded": 5.0, "top_z": 136},
+      "hawse": {"dy": [[7, 10], [11, 14], [15, 18], [19, 22], [23, 26]], "moulded": 6.0}
+    },
+    "provenance": {
+      "layout": "斜肋排法照 Steel《Elements and Practice of Naval Architecture》(1805) 的兩線法：舷寬線（Z 80）與 bearding line（dy 2.5）在最後一片方肋與最後一根 cant 之間各分等分、對應點連直線；cant 是只在平面上轉角度的垂直平板（Steel：perpendicular to the half-breadth plan）。參考：archive.org 的 Steel 全文（研究 workflow 2026-10-11 抽驗）",
+      "bow": "Humphreys 1794 年 44 砲巡防艦規格（wardepartmentpapers.org document 46934，機器轉錄）：bow timbers 每邊依圖、sided 12\"、根部固定在 deadwood；hawse pieces 每邊 4 根 sided 18\"（≈4 格）；knight heads sided 16–18\"、moulded 12–14\"。本作品：bow timbers 單片 6 根（timber estimate 寫 12 根 ⇒ 每邊 6）、hawse pieces 4 根＋1 根填補（1927 線形的船頭比較飽，第 5 根 dy 23–26 是設計決定）、knighthead 頭伸到 Z 136（設計決定，欄杆以上給 bowsprit 夾著）。最前一根 cant 的角度 38.5°（研究建議 35–45°，沒有原船數字）",
+      "stern": "Humphreys 規格：fashion pieces sided 12\"、moulded 15\"（≈3.8 格）；wing transom 22\" 見方、上緣在 rabbet 上 25'8.5\"（本框 Z≈81.4）；transoms sided 14\"（≈4 格）；counter timbers 11\" → 6\"（本作品取 3 格）；seat transom 9\"。cant 7 對（研究建議 6–9 對）、fashion piece 根部在 X 146 的 deadwood 上 ⇒ cant 角度 3° → 21°、fashion piece 29°（設計決定）。wing transom 長度照 1927 線形的 tuck 外形裁（規格 29 ft、這裡約 25 ft，設計決定）；下面只留 Z 60 以上三道 transom（round tuck：更低的地方船殼已經收進艉柱，transom 只剩幾格）",
+      "counter": "counter timbers 站在 wing transom 上、沿 counter 與船尾面（各自平面上 3 格厚），dy 6／12／25／36 與舷邊各一根；窗位照 11 號船尾正視（中窗 |dy| < 5.7、側窗 13.6–24.3、窄窗 7.5／11.5／27／34.5）留空。窗台、窗楣、taffrail 三道橫材（高度照 11 號船尾正視：主窗列 94.7–101.3、pilaster caps 103.3、taffrail 頂 128.4）",
+      "quarter": "懸出部側面（Z 81 以上、X 97–126）用 3 片方的 quarter timbers（只取側面那條帶子；底面是 counter timbers 的）—— 設計決定。quarter gallery 是裝飾物，之後另做子作品",
+      "not_now": "breast hooks（5＋2 deck hooks）、transom knees、stern knee、hawse holes 留到甲板與艙內階段"
     }
   }
 }

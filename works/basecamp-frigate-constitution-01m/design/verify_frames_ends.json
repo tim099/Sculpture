@@ -1,0 +1,1689 @@
+{
+ "stern": {
+  "fan": [
+   {
+    "k": 1,
+    "heel": [
+     180.78,
+     2.5
+    ],
+    "head": [
+     178.34,
+     49.35
+    ]
+   },
+   {
+    "k": 2,
+    "heel": [
+     175.81,
+     2.5
+    ],
+    "head": [
+     170.93,
+     48.62
+    ]
+   },
+   {
+    "k": 3,
+    "heel": [
+     170.84,
+     2.5
+    ],
+    "head": [
+     163.53,
+     47.89
+    ]
+   },
+   {
+    "k": 4,
+    "heel": [
+     165.87,
+     2.5
+    ],
+    "head": [
+     156.12,
+     47.13
+    ]
+   },
+   {
+    "k": 5,
+    "heel": [
+     160.9,
+     2.5
+    ],
+    "head": [
+     148.72,
+     46.29
+    ]
+   },
+   {
+    "k": 6,
+    "heel": [
+     155.94,
+     2.5
+    ],
+    "head": [
+     141.31,
+     45.25
+    ]
+   },
+   {
+    "k": 7,
+    "heel": [
+     150.97,
+     2.5
+    ],
+    "head": [
+     133.91,
+     43.69
+    ]
+   },
+   {
+    "k": 8,
+    "heel": [
+     146.0,
+     2.5
+    ],
+    "head": [
+     126.5,
+     40.33
+    ]
+   }
+  ]
+ },
+ "bow": {
+  "fan": [
+   {
+    "k": 1,
+    "heel": [
+     619.45,
+     2.5
+    ],
+    "head": [
+     622.32,
+     46.64
+    ]
+   },
+   {
+    "k": 2,
+    "heel": [
+     622.52,
+     2.5
+    ],
+    "head": [
+     628.25,
+     44.0
+    ]
+   },
+   {
+    "k": 3,
+    "heel": [
+     625.59,
+     2.5
+    ],
+    "head": [
+     634.19,
+     40.66
+    ]
+   },
+   {
+    "k": 4,
+    "heel": [
+     628.66,
+     2.5
+    ],
+    "head": [
+     640.13,
+     36.24
+    ]
+   },
+   {
+    "k": 5,
+    "heel": [
+     631.73,
+     2.5
+    ],
+    "head": [
+     646.06,
+     30.49
+    ]
+   },
+   {
+    "k": 6,
+    "heel": [
+     634.8,
+     2.5
+    ],
+    "head": [
+     652.0,
+     24.07
+    ]
+   }
+  ]
+ },
+ "timbers": [
+  {
+   "name": "S-fashion-piece",
+   "kind": "fashion_piece",
+   "yielded_to": {},
+   "heel": [
+    146.0,
+    2.5
+   ],
+   "head": [
+    126.5,
+    38.0
+   ],
+   "cant_deg": 28.8,
+   "d": [
+    -1.5,
+    1.5
+   ],
+   "voxels": 1396,
+   "list": "design/masks/ends/S-fashion-piece.vox.txt",
+   "sha256": "2462a7fb0075a8a214d42d61c32dbc05adabf7bdc7b74e33a15a2c001adad2d1",
+   "bbox": [
+    [
+     124,
+     146
+    ],
+    [
+     3,
+     41
+    ],
+    [
+     33,
+     81
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-fashion-piece.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1396
+   }
+  },
+  {
+   "name": "S-cant1-fwd",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    180.78,
+    2.5
+   ],
+   "head": [
+    178.34,
+    49.35
+   ],
+   "cant_deg": 3.0,
+   "d": [
+    0.0,
+    3.0
+   ],
+   "voxels": 1844,
+   "list": "design/masks/ends/S-cant1-fwd.vox.txt",
+   "sha256": "b47cd21249ea4ce2669d8a7be9bb5bde2b14e5d748a517e21ca059612a69f6d5",
+   "bbox": [
+    [
+     178,
+     183
+    ],
+    [
+     3,
+     49
+    ],
+    [
+     14,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant1-fwd.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1844
+   }
+  },
+  {
+   "name": "S-cant1-aft",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    180.78,
+    2.5
+   ],
+   "head": [
+    178.34,
+    49.35
+   ],
+   "cant_deg": 3.0,
+   "d": [
+    -3.0,
+    0.0
+   ],
+   "voxels": 1794,
+   "list": "design/masks/ends/S-cant1-aft.vox.txt",
+   "sha256": "aa6f0008a36a24062d8eb40c7538491b9345453568ad0fff731bdfc2985f0033",
+   "bbox": [
+    [
+     175,
+     180
+    ],
+    [
+     3,
+     49
+    ],
+    [
+     14,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant1-aft.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1794
+   }
+  },
+  {
+   "name": "S-cant2-fwd",
+   "kind": "stern_cant",
+   "yielded_to": {
+    "S-cant1-aft": 63
+   },
+   "heel": [
+    175.81,
+    2.5
+   ],
+   "head": [
+    170.93,
+    48.62
+   ],
+   "cant_deg": 6.0,
+   "d": [
+    0.0,
+    3.0
+   ],
+   "voxels": 1628,
+   "list": "design/masks/ends/S-cant2-fwd.vox.txt",
+   "sha256": "7425c08415113bdcd29136731c963fb82837e6b7731236ab790cdb199001ca11",
+   "bbox": [
+    [
+     171,
+     178
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     15,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant2-fwd.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1628
+   }
+  },
+  {
+   "name": "S-cant2-aft",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    175.81,
+    2.5
+   ],
+   "head": [
+    170.93,
+    48.62
+   ],
+   "cant_deg": 6.0,
+   "d": [
+    -3.0,
+    0.0
+   ],
+   "voxels": 1748,
+   "list": "design/masks/ends/S-cant2-aft.vox.txt",
+   "sha256": "9f654bb53c74965fdb887632f590e9de51152ca4cca3ae7aaf15e26953351393",
+   "bbox": [
+    [
+     168,
+     175
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     15,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant2-aft.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1748
+   }
+  },
+  {
+   "name": "S-cant3-fwd",
+   "kind": "stern_cant",
+   "yielded_to": {
+    "S-cant2-aft": 65
+   },
+   "heel": [
+    170.84,
+    2.5
+   ],
+   "head": [
+    163.53,
+    47.89
+   ],
+   "cant_deg": 9.2,
+   "d": [
+    0.0,
+    3.0
+   ],
+   "voxels": 1668,
+   "list": "design/masks/ends/S-cant3-fwd.vox.txt",
+   "sha256": "aa46c26ff2c404838481a43a1b63b1c1d1e3895f548564c1e76c7a161b675401",
+   "bbox": [
+    [
+     164,
+     172
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     15,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant3-fwd.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1668
+   }
+  },
+  {
+   "name": "S-cant3-aft",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    170.84,
+    2.5
+   ],
+   "head": [
+    163.53,
+    47.89
+   ],
+   "cant_deg": 9.2,
+   "d": [
+    -3.0,
+    0.0
+   ],
+   "voxels": 1776,
+   "list": "design/masks/ends/S-cant3-aft.vox.txt",
+   "sha256": "3fc4afb0cdb3212dedd40d5626dadd472e4423f322c12285dc544a9149fd0922",
+   "bbox": [
+    [
+     160,
+     170
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     16,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant3-aft.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1776
+   }
+  },
+  {
+   "name": "S-cant4-fwd",
+   "kind": "stern_cant",
+   "yielded_to": {
+    "S-cant3-aft": 76
+   },
+   "heel": [
+    165.87,
+    2.5
+   ],
+   "head": [
+    156.12,
+    47.13
+   ],
+   "cant_deg": 12.3,
+   "d": [
+    0.0,
+    3.0
+   ],
+   "voxels": 1608,
+   "list": "design/masks/ends/S-cant4-fwd.vox.txt",
+   "sha256": "71d841258a0af83012822208941d799e9bf2e80eca420a44215cb3cba6634270",
+   "bbox": [
+    [
+     156,
+     167
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     16,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant4-fwd.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1608
+   }
+  },
+  {
+   "name": "S-cant4-aft",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    165.87,
+    2.5
+   ],
+   "head": [
+    156.12,
+    47.13
+   ],
+   "cant_deg": 12.3,
+   "d": [
+    -3.0,
+    0.0
+   ],
+   "voxels": 1738,
+   "list": "design/masks/ends/S-cant4-aft.vox.txt",
+   "sha256": "f1bd513d7730ec1a462238c88da4f5efaa6c213cae22b7cff1d3eab5b2d983ef",
+   "bbox": [
+    [
+     153,
+     165
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     17,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant4-aft.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1738
+   }
+  },
+  {
+   "name": "S-cant5-fwd",
+   "kind": "stern_cant",
+   "yielded_to": {
+    "S-cant4-aft": 81
+   },
+   "heel": [
+    160.9,
+    2.5
+   ],
+   "head": [
+    148.72,
+    46.29
+   ],
+   "cant_deg": 15.6,
+   "d": [
+    0.0,
+    3.0
+   ],
+   "voxels": 1528,
+   "list": "design/masks/ends/S-cant5-fwd.vox.txt",
+   "sha256": "08018242e239b81bd9eb45882472658646e1db487d5f9b79a88381f13e6de9ca",
+   "bbox": [
+    [
+     148,
+     162
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     17,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant5-fwd.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1528
+   }
+  },
+  {
+   "name": "S-cant5-aft",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    160.9,
+    2.5
+   ],
+   "head": [
+    148.72,
+    46.29
+   ],
+   "cant_deg": 15.6,
+   "d": [
+    -3.0,
+    0.0
+   ],
+   "voxels": 1672,
+   "list": "design/masks/ends/S-cant5-aft.vox.txt",
+   "sha256": "46fdf7163d9b16f72a139b69820dd2b1c537b8b645ee65fcdd769f024b76dc2d",
+   "bbox": [
+    [
+     145,
+     160
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     18,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant5-aft.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1672
+   }
+  },
+  {
+   "name": "S-cant6-fwd",
+   "kind": "stern_cant",
+   "yielded_to": {
+    "S-cant5-aft": 89
+   },
+   "heel": [
+    155.94,
+    2.5
+   ],
+   "head": [
+    141.31,
+    45.25
+   ],
+   "cant_deg": 18.9,
+   "d": [
+    0.0,
+    3.0
+   ],
+   "voxels": 1538,
+   "list": "design/masks/ends/S-cant6-fwd.vox.txt",
+   "sha256": "ee966d01f88710928c3b5a548283a316771a8d6e89c4c3cd3b976cd43181b00d",
+   "bbox": [
+    [
+     140,
+     157
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     20,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant6-fwd.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1538
+   }
+  },
+  {
+   "name": "S-cant6-aft",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    155.94,
+    2.5
+   ],
+   "head": [
+    141.31,
+    45.25
+   ],
+   "cant_deg": 18.9,
+   "d": [
+    -3.0,
+    0.0
+   ],
+   "voxels": 1616,
+   "list": "design/masks/ends/S-cant6-aft.vox.txt",
+   "sha256": "38435cbe562b2c01c6a7bfddb55097dee4f96d94bf4a8e6dc0b28310e4bdaa98",
+   "bbox": [
+    [
+     137,
+     155
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     21,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant6-aft.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1616
+   }
+  },
+  {
+   "name": "S-cant7-fwd",
+   "kind": "stern_cant",
+   "yielded_to": {
+    "S-cant6-aft": 85
+   },
+   "heel": [
+    150.97,
+    2.5
+   ],
+   "head": [
+    133.91,
+    43.69
+   ],
+   "cant_deg": 22.5,
+   "d": [
+    0.0,
+    3.0
+   ],
+   "voxels": 1422,
+   "list": "design/masks/ends/S-cant7-fwd.vox.txt",
+   "sha256": "c50895f1f2ae46e81062bf11bf1732645238273c32a461122860a51e986e9113",
+   "bbox": [
+    [
+     132,
+     152
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     26,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant7-fwd.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1422
+   }
+  },
+  {
+   "name": "S-cant7-aft",
+   "kind": "stern_cant",
+   "yielded_to": {},
+   "heel": [
+    150.97,
+    2.5
+   ],
+   "head": [
+    133.91,
+    43.69
+   ],
+   "cant_deg": 22.5,
+   "d": [
+    -3.0,
+    0.0
+   ],
+   "voxels": 1568,
+   "list": "design/masks/ends/S-cant7-aft.vox.txt",
+   "sha256": "0ab7a90216a99e5704c04355c78c51587c49dcb0e7cadb0879d4056771282a71",
+   "bbox": [
+    [
+     129,
+     150
+    ],
+    [
+     3,
+     48
+    ],
+    [
+     29,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-cant7-aft.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1568
+   }
+  },
+  {
+   "name": "S-counter-timber-6",
+   "kind": "counter_timber",
+   "yielded_to": {},
+   "dy": 6,
+   "voxels": 744,
+   "list": "design/masks/ends/S-counter-timber-6.vox.txt",
+   "sha256": "6ed11000f01b654666d986a6d9563a03d2cf24991baee6fdbc61e4f451069649",
+   "bbox": [
+    [
+     98,
+     126
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     81,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-counter-timber-6.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 744
+   }
+  },
+  {
+   "name": "S-counter-timber-12",
+   "kind": "counter_timber",
+   "yielded_to": {},
+   "dy": 12,
+   "voxels": 744,
+   "list": "design/masks/ends/S-counter-timber-12.vox.txt",
+   "sha256": "11f1d355ea369b85577aef2c523f3da0238e7f36e01314c99aff24a0f4f541c2",
+   "bbox": [
+    [
+     98,
+     126
+    ],
+    [
+     12,
+     14
+    ],
+    [
+     81,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-counter-timber-12.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 744
+   }
+  },
+  {
+   "name": "S-counter-timber-25",
+   "kind": "counter_timber",
+   "yielded_to": {},
+   "dy": 25,
+   "voxels": 744,
+   "list": "design/masks/ends/S-counter-timber-25.vox.txt",
+   "sha256": "4c796dc2add1b269bae1131d3f6d956b0c8bd1a4e87ccbb4f2701189efe6323b",
+   "bbox": [
+    [
+     98,
+     126
+    ],
+    [
+     25,
+     27
+    ],
+    [
+     81,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-counter-timber-25.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 744
+   }
+  },
+  {
+   "name": "S-counter-timber-36",
+   "kind": "counter_timber",
+   "yielded_to": {
+    "S-fashion-piece": 4
+   },
+   "dy": 36,
+   "voxels": 736,
+   "list": "design/masks/ends/S-counter-timber-36.vox.txt",
+   "sha256": "3fa7c6bfb294d2b0be11410912138d21ae5fe956b108588a5bcf5fc30cb89796",
+   "bbox": [
+    [
+     98,
+     126
+    ],
+    [
+     36,
+     38
+    ],
+    [
+     81,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-counter-timber-36.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 736
+   }
+  },
+  {
+   "name": "S-counter-timber-side",
+   "kind": "counter_timber",
+   "yielded_to": {
+    "S-counter-timber-36": 14
+   },
+   "dy": "side",
+   "voxels": 716,
+   "list": "design/masks/ends/S-counter-timber-side.vox.txt",
+   "sha256": "e45c0a04aa58bbb1dd0186a14aeb4c8a22a486eb828d8d14bd0e4be2a3c6fea8",
+   "bbox": [
+    [
+     98,
+     126
+    ],
+    [
+     34,
+     47
+    ],
+    [
+     81,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-counter-timber-side.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 716
+   }
+  },
+  {
+   "name": "S-rail-sill",
+   "kind": "stern_rail",
+   "yielded_to": {
+    "S-counter-timber-6": 15,
+    "S-counter-timber-12": 15,
+    "S-counter-timber-25": 15,
+    "S-counter-timber-36": 15,
+    "S-counter-timber-side": 15
+   },
+   "z": [
+    93,
+    94
+   ],
+   "voxels": 300,
+   "list": "design/masks/ends/S-rail-sill.vox.txt",
+   "sha256": "a7e7fb21e774c7074857ffb3ee3b89d89ddf9eaf89755da62b75578ccaea7fca",
+   "bbox": [
+    [
+     110,
+     112
+    ],
+    [
+     3,
+     47
+    ],
+    [
+     93,
+     94
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-rail-sill.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 300
+   }
+  },
+  {
+   "name": "S-rail-head",
+   "kind": "stern_rail",
+   "yielded_to": {
+    "S-counter-timber-6": 15,
+    "S-counter-timber-12": 15,
+    "S-counter-timber-25": 15,
+    "S-counter-timber-36": 15,
+    "S-counter-timber-side": 15
+   },
+   "z": [
+    102,
+    103
+   ],
+   "voxels": 280,
+   "list": "design/masks/ends/S-rail-head.vox.txt",
+   "sha256": "a77dab0816c687147233a539afa65911689b2487dca77cb951350d583178b37a",
+   "bbox": [
+    [
+     106,
+     108
+    ],
+    [
+     3,
+     45
+    ],
+    [
+     102,
+     103
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-rail-head.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 280
+   }
+  },
+  {
+   "name": "S-rail-taffrail",
+   "kind": "stern_rail",
+   "yielded_to": {
+    "S-counter-timber-6": 9,
+    "S-counter-timber-12": 9,
+    "S-counter-timber-25": 9,
+    "S-counter-timber-36": 9,
+    "S-counter-timber-side": 6
+   },
+   "z": [
+    125,
+    128
+   ],
+   "voxels": 156,
+   "list": "design/masks/ends/S-rail-taffrail.vox.txt",
+   "sha256": "75be5f46e2b0ecd42773c07d4192e9050a901df25c3b98110a8ceb9c5ee5fa14",
+   "bbox": [
+    [
+     98,
+     100
+    ],
+    [
+     3,
+     42
+    ],
+    [
+     125,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-rail-taffrail.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 156
+   }
+  },
+  {
+   "name": "S-wing-transom",
+   "kind": "transom",
+   "yielded_to": {
+    "S-fashion-piece": 107
+   },
+   "z": [
+    75,
+    80
+   ],
+   "voxels": 2414,
+   "list": "design/masks/ends/S-wing-transom.vox.txt",
+   "sha256": "89d1ea1a6b7eda506c3bf419125260ee6972056f26b3f9611e461e04d1fae693",
+   "bbox": [
+    [
+     125,
+     130
+    ],
+    [
+     3,
+     42
+    ],
+    [
+     75,
+     80
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-wing-transom.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 2414
+   }
+  },
+  {
+   "name": "S-transom1",
+   "kind": "transom",
+   "yielded_to": {},
+   "z": [
+    70,
+    73
+   ],
+   "voxels": 698,
+   "list": "design/masks/ends/S-transom1.vox.txt",
+   "sha256": "cf5ba6f404d7380e46911677d79516f162a03bff87d4890acdd1f1db4b8e5d7c",
+   "bbox": [
+    [
+     130,
+     133
+    ],
+    [
+     3,
+     27
+    ],
+    [
+     70,
+     73
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-transom1.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 698
+   }
+  },
+  {
+   "name": "S-transom2",
+   "kind": "transom",
+   "yielded_to": {},
+   "z": [
+    65,
+    68
+   ],
+   "voxels": 404,
+   "list": "design/masks/ends/S-transom2.vox.txt",
+   "sha256": "7787f6cc36bbbd9f1d56841a6be221082c49ecca740e343aba94131098153ef8",
+   "bbox": [
+    [
+     131,
+     134
+    ],
+    [
+     3,
+     20
+    ],
+    [
+     65,
+     68
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-transom2.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 404
+   }
+  },
+  {
+   "name": "S-transom3",
+   "kind": "transom",
+   "yielded_to": {},
+   "z": [
+    60,
+    63
+   ],
+   "voxels": 114,
+   "list": "design/masks/ends/S-transom3.vox.txt",
+   "sha256": "e7f3574c43c7129014bbc4122609dc3893d408f6a1855f67c0a0199f4d0db6f4",
+   "bbox": [
+    [
+     132,
+     135
+    ],
+    [
+     3,
+     10
+    ],
+    [
+     60,
+     63
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-transom3.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 114
+   }
+  },
+  {
+   "name": "S-quarter1",
+   "kind": "quarter_timber",
+   "yielded_to": {
+    "S-counter-timber-side": 17
+   },
+   "x": [
+    118,
+    120
+   ],
+   "voxels": 484,
+   "list": "design/masks/ends/S-quarter1.vox.txt",
+   "sha256": "14119976a5d7adb25ebcf984e02281f22ffc9b1fb4aee37563efd1cff4a0fece",
+   "bbox": [
+    [
+     118,
+     120
+    ],
+    [
+     42,
+     48
+    ],
+    [
+     83,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-quarter1.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 484
+   }
+  },
+  {
+   "name": "S-quarter2",
+   "kind": "quarter_timber",
+   "yielded_to": {
+    "S-counter-timber-side": 16,
+    "S-rail-sill": 4
+   },
+   "x": [
+    111,
+    113
+   ],
+   "voxels": 382,
+   "list": "design/masks/ends/S-quarter2.vox.txt",
+   "sha256": "7bdf1177919719562c49682266379d3a3bdaea74f006cfb89450566a8a89496c",
+   "bbox": [
+    [
+     111,
+     113
+    ],
+    [
+     42,
+     48
+    ],
+    [
+     90,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-quarter2.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 382
+   }
+  },
+  {
+   "name": "S-quarter3",
+   "kind": "quarter_timber",
+   "yielded_to": {
+    "S-counter-timber-side": 22,
+    "S-rail-head": 1
+   },
+   "x": [
+    104,
+    106
+   ],
+   "voxels": 162,
+   "list": "design/masks/ends/S-quarter3.vox.txt",
+   "sha256": "246b2ff7ea2390e9a2dd5f1d3abdb5652aeba4763740b8b81b944143a5f87c64",
+   "bbox": [
+    [
+     104,
+     106
+    ],
+    [
+     41,
+     45
+    ],
+    [
+     104,
+     125
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/S-quarter3.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 162
+   }
+  },
+  {
+   "name": "B-cant1",
+   "kind": "bow_cant",
+   "yielded_to": {},
+   "heel": [
+    619.45,
+    2.5
+   ],
+   "head": [
+    622.32,
+    46.64
+   ],
+   "cant_deg": 3.7,
+   "d": [
+    -1.5,
+    1.5
+   ],
+   "voxels": 1720,
+   "list": "design/masks/ends/B-cant1.vox.txt",
+   "sha256": "79fe0fef94e85da898acc3546a97cea9ade76e70f11c97a1546123f1859e7242",
+   "bbox": [
+    [
+     618,
+     623
+    ],
+    [
+     3,
+     47
+    ],
+    [
+     17,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-cant1.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1720
+   }
+  },
+  {
+   "name": "B-cant2",
+   "kind": "bow_cant",
+   "yielded_to": {},
+   "heel": [
+    622.52,
+    2.5
+   ],
+   "head": [
+    628.25,
+    44.0
+   ],
+   "cant_deg": 7.9,
+   "d": [
+    -1.5,
+    1.5
+   ],
+   "voxels": 1668,
+   "list": "design/masks/ends/B-cant2.vox.txt",
+   "sha256": "a004c593d546b63dc6b92e98f18879edafda66f9371f4653062b067a6359f5d5",
+   "bbox": [
+    [
+     621,
+     629
+    ],
+    [
+     3,
+     45
+    ],
+    [
+     18,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-cant2.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1668
+   }
+  },
+  {
+   "name": "B-cant3",
+   "kind": "bow_cant",
+   "yielded_to": {},
+   "heel": [
+    625.59,
+    2.5
+   ],
+   "head": [
+    634.19,
+    40.66
+   ],
+   "cant_deg": 12.7,
+   "d": [
+    -1.5,
+    1.5
+   ],
+   "voxels": 1632,
+   "list": "design/masks/ends/B-cant3.vox.txt",
+   "sha256": "7f947e94afdf3f036561d9c762e8fdb3d0e317ed85253b5e0e2da93ac0667771",
+   "bbox": [
+    [
+     624,
+     635
+    ],
+    [
+     3,
+     43
+    ],
+    [
+     19,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-cant3.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1632
+   }
+  },
+  {
+   "name": "B-cant4",
+   "kind": "bow_cant",
+   "yielded_to": {},
+   "heel": [
+    628.66,
+    2.5
+   ],
+   "head": [
+    640.13,
+    36.24
+   ],
+   "cant_deg": 18.8,
+   "d": [
+    -1.5,
+    1.5
+   ],
+   "voxels": 1638,
+   "list": "design/masks/ends/B-cant4.vox.txt",
+   "sha256": "cf0612925d63f3fec8dd7173a8238507d40dd0057988dbacb615939abae50632",
+   "bbox": [
+    [
+     627,
+     641
+    ],
+    [
+     3,
+     39
+    ],
+    [
+     21,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-cant4.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1638
+   }
+  },
+  {
+   "name": "B-cant5",
+   "kind": "bow_cant",
+   "yielded_to": {},
+   "heel": [
+    631.73,
+    2.5
+   ],
+   "head": [
+    646.06,
+    30.49
+   ],
+   "cant_deg": 27.1,
+   "d": [
+    -1.5,
+    1.5
+   ],
+   "voxels": 1392,
+   "list": "design/masks/ends/B-cant5.vox.txt",
+   "sha256": "c77549b4ad9822cbd23541acf33029c80cb59c162f731013be819598a044935a",
+   "bbox": [
+    [
+     630,
+     648
+    ],
+    [
+     3,
+     33
+    ],
+    [
+     24,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-cant5.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1392
+   }
+  },
+  {
+   "name": "B-cant6",
+   "kind": "bow_cant",
+   "yielded_to": {
+    "B-cant5": 4
+   },
+   "heel": [
+    634.8,
+    2.5
+   ],
+   "head": [
+    652.0,
+    24.07
+   ],
+   "cant_deg": 38.6,
+   "d": [
+    -1.5,
+    1.5
+   ],
+   "voxels": 1456,
+   "list": "design/masks/ends/B-cant6.vox.txt",
+   "sha256": "7be1d92bac6f1400197de28542b2d8c5d19aa75f026fdd0d8678ce79d6280717",
+   "bbox": [
+    [
+     633,
+     654
+    ],
+    [
+     3,
+     27
+    ],
+    [
+     27,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-cant6.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 1456
+   }
+  },
+  {
+   "name": "B-knighthead",
+   "kind": "knighthead",
+   "yielded_to": {},
+   "dy": [
+    3,
+    6
+   ],
+   "voxels": 4312,
+   "list": "design/masks/ends/B-knighthead.vox.txt",
+   "sha256": "e65fc3fa61c92815f9736831d31efc87547f133c744c6b7610046ac26a701219",
+   "bbox": [
+    [
+     637,
+     672
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     30,
+     136
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-knighthead.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 4312
+   }
+  },
+  {
+   "name": "B-hawse1",
+   "kind": "hawse_piece",
+   "yielded_to": {},
+   "dy": [
+    7,
+    10
+   ],
+   "voxels": 4112,
+   "list": "design/masks/ends/B-hawse1.vox.txt",
+   "sha256": "6849c63bc075daae702e195eb3de2287fdaddaf76252dea5ee8ab23ed7c77bdb",
+   "bbox": [
+    [
+     640,
+     669
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     37,
+     124
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-hawse1.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 4112
+   }
+  },
+  {
+   "name": "B-hawse2",
+   "kind": "hawse_piece",
+   "yielded_to": {},
+   "dy": [
+    11,
+    14
+   ],
+   "voxels": 3640,
+   "list": "design/masks/ends/B-hawse2.vox.txt",
+   "sha256": "366e0c8f0341dffc1c5ad9a6898aaf5b1c0d6e8d1a3cd9fef87ada05881c28a2",
+   "bbox": [
+    [
+     643,
+     666
+    ],
+    [
+     11,
+     14
+    ],
+    [
+     44,
+     124
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-hawse2.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 3640
+   }
+  },
+  {
+   "name": "B-hawse3",
+   "kind": "hawse_piece",
+   "yielded_to": {},
+   "dy": [
+    15,
+    18
+   ],
+   "voxels": 3058,
+   "list": "design/masks/ends/B-hawse3.vox.txt",
+   "sha256": "1bf18c1651110cf5fc0da0465b2a6c030f48b01ab08ac18d0d477ffeabd37474",
+   "bbox": [
+    [
+     647,
+     663
+    ],
+    [
+     15,
+     18
+    ],
+    [
+     53,
+     124
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-hawse3.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 3058
+   }
+  },
+  {
+   "name": "B-hawse4",
+   "kind": "hawse_piece",
+   "yielded_to": {},
+   "dy": [
+    19,
+    22
+   ],
+   "voxels": 2192,
+   "list": "design/masks/ends/B-hawse4.vox.txt",
+   "sha256": "76e4816777a09fc39465d04b0a590021eef4e3043783eb8c4bba07ff6691098e",
+   "bbox": [
+    [
+     650,
+     660
+    ],
+    [
+     19,
+     22
+    ],
+    [
+     64,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-hawse4.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 2192
+   }
+  },
+  {
+   "name": "B-hawse5",
+   "kind": "hawse_piece",
+   "yielded_to": {},
+   "dy": [
+    23,
+    26
+   ],
+   "voxels": 356,
+   "list": "design/masks/ends/B-hawse5.vox.txt",
+   "sha256": "27ab46ff0a82e2850133df0493acdf98311ad7f43a5f1a130173d6016f77674e",
+   "bbox": [
+    [
+     653,
+     656
+    ],
+    [
+     23,
+     25
+    ],
+    [
+     82,
+     123
+    ]
+   ],
+   "stamp": {
+    "voxels": "design/masks/ends/B-hawse5.vox.txt",
+    "at": "0,0,0",
+    "expect_pixels": 356
+   }
+  }
+ ],
+ "total_voxels": 60798
+}

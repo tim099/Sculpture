@@ -1,0 +1,2393 @@
+{
+ "note": "階段六（TASK-0486）讀圖原始讀數：11 號（1927 MIT PLAN VIII）水線半寬圖兩頭、sheer plan 兩頭輪廓、body plan 船尾正視。每份讀數配一個 verifier 獨立重量（verify 欄）；⚠ 這是原始讀數＋verifier 修正，還沒整理成設計 —— 用的時候以 verify.corrections 為準，數字要再挑。只當參考與驗證，⛔ 不是設計本身。",
+ "date": "2026-10-11",
+ "by": "basecamp（workflow read-frigate-ends，3 讀圖＋3 verifier）",
+ "source_image": "references/uss-constitution-1927/RG19_ALPHA_Constitution_1797_11.JPG",
+ "readings": [
+  {
+   "task": "Read the LINES (half-breadth) plan ends on drawing 11 (RG19_ALPHA_Constitution_1797_11.JPG): find the baseline and station ticks, fit px to work X, find the half-breadth scale, sample waterlines A-F plus the top lines at stations 10, 9.5, 9, 8, 2, 1, 0.5 and 0, find where each curve ends, get waterline heights from the sheer and body plans, and cross-check against source_lines.json d11 at stations 8 and 2.",
+   "calibration": "These are partial results; I went over the 20-minute budget. All six waterlines A-F are traced and checked against the letters on the drawing, so their stern and bow values and end points are solid (about ±1.5 px, or ±0.25 cells). The RAIL and SPAR DECK curves are only partly done: I have pixel positions for the top lines at stations 10, 2, 1 and 0.5, but I could not reliably tell which of them is RAIL and which is SPAR DECK. At station 2, waterlines A-D sit in a crowd of 5 lines near the top and their assignment is ambiguous. One important result: the half-breadths in the LINES plan run vertically on the sheet. Treating them with the vertical scale (19.25 px/ft) fits the body plan much better than the horizontal scale (18.5 px/ft) does, and even then the LINES values come out about 2% wider than source_lines.json.",
+   "data": {
+    "output_folder": "C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/lines",
+    "files": {
+     "traces_stern": "traces_stern.json (sub-pixel ridge traces A-F seeded at x=1017)",
+     "traces_bow": "traces_bow.json (b5=A, b4=B, b3=C, b2=D, b1=E, F2=F, b7=dashed HEAD line)",
+     "samples": "samples.json",
+     "overlays": [
+      "overlay_stern.png",
+      "overlay_bow.png",
+      "overlay_bow_zoom.png"
+     ],
+     "scripts": [
+      "crop.py",
+      "tracer.py",
+      "run_trace.py",
+      "sample.py",
+      "stations.py",
+      "fitx.py",
+      "scalebar.py",
+      "vscan.py",
+      "sheerscan.py"
+     ]
+    },
+    "1_baseline_and_stations": {
+     "method": "Station lines: for each row y=3200..3575 (every 3 px), took the brightest column within ±30 px, refined it with a centroid, then fitted x(y) robustly (rms 0.23-0.63 px). Baseline: peaks found by scanning columns.",
+     "baseline": {
+      "finding": "There are two parallel lines about 10.5 px apart. The lower one is the centreline (CL). The upper one is the keel/sternpost/stem half-siding (HS); the waterlines end on it. HS = 10 px = 0.52 ft ≈ 1.6 cells, which matches the first body-plan point hb 1.86.",
+      "CL_y_samples": {
+       "500": 3603,
+       "1000": 3594,
+       "1300": 3590.5,
+       "2000": 3583,
+       "3000": 3566,
+       "4000": 3548,
+       "4500": 3536
+      },
+      "tilt": "The CL slopes about -0.016 (y falls toward the bow), but the station lines are nearly vertical (dx/dy about +0.005). So the two are about 0.6° off perpendicular (drawing or paper distortion). Half-breadths were therefore measured vertically from the local CL, found again at each sample x.",
+      "CL_HS_at_stations_[yCL,yHS,halfsiding_px]": {
+       "0": [
+        3546.1,
+        3536.1,
+        10
+       ],
+       "1": [
+        3552,
+        3543.1,
+        8.9
+       ],
+       "2": [
+        3559,
+        3550,
+        9
+       ],
+       "8": [
+        3590,
+        3580,
+        10
+       ],
+       "9": [
+        3594,
+        3584,
+        10
+       ],
+       "10": [
+        3599,
+        3591,
+        8
+       ],
+       "9.5": [
+        3597,
+        3585.9,
+        11.1
+       ],
+       "0.5": [
+        3550,
+        3538,
+        12
+       ]
+      }
+     },
+     "station_px_x_at_centreline": {
+      "0": 4038.5,
+      "1": 3706.6,
+      "2": 3371,
+      "3": 3039.5,
+      "4": 2703.4,
+      "5": 2365.5,
+      "6": 2025.8,
+      "7": 1690.2,
+      "8": 1356.1,
+      "9": 1017.1,
+      "10": 677.9
+     },
+     "station_spacing_px": "331.5-339.8, mean 336.06",
+     "fit": "X_cells = 0.161962*px + 17.271 (stations 9..1; 6.174 px/cell)",
+     "residuals_cells_known_minus_fit": {
+      "1": -0.5,
+      "2": -0.04,
+      "3": -0.05,
+      "4": 0.28,
+      "5": 0.41,
+      "6": 0.43,
+      "7": 0.28,
+      "8": -0.31,
+      "9": -0.5
+     },
+     "rms": 0.35,
+     "residual_pattern": "Bowed: -0.5 at both ends and +0.4 in the middle, so there is slight nonlinearity. If anything, linear extrapolation slightly overestimates the reach at both ends.",
+     "extrapolated": {
+      "station_10_X": 127.06,
+      "station_0_X": 671.35,
+      "equal_spacing_model": "X(st) = 182.25 + (9-st)*54.47 gives st10 = 127.8 and st0 = 672.5",
+      "vs_expected": "st10 is about 1.2 cells forward of the sternpost aft edge at LWL (125.9); st0 is 0.2 cells from the cutwater at LWL (671.5)"
+     },
+     "station_9.5_px": 847.5,
+     "station_0.5_px": 3872.55
+    },
+    "2_half_breadth_scale": {
+     "FEET_scale_bar": "Found at x 3926..4297, y 3702..3727, labels at y≈3745 reading 0,2,...,20. Located 21 ticks from column-profile peaks (y 3716-3724); the end ticks are at 3926.2 and 4297.1, giving 370.9 px / 20 ft = 18.55 px/ft. Major ticks every 2 ft give 18.49 px/ft. Result: 18.52 ± 0.03 px/ft. The bar is horizontal.",
+     "station_spacing": "336.06 px per 54.5 cells gives 6.17 px/cell, i.e. 18.56 px per drawing-ft at 3.0065 cells/ft. This is also horizontal.",
+     "key_point": "LINES-plan half-breadths run vertically on the sheet, and this sheet's vertical scale differs from its horizontal one: waterlines in the sheer and body plans are 57.6 px per 3 ft, i.e. 19.2 px/ft, not 18.5. So the scale bar and station spacing cannot set the half-breadth scale. Both conversions are given: cells_V = px*3.048/19.25 = 0.15834 cells/px (recommended); cells_H = px*3.0065/18.5 = 0.16251 cells/px.",
+     "best_fit_from_body_plan_crosscheck": "Ratios of body-plan hb to LINES px at stations 8 and 2 come to 0.151-0.159, mean about 0.155 cells/px, i.e. about 19.66 px per true ft. cells_V is within about 2% of this; cells_H is about 5% too wide."
+    },
+    "3_half_breadths": {
+     "method": "Sub-pixel ridge tracer (Gaussian-smoothed image, perpendicular search ±1.5 px, parabolic peak), seeded from vertical scans and checked visually on the overlays. Values at stations come from the trace, or from vertical scans 6-8 px either side of the dashed station line, averaged, where the trace was missing (marked 'scan'). hb_px = y_CL(local) - y_curve. ft = px/19.25.",
+     "letters": "At the stern, the letters A, B, C, D, E, F sit beside curves 1-6 from the top (blobs at (885,3352), (937,3403), (1003,3460), (1028,3493), (1060,3527), (1083,3555)). At the bow, blobs at (3770,3288), (3753,3308), (3722,3335), (3690,3367), (3652,3413), (3595,3472) are A-F from the outside. RAIL text is at about (3780-3820, 3245-3260).",
+     "A": {
+      "0": "0 (ended at x 3975)",
+      "1": {
+       "hb_px": 288.9,
+       "ft": 15.01,
+       "cells_V": 45.75,
+       "cells_H": 46.95
+      },
+      "2": {
+       "candidates": "one of y 3185.0 / 3170.5 → hb 374.0 / 388.5 px = 59.2 / 61.5 cells_V; ambiguous"
+      },
+      "8": {
+       "hb_px": 341,
+       "ft": 17.71,
+       "cells_V": 53.99,
+       "cells_H": 55.42,
+       "note": "scan; line at y≈3249 in a crowded top area; medium confidence"
+      },
+      "9": {
+       "hb_px": 284.9,
+       "ft": 14.8,
+       "cells_V": 45.11,
+       "cells_H": 46.3
+      },
+      "10": "0 (ends at post)",
+      "9.5": {
+       "hb_px": 209.4,
+       "ft": 10.88,
+       "cells_V": 33.16,
+       "cells_H": 34.04
+      },
+      "0.5": {
+       "hb_px": 171.9,
+       "ft": 8.93,
+       "cells_V": 27.22,
+       "cells_H": 27.94
+      }
+     },
+     "B": {
+      "0": "0",
+      "1": {
+       "hb_px": 262.3,
+       "ft": 13.63,
+       "cells_V": 41.53,
+       "cells_H": 42.63,
+       "note": "scan"
+      },
+      "2": {
+       "candidates": "y 3185.0 (hb 374.0 px = 59.2 cells_V) or y 3199.5 (359.5 px = 56.9); ambiguous"
+      },
+      "8": {
+       "hb_px": 318.3,
+       "ft": 16.54,
+       "cells_V": 50.4,
+       "cells_H": 51.73
+      },
+      "9": {
+       "hb_px": 218.1,
+       "ft": 11.33,
+       "cells_V": 34.53,
+       "cells_H": 35.44
+      },
+      "10": "0",
+      "9.5": {
+       "hb_px": 126.9,
+       "ft": 6.59,
+       "cells_V": 20.09,
+       "cells_H": 20.62,
+       "note": "first-pass trace and scan agree (3470.1)"
+      },
+      "0.5": {
+       "hb_px": 134.1,
+       "ft": 6.97,
+       "cells_V": 21.24,
+       "cells_H": 21.8
+      }
+     },
+     "C": {
+      "0": "0",
+      "1": {
+       "hb_px": 218.4,
+       "ft": 11.35,
+       "cells_V": 34.58,
+       "cells_H": 35.49,
+       "note": "scan"
+      },
+      "2": {
+       "likely": "y 3207.4 → hb 351.6 px = 55.7 cells_V (assignment medium-low)"
+      },
+      "8": {
+       "hb_px": 260,
+       "ft": 13.51,
+       "cells_V": 41.16,
+       "cells_H": 42.25
+      },
+      "9": {
+       "hb_px": 137.2,
+       "ft": 7.13,
+       "cells_V": 21.72,
+       "cells_H": 22.29
+      },
+      "10": "0 (at half-siding)",
+      "9.5": {
+       "hb_px": 64.6,
+       "ft": 3.36,
+       "cells_V": 10.23,
+       "cells_H": 10.5
+      },
+      "0.5": {
+       "hb_px": 74.6,
+       "ft": 3.88,
+       "cells_V": 11.81,
+       "cells_H": 12.13
+      }
+     },
+     "D": {
+      "0": "0",
+      "1": {
+       "hb_px": 161.7,
+       "ft": 8.4,
+       "cells_V": 25.6,
+       "cells_H": 26.28
+      },
+      "2": {
+       "likely": "y 3240.6 → hb 318.4 px = 50.4 cells_V (medium)"
+      },
+      "8": {
+       "hb_px": 191.6,
+       "ft": 9.95,
+       "cells_V": 30.33,
+       "cells_H": 31.13
+      },
+      "9": {
+       "hb_px": 82.6,
+       "ft": 4.29,
+       "cells_V": 13.08,
+       "cells_H": 13.43
+      },
+      "10": "0",
+      "9.5": {
+       "hb_px": 34.6,
+       "ft": 1.8,
+       "cells_V": 5.48,
+       "cells_H": 5.63
+      },
+      "0.5": {
+       "hb_px": 12.8,
+       "note": "= half-siding; D ends at x 3871.9"
+      }
+     },
+     "E": {
+      "0": "0",
+      "1": {
+       "hb_px": 93.8,
+       "ft": 4.87,
+       "cells_V": 14.85,
+       "cells_H": 15.24
+      },
+      "2": {
+       "hb_px": 250.1,
+       "ft": 12.99,
+       "cells_V": 39.59,
+       "cells_H": 40.64
+      },
+      "8": {
+       "hb_px": 124.3,
+       "ft": 6.46,
+       "cells_V": 19.68,
+       "cells_H": 20.2
+      },
+      "9": {
+       "hb_px": 48.7,
+       "ft": 2.53,
+       "cells_V": 7.71,
+       "cells_H": 7.92
+      },
+      "10": "0",
+      "9.5": {
+       "hb_px": 18.7,
+       "ft": 0.97,
+       "cells_V": 2.96,
+       "cells_H": 3.04
+      },
+      "0.5": "0 (ends at x 3819.6)"
+     },
+     "F": {
+      "0": "0",
+      "1": {
+       "hb_px": 22.6,
+       "ft": 1.17,
+       "cells_V": 3.57,
+       "cells_H": 3.67
+      },
+      "2": {
+       "hb_px": 138.9,
+       "ft": 7.22,
+       "cells_V": 22,
+       "cells_H": 22.58
+      },
+      "8": {
+       "hb_px": 59,
+       "ft": 3.06,
+       "cells_V": 9.35,
+       "cells_H": 9.59
+      },
+      "9": {
+       "hb_px": 25.2,
+       "ft": 1.31,
+       "cells_V": 3.99,
+       "cells_H": 4.1
+      },
+      "10": "0",
+      "9.5": {
+       "hb_px": 11.1,
+       "note": "= half-siding (F lifts off at x≈887)"
+      },
+      "0.5": "0 (ends at x 3727)"
+     },
+     "terminations": {
+      "definition": "Where the curve meets the half-siding line (hb above HS falls to about 1.5 px). The low waterlines run tangent to the HS at the deadwood, so their aft lift-off x is ±15 px. The upper waterlines meet the HS at a clear angle (±3 px).",
+      "A": {
+       "aft_px": 706.9,
+       "aft_X": 131.8,
+       "fore_px": 3974.9,
+       "fore_X": 661.1
+      },
+      "B": {
+       "aft_px": "≈715 (first-pass trace reached CL at 717.9; low confidence)",
+       "aft_X": "≈133",
+       "fore_px": 3947.7,
+       "fore_X": 656.7
+      },
+      "C": {
+       "aft_px": 745.8,
+       "aft_X": 138.1,
+       "fore_px": 3915.3,
+       "fore_X": 651.4
+      },
+      "D": {
+       "aft_px": 785.4,
+       "aft_X": 144.5,
+       "fore_px": 3871.9,
+       "fore_X": 644.4
+      },
+      "E": {
+       "aft_px": 834.3,
+       "aft_X": 152.4,
+       "fore_px": 3819.6,
+       "fore_X": 635.9
+      },
+      "F": {
+       "aft_px": 887.5,
+       "aft_X": 161,
+       "fore_px": 3727.1,
+       "fore_X": 620.9
+      },
+      "note": "Visually all A-F converge on the post at about (700, 3589), i.e. X≈130. A ends 5.9 cells forward of the sternpost aft edge (125.9), consistent with the rabbet/post depth. A's fore end is 10.4 cells aft of the cutwater (671.5), consistent with stem+cutwater depth at the LWL. The outermost solid bow curve reaches the HS at about x 4035-4040 (X≈671), i.e. station 0."
+     },
+     "top_lines_RAIL_SPARDECK_partial": {
+      "station_10_x678": "Lines at y 3254, 3288.4, 3310.9, 3320.6 (dashed) with CL 3599.4 → hb 345 / 311 / 288.5 / 279 px = 54.7 / 49.2 / 45.7 / 44.1 cells_V. Likely (low confidence): 3254 = quarter-gallery outer line, 3288 = solid top/rail line, 3320 = dashed spar-deck-at-transom line.",
+      "stern_transom": "The RAIL dash-dot vertical is at x≈497 (crosses the CL at x≈500) and the dashed vertical at x≈537. Both turn forward at y≈3315-3330 (hb≈275-285 px).",
+      "station_8_x1356": "Heavy dash-dot line at y≈3279 → hb 311 px = 49.2 cells_V (spar deck or rail; low confidence)",
+      "station_2_x3371": "Five lines above E: 3170.5, 3185.0, 3199.5, 3207.4, 3240.6. Each of the two deck lines, if present, is one of 3199.5 / 3185.0. With tumblehome the rail sits inside A here (body plan: hb 54.4 at the top vs 60.3 at A).",
+      "station_1_x3707": "Outer line(s) at y≈3241 (two lines merging at 3238/3244) → hb≈311 px = 49.2 cells_V; outside A (flare)",
+      "station_0.5": "Outer line at y≈3334 → hb≈216 px = 34.2 cells_V (identity uncertain)",
+      "station_0": "Only the outermost solid curve, at hb≈36 px near the HS (it ends at x≈4040), plus the dashed HEAD line (b7, from (3659,3243) to (4214,3482), knee at about (4250,3500)) remain"
+     }
+    },
+    "4_waterline_heights": {
+     "body_plan": "Waterlines at x 5200/5450, interpolated to the keel at x≈5290: A 1918.4, B 1976.6, C 2033.7, D 2090.0, E 2148.4, F 2206.8. All sections meet the keel side at a common point y≈2261±3, so the body plan has no drag. Keel bottom ≈2310 (48 px = 2.5 ft below the rabbet).",
+     "sheer_plan_x2600": "Brightest-pixel peaks: A 1950.8, B 2007.9, C 2065.9, D 2123.9, E 2181.1, F 2238.8; spacing 57.1-58.0, mean 57.6 px = 3 ft (19.2 px/ft). Letters A-F are printed just above each waterline at x≈2400. Rabbet/keel lines are at 2304 and 2339/2346. The keel is not parallel to the waterlines: slope -0.026 vs -0.011, a drag of about 1.8 ft over 2200 px. The F-to-rabbet height runs from 90 px at x 1100 to 54 px at x 3300.",
+     "datum": "Top of keel (rabbet) in the body plan = work Z 8. Z = 8 + ft*3.048.",
+     "heights": {
+      "A": {
+       "ft_measured": 17.84,
+       "ft_nominal": 18,
+       "Z": 62.86
+      },
+      "B": {
+       "ft_measured": 14.81,
+       "ft_nominal": 15,
+       "Z": 53.72
+      },
+      "C": {
+       "ft_measured": 11.84,
+       "ft_nominal": 12,
+       "Z": 44.58
+      },
+      "D": {
+       "ft_measured": 8.9,
+       "ft_nominal": 9,
+       "Z": 35.43
+      },
+      "E": {
+       "ft_measured": 5.86,
+       "ft_nominal": 6,
+       "Z": 26.29
+      },
+      "F": {
+       "ft_measured": 2.82,
+       "ft_nominal": 3,
+       "Z": 17.14
+      }
+     },
+     "note": "The measured values are consistently 0.16 ft below nominal, within the ±3 px uncertainty of the rabbet y. A = Z 63 matches the earlier calibration (SPa(63) on waterline A). In the sheer plan the height above the rabbet varies along the ship because of drag; the A-rabbet distance is 19.8 ft at x 1100 and 17.8 ft at x 3300."
+    },
+    "5_crosscheck_vs_source_lines_d11": {
+     "method": "Body-plan [hb, z] pts were linearly interpolated at the nominal waterline Z. Diff = LINES minus body plan, in cells.",
+     "station_8": {
+      "F_Z17.1": {
+       "body": 9.37,
+       "lines_V": 9.35,
+       "diff_V": -0.02,
+       "diff_H": 0.22
+      },
+      "E_Z26.3": {
+       "body": 18.82,
+       "lines_V": 19.68,
+       "diff_V": 0.86,
+       "diff_H": 1.38
+      },
+      "D_Z35.4": {
+       "body": 29.47,
+       "lines_V": 30.33,
+       "diff_V": 0.86,
+       "diff_H": 1.66
+      },
+      "C_Z44.6": {
+       "body": 40.42,
+       "lines_V": 41.16,
+       "diff_V": 0.74,
+       "diff_H": 1.83
+      },
+      "B_Z53.7": {
+       "body": 48.93,
+       "lines_V": 50.4,
+       "diff_V": 1.47,
+       "diff_H": 2.8
+      },
+      "A_Z62.9": {
+       "body": 52.92,
+       "lines_V": 53.99,
+       "diff_V": 1.07,
+       "diff_H": 2.5,
+       "note": "A at st 8 has medium confidence"
+      }
+     },
+     "station_2": {
+      "F_Z17.1": {
+       "body": 22.07,
+       "lines_V": 22,
+       "diff_V": -0.07,
+       "diff_H": 0.51
+      },
+      "E_Z26.3": {
+       "body": 38.46,
+       "lines_V": 39.59,
+       "diff_V": 1.13,
+       "diff_H": 2.18
+      },
+      "D_Z35.4": {
+       "body": 49.2,
+       "lines_V_candidate": 50.4,
+       "diff_V": 1.2
+      },
+      "C_Z44.6": {
+       "body": 56,
+       "lines_V_candidate": 55.7,
+       "diff_V": -0.3
+      },
+      "B_Z53.7": {
+       "body": 59.3,
+       "lines_V_candidates": [
+        59.2,
+        56.9
+       ]
+      },
+      "A_Z62.9": {
+       "body": 60.3,
+       "lines_V_candidates": [
+        61.5,
+        59.2
+       ]
+      }
+     },
+     "station_1_bonus": {
+      "A_Z62.9": {
+       "body": 45.1,
+       "lines_V": 45.75,
+       "diff_V": 0.65
+      }
+     },
+     "conclusion": "With the vertical scale (0.15834 cells/px), LINES matches the body plan at F and runs 0.7-1.5 cells wider at E-A. With the horizontal scale (0.16251) it is 1.4-2.8 cells wider, so that scale is wrong for LINES half-breadths. The leftover excess points to about 0.155 cells/px (about 19.6 px/ft) for this plan, or to slightly narrow body-plan readings."
+    }
+   },
+   "confidence_notes": [
+    "Station x positions fit within 0.5 cells (rms 0.35). Station 10 extrapolates to X 127.1 and station 0 to X 671.35, in line with the expected 126 and 672.",
+    "Waterlines A-F are identified from letter blobs next to each curve at both ends, in the same top-to-bottom order as the A-F letters in the sheer and body plans. Confidence is high.",
+    "Stern values (stations 9.5, 9, 8) and bow values (stations 1, 0.5) for A-F come from verified traces, about ±1.5 px (±0.25 cells), except where marked 'scan' or 'medium'.",
+    "The bow end x of each waterline at the half-siding is good to ±3 px. The aft lift-off x for the low waterlines (D, E, F) is ±15 px, because they run tangent to the deadwood half-siding.",
+    "The half-breadth scale is the main uncertainty, about 2-5%. Half-breadths run vertically on the sheet, and its vertical scale (19.2-19.25 px/ft from waterline spacing) differs from the horizontal scale (18.52 px/ft from the FEET bar). Both conversions are given.",
+    "Heights A-F = 18/15/12/9/6/3 ft above the keel top (Z 62.9 down to 17.1), measured in the body plan. This agrees with the earlier A = Z 63. The sheer plan shows keel drag that the body plan does not."
+   ],
+   "unverified": [
+    "I could not tell RAIL from SPAR DECK among the top lines at the stern and at stations 2, 1 and 0.5. Only pixel positions and candidate identities are given.",
+    "At station 2, which of the 5 crowded top lines (y 3170.5, 3185.0, 3199.5, 3207.4, 3240.6) belongs to A-D is ambiguous. D = 3240.6 and C = 3207.4 are the likely ones.",
+    "B's aft end (≈x 715) and A at station 8 (y≈3249) rest on a single scan or first-pass trace each.",
+    "I did not trace the quarter-gallery outline or the stern ends of the top lines in detail.",
+    "The cause of the 0.6° mismatch between the CL tilt and the station lines (paper distortion or drafting) was not looked into.",
+    "The keel-top y in the body plan (2261) is good to only ±3 px, which shifts every waterline height by about ±0.15 ft."
+   ],
+   "verify": {
+    "task": "Verify the LINES (half-breadth) plan reading of drawing 11 (RG19_ALPHA_Constitution_1797_11.JPG). I re-measured the station fit, the scales, the half-breadths at stations 10, 9.5, 9, 8, 2, 1 and 0.5, the waterline end points and the station-2 line assignment, and checked them against source_lines.json d11. My files are in C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/verify_lines. Scripts: stations.py, scan.py, check2.py, trace.py, trace2.py, trace3.py, st2c.py. Overlays: c_stern.png, c_bow.png, trace_stern.png, trace_bow.png, trace_st2.png.",
+    "verdict": "corrected",
+    "checks": [
+     {
+      "item": "Station x fit, stations 9..1 (my method: per-row argmax within ±7 px of each dashed station line, parabolic refinement, robust linear x(y), read at the local CL y)",
+      "reader_value": "X = 0.161962*px + 17.271, rms 0.35, bowed residuals -0.5 / +0.4 / -0.5",
+      "my_value": "X = 0.161954*px + 17.266 (6.175 px/cell). Residuals known-fit: st9 -0.52, 8 -0.32, 7 +0.30, 6 +0.46, 5 +0.41, 4 +0.29, 3 -0.06, 2 -0.05, 1 -0.51. Mean spacing 336.23 px",
+      "agree": true,
+      "note": "Station px x at CL: 10: 678.2, 9: 1017.3, 8: 1356.3, 7: 1690.2, 6: 2025.7, 5: 2365.7, 4: 2703.5, 3: 3039.7, 2: 3371.2, 1: 3706.9, 0: 4040.4. The bowed residual pattern is real."
+     },
+     {
+      "item": "Station 10 extrapolated X",
+      "reader_value": "px 677.9 -> X 127.06",
+      "my_value": "px 678.2 (rms 0.23) -> X 127.10",
+      "agree": true
+     },
+     {
+      "item": "Station 0 extrapolated X",
+      "reader_value": "px 4038.5 -> X 671.35",
+      "my_value": "px 4040.4 (rms 1.2 px, noisy because curves cross it) -> X 671.63. The outermost solid bow curve meets the HS at x 4041 in a row scan at HS-4",
+      "agree": true
+     },
+     {
+      "item": "FEET scale bar",
+      "reader_value": "end ticks 3926.2 / 4297.1 -> 18.55 px/ft",
+      "my_value": "21 column-profile peaks over y 3712-3726, from 3926 to 4297 -> 371/20 = 18.55 px/ft (horizontal)",
+      "agree": true
+     },
+     {
+      "item": "Sheer-plan waterline y at x 2600 (brightest pixel, 3-col mean, parabolic)",
+      "reader_value": "A 1950.8, B 2007.9, C 2065.9, D 2123.9, E 2181.1, F 2238.8 (57.6 px / 3 ft)",
+      "my_value": "1950.6, 2007.7, 2065.8, 2123.8, 2181.2, 2238.6 -> 57.6 px / 3 ft = 19.2 px/ft",
+      "agree": true
+     },
+     {
+      "item": "Body-plan waterline y interpolated to x 5290 (from scans at x 5200 and 5450)",
+      "reader_value": "A 1918.4, B 1976.6, F 2206.8",
+      "my_value": "A 1918.3, B 1976.6, F 2206.7 (spacing 57.7 px = 19.23 px/ft)",
+      "agree": true,
+      "note": "I did not re-check the keel-top y of 2261."
+     },
+     {
+      "item": "CL / half-siding double baseline",
+      "reader_value": "lower line = CL, upper line = HS, about 10 px apart; CL 3599 at st 10, 3590 at st 8, 3552 at st 1",
+      "my_value": "Pairs (HS, CL): x 700: 3589.4 / 3599.4; x 1360: 3579.5 / 3590.4; x 2000: 3572.2 / 3583.3; x 3000: 3555.8 / 3565.7; x 3710: 3543.0 / 3552.6; x 4040: 3536.4 / 3546.2. Single line at x 4500: 3536.1. In the stern crop the HS line starts at the station-10 post",
+      "agree": true
+     },
+     {
+      "item": "Station 10 top lines (vertical scans at x 673 and 683)",
+      "reader_value": "y 3254 / 3288.4 / 3310.9 / 3320.6, CL 3599.4",
+      "my_value": "3253.7 / 3288.4 / 3310.7 (x 673 only) / 3320.8, CL 3599.6. Also a dashed horizontal line at 3445",
+      "agree": true
+     },
+     {
+      "item": "Station 9.5 half-breadths A-E (scans at x±7 averaged, and my ridge trace)",
+      "reader_value": "A 209.4, B 126.9, C 64.6, D 34.6, E 18.7 px; F = HS",
+      "my_value": "A 209.85 (trace 209.5), B 127.1, C 64.8, D 34.5 (trace 34.6), E 18.95 (trace 18.6), F 11.6 = HS",
+      "agree": true,
+      "note": "The crop confirms these points sit on curves 1-5, which carry the letters A-E."
+     },
+     {
+      "item": "Station 9 half-breadths A-F",
+      "reader_value": "A 284.9, B 218.1, C 137.2, D 82.6, E 48.7, F 25.2 px",
+      "my_value": "A 284.4, B 218.05, C 137.0, D 82.6, E 48.0, F 24.6 px (CL 3594.0; scans at x 1010 and 1024)",
+      "agree": true,
+      "note": "In the crop, A at st 9 is the curve just under the flat top dashed line at about 3297."
+     },
+     {
+      "item": "Station 8 half-breadths A-F",
+      "reader_value": "A 341, B 318.3, C 260, D 191.6, E 124.3, F 59 px (CL 3590)",
+      "my_value": "A 341.65, B 318.5, C 261.05, D 191.2, E 124.95, F 60.3 px (CL 3590.55; scans at x 1349 and 1363). There is also a flat dash-dot line at 3278.5 and a dashed horizontal at 3435",
+      "agree": true,
+      "note": "The largest difference is F, 1.3 px = 0.2 cells, mostly from the CL estimate."
+     },
+     {
+      "item": "Station 1 half-breadths A-F",
+      "reader_value": "A 288.9, B 262.3, C 218.4, D 161.7, E 93.8, F 22.6 px",
+      "my_value": "A 289.5, B 262.8, C 218.55, D 162.0, E 95.8, F 23.3 px (CL 3552.7)",
+      "agree": true,
+      "note": "The bow dashed horizontal line at y≈3397-3399 sits on D at +7 px, so D is ±2 px. E differs by 2 px = 0.3 cells."
+     },
+     {
+      "item": "Station 0.5 half-breadths",
+      "reader_value": "A 171.9, B 134.1, C 74.6 px; D = HS (ends at 3871.9)",
+      "my_value": "A 171.2 (trace 171.7), B 133.5, C 74.15 (trace 74.5); D 12.1 = HS by trace",
+      "agree": true
+     },
+     {
+      "item": "Bow end x of each waterline at the HS (row scans along HS-4/-7/-10 px, plus traces)",
+      "reader_value": "A 3974.9, B 3947.7, C 3915.3, D 3871.9, E 3819.6, F 3727.1",
+      "my_value": "Row HS-4: A 3975, B 3948, C 3916, D 3872, E 3820, F 3727. Traces: A 3975.1, C 3916.9, D 3874.0, E 3822.8, F 3732.5. Further out: a dashed curve at 4014 and the outer solid curve at 4041",
+      "agree": true
+     },
+     {
+      "item": "Stern end x of A, C and D",
+      "reader_value": "A 706.9, C 745.8, D 785.4",
+      "my_value": "A 706.9 (trace), D 785.1 (gap to HS < 1.5 px), C about 745 by eye on the crop (my C trace jumped at the letter blob)",
+      "agree": true
+     },
+     {
+      "item": "Stern end x of E and F (tangent run-out on the deadwood)",
+      "reader_value": "E 834.3, F 887.5 (defined as the gap above HS falling to about 1.5 px)",
+      "my_value": "E 828-835. For F, the gap above HS (HS measured locally at 3585.4 near x 848) is about 4.7 px at x 892 and about 1.0 px at x 867, so the 1.5 px rule puts F's end near x 870-875 (X 158-159); a 3 px rule gives x 885",
+      "agree": false,
+      "note": "F differs by about 15 px = 2.5 cells, at the edge of the reader's ±15 px. The end point is poorly defined either way."
+     },
+     {
+      "item": "Station 2 D, E, F",
+      "reader_value": "D likely 3240.6 (318.4 px), E 250.1, F 138.9",
+      "my_value": "Tracing from station 1 aft to station 2: D 3241.0 (318.1), E 3308.9 (250.2), F 3420.1 (139.0)",
+      "agree": true
+     },
+     {
+      "item": "Station 2 C assignment",
+      "reader_value": "likely y 3207.4 -> 351.6 px (medium-low)",
+      "my_value": "C = y 3199.5 -> 359.6 px. Column peaks show two separate lines. Line L3 runs 3191 @3330, 3195 @3350, (3199.5 @3371), merges @3392-3430, 3220 @3450, slope 0.24; the C trace from station 1 follows it to x 3445. The flat heavy dash-dot line runs 3205 / 3207 / 3206 / 3207 / 3210 / 3213, slope 0.07; this is the 3207.4 peak, a deck/rail line that crosses C near x 3390-3430",
+      "agree": false,
+      "note": "Wrong line chosen: 8 px = 1.25 cells. With 0.156 cells/px, C = 56.0 cells, exactly the body-plan 56.0."
+     },
+     {
+      "item": "Station 2 A and B (left ambiguous by the reader)",
+      "reader_value": "A one of 3185.0 / 3170.5; B one of 3185.0 / 3199.5",
+      "my_value": "Lines are ordered outside to inside (L1 > L2 > L3 = C): A = 3170.5 (388.5 px), B = 3185.0 (374.0 px). At 0.156 cells/px: A 60.6 vs body 60.3, B 58.3 vs body 59.3",
+      "agree": false,
+      "note": "This resolves the ambiguity rather than contradicting a firm value. 3207.4 (351.6 px = 54.9 cells) matches the body-plan top hb of 54.4, so it is the rail/deck line."
+     },
+     {
+      "item": "Half-breadth scale for the LINES plan",
+      "reader_value": "recommends cells_V = 3.048/19.25 = 0.15834 cells/px; notes the residual excess points to about 0.155",
+      "my_value": "Body hb (d11, nominal WL Z) divided by my LINES px: st1 A-E 0.1556-0.1569; st2 A 0.1552, C 0.1557, D 0.1545, E 0.1538, F 0.1588; st8 0.1536-0.1568; st9 A 0.1524, B-F 0.156-0.159. Midship max beam check: the outermost hull line at st 4 is at hb 426.1 px (y 3144.7, CL 3570.8), against body max 66.44 -> 0.1559. Overall about 0.1556 ± 0.0015, which matches 3.0065/19.25 = 0.15618 (the same k as d11's horizontal conversion, applied to the vertical sheet scale)",
+      "agree": false,
+      "note": "0.15834 makes the LINES plan about 1.5% wide. Examples: st 9 A = 45.1 against body 43.4 (+1.7 cells); st 4 outer line = 67.5 against the 66.44 maximum. The horizontal scale 0.16251 is clearly wrong; I agree with the reader there."
+     },
+     {
+      "item": "Waterline Z values",
+      "reader_value": "A-F Z = 62.86 / 53.72 / 44.58 / 35.43 / 26.29 / 17.14 (nominal 18 ... 3 ft above keel top at Z 8)",
+      "my_value": "Not independently re-derived. The listed Z values use the nominal heights, not the reader's ft_measured values (which would give A 62.4 ... F 16.6). Waterline y and spacing check out",
+      "agree": true,
+      "note": "The reader's datum formula and its table are inconsistent. The body-plan comparisons are sensitive to this at low waterlines on steep sections; for example F at st 4 is 33.0 cells at Z 17.14 and 35.4 at Z 18."
+     }
+    ],
+    "corrections": [
+     "Station 2, waterline C is the line at y 3199.5, hb 359.6 px (about 56.0 cells at 0.156 cells/px), not 3207.4. The 3207.4 peak is the flat heavy dash-dot deck/rail line (hb 351.6 px, about 54.9 cells, matching the body-plan top hb of 54.4). It crosses C between x 3390 and 3430.",
+     "Station 2 A and B can be resolved by line order (lines do not cross; A is outermost): A = y 3170.5 (388.5 px, about 60.6 cells), B = y 3185.0 (374.0 px, about 58.3 cells). D = 3240.6 (318.4 px) is confirmed by a continuous trace from station 1.",
+     "Use about 0.156 cells/px for the LINES half-breadths, best taken as 3.0065/19.25 = 0.15618, not 3.048/19.25 = 0.15834. Ratios against the d11 body plan at stations 1, 2, 8 and 9, and the station-4 maximum-beam check (426.1 px -> 66.44), average 0.1556. The 0.15834 conversion makes the LINES values about 1.5% too wide, up to +1.7 cells at station 9 A. All reader cells_V values should be scaled by about 0.986.",
+     "F's stern end: under the reader's own rule (gap above HS of 1.5 px or less), F reaches the HS near x 870-875 (X about 158-159), not 887.5 (X 161.0). x 885 is where the gap is about 3 px. Treat F's aft end as ±3 cells.",
+     "Minor: the reader's Z table uses the nominal waterline heights (Z = 8 + 3.048 × 18/15/12/9/6/3) even though its ft_measured values are 0.16 ft lower. State which one is meant.",
+     "Everything else matches my measurements to within 1-2 px (0.3 cells or less): station fit and extrapolations (st10 X 127.1, st0 X 671.6), FEET bar 18.55 px/ft, waterline y in the sheer and body plans, station 10 / 9.5 / 9 / 8 / 1 / 0.5 half-breadth pixels, and all bow end points A-F plus the stern ends of A and D."
+    ]
+   }
+  },
+  {
+   "task": "Drawing 11 (1927 MIT PLAN VIII) SHEER PLAN, stern and bow ends: calibration, stern outline, bow stem/cutwater/head, rail-top lines at each station. Gunports were not measured.",
+   "calibration": "Station lines 9..1 under the sheer plan located by column-mean brightness peaks in y 2050..2300 (subpixel centroid). The lines are not quite vertical: dx/dy = +0.0095..0.0166, mean 0.013, so the scan is rotated about 0.7 deg. I used u = x - 0.013*(y-2200) and fit work X = 0.16249533*u + 18.3504 (6.154 px/cell = 18.502 px per drawing-ft, which confirms 3.0065 cells/ft, k=0.9864). Residuals against the known body-plan station X: st9 +0.03, st8 -0.01, st7 -0.02, st6 +0.01, st5 -0.03, st4 -0.01, st3 +0.07, st2 -0.02, st1 -0.01 cells. Re-checks: the sternpost aft edge at the LWL comes out at X 126.0 (known 125.9). The outer cutwater at the LWL comes out at X 671.0 (known 671.5). Vertical scale: 6 waterlines are 57.4..57.9 px apart (3 ft), so 19.22 px/ft = 0.15859 cells/px. Z datum: the keel bottom is drawn as a double line (two lines about 8 px apart, i.e. about 1.3 cells). I took Z=0 at the LOWER line (taken as the bottom of the keel shoe), fitted as y = -0.02644*x + 2414.74 (54 columns x 760..3650, rms 1.0 px). Z is measured up the station-line direction from that keel line: Z = (y_keel - y)*0.15859, so drag is built in, as plan.json asks. A separate upper keel line (top of keel / rabbet?) sits at Z 6.1 aft to 6.9 forward. That is below the work's keel top of Z 8, so drawing 11 and the work disagree by about 1.5 cells there. LWL (top waterline, y = -0.01069*x + 1977.59, rms 2.5 px): Z 67.7 at X 126, falling to 59.3 at X 671; about Z 62.7 at midships (X 449), against the stated mean 20'9\" = 63.2. Drag works out to about 0.89 deg, deeper aft, which matches plan.json's 0.85 deg.",
+   "data": {
+    "files": {
+     "folder": "C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/profile",
+     "final_points_json": "final.json",
+     "calibration_json": "calib.json",
+     "raw_traces_px_json": "trace.json",
+     "rail_scan_json": "rail.json",
+     "crops": [
+      "ov_sheer.png",
+      "stern_ov.png",
+      "stern_up.png",
+      "stern_low.png",
+      "bow_ov.png",
+      "keel_mid.png"
+     ],
+     "scripts": [
+      "crop.py",
+      "prof.py",
+      "fit.py",
+      "rows.py",
+      "hscan.py",
+      "main.py",
+      "trace.py",
+      "rail.py",
+      "final.py"
+     ]
+    },
+    "transform": {
+     "u": "x - 0.013*(y - 2200)",
+     "X_cells": "0.16249533*u + 18.3504",
+     "keel_bottom_px": "y = -0.02644*x + 2414.74 (lower line of the double keel line)",
+     "Z_cells": "(y_keelbottom on the same station line - y) * 0.15859",
+     "station_px_at_y2200": {
+      "1": 3684.7,
+      "2": 3352.9,
+      "3": 3023,
+      "4": 2689.6,
+      "5": 2353.4,
+      "6": 2015.2,
+      "7": 1679.6,
+      "8": 1343,
+      "9": 1004.2
+     },
+     "station_fit_residual_cells": {
+      "1": -0.01,
+      "2": -0.02,
+      "3": 0.07,
+      "4": -0.01,
+      "5": -0.03,
+      "6": 0.01,
+      "7": -0.02,
+      "8": -0.01,
+      "9": 0.03
+     },
+     "LWL_Z_vs_X": [
+      [
+       124.5,
+       67.7
+      ],
+      [
+       235,
+       66
+      ],
+      [
+       345.5,
+       64.3
+      ],
+      [
+       456,
+       62.6
+      ],
+      [
+       566.5,
+       60.9
+      ],
+      [
+       671,
+       59.3
+      ]
+     ],
+     "upper_keel_line_Z_vs_X": [
+      [
+       123.6,
+       6.1
+      ],
+      [
+       289.4,
+       6.4
+      ],
+      [
+       455.2,
+       6.7
+      ],
+      [
+       621.1,
+       6.9
+      ]
+     ]
+    },
+    "stern": {
+     "method": "Sternpost and rudder lines: brightness centroid along rows every 10 px, followed row to row and thinned to about 5 cells. Stern face: aft (left) edge of the outer raked line or thick band, rows every 5 px. Counter and quarter gallery: read by hand from the 4.6x and 2.6x gridded crops.",
+     "rudder_aft_edge": [
+      [
+       117.9,
+       85.4
+      ],
+      [
+       117.6,
+       79.1
+      ],
+      [
+       117.5,
+       72.7
+      ],
+      [
+       117.2,
+       64.8
+      ],
+      [
+       117,
+       58.5
+      ],
+      [
+       116.8,
+       50.5
+      ],
+      [
+       116.8,
+       44.2
+      ],
+      [
+       116.7,
+       36.3
+      ],
+      [
+       116.5,
+       29.9
+      ],
+      [
+       116.3,
+       20.4
+      ],
+      [
+       116.1,
+       14.1
+      ],
+      [
+       116,
+       7.7
+      ],
+      [
+       116,
+       4.6
+      ]
+     ],
+     "rudder_bottom": [
+      117.4,
+      2.3
+     ],
+     "rudder_head_top": [
+      119,
+      88.1
+     ],
+     "sternpost_aft_edge": [
+      [
+       124.3,
+       85.2
+      ],
+      [
+       125.2,
+       78.9
+      ],
+      [
+       125.5,
+       72.5
+      ],
+      [
+       126.2,
+       64.6
+      ],
+      [
+       127.1,
+       58.2
+      ],
+      [
+       128,
+       50.2
+      ],
+      [
+       128.7,
+       43.9
+      ],
+      [
+       129.7,
+       35.9
+      ],
+      [
+       130.4,
+       29.6
+      ],
+      [
+       131.6,
+       20
+      ],
+      [
+       132.3,
+       13.7
+      ],
+      [
+       133,
+       7.3
+      ],
+      [
+       133.4,
+       4.1
+      ]
+     ],
+     "sternpost_aft_edge_note": "Drawn as a 12-14 px double line (rudder forward edge plus post aft edge); these points are its centre. Rake about 6.4 deg relative to the keel datum, against 4.3 deg for the work's SPa (taken from drawing 02).",
+     "sternpost_fore_edge": [
+      [
+       128.3,
+       85.1
+      ],
+      [
+       129.3,
+       78.8
+      ],
+      [
+       130.6,
+       72.4
+      ],
+      [
+       132.1,
+       64.4
+      ],
+      [
+       133.3,
+       58
+      ],
+      [
+       134.9,
+       50.1
+      ],
+      [
+       136.2,
+       43.7
+      ],
+      [
+       137.9,
+       35.7
+      ],
+      [
+       139.1,
+       29.3
+      ],
+      [
+       140.9,
+       19.8
+      ],
+      [
+       142.3,
+       13.4
+      ],
+      [
+       143.3,
+       8.6
+      ]
+     ],
+     "keel_aft_end_bottom": [
+      132.5,
+      0.6
+     ],
+     "counter_aft_edge_knuckle_to_sternpost": [
+      [
+       112.3,
+       97
+      ],
+      [
+       114.1,
+       95
+      ],
+      [
+       115.9,
+       93.1
+      ],
+      [
+       117.5,
+       91.7
+      ],
+      [
+       119.1,
+       90.1
+      ],
+      [
+       120,
+       89.3
+      ],
+      [
+       121.8,
+       87.8
+      ],
+      [
+       124.2,
+       86.5
+      ]
+     ],
+     "stern_face_transom_aft_edge_bottom_to_top": [
+      [
+       111,
+       98.3
+      ],
+      [
+       110.9,
+       99.1
+      ],
+      [
+       108.5,
+       103.9
+      ],
+      [
+       106.5,
+       108.7
+      ],
+      [
+       105.1,
+       114.3
+      ],
+      [
+       103.2,
+       119.1
+      ],
+      [
+       101.3,
+       123.9
+      ],
+      [
+       99.4,
+       128.7
+      ],
+      [
+       97.4,
+       133.5
+      ]
+     ],
+     "stern_face_note": "Raked about 22 deg aft from vertical (dx/dy about 0.41 px/px). Three parallel moulding lines run from Z 128 to 116; from Z 116 down it becomes a 22-27 px thick band. The points are the aft-most edge.",
+     "taffrail_aft_top_corner": [
+      96.1,
+      136.4
+     ],
+     "rail_top_aft_end": "Thick rail-top line: Z 134.7 at X 107.5, 134.3 at X 117, 134.1 at X 127, falling to 130.4 at X 205",
+     "quarter_gallery": {
+      "roof_aft": [
+       107.3,
+       121.8
+      ],
+      "roof_fwd": [
+       133.3,
+       120.5
+      ],
+      "roof_drops_to": [
+       142.9,
+       113.6
+      ],
+      "window_box_top_aft": [
+       108.5,
+       114.8
+      ],
+      "window_box_top_fwd": [
+       147.8,
+       113.5
+      ],
+      "window_box_bottom_fwd": [
+       150.2,
+       94.9
+      ],
+      "window_box_bottom_aft": [
+       114.8,
+       96.3
+      ],
+      "lower_finishing_low_point": [
+       129.6,
+       85.6
+      ],
+      "lower_finishing_fwd_end": [
+       149.2,
+       93.3
+      ],
+      "shape": "Parallelogram following the stern rake; two tiers of windows; the lower finishing is a curved drop."
+     },
+     "spar_like_horn_beyond_stern": {
+      "tip": [
+       75.9,
+       142.3
+      ],
+      "joins_rail": [
+       127,
+       135.1
+      ],
+      "note": "A tapering two-line wedge that sticks out about 20 cells aft of the taffrail and rises aft. Probably the spanker boom (a spar, not hull), confidence medium."
+     },
+     "key_heights": {
+      "LWL_at_sternpost": 67.7,
+      "counter_meets_sternpost": 86.5,
+      "rudder_head_top": 88.1,
+      "wing_transom_knuckle_top_of_counter": "about 97-98 (X 111-112)",
+      "quarter_gallery_window_box": "95-115",
+      "taffrail_top": "about 136 (aft corner X 96); rail-top line 134-135 near X 107-127"
+     }
+    },
+    "bow": {
+     "method": "Row scans every 15 px, brightness-centroid runs, lines picked by continuity (an automatic tracker failed at waterline crossings, so the picking was done by hand from the scan output).",
+     "outer_cutwater_knee_of_head_keel_to_head": [
+      [
+       618.1,
+       1.1
+      ],
+      [
+       625.8,
+       3.3
+      ],
+      [
+       630.7,
+       5.6
+      ],
+      [
+       637.8,
+       10.1
+      ],
+      [
+       642.7,
+       14.8
+      ],
+      [
+       646.8,
+       19.4
+      ],
+      [
+       650.3,
+       24.1
+      ],
+      [
+       653.4,
+       28.8
+      ],
+      [
+       656.2,
+       33.4
+      ],
+      [
+       659.1,
+       38.1
+      ],
+      [
+       661.7,
+       42.8
+      ],
+      [
+       664.4,
+       47.5
+      ],
+      [
+       667,
+       52.2
+      ],
+      [
+       672.8,
+       61.6
+      ],
+      [
+       676.3,
+       66.2
+      ],
+      [
+       680.7,
+       70.9
+      ],
+      [
+       685.8,
+       75.5
+      ],
+      [
+       691.4,
+       80.1
+      ],
+      [
+       697.9,
+       84.7
+      ],
+      [
+       704.2,
+       89.3
+      ],
+      [
+       709.1,
+       93.9
+      ],
+      [
+       713,
+       98.6
+      ],
+      [
+       716.1,
+       103.3
+      ],
+      [
+       718.7,
+       108
+      ],
+      [
+       720.8,
+       112.7
+      ],
+      [
+       721.1,
+       115
+      ]
+     ],
+     "outer_note": "Matches the work's O (cutwater at LWL X 671.0, known 671.5). Above Z 115 it runs into the figurehead/billet scroll region (X about 720-725, Z 115-135), which was not traced.",
+     "inner_stem_line_keel_to_trailboard": [
+      [
+       619.7,
+       13
+      ],
+      [
+       624.3,
+       15.2
+      ],
+      [
+       631.4,
+       19.8
+      ],
+      [
+       636.9,
+       24.4
+      ],
+      [
+       641.4,
+       29.1
+      ],
+      [
+       645.5,
+       33.7
+      ],
+      [
+       649,
+       38.4
+      ],
+      [
+       652.2,
+       43.1
+      ],
+      [
+       654.9,
+       47.8
+      ],
+      [
+       657.4,
+       52.4
+      ],
+      [
+       659.6,
+       57.1
+      ],
+      [
+       661.5,
+       61.9
+      ],
+      [
+       664,
+       68.9
+      ],
+      [
+       665.9,
+       76
+      ]
+     ],
+     "inner_at_LWL": [
+      660.4,
+      59.4
+     ],
+     "inner_note": "The waterlines end on this line. Only two bow lines are drawn, so this is the rabbet or the stem fore edge; at the LWL it sits between the work's T (658.6) and F (662.9). It is hidden behind the trailboards from Z 76 to 92.",
+     "inner_above_trailboard_hook_to_head_rail": [
+      [
+       666.2,
+       92.7
+      ],
+      [
+       666.1,
+       95
+      ],
+      [
+       665.2,
+       97.4
+      ],
+      [
+       663.7,
+       99.9
+      ],
+      [
+       661.4,
+       102.3
+      ],
+      [
+       657.5,
+       104.8
+      ],
+      [
+       647.9,
+       107.4
+      ],
+      [
+       641.6,
+       109.9
+      ]
+     ],
+     "head_note": "Trailboard band (scroll carving) runs from about X 638 / Z 88-97 forward and upward to X about 715 / Z 108-112. The head rails sweep from the hook (X 641, Z 110) forward to the figurehead. Only these corners were read.",
+     "bow_rail_top": "Forecastle top lines: Z 130.1 at X 624 (thin top rail); 126.7-127.4 at X 634-653 (w 8, the last rail before the head); hook top about Z 110 at X 642"
+    },
+    "rail_top_by_station": {
+     "1": {
+      "X": 618.1,
+      "lines": [
+       [
+        129.9,
+        3
+       ],
+       [
+        126,
+        8
+       ],
+       [
+        121.6,
+        11
+       ]
+      ],
+      "src_top_z": 125.49
+     },
+     "2": {
+      "X": 564.1,
+      "lines": [
+       [
+        127.8,
+        3
+       ],
+       [
+        124.7,
+        8
+       ],
+       [
+        120.4,
+        10
+       ]
+      ],
+      "src_top_z": 121.22
+     },
+     "3": {
+      "X": 510.6,
+      "lines": [
+       [
+        119.6,
+        8
+       ],
+       [
+        106.6,
+        5
+       ]
+      ],
+      "src_top_z": 118.05
+     },
+     "4": {
+      "X": 456.3,
+      "lines": [
+       [
+        119.3,
+        10
+       ],
+       [
+        105.7,
+        10
+       ]
+      ],
+      "src_top_z": 118.05
+     },
+     "5": {
+      "X": 401.7,
+      "lines": [
+       [
+        120,
+        9
+       ],
+       [
+        106.2,
+        13
+       ]
+      ],
+      "src_top_z": 124.05
+     },
+     "6": {
+      "X": 341.4,
+      "lines": [
+       [
+        128.3,
+        5
+       ],
+       [
+        125.8,
+        10
+       ],
+       [
+        121.3,
+        10
+       ]
+      ],
+      "src_top_z": 124.85,
+      "note": "Read at X 341 because the main mast stump confuses X 347-351."
+     },
+     "7": {
+      "X": 292.2,
+      "lines": [
+       [
+        130,
+        4
+       ],
+       [
+        127.2,
+        9
+       ],
+       [
+        122.7,
+        9
+       ]
+      ],
+      "src_top_z": 125.39
+     },
+     "8": {
+      "X": 237.6,
+      "lines": [
+       [
+        132,
+        4
+       ],
+       [
+        129.2,
+        10
+       ],
+       [
+        124.6,
+        10
+       ]
+      ],
+      "src_top_z": 126.19
+     },
+     "9": {
+      "X": 182.5,
+      "lines": [
+       [
+        131.5,
+        11
+       ],
+       [
+        126.6,
+        10
+       ],
+       [
+        114.4,
+        5
+       ]
+      ],
+      "src_top_z": 126.86
+     },
+     "method": "Column brightness peaks 6 px forward of each station line, y 1440..1700; listed top-down as [Z, line width px]."
+    },
+    "rail_top_along_length_top_line": [
+     [
+      97.8,
+      134.4
+     ],
+     [
+      107.5,
+      134.7
+     ],
+     [
+      127,
+      134.1
+     ],
+     [
+      146.5,
+      133.1
+     ],
+     [
+      166,
+      132.2
+     ],
+     [
+      185.4,
+      131.3
+     ],
+     [
+      204.9,
+      130.4
+     ],
+     [
+      214.7,
+      132.8
+     ],
+     [
+      244,
+      131.8
+     ],
+     [
+      273.2,
+      130.8
+     ],
+     [
+      302.5,
+      129.6
+     ],
+     [
+      331.7,
+      128.6
+     ],
+     [
+      370.7,
+      127.5
+     ],
+     [
+      380.2,
+      "break"
+     ],
+     [
+      390.1,
+      120.2
+     ],
+     [
+      419.4,
+      119.6
+     ],
+     [
+      448.6,
+      119.3
+     ],
+     [
+      477.9,
+      119.3
+     ],
+     [
+      507.1,
+      119.5
+     ],
+     [
+      517,
+      126.8
+     ],
+     [
+      546.3,
+      127.4
+     ],
+     [
+      575.5,
+      128.1
+     ],
+     [
+      604.8,
+      129.2
+     ],
+     [
+      624.3,
+      130.1
+     ],
+     [
+      634,
+      126.7
+     ],
+     [
+      653.5,
+      127.4
+     ]
+    ],
+    "rail_structure": "Quarterdeck: thick rail top Z 134.7 to 130.4 (X 98-205), with a thin rail on top from X 215 to 371 (Z 132.8 to 127.5) above the thick lines. Waist drop between X 371 and 380. Waist: rail Z about 119.3-120, with a second line at about 106. Forecastle rises at X 507-517: thin top line Z 126.8 to 130.1 (X 517-624), w8 line 123.9 to 126.3, w10 line 119.7 to 121.9.",
+    "station_top_comparison": "The body-plan station tops do not match one sheer-plan line consistently. St9: 126.86 vs second line 126.6. St8 and st7 fall between the second and third lines. St4 and st3 (118.05) are about 1.3-1.5 below the waist rail (119.3-119.6). St2 (121.22) is about 0.8 above the lowest forecastle line (120.4). St1 (125.49) is about 0.5 below the w8 line (126.0). St5 (124.05) is 4 cells above the waist rail (120.0) at X 401.7, so the body plan probably draws st5 to quarterdeck height (the break is at X 371-380) or st5 is mislabelled. Confidence medium-low.",
+    "gunports": "Not done (time budget). The overview shows a row of about 14 square ports on the gun deck between the quarter gallery and the bow, plus one diamond-shaped port near the bow (X about 645). The spar-deck ports are in separate aft and forward groups. Positions and heights were not measured."
+   },
+   "confidence_notes": [
+    "High: the station-X fit (residuals under 0.07 cells), the sternpost aft edge at the LWL (126.0 vs 125.9) and the cutwater at the LWL (671.0 vs 671.5).",
+    "High: rudder aft edge, sternpost aft and fore edges, and the bow outer and inner lines below the trailboards. They are clean single or double lines, and centroid error is about 0.2-0.5 cells.",
+    "Medium: the Z datum. Z=0 is the lower of the two keel-bottom lines. If the upper of the two is meant as the shoe bottom, every Z rises by about 1.3 cells. The drawing's upper keel line is at Z 6.1-6.9, not the work's 8.",
+    "Medium: a station lean of 0.013 is used everywhere, but the measured lean varies from 0.0095 to 0.0166. At the taffrail (about 650 px above y 2200) that leaves about ±0.3 cells of X uncertainty.",
+    "Medium: stern-face points are the aft edge of a 22-27 px thick band. The counter and quarter-gallery corners were read by hand from gridded crops (about ±3 px, ±0.5 cells).",
+    "Medium-low: the identity of the horn aft of the taffrail (taken as the spanker boom), and which bow inner line is the rabbet and which the stem fore edge.",
+    "Convention: shear, not rotation. Work X comes from the station-line coordinate, and Z is measured along the station line from the keel. If instead the hull is rotated so the keel is level, points shift by about 0.0155*Z cells in X (about 2 cells at the taffrail)."
+   ],
+   "unverified": [
+    "Gunport positions and heights (task 5) were not measured.",
+    "Figurehead/billet head above Z 115 and the full trailboard and head-rail outlines were not traced. Only the corners are given.",
+    "The quarter gallery's upper finishing and the exact taffrail outline above Z 134 were not traced point by point.",
+    "No stations 10 or 0 tick marks were found under the sheer plan; only 9..1 are printed there. Stations 10 and 0 were not checked on the LINES plan.",
+    "Why body-plan station 5's top (124.05) is higher than the sheer-plan waist rail (120.0) was not resolved.",
+    "No independent verifier pass was run on these readings."
+   ],
+   "verify": {
+    "task": "Verify the reader's Drawing 11 SHEER PLAN profile reading (calibration, stern, bow, rail tops), re-measured from the image. My scripts and crops are in C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/verify_profile: stations.py, wl.py, keel.py and wscan.py (profiles sampled along constant-Z or constant-X lines in work coordinates, with run centroids), tf.py (the transform), and gridded crops stern_all.png, stern_keel.png, qg.png and bow_all.png. Result: the calibration and nearly all traced points reproduce within 0.3 cells. The quarter-gallery roof and box-corner points are wrong, and there is a small systematic vertical-scale fan.",
+    "verdict": "corrected",
+    "checks": [
+     {
+      "item": "Station line x at y=2200 (px), method: column-mean peak with centroid in 7 bands from y 2010 to 2390, line fit through the bands",
+      "reader_value": "st9 1004.2, st5 2353.4, st1 3684.7",
+      "my_value": "st9 1004.45, st5 2353.69, st1 3684.10 (st8 1343.17, st7 1679.84, st6 2015.73, st4 2689.87, st3 3023.59, st2 3354.03)",
+      "agree": true,
+      "note": "Every station is within 1.1 px (0.18 cells)."
+     },
+     {
+      "item": "Station-X fit (work X = m*u + b)",
+      "reader_value": "X = 0.16249533*u + 18.3504; residuals under 0.07 cells; 18.502 px per drawing-ft",
+      "my_value": "X = 0.16249332*u + 18.3015; residuals -0.11 to +0.16 cells; 6.1541 px/cell = 18.502 px per drawing-ft (3.0065 cells/ft confirmed). The reader's fit run on my station x values reproduces the known X within 0.17 cells.",
+      "agree": true
+     },
+     {
+      "item": "Station-line lean dx/dy",
+      "reader_value": "0.0095 to 0.0166, used 0.013",
+      "my_value": "0.010 to 0.019 in the clean bands (one band at y 2375 dropped as an outlier), mean about 0.0145",
+      "agree": true,
+      "note": "The 0.0015 difference is about 0.2 cells at taffrail height, which is negligible."
+     },
+     {
+      "item": "Vertical scale: waterline spacing (5 gaps, 6 waterlines traced at 66 columns)",
+      "reader_value": "57.4 to 57.9 px per 3 ft, constant 19.22 px/ft = 0.15859 cells/px",
+      "my_value": "The spacing varies with x: 58.2 to 58.6 px at the stern (x 760 to 1240) and 57.3 to 57.4 px at the bow (x 3400 to 3560). Linear fit: 58.38 - 0.000281*x px per 3 ft, i.e. 19.39 px/ft at the stern and 19.13 px/ft at the bow.",
+      "agree": false,
+      "note": "Systematic fan of about 1.4%. With the reader's single scale, stern heights come out about 1% high (rail top 134.7 becomes about 133.4; taffrail 136.4 becomes about 135.1, both about -1.3 cells) and bow heights about 0.8% low (Z 112.7 at the head becomes about 113.6, +0.9). Each is under the 1.5-cell threshold but all have the same sign at each end. The LWL at the sternpost moves only from 67.7 to about 67.0."
+     },
+     {
+      "item": "Keel-bottom datum line (px)",
+      "reader_value": "y = -0.02644*x + 2414.74 (lower line of a double line)",
+      "my_value": "Lowest peak in the band: y = -0.02678*x + 2415.59 (rms 0.9, n 129). It differs from the reader's line by +0.6 px at x 700 and -0.4 px at x 3650. The band is 11.5 px wide at half maximum, with two peaks 5-7 px apart. Its lower half-max edge is about 2.5 px (0.4 cell) below the reader's line.",
+      "agree": true,
+      "note": "Z=0 on the lower peak is a fair reading of the shoe bottom. The true outer edge is at most about 0.4 cell lower."
+     },
+     {
+      "item": "Upper keel line Z",
+      "reader_value": "6.1 aft to 6.9 forward",
+      "my_value": "6.2 (x 820), 6.3 (x 1200), 6.7 (x 3520)",
+      "agree": true
+     },
+     {
+      "item": "LWL Z at the stern (X 126) and at the bow (X 671)",
+      "reader_value": "67.7 / 59.3",
+      "my_value": "67.8 / 59.1 with the reader's uniform scale; with the local waterline scale about 67.0 at the stern",
+      "agree": true
+     },
+     {
+      "item": "Sternpost double-line centre at the LWL (X at Z 67.7)",
+      "reader_value": "126.0",
+      "my_value": "125.98 (interpolated between 126.24 at Z 64.8 and 125.53 at Z 72.7). The known value is 125.9.",
+      "agree": true
+     },
+     {
+      "item": "Sternpost double-line centre at Z 4.6 / 14.1 / 29.9 / 36.3 / 50.5",
+      "reader_value": "133.4@4.1, 132.3@13.7, 130.4@29.6, 129.7@35.9, 128.0@50.2",
+      "my_value": "133.34, 132.29, 130.35, 129.74, 127.87",
+      "agree": true,
+      "note": "The rake comes out at 6.5 deg, against the reader's 6.4."
+     },
+     {
+      "item": "Rudder aft line (X at Z 4.6, 36.3, 64.8, 85.4)",
+      "reader_value": "116.0, 116.7, 117.2, 117.9",
+      "my_value": "115.95, 116.67, 117.19, 117.90",
+      "agree": true,
+      "note": "These are line centres. The line is about 1.2 cells wide, so the true aft edge is about 0.6 cell further aft (lower X)."
+     },
+     {
+      "item": "Sternpost fore edge (X at Z 14.1, 36.3, 72.7)",
+      "reader_value": "142.3@13.4, 137.9@35.7, 130.6@72.4",
+      "my_value": "142.09, 137.74, 130.53",
+      "agree": true
+     },
+     {
+      "item": "Rudder bottom, rudder head top, keel aft end",
+      "reader_value": "rudder bottom Z 2.3; head top [119, 88.1]; keel aft end bottom [132.5, 0.6]",
+      "my_value": "Rudder lower edge line at Z 2.22-2.34 (X 125-132). Head top: the run ends at Z 87.95 at X 119. Keel band starts at X about 132.6-133 (gridded 4x crop), with its centre at Z 0.8 at X 136.",
+      "agree": true
+     },
+     {
+      "item": "Counter aft edge (start of the aft-most run)",
+      "reader_value": "119.1@90.1, 114.1@95, 121.8@87.8, meets sternpost [124.2, 86.5]",
+      "my_value": "119.1@90.1, 114.0@95.0, 120.1 (run start; centre 120.76)@87.8, a weak run centred at Z 86.3 at X 124.2",
+      "agree": true,
+      "note": "The point at Z 87.8 is 1.0-1.7 cells forward of my run (start 120.1, centre 120.8), on the threshold. All other points agree."
+     },
+     {
+      "item": "Stern face, aft-most edge (run start at Z 99.1 / 103.9 / 114.3 / 123.9 / 133.5)",
+      "reader_value": "110.9, 108.5, 105.1, 101.3, 97.4",
+      "my_value": "110.75, 108.4, 104.9, 101.15, 97.4",
+      "agree": true
+     },
+     {
+      "item": "Taffrail aft top corner and horn tip",
+      "reader_value": "corner [96.1, 136.4]; horn tip [75.9, 142.3]",
+      "my_value": "Run at Z 136.4 starts at X 95.7. The tip run is at X 75.6-77.4 for Z 141-142.5.",
+      "agree": true
+     },
+     {
+      "item": "Quarter gallery roof_aft",
+      "reader_value": "[107.3, 121.8]",
+      "my_value": "Run at Z 121.8 starts at X 106.6",
+      "agree": true
+     },
+     {
+      "item": "Quarter gallery roof_fwd",
+      "reader_value": "[133.3, 120.5]",
+      "my_value": "No line there. The vertical scan at X 133.3 finds 85.6, 92.0, 96.0, 99.8, the box band (103-114), then 116.7, and nothing up to the rail at about 129. The roof (two lines at Z 120-121.7) ends at X 126.3 (Z-120.5 run 122.65-126.3; X 126 scan 117.95-121.15; X 130 scan has no roof). X 128.3 to 137.3 is a separate rectangular opening hanging from the rail (verticals Z 117-129, sill at Z 116.7), probably a spar-deck port.",
+      "agree": false
+     },
+     {
+      "item": "Quarter gallery roof_drops_to",
+      "reader_value": "[142.9, 113.6]",
+      "my_value": "No line at X 142.9 near Z 113.6. The X 142.9 scan has lines at 102.7 (the box's raked forward edge) and 115.4 (a separate horizontal line that runs forward from X about 142 to 158+, probably the mizzen channel).",
+      "agree": false
+     },
+     {
+      "item": "Window box top forward corner",
+      "reader_value": "[147.8, 113.5]",
+      "my_value": "About [139, 113.5]. The forward end of the box's top runs is at X 140.7 (Z 110.5), 139.8 (Z 112) and 138.7 (Z 113.6). At X 141 nothing lies between Z 110 and 128. At X 147.8 the only nearby line is at Z 115.1, the separate channel-like line.",
+      "agree": false,
+      "note": "About 9 cells of X error."
+     },
+     {
+      "item": "Window box bottom fwd/aft and lower finishing",
+      "reader_value": "bottom_fwd [150.2, 94.9]; bottom_aft [114.8, 96.3]; lower finishing low point [129.6, 85.6]; fwd end [149.2, 93.3]",
+      "my_value": "95.3 at X 150.2; the bottom edge reaches about X 113-114 at Z about 96-97 (gridded crop); 85.58 at X 133.3; 93.4 at X 147.8",
+      "agree": true
+     },
+     {
+      "item": "Bow outer cutwater (X at Z 3.3 / 10.1 / 28.8 / 47.5 / 61.6 / 75.5 / 89.3 / 103.3 / 112.7)",
+      "reader_value": "625.8, 637.8, 653.4, 664.4, 672.8, 685.8, 704.2, 716.1, 720.8",
+      "my_value": "625.85, 637.66, 653.37, 664.41, 672.81, 685.71, 704.13, 716.15, 720.79",
+      "agree": true
+     },
+     {
+      "item": "Bow inner stem line (X at Z 19.4 / 38.1 / 52.4 / 61.6 / 75.5)",
+      "reader_value": "631.4@19.8, 649.0@38.4, 657.4@52.4, 661.5@61.9, 665.9@76",
+      "my_value": "630.84, 648.79, 657.25, 661.37, 665.78",
+      "agree": true
+     },
+     {
+      "item": "Rail top along the length (top line Z at X 107.5 / 204.9 / 214.7 / 370.7 / 448.6 / 517 / 624.3 / 653.5)",
+      "reader_value": "134.7, 130.4, 132.8, 127.5, 119.3, 126.8, 130.1, 127.4",
+      "my_value": "134.72, 130.43, 132.82, 127.44, 119.33, 126.83, 130.18, 127.41",
+      "agree": true
+     },
+     {
+      "item": "Quarterdeck break and forecastle break X",
+      "reader_value": "Waist drop between X 371 and 380; forecastle rises at X 507-517",
+      "my_value": "The quarterdeck rail ends at a vertical at X 372.8 (371.8-373.7). A second vertical at X 383.3 is where the waist rail starts (X 382.3-384.2). The forecastle break is a vertical at X 515.5 (514.5-516.4); at X 512 the top line is still the waist level, 119.6.",
+      "agree": true,
+      "note": "Mine gives the break positions more precisely."
+     },
+     {
+      "item": "Rail lines at stations 1 and 5",
+      "reader_value": "st1 (X 618.1): 129.9 / 126.0 / 121.6; st5 (X 401.7): 120.0 / 106.2",
+      "my_value": "st1, interpolated between X 604.8 and 624.3: 129.9 / 126.1 / 121.6. At X 390.1: 120.14 / 106.49, and the waist rail is flat 119.3-120.1 out to X 448.",
+      "agree": true,
+      "note": "Body-plan st5 top 124.05 sits about 4 cells above the waist rail. St5 (X 400.8) is clearly forward of the quarterdeck break (X 373.7), so the inconsistency is real, and the cause lies in the body plan or the source JSON, not in this sheer reading."
+     }
+    ],
+    "corrections": [
+     "Three quarter-gallery points are wrong. (1) The window box top forward corner is about [139, 113.5], not [147.8, 113.5]. (2) There is no roof line at [133.3, 120.5]: the roof (two lines at Z 120-121.7) runs from X 106.6 to about X 126.3. (3) There is no line at [142.9, 113.6]. The rectangle at X 128.3-137.3, Z 116.7-129 hangs from the rail and is not the gallery roof (it looks like a spar-deck port). The horizontal line at Z 115.1-115.4 running forward from X 142 is separate from the gallery (it looks like the mizzen channel).",
+     "Vertical scale is not uniform along the length. Waterline spacing is 58.38 - 0.000281*x px per 3 ft: about 58.2 px at the stern and 57.4 px at the bow. If heights are converted with the local scale, cells per px is 9.144/(58.38 - 0.000281*x) instead of the constant 0.15859. That lowers the stern rail and taffrail heights by about 1.3 cells (rail top about 133.4 at X 107.5, taffrail about 135.1) and raises the bow head heights by about 0.9 cell (Z 112.7 becomes about 113.6). This is under the 1.5-cell threshold but systematic.",
+     "The rudder 'aft edge' points are line centres. The aft edge proper is about 0.6 cell further aft (lower X).",
+     "The counter point at Z 87.8 is better as X 120.1-120.8 (my run, start to centre) than 121.8.",
+     "The breaks can be given more precisely: the quarterdeck rail ends at X 373.7, the waist rail starts at X 382.3-384.2, and the forecastle break is at X 515.5.",
+     "Keel datum: Z=0 on the lower peak is confirmed (my fit y = -0.02678*x + 2415.59, within 0.6 px of the reader's line). The outer half-max edge of the 11.5 px keel band is about 0.4 cell lower."
+    ]
+   }
+  },
+  {
+   "task": "Drawing 11 (1927 MIT PLAN VIII) BODY PLAN, stern half (left): calibration, stern/transom/counter outline, check for curves aft of station 9, and rail/top of side at the stern. Converted to work cells (hb from the centreline, Z with 0 = bottom of the keel shoe).",
+   "calibration": "The body plan is rotated by theta = 0.016 rad (about 0.92 deg) in the scan, so a fixed vertical centreline does not fit. Three measurements show the tilt: (a) the dashed centreline between the post lines, x(y) = 5287.8 + 0.0152*(y-2280), from row-scan peaks at y 1820..2280; (b) the 8-ft buttock line, x = 5127.7 at y 1530 and 5137.7 at y 2200 (slope 0.0149); (c) waterline A, y = 1922.1 at x 5000 and 1914.5 at x 5555 (slope -0.0137). Joint brightness-maximisation fit over all 161 source_lines.json d11 points (stations 1-9, aft and fore together): theta = 0.016, origin O (Z = 0 on the centreline) = (5288.0, 2314.25) px, horizontal 18.5 px/ft (fitting aft or fore alone also gives 18.4-18.5), vertical 19.23 px/ft. Fitting each side separately gives the same scale, so the earlier reading's 18.5 px/ft x 3.0065 cells/ft is confirmed. Conversion from pixel (x, y): du = (x-5288)cos(th) - (y-2314.25)sin(th); dv = (x-5288)sin(th) + (y-2314.25)cos(th); hb = -du*0.162514 (left side; use +du on the right); Z = -dv*0.158502. Re-checks: waterline spacing measured 57.62 px per 3 ft = 19.21 px/ft (WL peaks at x=5150: 1920.1, 1978.9, 2035.2, 2092.6, 2150.4, 2208.2), close to the given 19.25. WL A comes out at Z = 62.75 (sheet value 63). The keel-shoe bottom line's lower edge is at y of about 2316, consistent with Z = 0. Residuals of the known points, measured as the distance along the curve normal to the nearest brightness peak (window +-6 px): aft stations 5-9, 88 points, mean -0.08 px, rms 1.15 px, 68 of 88 within 1 px (58 within 0.7); fore stations 1-4, 72 points, mean +0.49, rms 1.22, 59 of 72 within 1 px. An unrotated frame does worse (aft rms 2.07, fore rms 3.66). Direct spot check on station 9: at Z 80.7 I measure hb 49.42 against the source's 49.31 at Z 80.35; at Z 87.0, 49.14 against 48.89 at Z 88.1.",
+   "data": {
+    "frame": {
+     "theta_rad": 0.016,
+     "origin_px": [
+      5288,
+      2314.25
+     ],
+     "px_per_ft_h": 18.5,
+     "cells_per_ft_h": 3.0065,
+     "cells_per_px_h": 0.162514,
+     "px_per_ft_v": 19.23,
+     "cells_per_px_v": 0.158502,
+     "centreline_px_x_of_y": "5287.8 + 0.0152*(y-2280)",
+     "WL_A_Z": 62.75,
+     "residuals_known_pts": {
+      "aft_5_9": {
+       "n": 88,
+       "mean_px": -0.08,
+       "rms_px": 1.15,
+       "within_1px": 68
+      },
+      "fore_1_4": {
+       "n": 72,
+       "mean_px": 0.49,
+       "rms_px": 1.22,
+       "within_1px": 59
+      }
+     }
+    },
+    "stern_outline_ordered_hb_z": {
+     "description": "Outer edge of the stern face seen from astern, ordered from the counter knuckle at the centreline, out to the side, then up the transom side edge to the taffrail corner. Method: column-scan peak tracking for the counter, row-scan peak tracking for the side edge (Gaussian blur 1.0, sub-pixel parabola fit).",
+     "counter_lower_edge": [
+      [
+       0.6,
+       81.2
+      ],
+      [
+       5.2,
+       81.24
+      ],
+      [
+       10.4,
+       81.29
+      ],
+      [
+       15.6,
+       81.27
+      ],
+      [
+       20.1,
+       81.3
+      ],
+      [
+       25.3,
+       81.46
+      ],
+      [
+       30.5,
+       81.55
+      ],
+      [
+       33.8,
+       81.6
+      ],
+      [
+       35.7,
+       81.68
+      ],
+      [
+       37.7,
+       81.85
+      ],
+      [
+       39,
+       82.05
+      ],
+      [
+       40.3,
+       82.32
+      ],
+      [
+       41.6,
+       82.77
+      ],
+      [
+       42.8,
+       83.24
+      ],
+      [
+       44.1,
+       83.89
+      ],
+      [
+       44.4,
+       84.12
+      ],
+      [
+       45.4,
+       84.69
+      ],
+      [
+       45.9,
+       85.09
+      ],
+      [
+       46.9,
+       86.06
+      ],
+      [
+       47.45,
+       87.02
+      ],
+      [
+       47.64,
+       87.99
+      ]
+     ],
+     "hull_side_at_name_band_end": [
+      [
+       48.23,
+       89.09
+      ],
+      [
+       48.21,
+       90.17
+      ],
+      [
+       48.19,
+       91.07
+      ],
+      [
+       47.6,
+       95
+      ]
+     ],
+     "transom_side_edge": [
+      [
+       46.97,
+       96.52
+      ],
+      [
+       46.05,
+       99.68
+      ],
+      [
+       45.42,
+       102.84
+      ],
+      [
+       44.87,
+       105.21
+      ],
+      [
+       44.27,
+       108.37
+      ],
+      [
+       43.82,
+       110.74
+      ],
+      [
+       43.25,
+       113.9
+      ],
+      [
+       42.87,
+       116.27
+      ],
+      [
+       42.46,
+       119.44
+      ],
+      [
+       42.19,
+       121.81
+      ],
+      [
+       41.84,
+       123.39
+      ],
+      [
+       41.85,
+       124.97
+      ],
+      [
+       41.71,
+       126.56
+      ]
+     ],
+     "top_corner_taffrail_meets_side": [
+      42,
+      127.62
+     ]
+    },
+    "stern_side_hb_vs_Z_resampled": {
+     "82": 38.8,
+     "83": 42.2,
+     "84": 44.3,
+     "85": 45.8,
+     "87": 47.44,
+     "90": 48.21,
+     "95": 47.31,
+     "100": 45.99,
+     "105": 44.91,
+     "110": 43.96,
+     "115": 43.06,
+     "120": 42.4,
+     "125": 41.85,
+     "81.2": "0..33 (flat knuckle at the centreline; rises to 81.6 at hb 33, 82.0 at hb 38.8)",
+     "126.5": 41.72,
+     "127.6": "42.0 (taffrail corner)"
+    },
+    "taffrail": {
+     "top_line_hb_z": [
+      [
+       0,
+       128.08
+      ],
+      [
+       4.1,
+       128.25
+      ],
+      [
+       8.1,
+       128.38
+      ],
+      [
+       12.2,
+       128.47
+      ],
+      [
+       16.3,
+       128.44
+      ],
+      [
+       20.3,
+       128.43
+      ],
+      [
+       24.4,
+       128.27
+      ],
+      [
+       28.5,
+       128.17
+      ],
+      [
+       32.5,
+       127.92
+      ],
+      [
+       36.6,
+       127.65
+      ],
+      [
+       40.7,
+       127.68
+      ],
+      [
+       42.3,
+       127.76
+      ]
+     ],
+     "lower_rail_line_hb_z": [
+      [
+       0.1,
+       124.24
+      ],
+      [
+       9.8,
+       124.32
+      ],
+      [
+       19.6,
+       124.12
+      ],
+      [
+       29.3,
+       124.13
+      ],
+      [
+       39.1,
+       123.77
+      ]
+     ],
+     "note": "Taffrail top is crowned: about Z 128.4 near the centre, 127.6-127.7 at the side corner (hb 42). The lower rail line is about 4.1 cells below it."
+    },
+    "top_of_side_at_stern": {
+     "stern_face_top_corner": [
+      42,
+      127.62
+     ],
+     "station9_top": [
+      46.35,
+      126.9
+     ],
+     "rail_line_outboard_of_stern_seen_from_aft": [
+      [
+       46.35,
+       126.93
+      ],
+      [
+       48.8,
+       126.48
+      ],
+      [
+       50.4,
+       126.06
+      ],
+      [
+       52.9,
+       125.02
+      ],
+      [
+       54.5,
+       124.22
+      ],
+      [
+       55.67,
+       123.84
+      ]
+     ],
+     "note": "The line from the taffrail corner sloping outboard and down is the top of side at each station (sheer as seen from astern). It ends at the outermost curve's top, hb 55.7 at Z 123.8, which agrees with the source's station 5 top of hb 54.8 at Z 124.05."
+    },
+    "stern_face_features_Z": {
+     "upper_ports_in_taffrail_bulwark": {
+      "Z_top": 123.8,
+      "Z_bottom": 113.64,
+      "port1_hb": [
+       18.25,
+       28.22
+      ],
+      "port2_hb": [
+       0,
+       5.12
+      ],
+      "note": "Two rectangles below the taffrail rail. Port 2 runs to the centreline post."
+     },
+     "gallery_top_molding_two_lines": [
+      111.98,
+      110.26
+     ],
+     "gallery_top_note": "At hb 19 these are flat. They curve down at the sides with a large corner radius into the name band end at hb about 48, Z 91-95.",
+     "pilaster_caps": 103.27,
+     "main_stern_window_row": {
+      "Z_top": 101.28,
+      "Z_mid_bar": 97.63,
+      "Z_bottom": 94.71,
+      "window1_hb": [
+       13.6,
+       24.27
+      ],
+      "window1_mullions_hb": [
+       20.9,
+       17
+      ],
+      "window2_hb": [
+       0,
+       5.66
+      ],
+      "narrow_i_lights_or_pilasters_hb": [
+       34.53,
+       26.95,
+       11.51,
+       7.5
+      ]
+     },
+     "name_band_CONSTITUTION": {
+      "Z_top": 92.84,
+      "Z_bottom": 88.73,
+      "outer_end_hb": 48.2
+     },
+     "counter_knuckle_lower_edge_at_centreline": 81.15
+    },
+    "station9_upper_measured": [
+     [
+      48.47,
+      74.35
+     ],
+     [
+      49.13,
+      77.53
+     ],
+     [
+      49.42,
+      80.71
+     ],
+     [
+      49.43,
+      83.08
+     ],
+     [
+      49.35,
+      84.19
+     ],
+     [
+      49.33,
+      85.14
+     ],
+     [
+      49.2,
+      86.09
+     ],
+     [
+      49.14,
+      87.04
+     ],
+     [
+      47.54,
+      98.11
+     ],
+     [
+      47.55,
+      101.29
+     ],
+     [
+      47.47,
+      104.45
+     ],
+     [
+      46.52,
+      110.78
+     ],
+     [
+      46.42,
+      113.95
+     ],
+     [
+      46.4,
+      117.12
+     ],
+     [
+      46.35,
+      120.29
+     ],
+     [
+      46.34,
+      123.46
+     ],
+     [
+      46.35,
+      125.84
+     ]
+    ],
+    "aft_of_station9": {
+     "present": false,
+     "detail": "Below the counter there is no section curve between station 9 and the sternpost. Row scans at y 1850-2260 (Z 24-73) between station 9 and the post show only the vertical 8-ft buttock (x about 5133-5138) and the post/centre lines (about 5270-5298). Above the counter, the only lines inboard of station 9 are the transom side edge (Z 95-127.6) and the counter lower edge (Z 81.2). These outline the stern face; they are not a station 10 or fashion-piece section. Confidence about 80%."
+    },
+    "files": {
+     "folder": "C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/stern_body",
+     "final_json": "C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/stern_body/final.json",
+     "trace_json": "C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/stern_body/trace.json",
+     "overlay_png": "C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/stern_body/overlay.png"
+    }
+   },
+   "confidence_notes": [
+    "Frame and scale are high confidence. Three separate drawing features give the tilt (centreline, buttock, waterline A), and the joint fit to 161 known points gives 18.5 px/ft on both sides, rms of about 1.2 px, roughly 0.2 cells.",
+    "The counter lower edge (Z 81.2) is a clean, bright continuous line from the centreline to hb about 45, so it is high confidence (+-0.2 cells). The corner where it meets the name band end at hb 46-48, Z 85-88 is medium-high: lines merge there and the column scans at x 4988-4996 lose the peak.",
+    "Transom side edge: Z 96.5-127.6 is high confidence; it is a distinct line about 3-5 px inboard of station 9. Between Z 91 and 96 it merges with station 9 and the ends of the gallery top moldings. The hb of 47.6 at Z 95 is an interpolated join point, not a resolved peak.",
+    "Below Z of about 90, the 16-ft buttock (x 4986-4988) runs within about 10 px of station 9. My automatic tracker first followed the buttock (hb 47.7 at Z 75-83). The station 9 values reported above come from the correct line (x 4975.5-4977.9) and match the source to within 0.1-0.3 cells.",
+    "Window and port heights come from column peaks at x 5110-5255 and are good to +-0.3 cells. What the narrow 'i' glyphs are (narrow lights or pilasters) is my interpretation.",
+    "The two upper rectangles below the taffrail rail are read as stern ports or windows in the taffrail bulwark. That is an interpretation; the drawing does not label them.",
+    "The dashed line across the stern at about y 1640-1650 (Z of about 106) was not traced. It looks like the deck line seen through the stern (hidden line). Low confidence on what it is."
+   ],
+   "unverified": [
+    "I did not cross-check the counter knuckle height (Z 81.2) or the taffrail height (Z 128.3) against the SHEER PLAN profile of the stern.",
+    "I did not check whether the earlier reading of the station 9 top points (hb 46.27-46.45 at Z 111-127) took the station line or the nearby buttock. My own trace of the line at x of about 4990 agrees with them to within 0.1 cells.",
+    "The window and port hb edges are from a single scanline each (y 1570 and y 1710); I did not trace the full window outlines.",
+    "I did not look for a quarter gallery in the body plan. None is obviously drawn outboard of the hull in the stern view."
+   ],
+   "verify": {
+    "task": "VERIFY stern_body reading: Drawing 11 (1927 MIT PLAN VIII) BODY PLAN, stern half. Checked the calibration frame, stern/counter/transom outline, taffrail, top of side, stern-face features, station 9 upper part, whether any curve exists aft of station 9, and whether a quarter gallery appears. Also cross-checked against the SHEER PLAN. My frame was measured on its own: theta 0.016; origin at the centre of the keel-shoe bottom line (5288.0, 2313.6); 18.5 px/ft horizontal; 19.243 px/ft vertical. Because my origin sits 0.65 px lower, my Z values run about 0.10 cells below the reader's. Files are in C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/f8b17761-635f-40bb-9f69-ddb8ca6bede6/scratchpad/read6/verify_stern_body (cal.py, cal2.py, keel.py, check.py to check5.py, sheer.py, overlay_reader_pts.png).",
+    "verdict": "confirmed",
+    "checks": [
+     {
+      "item": "Rotation of the scan (theta)",
+      "reader_value": "0.016 rad (WL A slope -0.0137, 8-ft buttock slope +0.0149)",
+      "my_value": "Tracked straight lines (peak tracking, ±2.5 px, iterative fit). WL A to F slopes are -0.0147, -0.0176, -0.0180, -0.0137, -0.0133, -0.0134 (mean -0.0151). Buttock slopes: L8 +0.0145, R8 +0.0167, L16 +0.0147, R16 +0.0217 (mean +0.0169). Overall about 0.016.",
+      "agree": true
+     },
+     {
+      "item": "Centreline position",
+      "reader_value": "x(y) = 5287.8 + 0.0152*(y-2280), i.e. 5279.0 at y 1700 and 5285.1 at y 2100",
+      "my_value": "Midpoint of the left and right 8-ft buttocks: 5278.4 at y 1700, 5281.6 at y 1900, 5284.7 at y 2100. The 16-ft pair gives 5279.7 / 5283.3 / 5286.9. The keel-shoe box at y 2310 is centred at about 5288.7.",
+      "agree": true
+     },
+     {
+      "item": "Horizontal scale",
+      "reader_value": "18.5 px/ft (0.162514 cells/px)",
+      "my_value": "8-ft buttock separation is 295.7-296.6 px for 16 ft, so 18.48-18.54 px/ft. 16-ft separation is 590.2-593.0 px for 32 ft, so 18.44-18.53 px/ft.",
+      "agree": true
+     },
+     {
+      "item": "Vertical scale",
+      "reader_value": "19.23 px/ft (WL spacing 57.62 px per 3 ft)",
+      "my_value": "Fitted WL A to F at the centreline: y 1918.13 to 2206.78, 288.65 px over 15 ft, so 19.243 px/ft (57.73 px per 3 ft).",
+      "agree": true
+     },
+     {
+      "item": "Z origin (keel-shoe bottom) and Z of WL A",
+      "reader_value": "Origin y 2314.25; WL A at Z 62.75",
+      "my_value": "Column profiles at x 5280-5296 put the keel-shoe bottom line centre at y about 2313.5 (bright at 2313-2315); its lower half-max edge is at 2316.6. That is 0.75 px, or 0.12 cells, from the reader. With my origin WL A is at Z 62.64 (the sheet value is 63).",
+      "agree": true
+     },
+     {
+      "item": "Counter lower edge (column scans)",
+      "reader_value": "Z 81.20 / 81.29 / 81.30 / 81.45 / 81.54 / 82.26 / 82.93 / 83.84 / 84.77 at hb 1 / 10 / 20 / 25 / 30 / 40 / 42 / 44 / 45.5",
+      "my_value": "Z 81.02 / 81.15 / 81.13 / 81.30 / 81.39 / 82.09 / 82.80 / 83.64 / 84.63. Each is about 0.15 lower, which is the frame offset.",
+      "agree": true
+     },
+     {
+      "item": "Transom side edge (row scans)",
+      "reader_value": "hb 46.83 / 45.99 / 45.38 / 44.72 / 43.96 / 43.23 / 42.65 / 42.15 / 41.85 / 41.72 at Z 97 / 100 / 103 / 106 / 110 / 114 / 118 / 122 / 125 / 126.5",
+      "my_value": "hb 46.78 / 45.91 / 45.35 / 44.66 / 43.94 / 43.19 / 42.62 / 42.17 / 41.85 / 41.66. At Z 97-106 two more lines sit inboard of it (the gallery top moldings curving down), which supports the reader's reading that the outermost of the three is the side edge.",
+      "agree": true
+     },
+     {
+      "item": "Hull side at the name-band end",
+      "reader_value": "hb 48.21 at Z 90; 47.6 at Z 95",
+      "my_value": "Row peak at hb 48.21 at Z 90. At Z 95 the outermost inboard line is at hb 47.52 (station 9 and the 16-ft buttock merged). Note: the reader's resampled table gives 47.31 at Z 95, which does not match its own outline point (47.6, 95).",
+      "agree": true
+     },
+     {
+      "item": "Taffrail top line",
+      "reader_value": "Z 128.08 (hb 0), 128.38 (8.1), 128.47 (12.2), 128.44 (16.3), 127.92 (32.5), 127.65 (36.6); corner (42, 127.62)",
+      "my_value": "Z 128.02 (hb 2.5), 128.20 (8), 128.30 (12), 128.27 (16), 128.08 (22), 127.72 (32), 127.65 (36), 127.60 (40). The crown is confirmed.",
+      "agree": true
+     },
+     {
+      "item": "Taffrail lower rail line",
+      "reader_value": "Z 124.24-124.32 near the centre; 123.77 at hb 39.1",
+      "my_value": "Z 124.03-124.17 (hb 2.5-16); 123.84 (hb 22); 123.58 (hb 40)",
+      "agree": true
+     },
+     {
+      "item": "Gallery top moldings",
+      "reader_value": "Z 111.98 and 110.26",
+      "my_value": "Z 112.01 / 110.36 (hb 8), 111.98 / 110.29 (hb 12), 111.88 / 110.18 (hb 16)",
+      "agree": true
+     },
+     {
+      "item": "Upper ports in the taffrail bulwark",
+      "reader_value": "Z 123.8 to 113.64; port 1 hb 18.25-28.22; port 2 hb 0-5.12",
+      "my_value": "Port bottom at Z 113.42 (hb 22). Row scans at Z 116/118/120 put the port 1 edges at hb 18.22-18.29 and 28.22-28.28, and the port 2 outer edge at hb 5.12-5.19. The peak at hb 24.0 inside port 1 is the 8-ft buttock.",
+      "agree": true
+     },
+     {
+      "item": "Main stern window row",
+      "reader_value": "Z top 101.28, mid bar 97.63, bottom 94.71; window 1 hb 13.6-24.27; mullions at hb 20.9 and 17; window 2 out to hb 5.66",
+      "my_value": "Top at Z 101.13-101.19. The bright bar is at Z 96.69-97.05 (about 96.8-97.15 in the reader's frame), 0.5-0.8 below the reader's mid bar. The bottom is a weak peak at Z 94.5-95.6. Window 1 edges at hb 13.65-13.78 and 24.14-24.39; mullions at 20.73-21.14 and 17.11-17.14; window 2 edge at 5.48-5.65.",
+      "agree": true,
+      "note": "The mid bar differs by 0.5-0.8 cells. That is under the 1.5-cell threshold but more than the reader's stated ±0.3."
+     },
+     {
+      "item": "Narrow 'i' lights or pilasters, and pilaster caps",
+      "reader_value": "hb 34.53, 26.95, 11.51, 7.5; caps at Z 103.27",
+      "my_value": "hb 34.51-34.70, 26.94-27.35, 11.48-11.73, 7.45-7.49; caps at Z 103.05",
+      "agree": true
+     },
+     {
+      "item": "Name band CONSTITUTION",
+      "reader_value": "Z top 92.84, bottom 88.73",
+      "my_value": "Line centres at Z 92.38-92.55 and 88.41-88.48 (hb 2.5-22). Toward the side they fall to 91.75 and 87.98 at hb 40.",
+      "agree": true,
+      "note": "About 0.3-0.45 lower in Z. The reader may have measured line edges rather than line centres."
+     },
+     {
+      "item": "Station 9 upper (all 17 reader points re-measured by row scan)",
+      "reader_value": "e.g. hb 48.47 @ Z 74.35, 49.42 @ 80.71, 49.14 @ 87.04, 47.55 @ 101.29, 47.47 @ 104.45, 46.52 @ 110.78, 46.35 @ 125.84",
+      "my_value": "hb 48.49, 49.42, 49.15, 47.56, 47.66, 46.52, 46.34. All 17 points agree within 0.2 cells. At Z 98-104.5, station 9 merges with the 16-ft buttock (hb about 47.7). At Z 105 the two separate again (47.75 buttock, 46.98 station 9; the source has 47.08 at Z 103.54). So the reader's 47.47 at Z 104.45 is probably the merged line and about 0.4 cells outboard of station 9.",
+      "agree": true
+     },
+     {
+      "item": "Top of side seen from astern (rail line outboard of the stern)",
+      "reader_value": "Z 126.93 / 126.48 / 126.06 / 125.02 / 124.22 / 123.84 at hb 46.35 / 48.8 / 50.4 / 52.9 / 54.5 / 55.67",
+      "my_value": "Z 126.73 / 126.29 / 125.87 / 124.83 / 124.02 / 123.45. The line ends at hb 55.5-56: at hb 57 no peak is found above Z 113.",
+      "agree": true
+     },
+     {
+      "item": "Curves aft of station 9 (below the counter)",
+      "reader_value": "None. Only the 8-ft buttock and the post/centre lines.",
+      "my_value": "Row scans every 4 Z from Z 20 to 76, between station 9 and the centreline, find only station 9 itself, the 8-ft buttock (hb 24.0), the post lines (hb ±1.65) and the centreline (hb 0). The scattered weak peaks at Z 36 and 44 lie on waterline rows D and C. Confirmed: there is no station 10 or fashion-piece curve.",
+      "agree": true
+     },
+     {
+      "item": "Quarter gallery in the body plan (the reader left this unverified)",
+      "reader_value": "None obviously drawn outboard",
+      "my_value": "Row scans from hb 44 to 75 at Z 80-123 find nothing outboard of the outermost station (hb 64.8 at Z 80). The SHEER PLAN does draw a quarter gallery (windows, plus a lower finish bottoming at sheer y 1858, about 5.6 ft above WL A), but the body plan does not show it.",
+      "agree": true
+     },
+     {
+      "item": "Cross-check against the SHEER PLAN: counter knuckle height",
+      "reader_value": "Z 81.2, i.e. 6.05 ft above WL A (62.75)",
+      "my_value": "Sheer plan WL A at y 1967.3 (x 700-900); local WL spacing 19.3-19.4 px/ft. Where the counter profile meets the post, the column peaks are at y 1845-1849, i.e. 118-122 px or about 6.1-6.3 ft above WL A (roughly Z 81.4-82). Medium confidence on which sheer line is the knuckle; the quarter-gallery finish just aft bottoms at y 1858.",
+      "agree": true
+     },
+     {
+      "item": "Cross-check against the SHEER PLAN: taffrail and lower rail heights",
+      "reader_value": "Taffrail crown Z 128.08-128.47 (21.44-21.56 ft above WL A); lower rail Z 124.2 (20.16 ft)",
+      "my_value": "Sheer plan rail top at the stern is at y 1548-1551 (416-419 px above WL A, 21.4-21.8 ft). The lower rail line is at y 1578-1581 (20.0-20.2 ft). The tapered beam above it (y about 1502-1537, projecting aft to x about 330) is a stern davit and is not part of the taffrail.",
+      "agree": true
+     }
+    ],
+    "corrections": [
+     "No disagreement over 1.5 cells was found. Every value I re-measured is within 0.5 cells, except the window mid bar (0.5-0.8 cells).",
+     "Minor: the main window mid bar measures Z 96.7-97.05 in my frame (about 96.8-97.15 in the reader's frame), not 97.63. Suggest Z ≈ 97.1.",
+     "Minor internal inconsistency: stern_side_hb_vs_Z_resampled gives '95': 47.31, but the outline point is (47.6, 95). The row scan at Z 95 finds the outermost inboard line at hb 47.52, so use about 47.5.",
+     "Minor: the station 9 points at Z 98.11-104.45 (hb 47.47-47.55) are where station 9 merges with the 16-ft buttock (hb about 47.7). At Z 104.45 the true station 9 is probably about 47.1 (it resolves at 46.98 at Z 105; the source has 47.08 at Z 103.54).",
+     "The name band line centres are Z 92.4 and 88.45 (reader 92.84 and 88.73). That is within tolerance; the reader may have used line edges.",
+     "For the downstream reader, outside this reading's scope: the aft side of the body plan has an extra line between source stations 5 and 6 at Z 90-115 (hb 62.31 @ 90, 60.26 @ 95, 58.44 @ 100, 57.19 @ 105, 56.25 @ 110, 55.52 @ 115). The source's station 5 value of 56.14 at Z 115 falls between my two peaks (56.80 and 55.52). The upper part of source station 5 may mix two lines. Confidence on this is medium."
+    ]
+   }
+  }
+ ]
+}
