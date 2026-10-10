@@ -1,6 +1,6 @@
 # 風帆戰艦憲法號（0.1 m／格・照圖紙）—— 建造筆記
 
-委託：Tim 2026-10-10（TASK-0478 傘；階段一 TASK-0481、階段二 TASK-0482、階段三 TASK-0483）。比例 **0.1 公尺／格**（書卡 `meters_per_voxel=0.1`）。
+委託：Tim 2026-10-10（TASK-0478 傘；階段一 TASK-0481、階段二 TASK-0482、階段三 TASK-0483、階段四 TASK-0484 進行中）。比例 **0.1 公尺／格**（書卡 `meters_per_voxel=0.1`）。
 空間 1024×320×800（X 船長方向、船頭朝 +X；Y 船寬，中線 y=160；Z 高度，z=0 ＝ 護龍骨底面）。
 
 ## ⭐ 新圖紙（階段二起照它雕，不再直接照原圖）
@@ -11,6 +11,7 @@ Tim 2026-10-10：「參考原設計圖紙，由妳重新設計一套新圖紙」
 - `sheet01_profile_v1.png`／`sheet01b_details_v1.png` —— v1：龍骨・艏柱・艉柱。
 - `sheet02_profile_v2.png`／`sheet02b_details_v2.png` —— v2：加 apron・內艉柱・船頭與船尾 deadwood（v1 的檔重產逐位元組不變）。
 - `compare01_*_v1.png`、`compare02_details_v2.png` —— 原圖（已補接縫）＋新圖紙紅線的對照。
+- `sheet03_lines_v1.png`／`compare03_bodyplan_v1.png` —— 新圖紙 03 線形圖（`draft_lines.py` 產；原圖讀數在 `source_lines.json`，讀數在 `verify_lines.json`）。
 - `source_points.json` —— 從原圖描的點（只拿來量新線離原圖多遠，不是設計來源）。
 - `masks/*.png` —— 給 `stampimg facing=y+` 的遮罩。⚠ y± 貼片的 v 軸不翻轉 ⇒ 遮罩第 0 列是**最低**的 z（圖看起來上下顛倒，這是對的）。
 
@@ -98,3 +99,22 @@ Tim 2026-10-10：「參考原設計圖紙，由妳重新設計一套新圖紙」
 **keelson 的去留**：keelson 坐在底肋上，底肋要等肋骨階段 ⇒ keelson 挪到肋骨階段（設計決定）。
 它的位置已經畫在 v2 上（虛線）：底面＝A、頂面＝B；船尾在 X 186 頂上 deadwood 的前端面，船頭在 X 577 接 apron 的後端。
 sternson 併進船尾 deadwood、stemson 併進 apron，不另分件（設計決定）。
+
+## 階段四（進行中，TASK-0484）：新圖紙 03 線形圖 v1 定稿；底肋與 keelson 已設計、**還沒雕**
+讀圖（2026-10-10 晚～10-11，workflow：四個 agent 平行讀 02／04／11／15 號，每份再派一個 verifier 獨立重量）：
+- **02 號肋位**：站位線每標號隔 2 肋位（46…2、Ø、B…Z），肋距 6.579 格（25.9"），Ø 船中 X 448.9；verifier 37 條全部 0.2 px 內對上。
+  ⚠ verifier 抓到換算的兩個 1 格級系統誤差：比例尺端點跨了拼貼接縫（船身那張實際 74.31 px/ft，不是 74.47）、船頭那張位移更像 (31.5, 17) px 而不是 (24, 12)。已雕的都用同一套換算、彼此一致 ⇒ 不改，只記。
+- **11 號（1927 MIT 藍曬）**：1–9 號站橫剖面、水線、keel drag；橫向比例偏大約 1.5%（型寬 43'6" 與水線長兩個獨立的量都給 0.985）。3 號站可能是 4 號的雙線 ⇒ 不採用。
+- **15 號（1928 船中剖面）**：molded 外形；double frames sided 12"、room and space 26"、frame moulded 14"、keelson 18"x18"、floors 21" over keel；**底肋頭沒畫**（註明待取得）。
+- **04 號（Humphreys 規格）**：floors 21" 喉部、moulded 15"、keelson 18"x18" 上面還有 15"x18" rider；Humphreys 要求龍骨與底肋之間一條 9"x24" deadwood（這張圖把它併進底肋與 keelson）。讀 04 號的 agent 拖太久，本小姐自己看了那兩塊。
+
+新圖紙 03 的船殼：hb(X, z) = 2.5 + (H11(X, z) − 2.5) · s(z)
+- H11 ＝ 11 號 1、2、4–9 號站在每個高度沿船長的自然樣條；s(z) ＝ 讓 Ø 船中剛好等於 15 號的修正係數（Z 9 處 0.29、Z 20 處 0.83、Z 50 以上 ≈1）—— 15 號的船底比 11 號尖（deadrise 大）、舭部瘦約 1.5 ft。
+- 讀數：船中 vs 15 號 rms 0.19 格（最大 0.52）；各站比 11 號描點瘦 2–3 格（刻意的修正，上舷幾乎重合）。
+- 不用 scipy.interpolate（這台的被一個 09-08 留下的舊 `scipy/interpolate/interpnd.cp310-win_amd64.pyd` 擋住，載不起來）；PCHIP 與自然樣條在 `draft_lines.py` 裡自己寫。
+
+底肋與 keelson（設計完成，遮罩已產，**還沒 stampimg**）：
+- 底肋 59 片：f −39..+19（X 192.3..573.9），每片 sided 3 格（12"）、置中於肋位；沿 molded 線 moulded 3.6 格（14"）；喉部頂 ＝ cutting-down line A；
+  底肋頭 ＝ 沿 molded 線從龍骨側面量 3.6 m（兩張圖都沒畫 ⇒ 設計決定，船中那片全長約 25 ft；往兩頭 V 形船底讓底肋頭自然升高）。顏色 141。
+  遮罩 `design/masks/floors/f±NN.png`（facing=x+；at／expect_pixels 在 `verify_lines.json` 的 floors[].stamp）。共 15,496 個 Y-Z 格 × 3 ＝ 46,488 voxel。
+- keelson：A 到 B、X 186..577、sided 5 格、顏色 209；遮罩 `design/masks/keelson.png`（facing=y+）。

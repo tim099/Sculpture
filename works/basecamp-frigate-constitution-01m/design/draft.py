@@ -282,6 +282,21 @@ def write_mask(path, cells, color):
     return x0, z0, w, h
 
 
+def write_mask_x(path, cells_yz, color, y_base, z_base):
+    """給 `stampimg facing=x+` 的遮罩（Y-Z 平面）：引擎對 x± 是 u→Z、v→Y 且 v 翻轉 ⇒
+    像素 (u, v) 落在 z = at.z + u、y = at.y + (H−1−v)。at 取 (x, y_base, z_base)。"""
+    ys = [c[0] for c in cells_yz]
+    zs = [c[1] for c in cells_yz]
+    h = max(ys) - y_base + 1
+    w = max(zs) - z_base + 1
+    a = np.zeros((h, w, 4), np.uint8)
+    r, g, b = palette_rgb(color)
+    for y, z in cells_yz:
+        a[h - 1 - (y - y_base), z - z_base] = (r, g, b, 255)
+    Image.fromarray(a, 'RGBA').save(path)
+    return w, h
+
+
 # ───────────────────────── 畫圖 ─────────────────────────
 def font(size, bold=False):
     f = 'C:/Windows/Fonts/msjhbd.ttc' if bold else 'C:/Windows/Fonts/msjh.ttc'

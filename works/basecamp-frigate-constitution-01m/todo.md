@@ -1,14 +1,16 @@
-## 下一階段（階段四）：肋骨的前置 —— 先畫新圖紙 03「線形圖」再雕底肋與 keelson
-- [ ] 新圖紙 03：線形（body plan）—— 從 11 號圖（1927 MIT 藍曬，側面／橫剖面／水線）取各站的斷面形狀，配 02 號圖底下的站位號（46…2 ⊗ A…Z）；一樣 plan.json 參數＋provenance、draft.py 出圖與對照
-- [ ] 底肋（floors）：船中 X 186..577、龍骨上緣到 cutting-down line（A，v2 已畫）；肋骨間距照原圖站位（先量）
-- [ ] keelson：A 到 B（v2 虛線），船尾頂到 deadwood 前端（X 186）、船頭接 apron 後端（X 577）
-- [ ] 04 號圖 keelson 寫 18"×18"（＋9"×24"），原圖 02 號量到 A→B 約 5 格（0.5 m）—— 兩者對一下
+## 下次從這裡接（階段四 TASK-0484 剩下的）
+- [ ] 先看一眼新圖紙 03 的底肋設計（底肋頭 3.6 m 是設計決定）；要改就改 plan.json 的 lines.floor 重跑 `python -I draft_lines.py <design>`
+- [ ] 雕 59 片底肋：照 `verify_lines.json` floors[].stamp 逐片 `sculpture op=stampimg facing=x+ thickness=3 expect_pixels=…`（建議寫成一支小迴圈，每片讀回 placed 是否 ＝ expect × 3）
+- [ ] 雕 keelson：`verify_lines.json` keelson.stamp（facing=y+、thickness 5）
+- [ ] 驗收：剖面（axis=x+ 疊新圖紙 03 的橫剖面）探針 ≤ 1 格；反向對照偏 3 報 3；y／x 切片格數對設計
+- [ ] ⚠ x± 貼片的軸向（u→Z、v→Y 翻轉）第一次用 —— 先貼一片、用 section axis=x+ 看形狀對不對再全貼
 
 ## 之後
-- [ ] 肋骨其餘部分（futtocks、top timbers）→ 船殼板 → 橫樑與甲板 → 柱與艙內 → 桅檣與索具（主桅高度先查帆裝圖，Z 現在 800 格）
-- [ ] 船尾：transom（02 號圖艉柱前方橘色斜線那一排）、counter、fashion pieces；內艉柱頂 Z 82 以上
-- [ ] 船首 knee of the head（gripe 頂 Z 68 以上）
+- [ ] 其餘肋骨（雙肋的另一片＝first futtock、second futtocks、top timbers）—— 新圖紙 03 的船殼已經有了，肋骨外緣直接用它
+- [ ] 04／15 號的 rider keelson（15"x18"）與 Humphreys 9"x24" deadwood 要不要做
+- [ ] 船殼板 → 橫樑與甲板（15 號：orlop 13.09 ft、berth 19.14、gun 26.27、spar 33.79 ft at CL）→ 柱與艙內 → 桅檣與索具
+- [ ] 船尾 transom、counter；船首 knee of the head
 
 ## 待確認
-- [ ] 02 號圖龍骨深度船尾 0.47 m／船頭 0.63 m 與規格 24" 不一致 —— 拼貼錯位只解釋 0.05 m；原圖的 A、B 線也跟著龍骨線往船頭微升 ⇒ 比較像圖上的龍骨線本身是斜的；找第二份證據（11 號線形圖的龍骨線）
-- [ ] 艏柱／艉柱／deadwood／apron 的 sided 5 格都是設計決定，查 04／15 號或 Humphreys 規格
+- [ ] 02 號圖龍骨深度船尾 0.47／船頭 0.63 m 的謎：11 號側面顯示真的有 keel drag（船尾深約 2.7 ft）—— 作品的龍骨是平的；要不要做 drag 留給 Tim 決定
+- [ ] sided（艏柱／艉柱／deadwood／apron 5 格）仍是設計決定

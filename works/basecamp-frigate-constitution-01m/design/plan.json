@@ -19,6 +19,28 @@
     "provenance": "原圖讀數：比例尺刻度兩側各自每英尺 74.5 px；船頭那張的 20 ft 刻度外插在 12654、船身那張在 12630 ⇒ 右移 24；比例尺框線兩側各差 12 px ⇒ 下移 12；兩張都沒有量到旋轉"
   },
 
+  "lines": {
+    "title": "USS Constitution（1797）新圖紙 03：線形圖 v1 —— 船殼型線・底肋・keelson",
+    "task": "TASK-0484（傘 TASK-0478）",
+    "z_max": 128,
+    "exclude_stations": ["3"],
+    "midship_x": 448.9,
+    "d15_keel_top_ft": 2.53,
+    "ratio_smooth_cells": 2.0,
+    "frames": {"x0": 448.904, "spacing": 6.579, "f_from": -39, "f_to": 19},
+    "floor": {"sided": 3, "moulded": 3.6, "head_arc": 36.0, "color": 141},
+    "keelson": {"x_from": 186.0, "x_to": 577.0, "color": 209},
+    "show_floors": [-30, 0, 15],
+    "provenance": {
+      "hull": "船殼（molded，肋骨外面）＝ 11 號 1、2、4–9 號站沿船長的形狀（每個高度自然樣條）× 高度修正係數，讓 Ø 船中剛好等於 15 號船中剖面；龍骨側面半寬 2.5 固定（設計決定）。3 號站排除：11 號的 agent 與 verifier 都判它可能是 4 號的雙線（信心中低）",
+      "midship_x": "Ø 肋位：02 號站位的直線擬合 f=0（448.904；標記本身量到 448.36）",
+      "frames": "02 號站位：每標號隔 2 肋位、肋距 6.579 格（25.9\"）；15 號寫 room and space 26\" ⇒ 兩者一致（原圖讀數）；取等距（設計決定，原圖逐站有 ±0.5 格的手繪起伏）",
+      "floor": "sided 3 格（15 號：double frames sided 12\"，底肋是雙肋的其中一片）；moulded 3.6 格（15 號 14\"、04 號 15\"）；底肋頭 head_arc：兩張圖都沒畫（15 號註明待取得）⇒ 設計決定：沿 molded 線從龍骨側面量 3.6 m（船中那片全長約 25 ft）；喉部頂 ＝ cutting-down line A（v2）",
+      "keelson": "A 到 B（v2 虛線）、X 186..577、sided 5 格（15 號 keelson 18\"x18\"）；04／15 號在 keelson 上還有一條 rider（15\"x18\"）與 Humphreys 的 9\"x24\" deadwood ⇒ 之後再說（設計決定）",
+      "heights": "15 號高度對齊作品龍骨頂（15 號龍骨頂 2.53 ft ↔ 作品 Z 8）；11 號 rabbet 本來就落在 Z 7.8–8.2"
+    }
+  },
+
   "existing": {
     "shoe": {"label": "護龍骨 Shoe", "x": [130, 598], "z": [0, 1], "color": 104},
     "keel": {"label": "龍骨 Keel", "x_from": 130, "z": [2, 7], "color": 177,
