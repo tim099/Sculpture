@@ -1,0 +1,6491 @@
+{
+ "sheer": {
+  "coef": [
+   4.979121828250796e-05,
+   -0.0484081001576455,
+   134.725697188597
+  ],
+  "residuals": {
+   "11-9": -0.72,
+   "11-8": 0.13,
+   "11-7": 0.54,
+   "11-6": 0.91,
+   "11-5": 0.73,
+   "15-mid": -1.23,
+   "11-2": -2.04,
+   "11-1": 1.68
+  }
+ },
+ "moulded_z": [
+  [
+   8,
+   3.6
+  ],
+  [
+   17,
+   3.55
+  ],
+  [
+   23,
+   3.2
+  ],
+  [
+   33,
+   3.0
+  ],
+  [
+   41,
+   3.0
+  ],
+  [
+   51,
+   2.8
+  ],
+  [
+   60,
+   2.5
+  ],
+  [
+   66,
+   2.45
+  ],
+  [
+   95,
+   2.1
+  ],
+  [
+   128,
+   1.8
+  ]
+ ],
+ "planes": [
+  {
+   "f": -40,
+   "plane": "A",
+   "X": 185.74,
+   "x_cells": [
+    185,
+    187
+   ],
+   "top": 126.0,
+   "arc_end": 137.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     137.5,
+     141
+    ]
+   ],
+   "cells_yz": 640,
+   "counts": {
+    "floor": 164,
+    "2nd futtock": 258,
+    "4th futtock": 218
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-40A.png",
+    "at": "185,110,14",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 640
+   }
+  },
+  {
+   "f": -40,
+   "plane": "B",
+   "X": 188.74,
+   "x_cells": [
+    188,
+    190
+   ],
+   "top": 126.0,
+   "arc_end": 137.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     137.5,
+     141
+    ]
+   ],
+   "cells_yz": 638,
+   "counts": {
+    "1st futtock": 300,
+    "3rd futtock": 222,
+    "short top timber": 116
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-40B.png",
+    "at": "188,110,13",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 638
+   }
+  },
+  {
+   "f": -39,
+   "plane": "A",
+   "X": 192.32,
+   "x_cells": [
+    191,
+    193
+   ],
+   "top": 126.0,
+   "arc_end": 137.6,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     137.6,
+     141
+    ]
+   ],
+   "cells_yz": 480,
+   "counts": {
+    "2nd futtock": 270,
+    "4th futtock": 210
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-39A.png",
+    "at": "191,110,39",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 480
+   }
+  },
+  {
+   "f": -39,
+   "plane": "B",
+   "X": 195.32,
+   "x_cells": [
+    194,
+    196
+   ],
+   "top": 126.0,
+   "arc_end": 137.7,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     137.7,
+     141
+    ]
+   ],
+   "cells_yz": 654,
+   "counts": {
+    "1st futtock": 318,
+    "3rd futtock": 224,
+    "short top timber": 112
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-39B.png",
+    "at": "194,109,12",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 654
+   }
+  },
+  {
+   "f": -38,
+   "plane": "A",
+   "X": 198.9,
+   "x_cells": [
+    198,
+    200
+   ],
+   "top": 126.0,
+   "arc_end": 137.9,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     137.9,
+     141
+    ]
+   ],
+   "cells_yz": 476,
+   "counts": {
+    "2nd futtock": 264,
+    "4th futtock": 212
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-38A.png",
+    "at": "198,109,38",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 476
+   }
+  },
+  {
+   "f": -38,
+   "plane": "B",
+   "X": 201.9,
+   "x_cells": [
+    201,
+    203
+   ],
+   "top": 126.0,
+   "arc_end": 138.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     138.1,
+     141
+    ]
+   ],
+   "cells_yz": 644,
+   "counts": {
+    "1st futtock": 326,
+    "3rd futtock": 206,
+    "short top timber": 112
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-38B.png",
+    "at": "201,109,12",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 644
+   }
+  },
+  {
+   "f": -37,
+   "plane": "A",
+   "X": 205.48,
+   "x_cells": [
+    204,
+    206
+   ],
+   "top": 126.0,
+   "arc_end": 138.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     138.3,
+     141
+    ]
+   ],
+   "cells_yz": 474,
+   "counts": {
+    "2nd futtock": 258,
+    "4th futtock": 216
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-37A.png",
+    "at": "204,108,37",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 474
+   }
+  },
+  {
+   "f": -37,
+   "plane": "B",
+   "X": 208.48,
+   "x_cells": [
+    207,
+    209
+   ],
+   "top": 126.0,
+   "arc_end": 138.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     138.5,
+     141
+    ]
+   ],
+   "cells_yz": 680,
+   "counts": {
+    "1st futtock": 332,
+    "3rd futtock": 226,
+    "short top timber": 122
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-37B.png",
+    "at": "207,108,11",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 680
+   }
+  },
+  {
+   "f": -36,
+   "plane": "A",
+   "X": 212.06,
+   "x_cells": [
+    211,
+    213
+   ],
+   "top": 126.0,
+   "arc_end": 138.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     138.8,
+     141
+    ]
+   ],
+   "cells_yz": 488,
+   "counts": {
+    "2nd futtock": 264,
+    "4th futtock": 224
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-36A.png",
+    "at": "211,108,36",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 488
+   }
+  },
+  {
+   "f": -36,
+   "plane": "B",
+   "X": 215.06,
+   "x_cells": [
+    214,
+    216
+   ],
+   "top": 126.0,
+   "arc_end": 139.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     139.1,
+     141
+    ]
+   ],
+   "cells_yz": 670,
+   "counts": {
+    "1st futtock": 326,
+    "3rd futtock": 220,
+    "short top timber": 124
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-36B.png",
+    "at": "214,108,11",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 670
+   }
+  },
+  {
+   "f": -35,
+   "plane": "A",
+   "X": 218.64,
+   "x_cells": [
+    218,
+    220
+   ],
+   "top": 126.0,
+   "arc_end": 139.4,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     139.4,
+     141
+    ]
+   ],
+   "cells_yz": 494,
+   "counts": {
+    "2nd futtock": 270,
+    "4th futtock": 224
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-35A.png",
+    "at": "218,107,36",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 494
+   }
+  },
+  {
+   "f": -35,
+   "plane": "B",
+   "X": 221.64,
+   "x_cells": [
+    221,
+    223
+   ],
+   "top": 126.0,
+   "arc_end": 139.7,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     139.7,
+     141
+    ]
+   ],
+   "cells_yz": 690,
+   "counts": {
+    "1st futtock": 344,
+    "3rd futtock": 220,
+    "short top timber": 126
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-35B.png",
+    "at": "221,107,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 690
+   }
+  },
+  {
+   "f": -34,
+   "plane": "A",
+   "X": 225.22,
+   "x_cells": [
+    224,
+    226
+   ],
+   "top": 126.0,
+   "arc_end": 140.0,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     140.0,
+     141
+    ]
+   ],
+   "cells_yz": 482,
+   "counts": {
+    "2nd futtock": 264,
+    "4th futtock": 218
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-34A.png",
+    "at": "224,107,35",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 482
+   }
+  },
+  {
+   "f": -34,
+   "plane": "B",
+   "X": 228.22,
+   "x_cells": [
+    227,
+    229
+   ],
+   "top": 126.0,
+   "arc_end": 140.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     140.4,
+     141
+    ]
+   ],
+   "cells_yz": 690,
+   "counts": {
+    "1st futtock": 332,
+    "3rd futtock": 224,
+    "short top timber": 134
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-34B.png",
+    "at": "227,106,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 690
+   }
+  },
+  {
+   "f": -33,
+   "plane": "A",
+   "X": 231.8,
+   "x_cells": [
+    231,
+    233
+   ],
+   "top": 126.0,
+   "arc_end": 140.7,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     140.7,
+     141
+    ]
+   ],
+   "cells_yz": 496,
+   "counts": {
+    "2nd futtock": 262,
+    "4th futtock": 234
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-33A.png",
+    "at": "231,106,34",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 496
+   }
+  },
+  {
+   "f": -33,
+   "plane": "B",
+   "X": 234.8,
+   "x_cells": [
+    234,
+    236
+   ],
+   "top": 126.0,
+   "arc_end": 141.0,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     141.0,
+     141
+    ]
+   ],
+   "cells_yz": 690,
+   "counts": {
+    "1st futtock": 332,
+    "3rd futtock": 228,
+    "short top timber": 130
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-33B.png",
+    "at": "234,106,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 690
+   }
+  },
+  {
+   "f": -32,
+   "plane": "A",
+   "X": 238.38,
+   "x_cells": [
+    237,
+    239
+   ],
+   "top": 125.25,
+   "arc_end": 140.6,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     140.6,
+     141
+    ]
+   ],
+   "cells_yz": 480,
+   "counts": {
+    "2nd futtock": 268,
+    "4th futtock": 212
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-32A.png",
+    "at": "237,106,34",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 480
+   }
+  },
+  {
+   "f": -32,
+   "plane": "B",
+   "X": 241.38,
+   "x_cells": [
+    240,
+    242
+   ],
+   "top": 125.25,
+   "arc_end": 140.9,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     140.9,
+     141
+    ]
+   ],
+   "cells_yz": 702,
+   "counts": {
+    "1st futtock": 340,
+    "3rd futtock": 236,
+    "short top timber": 126
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-32B.png",
+    "at": "240,105,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 702
+   }
+  },
+  {
+   "f": -31,
+   "plane": "A",
+   "X": 244.96,
+   "x_cells": [
+    244,
+    246
+   ],
+   "top": 125.25,
+   "arc_end": 141.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     141.3,
+     141
+    ]
+   ],
+   "cells_yz": 506,
+   "counts": {
+    "2nd futtock": 274,
+    "4th futtock": 232
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-31A.png",
+    "at": "244,105,33",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 506
+   }
+  },
+  {
+   "f": -31,
+   "plane": "B",
+   "X": 247.96,
+   "x_cells": [
+    247,
+    249
+   ],
+   "top": 125.25,
+   "arc_end": 141.6,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     141.6,
+     141
+    ]
+   ],
+   "cells_yz": 704,
+   "counts": {
+    "1st futtock": 348,
+    "3rd futtock": 220,
+    "short top timber": 136
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-31B.png",
+    "at": "247,105,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 704
+   }
+  },
+  {
+   "f": -30,
+   "plane": "A",
+   "X": 251.53,
+   "x_cells": [
+    251,
+    253
+   ],
+   "top": 125.25,
+   "arc_end": 141.9,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     141.9,
+     141
+    ]
+   ],
+   "cells_yz": 498,
+   "counts": {
+    "2nd futtock": 268,
+    "4th futtock": 230
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-30A.png",
+    "at": "251,105,32",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 498
+   }
+  },
+  {
+   "f": -30,
+   "plane": "B",
+   "X": 254.53,
+   "x_cells": [
+    254,
+    256
+   ],
+   "top": 125.25,
+   "arc_end": 142.2,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     142.2,
+     141
+    ]
+   ],
+   "cells_yz": 724,
+   "counts": {
+    "1st futtock": 350,
+    "3rd futtock": 242,
+    "short top timber": 132
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-30B.png",
+    "at": "254,104,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 724
+   }
+  },
+  {
+   "f": -29,
+   "plane": "A",
+   "X": 258.11,
+   "x_cells": [
+    257,
+    259
+   ],
+   "top": 125.25,
+   "arc_end": 142.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     142.5,
+     141
+    ]
+   ],
+   "cells_yz": 502,
+   "counts": {
+    "2nd futtock": 278,
+    "4th futtock": 188,
+    "long top timber": 36
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-29A.png",
+    "at": "257,104,32",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 502
+   }
+  },
+  {
+   "f": -29,
+   "plane": "B",
+   "X": 261.11,
+   "x_cells": [
+    260,
+    262
+   ],
+   "top": 125.25,
+   "arc_end": 142.8,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     142.8,
+     141
+    ]
+   ],
+   "cells_yz": 704,
+   "counts": {
+    "1st futtock": 352,
+    "3rd futtock": 216,
+    "short top timber": 136
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-29B.png",
+    "at": "260,104,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 704
+   }
+  },
+  {
+   "f": -28,
+   "plane": "A",
+   "X": 264.69,
+   "x_cells": [
+    264,
+    266
+   ],
+   "top": 125.25,
+   "arc_end": 143.2,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     143.2,
+     141
+    ]
+   ],
+   "cells_yz": 494,
+   "counts": {
+    "2nd futtock": 264,
+    "4th futtock": 188,
+    "long top timber": 42
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-28A.png",
+    "at": "264,104,31",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 494
+   }
+  },
+  {
+   "f": -28,
+   "plane": "B",
+   "X": 267.69,
+   "x_cells": [
+    267,
+    269
+   ],
+   "top": 125.25,
+   "arc_end": 143.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     143.4,
+     141
+    ]
+   ],
+   "cells_yz": 740,
+   "counts": {
+    "1st futtock": 344,
+    "3rd futtock": 250,
+    "short top timber": 146
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-28B.png",
+    "at": "267,103,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 740
+   }
+  },
+  {
+   "f": -27,
+   "plane": "A",
+   "X": 271.27,
+   "x_cells": [
+    270,
+    272
+   ],
+   "top": 125.25,
+   "arc_end": 143.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     143.8,
+     141
+    ]
+   ],
+   "cells_yz": 512,
+   "counts": {
+    "2nd futtock": 270,
+    "4th futtock": 198,
+    "long top timber": 44
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-27A.png",
+    "at": "270,103,30",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 512
+   }
+  },
+  {
+   "f": -27,
+   "plane": "B",
+   "X": 274.27,
+   "x_cells": [
+    273,
+    275
+   ],
+   "top": 125.19,
+   "arc_end": 143.8,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     143.8,
+     141
+    ]
+   ],
+   "cells_yz": 718,
+   "counts": {
+    "1st futtock": 356,
+    "3rd futtock": 224,
+    "short top timber": 138
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-27B.png",
+    "at": "273,103,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 718
+   }
+  },
+  {
+   "f": -26,
+   "plane": "A",
+   "X": 277.85,
+   "x_cells": [
+    277,
+    279
+   ],
+   "top": 125.12,
+   "arc_end": 144.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     144.1,
+     141
+    ]
+   ],
+   "cells_yz": 504,
+   "counts": {
+    "2nd futtock": 272,
+    "4th futtock": 186,
+    "long top timber": 46
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-26A.png",
+    "at": "277,103,30",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 504
+   }
+  },
+  {
+   "f": -26,
+   "plane": "B",
+   "X": 280.85,
+   "x_cells": [
+    280,
+    282
+   ],
+   "top": 125.06,
+   "arc_end": 144.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     144.4,
+     141
+    ]
+   ],
+   "cells_yz": 758,
+   "counts": {
+    "1st futtock": 356,
+    "3rd futtock": 250,
+    "short top timber": 152
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-26B.png",
+    "at": "280,102,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 758
+   }
+  },
+  {
+   "f": -25,
+   "plane": "A",
+   "X": 284.43,
+   "x_cells": [
+    283,
+    285
+   ],
+   "top": 124.99,
+   "arc_end": 144.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     144.5,
+     141
+    ]
+   ],
+   "cells_yz": 526,
+   "counts": {
+    "2nd futtock": 278,
+    "4th futtock": 196,
+    "long top timber": 52
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-25A.png",
+    "at": "283,102,29",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 526
+   }
+  },
+  {
+   "f": -25,
+   "plane": "B",
+   "X": 287.43,
+   "x_cells": [
+    286,
+    288
+   ],
+   "top": 124.93,
+   "arc_end": 144.8,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     144.8,
+     141
+    ]
+   ],
+   "cells_yz": 728,
+   "counts": {
+    "1st futtock": 356,
+    "3rd futtock": 224,
+    "short top timber": 148
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-25B.png",
+    "at": "286,102,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 728
+   }
+  },
+  {
+   "f": -24,
+   "plane": "A",
+   "X": 291.01,
+   "x_cells": [
+    290,
+    292
+   ],
+   "top": 124.86,
+   "arc_end": 145.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     145.1,
+     141
+    ]
+   ],
+   "cells_yz": 516,
+   "counts": {
+    "2nd futtock": 276,
+    "4th futtock": 190,
+    "long top timber": 50
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-24A.png",
+    "at": "290,102,28",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 516
+   }
+  },
+  {
+   "f": -24,
+   "plane": "B",
+   "X": 294.01,
+   "x_cells": [
+    293,
+    295
+   ],
+   "top": 124.8,
+   "arc_end": 145.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     145.4,
+     141
+    ]
+   ],
+   "cells_yz": 756,
+   "counts": {
+    "1st futtock": 356,
+    "3rd futtock": 250,
+    "short top timber": 150
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-24B.png",
+    "at": "293,101,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 756
+   }
+  },
+  {
+   "f": -23,
+   "plane": "A",
+   "X": 297.59,
+   "x_cells": [
+    297,
+    299
+   ],
+   "top": 124.73,
+   "arc_end": 145.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     145.5,
+     141
+    ]
+   ],
+   "cells_yz": 532,
+   "counts": {
+    "2nd futtock": 276,
+    "4th futtock": 206,
+    "long top timber": 50
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-23A.png",
+    "at": "297,101,27",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 532
+   }
+  },
+  {
+   "f": -23,
+   "plane": "B",
+   "X": 300.59,
+   "x_cells": [
+    300,
+    302
+   ],
+   "top": 124.67,
+   "arc_end": 145.8,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     145.8,
+     141
+    ]
+   ],
+   "cells_yz": 738,
+   "counts": {
+    "1st futtock": 360,
+    "3rd futtock": 226,
+    "short top timber": 152
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-23B.png",
+    "at": "300,101,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 738
+   }
+  },
+  {
+   "f": -22,
+   "plane": "A",
+   "X": 304.17,
+   "x_cells": [
+    303,
+    305
+   ],
+   "top": 124.61,
+   "arc_end": 146.2,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     146.2,
+     141
+    ]
+   ],
+   "cells_yz": 526,
+   "counts": {
+    "2nd futtock": 274,
+    "4th futtock": 194,
+    "long top timber": 58
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-22A.png",
+    "at": "303,101,27",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 526
+   }
+  },
+  {
+   "f": -22,
+   "plane": "B",
+   "X": 307.17,
+   "x_cells": [
+    306,
+    308
+   ],
+   "top": 124.55,
+   "arc_end": 146.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     146.5,
+     141
+    ]
+   ],
+   "cells_yz": 764,
+   "counts": {
+    "1st futtock": 358,
+    "3rd futtock": 246,
+    "short top timber": 160
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-22B.png",
+    "at": "306,100,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 764
+   }
+  },
+  {
+   "f": -21,
+   "plane": "A",
+   "X": 310.75,
+   "x_cells": [
+    310,
+    312
+   ],
+   "top": 124.49,
+   "arc_end": 146.6,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     146.6,
+     141
+    ]
+   ],
+   "cells_yz": 550,
+   "counts": {
+    "2nd futtock": 278,
+    "4th futtock": 218,
+    "long top timber": 54
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-21A.png",
+    "at": "310,100,26",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 550
+   }
+  },
+  {
+   "f": -21,
+   "plane": "B",
+   "X": 313.75,
+   "x_cells": [
+    313,
+    315
+   ],
+   "top": 124.44,
+   "arc_end": 147.0,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     147.0,
+     141
+    ]
+   ],
+   "cells_yz": 742,
+   "counts": {
+    "1st futtock": 360,
+    "3rd futtock": 230,
+    "short top timber": 152
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-21B.png",
+    "at": "313,100,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 742
+   }
+  },
+  {
+   "f": -20,
+   "plane": "A",
+   "X": 317.32,
+   "x_cells": [
+    316,
+    318
+   ],
+   "top": 124.38,
+   "arc_end": 147.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     147.3,
+     141
+    ]
+   ],
+   "cells_yz": 536,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 192,
+    "long top timber": 60
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-20A.png",
+    "at": "316,100,26",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 536
+   }
+  },
+  {
+   "f": -20,
+   "plane": "B",
+   "X": 320.32,
+   "x_cells": [
+    319,
+    321
+   ],
+   "top": 124.33,
+   "arc_end": 147.7,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     147.7,
+     141
+    ]
+   ],
+   "cells_yz": 742,
+   "counts": {
+    "1st futtock": 356,
+    "3rd futtock": 224,
+    "short top timber": 162
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-20B.png",
+    "at": "319,100,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 742
+   }
+  },
+  {
+   "f": -19,
+   "plane": "A",
+   "X": 323.9,
+   "x_cells": [
+    323,
+    325
+   ],
+   "top": 124.27,
+   "arc_end": 148.0,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     148.0,
+     141
+    ]
+   ],
+   "cells_yz": 560,
+   "counts": {
+    "2nd futtock": 286,
+    "4th futtock": 214,
+    "long top timber": 60
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-19A.png",
+    "at": "323,99,25",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 560
+   }
+  },
+  {
+   "f": -19,
+   "plane": "B",
+   "X": 326.9,
+   "x_cells": [
+    326,
+    328
+   ],
+   "top": 124.22,
+   "arc_end": 148.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     148.1,
+     141
+    ]
+   ],
+   "cells_yz": 786,
+   "counts": {
+    "1st futtock": 360,
+    "3rd futtock": 262,
+    "short top timber": 164
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-19B.png",
+    "at": "326,99,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 786
+   }
+  },
+  {
+   "f": -18,
+   "plane": "A",
+   "X": 330.48,
+   "x_cells": [
+    329,
+    331
+   ],
+   "top": 124.17,
+   "arc_end": 148.4,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     148.4,
+     141
+    ]
+   ],
+   "cells_yz": 544,
+   "counts": {
+    "2nd futtock": 286,
+    "4th futtock": 194,
+    "long top timber": 64
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-18A.png",
+    "at": "329,99,24",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 544
+   }
+  },
+  {
+   "f": -18,
+   "plane": "B",
+   "X": 333.48,
+   "x_cells": [
+    332,
+    334
+   ],
+   "top": 124.12,
+   "arc_end": 148.7,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     148.7,
+     141
+    ]
+   ],
+   "cells_yz": 762,
+   "counts": {
+    "1st futtock": 364,
+    "3rd futtock": 228,
+    "short top timber": 170
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-18B.png",
+    "at": "332,99,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 762
+   }
+  },
+  {
+   "f": -17,
+   "plane": "A",
+   "X": 337.06,
+   "x_cells": [
+    336,
+    338
+   ],
+   "top": 124.07,
+   "arc_end": 149.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     149.1,
+     141
+    ]
+   ],
+   "cells_yz": 518,
+   "counts": {
+    "2nd futtock": 276,
+    "4th futtock": 182,
+    "long top timber": 60
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-17A.png",
+    "at": "336,99,24",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 518
+   }
+  },
+  {
+   "f": -17,
+   "plane": "B",
+   "X": 340.06,
+   "x_cells": [
+    339,
+    341
+   ],
+   "top": 124.02,
+   "arc_end": 149.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     149.4,
+     141
+    ]
+   ],
+   "cells_yz": 792,
+   "counts": {
+    "1st futtock": 368,
+    "3rd futtock": 254,
+    "short top timber": 170
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-17B.png",
+    "at": "339,98,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 792
+   }
+  },
+  {
+   "f": -16,
+   "plane": "A",
+   "X": 343.64,
+   "x_cells": [
+    343,
+    345
+   ],
+   "top": 123.97,
+   "arc_end": 149.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     149.5,
+     141
+    ]
+   ],
+   "cells_yz": 570,
+   "counts": {
+    "2nd futtock": 282,
+    "4th futtock": 220,
+    "long top timber": 68
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-16A.png",
+    "at": "343,98,24",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 570
+   }
+  },
+  {
+   "f": -16,
+   "plane": "B",
+   "X": 346.64,
+   "x_cells": [
+    346,
+    348
+   ],
+   "top": 123.93,
+   "arc_end": 149.8,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     149.8,
+     141
+    ]
+   ],
+   "cells_yz": 776,
+   "counts": {
+    "1st futtock": 372,
+    "3rd futtock": 230,
+    "short top timber": 174
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-16B.png",
+    "at": "346,98,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 776
+   }
+  },
+  {
+   "f": -15,
+   "plane": "A",
+   "X": 350.22,
+   "x_cells": [
+    349,
+    351
+   ],
+   "top": 123.88,
+   "arc_end": 150.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     150.1,
+     141
+    ]
+   ],
+   "cells_yz": 546,
+   "counts": {
+    "2nd futtock": 282,
+    "4th futtock": 190,
+    "long top timber": 74
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-15A.png",
+    "at": "349,98,23",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 546
+   }
+  },
+  {
+   "f": -15,
+   "plane": "B",
+   "X": 353.22,
+   "x_cells": [
+    352,
+    354
+   ],
+   "top": 123.84,
+   "arc_end": 150.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     150.4,
+     141
+    ]
+   ],
+   "cells_yz": 766,
+   "counts": {
+    "1st futtock": 366,
+    "3rd futtock": 224,
+    "short top timber": 176
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-15B.png",
+    "at": "352,98,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 766
+   }
+  },
+  {
+   "f": -14,
+   "plane": "A",
+   "X": 356.8,
+   "x_cells": [
+    356,
+    358
+   ],
+   "top": 123.79,
+   "arc_end": 150.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     150.8,
+     141
+    ]
+   ],
+   "cells_yz": 584,
+   "counts": {
+    "2nd futtock": 290,
+    "4th futtock": 220,
+    "long top timber": 74
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-14A.png",
+    "at": "356,97,22",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 584
+   }
+  },
+  {
+   "f": -14,
+   "plane": "B",
+   "X": 359.8,
+   "x_cells": [
+    359,
+    361
+   ],
+   "top": 123.75,
+   "arc_end": 151.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     151.1,
+     141
+    ]
+   ],
+   "cells_yz": 820,
+   "counts": {
+    "1st futtock": 372,
+    "3rd futtock": 268,
+    "short top timber": 180
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-14B.png",
+    "at": "359,97,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 820
+   }
+  },
+  {
+   "f": -13,
+   "plane": "A",
+   "X": 363.38,
+   "x_cells": [
+    362,
+    364
+   ],
+   "top": 123.71,
+   "arc_end": 151.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     151.1,
+     141
+    ]
+   ],
+   "cells_yz": 560,
+   "counts": {
+    "2nd futtock": 280,
+    "4th futtock": 202,
+    "long top timber": 78
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-13A.png",
+    "at": "362,97,22",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 560
+   }
+  },
+  {
+   "f": -13,
+   "plane": "B",
+   "X": 366.38,
+   "x_cells": [
+    365,
+    367
+   ],
+   "top": 123.67,
+   "arc_end": 151.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     151.4,
+     141
+    ]
+   ],
+   "cells_yz": 782,
+   "counts": {
+    "1st futtock": 374,
+    "3rd futtock": 228,
+    "short top timber": 180
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-13B.png",
+    "at": "365,97,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 782
+   }
+  },
+  {
+   "f": -12,
+   "plane": "A",
+   "X": 369.96,
+   "x_cells": [
+    369,
+    371
+   ],
+   "top": 123.63,
+   "arc_end": 151.7,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     151.7,
+     141
+    ]
+   ],
+   "cells_yz": 546,
+   "counts": {
+    "2nd futtock": 286,
+    "4th futtock": 184,
+    "long top timber": 76
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-12A.png",
+    "at": "369,97,22",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 546
+   }
+  },
+  {
+   "f": -12,
+   "plane": "B",
+   "X": 372.96,
+   "x_cells": [
+    372,
+    374
+   ],
+   "top": 123.6,
+   "arc_end": 152.0,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     152.0,
+     141
+    ]
+   ],
+   "cells_yz": 796,
+   "counts": {
+    "1st futtock": 368,
+    "3rd futtock": 246,
+    "short top timber": 182
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-12B.png",
+    "at": "372,96,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 796
+   }
+  },
+  {
+   "f": -11,
+   "plane": "A",
+   "X": 376.53,
+   "x_cells": [
+    376,
+    378
+   ],
+   "top": 123.56,
+   "arc_end": 152.2,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     152.2,
+     141
+    ]
+   ],
+   "cells_yz": 600,
+   "counts": {
+    "2nd futtock": 286,
+    "4th futtock": 232,
+    "long top timber": 82
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-11A.png",
+    "at": "376,96,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 600
+   }
+  },
+  {
+   "f": -11,
+   "plane": "B",
+   "X": 379.53,
+   "x_cells": [
+    379,
+    381
+   ],
+   "top": 123.53,
+   "arc_end": 152.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     152.5,
+     141
+    ]
+   ],
+   "cells_yz": 814,
+   "counts": {
+    "1st futtock": 374,
+    "3rd futtock": 254,
+    "short top timber": 186
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-11B.png",
+    "at": "379,96,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 814
+   }
+  },
+  {
+   "f": -10,
+   "plane": "A",
+   "X": 383.11,
+   "x_cells": [
+    382,
+    384
+   ],
+   "top": 123.49,
+   "arc_end": 152.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     152.5,
+     141
+    ]
+   ],
+   "cells_yz": 572,
+   "counts": {
+    "2nd futtock": 288,
+    "4th futtock": 204,
+    "long top timber": 80
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-10A.png",
+    "at": "382,96,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 572
+   }
+  },
+  {
+   "f": -10,
+   "plane": "B",
+   "X": 386.11,
+   "x_cells": [
+    385,
+    387
+   ],
+   "top": 123.46,
+   "arc_end": 152.7,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     152.7,
+     141
+    ]
+   ],
+   "cells_yz": 796,
+   "counts": {
+    "1st futtock": 376,
+    "3rd futtock": 240,
+    "short top timber": 180
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-10B.png",
+    "at": "385,96,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 796
+   }
+  },
+  {
+   "f": -9,
+   "plane": "A",
+   "X": 389.69,
+   "x_cells": [
+    389,
+    391
+   ],
+   "top": 123.42,
+   "arc_end": 152.9,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     152.9,
+     141
+    ]
+   ],
+   "cells_yz": 554,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 192,
+    "long top timber": 78
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-09A.png",
+    "at": "389,96,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 554
+   }
+  },
+  {
+   "f": -9,
+   "plane": "B",
+   "X": 392.69,
+   "x_cells": [
+    392,
+    394
+   ],
+   "top": 123.39,
+   "arc_end": 153.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     153.1,
+     141
+    ]
+   ],
+   "cells_yz": 792,
+   "counts": {
+    "1st futtock": 382,
+    "3rd futtock": 234,
+    "short top timber": 176
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-09B.png",
+    "at": "392,96,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 792
+   }
+  },
+  {
+   "f": -8,
+   "plane": "A",
+   "X": 396.27,
+   "x_cells": [
+    395,
+    397
+   ],
+   "top": 123.36,
+   "arc_end": 153.2,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     153.2,
+     141
+    ]
+   ],
+   "cells_yz": 588,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 224,
+    "long top timber": 80
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-08A.png",
+    "at": "395,95,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 588
+   }
+  },
+  {
+   "f": -8,
+   "plane": "B",
+   "X": 399.27,
+   "x_cells": [
+    398,
+    400
+   ],
+   "top": 123.34,
+   "arc_end": 153.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     153.4,
+     141
+    ]
+   ],
+   "cells_yz": 828,
+   "counts": {
+    "1st futtock": 370,
+    "3rd futtock": 266,
+    "short top timber": 192
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-08B.png",
+    "at": "398,95,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 828
+   }
+  },
+  {
+   "f": -7,
+   "plane": "A",
+   "X": 402.85,
+   "x_cells": [
+    402,
+    404
+   ],
+   "top": 123.31,
+   "arc_end": 153.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     153.5,
+     141
+    ]
+   ],
+   "cells_yz": 586,
+   "counts": {
+    "2nd futtock": 288,
+    "4th futtock": 210,
+    "long top timber": 88
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-07A.png",
+    "at": "402,95,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 586
+   }
+  },
+  {
+   "f": -7,
+   "plane": "B",
+   "X": 405.85,
+   "x_cells": [
+    405,
+    407
+   ],
+   "top": 123.28,
+   "arc_end": 153.6,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     153.6,
+     141
+    ]
+   ],
+   "cells_yz": 808,
+   "counts": {
+    "1st futtock": 378,
+    "3rd futtock": 248,
+    "short top timber": 182
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-07B.png",
+    "at": "405,95,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 808
+   }
+  },
+  {
+   "f": -6,
+   "plane": "A",
+   "X": 409.43,
+   "x_cells": [
+    408,
+    410
+   ],
+   "top": 123.25,
+   "arc_end": 153.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     153.8,
+     141
+    ]
+   ],
+   "cells_yz": 568,
+   "counts": {
+    "2nd futtock": 290,
+    "4th futtock": 196,
+    "long top timber": 82
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-06A.png",
+    "at": "408,95,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 568
+   }
+  },
+  {
+   "f": -6,
+   "plane": "B",
+   "X": 412.43,
+   "x_cells": [
+    411,
+    413
+   ],
+   "top": 123.23,
+   "arc_end": 153.6,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     153.6,
+     141
+    ]
+   ],
+   "cells_yz": 804,
+   "counts": {
+    "1st futtock": 380,
+    "3rd futtock": 238,
+    "short top timber": 186
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-06B.png",
+    "at": "411,95,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 804
+   }
+  },
+  {
+   "f": -5,
+   "plane": "A",
+   "X": 416.01,
+   "x_cells": [
+    415,
+    417
+   ],
+   "top": 123.2,
+   "arc_end": 153.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     153.8,
+     141
+    ]
+   ],
+   "cells_yz": 570,
+   "counts": {
+    "2nd futtock": 282,
+    "4th futtock": 202,
+    "long top timber": 86
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-05A.png",
+    "at": "415,95,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 570
+   }
+  },
+  {
+   "f": -5,
+   "plane": "B",
+   "X": 419.01,
+   "x_cells": [
+    418,
+    420
+   ],
+   "top": 123.18,
+   "arc_end": 153.9,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     153.9,
+     141
+    ]
+   ],
+   "cells_yz": 796,
+   "counts": {
+    "1st futtock": 370,
+    "3rd futtock": 234,
+    "short top timber": 192
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-05B.png",
+    "at": "418,95,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 796
+   }
+  },
+  {
+   "f": -4,
+   "plane": "A",
+   "X": 422.59,
+   "x_cells": [
+    422,
+    424
+   ],
+   "top": 123.16,
+   "arc_end": 154.0,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     154.0,
+     141
+    ]
+   ],
+   "cells_yz": 564,
+   "counts": {
+    "2nd futtock": 286,
+    "4th futtock": 194,
+    "long top timber": 84
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-04A.png",
+    "at": "422,95,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 564
+   }
+  },
+  {
+   "f": -4,
+   "plane": "B",
+   "X": 425.59,
+   "x_cells": [
+    425,
+    427
+   ],
+   "top": 123.14,
+   "arc_end": 154.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     154.1,
+     141
+    ]
+   ],
+   "cells_yz": 804,
+   "counts": {
+    "1st futtock": 376,
+    "3rd futtock": 238,
+    "short top timber": 190
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-04B.png",
+    "at": "425,95,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 804
+   }
+  },
+  {
+   "f": -3,
+   "plane": "A",
+   "X": 429.17,
+   "x_cells": [
+    428,
+    430
+   ],
+   "top": 123.12,
+   "arc_end": 154.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     154.3,
+     141
+    ]
+   ],
+   "cells_yz": 588,
+   "counts": {
+    "2nd futtock": 300,
+    "4th futtock": 202,
+    "long top timber": 86
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-03A.png",
+    "at": "428,94,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 588
+   }
+  },
+  {
+   "f": -3,
+   "plane": "B",
+   "X": 432.17,
+   "x_cells": [
+    431,
+    433
+   ],
+   "top": 123.1,
+   "arc_end": 154.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     154.4,
+     141
+    ]
+   ],
+   "cells_yz": 820,
+   "counts": {
+    "1st futtock": 380,
+    "3rd futtock": 256,
+    "short top timber": 184
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-03B.png",
+    "at": "431,94,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 820
+   }
+  },
+  {
+   "f": -2,
+   "plane": "A",
+   "X": 435.75,
+   "x_cells": [
+    435,
+    437
+   ],
+   "top": 123.09,
+   "arc_end": 154.6,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     154.6,
+     141
+    ]
+   ],
+   "cells_yz": 592,
+   "counts": {
+    "2nd futtock": 290,
+    "4th futtock": 214,
+    "long top timber": 88
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-02A.png",
+    "at": "435,94,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 592
+   }
+  },
+  {
+   "f": -2,
+   "plane": "B",
+   "X": 438.75,
+   "x_cells": [
+    438,
+    440
+   ],
+   "top": 123.07,
+   "arc_end": 154.7,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     154.7,
+     141
+    ]
+   ],
+   "cells_yz": 824,
+   "counts": {
+    "1st futtock": 370,
+    "3rd futtock": 266,
+    "short top timber": 188
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-02B.png",
+    "at": "438,94,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 824
+   }
+  },
+  {
+   "f": -1,
+   "plane": "A",
+   "X": 442.32,
+   "x_cells": [
+    441,
+    443
+   ],
+   "top": 123.06,
+   "arc_end": 154.9,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     154.9,
+     141
+    ]
+   ],
+   "cells_yz": 594,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 222,
+    "long top timber": 88
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f-01A.png",
+    "at": "441,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 594
+   }
+  },
+  {
+   "f": -1,
+   "plane": "B",
+   "X": 445.32,
+   "x_cells": [
+    444,
+    446
+   ],
+   "top": 123.04,
+   "arc_end": 155.0,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     155.0,
+     141
+    ]
+   ],
+   "cells_yz": 836,
+   "counts": {
+    "1st futtock": 380,
+    "3rd futtock": 266,
+    "short top timber": 190
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f-01B.png",
+    "at": "444,94,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 836
+   }
+  },
+  {
+   "f": 0,
+   "plane": "A",
+   "X": 448.9,
+   "x_cells": [
+    448,
+    450
+   ],
+   "top": 123.03,
+   "arc_end": 155.2,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     155.2,
+     141
+    ]
+   ],
+   "cells_yz": 602,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 230,
+    "long top timber": 88
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+00A.png",
+    "at": "448,94,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 602
+   }
+  },
+  {
+   "f": 0,
+   "plane": "B",
+   "X": 451.9,
+   "x_cells": [
+    451,
+    453
+   ],
+   "top": 123.02,
+   "arc_end": 155.3,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     155.3,
+     141
+    ]
+   ],
+   "cells_yz": 826,
+   "counts": {
+    "1st futtock": 376,
+    "3rd futtock": 262,
+    "short top timber": 188
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+00B.png",
+    "at": "451,94,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 826
+   }
+  },
+  {
+   "f": 1,
+   "plane": "A",
+   "X": 455.48,
+   "x_cells": [
+    454,
+    456
+   ],
+   "top": 123.01,
+   "arc_end": 155.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     155.5,
+     141
+    ]
+   ],
+   "cells_yz": 596,
+   "counts": {
+    "2nd futtock": 292,
+    "4th futtock": 212,
+    "long top timber": 92
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+01A.png",
+    "at": "454,94,20",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 596
+   }
+  },
+  {
+   "f": 1,
+   "plane": "B",
+   "X": 458.48,
+   "x_cells": [
+    457,
+    459
+   ],
+   "top": 123.0,
+   "arc_end": 155.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     155.4,
+     141
+    ]
+   ],
+   "cells_yz": 824,
+   "counts": {
+    "1st futtock": 376,
+    "3rd futtock": 256,
+    "short top timber": 192
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+01B.png",
+    "at": "457,94,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 824
+   }
+  },
+  {
+   "f": 2,
+   "plane": "A",
+   "X": 462.06,
+   "x_cells": [
+    461,
+    463
+   ],
+   "top": 122.99,
+   "arc_end": 155.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     155.5,
+     141
+    ]
+   ],
+   "cells_yz": 592,
+   "counts": {
+    "2nd futtock": 296,
+    "4th futtock": 208,
+    "long top timber": 88
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+02A.png",
+    "at": "461,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 592
+   }
+  },
+  {
+   "f": 2,
+   "plane": "B",
+   "X": 465.06,
+   "x_cells": [
+    464,
+    466
+   ],
+   "top": 122.98,
+   "arc_end": 155.7,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     155.7,
+     141
+    ]
+   ],
+   "cells_yz": 826,
+   "counts": {
+    "1st futtock": 380,
+    "3rd futtock": 248,
+    "short top timber": 198
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+02B.png",
+    "at": "464,94,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 826
+   }
+  },
+  {
+   "f": 3,
+   "plane": "A",
+   "X": 468.64,
+   "x_cells": [
+    468,
+    470
+   ],
+   "top": 122.98,
+   "arc_end": 155.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     155.8,
+     141
+    ]
+   ],
+   "cells_yz": 592,
+   "counts": {
+    "2nd futtock": 294,
+    "4th futtock": 202,
+    "long top timber": 96
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+03A.png",
+    "at": "468,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 592
+   }
+  },
+  {
+   "f": 3,
+   "plane": "B",
+   "X": 471.64,
+   "x_cells": [
+    471,
+    473
+   ],
+   "top": 122.97,
+   "arc_end": 155.9,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     155.9,
+     141
+    ]
+   ],
+   "cells_yz": 820,
+   "counts": {
+    "1st futtock": 380,
+    "3rd futtock": 242,
+    "short top timber": 198
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+03B.png",
+    "at": "471,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 820
+   }
+  },
+  {
+   "f": 4,
+   "plane": "A",
+   "X": 475.22,
+   "x_cells": [
+    474,
+    476
+   ],
+   "top": 122.97,
+   "arc_end": 156.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     156.1,
+     141
+    ]
+   ],
+   "cells_yz": 584,
+   "counts": {
+    "2nd futtock": 290,
+    "4th futtock": 198,
+    "long top timber": 96
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+04A.png",
+    "at": "474,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 584
+   }
+  },
+  {
+   "f": 4,
+   "plane": "B",
+   "X": 478.22,
+   "x_cells": [
+    477,
+    479
+   ],
+   "top": 122.96,
+   "arc_end": 156.2,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     156.2,
+     141
+    ]
+   ],
+   "cells_yz": 824,
+   "counts": {
+    "1st futtock": 388,
+    "3rd futtock": 240,
+    "short top timber": 196
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+04B.png",
+    "at": "477,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 824
+   }
+  },
+  {
+   "f": 5,
+   "plane": "A",
+   "X": 481.8,
+   "x_cells": [
+    481,
+    483
+   ],
+   "top": 122.96,
+   "arc_end": 156.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     156.3,
+     141
+    ]
+   ],
+   "cells_yz": 588,
+   "counts": {
+    "2nd futtock": 292,
+    "4th futtock": 202,
+    "long top timber": 94
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+05A.png",
+    "at": "481,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 588
+   }
+  },
+  {
+   "f": 5,
+   "plane": "B",
+   "X": 484.8,
+   "x_cells": [
+    484,
+    486
+   ],
+   "top": 122.96,
+   "arc_end": 156.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     156.4,
+     141
+    ]
+   ],
+   "cells_yz": 832,
+   "counts": {
+    "1st futtock": 388,
+    "3rd futtock": 244,
+    "short top timber": 200
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+05B.png",
+    "at": "484,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 832
+   }
+  },
+  {
+   "f": 6,
+   "plane": "A",
+   "X": 488.38,
+   "x_cells": [
+    487,
+    489
+   ],
+   "top": 122.96,
+   "arc_end": 156.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     156.5,
+     141
+    ]
+   ],
+   "cells_yz": 596,
+   "counts": {
+    "2nd futtock": 298,
+    "4th futtock": 204,
+    "long top timber": 94
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+06A.png",
+    "at": "487,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 596
+   }
+  },
+  {
+   "f": 6,
+   "plane": "B",
+   "X": 491.38,
+   "x_cells": [
+    490,
+    492
+   ],
+   "top": 122.96,
+   "arc_end": 156.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     156.5,
+     141
+    ]
+   ],
+   "cells_yz": 836,
+   "counts": {
+    "1st futtock": 386,
+    "3rd futtock": 248,
+    "short top timber": 202
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+06B.png",
+    "at": "490,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 836
+   }
+  },
+  {
+   "f": 7,
+   "plane": "A",
+   "X": 494.96,
+   "x_cells": [
+    494,
+    496
+   ],
+   "top": 122.96,
+   "arc_end": 156.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     156.5,
+     141
+    ]
+   ],
+   "cells_yz": 590,
+   "counts": {
+    "2nd futtock": 292,
+    "4th futtock": 204,
+    "long top timber": 94
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+07A.png",
+    "at": "494,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 590
+   }
+  },
+  {
+   "f": 7,
+   "plane": "B",
+   "X": 497.96,
+   "x_cells": [
+    497,
+    499
+   ],
+   "top": 122.97,
+   "arc_end": 156.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     156.5,
+     141
+    ]
+   ],
+   "cells_yz": 812,
+   "counts": {
+    "1st futtock": 378,
+    "3rd futtock": 240,
+    "short top timber": 194
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+07B.png",
+    "at": "497,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 812
+   }
+  },
+  {
+   "f": 8,
+   "plane": "A",
+   "X": 501.54,
+   "x_cells": [
+    501,
+    503
+   ],
+   "top": 122.97,
+   "arc_end": 156.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     156.5,
+     141
+    ]
+   ],
+   "cells_yz": 596,
+   "counts": {
+    "2nd futtock": 290,
+    "4th futtock": 206,
+    "long top timber": 100
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+08A.png",
+    "at": "501,94,21",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 596
+   }
+  },
+  {
+   "f": 8,
+   "plane": "B",
+   "X": 504.54,
+   "x_cells": [
+    504,
+    506
+   ],
+   "top": 122.98,
+   "arc_end": 156.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     156.4,
+     141
+    ]
+   ],
+   "cells_yz": 824,
+   "counts": {
+    "1st futtock": 380,
+    "3rd futtock": 242,
+    "short top timber": 202
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+08B.png",
+    "at": "504,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 824
+   }
+  },
+  {
+   "f": 9,
+   "plane": "A",
+   "X": 508.12,
+   "x_cells": [
+    507,
+    509
+   ],
+   "top": 122.98,
+   "arc_end": 156.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     156.3,
+     141
+    ]
+   ],
+   "cells_yz": 592,
+   "counts": {
+    "2nd futtock": 292,
+    "4th futtock": 204,
+    "long top timber": 96
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+09A.png",
+    "at": "507,94,22",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 592
+   }
+  },
+  {
+   "f": 9,
+   "plane": "B",
+   "X": 511.12,
+   "x_cells": [
+    510,
+    512
+   ],
+   "top": 122.99,
+   "arc_end": 156.2,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     156.2,
+     141
+    ]
+   ],
+   "cells_yz": 834,
+   "counts": {
+    "1st futtock": 380,
+    "3rd futtock": 258,
+    "short top timber": 196
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+09B.png",
+    "at": "510,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 834
+   }
+  },
+  {
+   "f": 10,
+   "plane": "A",
+   "X": 514.69,
+   "x_cells": [
+    514,
+    516
+   ],
+   "top": 123.0,
+   "arc_end": 156.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     156.3,
+     141
+    ]
+   ],
+   "cells_yz": 594,
+   "counts": {
+    "2nd futtock": 286,
+    "4th futtock": 216,
+    "long top timber": 92
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+10A.png",
+    "at": "514,94,22",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 594
+   }
+  },
+  {
+   "f": 10,
+   "plane": "B",
+   "X": 517.69,
+   "x_cells": [
+    517,
+    519
+   ],
+   "top": 123.01,
+   "arc_end": 156.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     156.1,
+     141
+    ]
+   ],
+   "cells_yz": 820,
+   "counts": {
+    "1st futtock": 378,
+    "3rd futtock": 246,
+    "short top timber": 196
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+10B.png",
+    "at": "517,94,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 820
+   }
+  },
+  {
+   "f": 11,
+   "plane": "A",
+   "X": 521.27,
+   "x_cells": [
+    520,
+    522
+   ],
+   "top": 123.02,
+   "arc_end": 155.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     155.8,
+     141
+    ]
+   ],
+   "cells_yz": 580,
+   "counts": {
+    "2nd futtock": 282,
+    "4th futtock": 206,
+    "long top timber": 92
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+11A.png",
+    "at": "520,95,22",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 580
+   }
+  },
+  {
+   "f": 11,
+   "plane": "B",
+   "X": 524.27,
+   "x_cells": [
+    523,
+    525
+   ],
+   "top": 123.03,
+   "arc_end": 155.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     155.5,
+     141
+    ]
+   ],
+   "cells_yz": 812,
+   "counts": {
+    "1st futtock": 378,
+    "3rd futtock": 242,
+    "short top timber": 192
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+11B.png",
+    "at": "523,95,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 812
+   }
+  },
+  {
+   "f": 12,
+   "plane": "A",
+   "X": 527.85,
+   "x_cells": [
+    527,
+    529
+   ],
+   "top": 123.05,
+   "arc_end": 155.2,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     155.2,
+     141
+    ]
+   ],
+   "cells_yz": 592,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 216,
+    "long top timber": 92
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+12A.png",
+    "at": "527,95,23",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 592
+   }
+  },
+  {
+   "f": 12,
+   "plane": "B",
+   "X": 530.85,
+   "x_cells": [
+    530,
+    532
+   ],
+   "top": 123.06,
+   "arc_end": 154.8,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     154.8,
+     141
+    ]
+   ],
+   "cells_yz": 814,
+   "counts": {
+    "1st futtock": 378,
+    "3rd futtock": 246,
+    "short top timber": 190
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+12B.png",
+    "at": "530,95,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 814
+   }
+  },
+  {
+   "f": 13,
+   "plane": "A",
+   "X": 534.43,
+   "x_cells": [
+    533,
+    535
+   ],
+   "top": 123.08,
+   "arc_end": 154.4,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     154.4,
+     141
+    ]
+   ],
+   "cells_yz": 578,
+   "counts": {
+    "2nd futtock": 288,
+    "4th futtock": 204,
+    "long top timber": 86
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+13A.png",
+    "at": "533,96,23",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 578
+   }
+  },
+  {
+   "f": 13,
+   "plane": "B",
+   "X": 537.43,
+   "x_cells": [
+    536,
+    538
+   ],
+   "top": 123.09,
+   "arc_end": 153.9,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     153.9,
+     141
+    ]
+   ],
+   "cells_yz": 818,
+   "counts": {
+    "1st futtock": 376,
+    "3rd futtock": 258,
+    "short top timber": 184
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+13B.png",
+    "at": "536,96,8",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 818
+   }
+  },
+  {
+   "f": 14,
+   "plane": "A",
+   "X": 541.01,
+   "x_cells": [
+    540,
+    542
+   ],
+   "top": 123.11,
+   "arc_end": 153.4,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     153.4,
+     141
+    ]
+   ],
+   "cells_yz": 566,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 204,
+    "long top timber": 78
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+14A.png",
+    "at": "540,96,23",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 566
+   }
+  },
+  {
+   "f": 14,
+   "plane": "B",
+   "X": 544.01,
+   "x_cells": [
+    543,
+    545
+   ],
+   "top": 123.13,
+   "arc_end": 152.8,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     152.8,
+     141
+    ]
+   ],
+   "cells_yz": 796,
+   "counts": {
+    "1st futtock": 374,
+    "3rd futtock": 244,
+    "short top timber": 178
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+14B.png",
+    "at": "543,97,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 796
+   }
+  },
+  {
+   "f": 15,
+   "plane": "A",
+   "X": 547.59,
+   "x_cells": [
+    547,
+    549
+   ],
+   "top": 123.15,
+   "arc_end": 152.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     152.1,
+     141
+    ]
+   ],
+   "cells_yz": 566,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 204,
+    "long top timber": 78
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+15A.png",
+    "at": "547,97,24",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 566
+   }
+  },
+  {
+   "f": 15,
+   "plane": "B",
+   "X": 550.59,
+   "x_cells": [
+    550,
+    552
+   ],
+   "top": 123.17,
+   "arc_end": 151.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     151.5,
+     141
+    ]
+   ],
+   "cells_yz": 780,
+   "counts": {
+    "1st futtock": 370,
+    "3rd futtock": 236,
+    "short top timber": 174
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+15B.png",
+    "at": "550,98,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 780
+   }
+  },
+  {
+   "f": 16,
+   "plane": "A",
+   "X": 554.17,
+   "x_cells": [
+    553,
+    555
+   ],
+   "top": 123.19,
+   "arc_end": 150.7,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     150.7,
+     141
+    ]
+   ],
+   "cells_yz": 548,
+   "counts": {
+    "2nd futtock": 274,
+    "4th futtock": 204,
+    "long top timber": 70
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+16A.png",
+    "at": "553,98,25",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 548
+   }
+  },
+  {
+   "f": 16,
+   "plane": "B",
+   "X": 557.17,
+   "x_cells": [
+    556,
+    558
+   ],
+   "top": 123.21,
+   "arc_end": 150.0,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     150.0,
+     141
+    ]
+   ],
+   "cells_yz": 770,
+   "counts": {
+    "1st futtock": 362,
+    "3rd futtock": 244,
+    "short top timber": 164
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+16B.png",
+    "at": "556,99,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 770
+   }
+  },
+  {
+   "f": 17,
+   "plane": "A",
+   "X": 560.75,
+   "x_cells": [
+    560,
+    562
+   ],
+   "top": 123.24,
+   "arc_end": 149.1,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     149.1,
+     141
+    ]
+   ],
+   "cells_yz": 532,
+   "counts": {
+    "2nd futtock": 268,
+    "4th futtock": 200,
+    "long top timber": 64
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+17A.png",
+    "at": "560,100,25",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 532
+   }
+  },
+  {
+   "f": 17,
+   "plane": "B",
+   "X": 563.75,
+   "x_cells": [
+    563,
+    565
+   ],
+   "top": 123.26,
+   "arc_end": 148.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     148.5,
+     141
+    ]
+   ],
+   "cells_yz": 764,
+   "counts": {
+    "1st futtock": 362,
+    "3rd futtock": 246,
+    "short top timber": 156
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+17B.png",
+    "at": "563,100,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 764
+   }
+  },
+  {
+   "f": 18,
+   "plane": "A",
+   "X": 567.33,
+   "x_cells": [
+    566,
+    568
+   ],
+   "top": 123.29,
+   "arc_end": 147.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     147.5,
+     141
+    ]
+   ],
+   "cells_yz": 544,
+   "counts": {
+    "2nd futtock": 282,
+    "4th futtock": 204,
+    "long top timber": 58
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+18A.png",
+    "at": "566,101,26",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 544
+   }
+  },
+  {
+   "f": 18,
+   "plane": "B",
+   "X": 570.33,
+   "x_cells": [
+    569,
+    571
+   ],
+   "top": 123.31,
+   "arc_end": 146.6,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     146.6,
+     141
+    ]
+   ],
+   "cells_yz": 744,
+   "counts": {
+    "1st futtock": 360,
+    "3rd futtock": 232,
+    "short top timber": 152
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+18B.png",
+    "at": "569,102,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 744
+   }
+  },
+  {
+   "f": 19,
+   "plane": "A",
+   "X": 573.9,
+   "x_cells": [
+    573,
+    575
+   ],
+   "top": 123.34,
+   "arc_end": 145.5,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     145.5,
+     141
+    ]
+   ],
+   "cells_yz": 522,
+   "counts": {
+    "2nd futtock": 284,
+    "4th futtock": 192,
+    "long top timber": 46
+   },
+   "has_floor": true,
+   "stamp": {
+    "png": "design/masks/frames/f+19A.png",
+    "at": "573,102,27",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 522
+   }
+  },
+  {
+   "f": 19,
+   "plane": "B",
+   "X": 576.9,
+   "x_cells": [
+    576,
+    578
+   ],
+   "top": 123.37,
+   "arc_end": 144.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     144.5,
+     141
+    ]
+   ],
+   "cells_yz": 756,
+   "counts": {
+    "1st futtock": 366,
+    "3rd futtock": 248,
+    "short top timber": 142
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+19B.png",
+    "at": "576,103,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 756
+   }
+  },
+  {
+   "f": 20,
+   "plane": "A",
+   "X": 580.48,
+   "x_cells": [
+    579,
+    581
+   ],
+   "top": 123.4,
+   "arc_end": 143.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     132,
+     141
+    ],
+    [
+     "long top timber",
+     132,
+     143.3,
+     141
+    ]
+   ],
+   "cells_yz": 726,
+   "counts": {
+    "floor": 214,
+    "2nd futtock": 270,
+    "4th futtock": 202,
+    "long top timber": 40
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+20A.png",
+    "at": "579,104,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 726
+   }
+  },
+  {
+   "f": 20,
+   "plane": "B",
+   "X": 583.48,
+   "x_cells": [
+    582,
+    584
+   ],
+   "top": 123.43,
+   "arc_end": 142.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     142.4,
+     141
+    ]
+   ],
+   "cells_yz": 710,
+   "counts": {
+    "1st futtock": 358,
+    "3rd futtock": 220,
+    "short top timber": 132
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+20B.png",
+    "at": "582,105,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 710
+   }
+  },
+  {
+   "f": 21,
+   "plane": "A",
+   "X": 587.06,
+   "x_cells": [
+    586,
+    588
+   ],
+   "top": 123.47,
+   "arc_end": 141.2,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     141.2,
+     141
+    ]
+   ],
+   "cells_yz": 714,
+   "counts": {
+    "floor": 218,
+    "2nd futtock": 270,
+    "4th futtock": 226
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+21A.png",
+    "at": "586,105,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 714
+   }
+  },
+  {
+   "f": 21,
+   "plane": "B",
+   "X": 590.06,
+   "x_cells": [
+    589,
+    591
+   ],
+   "top": 123.5,
+   "arc_end": 140.2,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     140.2,
+     141
+    ]
+   ],
+   "cells_yz": 724,
+   "counts": {
+    "1st futtock": 354,
+    "3rd futtock": 246,
+    "short top timber": 124
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+21B.png",
+    "at": "589,106,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 724
+   }
+  },
+  {
+   "f": 22,
+   "plane": "A",
+   "X": 593.64,
+   "x_cells": [
+    593,
+    595
+   ],
+   "top": 123.54,
+   "arc_end": 139.3,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     139.3,
+     141
+    ]
+   ],
+   "cells_yz": 702,
+   "counts": {
+    "floor": 214,
+    "2nd futtock": 274,
+    "4th futtock": 214
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+22A.png",
+    "at": "593,107,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 702
+   }
+  },
+  {
+   "f": 22,
+   "plane": "B",
+   "X": 596.64,
+   "x_cells": [
+    596,
+    598
+   ],
+   "top": 123.57,
+   "arc_end": 138.4,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     138.4,
+     141
+    ]
+   ],
+   "cells_yz": 688,
+   "counts": {
+    "1st futtock": 348,
+    "3rd futtock": 218,
+    "short top timber": 122
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+22B.png",
+    "at": "596,108,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 688
+   }
+  },
+  {
+   "f": 23,
+   "plane": "A",
+   "X": 600.22,
+   "x_cells": [
+    599,
+    601
+   ],
+   "top": 123.61,
+   "arc_end": 137.4,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     137.4,
+     141
+    ]
+   ],
+   "cells_yz": 672,
+   "counts": {
+    "floor": 208,
+    "2nd futtock": 264,
+    "4th futtock": 200
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+23A.png",
+    "at": "599,109,9",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 672
+   }
+  },
+  {
+   "f": 23,
+   "plane": "B",
+   "X": 603.22,
+   "x_cells": [
+    602,
+    604
+   ],
+   "top": 123.64,
+   "arc_end": 136.6,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     136.6,
+     141
+    ]
+   ],
+   "cells_yz": 690,
+   "counts": {
+    "1st futtock": 342,
+    "3rd futtock": 234,
+    "short top timber": 114
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+23B.png",
+    "at": "602,109,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 690
+   }
+  },
+  {
+   "f": 24,
+   "plane": "A",
+   "X": 606.8,
+   "x_cells": [
+    606,
+    608
+   ],
+   "top": 123.69,
+   "arc_end": 135.7,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     135.7,
+     141
+    ]
+   ],
+   "cells_yz": 672,
+   "counts": {
+    "floor": 200,
+    "2nd futtock": 264,
+    "4th futtock": 208
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+24A.png",
+    "at": "606,110,10",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 672
+   }
+  },
+  {
+   "f": 24,
+   "plane": "B",
+   "X": 609.8,
+   "x_cells": [
+    609,
+    611
+   ],
+   "top": 123.72,
+   "arc_end": 135.1,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     135.1,
+     141
+    ]
+   ],
+   "cells_yz": 654,
+   "counts": {
+    "1st futtock": 326,
+    "3rd futtock": 218,
+    "short top timber": 110
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+24B.png",
+    "at": "609,111,11",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 654
+   }
+  },
+  {
+   "f": 25,
+   "plane": "A",
+   "X": 613.38,
+   "x_cells": [
+    612,
+    614
+   ],
+   "top": 123.77,
+   "arc_end": 134.8,
+   "members": [
+    [
+     "floor",
+     0,
+     36,
+     141
+    ],
+    [
+     "2nd futtock",
+     36,
+     86,
+     141
+    ],
+    [
+     "4th futtock",
+     86,
+     134.8,
+     141
+    ]
+   ],
+   "cells_yz": 654,
+   "counts": {
+    "floor": 182,
+    "2nd futtock": 262,
+    "4th futtock": 210
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+25A.png",
+    "at": "612,111,12",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 654
+   }
+  },
+  {
+   "f": 25,
+   "plane": "B",
+   "X": 616.38,
+   "x_cells": [
+    615,
+    617
+   ],
+   "top": 123.8,
+   "arc_end": 134.5,
+   "members": [
+    [
+     "1st futtock",
+     0,
+     60,
+     141
+    ],
+    [
+     "3rd futtock",
+     60,
+     108,
+     141
+    ],
+    [
+     "short top timber",
+     108,
+     134.5,
+     141
+    ]
+   ],
+   "cells_yz": 626,
+   "counts": {
+    "1st futtock": 304,
+    "3rd futtock": 218,
+    "short top timber": 104
+   },
+   "has_floor": false,
+   "stamp": {
+    "png": "design/masks/frames/f+25B.png",
+    "at": "615,112,16",
+    "facing": "x+",
+    "thickness": 3,
+    "expect_pixels": 626
+   }
+  }
+ ],
+ "chocks": [
+  {
+   "f": 3,
+   "x": 471,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 3,
+   "x": 472,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 3,
+   "x": 473,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 5,
+   "x": 484,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 5,
+   "x": 485,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 5,
+   "x": 486,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 8,
+   "x": 504,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 8,
+   "x": 505,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 8,
+   "x": 506,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 10,
+   "x": 517,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 10,
+   "x": 518,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 10,
+   "x": 519,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 12,
+   "x": 530,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 12,
+   "x": 531,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  },
+  {
+   "f": 12,
+   "x": 532,
+   "y": [
+    158,
+    162
+   ],
+   "z": [
+    8,
+    11
+   ],
+   "color": 141
+  }
+ ]
+}

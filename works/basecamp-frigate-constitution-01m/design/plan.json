@@ -107,5 +107,30 @@
     "apron": {"label": "Apron（含 stemson）", "stage": 3, "aft_x": 577.0, "top_z": 112.0,
               "sided_y": [158, 162], "color": 173,
               "provenance": "top 112 ＝ 原圖 apron 線停的高度（111.8）；cutting-down line 與 keelson 頂之間那段（stemson）併進 apron（設計決定）"}
+  },
+
+  "framing": {
+    "title": "USS Constitution（1797）新圖紙 04：肋骨圖 v1 —— 雙肋・futtocks・top timbers",
+    "task": "TASK-0485（傘 TASK-0478）",
+    "date": "2026-10-11",
+    "f_from": -40, "f_to": 25,
+    "sided": 3, "plane_b_offset": 3, "keep_clear_dy": 2,
+    "moulded_z": [[8, 3.6], [17, 3.55], [23, 3.2], [33, 3.0], [41, 3.0], [51, 2.8], [60, 2.5], [66, 2.45], [95, 2.1], [128, 1.8]],
+    "members": {
+      "A": [["floor", 0, 36, 141], ["2nd futtock", 36, 86, 141], ["4th futtock", 86, 132, 141], ["long top timber", 132, 9999, 141]],
+      "B": [["1st futtock", 0, 60, 141], ["3rd futtock", 60, 108, 141], ["short top timber", 108, 9999, 141]]
+    },
+    "min_piece_arc": 10,
+    "sheer_points": [["11-9", 181.5, 126.86], ["11-8", 236.6, 126.19], ["11-7", 291.3, 125.39], ["11-6", 345.8, 124.85], ["11-5", 400.8, 124.05],
+                     ["15-mid", 448.9, 121.8], ["11-2", 563.2, 121.22], ["11-1", 617.1, 125.49]],
+    "provenance": {
+      "planes": "雙肋（double frames）：每個肋位兩片並排、各 sided 3 格（15 號：double frames sided 12\"、room and space 26\" ⇒ 兩片 24\"、之間約 2\"，原圖讀數）。plane A ＝ 底肋那一片（x 欄 round(X)−1..+1，沿用階段四）；plane B 貼在它的船頭側（x 欄 round(X)+2..+4，設計決定）⇒ 到下一個肋位只剩 0–1 格，跟憲法號「成對栓合、每對之間只留幾吋透氣」一致（參考：historyofmassachusetts.org、USS Constitution Museum）",
+      "members": "分段：plane A ＝ 底肋／2nd futtock／4th futtock／long top timber，plane B ＝ 1st futtock／3rd futtock／short top timber，兩片的接頭沿弧長錯開（18 世紀雙肋的通例：兩組 futtocks 交錯重疊、栓合；參考：mfship.org Virginia midship section、Model Ship World 的 Steel 表格討論、1778 大英百科 plate 說明）。各段弧長（從龍骨側面沿 molded 線量）是設計決定，原圖沒畫：船中弧長約 160 格 ⇒ A 段長 36／50／46／餘、B 段長 60／48／餘；短於 10 格的尾段併進上一段",
+      "moulded": "肋骨 moulded（垂直船殼的厚度）隨高度：Z 8–66 照 15 號肋骨內面讀數（14\"→12\"→10\"，原圖讀數，換算成格並取平滑點）；Z 66 以上圖沒畫 ⇒ 設計決定：線性收到舷頂 1.8 格（約 7\"，美觀優先）。同一條 m(z) 用在每一站（設計決定）",
+      "keep_clear": "|dy| ≤ 2（中線兩側各 2.5 格）留給龍骨、keelson、deadwood、apron ⇒ 肋骨只在 |dy| ≥ 3（設計決定）",
+      "sheer": "舷頂（肋骨頂）＝ 二次曲線擬合 11 號 1、2、5–9 號站的頂與 15 號船中 molded 線的頂（原圖讀數）；4 號站（與被排除的 3 號同值，疑為雙線）不採用；再以船殼有定義的高度封頂（設計決定）",
+      "range": "肋位 f −40..+25：船殼（11 號 9 號站 X 181.5 到 1 號站 X 617.1）有定義的範圍；更後面的船尾（transom、counter）與更前面的船頭 cant frames 之後另做（設計決定）",
+      "colors": "全部 141（跟底肋同色）—— Tim 2026-10-11：木紋不做，要考慮效能，同色在匯出模型時可以合併。分段與接頭只留在設計與圖紙裡，作品上不分色"
+    }
   }
 }

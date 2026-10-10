@@ -214,29 +214,51 @@ def main():
         if dd:
             out['stations_vs_d11'][lab] = {'x': round(v['x'], 1), 'mean': round(float(np.mean(dd)), 2), 'rms': round(float(np.sqrt(np.mean(np.square(dd)))), 2), 'max_abs': round(float(np.max(np.abs(dd))), 2)}
 
-    # 底肋遮罩
-    mdir = os.path.join(design, 'masks', 'floors')
-    os.makedirs(mdir, exist_ok=True)
-    fl = L['floor']
-    for f, X in frames(plan):
-        cells, A = floor_cells(hull, plan, C, X)
-        ys = [YC + dy for dy, z in cells]
-        zs = [z for dy, z in cells]
-        y0, z0 = min(ys), min(zs)
-        w, h = D.write_mask_x(os.path.join(mdir, 'f%+03d.png' % f), [(YC + dy, z) for dy, z in cells], fl['color'], y0, z0)
-        x0 = int(round(X)) - fl['sided'] // 2
-        out['floors'].append({'f': f, 'x': round(X, 2), 'x_cells': [x0, x0 + fl['sided'] - 1], 'A': round(A, 2), 'cells_yz': len(cells),
-                              'hb_max': max(abs(dy) for dy, z in cells), 'z_max': max(zs),
-                              'stamp': {'png': 'design/masks/floors/f%+03d.png' % f, 'at': '%d,%d,%d' % (x0, y0, z0), 'facing': 'x+',
-                                        'thickness': fl['sided'], 'expect_pixels': len(cells)}})
-
-    # keelson（X-Z 平面，sided 與龍骨同 y 158..162）
+    # keelson（X-Z 平面，sided 與龍骨同 y 158..162）—— 先算，底肋要讓出它的位置
     ks = L['keelson']
     poly = ([(ks['x_from'], a_line(C, ks['x_from']))] + [(x, a_line(C, x)) for x in np.arange(ks['x_from'], ks['x_to'] + 0.01, 0.25)]
             + [(x, b_line(C, x)) for x in np.arange(ks['x_to'], ks['x_from'] - 0.01, -0.25)])
     kc = D.cells_of(poly)
+    kset = set((int(x), int(z)) for x, z in kc)
+
+    # 底肋遮罩
+    # ⚠ moulded 那條規則（離 molded 線 ≤ moulded 就算底肋）在 V 形船底會讓中線附近 A 以上的格也進來，
+    #   而那裡是 keelson（v1 遮罩的實害：f−31..f−2 往 keelson 底面凸 1–2 格，keelson 落地少 205）。
+    #   ⇒ |dy| ≤ 2（keelson sided 5）且這一片三個 x 都是 keelson 的格，讓給 keelson。
+    #   只在三個 x 都是 keelson 才讓 ⇒ 不會留洞（A 在一片三格之間跨整數時，多出來的那格由底肋留著，keelson 落地會跳過它）。
+    mdir = os.path.join(design, 'masks', 'floors')
+    os.makedirs(mdir, exist_ok=True)
+    fl = L['floor']
+    seat = []
+    for f, X in frames(plan):
+        cells, A = floor_cells(hull, plan, C, X)
+        x0 = int(round(X)) - fl['sided'] // 2
+        xs3 = range(x0, x0 + fl['sided'])
+        give = set(c for c in cells if abs(c[0]) <= 2 and all((x, c[1]) in kset for x in xs3))
+        cells = cells - give
+        ys = [YC + dy for dy, z in cells]
+        zs = [z for dy, z in cells]
+        y0, z0 = min(ys), min(zs)
+        w, h = D.write_mask_x(os.path.join(mdir, 'f%+03d.png' % f), [(YC + dy, z) for dy, z in cells], fl['color'], y0, z0)
+        out['floors'].append({'f': f, 'x': round(X, 2), 'x_cells': [x0, x0 + fl['sided'] - 1], 'A': round(A, 2), 'cells_yz': len(cells),
+                              'given_to_keelson': len(give),
+                              'hb_max': max(abs(dy) for dy, z in cells), 'z_max': max(zs),
+                              'stamp': {'png': 'design/masks/floors/f%+03d.png' % f, 'at': '%d,%d,%d' % (x0, y0, z0), 'facing': 'x+',
+                                        'thickness': fl['sided'], 'expect_pixels': len(cells)}})
+        # keelson 坐到底肋上：底肋頂取這片中心的 A、keelson 底逐欄跟 A 走 ⇒ A 在一片三格之間跨過格中心時，
+        # 外側那一欄會空一格（v1 量到 4 欄、20 voxel）。那幾欄的 keelson 往下補到底肋頂。
+        ctop = 7
+        while all((dy, ctop + 1) in cells for dy in range(-2, 3)):
+            ctop += 1
+        for x in xs3:
+            kmin = min((z for (xx, z) in kset if xx == x), default=None)
+            if kmin is not None:
+                for z in range(ctop + 1, kmin):
+                    kc.add((x, z))
+                    seat.append((x, z))
+
     x0, z0, w, h = D.write_mask(os.path.join(design, 'masks', 'keelson.png'), kc, ks['color'])
-    out['keelson'] = {'cells_xz': len(kc), 'bbox_x': [x0, x0 + w - 1], 'bbox_z': [z0, z0 + h - 1],
+    out['keelson'] = {'cells_xz': len(kc), 'seat_fill_xz': sorted(seat), 'bbox_x': [x0, x0 + w - 1], 'bbox_z': [z0, z0 + h - 1],
                       'stamp': {'png': 'design/masks/keelson.png', 'at': '%d,158,%d' % (x0, z0), 'facing': 'y+', 'thickness': 5, 'expect_pixels': len(kc)}}
 
     render(design, plan, src, hull, C, polys, out)
@@ -282,7 +304,11 @@ def render(design, plan, src, hull, C, polys, out):
     bp.commit()
     sh.text(80, 24, '新圖紙 03　線形圖 v1（Lines）', 26, bold=True)
     sh.text(80, 62, '左上：橫剖面（左半＝船尾各站、右半＝船頭各站，紅＝Ø 船中＝15 號剖面）｜右上：水線半寬｜下：側面肋位、底肋與 keelson', 15, color=D.CONSTR)
-    sh.text(80 + 72 * 5, 100 + 136 * 5 + 30, '橫剖面 Body plan　每格 5 px｜紅褐＝底肋（船尾 f%+d、船頭 f%+d）、中間方塊＝龍骨與 keelson' % (L['show_floors'][0], L['show_floors'][-1]), 13, anchor='ma', color=D.CONSTR)
+    # 說明照實列出每一半畫了哪幾片（v1 只寫頭尾兩片，漏了右半邊疊著的 f+00 —— 驗收時被它誤導過一次）
+    sides = {True: [], False: []}
+    for f in L.get('show_floors', []):
+        sides[[r for r in out['floors'] if r['f'] == f][0]['x'] < hull.xmid].append('f%+d' % f)
+    sh.text(80 + 72 * 5, 100 + 136 * 5 + 30, '橫剖面 Body plan　每格 5 px｜紅褐＝底肋（左半 %s、右半 %s 疊畫）、中間方塊＝龍骨與 keelson' % ('、'.join(sides[True]), '＋'.join(sides[False])), 13, anchor='ma', color=D.CONSTR)
 
     hp = D.Panel(sh, 880, 100, 170, 640, -2, 72, 3.2)
     hp.grid(minor=10, major=50, label_x=50, label_z=20)
