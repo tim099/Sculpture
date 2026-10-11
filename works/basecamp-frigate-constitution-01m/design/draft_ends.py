@@ -42,6 +42,11 @@ class HullV2:
         # 接縫站最高那一格：表格 0.25 一格、四捨五入 ⇒ 站頂那個 z 本身取不到值，退一格
         s.ztop9 = s.base.st[0][1]['pts'][-1][1] - 0.26
         s.ztop1 = s.base.st[-1][1]['pts'][-1][1] - 0.26
+        # ⚠ 1–9 號站的船殼是沿船長跨站的樣條 ⇒ 鄰站（8 號，頂 126.19）以上只剩一站，連 9 號站那個 X 本身也是 nan。
+        #   船尾的 h9／斜率一律夾在「9 號站與它往船頭 0.5 格都有值」的最高 z（126.10）；舊值 126.60 在那之上 ⇒ 船尾 Z 126 以上整排 nan
+        #   （2026-10-11 verifier：taffrail 只產出 1 層）。船頭的舊值（125.23）本來就在有效範圍內，不動。
+        while s.ztop9 > 0 and not (np.isfinite(s.base.hb(s.XS, [s.ztop9])[0]) and np.isfinite(s.base.hb(s.XS + 0.5, [s.ztop9])[0])):
+            s.ztop9 -= 0.05
         s.z9 = s.base.st[0][1]['pts'][0][1]      # 9 號站最低點（11.8）：以下往船尾只有 deadwood
         s.z1 = s.base.st[-1][1]['pts'][0][1]     # 1 號站最低點（15.76）
         s.C, _ = D.build(plan)
@@ -76,9 +81,13 @@ class HullV2:
         return float(np.interp(z, *zip(*E['aft_profile_zx']))), float(np.interp(z, *zip(*E['aft_outline_zhb'])))
 
     def _taper(s, z, h9, he, xa):
-        """psi 的 a：讓水線離開 9 號站的斜率 ＝ 1–9 號站船殼在 9 號站的斜率。"""
+        """psi 的 a：讓水線離開 9 號站的斜率 ＝ 1–9 號站船殼在 9 號站的斜率。
+        ⚠ 8 號站頂（126.19）以上只剩 9 號站一站 ⇒ 沿船長的樣條量不到斜率（nan）；那裡當 0（平著離開 9 號站）——
+        少了這一行，整排船尾水線跟著變 nan，船尾上部只長到 Z 126（2026-10-11 verifier：taffrail 只產出 1 層）。"""
         zc = min(z, s.ztop9)
         d = (s.base.hb(s.XS + 0.5, [zc])[0] - s.base.hb(s.XS, [zc])[0]) / 0.5
+        if np.isnan(d):
+            d = 0.0
         if abs(h9 - he) < 0.05:
             return 0.0
         return float(np.clip(d * (s.XS - xa) / (h9 - he), -0.3, 0.8))
@@ -165,6 +174,11 @@ class HullV2:
         d_ext = (row[j1] - row[j0]) / (xs[j1] - xs[j0])
         d_base = (s.base.hb(xj - sgn * 0.5, [zc])[0] - h0) / (-sgn * 0.5)
         L = abs(xj - (xs[ok[0]] if sgn < 0 else xs[ok[-1]]))
+        # 補正只攤在接縫附近 blend 格內（plan ends.<end>.junction_blend_cells；沒給 ⇒ 攤滿整條水線，船頭照舊）——
+        # 攤滿整條會把原圖的形狀在中段推開最多 0.76 格（船尾 B，2026-10-11 雕之前修量到）
+        blend = s.E['stern' if sgn < 0 else 'bow'].get('junction_blend_cells')
+        if blend:
+            L = min(L, float(blend))
         u = np.clip(np.abs(xs - xj) / L, 0.0, 1.0)
         beta = (d_base - d_ext) * (1.0 if sgn > 0 else -1.0)
         s.junction.append({'end': 'stern' if sgn < 0 else 'bow', 'z': round(float(z), 2), 'slope_base': round(float(d_base), 4),

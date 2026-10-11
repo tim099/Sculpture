@@ -78,30 +78,30 @@
    "voxels_if_empty": 3330
   },
   "sternpost": {
-   "cells_xz": 533,
+   "cells_xz": 504,
    "overlap_keel_xz": 0,
    "bbox_x": [
-    124,
+    125,
     139
    ],
    "bbox_z": [
     8,
-    87
+    80
    ],
-   "voxels_if_empty": 2665
+   "voxels_if_empty": 2520
   },
   "inner_post": {
-   "cells_xz": 491,
+   "cells_xz": 446,
    "overlap_keel_xz": 0,
    "bbox_x": [
-    129,
+    130,
     146
    ],
    "bbox_z": [
     8,
-    81
+    74
    ],
-   "voxels_if_empty": 2455
+   "voxels_if_empty": 2230
   },
   "aft_deadwood": {
    "cells_xz": 1487,
@@ -187,17 +187,17 @@
   },
   "sternpost": {
    "png": "design/masks/sternpost.png",
-   "at": "124,158,8",
+   "at": "125,158,8",
    "facing": "y+",
    "thickness": 5,
-   "expect_pixels": 533
+   "expect_pixels": 504
   },
   "inner_post": {
    "png": "design/masks/inner_post.png",
-   "at": "129,158,8",
+   "at": "130,158,8",
    "facing": "y+",
    "thickness": 5,
-   "expect_pixels": 491
+   "expect_pixels": 446
   },
   "aft_deadwood": {
    "png": "design/masks/aft_deadwood.png",
@@ -276,7 +276,7 @@
   },
   "parts": {
    "inner_post": {
-    "cells_xz": 491,
+    "cells_xz": 446,
     "overlap_existing_xz": 0,
     "overlap_other_new_xz": 0
    },

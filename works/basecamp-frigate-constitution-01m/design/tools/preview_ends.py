@@ -4,11 +4,12 @@ import sys, os, glob, json, math
 import numpy as np
 from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from replay import replay
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import draft_frames_ends as DFE
 W = 'D:/Unity/Valhalla/Sculpture/works/basecamp-frigate-constitution-01m'
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.environ.get('TEMP', '.'), '')
-vox = replay(W)
-old = np.array([k for k in vox.keys()], int)
+cx = DFE.Ctx(W + '/design')          # 作品現況扣掉雕兩頭之前要刻的柱頭（post_trim）
+old = np.array([k for k in cx.world.keys()], int)
 new = []
 for f in sorted(glob.glob(W + '/design/masks/ends/*.vox.txt')):
     for line in open(f, encoding='utf-8'):
