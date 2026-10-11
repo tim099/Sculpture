@@ -223,7 +223,7 @@
               "colors": {"copper": 168, "black": 36, "white": 255}},
     "segments_x": [90, 190, 290, 390, 490, 590, 690],
     "provenance": {
-      "order": "現實造船的順序（Tim 2026-10-11：「順序可以參考現實造船的建造順序」「是否要先鋪設一層外殼才開炮門?」）：肋骨立好 → 修整肋骨外緣（dubbing）→ 鋪外板 → 之後才從外板上鋸開砲門（下一階段）→ 內板、橫樑、甲板。參考：Lavery《Wooden Warship Construction》的章序（starting the ship → frames → outside planking → inside the hull → fittings）；砲門的位置在立肋骨時就排好，外板鋪過去再鋸開",
+      "order": "現實造船的順序（Tim 2026-10-11：「順序可以參考現實造船的建造順序」「是否要先鋪設一層外殼才開炮門?」）：肋骨立好 → 修整肋骨外緣（dubbing）→ 鋪外板 → 之後才從外板上鋸開砲門（下一階段）→ 內板、橫樑、甲板。參考：Lavery《Wooden Warship Construction》的章序（starting the ship → frames → outside planking → inside the hull → fittings）；砲門在外板鋪過去之後從板上鋸開（Tim 貼的造船說明）。⚠ 2026-10-11 更正：原本這裡還寫「砲門的位置在立肋骨時就排好」—— 那是記憶，查到的資料沒有一篇講到，拿掉",
       "dubbing": "設計決定：肋骨凸出 molded 線的格（格中心在船殼外，最多 0.80 格，大多是階段五每片 3 格厚的方肋用片中心判船殼內外留下的 bevel）在外板那一層裡 ⇒ 用外板蓋過去（stampvox overwrite=1，只限這一份清單，蓋之前逐格驗是肋骨色、在 molded 線外）。結果跟「先刻掉再鋪板」一樣；用 AABB 刻要 2,630 刀",
       "shell": "設計決定：外板 ＝ 船殼外面、跟船殼（molded 線以內）共用一個面的那一層格（6 連通意義下把船內和船外隔開的最薄一層）—— 規格的船底板 4\"（1.0 格）⇒ 1 格。從 z 7（龍骨上緣下 1 格，rabbet）到肋骨頂（每一欄 floor(top − 0.5)，跟肋骨同一條線）。龍骨、艏柱、艉柱、deadwood 露在外面的部分不包（它們本身就是外板收進去的 rabbet）",
       "wales": "規格（Humphreys 1794，Papers of the War Department 機器轉錄）：main wales 每舷 6 道、7\" 厚、10\" 寬 ⇒ 帶寬 60\"（15.24 格）、2 格厚（比旁邊的板凸出 1 格）。位置：圖上沒畫 ⇒ 設計決定，照規格的排列（wales 之上 5 道 black strakes 10\" 寬、再上是砲門那一帶的板）⇒ wales 上緣 ＝ 砲門下緣線 − 12.7 格，船中下緣約在水線下 2.4 格（這一代巡防艦的 main wale 下緣本來就在滿載水線附近）。只加厚側面（往外那一格在舷側的法線方向）；船尾面、船底不加厚",
