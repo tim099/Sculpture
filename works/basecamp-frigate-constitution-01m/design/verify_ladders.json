@@ -1,0 +1,219 @@
+{
+ "cells": 1872,
+ "by_kind": {
+  "stringer": 900,
+  "tread": 728,
+  "stanchion": 244
+ },
+ "by_deck": {
+  "gun": 1084,
+  "berth": 788
+ },
+ "overlap_world": 0,
+ "floating": {
+  "n": 0,
+  "first": []
+ },
+ "ladders": [
+  {
+   "xe": 440,
+   "d": 1,
+   "y": [
+    164,
+    172
+   ],
+   "zcap": 107,
+   "zl": 82,
+   "band": 4,
+   "cap_up": 0,
+   "R": 16,
+   "xf": 455,
+   "treads": 7,
+   "post_bot": 13,
+   "post_h": 9,
+   "id": "waist-S",
+   "placed": true,
+   "hatch": "long_hatchway",
+   "upper": "spar",
+   "deck": "gun",
+   "cells": 260,
+   "rise": 26,
+   "tried_before": 0
+  },
+  {
+   "xe": 440,
+   "d": 1,
+   "y": [
+    148,
+    156
+   ],
+   "zcap": 107,
+   "zl": 82,
+   "band": 4,
+   "cap_up": 0,
+   "R": 16,
+   "xf": 455,
+   "treads": 7,
+   "post_bot": 13,
+   "post_h": 9,
+   "id": "waist-P",
+   "placed": true,
+   "hatch": "long_hatchway",
+   "upper": "spar",
+   "deck": "gun",
+   "cells": 260,
+   "rise": 26,
+   "tried_before": 0
+  },
+  {
+   "xe": 307,
+   "d": 1,
+   "y": [
+    156,
+    164
+   ],
+   "zcap": 109,
+   "zl": 82,
+   "band": 4,
+   "cap_up": 2,
+   "R": 17,
+   "xf": 323,
+   "treads": 8,
+   "post_bot": 14,
+   "post_h": 9,
+   "id": "after-gun",
+   "placed": true,
+   "hatch": "after",
+   "upper": "spar",
+   "deck": "gun",
+   "cells": 284,
+   "rise": 28,
+   "tried_before": 2
+  },
+  {
+   "xe": 617,
+   "d": -1,
+   "y": [
+    156,
+    164
+   ],
+   "zcap": 113,
+   "zl": 86,
+   "band": 4,
+   "cap_up": 3,
+   "R": 17,
+   "xf": 601,
+   "treads": 8,
+   "post_bot": 14,
+   "post_h": 8,
+   "id": "fore-gun",
+   "placed": true,
+   "hatch": "fore_scuttle",
+   "upper": "spar",
+   "deck": "gun",
+   "cells": 280,
+   "rise": 28,
+   "tried_before": 3
+  },
+  {
+   "xe": 223,
+   "d": 1,
+   "y": [
+    156,
+    164
+   ],
+   "zcap": 85,
+   "zl": 61,
+   "band": 4,
+   "cap_up": 0,
+   "R": 15,
+   "xf": 237,
+   "treads": 7,
+   "post_bot": 12,
+   "post_h": 8,
+   "id": "companion",
+   "placed": true,
+   "hatch": "companion",
+   "upper": "gun",
+   "deck": "berth",
+   "cells": 250,
+   "rise": 25,
+   "tried_before": 0
+  },
+  {
+   "xe": 307,
+   "d": 1,
+   "y": [
+    156,
+    164
+   ],
+   "zcap": 86,
+   "zl": 60,
+   "band": 4,
+   "cap_up": 2,
+   "R": 16,
+   "xf": 322,
+   "treads": 8,
+   "post_bot": 13,
+   "post_h": 9,
+   "id": "after-berth",
+   "placed": true,
+   "hatch": "after",
+   "upper": "gun",
+   "deck": "berth",
+   "cells": 269,
+   "rise": 27,
+   "tried_before": 10
+  },
+  {
+   "xe": 617,
+   "d": -1,
+   "y": [
+    156,
+    164
+   ],
+   "zcap": 89,
+   "zl": 63,
+   "band": 4,
+   "cap_up": 1,
+   "R": 16,
+   "xf": 602,
+   "treads": 8,
+   "post_bot": 13,
+   "post_h": 9,
+   "id": "fore-berth",
+   "placed": true,
+   "hatch": "fore_scuttle",
+   "upper": "gun",
+   "deck": "berth",
+   "cells": 269,
+   "rise": 27,
+   "tried_before": 9
+  }
+ ],
+ "placed": 7,
+ "anchors": 28,
+ "ropes_total": 14,
+ "notes": [],
+ "expect_assembly_after": 1443188,
+ "hidden_for_base": [
+  "甲板-gun/梯子",
+  "甲板-berth/梯子"
+ ],
+ "files": {
+  "gun": {
+   "sha256": "fdf0a2d173c7e4a3574c62175a2ea262fa2e21ba7bbd2bfc572c8f04602a646b",
+   "cells": 1084
+  },
+  "berth": {
+   "sha256": "665283ba6cd208f318002ca4dd5ccdaec88077641316f23669a0aae566636d75",
+   "cells": 788
+  },
+  "rig_points": {
+   "sha256": "f88b3356c475129555472486c737b06a542cdcb08a0502dfb0ad802933a27371"
+  },
+  "ropes": {
+   "sha256": "559a6227a62a2cdbb3c55f5a9e103272e16aa8fd624d7f2d888f71216a678a8a"
+  }
+ }
+}

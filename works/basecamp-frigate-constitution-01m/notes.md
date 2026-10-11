@@ -533,3 +533,15 @@ Tim：「接著做吧 GO」（照上一則的清單往下）。
 - **第 2 門船頭側的環**：船牆上放不了（貼著艙房隔牆）⇒ 釘在隔牆朝砲的那一面（227, 189, 91）；那一側的 breeching＋tackle 補掛（兩舷 4 條）。
 - 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 649、mismatch 0）；砲具子作品 1,004 格 ＝ 清單逐格相等；組裝件 1,440,018 ＋ 2 × 649 ＝ 1,441,316、link_overlap 0、1 元件、空腔 0；重產三個檔逐位元組相同；全船繩 645（靜索 133、帆腳索 32、砲索 140、ratlines 340）、ropes_broken 0。
 - 過程圖：`overlays/stage22_*`（`_implements_v2_hidden` 是貼在橫樑之間、看不到的那一版）。
+
+## 階段二十三 艙口梯（新圖紙 20）
+Tim：「接下來可以試著加樓梯嗎（或是實際上船員是如何上下甲板的？）」。設計 plan.json `ladders`；`design/draft_ladders.py`；`verify_ladders.json`、`sheet20_ladders_v1.png`；`masks/ladders/{gun,berth}.vox.txt`（世界座標）；固定點 `design/rig_points_ladders.json`；扶手繩 `design/ladder_ropes.json`（`tools/ropes_apply.py` 下 CLI）。
+- 實船：上下甲板走艙口裡的陡梯（兩根側板＋開放踏板，上端扣在艙口圍板上，旁邊一條 man rope）；main ladder（waist）、after ladder、fore ladder（前桅前的 scuttle）、艦長／軍官的 companion ladder。從小艇上船走船側 side steps；上桅走 ratlines。位置是設計決定：在 deckworks.hatches 已有的艙口裡挑。
+- 子作品兩件（parent ＝ 下面那一層甲板、at 0,0,0、尺寸 ＝ 船殼）：`-ladders-gun`「憲法號 spar → gun deck 的梯子」1,084 格、`-ladders-berth`「憲法號 gun → berth deck 的梯子」788 格；關聯進 `甲板-gun`／`甲板-berth`，名 `梯子`（藏上一層看得到梯子往上伸；藏這一層一起藏）。
+- 7 座：waist 一對（spar → gun，長艙口 x 440 往前斜下，中線兩側 y 148–156／164–172 —— 中線有柱子）、after（spar → gun、gun → berth，x 307 往前）、fore（spar → gun、gun → berth，fore scuttle x 617 往後）、companion（gun → berth，艦長室 x 223 往前）。斜度 rise 3／run 2（≈ 56°）、一階 3 格、踏板 7 寬 2 深 1 厚（250）、側板 1 格厚、垂直 4 格（136）；梯寬 9。每座兩根側板上各兩根鐵柱（36，上 ＝ 第 1 欄、下 ＝ 倒數第 3 欄、高 9；fore spar → gun 與 companion 高 8。程式會往梯頂試到倒數第 5 欄、往下試到高 7，實際都沒用到），柱頂是固定點（28 個），扶手繩 14 條（0.35、slack 1.02、#cdb88e）。
+- 每座都量：梯子每一格是空氣、兩層甲板之間踏板上方 8 格是空氣、梯腳外 5 格是空氣、扶手柱與扶手繩不穿東西；先放的梯子算現況。試的順序 dir → band（4、3）→ cap_up（0–3）。
+- 草稿期間：after hatch（四層）與 fore scuttle（三層：berth／gun／spar）上下對齊 ⇒ 梯腳要跨過下一層的圍板落在洞外 ⇒ 側板上端比圍板高 1–3 格（after 兩座 ＋2、fore spar → gun ＋3、fore gun → berth ＋1）；fore scuttle 正上方是 bowsprit 根部（z 113–125）⇒ headroom 只量兩層甲板之間；companion 的扶手繩擦到 gun deck 橫樑 ⇒ 程式改成下柱可以往梯頂挪、柱高可以降；最後是柱高 9 → 8 解掉的（下柱位置沒動）。after／fore 兩組上下兩座平行疊著（先放的那座佔住了反方向）。
+- 不放：berth → orlop（after hatch 在 orlop 同一處也是洞、短梯落不出去；fore scuttle 底下的 orlop 是實心甲板，但梯子落進艙房（orlop 艙壁 x 608、621）；companion 底下梯腳正對中線柱子）、main／fore hatch（貨艙口，下一層同一處也是洞）。
+- 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 1,084／788、mismatch 0）；組裝件 1,441,316 ＋ 1,872 ＝ 1,443,188、link_overlap 0、1 元件、空腔 0、浮空 0；重產（藏兩條關聯讀 1,441,316）四個檔逐位元組相同；全船繩 659（＋扶手 14）、ropes_broken 0。
+- 過程圖：`overlays/stage23_*`。
+- 更正（2026-10-12，核對流程對原始檔抓到的；連日記、plan not_now、draft_ladders.py 註解一起改）：fore scuttle 只開在 berth／gun／spar 三層，底下的 orlop 是實心甲板（只有 after hatch 在 orlop 同一處也是洞）；扶手柱實際都在倒數第 3 欄、高 9（fore spar → gun 與 companion 高 8），「倒數第 3–5 欄、高 7–9」是程式試的範圍；companion 是靠降柱高解掉的。

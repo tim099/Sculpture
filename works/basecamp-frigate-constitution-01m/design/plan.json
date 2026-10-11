@@ -2246,5 +2246,122 @@
       "research agent（2026-10-11）：breeching 約砲長 3 倍、穿過 cascabel 的環、兩頭扣在砲門兩側的 ring bolt；side tackles 從船側 ring bolt 到 cheek 的 eyebolt；train tackle 從砲架尾到甲板的 ring bolt；shot garlands 在艙口圍板或船側（typical practice）"
     ],
     "not_now": "rammer／sponge／handspikes（掛在上面橫樑底下）、滑車本身、砲門蓋"
+  },
+
+  "ladders": {
+    "title": "新圖紙 20：艙口梯（companion／hatch ladders）與扶手繩 v1",
+    "date": "2026-10-11",
+    "subworks": {
+      "gun": {
+        "id": "basecamp-frigate-constitution-01m-ladders-gun",
+        "title": "憲法號 spar → gun deck 的梯子",
+        "parent": "basecamp-frigate-constitution-01m-deck-gun",
+        "link_in": "basecamp-frigate-constitution-01m-deck-gun",
+        "link": "梯子",
+        "path": "甲板-gun/梯子"
+      },
+      "berth": {
+        "id": "basecamp-frigate-constitution-01m-ladders-berth",
+        "title": "憲法號 gun → berth deck 的梯子",
+        "parent": "basecamp-frigate-constitution-01m-deck-berth",
+        "link_in": "basecamp-frigate-constitution-01m-deck-berth",
+        "link": "梯子",
+        "path": "甲板-berth/梯子"
+      },
+      "note": "梯子站在下面那一層、上端靠在上一層的艙口圍板 ⇒ 子作品掛在下面那一層（藏上一層看得到梯子往上伸；藏這一層就一起藏）；at 0,0,0、尺寸 ＝ 船殼，格子是世界座標"
+    },
+    "base": {
+      "hide_links": [
+        "甲板-gun/梯子",
+        "甲板-berth/梯子"
+      ],
+      "assembly_voxels": 1441316,
+      "note": "現況讀組裝件藏起這三條關聯（程式先查現有關聯）⇒ 套用之後重跑逐位元組一樣；扶手繩不是 voxel，不影響"
+    },
+    "geometry": {
+      "rise": 3,
+      "run": 2,
+      "band": [4, 3],
+      "cap_up": [0, 1, 2, 3],
+      "headroom": 8,
+      "landing": 5,
+      "stanchion_h": 9,
+      "note": "斜度 rise 3／run 2（≈ 56°）：踏板每 3 格（≈ 30 cm）一階、往前 2 格；側板（stringer）1 格厚、垂直方向 band 格高（先試 4，撞到下一層的艙口圍板再試 3）；上端頂到上一層圍板頂（cap_up：側板往上多出 0–3 格當掛鉤／把手 —— 同一個艙口上下層都有洞時，梯子要高一點才跨得過下一層的圍板）；踏板 1 格厚、2 格深、開放式（沒有豎板）。每一格梯子要是空氣；踏板上方 headroom 格、梯腳外 landing 格（落地的走道）也要是空氣"
+    },
+    "colors": {
+      "stringer": 136,
+      "tread": 250,
+      "iron": 36
+    },
+    "manrope": {
+      "thickness": 0.35,
+      "slack": 1.02,
+      "color": "#cdb88e",
+      "note": "每座梯子兩側各一條：側板上兩根鐵柱（上端第 1 欄、下端倒數第 3 欄，高 stanchion_h），柱頂是固定點，繩拉在兩柱頂之間（實船 man rope 常包布、刷白 ⇒ 顏色比砲索淡）"
+    },
+    "list": [
+      {
+        "id": "waist-S",
+        "deck": "gun",
+        "upper": "spar",
+        "hatch": "long_hatchway",
+        "dir": [1, -1],
+        "y": [164, 172],
+        "note": "main ladders：spar deck 長艙口（waist）裡一對，中線兩側各一座（中線有柱子）"
+      },
+      {
+        "id": "waist-P",
+        "deck": "gun",
+        "upper": "spar",
+        "hatch": "long_hatchway",
+        "dir": [1, -1],
+        "y": [148, 156]
+      },
+      {
+        "id": "after-gun",
+        "deck": "gun",
+        "upper": "spar",
+        "hatch": "after",
+        "dir": [1, -1],
+        "y": [156, 164],
+        "note": "after ladder（主桅後、往後甲板）"
+      },
+      {
+        "id": "fore-gun",
+        "deck": "gun",
+        "upper": "spar",
+        "hatch": "fore_scuttle",
+        "dir": [-1, 1],
+        "y": [156, 164],
+        "note": "fore ladder（前桅前的 scuttle；水兵住 berth deck 前半段）"
+      },
+      {
+        "id": "companion",
+        "deck": "berth",
+        "upper": "gun",
+        "hatch": "companion",
+        "dir": [1, -1],
+        "y": [156, 164],
+        "note": "艦長室 → wardroom 的 companion ladder"
+      },
+      {
+        "id": "after-berth",
+        "deck": "berth",
+        "upper": "gun",
+        "hatch": "after",
+        "dir": [-1, 1],
+        "y": [156, 164]
+      },
+      {
+        "id": "fore-berth",
+        "deck": "berth",
+        "upper": "gun",
+        "hatch": "fore_scuttle",
+        "dir": [1, -1],
+        "y": [156, 164]
+      }
+    ],
+    "sources": "實船上下甲板走的是艙口裡的陡梯（ladder：兩根側板＋開放踏板，約 60°，上端扣在艙口圍板上），旁邊一條 man rope 當扶手；主要幾座 ＝ main ladder（waist）、after ladder、fore ladder（前桅前的 scuttle）、艦長／軍官的 companion ladder。從小艇上船走船側的 side steps（釘在船殼上的一排木條＋兩條 man ropes）；上桅走 ratlines（階段二十二已做）。⚠ 位置是設計決定：plan.json deckworks.hatches 已有的艙口裡挑能當梯口的（main／fore 是貨艙口，下一層同一處也是洞 ⇒ 不放）",
+    "not_now": "berth deck → orlop（v1 量過：after hatch 在 orlop 同一處也是洞、短梯落不出去；fore scuttle 底下的 orlop 是實心甲板，但梯子落進艙房；companion 底下梯腳正對中線柱子 ⇒ 三處都不放，之後要的話另開一個 orlop 的梯口）、船側 side steps 與 entry port、艙口格柵（gratings）、spar deck 艦長室上方的 companion（spar deck 那一格目前沒有開口）、orlop → 底艙"
   }
 }

@@ -28,6 +28,7 @@
 | 二十 | 新圖紙 18：gun deck 24 磅長砲 —— 一門做一次（子作品）、關聯擺 28 門（船頭那個砲門太窄不放） | [stage20.md](stage20.md) |
 | 二十一 | 新圖紙 19：gun deck 砲具（子作品，一舷＋鏡像）—— 環首螺栓 41、shot garlands 11 條；breeching／side tackles／train tackle 136 條繩 | [stage20.md](stage20.md#然後繩與砲彈階段二十一) |
 | 二十二 | ratlines 340 道（繩）；rammer／sponge 掛在橫樑底下、第 2 門的環釘在艙房隔牆上（砲具第二輪） | [stage20.md](stage20.md#再然後梯子與桿子階段二十二) |
+| 二十三 | 新圖紙 20：艙口梯（子作品兩件，掛在 gun／berth deck）—— spar → gun 4 座、gun → berth 3 座；扶手繩 14 條 | [stage23.md](stage23.md) |
 
 ## 範圍與做法（Tim 2026-10-11）
 - 玻璃等透明部分、帆、纜索：先不做，等 `/scp-sculpture` 能直接嵌模型再處理。

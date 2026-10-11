@@ -154,6 +154,13 @@
 - [ ] spar deck：carronades（32 磅、slide carriage）與 bow chasers —— spar deck 的砲門要先開（現在 pin rails 是照 gun deck 砲門的空檔放的，開 spar deck 砲門時一起看）
 - [ ] 砲門蓋（等可以匯入模型）
 
+## 階段二十三 艙口梯（2026-10-11 套用）
+- [x] spar → gun 4 座（waist 一對、after、fore）、gun → berth 3 座（companion、after、fore）；扶手繩 14
+- [ ] berth → orlop：三個候選都放不下（見 notes.md 階段二十三）⇒ 要的話另開一個 orlop 的梯口
+- [ ] 船側 side steps 與 entry port（從小艇上船）
+- [ ] 艙口格柵（gratings；spar deck 長艙口、main／fore hatch）
+- [ ] spar deck 艦長室上方的 companion（spar deck 那一格目前沒有開口）
+
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**
 - [ ] ⚠ 先做 TASK-0497（關聯／組裝支援鏡像）—— 兩舷對稱的肘、艙房只做一份
