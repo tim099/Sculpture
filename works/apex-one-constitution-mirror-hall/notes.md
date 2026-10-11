@@ -8,7 +8,7 @@ Tim 2026-10-11 委託（TASK-0497）：開新作品，匯入 basecamp 的兩個�
 
 | 關聯 | 來源 | at | 鏡像 | 意思 |
 |---|---|---|---|---|
-| `frigate` | basecamp-frigate-constitution-01m（0.1 m 照圖紙版） | 0,0,800 | — | 正立 |
+| `frigate` | basecamp-frigate-constitution-01m-assembly《憲法號（組裝）》（船殼＋甲板＋桅＋裝飾，basecamp 自己的關聯樹） | 0,0,800 | — | 正立 |
 | `frigate-floor` | 同一艘 | 0,0,0 | z | 龍骨對龍骨的鏡面：z ↔ 1599−z |
 | `small-port` | basecamp-uss-constitution（小比例版） | 200,370,0 | — | 照原樣 |
 | `small-starboard` | 同一艘 | 568,370,0 | x | 以 x=511.5 為鏡面，與 small-port 對稱 |
@@ -25,3 +25,9 @@ Tim 2026-10-11 委託（TASK-0497）：開新作品，匯入 basecamp 的兩個�
 
 - 舊版 senate.exe（不認得鏡像）讀這件會 **exit 2：links.json schema=2** —— 是刻意的：沒有這道擋，舊版會默默畫成兩艘沒翻面的船。
 - 觀測時會拿 basecamp 兩件作品的引擎鎖；她正在大量落刀時觀測可能要等一下。
+
+## 2026-10-11 改接組裝件（Tim：「子模組改用 憲法號(組裝)吧」）
+
+frigate／frigate-floor 兩條從 0.1 m 船殼改接 `basecamp-frigate-constitution-01m-assembly`（同為 1024×320×800，位置與鏡像不變）—— 現在連桅、帆、艏斜桅、裝飾一起進來，關聯樹三層。
+讀數：組好 3,064,202 格 ＝ 2×1,441,316 ＋ 2×90,785；重疊 0、越界 0（鏡面那半的桅尖沒有出界）；
+逐格對拍 z ↔ 1599−z 2,882,632 格、x ↔ 1023−x 181,570 格，全部 0 不符。渲染看過：整艘帆船立在龍骨上，倒影的帆朝下。
