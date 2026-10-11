@@ -38,10 +38,16 @@
 - [x] 雕：8 刀 stampvox，435,561 → 593,700；結果帳 0 差、不漏水、反向對照會叫、1 元件；過程圖 `overlays/stage7_*`、心得 `journal/stage7.md`
 - [x] LWL 那題對砲門不影響（直線擬合 vs 圖上畫的 LWL ≤ 0.26 格）
 
-## 下一階段：開砲門（Tim 2026-10-11：「鋪設完外殼後先 commit 然後挖炮門」）
-- [ ] 開子單（掛 478）。gun deck 14 個方砲門的位置與高度已在 `design/source_ports.json`（X_aft..X_fwd、sill..lintel）；還要量：船尾帶窗格的那個（px x≈687）、船頭菱形的（px x≈3835）、spar deck 兩組砲門（船尾 X ≈ 100–371、船頭 X ≈ 515 起）與舷牆高度（sheer plan 船尾 rail Z 130–134、waist 約 119.6、見 source_ends_raw.json readings[1] rail_structure）
-- [ ] 做法：一個盒子同時刻穿外板＋肋骨（開口照讀數，四捨五入到格；兩舷鏡像）；刻完在開口上下補 port sill／lintel（規格：gun deck 橫樑「每個砲門底下一根、之間一根」—— 甲板階段用）、左右是被切斷的肋骨面（實船左右各一根完整的 port timber —— 要不要補等量完再定）
-- [ ] ⚠ 高度一律用 plan.json `ends.provenance.frame_of_heights` 的一致換算（source_ports.json 已經換好）；⛔ 不要用舊式「− 0.01538·(439.2 − X)」
+## 階段八 TASK-0490（2026-10-11 雕完）
+- [x] 船頭那個砲門（平行四邊形）讀圖；新圖紙 06（`design/draft_ports.py`、`sheet06_ports_v1.png`）；44 刀 carve ＋ 砲門框 416 格；593,700 → 586,192；結果帳 0 差、透光、框沒有縫、1 元件、反向對照會叫（`design/tools/check_ports.py`）；標記 `砲門:begin／end`
+- [ ] 雕完派的 3 個 verifier（原圖幾何／帳與結構／外觀）結果待回 —— 有發現就放進「放上去之後再細修」
+- [x] 船頭那個砲門斜看有鋸齒（格子表現斜邊）—— Tim 目視檢查過砲門：「沒問題的」（2026-10-11）
+
+## 下一階段（現實順序：外板之後是內板、clamps、橫樑與甲板）
+- [ ] spar deck 的砲門跟舷牆、舷弧一起做：spar deck 兩組砲門（船尾 X ≈ 100–371、船頭 X ≈ 515 起）與舷牆高度（sheer plan 船尾 rail Z 130–134、waist 約 119.6、見 source_ends_raw.json readings[1] rail_structure）；先決定「階段五方肋頂沒照 sheer_points 起翹」那條（等 Tim）
+- [ ] gun deck 橫樑「每個砲門底下一根、之間一根」（Humphreys）；砲門下緣離甲板 2'2"（02 號）～2'4"（Humphreys）⇒ 甲板面約在下緣 − 6.6～7.1 格，對 15 號 gun deck at CL（Z≈80）再扣 camber
+- [ ] ⚠ 高度一律用 plan.json `ends.provenance.frame_of_heights` 的一致換算；⛔ 不要用舊式「− 0.01538·(439.2 − X)」
+- [ ] ⚠ 重跑 `draft_ports.py` 讀 `gunports.world_upto`（階段八第一刀之前），已設好
 - [ ] ⚠ 重跑 `draft_planking.py` 要讀 `planking.world_upto`（階段七第一刀之前）—— 讀現況會長出第二層外板
 - [ ] `draft_frames_ends.py`（階段六）的 Ctx 也讀現況（events 重播減柱頭）⇒ 雕完重跑會讀到自己雕上去的木料、清單會變；補同一道閘（`framing_ends.world_upto` ＝ 階段六第一刀之前），重產比對事件記的 51 個 sha256
 - [ ] 砲門蓋（port lids）與其他活動部件：⛔ 不用 voxel 做 —— 等 `/scp-sculpture` 擴充成可以匯入模型之後用模型做（Tim 2026-10-11）；舷牆上的 hammock netting 同上再看

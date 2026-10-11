@@ -13,6 +13,7 @@
 | 五 | 新圖紙 04 肋骨圖、雙肋 132 片（futtocks・top timbers） | [stage5.md](stage5.md)（含查到的參考資料） |
 | 六 | 新圖紙 03 v2（船殼延伸到兩頭）、04 v2（cant frames、hawse pieces、transoms、counter timbers）—— 雕之前修、雕完 | [stage6.md](stage6.md)（含查到的參考資料） |
 | 七 | 新圖紙 05：整肋（dubbing）、外板、wales、塗裝（銅底、黑身、砲門白帶）—— 先鋪殼，砲門下一階段開 | [stage7.md](stage7.md)（含查到的參考資料） |
+| 八 | 雕刻引擎的時間標記；新圖紙 06：gun deck 砲門每舷 15 個，從殼上鋸開、補 sill／lintel／port timber | [stage8.md](stage8.md)（含查到的參考資料） |
 
 ## 範圍與做法（Tim 2026-10-11）
 - 玻璃等透明部分、帆、纜索：先不做，等 `/scp-sculpture` 能直接嵌模型再處理。

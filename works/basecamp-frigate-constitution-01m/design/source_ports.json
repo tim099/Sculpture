@@ -1,5 +1,5 @@
 {
- "note": "階段七（TASK-0489）讀圖：11 號（1927 MIT PLAN VIII）sheer plan 上 gun deck 那排方砲門（每舷 14 個方的；船頭另有一個菱形的、船尾 quarter gallery 前有一個帶窗格的，都還沒量）。只拿來定外板的 wales／black strakes 與塗裝帶的高度；開口在下一階段。",
+ "note": "階段七（TASK-0489）讀圖：11 號（1927 MIT PLAN VIII）sheer plan 上 gun deck 那排方砲門（每舷 14 個方的；船頭另有一個平行四邊形的（bow_port，階段八量）；船尾 quarter gallery 前那個帶窗格的屬於 quarter gallery，不是砲門）。只拿來定外板的 wales／black strakes 與塗裝帶的高度；開口在下一階段。",
  "date": "2026-10-11",
  "by": "basecamp（本 session 自己量；verifier 還沒派）",
  "source_image": "references/uss-constitution-1927/RG19_ALPHA_Constitution_1797_11.JPG",
@@ -216,5 +216,32 @@
     "B": 1740.7
    }
   }
- ]
+ ],
+ "bow_port": {
+  "note": "船頭那個 gun deck 砲門（第 15 個）：圖上畫成平行四邊形 —— 上下緣水平、兩側往船頭斜（船殼在這裡轉彎，側面投影）。上下緣用框內中段的列剖面找線中心；左右緣在 13 列各找線中心再各擬一條直線（殘差 rms 左 0.20、右 0.18 px）。高度用 frame_of_heights 的一致換算（LWL 直線擬合）。",
+  "top": {
+   "px": [
+    3851.3,
+    3893.3,
+    1678.7
+   ],
+   "X_aft": 645.27,
+   "X_fwd": 652.09,
+   "Z": 103.97
+  },
+  "bottom": {
+   "px": [
+    3837.5,
+    3879.3,
+    1730.3
+   ],
+   "X_aft": 642.91,
+   "X_fwd": 649.7,
+   "Z": 95.75
+  },
+  "slope_px_per_px": {
+   "left": -0.267,
+   "right": -0.272
+  }
+ }
 }
