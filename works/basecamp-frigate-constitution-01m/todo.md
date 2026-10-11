@@ -55,6 +55,42 @@
 - [x] keelson 兩側那道 1 格縫：內板蓋掉
 - [x] 甲板高度那題 ⇒ 定案在 plan.json `interior.decks`（砲門那邊＋15 號 ＋2）；~~甲板跟著 sheer 走（每個 X 一個值）~~ ⇒ Tim 要大致平整，改成分段平、折在艙壁
 
+## 階段十 甲板子作品（2026-10-11 套用）
+- [x] 新圖紙 08（`design/draft_decks.py`、`sheet08_decks_v1.png`、`verify_decks.json`；設計與出處在 plan.json `deckworks`）
+- [x] 建子作品（parent_work ＝ 本作品，免費）：`-deck-orlop／-deck-berth／-deck-gun／-deck-spar`，尺寸 ＝ 船殼
+- [x] 組裝件 `basecamp-frigate-constitution-01m-assembly`「憲法號（組裝）」—— Tim：「開一個作品來組裝憲法號，目前的作品就作為船殼部分」「另一個作品本身只做組裝工作」⇒ 一格都不雕、只有關聯：船殼＋四層甲板（at=0,0,0）；⛔ 甲板不關聯進船殼
+- [x] 四層草稿 stampvox（52,858／108,018／132,734／110,983，placed ＝ 清單）；組裝件 draft=1 匯出 1,226,037 ＝ 821,444 ＋ 404,593、link_overlap 0、甲板格逐格對上
+- [x] Tim「可以套用草稿了」⇒ 四件 apply（changed ＝ 清單、apply_mismatch 0）；notes.md「階段十」；過程圖 `overlays/stage10_*`
+- [ ] journal（stage10–13 一起）
+- 甲板板 250、桅孔現在就開：Tim 預覽後沒有要改（2026-10-11 套用）
+- Tim 2026-10-11：組裝件「測試 ok」；觀測頁開關關聯 ⇒ 開 TASK-0499（toggle，先不用做）
+
+## 階段十一 房間子作品（2026-10-11 套用）
+- [x] 新圖紙 09（`design/draft_rooms.py`、`sheet09_rooms_v1.png`、`verify_rooms.json`；設計在 plan.json `rooms`）：orlop／berth／gun 的艙壁與艙房，門不放、留門洞；牆 1 格（板 177、框 136）
+- 六件：三件全寬艙壁（whole，at=0,0,0）＋ 三件舷側艙房（side，只做 y > 160 那一舷、自己的座標；另一舷 mirror=y、at.y ＝ 321 − y0 − h）；都關聯進各自的甲板子作品
+- 讀數：43,798 格（含鏡像那一舷）、跟船殼／甲板重疊 0、鏡像差 0、封閉空腔 0
+- [x] Tim「GO 建房間子作品」「房間可以做為甲板的子作品」⇒ 六件 parent_work ＝ 各自的甲板子作品（root 仍是本作品，免費）；草稿 stampvox（placed ＝ 清單）；關聯進甲板：艙壁 at=0,0,0、艙房（照原樣）＋ 艙房-鏡像（mirror=y）
+- [x] 組裝件 draft=1 匯出 1,269,835 ＝ 1,226,037 ＋ 43,798、link_overlap 0；房間格（含鏡像那一舷，自己用 320 − y 手算對拍）逐格對上、舊格一格沒變
+- [x] 六件 apply（changed ＝ 清單、apply_mismatch 0；berth-bulkheads 是避開桅孔之後的 7,248）
+- ⚠ berth seam 587 在前桅上 ⇒ 矮檻蓋高低差、sick bay 艙壁移到 596；gun deck seam 570（3 格台階）留給 riding bitts
+- Tim 2026-10-11：「房間可以做為所在甲板的子模組嗎（隱藏甲板同時會隱藏對應房間）」⇒ 已經是：拿掉 甲板-gun 匯出 1,131,019 ＝ 1,269,835 − 132,734 − 3,888 − 1,097×2（links_used 沒有 甲板-gun/…）
+
+## 階段十二 舷牆與舷弧起翹（2026-10-11 套用；船殼本身）
+- [x] 新圖紙 10（`design/draft_bulwark.py`、`sheet10_bulwark_v1.png`、`verify_bulwark.json`；設計在 plan.json `bulwark`）：舷頂 ＝ 白帶上緣（三次擬合，殘差 ≤ 0.66）＋ 25、只往上補（x 493 起，船頭最多 +9）；補的格照肋骨頂那一列（36／141／177，牆中間的空格當 141）；全長 cap rail 104（內外各多 1 格）
+- 讀數：rise 6,406、cap 6,995、跟現有重疊 0、鏡像差 0、1 元件、空腔 0（補 16 格）；新格 z 122–133（甲板最高 110，不相干）
+- [x] Tim「GO 舷牆落草稿」⇒ 標記 `舷牆:begin`（＝ 船殼內部:end，第 473 個事件）；船殼草稿 stampvox rise 6,406 ＋ cap 6,995；船殼＋草稿 834,845、新格逐格對上；組裝件 1,283,236、link_overlap 0
+- [x] apply（跟 bowsprit 開口拆成兩筆：丟掉混在一起的草稿、重落同樣兩份清單）⇒ 13,401、標記 `舷牆:end`（第 474 個事件）
+
+## 階段十三 桅杆（2026-10-11 套用）
+- [x] 新圖紙 11（`design/draft_masts.py`、`sheet11_masts_v1.png`、`verify_masts.json`；設計在 plan.json `masts`，軸照 `deckworks.masts`）：三根桅（下桅、masthead、cap、top、trestletrees／crosstrees、topmast、topgallant／royal、truck）＋ bowsprit／jibboom／flying jibboom；讀組裝件 draft=1 的現況
+- 讀數：main 27,484／fore 21,732／mizzen 11,692／bowsprit 11,394（72,302）；鏡像差 0；碰到甲板／房間 0；底艙 step 的腳碰到船殼 58／26 格（讓開）；top z 285／262／240、truck 648／600／511；bowsprit 斜度 15.4°、flying jibboom 尖端 x 958
+- ⚠ 房間的 berth seam 587 矮檻原本橫過前桅孔（房間比桅杆早產生）⇒ draft_rooms 改成避開桅孔，berth-bulkheads 7,266 → 7,248、草稿丟掉重落（其他五件逐位元組不變）
+- ⚠ 後桅 1801 年 92 ft 照放 top 會比前桅高（跟在 deadwood 上）⇒ 設計決定 82 ft
+- [x] 四件子作品（parent ＝ 船殼）→ 草稿 → 關聯進組裝件 → apply；船殼刻 33 格（顏色守門）、標記 `艏斜桅開口:begin／end`（834,812）
+- [x] v1.1 主桅 top 浮空 ⇒ trestletrees 緊貼 masthead（刻 144 補 144）；組裝件 1 元件、空腔 0、1,355,487
+- [ ] 之後：yards、gaffs、spanker boom、dolphin striker、channels、索具與帆（Tim：先不做）
+- 之後：吊床網架與欄杆（11 號 quarterdeck 130–135／forecastle 127–130 那幾條）、spar deck 砲門 ⇒ 配件
+
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**
 - [ ] ⚠ 先做 TASK-0497（關聯／組裝支援鏡像）—— 兩舷對稱的肘、艙房只做一份

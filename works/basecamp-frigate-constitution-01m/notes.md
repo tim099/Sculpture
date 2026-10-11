@@ -403,3 +403,35 @@ Tim：「參考現實風帆戰艦的內裝（文獻、實際參考圖、船模�
 - **讀數**（`check_interior.py`，跟產生程式不共用量法）：結果帳 0 差、事件 ＝ 兩筆 apply、從艙內看得到的外板漆 24,360 → **0 面**（砲門開口那幾列 116 面前後一樣，不算）、砲門透光、1 元件、封閉空腔 0、鏡像（含顏色）0、每個砲門下緣離 gun deck 6–9、斜肋頭不進 berth clamp；反向對照（拿掉內板）報 5,322 面。證人重播（純 python）821,444／821,444。匯出 greedy **107,225 → 99,207 面**（多了 23 萬格，面反而少：鋸齒狀的縫被蓋掉）。v1.1 重產時其他七份清單逐位元組不變（換色照 v1 的艙內空氣算）。
 - **留給甲板子作品**：deck hooks（船頭 orlop／berth／gun 三層）、berth deck 的 transom knee（船尾 Z ≈ 61）、斜肋穿過 orlop 平台那一層（右舷 x 270–284、303–315、335–348、492–506、511–523、530–542，兩舷鏡像）⇒ orlop 橫樑開槽或避開、seam 504 不是艙壁（要放一道橫向的東西）、orlop 平台照 z 38–41 的艙內空氣裁。
 - 過程圖：`overlays/stage9_compare.png`（俯瞰／底艙／gun deck 前後）、`stage9_details.png`（主貨艙斜肋、船尾、船頭內壁、船中舷側）、`stage9b_top.png`／`stage9b_main_hold.png`／`stage9b_hold_fwd.png`（加了橫向 rider）、`stage9_*`；新圖紙 `design/sheet07_interior_v1.png`。
+
+## 組裝件與子作品（2026-10-11）
+Tim：「開一個作品來組裝憲法號，目前的作品就作為船殼部分」「另一個作品本身只做組裝工作（組合船殼、甲板、桅杆等部件）」「鏡像不要套用到整個甲板，只用在上面的物件」「房間可以做為所在甲板的子模組」。
+- 組裝件 `basecamp-frigate-constitution-01m-assembly`「憲法號（組裝）」：一格都不雕、只有關聯 —— 船殼、甲板-orlop／berth／gun／spar（各自底下掛 艙壁、艙房、艙房-鏡像）、前桅、主桅、後桅、艏斜桅。全部 at=0,0,0（艙房那件例外：自己的座標，另一舷 mirror=y、at.y ＝ 321 − y0 − h）。
+- 子作品都掛在船殼底下（parent_work，免費），房間掛在各自的甲板底下（隱藏甲板 ⇒ 房間一起隱藏，量過：拿掉 甲板-gun 少 132,734 ＋ 3,888 ＋ 1,097×2）。
+- 2026-10-11 全部套用：組裝件 1,355,487 格、link_overlap 0、1 元件、空腔 0（＝ Tim 預覽的草稿版本逐格相同）。
+
+## 階段十 甲板（新圖紙 08）
+設計在 plan.json `deckworks`；產生 `design/draft_decks.py`；`verify_decks.json`、`sheet08_decks_v1.png`；四份清單 `masks/decks/`。
+- 橫樑照 Humphreys「每個砲門底下一根、兩個砲門之間一根」（格點 ＝ 15 個砲門中心＋中點，兩頭 16.5 外推；02 號量到的間距 15.5–19 格）；階段九的接縫剛好都在「兩個砲門之間」那幾根上 ⇒ 每道高低差底下都有橫樑（高的那側）。
+- carlings |dy| 20–21（15 號：6'10" from ℄）；艙口 7 種（02 號／1931 GA／Waldo，上下對齊）、spar deck 長艙口的三根橫樑照樣跨過去；504 全寬橫檻；桅孔照桅軸（3.5°／2°／1°）＋ partners ＋ 桅座；柱子每根橫樑底下中線一根（gun／berth 上車削），放不下 ⇒ 兩舷一對；hanging knees（spar deck 砲門上那 28 根不放；牆斜超過 4 格不放）、lodging knees、waterway、deck hooks、transom knees。
+- 甲板板 250（淡奶油），構件 136／104。讀數：orlop 52,858、berth 108,018、gun 132,734、spar 110,983；四層不重疊、每層鏡像差 0、全在艙內空氣、42 格新空腔補實；淨高 14–17／16–20／18–19。
+- 坑：plan.json 用 json.dump 整份重寫一次（1,783 行差異）⇒ 立刻改回，之後一律只在尾巴接新段（append_section）。
+
+## 階段十一 房間（新圖紙 09）
+設計 plan.json `rooms`；`design/draft_rooms.py`；`verify_rooms.json`、`sheet09_rooms_v1.png`；`masks/rooms/`。
+- orlop（Waldo 1816）、berth（Martin c.1812）、gun（1931 GA）的艙壁與艙房；門不放、留門洞；牆 1 格（板 177、框 136：牆腳、牆頂、兩端、門框、每 8 格一根立柱）。
+- 六件：三件全寬艙壁（whole）＋ 三件舷側艙房（只做 y > 160 那一舷、mirror=y 關聯另一舷）。43,780 格（含鏡像那一舷）、重疊 0、鏡像差 0、空腔 0。
+- 設計決定：berth seam 587 在前桅上 ⇒ 矮檻蓋高低差、sick bay 艙壁移到 596；gun deck great cabin 隔間 186 會穿過第 1 個砲門 ⇒ 200；gun deck seam 570 的 3 格台階留給 riding bitts。
+- 坑：房間比桅杆早產生，587 矮檻橫過前桅孔（18 格）⇒ draft_rooms 改成避開桅孔，berth-bulkheads 7,266 → 7,248（其他五件逐位元組不變）。
+
+## 階段十二 舷牆與舷弧起翹（新圖紙 10；船殼本身）
+設計 plan.json `bulwark`；`design/draft_bulwark.py`；`verify_bulwark.json`、`sheet10_bulwark_v1.png`；`masks/bulwark/`。標記 `舷牆:begin／end`。
+- 舷頂 ＝ 白帶上緣（三次擬合，殘差 ≤ 0.66）＋ 25（船中 122 − 97），只往上補：x 493 起、船頭最多 +9；照肋骨頂那一列（36／141／177）往上疊；全長 cap rail 104（內外各多 1 格）。rise 6,406 ＋ cap 6,995 ⇒ 834,845；空腔 0（補 16 格）。
+
+## 階段十三 桅杆（新圖紙 11）
+設計 plan.json `masts`（軸照 `deckworks.masts`）；`design/draft_masts.py`；`verify_masts.json`、`sheet11_masts_v1.png`；`masks/masts/`。船殼標記 `艏斜桅開口:begin／end`（刻 33 格 ⇒ 834,812）。
+- 資料（Martin《Close Up》）：1801 下桅 fore 95'×32"、main 105'×35"、mizzen 92'×24"、bowsprit 64'×34"；1795 全桅總長 main 210–222 ft；1810 斜度 fore 3'6½"／main 2'7¼"／mizzen 4'1¾"（約 3°／2°／4°）。
+- 設計決定：軸照甲板已開的桅孔（3.5°／2°／1°；前桅比日誌直 2°，照實記）；後桅 82 ft（92 ft 的話 top 比前桅高）；上面幾節照常用比例湊到 Humphreys 的總長；三根都踩 keelson／deadwood。
+- main 27,484／fore 21,732／mizzen 11,692／bowsprit 11,394；top z 285／262／240、truck 648／600／511；bowsprit 斜度 15.4°、flying jibboom 尖端 x 958。
+- v1.1（套用後量到）：組裝件 2 個元件 ⇒ 主桅 top 浮在空中（trestletrees 用 round(160 ± 4.56) ⇒ 5／6，跟 masthead 空一格）⇒ 改成緊貼 masthead（floor ＋ 1）、主桅子作品刻 144 補 144；之後 1 元件。產生程式改讀「桅杆加進來之前」的現況（組裝件藏起桅杆、船殼讀 艏斜桅開口:begin，base 1,283,218）⇒ 其他三件與刻除清單逐位元組重產。
+- 坑：批次加關聯兩次被引擎擋下（零寫入）—— bash read 用 tab 切會把空欄併掉；Windows python 輸出帶 \r 進了關聯名。

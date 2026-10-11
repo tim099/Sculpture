@@ -295,5 +295,755 @@
       "colors_note": "Tim 2026-10-11：「艙內可以用原木色（比較美觀）」⇒ 不照 Constitution 的刷白（日誌：hold／berth／gun deck 都刷白，Martin《Close Up》）—— 原木三色：內板 177（淡米棕，yellow pine）、clamps／spirketting／stringer／limber 136（栗棕，white oak 上油）、斜肋／hooks 104（深棕，live oak）。配色是在草稿裡渲同角度比出來的：第一版用 141／105（藍分量 85）木頭偏紫灰 ⇒ 換藍分量 0；帶子試過 140（亮處偏芥末黃）⇒ 136。甲板（子作品）之後用更淡的磨過的松木色"
     },
     "not_now": "甲板骨架（橫樑、carlings／ledges、hanging／lodging／dagger knees、standards、waterways、deck hooks、柱子）與甲板板 ⇒ 甲板子作品（每層一件，關聯進船殼；左右對稱的零件等 TASK-0497 鏡像）；房間（艙壁、不放門）⇒ 房間子作品；舷頂照 sheer 起翹與舷牆（拍板：起翹）⇒ 之後；bilge 的厚板（15 號 7½\" in the bends）不做（設計決定：斜肋已經給底艙層次）"
+  },
+
+  "deckworks": {
+    "title": "USS Constitution（1797）新圖紙 08：甲板 v1 —— 四層甲板子作品（橫樑・carlings・艙口與圍板・桅孔與 partners・柱子・肘・waterway・deck hooks／transom）",
+    "task": "TASK-0478 傘（甲板子作品）",
+    "date": "2026-10-11",
+    "world_mark": "船殼內部:end",
+    "world_voxels": 821444,
+    "world_note": "讀階段九做完的船殼（標記 船殼內部:end）；甲板只放在艙內空氣裡（跟船中 (440,160,60) 6 連通的空格），一格都不動船殼；四層一起算、彼此不重疊",
+    "subworks": {
+      "orlop": {
+        "id": "basecamp-frigate-constitution-01m-deck-orlop",
+        "title": "憲法號 orlop 平台"
+      },
+      "berth": {
+        "id": "basecamp-frigate-constitution-01m-deck-berth",
+        "title": "憲法號 berth deck"
+      },
+      "gun": {
+        "id": "basecamp-frigate-constitution-01m-deck-gun",
+        "title": "憲法號 gun deck"
+      },
+      "spar": {
+        "id": "basecamp-frigate-constitution-01m-deck-spar",
+        "title": "憲法號 spar deck"
+      },
+      "assembly": {
+        "id": "basecamp-frigate-constitution-01m-assembly",
+        "title": "憲法號（組裝）",
+        "links": ["船殼 ← basecamp-frigate-constitution-01m", "甲板-orlop", "甲板-berth", "甲板-gun", "甲板-spar"],
+        "note": "Tim 2026-10-11：「開一個作品來組裝憲法號，目前的作品就作為船殼部分」「另一個作品本身只做組裝工作（組合船殼、甲板、桅杆等部件）」⇒ 組裝件一格都不雕、只有關聯（尺寸 ＝ 船殼、全部 at=0,0,0、turn=0）；甲板不關聯進船殼（船殼保持只有船殼：補空腔、驗收、單獨匯出都只量它；apex-one 的鏡廳關聯的是船殼）"
+      },
+      "note": "子作品尺寸 ＝ 船殼、at=0,0,0、turn=0（Sculpture.md §9.4.4 慣例）。每層甲板是一件完整的子作品，兩舷一起產生（Tim 2026-10-11：「鏡像不要套用到整個甲板，只用在上面的物件」）。柱子算在它撐住的那一層（gun deck 的柱子站在 berth deck 上）"
+    },
+    "colors": {
+      "plank": 250,
+      "beam": 136,
+      "carling": 136,
+      "waterway": 136,
+      "pillar": 136,
+      "knee": 104,
+      "coaming": 104,
+      "partner": 104,
+      "hook": 104,
+      "sill": 104,
+      "note": "甲板板 250（淡奶油，磨過的松木；USSCM：holystoned decks 『pale cream』）—— 階段九寫的「甲板用更淡的磨過的松木色」；構件沿用階段九的原木三色：136 橡木（橫樑、carlings、waterway、柱子）、104 live oak（肘、艙口圍板、桅 partners、hooks）"
+    },
+    "beams": {
+      "rule": "port_grid",
+      "sided": {
+        "orlop": 3,
+        "berth": 4,
+        "gun": 4,
+        "spar": 4
+      },
+      "pitch_ends": 16.5,
+      "provenance": "Humphreys 1794：gun deck 橫樑『每個砲門底下一根、兩個砲門之間一根』⇒ 格點 ＝ 15 個 gun deck 砲門中心＋相鄰兩個的中點（間距 15.5–17.5 格），兩頭照 16.5 外推；四層共用同一套格點（02 號 1849 Pook 圖量到的橫樑間距 15.5–19 格，gun／berth 上下對齊）。sided：15 號 spar deck beam 10½\"x15\"（15\" ≈ 4 格）；moulded 照 interior.decks（gun 4、berth 3、spar 3、orlop 3）。接縫（seams）那一根：高的那一側貼著接縫放一根（台階底下要有東西撐，不然低的那側甲板板底下會露出 1 格的縫），格點上離它 ≤ 6 格的那根拿掉。桅孔碰到的格點那根拿掉（桅在兩根橫樑之間、四周 partners）；接縫那根碰到桅孔 ⇒ 切成兩段（berth 587 ＝ 前桅）"
+    },
+    "carlings": {
+      "dy": [20, 21],
+      "depth": 2,
+      "provenance": "15 號（1928）：『CARLINGS NOW IN POSITION Y.P. 10\"x8½\" 6'-10\" FROM ℄ SHIP』⇒ |dy| 20–21（2 格寬）、板下 2 格深，沿船長在每兩根橫樑之間；大艙口的兩邊就落在這一排上（main hatch、long hatchway 的 hw 19）"
+    },
+    "masts": {
+      "mizzen": {
+        "x_gun": 206,
+        "r": 3.5,
+        "rake_deg": 3.5
+      },
+      "main": {
+        "x_gun": 351,
+        "r": 5.0,
+        "rake_deg": 2.0
+      },
+      "fore": {
+        "x_gun": 587,
+        "r": 4.5,
+        "rake_deg": 1.0
+      },
+      "z_ref": 80,
+      "provenance": "桅位 X 是 interior.stations 換出來的（後桅 st 24、主桅 st 72.5、前桅 st 151，在 gun deck 那一層）；直徑設計決定：主桅 ≈ 1.0 m、前桅 ≈ 0.9 m、後桅 ≈ 0.7 m（現役憲法號主桅在 partners 約 38\"）；往船尾傾的角度看 02 號圖（後桅最斜、前桅幾乎直立）定成 3.5°／2°／1°，之後做桅檣時照這條軸。每層的孔心 ＝ x_gun − (z − z_ref)·tan(rake)。孔四周：partners（橫樑那一層的方框，兩條短 carlings ＋ 兩條橫的）與甲板面上一圈 1 格高的桅座（mast coat）"
+    },
+    "hatches": {
+      "list": [
+        {
+          "name": "companion",
+          "decks": ["berth", "gun"],
+          "x": [223, 233],
+          "hw": 5,
+          "note": "船尾的梯口（02 號：gun-room hatch／scuttles）—— gun deck 在艦長室裡（房間子作品再決定要不要加 skylight）"
+        },
+        {
+          "name": "spirit_room",
+          "decks": ["orlop", "berth", "gun", "spar"],
+          "x": [274, 285],
+          "hw": 7,
+          "note": "02 號 Spr't room hatch（四層都有）；Waldo 1816：st 49.5 ⇒ X 282"
+        },
+        {
+          "name": "after",
+          "decks": ["orlop", "berth", "gun", "spar"],
+          "x": [307, 319],
+          "hw": 9,
+          "note": "02 號 After hatch（四層）；Waldo st 63.5–66.5（X 324–333，orlop）⇒ 上下對齊取 02 號的位置"
+        },
+        {
+          "name": "main",
+          "decks": ["berth", "gun"],
+          "x": [392, 419],
+          "hw": 19,
+          "note": "02 號 Main hatch（gun／berth，兩根砲門橫樑之間，中間那根切掉）；1931 gun deck GA：8'1½\" x 12'4\"（25 x 37 格）⇒ 28 x 39"
+        },
+        {
+          "name": "long_hatchway",
+          "decks": ["spar"],
+          "x": [440, 501],
+          "hw": 19,
+          "keep_beams": true,
+          "note": "02 號 spar deck『Long Hatchway』X 438–505；15 號：hatch 原設計 40' x 13'8\"、『DO NOT CUT TRANSVERSE DECK BEAMS』、W.oak hatch beams ⇒ 中間三根橫樑照樣跨過去（之後格柵是可動件，另外做）"
+        },
+        {
+          "name": "fore",
+          "decks": ["orlop", "berth", "gun"],
+          "x": [508, 534],
+          "hw": 13,
+          "note": "02 號 Fore hatchway（gun 505–539）；1931／Waldo st 122.5–128 ⇒ 後緣 ＝ seam 504（甲板高低差就落在艙口後緣那根橫樑上）"
+        },
+        {
+          "name": "fore_scuttle",
+          "decks": ["berth", "gun", "spar"],
+          "x": [605, 617],
+          "hw": 5,
+          "note": "02 號 Scuttle（前桅前面，三層）"
+        }
+      ],
+      "coaming": {
+        "thick": 2,
+        "height": {
+          "orlop": 1,
+          "berth": 2,
+          "gun": 3,
+          "spar": 3
+        }
+      },
+      "provenance": "艙口位置參考 02 號（1849）與 1931 gun deck GA、Waldo 1816，對齊到最近的橫樑（艙口在兩根橫樑之間）；上下各層同一個 X 範圍（從上面看一路通到底艙）。圍板 2 格厚（15 號：coaming 10\"x17\" W.oak），高度 gun／spar 3、berth 2、orlop 1。艙口不放格柵與梯子（可動件／配件之後另外做）"
+    },
+    "sill_504": {
+      "decks": ["berth", "gun"],
+      "x": [504, 505],
+      "provenance": "plan.json interior.decks.seams 504：前艙口後緣不是艙壁 ⇒ 沿 seam 504 放一道全寬的橫檻（艙口後圍板往兩舷延伸，高出高的那側甲板 1 格），蓋住 1 格的高低差"
+    },
+    "pillars": {
+      "size": 3,
+      "turned": ["berth", "gun"],
+      "pair_max_dy": 26,
+      "provenance": "1931 inboard profile：berth／gun deck 的柱子是車削的（balusters），hold 裡是方柱；Waldo：hold pillars 在中線、約每 4.7 ft ⇒ 每根橫樑底下中線一根（3 x 3），底下是開口或桅孔就不放；橫樑跨過大艙口（long hatchway）的那幾根改成艙口兩邊各一根（15 號：『STANCHIONS UNDER DK BEAMS IN WAY OF HATCH』）。車削的：中段十字斷面、上下各一圈 3 x 3 的環。柱子屬於它撐住的那一層。中線那根放不下（底下是艙口、桅孔、圍板、桅座，或橫樑在中線被切掉）⇒ 往外找第一個兩舷都放得下的位置（|dy| 3–26），放一對 —— 艙口兩頭的橫樑底下因此是一對貼著圍板的柱子；底艙（沒有下一層甲板）只放中線"
+    },
+    "knees": {
+      "hanging": {
+        "down": 10,
+        "along": 10,
+        "thick": 2,
+        "throat": 5,
+        "max_slope": 4,
+        "decks": ["berth", "gun", "spar"]
+      },
+      "lodging": {
+        "along": 7,
+        "thick": 2,
+        "throat": 3
+      },
+      "provenance": "Humphreys：hanging and lodging knees of live oak；15 號『KNEES WHITE OAK, LIVE OAK AND HACK』『DAGGER OR THRUST KNEE』。hanging knee：橫樑兩端底下、貼著船殼往下 10 格、沿橫樑 10 格，臂厚 2、內角 45° 斜撐 5 格，寬 2（橫樑寬的中間）。spar deck 的 hanging knee 往下會進 gun deck 的砲門 ⇒ 砲門上面那幾根（x 在砲門 ±2 以內）不放 hanging knee，只放 lodging knee（Humphreys 的『one between each port』那一根才有）。斜肋、hooks 擋住超過一成的 hanging knee 不放。lodging knee：橫樑那一層、每根橫樑前面貼著船殼沿船長 7 格。到牆的距離用切片上的真實距離（EDT）量 ⇒ 臂厚沿著牆的法向、斜一點的牆也不會斷成台階；肘那一段牆的 y 變化超過 4 格（船兩頭 V 形的底艙）不放 hanging knee（USSCM：berth deck 的肘本來就集中在兩頭以外的地方另有做法）"
+    },
+    "waterway": {
+      "width": 2,
+      "height": 1,
+      "provenance": "15 號：waterway lock strake 14\"x13½\"（gun）、15\"x14½\"（spar）⇒ 甲板面上沿船殼一圈 1 格高、2 格寬（往內接在 spirketting／內板前面）"
+    },
+    "hooks": {
+      "bow_arm": 16,
+      "bow_tip": 5,
+      "thick": 3,
+      "stern_arm": 10,
+      "provenance": "1931 profile：船頭 gun deck、berth deck 各一道 deck hook（orlop 平台前端那道 Z 38，階段九留下來的）；船尾 berth deck transom knee（Z ≈ 61）。設計：每層橫樑那一層，船頭最前 5 格整片、兩舷沿船殼 16 格的臂（厚 3）；船尾最後一根橫樑兩端各一道水平的 transom knee（沿船殼 10 格）"
+    },
+    "not_now": "格柵、梯子、絞盤（capstan，st 53.5）、泵、riding bitts、廚房爐、桅檣與桅座的楔子、砲 ⇒ 配件子作品（可動件等可以匯入模型）；艙壁與房間 ⇒ 房間子作品（關聯進甲板）；ledges（carlings 之間的小橫材）不做（0.1 m 一格會變成一片密格子）；甲板拱度不做（Tim：大致平整）"
+  },
+
+  "rooms": {
+    "title": "USS Constitution（1797）新圖紙 09：房間 v1 —— orlop／berth／gun deck 的艙壁與艙房（不放門，留門洞）",
+    "task": "TASK-0478 傘（房間子作品）",
+    "date": "2026-10-11",
+    "base": "船殼（標記 船殼內部:end）＋ 四層甲板（masks/decks/*.vox.txt，新圖紙 08）—— 牆只放在還空著的艙內空氣裡",
+    "colors": {
+      "panel": 177,
+      "frame": 136,
+      "note": "原木（Tim：艙內原木色）：板 177（跟內板同一個 yellow pine）、框 136（橡木：牆腳、牆頂、兩端、門框、門楣、每 8 格一根立柱）"
+    },
+    "frame_every": 8,
+    "door": {
+      "width": 5,
+      "headroom": 3,
+      "note": "門洞寬 5 格（0.5 m）；高 ＝ 這一層淨高 − 3（上面留門楣與橫樑）；門本身是可動件，之後用模型放"
+    },
+    "pieces": {
+      "orlop-bulkheads": {
+        "deck": "orlop",
+        "kind": "whole",
+        "id": "basecamp-frigate-constitution-01m-rooms-orlop-bulkheads",
+        "title": "憲法號 orlop 艙壁"
+      },
+      "orlop-cabins": {
+        "deck": "orlop",
+        "kind": "side",
+        "id": "basecamp-frigate-constitution-01m-rooms-orlop-side",
+        "title": "憲法號 orlop 舷側艙房（一舷）"
+      },
+      "berth-bulkheads": {
+        "deck": "berth",
+        "kind": "whole",
+        "id": "basecamp-frigate-constitution-01m-rooms-berth-bulkheads",
+        "title": "憲法號 berth deck 艙壁"
+      },
+      "berth-cabins": {
+        "deck": "berth",
+        "kind": "side",
+        "id": "basecamp-frigate-constitution-01m-rooms-berth-side",
+        "title": "憲法號 berth deck 舷側艙房（一舷）"
+      },
+      "gun-bulkheads": {
+        "deck": "gun",
+        "kind": "whole",
+        "id": "basecamp-frigate-constitution-01m-rooms-gun-bulkheads",
+        "title": "憲法號 gun deck 艙壁"
+      },
+      "gun-cabins": {
+        "deck": "gun",
+        "kind": "side",
+        "id": "basecamp-frigate-constitution-01m-rooms-gun-side",
+        "title": "憲法號 gun deck 艦長室舷側（一舷）"
+      },
+      "note": "whole ＝ 全寬、兩舷對稱的橫向艙壁，一整件（尺寸 ＝ 船殼、at=0,0,0）；side ＝ 只做 y > 160 那一舷的艙房（子作品只包住自己的範圍），另一舷用 mirror=y 關聯進來（Tim：鏡像只用在甲板上面的物件）。都關聯進各自的甲板子作品（組裝件 → 甲板 → 房間）"
+    },
+    "walls": [
+      {
+        "piece": "orlop-bulkheads",
+        "name": "after filling room 前壁",
+        "athwart": 192,
+        "dy": [0, 99],
+        "doors": [[-2, 2]]
+      },
+      {
+        "piece": "orlop-bulkheads",
+        "name": "forward filling room 後壁",
+        "athwart": 608,
+        "dy": [0, 99],
+        "doors": [[-2, 2]]
+      },
+      {
+        "piece": "orlop-bulkheads",
+        "name": "painters tanks／lockers 後壁",
+        "athwart": 621,
+        "dy": [0, 99],
+        "doors": [[-2, 2]]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "bread room 內壁",
+        "fore_aft": 10,
+        "x": [201, 251],
+        "doors": [[224, 228]]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "bread room 後壁",
+        "athwart": 201,
+        "dy": [10, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "bread room 前壁",
+        "athwart": 251,
+        "dy": [10, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "surgeon's mates 內壁",
+        "fore_aft": 20,
+        "x": [252, 290],
+        "doors": [[259, 263], [279, 283]]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "surgeon's mates 隔間",
+        "athwart": 271,
+        "dy": [20, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "surgeon's mates 前壁",
+        "athwart": 290,
+        "dy": [14, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "storerooms 內壁",
+        "fore_aft": 14,
+        "x": [291, 326],
+        "doors": [[296, 300], [314, 318]]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "storerooms 隔間",
+        "athwart": 308,
+        "dy": [14, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "storerooms 前壁",
+        "athwart": 326,
+        "dy": [9, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "cable tier 矮隔板",
+        "fore_aft": 9,
+        "x": [327, 400],
+        "height": 6
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "boatswain's store／sail room 內壁",
+        "fore_aft": 12,
+        "x": [538, 568],
+        "doors": [[551, 555]]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "boatswain's store／sail room 後壁",
+        "athwart": 538,
+        "dy": [12, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "boatswain's store／sail room 前壁",
+        "athwart": 568,
+        "dy": [8, 99]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "gunner's room／master's store 內壁",
+        "fore_aft": 8,
+        "x": [569, 607],
+        "doors": [[575, 579], [595, 599]]
+      },
+      {
+        "piece": "orlop-cabins",
+        "name": "gunner's room／master's store 隔間",
+        "athwart": 588,
+        "dy": [8, 99]
+      },
+      {
+        "piece": "berth-bulkheads",
+        "name": "pantry 前壁（船尾橫過全寬、包住舵柄）",
+        "athwart": 172,
+        "dy": [0, 99],
+        "doors": [[-2, 2]]
+      },
+      {
+        "piece": "berth-bulkheads",
+        "name": "wardroom 前壁",
+        "athwart": 269,
+        "dy": [0, 99],
+        "doors": [[-3, 3]]
+      },
+      {
+        "piece": "berth-bulkheads",
+        "name": "steerage 艙壁（seam 290）",
+        "athwart": 290,
+        "dy": [0, 99],
+        "doors": [[-3, 3]]
+      },
+      {
+        "piece": "berth-bulkheads",
+        "name": "seam 587 矮檻（前桅那道高低差）",
+        "athwart": 587,
+        "width": 2,
+        "dy": [0, 99],
+        "z_top": 63
+      },
+      {
+        "piece": "berth-bulkheads",
+        "name": "sick bay 後壁（前桅之前）",
+        "athwart": 596,
+        "dy": [0, 99],
+        "doors": [[-2, 2]]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "wardroom staterooms 內壁",
+        "fore_aft": 20,
+        "x": [173, 268],
+        "doors": [[179, 183], [195, 199], [211, 215], [227, 231], [243, 247], [259, 263]]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "staterooms 隔間",
+        "athwart": 189,
+        "dy": [20, 99]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "staterooms 隔間",
+        "athwart": 205,
+        "dy": [20, 99]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "staterooms 隔間",
+        "athwart": 221,
+        "dy": [20, 99]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "staterooms 隔間",
+        "athwart": 237,
+        "dy": [20, 99]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "staterooms 隔間",
+        "athwart": 253,
+        "dy": [20, 99]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "steerage stateroom 內壁",
+        "fore_aft": 20,
+        "x": [270, 289],
+        "doors": [[277, 281]]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "warrant officers 內壁",
+        "fore_aft": 24,
+        "x": [291, 322],
+        "doors": [[296, 300], [313, 317]]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "warrant officers 隔間",
+        "athwart": 307,
+        "dy": [24, 99]
+      },
+      {
+        "piece": "berth-cabins",
+        "name": "warrant officers 前壁",
+        "athwart": 323,
+        "dy": [24, 99]
+      },
+      {
+        "piece": "gun-bulkheads",
+        "name": "艦長室前艙壁（seam 238）",
+        "athwart": 238,
+        "dy": [0, 99],
+        "doors": [[-4, 4]]
+      },
+      {
+        "piece": "gun-bulkheads",
+        "name": "great cabin／day cabin 隔間",
+        "athwart": 200,
+        "dy": [0, 99],
+        "doors": [[-10, 10]]
+      },
+      {
+        "piece": "gun-bulkheads",
+        "name": "manger board（seam 633）",
+        "athwart": 632,
+        "dy": [0, 99],
+        "height": 5
+      },
+      {
+        "piece": "gun-cabins",
+        "name": "艦長寢室／pantry 內壁",
+        "fore_aft": 24,
+        "x": [201, 237],
+        "doors": [[208, 212], [231, 235]]
+      },
+      {
+        "piece": "gun-cabins",
+        "name": "寢室／pantry 隔間",
+        "athwart": 228,
+        "dy": [24, 99]
+      }
+    ],
+    "labels": [
+      {
+        "deck": "orlop",
+        "x": 180,
+        "dy": 0,
+        "t": "after filling room"
+      },
+      {
+        "deck": "orlop",
+        "x": 226,
+        "dy": 30,
+        "t": "bread room"
+      },
+      {
+        "deck": "orlop",
+        "x": 270,
+        "dy": 0,
+        "t": "cockpit"
+      },
+      {
+        "deck": "orlop",
+        "x": 262,
+        "dy": 32,
+        "t": "mates"
+      },
+      {
+        "deck": "orlop",
+        "x": 308,
+        "dy": 30,
+        "t": "store"
+      },
+      {
+        "deck": "orlop",
+        "x": 365,
+        "dy": 30,
+        "t": "cable tier"
+      },
+      {
+        "deck": "orlop",
+        "x": 553,
+        "dy": 30,
+        "t": "bosun / sail"
+      },
+      {
+        "deck": "orlop",
+        "x": 578,
+        "dy": 24,
+        "t": "gunner"
+      },
+      {
+        "deck": "orlop",
+        "x": 598,
+        "dy": 22,
+        "t": "master"
+      },
+      {
+        "deck": "orlop",
+        "x": 614,
+        "dy": 0,
+        "t": "filling"
+      },
+      {
+        "deck": "berth",
+        "x": 155,
+        "dy": 0,
+        "t": "pantry"
+      },
+      {
+        "deck": "berth",
+        "x": 220,
+        "dy": 0,
+        "t": "wardroom"
+      },
+      {
+        "deck": "berth",
+        "x": 220,
+        "dy": 34,
+        "t": "staterooms x6"
+      },
+      {
+        "deck": "berth",
+        "x": 280,
+        "dy": 34,
+        "t": "steerage"
+      },
+      {
+        "deck": "berth",
+        "x": 307,
+        "dy": 40,
+        "t": "warrant"
+      },
+      {
+        "deck": "berth",
+        "x": 440,
+        "dy": 0,
+        "t": "crew (hammocks)"
+      },
+      {
+        "deck": "berth",
+        "x": 615,
+        "dy": 0,
+        "t": "sick bay"
+      },
+      {
+        "deck": "gun",
+        "x": 165,
+        "dy": 0,
+        "t": "great cabin"
+      },
+      {
+        "deck": "gun",
+        "x": 219,
+        "dy": 0,
+        "t": "day cabin"
+      },
+      {
+        "deck": "gun",
+        "x": 212,
+        "dy": 40,
+        "t": "sleeping"
+      },
+      {
+        "deck": "gun",
+        "x": 233,
+        "dy": 30,
+        "t": "pantry"
+      },
+      {
+        "deck": "gun",
+        "x": 640,
+        "dy": 0,
+        "t": "manger"
+      }
+    ],
+    "provenance": "配置參考：orlop ＝ Waldo 1816 orlop 平面（USSCM #14949；st → X ＝ 134 ＋ 2.998·st）：after filling room st 11–19.5、passage、bread rooms 兩舷 st 22–39.5、cockpit st 39.5–52（兩舷各 2 間 surgeon's mates）、storerooms st 52–64、cable tiers 兩舷 st 64–89（中線走道）；前平台 boatswain's store／sail room st 132–145、gunner's room st 145–158、master's store、forward filling room st 158–162、painters' tanks／lockers 到 st 168.5。berth ＝ Martin《Close Up》c.1812：船尾 pantry 橫過全寬、wardroom 兩舷各 6 間 staterooms、steerage 兩舷各一間大艙、warrant officers 兩舷各 2 間靠著 steerage 艙壁、前桅到 steerage 是水兵的吊床區、sick bay 在前桅之前。gun ＝ 1931 gun deck GA：艦長室包 2 個砲門／舷（前艙壁 seam 238）、great cabin 在船尾、寢室與 pantry 在兩舷；manger board 在第 14、15 個砲門之間。設計決定：牆的 dy 照每層甲板面上的艙內半寬（orlop 13→59→22、berth 37→62→36、gun 44→60→33）與艙口、桅孔、柱子挑；橫向艙壁都放在兩個砲門之間（gun deck great cabin 那道原本想放 186，會穿過第 1 個砲門 ⇒ 200）；berth seam 587 正好在前桅上 ⇒ 用一道矮檻蓋住高低差、sick bay 艙壁往前到 596（Martin：sick bay 在前桅之前）。牆 1 格厚；艙壁從甲板面到上一層甲板板底下（碰到橫樑、carlings 就停在它們底下）；cable tier 是 6 格高的矮隔板",
+    "not_now": "門（可動件，之後用模型）、吊床、桌椅與櫃子、廚房爐、絞盤、泵、riding bitts（gun deck seam 570 那道 3 格的台階留給 bitts）、船尾窗與 quarter galleries、spar deck（開放的 quarterdeck／forecastle，沒有房間）"
+  },
+
+  "bulwark": {
+    "title": "USS Constitution（1797）新圖紙 10：舷牆與舷弧起翹 v1 —— 舷頂跟白帶平行（船頭往上補）＋ 全長一條 cap rail",
+    "task": "TASK-0478 傘（船殼）",
+    "date": "2026-10-11",
+    "world_mark": "船殼內部:end",
+    "world_voxels": 821444,
+    "band_color": 255,
+    "offset_from_band": 25,
+    "fit_degree": 3,
+    "fit_x": [118, 672],
+    "cap": {
+      "color": 104,
+      "overhang_out": 1,
+      "overhang_in": 1
+    },
+    "rule": "舷頂目標 rail(x) ＝ 白帶上緣（每個 x 外側 255 最高那一格，三次多項式擬合）＋ offset；offset ＝ 船中（白帶最低處）現在的舷頂 − 白帶上緣 ＝ 122 − 97 ＝ 25。只往上補、不切：新頂 ＝ max(現在的肋骨頂, round(rail))。補的那幾排照現在最上面那一排（肋骨頂 zt 那一列）的組成往上疊：外板 36、肋骨 141、內板 177，y 範圍不變（不再往內傾）。cap rail：新頂上面一排，比牆的內外各多出 1 格，全長都有（船尾 taffrail、船中、船頭）",
+    "provenance": "Tim 2026-10-11：「方肋頂要不要照 sheer 起翹（由妳拍板，美觀為主）」⇒ 拍板起翹。問題（階段七 overlays/stage7_view_side.png）：白帶照 sheer 往船頭翹（船中 97 → 船頭 107），舷頂幾乎是直的（126 → 122 → 123），兩條線不平行 ⇒ 船頭看起來往下垂。11 號 sheer plan（1927）的欄杆讀數（source_ends_raw.json readings[1]）：quarterdeck 130–135、waist 119–120、forecastle 127–130 —— 那幾條高的是吊床網架（hammock netting）的欄杆，是配件（之後另外做）；船殼的實心舷牆照白帶的 sheer。設計決定：跟白帶平行（offset 固定）、船尾那段現在就對（±1 格）不動",
+    "not_now": "spar deck 的砲門（跟可動件一起）、吊床網架與欄杆、catheads、channels（桅杆的 chain plates）、舷梯、船頭 head rails／knee of the head、船尾 quarter galleries"
+  },
+
+  "masts": {
+    "title": "USS Constitution（1797）新圖紙 11：桅杆 v1 —— 前桅・主桅・後桅（下桅、tops、caps、topmast、crosstrees、topgallant／royal）＋ bowsprit・jibboom・flying jibboom",
+    "task": "TASK-0478 傘（桅杆子作品）",
+    "date": "2026-10-11",
+    "base": {"hide_links": ["前桅", "主桅", "後桅", "艏斜桅"], "hull_mark": "艏斜桅開口:begin", "voxels": 1283218, "note": "組裝件藏起桅杆那四條關聯 ＋ 船殼讀標記 艏斜桅開口:begin（bowsprit 開口刻之前）＝ 桅杆加進來之前的現況（船殼＋舷牆＋四層甲板＋房間）；桅杆只放在空著的格，碰到的另外報"},
+    "axis_from": "deckworks.masts（x_gun、rake_deg、z_ref；甲板的桅孔就是照這條軸開的）",
+    "subworks": {
+      "fore": {
+        "id": "basecamp-frigate-constitution-01m-mast-fore",
+        "title": "憲法號 前桅",
+        "link": "前桅"
+      },
+      "main": {
+        "id": "basecamp-frigate-constitution-01m-mast-main",
+        "title": "憲法號 主桅",
+        "link": "主桅"
+      },
+      "mizzen": {
+        "id": "basecamp-frigate-constitution-01m-mast-mizzen",
+        "title": "憲法號 後桅",
+        "link": "後桅"
+      },
+      "bowsprit": {
+        "id": "basecamp-frigate-constitution-01m-bowsprit",
+        "title": "憲法號 艏斜桅（bowsprit・jibboom）",
+        "link": "艏斜桅"
+      },
+      "note": "每根一件、尺寸 ＝ 船殼、at=0,0,0，掛在船殼底下、關聯進組裝件；桅杆本身左右對稱，整件做（不用鏡像）"
+    },
+    "masts": {
+      "main": {
+        "lower": [105, 35],
+        "masthead": 18,
+        "top": [20, 15],
+        "topmast": [68, 19],
+        "topmast_head": 9,
+        "crosstrees": 14,
+        "topgallant": [60, 10]
+      },
+      "fore": {
+        "lower": [95, 32],
+        "masthead": 16,
+        "top": [18.5, 14],
+        "topmast": [62, 18],
+        "topmast_head": 8,
+        "crosstrees": 13,
+        "topgallant": [57, 9]
+      },
+      "mizzen": {
+        "lower": [82, 24],
+        "masthead": 12,
+        "top": [14.5, 11],
+        "topmast": [52, 14],
+        "topmast_head": 7,
+        "crosstrees": 10,
+        "topgallant": [44, 7]
+      },
+      "units": "長度 ft、直徑 inch（×3.048 ⇒ 格、÷39.37×10 ⇒ 格）；top ＝ [athwart 寬, fore-aft 深] ft；crosstrees ＝ 兩端距離 ft"
+    },
+    "bowsprit": {
+      "length": 64,
+      "dia": 34,
+      "heel": [597, 115.5],
+      "over_stem": [677, 137.5],
+      "jibboom": [
+        50,
+        16,
+        0.35
+      ],
+      "flying_jibboom": [
+        45,
+        11,
+        0.4
+      ],
+      "note": "heel ＝ 軸在 spar deck 上的跟（x, z）；over_stem ＝ 軸跨過艏柱頭那一點（底面約 133，坐在艏柱頭上）⇒ 斜度約 16°。jibboom／flying jibboom ＝ [全長 ft, 直徑 in, 跟上一節重疊的比例]，疊在上一節的上面、同一個斜度"
+    },
+    "taper": {
+      "lower_head": 0.8,
+      "topmast_head": 0.75,
+      "topgallant_head": 0.6,
+      "bowsprit_head": 0.7
+    },
+    "hoops": {
+      "every": 10,
+      "color": 36,
+      "note": "made masts 的鐵箍（1810：2½–3½ 吋寬）⇒ 下桅與 bowsprit 每 10 格一圈 1 格高、比桅身大半格"
+    },
+    "colors": {
+      "spar": 177,
+      "black": 36,
+      "top": 104,
+      "truck": 255,
+      "step": 104,
+      "note": "桅身原木（177）；mastheads、caps、trestletrees／crosstrees、鐵箍黑（36；日誌：yards blacked、masts painted —— 顏色沒寫）；tops 平台 104（深色木）＋黑邊；桅頂 truck 白"
+    },
+    "provenance": "下桅：1801 年 12 月海軍部長給 44 門砲巡防艦的規格 —— fore 95'×32″、main 105'×35″、mizzen 92'×24″、bowsprit 64'×34″（Martin《Constitution Close Up》引 RG45 M209）。全桅總長：1795 年四人估計 main 210–222 ft、fore 197–200、mizzen 156–177（Humphreys：212.6／198.0／175.8）⇒ 上面幾節照當時常用比例（topmast ≈ 0.6–0.65 下桅、masthead ≈ 1/6、topgallant＋royal 一根）湊到接近 Humphreys 的總長，都是設計決定。斜度：1810 年日誌（從 trestletrees 量）fore 3'6½″、main 2'7¼″、mizzen 4'1¾″（約 3°／2°／4°）。後桅：1801 年的 92 ft 照放，top 會比前桅高（後桅的跟在 deadwood 上、比 keelson 高 6 格）⇒ 設計決定改成 82 ft（masthead 12），三根 top 主 > 前 > 後（美觀為主）；甲板的桅孔照 02 號圖（1849）定成 1°／2°／3.5° 已經開好 ⇒ 桅杆照桅孔的軸（前桅比日誌直 2°，照實記）。後桅跟（Waldo 1816 寫 mizzen step 在 orlop 上）⇒ 設計決定三根都踩在 keelson／deadwood 上（orlop 已經開了孔）。tops 大小、crosstrees、caps、jibboom 長度是設計決定（美觀為主）",
+    "not_now": "yards、gaffs、spanker boom、dolphin striker、桅上的 blocks 與所有索具（帆、索具 Tim：先不做）、channels 與 chain plates（掛 shrouds 的，之後跟索具一起）、桅座的楔子、帆桁"
   }
 }
