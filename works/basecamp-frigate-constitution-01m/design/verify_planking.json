@@ -1,0 +1,243 @@
+{
+ "title": "USS Constitution（1797）新圖紙 05：外板與塗裝 v1",
+ "task": "TASK-0489（傘 TASK-0478）",
+ "hull_hold_cells": 130,
+ "dubbing_cells_half": 1849,
+ "dubbing_max_beyond_hb": 0.795183072797137,
+ "bridges": [
+  [
+   651,
+   129,
+   122
+  ],
+  [
+   651,
+   129,
+   123
+  ],
+  [
+   651,
+   130,
+   121
+  ],
+  [
+   651,
+   190,
+   121
+  ],
+  [
+   651,
+   191,
+   122
+  ],
+  [
+   651,
+   191,
+   123
+  ],
+  [
+   652,
+   130,
+   122
+  ],
+  [
+   652,
+   130,
+   123
+  ],
+  [
+   652,
+   190,
+   122
+  ],
+  [
+   652,
+   190,
+   123
+  ]
+ ],
+ "shell_cells": 146231,
+ "wale_outer_cells": 15606,
+ "total_cells": 161837,
+ "struct_paint_cells": 11887,
+ "struct_paint_from_colors": {
+  "104": 3397,
+  "173": 524,
+  "177": 7146,
+  "209": 820
+ },
+ "colors": {
+  "36": 78271,
+  "168": 71924,
+  "255": 11642
+ },
+ "port_fit": {
+  "sill_coef": [
+   2.272758736988597e-07,
+   -0.0001813189958723673,
+   0.03136341337845851,
+   90.431405375425
+  ],
+  "lintel_coef": [
+   2.198166234319247e-07,
+   -0.00017570286463448488,
+   0.030071102118418118,
+   99.0756362891071
+  ],
+  "sill_res_max": 0.18761539699133323,
+  "lintel_res_max": 0.1736121072242156
+ },
+ "bands_at": {
+  "130": {
+   "wale_bot": 64.0,
+   "wale_top": 79.24,
+   "sill": 91.94,
+   "lintel": 100.5,
+   "top": 126
+  },
+  "190": {
+   "wale_bot": 63.46,
+   "wale_top": 78.7,
+   "sill": 91.4,
+   "lintel": 99.95,
+   "top": 125
+  },
+  "300": {
+   "wale_bot": 61.71,
+   "wale_top": 76.95,
+   "sill": 89.65,
+   "lintel": 98.21,
+   "top": 124
+  },
+  "449": {
+   "wale_bot": 60.6,
+   "wale_top": 75.84,
+   "sill": 88.54,
+   "lintel": 97.06,
+   "top": 122
+  },
+  "560": {
+   "wale_bot": 63.13,
+   "wale_top": 78.37,
+   "sill": 91.07,
+   "lintel": 99.44,
+   "top": 122
+  },
+  "620": {
+   "wale_bot": 66.44,
+   "wale_top": 81.68,
+   "sill": 94.38,
+   "lintel": 102.6,
+   "top": 123
+  },
+  "660": {
+   "wale_bot": 69.59,
+   "wale_top": 84.83,
+   "sill": 97.53,
+   "lintel": 105.63,
+   "top": 123
+  }
+ },
+ "leak_design": {
+  "interior_air_cells": 5187103,
+  "leaking": 0,
+  "where": []
+ },
+ "lists": [
+  {
+   "name": "dub",
+   "file": "masks/planking/dub.vox.txt",
+   "cells": 3698,
+   "overwrite": true,
+   "sha256": "5b5a22bfc60fe122613aae14ff8f9a4df27afca0b8d878f782728959a5ac07bd",
+   "colors": {
+    "36": 1192,
+    "168": 2288,
+    "255": 218
+   }
+  },
+  {
+   "name": "paint_struct",
+   "file": "masks/planking/paint_struct.vox.txt",
+   "cells": 11887,
+   "overwrite": true,
+   "sha256": "090ff0948316deb54d789f3ebf0fdfbcc8c008269db530900e1934eaa069ab2e",
+   "colors": {
+    "36": 846,
+    "168": 11041
+   }
+  },
+  {
+   "name": "plank_x090_189",
+   "file": "masks/planking/plank_x090_189.vox.txt",
+   "cells": 22261,
+   "overwrite": false,
+   "sha256": "94ae5ff23fa7d017c385d3bab3346a4962bd0afa664ef30248963d434a9ce142",
+   "colors": {
+    "36": 15599,
+    "168": 5182,
+    "255": 1480
+   }
+  },
+  {
+   "name": "plank_x190_289",
+   "file": "masks/planking/plank_x190_289.vox.txt",
+   "cells": 27588,
+   "overwrite": false,
+   "sha256": "3812e8b183954c40b39d990989fd2e1540fd916cf14e4f596888c71ff0ba3c8d",
+   "colors": {
+    "36": 13222,
+    "168": 12270,
+    "255": 2096
+   }
+  },
+  {
+   "name": "plank_x290_389",
+   "file": "masks/planking/plank_x290_389.vox.txt",
+   "cells": 30064,
+   "overwrite": false,
+   "sha256": "5e86cb263804b0ad33ac845f1ff7e918fb3081c3ab1462983528a216a5aab3a9",
+   "colors": {
+    "36": 12738,
+    "168": 15266,
+    "255": 2060
+   }
+  },
+  {
+   "name": "plank_x390_489",
+   "file": "masks/planking/plank_x390_489.vox.txt",
+   "cells": 31456,
+   "overwrite": false,
+   "sha256": "ae22ad82f45a58fe41c130bc9ca8b2a4c58de4c0ff3269270ad540ad9962f6a7",
+   "colors": {
+    "36": 12494,
+    "168": 16890,
+    "255": 2072
+   }
+  },
+  {
+   "name": "plank_x490_589",
+   "file": "masks/planking/plank_x490_589.vox.txt",
+   "cells": 29126,
+   "overwrite": false,
+   "sha256": "112e6c7e37427d0667770e06dcfc623cbd963d092e67896320f8df3b327ae02b",
+   "colors": {
+    "36": 12630,
+    "168": 14486,
+    "255": 2010
+   }
+  },
+  {
+   "name": "plank_x590_689",
+   "file": "masks/planking/plank_x590_689.vox.txt",
+   "cells": 17644,
+   "overwrite": false,
+   "sha256": "1e7abc80a2db788d49f2a8a3e965d6e1bb6015f66d2c20b284d1d4dd3eeae2cd",
+   "colors": {
+    "36": 10396,
+    "168": 5542,
+    "255": 1706
+   }
+  }
+ ]
+}

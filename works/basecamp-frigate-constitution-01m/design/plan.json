@@ -207,5 +207,31 @@
       "fill": "2026-10-11 雕之前修（verifier 的木料帳）：①針孔 —— 船殼內的空格、6 個面有 ≥ 5 個實心 ⇒ 補；②兩面夾縫 —— 至少兩個軸向的兩邊都是實心 ⇒ 補；③同一對 cant 兩片之間的 1 格縫、最前一對船頭 cant 跟 hawse／knighthead／chock 之間的 1 格夾縫（slot_kind_pairs）⇒ 補。只跑一輪，不讓填補一路長出去；補的格歸給接觸面最多的那根新木料。④一根木料裡的碎塊（≤ 30 格，或 ≤ 主體的 6%）⇒ 歸給它接觸面最多的那根鄰居；窗台、窗楣被 counter timbers 斷開的段落照設計留著（fragment_keep_kinds）。⚠ 第二輪 verifier 量到同一對 cant 兩片之間還有 2–3 格寬的缺口（船尾 156 格）—— 根因是兩片各自在自己的中面量 moulded、內側面差 2–3 格，補縫補不完 ⇒ 改成一對當一塊產（cant_pair），量到 0",
       "not_now": "breast hooks（5＋2 deck hooks）、transom knees、stern knee、hawse holes 留到甲板與艙內階段"
     }
+  },
+
+  "planking": {
+    "title": "USS Constitution（1797）新圖紙 05：外板與塗裝 v1",
+    "task": "TASK-0489（傘 TASK-0478）",
+    "date": "2026-10-11",
+    "z_min": 7,
+    "world_upto": "2026-10-11/094122_234_c550a9.json",
+    "wales": {"strakes": 6, "width_in": 10, "thick_cells": 2},
+    "black_strakes": {"strakes": 5, "width_in": 10},
+    "port_lines": {"source": "source_ports.json", "fit_deg": 3},
+    "paint": {"copper_top_z": 63.0, "stripe_below_sill": 1.0, "stripe_above_lintel": 1.0, "stripe_x_aft": 118.0,
+              "structure_colors": [104, 173, 177, 209],
+              "colors": {"copper": 168, "black": 36, "white": 255}},
+    "segments_x": [90, 190, 290, 390, 490, 590, 690],
+    "provenance": {
+      "order": "現實造船的順序（Tim 2026-10-11：「順序可以參考現實造船的建造順序」「是否要先鋪設一層外殼才開炮門?」）：肋骨立好 → 修整肋骨外緣（dubbing）→ 鋪外板 → 之後才從外板上鋸開砲門（下一階段）→ 內板、橫樑、甲板。參考：Lavery《Wooden Warship Construction》的章序（starting the ship → frames → outside planking → inside the hull → fittings）；砲門的位置在立肋骨時就排好，外板鋪過去再鋸開",
+      "dubbing": "設計決定：肋骨凸出 molded 線的格（格中心在船殼外，最多 0.80 格，大多是階段五每片 3 格厚的方肋用片中心判船殼內外留下的 bevel）在外板那一層裡 ⇒ 用外板蓋過去（stampvox overwrite=1，只限這一份清單，蓋之前逐格驗是肋骨色、在 molded 線外）。結果跟「先刻掉再鋪板」一樣；用 AABB 刻要 2,630 刀",
+      "shell": "設計決定：外板 ＝ 船殼外面、跟船殼（molded 線以內）共用一個面的那一層格（6 連通意義下把船內和船外隔開的最薄一層）—— 規格的船底板 4\"（1.0 格）⇒ 1 格。從 z 7（龍骨上緣下 1 格，rabbet）到肋骨頂（每一欄 floor(top − 0.5)，跟肋骨同一條線）。龍骨、艏柱、艉柱、deadwood 露在外面的部分不包（它們本身就是外板收進去的 rabbet）",
+      "wales": "規格（Humphreys 1794，Papers of the War Department 機器轉錄）：main wales 每舷 6 道、7\" 厚、10\" 寬 ⇒ 帶寬 60\"（15.24 格）、2 格厚（比旁邊的板凸出 1 格）。位置：圖上沒畫 ⇒ 設計決定，照規格的排列（wales 之上 5 道 black strakes 10\" 寬、再上是砲門那一帶的板）⇒ wales 上緣 ＝ 砲門下緣線 − 12.7 格，船中下緣約在水線下 2.4 格（這一代巡防艦的 main wale 下緣本來就在滿載水線附近）。只加厚側面（往外那一格在舷側的法線方向）；船尾面、船底不加厚",
+      "black_strakes": "規格：5 道、10\" 寬、4½–5½\" 厚 ⇒ 帶寬 12.7 格、厚 1 格（1.1–1.4 格四捨五入）",
+      "port_lines": "原圖讀數（source_ports.json）：14 個 gun deck 砲門的下緣與上緣，各用三次多項式沿 X 擬合（殘差 ≤ 0.19 格），兩頭外插；跟 Humphreys 規格對得上（寬 3'5\"、淨高 2'11\"、中心距 10'10\"）",
+      "paint": "設計決定（Tim 2026-10-11：「外板可以用另一種顏色，甚至表層可以直接上塗裝顏色」；參考：憲法號現在的塗裝 —— 黑色船身、砲門那一帶一條白帶、水線以下包銅）：水線（Z 62.86）以下 ＝ 銅（copper_top_z 63.0）；砲門下緣 − 1 到上緣 ＋ 1 之間 ＝ 白帶（stripe_x_aft 118 以前；船尾面黑 —— 第一版用「只塗舷側」判，艏柱附近一格對一格錯、白黑相間，改成照 X 範圍）；其餘 ＝ 黑。顏色是 RGB332 索引：黑 36（36,36,0；色號 0 是空格不能用，37 渲出來偏藍）、銅 168、白 255",
+      "paint_structure": "設計決定：龍骨、護龍骨、gripe、艏柱、艉柱、deadwood 露在船外的那一層也上塗裝（實船水線以下連龍骨、deadwood 一起包銅）—— 用外板鋪好之後的「船外空氣」判斷哪一格露在外面（肋骨頂以上當牆，船艙裡的面不算）；stampvox overwrite=1，蓋之前逐格驗是這幾種結構色。⚠ 這一步依賴外板不漏水：漏了船艙的空氣會被當成船外，第一版拿掉兩塊碎片時清單從 11,887 暴增到 19,931（產圖程式現在漏水不是 0 就停）",
+      "bridges": "設計決定：6 連通最薄的那一層在少數地方只靠邊（不共用面）接上 —— 船頭舷頂 x 651、dy ±30、z 122–123 兩舷各 2 格。⛔ 不能拿掉（它們是擋水的那一格，拿掉整個船艙就漏）⇒ 補「橋」：空的、在船殼外、同時跟碎塊和主體共用面的格（兩舷各 5 格）"
+    }
   }
 }

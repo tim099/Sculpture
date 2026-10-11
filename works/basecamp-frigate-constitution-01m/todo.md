@@ -29,12 +29,24 @@
     - [ ] S-counter-timber-35 在 Z 81 多 3 格 dy 34（舷邊那根的碎塊歸過來的）
     - [ ] 上層船尾窗（Z 113.6–123.8、hb 18.25–28.22）被 dy 25–26 的 counter timber 穿過 —— 鋪船尾板時開窗再處理
     - [ ] 船頭 cant 根部擠在一起、後片沒碰到 deadwood／apron（只靠鄰片撐）
-    - [ ] 高度換算的 LWL 用直線擬合，船尾那段可能偏高 0.6–0.9 格（verifier minor，證據兩邊都有）—— 做砲門高度前先決定
+    - [ ] 高度換算的 LWL 用直線擬合，船尾那段可能偏高 0.6–0.9 格（verifier minor，證據兩邊都有）—— 砲門那段（X 185–625）量過不影響（≤ 0.26 格，階段七）；只剩船尾 X < 185 的 counter／船尾面
     - [ ] 階段二 gripe 在 Z 66–67 伸出艏柱前面一塊平台 —— knee of the head 子作品時處理
-    - [ ] 階段五的方肋頂沒照 sheer_points 起翹（船頭幾乎沒有 sheer 上揚）—— 要不要改等 Tim
-- [ ] 砲門與甲板：先把砲門（gun deck、spar deck）與甲板高度畫進新圖紙，再在肋骨上開口（port sill／lintel）；⚠ 高度用作品的框（11 號 body plan 沒畫 drag）：sheer plan 讀數用 plan.json `ends.provenance.frame_of_heights` 的一致換算（Z ＝ 62.86 ＋（Z_sheer − Z_LWL(X)）／0.15859 × 局部比例），⛔ 不要用舊式「− 0.01538·(439.2 − X)」（比例修正算兩次）；船尾約 −5、船頭約 +3（見 notes.md「階段六」）
+    - [ ] 階段五的方肋頂沒照 sheer_points 起翹（船頭幾乎沒有 sheer 上揚）—— 要不要改等 Tim；⚠ 鋪了外板之後這條線變得很顯眼（`overlays/stage7_view_side.png`：船尾翹起、往船頭幾乎是平的）。要改的話是在肋骨頂與外板上面往上補（不用拆）
+## 階段七 TASK-0489（2026-10-11 雕完）
+- [x] 讀圖：11 號 gun deck 砲門 14 個（`design/source_ports.json`）＋ Humphreys 1794 規格（wales、black strakes、船底板、砲門）
+- [x] 新圖紙 05 外板與塗裝 v1（`design/draft_planking.py`、`sheet05_planking_v1.png`）：dubbing（overwrite 蓋掉凸出 molded 線的 3,698 格）、外板 1 格、wales 2 格、銅／黑／白帶、結構露在外面的那層上色
+- [x] 雕：8 刀 stampvox，435,561 → 593,700；結果帳 0 差、不漏水、反向對照會叫、1 元件；過程圖 `overlays/stage7_*`、心得 `journal/stage7.md`
+- [x] LWL 那題對砲門不影響（直線擬合 vs 圖上畫的 LWL ≤ 0.26 格）
+
+## 下一階段：開砲門（Tim 2026-10-11：「鋪設完外殼後先 commit 然後挖炮門」）
+- [ ] 開子單（掛 478）。gun deck 14 個方砲門的位置與高度已在 `design/source_ports.json`（X_aft..X_fwd、sill..lintel）；還要量：船尾帶窗格的那個（px x≈687）、船頭菱形的（px x≈3835）、spar deck 兩組砲門（船尾 X ≈ 100–371、船頭 X ≈ 515 起）與舷牆高度（sheer plan 船尾 rail Z 130–134、waist 約 119.6、見 source_ends_raw.json readings[1] rail_structure）
+- [ ] 做法：一個盒子同時刻穿外板＋肋骨（開口照讀數，四捨五入到格；兩舷鏡像）；刻完在開口上下補 port sill／lintel（規格：gun deck 橫樑「每個砲門底下一根、之間一根」—— 甲板階段用）、左右是被切斷的肋骨面（實船左右各一根完整的 port timber —— 要不要補等量完再定）
+- [ ] ⚠ 高度一律用 plan.json `ends.provenance.frame_of_heights` 的一致換算（source_ports.json 已經換好）；⛔ 不要用舊式「− 0.01538·(439.2 − X)」
+- [ ] ⚠ 重跑 `draft_planking.py` 要讀 `planking.world_upto`（階段七第一刀之前）—— 讀現況會長出第二層外板
+- [ ] `draft_frames_ends.py`（階段六）的 Ctx 也讀現況（events 重播減柱頭）⇒ 雕完重跑會讀到自己雕上去的木料、清單會變；補同一道閘（`framing_ends.world_upto` ＝ 階段六第一刀之前），重產比對事件記的 51 個 sha256
+- [ ] 砲門蓋（port lids）與其他活動部件：⛔ 不用 voxel 做 —— 等 `/scp-sculpture` 擴充成可以匯入模型之後用模型做（Tim 2026-10-11）；舷牆上的 hammock netting 同上再看
 - [ ] 04／15 號的 rider keelson（15"x18"）與 Humphreys 9"x24" deadwood 要不要做
-- [ ] 船殼板（外板）：⚠ 先處理兩頭肋骨的 bevel —— 每片 3 格厚用片中心判斷船殼內外，兩頭最外一欄最多凸出 molded 線 0.8 格（3,278 voxel，f+25 B 的 x 617 欄超出船殼範圍）；外板落地會被它們擋住 ⇒ 鋪板前先逐欄刻掉凸出的格，或讓外板遮罩避開。內板（ceiling）鋪時順便蓋掉 keelson 兩側那道 1 格縫
+- [ ] 內板（ceiling）、clamps、橫樑與甲板（02 號：砲門 3'6"×2'10"、下緣離甲板 2'2"，甲板間距 7'2"／6'10"，橫樑 16"×14"／16"×15"）—— 鋪內板時順便蓋掉 keelson 兩側那道 1 格縫
 - [ ] 橫樑與甲板（15 號：orlop 13.09 ft、berth 19.14、gun 26.27、spar 33.79 ft at CL）→ 柱與艙內 → 桅檣
 - [ ] 船首 knee of the head、head rails、trailboards（裝飾的部分做子作品）；船尾 quarter galleries（子作品，掛在 fashion pieces 外面）；艉柱頭伸出 wing transom 約 7 格 —— 做舵與 counter 外板時決定要不要削
 - [ ] breast hooks（5 道＋2 道 deck hooks）、transom knees、stern knee、hawse holes —— 甲板與艙內階段
@@ -42,6 +54,7 @@
 
 ## 範圍（Tim 2026-10-11）
 - 玻璃等透明部分、帆、纜索：先不做（之後 /scp-sculpture 擴充成可嵌模型再處理）
+- 砲門蓋與其他活動部件：不用 voxel 做，等可以匯入模型再做
 
 ## 待確認
 - [x] keel drag：不做（2026-10-11 決定，理由見 notes.md）；~~甲板／舷弧／砲門的高度要逐站相對龍骨量~~ ⚠ 階段六更正：作品是「從水線量」的框，sheer plan（相對龍骨）的讀數要減 drag 才放得進來（見 notes.md「階段六」）
