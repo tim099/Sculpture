@@ -1899,5 +1899,352 @@
       "https://upload.wikimedia.org/wikipedia/commons/1/19/050_Deck_der_USS_Constitution.jpg (2022)"
     ],
     "not_now": "動索本身（braces、sheets、halliards… 等帆）；kevels、timberheads、桅腳的 cleats；fore 前面 bowsprit bitts 的頭；舷牆內側改成實船現在的深綠（要的話另外一階段）"
+  },
+
+  "guns": {
+    "title": "新圖紙 18：gun deck 24 磅長砲（一門做一次、關聯擺 30 門）v1",
+    "date": "2026-10-11",
+    "subwork": {
+      "id": "basecamp-frigate-constitution-01m-gun-24",
+      "title": "憲法號 24 磅長砲（一門）",
+      "parent": "basecamp-frigate-constitution-01m-deck-gun",
+      "link_in": "basecamp-frigate-constitution-01m-deck-gun",
+      "link_prefix": "砲-",
+      "note": "一門砲＋truck carriage 做成一件子作品（parent ＝ gun deck 子作品）；關聯進 甲板-gun，每個砲門一條：S 舷 砲-Snn 照原樣、P 舷 砲-Pnn mirror=y（藏 gun deck ⇒ 砲一起藏）"
+    },
+    "base": {
+      "hide_links": [
+        "甲板-gun/砲-S01",
+        "甲板-gun/砲-P01",
+        "甲板-gun/砲-S02",
+        "甲板-gun/砲-P02",
+        "甲板-gun/砲-S03",
+        "甲板-gun/砲-P03",
+        "甲板-gun/砲-S04",
+        "甲板-gun/砲-P04",
+        "甲板-gun/砲-S05",
+        "甲板-gun/砲-P05",
+        "甲板-gun/砲-S06",
+        "甲板-gun/砲-P06",
+        "甲板-gun/砲-S07",
+        "甲板-gun/砲-P07",
+        "甲板-gun/砲-S08",
+        "甲板-gun/砲-P08",
+        "甲板-gun/砲-S09",
+        "甲板-gun/砲-P09",
+        "甲板-gun/砲-S10",
+        "甲板-gun/砲-P10",
+        "甲板-gun/砲-S11",
+        "甲板-gun/砲-P11",
+        "甲板-gun/砲-S12",
+        "甲板-gun/砲-P12",
+        "甲板-gun/砲-S13",
+        "甲板-gun/砲-P13",
+        "甲板-gun/砲-S14",
+        "甲板-gun/砲-P14",
+        "甲板-gun/砲-S15",
+        "甲板-gun/砲-P15"
+      ],
+      "assembly_voxels": 1407808,
+      "note": "現況讀組裝件藏起 30 條砲的關聯（程式先查現有關聯、只藏已經存在的 ⇒ 第一次跑與關聯建好之後讀到的一樣）⇒ 套用之後重跑逐位元組一樣"
+    },
+    "deck_z": {
+      "segments": [
+        [
+          null,
+          238,
+          83
+        ],
+        [
+          238,
+          504,
+          82
+        ],
+        [
+          504,
+          570,
+          83
+        ],
+        [
+          570,
+          633,
+          86
+        ],
+        [
+          633,
+          null,
+          88
+        ]
+      ],
+      "note": "gun deck 面（第一個空格的 z）＝ plan.json interior.decks.gun"
+    },
+    "max_back": 8,
+  "dx_try": [0, -1, 1, -2, 2],
+    "gun": {
+      "size": [
+        15,
+        32,
+        16
+      ],
+      "axis_x": 7,
+      "axis_z": 11,
+      "breech_y": 3,
+      "trunnion_y": 15,
+      "trunnion_plus": false,
+      "tube_profile": [[0, 2.6], [1.2, 2.6], [1.2, 2.5], [10.8, 2.4], [10.8, 2.15], [16.8, 2.05], [16.8, 1.75], [25.8, 1.6], [25.8, 1.5], [26.6, 1.5], [26.6, 2.05], [28.3, 2.05], [28.3, 1.9], [29.0, 1.9]],
+      "cascabel": [
+        [
+          -0.9,
+          0.0,
+          0.9
+        ],
+        [
+          -2.3,
+          -0.9,
+          1.2
+        ]
+      ],
+      "bore_depth": 4,
+      "carriage": {
+        "front_y": 19,
+        "length": 17,
+        "cheek_k": [3, 4],
+        "cheek_bottom": 4,
+        "arch": {
+          "from_back": 5,
+          "to_back": 11,
+          "bottom": 5
+        },
+        "cheek_steps": [[0, 11], [6, 9], [9, 8], [12, 6]],
+        "truck_k": [5],
+        "truck_r_front": 2.75,
+        "truck_r_rear": 2.45,
+        "axle_front_back": 3,
+        "axle_rear_fwd": 2,
+        "axle_z": [2, 3],
+        "bed_len": 8,
+        "bed_z": 4,
+        "quoin_len": 5,
+        "quoin_top": 8,
+        "transom_h": 3,
+        "eye_back": 9,
+        "eye_z": 7
+      },
+      "colors": {
+        "tube": 36,
+        "carriage": 132,
+        "truck": 36,
+        "iron": 36,
+        "quoin": 136
+      },
+      "note": "設計（美觀為主，尺寸取 1809–16 Cecil Iron Works 24 磅砲 ≈ Blomefield 1790 9'6\"）：砲管 base ring 到砲口 29 格；外徑 base ring 20\" ⇒ r 2.5–2.6（草稿 v1 base ring 用 r 2.9 ⇒ 5×5 方塊，從後面看像一塊黑磚 ⇒ 2.6）、耳軸處 16.5\" ⇒ r 2.1、chase 往前收到 r 1.6、砲口頸 12\" ⇒ r 1.5、muzzle swell 15\" ⇒ r 2.05；格子上只有 9／13／21／25 格幾種圓 ⇒ 剖面挑會換形狀的半徑，讓 base ring、兩段 reinforce、chase、swell 看得出台階。耳軸在 base ring 前 12 格（≈ 3/7）。cascabel：頸＋鈕。砲架寬 15 格（axletree 4'9\"）、長 17 格、cheek 2 格厚分 4 階（頂 11／9／8／6）、兩軸之間底下拱起一格；前輪 18\" ⇒ r 2.75、後輪 16\" ⇒ r 2.45，黑、1 格厚（v1 兩格厚，從後面看像黑球）、外側一格輪軸頭；床板＋quoin（136）；cap square、輪軸頭、環首螺栓用黑。軸心高 11 格：作品的砲門下緣離甲板 7–8 格（實船 1833 年後是 2 ft）、15 個砲門中線離甲板 10–12 ⇒ 取 11，cheek 前段因此 8 格高（z 4–11；26\" 的 cheek ≈ 6.6 格 ⇒ 高一格多，砲門比實船高的代價；2026-10-11 寫第二冊第十二章回讀時更正，原寫「約 7 格、剛好」）。色：今天的照片砲管黑、砲架紅赭、輪子黑（低信度）⇒ 砲架 132（v1 用 164，渲出來偏亮橘紅）"
+    },
+    "ports": [
+      {
+        "n": 1,
+        "x": [185, 195],
+        "sill_y_in": 206,
+        "sill_y_out": 210,
+        "open_z": [89, 101]
+      },
+      {
+        "n": 2,
+        "x": [216, 226],
+        "sill_y_in": 208,
+        "sill_y_out": 213,
+        "open_z": [91, 98]
+      },
+      {
+        "n": 3,
+        "x": [251, 261],
+        "sill_y_in": 211,
+        "sill_y_out": 215,
+        "open_z": [90, 98]
+      },
+      {
+        "n": 4,
+        "x": [283, 293],
+        "sill_y_in": 213,
+        "sill_y_out": 217,
+        "open_z": [90, 98]
+      },
+      {
+        "n": 5,
+        "x": [317, 327],
+        "sill_y_in": 215,
+        "sill_y_out": 219,
+        "open_z": [89, 97]
+      },
+      {
+        "n": 6,
+        "x": [352, 362],
+        "sill_y_in": 218,
+        "sill_y_out": 222,
+        "open_z": [89, 96]
+      },
+      {
+        "n": 7,
+        "x": [385, 395],
+        "sill_y_in": 220,
+        "sill_y_out": 224,
+        "open_z": [89, 96]
+      },
+      {
+        "n": 8,
+        "x": [417, 427],
+        "sill_y_in": 221,
+        "sill_y_out": 225,
+        "open_z": [88, 96]
+      },
+      {
+        "n": 9,
+        "x": [450, 459],
+        "sill_y_in": 220,
+        "sill_y_out": 224,
+        "open_z": [89, 96]
+      },
+      {
+        "n": 10,
+        "x": [483, 493],
+        "sill_y_in": 219,
+        "sill_y_out": 223,
+        "open_z": [89, 96]
+      },
+      {
+        "n": 11,
+        "x": [515, 525],
+        "sill_y_in": 217,
+        "sill_y_out": 222,
+        "open_z": [90, 97]
+      },
+      {
+        "n": 12,
+        "x": [547, 558],
+        "sill_y_in": 215,
+        "sill_y_out": 219,
+        "open_z": [91, 98]
+      },
+      {
+        "n": 13,
+        "x": [582, 591],
+        "sill_y_in": 210,
+        "sill_y_out": 214,
+        "open_z": [92, 100]
+      },
+      {
+        "n": 14,
+        "x": [616, 624],
+        "sill_y_in": 203,
+        "sill_y_out": 208,
+        "open_z": [94, 101]
+      },
+      {
+        "n": 15,
+        "x": [641, 653],
+        "sill_y_in": 187,
+        "sill_y_out": 192,
+        "open_z": [94, 105]
+      }
+    ],
+    "ports_note": "15 個 gun deck 砲門（14 方＋船頭 1）：x ＝ 開口那幾欄；sill_y_in／sill_y_out ＝ 砲門中線那一欄、開口下面一層船殼的內面／外面（S 舷，2026-10-11 從組裝件量）；open_z ＝ 開口的 z",
+    "placement_note": "砲架前緣貼 sill_y_in − 1；撞到現況就往裡退一格（最多 max_back）、每一格都先試左右挪 dx_try（第 2 個砲門在艦長室側艙裡，輪軸頭碰到 x 228 的隔牆），退與挪的格數寫在 verify；第 15 個（船頭）兩舷的砲會在中線撞在一起 ⇒ 不放（實船那是 chase gun 的砲門）；P 舷 mirror=y、at.y ＝ 321 − at.y(S) − size.y",
+    "sources": [
+      "Tyrone Martin, Constitution Close Up（24 磅砲規格附錄；1833 年 gun deck 砲門下緣統一 2 ft）",
+      "https://thecaptainsclerk.com/speaks/book07.html （1809–16 Cecil Iron Works 24-pdr 9'6\"、32-pdr carronades）",
+      "https://wardepartmentpapers.org/document/46537/ （1794 frigate 24-pdr 外徑）",
+      "https://ussconstitutionmuseum.org/2015/08/25/modern-armament/ （今天的 30 門是 1929 年鑄的複製品）",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c0/Mass-01824_-_24-pounder_Gun_%2852954433277%29.jpg"
+    ],
+    "not_now": "breeching rope、gun tackles（繩，之後用 TASK-0502 的繩掛：cascabel 的環 → 船側環首螺栓）；砲門蓋；spar deck 的 carronades 與 bow chasers（spar deck 砲門開了再做）；shot garlands、rammer／sponge"
+  },
+
+  "gunfittings": {
+    "title": "新圖紙 19：gun deck 砲具（船側與甲板的環首螺栓、shot garlands）＋ breeching／tackles 的繩 v1",
+    "date": "2026-10-11",
+    "subwork": {
+      "id": "basecamp-frigate-constitution-01m-gun-fittings",
+      "title": "憲法號 gun deck 砲具（一舷）",
+      "parent": "basecamp-frigate-constitution-01m-deck-gun",
+      "link_in": "basecamp-frigate-constitution-01m-deck-gun",
+      "link": "砲具",
+      "mirror_link": "砲具-鏡像",
+      "box": {
+        "at": [
+          170,
+          161,
+          80
+        ],
+        "size": [
+          480,
+          80,
+          30
+        ]
+      },
+      "note": "y > 160 那一舷：每個有砲的砲門兩側船牆上的環首螺栓、砲後甲板上的環首螺栓、砲與砲之間靠牆的 shot garland；另一舷 mirror=y、at.y ＝ 321 − 161 − 80 ＝ 80；關聯進 甲板-gun（藏 gun deck ⇒ 一起藏）"
+    },
+    "base": {
+      "hide_links": [
+        "甲板-gun/砲具",
+        "甲板-gun/砲具-鏡像"
+      ],
+      "assembly_voxels": 1439308,
+      "note": "現況讀組裝件藏起這兩條關聯（程式先查現有關聯）⇒ 套用之後重跑逐位元組一樣"
+    },
+    "colors": {
+      "iron": 36,
+      "garland": 136,
+      "shot": 36,
+      "staff": 136,
+      "rammer_head": 104,
+      "sponge_head": 218
+    },
+    "ring": {
+      "offset": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "z_above_deck": 8,
+      "partition": true,
+      "note": "船牆上的環：砲門中線往船尾／船頭 offset 格（從 8 試起，砲架最寬到 ±6）、甲板面 ＋8（砲口軸 ＋11 之下、砲門下緣附近）；一格鐵釘進牆、外面再一格當環。碰到艙房隔牆或繩會穿牆 ⇒ 換下一個 offset，都不行就不放（照實記）。partition：牆上放不了 ⇒ 試砲旁邊那道艙房隔牆朝砲的那一面（第 2 門，艦長室側艙；Tim 2026-10-11「接著做吧 GO」）"
+    },
+    "implements": {
+      "lengths": [28, 22], "clear_wall": 3, "ceiling_from": 16, "dx_try": [-2, 0, -1, 1, -3, -4, -5, -6, 2, 3, 4, 5, 6], "bands": [6, 22],
+      "note": "rammer 與 sponge：每門砲正上方、天花板（上一層甲板板或橫樑）底下各一根，平行砲身，外端離船牆 3 格（牆邊那一格是 clamp 伸出來的一條，z 低 4 格；v1 離 2 格 ⇒ 天花板不平、一半放不下）；長 28 格（約 9 ft，放不下改 22）、桿 1 格（136；v1 用 177，跟陰影裡的甲板板底分不出來）、外端頭 2×2（rammer 104 深木、sponge 218 羊皮）、兩道鐵箍；沿船長從砲中線挪 ±2／±3／±4 找天花板平的位置（不准跨橫樑），掛在橫樑底下（天花板最低）的優先（草稿 v2 優先兩根橫樑之間 ⇒ 貼著甲板板、被橫樑擋住，從艙裡看不到）；找牆的高度取甲板面 ＋16（砲門上緣之上；草稿 v1 取 ＋12 ＝ 砲門的高度，把砲管當成了牆）"
+    },
+    "deck_ring": {
+      "back": 9,
+      "note": "砲架尾往船裡 9 格的甲板上一個環（train tackle）"
+    },
+    "garland": {
+      "z_above_deck": 2,
+      "clear": 11,
+      "max_len": 12,
+      "shot_step": 2,
+      "note": "兩門砲之間靠牆：一條 2 格深的木條（136），甲板面 ＋2；上面每 2 格一顆黑色的 24 磅砲彈（5.6\" ⇒ 1 格）；離兩邊砲門中線各 clear 格，最長 max_len"
+    },
+    "ropes": {
+      "breeching": {
+        "thickness": 0.6,
+        "slack": 1.12,
+        "color": "#b59a6a"
+      },
+      "tackle": {
+        "thickness": 0.35,
+        "slack": 1.03,
+        "color": "#a08458"
+      },
+      "train": {
+        "thickness": 0.35,
+        "slack": 1.05,
+        "color": "#a08458"
+      },
+      "note": "每門 5 條（作品資料，掛在組裝件）：breeching 兩條（砲尾的環 → 兩側船牆的環；實船是一條繩穿過 cascabel 的環、兩頭扣在兩側 ⇒ 畫成兩段，留一點鬆）、side tackle 兩條（cheek 的 eye-aft／eye-fwd → 同側船牆的環）、train tackle 一條（砲架尾 → 甲板的環）；滑車畫不出來，用一條比較細的繩代表一組 tackle"
+    },
+    "sources": [
+      "research agent（2026-10-11）：breeching 約砲長 3 倍、穿過 cascabel 的環、兩頭扣在砲門兩側的 ring bolt；side tackles 從船側 ring bolt 到 cheek 的 eyebolt；train tackle 從砲架尾到甲板的 ring bolt；shot garlands 在艙口圍板或船側（typical practice）"
+    ],
+    "not_now": "rammer／sponge／handspikes（掛在上面橫樑底下）、滑車本身、砲門蓋"
   }
 }

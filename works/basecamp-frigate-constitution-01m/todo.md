@@ -128,7 +128,8 @@
 
 ## 靜索試掛（2026-10-11；繩，不是 voxel）
 - [x] Tim：「可以先試著掛一些跟帆沒有連接的繩子測試」⇒ 固定點 134、繩 133（shrouds、backstays、futtock、topmast／topgallant shrouds、stays、bobstays），ropes_broken 0；工具 `design/tools/rig_standing_{plan,apply}.py`、清單 `design/rig_standing.json`
-- [ ] 之後：ratlines（shrouds 之間的橫繩）、lanyards 與上 deadeyes、catharpins；動索（braces、sheets、halliards…）等帆 —— 下端綁 `rig_points_belaying.json` 的 pins
+- [x] ratlines 340 道（階段二十二；`tools/ratlines.py`）
+- [ ] 之後：lanyards 與上 deadeyes、catharpins；動索（braces、sheets、halliards…）等帆 —— 下端綁 `rig_points_belaying.json` 的 pins
 
 ## 掛帆試試（2026-10-11；帆，不是 voxel）
 - [x] Tim「掛帆試試吧」「可以調整風力試試」⇒ 帆 15 面＋帆腳索 32 條；組裝件 meters_per_voxel 補 0.1；預設風 4.5,−1.5,0、4 秒（notes.md「掛帆試試」）
@@ -142,6 +143,16 @@
 - [x] Tim「測試ok 可以套用了」⇒ apply（mismatch 0）；組裝件 1,407,808、1 元件、空腔 0；重產逐位元組相同；固定點 194（登記 125）
 - [ ] 之後：kevels、timberheads、桅腳的 cleats、bowsprit bitts 的頭；舷牆內側換實船現在的深綠（要的話另開一階段）
 - [ ] spar deck 砲門開的時候：pin rails 是照 gun deck 砲門的空檔放的，spar deck 的砲門若不在正上方要重排
+
+## 階段二十 gun deck 長砲（2026-10-11 套用）
+- [x] 新圖紙 18（`design/draft_guns.py`、`sheet18_guns_v1.png`、`verify_guns.json`、`guns_placement.json`；設計在 plan.json `guns`）：子作品 `-gun-24` 一門 1,125 格，關聯進 `甲板-gun` 28 條（S／P 各 14）；Tim「測試ok 可以套用了」⇒ 1,439,308、重產逐位元組相同
+- [x] breeching rope、gun tackles、train tackle ＋ 船牆／甲板的環首螺栓、shot garlands ⇒ 階段二十一（2026-10-11 套用；新圖紙 19）
+- [x] 第 2 門（艦長室）船頭側的環 ⇒ 釘在艙房隔牆上（階段二十二）
+- [x] rammer／sponge 掛在橫樑底下（階段二十二；22 根，艦長室裡與第 3、4 門的 sponge 放不下）
+- [ ] handspikes
+- [ ] 第 15 個砲門（船頭）沒放砲 —— 要放就做一門短一點的 chase gun 或斜放（turn 只有 90°）
+- [ ] spar deck：carronades（32 磅、slide carriage）與 bow chasers —— spar deck 的砲門要先開（現在 pin rails 是照 gun deck 砲門的空檔放的，開 spar deck 砲門時一起看）
+- [ ] 砲門蓋（等可以匯入模型）
 
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**

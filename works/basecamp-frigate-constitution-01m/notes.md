@@ -508,3 +508,28 @@ Tim：「掛帆試試吧」「可以調整風力試試」。一格 voxel 都不�
 - 讀數（4.7 m/s、4 秒 240 步、每步約 4.4 ms）：最鼓 main course −89、fore course −67、topsail −46～−59、topgallant −33～−44、royal −25～−34、spanker 20、三角帆 14～31；sails_broken 0、帆腳索 32 條 ropes_broken 0。
 - 正側面看方帆像一條條彎弧：帆桁是正橫擺的（沒有 brace），從正側面看剛好是帆的側緣 —— 不是錯。
 - 過程圖：`overlays/stage19_sails_*`（`_v1_bowq_scale_wrong` 是比例錯的那一輪）。
+
+## 階段二十 gun deck 長砲（新圖紙 18）
+Tim：「接著開始裝飾細節吧 可以加炮了」。設計 plan.json `guns`；`design/draft_guns.py`；`verify_guns.json`、`sheet18_guns_v1.png`；`masks/guns/gun24.vox.txt`；擺放 `design/guns_placement.json`。資料：research agent（Martin《Constitution Close Up》、captainsclerk 的 1809–16 Cecil Iron Works 24 磅砲 9'6"、1794 frigate 24-pdr 外徑、truck 前 18"／後 16"、axletree 4'9"、cheek 4 階、今天的照片：砲管黑、砲架紅赭、輪子黑（低信度））。
+- 一門砲做一次：子作品 `-gun-24`「憲法號 24 磅長砲（一門）」15×32×16（parent ＝ gun deck 子作品），1,125 格（tube 417、cheek 352、quoin 100、truck 80、axletree 72、bed 40、transom 30 …；黑 531、砲架 132 494、quoin 136 100）；自己的座標 x ＝ 沿船長（軸在 x 7）、y ＝ 砲口方向、z 0 ＝ 甲板面那一層。砲管剖面照外徑挑「格子上會換形狀」的半徑（21／13／9／13 格的圓 ⇒ base ring＋第一段 reinforce、第二段、chase、muzzle swell 看得出台階）；cascabel 頸＋鈕＋上面的環；耳軸在 base ring 前 12 格；cheek 兩格厚 4 階（頂 11／9／8／6）、兩軸之間底下拱起；輪子 1 格厚、前 r 2.75／後 r 2.45；軸心高 11 格（15 個砲門中線離甲板 10–12）。左右不對稱 0、1 元件。
+- 擺：關聯進 `甲板-gun`，S 舷 `砲-S01..14` 照原樣、P 舷 `砲-P01..14` mirror=y（at.y ＝ 321 − at.y − 32）；砲架前緣先貼砲門下檻那一層的內面 − 1，撞到現況就往裡退、每一格先試沿船長挪 0／−1／+1／−2／+2。結果：第 2、3、4、5、7、8、9、10、11 門不動；第 1、6、12、13、14 門退 1 格（14 再挪 −2）；砲口伸出船殼 5–7 格。第 2 門在艦長室側艙裡，剛好在兩道隔牆中間。**第 15 個（船頭）不放**：半寬約 30 格、砲連砲架 32 格 ⇒ 兩舷的砲會在中線撞在一起（退 8 格還撞 44 格）；實船那是 chase gun 的砲門。⇒ 28 門（實船 30）。
+- 草稿期間改掉的：base ring r 2.9 ⇒ 5×5 方塊、從後面看像一塊黑磚 ⇒ 2.6；輪子兩格厚像黑球 ⇒ 一格厚＋輪軸頭；砲架 164 渲出來偏亮橘紅 ⇒ 132；輪子改窄之後第 2／13／14 門的擺法變了（不用挪／少退）⇒ 6 條關聯改到重算的位置（舊位置也不撞，但掛著的要等於產生程式算的）。v1 第 2 門只撞 4 格：兩個輪軸頭碰到側艙 x 228 的隔牆。
+- 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 1,125、mismatch 0）；組裝件 1,407,808 ＋ 28 × 1,125 ＝ 1,439,308、link_overlap 0、1 元件、空腔 0；每門輪子底下 12／12 格踩在甲板上；重產（藏 28 條關聯讀 1,407,808）逐位元組相同。
+- 固定點（子作品裡 4 個，經 28 條關聯每門都有）：`cascabel`（砲尾的環）、`eye-aft`／`eye-fwd`（兩片 cheek 外側的環首螺栓 —— x 是沿船長，所以是船尾側／船頭側，不是左右舷；第一次登記成 eye-P／eye-S，改名）、`muzzle`。例：`甲板-gun/砲-S01/cascabel`。
+- 過程圖：`overlays/stage20_guns_*`（`_v1_close` 是改之前）。
+
+## 階段二十一 gun deck 砲具與砲索（新圖紙 19）
+Tim：「接著做 breeching 繩以及其他細節吧 GO」。設計 plan.json `gunfittings`；`design/draft_gunfittings.py`；`verify_gunfittings.json`、`sheet19_gunfittings_v1.png`；`masks/gunfittings/side.vox.txt`；固定點 `design/rig_points_gunfittings.json`；繩 `design/gun_ropes.json`（`tools/ropes_apply.py` 下 CLI）。砲的子作品多一個固定點 `train`（砲架尾，local 7,3,4）。
+- 子作品 `-gun-fittings`「憲法號 gun deck 砲具（一舷）」：parent ＝ gun deck、固定框 at 170,161,80、480×80×30；關聯進 `甲板-gun` 名 `砲具`／`砲具-鏡像`（mirror=y、at.y 80）。一舷 355 格：船牆的環 27 個（ring 54 格：一格釘進牆、外面一格當環；砲門中線往船尾／船頭 8 格、甲板面 ＋8）、甲板的環 14 個（砲架尾往裡 9 格；第 2 門 6 格）、shot garland 11 條（第 3–4 到 13–14 門之間；garland 232 格、砲彈 55 顆；兩門砲之間靠牆、甲板面 ＋2、2 格深、每 2 格一顆）。
+- 每個環都量過：砲尾 → 環、cheek → 環兩條線不准穿過別的實心（穿過自己這門砲的砲架不算），另一舷鏡過去也量；不行就換 offset 9／10／11。⇒ 第 2 門（艦長室）的船頭側環找不到 ⇒ 不放、那一側的 breeching 與 tackle 不掛；第 1–2、2–3 門之間的 garland 在艙房裡 ⇒ 不放。⚠ v1 第 12–13 門之間的 garland 取兩門裡低的甲板 ⇒ 在 570 以後插進甲板板 ⇒ 只放在中心那一段甲板上。
+- 繩 136（掛在組裝件）：breeching 54（砲尾的環 cascabel → 兩側船牆的環，slack 1.12、粗 0.6、#b59a6a）、side tackle 54（eye-aft／eye-fwd → 同側的環，1.03、0.35）、train tackle 28（train → 甲板的環，1.05、0.35）；全船繩 301、ropes_broken 0。
+- 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 355、mismatch 0）；組裝件 1,439,308 ＋ 2 × 355 ＝ 1,440,018、link_overlap 0、1 元件、空腔 0、浮空 0；重產（藏兩條關聯讀 1,439,308）三個檔逐位元組相同。
+- 過程圖：`overlays/stage21_gunfittings_*`。
+
+## 階段二十二 ratlines、rammer／sponge、第 2 門的環
+Tim：「接著做吧 GO」（照上一則的清單往下）。
+- **ratlines**（繩 340，`design/tools/ratlines.py` ⇒ `design/ratlines.json`，`tools/ropes_apply.py` 下 CLI）：三根桅兩舷的 lower shrouds（fore 31、main 37、mizzen 24 道／舷）與 topmast shrouds（28、31、19 道／舷）；每 4 格（≈15"）一道，lower 從 deadeye 頂上 7 格到 hounds 下 16 格、topmast 從 top 邊緣上 4 格到 topmast head 下 10 格；每一道從最前面那根 shroud 拉到最後面那根（shrouds 從一排 deadeye 收到同一點、大致共面）；短於 5 格的不畫（topmast shrouds 最上面收成一點）；粗 0.3／0.25、#2b2620、拉直。端點是連續座標：CLI 的繩端點整數 ＝ 格心、帶小數照原值（先試一條量過：100 → 100.5、110.25 → 110.25）⇒ 一律寫帶小數。shrouds 改了就重跑。
+- **rammer／sponge**（砲具子作品第二輪，草稿只落新增的格 `masks/gunfittings/side_add_v2.vox.txt`；已套用的 355 格在新清單裡一格不變）：每門砲正上方那根橫樑底下一對、平行砲身、外端離牆 3 格、長 28（放不下 22）、桿 136、頭 2×2（rammer 104、sponge 218）、兩道鐵箍；22 根（第 1、2 門在艦長室兩根都放不下、第 3、4 門 sponge 放不下）。草稿期間：找牆的高度取 ＋12 ＝ 砲門那一層 ⇒ 把砲管當成牆 ⇒ ＋16；牆邊那一格是 clamp 伸出來的一條 ⇒ 離牆 3 格；v2 優先兩根橫樑之間 ⇒ 貼著甲板板、被 3 格深的橫樑擋住、艙裡看不到 ⇒ 掛在橫樑底下（z 100；x 570 以後天花板高 3 格 ⇒ 103）、桿從 177 改 136。
+- **第 2 門船頭側的環**：船牆上放不了（貼著艙房隔牆）⇒ 釘在隔牆朝砲的那一面（227, 189, 91）；那一側的 breeching＋tackle 補掛（兩舷 4 條）。
+- 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 649、mismatch 0）；砲具子作品 1,004 格 ＝ 清單逐格相等；組裝件 1,440,018 ＋ 2 × 649 ＝ 1,441,316、link_overlap 0、1 元件、空腔 0；重產三個檔逐位元組相同；全船繩 645（靜索 133、帆腳索 32、砲索 140、ratlines 340）、ropes_broken 0。
+- 過程圖：`overlays/stage22_*`（`_implements_v2_hidden` 是貼在橫樑之間、看不到的那一版）。
