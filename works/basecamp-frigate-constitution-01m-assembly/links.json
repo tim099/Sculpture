@@ -1,5 +1,5 @@
 {
-	"schema": 1,
+	"schema": 2,
 	"links": [
 		{
 			"name": "船殼",
@@ -180,6 +180,146 @@
 			"created_at": "2026-10-11T17:37:59",
 			"persona": "basecamp",
 			"note": "新圖紙 11"
+		},
+		{
+			"name": "船尾裝飾",
+			"work": "basecamp-frigate-constitution-01m-stern-deco",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1024,
+				320,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T18:26:38",
+			"persona": "basecamp",
+			"note": "船尾窗格、pilasters、拱線、星、鷹、船名（新圖紙 12）"
+		},
+		{
+			"name": "船頭-knee",
+			"work": "basecamp-frigate-constitution-01m-head-knee",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1024,
+				320,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T19:45:22",
+			"persona": "basecamp",
+			"note": "knee of the head（cutwater）＋ billethead，在中線上整件（新圖紙 13）"
+		},
+		{
+			"name": "船頭裝飾",
+			"work": "basecamp-frigate-constitution-01m-head-side",
+			"at": [
+				630,
+				161,
+				70
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				112,
+				64,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T19:45:24",
+			"persona": "basecamp",
+			"note": "y > 160 那一舷：cheeks、trailboard、盾牌、hawse 圈、head rails、head timbers、cathead（新圖紙 13）"
+		},
+		{
+			"name": "船頭裝飾-鏡像",
+			"work": "basecamp-frigate-constitution-01m-head-side",
+			"at": [
+				630,
+				96,
+				70
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				112,
+				64,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T19:45:24",
+			"persona": "basecamp",
+			"note": "另一舷：同一件 mirror=y（160 ↔ 160 的鏡面，at.y ＝ 321 − 161 − 64）"
+		},
+		{
+			"name": "舵",
+			"work": "basecamp-frigate-constitution-01m-rudder",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1024,
+				320,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T20:09:38",
+			"persona": "basecamp",
+			"note": "舵＋pintle／gudgeon 帶（新圖紙 15）"
+		},
+		{
+			"name": "channels",
+			"work": "basecamp-frigate-constitution-01m-channels",
+			"at": [
+				150,
+				161,
+				70
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				460,
+				80,
+				50
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T20:13:05",
+			"persona": "basecamp",
+			"note": "y > 160 那一舷：channels、deadeyes、chain plates（新圖紙 16）"
+		},
+		{
+			"name": "channels-鏡像",
+			"work": "basecamp-frigate-constitution-01m-channels",
+			"at": [
+				150,
+				80,
+				70
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				460,
+				80,
+				50
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T20:13:06",
+			"persona": "basecamp",
+			"note": "另一舷：同一件 mirror=y（at.y ＝ 321 − 161 − 80）"
 		}
 	]
 }

@@ -27,7 +27,7 @@
   - [ ] **放上去之後再細修**（Tim 2026-10-11：「細節可以實際放置上去後再細修，不用一次到位」；讀數見 notes.md「階段六 雕之前修＋雕刻」）：
     - [ ] 艏柱頭後面中線的槽（dy 0–2、X 665–671、夾在兩根 chock 之間，約 11 格深）—— 做 bowsprit 時決定要填還是當 bowsprit 座
     - [ ] S-counter-timber-35 在 Z 81 多 3 格 dy 34（舷邊那根的碎塊歸過來的）
-    - [ ] 上層船尾窗（Z 113.6–123.8、hb 18.25–28.22）被 dy 25–26 的 counter timber 穿過 —— 鋪船尾板時開窗再處理
+    - [x] 上層船尾窗（Z 113.6–123.8、hb 18.25–28.22）被 dy 25–26 的 counter timber 穿過 —— 階段十四決定不開（照現代照片，那裡放鷹與星），timber 留在外板裡面看不到
     - [ ] 船頭 cant 根部擠在一起、後片沒碰到 deadwood／apron（只靠鄰片撐）
     - [ ] 高度換算的 LWL 用直線擬合，船尾那段可能偏高 0.6–0.9 格（verifier minor，證據兩邊都有）—— 砲門那段（X 185–625）量過不影響（≤ 0.26 格，階段七）；只剩船尾 X < 185 的 counter／船尾面
     - [ ] 階段二 gripe 在 Z 66–67 伸出艏柱前面一塊平台 —— knee of the head 子作品時處理
@@ -91,6 +91,40 @@
 - [ ] 之後：yards、gaffs、spanker boom、dolphin striker、channels、索具與帆（Tim：先不做）
 - 之後：吊床網架與欄杆（11 號 quarterdeck 130–135／forecastle 127–130 那幾條）、spar deck 砲門 ⇒ 配件
 
+## 階段十四 船尾窗與船尾裝飾（2026-10-11 套用）
+- [x] Tim 給兩張實船照片：「可以加上裝飾線條（參考現實照片 由你設計）」「其實可以重新設計（例如嘗試開船尾窗）」；quarter gallery「好像不用改，那是模型自己改的」⇒ 這次不做（⚠ 1927 年 11 號圖其實有標 QUARTER GALLERY，比模型扁很多 —— 已跟 Tim 講）
+- [x] 新圖紙 12（`design/draft_stern.py`、`sheet12_stern_v1.png`、`verify_stern.json`；設計在 plan.json `stern`）
+- [x] 船殼開窗 7 扇（gun deck 主窗列 z 95–101，counter timbers 之間）：carvevox 帶顏色守門 1,165 格；標記 `船尾窗:begin／end` ⇒ 833,647
+- [x] 子作品 `-stern-deco`「憲法號 船尾裝飾」（parent ＝ 船殼）＋ 組裝件關聯 `船尾裝飾`：1,676 格（窗格、pilasters、拱線、星、鷹、船名、白線）
+- [x] 組裝件 1,355,998、link_overlap 0、1 元件、空腔 0；產生程式讀 `船尾窗:begin` 重產兩份清單逐位元組相同
+- 草稿期間改掉的：船名在引擎裡反了（從船尾看觀者左手邊 ＝ −y）、白窗格像柵欄 ⇒ 黑、星星像小烏龜、拱線圓角糊成一團、拱線細化左右差 12 格 ⇒ 只算半邊再鏡射
+- [ ] Tim 在 Unity 看船名是不是正著讀（引擎裡是正的；從 OBJ 匯出的軸推起來應該一致，沒實測）
+- [ ] 之後：quarter galleries（子作品，掛在 fashion pieces 外面）、上層船尾窗（1927 有三扇；這次照照片放鷹與星）、舵、船尾燈籠、davits 與小艇
+
+## 階段十五 船頭（2026-10-11 套用）
+- [x] 資料 workflow（歷史、讀圖、現況、外部盤點＋兩位推翻者）；Tim「不用太過追求史實……追求美觀就好」
+- [x] 新圖紙 13（`design/draft_head.py`、`sheet13_head_v1.png`、`verify_head.json`；設計在 plan.json `head`）
+- [x] 子作品 `-head-knee`（中線整件）＋ `-head-side`（一舷、固定框）＋ 組裝件三條關聯（船頭-knee、船頭裝飾、船頭裝飾-鏡像 mirror=y）
+- [x] Tim 預覽「測試ok 可以套用了」⇒ apply（6,131＋2,925，mismatch 0）；組裝件 1,367,979、1 元件、空腔 0；重產逐位元組相同
+- [x] ~~審查 workflow（美觀＋幾何）~~ Tim：「審美妳決定後，我再看一次就好，不用額外派 agent 審核」⇒ 停掉（他已經預覽、套用了）
+- [ ] 之後：head deck／gratings、bobstay 孔與 gammoning（繩索固定點）、真的 hawse 孔（刻船殼）、錨、fore-tack bumpkin
+
+## 階段十六 帆桁（2026-10-11 套用）
+- [x] 資料 workflow（尺寸＋桅的量測＋推翻者）；新圖紙 14（`design/draft_yards.py`、`sheet14_yards_v1.png`、`verify_yards.json`；設計在 plan.json `yards`）
+- [x] 12 根橫桁＋spanker gaff／boom（後桅）＋spritsail yard（艏斜桅）貼進四件桅杆子作品；固定點 320 個（`design/rig_points_yards.json`）
+- [x] Tim「測試ok 可以套用了」⇒ 四件各打 `帆桁:begin` → apply（mismatch 0）→ `帆桁:end`；組裝件 1,386,789、1 元件、空腔 0；重產逐位元組相同
+- [ ] 固定點清單照 TASK-0502／0503 定下來的格式轉；之後的部件（channels、cleats、bitts…）也照這個做
+- [ ] 想要「停泊」的樣子時：topsail／topgallant yard 改用 `z_lowered`（plan.json yards）
+
+## 階段十七 舵（2026-10-11 套用）
+- [x] 新圖紙 15（`design/draft_rudder.py`、`sheet15_rudder_v1.png`）；子作品 `-rudder`＋關聯「舵」；3,950 格；Tim「舵我確認ok」⇒ apply；組裝件 1,390,739
+- [ ] 之後：helm port 與舵頭在船裡那段、tiller、rudder pendant chains（繩索）
+
+## 階段十八 channels（2026-10-11 套用）
+- [x] 新圖紙 16（`design/draft_channels.py`、`sheet16_channels_v1.png`、`rig_points_channels.json`）；子作品 `-channels`（一舷）＋關聯 channels／channels-鏡像；一舷 6,506 格；Tim「測試ok 可以套用了」⇒ apply；組裝件 1,403,751
+- [ ] chain plates 長短不一（10 根在白帶上緣收住）—— Tim 想全部一樣長再改
+- [ ] 之後：上 deadeyes、shrouds／lanyards（TASK-0502）、backstay stools、channel 下的支撐肘
+
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**
 - [ ] ⚠ 先做 TASK-0497（關聯／組裝支援鏡像）—— 兩舷對稱的肘、艙房只做一份
@@ -116,6 +150,8 @@
 
 ## 範圍（Tim 2026-10-11）
 - 玻璃等透明部分、帆、纜索：先不做（之後 /scp-sculpture 擴充成可嵌模型再處理）
+- **帆與索具的做法（Tim 2026-10-11 晚）**：帆用布料模擬（綁在幾個 voxel 上固定、可以跟線綁定、風＋重力）；繩索另外做（設定綁定點、受重力與一定的物理彎曲、可設顏色與粗細），**繩索可以綁帆，也可以綁 voxel 固定點**；**yards 做進桅杆子作品裡**（gaffs／booms 同理）；帆可以設定顏色，甚至指定貼圖
+  - ⇒ 之後每做一件會被繩索或帆綁到的 voxel 部件（yardarm 兩端、slings、channels／deadeyes、cleats、bitts、belaying pins、tops 邊…），設計裡要把**固定點記成有名字的座標**（plan.json 裡一份清單），不要只留在格子裡
 - 砲門蓋與其他活動部件：不用 voxel 做，等可以匯入模型再做
 
 ## 待確認

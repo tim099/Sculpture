@@ -19,6 +19,11 @@
 | 十一 | 新圖紙 09：房間（子作品，掛在各層甲板底下）—— 全寬艙壁整件、兩舷艙房一邊＋鏡像 | [stage10-13.md](stage10-13.md#房間鏡像只給上面的物件) |
 | 十二 | 新圖紙 10：舷牆與舷弧起翹 —— 舷頂跟白帶平行、cap rail | [stage10-13.md](stage10-13.md#舷牆讓兩條線平行) |
 | 十三 | 新圖紙 11：桅杆（子作品）—— 三根桅、tops、bowsprit；船頭開口 | [stage10-13.md](stage10-13.md#桅杆照著已經開好的孔)（含查到的參考資料） |
+| 十四 | 新圖紙 12：船尾窗與船尾裝飾（子作品）—— 開 7 扇窗、pilasters、拱線、鷹與星、船名 | [stage14.md](stage14.md)（含查到的參考資料） |
+| 十五 | 新圖紙 13：船頭（子作品）—— knee of the head、billethead、trailboards、head rails、catheads | [stage15-16.md](stage15-16.md)（含查到的參考資料） |
+| 十六 | 新圖紙 14：帆桁（貼進桅杆子作品）—— 12 根橫桁、spanker gaff 與 boom、spritsail yard；固定點 320 個 | [stage15-16.md](stage15-16.md#帆桁一根接一根貼在桅的前面) |
+| 十七 | 新圖紙 15：舵（子作品）—— 前緣貼艉柱、頂端收進 counter、六道 pintle／gudgeon 帶 | [stage15-16.md](stage15-16.md#之後舵與-channels階段十七十八) |
+| 十八 | 新圖紙 16：channels（子作品，一舷＋鏡像）—— deadeyes 31 個、chain plates 避開砲門；固定點 62 個 | [stage15-16.md](stage15-16.md#之後舵與-channels階段十七十八) |
 
 ## 範圍與做法（Tim 2026-10-11）
 - 玻璃等透明部分、帆、纜索：先不做，等 `/scp-sculpture` 能直接嵌模型再處理。

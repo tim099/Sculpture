@@ -1,0 +1,106 @@
+{
+ "read": {
+  "mark": "船尾窗:begin",
+  "voxels": 834812,
+  "others": 520675
+ },
+ "carve": {
+  "cells": 1165,
+  "colors": {
+   "36": 428,
+   "141": 12,
+   "177": 725
+  }
+ },
+ "window_wall_depth": {
+  "min": 2,
+  "max": 5,
+  "columns": 385
+ },
+ "deco": {
+  "cells": 1676,
+  "by_kind": {
+   "arch": 254,
+   "eagle": 184,
+   "name": 118,
+   "name-frame": 120,
+   "pilaster": 256,
+   "rail-lower": 198,
+   "rail-sill": 347,
+   "sash": 127,
+   "star": 72
+  },
+  "colors": {
+   "2": 20,
+   "36": 127,
+   "182": 22,
+   "192": 34,
+   "248": 2,
+   "255": 1471
+  }
+ },
+ "skipped": {
+  "n": 0,
+  "first": []
+ },
+ "rail_wrap": {
+  "sill@93": {
+   "cells": 115,
+   "x_max": 119,
+   "dy_max": 49
+  },
+  "sill@94": {
+   "cells": 232,
+   "x_max": 119,
+   "dy_max": 50
+  },
+  "lower@82": {
+   "cells": 97,
+   "x_max": 124,
+   "dy_max": 45
+  },
+  "lower@83": {
+   "cells": 101,
+   "x_max": 124,
+   "dy_max": 46
+  }
+ },
+ "overlap_after_carve": 0,
+ "deco_floating": 0,
+ "mirror_mismatch_by_kind": {
+  "eagle": 4,
+  "name": 64
+ },
+ "carve_mirror_mismatch": 0,
+ "window_see_through_columns": 282,
+ "cavities_box": {
+  "before": 0,
+  "after": 0
+ },
+ "deco_bbox": {
+  "x": [
+   97,
+   124
+  ],
+  "y": [
+   110,
+   210
+  ],
+  "z": [
+   82,
+   125
+  ]
+ },
+ "expect_assembly_after": 1355998,
+ "name_width": 49,
+ "files": {
+  "deco": {
+   "cells": 1676,
+   "sha256": "6e1edf78863de14c1461eaa3c25a381280a0ac0589256535a9a0c2ddc0cddaa7"
+  },
+  "hull_windows_carve": {
+   "cells": 1165,
+   "sha256": "d611e8d7c0611a58cc9baf867688c5c325c21196ab35c7903bd139fad015560a"
+  }
+ }
+}

@@ -1045,5 +1045,687 @@
     },
     "provenance": "下桅：1801 年 12 月海軍部長給 44 門砲巡防艦的規格 —— fore 95'×32″、main 105'×35″、mizzen 92'×24″、bowsprit 64'×34″（Martin《Constitution Close Up》引 RG45 M209）。全桅總長：1795 年四人估計 main 210–222 ft、fore 197–200、mizzen 156–177（Humphreys：212.6／198.0／175.8）⇒ 上面幾節照當時常用比例（topmast ≈ 0.6–0.65 下桅、masthead ≈ 1/6、topgallant＋royal 一根）湊到接近 Humphreys 的總長，都是設計決定。斜度：1810 年日誌（從 trestletrees 量）fore 3'6½″、main 2'7¼″、mizzen 4'1¾″（約 3°／2°／4°）。後桅：1801 年的 92 ft 照放，top 會比前桅高（後桅的跟在 deadwood 上、比 keelson 高 6 格）⇒ 設計決定改成 82 ft（masthead 12），三根 top 主 > 前 > 後（美觀為主）；甲板的桅孔照 02 號圖（1849）定成 1°／2°／3.5° 已經開好 ⇒ 桅杆照桅孔的軸（前桅比日誌直 2°，照實記）。後桅跟（Waldo 1816 寫 mizzen step 在 orlop 上）⇒ 設計決定三根都踩在 keelson／deadwood 上（orlop 已經開了孔）。tops 大小、crosstrees、caps、jibboom 長度是設計決定（美觀為主）",
     "not_now": "yards、gaffs、spanker boom、dolphin striker、桅上的 blocks 與所有索具（帆、索具 Tim：先不做）、channels 與 chain plates（掛 shrouds 的，之後跟索具一起）、桅座的楔子、帆桁"
+  },
+
+  "stern": {
+    "title": "新圖紙 12：船尾窗與船尾裝飾 v1",
+    "subwork": {
+      "id": "basecamp-frigate-constitution-01m-stern-deco",
+      "title": "憲法號 船尾裝飾",
+      "link": "船尾裝飾",
+      "note": "船尾窗格、pilasters、拱線、星、鷹、船名（新圖紙 12）"
+    },
+    "base": {
+      "hide_links": [
+        "船殼",
+        "船尾裝飾"
+      ],
+      "hull_mark": "船尾窗:begin",
+      "assembly_voxels": 1355487,
+      "hull_voxels": 834812,
+      "note": "現況要讀『開窗之前』：船殼讀標記 船尾窗:begin（套用之前還沒有這個標記 ⇒ 讀船殼現在的樣子）、其他部件讀組裝件藏起 船殼 與 船尾裝飾 ⇒ 套用之後重跑逐位元組一樣"
+    },
+    "colors": {
+      "trim": 255,
+      "sash": 36,
+      "grey": 182,
+      "gold": 248,
+      "blue": 2,
+      "red": 192
+    },
+    "windows": {
+      "z": [95, 101],
+      "dy": [[-5, 5], [8, 11], [14, 24], [27, 33]],
+      "sash": {
+        "setback": 1,
+        "z": [
+          98
+        ],
+        "dy": [
+          2,
+          17,
+          21,
+          30
+        ]
+      },
+      "note": "主窗列照 1927 年 11 號船尾正視（94.7–101.3）；船殼的 counter timbers 本來就照這一列框窗（dy 6–7／12–13／25–26／35–37）⇒ 窗開在 timbers 之間：中窗 |dy| ≤ 5、窄窗 8–11、側窗 14–24、外窗 27–33。刻穿外板＋內板（窗台 93–94、窗楣 102–103 照留）；窗格 1 格、比外板面縮進 1 格（內板那一層），中間一道橫的（z 98），寬的窗再分成三格（中窗、側窗）或兩格（外窗）。玻璃不做（之後用模型）。窗格顏色：v1 第一次落草稿用白 255，引擎渲出來白窗格疊在亮的船艙內壁上、又貼著白 pilasters，從外面看像一排白柵欄 ⇒ 改成船身的黑 36（照片裡窗是暗的，讓白 pilasters 自己站出來）"
+    },
+    "pilasters": {
+      "dy": [[6, 7], [12, 13], [25, 26], [34, 35]],
+      "base_z": 95,
+      "shaft_z": [96, 101],
+      "cap_z": [102, 103],
+      "cap_widen": 1,
+      "proud": {
+        "base": 2,
+        "shaft": 1,
+        "cap": 2
+      },
+      "note": "現代照片：白色 pilasters，中間兩對、外側單根 ⇒ 站在 counter timbers 前面（最外那根往窗那側挪 1 格，貼著外窗）"
+    },
+    "rails": {
+      "sill": {
+        "z": [93, 94],
+        "proud": [1, 2],
+        "x_end": 119,
+        "note": "窗台下那條白線（上緣多凸 1 格）；繞過船尾角，沿 quarter 往前接到側面白帶（x 120 起）"
+      },
+      "lower": {
+        "z": [82, 83],
+        "proud": [1, 1],
+        "x_end": 124,
+        "note": "counter 下緣的白線；繞過船尾角一點"
+      }
+    },
+    "arch": {
+      "lines": [
+        {
+          "half_width": 42,
+          "top": 125,
+          "radius": 12
+        },
+        {
+          "half_width": 40,
+          "top": 123,
+          "radius": 10
+        }
+      ],
+      "bottom": 95,
+      "proud": 1,
+      "note": "現代照片：兩道平行的白線沿船尾面外緣、在頂上圓轉過去；下端落在窗台那條白線上。像素畫的細線（8 連通；每一格都貼著船尾面）—— 第一次落草稿補成 4 連通，圓角被塞成一團"
+    },
+    "stars": {
+      "at": [[18, 113], [27, 112], [35, 109]],
+      "glyph": [
+        "..W..",
+        "..W..",
+        "WWWWW",
+        ".WWW.",
+        "W...W"
+      ],
+      "proud": 1,
+      "note": "每舷三顆，沿拱線內側由中間往外漸低（照片）。v1 第一次落草稿的字形（第二排 .WWW.、腿 .W.W.）在引擎裡像小烏龜 ⇒ 頂端一格細尖、腿往兩角張開"
+    },
+    "eagle": {
+      "top_z": 117,
+      "center_col": 13,
+      "rows": [
+        "............WWW............",
+        "...........YWWWW...........",
+        "ww..........WWW..........ww",
+        "gwww.......BBBBB.......wwwg",
+        ".gwwww.....BBBBB.....wwwwg.",
+        "..gwwwwww..RWRWR..wwwwwwg..",
+        "...gwwwwwwwRWRWRwwwwwwwg...",
+        "....ggwwwwwRWRWRwwwwwgg....",
+        "......gggwwRWRWRwwggg......",
+        "...........RWRWR...........",
+        "............RWR............",
+        "...........gwwwg...........",
+        "..........gw.w.wg.........."
+      ],
+      "legend": {
+        "w": [
+          "trim",
+          1
+        ],
+        "W": [
+          "trim",
+          2
+        ],
+        "g": [
+          "grey",
+          1
+        ],
+        "Y": [
+          "gold",
+          2
+        ],
+        "B": [
+          "blue",
+          2
+        ],
+        "R": [
+          "red",
+          2
+        ]
+      },
+      "note": "照片：展翅的鷹、胸前盾牌（藍 chief＋紅白直條），在中間兩對 pilasters 上面；頭朝觀者左手邊。畫素圖是設計（27×13 格）"
+    },
+    "name": {
+      "text": "CONSTITUTION",
+      "z_top": 90,
+      "gap": 1,
+      "proud": 1,
+      "font": {
+        "C": [
+          "###",
+          "#..",
+          "#..",
+          "#..",
+          "###"
+        ],
+        "O": [
+          "###",
+          "#.#",
+          "#.#",
+          "#.#",
+          "###"
+        ],
+        "N": [
+          "#..#",
+          "##.#",
+          "#.##",
+          "#..#",
+          "#..#"
+        ],
+        "S": [
+          "###",
+          "#..",
+          "###",
+          "..#",
+          "###"
+        ],
+        "T": [
+          "###",
+          ".#.",
+          ".#.",
+          ".#.",
+          ".#."
+        ],
+        "I": [
+          "###",
+          ".#.",
+          ".#.",
+          ".#.",
+          "###"
+        ],
+        "U": [
+          "#.#",
+          "#.#",
+          "#.#",
+          "#.#",
+          "###"
+        ]
+      },
+      "frame": {
+        "z": [85, 91],
+        "half": 27,
+        "point": 3
+      },
+      "note": "照片：窗台白線與下緣白線之間一塊船名牌（細白框、兩頭尖），白字；這裡落在 counter 上半（z 85–91）。字 5 格高（0.5 m，比實船大，格子解析度的下限）。方向：從船尾看，觀者的左手邊是 −y（引擎的視圖量到的）—— 第一次落草稿照右手系把第一個字放在 +y，引擎裡船名是反的（NOITUTITSNOC），鷹頭也朝錯邊 ⇒ 兩個一起翻"
+    },
+    "sources": "現代照片（Tim 2026-10-11 給的兩張：船尾全景、船尾特寫）；1927 MIT PLAN VIII（11 號）船尾正視：主窗列 94.7–101.3、pilaster caps 103.3、上層三扇窗 113.6–123.8、拱形飾帶與兩顆星、船名在窗台下；同一張 sheer plan 與 half-breadth 標著 QUARTER GALLERY；USS Constitution Museum〈The Quarter Galleries〉（quarter gallery 掛在 fashion pieces 外面）",
+    "decisions": "美觀為主、照現代照片的樣子（Tim：「參考現實照片 由你設計」「可以重新設計（例如嘗試開船尾窗）」）：上層那一列（1927 有三扇）不開，改放鷹與星（照片）；pilasters 跟窗對齊船殼原本的 counter timbers；所有裝飾在船殼外面凸 1–2 格（不改船殼的格，子作品可以整件關掉）；窗只刻船殼（標記 船尾窗:begin／end）",
+    "not_now": "quarter galleries（1927 圖上有、比 Tim 照片裡的模型扁很多；Tim 2026-10-11：先不做）、上層船尾窗、舵、船尾燈籠、davits 與小艇、玻璃"
+  },
+
+  "head": {
+    "title": "新圖紙 13：船頭（knee of the head、billethead、trailboards、head rails、catheads）v1",
+    "subworks": {
+      "knee": {
+        "id": "basecamp-frigate-constitution-01m-head-knee",
+        "title": "憲法號 船頭 knee 與 billethead",
+        "link": "船頭-knee",
+        "note": "knee of the head（cutwater）＋ billethead，在中線上整件（新圖紙 13）"
+      },
+      "side": {
+        "id": "basecamp-frigate-constitution-01m-head-side",
+        "title": "憲法號 船頭裝飾（一舷）",
+        "link": "船頭裝飾",
+        "mirror_link": "船頭裝飾-鏡像", "box": {"at": [630, 161, 70], "size": [112, 64, 80]},
+        "note": "cheeks、trailboard、盾牌、hawse 圈、head rails、head timbers、cathead —— 只做 y > 160 那一舷（新圖紙 13）"
+      }
+    },
+    "base": {
+      "hide_links": [
+        "船頭-knee",
+        "船頭裝飾",
+        "船頭裝飾-鏡像"
+      ],
+      "assembly_voxels": 1355998,
+      "note": "現況讀組裝件藏起船頭這三條關聯（船殼不改）⇒ 套用之後重跑逐位元組一樣"
+    },
+    "colors": {
+      "black": 36,
+      "white": 255,
+      "copper": 168,
+      "gold": 248,
+      "red": 192,
+      "blue": 2,
+      "iron": 146
+    },
+    "frame": "11 號（1927）sheer plan 讀圖換到作品座標（x, z）；body plan 正視換到 (dy, z)。換算與校準：sheer X ＝ 0.16249533·u ＋ 18.3504、Z 用 ends.provenance.frame_of_heights；body plan Z ＝ 62.86 ＋ (yA − y)·0.15901、dy ＝ (x − x_cl)·0.1625。讀圖的 agent 重現 bow_port 差 ≤ 0.01，推翻者自己重新校準差 ≤ 0.07、逐線重追差 ≤ 0.5 格",
+    "knee": {
+      "front": [[671.8, 63.3], [676.3, 69.9], [681.9, 75.9], [688.0, 81.3], [694.4, 86.4], [701.1, 91.2], [707.2, 96.5], [712.6, 102.6], [717.0, 109.5], [720.6, 116.9], [721.8, 120.6], [722.6, 121.3], [723.6, 125.4], [725.2, 128.3], [724.0, 131.0]],
+      "top": [[654.8, 95.6], [662.9, 96.1], [671.0, 97.1], [679.1, 98.6], [686.9, 101.0], [694.3, 104.4], [701.3, 108.7], [707.3, 114.3], [712.1, 120.9], [716.0, 128.1], [718.9, 135.5]],
+      "z_from": 63,
+      "half_width": 2,
+      "edge_half_width": 1,
+      "edge_depth": 2,
+      "note": "側面 ＝ 前緣（11 號的 cutwater 線）與上緣（上 cheek 的線 T_a）之間、艏柱前緣之前的那一塊月牙；z 63 起（gripe 平台 z 63–67 被它包住）。厚 5 格（|dy| ≤ 2；Plan 24779 剖面 17–19½\"）、最前 2 格收成 3 格（|dy| ≤ 1）。上緣以上、艏柱與 rails 之間是空的 head。全部黑 36（水線 63 以上）"
+    },
+    "billethead": {
+      "center": [724.5, 137.0],
+      "radius": 5.3,
+      "half_width": 3,
+      "spiral": {
+        "r_out": 4.0,
+        "r_in": 1.6,
+        "turns": 1.1,
+        "start_deg": 200
+      },
+      "eye_radius": 1.1,
+      "note": "11 號側面球 X 719.6–727.1、Z 131.1–138.5（中心 723.4, 134.8，半徑 3.75）；設計決定：稍微放大、往上抬 1.7（中心 724, 136.5、半徑 4.2）—— 作品的 bowsprit 斜度 15.4°（11 號約 24°），照原圖放的話球頂離 bowsprit 底 8–9 格，實船約 3 格。寬 7 格（|dy| ≤ 3，11 號正視半寬 4.0）。兩側面照照片「白色雕刻、黑色凹處」：外圈一圈白、白色渦卷線從外圈捲到渦眼，捲線之間的凹處黑，渦眼黑底一格白星；正面與頂面全白。v1 第一次落草稿是反過來的（白底刻黑溝），近看像一張鬼臉；第二次改對了配色，但球只有 9 格寬、渦卷線擠著外圈，側面只剩幾個黑點 ⇒ 放大到半徑 5.3（中心 724.5, 137；頂離 bowsprit 底約 5 格、往前凸出 knee 6 格，billethead 本來就往前捲）"
+    },
+    "cheeks": {
+      "upper": {
+        "a": [[654.8, 95.6], [662.9, 96.1], [671.0, 97.1], [679.1, 98.6], [686.9, 101.0], [694.3, 104.4], [701.3, 108.7], [707.3, 114.3], [712.1, 120.9], [716.0, 128.1], [718.9, 135.5]],
+        "thick": 1.7
+      },
+      "lower": {
+        "b": [[650.7, 83.6], [662.5, 84.2], [674.3, 85.8], [685.9, 89.0], [696.8, 94.0], [706.5, 101.1], [714.5, 109.9], [720.7, 120.1]],
+        "thick": 1.6
+      },
+      "aft_x": 651,
+      "proud": 2,
+      "note": "上 cheek ＝ 11 號 T_a 往下 1.7（T_b）；下 cheek ＝ B_b 往下 1.6（B_c）；後端斜邊 654.3 → 650.6。白 255、凸 2 格。上 cheek 在 z 120 以上是 hair bracket（沿 billethead 後側往上收）"
+    },
+    "trailboard": {
+      "scroll": {
+        "wavelength": 11.0,
+        "stem_amp": 0.65,
+        "curl_r": 0.38,
+        "curl_turns": 0.75,
+        "line_half": 0.55
+      },
+      "u_from_x": 669,
+      "min_half_height": 1.6,
+      "proud": 1,
+      "note": "兩道 cheek 之間：黑底（knee 與外板本來的黑）上白色的 running scroll —— 一條波浪的莖，每個波峰一個往內捲的渦（acanthus C 卷草的像素版，設計）；從前面那個 hawse 圈的前緣往前，捲到 billethead 頸、帶子窄到 3 格以下就停。v1 第一次落草稿每個渦捲 1.25 圈，帶子只有 5–10 格高，渦擠成一團、莖斷斷續續，看起來像一串亂碼 ⇒ 渦只捲 0.7 圈（一個 C 鉤）、從莖上長出來、放在波峰對面那一側；第二次看起來像草寫字：莖斷斷續續（量的是 v 方向的差，波浪陡的地方線就斷）、帶子內半高只有 2–4 格、振幅 0.5 幾乎是平的 ⇒ 量到曲線的真正距離、振幅 0.65、波長 11、每個波峰往內（中線那側）勾一個 0.75 圈的小鉤"
+    },
+    "shield": {
+      "center_x": 693.0,
+      "rows": [
+        "..WWW..",
+        ".WBWBW.",
+        "WBBWBBW",
+        "WWWWWWW",
+        "WRWRWRW",
+        "WRWRWRW",
+        ".WRWRW.",
+        "..WWW.."
+      ],
+      "legend": {
+        "W": "white",
+        "B": "blue",
+        "R": "red"
+      },
+      "proud": 1,
+      "note": "盾牌：藍 chief（3 顆白星）＋ 白帶 ＋ 紅白直條，外圈白框；直立（照片上長軸大致垂直於帶子；這裡做直的，格子上斜的橢圓會鋸齒）；在 trailboard 後三分之一、離前面那個 hawse 約 28 格（照片量 25–35）"
+    },
+    "hawse": {
+      "front_view": [[22.3, 90.65], [15.2, 91.95]],
+      "r_out": 3.6,
+      "r_in": 1.6,
+      "proud": 2,
+      "color": "iron",
+      "note": "11 號正視：外孔 dy 22.3、z 90.6；內孔 dy 15.2、z 92.0（側視 X 對不上 4.5 格 ⇒ 照正視的 (dy, z) 貼到作品船殼表面，設計決定）。鐵 flange 外徑約 7 格（照片 2.6–2.8 ft）、凸 2 格；中間不刻船殼 —— 圈凸出來，中間的黑看起來就是孔。顏色：實船是黑的，v1 第一次落草稿用黑 36，黑圈貼在黑船身上完全看不見 ⇒ 鑄鐵灰 146（設計決定）"
+    },
+    "rails": {
+      "plan": [[647.0, 34.5], [656.0, 28.0], [665.0, 22.0], [680.0, 15.0], [692.0, 10.4], [702.0, 7.3], [710.0, 5.0], [716.0, 3.5]],
+      "top": {
+        "upper": [[650.4, 130.9], [658.2, 131.4], [666.5, 132.0], [674.8, 132.8], [683.0, 133.8], [691.3, 134.2], [699.4, 135.0], [703.4, 135.5], [713.1, 136.0], [717.9, 136.6]],
+        "lower": [[650.0, 127.0], [655.8, 127.3], [663.8, 128.1], [671.9, 129.0], [680.1, 130.0], [688.2, 131.1], [696.3, 132.4], [704.4, 133.8], [712.2, 135.5], [717.9, 136.4]]
+      },
+      "main": {
+        "upper": [[647.0, 125.0], [646.6, 121.5], [647.2, 117.0], [649.4, 113.3], [657.0, 113.8], [664.9, 114.4], [672.7, 115.3], [680.5, 116.4], [688.3, 117.9], [695.9, 120.1], [703.1, 123.3], [709.7, 127.5], [715.8, 132.5], [718.6, 135.2]],
+        "lower": [[644.6, 125.0], [644.2, 121.0], [645.0, 115.5], [648.3, 111.0], [656.1, 111.6], [663.9, 112.2], [671.7, 113.0], [679.4, 113.8], [687.1, 115.5], [694.6, 117.6], [701.8, 120.6], [708.5, 124.6], [714.5, 129.6], [717.3, 132.2]]
+      },
+      "panel": true,
+      "rail_thick": 2,
+      "panel_thick": 1,
+      "timbers_x": [
+        674.0,
+        686.0,
+        698.0
+      ],
+      "timber_lean": 4.0,
+      "note": "側面照 11 號：最上一道（U 帶，cathead 那裡 4 格深、往前收到 2 格）、main rail（11 號後端在 cathead 下面往上捲成一個大鉤 X 638–646；v1 第一次照畫，貼在船殼側面像一個白色問號 ⇒ 設計：後端只短短往上一翹，收在 cathead 底下）；兩道之間是黑釘板（照片：整片封死，Martin 1804『最上面兩道 rail 之間 boarded up』）；main rail 以下到上 cheek 是空的，放 3 根往前傾的 head timbers。平面（dy）11 號沒畫 ⇒ 設計：照 Plan 25175 欄杆內寬（21'10\"、14'8½\"、9'10\"、6'10\"、62\"、39\"）從 cathead 那裡半寬 34.5 收到 billethead 後側 3.5；離船殼不到 1 格的地方往外推。rail 2 格厚：最上一道黑芯白邊（上下各一列白）、main rail 全白（v1 第一次：main rail 也黑芯白邊，cathead 下 3 格粗的鉤變成描邊的空心字）；釘板黑、1 格；head timbers 白、1 格"
+    },
+    "cathead": {
+      "root": [646.0, 129.0],
+      "angle_deg": 55.0,
+      "rise_deg": 8.0,
+      "length": 15.0,
+      "half": 1.5,
+      "face": "gold",
+      "note": "11 號側面方塊 X 642.4–649.1、Z 123.5–131.1（夾在最上一道 rail 裡，main rail 的鉤從它底下長出來）；伸出舷外多少原圖沒畫 ⇒ 設計：從 cap rail 外側往前外伸 55°、微微上翹 8°、15 格、截面 4×4 黑；端面一層金 248（2023 照片 cathead 端面是金色雕刻臉；Skillin 1802 帳單『cat faces』）"
+    },
+    "sources": "11 號（1927 MIT PLAN VIII）sheer plan 與 body plan 讀圖（agent drawing＋verify-drawing 自己重新校準重追）；USS Constitution Museum〈Bow Decor〉〈Happy Trails〉〈Hawse Pipes〉〈Cutwater〉、Plan 24779（cutwater 剖面、billethead）、30155（trailboard）、24825（盾牌）、25175（head 平面、rails 內寬）；Commons 照片 2011／2013／2023；Martin《Constitution Close Up》（1804 boarded up、1802 cat faces）",
+    "decisions": "Tim：「不用太過追求史實，參考資料然後由妳重新設計圖紙，追求美觀就好」。做的是現在（1876 式、1927 重建）的樣子：billethead 不是人像。1849 年的艏柱（02 號）配 1927 年的 head（11 號）是兩個年代混搭（verify-drawing 指出），美觀優先接受。不刻船殼（hawse 用凸出的圈表現孔）；knee 整件在中線、其他只做一舷再鏡像",
+    "not_now": "head deck／gratings／seats of ease、bobstay 孔與 gammoning（之後繩索的固定點）、fore-tack bumpkin、白帶裡那對帶蓋圓件、艏柱吃水數字、真的 hawse 孔（要刻船殼）、錨"
+  },
+
+  "yards": {
+    "title": "新圖紙 14：帆桁（yards、spanker gaff 與 boom、spritsail yard）v1",
+    "works": {
+      "fore": "basecamp-frigate-constitution-01m-mast-fore",
+      "main": "basecamp-frigate-constitution-01m-mast-main",
+      "mizzen": "basecamp-frigate-constitution-01m-mast-mizzen",
+      "bowsprit": "basecamp-frigate-constitution-01m-bowsprit"
+    },
+    "base": {
+      "mark": "帆桁:begin",
+      "hide_links": [
+        "前桅",
+        "主桅",
+        "後桅",
+        "艏斜桅"
+      ],
+      "assembly_voxels": 1367979,
+      "note": "Tim：「yards 可以做到桅杆裡」⇒ 帆桁貼進各自的桅杆子作品（艏斜桅那件放 spritsail yard）。現況：四件桅杆子作品讀標記 帆桁:begin（套用之前還沒有 ⇒ 讀現在的樣子），其他部件讀組裝件藏起這四條關聯 ⇒ 套用之後重跑逐位元組一樣"
+    },
+    "colors": {
+      "spar": 36,
+      "tip": 177
+    },
+    "taper": {
+      "s": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "k": [
+        1.0,
+        0.968,
+        0.875,
+        0.7,
+        0.4286
+      ],
+      "note": "Steel 1794 two-tree yard：從中間往兩端每四分之一 —— 中徑、30/31、7/8、7/10、yardarm 端 3/7"
+    },
+    "state": "hoisted",
+    "yards": [
+      {
+        "mast": "fore",
+        "name": "fore-course",
+        "label": "fore yard",
+        "ft": 81.0,
+        "in": 18.0,
+        "arm_ft": 4.25,
+        "z": 254,
+        "z_lowered": 254
+      },
+      {
+        "mast": "fore",
+        "name": "fore-topsail",
+        "label": "fore topsail yard",
+        "ft": 61.17,
+        "in": 13.5,
+        "arm_ft": 5.25,
+        "z": 417,
+        "z_lowered": 316
+      },
+      {
+        "mast": "fore",
+        "name": "fore-topgallant",
+        "label": "fore topgallant yard",
+        "ft": 42.0,
+        "in": 9.0,
+        "arm_ft": 2.0,
+        "z": 518,
+        "z_lowered": 453
+      },
+      {
+        "mast": "fore",
+        "name": "fore-royal",
+        "label": "fore royal yard",
+        "ft": 28.0,
+        "in": 7.0,
+        "arm_ft": 1.42,
+        "z": 590
+      },
+      {
+        "mast": "main",
+        "name": "main-course",
+        "label": "main yard",
+        "ft": 95.0,
+        "in": 22.5,
+        "arm_ft": 4.75,
+        "z": 276,
+        "z_lowered": 276
+      },
+      {
+        "mast": "main",
+        "name": "main-topsail",
+        "label": "main topsail yard",
+        "ft": 70.5,
+        "in": 15.5,
+        "arm_ft": 5.92,
+        "z": 456,
+        "z_lowered": 345
+      },
+      {
+        "mast": "main",
+        "name": "main-topgallant",
+        "label": "main topgallant yard",
+        "ft": 46.0,
+        "in": 9.75,
+        "arm_ft": 2.0,
+        "z": 566,
+        "z_lowered": 496
+      },
+      {
+        "mast": "main",
+        "name": "main-royal",
+        "label": "main royal yard",
+        "ft": 30.0,
+        "in": 8.0,
+        "arm_ft": 1.5,
+        "z": 638
+      },
+      {
+        "mast": "mizzen",
+        "name": "mizzen-crossjack",
+        "label": "crossjack",
+        "ft": 75.0,
+        "in": 14.0,
+        "arm_ft": 6.5,
+        "z": 232,
+        "z_lowered": 232
+      },
+      {
+        "mast": "mizzen",
+        "name": "mizzen-topsail",
+        "label": "mizzen topsail yard",
+        "ft": 49.0,
+        "in": 9.5,
+        "arm_ft": 5.0,
+        "z": 369,
+        "z_lowered": 281
+      },
+      {
+        "mast": "mizzen",
+        "name": "mizzen-topgallant",
+        "label": "mizzen topgallant yard",
+        "ft": 32.0,
+        "in": 7.5,
+        "arm_ft": 1.67,
+        "z": 454,
+        "z_lowered": 401
+      },
+      {
+        "mast": "mizzen",
+        "name": "mizzen-royal",
+        "label": "mizzen royal yard",
+        "ft": 20.5,
+        "in": 6.0,
+        "arm_ft": 1.17,
+        "z": 502
+      }
+    ],
+    "spanker": {
+      "gaff": {
+        "ft": 44.0,
+        "in": 12.0,
+        "jaws_z": 222,
+        "angle_deg": 35.0,
+        "taper_end": 0.7
+      },
+      "boom": {
+        "ft": 62.0,
+        "in": 12.5,
+        "jaws_z": 134,
+        "angle_deg": 3.0,
+        "taper_end": 0.75
+      },
+      "note": "gaff 的 jaws 在後桅後面（後桅 top z 239–240、後面那根 crosstree x 187–188 z 237–238 ⇒ jaws z 222、往船尾上翹 35° 才過得去；1817 帆圖 18–20°、現代照片 35–40°）；boom 的 jaws 在後桅後面 z 134（中心 ≥ 131 才過得了 taffrail z 128），往船尾微微上翹 3°。boom 用 62 ft（1824）—— 66 ft（1812）的末端會落在 x −2，超出作品（verify-yards）"
+    },
+    "spritsail": {
+      "ft": 60.0,
+      "in": 13.5,
+      "arm_ft": 8.33,
+      "inboard_of_cap": 8.0,
+      "note": "掛在 bowsprit 底下、cap 內側一點，水平、跟中線垂直（Museum 2018：suspended below the bowsprit；實船主要當 jibboom guys 的撐桿）；放進艏斜桅子作品"
+    },
+    "jackstay_spacing": 8,
+    "anchor_note": "固定點（給 TASK-0502 繩索、0503 帆）：每根帆桁 —— 兩端 yardarm（arm-P／arm-S）、帆上緣兩角（earing-P／earing-S ＝ yardarm 內端）、中間 slings、帆上緣每隔 8 格一個 jackstay 點；gaff —— throat、peak、上緣每隔 8 格；boom —— jaws、end；spritsail yard —— 兩端。座標是那一格實心 voxel（世界座標，各子作品 at 0,0,0）。P ＝ y < 160、S ＝ y > 160（從船尾往船頭看，引擎視圖的左手邊是 −y ⇒ 左舷 port）",
+    "sources": "Martin《Constitution Close Up》附錄 A（1815 年的長、徑；1820／1824 的 yardarm）—— 推翻者逐格對過原表；Steel 1794（錐度、八角段、arm 規則）；USS Constitution Museum（spritsail yard、305 ft overall）；1817 帆圖（NARA 7369032）；現代照片（yards 黑、yardarm 端原木）；作品 mast-probe 量的桅各段與建議高度",
+    "decisions": "Tim：「不用太過追求史實……追求美觀就好」「yards 可以做到桅杆裡」。做「升起」的高度（之後要掛帆；收下的高度記在 z_lowered）；fore topgallant 用 42 ft（記錄 45 ft，跟 main 一樣長、比例怪 —— verify-yards 建議）；yards 全部黑 36、yardarm 端 1 格原木 177；八角段不做（Ø 5.7 以下看不出來）；skysail、studdingsail booms、dolphin striker 不做",
+    "not_now": "skysail yards、studdingsail booms、dolphin striker／martingale、trysail mast、sling cleats／stop cleats／parrels（幾吋級）、footropes（繩索）"
+  },
+
+  "rudder": {
+    "title": "新圖紙 15：舵 v1",
+    "subwork": {
+      "id": "basecamp-frigate-constitution-01m-rudder",
+      "title": "憲法號 舵",
+      "link": "舵",
+      "note": "舵＋pintle／gudgeon 帶（新圖紙 15）"
+    },
+    "base": {
+      "hide_links": [
+        "舵"
+      ],
+      "assembly_voxels": 1386789,
+      "note": "現況讀組裝件藏起「舵」⇒ 套用之後重跑逐位元組一樣"
+    },
+    "colors": {
+      "copper": 168,
+      "black": 36,
+      "strap": 136
+    },
+    "lwl": 63,
+    "aft_edge": [[116.0, 2.0], [116.8, 40.0], [118.0, 82.0]],
+    "bottom_z": 2,
+    "top_z": 86,
+    "half_width": {
+      "fore": 2,
+      "aft": 1,
+      "note": "前緣 5 格（|dy| ≤ 2，跟艉柱一樣 sided）、往後緣收到 3 格（|dy| ≤ 1）"
+    },
+    "straps": {
+      "z": [
+        6,
+        19,
+        34,
+        48,
+        63,
+        71
+      ],
+      "rows": 2,
+      "proud": 1,
+      "hull_len": [22.0, 8.0],
+      "rudder_aft_gap": 2,
+      "hull_half": 8,
+      "note": "11 號 sheer plan 六道 strap（作品 z 約 71、63、48、34、19、6）；往前伸到船殼上：最下面那道約 22 格、最上面約 8 格（原圖 X 131 → 150–155）；舵板上從前緣到離後緣 2 格；船殼上只貼在艉柱兩側 |dy| ≤ 8（v1 放到 40，z 70 那道在寬的 tuck 上橫貫整個船尾、像一條腰帶）。深一點的銅 136、凸 1 格"
+    },
+    "anchors": {
+      "pendant_z": 64,
+      "note": "rudder pendant chains（繩索）的固定點：後緣兩側、水線上一點"
+    },
+    "sources": "11 號（1927）sheer plan 讀圖（source_ends_raw.json readings[1].stern：rudder_aft_edge X 116.0–117.9、rudder_bottom Z 2.3、rudder_head_top (119, 88.1)；六道 strap 的高度與長度，盤點 agent 掃描）；作品的艉柱後緣（x 130 → 124）",
+    "decisions": "舵前緣跟著作品的艉柱（11 號艉柱斜 6.4°、作品 4.3°）；頂端順著 counter 下緣收進去（實船從 helm port 穿進船裡；這裡不刻船殼，看起來一樣是鑽進 counter）；舵寬、厚度、pintle 數查不到規格 ⇒ 設計",
+    "not_now": "helm port 與舵頭在船裡的那一段、tiller、rudder pendant chains（繩索）、rudder coat"
+  },
+
+  "channels": {
+    "title": "新圖紙 16：channels（chain wales）、deadeyes、chain plates v1",
+    "subwork": {
+      "id": "basecamp-frigate-constitution-01m-channels",
+      "title": "憲法號 channels（一舷）",
+      "link": "channels",
+      "mirror_link": "channels-鏡像",
+      "box": {
+        "at": [
+          150,
+          161,
+          70
+        ],
+        "size": [
+          460,
+          80,
+          50
+        ]
+      },
+      "note": "三根桅的 channels＋deadeyes＋chain plates，只做 y > 160 那一舷（新圖紙 16）"
+    },
+    "base": {
+      "hide_links": [
+        "channels",
+        "channels-鏡像",
+        "舵"
+      ],
+      "assembly_voxels": 1386789,
+      "note": "現況讀組裝件藏起 channels 兩條關聯與舵（舵在船尾、跟 channels 不相干；藏起來 ⇒ 舵套用前後讀到的都一樣）⇒ 套用之後重跑逐位元組一樣"
+    },
+    "colors": {
+      "channel": 36,
+      "deadeye": 104,
+      "plate": 36
+    },
+    "z": [109, 110],
+    "width": 12,
+    "corner": 4,
+    "deadeye": {
+      "size": 3,
+      "thick": 2
+    },
+    "plate_to_z": 78,
+    "masts": [
+      {
+        "mast": "fore",
+        "x_mast": 586.4,
+        "hounds": [583.8, 261.8],
+        "shrouds": 8,
+        "backstays": 3,
+        "spacing": 7.0,
+        "fwd": 4
+      },
+      {
+        "mast": "main",
+        "x_mast": 349.8,
+        "hounds": [343.8, 285.0],
+        "shrouds": 9,
+        "backstays": 3,
+        "spacing": 7.0,
+        "fwd": 4
+      },
+      {
+        "mast": "mizzen",
+        "x_mast": 203.9,
+        "hounds": [196.2, 240.0],
+        "shrouds": 6,
+        "backstays": 2,
+        "spacing": 6.0,
+        "fwd": 3
+      }
+    ],
+    "note": "設計（美觀為主）：channels 在白帶上方、cap rail 下方（z 109–110，2 格厚），從船殼表面往外 12 格（外緣跟著船殼曲線走，兩頭收 4 格的圓角）；盤點 agent 量過：shroud 從 masthead 拉到 channel 外緣（|dy| ≈ 69）在舷頂會讓開 cap rail 約 11 格 ⇒ 外伸 12 格夠。每根桅一組：第一個 deadeye 在桅前 fwd 格，往船尾每 spacing 格一個（shrouds 之後接 backstays）。deadeye 3×3 圓塊（十字形）、2 格厚、深木色 104，坐在 channel 外緣上；chain plate 從 deadeye 底下沿船殼往下到 z 78（wale 上方），前後方向照 shroud 的斜度（masthead hounds → deadeye 那條線往下延長）；不擋 gun deck 砲門：下端往前／後挪最少的格數讓整條線在 z 86–104 都不在砲門前面，10 格內找不到就在 z 105 收住（v1 主桅那組有好幾根斜過砲門、像一把梳子）；黑 36",
+    "sources": "盤點 agent（shrouds 的幾何、channel 外伸量）；mast-probe（hounds 高度與 x）；Steel 1794（channels、deadeyes、chain plates 的做法）；Constitution 的 shroud 數量是設計（main 9、fore 8、mizzen 6，加 backstays）",
+    "not_now": "shrouds 與 lanyards（繩索，TASK-0502）、上 deadeyes、backstay stools、channel 下面的支撐肘、preventer plates"
   }
 }

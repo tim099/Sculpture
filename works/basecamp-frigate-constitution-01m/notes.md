@@ -435,3 +435,51 @@ Tim：「開一個作品來組裝憲法號，目前的作品就作為船殼部�
 - main 27,484／fore 21,732／mizzen 11,692／bowsprit 11,394；top z 285／262／240、truck 648／600／511；bowsprit 斜度 15.4°、flying jibboom 尖端 x 958。
 - v1.1（套用後量到）：組裝件 2 個元件 ⇒ 主桅 top 浮在空中（trestletrees 用 round(160 ± 4.56) ⇒ 5／6，跟 masthead 空一格）⇒ 改成緊貼 masthead（floor ＋ 1）、主桅子作品刻 144 補 144；之後 1 元件。產生程式改讀「桅杆加進來之前」的現況（組裝件藏起桅杆、船殼讀 艏斜桅開口:begin，base 1,283,218）⇒ 其他三件與刻除清單逐位元組重產。
 - 坑：批次加關聯兩次被引擎擋下（零寫入）—— bash read 用 tab 切會把空欄併掉；Windows python 輸出帶 \r 進了關聯名。
+
+## 階段十四 船尾窗與船尾裝飾（新圖紙 12）
+設計 plan.json `stern`；`design/draft_stern.py`；`verify_stern.json`、`sheet12_stern_v1.png`；`masks/stern/`。船殼標記 `船尾窗:begin／end`（刻 1,165 格 ⇒ 833,647）；子作品 `basecamp-frigate-constitution-01m-stern-deco`（組裝件關聯 `船尾裝飾`，1,676 格）。
+- Tim：「可以加上裝飾線條（參考現實照片 由你設計）」「其實可以重新設計（例如嘗試開船尾窗）」；給兩張現代照片（船尾全景、特寫）。
+- 窗：1927 年 11 號船尾正視的主窗列（94.7–101.3）＝ 階段六 counter timbers 框的那一列 ⇒ z 95–101，中窗 |dy| ≤ 5、窄窗 8–11、側窗 14–24、外窗 27–33；每一欄從船尾面往裡刻到船艙空氣（牆 2–5 格：外板 36 ×428、內板 177 ×725、counter timber 碎角 141 ×12）。窗格黑 36、縮進 1 格；船尾面是斜的 ⇒ 直窗格每一排往下一排的位置補 1 格（不然 16 格只有邊碰邊）。
+- 裝飾（照片）：pilasters 8 根（|dy| 6–7、12–13、25–26、34–35，站在 counter timbers 前面；base／cap 凸 2 格）、兩道拱線（半寬 42／40、頂 125／123、像素畫的 8 連通細線，半邊算完再鏡射）、星 6 顆、鷹 27×13（盾牌藍 2／紅 192／白，喙金 248；頭朝觀者左手邊）、船名牌 CONSTITUTION（5 格高、49 格寬、細框兩頭尖，z 85–91）、窗台白線 z 93–94（繞過船尾角接到側面白帶，x ≤ 119）、counter 下緣白線 z 82–83。全部在船殼外面凸 1–2 格（不改船殼的格）。
+- ⚠ **方向**：從船尾看，引擎視圖的觀者左手邊是 −y（不是右手系推的 +y）—— 第一次落草稿船名在引擎裡是反的。OBJ 匯出把 y、z 對調（Y 朝上），推起來 Unity 跟引擎一致，⛔ 沒實測（請 Tim 在 Unity 看）。
+- 外殼判斷：白線用每一層 z「跟船外空氣相通、離實心 ≤ p 格」的空格 —— 整層算的話船艙經過側面砲門也通到船外，白線會跑進船艙（斷言當場擋下）⇒ 只在 x ≤ x_end ＋ 3 那一段裡判斷。
+- 上層船尾窗（1927 有三扇，z 113.6–123.8）不開：照片那裡是鷹與星（設計決定）。quarter galleries：1927 年 11 號 sheer plan 與 half-breadth 都有畫、有標字，比 Tim 照片裡的模型扁很多 ⇒ Tim 這次先不做。
+- 讀數：組裝件 1,355,998（＝ 1,355,487 − 1,165 ＋ 1,676）、link_overlap 0、1 元件、空腔 0；鏡像差只在鷹頭（4）與船名（64）；透光 282 欄；產生程式讀 `船尾窗:begin`（船殼 834,812 ＋ 其他部件 520,675）重產兩份清單逐位元組相同。
+- 過程圖：`overlays/stage14_stern_{astern,close,quarter,quarter_low}.png`、`stage14_cabin_windows.png`（從艦長室往外看）。
+
+## 階段十五 船頭（新圖紙 13）
+設計 plan.json `head`；`design/draft_head.py`；`verify_head.json`、`sheet13_head_v1.png`；`masks/head/{knee,side}.vox.txt`。子作品 `-head-knee`「船頭 knee 與 billethead」（中線、整件、at 0,0,0）、`-head-side`「船頭裝飾（一舷）」（固定框 at 630,161,70、112×64×80）；組裝件關聯 `船頭-knee`、`船頭裝飾`、`船頭裝飾-鏡像`（mirror=y、at.y ＝ 321 − 161 − 64 ＝ 96）。船殼不改。
+- Tim：「試著加上船頭裝飾」「不用太過追求史實，參考資料然後由妳重新設計圖紙，追求美觀就好」。
+- 資料（workflow 6 個 agent：歷史／讀圖／現況／外部盤點＋兩位推翻者；scratchpad s13/bow_survey.json）：現在的船頭是 billethead（1876 式、1927–31 重建），不是人像；trailboard 黑底白色 acanthus 卷草＋紅白藍盾牌（Plan 30155／24825）；cheeks 夾著每舷兩個 hawse；head rails 最上兩道之間封死成黑釘板；cathead 端面金色雕刻臉。讀圖：11 號 sheer plan 的 cutwater、T_a（上 cheek）、B_b／B_c（下 cheek）、U、M rails、billethead、hawse；推翻者自己重新校準，差 ≤ 0.5 格。⚠ 02 號（1849 艏柱）與 11 號（1927 head）兩個年代混搭，美觀優先接受。
+- knee：前緣照 11 號 cutwater、上緣照 T_a，從艏柱前緣往前填（每一欄從最前面那格實心往前），z 63 起 ⇒ 階段二的 gripe 平台被包進去；厚 5、最前 2 格收成 3。billethead：中心 (724.5, 137)、半徑 5.3、寬 7（作品 bowsprit 15.4° 比實船 24° 平 ⇒ 放大往上抬，頂離 bowsprit 底約 5 格）；側面白色渦卷線＋外圈白、凹處黑、渦眼一格白星。
+- 貼在表面的（cheeks 凸 2、卷草與盾牌凸 1、hawse 圈凸 2）：每一層 z 在 x 600–790 裡跟船外相通、貼著實心的空格；knee 那段只取 dy ≥ 3。hawse 照 11 號正視 (dy, z) 找到船殼表面的點（x 656／662），表面距離 ＝ |Δdy|·√(1 + 1/k²)。
+- rails：側面照 11 號 U／M、平面照 Plan 25175 欄杆內寬設計（cathead 處半寬 34.5 → billethead 後 3.5，離船殼不到 1 格就往外推）；最上一道黑芯白邊、main rail 全白、兩道之間黑釘板；3 根 head timbers（上 cheek → main rail 下緣，往前傾 4 格）。cathead：cap rail 外側往前外伸 55°、上翹 8°、15 格、4×4 黑、端面金 248。
+- 草稿期間改的（每一次都是引擎渲出來才看到）：main rail 照 11 號在 cathead 下捲成大鉤 ⇒ 船殼側面像白色問號 ⇒ 短短往上一翹；卷草第一版渦捲 1.25 圈擠成亂碼、第二版像草寫字（量 v 差、波浪陡處斷線、振幅太小）⇒ 量到曲線的真正距離、振幅 0.65、波長 11、波峰往內勾 0.75 圈；billethead 第一版白底刻黑溝像鬼臉、第二版太小捲不開 ⇒ 配色反過來、半徑 5.3；hawse 圈黑貼黑看不見 ⇒ 鑄鐵灰 146。
+- 讀數：knee 6,131（knee 5,529、billethead 602）；一舷 2,925（cheek 816、panel 840、rail-main 348、rail-top 358、scroll 202、cathead 141、hawse 96、timber 80、shield 44）；組裝件 1,367,979（＝ 1,355,998 ＋ 6,131 ＋ 2 × 2,925）、link_overlap 0、1 元件、空腔 0；鏡像那一舷逐格在 320 − y（不符 0）。產生程式讀「藏起船頭三條關聯」的組裝件重產，兩份清單逐位元組相同。
+- 過程圖：`overlays/stage15_head_{side,quarter,quarter_port,front,billet,top,low}.png`、`stage15_ship_bow_far.png`。
+
+## 階段十六 帆桁（新圖紙 14）
+設計 plan.json `yards`；`design/draft_yards.py`；`verify_yards.json`、`sheet14_yards_v1.png`；`masks/yards/{fore,main,mizzen,bowsprit}.vox.txt`；固定點 `design/rig_points_yards.json`（320 個）。Tim：「yards 可以做到桅杆裡（只要繩索另外做）」⇒ 貼進四件桅杆子作品（艏斜桅那件放 spritsail yard），各打標記 `帆桁:begin／end`。
+- 資料（workflow：yard-specs＋mast-probe＋推翻者；scratchpad s13/yards_survey.json）：Martin《Close Up》附錄 A 的 1815 年長徑（推翻者逐格對過原表）；Steel 1794 錐度（中徑 → 30/31 → 7/8 → 7/10 → 端 3/7）；yards 黑、yardarm 端原木；現代實船停泊時 topsail／topgallant yard 降在 cap 上。
+- 12 根橫桁（每根桅 course、topsail、topgallant、royal）：水平、跟中線垂直、貼在那一層桅的最前緣（中心 x ＝ 前緣 ＋ 0.5 ＋ r）；做「升起」高度（之後要掛帆），收下的高度記在 `z_lowered`。fore 81／61.2／42／28 ft、main 95／70.5／46／30、mizzen 75／49／32／20.5；main yard 290 格（y 16–304）。
+- spanker gaff 44 ft（jaws z 222、往船尾上翹 35°、peak 到 x 83）、boom 62 ft（jaws z 134、上翹 3°、尾端 x 9 ⇒ 伸出船尾約 9 m；66 ft 會出界 x −2）；spritsail yard 60 ft（bowsprit cap 照 plan 從 heel 量 64 ft ＝ (785, 167)、往內 8 格、吊在 bowsprit 底下）。
+- 設計決定：fore topgallant 42 ft（紀錄 45 ft 跟 main 一樣長）；八角段、skysail、studdingsail booms、dolphin striker、trysail mast 不做。
+- 坑：spritsail 第一版拿「整件子作品最前面的 x」當 cap ⇒ 會拿到往前伸的 jibboom 那一段，不是 cap（跑之前回讀程式看到的；那一行沒跑過，先前寫的「x 958」是推的、不是量的 —— 那一行還篩了 z < 200，flying jibboom 尖在 z 224 不會被選到）；gaff／boom 第一版從桅後緣再退 r 起算、u < 0 被切掉 ⇒ 2,166 格浮空 ⇒ 從後緣起算、多留半格。
+- 讀數：新加 18,810（fore 4,850、main 7,957、mizzen 4,708、bowsprit 1,295）；每根都 6 連通接到自己的桅；鏡像差 0；組裝件 1,386,789、link_overlap 0、1 元件、空腔 0；產生程式讀四件子作品的 `帆桁:begin` 重產，四份清單與固定點檔逐位元組相同。
+- 固定點（給 TASK-0502 繩索、0503 帆）：每根橫桁 yardarm 兩端、earing 兩角（yardarm 內端，帆上緣兩角）、slings、帆上緣每 8 格一個 jackstay；gaff throat／peak＋上緣每 8 格；boom jaws／end；P ＝ y < 160、S ＝ y > 160。格式等兩張單定下來再轉。
+- 過程圖：`overlays/stage16_yards_{side,quarter,front,main_close,spanker,spritsail}.png`。
+
+## 階段十七 舵（新圖紙 15）
+設計 plan.json `rudder`；`design/draft_rudder.py`；`verify_rudder.json`、`sheet15_rudder_v1.png`；`masks/rudder/rudder.vox.txt`。子作品 `-rudder`「憲法號 舵」（中線整件、at 0,0,0）、組裝件關聯 `舵`。船殼不改。
+- 每一欄 (y, z)：從後緣線（11 號 rudder_aft_edge：x 116 → 118）到那一欄最後面的實心前一格 ⇒ 前緣貼著作品的艉柱（x 130 → 124）、頂端順著 counter 下緣收進去（實船從 helm port 穿進船裡；不刻船殼）。z 2–84，底寬 14、頂寬 1；前半 5 格厚、後半 3 格；水線 63 以下銅 168、以上黑 36。
+- 六道 pintle／gudgeon 帶（11 號 z 6、19、34、48、63、71）：深一點的銅 136、凸 1 格，舵板上到離後緣 2 格、船殼上往前 22 → 8 格；只貼在艉柱兩側 |dy| ≤ 8 —— v1 放到 40，z 70 那道在寬的 tuck 上橫貫整個船尾、像一條腰帶。
+- 讀數：3,950（舵板 3,388、帶 562）；重疊 0、浮空 0、鏡像差 0、空腔 0；組裝件 1,390,739、1 元件；重產（藏起「舵」讀組裝件）逐位元組相同。固定點：rudder.pendant-P／S（後緣兩側、z 64，給之後的 rudder pendant chains）。
+- 過程圖：`overlays/stage17_rudder_{quarter,side,astern}.png`。Tim：「舵我確認 ok」（2026-10-11）⇒ apply。
+
+## 階段十八 channels（新圖紙 16）
+設計 plan.json `channels`；`design/draft_channels.py`；`verify_channels.json`、`sheet16_channels_v1.png`；`masks/channels/side.vox.txt`；固定點 `design/rig_points_channels.json`（62 個）。子作品 `-channels`「憲法號 channels（一舷）」（固定框 at 150,161,70、460×80×50）；組裝件關聯 `channels`、`channels-鏡像`（mirror=y、at.y ＝ 321 − 161 − 80 ＝ 80）。船殼不改。
+- channel：三根桅各一組，z 109–110（白帶上方、cap rail 下方），從船殼表面往外 12 格（外緣跟著船殼曲線、兩頭收 4 格圓角）；黑 36。
+- deadeyes：main 9＋3、fore 8＋3、mizzen 6＋2（shrouds＋backstays，設計），第一個在桅前 3–4 格、往船尾每 7（mizzen 6）格一個；3×3 去四角、2 格厚、深木色 104，坐在外緣上。
+- chain plates：deadeye 底下（外緣、z 108）斜向內往下到 z 78 的船殼表面，前後照 hounds → deadeye 那條線往下延長。⚠ v1 主桅那組好幾根斜過 gun deck 砲門、像一把梳子 ⇒ 先從船殼量砲門開口（z 95 那層最外面的實心比 z 110 縮進 4 格以上 ⇒ 142 欄），下端前後挪最少的格數讓整條線在 z 86–104 都不在砲門前面（4 根挪了），10 格內找不到就在 z 105 收住（10 根）。
+- 讀數：一舷 6,506（channel 5,184、deadeye 310、plate 1,012）；重疊 0、浮空 0、空腔 0；組裝件 1,403,751、1 元件；重產（藏起 channels 兩條關聯與舵讀組裝件 ＝ 1,386,789）逐位元組相同。
+- 過程圖：`overlays/stage18_channels_{main,fore,mizzen,side}.png`、`stage18_ship_quarter.png`、`stage18_ship_port_stern.png`。Tim：「測試ok 可以套用了」（2026-10-11）。
