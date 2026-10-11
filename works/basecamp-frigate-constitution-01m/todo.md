@@ -154,6 +154,10 @@
 - [ ] spar deck：carronades（32 磅、slide carriage）與 bow chasers —— spar deck 的砲門要先開（現在 pin rails 是照 gun deck 砲門的空檔放的，開 spar deck 砲門時一起看）
 - [ ] 砲門蓋（等可以匯入模型）
 
+## 帆（kotoko 2026-10-11 噗浪上的兩點，還沒試）
+- [ ] 帆鼓得偏深（main course 最鼓點離綁點平面 89 格 ＝ 8.9 m、fore course 6.7 m；真的方帆約鼓寬度的一到兩成）⇒ 試 fullness 從 1.05 往下
+- [ ] 兩面 course 整面抬了 7–10 格：sheet 0.85 繃住、tack 還是 slack 1（垂 21–26 格）⇒ 試 tack 也收到 1 以下（她標明是從讀數推的、沒在船上試）；試完量最鼓點與下角高度回報她
+
 ## 階段二十三 艙口梯（2026-10-11 套用）
 - [x] spar → gun 4 座（waist 一對、after、fore）、gun → berth 3 座（companion、after、fore）；扶手繩 14
 - [ ] berth → orlop：三個候選都放不下（見 notes.md 階段二十三）⇒ 要的話另開一個 orlop 的梯口
