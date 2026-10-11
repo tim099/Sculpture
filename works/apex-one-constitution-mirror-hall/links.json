@@ -1,0 +1,85 @@
+{
+	"schema": 2,
+	"links": [
+		{
+			"name": "frigate",
+			"work": "basecamp-frigate-constitution-01m",
+			"at": [
+				0,
+				0,
+				800
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1024,
+				320,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T15:53:20",
+			"persona": "apex-one",
+			"note": "0.1 m 照圖紙版，正立"
+		},
+		{
+			"name": "frigate-floor",
+			"work": "basecamp-frigate-constitution-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "z",
+			"pivot": [
+				1024,
+				320,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T15:53:20",
+			"persona": "apex-one",
+			"note": "同一艘的 mirror=z：龍骨對龍骨的鏡面地板"
+		},
+		{
+			"name": "small-port",
+			"work": "basecamp-uss-constitution",
+			"at": [
+				200,
+				370,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				256,
+				100,
+				200
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T15:53:21",
+			"persona": "apex-one",
+			"note": "小比例版，照原樣"
+		},
+		{
+			"name": "small-starboard",
+			"work": "basecamp-uss-constitution",
+			"at": [
+				568,
+				370,
+				0
+			],
+			"turn": 0,
+			"mirror": "x",
+			"pivot": [
+				256,
+				100,
+				200
+			],
+			"enabled": true,
+			"created_at": "2026-10-11T15:53:21",
+			"persona": "apex-one",
+			"note": "小比例版 mirror=x：與 small-port 以 x=511.5 為鏡面對稱，船頭相對"
+		}
+	]
+}
