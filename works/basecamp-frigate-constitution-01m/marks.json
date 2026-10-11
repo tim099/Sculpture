@@ -139,11 +139,47 @@
 		{
 			"name": "砲門",
 			"phase": "end",
-			"event": "2026-10-11/104341_133_79efc3.json",
-			"event_index": 469,
-			"created_at": "2026-10-11T10:44:08",
+			"event": "2026-10-11/134959_755_5b77e3.json",
+			"event_index": 470,
+			"created_at": "2026-10-11T13:50:09",
 			"persona": "basecamp",
-			"note": "階段八 TASK-0490：44 刀 carve（7,924）＋ lining 416 ＋ 細修（白帶補漆 36、補洞 8）；586,200"
+			"note": "階段八 TASK-0490：44 刀 carve（7,924）＋ lining 416 ＋ 細修 v1.1（白帶補漆 36、補洞 8）＋ v1.2 船頭砲門兩側垂直（草稿 apply：刻 138、補 4、補漆 16）；586,066"
+		},
+		{
+			"name": "補空腔",
+			"phase": "begin",
+			"event": "2026-10-11/134959_755_5b77e3.json",
+			"event_index": 470,
+			"created_at": "2026-10-11T13:50:53",
+			"persona": "basecamp",
+			"note": "外板與砲門封住的封閉空腔用鄰近顏色補實（Tim 2026-10-11）；design/tools/fill_cavities.py after_stage8"
+		},
+		{
+			"name": "補空腔",
+			"phase": "end",
+			"event": "2026-10-11/135258_665_3be41b.json",
+			"event_index": 471,
+			"created_at": "2026-10-11T13:52:59",
+			"persona": "basecamp",
+			"note": "封閉空腔 2,200 個／5,602 格補實（6 鄰居最多的顏色，同票 141）；匯出 120,832 → 107,225 面；591,668"
+		},
+		{
+			"name": "船殼內部",
+			"phase": "begin",
+			"event": "2026-10-11/135258_665_3be41b.json",
+			"event_index": 471,
+			"created_at": "2026-10-11T14:35:55",
+			"persona": "basecamp",
+			"note": "階段九 TASK-0496：內板、limber、clamps／stringer／spirketting、斜肋、breast hooks／crutches（新圖紙 07）"
+		},
+		{
+			"name": "船殼內部",
+			"phase": "end",
+			"event": "2026-10-11/152558_382_fe8a41.json",
+			"event_index": 473,
+			"created_at": "2026-10-11T15:26:00",
+			"persona": "basecamp",
+			"note": "階段九 TASK-0496：內板 140,341、limber 4,640、clamps／stringer／spirketting 28,086、斜肋 16,774、hooks 2,204、舷頂封口 170、中線換色 4,292、補空腔 33,127（v1，817,010）＋ v1.1 橫向 rider 14 根 4,434；821,444（新圖紙 07）"
 		}
 	]
 }

@@ -1,0 +1,220 @@
+{
+ "title": "USS Constitution（1797）新圖紙 07：船殼內部 v1 —— 內板・limber 厚板・clamps／stringer／spirketting・斜肋・breast hooks／crutches；甲板高度定案",
+ "task": "TASK-0496（傘 TASK-0478）",
+ "world_mark": "船殼內部:begin",
+ "world_voxels": 591668,
+ "gap_cells_x": 28211,
+ "closed_cells_depth_bounded": 3070,
+ "files": {
+  "ceiling": {
+   "cells": 140341,
+   "color": 177,
+   "sha256": "e6def46d631a981db29c6f314d01b0d8daa6bf118e8165f849157b7b0c373256"
+  },
+  "limber": {
+   "cells": 4640,
+   "color": 136,
+   "sha256": "f2093e9f646924e57646de1b1b2fb72350867f04e30553c168ecf4e2a29520c5"
+  },
+  "bands": {
+   "cells": 28086,
+   "color": 136,
+   "sha256": "a387dbd3f91f9a66f7d36601e7ac1e058798a8265ab9705cfb6a425bcae8e947"
+  },
+  "riders": {
+   "cells": 16774,
+   "color": 104,
+   "sha256": "22367dd114af47b4208405120407928b21c2ed247a1aded246d74c2fa9ddcffb"
+  },
+  "hooks": {
+   "cells": 2204,
+   "color": 104,
+   "sha256": "559d04fbfa31fda62aaf9de9682c3935418928686d680d0584682510a5bcdd21"
+  },
+  "cap": {
+   "cells": 170,
+   "color": 141,
+   "sha256": "0577bc2bdd2fc9346707b8fdeb96beeec38877a91573165f162bf60082823f0a"
+  },
+  "riders_t": {
+   "cells": 4434,
+   "color": 104,
+   "sha256": "394371e8fe78b719982fc511b53a65b631ca11507821f17316cd2c9564fc8a19"
+  },
+  "recolor": {
+   "cells": 4292,
+   "overwrite": true,
+   "by": {
+    "209→136": 3314,
+    "173→104": 978
+   },
+   "sha256": "9b2f436f10bc6ff895f43f67268876195163bad89feeb3fbacff9cf918333dd2"
+  }
+ },
+ "total_new": 196649,
+ "expect_after": 788317,
+ "recolor": {
+  "209→136": 3314,
+  "173→104": 978
+ },
+ "band_pieces_starboard": {
+  "stern_x<190": 11,
+  "bow_x>=610": 7,
+  "mid_250-560": 14
+ },
+ "rider_cells_in_berth_clamp_or_beam": 0,
+ "riders_cross_orlop": {
+  "starboard_x_runs_z38_41": [
+   [
+    270,
+    284
+   ],
+   [
+    303,
+    315
+   ],
+   [
+    335,
+    348
+   ],
+   [
+    492,
+    506
+   ],
+   [
+    511,
+    523
+   ],
+   [
+    530,
+    542
+   ]
+  ],
+  "mirrored": true
+ },
+ "visible_paint_faces": {
+  "before": 24360,
+  "after": 0,
+  "in_port_openings_before": 116,
+  "in_port_openings_after": 116
+ },
+ "port_cells_hit": 0,
+ "components_after": 1,
+ "cavities_after": {
+  "n": 494,
+  "cells": 33127
+ },
+ "mirror_mismatch": 0,
+ "riders": [
+  {
+   "end": "forward",
+   "head_st": 128.7,
+   "head_x": 520,
+   "head_z": 53,
+   "heel_x": 425.1,
+   "girth": 79.7
+  },
+  {
+   "end": "forward",
+   "head_st": 134.5,
+   "head_x": 537,
+   "head_z": 53,
+   "heel_x": 444.6,
+   "girth": 77.5
+  },
+  {
+   "end": "forward",
+   "head_st": 140.3,
+   "head_x": 555,
+   "head_z": 53,
+   "heel_x": 466.7,
+   "girth": 74.1
+  },
+  {
+   "end": "aft",
+   "head_st": 39.9,
+   "head_x": 254,
+   "head_z": 53,
+   "heel_x": 326.1,
+   "girth": 60.5
+  },
+  {
+   "end": "aft",
+   "head_st": 51.3,
+   "head_x": 288,
+   "head_z": 53,
+   "heel_x": 367.2,
+   "girth": 66.5
+  },
+  {
+   "end": "aft",
+   "head_st": 62.6,
+   "head_x": 322,
+   "head_z": 52,
+   "heel_x": 406.2,
+   "girth": 70.7
+  }
+ ],
+ "hooks": [
+  {
+   "end": "bow",
+   "z": 33,
+   "cells": 198
+  },
+  {
+   "end": "bow",
+   "z": 34,
+   "cells": 200
+  },
+  {
+   "end": "bow",
+   "z": 35,
+   "cells": 190
+  },
+  {
+   "end": "bow",
+   "z": 48,
+   "cells": 216
+  },
+  {
+   "end": "bow",
+   "z": 49,
+   "cells": 234
+  },
+  {
+   "end": "bow",
+   "z": 50,
+   "cells": 232
+  },
+  {
+   "end": "stern",
+   "z": 43,
+   "cells": 138
+  },
+  {
+   "end": "stern",
+   "z": 44,
+   "cells": 134
+  },
+  {
+   "end": "stern",
+   "z": 45,
+   "cells": 150
+  },
+  {
+   "end": "stern",
+   "z": 47,
+   "cells": 164
+  },
+  {
+   "end": "stern",
+   "z": 48,
+   "cells": 170
+  },
+  {
+   "end": "stern",
+   "z": 49,
+   "cells": 178
+  }
+ ]
+}

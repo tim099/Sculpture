@@ -12,8 +12,10 @@ def _events(work_dir):
     return [(os.path.basename(os.path.dirname(f)) + '/' + os.path.basename(f), f) for f in files]
 
 
-def replay(work_dir, upto=None, senate='senate'):
-    mark = None
+def replay(work_dir, upto=None, senate='senate', draft=False, mark=None):
+    """draft=True ⇒ 作品＋開著的草稿（`draft=1`，§9.4.3）；mark ⇒ 時間標記那一刻（例 '砲門:end'，§9.4.1）。三者只能給一個。"""
+    if sum(1 for v in (upto, draft, mark) if v) > 1:
+        raise SystemExit('replay：upto／draft／mark 只能給一個（引擎擋 draft＋mark）')
     if upto:
         keep = [n for n, _ in _events(work_dir) if n < upto]
         mark = keep[-1] if keep else 'start'          # mark=<事件> 含那一刀 ⇒ 給 upto 的前一個
@@ -24,6 +26,8 @@ def replay(work_dir, upto=None, senate='senate'):
                 '--arg', 'links=none', '--arg', 'out=' + out]
         if mark:
             args += ['--arg', 'mark=' + mark]
+        if draft:
+            args += ['--arg', 'draft=1']
         r = subprocess.run(args, capture_output=True, text=True, encoding='utf-8', errors='replace')
         if r.returncode != 0 or not os.path.exists(out):
             msg = r.stdout + r.stderr

@@ -1,8 +1,9 @@
 {
- "title": "USS Constitution（1797）新圖紙 06：gun deck 砲門 v1",
+ "title": "USS Constitution（1797）新圖紙 06：gun deck 砲門 v1.2（船頭砲門兩側垂直）",
  "task": "TASK-0490（傘 TASK-0478）",
  "world_upto": "2026-10-11/102746_183_6b04f2.json",
  "world_voxels": 593700,
+ "bow_shape": "vertical",
  "ports": [
   {
    "n": 1,
@@ -53,6 +54,7 @@
     311,
     311
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 185.05,
     "X_fwd": 195.87,
@@ -105,6 +107,7 @@
     263,
     263
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 216.28,
     "X_fwd": 226.61,
@@ -161,6 +164,7 @@
     311,
     311
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 251.05,
     "X_fwd": 262.04,
@@ -217,6 +221,7 @@
     269,
     269
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 283.82,
     "X_fwd": 294.35,
@@ -273,6 +278,7 @@
     294,
     294
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 317.48,
     "X_fwd": 328.24,
@@ -325,6 +331,7 @@
     274,
     274
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 351.81,
     "X_fwd": 362.76,
@@ -377,6 +384,7 @@
     272,
     272
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 385.48,
     "X_fwd": 395.76,
@@ -433,6 +441,7 @@
     319,
     319
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 417.08,
     "X_fwd": 427.52,
@@ -485,6 +494,7 @@
     260,
     260
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 450.2,
     "X_fwd": 460.49,
@@ -537,6 +547,7 @@
     264,
     264
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 483.35,
     "X_fwd": 493.69,
@@ -589,6 +600,7 @@
     278,
     278
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 515.38,
     "X_fwd": 525.8,
@@ -641,6 +653,7 @@
     244,
     244
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 548.78,
     "X_fwd": 559.27,
@@ -697,6 +710,7 @@
     226,
     226
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 581.57,
     "X_fwd": 591.26,
@@ -749,6 +763,7 @@
     210,
     210
    ],
+   "wall_holes": 0,
    "read": {
     "X_aft": 616.09,
     "X_fwd": 624.86,
@@ -766,41 +781,42 @@
    "x_rows": {
     "96": [
      643,
-     649
+     651
     ],
     "97": [
      643,
-     649
+     651
     ],
     "98": [
-     644,
-     649
+     643,
+     651
     ],
     "99": [
-     644,
-     650
+     643,
+     651
     ],
     "100": [
-     644,
-     650
+     643,
+     651
     ],
     "101": [
-     645,
-     650
+     643,
+     651
     ],
     "102": [
-     645,
+     643,
      651
     ],
     "103": [
-     645,
+     643,
      651
     ]
    },
    "carve": [
-    167,
-    167
+    224,
+    224
    ],
+   "wall_holes": 4,
    "read": {
     "bottom": {
      "px": [
@@ -825,15 +841,16 @@
    }
   }
  ],
- "carve_boxes": 44,
- "carve_cells": 7924,
+ "carve_boxes": 30,
+ "carve_cells": 8038,
  "carve_by_kind": {
   "frame": 4896,
-  "plank": 2586,
-  "cant": 442
+  "plank": 2622,
+  "cant": 520
  },
  "blocked_in_openings": [],
- "lining_cells": 416,
- "lining_sha256": "8ea6721eae36ef72f8541d7df6d5b72383fc9ca285955058b5828ed789e90436",
- "expect_after": 586192
+ "lining_cells": 402,
+ "lining_wall_holes": 4,
+ "lining_sha256": "7630515bdf86f1c30667f1c3145d1d6aeb81a6145c28acb634b5ef7306cc3c55",
+ "expect_after": 586064
 }

@@ -1,10 +1,13 @@
 # 新圖紙 06（TASK-0490）：gun deck 砲門 —— plan.json 的 gunports 段 ＋ source_ports.json（11 號讀數）＋ 作品現況
 #   ⇒ 刻穿外板與肋骨的 carve 盒子（masks/ports/carve_boxes.json）、砲門框的 3D 格子清單（masks/ports/lining.vox.txt）、
-#     新圖紙 06（sheet06_ports_v1.png）、verify_ports.json。
+#     新圖紙 06（plan.json gunports.sheet；v1 sheet06_ports_v1.png、v1.2 sheet06_ports_v2.png）、verify_ports.json。
+#   ⚠ 會清空 masks/ports/ 再寫 ⇒ 之後要重跑 draft_ports_touchup.py（細修清單也住那裡）。
 # 用法：python -I draft_ports.py <design 資料夾>
-#   · 開口：格中心落在讀數框裡的格（方砲門每一列同一個 x 範圍；船頭那個平行四邊形每一列照上下兩緣內插）；兩舷鏡像。
+#   · 開口：格中心落在讀數框裡的格（方砲門每一列同一個 x 範圍；船頭那個：gunports.bow_shape ＝ vertical ⇒ 平行四邊形的外框、兩側垂直（v1.2），
+#     沒給 ⇒ 每一列照上下兩緣內插（v1））；兩舷鏡像。
 #   · 刻：開口裡、屬於舷側的格（外板、方肋、cant）全刻 —— 從外面看得到船艙；hawse／knighthead／橫材／結構色碰到就拆盒子。
-#   · 框：開口外一圈、肋骨那一層（molded 線往內 m(z)）的空格補 141（port sill／lintel／port timber）。
+#   · 框：開口外一圈、肋骨那一層（molded 線往內 m(z)）的空格補 141（port sill／lintel／port timber）；
+#     v1.2 再補「牆不能有洞」（wall_holes：相鄰開口刻到多深，牆就要實心到多深）。
 #   · 讀「階段八第一刀之前」的作品（plan.json gunports.world_upto；空 ＝ 現況，雕之前用）。
 import sys, os, json, glob, hashlib
 import numpy as np
@@ -90,6 +93,10 @@ class Ports:
         zb, zt = b['bottom']['Z'], b['top']['Z']
         rows = {}
         for z in cell_rows(zb, zt):
+            if s.P.get('bow_shape') == 'vertical':
+                # v1.2（Tim 2026-10-11「船頭的炮窗 試著雕刻成垂直的吧」＋示意圖）：兩側垂直 ＝ 平行四邊形的外框
+                rows[z] = x_span(min(b['bottom']['X_aft'], b['top']['X_aft']), max(b['bottom']['X_fwd'], b['top']['X_fwd']))
+                continue
             t = (z + 0.5 - zb) / (zt - zb)
             rows[z] = x_span(b['bottom']['X_aft'] + t * (b['top']['X_aft'] - b['bottom']['X_aft']),
                              b['bottom']['X_fwd'] + t * (b['top']['X_fwd'] - b['bottom']['X_fwd']))
@@ -195,6 +202,40 @@ class Ports:
                         fill[c] = s.P['lining_color']
                 p.setdefault('ring', len(ring))
         s.fill = fill
+        s.wall_holes(carved)
+
+    def wall_holes(s, carved):
+        """v1.2：開口四面那一圈的牆不能有洞 —— 相鄰開口那一欄刻到多深（最內的 dy），牆那一欄從這個深度到它自己的外緣每一格都要是實心，
+        空的補 141。v1 只補肋骨那一層（hb − m(z)），cant 那一帶的肋骨比 m(z) 深，船頭砲門後壁留過一道看得進船艙的縫（v1.1 手補 6 格）。"""
+        def occ(c):
+            return (c in s.world and c not in carved) or c in s.fill
+        s.hole_fill = {}
+        for p in s.ports:
+            rows = p['rows']
+            zs = sorted(rows)
+            ring = {}                                   # 牆那一欄 (x, z) → 相鄰開口那一欄 (x, z)
+            for z in zs:
+                xa, xb = rows[z]
+                ring[(xa - 1, z)] = (xa, z)
+                ring[(xb + 1, z)] = (xb, z)
+            for z, zz in ((zs[0] - 1, zs[0]), (zs[-1] + 1, zs[-1])):
+                xa, xb = rows[zz]
+                for x in range(xa - 1, xb + 2):
+                    ring.setdefault((x, z), (min(max(x, xa), xb), zz))
+            n = 0
+            for (x, z), (ax, az) in ring.items():
+                for side in (1, -1):
+                    dug = [d for d in range(DP.NDY) if (ax, YC + side * d, az) in p['carve'][side]]
+                    wall = [d for d in range(DP.NDY) if occ((x, YC + side * d, z))]
+                    if not dug or not wall:
+                        continue
+                    for d in range(max(min(wall), min(dug)), max(wall) + 1):
+                        c = (x, YC + side * d, z)
+                        if not occ(c):
+                            s.hole_fill[c] = s.P['lining_color']
+                            n += 1
+            p['wall_holes'] = n
+        s.fill.update(s.hole_fill)
 
     # ───────── 輸出 ─────────
     def write(s):
@@ -249,7 +290,8 @@ def render_sheet(P, path):
         else:
             t, b = r['top'], r['bottom']
             d.polygon([Pt(b['X_aft'], b['Z']), Pt(b['X_fwd'], b['Z']), Pt(t['X_fwd'], t['Z']), Pt(t['X_aft'], t['Z'])], outline=(30, 80, 220))
-    d.text((8, 8), 'sheet 06 v1  gun deck ports  (red: carved cells, starboard;  blue: drawing 11 port outlines;  tan: lining fill)', fill=(0, 0, 0))
+    ver = 'v2  bow port: vertical sides (outer box of the drawing parallelogram)' if P.P.get('bow_shape') == 'vertical' else 'v1'
+    d.text((8, 8), 'sheet 06 %s  gun deck ports  (red: carved cells, starboard;  blue: drawing 11 port outlines;  tan: lining fill)' % ver, fill=(0, 0, 0))
     im.save(path)
 
 
@@ -271,14 +313,15 @@ def main():
     for p in P.ports:
         zs = sorted(p['rows'])
         per.append({'n': p['n'], 'kind': p['kind'], 'z': [zs[0], zs[-1]], 'x_rows': {str(z): list(p['rows'][z]) for z in zs},
-                    'carve': [len(p['carve'][1]), len(p['carve'][-1])], 'read': p['read']})
+                    'carve': [len(p['carve'][1]), len(p['carve'][-1])], 'wall_holes': p['wall_holes'], 'read': p['read']})
     v = {'title': P.P['title'], 'task': P.P['task'], 'world_upto': P.P.get('world_upto', ''), 'world_voxels': len(P.world),
+         'bow_shape': P.P.get('bow_shape', 'parallelogram'),
          'ports': per, 'carve_boxes': len(P.cuts), 'carve_cells': tot, 'carve_by_kind': kinds,
-         'blocked_in_openings': P.blocked, 'lining_cells': len(P.fill), 'lining_sha256': P.lining_sha,
+         'blocked_in_openings': P.blocked, 'lining_cells': len(P.fill), 'lining_wall_holes': len(P.hole_fill), 'lining_sha256': P.lining_sha,
          'expect_after': len(P.world) - tot + len(P.fill)}
     json.dump(v, open(os.path.join(design, 'verify_ports.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
-    render_sheet(P, os.path.join(design, 'sheet06_ports_v1.png'))
-    print(json.dumps({k: v[k] for k in ('world_voxels', 'carve_boxes', 'carve_cells', 'carve_by_kind', 'blocked_in_openings', 'lining_cells', 'expect_after')}, ensure_ascii=False))
+    render_sheet(P, os.path.join(design, P.P.get('sheet', 'sheet06_ports_v1.png')))
+    print(json.dumps({k: v[k] for k in ('world_voxels', 'bow_shape', 'carve_boxes', 'carve_cells', 'carve_by_kind', 'blocked_in_openings', 'lining_cells', 'lining_wall_holes', 'expect_after')}, ensure_ascii=False))
 
 
 if __name__ == '__main__':

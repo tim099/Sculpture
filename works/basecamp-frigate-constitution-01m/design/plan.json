@@ -236,7 +236,7 @@
   },
 
   "gunports": {
-    "title": "USS Constitution（1797）新圖紙 06：gun deck 砲門 v1",
+    "title": "USS Constitution（1797）新圖紙 06：gun deck 砲門 v1.2（船頭砲門兩側垂直）",
     "task": "TASK-0490（傘 TASK-0478）",
     "date": "2026-10-11",
     "world_upto": "2026-10-11/102746_183_6b04f2.json",
@@ -244,12 +244,56 @@
     "source": "source_ports.json",
     "lining_color": 141,
     "carve_members": ["plank", "frame", "cant"],
+    "bow_shape": "vertical",
+    "sheet": "sheet06_ports_v2.png",
     "provenance": {
       "openings": "原圖讀數（source_ports.json，11 號 sheer plan）：14 個方砲門每個的 X_aft..X_fwd 與下緣..上緣；船頭那個是平行四邊形（上下緣水平、兩側往船頭斜，四個角量出來，每一列的 x 照上下兩緣內插）。開口 ＝ 格中心落在框裡的格（四捨五入到格）；兩舷鏡像。跟 Humphreys 1794 規格對照：15 個／舷 ＝ 14 方＋船頭 1；寬 3'5\"（10.4 格）對得上，淨高 2'11\"（8.9 格）圖上矮 0.2–0.8 格 —— 照圖",
       "cut": "設計決定（現實順序：外板鋪過去之後從板上鋸開，Tim 貼的造船說明）：一個盒子同時刻穿外板與肋骨 —— 開口範圍裡、屬於舷側的格（外板、方肋、cant）全部刻掉，所以從外面看得到船艙；⛔ hawse pieces、knightheads、chock、橫材、龍骨／艏柱／deadwood 等不准刻，盒子碰到就拆成一欄一欄。每個盒子事先驗過只含准刻的格與空氣",
       "lining": "設計決定（參考 18 世紀砲門的做法：開口上下是 port sill／lintel，左右是 port timber）：開口外一圈、肋骨那一層（molded 線往內 m(z)）的空格補 141 —— 肋骨之間 0–1 格的縫從砲門往裡看就不見了；外板那一層照舊（白帶在開口上下各留 1 格）",
       "touchup": "雕完細修 v1.1（2026-10-11，雕完派的 3 個 verifier 量到；draft_ports_touchup.py）：①白帶補漆 —— 第 4 個砲門讀數上緣 98.50 剛好落在 z98 的格中心，開口吃掉白帶最上面那一格、上面整排變黑（verifier：外觀判 major）；13／14／船頭那個有 1–3 欄碰到黑 ⇒ 上緣上一列、下緣下一列開口範圍裡最外面那格黑外板換白（36 格，overwrite，蓋之前驗是 36）。②船頭砲門後壁 (644, 160±32, 101..103) 一道看得進船艙的縫 —— 砲門框用 m(z) 定肋骨那一層，cant 那一帶的肋骨面比 m(z) 深 ⇒ 補 141。③砲門框把 (560, 160±56, 98) 兩個單格封成空腔 ⇒ 補 141。cant 照設計准刻（442 格），記在這裡免得之後被讀成違規",
+      "bow_v12": "v1.2（2026-10-11，Tim：「船頭的炮窗 試著雕刻成垂直的吧」＋示意圖：左緣照下半段往上拉直、右緣照上半段往下拉直）：船頭砲門每一列都用平行四邊形的外框 X 643..651（x_span(min X_aft, max X_fwd)，＝ v1 八列的 AABB）、Z 96..103 ⇒ 每舷一個盒子（v1 是每列一個）。原圖那個平行四邊形是 11 號側面圖的投影，留在 source_ports.json 不動。砲門框多一條「牆不能有洞」（draft_ports.py wall_holes：相鄰開口那一欄刻到的最內 dy 到牆那一欄的外緣，空的補 141）—— 方砲門 0 格；v1 的船頭砲門它量得出 10 格，其中 6 格就是 v1.1 ② 手補的那道縫 ⇒ ② 改由它補。細修的白帶補漆多算左右兩角。touchup_upto 不再用：細修照「world_upto ＋ 設計」組出來的作品算（v1.2 的設計沒有在作品裡單獨存在過）。在作品裡是一筆草稿 apply（draft_ports_v12.py 算『現況 → 新設計』的差異清單）",
       "not_now": "砲門蓋（port lids）與其他活動部件：不用 voxel 做，等 /scp-sculpture 能匯入模型（Tim 2026-10-11）；spar deck 的砲門跟舷牆、舷弧一起做；gun deck 橫樑「每個砲門底下一根、之間一根」（Humphreys）在甲板階段"
     }
+  },
+
+  "interior": {
+    "title": "USS Constitution（1797）新圖紙 07：船殼內部 v1 —— 內板・limber 厚板・clamps／stringer／spirketting・斜肋・breast hooks／crutches；甲板高度定案",
+    "task": "TASK-0496（傘 TASK-0478）",
+    "date": "2026-10-11",
+    "world_upto": "",
+    "world_mark": "船殼內部:begin",
+    "world_voxels": 591668,
+    "world_note": "讀『階段九第一刀之前』的作品：標記 船殼內部:begin（＝ 補空腔 apply 之後）。⛔ 不讀現況 —— apply 之後重跑會把內板當成船殼、再往內鋪一層（評審 F3）；world_voxels 對不上就停",
+    "stations": {"x0": 134.0, "per_ft": 2.998,
+      "provenance": "1931 inboard profile 的站位 st（ft，從船尾柱起量，LBP 175）換到作品 X：兩端錨定 —— st 0 ＝ 艉柱後緣在水線（Z 63）X 134（SPa 過 (130,8)、傾 4.3°），st 175 ＝ rabbet 在水線 X 658.6（T 上段圓心 (488.2,135) R185）⇒ X ＝ 134 ＋ 2.998·st（比 3.048 短 1.6%：作品水線長 172 ft）。換出：後桅 st 24 → X 206、主桅 st 72.5 → 351、前桅 st 151 → 587（設計決定：桅位之後做桅檣時再對 02 號）"},
+    "decks": {
+      "note": "Tim 2026-10-11：「希望甲板能大致平整（或讓彎曲處儘量在房間接縫）」⇒ 每層甲板是幾段平的（不做拱度、不做連續 sheer），高低差只落在艙壁／艙口邊（房間接縫）。segments ＝ [x 起, x 止（不含）, 甲板面 Z（＝ 甲板板最上面那一格 ＋ 1）]；null ＝ 到底。甲板本身（橫樑、肘、甲板板）在之後的子作品，這裡定高度是因為 clamps 要釘在橫樑底下",
+      "gun":   {"segments": [[null, 238, 83], [238, 504, 82], [504, 570, 83], [570, 633, 86], [633, null, 88]], "plank": 1, "beam": 4, "clamp": 3, "spirketting": "sill"},
+      "berth": {"segments": [[null, 290, 61], [290, 504, 60], [504, 587, 61], [587, null, 63]], "plank": 1, "beam": 3, "clamp": 3, "spirketting": 5},
+      "spar":  {"segments": [[null, 238, 106], [238, 570, 105], [570, 633, 108], [633, null, 110]], "plank": 1, "beam": 3, "clamp": 2},
+      "orlop": {"segments": [[167, 401, 42], [500, 634, 42]], "plank": 1, "beam": 3, "stringer": 3, "stringer_x": [167, 633],
+        "note": "平台與橫樑由 orlop 子作品照 z 38–41 的艙內空氣裁（船尾起點 x 167 半寬只有 5、船頭 x 630 以後碰 apron）；斜肋穿過平台那一層（period practice：orlop 橫樑在斜肋處開槽或避開）—— 穿越的 x 範圍寫在 verify_interior.json riders_cross_orlop"},
+      "seams": {"238": "captain's cabin 前艙壁（gun deck；第 2、3 個砲門之間，1931 的艙房包 2 個砲門／舷）＝ spar deck quarterdeck 那一道", "290": "berth deck：1812 年船員吊床區的後界 ＝ 准尉艙房靠著的 steerage 艙壁（Martin：約在主桅與後桅中間，st 50–55；X 290 ＝ st 52）", "504": "前艙口後緣（st 122.5–128）＝ gun deck 廚房（st 134–140）之前 —— ⚠ 這裡不是艙壁：甲板／房間子作品要在這條線上放一道橫向的東西（艙口圍板＋隔板或梯子），不然 1 格的高低差會在艙口外側露出來", "570": "前桅後的 riding bitts（gun／spar）", "587": "berth deck sick bay 艙壁（前桅，st 151）", "633": "manger board（第 14、15 個砲門之間，st 160+）"},
+      "seams_removed": {"603": "v1 有，評審 A4：不在任何艙壁上、6.3 m 內第三個高低差 ⇒ 刪掉，570–633 一段（gun 86、spar 108：第 13／14 個砲門下緣離甲板 6／8、spar clamp 102–103 在上緣 100／101 之上、淨高 18）"},
+      "provenance": "原圖讀數：15 號（1928 船中剖面，150 px/ft，從護龍骨底量；verifier 確認）gun 26.27 ft（Z 80.07）／berth 19.07–19.14（58.2）／orlop 13.09（39.9）／spar 33.6（102.4）at CL；拱度 gun 5\"、berth 3\"、orlop 3\"、spar 2½\"。設計決定：四層一起比 15 號高 2 格 —— 作品的砲門照 11 號（1927）比 15 號的甲板高 2–3 格（2026-10-11 已記的落差），Humphreys 規定砲門下緣離 gun deck 2'2\"–2'4\"（6.6–7.1 格）⇒ 船中 gun deck 82 ＝ 下緣 88／89 上 6／7 格。每一段的高度照兩條約束挑：① gun deck 每個砲門下緣離甲板 6–9 格（Martin：1833 年才把下緣統一成 2 ft，之前不齊）；② spar deck 的 clamp 要在砲門上緣之上（S_spar ≥ 上緣開口最高格 ＋ 7）。前後的升高對照 1931 inboard profile 量到的甲板 sheer（gun 船頭 ＋6.9 格、船尾 ＋1.2；berth 船頭 ＋4.4、船尾 ＋1.2；spar 船頭 st145 ＋4.3、船尾 ＋4），階段之間的高低差放在 seams 那幾道艙壁上。層間淨高：gun deck 到 spar 橫樑底 18–19 格（5.9–6.2 ft，15 號 6.1）、berth 到 gun 橫樑底 16–20、orlop 到 berth 橫樑底 14–17（15 號 4.4 ft ＝ 13.5 格）。orlop 只有兩塊平台（1816 Waldo 平面圖：船尾 st 11–89、船頭 st 122–168.5，中間是開放的貨艙）"
+    },
+    "members": {
+      "ceiling": {"thick": 1, "color": 177, "provenance": "Humphreys 1794：running ceiling 4\"（1 格）；15 號（1928）現況 6½\" yellow pine（1.65 格）⇒ 取 1 格（留艙內空間）。範圍：肋骨／底肋／cant／舷牆內面整片，從 keelson 旁（limber 蓋板）一路到舷頂；砲門開口不蓋（開口的隧道往內多一格）。中線結構（keelson、deadwood、apron、艏柱、艉柱，|dy| ≤ 2）不蓋。肋骨之間 1 格的縫（room and space）被內板蓋住後變封閉空腔 ⇒ 階段收尾跑 fill_cavities"},
+      "limber": {"dy": [6, 12], "x": [214, 577], "color": 136, "x_note": "船尾起點 190 → 214（評審 A5：190–213 的底肋陡升，同一條 dy 6–12 的厚板跨 10 列、頂到 orlop stringer；214 起頂 ≤ z 32，端點是整齊的一刀）", "provenance": "04 號（verifier 量）：keelson 旁第一道厚板在離中線 1.83–4.03 ft（dy 5.6–12.3），Humphreys：limber streaks 2 道 6\"x14\" ⇒ 底肋頂上多一層（共 2 格）；離中線 1.06–1.83 ft 那一段是 limber 蓋板（1 格，下面是 limber 水道）"},
+      "bands": {"color": 136, "thick": 2, "provenance": "clamps：15 號 spar 8½\"x7\"、gun 11\"x7½\"、berth 11\"x6½\"；orlop stringer 10\"x4½\"（04／15 號）—— 厚 7\" ≈ 2 格（內板 1 ＋ 凸出 1），高 2–3 格，頂 ＝ 橫樑底。spirketting：gun deck 15 號 10\"x7\"＋9½\"x7\"、Humphreys／USSCM／1834 年那封信都說到砲門下緣 ⇒ 每一段從甲板面到『這一段最低的砲門下緣 − 1』，下緣比較高的砲門底下再補到它自己的下緣 − 1（寬 ＝ 開口 ±1；評審 R2：v1 固定 5 格，14／15 個砲門下面露出 1–3 列淡色）；berth deck 2 道 5\"（Humphreys）⇒ 甲板面往上 5 格。厚 2 格；都跟著甲板的分段在艙壁處一起升降。往內那一格沿船殼表面的法向取（6 鄰居碰到內板，不只 ±y）＋同一層 z 補一次斜接（評審 A1：v1 只沿 y 偏移，船頭船尾的帶子碎成磚塊，bow 240 塊）"},
+      "riders": {"angle_deg": 40, "sided": 3, "moulded": 4, "color": 104,
+        "heads_st": {"forward": [128.7, 134.5, 140.3], "aft": [39.9, 51.3, 62.6]},
+        "provenance": "Humphreys 1794：diagonal riders six pair each side；04 號：『DIAGONAL RISERS 6 PAIRS EACH SIDE, 3 FORWARD & 3 AFT OF SHIP'S MIDSHIP … HEEL OF RISER TENONED INTO KEELSON … LIVE OAK』；15 號『DIAGONAL RISER 9\"x16\"』（sided 9\" ≈ 3 格、moulded 16\" ≈ 4 格）。位置（v1.1，評審 R1）：15 號立面在 gun deck 第 7 個砲門（從前數）那一帶畫了兩根 rider（船中，往船尾斜下、投影約 27°）；Marquardt（論壇轉述，MSW）：原本的 riders 頭在 berth 橫樑 18／20／22 ⇒ 設計決定：後組頭在 berth 橫樑 24／22／20（1931 profile 站位 st 39.9／51.3／62.6 → X 254／288／322），前組頭在 9／8／7（st 128.7／134.5／140.3 → X 520／537／555），兩組的跟分在主艙口（st 89.5–93）兩側、不交叉，本體落在中間開放的主貨艙。⚠ v1 用過『前組頭在船頭數來第 8、6、4 根』—— 那句來自一次搜尋工具的摘要（USNI 1994，原文 403 讀不到、masshist 那篇沒有這句），驗不到 ⇒ 不用。走向：頭往船的兩端、跟往船中（把兩端的彎矩引到船中的 keel）。角度：展開面（x 對沿船殼的弧長）40°，投影出來約 27° ＝ 15 號立面。頭停在 berth deck clamp 底下一格（v1 頭穿進 clamp、14 格進到橫樑那一層，評審 R8／F2），跟在 keelson 側面。顏色深色（live oak）"},
+      "hooks": {"rows": 3, "moulded": 3, "arm": 18, "color": 104, "bow_z": [33, 48], "stern_z": [43, 47],
+        "provenance": "Humphreys：breast hooks of live oak 5 in the hold（含 deck hooks）；1931 profile：船頭 hold 裡 3 道（berth deck hook 以下約 4.1／7.2／8.4 ft ⇒ 作品 Z ≈ 47–48／38／34）、2 道 deck hook，船尾 3 道 crutches（20.3／16.5／14.4 ft ⇒ Z ≈ 61／49／43）。v1.1（評審 R4／A6）：船頭 33–35、48–50（Z 38 那道是 orlop 平台的 deck hook ⇒ orlop 子作品），船尾 43–45、47–49（x ≤ 167，在 orlop 平台之後；Z 61 那道是 berth deck 的 transom knee ⇒ berth 子作品）；v1 的 24／31 那兩道（船尾 z 24 只有 12 格、是 deadwood 上的一個疙瘩）刪掉。每道 3 格高（sided 12\"）、往內 3 格（moulded）、兩臂沿船殼往後（船尾那組往前）18 格；hooks 蓋過 orlop stringer"},
+      "centreline_recolor": {"keelson": [209, 136], "apron": [173, 104],
+        "provenance": "評審 A3：中線結構露在艙內的那一層格子換色（只換『跟艙內空氣共一個面、不跟船外空氣共面』的格；|dy| ≤ 2、x ≥ 131）—— keelson／deadwood 209（亮橘粉，艙內最亮最飽和）→ 136（跟 clamps、limber 同一個橡木色）；apron／stemson／艉柱 173（粉紅）→ 104（跟斜肋、hooks 同一個深色）。船外看得到的格不動"},
+      "transverse_riders": {"frames": [-34, -30, -26, -5, 14, 18, 22], "sided": 3, "moulded": 3, "z_max": 34, "color": 104,
+        "provenance": "v1.1（Tim 2026-10-11 看過斜肋後：「維持斜肋吧」「再加幾根橫向吧」＋一張剖面圖：底艙一根沿船殼彎上去、垂直龍骨的 rider）⇒ 一般巡防艦底艙的橫向 rider（floor／futtock riders，疊在內板上、對齊肋骨穿釘）；Humphreys 規格只寫了 diagonal riders 與 transom riders，橫向這幾根是設計決定。站位：肋位 k（x ＝ 448.904 ＋ 6.579·k）每 4 個肋位一根、挑跟斜肋（外擴 1 格）與 hooks 都不重疊的 —— 船尾 k −34／−30／−26（X 225／252／278）、主艙口 k −5（X 416，兩組斜肋的跟中間）、船頭 k 14／18／22（X 541／567／594）；最兩頭船殼太窄不放。形狀：每個切片離實心 ≤ 3.5 格的艙內空氣（貼著內板、limber 厚板、keelson 側面往內 3 格）、dy ≥ 3（不蓋 keelson 頂）、z ≤ 34（停在 orlop stringer 底下）、寬 3 格（x0 −1..+1）。顏色同斜肋（live oak）"},
+      "centreline_x_min": 131,
+      "cap": {"color": 141, "provenance": "設計決定（2026-10-11 量到）：內板蓋住之後，肋骨之間 1 格寬的縫還有 25,060 格從船底通到舷頂開口（從上面看是一條條深縫、匯出多一堆內面；階段五起就在）⇒ 縫在舷頂那一列（z ＝ 肋骨頂）補 141，整條縫變封閉空腔，收尾 fill_cavities 補實。之後舷牆／舷頂起翹時蓋板疊在上面"},
+      "colors_note": "Tim 2026-10-11：「艙內可以用原木色（比較美觀）」⇒ 不照 Constitution 的刷白（日誌：hold／berth／gun deck 都刷白，Martin《Close Up》）—— 原木三色：內板 177（淡米棕，yellow pine）、clamps／spirketting／stringer／limber 136（栗棕，white oak 上油）、斜肋／hooks 104（深棕，live oak）。配色是在草稿裡渲同角度比出來的：第一版用 141／105（藍分量 85）木頭偏紫灰 ⇒ 換藍分量 0；帶子試過 140（亮處偏芥末黃）⇒ 136。甲板（子作品）之後用更淡的磨過的松木色"
+    },
+    "not_now": "甲板骨架（橫樑、carlings／ledges、hanging／lodging／dagger knees、standards、waterways、deck hooks、柱子）與甲板板 ⇒ 甲板子作品（每層一件，關聯進船殼；左右對稱的零件等 TASK-0497 鏡像）；房間（艙壁、不放門）⇒ 房間子作品；舷頂照 sheer 起翹與舷牆（拍板：起翹）⇒ 之後；bilge 的厚板（15 號 7½\" in the bends）不做（設計決定：斜肋已經給底艙層次）"
   }
 }
