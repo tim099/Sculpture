@@ -42,10 +42,8 @@ if NOLINE:
     post = {k: v for k, v in post.items() if k not in lining}
 
 # ── 結果帳 ──
-inbox = set()
-for b in boxes:
-    for c in pre:
-        pass
+paint = load_list(DES + '/masks/ports/touchup_paint.vox.txt')     # v1.1 細修：白帶補漆（overwrite）
+fill = load_list(DES + '/masks/ports/touchup_fill.vox.txt')       # v1.1 細修：船頭砲門後壁的縫＋兩個單格空腔
 cut = set()
 for b in boxes:
     for x in range(b['x1'], b['x2'] + 1):
@@ -55,6 +53,9 @@ for b in boxes:
                     cut.add((x, y, z))
 expect = {k: v for k, v in pre.items() if k not in cut}
 expect.update(lining)
+expect.update(fill)
+check('白帶補漆只蓋在黑外板上（細修前是 36）', all(expect.get(k) == 36 for k in paint), sum(1 for k in paint if expect.get(k) != 36))
+expect.update(paint)
 miss = sum(1 for k in expect if k not in post)
 extra = sum(1 for k in post if k not in expect)
 diffc = sum(1 for k in expect if k in post and post[k] != expect[k])
@@ -62,7 +63,7 @@ check('結果帳：應有 %d ／ 實有 %d' % (len(expect), len(post)), miss == 
 evs = sorted(glob.glob(W + '/events/*/*.json'))
 later = [f for f in evs if os.path.basename(os.path.dirname(f)) + '/' + os.path.basename(f) >= FIRST]
 ops = [json.load(open(f, encoding='utf-8')).get('op') for f in later]
-check('階段八的事件 ＝ %d 刀 carve ＋ 1 刀 stampvox' % len(boxes), ops == ['carve'] * len(boxes) + ['stampvox'], '%d 個事件' % len(later))
+check('階段八的事件 ＝ %d 刀 carve ＋ 1 刀 stampvox（lining）＋ 2 刀細修' % len(boxes), ops == ['carve'] * len(boxes) + ['stampvox'] * 3, '%d 個事件' % len(later))
 check('lining 只落在空格（階段八前也是空的）', all(k not in pre for k in lining) and all(k not in cut for k in lining))
 
 # ── 刻掉的是誰 ──
@@ -159,6 +160,37 @@ for p in vp['ports']:
                 if (x, YC + side * d, z) not in post:
                     gaps.append((p['n'], x, YC + side * d, z))
 check('砲門框：開口四面在肋骨那一層沒有空格（%d 格面）' % faces, not gaps, gaps[:6])
-asym = sum(1 for (x, y, z) in cut if (x, 2 * YC - y, z) not in cut) + sum(1 for (x, y, z) in lining if (x, 2 * YC - y, z) not in lining)
+# 白帶：每個砲門上緣上一列、下緣下一列，開口範圍裡最外面那格外板是白（verifier 量到第 4 個上面整排是黑）
+plank_cells = set()
+for f in glob.glob(DES + '/masks/planking/plank_*.vox.txt') + [DES + '/masks/planking/dub.vox.txt']:
+    plank_cells |= set(load_list(f))
+nowhite = []
+for p in vp['ports']:
+    rows = {int(z): v for z, v in p['x_rows'].items()}
+    zs = sorted(rows)
+    for z, zr in ((zs[-1] + 1, zs[-1]), (zs[0] - 1, zs[0])):
+        for x in range(rows[zr][0], rows[zr][1] + 1):
+            for side in (1, -1):
+                outer = next(((x, YC + side * d, z) for d in range(80, -1, -1) if (x, YC + side * d, z) in plank_cells and (x, YC + side * d, z) in post), None)
+                if outer is None or post[outer] != 255:
+                    nowhite.append((p['n'], x, z, side, post.get(outer) if outer else None))
+check('白帶：每個砲門上下各一列白（開口範圍裡最外面那格外板）', not nowhite, nowhite[:6])
+# 封閉空腔：階段八前後各數一次（6 連通、跟外面不通的空氣）—— 階段八不應新增
+def cavities(vox):
+    k = np.array(list(vox.keys()))
+    lo = k.min(0) - 1
+    A = np.zeros(k.max(0) - lo + 2, bool)
+    A[tuple((k - lo).T)] = True
+    lab, n = ndimage.label(~A)
+    outside = lab[0, 0, 0]
+    inner = (lab != outside) & ~A
+    ids = set(np.unique(lab[inner]).tolist())
+    cells = {tuple(int(v) for v in c + lo) for c in np.argwhere(inner)}
+    return len(ids), cells
+npre, cpre = cavities(pre)
+npost, cpost = cavities(post)
+newc = sorted(cpost - cpre)
+check('階段八沒有新增封閉空腔（前 %d 個／%d 格 → 後 %d 個／%d 格）' % (npre, len(cpre), npost, len(cpost)), not newc, newc[:6])
+asym = sum(1 for (x, y, z) in cut if (x, 2 * YC - y, z) not in cut) + sum(1 for (x, y, z) in lining if (x, 2 * YC - y, z) not in lining)     + sum(1 for (x, y, z) in paint if (x, 2 * YC - y, z) not in paint) + sum(1 for (x, y, z) in fill if (x, 2 * YC - y, z) not in fill)
 check('兩舷鏡像（刻掉的格＋砲門框）', asym == 0, asym)
 print('ALL OK' if ok else 'FAIL')
