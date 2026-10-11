@@ -98,7 +98,7 @@
 - [x] 子作品 `-stern-deco`「憲法號 船尾裝飾」（parent ＝ 船殼）＋ 組裝件關聯 `船尾裝飾`：1,676 格（窗格、pilasters、拱線、星、鷹、船名、白線）
 - [x] 組裝件 1,355,998、link_overlap 0、1 元件、空腔 0；產生程式讀 `船尾窗:begin` 重產兩份清單逐位元組相同
 - 草稿期間改掉的：船名在引擎裡反了（從船尾看觀者左手邊 ＝ −y）、白窗格像柵欄 ⇒ 黑、星星像小烏龜、拱線圓角糊成一團、拱線細化左右差 12 格 ⇒ 只算半邊再鏡射
-- [ ] Tim 在 Unity 看船名是不是正著讀（引擎裡是正的；從 OBJ 匯出的軸推起來應該一致，沒實測）
+- [x] Tim 在 Unity 看船名是不是正著讀 —— Tim 2026-10-11：「船名 ok」
 - [ ] 之後：quarter galleries（子作品，掛在 fashion pieces 外面）、上層船尾窗（1927 有三扇；這次照照片放鷹與星）、舵、船尾燈籠、davits 與小艇
 
 ## 階段十五 船頭（2026-10-11 套用）
@@ -113,7 +113,7 @@
 - [x] 資料 workflow（尺寸＋桅的量測＋推翻者）；新圖紙 14（`design/draft_yards.py`、`sheet14_yards_v1.png`、`verify_yards.json`；設計在 plan.json `yards`）
 - [x] 12 根橫桁＋spanker gaff／boom（後桅）＋spritsail yard（艏斜桅）貼進四件桅杆子作品；固定點 320 個（`design/rig_points_yards.json`）
 - [x] Tim「測試ok 可以套用了」⇒ 四件各打 `帆桁:begin` → apply（mismatch 0）→ `帆桁:end`；組裝件 1,386,789、1 元件、空腔 0；重產逐位元組相同
-- [ ] 固定點清單照 TASK-0502／0503 定下來的格式轉；之後的部件（channels、cleats、bitts…）也照這個做
+- [ ] 固定點清單照 TASK-0502／0503 定下來的格式轉（`work sub=anchor`；`design/tools/register_anchors.py <rig_points 檔>`）—— 已登記：channels S 舷 deadeye 31（靜索試掛）、繫繩點 125（階段十九）；**帆桁的 320 個還沒**（掛帆時再登記，名字照 rig_points_yards.json）
 - [ ] 想要「停泊」的樣子時：topsail／topgallant yard 改用 `z_lowered`（plan.json yards）
 
 ## 階段十七 舵（2026-10-11 套用）
@@ -122,8 +122,26 @@
 
 ## 階段十八 channels（2026-10-11 套用）
 - [x] 新圖紙 16（`design/draft_channels.py`、`sheet16_channels_v1.png`、`rig_points_channels.json`）；子作品 `-channels`（一舷）＋關聯 channels／channels-鏡像；一舷 6,506 格；Tim「測試ok 可以套用了」⇒ apply；組裝件 1,403,751
-- [ ] chain plates 長短不一（10 根在白帶上緣收住）—— Tim 想全部一樣長再改
-- [ ] 之後：上 deadeyes、shrouds／lanyards（TASK-0502）、backstay stools、channel 下的支撐肘
+- [x] chain plates 長短不一（10 根在白帶上緣收住）—— Tim 2026-10-11「由你決定」⇒ 不改（只有穿過白帶那段看得到；統一變短會全拿掉、統一變長會蓋砲門；notes.md 階段十九）
+- [x] shrouds／backstays 試掛（繩，2026-10-11；notes.md「靜索試掛」）
+- [ ] 之後：上 deadeyes、lanyards、backstay stools、channel 下的支撐肘
+
+## 靜索試掛（2026-10-11；繩，不是 voxel）
+- [x] Tim：「可以先試著掛一些跟帆沒有連接的繩子測試」⇒ 固定點 134、繩 133（shrouds、backstays、futtock、topmast／topgallant shrouds、stays、bobstays），ropes_broken 0；工具 `design/tools/rig_standing_{plan,apply}.py`、清單 `design/rig_standing.json`
+- [ ] 之後：ratlines（shrouds 之間的橫繩）、lanyards 與上 deadeyes、catharpins；動索（braces、sheets、halliards…）等帆 —— 下端綁 `rig_points_belaying.json` 的 pins
+
+## 掛帆試試（2026-10-11；帆，不是 voxel）
+- [x] Tim「掛帆試試吧」「可以調整風力試試」⇒ 帆 15 面＋帆腳索 32 條；組裝件 meters_per_voxel 補 0.1；預設風 4.5,−1.5,0、4 秒（notes.md「掛帆試試」）
+- [ ] 帆桁轉角度（brace）：現在是正橫擺，正側面只看得到帆的側緣 —— 要「航行中」的樣子就轉 yard（帆桁在桅杆子作品裡是 voxel ⇒ 要重產帆桁）或至少讓帆角跟著 braces 走
+- [ ] course 的 sheet／tack 現在穿過舷牆直接綁到 pin（實船從船側的 sheave 進來）；三角帆 sheet 綁在 x 609 的 pin，離 clew 很遠 —— 之後加 sheet 的導點（船側 sheave、cathead、bumpkin）
+- [ ] 收帆（furled）／縮帆（reef）等引擎支援；spritsail、studding sails 沒掛
+
+## 階段十九 甲板繫繩點（2026-10-11 套用）
+- [x] 資料（research agent：1973 BSN 27076-B、1927 Magoun Plan X、1930 #28433／#28432、2022 照片）；新圖紙 17（`design/draft_belaying.py`、`sheet17_belaying_v1.png`、`verify_belaying.json`；設計在 plan.json `belaying`）
+- [x] 子作品 `-fiferails`（parent ＝ spar deck，關聯進 `甲板-spar` 名 `fife-rails`）2,393 格；`-belaying-side`（一舷，關聯 `繫繩欄`／`繫繩欄-鏡像`）832 格
+- [x] Tim「測試ok 可以套用了」⇒ apply（mismatch 0）；組裝件 1,407,808、1 元件、空腔 0；重產逐位元組相同；固定點 194（登記 125）
+- [ ] 之後：kevels、timberheads、桅腳的 cleats、bowsprit bitts 的頭；舷牆內側換實船現在的深綠（要的話另開一階段）
+- [ ] spar deck 砲門開的時候：pin rails 是照 gun deck 砲門的空檔放的，spar deck 的砲門若不在正上方要重排
 
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**

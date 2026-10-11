@@ -1727,5 +1727,177 @@
     "note": "設計（美觀為主）：channels 在白帶上方、cap rail 下方（z 109–110，2 格厚），從船殼表面往外 12 格（外緣跟著船殼曲線走，兩頭收 4 格的圓角）；盤點 agent 量過：shroud 從 masthead 拉到 channel 外緣（|dy| ≈ 69）在舷頂會讓開 cap rail 約 11 格 ⇒ 外伸 12 格夠。每根桅一組：第一個 deadeye 在桅前 fwd 格，往船尾每 spacing 格一個（shrouds 之後接 backstays）。deadeye 3×3 圓塊（十字形）、2 格厚、深木色 104，坐在 channel 外緣上；chain plate 從 deadeye 底下沿船殼往下到 z 78（wale 上方），前後方向照 shroud 的斜度（masthead hounds → deadeye 那條線往下延長）；不擋 gun deck 砲門：下端往前／後挪最少的格數讓整條線在 z 86–104 都不在砲門前面，10 格內找不到就在 z 105 收住（v1 主桅那組有好幾根斜過砲門、像一把梳子）；黑 36",
     "sources": "盤點 agent（shrouds 的幾何、channel 外伸量）；mast-probe（hounds 高度與 x）；Steel 1794（channels、deadeyes、chain plates 的做法）；Constitution 的 shroud 數量是設計（main 9、fore 8、mizzen 6，加 backstays）",
     "not_now": "shrouds 與 lanyards（繩索，TASK-0502）、上 deadeyes、backstay stools、channel 下面的支撐肘、preventer plates"
+  },
+
+  "belaying": {
+    "title": "新圖紙 17：甲板繫繩點（fife rails、bitts、舷牆 pin rails、cleats）v1",
+    "date": "2026-10-11",
+    "subworks": {
+      "fife": {
+        "id": "basecamp-frigate-constitution-01m-fiferails",
+        "title": "憲法號 fife rails 與 bitts",
+        "parent": "basecamp-frigate-constitution-01m-deck-spar",
+        "link_in": "basecamp-frigate-constitution-01m-deck-spar",
+        "link": "fife-rails",
+        "path": "甲板-spar/fife-rails",
+        "note": "三根桅的 fife rail（U 形、開口朝前）＋前端兩根 bitts；中線整件、at 0,0,0、尺寸 ＝ 船殼；關聯進 spar deck 子作品（藏 spar deck ⇒ 一起藏，同房間的做法）"
+      },
+      "side": {
+        "id": "basecamp-frigate-constitution-01m-belaying-side",
+        "title": "憲法號 舷牆 pin rails 與 cleats（一舷）",
+        "parent": "basecamp-frigate-constitution-01m",
+        "link": "繫繩欄",
+        "mirror_link": "繫繩欄-鏡像",
+        "box": {
+          "at": [
+            120,
+            161,
+            100
+          ],
+          "size": [
+            540,
+            80,
+            40
+          ]
+        },
+        "note": "y > 160 那一舷；另一舷 mirror=y、at.y ＝ 321 − 161 − 80 ＝ 80（同 channels）"
+      }
+    },
+    "base": {
+      "hide_links": [
+        "甲板-spar/fife-rails",
+        "繫繩欄",
+        "繫繩欄-鏡像"
+      ],
+      "assembly_voxels": 1403751,
+      "note": "現況讀組裝件藏起這三條關聯（子作品與空關聯要先建好 —— 引擎不准藏還不存在的關聯）⇒ 套用之後重跑逐位元組一樣。繩索不是 voxel，不影響"
+    },
+    "colors": {
+      "rail": 172,
+      "post": 172,
+      "bitt": 172,
+      "pin": 104,
+      "knee": 36,
+      "sheave": 36,
+      "cross_pin": 146,
+      "cleat": 136
+    },
+    "deck_z": {
+      "segments": [
+        [
+          null,
+          238,
+          106
+        ],
+        [
+          238,
+          570,
+          105
+        ],
+        [
+          570,
+          633,
+          108
+        ],
+        [
+          633,
+          null,
+          110
+        ]
+      ],
+      "note": "spar deck 面（第一個空格的 z）＝ plan.json interior.decks.spar"
+    },
+    "fife": {
+      "rail_h": 8,
+      "rail_w": 3,
+      "pin_up": 2,
+      "pin_down": 2,
+      "pin_step": 3,
+      "masts": [
+        {
+          "mast": "mizzen",
+          "xm": 204.5,
+          "rail_x0": 195,
+          "athwart": 31,
+          "posts": [
+            -12,
+            -5,
+            5,
+            12
+          ],
+          "side_dy": 8,
+          "side_len": 15,
+          "bitt_h": 13
+        },
+        {
+          "mast": "main",
+          "xm": 350.0,
+          "rail_x0": 340,
+          "athwart": 51,
+          "posts": [
+            -23,
+            -14,
+            -5,
+            5,
+            14,
+            23
+          ],
+          "side_dy": 9,
+          "side_len": 19,
+          "bitt_h": 15
+        },
+        {
+          "mast": "fore",
+          "xm": 586.5,
+          "rail_x0": 576,
+          "athwart": 41,
+          "posts": [
+            -18,
+            -10,
+            0,
+            10,
+            18
+          ],
+          "side_dy": 8,
+          "side_len": 21,
+          "bitt_h": 15
+        }
+      ],
+      "note": "設計（美觀為主，尺寸照 1973 BSN 27076-B『Fife Rails & Bitts』與 1927 Magoun Plan X）：U 形開口朝前 —— 桅後一根橫的 athwartship rail（main 17'-0\" ≈ 51 格、fore 13'-8\" ≈ 41、mizzen 10'-2\" ＝ 31，取奇數 ⇒ 對中線 160 左右對稱；12\" 寬 ＝ 3 格、1 格厚），兩根縱向 side rail 從它往前、在桅兩側（main ±6'3\"/2、fore／mizzen ±29\" ⇒ ±9／±8 格），前端各接一根 bitt；rail 頂離甲板 33½\" ⇒ rail 那一格在甲板面 ＋8。athwartship rail 底下車削的 baluster（main 6、fore 5、mizzen 4；3×3 的座與頂、中間十字斷面（草稿 v1 腰上多一圈 3×3，渲出來像串珠 ⇒ 拿掉））。bitts 3×3（main 11\"、fore 13½\"），高 main 61\" ＝ 15、fore 58\" ＝ 15、mizzen 13（設計）；上段一根鐵 cross pin（146）前後穿過、外側面兩格深色 sheave 槽、前面一塊黑 knee（1973：『sheet bitt knees… painted black』）。belaying pins：rail 中線每 3 格一根（1⅛\" 孔、19½\" lignum vitae ⇒ 1 格粗、rail 上 2 格下 2 格；碰到 baluster 那幾格不放），深木色 104；rail、baluster、bitts 上清漆的木色 172（2022 照片：fife rails 與 bitts 是 natural finished）"
+    },
+    "pinrails": {
+      "rail_h": 10,
+      "depth": 2,
+      "max_len": 15,
+      "min_len": 9,
+      "clear_ends": 2,
+      "pin_step": 3,
+      "pin_up": 2,
+      "pin_down": 2,
+      "x_range": [150, 640],
+      "note": "設計：舷牆內側、砲門之間（實船 21 根、左右各約十根，62–78\"）—— spar deck 砲門還沒開（之後跟可動件一起做），就照 gun deck 砲門的空檔放（spar deck 的砲門大致在它們上方），每個空檔一根，長 ≤ 15 格、兩頭各讓 2 格；高 41\" ⇒ 甲板面 ＋10；2 格深（貼舷牆那排＋外排），pins 在外排每 3 格一根，兩頭底下一格的小肘"
+    },
+    "cleats": {
+      "len": 12,
+      "foot": 6,
+      "h": 2,
+      "z_above_deck": 3,
+      "x_targets": [
+        205,
+        330,
+        480,
+        600
+      ],
+      "note": "1930 Plan #28433：live oak cleat 47½\" 長（20\" 座、13¾\" 角）、9½\" 高、8½\" 寬 ⇒ 12 格長、座 6、2 格高、2 格深；位置照 1930 那張（mizzen 旁、gangway 後、anchor port 前）改成每舷四個，取最靠近 x_targets 的砲門空檔中心；甲板面 ＋3，在 pin rail 底下；色 136"
+    },
+    "anchors_note": "固定點（給之後的動索）：每根 belaying pin 的頂、bitt 頂、cleat 角的中間 ⇒ design/rig_points_belaying.json（世界座標；P ＝ y < 160、S ＝ y > 160）；套用之後再用 work sub=anchor 登記進子作品",
+    "sources": [
+      "https://ussconstitutionmuseum.org/download/fife-rails-and-bitts-arrangement-and-details-mizzen-main-and-fore-masts/ (BSN 27076-B, 1973)",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7c/USS_Constitution-_Belaying_Pin_Arrangement_at_the_Port_Rail_-_Fife_Rails_-_Section_at_Mainmast_Looking_Forward_-_NARA_-_75841381.jpg (Magoun Plan X, 1927)",
+      "https://ussconstitutionmuseum.org/download/spar-deck-bulwark-cleats-of-live-oak-material/ (#28433, 1930)",
+      "https://ussconstitutionmuseum.org/download/belaying-pins/ (#28432, 1930)",
+      "https://upload.wikimedia.org/wikipedia/commons/1/19/050_Deck_der_USS_Constitution.jpg (2022)"
+    ],
+    "not_now": "動索本身（braces、sheets、halliards… 等帆）；kevels、timberheads、桅腳的 cleats；fore 前面 bowsprit bitts 的頭；舷牆內側改成實船現在的深綠（要的話另外一階段）"
   }
 }

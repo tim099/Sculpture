@@ -24,6 +24,7 @@
 | 十六 | 新圖紙 14：帆桁（貼進桅杆子作品）—— 12 根橫桁、spanker gaff 與 boom、spritsail yard；固定點 320 個 | [stage15-16.md](stage15-16.md#帆桁一根接一根貼在桅的前面) |
 | 十七 | 新圖紙 15：舵（子作品）—— 前緣貼艉柱、頂端收進 counter、六道 pintle／gudgeon 帶 | [stage15-16.md](stage15-16.md#之後舵與-channels階段十七十八) |
 | 十八 | 新圖紙 16：channels（子作品，一舷＋鏡像）—— deadeyes 31 個、chain plates 避開砲門；固定點 62 個 | [stage15-16.md](stage15-16.md#之後舵與-channels階段十七十八) |
+| 十九 | 靜索試掛（繩 133 條、固定點 134）＋ 新圖紙 17：甲板繫繩點（子作品）—— fife rails＋bitts、舷牆 pin rails 13 根／舷、cleats；固定點 194；掛帆試試（帆 15 面、帆腳索 32） | [stage19.md](stage19.md) |
 
 ## 範圍與做法（Tim 2026-10-11）
 - 玻璃等透明部分、帆、纜索：先不做，等 `/scp-sculpture` 能直接嵌模型再處理。

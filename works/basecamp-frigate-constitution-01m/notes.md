@@ -483,3 +483,28 @@ Tim：「開一個作品來組裝憲法號，目前的作品就作為船殼部�
 - chain plates：deadeye 底下（外緣、z 108）斜向內往下到 z 78 的船殼表面，前後照 hounds → deadeye 那條線往下延長。⚠ v1 主桅那組好幾根斜過 gun deck 砲門、像一把梳子 ⇒ 先從船殼量砲門開口（z 95 那層最外面的實心比 z 110 縮進 4 格以上 ⇒ 142 欄），下端前後挪最少的格數讓整條線在 z 86–104 都不在砲門前面（4 根挪了），10 格內找不到就在 z 105 收住（10 根）。
 - 讀數：一舷 6,506（channel 5,184、deadeye 310、plate 1,012）；重疊 0、浮空 0、空腔 0；組裝件 1,403,751、1 元件；重產（藏起 channels 兩條關聯與舵讀組裝件 ＝ 1,386,789）逐位元組相同。
 - 過程圖：`overlays/stage18_channels_{main,fore,mizzen,side}.png`、`stage18_ship_quarter.png`、`stage18_ship_port_stern.png`。Tim：「測試ok 可以套用了」（2026-10-11）。
+
+## 靜索試掛（階段十九前，TASK-0502 的繩）
+Tim：「可以先試著掛一些跟帆沒有連接的繩子測試」。一格 voxel 都不動 —— 固定點與繩是作品資料（`anchors.json`／`ropes.json`），量測與清單在 `design/tools/rig_standing_plan.py` ⇒ `design/rig_standing.json`，下 CLI 的是 `design/tools/rig_standing_apply.py`（overwrite=1，重跑一樣；搬進作品後重算 ＝ 掛上去的那份）。
+- 固定點 134（主桅 34、前桅 33、後桅 26、艏斜桅 6、knee 2、船殼 2、channels 31）：從各子作品的實際格子量 —— hounds ＝ trestletrees 下一格的桅側（main z 281、fore 258、mizzen 236）、topmast head ＝ crosstrees 下一格、topgallant head ＝ royal yard 下兩格、top 邊緣上下兩層、crosstrees 兩端、桅前後面（stay 的出入口）；channels 的 deadeye 只登記 S 那一舷，P 舷用 `channels-鏡像/…`（同名翻過去，兩舷每條長度相同）。
+- 繩 133（全部掛在組裝件）：lower shrouds 46（deadeye → hounds）、backstays 16（最後一根到 topgallant head，其餘到 topmast head）、futtock 22、topmast shrouds 22、topgallant shrouds 12、stays 13（fore 4 到 bowsprit／jibboom／flying jibboom；main stay 與 preventer 到船頭 knighthead 兩側 y ±10 ⇒ 讓開前桅；main／mizzen 的 topmast 以上接前一根桅的後面；mizzen stay 到主桅 z 120）、bobstays 2（knee 前緣 → bowsprit 底）。色 #2b2620（上過焦油的靜索），粗 0.4–1.5 格。
+- slack：shrouds、backstays 1.0（拉直）；stays 1.0006–1.0008（下垂 3.8–11.9 格）。⚠ backstays 第一版 1.0004 就垂 19–37 格（長而陡的繩一點點鬆就垂很多）⇒ 改 1.0。
+- ropes_broken 0；`overlays/stage19_rig_*`。
+
+## 階段十九 甲板繫繩點（新圖紙 17）
+設計 plan.json `belaying`；`design/draft_belaying.py`；`verify_belaying.json`、`sheet17_belaying_v1.png`；`masks/belaying/{fife,side}.vox.txt`；固定點 `design/rig_points_belaying.json`（194 個，已用 `design/tools/register_anchors.py` 登記進兩件子作品：fife 56、舷牆 69，P 舷走鏡像關聯）。資料：research agent 回的 1973 BSN 27076-B（Fife Rails & Bitts）、1927 Magoun Plan X（belaying pin 配置）、1930 #28433（cleats）／#28432（belaying pins）、2022 照片。
+- 子作品 `-fiferails`「憲法號 fife rails 與 bitts」：parent ＝ spar deck 子作品、關聯進 `甲板-spar` 名 `fife-rails`（at 0,0,0；藏 spar deck ⇒ 一起藏）。三根桅各一組 U 形、開口朝前：桅後 athwartship rail（main 51／fore 41／mizzen 31 格，取奇數 ⇒ 對 160 對稱；3 格寬、1 格厚，甲板面 ＋8）、兩側 side rail（±9／±8／±8）往前接 bitts（3×3，高 15／15／13；上段鐵 cross pin 146 前後穿過、外側面 sheave 槽 36、前面黑 knee 36）；athwartship rail 下 baluster（6／5／4，座與頂 3×3、中間十字）；belaying pins 從中線往兩邊每 3 格一根、rail 上 2 下 2、104；木色 172。前桅那對 bitts 夾住 bowsprit 根部（bowsprit y 155–165、bitts y 151–153／167–169 ⇒ 兩邊各空一格；量過）。
+- 子作品 `-belaying-side`「憲法號 舷牆 pin rails 與 cleats（一舷）」：固定框 at 120,161,100、540×80×40；組裝件關聯 `繫繩欄`、`繫繩欄-鏡像`（mirror=y、at.y 80）。pin rails 13 根：gun deck 砲門（14 個，連續 ≥ 6 欄才算）之間每個空檔一根，長 ≤ 15、兩頭各讓 2；甲板面 ＋10（跨 570 高低差那根取低的那段）；2 格深、pins 在外排每 3 格、兩頭底下小肘。cleats 4 個（取最靠近 x 205／330／480／600 的空檔中心；甲板面 ＋3；12 長、座 6、2 高、兩頭只留上格 ⇒ 角）；136。
+- 草稿期間改掉的：抓砲門時 z 110 那層有 channels（往外 12 格）⇒ 全段被當成砲門、只放了 7 根 ⇒ 上層改 z 106；chain plates 在 z 106 還伸在外面、被量成 1–2 欄的「砲門」⇒ 連續 6 欄以上才算；fore／mizzen 的 pins 從 rail 端點起算 ⇒ 左右不對稱 56 格 ⇒ 改從中線往兩邊；rail 12 跨 570 取 fore 那段的甲板高 ⇒ pins 頂到舷牆上緣 4 格 ⇒ 取低的；baluster 腰上一圈 3×3 渲出來像串珠 ⇒ 拿掉。
+- 讀數：fife 2,393（bitt 774、post 720、rail 627、pin 200（50 根）、cross pin 36、knee 36）、舷牆一舷 832（pinrail 390、pin 260（65 根）、cleat 130、bracket 52）；撞到現況 0、鏡像重疊 0、fife 左右不對稱 0、浮空 0、空腔 0。Tim「測試ok 可以套用了」⇒ apply（changed 2,393／832、mismatch 0）；組裝件 1,407,808、link_overlap 0、1 元件、空腔 0；重產（藏 `甲板-spar/fife-rails`、`繫繩欄`、`繫繩欄-鏡像` 讀組裝件 ＝ 1,403,751）三個檔逐位元組相同。
+- chain plates 長短不一（階段十八）：Tim「由你決定」⇒ **不改**。近看它們只在穿過白帶那一段看得到（`overlays/stage19_chainplates_keep.png`）；統一變短 ⇒ 那一段全拿掉，統一變長 ⇒ 蓋住砲門。
+- 過程圖：`overlays/stage19_belay_*`（`_main_v1_beads` 是改 baluster 之前）。
+
+## 掛帆試試（TASK-0503 的帆）
+Tim：「掛帆試試吧」「可以調整風力試試」。一格 voxel 都不動 —— 帆、帆腳索、風是組裝件的作品資料（`sails.json`／`ropes.json`）。工具 `design/tools/sails_test.py`（`--apply` 下 CLI、overwrite=1 重跑一樣）⇒ `design/sails_test.json`。先把帆桁的 320 個固定點登記進四件桅杆子作品（`tools/register_anchors.py . rig_points_yards.json`）。
+- 帆 15 面：方帆 11（fore／main 的 course、topsail、topgallant、royal；mizzen 的 topsail、topgallant、royal）上緣（邊 0）整條釘在兩個 earing 之間、下兩角 free；topsail 以上的 sheet 綁到下一根帆桁同舷的 earing（長 3）；course 的 sheet 往後、tack 往前綁到舷牆 belaying pin（fore：pinrail-11／13、main：pinrail-4／8；sheet slack 0.85 把下角往後下拉）。spanker：gaff top8–top120、boom top176–top8，gaff／boom／桅三條邊釘住、只有 leech 自由。三角帆 3（fore topmast staysail、jib、flying jib）：tack 在 stay 下端、head 是 stay 上 75／70／80% 那一格（前桅子作品裡登記 `*.head`）、luff 沿 stay（那三條 stay 改 slack 1 拉直）、clew free、兩舷各一條 sheet 到前甲板 pinrail-13。動索色 #a08458。
+- ⚠ **組裝件沒記比例**（`meters_per_voxel` 0 ⇒ 預設 1 m ＝ 32 格），帆的重力與風照它換算 ⇒ 第一輪的力大了 3.2 倍。船殼有記 0.1，組裝件是後來另開的、沒繼承 ⇒ `work sub=update meters_per_voxel=0.1`。
+- 風：v1 7,−3,0（7.6 m/s）＋fullness 1.08 ⇒ 方帆最鼓 76–106 格、正側面像降落傘，course 下角被吹得往前往上 ⇒ 預設改 4.5,−1.5,0（4.7 m/s）、方帆 fullness 1.05、course sheet 收短 15%。比較圖 `overlays/stage19_sails_wind_compare.png`（2.6／4.7／7.6 m/s，view 的 `wind=` 單次覆寫，不改預設）。
+- 讀數（4.7 m/s、4 秒 240 步、每步約 4.4 ms）：最鼓 main course −89、fore course −67、topsail −46～−59、topgallant −33～−44、royal −25～−34、spanker 20、三角帆 14～31；sails_broken 0、帆腳索 32 條 ropes_broken 0。
+- 正側面看方帆像一條條彎弧：帆桁是正橫擺的（沒有 brace），從正側面看剛好是帆的側緣 —— 不是錯。
+- 過程圖：`overlays/stage19_sails_*`（`_v1_bowq_scale_wrong` 是比例錯的那一輪）。

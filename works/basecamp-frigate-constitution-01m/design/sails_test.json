@@ -1,0 +1,480 @@
+{
+ "wind": "4.5,-1.5,0",
+ "sail_seconds": 4,
+ "anchors": [
+  {
+   "work": "basecamp-frigate-constitution-01m-mast-fore",
+   "name": "fore-topmast-staysail.head",
+   "at": [
+    638,
+    160,
+    361
+   ]
+  },
+  {
+   "work": "basecamp-frigate-constitution-01m-mast-fore",
+   "name": "jib.head",
+   "at": [
+    675,
+    160,
+    471
+   ]
+  },
+  {
+   "work": "basecamp-frigate-constitution-01m-mast-fore",
+   "name": "flying-jib.head",
+   "at": [
+    662,
+    160,
+    523
+   ]
+  }
+ ],
+ "stays_straight": [
+  "fore-topmast-stay",
+  "jib-stay",
+  "flying-jib-stay"
+ ],
+ "sails": [
+  {
+   "name": "fore-course",
+   "corners": "前桅/fore-course.earing-P|前桅/fore-course.earing-S|590,248,145|590,72,145",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "course：sheet 往後、tack 往前綁到舷牆 belaying pin"
+  },
+  {
+   "name": "fore-topsail",
+   "corners": "前桅/fore-topsail.earing-P|前桅/fore-topsail.earing-S|590,270,258|590,50,258",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（course）同舷的 earing"
+  },
+  {
+   "name": "fore-topgallant",
+   "corners": "前桅/fore-topgallant.earing-P|前桅/fore-topgallant.earing-S|590,237,421|590,83,421",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（topsail）同舷的 earing"
+  },
+  {
+   "name": "fore-royal",
+   "corners": "前桅/fore-royal.earing-P|前桅/fore-royal.earing-S|591,218,521|591,102,521",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing"
+  },
+  {
+   "name": "main-course",
+   "corners": "主桅/main-course.earing-P|主桅/main-course.earing-S|350,264,150|350,56,150",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "course：sheet 往後、tack 往前綁到舷牆 belaying pin"
+  },
+  {
+   "name": "main-topsail",
+   "corners": "主桅/main-topsail.earing-P|主桅/main-topsail.earing-S|350,290,280|350,30,280",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（course）同舷的 earing"
+  },
+  {
+   "name": "main-topgallant",
+   "corners": "主桅/main-topgallant.earing-P|主桅/main-topgallant.earing-S|348,249,460|348,71,460",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（topsail）同舷的 earing"
+  },
+  {
+   "name": "main-royal",
+   "corners": "主桅/main-royal.earing-P|主桅/main-royal.earing-S|347,224,569|347,96,569",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing"
+  },
+  {
+   "name": "mizzen-topsail",
+   "corners": "後桅/mizzen-topsail.earing-P|後桅/mizzen-topsail.earing-S|201,254,236|201,66,236",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（crossjack）同舷的 earing"
+  },
+  {
+   "name": "mizzen-topgallant",
+   "corners": "後桅/mizzen-topgallant.earing-P|後桅/mizzen-topgallant.earing-S|196,219,372|196,101,372",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（topsail）同舷的 earing"
+  },
+  {
+   "name": "mizzen-royal",
+   "corners": "後桅/mizzen-royal.earing-P|後桅/mizzen-royal.earing-S|192,204,457|192,116,457",
+   "corner_names": "head_p|head_s|clew_s|clew_p",
+   "bind": "0",
+   "free": "clew_s,clew_p",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing"
+  },
+  {
+   "name": "spanker",
+   "corners": "後桅/spanker-gaff.top8|後桅/spanker-gaff.top120|後桅/spanker-boom.top176|後桅/spanker-boom.top8",
+   "corner_names": "throat|peak|clew|tack",
+   "bind": "0,2,3",
+   "free": "",
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "note": "gaff、boom、桅三條邊釘住，只有 leech 自由"
+  },
+  {
+   "name": "fore-topmast-staysail",
+   "corners": "艏斜桅/cap|前桅/fore-topmast-staysail.head|690,160,205",
+   "corner_names": "tack|head|clew",
+   "bind": "0",
+   "free": "clew",
+   "fullness": 1.06,
+   "color": "#f2ead8",
+   "note": "luff（邊 0）沿 fore-topmast-stay"
+  },
+  {
+   "name": "jib",
+   "corners": "艏斜桅/jibboom-end|前桅/jib.head|770,160,225",
+   "corner_names": "tack|head|clew",
+   "bind": "0",
+   "free": "clew",
+   "fullness": 1.06,
+   "color": "#f2ead8",
+   "note": "luff（邊 0）沿 jib-stay"
+  },
+  {
+   "name": "flying-jib",
+   "corners": "艏斜桅/flying-end|前桅/flying-jib.head|850,160,250",
+   "corner_names": "tack|head|clew",
+   "bind": "0",
+   "free": "clew",
+   "fullness": 1.06,
+   "color": "#f2ead8",
+   "note": "luff（邊 0）沿 flying-jib-stay"
+  }
+ ],
+ "ropes": [
+  {
+   "name": "fore-course.sheet-S",
+   "from": "sail:fore-course/clew_s",
+   "to": "繫繩欄/pinrail-11.pin-3",
+   "thickness": 0.5,
+   "slack": 0.85,
+   "color": "#a08458",
+   "note": "course sheet（收短 15% ⇒ 下角往後下拉；v1 slack 1 下角被風吹得往前往上）"
+  },
+  {
+   "name": "fore-course.tack-S",
+   "from": "sail:fore-course/clew_s",
+   "to": "繫繩欄/pinrail-13.pin-3",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "course tack"
+  },
+  {
+   "name": "fore-course.sheet-P",
+   "from": "sail:fore-course/clew_p",
+   "to": "繫繩欄-鏡像/pinrail-11.pin-3",
+   "thickness": 0.5,
+   "slack": 0.85,
+   "color": "#a08458",
+   "note": "course sheet（收短 15% ⇒ 下角往後下拉；v1 slack 1 下角被風吹得往前往上）"
+  },
+  {
+   "name": "fore-course.tack-P",
+   "from": "sail:fore-course/clew_p",
+   "to": "繫繩欄-鏡像/pinrail-13.pin-3",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "course tack"
+  },
+  {
+   "name": "fore-topsail.sheet-S",
+   "from": "sail:fore-topsail/clew_s",
+   "to": "前桅/fore-course.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "fore-topsail.sheet-P",
+   "from": "sail:fore-topsail/clew_p",
+   "to": "前桅/fore-course.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "fore-topgallant.sheet-S",
+   "from": "sail:fore-topgallant/clew_s",
+   "to": "前桅/fore-topsail.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "fore-topgallant.sheet-P",
+   "from": "sail:fore-topgallant/clew_p",
+   "to": "前桅/fore-topsail.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "fore-royal.sheet-S",
+   "from": "sail:fore-royal/clew_s",
+   "to": "前桅/fore-topgallant.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "fore-royal.sheet-P",
+   "from": "sail:fore-royal/clew_p",
+   "to": "前桅/fore-topgallant.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "main-course.sheet-S",
+   "from": "sail:main-course/clew_s",
+   "to": "繫繩欄/pinrail-4.pin-3",
+   "thickness": 0.5,
+   "slack": 0.85,
+   "color": "#a08458",
+   "note": "course sheet（收短 15% ⇒ 下角往後下拉；v1 slack 1 下角被風吹得往前往上）"
+  },
+  {
+   "name": "main-course.tack-S",
+   "from": "sail:main-course/clew_s",
+   "to": "繫繩欄/pinrail-8.pin-3",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "course tack"
+  },
+  {
+   "name": "main-course.sheet-P",
+   "from": "sail:main-course/clew_p",
+   "to": "繫繩欄-鏡像/pinrail-4.pin-3",
+   "thickness": 0.5,
+   "slack": 0.85,
+   "color": "#a08458",
+   "note": "course sheet（收短 15% ⇒ 下角往後下拉；v1 slack 1 下角被風吹得往前往上）"
+  },
+  {
+   "name": "main-course.tack-P",
+   "from": "sail:main-course/clew_p",
+   "to": "繫繩欄-鏡像/pinrail-8.pin-3",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "course tack"
+  },
+  {
+   "name": "main-topsail.sheet-S",
+   "from": "sail:main-topsail/clew_s",
+   "to": "主桅/main-course.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "main-topsail.sheet-P",
+   "from": "sail:main-topsail/clew_p",
+   "to": "主桅/main-course.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "main-topgallant.sheet-S",
+   "from": "sail:main-topgallant/clew_s",
+   "to": "主桅/main-topsail.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "main-topgallant.sheet-P",
+   "from": "sail:main-topgallant/clew_p",
+   "to": "主桅/main-topsail.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "main-royal.sheet-S",
+   "from": "sail:main-royal/clew_s",
+   "to": "主桅/main-topgallant.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "main-royal.sheet-P",
+   "from": "sail:main-royal/clew_p",
+   "to": "主桅/main-topgallant.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "mizzen-topsail.sheet-S",
+   "from": "sail:mizzen-topsail/clew_s",
+   "to": "後桅/mizzen-crossjack.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "mizzen-topsail.sheet-P",
+   "from": "sail:mizzen-topsail/clew_p",
+   "to": "後桅/mizzen-crossjack.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "mizzen-topgallant.sheet-S",
+   "from": "sail:mizzen-topgallant/clew_s",
+   "to": "後桅/mizzen-topsail.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "mizzen-topgallant.sheet-P",
+   "from": "sail:mizzen-topgallant/clew_p",
+   "to": "後桅/mizzen-topsail.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "mizzen-royal.sheet-S",
+   "from": "sail:mizzen-royal/clew_s",
+   "to": "後桅/mizzen-topgallant.earing-S",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "mizzen-royal.sheet-P",
+   "from": "sail:mizzen-royal/clew_p",
+   "to": "後桅/mizzen-topgallant.earing-P",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "topsail 以上的 sheet"
+  },
+  {
+   "name": "fore-topmast-staysail.sheet-S",
+   "from": "sail:fore-topmast-staysail/clew",
+   "to": "繫繩欄/pinrail-13.pin-5",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "三角帆 sheet"
+  },
+  {
+   "name": "fore-topmast-staysail.sheet-P",
+   "from": "sail:fore-topmast-staysail/clew",
+   "to": "繫繩欄-鏡像/pinrail-13.pin-5",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "三角帆 sheet"
+  },
+  {
+   "name": "jib.sheet-S",
+   "from": "sail:jib/clew",
+   "to": "繫繩欄/pinrail-13.pin-5",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "三角帆 sheet"
+  },
+  {
+   "name": "jib.sheet-P",
+   "from": "sail:jib/clew",
+   "to": "繫繩欄-鏡像/pinrail-13.pin-5",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "三角帆 sheet"
+  },
+  {
+   "name": "flying-jib.sheet-S",
+   "from": "sail:flying-jib/clew",
+   "to": "繫繩欄/pinrail-13.pin-5",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "三角帆 sheet"
+  },
+  {
+   "name": "flying-jib.sheet-P",
+   "from": "sail:flying-jib/clew",
+   "to": "繫繩欄-鏡像/pinrail-13.pin-5",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "note": "三角帆 sheet"
+  }
+ ]
+}

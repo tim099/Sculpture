@@ -1,0 +1,523 @@
+{
+	"schema": 1,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 4,
+	"sails": [
+		{
+			"name": "fore-course",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "前桅/fore-course.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "前桅/fore-course.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "590,248,145",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "590,72,145",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "course：sheet 往後、tack 往前綁到舷牆 belaying pin",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:01"
+		},
+		{
+			"name": "fore-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "前桅/fore-topsail.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "前桅/fore-topsail.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "590,270,258",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "590,50,258",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（course）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:02"
+		},
+		{
+			"name": "fore-topgallant",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "前桅/fore-topgallant.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "前桅/fore-topgallant.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "590,237,421",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "590,83,421",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（topsail）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:02"
+		},
+		{
+			"name": "fore-royal",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "前桅/fore-royal.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "前桅/fore-royal.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "591,218,521",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "591,102,521",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:02"
+		},
+		{
+			"name": "main-course",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "主桅/main-course.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "主桅/main-course.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "350,264,150",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "350,56,150",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "course：sheet 往後、tack 往前綁到舷牆 belaying pin",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:02"
+		},
+		{
+			"name": "main-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "主桅/main-topsail.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "主桅/main-topsail.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "350,290,280",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "350,30,280",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（course）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:03"
+		},
+		{
+			"name": "main-topgallant",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "主桅/main-topgallant.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "主桅/main-topgallant.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "348,249,460",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "348,71,460",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（topsail）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:03"
+		},
+		{
+			"name": "main-royal",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "主桅/main-royal.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "主桅/main-royal.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "347,224,569",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "347,96,569",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:03"
+		},
+		{
+			"name": "mizzen-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "後桅/mizzen-topsail.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "後桅/mizzen-topsail.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "201,254,236",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "201,66,236",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（crossjack）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:04"
+		},
+		{
+			"name": "mizzen-topgallant",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "後桅/mizzen-topgallant.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "後桅/mizzen-topgallant.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "196,219,372",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "196,101,372",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（topsail）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:04"
+		},
+		{
+			"name": "mizzen-royal",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "後桅/mizzen-royal.earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "後桅/mizzen-royal.earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "192,204,457",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "192,116,457",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:04"
+		},
+		{
+			"name": "spanker",
+			"corners": [
+				{
+					"name": "throat",
+					"at": "後桅/spanker-gaff.top8",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "後桅/spanker-gaff.top120",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "後桅/spanker-boom.top176",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "後桅/spanker-boom.top8",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2,
+				3
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "gaff、boom、桅三條邊釘住，只有 leech 自由",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:04"
+		},
+		{
+			"name": "fore-topmast-staysail",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "艏斜桅/cap",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "前桅/fore-topmast-staysail.head",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "690,160,205",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "luff（邊 0）沿 fore-topmast-stay",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:05"
+		},
+		{
+			"name": "jib",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "艏斜桅/jibboom-end",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "前桅/jib.head",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "770,160,225",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "luff（邊 0）沿 jib-stay",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:05"
+		},
+		{
+			"name": "flying-jib",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "艏斜桅/flying-end",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "前桅/flying-jib.head",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "850,160,250",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "luff（邊 0）沿 flying-jib-stay",
+			"persona": "basecamp",
+			"created_at": "2026-10-11T21:07:05"
+		}
+	]
+}
