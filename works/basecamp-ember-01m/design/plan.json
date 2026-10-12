@@ -627,5 +627,76 @@
    }
   },
   "provenance": "三根桅：x 照拉長（前桅 x 566–608 全在 472 以後 ⇒ +66；主桅、後桅不動）；z 109 插 23（複製 z 108 那一層）⇒ 下桅加長 23、上面全部抬 23 —— 跟船殼、甲板同一套，上層砲甲板與上甲板的桅孔都對得上。艏斜桅（x 594–958、z 108–224）整根 (+66, 0, +23) ⇒ 對準船殼跟著抬高的開口；尖端到 x 1024 ⇒ 組裝件與艏斜桅子作品要放寬到 1100。帆桁：模型來源照舊是憲法號的 -yard-* 子作品（同一件做一次），at 照換算、meta 照抄。固定點照同一套換算（名字不變，之後繩索照名字接）"
+ },
+ "rigging": {
+  "title": "新圖紙 08：索具 v1 —— channels、pin rails、fife rails、靜索、ratlines、帆（憲法號照換算搬來）",
+  "assembly_before": 1709837,
+  "fittings": {
+   "channels": {
+    "source": "channels",
+    "con_at": [
+     150,
+     161,
+     70
+    ],
+    "con_size": [
+     460,
+     80,
+     50
+    ],
+    "kind": "hull",
+    "work": "basecamp-ember-01m-channels",
+    "link": "channels",
+    "mirror_link": "channels-鏡像",
+    "clear_upper_ports": true,
+    "clear_provenance": "第一版量到 26 個 (x, z) 欄的 chain plate 擋在上層砲門前面（憲法號的 chain plates 在 z 108 避開的是下層砲門，往下複製之後穿過上層砲門）⇒ 那幾格不放，chain plate 在砲門處斷開、上下兩段都貼著船殼"
+   },
+   "belaying": {
+    "source": "belaying-side",
+    "con_at": [
+     120,
+     161,
+     100
+    ],
+    "con_size": [
+     540,
+     80,
+     40
+    ],
+    "kind": "deck",
+    "work": "basecamp-ember-01m-belaying-side",
+    "link": "繫繩欄",
+    "mirror_link": "繫繩欄-鏡像"
+   },
+   "fiferails": {
+    "source": "fiferails",
+    "con_at": [
+     0,
+     0,
+     0
+    ],
+    "con_size": [
+     1024,
+     320,
+     800
+    ],
+    "kind": "deck",
+    "full": true,
+    "work": "basecamp-ember-01m-fiferails",
+    "link": "fife-rails",
+    "parent_link_work": "basecamp-ember-01m-deck-spar"
+   }
+  },
+  "skip_groups": [
+   "guns",
+   "ladders",
+   "entry",
+   "steering"
+  ],
+  "skip_links": [
+   "船頭-knee"
+  ],
+  "sail_color": "#57524c",
+  "provenance": "channels 掛在船殼外面、chain plates 往下接 ⇒ 照船殼換算（z 109 插 23，chain plates 跟著加長）；pin rails、fife rails 站在上甲板上 ⇒ 整件抬 23（同上甲板）；兩者 x 照拉長。繩：砲索、梯子、entry、舵輪那幾組等那些部件做好再接；bobstays 要船頭 knee（還沒做）。帆色（設計決定，奇幻）：暖深灰 #57524c"
  }
 }

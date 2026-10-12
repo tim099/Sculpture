@@ -103,3 +103,18 @@
 - 讀數：四件跟組裝件現況（船殼＋甲板＋裝飾）重疊 0（每一層的桅孔都對上）、彼此重疊 0、鏡像差 0；**每件子作品匯出 vs 清單逐格相同**；帆桁模型的 309 個點 vs 憲法號同名點：剛好 (+66 或 0, 0, +23)、差 0（boom 另算）、meta 相同、狀態全 ok；組裝件 **1,709,837**、1 元件、空腔 0、link_overlap 0、models_broken 0。
 - 過程圖：`overlays/stage6_masts_{side,bowq,sternq}.png`。⚠ 用 region 裁的近照不能拿來看帆桁（region 只裁格子、模型照畫）—— 那張刪了。
 - ⚠ 還沒有：繩（靜索、ratlines）、帆、channels、fife rails；桅的固定點已照換算登記，繩索那一階段照名字接。
+
+## 階段七 索具 —— 新圖紙 08（2026-10-12 晚）
+設計 plan.json `rigging`；產生 `design/draft_rigging.py`（憲法號 channels／belaying-side／fiferails 子作品＋固定點、組裝件 ropes.json／sails.json、船殼固定點）⇒ `masks/rigging/{channels,belaying,fiferails}.vox.txt`、`rigging_placement.json`、`verify_rigging.json`；下 CLI `design/tools/rigging_apply.py <design> fittings|sails|ropes`。
+- 換算：x 照拉長（點取原地那一份）；**channels**（掛在船殼外、chain plates 往下接）照船殼插 23（chain plates 跟著加長）；**pin rails、fife rails**（站在上甲板上）整件抬 23；繩端與帆角座標 z ≥ 109 抬 23。
+- chain plates：在 z 108 避開的是下層砲門，往下複製 23 層之後從上層砲門前面穿過 —— 第一版量到 **26 個 (x, z) 欄**擋在上層開口前 ⇒ 那幾格不放（44 格），chain plate 在砲門處斷開、上下兩段都貼著船殼；之後擋在前面 0。
+- 子作品（parent 船殼、tags sub、0.1 m）：`-channels`（一舷 7,355、at 150,161,70、512×80×67）、`-belaying-side`（一舷 919、at 120,161,123、579×80×40）、`-fiferails`（2,393、整件 at 0,0,0）；關聯 `channels`／`channels-鏡像`、`繫繩欄`／`繫繩欄-鏡像`（mirror=y、at.y 80）、`fife-rails`（掛在 -deck-spar 裡 ⇒ 路徑 `甲板-spar/fife-rails`，同憲法號）；固定點 31／63／56 照換算；船殼補 `mainstay-S／P`（726,170／150,155，落在實心上）。
+- 繩 **739**（憲法號 901 扣：砲索 140、梯子 14、entry 4、舵輪 2 —— 那些部件還沒做；bobstays 2 —— 要船頭 knee）；帆 15（色 **#57524c 暖深灰**，設計決定）；風照憲法號 4.5,−1.5,0、4 秒。
+- 量到的錯：
+  ① 繩 739 條一次下，1 條（mizzen-shroud-P3.lanyard-a）IOException（檔案被佔用）⇒ 比對清單找出來補跑。
+  ② **座標寫法**：第一版用 %g，憲法號寫 `118.00` 的變成 `141` ⇒ 引擎把整數當格心、多 0.5 格（跟憲法號比 18 條 lanyard 量到 +0.5）⇒ 每個分量照原本的寫法（原本帶小數 ⇒ %.2f、原本整數 ⇒ 整數），122 條字串變了、重下。
+  ③ 產生程式的驗證要「加配件之前」的組裝件，套用之後重跑被斷言擋下 ⇒ 改成藏起這一階段的 5 條關聯再匯出。
+- 讀數：配件跟組裝件重疊 0、彼此 0、接到船殼；組裝件 **1,728,778**、1 元件、空腔 0、link_overlap 0；繩 739、broken 0、子繩 328；帆 15、broken 0。
+  **跟憲法號逐條比**（引擎讀數的兩端座標）：470 條剛好 (0, 0, +23)、264 條剛好 (+66, 0, +23)；5 條 stay（主桅 → 前桅）一端 +0 一端 +66（船拉長、長 +52～+65，預期）。帆 14 面四角剛好平移、鼓度逐位相同（main course −96.51）；spanker 下緣跟著改短的 boom（clew +92.6／+29、tack +5.2／+29），鼓度 20.35 → 20.79。
+- 過程圖：`overlays/stage7_rigging_{bowq,side,sternq}.png`。
+- ⚠ 還沒有：砲與砲索、梯子、entry port、舵輪、船頭（bobstays）、房間、彈藥庫。帆是整片的（破帆要引擎支援開洞）。

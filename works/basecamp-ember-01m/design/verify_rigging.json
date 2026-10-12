@@ -1,0 +1,161 @@
+{
+ "read": {
+  "con_channels": 6640,
+  "cleared_in_front_of_upper_ports_channels": 44,
+  "con_belaying": 771,
+  "con_fiferails": 2393,
+  "ropes": 739,
+  "ropes_skipped": {
+   "link 船頭-knee": 2,
+   "group guns": 140,
+   "group ladders": 14,
+   "group steering": 2,
+   "group entry": 4
+  },
+  "sails": 15
+ },
+ "hull_anchor_on_solid": {
+  "mainstay-S": true,
+  "mainstay-P": true
+ },
+ "channels": {
+  "cells_one_side": 7355,
+  "cells_both": 14710,
+  "overlap_assembly": 0,
+  "overlap_other": 0,
+  "anchors": 31
+ },
+ "belaying": {
+  "cells_one_side": 919,
+  "cells_both": 1838,
+  "overlap_assembly": 0,
+  "overlap_other": 0,
+  "anchors": 63
+ },
+ "fiferails": {
+  "cells_one_side": 2393,
+  "cells_both": 2393,
+  "overlap_assembly": 0,
+  "overlap_other": 0,
+  "anchors": 56
+ },
+ "channels_cols_in_front_of_upper_ports": 0,
+ "assembly_expect": 1728778,
+ "structure_expect": {
+  "components": 1,
+  "cavities": 0
+ },
+ "not_connected": {
+  "channels": 0,
+  "belaying": 0,
+  "fiferails": 0
+ },
+ "flags": [
+  [
+   "point_in_stretch_block",
+   439
+  ],
+  [
+   "point_in_stretch_block",
+   442
+  ],
+  [
+   "point_in_stretch_block",
+   445
+  ],
+  [
+   "point_in_stretch_block",
+   465
+  ],
+  [
+   "point_in_stretch_block",
+   468
+  ],
+  [
+   "point_in_stretch_block",
+   471
+  ],
+  [
+   "point_in_stretch_block",
+   471
+  ]
+ ],
+ "flags_count": 7,
+ "placement": {
+  "channels": {
+   "work": "basecamp-ember-01m-channels",
+   "at": [
+    150,
+    161,
+    70
+   ],
+   "size": [
+    512,
+    80,
+    67
+   ],
+   "cells": 7355,
+   "link": "channels",
+   "mirror_link": "channels-鏡像",
+   "parent_link_work": null,
+   "mirror_at": [
+    150,
+    80,
+    70
+   ]
+  },
+  "belaying": {
+   "work": "basecamp-ember-01m-belaying-side",
+   "at": [
+    120,
+    161,
+    123
+   ],
+   "size": [
+    579,
+    80,
+    40
+   ],
+   "cells": 919,
+   "link": "繫繩欄",
+   "mirror_link": "繫繩欄-鏡像",
+   "parent_link_work": null,
+   "mirror_at": [
+    120,
+    80,
+    123
+   ]
+  },
+  "fiferails": {
+   "work": "basecamp-ember-01m-fiferails",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "size": [
+    1024,
+    320,
+    800
+   ],
+   "cells": 2393,
+   "link": "fife-rails",
+   "mirror_link": null,
+   "parent_link_work": "basecamp-ember-01m-deck-spar"
+  }
+ },
+ "files": {
+  "channels": {
+   "cells": 7355,
+   "sha256": "244dda4574208c582cc641867c43669d9239fb5870234191168537d61bf8e577"
+  },
+  "belaying": {
+   "cells": 919,
+   "sha256": "d3fd7a64e3e6dd3ba74a4fccd3bc1ff177218cf3f3fea3cbec1344c254ccb2d4"
+  },
+  "fiferails": {
+   "cells": 2393,
+   "sha256": "abd376949f9a1f282686698a9e03cadf5ef444c4a1c74559e8fc460ee00f9e08"
+  }
+ }
+}
