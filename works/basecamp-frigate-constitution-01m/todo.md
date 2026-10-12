@@ -252,3 +252,31 @@ Tim 的回饋：「這幾個被纜線擋住了」—— channel 上的 deadeye�
 - [x] v1.1：man rope 下端綁在空中（Tim 2026-10-12 預覽指出）⇒ 最下一道加寬加深、繩端埋進它外側兩角（-entry-side 草稿增量 22 格）
 - [x] Tim「測試ok」⇒ -entry-side apply（changed 22、mismatch 0）；組裝件 1,433,632
 - [ ] 之後：entry port 的扶手欄杆、gangway 板、fenders／chesstree、quarterdeck 那段欄杆比 waist 高（11 號有畫，作品舷頂是單一高度）
+
+## 階段三十一 主甲板砲改外部模型（2026-10-12；讀數見 notes.md 階段三十一）
+- [x] 28 門 24 磅砲關聯 → 外部模型、140 條砲索重綁 model: 路徑（diff 0、broken 0）
+- [x] P 舷第 15 個砲門補 chase18-P（Tim 預覽「好像缺一門炮」）
+- [ ] Tim 預覽 OK ⇒ 單層提交（Sculpture）
+
+## 彈藥庫（規劃，等 Tim 拍板；遊戲要模擬彈藥庫爆炸）
+史實配置（1812 前後的 44 砲巡防艦）：火藥庫在 orlop 平台**下面**的船艙（hold），正上方是 filling room（裝藥包的房間，作品已有牆：after filling room x 167–192、forward filling room x 608–630）；旁邊有 light room（隔著玻璃點燈，火不進彈藥庫）。主彈藥庫在前、大；後彈藥庫在後、小。
+量（組裝件現況，船艙中線、到 orlop 橫樑底 z 38）：
+- 船尾 x 180–240：底 z 30→20、高 8–18 格、寬 9–43 格（V 形很尖）—— 後彈藥庫只放得下小的
+- 船頭 x 560–615：底 z 17–24、高 14–21 格、寬 13–87 格；x 590 是前桅桅腳 —— 主彈藥庫放這段（避開桅腳）
+提案：
+- [ ] 先讀 02 號側面圖（1849 inboard，Pook）找 MAGAZINE／light room 的實際 x 範圍，換到作品座標（派讀圖 agent，限時、只要兩段 x 範圍與高度）
+- [ ] 子作品各一件（遊戲可以分開引爆）：`-magazine-fore`、`-magazine-aft`；關聯進 -deck-orlop（跟房間同一層）
+      內容：艙壁（銅皮內襯色）、地板抬高、門洞朝 filling room 那側；火藥桶（voxel 或外部模型，待定）
+- [ ] 固定點給遊戲用：`blast`（爆心）、`door`、外框兩角；notes 記火藥量估值（桶數 × 每桶磅數）
+- [ ] light room（可選）、shot locker（主桅附近，彈丸不會爆，⛔ 不放進彈藥庫子作品）
+Tim 2026-10-12 拍板（醒來不要重問）：
+- 彈藥庫照史實；史實兩個版本都有就兩個都做。
+- 火藥桶要做：彈藥庫的子模組，**跟砲一樣用外部模型引用**（不是 voxel 關聯）。
+- 模型要不要多帶資訊給遊戲、export 要不要搬到 C#（現在是 ArtGallery/VoxelKit/voxel_export.py）⇒ 到酒館跟遊戲那邊討論（2026-10-12 seq 24095 @ame）。
+
+## 階段三十二 彈藥庫（2026-10-12；讀數見 notes.md 階段三十二）
+- [x] 讀 02 號圖找 MAGAZINE（後 x 200–271、前 x 521–574）、1812 日誌對照（前後兩間）
+- [x] 子作品 -magazine-aft／-magazine-fore（銅皮、門洞、木架）＋ -powder-barrel（0.02 m）當模型 22＋116 桶；固定點 blast／door
+- [x] 組裝件 1,413,088、1 元件、空腔 0、overlap 0、模型 193、broken 0
+- [ ] Tim 預覽 OK ⇒ 單層提交（Sculpture；階段三十一一起）
+- [ ] meta（kind=magazine、powder_lb）等 TASK-0517；砲的 breech 固定點也在那張單
