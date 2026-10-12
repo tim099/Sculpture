@@ -1,0 +1,18 @@
+# 繩分組（TASK-0512）：組路徑<TAB>繩名 regex —— 照順序 work sub=ropegroup name=<組> assign=<regex>；2026-10-12 對 897 條剛好切完（不漏、不重複）
+standing/shrouds	^(main|fore|mizzen)-shroud-[SP][0-9]+$
+standing/backstays	^(main|fore|mizzen)-backstay-[SP][0-9]+$
+standing/stays	^(bobstay-[0-9]+|(main|fore|mizzen)(-[a-z]+)*-stay|(flying-)?jib-stay)$
+standing/futtock-shrouds	^(main|fore|mizzen)-futtock-[SP][0-9]+$
+standing/topmast-shrouds	^(main|fore|mizzen)-tmshroud-[SP][0-9]+$
+standing/topgallant-shrouds	^(main|fore|mizzen)-tgshroud-[SP][0-9]+$
+standing/deadeyes/upper	\.deadeye$
+standing/deadeyes/lanyards	\.lanyard-[abc]$
+ratlines/lower	^(main|fore|mizzen)-ratline-[SP][0-9]+$
+ratlines/topmast	^(main|fore|mizzen)-tmratline-[SP][0-9]+$
+running/sheets	\.sheet-[SP]$
+running/tacks	\.tack-[SP]$
+guns/breeching	\.breeching-(aft|fwd)$
+guns/tackle	\.tackle-(aft|fwd)$
+guns/train	\.train$
+ladders/manropes	\.manrope-[SP]$
+steering	^wheel-rope-[ab]$

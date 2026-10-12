@@ -613,3 +613,31 @@ Tim：「繼續造船吧 GO（可以做其他口徑的炮 然後也用子模組 
   搜尋：每個角度沿砲身往裡退到「模型每一格的格心＋八個角都不在組裝件實心格裡」，再要求砲口在船殼外。往船頭偏 5–20° 推得出去、25° 砲口出不了砲門、30° 以上塞不進去 ⇒ 取 −20°：at (644.08,183.46,88)、pivot 砲架前 transom (13.5,38.5,0)；砲口 (648.1,194.5,98.75)，伸出下檻外面 2.5 格、在開口中段。P 舷那個船頭砲門照舊空著（只有一門）。
 - carronade 還沒上船：spar deck 的砲門要先讀圖、開舷牆（下一階段）。
 - 過程圖：`overlays/stage28_{carronade32,long18,chase_in,chase_out}.png`。
+
+## 階段二十九 spar deck 砲門＋24 門 carronade＋channels v2（已套用）
+讀圖 `design/read_spar_ports.py` ⇒ `source_ports_spar.json`；設計 `design/draft_spar_ports.py` ⇒ `masks/spar_ports/{hull_carve,hull_lining,side_carve,side_add}.vox.txt`、`spar_ports_anchors.json`、`verify_spar_ports.json`；擺砲 `design/place_carronades.py` ⇒ `carronades_placement.json`。動刀前量測 `design/probe_spar_ports.py` ⇒ `probe_spar_ports.json`。
+Tim：「繼續開spar deck砲門 GO」（spar deck 砲門原本說跟可動件一起做 —— 外部模型做好了，條件到了）。
+- 讀圖：11 號 sheer plan 舷牆上的方框 —— 逐欄數亮像素找豎線、相鄰兩條配成一個砲門（40–95 px）、沿豎線找上下端點；換算同 source_ports.json（gun deck 第 1 個回算上緣 100.02 ↔ 記錄 99.99）。
+  一舷 12 個：quarterdeck 8（X 128–361）、forecastle 4（X 522–610；最前面那個寬 13.6 格）；圖上下緣 107.7–112.2、上緣 120.2–125.0（cap rail 下面）。
+- 量測：舷牆 4–5 格厚（36／141／177）、cap rail 104 在 z 124–127；z 109–110 舷外有一條黑木（channels 那件），有幾個連牆厚範圍裡都有 ⇒ **下緣統一從 111 起**（離甲板 3–6 格）；舷牆內面的 pin rails 壓在第 4、5、9、12 個上、cleat-4 在第 12 個裡。
+- 船殼（草稿）：開口裡的舷牆格全刻、cap rail 不刻 ⇒ 10,676 格（兩舷各 12 個、格數兩舷相同）；開口外一圈都是實心 ⇒ 不用補 141。
+- pin rails v2（-belaying-side 草稿）：改照 spar deck 砲門的空檔（waist 照舊用 gun deck 第 6–11 個分隔、船頭用 gun deck 第 15 個收尾）；13 根照舊編號、DP 配到離原位最近的空檔 ⇒
+  6–10 不動、1–5 與 11 往船頭 2–7 格、12 挪 1 格（空檔只夠 14 格長 ⇒ 4 根栓，pinrail-12.pin-5 拿掉、沒有繩綁）、13 搬到第 12 個砲門前面（+22，x 618–632；三角帆三條 sheet＋前桅 course 的 tack 綁在它上面）；
+  cleat-4 改瞄 x 570（原本 600 ⇒ 會被排到 620–631，船頭的牆往內彎、角撞進內板 7 格）。拿掉 337、放 330 格。⚠ 固定點（名字不變、位置換）要套用時才登記 ⇒ 預覽不畫繩。
+- carronade 小修（已套用）：擺上船時 skid 前緣只能頂到舷牆內面（下檻以下的牆還在），牆 0.45 m 厚、砲口只超出 skid 0.35 m ⇒ 縮在牆裡 1–2 格 ⇒ 砲身在 slide 上往前 4 格（砲口超出 skid 0.55 m）⇒ 齊平到伸出 1 格。
+- 24 門：spar deck 子作品的外部模型 `carronade-S01..12／P01..12`（S rotate 0、P rotate 180；pivot skid 前緣 (7.5,42,0)；scale 0.5 明寫）；每個砲門從舷牆外面往裡退到零碰撞（對「草稿套上去」的組裝件逐點量）⇒ 全部 back 4–5（skid 前緣頂到內面）、砲軸 z 114.75–117.75（開口 111–124 的中段）、兩舷逐門對稱。
+- 過程圖：`overlays/stage29_spar_{side,deck,fwd}.png`。
+- Tim 回饋「這幾個被纜線擋住了」⇒ **channels v2**（`design/draft_channels_v2.py`）：deadeye 數量與名字不變，改擠在 spar deck 砲門之間 —— 間距 4 格（deadeye 3 格寬、空 1 格）、
+  deadeye ±1 與上面那段 shroud（z 111–125）離砲門 ≥ 1 格。第一輪間距 5／餘裕 2 ⇒ 後桅最後兩個掉出子作品的框（x 145）、主桅最後一個散到 248 ⇒ 收緊。
+  結果 前桅 591…511、主桅 349…279、後桅 207…169（verify_channels_v2.json，still_blocked 0）；channels 子作品 carve 1,280＋add 1,414 ⇒ 6,640 格。
+  ⚠ 引擎登記的 deadeye 固定點是 rig_standing.json 的 `<桅>.deadeye-<i>`（31 個、只 S 舷），不是 rig_points_channels.json 那份（從沒登記過）。
+- 纜索（TASK-0511 子繩、0512 分組做完之後）：31 個 deadeye 固定點重新登記 → rig_deadeyes 重產 310 條 →
+  **ratlines 改子繩** `rope:<shroud>/比例`（tools/ratlines.py；比例照 shroud 現在真正的下端 ＝ 上 deadeye 頂）。起點改從上 deadeye 頂往上 7 格
+  （以前從下 deadeye 起算 ⇒ 最下面幾道跟階段二十五才加的上 deadeye、lanyard 擠在一起）⇒ 340 → 328 條（拿掉 12 條舊的）。
+  897 條全部分 17 組（`design/tools/rope_groups.tsv`）：standing/{shrouds,backstays,stays,futtock-shrouds,topmast-shrouds,topgallant-shrouds,deadeyes/upper,deadeyes/lanyards}、
+  ratlines/{lower,topmast}、running/{sheets,tacks}、guns/{breeching,tackle,train}、ladders/manropes、steering。
+  ⚠ 上 deadeye、lanyards、shroud 下端仍是座標（rig_deadeyes 從固定點算；它們要「往舷外偏」，rope: 表達不了）⇒ deadeye 再動要重跑 rig_deadeyes.py ＋ ratlines.py。
+- 套用（Tim「測試ok 套用草稿」）：船殼 10,676、-belaying-side 667、channels 2,694 格變動，各一筆 workedit；pin rails 固定點 68 個照 spar_ports_anchors.json 重新登記、
+  unanchor pinrail-12.pin-5（沒有繩或帆綁）。組裝件 1,434,874 格、1 元件、空腔 0、link_overlap 0；繩 897、broken 0、子繩 328。
+- 過程圖：`overlays/stage29_channels_v2_{side,ropes}.png`、`stage29_main_channel_ropes.png`（砲門前面沒有纜線）、`stage29_hide_ratlines.png`（關掉 ratlines 組）、
+  `stage29_follow_test.png`（把 main-shroud-S1 下端挪 14 格 ⇒ ratlines 跟著；已改回）。

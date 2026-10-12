@@ -105,19 +105,18 @@ def carronade():
     # ── slide（上層，坐在 skid 上、整組後座時往後滑，1.0 m；推到前端）──
     S0, S1 = 21, 40
     P.box(3, 11, S0, S1, 9, 12, CARR)
-    P.box(3, 4, 29, 36, 13, 15, CARR)             # 兩片 lug cheek（夾住砲身底下的 loop）
-    P.box(10, 11, 29, 36, 13, 15, CARR)
-    P.box(3, 11, 32, 33, 14, 14, IRON, True)      # loop 的螺栓（沿 x 穿過）
-    P.box(6, 8, S0 - 5, S0 - 1, 9, 11, CARR)      # 後面伸出去托升降螺桿的那一截
+    P.box(3, 4, 33, 40, 13, 15, CARR)             # 兩片 lug cheek（夾住砲身底下的 loop）
+    P.box(10, 11, 33, 40, 13, 15, CARR)
+    P.box(3, 11, 36, 37, 14, 14, IRON, True)      # loop 的螺栓（沿 x 穿過）
     # ── 砲身（1.15 m；後膛半球、往前收、砲口外翻）──
-    yb = 25                                       # 後膛最後面 ⇒ 砲口 y 48（伸出 skid 前端 7 格 ≈ 0.35 m）
+    yb = 29                                       # 後膛最後面 ⇒ 砲口 y 52（伸出 skid 前端 11 格 ≈ 0.55 m；v1 是 0.35 m，擺上船時砲口縮在 0.45 m 厚的舷牆裡 1–2 格 ⇒ 往前挪 4 格）
     prof = [(0, 0.8), (1.0, 2.6), (2.0, 3.5), (3.5, 4.3), (4.6, 4.6), (9.0, 4.6), (9.0, 4.9), (10.0, 4.9), (10.0, 4.4),
             (19.0, 3.6), (19.5, 3.3), (21.0, 3.3), (21.0, 3.9), (23.0, 3.9)]
     P.tube(AX, AZ, yb, prof, BLACK, bore_r=1.7, bore_depth=7)
-    P.box(6, 8, 31, 34, 14, 15, BLACK)            # loop（砲身底下）
+    P.box(6, 8, 35, 38, 14, 15, BLACK)            # loop（砲身底下）
     P.tube(AX, AZ, yb - 2, [(0, 1.2), (2.0, 1.2)], BLACK)      # cascabel 頸
     P.tube(AX, AZ, yb - 4, [(0, 1.3), (0.5, 1.8), (1.5, 1.8), (2.0, 1.3)], BLACK)   # cascabel 鈕（圓）
-    P.box(7, 7, yb - 3, yb - 3, AZ - 7, AZ - 2, IRON)          # 升降螺桿（鈕 → 下面那一截）
+    P.box(7, 7, yb - 3, yb - 3, AZ - 6, AZ - 2, IRON)          # 升降螺桿（鈕 → slide 頂）
     P.box(7, 7, yb + 21, yb + 22, AZ + 4, AZ + 4, BLACK)       # 砲口上的準星
     P.points = {'muzzle': (AX, yb + 22, AZ), 'cascabel': (AX, yb - 4, AZ), 'pivot': (AX, Y1 - 3, 4),
                 'eye-aft': (0, Y1 - 1, 7), 'eye-fwd': (14, Y1 - 1, 7)}

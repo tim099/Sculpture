@@ -160,7 +160,8 @@
 - [x] 兩面 course 下角被吹高、tack 垂 21–26 格 ⇒ **tack 收到 0.8**（sails_test.py 已改、已套用）：main 下角 z 161.6 → 153.4（設計 150）、tack 垂 0；fore 下角不動（153.5，sheet 撐著）、tack 垂 21 → 10–12
 - [x] 鼓得偏深 ⇒ fullness **不是**主要旋鈕：1.05 → 1.02 只少 5 格、1.0（布繃平）main 仍 −84 ⇒ 鼓度主要來自風（tack 0.8／fullness 1.0 時，風減半 main −55／fore −45 ≈ 寬度兩成；無風 −17／+27 自然下垂）。fullness 維持 1.05
 - [ ] 要不要讓 course 鼓淺一點：① 預設風降到約 2.4 m/s（全部帆一起變淺）② 帆腳那條邊（clew_s→clew_p）加束縛（foot rope；引擎目前帆腳是自由邊，推測是中段被吹起的主因 —— ⚠ 推論，沒驗）—— 審美題，等 Tim 預覽後選
-- [ ] 讀數回噗浪給 kotoko（她的兩點：tack 成立；fullness 那點換成風）
+- [x] 讀數回噗浪給 kotoko（2026-10-12，plurk 359018012547482 的回應；酒館 seq 22919）
+- [ ] ⚠ brace（階段二十六）之後 course 的 tack 又不繃了（kotoko 的判準：長度 ＝ 直線才算繃住）：main S 57.88 ＝ 57.88、main P 115.89 對 112.35 垂 13.07、fore S 41.14 對 40.62 垂 11.59、fore P 54.67 對 48.64 垂 12.15 —— 帆下角轉了而 tack 還綁在原本的 pin ⇒ 兩舷分開調（slack 各自算、或換 pin）
 
 ## 階段二十三 艙口梯（2026-10-11 套用）
 - [x] spar → gun 4 座（waist 一對、after、fore）、gun → berth 3 座（companion、after、fore）；扶手繩 14
@@ -221,3 +222,23 @@
 - [x] keel drag：不做（2026-10-11 決定，理由見 notes.md）；~~甲板／舷弧／砲門的高度要逐站相對龍骨量~~ ⚠ 階段六更正：作品是「從水線量」的框，sheer plan（相對龍骨）的讀數要減 drag 才放得進來（見 notes.md「階段六」）
 - [ ] sided（艏柱／艉柱／deadwood／apron 5 格）仍是設計決定
 - [ ] 底肋頭長 3.6 m 仍是設計決定（02／15 號都沒畫）
+
+## 階段二十九 spar deck 砲門 —— 已套用（2026-10-12）
+現況：全部套用（2026-10-12 下午；讀數見 notes.md 階段二十九）。以下是套用前的紀錄：
+- 草稿（已套用）：船殼（basecamp-frigate-constitution-01m，刻 10,676 格 spar deck 砲門）、-belaying-side（pin rails v2：拿掉 337、放 330）。
+- 已經生效（不是草稿）：carronade 子作品砲身往前 4 格（已 apply，一筆事件，undo 一次就回去）；spar deck 子作品 models.json 24 門 carronade-S01..12／P01..12。
+- notes.md 階段二十九已寫、overlays/stage29_spar_{side,deck,fwd}.png 已存。
+Tim 的回饋：「這幾個被纜線擋住了」—— channel 上的 deadeye／lanyard／shroud 擋在後桅段（砲門 2、3）、主桅段（6–8）、前桅段（9–11）前面。
+接下來（照順序）：
+- [x] 跑 draft_channels_v2.py（2026-10-12 下午）：第一輪 SPACING 5／MARGIN 2 ⇒ 後桅最後兩個掉出子作品的框（x 145）、主桅最後一個散到 248 ⇒ 改 SPACING 4／MARGIN 1（deadeye 3 格寬、中間空 1 格）。
+      結果：前桅 591,577,573,569,565,548,544,540,536,515,511；主桅 349,345,341,337,333,318,314,310,306,302,283,279；後桅 207,203,199,185,181,177,173,169；still_blocked 0（verify_channels_v2.json）。
+- [x] channels 子作品草稿：carvevox 1,280（顏色守門）＋ stampvox 1,414 ⇒ 讀回 6,640 ＝ 設計。側視圖（不畫繩）overlays/stage29_channels_v2_side.png。
+- [x] rig_standing.json 的 31 個 channels 固定點（`<桅>.deadeye-<i>`，只有 S 舷，P 舷靠鏡像）改成 v2 座標 —— ⚠ 只改了檔，**引擎裡還沒重新登記**。
+      📌 量過：引擎登記的是這 31 個，不是 rig_points_channels.json 的 `<桅>-channel.deadeye-S／P<i>`（那份從沒登記過；舊 todo 寫錯了）。
+- [x] 子繩 TASK-0511／繩分組 TASK-0512 做完（還沒提交）、出廠 12ebd95-dirty；套到船上（2026-10-12 12:3x）：
+      31 個 deadeye 固定點重新登記；rig_deadeyes 重產 310 條；ratlines 改子繩 `rope:<shroud>/比例`（tools/ratlines.py），
+      起點改從上 deadeye 頂往上 7 格 ⇒ 340 → 328 條（拿掉 12 條舊的）；897 條全部分進 17 組（design/tools/rope_groups.tsv 的 regex）。
+      讀數：broken 0、子繩 328、組 23（含上層）、未分組 0；hide_rope_groups=standing/shrouds ⇒ 藏 218（46＋掛在上面的 lower ratlines 172）。
+      圖：overlays/stage29_channels_v2_ropes.png、stage29_main_channel_ropes.png。
+      ⚠ 上 deadeye／lanyards／shroud 下端仍是座標（rig_deadeyes 從固定點算的，要重跑腳本才跟）；子繩語法表達不了「往舷外偏一點」。
+- [x] Tim「測試ok 套用草稿然後單層提交吧」⇒ 三份草稿套用、pin rails 固定點 68 個重新登記、unanchor pinrail-12.pin-5；繩 broken 0（SCP_Core d48e4ab、Senate 2f5cf4c）。
