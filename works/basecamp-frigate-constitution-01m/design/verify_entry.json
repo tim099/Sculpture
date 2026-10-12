@@ -1,0 +1,417 @@
+{
+ "title": "新圖紙 23：entry port 與 side steps v1",
+ "base_assembly_voxels": 1433286,
+ "hull_carve": {
+  "S": 740,
+  "P": 740,
+  "by_color_S": {
+   "177": 170,
+   "104": 54,
+   "141": 342,
+   "36": 174
+  },
+  "P_equals_mirror_S": true,
+  "not_in_assembly": 1480
+ },
+ "pinrail": {
+  "name": "pinrail-6",
+  "cells": 54,
+  "by_color": {
+   "172": 34,
+   "104": 20
+  },
+  "world_box": [
+   [
+    366,
+    209,
+    113
+   ],
+   [
+    380,
+    210,
+    117
+   ]
+  ],
+  "belay_at": [
+   120,
+   161,
+   100
+  ],
+  "anchors_to_unanchor": [
+   "pinrail-6.pin-1",
+   "pinrail-6.pin-2",
+   "pinrail-6.pin-3",
+   "pinrail-6.pin-4",
+   "pinrail-6.pin-5"
+  ],
+  "in_assembly_S": 0,
+  "in_assembly_P": 0,
+  "users": 0,
+  "control_pinrail_refs": 14
+ },
+ "side": {
+  "cells_one_side": 151,
+  "steps": 142,
+  "posts": 9,
+  "overlap_S": 0,
+  "overlap_P": 0,
+  "step_rows": [
+   {
+    "z": 66,
+    "hull_y_out": [
+     226,
+     226
+    ],
+    "face_y": 228,
+    "hull_colors": {
+     "36": 7
+    }
+   },
+   {
+    "z": 70,
+    "hull_y_out": [
+     226,
+     226
+    ],
+    "face_y": 228,
+    "hull_colors": {
+     "36": 7
+    }
+   },
+   {
+    "z": 74,
+    "hull_y_out": [
+     226,
+     226
+    ],
+    "face_y": 228,
+    "hull_colors": {
+     "36": 7
+    }
+   },
+   {
+    "z": 78,
+    "hull_y_out": [
+     225,
+     225
+    ],
+    "face_y": 227,
+    "hull_colors": {
+     "36": 7
+    }
+   },
+   {
+    "z": 82,
+    "hull_y_out": [
+     225,
+     225
+    ],
+    "face_y": 227,
+    "hull_colors": {
+     "36": 7
+    }
+   },
+   {
+    "z": 86,
+    "hull_y_out": [
+     224,
+     224
+    ],
+    "face_y": 226,
+    "hull_colors": {
+     "36": 7
+    }
+   },
+   {
+    "z": 90,
+    "hull_y_out": [
+     222,
+     223
+    ],
+    "face_y": 225,
+    "hull_colors": {
+     "255": 7
+    }
+   },
+   {
+    "z": 94,
+    "hull_y_out": [
+     221,
+     221
+    ],
+    "face_y": 223,
+    "hull_colors": {
+     "255": 7
+    }
+   },
+   {
+    "z": 98,
+    "hull_y_out": [
+     219,
+     219
+    ],
+    "face_y": 221,
+    "hull_colors": {
+     "36": 7
+    }
+   },
+   {
+    "z": 102,
+    "hull_y_out": [
+     217,
+     218
+    ],
+    "face_y": 220,
+    "hull_colors": {
+     "36": 7
+    }
+   }
+  ],
+  "post_rows": [
+   {
+    "x": 373,
+    "y": 216,
+    "base_z": 124,
+    "base_color": 104,
+    "z": [
+     125,
+     128
+    ]
+   },
+   {
+    "x": 383,
+    "y": 216,
+    "base_z": 123,
+    "base_color": 104,
+    "z": [
+     124,
+     128
+    ]
+   }
+  ],
+  "steps_not_touching_S": 0,
+  "steps_not_touching_P": 0,
+  "post_base_P": [
+   104,
+   104
+  ]
+ },
+ "opening_left": {
+  "S": {
+   "105:136": 18
+  },
+  "P": {
+   "105:136": 18
+  }
+ },
+ "ropes": [
+  {
+   "name": "entry-S.manrope-aft",
+   "from": [
+    373.5,
+    217.5,
+    128.5
+   ],
+   "to": [
+    374.5,
+    230.5,
+    66.5
+   ],
+   "length": 63.36,
+   "min_clear": 0.447,
+   "at": [
+    374.38,
+    228.92,
+    74.06
+   ],
+   "nearest_cell": [
+    375,
+    228,
+    74
+   ],
+   "nearest_color": null
+  },
+  {
+   "name": "entry-S.manrope-fwd",
+   "from": [
+    383.5,
+    217.5,
+    128.5
+   ],
+   "to": [
+    382.5,
+    230.5,
+    66.5
+   ],
+   "length": 63.36,
+   "min_clear": 0.433,
+   "at": [
+    382.8,
+    226.59,
+    85.13
+   ],
+   "nearest_cell": [
+    382,
+    225,
+    84
+   ],
+   "nearest_color": 36
+  },
+  {
+   "name": "entry-P.manrope-aft",
+   "from": [
+    373.5,
+    103.5,
+    128.5
+   ],
+   "to": [
+    374.5,
+    90.5,
+    66.5
+   ],
+   "length": 63.36,
+   "min_clear": 0.447,
+   "at": [
+    374.38,
+    92.08,
+    74.06
+   ],
+   "nearest_cell": [
+    375,
+    92,
+    74
+   ],
+   "nearest_color": null
+  },
+  {
+   "name": "entry-P.manrope-fwd",
+   "from": [
+    383.5,
+    103.5,
+    128.5
+   ],
+   "to": [
+    382.5,
+    90.5,
+    66.5
+   ],
+   "length": 63.36,
+   "min_clear": 0.433,
+   "at": [
+    382.8,
+    94.41,
+    85.13
+   ],
+   "nearest_cell": [
+    382,
+    95,
+    84
+   ],
+   "nearest_color": 36
+  }
+ ],
+ "anchors_world": {
+  "post-aft.top": [
+   373.5,
+   217.5,
+   128.5
+  ],
+  "post-fwd.top": [
+   383.5,
+   217.5,
+   128.5
+  ],
+  "step-1.aft": [
+   374.5,
+   230.5,
+   66.5
+  ],
+  "step-1.fwd": [
+   382.5,
+   230.5,
+   66.5
+  ]
+ },
+ "anchors_local": {
+  "post-aft.top": [
+   0,
+   1,
+   62
+  ],
+  "post-fwd.top": [
+   10,
+   1,
+   62
+  ],
+  "step-1.aft": [
+   1,
+   14,
+   0
+  ],
+  "step-1.fwd": [
+   9,
+   14,
+   0
+  ]
+ },
+ "expect_assembly_after": 1433588,
+ "files": {
+  "hull_carve.vox.txt": {
+   "cells": 1480,
+   "sha256": "b3bce057234648010549c49abbf96dae08d8ae57fa5d1110f535796fd802d465"
+  },
+  "side.vox.txt": {
+   "cells": 151,
+   "sha256": "a3012bbec9986a164cd73ee6047ad2a68ba6605c0cbc4c63ee8e6108a917f295"
+  },
+  "pinrail6_carve.vox.txt": {
+   "cells": 54,
+   "sha256": "b803a4d1161a455c9bf2b8107a5d908d4e3d2ee017524ceea70b1a5a5813a513"
+  }
+ },
+ "source": {
+  "step_count": 11,
+  "step_spacing_mean": 3.742,
+  "posts": [
+   {
+    "px": {
+     "L": 2168,
+     "R": 2179,
+     "T": 1533,
+     "B": 1688
+    },
+    "X_aft": 371.89,
+    "X_fwd": 373.84,
+    "X_center": 372.86,
+    "Z_top": 129.58,
+    "Z_bottom": 105.04
+   },
+   {
+    "px": {
+     "L": 2233,
+     "R": 2244,
+     "T": 1537,
+     "B": 1687
+    },
+    "X_aft": 382.44,
+    "X_fwd": 384.39,
+    "X_center": 383.42,
+    "Z_top": 128.85,
+    "Z_bottom": 105.1
+   }
+  ],
+  "steps_Z": [
+   102.38,
+   98.74,
+   95.02,
+   91.31,
+   87.67,
+   83.95,
+   80.08,
+   76.44,
+   72.56,
+   68.84,
+   64.96
+  ]
+ }
+}

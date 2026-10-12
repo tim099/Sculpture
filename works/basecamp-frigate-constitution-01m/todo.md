@@ -166,7 +166,7 @@
 ## 階段二十三 艙口梯（2026-10-11 套用）
 - [x] spar → gun 4 座（waist 一對、after、fore）、gun → berth 3 座（companion、after、fore）；扶手繩 14
 - [ ] berth → orlop：三個候選都放不下（見 notes.md 階段二十三）⇒ 要的話另開一個 orlop 的梯口
-- [ ] 船側 side steps 與 entry port（從小艇上船）
+- [ ] 船側 side steps 與 entry port（從小艇上船）⇒ 階段三十（草稿，見下）
 - [ ] 艙口格柵（gratings；spar deck 長艙口、main／fore hatch）
 - [ ] spar deck 艦長室上方的 companion（spar deck 那一格目前沒有開口）
 
@@ -242,3 +242,12 @@ Tim 的回饋：「這幾個被纜線擋住了」—— channel 上的 deadeye�
       圖：overlays/stage29_channels_v2_ropes.png、stage29_main_channel_ropes.png。
       ⚠ 上 deadeye／lanyards／shroud 下端仍是座標（rig_deadeyes 從固定點算的，要重跑腳本才跟）；子繩語法表達不了「往舷外偏一點」。
 - [x] Tim「測試ok 套用草稿然後單層提交吧」⇒ 三份草稿套用、pin rails 固定點 68 個重新登記、unanchor pinrail-12.pin-5；繩 broken 0（SCP_Core d48e4ab、Senate 2f5cf4c）。
+
+## 階段三十 entry port 與 side steps（2026-10-12 套用；讀數見 notes.md 階段三十）
+- [x] 讀圖（11 號：11 道橫條、開口兩側的柱）；新圖紙 23（`design/draft_entry.py`、`sheet23_entry_v1.png`、`verify_entry.json`；設計在 plan.json `entry`）
+- [x] 子作品 `-entry-side`（一舷）＋組裝件關聯 舷梯／舷梯-鏡像；標記 `舷梯:begin`（船殼、-belaying-side）
+- [x] 草稿三份：船殼 carvevox 1,480（兩舷開口）、-entry-side stampvox 151、-belaying-side carvevox 54（pinrail-6）；固定點 4、man ropes 4（組 entry/manropes）
+- [x] 組裝件 draft=1 1,433,588（預期對上）、1 元件、空腔 0、link_overlap 0、ropes_broken 0
+- [x] Tim「測試ok 套用草稿」⇒ 三件 apply（changed 1,480／151／54、mismatch 0）→ unanchor pinrail-6.pin-1..5 → 船殼、-belaying-side 打 `舷梯:end` → 重跑 draft_entry.py 三份 sha256 相同；組裝件 1,433,588
+- [ ] v1.1：man rope 下端綁在空中（Tim 2026-10-12 預覽指出）⇒ 改綁在踏階上
+- [ ] 之後：entry port 的扶手欄杆、gangway 板、fenders／chesstree、quarterdeck 那段欄杆比 waist 高（11 號有畫，作品舷頂是單一高度）
