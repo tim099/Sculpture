@@ -1,0 +1,159 @@
+{
+ "read": {
+  "world": 1054406,
+  "walk_skipped_hull": 6,
+  "walk_face_x": 104
+ },
+ "parts": {
+  "quarter_gallery": {
+   "cells": 7542,
+   "overlap_hull": 0,
+   "not_connected_to_hull": 0,
+   "overlap_other_parts": 0
+  },
+  "stern_walk": {
+   "cells": 1395,
+   "overlap_hull": 0,
+   "not_connected_to_hull": 0,
+   "overlap_other_parts": 0
+  },
+  "stern_deco": {
+   "cells": 170,
+   "overlap_hull": 0,
+   "not_connected_to_hull": 0,
+   "overlap_other_parts": 0
+  },
+  "quarter_gallery_P": {
+   "cells": 7542,
+   "overlap_hull": 0,
+   "not_connected_to_hull": 0,
+   "overlap_other_parts": 0
+  },
+  "lantern_cells": 57284,
+  "lantern_symmetry_diff": 0,
+  "assembly_voxels_expect": 1071055,
+  "structure_expect": {
+   "components": 1,
+   "cavities": 0
+  }
+ },
+ "files": {
+  "quarter_gallery": {
+   "cells": 7542,
+   "sha256": "29017e778e5b9b5d77a5cb27811c7603bd2efb8f7fb6ccfc09973703b26aa19e"
+  },
+  "stern_walk": {
+   "cells": 1395,
+   "sha256": "baa71b5cd2c289874c1d2f002d320e07d2ff018e4df087f585c532b70f8c0795"
+  },
+  "stern_deco": {
+   "cells": 170,
+   "sha256": "9eb05e278230022ccd5dd8da73095baca218e177b0f18100d959b4be15768b6f"
+  },
+  "lantern": {
+   "cells": 57284,
+   "sha256": "69a6e7674fa9f0b4030f782fbe3f3371bb1414f5e869622807cccee5fe28fe02"
+  }
+ },
+ "placement": {
+  "quarter_gallery": {
+   "origin": [
+    102,
+    203,
+    95
+   ],
+   "size": [
+    26,
+    11,
+    73
+   ],
+   "cells": 7542,
+   "mirror_at": [
+    102,
+    107,
+    95
+   ]
+  },
+  "stern_walk": {
+   "origin": [
+    97,
+    117,
+    125
+   ],
+   "size": [
+    8,
+    87,
+    16
+   ],
+   "cells": 1395
+  },
+  "stern_deco": {
+   "origin": [
+    95,
+    129,
+    149
+   ],
+   "size": [
+    3,
+    63,
+    11
+   ],
+   "cells": 170
+  },
+  "lantern": {
+   "size": [
+    40,
+    40,
+    80
+   ],
+   "cells": 57284,
+   "pivot": [
+    20.5,
+    20.5,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    {
+     "name": "lantern-C",
+     "at": [
+      99.5,
+      160.5,
+      161
+     ],
+     "cap_cell": [
+      97,
+      160,
+      160
+     ]
+    },
+    {
+     "name": "lantern-S",
+     "at": [
+      99.5,
+      196.5,
+      161
+     ],
+     "cap_cell": [
+      97,
+      196,
+      160
+     ]
+    },
+    {
+     "name": "lantern-P",
+     "at": [
+      99.5,
+      124.5,
+      161
+     ],
+     "cap_cell": [
+      97,
+      124,
+      160
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -47,3 +47,26 @@
 - **結果帳**：936,276 vs 設計 936,276，缺 0、多 0、色差 0；1 元件、空腔 0。
 - 過程圖：`overlays/stage4_before_astern.png`（改之前）、`stage4_stern_astern.png`、`stage4_stern_quarter.png`。
 - ⚠ 看得到的：船尾頂端兩角舊 taffrail 的翹角從正後方看像兩隻角（4b 的 quarter galleries 會包住）；poop 前緣 x 215 是牆的斷面（之後放 poop 的 breastwork 與欄杆）。
+
+## 船身拉長（2026-10-12 晚，Tim：「可以嘗試拉長船體嗎（船體中段複製拉伸）」＋截圖紅圈在船中）
+設計 plan.json `stretch`；產生 `design/draft_stretch.py`（讀標記 `船尾:end`）⇒ `masks/stretch/block.vox.txt`、`verify_stretch.json`。
+- 量接縫再挑段：接縫兩邊兩欄的右舷外緣逐 z 比 —— 66 格一段的（x 439、406、472 起）兩端船寬本來就差 1–3 格（439 起：z 70–100 差到 2、舷頂差 1；406 起：水線以上 −1 一整條、舷牆 −2，還多封 2 個空腔）；**33 格一段的 x 439..471 最平（每個 z 最多差 1、舷頂差 0）**⇒ 這一段**複製兩份**接在它後面（第 8／9 個砲門之間的中點到第 9／10 個之間的中點，含第 9 個砲門、兩層都有）。
+- 落格：`拉長:begin` → `work sub=move region=472..1023,… delta=66,0,0` → stampvox block（59,065）at 33,0,0 與 66,0,0 → `拉長:end`。
+- **結果帳**：1,054,406 vs 設計 1,054,406，缺 0、多 0、色差 0；1 元件、空腔 0；兩道接縫每個 z 外緣差 ≤ 1；船殼最前 x 742（以前 676）。
+- 每舷砲門 15 → 17（兩層）⇒ 砲 82 → **90**（兩層各 32 門舷側＋船頭 2＋船尾 2、上甲板 18；憲法號的 1.67 倍）—— plan.json guns 已改。
+- ⚠ 從上往下看（還沒鋪甲板）：船艙底的斜肋被複製成兩段斷開的斜線（鋸齒），鋪了甲板就看不到；之後照憲法號座標做的部件：x ≥ 472 ＋66、x 439..471 那一段再複製兩份。
+- 過程圖：`overlays/stage_stretch_{side,top,bowq}.png`。
+
+## 階段四b 船尾裝飾 —— 新圖紙 05（2026-10-12 晚）
+設計 plan.json `stern_deco`；產生 `design/draft_stern_deco.py`（讀標記 `拉長:end`）⇒ `masks/deco/{quarter_gallery,stern_walk,stern_deco,lantern}.vox.txt`、`deco_placement.json`、`verify_stern_deco.json`、`sheet05_stern_deco_v1.png`。
+- **組裝件** `basecamp-ember-01m-assembly`「餘燼號（組裝）」（0.1 m、1024×320×800）：關聯 `船殼`、`後廊-S`／`後廊-P`（mirror=y，at.y ＝ 321 − 203 − 11 ＝ 107）、`船尾陽台`、`船尾名牌`；模型 `lantern-C／S／P`。
+- 子作品（parent 船殼、tags sub）：
+  - `-quarter-gallery`（右舷一件、0.1 m、26×11×73、7,542 格）：貼船側外緣（y 203–206、x 103–125，收在上甲板第 1 個砲門 x 128 之前）；z 96–105 垂飾（往下收、金箍）、106–129 第一層（窗 114–124 琥珀 245＋金框、暗紅板 108–112）、130–132 金腰帶、133–149 第二層（窗 135–145）、150–160 暗紅冠＋金邊、金尖頂到 z 166。
+  - `-stern-walk`（0.1 m、1,395 格）：後甲板艙那列窗外的陽台，平台 z 131–132、從船尾面 x 104 往後 6 格、|dy| ≤ 42、金欄杆每 3 格一根、扶手 z 139、5 個托架（z 126–130）；船尾角往前彎，平台邊緣 6 格碰到船殼 ⇒ 不放。
+  - `-stern-deco`（0.1 m、170 格）：poop 那段船尾面寫 **EMBER**（5×7 字、金、z 151–157、凸 1；從船尾看觀者左手邊 ＝ −y ⇒ 字從 −y 往 +y 寫）＋兩邊火焰（橘 240、金、亮黃 252，|dy| 27）。
+  - `-lantern`（**0.02 m**、41×41×80、57,284 格）：八角、琥珀玻璃、金框金箍、暗紅頂、金尖；左右對稱差 0。模型 scale 0.2 ⇒ 約 0.8 m 寬、1.6 m 高；3 盞站在 poop 頂 cap（z 160）上：中間、|dy| 36；meta `kind=lantern, light=amber`。
+- 量：每件跟船殼重疊 0（stern walk 扣掉 6 格之後）、6 連通接到船殼、左舷鏡過去也不撞；組裝件 **1,071,055**、1 元件、空腔 0、link_overlap 0；**結果帳**（組裝件匯出 links=all vs 設計）缺 0、多 0、色差 0；models_broken 0。
+- 圖紙第一版：gallery 的冠頂設到 z 161，船側只到 160 ⇒ 貼不上（KeyError 當場擋下）⇒ 冠 150–160。
+- ⚠ plan.json 這一輪用 json.dump 整份重寫了（憲法號階段十的坑：之後只在尾巴接新段）—— 量過 git diff：刪 15 行、加 276 行（幾乎都是新段落，排版只動到 guns 那幾行）；內容沒丟（重跑產生程式結果帳都對得上）。
+- 過程圖：`overlays/stage4b_stern_{astern,quarter}.png`、`stage4b_ship_sternq.png`。
+- ⚠ 看得到的：船尾頂端兩角的舊 taffrail 翹角還在 gallery 冠旁邊露一點；燈籠是網格模型、觀測頁的光源不會從燈籠發光（只是琥珀色）。
