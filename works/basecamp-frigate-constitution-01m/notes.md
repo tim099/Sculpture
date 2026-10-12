@@ -593,3 +593,12 @@ Tim：「照順序繼續做下一階段 GO」（候選：錨 ✓、spar deck 砲
 - 固定點 320 重新登記（319 一次過；spritsail.jackstay-P64 一次 IOException，值沒變，補跑後讀回在原位）；sails_test --apply：sails_broken 0、ropes_broken 0；方帆鼓度多 0.5–3.2 格（main course −92.4 → −95.3、fore course −67.1 → −70.3；最少是 mizzen royal −25.0 → −25.5；⚠ commit 25c6a65 的訊息與第一次回報寫成「1–3 格」，說大了），縱帆不變。
 - 讀數：Tim「測試ok 可以套用了」⇒ 三件 apply（changed ＝ 草稿的加＋刻：9,089／14,684／4,769、mismatch 0）；組裝件 1,445,468 → 1,445,296、link_overlap 0、1 元件、空腔 0；sails_broken 0、ropes_broken 0。
 - 過程圖：`overlays/stage26_brace_*`（bowq 船頭斜看、above 從上往下）。
+
+## 階段二十七 舵輪（外部模型測試，TASK-0507）
+設計 `design/draft_wheel.py`；`masks/wheel/wheel.vox.txt`；固定點 `design/rig_points_wheel.json`。子作品 `-wheel`「憲法號雙舵輪（0.02 m／格）」100×104×104、tags sub；**不是關聯**，是組裝件的外部模型 `wheel`（作品當模型：匯出成 obj 快取、縮 0.2 掛上來）。
+- 資料：雙舵輪、裝在 quarterdeck（USS Constitution Museum；1812 年原本那副被 Java 號打掉，換上 Java 號的）。輪徑、輪幅數 ⚠ 未查證（10 根是模型論壇的說法）⇒ 照一般巡防艦比例：輪徑約 1.7 m（外緣半徑 42 格）、輪軸離甲板 1.12 m。
+- 子作品座標：x 沿船長（輪軸）、z 0 ＝ 甲板面；兩個輪在兩根支柱外側、中間鼓輪（兩頭鐵箍）、黃銅輪轂蓋。44,456 格、左右對稱差 0。
+- 位置：後桅 fife rail（x 195–200）往船尾到 x 140 都空；y 160 的甲板頂在 z 105 ⇒ pivot (50,52,0) 放到 (172.5,160.5,106)。外框 (163.3,150.7,106)–(181.7,170.3,126.8)；上方 spanker boom 在 z 133。
+- 舵索 2 條（組裝件的繩）：`model:wheel/drum-rope-a／b` → 甲板面（往下穿進甲板）、#a08458、粗 0.35、長 9.9。
+- 驗：模型轉 90°＋搬 10 格 ⇒ 繩端到手算的 (183.8,157.8,115.9)、改回原位讀數回來。Tim「測試ok」（2026-10-12）。
+- 過程圖：`overlays/stage27_wheel_{part,deck,close}.png`。
