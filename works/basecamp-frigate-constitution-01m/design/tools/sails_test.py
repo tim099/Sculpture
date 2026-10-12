@@ -51,7 +51,7 @@ for m, lst in SQUARE.items():
                  'course：sheet 往後、tack 往前綁到舷牆 belaying pin')
             for sd, cl, lk in (('S', 'clew_s', '繫繩欄'), ('P', 'clew_p', '繫繩欄-鏡像')):
                 rope('%s.sheet-%s' % (mem, sd), 'sail:%s/%s' % (mem, cl), '%s/pinrail-%d.pin-3' % (lk, C['sheet']), 0.5, slack=0.85, note='course sheet（收短 15% ⇒ 下角往後下拉；v1 slack 1 下角被風吹得往前往上）')
-                rope('%s.tack-%s' % (mem, sd), 'sail:%s/%s' % (mem, cl), '%s/pinrail-%d.pin-3' % (lk, C['tack']), 0.5, note='course tack')
+                rope('%s.tack-%s' % (mem, sd), 'sail:%s/%s' % (mem, cl), '%s/pinrail-%d.pin-3' % (lk, C['tack']), 0.5, slack=0.8, note='course tack（收短 20%；2026-10-12 照 kotoko：slack 1 時 tack 垂 21–26 格、下角被吹高 7–12 格）')
         else:
             low = 'crossjack' if (m == 'mizzen' and s == 'topsail') else LOWER[s]
             el = YP['%s-%s.earing-S' % (m, low)]

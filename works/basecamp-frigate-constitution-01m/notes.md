@@ -508,6 +508,20 @@ Tim：「掛帆試試吧」「可以調整風力試試」。一格 voxel 都不�
 - 讀數（4.7 m/s、4 秒 240 步、每步約 4.4 ms）：最鼓 main course −89、fore course −67、topsail −46～−59、topgallant −33～−44、royal −25～−34、spanker 20、三角帆 14～31；sails_broken 0、帆腳索 32 條 ropes_broken 0。
 - 正側面看方帆像一條條彎弧：帆桁是正橫擺的（沒有 brace），從正側面看剛好是帆的側緣 —— 不是錯。
 - 過程圖：`overlays/stage19_sails_*`（`_v1_bowq_scale_wrong` 是比例錯的那一輪）。
+- **kotoko 兩點（2026-10-12 試）**：她 10-11 噗浪：course 最鼓 89／67 格偏深（真的方帆約寬度一到兩成）；sheet 0.85 繃住、tack slack 1 垂 21–26 格 ⇒ 下角被吹高。工具 `design/tools/sail_try.py`（只改兩面 course 的 fullness 與四條 tack 的 slack，再 `sub=sails` 讀）；先用原值跑一次重現基準（−67.08／−89.37、下角 z 153.5／161.6、tack 垂 20.95–26.29，逐位一致）才換參數。
+  | tack slack | course fullness | fore 最鼓 | main 最鼓 | fore 下角 z | main 下角 z | fore tack 垂 | main tack 垂 |
+  |---|---|---|---|---|---|---|---|
+  | 1（原） | 1.05 | −67.08 | −89.37 | 153.5 | 161.6 | 21 | 24–26 |
+  | 0.85 | 1.05 | −67.1 | −90.72 | 153.5 | 158.1 | 14 | 0 |
+  | 1 | 1.02 | −62.56 | −84.76 | 155.2 | 163.4 | 20 | 22 |
+  | 0.85 | 1.02 | −62.54 | −86.47 | 155.2 | 158.2 | 10 | 0 |
+  | 0.8 | 1.02 | −62.61 | −87.77 | 155.1 | 153.4 | 0 | 0 |
+  | 0.8 | 1.0 | −59.79 | −84.35 | — | 153.6 | — | 0 |
+  | **0.8（採用）** | **1.05** | −67.11 | −92.36 | 153.5 | 153.4 | 10–12 | 0 |
+  風（狀態是 0.8／1.0 那組之後，`wind=` 單次覆寫）：2.4 m/s ⇒ fore −44.84、main −55.15；無風 ⇒ fore −16.64、main ＋27.36（自然下垂）。
+  ⇒ tack 那點成立（main 下角回到設計附近、tack 不再垂）；鼓度那點的旋鈕是**風**，fullness 只差幾格（布繃平 1.0 也還有 −84）。推測帆腳是自由邊、中段被吹起是主因 —— ⚠ 沒驗。fullness 與風不動，等 Tim 預覽選（todo「帆」）。
+  - 預覽 `overlays/stage19_sails_v2_tack08_preview.png`（yaw 135、pitch 12；⚠ 跟 stage19_sails_bowq 角度不同，不是改前改後對照）。
+  ⚠ 重新 `--apply` 時 spanker 那一筆 overwrite 回 IOException（檔案取代失敗）；sails.json 內容 `git diff` 無差異（寫入值本來就相同）⇒ 沒補跑。
 
 ## 階段二十 gun deck 長砲（新圖紙 18）
 Tim：「接著開始裝飾細節吧 可以加炮了」。設計 plan.json `guns`；`design/draft_guns.py`；`verify_guns.json`、`sheet18_guns_v1.png`；`masks/guns/gun24.vox.txt`；擺放 `design/guns_placement.json`。資料：research agent（Martin《Constitution Close Up》、captainsclerk 的 1809–16 Cecil Iron Works 24 磅砲 9'6"、1794 frigate 24-pdr 外徑、truck 前 18"／後 16"、axletree 4'9"、cheek 4 階、今天的照片：砲管黑、砲架紅赭、輪子黑（低信度））。
@@ -545,3 +559,12 @@ Tim：「接下來可以試著加樓梯嗎（或是實際上船員是如何上�
 - 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 1,084／788、mismatch 0）；組裝件 1,441,316 ＋ 1,872 ＝ 1,443,188、link_overlap 0、1 元件、空腔 0、浮空 0；重產（藏兩條關聯讀 1,441,316）四個檔逐位元組相同；全船繩 659（＋扶手 14）、ropes_broken 0。
 - 過程圖：`overlays/stage23_*`。
 - 更正（2026-10-12，核對流程對原始檔抓到的；連日記、plan not_now、draft_ladders.py 註解一起改）：fore scuttle 只開在 berth／gun／spar 三層，底下的 orlop 是實心甲板（只有 after hatch 在 orlop 同一處也是洞）；扶手柱實際都在倒數第 3 欄、高 9（fore spar → gun 與 companion 高 8），「倒數第 3–5 欄、高 7–9」是程式試的範圍；companion 是靠降柱高解掉的。
+
+## 階段二十四 錨（新圖紙 21）
+Tim：「478 繼續造船吧」（沒指定 ⇒ 照候選清單第一個）。設計 plan.json `anchors`；`design/draft_anchors.py`；`verify_anchors.json`、`sheet21_anchors_v1.png`；`masks/anchors/bower.vox.txt`；擺放 `design/anchors_placement.json`。
+- 一隻做一次：子作品 `-anchor`「憲法號 bower anchor（一隻）」47×33×58（parent ＝ 船殼），1,140 格（shank 405、stock 357、arm 243、palm 70、band 36、ring 29；鐵 146 783、木 172 357）。old pattern：shank 3×3、4.8 m；木 stock 4.3 m 中間粗兩端收、兩組鐵箍；arms 是半徑 15 的圓弧（展開 64°）、內側貼 palm；ring 半徑 3、粗 0.8。⚠ 尺度是這型錨的常見比例，沒查到原船數字（未查證）。
+- 掛法 catted：ring 頂貼 cathead 某一格的正下方，從 cathead 端面往船裡試、兩舷都不撞的第一格 ⇒ 653,205,130（端面那一格，第一個就過）。關聯進組裝件：錨-S at 630,189,73、錨-P at 630,99,73 mirror=y（at.y ＝ 321 − 33 − 189）。stock 沿船長、arms 展在船寬那一面。
+- 草稿期間改的：stock 沿船寬 ⇒ 靠船內那頭插進船殼 57 格（船頭這段半寬 182–191）⇒ 改沿船長；stock 46 格船尾端碰到 x 630 的黑木 2 格 ⇒ 42；ring 只靠斜角相接、6 連通量是 7 塊 ⇒ 粗 0.55 → 0.8；黑 36 貼黑船殼渲出來只看得到 stock ⇒ 鑄鐵灰 146（hawse 圈同一個理由）。
+- ⚠ plan.json 有不只一個 `"anchors": {`（別段的固定點也叫這個鍵）⇒ 改錨這一段要用最後一個（rindex），不然會改到別段；這次斷言當場擋下、diff 只有新增行。
+- 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 1,140、mismatch 0）；組裝件 1,443,188 ＋ 2 × 1,140 ＝ 1,445,468、link_overlap 0、1 元件、空腔 0；兩舷跟現況重疊 0、x／y 不對稱 0、貼著 cathead 6 格、離船殼最近 1 格、最低 z 75（水線 62.86 之上）。
+- 過程圖：`overlays/stage24_anchors_*`（close 是右舷船頭斜看、front 其實是 yaw 90 的右舷側面）。

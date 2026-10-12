@@ -2363,5 +2363,93 @@
     ],
     "sources": "實船上下甲板走的是艙口裡的陡梯（ladder：兩根側板＋開放踏板，約 60°，上端扣在艙口圍板上），旁邊一條 man rope 當扶手；主要幾座 ＝ main ladder（waist）、after ladder、fore ladder（前桅前的 scuttle）、艦長／軍官的 companion ladder。從小艇上船走船側的 side steps（釘在船殼上的一排木條＋兩條 man ropes）；上桅走 ratlines（階段二十二已做）。⚠ 位置是設計決定：plan.json deckworks.hatches 已有的艙口裡挑能當梯口的（main／fore 是貨艙口，下一層同一處也是洞 ⇒ 不放）",
     "not_now": "berth deck → orlop（v1 量過：after hatch 在 orlop 同一處也是洞、短梯落不出去；fore scuttle 底下的 orlop 是實心甲板，但梯子落進艙房；companion 底下梯腳正對中線柱子 ⇒ 三處都不放，之後要的話另開一個 orlop 的梯口）、船側 side steps 與 entry port、艙口格柵（gratings）、spar deck 艦長室上方的 companion（spar deck 那一格目前沒有開口）、orlop → 底艙"
+  },
+  "anchors": {
+    "title": "新圖紙 21：錨（bower anchor ×2，catted 掛在 cathead）v1",
+    "date": "2026-10-12",
+    "subwork": {
+      "id": "basecamp-frigate-constitution-01m-anchor",
+      "title": "憲法號 bower anchor（一隻）",
+      "parent": "basecamp-frigate-constitution-01m",
+      "link_in": "basecamp-frigate-constitution-01m-assembly",
+      "link_prefix": "錨-",
+      "note": "一隻錨做成一件子作品（parent ＝ 船殼）；關聯進組裝件兩條：錨-S 照原樣、錨-P mirror=y"
+    },
+    "base": {
+      "assembly_voxels": 1443188,
+      "note": "錨加進來之前的組裝件（2026-10-12 讀 composed_voxels；含 tack 0.8 之後的帆／繩不影響格數）"
+    },
+    "lwl_z": 62.86,
+    "cathead_box": {
+      "x": [
+        635,
+        660
+      ],
+      "y": [
+        196,
+        206
+      ],
+      "z": [
+        124,
+        136
+      ],
+      "color": 36,
+      "note": "S 舷 cathead 的黑色木料（船頭裝飾子作品，世界座標；端面金 248 在 x 653–655、y 204–205、z 130–132）。y ≥ 196 只取伸出舷外那一段，不取 rails"
+    },
+    "orient_order": [
+      "x",
+      "y"
+    ],
+    "anchor": {
+      "size": [
+        33,
+        47,
+        58
+      ],
+      "cx": 16,
+      "cy": 23,
+      "shank": {
+        "z0": 3,
+        "z1": 50
+      },
+      "ring": {
+        "zc": 53,
+        "r": 3,
+        "w": 0.8
+      },
+      "stock": {
+        "length": 42,
+        "zc": 46,
+        "half_x_mid": 2,
+        "half_x_end": 1,
+        "half_z_mid": 1.5,
+        "half_z_end": 1,
+        "bands": [
+          4,
+          12
+        ]
+      },
+      "arms": {
+        "R": 15,
+        "th1": 64,
+        "r0": 1.6,
+        "r1": 1.0
+      },
+      "palm": {
+        "th0": 40,
+        "th1": 62,
+        "w_mid": 3.5,
+        "offsets": [
+          1.2
+        ]
+      },
+      "colors": {
+        "iron": 146,
+        "wood": 172
+      }
+    },
+    "sources": "設計決定（美觀優先，Tim 2026-10-11「不用太過追求史實，參考資料然後由妳重新設計圖紙」）：old pattern（Admiralty 式）錨 —— 鐵 shank、兩隻彎 arm 帶 palm、上端 ring、木 stock 與 shank 垂直並套鐵箍。尺度：shank 4.8 m（約 15.7 ft）、stock 4.3 m、arm 展開約 2.7 m —— 是這型錨常見的比例，**沒有查到憲法號原船錨的數字**（未查證）。掛法：catted —— ring 吊在 cathead 端下方、shank 直立、crown 朝下；實船出海時通常再 fish 上來綁在船側，這裡先做 catted",
+    "decisions": "stock 沿船長（orient x）優先、arms 展在船寬那一面（v1 先試 stock 沿船寬：stock 靠船內那一頭插進船殼 57 格 ⇒ 換方向；stock 46 格時船尾端碰到 x 630 的黑木 2 格 ⇒ 縮成 42）；兩舷都不撞的第一個 cathead 掛點（從端面往船裡試）；顏色：鐵 146（鑄鐵灰，跟 hawse 圈同一個理由 —— v1 用砲的黑 36，渲出來黑錨貼黑船殼只看得到 stock）、stock 木 172（跟 fife rails 一樣）",
+    "not_now": "fish 起來綁在船側（billboard）、cat tackle／fish tackle 的繩、錨鏈或錨纜與 hawse 孔、sheet／stream／kedge anchors"
   }
 }

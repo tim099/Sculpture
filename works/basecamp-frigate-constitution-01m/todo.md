@@ -154,9 +154,11 @@
 - [ ] spar deck：carronades（32 磅、slide carriage）與 bow chasers —— spar deck 的砲門要先開（現在 pin rails 是照 gun deck 砲門的空檔放的，開 spar deck 砲門時一起看）
 - [ ] 砲門蓋（等可以匯入模型）
 
-## 帆（kotoko 2026-10-11 噗浪上的兩點，還沒試）
-- [ ] 帆鼓得偏深（main course 最鼓點離綁點平面 89 格 ＝ 8.9 m、fore course 6.7 m；真的方帆約鼓寬度的一到兩成）⇒ 試 fullness 從 1.05 往下
-- [ ] 兩面 course 整面抬了 7–10 格：sheet 0.85 繃住、tack 還是 slack 1（垂 21–26 格）⇒ 試 tack 也收到 1 以下（她標明是從讀數推的、沒在船上試）；試完量最鼓點與下角高度回報她
+## 帆（kotoko 2026-10-11 噗浪上的兩點，2026-10-12 試過；讀數見 notes.md「掛帆試試 → kotoko 兩點」）
+- [x] 兩面 course 下角被吹高、tack 垂 21–26 格 ⇒ **tack 收到 0.8**（sails_test.py 已改、已套用）：main 下角 z 161.6 → 153.4（設計 150）、tack 垂 0；fore 下角不動（153.5，sheet 撐著）、tack 垂 21 → 10–12
+- [x] 鼓得偏深 ⇒ fullness **不是**主要旋鈕：1.05 → 1.02 只少 5 格、1.0（布繃平）main 仍 −84 ⇒ 鼓度主要來自風（tack 0.8／fullness 1.0 時，風減半 main −55／fore −45 ≈ 寬度兩成；無風 −17／+27 自然下垂）。fullness 維持 1.05
+- [ ] 要不要讓 course 鼓淺一點：① 預設風降到約 2.4 m/s（全部帆一起變淺）② 帆腳那條邊（clew_s→clew_p）加束縛（foot rope；引擎目前帆腳是自由邊，推測是中段被吹起的主因 —— ⚠ 推論，沒驗）—— 審美題，等 Tim 預覽後選
+- [ ] 讀數回噗浪給 kotoko（她的兩點：tack 成立；fullness 那點換成風）
 
 ## 階段二十三 艙口梯（2026-10-11 套用）
 - [x] spar → gun 4 座（waist 一對、after、fore）、gun → berth 3 座（companion、after、fore）；扶手繩 14
@@ -164,6 +166,14 @@
 - [ ] 船側 side steps 與 entry port（從小艇上船）
 - [ ] 艙口格柵（gratings；spar deck 長艙口、main／fore hatch）
 - [ ] spar deck 艦長室上方的 companion（spar deck 那一格目前沒有開口）
+
+## 階段二十四 錨（2026-10-12 套用）
+- [x] 新圖紙 21（`design/draft_anchors.py`、`sheet21_anchors_v1.png`、`verify_anchors.json`；設計在 plan.json `anchors`）：old pattern bower anchor 一隻 1,140 格（shank 4.8 m、stock 4.3 m 木 172 套鐵箍、arms＋palms、ring），鐵 146
+- [x] 子作品 `-anchor`（parent ＝ 船殼，47×33×58）＋ 組裝件關聯 錨-S（630,189,73）／錨-P（630,99,73，mirror=y）；草稿已蓋（placed 1,140）
+- [x] 讀數：catted 在 cathead 端面正下方（掛點 653,205,130，第一個試的就過）、兩舷跟現況重疊 0、x／y 不對稱 0、1 元件、貼著 cathead 6 格、離船殼最近 1 格、最低 z 75（水線 62.86 之上）；組裝件預期 1,443,188 ＋ 2 × 1,140 ＝ 1,445,468
+- [x] 草稿期間改的：stock 先沿船寬 ⇒ 靠船內那頭插進船殼 57 格 ⇒ 改沿船長；stock 46 格船尾端碰到 x 630 的黑木 2 格 ⇒ 42；ring 只靠斜角相接（7 塊）⇒ 粗 0.8；黑 36 貼黑船殼看不見 ⇒ 鑄鐵灰 146（hawse 圈同一個理由）
+- [x] Tim「測試ok 可以套用了」⇒ apply（changed 1,140、mismatch 0）；組裝件 1,445,468、1 元件、空腔 0、link_overlap 0
+- [ ] 之後：fish 起來綁在船側、cat／fish tackle 的繩（綁在 ring 與 cathead 上的固定點）、錨纜與 hawse 孔、sheet／stream／kedge anchors
 
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**
