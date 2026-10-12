@@ -286,6 +286,6 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 - [x] 帆 12 面、sheet 18 條改 model: 路徑；sails_test.py 改產 model: 路徑
 - [x] 從桅刻掉舊帆桁（刻完 ＝ 帆桁:begin 逐格相同）、拿掉 320 個舊固定點
 - [x] 組裝件 1,394,450、1 元件、空腔 0、模型 208、broken 0；轉到另一舷試過、轉回來逐位元組相同
-- [ ] Tim 預覽 OK ⇒ 單層提交（Sculpture）
-- [ ] 跟 ame 說：帆桁的 meta 與 pivot（遊戲跟著風轉）
+- [x] Tim 預覽 OK ⇒ 單層提交（Sculpture）—— 57e2795
+- [x] 跟 ame 說：帆桁的 meta 與 pivot（遊戲跟著風轉）
 - [ ] 之後可以考慮：gaff／boom 改成「直桿＋rotate y」（現在是斜的格子階梯）；course 的 sheet／tack 跟著帆桁轉

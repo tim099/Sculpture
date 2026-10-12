@@ -1,0 +1,46 @@
+{
+ "title": "餘燼號（The Ember）新圖紙 01：側面、橫剖面、甲板高度、砲位表 v1 —— 憲法號插一層砲甲板",
+ "task": "TASK-0519",
+ "author": "basecamp",
+ "date": "2026-10-12",
+ "meters_per_cell": 0.1,
+ "base": {
+  "work": "basecamp-frigate-constitution-01m",
+  "events": 478,
+  "last_event": "2026-10-12/151329_081_052c44.json",
+  "voxels": 821491,
+  "note": "憲法號船殼（任務主作品，links=none）在階段三十之後的樣子：龍骨、肋骨、外板、內板、砲門、舷牆、船尾窗、上甲板砲門、entry port 開口"
+ },
+ "band": {
+  "cut_z": 109,
+  "height": 23,
+  "source_layer": 108,
+  "entry_slot": {"x": [374, 382], "z_from": 105, "fill_from_x": 373},
+  "rule": "z < cut_z 的格不動；z ≥ cut_z 的格往上 height；[cut_z, cut_z + height) 這一段每一層 ＝ source_layer 那一層的複製（entry port 的缺口先用 fill_from_x 那一欄補起來）。entry port 在 z 105–108 剩下的那一截也補起來（entry port 跟著上甲板抬高）。"
+ },
+ "decks": {
+  "orlop": {"z": "42（兩塊平台）", "from": "憲法號 orlop，不動"},
+  "berth": {"z": "61｜290｜60｜504｜61｜587｜63", "from": "憲法號 berth deck，不動"},
+  "lower_gun": {"z": "83｜238｜82｜504｜83｜570｜86｜633｜88", "from": "憲法號 gun deck，不動"},
+  "upper_gun": {"z": "106｜238｜105｜570｜108｜633｜110", "from": "憲法號 spar deck 的高度（在切口下面、不動）；變成有蓋的砲甲板"},
+  "spar": {"z": "129｜238｜128｜570｜131｜633｜133", "from": "憲法號 spar deck ＋ 23（跟著切口以上抬高）；quarterdeck／forecastle"}
+ },
+ "guns": {
+  "target": "憲法號 54 門 × 1.5 ≈ 81",
+  "rows": [
+   {"deck": "lower_gun", "ports_per_side": "14 ＋ 船頭 1", "broadside": 28, "chase_bow": 2, "chase_stern": 2, "gun": "32 磅長砲（新做一門，-gun-24 的砲身照口徑放大）", "ports_from": "憲法號 gun deck 砲門（source_ports.json），不動"},
+   {"deck": "upper_gun", "ports_per_side": "14 ＋ 船頭 1", "broadside": 28, "chase_bow": 2, "chase_stern": 2, "gun": "24 磅長砲（憲法號 -gun-24 當模型）", "ports_from": "下層砲門 ＋ 23（同一欄、上下對齊）"},
+   {"deck": "spar", "ports_per_side": "12（quarterdeck 8、forecastle 4）", "broadside": 18, "chase_bow": 0, "chase_stern": 0, "gun": "32 磅 carronade（憲法號 -gun-carronade32）", "ports_from": "憲法號 spar deck 砲門 ＋ 23；每舷放 9 門（哪幾個砲門等 poop deck 的設計定）"}
+  ],
+  "chase_gun": "18 磅長砲（憲法號 -gun-long18）；船頭照憲法號 chase18 的做法（角度搜）；船尾在 transom 上開砲門（下層：船尾窗那一列往下；上層：插進來那一段的船尾）",
+  "total": 82
+ },
+ "waterline": {"z": 62.86, "note": "照憲法號（設計決定：奇幻船，不照多一層甲板的排水量重算吃水）"},
+ "provenance": {
+  "band": "設計決定：兩層砲甲板 ＝ 在憲法號 gun deck 砲門上面插一段船身。切口取 z 109：z 108–110 是砲門、clamp、白帶都沒有的乾淨層（只有外板 36、肋骨 141、內板 177，加中線 173／104；z 105 以上只有 entry port 的 9 欄缺口）。插 23 格 ＝ 憲法號 gun deck → spar deck 的間距（83 → 106），三層甲板間距都是 23。",
+  "tumblehome": "設計決定：插進來那一段是直的（不再往內收）；之後要更多 tumblehome 再說",
+  "upper_ports": "設計決定：上層砲門跟下層同一欄、上下對齊（HMS Victory 那種一欄一欄的樣子）",
+  "deck_spacing_check": "research agent 2026-10-12（Wikipedia 各艦條目）：英國 74 砲（Bellona 1760、Arrogant 級、Bellerophon 1786）砲甲板 168 ft、寬 46'11\"、艙深 19'9\"；法國 Téméraire 級 55.87 m；憲法號 175 ft、43'6\"、艙深 14'3\" ⇒ 長度差不多、74 比較寬、艙深多 5–6 ft。配砲 Bellona：下層 28×32 磅、上層 28×18 磅、quarterdeck＋forecastle 18 門 ⇒ 本設計的 28／28／18 跟它同一個形狀。甲板間距約 7 ft（≈ 21 格）⚠ 沒查到有出處的數字（agent 的記憶＋一則沒出處的估計）；本設計取 23 格（2.3 m）＝ 憲法號自己的間距。插 23 格 ＝ 舷高多 2.3 m（比真的 74 多一點，奇幻船、接受）。船尾砲門：RMG 的 74 模型（Tucker）有下層船尾砲門＋兩層船尾窗（agent 報，沒逐一核對）"
+ },
+ "not_now": "poop deck 與更高的船尾、quarter galleries、船尾燈籠、船首像、塗裝（奇幻配色）、桅加高、帆色 —— 之後各一張圖紙"
+}
