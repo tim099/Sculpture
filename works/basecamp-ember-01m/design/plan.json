@@ -498,5 +498,85 @@
    ],
    "provenance": "設計決定：0.02 m 子作品當模型（scale 0.2 ⇒ 約 0.8 m 寬、1.6 m 高，奇幻船的大燈籠）；八角、琥珀玻璃、金框與金箍、暗紅頂、金尖；3 盞站在 poop 頂的 cap 上（中間與 |dy| 36），meta kind=lantern"
   }
+ },
+ "decks_build": {
+  "title": "新圖紙 06：甲板 v1 —— 憲法號的甲板照船殼的換算搬過來＋上甲板船腰打開＋poop deck",
+  "world_mark": "拉長:end",
+  "world_voxels": 1054406,
+  "assembly_before": 1071055,
+  "from_constitution": {
+   "orlop": {
+    "source": "deck-orlop",
+    "dz": 0
+   },
+   "berth": {
+    "source": "deck-berth",
+    "dz": 0
+   },
+   "lower": {
+    "source": "deck-gun",
+    "dz": 0
+   },
+   "upper": {
+    "source": "deck-spar",
+    "dz": 0
+   },
+   "spar": {
+    "source": "deck-spar",
+    "dz": 23,
+    "knee_shift": {
+     "color": 104,
+     "z_max": 125,
+     "dy_min": 30,
+     "provenance": "抬 23 之後懸肘落在插入段（牆比憲法號 z 91–101 那段窄 4–5 格）⇒ 第一版 5,434 格撞到船殼、54 格露到船外；改成每格往內挪「原本那層的外緣 − 現在這層的外緣」"
+    }
+   }
+  },
+  "waist": {
+   "x": [
+    372,
+    580
+   ],
+   "gangway_dy": 36,
+   "plank": 250,
+   "post_color": 104,
+   "cap_color": 248,
+   "rail_h": 8,
+   "provenance": "設計決定（74 砲戰列艦的樣子）：上甲板在主桅前（x 372）到前桅的 forecastle 後緣（x 580）之間、中線 ±36 以內打開，只留兩側 gangway（約 19 格寬）；開口兩側每 3 格一根 104 欄杆柱、扶手 104；quarterdeck 前緣與 forecastle 後緣 breastwork 頂金"
+  },
+  "poop": {
+   "z_top": 148,
+   "x_front": 215,
+   "seed_x": 150,
+   "plank": 250,
+   "beam": 136,
+   "beam_depth": 3,
+   "beams_x": [
+    110,
+    111,
+    126,
+    127,
+    142,
+    143,
+    158,
+    159,
+    174,
+    175,
+    190,
+    191
+   ],
+   "mizzen_hole": [
+    203.25,
+    160,
+    4.0
+   ],
+   "post": 104,
+   "cap": 248,
+   "rail_h": 7,
+   "stair_gap": 5,
+   "provenance": "設計決定：poop deck 甲板板 z 148（後甲板 129 ＋ 19）、橫樑每 16 格一根（2 格寬、3 格深）＋前緣一根；後桅孔：憲法號 deckworks.masts 後桅 x_gun 206、往後傾 3.5°，餘燼號 z 148 ＝ 憲法號 z 125（桅之後也照 z 109 插 23）⇒ 孔心 x 206 − 45·tan 3.5° ＝ 203.25、半徑 4；前緣欄杆中間 |dy| ≤ 5 留給梯子"
+  },
+  "provenance": "orlop／berth／下層砲甲板 ＝ 憲法號同名三層（高度不動）；上層砲甲板 ＝ 憲法號 spar deck（高度不動，橫樑擱在船殼原本的 spar clamp 上）；上甲板 ＝ 憲法號 spar deck ＋23；全部照拉長換算（x 439..471 複製兩份、x ≥ 472 推 66）。房間（艙壁、艙房）這一階段不搬",
+  "not_now": "房間與艙壁、上甲板的 clamps（插入段的牆沒有 clamp，上甲板橫樑直接靠內板）、梯子、格柵"
  }
 }
