@@ -567,6 +567,7 @@ Tim：「478 繼續造船吧」（沒指定 ⇒ 照候選清單第一個）。�
 - 草稿期間改的：stock 沿船寬 ⇒ 靠船內那頭插進船殼 57 格（船頭這段半寬 182–191）⇒ 改沿船長；stock 46 格船尾端碰到 x 630 的黑木 2 格 ⇒ 42；ring 只靠斜角相接、6 連通量是 7 塊 ⇒ 粗 0.55 → 0.8；黑 36 貼黑船殼渲出來只看得到 stock ⇒ 鑄鐵灰 146（hawse 圈同一個理由）。
 - ⚠ plan.json 有不只一個 `"anchors": {`（別段的固定點也叫這個鍵）⇒ 改錨這一段要用最後一個（rindex），不然會改到別段；這次斷言當場擋下、diff 只有新增行。
 - 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 1,140、mismatch 0）；組裝件 1,443,188 ＋ 2 × 1,140 ＝ 1,445,468、link_overlap 0、1 元件、空腔 0；兩舷跟現況重疊 0、x／y 不對稱 0、貼著 cathead 6 格、離船殼最近 1 格、最低 z 75（水線 62.86 之上）。
+- ⚠ `sheet21_anchors_v1.png` 的「從船頭正前方看」把左舷那隻畫成黑色 —— 畫圖紙的程式 P 舷寫死 36（作品兩隻都是 146）；2026-10-12 修了程式，圖紙沒重產（重跑要現況回到錨放進去之前）。
 - 過程圖：`overlays/stage24_anchors_*`（close 是右舷船頭斜看、front 其實是 yaw 90 的右舷側面）。
 
 ## 階段二十五 上 deadeyes 與 lanyards（繩，不是 voxel）
@@ -589,6 +590,6 @@ Tim：「照順序繼續做下一階段 GO」（候選：錨 ✓、spar deck 砲
 - 量：跟現況重疊不放 6 格（fore course 1、fore topsail 1、main course 4）—— 全在中線 y 158–159、色 177 ＝ 桅本身（往後擺那一側靠中心的一小段伸進桅裡）；浮空 0。固定點：移動 244（另 12 個 sling 在中心不動）；不在帆桁格子上的 35 個（jackstay 29、sling 5、yardarm 1，全部離格子 1 格；轉之前就有 37 個這樣 —— 「頂」點在細截面上本來就落在表面外一格；給帆用的 earing 全在格子上）。
 - sails_test.py：帆下角原本 P 舷拿 S 舷鏡過去 ⇒ 改成 P 讀 P 自己的 earing；改完在沒轉的狀態重產 sails_test.json 跟原本逐位元組相同，才拿去用。
 - 草稿：三件桅杆子作品各 carvevox（舊，顏色守門）＋ stampvox（新）；diff 作品 → 草稿：fore +4,534／−4,555、main +7,274／−7,410、mizzen +2,377／−2,392（淨 −21／−136／−15 ＝ −172，新舊重疊的格互相抵）。組裝件預期 1,445,468 − 172 ＝ 1,445,296。
-- 固定點 320 重新登記（319 一次過；spritsail.jackstay-P64 一次 IOException，值沒變，補跑後讀回在原位）；sails_test --apply：sails_broken 0、ropes_broken 0；方帆鼓度多 1–3 格（main course −92.4 → −95.3、fore course −67.1 → −70.3），縱帆不變。
+- 固定點 320 重新登記（319 一次過；spritsail.jackstay-P64 一次 IOException，值沒變，補跑後讀回在原位）；sails_test --apply：sails_broken 0、ropes_broken 0；方帆鼓度多 0.5–3.2 格（main course −92.4 → −95.3、fore course −67.1 → −70.3；最少是 mizzen royal −25.0 → −25.5；⚠ commit 25c6a65 的訊息與第一次回報寫成「1–3 格」，說大了），縱帆不變。
 - 讀數：Tim「測試ok 可以套用了」⇒ 三件 apply（changed ＝ 草稿的加＋刻：9,089／14,684／4,769、mismatch 0）；組裝件 1,445,468 → 1,445,296、link_overlap 0、1 元件、空腔 0；sails_broken 0、ropes_broken 0。
 - 過程圖：`overlays/stage26_brace_*`（bowq 船頭斜看、above 從上往下）。

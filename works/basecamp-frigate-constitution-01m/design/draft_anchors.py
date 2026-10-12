@@ -270,7 +270,8 @@ def render_sheet(R, path):
     occ_s, occ_f = {}, {}
     for p in (R.pS, R.pP):
         for q in map(tuple, p):
-            c = R.an.cells.get(tuple(np.array(q) - np.array(R.links[0]['at']))) if p is R.pS else 36
+            # 2026-10-12 修：原本 P 舷寫死 36 ⇒ sheet21 v1 的正前方圖把左舷那隻畫成黑的（作品兩隻都是 146）
+            c = R.an.cells.get(tuple(np.array(q) - np.array(R.links[0]['at']))) if p is R.pS else R.P['anchor']['colors']['iron']
             if xa <= q[0] < xb and za <= q[2] < zb:
                 if (q[0], q[2]) not in occ_s or q[1] > occ_s[(q[0], q[2])][0]:
                     occ_s[(q[0], q[2])] = (q[1], c or 36)
