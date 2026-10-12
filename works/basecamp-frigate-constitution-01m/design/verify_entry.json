@@ -1,5 +1,5 @@
 {
- "title": "新圖紙 23：entry port 與 side steps v1",
+ "title": "新圖紙 23：entry port 與 side steps v1.1",
  "base_assembly_voxels": 1433286,
  "hull_carve": {
   "S": 740,
@@ -50,25 +50,33 @@
   "control_pinrail_refs": 14
  },
  "side": {
-  "cells_one_side": 151,
-  "steps": 142,
+  "cells_one_side": 173,
+  "steps": 164,
   "posts": 9,
   "overlap_S": 0,
   "overlap_P": 0,
   "step_rows": [
    {
     "z": 66,
+    "x": [
+     374,
+     382
+    ],
     "hull_y_out": [
      226,
      226
     ],
-    "face_y": 228,
+    "face_y": 230,
     "hull_colors": {
-     "36": 7
+     "36": 9
     }
    },
    {
     "z": 70,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      226,
      226
@@ -80,6 +88,10 @@
    },
    {
     "z": 74,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      226,
      226
@@ -91,6 +103,10 @@
    },
    {
     "z": 78,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      225,
      225
@@ -102,6 +118,10 @@
    },
    {
     "z": 82,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      225,
      225
@@ -113,6 +133,10 @@
    },
    {
     "z": 86,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      224,
      224
@@ -124,6 +148,10 @@
    },
    {
     "z": 90,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      222,
      223
@@ -135,6 +163,10 @@
    },
    {
     "z": 94,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      221,
      221
@@ -146,6 +178,10 @@
    },
    {
     "z": 98,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      219,
      219
@@ -157,6 +193,10 @@
    },
    {
     "z": 102,
+    "x": [
+     375,
+     381
+    ],
     "hull_y_out": [
      217,
      218
@@ -218,16 +258,16 @@
     66.5
    ],
    "length": 63.36,
-   "min_clear": 0.447,
+   "min_clear": 0.36,
    "at": [
-    374.38,
-    228.92,
-    74.06
+    374.48,
+    230.28,
+    67.54
    ],
    "nearest_cell": [
-    375,
-    228,
-    74
+    374,
+    230,
+    66
    ],
    "nearest_color": null
   },
@@ -244,18 +284,18 @@
     66.5
    ],
    "length": 63.36,
-   "min_clear": 0.433,
+   "min_clear": 0.36,
    "at": [
-    382.8,
-    226.59,
-    85.13
+    382.52,
+    230.28,
+    67.54
    ],
    "nearest_cell": [
     382,
-    225,
-    84
+    230,
+    66
    ],
-   "nearest_color": 36
+   "nearest_color": null
   },
   {
    "name": "entry-P.manrope-aft",
@@ -270,16 +310,16 @@
     66.5
    ],
    "length": 63.36,
-   "min_clear": 0.447,
+   "min_clear": 0.36,
    "at": [
-    374.38,
-    92.08,
-    74.06
+    374.48,
+    90.72,
+    67.54
    ],
    "nearest_cell": [
-    375,
-    92,
-    74
+    374,
+    90,
+    66
    ],
    "nearest_color": null
   },
@@ -296,18 +336,18 @@
     66.5
    ],
    "length": 63.36,
-   "min_clear": 0.433,
+   "min_clear": 0.36,
    "at": [
-    382.8,
-    94.41,
-    85.13
+    382.52,
+    90.72,
+    67.54
    ],
    "nearest_cell": [
     382,
-    95,
-    84
+    90,
+    66
    ],
-   "nearest_color": 36
+   "nearest_color": null
   }
  ],
  "anchors_world": {
@@ -354,15 +394,15 @@
    0
   ]
  },
- "expect_assembly_after": 1433588,
+ "expect_assembly_after": 1433632,
  "files": {
   "hull_carve.vox.txt": {
    "cells": 1480,
    "sha256": "b3bce057234648010549c49abbf96dae08d8ae57fa5d1110f535796fd802d465"
   },
   "side.vox.txt": {
-   "cells": 151,
-   "sha256": "a3012bbec9986a164cd73ee6047ad2a68ba6605c0cbc4c63ee8e6108a917f295"
+   "cells": 173,
+   "sha256": "15612a47a0f72e379e163caafbf534ff353419ab2587561a83a64ebb5de65ec4"
   },
   "pinrail6_carve.vox.txt": {
    "cells": 54,

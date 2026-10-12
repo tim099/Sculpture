@@ -249,5 +249,6 @@ Tim 的回饋：「這幾個被纜線擋住了」—— channel 上的 deadeye�
 - [x] 草稿三份：船殼 carvevox 1,480（兩舷開口）、-entry-side stampvox 151、-belaying-side carvevox 54（pinrail-6）；固定點 4、man ropes 4（組 entry/manropes）
 - [x] 組裝件 draft=1 1,433,588（預期對上）、1 元件、空腔 0、link_overlap 0、ropes_broken 0
 - [x] Tim「測試ok 套用草稿」⇒ 三件 apply（changed 1,480／151／54、mismatch 0）→ unanchor pinrail-6.pin-1..5 → 船殼、-belaying-side 打 `舷梯:end` → 重跑 draft_entry.py 三份 sha256 相同；組裝件 1,433,588
-- [ ] v1.1：man rope 下端綁在空中（Tim 2026-10-12 預覽指出）⇒ 改綁在踏階上
+- [x] v1.1：man rope 下端綁在空中（Tim 2026-10-12 預覽指出）⇒ 最下一道加寬加深、繩端埋進它外側兩角（-entry-side 草稿增量 22 格）
+- [x] Tim「測試ok」⇒ -entry-side apply（changed 22、mismatch 0）；組裝件 1,433,632
 - [ ] 之後：entry port 的扶手欄杆、gangway 板、fenders／chesstree、quarterdeck 那段欄杆比 waist 高（11 號有畫，作品舷頂是單一高度）

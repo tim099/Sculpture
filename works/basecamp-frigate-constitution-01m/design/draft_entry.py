@@ -159,16 +159,18 @@ class Entry:
         # ② 踏階（世界座標，S 舷）
         s.steps = {}
         s.step_rows = []
+        bot = P['steps'].get('bottom')      # v1.1：最下一道加寬加深（man rope 下端埋在它外側兩角）
         for z in P['steps']['z']:
+            x0_, x1_, depth = (bot['x'][0], bot['x'][1], bot['depth']) if bot and z == P['steps']['z'][0] else (sx0, sx1, P['steps']['depth'])
             yout = {}
-            for x in range(sx0, sx1 + 1):
+            for x in range(x0_, x1_ + 1):
                 ys = [k[1] for k in H if k[0] == x and k[2] == z and k[1] > YC]
                 yout[x] = max(ys)
-            face = max(yout.values()) + P['steps']['depth']
-            for x in range(sx0, sx1 + 1):
+            face = max(yout.values()) + depth
+            for x in range(x0_, x1_ + 1):
                 for y in range(yout[x] + 1, face + 1):
                     s.steps[(x, y, z)] = P['steps']['color']
-            s.step_rows.append({'z': z, 'hull_y_out': [min(yout.values()), max(yout.values())], 'face_y': face,
+            s.step_rows.append({'z': z, 'x': [x0_, x1_], 'hull_y_out': [min(yout.values()), max(yout.values())], 'face_y': face,
                                 'hull_colors': dict(Counter(H[(x, yout[x], z)] for x in yout))})
         # 柱：立在 cap rail 外緣（y）那一格最上面的實心上
         s.posts = {}
@@ -197,26 +199,34 @@ class Entry:
         assert len(offs) == 1, offs
         s.belay_at = list(map(int, offs.pop()))
         # ④ 固定點：引擎只收整數格（點取格心）且要在子作品框裡 ⇒ 先定格、點 ＝ 格＋0.5
-        #    柱頂：柱外面那一格（繩端離柱面 0.5）；下端：踏階兩端外側那一欄、格心離踏階外面 bottom_off
+        #    柱頂：柱外面那一格（繩端離柱面 0.5）
+        #    下端：v1.1 ＝ 最下一道外側兩角那一格（繩端埋進踏階角）；v1 是踏階兩端外側、離踏階外面 bottom_off 的空中（Tim：綁在虛空中）
         at = P['subwork']['at']
         zb = P['steps']['z'][0]
-        face_b = [r for r in s.step_rows if r['z'] == zb][0]['face_y']
+        row_b = [r for r in s.step_rows if r['z'] == zb][0]
+        face_b = row_b['face_y']
         pa, pf = P['posts']['x']
         zt = P['posts']['z_top']
-        yb = int(round(face_b + 1 + P['manropes']['bottom_off'] - 0.5))
+        if bot:
+            low = {'step-1.aft': (row_b['x'][0], face_b, zb), 'step-1.fwd': (row_b['x'][1], face_b, zb)}
+        else:
+            yb = int(round(face_b + 1 + P['manropes']['bottom_off'] - 0.5))
+            low = {'step-1.aft': (sx0 - 1, yb, zb), 'step-1.fwd': (sx1 + 1, yb, zb)}
         s.anchor_cell = {
             'post-aft.top': (pa, y + 1, zt),
             'post-fwd.top': (pf, y + 1, zt),
-            'step-1.aft': (sx0 - 1, yb, zb),
-            'step-1.fwd': (sx1 + 1, yb, zb),
         }
+        s.anchor_cell.update(low)
         s.anchor_world = {k: [c[0] + 0.5, c[1] + 0.5, c[2] + 0.5] for k, c in s.anchor_cell.items()}
         s.anchor_local = {k: [c[0] - at[0], c[1] - at[1], c[2] - at[2]] for k, c in s.anchor_cell.items()}
         s.local = {(k[0] - at[0], k[1] - at[1], k[2] - at[2]): c for k, c in s.side_world.items()}
         W, L, Hh = P['subwork']['size']
         bad = [k for k in list(s.local) + [tuple(v) for v in s.anchor_local.values()] if not (0 <= k[0] < W and 0 <= k[1] < L and 0 <= k[2] < Hh)]
         assert not bad, ('出框', bad[:5])
-        assert not [c for c in s.anchor_cell.values() if c in s.side_world], '固定點落在實心格上'
+        # 柱頂那兩個在空中（柱外面一格）；下端兩個 v1.1 要落在踏階上
+        assert not [s.anchor_cell[k] for k in ('post-aft.top', 'post-fwd.top') if s.anchor_cell[k] in s.side_world], '柱頂固定點落在實心格上'
+        if bot:
+            assert all(s.anchor_cell[k] in s.steps for k in ('step-1.aft', 'step-1.fwd')), '下端固定點沒有落在最下一道踏階上'
         R = P['manropes']
         s.ropes = []
         for side, link in (('S', '舷梯'), ('P', '舷梯-鏡像')):
