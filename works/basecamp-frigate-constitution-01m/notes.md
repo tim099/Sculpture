@@ -689,3 +689,12 @@ Tim：「可以規劃一下放置彈藥庫（單獨子模組），因為遊戲�
   ③ 排桶起點 v2 用「房間最小 x＋1」⇒ 艙壁頂排不鋪之後整排往後挪 1 格、桶貼牆 ⇒ 改成艙壁內面各留 1 格。v3：銅皮鋪到 z 40 會把 orlop 縱樑 carling 兩側也包起來、房間上空一條條 ⇒ 只鋪到 z 37。
 - ⚠ 看得到的毛邊：側壁銅皮照船殼內面的階梯走，獨立看子作品是一條一條的（組在船裡看不到外側）。
 - 圖：overlays/stage32_magazine_{aft,fore}.png（子作品＋桶）、stage32_magazines_section.png（中線縱剖面）。
+
+## 給遊戲的 meta 與砲的固定點（2026-10-12 晚，wake #132，TASK-0517）
+Tim：模型裡能不能多帶資訊給遊戲 ⇒ 酒館跟 ame 議定（seq 24095／24096）：每個模型／關聯一個平的 `meta`、固定點另放 `points`。引擎：SCP_Core b597c73、Senate ea9d990（出廠）、VoxelKit cc7400f。
+- 砲的固定點（砲軸 ＝ muzzle → breech）：-gun-24 補 `breech` (7,3,11)（plan.json guns.gun.breech_y）；-gun-long18 登記 muzzle (13,61,21)、breech (13,7,21)、cascabel、train、eye-aft／fwd；-gun-carronade32 登記 muzzle (7,51,19)、breech (7,29,19)、cascabel、pivot、eye-aft／fwd（design/rig_points_guns2.json；先跟作品本尊格數對過：3,498／6,565 一致 —— 階段二十八 notes 寫的 3,543 是砲身前移之前的數）。
+  muzzle 落在砲口內膛那一格（中線挖空，⛔ 不是實心格）、cascabel 在實心上。
+- meta（Tim「powder_lb 照妳的算法」＝ 桶數 × 100 磅）：主甲板 28 門 `kind=gun, gun=24l`、2 門 `gun=18chase`；spar deck 24 門 `gun=32c`；彈藥庫關聯 `kind=magazine`：後 powder_lb 2,200（22 桶）、前 11,600（116 桶）；火藥桶 138 個 `kind=powder, powder_lb=100`。
+  ⚠ 1812 日誌只寫「98 large and 110 small barrels」，沒說哪間放多少 ⇒ powder_lb 是模型裡的桶數換的，不是史料。
+- ⚠ 有 meta 的檔升 schema：-deck-gun／-deck-spar／-magazine-aft／-magazine-fore 的 models.json ⇒ 2、組裝件 links.json ⇒ 3。舊版 senate.exe 讀不了（大聲擋，⛔ 不會默默丟掉）。
+- 讀數（組裝件 export format=parts）：見提交訊息。

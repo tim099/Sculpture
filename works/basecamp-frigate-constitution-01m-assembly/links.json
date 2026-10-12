@@ -1,5 +1,5 @@
 {
-	"schema": 2,
+	"schema": 3,
 	"links": [
 		{
 			"name": "船殼",
@@ -459,7 +459,11 @@
 			"enabled": true,
 			"created_at": "2026-10-12T19:05:18",
 			"persona": "basecamp",
-			"note": "憲法號 後彈藥庫（main magazine，1849 圖 23'4\")（draft_magazines.py）"
+			"note": "憲法號 後彈藥庫（main magazine，1849 圖 23'4\")（draft_magazines.py）",
+			"meta": {
+				"kind": "magazine",
+				"powder_lb": 2200
+			}
 		},
 		{
 			"name": "彈藥庫-前",
@@ -479,7 +483,11 @@
 			"enabled": true,
 			"created_at": "2026-10-12T19:05:19",
 			"persona": "basecamp",
-			"note": "憲法號 前彈藥庫（forward magazine，1849 圖 17'2\")（draft_magazines.py）"
+			"note": "憲法號 前彈藥庫（forward magazine，1849 圖 17'2\")（draft_magazines.py）",
+			"meta": {
+				"kind": "magazine",
+				"powder_lb": 11600
+			}
 		}
 	]
 }
