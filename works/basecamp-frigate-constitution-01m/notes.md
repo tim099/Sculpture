@@ -602,3 +602,14 @@ Tim：「照順序繼續做下一階段 GO」（候選：錨 ✓、spar deck 砲
 - 舵索 2 條（組裝件的繩）：`model:wheel/drum-rope-a／b` → 甲板面（往下穿進甲板）、#a08458、粗 0.35、長 9.9。
 - 驗：模型轉 90°＋搬 10 格 ⇒ 繩端到手算的 (183.8,157.8,115.9)、改回原位讀數回來。Tim「測試ok」（2026-10-12）。
 - 過程圖：`overlays/stage27_wheel_{part,deck,close}.png`。
+
+## 階段二十八 第二批砲：32 磅 carronade 與 18 磅 chase gun（0.05 m 子作品當外部模型）
+設計 `design/draft_guns2.py` ⇒ `masks/guns2/{carronade32,long18}.vox.txt`、`rig_points_guns2.json`；擺法 `design/place_chase.py` ⇒ `chase_placement.json`。
+Tim：「繼續造船吧 GO（可以做其他口徑的炮 然後也用子模組 0.05m精度）」。
+- 配置（1812）：照 NHHC 與 USS Constitution Museum 一致的那個版本 —— spar deck 24 門 32 磅 carronade、船頭一門 18 磅長砲。⚠ 別的來源有 20／22 門 carronade、兩門 24 磅 bow chaser（當年沒有固定編制、紀錄不全）。
+- 子作品 `-gun-carronade32`（parent spar deck、0.05 m、15×54×26、3,543 格）：skid 2.0 m（兩根側軌＋前後橫檔、前端樞軸墊＋fighting bolt、後端兩個沿船長橫移的小輪）、slide 1.0 m（lug cheek 夾住砲身底下的 loop）、砲身 1.15 m（後膛半球、往前收、砲口外翻、準星、cascabel 鈕＋升降螺桿）；推到前端（run out）⇒ 砲口伸出 skid 前端 0.35 m。⚠ 尺寸推算：約 7 倍口徑；整組照 Chapelle p.516 的 42 磅 × (32/42)^(1/3)。v1 砲擺在 skid 後半、砲口離前端 0.6 m（伸不出砲門）⇒ undo 重落。
+- 子作品 `-gun-long18`（parent gun deck、0.05 m、27×66×28、6,565 格）：9 ft 砲身（外徑照 24 磅那門按口徑比例縮）、耳軸在 base ring 前 3/7、truck carriage（cheek 3 格厚 4 階、前輪 r 4.6／後 r 4.0、床板＋quoin）。⚠ 尺寸推算。兩件左右對稱差 0。
+- chase gun 擺進 gun deck 第 15 個砲門（S 舷船頭；以前 24 磅砲只能轉 90°、兩舷會在中線撞 ⇒ 空著）：外部模型 `甲板-gun/chase18`（掛在 gun deck 子作品上，藏甲板就一起藏）、scale 0.5（⚠ gun deck 子作品沒記比例，自動換算會變 1.6 ⇒ 明寫）。
+  搜尋：每個角度沿砲身往裡退到「模型每一格的格心＋八個角都不在組裝件實心格裡」，再要求砲口在船殼外。往船頭偏 5–20° 推得出去、25° 砲口出不了砲門、30° 以上塞不進去 ⇒ 取 −20°：at (644.08,183.46,88)、pivot 砲架前 transom (13.5,38.5,0)；砲口 (648.1,194.5,98.75)，伸出下檻外面 2.5 格、在開口中段。P 舷那個船頭砲門照舊空著（只有一門）。
+- carronade 還沒上船：spar deck 的砲門要先讀圖、開舷牆（下一階段）。
+- 過程圖：`overlays/stage28_{carronade32,long18,chase_in,chase_out}.png`。
