@@ -580,3 +580,15 @@ Tim：「照順序繼續做下一階段 GO」。錨那一段的下一步（cat t
 - **cat fall**（錨，兩舷；⛔ 已拿掉 —— Tim 2026-10-12「錨我覺得不用繩子 看起來有點怪」（原文「茅」，讀成「錨」）⇒ unrope 4 段、工具不再產生）：cathead 端（654, 204.5, 132.5）→ 前甲板 `pinrail-13.pin-5`。⚠ 直線會穿過舷牆（200 個取樣 52 個碰到實心）⇒ 拆兩段、中間越過 cap rail 頂上一點：在 x 618–644、y 196–204、z 130.5–133.5 裡搜兩段都不碰實心的點，只有 z 133.5 過 ⇒ (620, 202, 133.5)。
 - 讀數：繩 312 條一次下完（失敗 0），cat fall 改兩段後重下 4 條（911）；拿掉 cat fall 之後組裝件繩 659 → **907**（＝ ＋62 deadeye ＋186 lanyard；那 62 條 shroud／backstay 是改寫）、ropes_broken 0；組裝件格數不變 1,445,468。
 - 過程圖：`overlays/stage25_*`（deadeyes_main 是主桅 channel；catfall 是拿掉之前的右舷船頭，留著當紀錄；bow_after 是拿掉之後同一個角度）。
+
+## 階段二十六 帆桁轉角度 brace（新圖紙 22）
+Tim：「照順序繼續做下一階段 GO」（候選：錨 ✓、spar deck 砲門（跟可動件一起 ⇒ 跳過）、lanyards ✓、**帆桁轉角度**）。設計 plan.json `brace`；`design/draft_brace.py` ⇒ `masks/brace/<桅>_{carve,stamp}.vox.txt`、`verify_brace.json`、`sheet22_brace_v1.png`；固定點覆寫 `rig_points_yards.json`（轉之前那份 `rig_points_yards_square.json`）。
+- 只轉前／主／後桅的方帆桁 12 根，每根繞自己的中心（xc, 160）水平轉；右舷那一頭往前（預設風 4.5,−1.5,0 從右舷後方吹來，正對風是 18.4°）：course／crossjack 20°、topsail 22°、topgallant 24°、royal 26°（上層多轉一點）。gaff、boom、spritsail yard 不動。yardarm 往前／往後擺：fore course 42.1、main course 49.3、crossjack 39.0 格。
+- **正向對照**（先做才跑真的角度）：角度全設 0 ⇒ 三根桅的方帆桁 4,850／7,957／2,534 格逐格相同（缺 0、多 0、色不同 0）、320 個固定點逐點相同。
+- 草稿期間改的：mizzen topgallant 兩頭 yardarm 浮空 7 格 —— 一格粗的截面轉了之後變成只靠斜角相接的階梯 ⇒ 有角度時最細截面 0.5 → 0.75（斜線上的格心離軸 ≤ 0.71；角度 0 照舊 0.5，正向對照不受影響）。
+- 量：跟現況重疊不放 6 格（fore course 1、fore topsail 1、main course 4）—— 全在中線 y 158–159、色 177 ＝ 桅本身（往後擺那一側靠中心的一小段伸進桅裡）；浮空 0。固定點：移動 244（另 12 個 sling 在中心不動）；不在帆桁格子上的 35 個（jackstay 29、sling 5、yardarm 1，全部離格子 1 格；轉之前就有 37 個這樣 —— 「頂」點在細截面上本來就落在表面外一格；給帆用的 earing 全在格子上）。
+- sails_test.py：帆下角原本 P 舷拿 S 舷鏡過去 ⇒ 改成 P 讀 P 自己的 earing；改完在沒轉的狀態重產 sails_test.json 跟原本逐位元組相同，才拿去用。
+- 草稿：三件桅杆子作品各 carvevox（舊，顏色守門）＋ stampvox（新）；diff 作品 → 草稿：fore +4,534／−4,555、main +7,274／−7,410、mizzen +2,377／−2,392（淨 −21／−136／−15 ＝ −172，新舊重疊的格互相抵）。組裝件預期 1,445,468 − 172 ＝ 1,445,296。
+- 固定點 320 重新登記（319 一次過；spritsail.jackstay-P64 一次 IOException，值沒變，補跑後讀回在原位）；sails_test --apply：sails_broken 0、ropes_broken 0；方帆鼓度多 1–3 格（main course −92.4 → −95.3、fore course −67.1 → −70.3），縱帆不變。
+- 讀數：Tim「測試ok 可以套用了」⇒ 三件 apply（changed ＝ 草稿的加＋刻：9,089／14,684／4,769、mismatch 0）；組裝件 1,445,468 → 1,445,296、link_overlap 0、1 元件、空腔 0；sails_broken 0、ropes_broken 0。
+- 過程圖：`overlays/stage26_brace_*`（bowq 船頭斜看、above 從上往下）。

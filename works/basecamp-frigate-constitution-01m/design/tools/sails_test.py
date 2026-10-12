@@ -43,10 +43,10 @@ for m, lst in SQUARE.items():
         mem = '%s-%s' % (m, s)
         head = ['%s/%s.earing-P' % (L[m], mem), '%s/%s.earing-S' % (L[m], mem)]
         if s == 'course':
-            e = YP[mem + '.earing-S']
+            e, eP = YP[mem + '.earing-S'], YP[mem + '.earing-P']
             C = COURSE[m]
             cs = (e[0], YC + round(0.8 * (e[1] - YC)), C['foot_z'])
-            cp = (e[0], 2 * YC - cs[1], C['foot_z'])
+            cp = (eP[0], YC + round(0.8 * (eP[1] - YC)), C['foot_z'])     # 2026-10-12 brace：左舷讀左舷自己的 earing（原本是右舷鏡過去，帆桁轉了就不對）
             sail(mem, head + [xyz(cs), xyz(cp)], ['head_p', 'head_s', 'clew_s', 'clew_p'], '0', 'clew_s,clew_p', 1.05,
                  'course：sheet 往後、tack 往前綁到舷牆 belaying pin')
             for sd, cl, lk in (('S', 'clew_s', '繫繩欄'), ('P', 'clew_p', '繫繩欄-鏡像')):
@@ -54,9 +54,9 @@ for m, lst in SQUARE.items():
                 rope('%s.tack-%s' % (mem, sd), 'sail:%s/%s' % (mem, cl), '%s/pinrail-%d.pin-3' % (lk, C['tack']), 0.5, slack=0.8, note='course tack（收短 20%；2026-10-12 照 kotoko：slack 1 時 tack 垂 21–26 格、下角被吹高 7–12 格）')
         else:
             low = 'crossjack' if (m == 'mizzen' and s == 'topsail') else LOWER[s]
-            el = YP['%s-%s.earing-S' % (m, low)]
+            el, elP = YP['%s-%s.earing-S' % (m, low)], YP['%s-%s.earing-P' % (m, low)]
             cs = (el[0], el[1], el[2] + 3)
-            cp = (el[0], 2 * YC - el[1], el[2] + 3)
+            cp = (elP[0], elP[1], elP[2] + 3)                                  # 同上：左舷讀左舷
             sail(mem, head + [xyz(cs), xyz(cp)], ['head_p', 'head_s', 'clew_s', 'clew_p'], '0', 'clew_s,clew_p', 1.05,
                  'sheet 綁到下一根帆桁（%s）同舷的 earing' % low)
             for sd, cl in (('S', 'clew_s'), ('P', 'clew_p')):

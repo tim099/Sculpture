@@ -1,0 +1,3845 @@
+{
+ "note": "固定點（給 TASK-0502 繩索、0503 帆）：每根帆桁 —— 兩端 yardarm（arm-P／arm-S）、帆上緣兩角（earing-P／earing-S ＝ yardarm 內端）、中間 slings、帆上緣每隔 8 格一個 jackstay 點；gaff —— throat、peak、上緣每隔 8 格；boom —— jaws、end；spritsail yard —— 兩端。座標是那一格實心 voxel（世界座標，各子作品 at 0,0,0）。P ＝ y < 160、S ＝ y > 160（從船尾往船頭看，引擎視圖的左手邊是 −y ⇒ 左舷 port）",
+ "points": [
+  {
+   "name": "fore-course.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    590,
+    37,
+    254
+   ]
+  },
+  {
+   "name": "fore-course.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    590,
+    283,
+    254
+   ]
+  },
+  {
+   "name": "fore-course.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    590,
+    50,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    590,
+    270,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    590,
+    160,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    152,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    168,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    144,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    176,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    136,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    184,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    128,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    192,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    120,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    200,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    112,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    208,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    104,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    216,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P64",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    96,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S64",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    224,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P72",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    88,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S72",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    232,
+    256
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P80",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    80,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S80",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    240,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P88",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    72,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S88",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    248,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P96",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    64,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S96",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    256,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-P104",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    56,
+    255
+   ]
+  },
+  {
+   "name": "fore-course.jackstay-S104",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    264,
+    255
+   ]
+  },
+  {
+   "name": "fore-topsail.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    590,
+    67,
+    417
+   ]
+  },
+  {
+   "name": "fore-topsail.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    590,
+    253,
+    417
+   ]
+  },
+  {
+   "name": "fore-topsail.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    590,
+    83,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    590,
+    237,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    590,
+    160,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    152,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    168,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    144,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    176,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    136,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    184,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    128,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    192,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    120,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    200,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    112,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    208,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    104,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    216,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P64",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    96,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S64",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    224,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-P72",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    590,
+    88,
+    418
+   ]
+  },
+  {
+   "name": "fore-topsail.jackstay-S72",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    590,
+    232,
+    418
+   ]
+  },
+  {
+   "name": "fore-topgallant.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    591,
+    96,
+    518
+   ]
+  },
+  {
+   "name": "fore-topgallant.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    591,
+    224,
+    518
+   ]
+  },
+  {
+   "name": "fore-topgallant.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    591,
+    102,
+    518
+   ]
+  },
+  {
+   "name": "fore-topgallant.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    591,
+    218,
+    518
+   ]
+  },
+  {
+   "name": "fore-topgallant.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    591,
+    160,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    591,
+    152,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    591,
+    168,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    591,
+    144,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    591,
+    176,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    591,
+    136,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    591,
+    184,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    591,
+    128,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    591,
+    192,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    591,
+    120,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    591,
+    200,
+    519
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    591,
+    112,
+    518
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    591,
+    208,
+    518
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    591,
+    104,
+    518
+   ]
+  },
+  {
+   "name": "fore-topgallant.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    591,
+    216,
+    518
+   ]
+  },
+  {
+   "name": "fore-royal.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    589,
+    118,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    589,
+    202,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    589,
+    122,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    589,
+    198,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    589,
+    160,
+    591
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    589,
+    152,
+    591
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    589,
+    168,
+    591
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    589,
+    144,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    589,
+    176,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    589,
+    136,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    589,
+    184,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    589,
+    128,
+    590
+   ]
+  },
+  {
+   "name": "fore-royal.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-fore",
+   "member": "fore-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    589,
+    192,
+    590
+   ]
+  },
+  {
+   "name": "main-course.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    350,
+    16,
+    276
+   ]
+  },
+  {
+   "name": "main-course.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    350,
+    304,
+    276
+   ]
+  },
+  {
+   "name": "main-course.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    350,
+    30,
+    277
+   ]
+  },
+  {
+   "name": "main-course.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    350,
+    290,
+    277
+   ]
+  },
+  {
+   "name": "main-course.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    350,
+    160,
+    279
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    152,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    168,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    144,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    176,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    136,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    184,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    128,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    192,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    120,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    200,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    112,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    208,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    104,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    216,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P64",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    96,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S64",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    224,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P72",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    88,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S72",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    232,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P80",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    80,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S80",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    240,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P88",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    72,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S88",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    248,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P96",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    64,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S96",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    256,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P104",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    56,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S104",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    264,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P112",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    48,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S112",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    272,
+    278
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P120",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    40,
+    277
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S120",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    280,
+    277
+   ]
+  },
+  {
+   "name": "main-course.jackstay-P128",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    350,
+    32,
+    277
+   ]
+  },
+  {
+   "name": "main-course.jackstay-S128",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-course",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    350,
+    288,
+    277
+   ]
+  },
+  {
+   "name": "main-topsail.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    348,
+    53,
+    456
+   ]
+  },
+  {
+   "name": "main-topsail.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    348,
+    267,
+    456
+   ]
+  },
+  {
+   "name": "main-topsail.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    348,
+    71,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    348,
+    249,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    348,
+    160,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    152,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    168,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    144,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    176,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    136,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    184,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    128,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    192,
+    458
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    120,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    200,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    112,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    208,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    104,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    216,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P64",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    96,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S64",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    224,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P72",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    88,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S72",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    232,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P80",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    80,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S80",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    240,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-P88",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    348,
+    72,
+    457
+   ]
+  },
+  {
+   "name": "main-topsail.jackstay-S88",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    348,
+    248,
+    457
+   ]
+  },
+  {
+   "name": "main-topgallant.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    347,
+    90,
+    566
+   ]
+  },
+  {
+   "name": "main-topgallant.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    347,
+    230,
+    566
+   ]
+  },
+  {
+   "name": "main-topgallant.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    347,
+    96,
+    566
+   ]
+  },
+  {
+   "name": "main-topgallant.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    347,
+    224,
+    566
+   ]
+  },
+  {
+   "name": "main-topgallant.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    347,
+    160,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    347,
+    152,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    347,
+    168,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    347,
+    144,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    347,
+    176,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    347,
+    136,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    347,
+    184,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    347,
+    128,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    347,
+    192,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    347,
+    120,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    347,
+    200,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    347,
+    112,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    347,
+    208,
+    567
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    347,
+    104,
+    566
+   ]
+  },
+  {
+   "name": "main-topgallant.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    347,
+    216,
+    566
+   ]
+  },
+  {
+   "name": "main-royal.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    344,
+    115,
+    638
+   ]
+  },
+  {
+   "name": "main-royal.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    344,
+    205,
+    638
+   ]
+  },
+  {
+   "name": "main-royal.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    344,
+    119,
+    638
+   ]
+  },
+  {
+   "name": "main-royal.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    344,
+    201,
+    638
+   ]
+  },
+  {
+   "name": "main-royal.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    344,
+    160,
+    639
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    344,
+    152,
+    639
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    344,
+    168,
+    639
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    344,
+    144,
+    639
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    344,
+    176,
+    639
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    344,
+    136,
+    639
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    344,
+    184,
+    639
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    344,
+    128,
+    638
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    344,
+    192,
+    638
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    344,
+    120,
+    638
+   ]
+  },
+  {
+   "name": "main-royal.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-main",
+   "member": "main-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    344,
+    200,
+    638
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    201,
+    46,
+    232
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    201,
+    274,
+    232
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    201,
+    66,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    201,
+    254,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    201,
+    160,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    152,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    168,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    144,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    176,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    136,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    184,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    128,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    192,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    120,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    200,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    112,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    208,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    104,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    216,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P64",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    96,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S64",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    224,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P72",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    88,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S72",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    232,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P80",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    80,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S80",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    240,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-P88",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    201,
+    72,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-crossjack.jackstay-S88",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-crossjack",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    201,
+    248,
+    233
+   ]
+  },
+  {
+   "name": "mizzen-topsail.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    196,
+    86,
+    369
+   ]
+  },
+  {
+   "name": "mizzen-topsail.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    196,
+    234,
+    369
+   ]
+  },
+  {
+   "name": "mizzen-topsail.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    196,
+    101,
+    369
+   ]
+  },
+  {
+   "name": "mizzen-topsail.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    196,
+    219,
+    369
+   ]
+  },
+  {
+   "name": "mizzen-topsail.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    196,
+    160,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    196,
+    152,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    196,
+    168,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    196,
+    144,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    196,
+    176,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    196,
+    136,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    196,
+    184,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    196,
+    128,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    196,
+    192,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    196,
+    120,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    196,
+    200,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    196,
+    112,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    196,
+    208,
+    370
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    196,
+    104,
+    369
+   ]
+  },
+  {
+   "name": "mizzen-topsail.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    196,
+    216,
+    369
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    192,
+    112,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    192,
+    208,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    192,
+    116,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    192,
+    204,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    192,
+    160,
+    455
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    192,
+    152,
+    455
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    192,
+    168,
+    455
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    192,
+    144,
+    455
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    192,
+    176,
+    455
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    192,
+    136,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    192,
+    184,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    192,
+    128,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    192,
+    192,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    192,
+    120,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-topgallant.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-topgallant",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    192,
+    200,
+    454
+   ]
+  },
+  {
+   "name": "mizzen-royal.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    189,
+    129,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    189,
+    191,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    189,
+    132,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    189,
+    188,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.sling",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    189,
+    160,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    189,
+    152,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    189,
+    168,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    189,
+    144,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    189,
+    176,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    189,
+    136,
+    502
+   ]
+  },
+  {
+   "name": "mizzen-royal.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "mizzen-royal",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    189,
+    184,
+    502
+   ]
+  },
+  {
+   "name": "spanker-gaff.jaws",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "jaws",
+   "side": "CL",
+   "world": [
+    194,
+    160,
+    222
+   ]
+  },
+  {
+   "name": "spanker-gaff.end",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "end",
+   "side": "CL",
+   "world": [
+    85,
+    160,
+    299
+   ]
+  },
+  {
+   "name": "spanker-gaff.top8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    188,
+    160,
+    228
+   ]
+  },
+  {
+   "name": "spanker-gaff.top16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    181,
+    160,
+    233
+   ]
+  },
+  {
+   "name": "spanker-gaff.top24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    175,
+    160,
+    237
+   ]
+  },
+  {
+   "name": "spanker-gaff.top32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    168,
+    160,
+    242
+   ]
+  },
+  {
+   "name": "spanker-gaff.top40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    162,
+    160,
+    246
+   ]
+  },
+  {
+   "name": "spanker-gaff.top48",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    155,
+    160,
+    251
+   ]
+  },
+  {
+   "name": "spanker-gaff.top56",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    149,
+    160,
+    255
+   ]
+  },
+  {
+   "name": "spanker-gaff.top64",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    142,
+    160,
+    260
+   ]
+  },
+  {
+   "name": "spanker-gaff.top72",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    136,
+    160,
+    265
+   ]
+  },
+  {
+   "name": "spanker-gaff.top80",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    129,
+    160,
+    269
+   ]
+  },
+  {
+   "name": "spanker-gaff.top88",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    122,
+    160,
+    274
+   ]
+  },
+  {
+   "name": "spanker-gaff.top96",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    116,
+    160,
+    278
+   ]
+  },
+  {
+   "name": "spanker-gaff.top104",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    109,
+    160,
+    283
+   ]
+  },
+  {
+   "name": "spanker-gaff.top112",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    103,
+    160,
+    288
+   ]
+  },
+  {
+   "name": "spanker-gaff.top120",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    96,
+    160,
+    292
+   ]
+  },
+  {
+   "name": "spanker-gaff.top128",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-gaff",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    90,
+    160,
+    297
+   ]
+  },
+  {
+   "name": "spanker-boom.jaws",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "jaws",
+   "side": "CL",
+   "world": [
+    200,
+    160,
+    134
+   ]
+  },
+  {
+   "name": "spanker-boom.end",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "end",
+   "side": "CL",
+   "world": [
+    11,
+    160,
+    144
+   ]
+  },
+  {
+   "name": "spanker-boom.top8",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    192,
+    160,
+    136
+   ]
+  },
+  {
+   "name": "spanker-boom.top16",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    184,
+    160,
+    136
+   ]
+  },
+  {
+   "name": "spanker-boom.top24",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    176,
+    160,
+    137
+   ]
+  },
+  {
+   "name": "spanker-boom.top32",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    168,
+    160,
+    137
+   ]
+  },
+  {
+   "name": "spanker-boom.top40",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    160,
+    160,
+    138
+   ]
+  },
+  {
+   "name": "spanker-boom.top48",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    152,
+    160,
+    138
+   ]
+  },
+  {
+   "name": "spanker-boom.top56",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    144,
+    160,
+    138
+   ]
+  },
+  {
+   "name": "spanker-boom.top64",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    136,
+    160,
+    139
+   ]
+  },
+  {
+   "name": "spanker-boom.top72",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    128,
+    160,
+    139
+   ]
+  },
+  {
+   "name": "spanker-boom.top80",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    120,
+    160,
+    140
+   ]
+  },
+  {
+   "name": "spanker-boom.top88",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    112,
+    160,
+    140
+   ]
+  },
+  {
+   "name": "spanker-boom.top96",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    104,
+    160,
+    140
+   ]
+  },
+  {
+   "name": "spanker-boom.top104",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    96,
+    160,
+    141
+   ]
+  },
+  {
+   "name": "spanker-boom.top112",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    88,
+    160,
+    141
+   ]
+  },
+  {
+   "name": "spanker-boom.top120",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    80,
+    160,
+    142
+   ]
+  },
+  {
+   "name": "spanker-boom.top128",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    72,
+    160,
+    142
+   ]
+  },
+  {
+   "name": "spanker-boom.top136",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    64,
+    160,
+    143
+   ]
+  },
+  {
+   "name": "spanker-boom.top144",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    56,
+    160,
+    143
+   ]
+  },
+  {
+   "name": "spanker-boom.top152",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    48,
+    160,
+    143
+   ]
+  },
+  {
+   "name": "spanker-boom.top160",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    40,
+    160,
+    144
+   ]
+  },
+  {
+   "name": "spanker-boom.top168",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    32,
+    160,
+    144
+   ]
+  },
+  {
+   "name": "spanker-boom.top176",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    24,
+    160,
+    145
+   ]
+  },
+  {
+   "name": "spanker-boom.top184",
+   "owner": "basecamp-frigate-constitution-01m-mast-mizzen",
+   "member": "spanker-boom",
+   "kind": "top",
+   "side": "CL",
+   "world": [
+    16,
+    160,
+    145
+   ]
+  },
+  {
+   "name": "spritsail.arm-P",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "yardarm",
+   "side": "P",
+   "world": [
+    777,
+    69,
+    160
+   ]
+  },
+  {
+   "name": "spritsail.arm-S",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "yardarm",
+   "side": "S",
+   "world": [
+    777,
+    251,
+    160
+   ]
+  },
+  {
+   "name": "spritsail.earing-P",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "earing",
+   "side": "P",
+   "world": [
+    777,
+    94,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.earing-S",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "earing",
+   "side": "S",
+   "world": [
+    777,
+    226,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.sling",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "sling",
+   "side": "CL",
+   "world": [
+    777,
+    160,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P8",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    152,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S8",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    168,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P16",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    144,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S16",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    176,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P24",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    136,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S24",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    184,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P32",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    128,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S32",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    192,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P40",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    120,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S40",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    200,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P48",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    112,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S48",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    208,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P56",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    104,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S56",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    216,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-P64",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "P",
+   "world": [
+    777,
+    96,
+    161
+   ]
+  },
+  {
+   "name": "spritsail.jackstay-S64",
+   "owner": "basecamp-frigate-constitution-01m-bowsprit",
+   "member": "spritsail",
+   "kind": "jackstay",
+   "side": "S",
+   "world": [
+    777,
+    224,
+    161
+   ]
+  }
+ ]
+}

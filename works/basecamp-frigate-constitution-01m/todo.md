@@ -178,6 +178,16 @@
 - [x] ~~cat fall 兩舷~~ 掛過又拿掉（Tim 2026-10-12：錨不用繩子，看起來有點怪）⇒ 錨的繩一律不做
 - [ ] 之後：fish 起來綁在船側（換成另一種收法，要 Tim 選）、fish tackle、錨纜與 hawse 孔、sheet／stream／kedge anchors
 
+## 階段二十六 帆桁轉角度 brace（2026-10-12 套用）
+- [x] plan.json `brace`（下層 20°、往上每層 +2°；右舷那一頭往前，對著從右舷後方吹來的預設風）；`design/draft_brace.py`（刻舊的＋蓋轉過的、固定點沿轉過的軸重算、轉之前的固定點另存 rig_points_yards_square.json）
+- [x] ~~⚠ 停手~~（summit 10:0x 出廠 791da4e 之後接上）：summit 的 TASK-0505（作品書卡加 tags）09:57 把 27 件子作品的書卡加了 `tags`，publish/senate.exe（1119802-dirty.20261012T014222Z）不認得 ⇒ 組裝件匯出 blocked。已在酒館跟她說（seq 22900），等她出廠再接；⛔ 那 27 個 work.json 是她的遷移，不收、不改
+- [x] 接手第一步：正向對照 —— 角度全設 0 跑 draft_brace，產出的帆桁格子與固定點要跟現在逐格、逐點相同；對上了才跑真的角度
+- [x] sails_test.py 的帆下角改成左舷讀左舷自己的 earing（現在 P 是 S 鏡過去 ⇒ 轉了就不對）；改完先在沒轉的狀態重跑，帆的讀數要跟現在一樣
+- [x] 草稿：三件桅杆子作品各 carvevox（舊方帆桁，顏色守門）＋ stampvox（轉過的）→ 登記轉過的固定點 → sails_test --apply（讀數見 notes 階段二十六）
+- [x] Tim「測試ok 可以套用了」⇒ 三件 apply（changed 9,089／14,684／4,769、mismatch 0）；組裝件 1,445,296、1 元件、空腔 0、link_overlap 0、sails／ropes broken 0
+- ⚠ 要退回的話：三件 discard 草稿 ＋ `register_anchors.py . rig_points_yards_square.json` ＋ 把 rig_points_yards.json 換回 square 那份 ＋ sails_test --apply
+- [ ] 之後：braces（yardarm → 船尾的動索）、lifts
+
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**
 - [ ] ⚠ 先做 TASK-0497（關聯／組裝支援鏡像）—— 兩舷對稱的肘、艙房只做一份
