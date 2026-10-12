@@ -85,3 +85,21 @@
 - 讀數：六層彼此重疊 0、跟船殼重疊 0、露到船外 0、鏡像差 0、每層都接到船殼；**每件子作品匯出 vs 清單逐格相同**（缺 0、多 0、色差 0）；組裝件 **1,634,200**、1 元件、空腔 0、link_overlap 0。
 - 過程圖：`overlays/stage5_decks_{top,bowq,waist}.png`；新圖紙 `design/sheet06_decks_v1.png`。
 - ⚠ 看得到的：上甲板橫樑在插入段的牆上沒有 clamp（直接靠內板）；房間、梯子、格柵還沒有。
+
+## 補漆：船頭與轉角的帶子（2026-10-12 晚，Tim：「船頭可以補噴漆（有發現縫）」＋兩張截圖）
+設計 plan.json `paint_fix`；產生 `design/draft_paint_fix.py`（讀標記 `拉長:end`）⇒ `masks/paint/paint_fix.vox.txt`、`verify_paint_fix.json`。
+- 原因（我的錯）：階段三只塗「每個 (x, z) 往外最遠那一格」—— 船側對，船頭朝前（+x）的面看得到的是每個 (y, z) 最前面那一格，沒塗到 ⇒ 帶子被一條條黑直條切開。
+- 改法：x ≥ 125 的黑外板（36）只要有一面貼著船外的空氣（外框外擴 1 格、從角落 flood）就算表面；帶的上下緣照每一欄已塗紅的高度（兩條帶各自；船頭最尖那 3 欄借鄰欄）⇒ 帶內 → 暗紅、上下各一格 → 金。260 格（暗紅 172、金 88；x 700 以上 228）、鏡像差 0。
+- 先量了一次「從正前方看帶子高度裡的黑」：在它那一欄帶子範圍內、朝前的黑格 100 個 ⇒ 都在這 260 格裡。
+- 落格：`補漆:begin` → stampvox overwrite（placed 260）→ `補漆:end`；**結果帳** 1,054,406 vs 設計，缺 0、多 0、色差 0。過程圖 `overlays/paintfix_bow_{before,after}.png`（正前方）、`paintfix_bowside_after.png`。
+- ⚠ 中線那根艏柱沒塗（兩條帶在那裡斷開）：之後做船頭的 knee 與 cheeks 會包住它，帶子接到 cheeks 上。
+
+## 階段六 桅杆 —— 新圖紙 07（2026-10-12 晚）
+設計 plan.json `masts_build`；產生 `design/draft_masts.py`（憲法號四件桅杆子作品的格＋models.json＋anchors.json）⇒ `masks/masts/<桅>.vox.txt`、`masts_placement.json`、`verify_masts.json`；下 CLI `design/tools/masts_apply.py`。
+- 三根桅照船殼同一套換算：x 照拉長（前桅 x 566–608 全在 472 以後 ⇒ +66）、z 109 插 23（複製 z 108 那一層：前 56／主 61／後 28 格）⇒ 下桅加長 23、上面全部抬 23。艏斜桅（x 594–958）整根 (+66, 0, +23)，對準船殼跟著抬高的開口；尖端到 x 1024 ⇒ 組裝件與艏斜桅子作品放寬到 **1100**。
+- 帆桁：模型來源照舊是**憲法號的 -yard-* 子作品**（同一件做一次）；at 照換算、meta 照抄；固定點照換算（名字不變）。
+- spanker boom（設計決定）：抬 23 之後 jaws z 157 會穿過船尾中間那盞燈籠（z 161–177、x 95.6–103.4）、離 poop deck 0.6 m ⇒ 再抬 6、沿 x 縮 0.48（尾端 x 110.6；長約 9 m）。模型外框 x 110.6–201.8、z 162–175。
+- 子作品（parent 船殼、tags sub、0.1 m）：`-mast-fore` 23,020、`-mast-main` 28,887、`-mast-mizzen` 12,336、`-bowsprit` 11,394（1100 寬）；模型 4／4／6／1、固定點 36／34／26／6；組裝件關聯 `前桅`、`主桅`、`後桅`、`艏斜桅`。
+- 讀數：四件跟組裝件現況（船殼＋甲板＋裝飾）重疊 0（每一層的桅孔都對上）、彼此重疊 0、鏡像差 0；**每件子作品匯出 vs 清單逐格相同**；帆桁模型的 309 個點 vs 憲法號同名點：剛好 (+66 或 0, 0, +23)、差 0（boom 另算）、meta 相同、狀態全 ok；組裝件 **1,709,837**、1 元件、空腔 0、link_overlap 0、models_broken 0。
+- 過程圖：`overlays/stage6_masts_{side,bowq,sternq}.png`。⚠ 用 region 裁的近照不能拿來看帆桁（region 只裁格子、模型照畫）—— 那張刪了。
+- ⚠ 還沒有：繩（靜索、ratlines）、帆、channels、fife rails；桅的固定點已照換算登記，繩索那一階段照名字接。
