@@ -698,3 +698,28 @@ Tim：模型裡能不能多帶資訊給遊戲 ⇒ 酒館跟 ame 議定（seq 240
   ⚠ 1812 日誌只寫「98 large and 110 small barrels」，沒說哪間放多少 ⇒ powder_lb 是模型裡的桶數換的，不是史料。
 - ⚠ 有 meta 的檔升 schema：-deck-gun／-deck-spar／-magazine-aft／-magazine-fore 的 models.json ⇒ 2、組裝件 links.json ⇒ 3。舊版 senate.exe 讀不了（大聲擋，⛔ 不會默默丟掉）。
 - 讀數（組裝件 export format=parts）：見提交訊息。
+
+## 階段三十三 帆桁改外部模型（每根一件子作品；2026-10-12 晚，wake #132）
+Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用的方式，這樣也可以任意旋轉，之後遊戲內可以跟著風向調整）」。
+產生程式 `design/draft_yard_models.py` ⇒ `masks/yard_models/<帆桁>.vox.txt`（子作品座標）、`masks/yard_models/carve_<桅>.vox.txt`（顏色守門）、`rig_points_yard_models.json`、`yard_models_placement.json`、`verify_yard_models.json`；下 CLI `design/tools/yard_models_apply.py <design> create|stamp|anchors|models|rebind|carve|unanchor`。
+
+- 15 根 → 15 件子作品 `-yard-<帆桁>`（parent ＝ 所在的桅杆子作品、tags sub、0.1 m）：方帆桁 12（fore／main 各 course、topsail、topgallant、royal；mizzen crossjack、topsail、topgallant、royal）、spanker gaff、spanker boom、spritsail。共 18,823 格。
+  子作品裡放**沒轉**的帆桁：截面、錐度、端色照 draft_yards.py，但不扣跟桅重疊的格（獨立零件要完整）。
+- 模型放在**桅杆子作品**裡（`前桅/yard-fore-course`…，跟著桅走）：scale 1 明寫、`rotate=0,0,θ` 繞世界 z；pivot ＝ 子作品固定點 `pivot` 那一格的格心 ——
+  方帆桁、spritsail ＝ 帆桁中心那一格（xc 取整）；gaff／boom ＝ 後桅在 jaws 高度的軸心那一格（繞桅轉，所以 pivot 不在桿上、子作品外框包到它）。
+  θ ＝ −20／−22／−24／−26（course／topsail／topgallant／royal；右舷那一頭往前 ＝ 從上往下看順時針 ＝ 負角）；gaff、boom、spritsail 0。
+- meta（給遊戲）：`kind=yard, mast, yard, length_ft, diameter_in, pivot_anchor=pivot, turn_axis=z, rotate_z_deg`，有帆的加 `sail`（gaff／boom ＝ spanker；crossjack 沒有）。
+  遊戲轉帆桁：繞 `pivot` 固定點（parts／vxk 的 points 裡，組裝件座標）的鉛直軸轉；帆角綁在模型上，引擎這邊會跟著走。
+- 固定點：每件子作品照舊名去掉「帆桁名.」登記（earing-P／S、arm-P／S、sling、jackstay-*；gaff top*／throat／peak；boom jaws／end…）＋ `pivot`，共 335；桅杆子作品裡的 320 個舊帆桁固定點已拿掉。
+- 重綁：帆 12 面（方帆 11 的 head 兩角、spanker 四角）、繩 18 條（topsail 以上的 sheet）改 `model:<桅關聯>/yard-<帆桁>/<點>`；去掉前綴後 sails.json／ropes.json 前後逐欄相同（15 面、901 條，連 created_at）。
+  `tools/sails_test.py` 改成產 `model:` 路徑：重產的 sails_test.json 跟組裝件 15 面帆、32 條繩的端點全相同。⚠ draft_yards.py、draft_brace.py、register_anchors.py＋rig_points_yards.json 是**舊做法**（把帆桁貼進桅、固定點登記在桅）—— ⛔ 不要再跑。
+- 量（先後照做的順序）：
+  ① 正向對照：重產的沒轉帆桁 vs 當初貼進桅的 masks/yards —— fore 4,850／main 7,957／bowsprit 1,295 逐格逐色相同；mizzen 多 13 格，全在 帆桁:begin 那時的桅裡（gaff／boom 的 jaws，當初被扣掉）。
+  ② 要刻的 18,638 格現在都在、顏色都對；刻完四件桅杆 vs 標記 帆桁:begin **逐格相同**（缺 0、多 0、色差 0）。
+  ③ 模型上的固定點（export parts）vs 預期：320 點跟產生程式算的一模一樣；vs 改之前（轉過、取整）的位置最多 1.05 格 —— pivot 用帆桁中心那一格的格心、不是帆桁真正的軸（差 ≤ 0.5 格），加上舊點本來就取整過。
+  ④ 帆：earing 移動 < 1 格；topsail 以上的 sheet 長 3 → 3.01–3.14；最大鼓度 −96.61 → −96.51；spanker 讀數逐字不變。
+- 讀數：組裝件 **1,394,450**（＝ 1,413,088 − 18,638）、1 元件、空腔 0、link_overlap 0；模型 208（193 ＋ 15）、broken 0；繩 901、帆 15、broken 0；vxk（include=rig,models,parts,meta）模型 208、帶 meta 209、points 1,137。
+- 任意旋轉試一次：方帆桁轉到另一舷（+20～+26）、gaff／boom −20、風這一次 4.5,1.5,0 ⇒ 帆跟著走、broken 0（`overlays/stage33_yards_demo_porttack.png`）；轉回來之後四份 models.json 跟備份**逐位元組相同**。
+  ⚠ course 的 sheet／tack 綁在甲板的 pin 上（不跟帆桁轉）⇒ 轉很大時 course 下角會被拉歪；遊戲那側要轉 course 的話，下角的繩也要跟著重算。
+- ⚠ 看得到的：帆桁是模型（網格），轉了 20° 之後中段往後那一側有一小段穿進桅裡（階段二十六用格子轉時那 6 格是「不放」，現在是網格互相穿過）。gaff 斜 35° 仍是格子的階梯（照當初的格子做、沒有改成「直桿＋轉」）。
+- 圖：overlays/stage33_yards_{bowq,above}.png、stage33_mast_main_models.png（主桅子作品自己：桅＋4 根帆桁模型）、stage33_yards_demo_porttack.png。

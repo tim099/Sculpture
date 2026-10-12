@@ -15,7 +15,8 @@ L = {'fore': '前桅', 'main': '主桅', 'mizzen': '後桅'}
 SAIL_C, RUN_C = '#f2ead8', '#a08458'           # 帆布、動索（沒上焦油的麻）
 WIND, SECONDS = '4.5,-1.5,0', 4                 # 從右舷後方吹來（往 +x、−y）；v1 用 7,-3,0（7.6 m/s）⇒ 方帆鼓 76–106 格、像降落傘 ⇒ 降
 
-YP = {q['name']: q['world'] for q in json.load(open(os.path.join(D, 'rig_points_yards.json'), encoding='utf-8'))['points']}
+YP = {q['name']: q['world']  # 帆下角的座標仍讀這份（改模型之前轉過、取整的固定點）；階段三十三起帆桁的固定點住在 -yard-* 子作品
+      for q in json.load(open(os.path.join(D, 'rig_points_yards.json'), encoding='utf-8'))['points']}
 RS = {a['link'] + '/' + a['name']: a['world'] for a in json.load(open(os.path.join(D, 'rig_standing.json'), encoding='utf-8'))['anchors']}
 BP = {q['name']: q['world'] for q in json.load(open(os.path.join(D, 'rig_points_belaying.json'), encoding='utf-8'))['points'] if q['side'] == 'S' and not q.get('via')}
 for k in ('pinrail-4.pin-3', 'pinrail-8.pin-3', 'pinrail-11.pin-3', 'pinrail-13.pin-3', 'pinrail-13.pin-5'):
@@ -41,7 +42,7 @@ COURSE = {'fore': {'foot_z': 145, 'sheet': 11, 'tack': 13}, 'main': {'foot_z': 1
 for m, lst in SQUARE.items():
     for s in lst:
         mem = '%s-%s' % (m, s)
-        head = ['%s/%s.earing-P' % (L[m], mem), '%s/%s.earing-S' % (L[m], mem)]
+        head = ['model:%s/yard-%s/earing-P' % (L[m], mem), 'model:%s/yard-%s/earing-S' % (L[m], mem)]   # 階段三十三：帆桁是模型
         if s == 'course':
             e, eP = YP[mem + '.earing-S'], YP[mem + '.earing-P']
             C = COURSE[m]
@@ -60,10 +61,10 @@ for m, lst in SQUARE.items():
             sail(mem, head + [xyz(cs), xyz(cp)], ['head_p', 'head_s', 'clew_s', 'clew_p'], '0', 'clew_s,clew_p', 1.05,
                  'sheet 綁到下一根帆桁（%s）同舷的 earing' % low)
             for sd, cl in (('S', 'clew_s'), ('P', 'clew_p')):
-                rope('%s.sheet-%s' % (mem, sd), 'sail:%s/%s' % (mem, cl), '%s/%s-%s.earing-%s' % (L[m], m, low, sd), 0.35, note='topsail 以上的 sheet')
+                rope('%s.sheet-%s' % (mem, sd), 'sail:%s/%s' % (mem, cl), 'model:%s/yard-%s-%s/earing-%s' % (L[m], m, low, sd), 0.35, note='topsail 以上的 sheet')
 
 # ── spanker ──
-sail('spanker', ['後桅/spanker-gaff.top8', '後桅/spanker-gaff.top120', '後桅/spanker-boom.top176', '後桅/spanker-boom.top8'],
+sail('spanker', ['model:後桅/yard-spanker-gaff/top8', 'model:後桅/yard-spanker-gaff/top120', 'model:後桅/yard-spanker-boom/top176', 'model:後桅/yard-spanker-boom/top8'],
      ['throat', 'peak', 'clew', 'tack'], '0,2,3', '', 1.05, 'gaff、boom、桅三條邊釘住，只有 leech 自由')
 
 # ── 三角帆（stay 改拉直，head 落在 stay 上）──

@@ -278,5 +278,14 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 - [x] 讀 02 號圖找 MAGAZINE（後 x 200–271、前 x 521–574）、1812 日誌對照（前後兩間）
 - [x] 子作品 -magazine-aft／-magazine-fore（銅皮、門洞、木架）＋ -powder-barrel（0.02 m）當模型 22＋116 桶；固定點 blast／door
 - [x] 組裝件 1,413,088、1 元件、空腔 0、overlap 0、模型 193、broken 0
-- [ ] Tim 預覽 OK ⇒ 單層提交（Sculpture；階段三十一一起）
-- [ ] meta（kind=magazine、powder_lb）等 TASK-0517；砲的 breech 固定點也在那張單
+- [x] Tim 預覽 OK ⇒ 單層提交（Sculpture；階段三十一一起）—— 366a440
+- [x] meta（kind=magazine、powder_lb）等 TASK-0517；砲的 breech 固定點也在那張單 —— 818140f
+
+## 階段三十三 帆桁改外部模型（2026-10-12 晚；讀數見 notes.md 階段三十三）
+- [x] 15 件子作品 -yard-*（沒轉的帆桁、固定點＋pivot）→ 桅杆子作品裡放模型（rotate z、meta kind=yard）
+- [x] 帆 12 面、sheet 18 條改 model: 路徑；sails_test.py 改產 model: 路徑
+- [x] 從桅刻掉舊帆桁（刻完 ＝ 帆桁:begin 逐格相同）、拿掉 320 個舊固定點
+- [x] 組裝件 1,394,450、1 元件、空腔 0、模型 208、broken 0；轉到另一舷試過、轉回來逐位元組相同
+- [ ] Tim 預覽 OK ⇒ 單層提交（Sculpture）
+- [ ] 跟 ame 說：帆桁的 meta 與 pivot（遊戲跟著風轉）
+- [ ] 之後可以考慮：gaff／boom 改成「直桿＋rotate y」（現在是斜的格子階梯）；course 的 sheet／tack 跟著帆桁轉
