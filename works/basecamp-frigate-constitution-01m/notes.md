@@ -568,3 +568,15 @@ Tim：「478 繼續造船吧」（沒指定 ⇒ 照候選清單第一個）。�
 - ⚠ plan.json 有不只一個 `"anchors": {`（別段的固定點也叫這個鍵）⇒ 改錨這一段要用最後一個（rindex），不然會改到別段；這次斷言當場擋下、diff 只有新增行。
 - 讀數：Tim「測試ok 可以套用了」⇒ apply（changed 1,140、mismatch 0）；組裝件 1,443,188 ＋ 2 × 1,140 ＝ 1,445,468、link_overlap 0、1 元件、空腔 0；兩舷跟現況重疊 0、x／y 不對稱 0、貼著 cathead 6 格、離船殼最近 1 格、最低 z 75（水線 62.86 之上）。
 - 過程圖：`overlays/stage24_anchors_*`（close 是右舷船頭斜看、front 其實是 yaw 90 的右舷側面）。
+
+## 階段二十五 上 deadeyes 與 lanyards（繩，不是 voxel）
+Tim：「照順序繼續做下一階段 GO」。錨那一段的下一步（cat tackle）量過：ring 頂離 cathead 只有 1 格，tackle 看不出來 ⇒ 只掛 cat fall（後來拿掉，見下）；spar deck 砲門 Tim 說跟可動件一起做 ⇒ 跳過；照候選順序做 lanyards 與上 deadeyes。工具 `design/tools/rig_deadeyes.py` ⇒ `design/rig_deadeyes.json`，`tools/ropes_apply.py` 下 CLI（overwrite=1，重跑一樣）。一格 voxel 都不動。
+- 下端掛在 channel deadeye 的繩 62 條（lower shrouds 46、backstays 16），每條：
+  - **上 deadeye**：一段短而粗的繩當圓盤 —— 軸朝舷外、直徑 3（＝下 deadeye）、長 2（＝下 deadeye 的厚）、色 #6d4900（＝下 deadeye 的 104）；中心在「下 deadeye 中心 → 桅上那一端」的線上離下 deadeye 中心 8 格。
+  - **lanyards** 3 條：兩顆 deadeye 之間、沿 shroud 方向、照船長方向排開 ±0.9；粗 0.25、#a08458。
+  - **shroud／backstay**：下端改成上 deadeye 頂（座標端點），上端不動；繩長縮短 8.58–8.82 格。
+- 量：62 顆上 deadeye 碰到實心 0；碰到實心的只有中間那條 lanyard 最下端（t 0–0.04）穿進下 deadeye 本身（色 104，全部 108 個取樣點都是它）—— 那是設計要的。
+- ⚠ 順序：`rig_standing_apply.py` 會把那 62 條的下端改回 channel 的固定點 ⇒ 重跑它之後要再跑一次 `ropes_apply.py . rig_deadeyes.json`。
+- **cat fall**（錨，兩舷；⛔ 已拿掉 —— Tim 2026-10-12「錨我覺得不用繩子 看起來有點怪」（原文「茅」，讀成「錨」）⇒ unrope 4 段、工具不再產生）：cathead 端（654, 204.5, 132.5）→ 前甲板 `pinrail-13.pin-5`。⚠ 直線會穿過舷牆（200 個取樣 52 個碰到實心）⇒ 拆兩段、中間越過 cap rail 頂上一點：在 x 618–644、y 196–204、z 130.5–133.5 裡搜兩段都不碰實心的點，只有 z 133.5 過 ⇒ (620, 202, 133.5)。
+- 讀數：繩 312 條一次下完（失敗 0），cat fall 改兩段後重下 4 條（911）；拿掉 cat fall 之後組裝件繩 659 → **907**（＝ ＋62 deadeye ＋186 lanyard；那 62 條 shroud／backstay 是改寫）、ropes_broken 0；組裝件格數不變 1,445,468。
+- 過程圖：`overlays/stage25_*`（deadeyes_main 是主桅 channel；catfall 是拿掉之前的右舷船頭，留著當紀錄；bow_after 是拿掉之後同一個角度）。

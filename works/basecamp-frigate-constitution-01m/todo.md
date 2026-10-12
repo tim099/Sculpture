@@ -124,12 +124,14 @@
 - [x] 新圖紙 16（`design/draft_channels.py`、`sheet16_channels_v1.png`、`rig_points_channels.json`）；子作品 `-channels`（一舷）＋關聯 channels／channels-鏡像；一舷 6,506 格；Tim「測試ok 可以套用了」⇒ apply；組裝件 1,403,751
 - [x] chain plates 長短不一（10 根在白帶上緣收住）—— Tim 2026-10-11「由你決定」⇒ 不改（只有穿過白帶那段看得到；統一變短會全拿掉、統一變長會蓋砲門；notes.md 階段十九）
 - [x] shrouds／backstays 試掛（繩，2026-10-11；notes.md「靜索試掛」）
-- [ ] 之後：上 deadeyes、lanyards、backstay stools、channel 下的支撐肘
+- [x] 上 deadeyes、lanyards（階段二十五，繩當圓盤）
+- [ ] 之後：backstay stools、channel 下的支撐肘
 
 ## 靜索試掛（2026-10-11；繩，不是 voxel）
 - [x] Tim：「可以先試著掛一些跟帆沒有連接的繩子測試」⇒ 固定點 134、繩 133（shrouds、backstays、futtock、topmast／topgallant shrouds、stays、bobstays），ropes_broken 0；工具 `design/tools/rig_standing_{plan,apply}.py`、清單 `design/rig_standing.json`
 - [x] ratlines 340 道（階段二十二；`tools/ratlines.py`）
-- [ ] 之後：lanyards 與上 deadeyes、catharpins；動索（braces、sheets、halliards…）等帆 —— 下端綁 `rig_points_belaying.json` 的 pins
+- [x] lanyards 與上 deadeyes（階段二十五）
+- [ ] 之後：catharpins；動索（braces、sheets、halliards…）等帆 —— 下端綁 `rig_points_belaying.json` 的 pins
 
 ## 掛帆試試（2026-10-11；帆，不是 voxel）
 - [x] Tim「掛帆試試吧」「可以調整風力試試」⇒ 帆 15 面＋帆腳索 32 條；組裝件 meters_per_voxel 補 0.1；預設風 4.5,−1.5,0、4 秒（notes.md「掛帆試試」）
@@ -173,7 +175,8 @@
 - [x] 讀數：catted 在 cathead 端面正下方（掛點 653,205,130，第一個試的就過）、兩舷跟現況重疊 0、x／y 不對稱 0、1 元件、貼著 cathead 6 格、離船殼最近 1 格、最低 z 75（水線 62.86 之上）；組裝件預期 1,443,188 ＋ 2 × 1,140 ＝ 1,445,468
 - [x] 草稿期間改的：stock 先沿船寬 ⇒ 靠船內那頭插進船殼 57 格 ⇒ 改沿船長；stock 46 格船尾端碰到 x 630 的黑木 2 格 ⇒ 42；ring 只靠斜角相接（7 塊）⇒ 粗 0.8；黑 36 貼黑船殼看不見 ⇒ 鑄鐵灰 146（hawse 圈同一個理由）
 - [x] Tim「測試ok 可以套用了」⇒ apply（changed 1,140、mismatch 0）；組裝件 1,445,468、1 元件、空腔 0、link_overlap 0
-- [ ] 之後：fish 起來綁在船側、cat／fish tackle 的繩（綁在 ring 與 cathead 上的固定點）、錨纜與 hawse 孔、sheet／stream／kedge anchors
+- [x] ~~cat fall 兩舷~~ 掛過又拿掉（Tim 2026-10-12：錨不用繩子，看起來有點怪）⇒ 錨的繩一律不做
+- [ ] 之後：fish 起來綁在船側（換成另一種收法，要 Tim 選）、fish tackle、錨纜與 hawse 孔、sheet／stream／kedge anchors
 
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**
