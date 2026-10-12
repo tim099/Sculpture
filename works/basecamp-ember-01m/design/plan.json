@@ -42,5 +42,23 @@
   "upper_ports": "設計決定：上層砲門跟下層同一欄、上下對齊（HMS Victory 那種一欄一欄的樣子）",
   "deck_spacing_check": "research agent 2026-10-12（Wikipedia 各艦條目）：英國 74 砲（Bellona 1760、Arrogant 級、Bellerophon 1786）砲甲板 168 ft、寬 46'11\"、艙深 19'9\"；法國 Téméraire 級 55.87 m；憲法號 175 ft、43'6\"、艙深 14'3\" ⇒ 長度差不多、74 比較寬、艙深多 5–6 ft。配砲 Bellona：下層 28×32 磅、上層 28×18 磅、quarterdeck＋forecastle 18 門 ⇒ 本設計的 28／28／18 跟它同一個形狀。甲板間距約 7 ft（≈ 21 格）⚠ 沒查到有出處的數字（agent 的記憶＋一則沒出處的估計）；本設計取 23 格（2.3 m）＝ 憲法號自己的間距。插 23 格 ＝ 舷高多 2.3 m（比真的 74 多一點，奇幻船、接受）。船尾砲門：RMG 的 74 模型（Tucker）有下層船尾砲門＋兩層船尾窗（agent 報，沒逐一核對）"
  },
- "not_now": "poop deck 與更高的船尾、quarter galleries、船尾燈籠、船首像、塗裝（奇幻配色）、桅加高、帆色 —— 之後各一張圖紙"
+ "ports_upper": {
+  "title": "新圖紙 03：上層砲門 v1",
+  "world_mark": "船殼:end",
+  "world_voxels": 937101,
+  "dy_min": 10,
+  "bow_box": {"x": [643, 651], "z": [96, 103], "from": "憲法號 plan.json gunports.bow_v12（船頭砲門兩側垂直）的外框"},
+  "rule": "下層開口從船殼量（憲法號 source_ports.json 每個框外擴 2 格裡、|dy| ≥ dy_min 沒有任何格的 (x, z)）；上層 ＝ 同一組 (x, z + band.height)，刻掉那裡 |dy| ≥ dy_min 的格（外板、肋骨、內板）",
+  "provenance": "設計決定：上下層同一欄（plan.provenance.upper_ports）；插入段的牆是實心 4 格（177／141／141／36，570 欄裡 1 欄有縫）⇒ 不像憲法號那樣補 141 包邊"
+ },
+ "paint": {
+  "title": "新圖紙 03：塗裝 v1（奇幻：黑、暗紅、金）",
+  "band": 128,
+  "line": 248,
+  "side_x_from": 125,
+  "low_z": [84, 108],
+  "rule": "下層白帶（外緣那一格是 255 的 (x, z)）→ 暗紅；上層 ＝ 同一組 (x, z + band.height) 的外緣格（是 36 才換）→ 暗紅；兩條帶每一欄上下各一格外緣（是 36 才換）→ 金；下層白帶裡不在外緣的 255（砲門側面）也換暗紅。x < side_x_from（船尾）不動，船尾另一張圖紙",
+  "provenance": "設計決定（奇幻、⛔ 不抄電影船）：黑船殼（憲法號的 36 照舊）＋ 兩層砲門帶暗紅（RGB332 128 ＝ 146,0,0）＋ 金線（248 ＝ 255,219,0；憲法號船頭 cathead 端面用的同一個金）"
+ },
+ "not_now":"poop deck 與更高的船尾、quarter galleries、船尾燈籠、船首像、塗裝（奇幻配色）、桅加高、帆色 —— 之後各一張圖紙"
 }
