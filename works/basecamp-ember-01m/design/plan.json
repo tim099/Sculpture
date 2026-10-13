@@ -1867,5 +1867,48 @@
   "link": "舷梯",
   "mirror_link": "舷梯-鏡像",
   "decisions": "todo「entry port 跟著上甲板抬高（舷梯要多 23 格）」。開口船殼本來就有（憲法號的跟著 z ≥ 109 抬 23）⇒ 不刻；踏階從水線 71 之上 z 74 起每 4 格一道到 126（14 道；憲法號 10 道 66–102）；柱頂 151（憲法號 128 ＋23）；man rope 同憲法號 v1.1（下端埋在最下一道外側兩角）。"
+ },
+ "magazines_build": {
+  "title": "彈藥庫：直接引用憲法號的前後兩間（含火藥桶模型）",
+  "links": [
+   {
+    "name": "彈藥庫-後",
+    "work": "basecamp-frigate-constitution-01m-magazine-aft",
+    "at": [
+     200,
+     129,
+     23
+    ],
+    "meta": {
+     "kind": "magazine",
+     "powder_lb": 2200
+    },
+    "con_at": [
+     200,
+     129,
+     23
+    ]
+   },
+   {
+    "name": "彈藥庫-前",
+    "work": "basecamp-frigate-constitution-01m-magazine-fore",
+    "at": [
+     587,
+     110,
+     26
+    ],
+    "meta": {
+     "kind": "magazine",
+     "powder_lb": 11600
+    },
+    "con_at": [
+     521,
+     110,
+     26
+    ]
+   }
+  ],
+  "assembly_voxels_before": 1798540,
+  "decisions": "todo「彈藥庫照兩層甲板重配（火藥桶引用憲法號的）」＋ Tim「子物件能重複用就重複用」。彈藥庫在 orlop 底下（z 23–41），那一層餘燼號跟憲法號一樣、只有拉長的平移（後 x 200–271 < 439 不動；前 x 521–573 ≥ 472 ⇒ ＋66）⇒ 兩間直接關聯憲法號的子作品（火藥桶模型掛在它們裡面，一起來），meta 照憲法號。先量：放進餘燼號組裝件重疊 後 0／前 0。⚠ powder_lb 是憲法號的量（桶數 × 100），沒照 90 門砲加量 —— 要多一間或加桶等 Tim。"
  }
 }

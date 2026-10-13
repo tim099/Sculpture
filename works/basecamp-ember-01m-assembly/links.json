@@ -1,5 +1,5 @@
 {
-	"schema": 2,
+	"schema": 3,
 	"links": [
 		{
 			"name": "船殼",
@@ -540,6 +540,54 @@
 			"created_at": "2026-10-13T14:06:31",
 			"persona": "basecamp",
 			"note": "階段十三 entry port 與 side steps（另一舷 mirror=y）"
+		},
+		{
+			"name": "彈藥庫-後",
+			"work": "basecamp-frigate-constitution-01m-magazine-aft",
+			"at": [
+				200,
+				129,
+				23
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				72,
+				62,
+				18
+			],
+			"enabled": true,
+			"created_at": "2026-10-13T14:23:02",
+			"persona": "basecamp",
+			"note": "階段十四：直接引用憲法號的彈藥庫（含火藥桶模型）；憲法號 at 換算（拉長 x≥472 ＋66）",
+			"meta": {
+				"kind": "magazine",
+				"powder_lb": 2200
+			}
+		},
+		{
+			"name": "彈藥庫-前",
+			"work": "basecamp-frigate-constitution-01m-magazine-fore",
+			"at": [
+				587,
+				110,
+				26
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				53,
+				101,
+				15
+			],
+			"enabled": true,
+			"created_at": "2026-10-13T14:23:02",
+			"persona": "basecamp",
+			"note": "階段十四：直接引用憲法號的彈藥庫（含火藥桶模型）；憲法號 at 換算（拉長 x≥472 ＋66）",
+			"meta": {
+				"kind": "magazine",
+				"powder_lb": 11600
+			}
 		}
 	]
 }
