@@ -251,3 +251,11 @@
 
 ## 匯出給遊戲（2026-10-13）
 - `op=export format=vxk include=rig,models,parts,meta` ⇒ `basecamp-ember-01m-assembly/exports/ember.vxk`（1.3 MB；exports/ 不進版控）：階段十五之後的組裝件 1,813,446 格、繩 1,081、帆 15、模型 246（網格 63 份）、關聯外框 49、帶 meta 248、固定點 1,465；引擎對拍「封裝回讀 ＝ 匯出的格子（逐格、逐色、checksum）」✓。⚠ 軍官室是之後才加的 ⇒ 要給 ame 前再匯一次。
+
+## 階段十七 舵輪（2026-10-13，Tim：「繼續造船吧」⇒ 對照憲法號建造順序，只剩舵輪沒做）
+設計 plan.json `wheel_build`；產生 `design/draft_wheel.py` ⇒ `design/wheel_placement.json`、`verify_wheel.json`；套用 `design/tools/wheel_apply.py`。
+- 子物件重複用：憲法號 -wheel（雙舵輪，0.02 m、44,456 格）當外部模型 `舵輪` 掛在 `甲板-spar`（同砲的掛法），pivot (50,52,0)、scale 0.2、轉角 0 —— 跟憲法號同一組參數。
+- 位置：後桅與船長室在 poop 底下（poop 前緣 x ≈ 212），中線 x 213–227 是上 poop 的梯子 ⇒ 放在梯子前面的上甲板中線（y 160.5）。搜法同砲：x 每 0.5 格試、z ＝ 腳下甲板頂 ＋ 1、模型每格格心＋八角縮 0.2 不落在「組裝件＋甲板-spar 的 carronade 模型」實心裡。
+- v1 從 x 228 搜：第一個 0 碰撞在 x 235.5，外框後緣 226.4 正好堵在梯子落腳處（梯腳 x ≈ 225）⇒ 留 1 m 走道，從 x 246 起搜 ⇒ x 246 第一個就過。
+- 讀數：at (246, 160.5, 128)、外框 (236.9,150.8,128.1)–(255.1,170.2,148.7)；腳印 24 欄正下方全是甲板（z 127）、外框正上方 0 格實心；舵索 2 條（#a08458、粗 0.35、組 steering）鼓輪 → 正下方甲板面，各長 9.9（同憲法號）。繩 **1,083**、ropes_broken 0；模型 **247**、models_broken 0；組裝件格數不變 **1,818,063**（模型不是 voxel）、1 元件、空腔 0、link_overlap 0。穿過舵輪外框的繩只有它自己那 2 條（直線近似）。重跑 sha256 相同。
+- 過程圖：`overlays/stage17_wheel_{deck,close}.png`（hide_rope_groups=standing、sails=0）。

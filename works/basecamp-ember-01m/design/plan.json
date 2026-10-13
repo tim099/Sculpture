@@ -1977,5 +1977,44 @@
   "link_in": "basecamp-ember-01m-deck-upper",
   "link": "軍官室",
   "decisions": "Tim 2026-10-13「接著繼續吧 GO」⇒ todo 可選項 wardroom；房間自由設計（Tim「房間也自由發揮吧」）。上層砲甲板船尾量過：地板 105、天花板 128；舷側砲架 |dy| ≥ 23、船尾追擊砲 x 108–128；中線柱 x 140／156／172／188；後桅 x 200–206。前艙壁放第 2、3 門砲之間（x 232–233；砲索的環在 230／248，不穿）；quarter gallery 下層的門通進這間。"
+ },
+ "wheel_build": {
+  "title": "舵輪 v1：憲法號雙舵輪（-wheel，0.02 m）當外部模型掛在甲板-spar；舵索 2 條往下到甲板面",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1818063,
+  "source_work": "basecamp-frigate-constitution-01m-wheel",
+  "deck_work": "basecamp-ember-01m-deck-spar",
+  "link_path": "甲板-spar",
+  "name": "舵輪",
+  "pivot": [
+   50,
+   52,
+   0
+  ],
+  "scale": 0.2,
+  "y": 160.5,
+  "search_x": [
+   246,
+   330
+  ],
+  "search_z": [
+   115,
+   140
+  ],
+  "rope_anchors": [
+   "drum-rope-a",
+   "drum-rope-b"
+  ],
+  "rope_names": [
+   "wheel-rope-a",
+   "wheel-rope-b"
+  ],
+  "rope": {
+   "color": "#a08458",
+   "thickness": 0.35,
+   "slack": 1,
+   "group": "steering"
+  },
+  "why": "後桅與船長室在 poop 底下（x ≤ 212），中線 x 213–227 是上 poop 的梯子 ⇒ 舵輪放在梯子前面的上甲板（同憲法號：舵輪在 quarterdeck 露天）。轉角 0 同憲法號。v1 從 x 228 搜到 235.5，箱子後緣 226.4 正好堵在梯子落腳處（梯腳 x ≈ 225）⇒ 留 1 m（10 格）走道：從 x 246 起搜。"
  }
 }

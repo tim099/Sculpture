@@ -1,0 +1,65 @@
+{
+ "name": "舵輪",
+ "work": "basecamp-ember-01m-deck-spar",
+ "source_work": "basecamp-frigate-constitution-01m-wheel",
+ "at": [
+  246.0,
+  160.5,
+  128.0
+ ],
+ "pivot": [
+  50,
+  52,
+  0
+ ],
+ "scale": 0.2,
+ "rotate": [
+  0,
+  0,
+  0
+ ],
+ "box": [
+  [
+   236.86,
+   150.76,
+   128.06
+  ],
+  [
+   255.14,
+   170.24,
+   148.74
+  ]
+ ],
+ "ropes": [
+  {
+   "name": "wheel-rope-a",
+   "from": "model:甲板-spar/舵輪/drum-rope-a",
+   "to": "243.3,159.2,128.0",
+   "color": "#a08458",
+   "thickness": 0.35,
+   "slack": 1,
+   "group": "steering",
+   "anchor_world": [
+    243.3,
+    159.2,
+    137.9
+   ],
+   "length": 9.9
+  },
+  {
+   "name": "wheel-rope-b",
+   "from": "model:甲板-spar/舵輪/drum-rope-b",
+   "to": "248.7,161.8,128.0",
+   "color": "#a08458",
+   "thickness": 0.35,
+   "slack": 1,
+   "group": "steering",
+   "anchor_world": [
+    248.7,
+    161.8,
+    137.9
+   ],
+   "length": 9.9
+  }
+ ]
+}
