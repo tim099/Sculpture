@@ -64,6 +64,47 @@
     ],
     "colors": { "bottom": 72, "algae": 76, "topsides": 109, "wale": 73, "cap": 73 }
   },
+  "decks": {
+    "levels": {
+      "lower": { "offset": -20 },
+      "upper": { "offset": 0 },
+      "half": { "offset": 20, "x_max": 235 },
+      "kamp": { "offset": 38, "x_max": 165 },
+      "bak": { "offset": 20, "x_min": 470 }
+    },
+    "beam_x0": 300, "beam_spacing": 14, "beam_sided": 3, "beam_moulded": 3,
+    "clamp_tall": 2, "clamp_depth": 1.4142135623730951, "coaming_height": 2,
+    "frag_max": 50,
+    "hatches": [
+      { "name": "main", "deck": "lower", "x": [306, 322], "dy": 9 },
+      { "name": "fore", "deck": "lower", "x": [445, 457], "dy": 6 },
+      { "name": "aft", "deck": "lower", "x": [205, 215], "dy": 5 },
+      { "name": "main", "deck": "upper", "x": [306, 322], "dy": 9 },
+      { "name": "fore", "deck": "upper", "x": [445, 457], "dy": 6 },
+      { "name": "aft", "deck": "upper", "x": [205, 215], "dy": 5 },
+      { "name": "companion", "deck": "half", "x": [214, 222], "dy": 4 },
+      { "name": "companion", "deck": "kamp", "x": [130, 136], "dy": 3 },
+      { "name": "scuttle", "deck": "bak", "x": [500, 506], "dy": 4 }
+    ],
+    "masts_provisional": {
+      "list": [
+        { "name": "mizzen", "x": 178.5, "hole_r": 3.5 },
+        { "name": "main", "x": 295.5, "hole_r": 4.5 },
+        { "name": "fore", "x": 490.5, "hole_r": 4.5 }
+      ],
+      "channels_avoid": { "mizzen": [168, 202], "main": [283, 337], "fore": [478, 522] }
+    },
+    "ports": [
+      { "name": "lower", "deck": "lower", "sill": 4, "height": 7, "x": [136, 163, 210, 237, 264, 345, 372, 399, 426, 453] },
+      { "name": "upper", "deck": "upper", "sill": 4, "height": 6, "x": [150, 223, 250, 277, 359, 386, 413, 440, 466] }
+    ],
+    "bulkheads": [
+      { "name": "half", "work": "half", "below": "upper", "above": "half", "x": [233, 234], "door_dy": 3, "door_h": 18 },
+      { "name": "kamp", "work": "kamp", "below": "half", "above": "kamp", "x": [163, 164], "door_dy": 3, "door_h": 13 },
+      { "name": "bak", "work": "bak", "below": "upper", "above": "bak", "x": [470, 471], "door_dy": 3, "door_h": 18 }
+    ],
+    "colors": { "plank": 104, "beam": 73, "coaming": 73, "bulkhead": 109, "lining": 109, "clamp": 73 }
+  },
   "provenance": {
     "frame.NY": "設計決定：主帆桁 69 voet × 1.194 ＝ 23.3 m（233 格，W1）要放得進 ⇒ 261（中線 130）",
     "frame.NX": "設計決定：艉板頂 x≈97 → 艏柱頂 x≈550（453 格）＋ galjoen 與船首斜桅（20.3 m、仰角約 35° ＝ 記憶）往前約 14 m ⇒ 736",
@@ -90,6 +131,12 @@
     "planking.algae": "設計決定（電影：船身長滿海草、貝殼 [A][C]）：水線附近一圈藻帶，下緣 z 44、上緣 z 55，各疊兩個 sin 起伏（±3 格上下）—— 長出來的東西邊緣不會是直線",
     "planking.colors": "設計決定（照 pal(k) 換算過）：船底 72 ＝ (72,72,0) 深橄欖褐；藻帶 76 ＝ (72,109,0) 橄欖綠；船身 109 ＝ (109,109,85) 暗的暖灰（電影「風化的灰、像漂流木」[H]）—— 🩸 第一版 145 ＝ (145,145,85)，圖紙上是卡其黃、不像灰；wale／頂蓋 73 ＝ (72,72,85) 深灰",
     "planking.leak_below_z": "下甲板 z 60（艙深 5.45 m，B3）以下量漏水",
+    "decks.levels": "設計決定：下甲板 ＝ 舷弧 −20（船中 z 60，艙深 5.45 m，B3）、上甲板 ＝ 舷弧、halfdek／bak ＋20、kampanje ＋38 —— 跟 lines.upper.tiers 的 rise 同一套；甲板都平行舷弧",
+    "decks.beams": "設計決定：橫樑 0.3 × 0.3 m、每 1.4 m 一根（每隔一根肋骨）—— 沒查到 Batavia 的橫樑尺寸",
+    "decks.masts_provisional": "設計決定（暫定，桅的階段再定）：主桅 x 295.5（船中略後）、前桅 x 490.5（艏樓裡）、後桅 x 178.5（halfdek，離 kampanje 艙壁 14 格）；孔徑 0.9／0.9／0.7 m。channels_avoid ＝ 砲門要避開的範圍（夜隼號／憲法號學過：上甲板砲門跟 channels 一起規劃）",
+    "decks.ports": "原圖讀數＋設計決定：砲門 7 格寬（Witsen 2 voet 2 duim ＝ 0.62 m × 1.194 ≈ 0.74 m，W1 OCR）；下排高 7、上排高 6（上排上面只剩舷牆，要留給「臉」的眼睛）；下沿離甲板 4 格。每舷下排 10、上排 9（避開 channels）—— 加船頭船尾的追擊砲約 42 門（Batavia 24–32，B1／B3；電影 46 以上，[B][E]）",
+    "decks.bulkheads": "設計決定：halfdek 前緣、kampanje 前緣、bak 後緣各一道艙壁，中線開門（寬 0.7 m；kampanje 底下淨高只有 1.4 m ⇒ 門高 1.3 m）",
+    "decks.colors": "設計決定：甲板板 104 ＝ (109,72,0) 褐（走的地方跟灰船身分得開）；橫樑、圍板、clamp 73；艙壁、砲門框 109",
     "lines.fullness": "設計決定：船頭飽滿（荷蘭船的圓船頭）、船尾在水線下比較瘦；照讀數的 Cb 調"
   }
 }

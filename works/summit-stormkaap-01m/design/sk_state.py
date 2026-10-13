@@ -8,8 +8,10 @@ import numpy as np
 STAGES = [
     ('stage2', 'verify_hull.json', {None: 'hull'}),
     ('stage3', 'verify_planking.json', {None: 'hull'}),
+    ('stage4', 'verify_decks.json', {'hull': 'hull', 'lower': 'lower', 'upper': 'upper', 'half': 'half', 'kamp': 'kamp', 'bak': 'bak'}),
 ]
-KEYS = ('hull',)
+KEYS = ('hull', 'lower', 'upper', 'half', 'kamp', 'bak')
+WORK_OF = {'hull': '', 'lower': '-deck-lower', 'upper': '-deck-upper', 'half': '-deck-half', 'kamp': '-deck-kampanje', 'bak': '-deck-bak'}
 
 
 def frame(d):
@@ -33,8 +35,9 @@ def _apply(tgt, o, d, origin=(0, 0, 0), mirror_ny=None):
         tgt[tuple(p.T)] = a[:, 3]
 
 
-def state_after(d, upto):
+def state_after(d, upto, nz=None):
     NX, NY, NZ = frame(d)
+    if nz is not None: NZ = nz      # 只重建到 nz 層（框全高 576 的陣列太大）；清單有格超出 ⇒ numpy 會丟 IndexError，⛔ 不會默默截掉
     W = {k: np.zeros((NX, NY, NZ), np.int16) for k in KEYS}
     for name, fn, keys in STAGES:
         V = json.load(open(os.path.join(d, fn), encoding='utf-8'))['stamp_order']
