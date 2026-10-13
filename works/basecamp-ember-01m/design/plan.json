@@ -1926,5 +1926,56 @@
   "from_color": 36,
   "to_color": 168,
   "decisions": "todo「舵（憲法號 -rudder 照換算；水線 71）」。舵 z 2–84 全在 z 109 以下、船尾不在拉長那一段 ⇒ 換算是恆等、位置照抄 at 0,0,0。水線抬到 71 ⇒ 不直接關聯（那件 z 63–70 是黑），新子作品 assemble（自動 Credit 憲法號）後換色。"
+ },
+ "wardroom_build": {
+  "title": "軍官室（wardroom）v1：上層砲甲板船尾 —— 前艙壁＋門、中線長桌、兩側長椅、小的餘燼之心吊燈",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1813446,
+  "hide_links": [
+   "甲板-upper/軍官室"
+  ],
+  "floor_z": 106,
+  "bulkhead_x": [
+   232,
+   233
+  ],
+  "door_half": 4,
+  "door_h": 18,
+  "table": {
+   "x": [
+    144,
+    184
+   ],
+   "half": 5,
+   "top_z": 113
+  },
+  "bench": {
+   "dy": [
+    8,
+    9
+   ],
+   "seat_z": 110
+  },
+  "lamp": {
+   "x": 164,
+   "chain": 3,
+   "cage_h": 5,
+   "cage_half": 2,
+   "core_half": 1
+  },
+  "colors": {
+   "panel": 177,
+   "frame": 136,
+   "gold": 248,
+   "table": 104,
+   "cushion": 128,
+   "amber": 245,
+   "flame": 252
+  },
+  "work": "basecamp-ember-01m-wardroom",
+  "title_work": "餘燼號 軍官室（上層砲甲板船尾）",
+  "link_in": "basecamp-ember-01m-deck-upper",
+  "link": "軍官室",
+  "decisions": "Tim 2026-10-13「接著繼續吧 GO」⇒ todo 可選項 wardroom；房間自由設計（Tim「房間也自由發揮吧」）。上層砲甲板船尾量過：地板 105、天花板 128；舷側砲架 |dy| ≥ 23、船尾追擊砲 x 108–128；中線柱 x 140／156／172／188；後桅 x 200–206。前艙壁放第 2、3 門砲之間（x 232–233；砲索的環在 230／248，不穿）；quarter gallery 下層的門通進這間。"
  }
 }
