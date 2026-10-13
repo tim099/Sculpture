@@ -2174,5 +2174,78 @@
     "cap_color": 255
    }
   ]
+ },
+ "boats_build": {
+  "title": "階段二十 小艇與艇架 v1（外觀，自由設計）：船腰三根 skid beam、兩舷各一艘 9 m cutter（0.05 m 子作品當外部模型）",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1813982,
+  "deck_work": "basecamp-ember-01m-deck-spar",
+  "work": "basecamp-ember-01m-boat",
+  "colors": {
+   "black": 36,
+   "red": 128,
+   "gold": 248,
+   "gunwale": 136,
+   "wood": 141,
+   "thwart": 104,
+   "oar": 177
+  },
+  "boat": {
+   "length": 180,
+   "beam": 52,
+   "depth": 20,
+   "keel": 2,
+   "sheer": 3,
+   "transom": 0.6,
+   "shell": 1.5,
+   "strake": 3,
+   "thwarts_u": [
+    0.2,
+    0.35,
+    0.5,
+    0.65,
+    0.8
+   ],
+   "thwart_z": 12,
+   "oars_y": [
+    -8,
+    -4,
+    4,
+    8
+   ],
+   "oar_u": [
+    0.12,
+    0.88
+   ],
+   "scale": 0.5,
+   "pivot": [
+    90,
+    26,
+    0
+   ]
+  },
+  "skids": {
+   "x": [
+    445,
+    478,
+    511
+   ],
+   "y": [
+    121,
+    199
+   ],
+   "z": [
+    136,
+    138
+   ],
+   "rest_y": [
+    124,
+    196
+   ],
+   "color": 136
+  },
+  "x": 478,
+  "y_s": 177.5,
+  "why": "船腰開口 x ≈ 372..583、y 125..195（量過）；三根 skid beam（寬 0.3 m、高 0.3 m）橫跨、擱在船腰兩邊欄杆的扶手（z 135、y 124／196）上（v1 擱走道甲板 ⇒ 撞欄杆柱 18 格）；兩艘一樣的 cutter（9 m × 2.6 m）一舷一艘、P 舷鏡像，擱在艇架上 ⇒ 兩舷對稱。尺寸照一般比例，未查證。"
  }
 }

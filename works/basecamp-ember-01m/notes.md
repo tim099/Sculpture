@@ -299,3 +299,10 @@
 - 讀數：帆 **17**（15 ＋ 2）、sails_broken 0；組裝件 **1,813,982**（＋34＋29）、1 元件、空腔 0、link_overlap 0、鏡像差不變；重跑（扣掉本階段旗桿自己的格再對格數）sha256 相同。寫入時 IOException 1 次、重試過。
 - 過程圖：`overlays/stage19_flags_{ship,ensign,pennant}.png`。
 - ⚠ vxk 還沒重匯（上一次 6a04b4a8 是階段十八之前）⇒ 給 ame 前再匯。
+## 階段二十 小艇與艇架（2026-10-13，外觀；自由設計）
+設計 plan.json `boats_build`；產生 `design/draft_boats.py` ⇒ `masks/boats/{boat,skids}.vox.txt`、`boats_placement.json`、`verify_boats.json`；套用 `design/tools/boats_apply.py`。
+- 船腰開口（量過）：上甲板 x ≈ 372..583、y 125..195；兩側走道甲板 z 127，開口邊是欄杆（柱每 3 格、z 128–134，扶手 z 135、y 124／196）。
+- 艇架：三根 skid beam（x 445／478／511，寬 3、高 3、y 121–199、z 136–138，色 136）擱在兩邊扶手上，落在 `甲板-spar`（標記 `艇架:begin／end`，2,133 格）。v1 擱在走道甲板 z 128–130 ⇒ 撞欄杆柱 18 格（當場擋下）⇒ 抬到扶手上。
+- 小艇：子作品 `-boat`（0.05 m、180×52×27、19,266 格、左右差 0、1 元件）＝ 9 m × 2.6 m cutter：外殼黑 36、舷頂暗紅帶 128＋金線 248、舷緣 136、艇內 141、坐板 5 條 104、收著 4 支槳 177；船頭尖、船尾方。當外部模型縮 0.5 掛 `甲板-spar`：`小艇-S` at (478,177.5,139)、`小艇-P` at (478,143.5,139) mirror y ⇒ 兩舷對稱。尺寸照一般比例，未查證。
+- 讀數：兩艘艇格心＋八角 0 碰撞（含 spar carronade）；艇與艇架外框穿過的繩 0；模型 **251**、models_broken 0；組裝件 **1,816,115**（＋2,133）、1 元件、空腔 0、link_overlap 0、鏡像差不變；重跑 sha256 相同。
+- 過程圖：`overlays/stage20_boats_{waist,ship}.png`。
