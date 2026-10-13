@@ -18,8 +18,9 @@ sys.stdout.reconfigure(encoding='utf-8')
 D = os.path.abspath(sys.argv[1])
 OAK, BLACK = 136, 36
 ITEMS = [dict(name='fore-sheet', label='FORE SHEET CHESSTREE（船腰）', x=438.6, z=115),
-         dict(name='studdingsail', label='CHESSTREE FOR LOWER STUDDINGSAIL BOOM（船腰）', x=481.2, z=115),
-         dict(name='main-brace', label='MAIN BRACE CHESSTREE（船尾 quarter）', x=143.0, z=123)]
+         dict(name='studdingsail', label='CHESSTREE FOR LOWER STUDDINGSAIL BOOM（船腰）', x=481.2, z=115)]
+# ⚠ 階段四十一（2026-10-13）：main brace 那個 X 143 放錯邊 —— 1931 平面圖 #24422 與側面圖 #24474 都畫在 spar deck 第 1 號砲門（作品 X 128–137）的**船尾**側；
+#   兩張圖各自量都是 X ≈ 115 ⇒ 從這裡拿掉，搬進 draft_bumpkins.py 的 -main-brace-bumpkin-side（跟 bumpkin 同一件；X 130 起的固定框裝不下 115）。
 FRAME_AT = (130, 200, 108)
 FRAME_SIZE = (370, 40, 24)
 

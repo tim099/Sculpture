@@ -784,7 +784,7 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - ⚠ 看得到的：gig 擋住船尾上半的鷹與星裝飾（1931 的配置就是這樣，照圖接受）。
 - 過程圖：`overlays/stage37_stern_gig.png`、`stage37_ship_stern.png`。
 
-## bumpkins —— 量過、這次不做（2026-10-13 晚）
+## bumpkins —— 量過、這次不做（2026-10-13 晚；⇒ 拿到平面圖 #24422 之後，階段四十一做了）
 - 1931 plan 24474 有兩個：FORE TACK BUMPKIN（船頭、往前伸的短桿、八角端）、main brace BUMPKIN（船尾 quarter、往舷外伸，側面圖只看到端面）。
 - 換算（bridle port 當尺）：fore tack 在 X ≈ 678–690、Z ≈ 109 —— 已經在作品艏柱前面（船殼 X 673 收尖，那裡只有中線的 head knee），側面圖也讀不出離中線多遠。
 - main brace（chesstree 當尺）：X ≈ 136、Z ≈ 123 —— 落在作品 spar deck 第 1 號砲門的開口裡（X 128–137、z 111–124；1931 圖那裡沒有砲門，跟 1927 11 號圖對不上）。
@@ -799,3 +799,48 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - ⚠ 同一張 #24422 量到：**舵輪在 mizzen 的船頭側**（輪心約在 mizzen 前 4 ft）；作品的舵輪（階段二十四之類）在 X 163–182、mizzen ≈ 206 的**船尾側** —— 跟 1931 相反，這次不動，記著。
 - binnacle：#24422、#29622（舵輪）都沒畫 ⇒ 沒出處，不做。
 - 過程圖：`overlays/stage38_capstan.png`（關帆、關繩）。
+
+## 階段三十九 gun deck 絞盤（2026-10-13 晚，BTC；Tim：「1~3 GO」⇒ todo「gun deck 絞盤（同一根軸，#29621）」）
+- 出處（查資料 agent 從之前下載的 PDF 抽圖、裁切圖我自己看過標字）：**Capstans (Spar and Gun Decks), 1929（plan #29621）第 2 頁 GUN DECK CAPSTAN 立面** —— 絞盤頭在上、「OPENINGS FOR 12 CAPSTAN BARS」（spar deck 那個寫 8）、上面再一個可拆的 PORTABLE WORK；
+  agent 從圖上量（1½" = 1 ft，±10%）：絞盤頭約 56" 直徑、13" 厚，頂約在甲板上 59"。⚠ 圖上寫著這張是照 1927 修復**之前**船上的舊絞盤畫的。
+  **Gun Deck General Arrangement 1931（plan #24423）**：CAPSTAN 在中線、夾在兩個梯子艙口中間（船尾「4'-9¼" × 5'-0" WARD RM COMP.」、船頭「4'-8½" × 5'-0" MIDSHIPMEN, WAR. OFFS. & CREWS COMP.」），兩舷寫「6-CAPSTAN BARS (STOWED) P&S」。
+- 作品：同一根軸 X 297、y 160.5。gun deck 中線量：X 272–287 一個艙口（圍板）、X 305–321 一個艙口（裡面一座梯子），中間 X 288–304 實心甲板（頂 z 81）、四角是 stanchion ⇒ 跟 #24423 同一個樣子（兩個艙口都是本來就在的）。
+- 模型 `甲板-gun/capstan`（掛在 -deck-gun 子作品 ⇒ 藏 gun deck 一起藏）：沿用餘燼號 `-capstan`（它本來就是 12 孔、絞盤頭在上 ⇒ 形狀跟 gun deck 這個一樣），at (297, 160.5, 82)、pivot 40,40,0、**scale 0.2**（絞盤頭 1.44 m ≈ 56"）、meta kind=capstan。PORTABLE WORK 不做（可拆、而且頂會碰到 spar deck 橫樑）。
+- 先量：每格 27 點碰撞 0；底下 166 欄全是甲板；2 格內的實心只有船頭那個艙口的圍板（X 305–306，高到 z 84；絞盤頭在 z 92–95）。引擎外框 (289.8,153.3,82)–(304.2,167.7,95.2) 跟算的一致；models_broken 0；格子不變。
+- ⚠ spar deck 那個（階段三十八）掛在組裝件、這個掛在 -deck-gun —— 掛的地方不一樣，藏甲板時只有這個會跟著藏。
+- 過程圖：`overlays/stage39_gun_capstan.png`（只開 gun deck、藏 spar deck 那個絞盤）。
+
+## 階段四十 艙口格柵（2026-10-13 晚，BTC；Tim：「1~3 GO」⇒ todo 170「艙口格柵」）
+設計 `design/draft_gratings.py`（不吃組裝件；開口與圍板的座標寫在程式裡）⇒ `masks/gratings/{spar_main,gun_main}.vox.txt`、`verify_gratings.json`；套用 `design/tools/gratings_apply.py`。
+- 出處（查資料 agent 下載、裁切圖我自己看過標字）：**Arrangement of Hatch Coamings, Hatch Bars and Solid Wood Shutters …（plan #19274，1930）**：
+  PLAN OF SPAR DECK MAIN HATCH —— 格柵「W. OAK / ASH 2" SPACING」、橫 hatch bar 15"×(11")／8"×(5")、中線縱 bar 10"×(7")、格 45½"／48"／48"、中線到圍板 6'-10½"；
+  立面 —— spar deck 格柵頂比甲板高 16¾"、gun deck 16½"、格柵 2" 厚。**#24423**（gun deck GA）：其他 gun deck 艙口旁寫「GRATING STOWED P&S」⇒ 只鋪 main hatch。**#24422**：main hatch 兩端 P／S 是「DOWN」梯口。
+- 作品（量 -deck-spar／-deck-gun）：
+  - spar：開口 X 440–501、y 141–179；圍板 2 格寬（X 438–503、y 139–181）、z 105–107。開口船尾那段 X 441–455 站著兩座 gun deck → spar deck 的梯子（y 148–156、164–172）。
+    ⚠ 這個開口是 1849 年 02 號圖的 Long Hatchway；1931 的 main hatch 在主桅前 7.7–50 ft、約 15 ft 寬（agent 量；1931 的 spar deck 船腰是整片鋪板、中間一個大 main hatch）—— 作品沒照 1931 改，**只鋪作品現有的開口、不刻甲板**。
+  - gun：main hatch 開口 X 392–419（圖 8'-1½"，作品 9.2 ft）、y 141–179（12.8 ft，圖 12'-?¼"）；圍板 z 82–84；開口裡沒有東西。
+- 設計：每個艙口一件子作品，**0.05 m／格**（2" 的條 ≈ 1 格、2" 的空 ≈ 1 格），外部模型 scale 0.5 掛在該層甲板子作品（`甲板-spar/格柵-main`、`甲板-gun/格柵-main`）、meta **kind=grating**。
+  - 圍板頂加一圈 cap 2 格（0.1 m）⇒ 格柵頂 ＝ 甲板上 15.7"（圖 16¾"／16½"）。hatch bar 頂齊格柵頂、往下照圖的深度。格柵在頂那一層：x 偶 或 y 偶 是條 ⇒ 1 格條、1 格空；橫的條橡木 136、縱的 ash 177、cap 與 bar 同圍板 104。
+  - spar：船尾 X 440–456 是梯口不鋪；橫 bar 15"（X 457–460、深 11"）、8"（473–474、5"）、15"（487–490、11"）⇒ 格 47"／47"／43"；中線縱 bar 10"（本地 6 格 ＝ 11.8"、對 y 160.5 對稱）、只在梯口以外。
+  - gun：中間橫 bar 8"×5"（X 405–406）⇒ 兩格 51"（圖 47½"）；縱 bar 中線 10"×8"、兩側 8"×4" ⇒ 每格 31.5"（圖 32½"）。
+- 讀數：spar 132×86×6、17,268 格、1 元件；gun 64×86×4、7,808 格、1 元件。每格 27 點碰撞 0；cap 那一圈坐在圍板上：spar 420 欄、gun 284 欄，底下全是圍板。引擎外框 spar (438,139,106)–(504,182,109)、gun (390,139,84)–(422,182,86) 跟算的一致；models_broken 0；格子不變。
+- 過程圖：`overlays/stage40_grating_{spar,gun}.png`（spar 那張藏三根桅 —— 不藏的話帆桁模型被鏡頭近裁切面切成一根橫在格柵上的黑桿，是畫面、不是東西）。
+
+## 階段四十一 bumpkins＋main brace＋fore tack（2026-10-13 晚，BTC；Tim：「1~3 GO」⇒ todo「braces＋bumpkins 一起規劃」）
+設計 `design/draft_bumpkins.py`（輸入：組裝件 list 匯出，藏掉 bumpkin 四條關聯）⇒ `masks/bumpkins/{main_brace_bumpkin_side,foretack_bumpkin_side}.vox.txt`、`verify_bumpkins.json`；套用 `design/tools/bumpkins_apply.py`。
+- 出處：**#24422（1931 spar deck 平面圖）** —— 船尾 quarter 兩舷「MAIN BRACE BUMPKIN」往舷外伸、端頭一個滑車、「MAIN BRACE」從那裡往前往外拉、「MAIN BRACE CHESSTREE」在它船頭側的舷牆上；船頭 head 兩舷「FORETACK BUMPKIN」從 head rails 底下斜著往前往外伸、端頭一條 guy 拉回中線。**#24474（側面圖）**：bumpkin 與 chesstree 都在 spar deck 第 1 號砲門的**船尾**側、砲門上緣那一帶。
+  上一次（「bumpkins —— 量過、這次不做」那段）只有側面圖；這次有平面圖，位置讀得出來了。
+- 換算（我量）：平面圖用桅當尺（mizzen→main 506 px 縮圖 ＝ 作品 149 格），圖上第 1 號砲門 X ≈ 132（作品 128–137）、船尾 ≈ 99（作品 97）⇒ 對得上；bumpkin X ≈ 108、chesstree X ≈ 115。側面圖用作品第 1 號砲門（10 格 ＝ 170 px）當尺 ⇒ chesstree 114.8、bumpkin 108.2、z ≈ 123。兩張各自量差 < 1 格。
+  - 🩸 **階段三十五的 main brace chesstree 放錯邊**：它在 X 143（砲門的船頭側），兩張圖都畫在砲門的船尾側 ⇒ 這一階段從 -chesstrees-side 刻掉（帶色守門 11 格，`masks/bumpkins/chesstree_main_brace_carve.vox.txt`；draft_chesstrees.py 拿掉那一項、重跑 ⇒ 新舊相減只少那 11 格）、搬進 -main-brace-bumpkin-side。當時用「gun deck 第 1 號」「最近的 spar deck 砲門」兩把尺換、取中間 —— 兩個數都落在砲門前面；那一段 notes 沒有記它在圖上是砲門的哪一邊。
+  - fore tack bumpkin（平面圖，前桅 X 590.5 當尺）：穿過 rail 那一點 (683.6, 180.4)、尖 (698.6, 199.9) ⇒ 往前 15、往外 19.5、長 24.6 格。作品的 head rail 比 1931 窄（x 684 外緣 y 174、圖 180）⇒ **方向與長度照圖、穿過點對齊作品的 rail**（684, 174）、往裡多 5 格（圖上 rail 底下的虛線）。高度：作品上 rail 在那裡的底面 z 115 ⇒ bumpkin z 113–114 貼著 rail 底；側面圖量的是 z 109（差 4.5 格，作品的 head 不是照 1931 那張做的）。
+- 子作品（都是一舷 S＋鏡像關聯；0.1 m）：
+  - `-main-brace-bumpkin-side`（固定框 at 100,200,115、25×20×15、59 格；鏡像 at 100,101,115）：bumpkin 2×2 黑 36、X 107–108、z 123–124、y 204–215（伸出船殼 12 格 ≈ 4 ft；圖上八角端 2 格做不出來）；chesstree 同階段三十五的形狀、X 113–117、z 122–124、y 205。
+    固定點 brace-eye（尖）、brace-block（尖下面、往前 2 往裡 1；v1 往裡 2 ⇒ S 舷回來那段擦到 quarter davit 頂上的橫桁 2 格）、chesstree（槽中間）。
+  - `-foretack-bumpkin-side`（固定框 at 670,161,105、45×50×15、176 格；鏡像 at 670,110,105）：斜的 2 格高、寬約 1.5 格的黑桿，重疊 0、貼著 rail 底；固定點 tack（尖上層）、guy（尖下層）。
+- 繩：
+  - **main brace** 兩舷各三段（組 running/braces、#a08458、0.5）：standing（bumpkin 尖 → `model:主桅/yard-main-course/arm-*`）、fall（帆桁端 → bumpkin 滑車）、lead（滑車 → chesstree）。S 舷是上風（帆桁 S 端往前）⇒ slack 1.001（下垂 7.3）；P 舷下風 ⇒ 拉直。chesstree 以內（綁在哪）圖上沒寫 ⇒ 繩停在 chesstree。
+  - **fore tack bumpkin guy** 兩舷（組 standing/bumpkins、#2b2620、0.5）：尖 → head knee 外側那格（718.5, 163.5／157.5, 115.5）。⚠ v1 端點寫整數 164／157 ⇒ 引擎當格心 164.5／157.5 ⇒ 兩舷長度差 0.84（34.73／35.57）—— 規格 §1 寫過「一律寫小數」，我踩了；改小數後兩舷都 35.57。
+  - **fore-course.tack-S** 改綁 S 舷 bumpkin 的 tack（原本 pinrail-13.pin-3）。只有上風那一舷：P 舷是下風、帆角由 sheet 拉著，tack 照舊綁 pin。slack 原本 0.8 ⇒ 換到 bumpkin 以後直線 92.4、0.8 會把帆角往船頭拉約 18 格（近照 fore course 變成一個漏斗）⇒ 改 1。對照（暫時換回舊的 tack 量、量完換回）：帆角模擬後 綁 pin (613.2, 209, 156.2)、綁 bumpkin (616.2, 209.3, 151.3) ⇒ 往前 3、往下 4.9；fore course 最鼓 −73.26 → −73.38 ⇒ 帆形沒變。tack 從 bumpkin 再往船裡那一段沒做：直線會穿過船頭舷牆 11 格，圖上也沒畫它怎麼進來。
+- 讀數：組裝件 **1,398,023**（＋470 ＝ 兩件子作品 × 兩舷、−22 ＝ 舊 chesstree 兩舷）、1 元件、空腔 0；繩 915、ropes_broken 0。新的 9 條繩（直線、半垂、全垂三種掃）穿過實心 0；跟其他繩最近：tack-S 與 guy-S 1.0（同一個 bumpkin 尖、上下差一格），其餘 ≥ 1.34。產生程式藏掉四條關聯重跑 ⇒ 兩件 sha 跟套用的那份逐位元組相同。
+- 其他 braces（fore、crossjack、topsail／topgallant 各桅）沒做 —— 1931 的平面圖只標了 main brace；#21227（Spar and Rigging Plan 1930）有畫 brace 的線但沒標名字。導向的通則見 todo「其他 braces（規劃）」（Steel 1794、Lever 1819）。
+- 過程圖：`overlays/stage41_main_brace{,_close}.png`、`stage41_foretack.png`。

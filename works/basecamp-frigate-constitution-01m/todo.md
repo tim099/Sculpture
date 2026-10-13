@@ -107,7 +107,7 @@
 - [x] 子作品 `-head-knee`（中線整件）＋ `-head-side`（一舷、固定框）＋ 組裝件三條關聯（船頭-knee、船頭裝飾、船頭裝飾-鏡像 mirror=y）
 - [x] Tim 預覽「測試ok 可以套用了」⇒ apply（6,131＋2,925，mismatch 0）；組裝件 1,367,979、1 元件、空腔 0；重產逐位元組相同
 - [x] ~~審查 workflow（美觀＋幾何）~~ Tim：「審美妳決定後，我再看一次就好，不用額外派 agent 審核」⇒ 停掉（他已經預覽、套用了）
-- [ ] 之後：head deck／gratings、bobstay 孔與 gammoning（繩索固定點）、真的 hawse 孔（刻船殼）、錨、fore-tack bumpkin
+- [ ] 之後：head deck／gratings、bobstay 孔與 gammoning（繩索固定點）、真的 hawse 孔（刻船殼）、錨、fore-tack bumpkin（⇒ 階段四十一做了）
 
 ## 階段十六 帆桁（2026-10-11 套用）
 - [x] 資料 workflow（尺寸＋桅的量測＋推翻者）；新圖紙 14（`design/draft_yards.py`、`sheet14_yards_v1.png`、`verify_yards.json`；設計在 plan.json `yards`）
@@ -167,7 +167,7 @@
 - [x] spar → gun 4 座（waist 一對、after、fore）、gun → berth 3 座（companion、after、fore）；扶手繩 14
 - [ ] berth → orlop：三個候選都放不下（見 notes.md 階段二十三）⇒ 要的話另開一個 orlop 的梯口
 - [ ] 船側 side steps 與 entry port（從小艇上船）⇒ 階段三十（草稿，見下）
-- [ ] 艙口格柵（gratings；spar deck 長艙口、main／fore hatch）
+- [x] 艙口格柵（gratings；spar deck 長艙口、main／fore hatch）⇒ 階段四十（spar 船腰開口＋gun deck main hatch；其他 gun deck 艙口 1931 寫 GRATING STOWED）
 - [ ] spar deck 艦長室上方的 companion（spar deck 那一格目前沒有開口）
 
 ## 階段二十四 錨（2026-10-12 套用）
@@ -187,7 +187,7 @@
 - [x] 草稿：三件桅杆子作品各 carvevox（舊方帆桁，顏色守門）＋ stampvox（轉過的）→ 登記轉過的固定點 → sails_test --apply（讀數見 notes 階段二十六）
 - [x] Tim「測試ok 可以套用了」⇒ 三件 apply（changed 9,089／14,684／4,769、mismatch 0）；組裝件 1,445,296、1 元件、空腔 0、link_overlap 0、sails／ropes broken 0
 - ⚠ 要退回的話：三件 discard 草稿 ＋ `register_anchors.py . rig_points_yards_square.json` ＋ 把 rig_points_yards.json 換回 square 那份 ＋ sails_test --apply
-- [ ] 之後：braces（yardarm → 船尾的動索）、lifts
+- [ ] 之後：braces（yardarm → 船尾的動索）、lifts —— main brace 做了（階段四十一）；其他見「其他 braces（規劃）」
 
 ## 下一階段（現實順序：內板之後是橫樑與甲板）
 - **範圍（Tim 2026-10-11）：砲門與其他可動件之後另外做；甲板階段只做甲板主體＋房間，門也不放；甲板骨架跟房間開子作品**
@@ -316,5 +316,36 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 ## 階段三十八 spar deck 絞盤（2026-10-13；讀數見 notes.md 階段三十八）
 - [x] 1931 plan #24422／#29621 ⇒ 主桅後 17.5 ft、兩個艙口中間；沿用餘燼號 -capstan（scale 0.163、kind=capstan）
 - [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說 kind=capstan）
-- [ ] 舵輪位置跟 1931 #24422 相反（作品在 mizzen 船尾側、圖在船頭側）—— 要不要搬，問 Tim
-- [ ] gun deck 絞盤（同一根軸，#29621）、binnacle（沒出處）—— 之後
+- [x] 舵輪位置跟 1931 #24422 相反（作品在 mizzen 船尾側、圖在船頭側）—— Tim 2026-10-13：「舵輪 不用搬」
+- [x] gun deck 絞盤（同一根軸，#29621）⇒ 階段三十九；binnacle 沒出處、不做
+
+## 階段三十九 gun deck 絞盤（2026-10-13；讀數見 notes.md 階段三十九）
+- [x] #29621 p.2（gun deck capstan：12 bars、絞盤頭約 56"）＋ #24423（兩個梯子艙口中間）⇒ 沿用餘燼號 -capstan、scale 0.2、掛 -deck-gun、kind=capstan
+- [ ] Tim 預覽 ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說多一個 kind=capstan）
+
+## 階段四十 艙口格柵（2026-10-13；讀數見 notes.md 階段四十）
+- [x] #19274（hatch bars、W. OAK／ASH 2" SPACING、16¾"／16½"）⇒ -grating-spar-main、-grating-gun-main（0.05 m、模型 scale 0.5、kind=grating）；spar 船尾梯口不鋪
+- [ ] Tim 預覽 ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說 kind=grating；造船規格 §9 加一行）
+- [ ] 之後（要 Tim 決定）：spar deck 船腰照 1931 改成整片鋪板＋大 main hatch（主桅前 7.7–50 ft、約 15 ft 寬）？現在是 1849 的 Long Hatchway —— 要刻甲板、移梯子
+- [ ] 之後：#24422 前桅前後兩個小「HATCH」有格柵符號（沒寫字）；bowsprit grating 是 1971 加的 ⇒ 不做
+
+## 階段四十一 bumpkins＋main brace＋fore tack（2026-10-13；讀數見 notes.md 階段四十一）
+- [x] #24422 平面圖讀位置（main brace bumpkin X 108、chesstree 115；fore tack bumpkin 往前 15 往外 19.5）
+- [x] 🩸 階段三十五的 main brace chesstree（X 143）放錯邊 ⇒ 刻掉 11 格、搬到 X 113–117（-main-brace-bumpkin-side）
+- [x] -main-brace-bumpkin-side、-foretack-bumpkin-side（一舷＋鏡像）；main brace 兩舷 × 三段、guy 兩舷、fore-course.tack-S 改綁 bumpkin（slack 1）
+- [ ] Tim 預覽 ⇒ 單層提交（之後 constitution.vxk 重匯 —— 格數變了 1,397,575 → 1,398,023）
+
+## 其他 braces（規劃；沒做）
+1931 的圖只標了 main brace；#21227（Spar and Rigging Plan 1930，agent 看過）有畫 brace 的線、沒寫名字。下面是 1794–1819 的通則（查資料 agent 從 archive.org 讀；我還沒自己對原文）：
+| brace | 固定端 | 導向 | 綁在 |
+|---|---|---|---|
+| fore | main stay 的 collar（Steel 1794 p.~202；Lever 1819 p.48） | collar 上的滑車 → yardarm → 下到主桅旁甲板上的導向滑車 | quarterdeck 前端 bitts 的槽（Steel）／forecastle 的 pin（Lever） |
+| crossjack | 對面舷的 main shroud（Steel p.~206；Lever p.49）—— 兩舷交叉往前 | 同一根 shroud 上的滑車 | fife rail 的 pin（Steel）／shroud 上的 cleat（Lever） |
+| fore topsail | main stay（Steel p.~204）或 main topmast stay（Lever 較好的做法） | → fore hatch 上方 stay 的滑車 → forecastle 後端 | boat skid 的鐵 pin（Steel） |
+| main topsail | mizzen stay 的 collar（Steel p.~204；Lever p.49） | mizzen 桅頭的 span 滑車 → mizzen 後面 bitts 的槽 | 那個 bitts |
+| mizzen topsail | gaff 的 peak（Steel p.~204） | peak 的單滑車 | taffrail 前面 |
+| fore／main topgallant | main／mizzen topmast stay 的 collar（Steel p.~205） | fore top 後面／mizzen topmast shroud 的滑車 | （Steel：cleat／mizzen shrouds，沒寫哪一根） |
+| mizzen topgallant | yardarm 單根 | mizzen peak 的 thimble | taffrail 前面 |
+| royal | 沒找到（Lever：flying royal「沒有 lifts 也沒有 braces，有時有 braces」） | — | — |
+- [ ] 要做的話先問 Tim：通則不是憲法號自己的出處（「有出處才做」的邊界）；做法：stay 上的點用子繩端點 `rope:<stay>/比例`
+- [ ] 讀 #28432（Belaying Pins 1929）、#27076.B（Fife Rails and Bitts 1973）有沒有寫哪根 pin 綁 brace —— agent 下載了沒讀
