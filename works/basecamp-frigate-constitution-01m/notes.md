@@ -730,3 +730,13 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 憲法號 7 座（berth 3：after-berth、companion、fore-berth；gun 4：after-gun、fore-gun、waist-P、waist-S）⇒ 固定點 28、meta 2 個關聯；verify 在 `basecamp-ember-01m/design/verify_ladder_points_basecamp-frigate-constitution-01m-assembly.json`。
 - 讀回：parts 的 kind=ladders 部件 2、二十八個點差 0；格數 1,394,450 不變。fore-gun 的 head 頭上 1.0 m 是艏斜桅根部。沒有梯子通 orlop。
 - 匯出 `exports/constitution.vxk`：checksum 6bf2f49c、模型 208、帶 meta 211、固定點 1,165；對拍 ✓。
+
+## 旗（2026-10-13 傍晚，BTC；Tim：「是否可以給憲法號也加上旗幟」）
+設計 `design/draft_flags.py`（輸入：組裝件 list 匯出）⇒ `masks/flags/{ensign,pennant}.png`、`masks/flags/pole_{mizzen,main}.vox.txt`、`verify_flags.json`（含配置）；套用 `design/tools/flags_apply.py`。做法照餘燼號階段十九。
+- 位置：餘燼號的索具跟憲法號只差平移（桅在 z 109 插 23）⇒ 旗桿、旗角 ＝ 餘燼號 z − 23。先量過：後桅 x 187 中線最高實心 z 513、主桅 x 341 z 649（＝ 536／672 − 23），上方 ±2 格空氣；只有本組裝件引用這兩件桅子作品。
+- 旗桿：後桅 x 187 z 514–538＋頂上 3×3 白冠（34 格）、主桅 x 341 z 650–669＋冠（29 格），色 177／冠 255，各在桅子作品裡用標記 `旗桿:begin／end` 包起來。
+- 船尾旗 `ensign`：**十五星十五條紋旗**（1795–1818 的 Flag Act 版本，1812 年戰爭時用的）—— 圖 52×30：15 條紅白（每條 2 px）、藍角蓋上面 8 條（22×16）、15 顆十字星 5 排 × 3 交錯；產生程式自己數條紋 15、星 15 才寫檔（v1 數到 13：奇數排第三顆貼邊被裁；v2 下排的臂貼紅條 ⇒ 星陣四周各留 1 格藍）。旗角 188..228 × z 515..538（4 m × 2.3 m）、掛旗桿船頭側、bind 3。
+- 長旗 `pennant`：commission pennant —— 圖 64×6：靠桅 12 欄藍底 3 顆白星、其餘上紅下白；三角收尖、4 m。⚠ 1812 年長旗的星數與條紋細節**沒查證**，照一般樣式畫。
+- 色：紅 #b22234、白 #f5f2ea（帆布色）、藍 #28346e。
+- 讀數：帆 **17**（15＋2）、sails_broken 0；ensign 最鼓 9.6、平均下垂 4.1；pennant 最鼓 17.5、平均下垂 5.0（同餘燼號）；組裝件 **1,394,513**（＋34＋29）、link_overlap 0。寫入時 IOException 重試 1 次。
+- 過程圖：`overlays/flags_{ship,ensign,pennant}.png`。

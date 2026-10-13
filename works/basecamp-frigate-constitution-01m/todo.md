@@ -289,3 +289,7 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 - [x] Tim 預覽 OK ⇒ 單層提交（Sculpture）—— 57e2795
 - [x] 跟 ame 說：帆桁的 meta 與 pivot（遊戲跟著風轉）
 - [ ] 之後可以考慮：gaff／boom 改成「直桿＋rotate y」（現在是斜的格子階梯）；course 的 sheet／tack 跟著帆桁轉
+
+## 旗（2026-10-13，Tim：「是否可以給憲法號也加上旗幟」）
+- [x] 旗桿（後桅、主桅桅冠）＋船尾旗（十五星十五條紋）＋長旗；帆 17、組裝件 1,394,513
+- [x] 旗 Tim 預覽 OK ⇒ 單層提交；constitution.vxk 已重匯 fcfe34c7（給 ame）

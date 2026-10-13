@@ -1,0 +1,96 @@
+{
+ "ensign": {
+  "file": "masks/flags/ensign.png",
+  "px": [
+   52,
+   30
+  ],
+  "sha256": "e622ddb65cb5af051c506ee94110eb33ff2698fa223f51bf36000c450c146363",
+  "colors": 3,
+  "stripes": 15,
+  "stars": 15
+ },
+ "pennant": {
+  "file": "masks/flags/pennant.png",
+  "px": [
+   64,
+   6
+  ],
+  "sha256": "db8c56b994004cb6dfae4a7c73295ba73e75c71ff5ec640951eb98812089ae22",
+  "colors": 3
+ },
+ "pole_mizzen": {
+  "work": "basecamp-frigate-constitution-01m-mast-mizzen",
+  "file": "masks/flags/pole_mizzen.vox.txt",
+  "cells": 34,
+  "sha256": "a4bbb00cb847ca9ff2b33059892703dad996297bc1cf253980794a5fb5169c24"
+ },
+ "pole_main": {
+  "work": "basecamp-frigate-constitution-01m-mast-main",
+  "file": "masks/flags/pole_main.vox.txt",
+  "cells": 29,
+  "sha256": "863c9af5df0e62ddb764c775698c2604a6279aafea78db2cf95d8a9b074f6541"
+ },
+ "plan": {
+  "ensign": {
+   "name": "ensign",
+   "px": [
+    52,
+    30
+   ],
+   "corners": [
+    "188,160,538",
+    "228,160,538",
+    "228,160,515",
+    "188,160,515"
+   ],
+   "bind": "3",
+   "free": "1,2",
+   "color": "#b22234",
+   "label": "船尾旗（十五星十五條紋旗，1795–1818）"
+  },
+  "pennant": {
+   "name": "pennant",
+   "px": [
+    64,
+    6
+   ],
+   "corners": [
+    "343,160,668",
+    "383,160,667",
+    "343,160,664"
+   ],
+   "bind": "2",
+   "free": "1",
+   "color": "#b22234",
+   "label": "長旗（commission pennant：藍底白星＋紅白兩條；細節未查證）"
+  },
+  "poles": [
+   {
+    "work": "basecamp-frigate-constitution-01m-mast-mizzen",
+    "label": "後桅",
+    "x": 187,
+    "y": 160,
+    "z": [
+     514,
+     538
+    ],
+    "color": 177,
+    "cap_color": 255
+   },
+   {
+    "work": "basecamp-frigate-constitution-01m-mast-main",
+    "label": "主桅",
+    "x": 341,
+    "y": 160,
+    "z": [
+     650,
+     669
+    ],
+    "color": 177,
+    "cap_color": 255
+   }
+  ]
+ },
+ "assembly": "basecamp-frigate-constitution-01m-assembly"
+}
