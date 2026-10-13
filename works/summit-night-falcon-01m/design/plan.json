@@ -119,6 +119,22 @@
     "ratlines": { "every": 4, "lower_from_deadeye": 4, "lower_below_hounds": 8, "tm_above_rim": 3, "tm_below_head": 6, "min_len": 3 },
     "clear_ends": 1.2, "landing_max": 6
   },
+  "belaying": {
+    "fife": { "aft_of_mast": 6, "fwd_of_mast": 7, "half_width": 7, "above_deck": 7, "rail_wide": 2, "post": 2, "bitt": 3, "bitt_tall": 10, "pin_every": 3,
+              "frame_at": [60, 70, 25], "frame_size": [170, 21, 30] },
+    "side": { "port_scan_above_deck": 6, "min_run": 8, "max_len": 14, "end_gap": 2, "waist_above_deck": 7, "qd_above_deck": 6, "deep": 2, "pin_every": 3,
+              "frame_at": [55, 92, 25], "frame_size": [215, 24, 35] },
+    "pin": { "up": 2, "down": 2 },
+    "horse": { "x": 72, "half_width": 8, "above_deck": 2, "post": 1 },
+    "colors": { "rail": 136, "pin": 104, "bitt": 136, "cross": 73, "horse": 73 }
+  },
+  "running": {
+    "color": "#a08458",
+    "thickness": { "lift": 0.3, "brace": 0.35, "footrope": 0.3, "halyard": 0.4, "fall": 0.3, "vang": 0.3, "topping_lift": 0.35, "sheet": 0.45 },
+    "footrope": { "inner_dy": 3, "slack": 1.03 },
+    "slack": 1.0,
+    "points": { "brace_block_below_top": 6 }
+  },
   "provenance": {
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
@@ -200,6 +216,15 @@
     "rigging.slack": "設計決定：全部 1.0（拉直）—— Shipbuilding §6：長而陡的繩一點點鬆就垂很多；stays 憲法號用 1.0006–1.0008，夜隼號的 stays 之後要掛三角帆（luff 沿 stay、那條要拉直）⇒ 一開始就 1",
     "rigging.ratlines": "參考資料（轉引）＋設計決定：每 4 格一道、子繩 rope:<shroud>/比例（Shipbuilding §6）；lower 從上 deadeye 頂往上 4 格（憲法號 7、夜隼號的 deadeye 間距小）到 hounds 下 8 格、topmast 從 top 邊緣上 3 格到 topmast head 下 6 格；從最前那根拉到最後那根；短於 3 格不畫",
     "rigging.clear_ends": "設計決定（量尺）：碰撞取樣跳過兩端各 1.2 格（端點是固定點那一格的格心，本來就在實心裡）；再往裡、從端點連續落在端點那件作品裡的取樣算「著陸」（繩貼著桅身收進固定點 —— 細而後傾的桅、陡的繩會貼 1–4 格），分開報、上限 landing_max 格；其他算「中段」，要 0。🩸 第一版只有 1.2 格 ⇒ topmast shrouds 報撞桅 10–14 —— 全在最後 4 格、全是那一根桅",
+    "belaying": "設計決定（階段十，2026-10-13）：繫繩點 —— 照 basecamp 憲法號階段十九（fife rails＋bitts 一件、舷牆 pin rails 一舷＋鏡像），尺寸縮給這艘小船；動索的下端都落在這些 pin 上",
+    "belaying.fife": "設計決定：兩根桅腳各一組 U 形、開口朝前（憲法號同）：桅孔後 6 格一根橫的 rail、兩側 ±7 往前到桅孔前 7 格接 bitts（3×3、甲板上 10 格）；rail 2 格寬 1 格厚、甲板面 ＋7（0.7 m）；橫 rail 兩頭與中間底下 2×2 柱。量過：主桅後 6 格是 x 142（後甲板斷口 138 之前）、前 7 格 155（主艙口 168 之前）；前桅 200–213（前艙口 226 之前）。一件子作品（中線、左右對稱；main sheet horse 也放這件）固定框 at 60,70,25、170×21×30",
+    "belaying.side": "設計決定：舷牆內面的 pin rails —— 憲法號階段十九的規則：砲門之間每個空檔（連續 ≥ 8 欄才算；只看船殼作品、⛔ 不看 channels —— 憲法號那邊 channels 被量成砲門的坑）一根，長 ≤ 14、兩頭各讓 2；船腰甲板面 ＋7、後甲板 ＋6（舷牆 9）；2 格深貼舷牆內面、pins 在裡面那一排每 3 格。一舷做、鏡像關聯（固定框 at 55,92,25、215×24×35；at.y ＝ 161 − 92 − 24 ＝ 45）。🩸 框第一版從 y 96 起 —— 船尾窄、rail 在 dy 13–14，出框",
+    "belaying.pin": "參考資料（轉引）：憲法號 belaying pin rail 上 2 下 2（basecamp notes 階段十九）",
+    "belaying.horse": "設計決定：main sheet 的 horse —— 後甲板 x 72（boom 的 top72 正下方附近、companion 110 之後、船尾燈 56 之前）一根橫的鐵桿，|dy| ≤ 8、甲板上 2 格，兩頭各一根 1 格柱",
+    "belaying.colors": "設計決定：rail、bitts 136（跟甲板橫樑同）、pins 104、鐵件 73",
+    "running": "設計決定（階段十）：動索 —— 憲法號只做了帆的 sheets／tacks，lifts、braces、halyards、footropes、gaff／boom 的動索是這艘船先做；做法是我照一般橫帆船的走法定的，⛔ 沒有一條是查來的史料。帆桁上的端點一律綁模型（model:<桅關聯>/yard-<帆桁>/<點>）⇒ 帆桁一轉、跟著走",
+    "running.lists": "設計決定：lifts（yardarm → 上一節桅的 cap 兩側；topgallant → 頂桅頭）、footropes（帆桁底下：yardarm 內一格 → 中心外 3 格，slack 1.03 垂下來）、braces（前桅的帆桁往船尾拉到主桅：course → 主桅 top 下 6 格桅側，再一段 fall 落主桅 fife rail；topsail → 主桅中桅 crosstrees 端、topgallant → 主桅 topmast head，fall 落舷牆 pin rail —— 從 top 外面下來；主桅 topsail → 後甲板舷牆 pin rail 一段）、halyards（topsail、topgallant：sling → 上一節桅頭前面一段 tye、桅頭側面 → 舷牆 pin rail 一段 fall）、gaff peak halyard 兩段（gaff 上 1/3、2/3 → 主桅 topmast head 後面）＋ fall 到主桅 fife rail、vangs 兩舷（peak → 後甲板 pin rail 最後一根）、topping lift（boom end → 主桅 top 下 6 格後面）、main sheet（boom 底下 → horse 中心）",
+    "running.color": "參考資料（轉引）：動索 #a08458（Shipbuilding §6，粗 0.35–0.5）⇒ 夜隼號 0.3–0.45",
     "upper.quarterdeck.drift": "設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
   }
 }

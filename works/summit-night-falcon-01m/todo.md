@@ -24,7 +24,8 @@
 - [x] 桅、艏斜桅、channels（階段七）
 - [x] 帆桁（階段八：6 件子作品＋外部模型；固定點 84 在 verify_yards.json 的 placements[].anchors）
 - [x] 靜索（階段九：channels v2＋下 deadeye＋chain plates；繩 207 —— shrouds、backstays、futtock、topmast／topgallant shrouds、stays 6＋bobstay、上 deadeye＋lanyards、ratlines）
-- [ ] 動索（lifts、braces、footropes、sheets／tacks 要 belaying pins —— 舷牆 pin rails 還沒做）→ 帆（掛帆時再定 brace 角、meta 加 sail；三角帆掛在 fore-tm-stay／fore-tg-stay）
+- [x] 繫繩點＋動索（階段十：fife rails＋bitts＋main sheet horse、舷牆 pin rails 12 根／舷、pins fife 20＋舷牆 80（兩舷）；動索 44 —— lifts、footropes、braces＋falls、halyards、gaff peak halyard＋vangs、topping lifts、main sheet）
+- [ ] 帆（掛帆時再定 brace 角、meta 加 sail；三角帆掛在 fore-tm-stay／fore-tg-stay、sheets／tacks 落 pin rails —— 已用 14 根 pin，空的還有 86）
 - [ ] 旗：候選圖在 summit-night-falcon-01m-flag（⛔ 不是定稿）—— 掛在主桅 truck
 - [ ] 砲（外部模型、退到零碰撞）、插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯

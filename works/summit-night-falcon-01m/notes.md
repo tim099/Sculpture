@@ -236,3 +236,23 @@ Tim：「提交吧 然後繼續做靜索」。設計 plan.json `rigging`（prove
   - 🩸 量尺：deadeye、chain plate 第一版只認顏色 —— 104 也是舷牆頂蓋（整條船長，五顆併成一群）、73 也是隼的背與舵的 pintle（1,851 格）⇒ 加上位置（船殼外、channel 範圍、channel 底面以下）。用顏色當身分證 —— 階段五量船尾窗混進窗廊玻璃也是這個病，今天又兩把。
 - 觀察：上 deadeye 是短粗的繩，渲染成開口的管 —— 斜看像一個 C（憲法號同一個做法）。`view region=` 不裁繩與模型 ⇒ 特寫改用 target＋zoom。
 - 過程圖：`overlays/stage9_assembly_yaw{45,-135,90}.png`、`stage9_bow_yaw0.png`、`stage9_channels_fore_yaw60.png`、`stage9_bobstay_yaw20.png`、`stage9_fore_tops_yaw50.png`。
+
+## 階段十 新圖紙 10：繫繩點（fife rails、舷牆 pin rails）與動索 44 條 —— 落格（2026-10-13 下午，wake #117）
+Tim：「提交吧 然後繼續做 pin rails 和動索」。設計 plan.json `belaying`、`running`（provenance `belaying.*`、`running.*`）；產生 `design/draft_belaying.py` ⇒ `verify_belaying.json`、`masks/belaying/`；`design/draft_running.py` ⇒ `verify_running.json`；下 CLI `apply_belaying.py`、`apply_running.py`；讀數 `check_running.py` ⇒ `verify_running_post.json`。兩支產生程式重跑逐位元組相同；`nf_state.py` 加 stage10（鍵 fife、side_S／_P）。
+⚠ 動索：憲法號只做了帆的 sheets／tacks —— lifts、braces、halyards、footropes、gaff／boom 的動索是這艘先做，走法是我照一般橫帆船定的，**沒有一條是查來的史料**（provenance 寫明）。
+- **子作品 `-fiferails`**（parent 主甲板、固定框 at 60,70,25、170×21×30，關聯 `fife-rails`）739 格：兩根桅腳各一組 U 形開口朝前（桅後 6 一根橫 rail、兩側 ±7 往前接 bitts 3×3 高 10、甲板面 ＋7、rail 2 寬）、柱、bitts 上鐵 cross pin；pins 每組 10；main sheet horse（x 72 後甲板、|dy| ≤ 8、鐵）。
+  - 草稿裡被自己的 assert 擋下三次：cross pin 落在 rail 那一層（壓到側 rail 最後一格）⇒ 高一格；橫 rail 的 pin 下半截撞柱（中線、±6）⇒ pin 改 dy ±2、±5；**bitts 從桅那一格的甲板面起 —— 舷弧往前升，x 213 撞進甲板** ⇒ 每一欄從自己的甲板面起。
+- **子作品 `-belaying-side`**（parent 船殼、固定框 at 55,92,25、215×24×35；關聯 `繫繩欄`、`繫繩欄-鏡像` mirror=y at.y 45）：舷牆內面 pin rails 一舷 12 根（後甲板 5、船腰 7），pins 40。砲門只看船殼作品（⛔ 不看 channels）；空檔平均切。
+  - 🩸 v1（513 格，**已落格**）兩個錯，量了才知道：① 每一欄只貼自己那一欄的內面 ⇒ 內面相鄰差 2 格的地方兩欄沒有共用的面 —— 12 根 rail 量成 56 塊（**斜面階梯病，第四次**；信裡那一題我在帆桁問了、這裡沒問）⇒ 往裡補到鄰欄最深那一格；② **頂蓋（104）往裡伸 2 格，整根 rail 跟 pin 頭縮在頂蓋底下** —— 動索的碰撞取樣在最後 1.2–1.7 格撞頂蓋（9 條）才看到 ⇒ pin 改放在「rail 那一層到上面 4 層」最靠裡的內面再往裡一格。
+  - v1 → v2：刻之前讀回 ＝ v1 清單 513／513；carvevox 513（帶原色）、stampvox 565，placed ＝ 清單。v1 清單凍結在 `masks/belaying/belaying_side_v1.vox.txt`，重播照實：貼 v1 → 刻 v1 → 貼 v2。
+  - 其他草稿期間：船尾 x 61 前面站著別的作品 ⇒ 內面要是船殼作品的格；rail 兩頭的肘用 rail 那一層與下一層較淺的內面；rail 端、舷牆、頂蓋圍出的 1–2 格口袋（v1 有 4 格）在 v2 沒有了。
+- **動索 44 條**（組裝件，#a08458，分 7 組 running/…）：方帆桁 4 根 × lifts 2、footropes 2（slack 1.03，引擎量的下垂 2.79–5.89 格）、braces 2；前桅帆桁的 braces 往船尾拉到主桅（course → 主桅 top 下 6 的桅側、topsail／topgallant → 主桅 crosstrees 端）＋ falls 落舷牆 pin；主桅 topsail braces 落後甲板 pin；halyards 3（tye ＋ fall）；gaff peak halyard 兩段＋fall、vangs 2；topping lifts 2（兩舷）；main sheet（boom 底下 → horse）。帆桁上的端點全部綁模型。新固定點 29（帆桁底下 foot-in／foot-out、boom sheet；桅 cap／tm-cap 兩側、主桅 brace、top-aft、tm-head-aft）。用掉 pin 14 根。
+  - 🩸 碰撞取樣第一版中段撞到的，五種走法錯：topsail 的 tye 從 sling 直上 —— **頂桅的跟就站在 topsail yard 正上方**（doubling），穿過 24–25 格 ⇒ tye 拉到 crosstrees 端；topgallant brace 到主桅 tm-head 前先穿過 crosstrees；從 cap／桅頭下的 fall 擦 crosstrees、穿過底下那根帆桁；**topping lift 在中線一定會跟往後上翹的 gaff 交叉**（量到穿過 7 格）⇒ 兩舷各一條（真船也是一對）；course 的 brace fall 落 fife ⇒ 貼著主桅跑 8 格 ⇒ 落舷牆；往前落 rail 7 的 fall 擦主桅 topsail yard 的背 ⇒ 改往後落後甲板 rail 5。改完 **中段 0（44 條）**、著陸最長 2.75。
+- **寫入失敗**：IOException「無法移除要被取代的檔案」—— 鏡像關聯 1 次、固定點 3 次；重跑全過。讀回 anchors.json：那 3 個裡 2 個本來就對（位置沒變，舊檔還在 —— 失敗是原子的），1 個（pinrail-1.pin-1，v2 搬了位置）是舊值 ⇒ 重下後 90／90 相同。
+- 讀數：
+  - 引擎 stats：**95,339 格**（＝ 93,470 ＋ 739 ＋ 2 × 565）、link_overlap 0、link_clipped 0、1 個元件、空腔 0、左右差 0（含顏色）；繩 251（靜索 207＋動索 44）、ropes_broken 0、20 組。
+  - `check_running.py`（讀引擎匯出）：結果帳 95,339／95,339 缺 0、多 0、顏色不同 0；pins 兩舷各 40 根（＝ 固定點）；引擎解的繩兩端 vs 我算的：動索 ≤ 0.053、靜索 207 條再比一次 ≤ 0.075（新固定點沒有動到舊繩）；直線長度差 ≤ 0.005。
+  - **綁模型的已知答案**：fore course 轉 −20° ⇒ 掛在它上面的 8 個繩端，引擎的位置 vs 我用 rot() 轉的 ≤ 0.047（印到 0.1）、其他繩端移動 0.0、broken 0；轉回 0 ⇒ 前桅 models.json 與組裝件 ropes.json 跟轉之前**逐位元組相同**（`overlays/stage10_demo_course_braced_yaw35.png`）。
+  - 🩸 量尺：① 繩長第一版拿引擎的「長」比我的直線長 ⇒ footrope 差 1.65 —— 兩種量 ⇒ 改比「直線」；② **pin 探針只認色 104 ⇒ 760 根 —— 104 也是頂蓋。這個病我在階段九才寫進筆記，一小時後同一把尺又這樣寫** ⇒ 改認形狀（rail 那一格上下各兩格 pin 色）。
+  - 反向對照（pin x 偏 3、繩端偏 3）全報 3。
+- 過程圖：`overlays/stage10_assembly_yaw{45,-135,90}.png`、`stage10_main_fife_yaw60.png`、`stage10_quarterdeck_yaw120.png`、`stage10_fore_yards_yaw30.png`、`stage10_demo_course_braced_yaw35.png`。
