@@ -195,3 +195,24 @@ Tim：「繼續做船頭欄杆和舵（另外窗戶部分可以直接開孔 這�
   - 引擎 stats（13 條關聯）：**93,122 格**、link_overlap 0、1 個元件、空腔 0、左右差 0（含顏色）。
   - `design/check_masts.py`（讀組裝件）：結果帳 93,122／93,122 缺 0、多 0、顏色不同 0；兩根桅在 3 個高度的軸心離圖紙（桅孔＋後傾）最多 0.36 格；艏斜桅在 x 300 離圖紙那條 22° 線 0.05 格；反向對照（x、z 偏 3）7 根全報 3。桅身跟現況撞到被丟的格 0。
 - 過程圖：`overlays/stage7_assembly_yaw{45,-135,90}.png`、`stage7_tops_yaw60.png`、`stage7_bowsprit_yaw30.png`。
+
+## 階段八 新圖紙 08：帆桁（6 件子作品＋外部模型）—— 落格（2026-10-13 下午，wake #117）
+Tim：「接著繼續造船吧 GO」。設計 plan.json `yards`（每個數字的出處在 provenance `yards.*`）；產生 `design/draft_yards.py` ⇒ `verify_yards.json`（placements：每件的框、清單、固定點、模型 at／pivot／rotate／meta；anchors_expect：轉好之後的預期點）、`masks/yards/<帆桁>.vox.txt`（子作品座標）。重跑逐位元組相同。下 CLI：`design/apply_yards.py <design> create|stamp|anchors|models|turn`。照 basecamp 憲法號階段三十三那套，但沒有「先貼進桅再刻掉」那一段 —— 一開始就是外部模型。
+- 6 件子作品 `-yard-<帆桁>`（parent ＝ 所在的桅杆子作品、tags sub、0.1 m）：
+  - 方帆桁 4（沿 y、水平、跟中線垂直，貼在那一節桅最前格的前面一格）：fore course 119 格（z 120，top 平台下 6）、fore topsail 89（z 191，中桅 crosstrees 下 4）、fore topgallant 61（z 234，truck 下 6）、main topsail 89（z 198）。
+    長 ＝ 型寬 64 × 1.862（憲法號 fore yard ÷ 型寬）× 憲法號同層比例；徑 ＝ 那一節桅的跟部徑 × 憲法號「桁徑 ÷ 桅徑」；Steel 錐度（轉引 basecamp）、yardarm 端 1 格黑。
+  - gaff 72 格（主桅 top 平台下 8、上翹 35°）、boom 102 格（上翹 3°、尾端伸出船尾 10 格到 x 43.6；jaws z 61 是「下緣離底下最高那一格 ≥ 2」的最低整數 —— 底下最高的是船尾燈）。
+  - ⭐ **gaff／boom 在子作品裡是水平的直桿，斜度交給模型 rotate 的 y**（35°／3°）—— basecamp 那邊記下的「gaff 斜 35° 仍是格子的階梯」這裡沒有。我信裡寫的那一題（斜面上它會不會只靠邊角相接？）這次在動手之前問了：答案是不要在格子裡斜。
+  - 共 2,038 格；每件 6 連通 1 塊。
+- 模型放在桅杆子作品裡（`前桅/yard-fore-course`…，跟著桅走）：scale 1、at ＝ pivot 那一格的格心；方帆桁 pivot ＝ 帆桁中心那一格，gaff／boom ＝ 主桅在 jaws 高度的軸心那一格（繞桅轉）。預設 rotate z 全部 0。
+  meta：`kind=yard, mast, yard, length_m, diameter_m, pivot_anchor=pivot, turn_axis=z, rotate_z_deg`；gaff／boom 多一個 `rotate_y_deg`（⚠ 遊戲那側轉帆桁只能換 z、要保留 y，不然 gaff 會躺平）。還沒有帆 ⇒ meta 不寫 sail。
+- 固定點 84（子作品座標）：方帆桁 arm-P／S、earing-P／S（yardarm 內端的頂面）、sling、jackstay 每 8 格、pivot；gaff throat／peak／top<n>、boom jaws／end／top<n>、pivot。
+- 落格：6 件各一刀，每刀 placed ＝ 清單（483／293／153／293／515／301）；anchors 84、models 6，0 失敗。桅杆子作品的格一格沒動（3,344／3,382）。
+- 讀數：
+  - 引擎 stats（組裝件）：**93,122 格**（模型不算格，跟階段七一樣）、link_overlap 0、1 個元件、空腔 0、左右差 0（含顏色）。
+  - `design/check_yards.py`（讀引擎匯出：六件 list、兩根桅 list、組裝件 list、組裝件 parts）：結果帳六件全部缺 0、多 0、顏色不同 0；**引擎轉過的 84 個固定點 vs 我這邊 rot() 算的：最大差 0.0**（兩條路算同一個旋轉 —— y 轉 +35 是 peak 往上往後，引擎同意）；方帆桁高度、長度跟 plan 一樣、背面離桅 0 格；gaff 仰角 35.0、boom 3.0；boom 下緣最緊 2.24 格（x 56，船尾燈頂 z 62；plan ≥ 2）；反向對照（x、z 偏 3、peak 多轉 3°）全報 3。
+  - 🩸 量尺兩把第一版是壞的：① gaff 仰角用 throat→peak 量出 34.2° —— throat 在桿的頂面、peak 在軸上；軸線過 pivot ⇒ 改 pivot→peak；② boom 淨空取整欄最高那一格 ⇒ 撞到 boom 上面、後傾到 x 141 的主桅，報 −152 ⇒ 只看 boom 底下。兩把都是尺錯、船沒錯。
+  - 已知答案（basecamp 階段三十三）：方帆桁轉到 −20～−24°、gaff／boom 轉 25°（`overlays/stage8_demo_braced_yaw{45,160}.png`）→ 轉回 0 ⇒ 兩件桅杆的 models.json 跟備份**逐位元組相同**。
+    🩸 轉回那一趟 6 個呼叫有 1 個失敗（fore 那件先不同），原因沒存到 —— 我的 `grep "ok "` 把 ✗ 那一行濾掉了（「管道會把失敗濾掉」那一族）。重跑 fore 那三個 ⇒ 相同。⛔ 不說它是階段五那個 IOException，沒有讀數。
+  - 觀察：`view region=` 只裁格子、模型照畫（主桅特寫裡前桅的帆桁浮在框外）⇒ 特寫用 hide_models。
+- 過程圖：`overlays/stage8_assembly_yaw{45,-135,90}.png`、`stage8_bow_yaw0.png`、`stage8_main_gaff_boom_yaw70.png`、`stage8_demo_braced_yaw{45,160}.png`。

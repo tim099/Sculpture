@@ -89,6 +89,23 @@
     "channels": { "fore": { "x": [196, 220] }, "main": { "x": [138, 162] }, "below_top": 3, "thick": 2, "out": 6, "frame_at": [130, 100, 25], "frame_size": [100, 28, 25] },
     "colors": { "spar": 177, "top": 104, "iron": 36, "step": 136, "channel": 36 }
   },
+  "yards": {
+    "prefix": "summit-night-falcon-01m-yard-",
+    "beam": 64, "course_over_beam": 1.862,
+    "square": [
+      { "name": "fore-course", "mast": "fore", "label": "fore course yard", "over_course": 1.0, "d_over_mast": 0.5625, "mast_r": "r_lower", "arm_over_L": 0.0525, "z_ref": "top", "z_off": -6 },
+      { "name": "fore-topsail", "mast": "fore", "label": "fore topsail yard", "over_course": 0.7552, "d_over_mast": 0.75, "mast_r": "r_top", "arm_over_L": 0.0858, "z_ref": "crosstrees", "z_off": -4 },
+      { "name": "fore-topgallant", "mast": "fore", "label": "fore topgallant yard", "over_course": 0.5185, "d_over_mast": 1.0, "mast_r": "r_tg", "arm_over_L": 0.0476, "z_ref": "truck", "z_off": -6 },
+      { "name": "main-topsail", "mast": "main", "label": "main topsail yard", "over_course": 0.7552, "d_over_mast": 0.75, "mast_r": "r_top", "arm_over_L": 0.0858, "z_ref": "crosstrees", "z_off": -4 }
+    ],
+    "taper": { "s": [0.0, 0.25, 0.5, 0.75, 1.0], "k": [1.0, 0.968, 0.875, 0.7, 0.4286] },
+    "r_min": 0.5,
+    "boom": { "mast": "main", "angle_deg": 3.0, "overhang": 10, "clear_below": 2, "d_over_mast": 0.5208, "taper_end": 0.75 },
+    "gaff": { "mast": "main", "jaws_below_top": 8, "angle_deg": 35.0, "over_boom": 0.7097, "d_over_mast": 0.5, "taper_end": 0.7 },
+    "rotate_z_deg": 0,
+    "jackstay_spacing": 8,
+    "colors": { "spar": 177, "tip": 36 }
+  },
   "provenance": {
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
@@ -149,6 +166,16 @@
     "masts.bowsprit": "設計決定：heel 在甲板 x 237（前艙口前面），往前上 22°、長 105 格（到 x 335），半徑 2.0 → 1.4；跨過艏柱頭、在隼頭頂上方 ~14 格；跟船殼相交的格（舷牆頂、艏柱頭）刻掉（憲法號「艏斜桅開口」同）；jib-boom 從艏斜桅 70 格處、上方平行 60 格（到 x ≈ 358；X 384 以內）",
     "masts.channels": "設計決定：兩根桅旁（fore x 196–220、main x 138–162 —— 階段四砲門刻意避開這兩段），舷牆頂（那一段最低處）往下 3 格起 2 格厚、往外 6 格、兩頭圓角；黑 36。deadeyes 與 chain plates 留給繩那一階段",
     "masts.colors": "設計決定：桅與桁 177（松木）、top 平台 104、cap／trestletrees／truck 36（黑）、桅座 136",
-    "upper.quarterdeck.drift": "設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
+    "yards": "設計決定（階段八，2026-10-13）：帆桁一根一件子作品（parent ＝ 所在的桅杆子作品），用外部模型放進桅杆子作品（照 basecamp 憲法號階段三十三；Tim 那時要的是「遊戲內可以跟著風向調整」）。前桅 course／topsail／topgallant 三根、主桅頂上 topsail 一根＋gaff＋boom；艏斜桅沒有 spritsail yard（三角帆之後掛在 stay 上）",
+    "yards.beam": "量的：plan lines.midship.half_beam 32 ⇒ 型寬 64 格",
+    "yards.course_over_beam": "參考資料（換算）：憲法號 fore yard 81 ft（basecamp 作品 plan.json yards，出處 Martin《Constitution Close Up》附錄 A 1815）÷ 型寬 43'6\"（basecamp notes：1927 11 號圖）＝ 1.862 ⇒ 夜隼號 fore course 119 格。⚠ 這是一艘 44 門巡防艦的比例搬到一艘 brigantine，沒查 brigantine 自己的史料",
+    "yards.square": "參考資料（換算）：長度比（÷ fore course）、yardarm／長取憲法號前桅同一層的那一根（topsail 61.17 ft／5.25 ft、topgallant 42／2）；直徑 ＝ 夜隼號那一節桅的跟部直徑 × 憲法號「桁徑 ÷ 掛它那一節桅的徑」（fore yard 18 in ÷ 下桅 32 ＝ 0.5625、topsail 13.5 ÷ 中桅 18 ＝ 0.75、topgallant 9 ÷ 頂桅 9 ＝ 1.0；basecamp plan.json masts／yards）。⚠ 第一版用「徑 ÷ 長」⇒ topsail 1.6 格、在 0.1 m 的格子上只剩一格粗的線，跟我已經做了 4.8 格粗的下桅不成比例；改用跟桅的比 —— 我的桅本來就比憲法號的比例粗，桁跟著粗；主桅沒有 course（主帆是 gaff 帆），頂上那根照前桅 topsail 的比例。高度是設計決定：course 在 top 平台下 6 格、topsail 在中桅 crosstrees 下 4 格、topgallant 在 truck 下 6 格 —— 全部「升起」的位置（之後要掛帆）",
+    "yards.taper": "參考資料（轉引）：basecamp 憲法號 plan.json yards.taper —— Steel 1794 two-tree yard，中間往兩端每四分之一：1、30/31、7/8、7/10、3/7（我沒讀 Steel 原文）",
+    "yards.r_min": "設計決定：直的桿（沿 y 或沿 x）核心那一排一定在格心上 ⇒ 半徑 0.5 也是 6 連通；斜的桿不做格子（見 gaff）",
+    "yards.boom": "設計決定：boom 從主桅後緣往船尾、上翹 3°（憲法號 spanker boom 同）；尾端伸出船尾最後一格 10 格（1 m）；jaws 高度取「boom 下緣離它底下最高那一格 ≥ 2 格」的最低整數（底下最高的是船尾燈）；直徑 ＝ 主桅下桅跟部 × 0.5208（憲法號 spanker boom 12.5 in ÷ 後桅下桅 24 in）、尾端收到 0.75（同）",
+    "yards.gaff": "設計決定：gaff jaws 在主桅 top 平台下 8 格；上翹 35°（basecamp 記：1817 帆圖 18–20°、現代照片 35–40° —— 我取照片那一端，看起來像翅膀）；長 ＝ boom × 0.7097（憲法號 44／62 ft）；直徑 ＝ 主桅下桅跟部 × 0.5（憲法號 gaff 12 in ÷ 後桅 24 in）、尾端 0.7。⭐ gaff／boom 在子作品裡做成水平的直桿，斜度交給模型的 rotate（繞 y）—— basecamp 階段三十三記下的『gaff 斜 35° 仍是格子的階梯』這裡不會有",
+    "yards.rotate_z_deg": "設計決定：預設全部 0（方帆桁正橫、gaff／boom 在中線）；還沒有帆、沒有風，轉角等掛帆那一階段再定",
+    "yards.colors": "設計決定：桁身 177（跟桅同，plan masts.colors 已寫『桅與桁 177』）、yardarm 端 1 格 36（黑 —— 跟 cap、trestletrees、truck 一樣的鐵件色；憲法號是反過來：黑桁、原木端）",
+    "upper.quarterdeck.drift":"設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
   }
 }

@@ -22,14 +22,15 @@
 - [ ] 舵改外部模型＋pivot（給遊戲轉）；舵輪接舵柱頂（隼徽記被剝後的疤）
 - [ ] 斷口艙壁：門／欄杆（breastwork rail）；後甲板舷牆上半是欄杆（定稿圖）
 - [x] 桅、艏斜桅、channels（階段七）
-- [ ] 帆桁（一根一件子作品＋外部模型，rotate 繞 z；rig_points 在 verify_masts.json）→ 靜索（shrouds、stays、backstays；channels 上的 deadeyes 與 chain plates）→ 動索 → 帆
+- [x] 帆桁（階段八：6 件子作品＋外部模型；固定點 84 在 verify_yards.json 的 placements[].anchors）
+- [ ] 靜索（shrouds、stays、backstays；channels 上的 deadeyes 與 chain plates）→ 動索（lifts、braces、footropes）→ 帆（掛帆時再定 brace 角、meta 加 sail）
 - [ ] 旗：候選圖在 summit-night-falcon-01m-flag（⛔ 不是定稿）—— 掛在主桅 truck
 - [ ] 砲（外部模型、退到零碰撞）、插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯
 
 ## 之後會撞到的（先記）
 - 插板放下會伸出龍骨底 ⇒ 插板做成會轉的外部模型（pivot），組裝件框往下加
-- 空間 X 384：甲板 60..276 ＋ 船首斜桅與三角帆（約 +100）＋ 主桅 boom 伸出船尾 —— 接近上限，桅檣那階段要量
+- 空間 X 384：量了 —— boom 尾端 x 43.6（框從 0 起）、jib-boom 到 x 358；三角帆在 stay 上，不會比 jib-boom 更前
 - 砲門與甲板高度一起規劃（Shipbuilding §3）；channels 跟砲門一起排
 - 砲、帆桁、舵輪一開始就做外部模型
 - 舵輪：隼徽記被剝後的疤（007 起）
