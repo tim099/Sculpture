@@ -306,4 +306,8 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 ## 階段三十六 quarter davits 與 whaleboat（2026-10-13；讀數見 notes.md 階段三十六）
 - [x] 1931 plan 24474 讀位置；davit 挪 −10 避 mizzen backstay；-whaleboat、-davits-side＋鏡像、模型 2、吊索 4；組裝件 1,397,375
 - [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說 —— 多了兩艘 kind=boat）
-- [ ] 下一階段候選：船尾 davit 與 28 ft whale gig（同一張圖）
+- [x] 船尾 davit 與 28 ft whale gig ⇒ 階段三十七
+
+## 階段三十七 船尾 davits 與 whale gig（2026-10-13；讀數見 notes.md 階段三十七）
+- [x] 橫吊 gig（沿用 -whaleboat、rotate 90）＋ -gig-davit-side＋鏡像＋吊索 2；組裝件 1,397,575
+- [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說 —— 三艘 kind=boat）

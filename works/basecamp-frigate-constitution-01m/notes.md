@@ -772,3 +772,14 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 自檢：davit 與鏡像在空氣裡、連到現況；艇（格心＋八角）不撞現況與 davit；既有 901 條繩（直線＋下垂）穿過 davit 或艇 0。
 - 讀數：組裝件 **1,397,375**（＋1,472 ＝ davit 兩舷，新舊相減只多這些）、1 元件、空腔 0、link_overlap 0；模型 210、models_broken 0；繩 905、ropes_broken 0。
 - 過程圖：`overlays/stage36_quarter_boat{,_end,_top,_out}.png`、`stage36_ship.png`（_out 是從船外看）。
+
+## 階段三十七 船尾 davits 與 28 ft whale gig（2026-10-13 晚，BTC；Tim：「繼續GO」；todo 102 的後半）
+設計 `design/draft_stern_gig.py`（輸入：組裝件 list 匯出＋`sub=ropes` 列表）⇒ `masks/stern_gig/gig_davit_side.vox.txt`、`verify_stern_gig.json`；套用 `design/tools/stern_gig_apply.py`。
+- 出處：Navy plan No. 24474（1931）—— 船尾欄杆上往後伸的 davit、吊「28 FT WHALE GIG BOAT」；圖上那艘畫成約 1.9 m × 1.2 m 的橢圓 ＝ 艇的橫切面 ⇒ **橫吊**在船尾後面。
+- 先量：船尾欄杆頂 z 128、X 97；船尾面往下收（z 120 X 99、z 100 X 106）；這一段沒有繩；spanker boom（模型）從 X 192 伸到 24、中線 z 136–146 ⇒ 艇吊在 boom 下面。
+- 艇：沿用階段三十六的 `-whaleboat`（同 28 ft），模型 `小艇-gig` at (86.5, 160.75, 108)、rotate 0,0,90（船頭朝 +y）、scale 0.5、meta kind=boat、boat=whale gig。at.y 取 160.75 ⇒ 兩個環 y 199.75／121.25 對中線鏡像。⚠ 轉向是推的（本地 +x → 世界 +y），套完讀回引擎算的外框與環座標，跟產生程式逐位一致。
+- davit `-gig-davit-side`（一舷、固定框 at 75,190,115、35×20×30、100 格）＋鏡像：2×2 黑柱貼欄杆後面（X 95–96）立到 z 129、四分之一圓（R 9）彎向船尾、尖 X 86、z 138、尖下一格滑車；固定點 gig-davit.head。v1 尖 z 134 ⇒ 柱只到 125、彎出去之前沒碰到欄杆（船尾最後面在 z 126–128）⇒ 產生程式擋下「浮空」⇒ 尖抬到 138。
+- 吊索 2 條（組 boats/falls）：gig-fall-S（→ ring-fwd）、gig-fall-P（→ ring-aft），長 19.25、垂直（y 差 0.2–0.3）。
+- 讀數：組裝件 **1,397,575**（＋200 ＝ davit 兩舷，新舊相減只多這些）、1 元件、空腔 0、link_overlap 0；models_broken 0、ropes_broken 0；既有繩穿過 0。
+- ⚠ 看得到的：gig 擋住船尾上半的鷹與星裝飾（1931 的配置就是這樣，照圖接受）。
+- 過程圖：`overlays/stage37_stern_gig.png`、`stage37_ship_stern.png`。
