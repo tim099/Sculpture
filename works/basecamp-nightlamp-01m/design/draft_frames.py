@@ -30,64 +30,95 @@ def load_prev(design):
     return prev
 
 
-def main():
-    design = sys.argv[1]
-    plan, R, B, ship = DL.load(design)
-    xs, zs, T, hb_max, _ = DL.hull_table(ship)
-    k, cpm, X, Z, Yh = DL.scale_of(plan, ship, hb_max)
-    Sc, Fl, Fr = plan['scale'], plan['floors'], plan['frames']
-    X0, Zk = Sc['X_of_x0'], Sc['Z_of_keel_top']
-    N = interp_tab(B, 'narrowing_line', 'x_hb')
-    hg = HullGrid(xs, zs, T)
-    prev = load_prev(design)
-    M = Fr['moulded_cells']
+class Ctx:
+    """產肋骨要用的東西：船、船殼表、倍數、narrowing、已經有的格"""
+    def __init__(s, design):
+        s.plan, s.R, s.B, s.ship = DL.load(design)
+        s.xs, s.zs, s.T, hb_max, _ = DL.hull_table(s.ship)
+        s.k, s.cpm, s.X, s.Z, s.Yh = DL.scale_of(s.plan, s.ship, hb_max)
+        Sc = s.plan['scale']
+        s.X0, s.Zk = Sc['X_of_x0'], Sc['Z_of_keel_top']
+        s.N = interp_tab(s.B, 'narrowing_line', 'x_hb')
+        s.hg = HullGrid(s.xs, s.zs, s.T)
+        s.M = s.plan['frames']['moulded_cells']
 
-    def mould(z, ztop):                                   # 底圖 m
+    def mould(s, z, ztop):                                # 底圖 m
+        M = s.M
         if z <= M['taper_from_z']:
             c = M['low']
         else:
             t = min(1.0, (z - M['taper_from_z']) / max(ztop - M['taper_from_z'], 1e-6))
             c = M['low'] + (M['top'] - M['low']) * t
-        return c / cpm
+        return c / s.cpm
+
+
+def seg_dist(sec, h, z):
+    """(h, z) 到剖面折線（線段，不只頂點）的最短距離 —— 船尾 tuck 那裡半寬一下跳 2 m，只量頂點會漏掉 counter 底面"""
+    p, q = sec[:-1], sec[1:]
+    d = q - p
+    L2 = (d ** 2).sum(1)
+    t = np.clip(((h - p[:, 0]) * d[:, 0] + (z - p[:, 1]) * d[:, 1]) / np.where(L2 > 0, L2, 1), 0, 1)
+    cx, cz = p[:, 0] + t * d[:, 0], p[:, 1] + t * d[:, 1]
+    return float(np.min(np.hypot(cx - h, cz - z)))
+
+
+def frame_cells(ctx, n, sided, color, occupied, use_head=True, segments=False):
+    """一片肋骨（肋位 n）的格；use_head ＝ 只要底肋頭以外那段（階段五），False ＝ 整條（兩頭沒有底肋）；
+    segments ＝ 量到剖面折線的線段（兩頭用；階段五量頂點，已雕，不改）"""
+    Fl, zs, cpm, X0, Zk, ship = ctx.plan['floors'], ctx.zs, ctx.cpm, ctx.X0, ctx.Zk, ctx.ship
+    xf = Fl['frame_x0'] + n * Fl['frame_spacing']
+    Xf = X0 + xf * cpm
+    i0 = int(round(Xf - sided / 2.0))
+    cells = []
+    for Xc in range(i0, i0 + sided):
+        x = (Xc + 0.5 - X0) / cpm
+        col = ctx.hg.column(x)
+        okz = col >= 0
+        if not okz.any():
+            continue
+        sec = ctx.hg.section(x)
+        z_valid_max = float(zs[okz].max())                         # 這一欄船殼表最後一個有值的高度（再上去是 −1 ＝ 外面）
+        z_valid_min = float(zs[okz].min())                         # 第一個有值的高度（船尾 counter 那幾欄從 tuck 才開始）
+        nh = ctx.N(x)
+        ztop = float(ship.top(x))
+        above = np.where((col >= nh) & (zs <= 7.0))[0]
+        z_head = float(zs[above[0]]) if len(above) else 0.0          # 船殼半寬第一次到 narrowing 的高度 ＝ 底肋頭的高度
+        for Zc in range(int(Zk), int(Zk + ztop * cpm) + 2):
+            z = (Zc + 0.5 - Zk) / cpm
+            if z > ztop or z > z_valid_max or z < z_valid_min:
+                continue
+            hb_z = float(np.interp(z, zs[okz], col[okz]))         # 只拿有值的點內插（夾著 −1 會內插出假的小半寬）
+            if hb_z < 0:
+                continue
+            mm = ctx.mould(z, ztop)
+            for dy in range(0, int(hb_z * cpm) + 2):
+                h = dy / cpm
+                if h > hb_z:
+                    continue
+                if use_head and not (z > z_head or h > nh):
+                    continue
+                if not segments and hb_z - h > mm + 1.0 / cpm:       # 粗篩（水平距離比 moulded 大很多就不必算；量線段時不能這樣篩）
+                    continue
+                d = seg_dist(sec, h, z) if segments else np.min(np.hypot(sec[:, 0] - h, sec[:, 1] - z))
+                if d > mm:
+                    continue
+                for y in {160 + dy, 160 - dy}:
+                    if (Xc, y, Zc) not in occupied:
+                        cells.append((Xc, y, Zc, color))
+    return cells, xf, i0
+
+
+def main():
+    design = sys.argv[1]
+    ctx = Ctx(design)
+    plan, R, B, ship = ctx.plan, ctx.R, ctx.B, ctx.ship
+    k, cpm, X0, Zk = ctx.k, ctx.cpm, ctx.X0, ctx.Zk
+    Fl, Fr = plan['floors'], plan['frames']
+    prev = load_prev(design)
 
     frames, info = {}, {}
     for n in range(Fr['n'][0], Fr['n'][1] + 1):
-        xf = Fl['frame_x0'] + n * Fl['frame_spacing']
-        Xf = X0 + xf * cpm
-        i0 = int(round(Xf - Fr['sided_cells'] / 2.0))
-        cells = []
-        for Xc in range(i0, i0 + Fr['sided_cells']):
-            x = (Xc + 0.5 - X0) / cpm
-            col = hg.column(x)
-            sec = hg.section(x)
-            okz = col >= 0
-            z_valid_max = float(zs[okz].max())                     # 這一欄船殼表最後一個有值的高度（再上去是 −1 ＝ 外面）
-            nh = N(x)
-            ztop = float(ship.top(x))
-            above = np.where((col >= nh) & (zs <= 7.0))[0]
-            z_head = float(zs[above[0]]) if len(above) else 0.0      # 船殼半寬第一次到 narrowing 的高度 ＝ 底肋頭的高度
-            for Zc in range(int(Zk), int(Zk + ztop * cpm) + 2):
-                z = (Zc + 0.5 - Zk) / cpm
-                if z > ztop or z > z_valid_max:
-                    continue
-                hb_z = float(np.interp(z, zs[okz], col[okz]))     # 只拿有值的點內插（夾著 −1 會內插出假的小半寬）
-                if hb_z < 0:
-                    continue
-                mm = mould(z, ztop)
-                for dy in range(0, int(hb_z * cpm) + 2):
-                    h = dy / cpm
-                    if h > hb_z:
-                        continue
-                    if not (z > z_head or h > nh):
-                        continue
-                    if hb_z - h > mm + 1.0 / cpm:                    # 粗篩（水平距離比 moulded 大很多就不必算）
-                        continue
-                    d = np.min(np.hypot(sec[:, 0] - h, sec[:, 1] - z))
-                    if d > mm:
-                        continue
-                    for y in {160 + dy, 160 - dy}:
-                        if (Xc, y, Zc) not in prev:
-                            cells.append((Xc, y, Zc, Fr['color']))
+        cells, xf, i0 = frame_cells(ctx, n, Fr['sided_cells'], Fr['color'], prev)
         frames[n] = cells
         info[n] = {'x_frame_plate': round(xf, 4), 'X_cells': [i0, i0 + Fr['sided_cells'] - 1], 'top_plate_m': round(float(ship.top(xf)), 3)}
 

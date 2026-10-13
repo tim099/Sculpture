@@ -378,5 +378,34 @@
       "top": "設計：舷牆頂照 silhouette（舷弧照圖 wale ＋ 2.99；後甲板 ＋0.70）；砲門、舷牆開口之後的階段刻",
       "color": "設計決定：照憲法號 141（跟底肋同色）"
     }
+  },
+  "ends": {
+    "title": "新圖紙 07：船頭船尾骨架 v1（階段六）",
+    "aft_n": [
+      -30,
+      -16
+    ],
+    "fore_n": [
+      21,
+      29
+    ],
+    "frame_rule": "同階段五（sided 4、moulded 3.5→2.5、頂到舷牆頂），但沒有底肋頭條件：船殼 molded 裡、離 molded 線 ≤ moulded(z)、不是已經有的格（deadwood／posts／apron 佔中線）",
+    "wing_transom": {
+      "color": 173,
+      "depth_m": 0.3,
+      "thick_m": 0.3
+    },
+    "stern_timbers": {
+      "color": 141,
+      "sided_cells": 5,
+      "spacing_cells": 9,
+      "thick_m": 0.27
+    },
+    "provenance": {
+      "n": "設計決定：兩頭照同一個肋距（0.7066）排到船尾樓與船頭柱；真船兩頭是斜排的 cant frames —— 這裡簡化成跟龍骨垂直（方肋骨），從外面看形狀一樣、之後外板蓋住",
+      "wing_transom": "設計決定：tuck（z 7.30）往上 0.30、從船尾輪廓往船頭 0.30 的一根橫樑（Pl. LI 船尾有 counter 下緣的線，沒畫 transom 的尺寸）",
+      "stern_timbers": "設計決定：船尾板沿船尾輪廓（plan silhouette.stern_outline，tuck 以上）往裡 0.27 底圖 m；以中線為準每 9 格一根、一根 5 格（|dy| 在 9k−2..9k+2），中線那根接在內艉柱上、左右對稱",
+      "color": "設計決定：肋骨與 stern timbers 141、wing transom 173"
+    }
   }
 }
