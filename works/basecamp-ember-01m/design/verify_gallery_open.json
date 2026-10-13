@@ -1,0 +1,100 @@
+{
+ "gallery": {
+  "voxels": 7542,
+  "glass": 330,
+  "hollow": 3679,
+  "door_backwall": 210,
+  "after": 3323,
+  "hollow_by_level": {
+   "下層（上層砲甲板）": 1845,
+   "上層（船長室）": 1834
+  },
+  "carve_colors": {
+   "36": 3553,
+   "248": 336,
+   "245": 330
+  }
+ },
+ "hull": {
+  "voxels": 1056828,
+  "carve": 964,
+  "colors": {
+   "141": 544,
+   "177": 420
+  },
+  "mirror_missing": 0
+ },
+ "doors": [
+  {
+   "level": "下層（上層砲甲板）",
+   "side": "S",
+   "x": [
+    111,
+    117
+   ],
+   "z": [
+    107,
+    121
+   ],
+   "hull_cells": 210,
+   "blocked_behind": 0,
+   "first_blocked": []
+  },
+  {
+   "level": "下層（上層砲甲板）",
+   "side": "P",
+   "x": [
+    111,
+    117
+   ],
+   "z": [
+    107,
+    121
+   ],
+   "hull_cells": 210,
+   "blocked_behind": 0,
+   "first_blocked": []
+  },
+  {
+   "level": "上層（船長室）",
+   "side": "S",
+   "x": [
+    111,
+    117
+   ],
+   "z": [
+    130,
+    144
+   ],
+   "hull_cells": 272,
+   "blocked_behind": 0,
+   "first_blocked": []
+  },
+  {
+   "level": "上層（船長室）",
+   "side": "P",
+   "x": [
+    111,
+    117
+   ],
+   "z": [
+    130,
+    144
+   ],
+   "hull_cells": 272,
+   "blocked_behind": 0,
+   "first_blocked": []
+  }
+ ],
+ "files": {
+  "gallery_carve": {
+   "cells": 4219,
+   "sha256": "180fb5dc6d5e229143afd6bdb0740b7a2176ecece457f0f3218ad230c03a1452"
+  },
+  "hull_carve": {
+   "cells": 964,
+   "sha256": "c52235b3b13455452fc52f1bdb82b7b729b4e9f30cf7742c6baf2a4104b11fa3"
+  }
+ },
+ "expect_assembly_after": 1793806
+}

@@ -36,7 +36,9 @@
 - [x] 階段十：砲 90 門全部外部模型＋meta（32 磅長砲新做；24 磅、carronade、18 磅追擊砲用憲法號的）；下層船頭／船尾追擊砲與 carronade 砲口沒伸出去（照實記）
 - [x] 階段十 Tim 預覽 OK ⇒ 單層提交 —— 0c0f54d
 - [x] 水線抬高 z 63 → 71（Tim：船變高了水線也往上）；結果帳 0 差
-- [ ] 水線 Tim 預覽 OK ⇒ 單層提交
+- [x] 水線 Tim 預覽 OK ⇒ 單層提交 —— 7254e8a
+- [x] quarter gallery 開窗：玻璃拿掉、兩層掏空、背後船殼開門（Tim：窗戶直接開孔看得到內部）
+- [x] 開窗 Tim 預覽 OK ⇒ 單層提交
 - [ ] 舵（憲法號 -rudder 照換算；水線 71）
 - [ ] 砲索與砲具（breeching、tackle、train、環、rammer／sponge）
 - [ ] entry port 跟著上甲板抬高（舷梯要多 23 格）；彈藥庫照兩層甲板重配

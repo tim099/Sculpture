@@ -190,3 +190,13 @@
 - **結果帳**：船殼現在 vs（上甲板clamp:end ＋ 換色清單）缺 0、多 0、色差 0；knee 子作品 vs knee.vox.txt 缺 0、多 0、色差 0。組裝件 1,803,208（不變）、1 元件、空腔 0、link_overlap 0、鏡像差 151／955／10（不變）。產生程式重跑 sha256 相同。
 - 過程圖：`overlays/stage11_waterline_{side,bowq}.png`（之前的樣子 ＝ `stage10_guns_side.png`）。
 - ⚠ 還沒有舵（憲法號有 -rudder；餘燼號還沒做）—— 做的時候水線也照 71。
+
+## quarter gallery 開窗（2026-10-13，Tim：「窗戶部分可以直接開孔 這樣可以看到內部結構」）
+設計 plan.json `gallery_open`；產生 `design/draft_gallery_open.py` ⇒ `masks/gallery/{gallery_carve,hull_carve}.vox.txt`、`verify_gallery_open.json`、`verify_gallery_open_ledger.json`。
+- 先量：船尾窗、後甲板艙那列窗本來就是開的（看得到船艙）；填滿的只有 quarter gallery 的窗 —— 琥珀玻璃（245）一層 330 格，而 gallery 子作品（7,542 格）是**實心的黑塊** ⇒ 只拿掉玻璃，看進去是黑的。
+- 改法（設計決定）：① 玻璃全拿掉 ② 上下兩層掏空成小房間（只拿掉六個鄰居都是 gallery 的格、z 在那一層地板與天花板之間 ⇒ 牆留 1 格）：下層 1,845、上層 1,834 ③ 背後各開一道門（實船 quarter gallery 從船長室進去）：門 x 111–117、下層 z 107–121（通上層砲甲板船尾）、上層 z 130–144（通船長室）；gallery 的背牆 210 格 ＋ 船殼一路刻到碰到空氣 964 格（141 544、177 420；兩舷逐格對稱）。
+- v1 量到的：門底那一排後面是上層砲甲板的 waterway（7 格擋住）、上層門角後面擋 1 格 ⇒ 門 15 高、下層從 107 起；下層門頂到 121（上甲板 clamp 從 122 起，不切）。第一次只刻了船殼、gallery 掏空留下的背牆還擋在門上 ⇒ 補刻背牆。之後每道門後面擋住 0。
+- 落格：gallery carvevox（顏色守門）4,219；船殼 `窗廊門:begin` → carvevox 964 → `窗廊門:end`。
+- **結果帳**：gallery 現在 3,323 ＋ 刻掉 4,219 ＝ 原本 7,542、兩份不重疊；船殼 vs（窗廊門:begin − 清單）缺 0、多 0、色差 0。組裝件 **1,793,806**（＝ 1,803,208 − 2×4,219 − 964）、1 元件、空腔 0、link_overlap 0、鏡像差不變。
+- 過程圖：`overlays/stage12_gallery_{sternq,close,inside}.png`（inside ＝ 藏 poop 甲板從船長室看那道門）。
+

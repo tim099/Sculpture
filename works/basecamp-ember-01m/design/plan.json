@@ -1637,5 +1637,45 @@
   "from_color": 36,
   "to_color": 168,
   "provenance": "Tim 2026-10-13：「另外我在想 船變高了 船底水線是否也要往上一點(用噴漆模式往上噴塗?)」。量：銅 ＝ 外板最外 1–2 格、z ≤ 62；水線一直照憲法號 62.86。設計決定 ＋8 格（0.8 m）：多一層砲甲板、拉長 66 格 ⇒ 吃水應該更深；下層砲門下緣（船中約 z 89）離水面 2.6 m → 1.8 m（74 砲約 1.5 m）。做法用換色清單（stampvox overwrite，同階段三／補漆）⇒ 結果帳逐格對；knee 由 draft_head.py 照 head_build.knee_copper_below 重產。"
+ },
+ "gallery_open": {
+  "title": "quarter gallery 開窗 v1：玻璃拿掉、上下兩層掏空、背後的船殼各開一道門",
+  "gallery": "basecamp-ember-01m-quarter-gallery",
+  "gallery_voxels": 7542,
+  "glass": 245,
+  "at_S": [
+   102,
+   203,
+   95
+  ],
+  "gallery_back_y": 1,
+  "hull": "basecamp-ember-01m",
+  "hull_voxels": 1056828,
+  "assembly": "basecamp-ember-01m-assembly",
+  "levels": [
+   {
+    "name": "下層（上層砲甲板）",
+    "floor": 105,
+    "ceiling": 129,
+    "door_x": [
+     111,
+     117
+    ],
+    "door_z0": 107,
+    "door_h": 15
+   },
+   {
+    "name": "上層（船長室）",
+    "floor": 129,
+    "ceiling": 150,
+    "door_x": [
+     111,
+     117
+    ],
+    "door_z0": 130,
+    "door_h": 15
+   }
+  ],
+  "provenance": "Tim 2026-10-13：「窗戶部分可以直接開孔 這樣可以看到內部結構」。量：船尾窗本來就是開的；填滿的只有 quarter gallery 的窗（琥珀 245，一層 330 格），而 gallery 子作品是實心的黑塊 ⇒ 只拿玻璃看進去是黑的 ⇒ 掏空成兩間小房間、背後船殼各開一道門（實船 quarter gallery 從船長室進去）。門高 15：下層 107–121（106 是上層砲甲板的 waterway，v1 門底那一排後面被它擋住 7 格；上甲板 clamp 在 122 起，不切）、上層 130–144（v1 到 145，門角後面擋 1 格）。"
  }
 }
