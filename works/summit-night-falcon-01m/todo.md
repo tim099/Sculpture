@@ -30,7 +30,8 @@
 - [ ] brace 角：帆桁都正橫（rz 0）；要轉時 course 下角的 sheet／tack 落在船上的 pin，轉很大會被拉歪（Shipbuilding §7）
 - [x] 旗（階段十二：v3 俯衝的隼定稿，主桅 truck 上 2.4 m 旗桿；作者決定，船設卡還沒寫 —— 等 Tim）
 - [x] 砲（階段十三：4 磅長砲 12 門，子作品 -gun-4l 0.05 m＋模型；退到零碰撞）—— ⚠ 4 號一對船尾側兩輪懸空 0.1 m（甲板台階在砲門正下方）
-- [ ] 砲具與砲索（breeching、side／train tackle；固定點 cascabel、eye-aft／fwd、train 已登記）
+- [x] 砲具與砲索（階段十四：環首螺栓一舷 18＋鏡像、砲索 60 —— breeching、side／train tackle）
+- [ ] shot garland、rammer／sponge（憲法號階段二十二的做法；這次沒做）
 - [ ] 插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯
 

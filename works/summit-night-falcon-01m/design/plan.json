@@ -168,12 +168,24 @@
     "ports": "decks.ports", "pivot": "carriage front centre, deck level",
     "search": { "dx": [0, 0.5, -0.5, 1, -1, 1.5, -1.5], "step": 0.5, "max_back": 30, "min_muzzle_out": 1.0 }
   },
+  "gunfittings": {
+    "work": "summit-night-falcon-01m-gun-fittings", "frame_at": [85, 81, 18], "frame_size": [175, 40, 34],
+    "ring": { "offset": [0, 1, 2, 3, 4], "z_above_deck": 4, "color": 73, "wall_scan_from": 92 },
+    "deck_ring": { "back": [5, 4, 6, 3, 7, 8], "color": 73 },
+    "ropes": { "breeching": { "thickness": 0.4, "slack": 1.12, "color": "#b59a6a" },
+               "tackle": { "thickness": 0.25, "slack": 1.03, "color": "#a08458" },
+               "train": { "thickness": 0.25, "slack": 1.05, "color": "#a08458" } }
+  },
   "provenance": {
     "guns": "設計決定（階段十三，2026-10-13）：4 磅長砲 12 門（每舷 6，照階段四已開的砲門）。口徑是我定的 —— 原作沒寫砲（查過：Books/summit-masthead-bet、-sequel 全文「砲／炮」0 處）；船設寫『小而快、靠靈活不靠火力』、參照船 Oswego 160 噸、RMG 的 brigantine 模型 10–12 門 ⇒ 取英國海軍最小的長砲 4 磅。",
     "guns.barrel_len": "參考資料（弱）：4 磅砲砲管 6 ft（≈1.83 m）—— modelshipworld.com 論壇 6pd/4pd cannon measurements 一串（論壇，不是史料；有人說也有 5.5 ft）⇒ 36 格（0.05 m）＝ 1.80 m",
     "guns.profile": "設計決定：外形比例照 basecamp 的 18 磅長砲（憲法號 draft_guns2.py long18）沿砲管 × 36/55、半徑 × 0.6（口徑比 3.2\"/5.3\"，3.2\" 是記憶的 4 磅口徑、沒查）；半徑再挑在格子上會換形狀的值（3.05／2.9／2.5／2.3／2.05／1.5 ⇒ 29／25／21／21／13／9 格的截面）",
     "guns.AZ": "設計決定：砲軸離甲板面 0.625 m（12.5 格 × 0.05）—— 砲門開口離甲板面 0.4–0.9 m（decks.ports sill 4、height 5），軸落在開口中線下 0.025 m",
     "guns.carriage": "設計決定：truck carriage 照 18 磅那座的比例縮（長 × 0.62、高 × 0.57、cheek 2 格厚）⇒ 長 0.95 m、cheek 外寬 0.55 m（砲門 0.5 m 寬，砲架留在舷牆裡面）",
+    "gunfittings": "做法照 basecamp 憲法號階段二十一、二十二（Shipbuilding §4.4；research agent 2026-10-11：breeching 穿過 cascabel 的環、兩頭扣在砲門兩側的 ring bolt；side tackle 從 ring bolt 到 cheek 的 eyebolt；train tackle 從砲架尾到甲板的 ring bolt）。每門 5 條繩；滑車畫不出來，一條細繩代表一組 tackle。shot garland、rammer／sponge 這次不做",
+    "gunfittings.ring": "設計決定：船牆上的環在砲門開口外側那一格起（offset 0 ＝ 緊貼開口邊的那一欄，往外最多 4 格）、開口下緣下一格（甲板頂格 ＋4）；一格鐵（73）貼在牆內面。憲法號是砲門中線 ±8–11、甲板面 ＋8（24 磅、0.1 m）—— 4 磅砲的砲架半寬只有 3.5 格，照比例縮。碰到東西、或繩（cascabel → 環、eye → 環）穿過別的實心或別門砲 ⇒ 換下一個 offset；都不行就不放、照實記",
+    "gunfittings.deck_ring": "設計決定：砲架尾（train）往船裡 5 格的甲板上一格鐵環（憲法號 9 格 × 砲架長比 0.62 ≈ 5.6）；擋住就照 back 清單試",
+    "gunfittings.ropes": "設計決定：粗細照砲縮（憲法號 breeching 0.6、tackle 0.35 ⇒ 0.4、0.25 —— 0.25 是本船 ratlines 的粗細，再細渲染看不到）；slack、顏色照憲法號",
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
     "keel.rabbet_z": "設計決定：龍骨深約 0.4 m",

@@ -1,0 +1,1063 @@
+{
+ "note": "draft_gunfittings.py（階段十四）—— 現況 nf_state stage12＋verify_guns.json",
+ "work": "summit-night-falcon-01m-gun-fittings",
+ "frame_at": [
+  85,
+  81,
+  18
+ ],
+ "frame_size": [
+  175,
+  40,
+  34
+ ],
+ "links": [
+  {
+   "name": "砲具",
+   "at": [
+    85,
+    81,
+    18
+   ],
+   "mirror": ""
+  },
+  {
+   "name": "砲具-鏡像",
+   "at": [
+    85,
+    40,
+    18
+   ],
+   "mirror": "y"
+  }
+ ],
+ "stamp_order": {
+  "fittings": [
+   {
+    "name": "gunfittings_side",
+    "op": "stampvox",
+    "file": "masks/gunfittings/side.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     85,
+     81,
+     18
+    ],
+    "voxels": 18,
+    "sha256": "d51188faa5bce602267bbbae8dc4df99e0dae9718b7a41717fad8be0ead6ecb7"
+   }
+  ]
+ },
+ "anchors": [
+  {
+   "name": "ring-1-aft",
+   "kind": "ring",
+   "world": [
+    93,
+    102,
+    28
+   ],
+   "gun": 1,
+   "side": "aft",
+   "at": [
+    8,
+    21,
+    10
+   ]
+  },
+  {
+   "name": "ring-1-fwd",
+   "kind": "ring",
+   "world": [
+    99,
+    103,
+    28
+   ],
+   "gun": 1,
+   "side": "fwd",
+   "at": [
+    14,
+    22,
+    10
+   ]
+  },
+  {
+   "name": "deck-1",
+   "kind": "deck_ring",
+   "world": [
+    95,
+    87,
+    25
+   ],
+   "gun": 1,
+   "at": [
+    10,
+    6,
+    7
+   ]
+  },
+  {
+   "name": "ring-2-aft",
+   "kind": "ring",
+   "world": [
+    113,
+    104,
+    26
+   ],
+   "gun": 2,
+   "side": "aft",
+   "at": [
+    28,
+    23,
+    8
+   ]
+  },
+  {
+   "name": "ring-2-fwd",
+   "kind": "ring",
+   "world": [
+    119,
+    105,
+    26
+   ],
+   "gun": 2,
+   "side": "fwd",
+   "at": [
+    34,
+    24,
+    8
+   ]
+  },
+  {
+   "name": "deck-2",
+   "kind": "deck_ring",
+   "world": [
+    117,
+    90,
+    23
+   ],
+   "gun": 2,
+   "at": [
+    32,
+    9,
+    5
+   ]
+  },
+  {
+   "name": "ring-3-aft",
+   "kind": "ring",
+   "world": [
+    167,
+    110,
+    33
+   ],
+   "gun": 3,
+   "side": "aft",
+   "at": [
+    82,
+    29,
+    15
+   ]
+  },
+  {
+   "name": "ring-3-fwd",
+   "kind": "ring",
+   "world": [
+    175,
+    108,
+    33
+   ],
+   "gun": 3,
+   "side": "fwd",
+   "at": [
+    90,
+    27,
+    15
+   ]
+  },
+  {
+   "name": "deck-3",
+   "kind": "deck_ring",
+   "world": [
+    171,
+    94,
+    30
+   ],
+   "gun": 3,
+   "at": [
+    86,
+    13,
+    12
+   ]
+  },
+  {
+   "name": "ring-4-aft",
+   "kind": "ring",
+   "world": [
+    183,
+    108,
+    34
+   ],
+   "gun": 4,
+   "side": "aft",
+   "at": [
+    98,
+    27,
+    16
+   ]
+  },
+  {
+   "name": "ring-4-fwd",
+   "kind": "ring",
+   "world": [
+    189,
+    108,
+    34
+   ],
+   "gun": 4,
+   "side": "fwd",
+   "at": [
+    104,
+    27,
+    16
+   ]
+  },
+  {
+   "name": "deck-4",
+   "kind": "deck_ring",
+   "world": [
+    186,
+    93,
+    31
+   ],
+   "gun": 4,
+   "at": [
+    101,
+    12,
+    13
+   ]
+  },
+  {
+   "name": "ring-5-aft",
+   "kind": "ring",
+   "world": [
+    223,
+    104,
+    37
+   ],
+   "gun": 5,
+   "side": "aft",
+   "at": [
+    138,
+    23,
+    19
+   ]
+  },
+  {
+   "name": "ring-5-fwd",
+   "kind": "ring",
+   "world": [
+    229,
+    102,
+    37
+   ],
+   "gun": 5,
+   "side": "fwd",
+   "at": [
+    144,
+    21,
+    19
+   ]
+  },
+  {
+   "name": "deck-5",
+   "kind": "deck_ring",
+   "world": [
+    225,
+    89,
+    34
+   ],
+   "gun": 5,
+   "at": [
+    140,
+    8,
+    16
+   ]
+  },
+  {
+   "name": "ring-6-aft",
+   "kind": "ring",
+   "world": [
+    238,
+    100,
+    39
+   ],
+   "gun": 6,
+   "side": "aft",
+   "at": [
+    153,
+    19,
+    21
+   ]
+  },
+  {
+   "name": "ring-6-fwd",
+   "kind": "ring",
+   "world": [
+    244,
+    98,
+    39
+   ],
+   "gun": 6,
+   "side": "fwd",
+   "at": [
+    159,
+    17,
+    21
+   ]
+  },
+  {
+   "name": "deck-6",
+   "kind": "deck_ring",
+   "world": [
+    240,
+    84,
+    36
+   ],
+   "gun": 6,
+   "at": [
+    155,
+    3,
+    18
+   ]
+  }
+ ],
+ "ropes": [
+  {
+   "name": "砲-S1.breeching-aft",
+   "from": "model:甲板-主/砲-S1/cascabel",
+   "to": "砲具/ring-1-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S1.tackle-aft",
+   "from": "model:甲板-主/砲-S1/eye-aft",
+   "to": "砲具/ring-1-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S1.breeching-fwd",
+   "from": "model:甲板-主/砲-S1/cascabel",
+   "to": "砲具/ring-1-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S1.tackle-fwd",
+   "from": "model:甲板-主/砲-S1/eye-fwd",
+   "to": "砲具/ring-1-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S1.train",
+   "from": "model:甲板-主/砲-S1/train",
+   "to": "砲具/deck-1",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-P1.breeching-aft",
+   "from": "model:甲板-主/砲-P1/cascabel",
+   "to": "砲具-鏡像/ring-1-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P1.tackle-aft",
+   "from": "model:甲板-主/砲-P1/eye-aft",
+   "to": "砲具-鏡像/ring-1-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P1.breeching-fwd",
+   "from": "model:甲板-主/砲-P1/cascabel",
+   "to": "砲具-鏡像/ring-1-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P1.tackle-fwd",
+   "from": "model:甲板-主/砲-P1/eye-fwd",
+   "to": "砲具-鏡像/ring-1-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P1.train",
+   "from": "model:甲板-主/砲-P1/train",
+   "to": "砲具-鏡像/deck-1",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-S2.breeching-aft",
+   "from": "model:甲板-主/砲-S2/cascabel",
+   "to": "砲具/ring-2-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S2.tackle-aft",
+   "from": "model:甲板-主/砲-S2/eye-aft",
+   "to": "砲具/ring-2-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S2.breeching-fwd",
+   "from": "model:甲板-主/砲-S2/cascabel",
+   "to": "砲具/ring-2-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S2.tackle-fwd",
+   "from": "model:甲板-主/砲-S2/eye-fwd",
+   "to": "砲具/ring-2-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S2.train",
+   "from": "model:甲板-主/砲-S2/train",
+   "to": "砲具/deck-2",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-P2.breeching-aft",
+   "from": "model:甲板-主/砲-P2/cascabel",
+   "to": "砲具-鏡像/ring-2-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P2.tackle-aft",
+   "from": "model:甲板-主/砲-P2/eye-aft",
+   "to": "砲具-鏡像/ring-2-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P2.breeching-fwd",
+   "from": "model:甲板-主/砲-P2/cascabel",
+   "to": "砲具-鏡像/ring-2-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P2.tackle-fwd",
+   "from": "model:甲板-主/砲-P2/eye-fwd",
+   "to": "砲具-鏡像/ring-2-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P2.train",
+   "from": "model:甲板-主/砲-P2/train",
+   "to": "砲具-鏡像/deck-2",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-S3.breeching-aft",
+   "from": "model:甲板-主/砲-S3/cascabel",
+   "to": "砲具/ring-3-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S3.tackle-aft",
+   "from": "model:甲板-主/砲-S3/eye-aft",
+   "to": "砲具/ring-3-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S3.breeching-fwd",
+   "from": "model:甲板-主/砲-S3/cascabel",
+   "to": "砲具/ring-3-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S3.tackle-fwd",
+   "from": "model:甲板-主/砲-S3/eye-fwd",
+   "to": "砲具/ring-3-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S3.train",
+   "from": "model:甲板-主/砲-S3/train",
+   "to": "砲具/deck-3",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-P3.breeching-aft",
+   "from": "model:甲板-主/砲-P3/cascabel",
+   "to": "砲具-鏡像/ring-3-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P3.tackle-aft",
+   "from": "model:甲板-主/砲-P3/eye-aft",
+   "to": "砲具-鏡像/ring-3-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P3.breeching-fwd",
+   "from": "model:甲板-主/砲-P3/cascabel",
+   "to": "砲具-鏡像/ring-3-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P3.tackle-fwd",
+   "from": "model:甲板-主/砲-P3/eye-fwd",
+   "to": "砲具-鏡像/ring-3-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P3.train",
+   "from": "model:甲板-主/砲-P3/train",
+   "to": "砲具-鏡像/deck-3",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-S4.breeching-aft",
+   "from": "model:甲板-主/砲-S4/cascabel",
+   "to": "砲具/ring-4-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S4.tackle-aft",
+   "from": "model:甲板-主/砲-S4/eye-aft",
+   "to": "砲具/ring-4-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S4.breeching-fwd",
+   "from": "model:甲板-主/砲-S4/cascabel",
+   "to": "砲具/ring-4-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S4.tackle-fwd",
+   "from": "model:甲板-主/砲-S4/eye-fwd",
+   "to": "砲具/ring-4-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S4.train",
+   "from": "model:甲板-主/砲-S4/train",
+   "to": "砲具/deck-4",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-P4.breeching-aft",
+   "from": "model:甲板-主/砲-P4/cascabel",
+   "to": "砲具-鏡像/ring-4-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P4.tackle-aft",
+   "from": "model:甲板-主/砲-P4/eye-aft",
+   "to": "砲具-鏡像/ring-4-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P4.breeching-fwd",
+   "from": "model:甲板-主/砲-P4/cascabel",
+   "to": "砲具-鏡像/ring-4-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P4.tackle-fwd",
+   "from": "model:甲板-主/砲-P4/eye-fwd",
+   "to": "砲具-鏡像/ring-4-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P4.train",
+   "from": "model:甲板-主/砲-P4/train",
+   "to": "砲具-鏡像/deck-4",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-S5.breeching-aft",
+   "from": "model:甲板-主/砲-S5/cascabel",
+   "to": "砲具/ring-5-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S5.tackle-aft",
+   "from": "model:甲板-主/砲-S5/eye-aft",
+   "to": "砲具/ring-5-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S5.breeching-fwd",
+   "from": "model:甲板-主/砲-S5/cascabel",
+   "to": "砲具/ring-5-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S5.tackle-fwd",
+   "from": "model:甲板-主/砲-S5/eye-fwd",
+   "to": "砲具/ring-5-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S5.train",
+   "from": "model:甲板-主/砲-S5/train",
+   "to": "砲具/deck-5",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-P5.breeching-aft",
+   "from": "model:甲板-主/砲-P5/cascabel",
+   "to": "砲具-鏡像/ring-5-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P5.tackle-aft",
+   "from": "model:甲板-主/砲-P5/eye-aft",
+   "to": "砲具-鏡像/ring-5-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P5.breeching-fwd",
+   "from": "model:甲板-主/砲-P5/cascabel",
+   "to": "砲具-鏡像/ring-5-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P5.tackle-fwd",
+   "from": "model:甲板-主/砲-P5/eye-fwd",
+   "to": "砲具-鏡像/ring-5-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P5.train",
+   "from": "model:甲板-主/砲-P5/train",
+   "to": "砲具-鏡像/deck-5",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-S6.breeching-aft",
+   "from": "model:甲板-主/砲-S6/cascabel",
+   "to": "砲具/ring-6-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S6.tackle-aft",
+   "from": "model:甲板-主/砲-S6/eye-aft",
+   "to": "砲具/ring-6-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S6.breeching-fwd",
+   "from": "model:甲板-主/砲-S6/cascabel",
+   "to": "砲具/ring-6-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-S6.tackle-fwd",
+   "from": "model:甲板-主/砲-S6/eye-fwd",
+   "to": "砲具/ring-6-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-S6.train",
+   "from": "model:甲板-主/砲-S6/train",
+   "to": "砲具/deck-6",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "砲-P6.breeching-aft",
+   "from": "model:甲板-主/砲-P6/cascabel",
+   "to": "砲具-鏡像/ring-6-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P6.tackle-aft",
+   "from": "model:甲板-主/砲-P6/eye-aft",
+   "to": "砲具-鏡像/ring-6-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P6.breeching-fwd",
+   "from": "model:甲板-主/砲-P6/cascabel",
+   "to": "砲具-鏡像/ring-6-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "砲-P6.tackle-fwd",
+   "from": "model:甲板-主/砲-P6/eye-fwd",
+   "to": "砲具-鏡像/ring-6-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "砲-P6.train",
+   "from": "model:甲板-主/砲-P6/train",
+   "to": "砲具-鏡像/deck-6",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  }
+ ],
+ "rows": [
+  {
+   "n": 1,
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "cell": [
+      93,
+      102,
+      28
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "cell": [
+      99,
+      103,
+      28
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     95,
+     87,
+     25
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "cell": [
+      113,
+      104,
+      26
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "cell": [
+      119,
+      105,
+      26
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     117,
+     90,
+     23
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "rings": {
+    "aft": {
+     "offset": 1,
+     "cell": [
+      167,
+      110,
+      33
+     ]
+    },
+    "fwd": {
+     "offset": 1,
+     "cell": [
+      175,
+      108,
+      33
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     171,
+     94,
+     30
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "cell": [
+      183,
+      108,
+      34
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "cell": [
+      189,
+      108,
+      34
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     186,
+     93,
+     31
+    ]
+   }
+  },
+  {
+   "n": 5,
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "cell": [
+      223,
+      104,
+      37
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "cell": [
+      229,
+      102,
+      37
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     225,
+     89,
+     34
+    ]
+   }
+  },
+  {
+   "n": 6,
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "cell": [
+      238,
+      100,
+      39
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "cell": [
+      244,
+      98,
+      39
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     240,
+     84,
+     36
+    ]
+   }
+  }
+ ],
+ "notes": [],
+ "counts": {
+  "ring_cells": 18,
+  "anchors": 18,
+  "ropes": 60
+ }
+}

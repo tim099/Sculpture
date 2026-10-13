@@ -310,3 +310,17 @@ Tim：「自由意志模式 處理待辦GO」。設計 plan.json `guns`（proven
   - 🩸 量尺：**引擎匯出的 obj 是 y 朝上**（x, 作品 z, 作品 y）。我第一次照作品座標讀，報「碰撞 0、輪底全懸空、輪底 z 52」—— 那個 0 是一把轉錯軸的尺給的。抓到它的是「輪底 z 52」這個數長得像 y。⇒ 跟階段十二的「OBJ 用名字當鍵、量的不是旗」同一族：**obj 讀進來先拿一個已知外框對過軸，再量**（S3 的外框 x 167.75–175.25、y 96.5–116.5、z 30–38 ⇒ obj 給的是 (167.75, 30, 96.5)）。
   - 🩸 `view region=` 只裁格子、模型照畫 —— 階段八、九的筆記都寫了，我照樣先用 region 拍特寫，拍出一張浮在空中的砲陣。改 target＋zoom（zoom 6 鑽進船殼，2 剛好）。
 - 過程圖：`overlays/stage13_gun4_yaw{30,150}.png`（單門）、`stage13_assembly_yaw60.png`、`stage13_guns_deck_yaw60_pitch55.png`（藏後甲板看 12 門）、`stage13_guns_outside_S_yaw100.png`（舷外：砲口伸出砲門）、`stage13_guns_inside_S_yaw-70.png`（舷內 3、4 號）、`stage13_guns_side_S_yaw100.png`（全景側面）。
+
+## 階段十四 新圖紙 14：砲具與砲索（環首螺栓 18 格一舷＋鏡像、砲索 60 條）—— 落格（2026-10-13 晚，wake #118）
+Tim：「提交吧 然後繼續做砲具與砲索 GO」。設計 plan.json `gunfittings`（provenance `gunfittings`、`.ring`、`.deck_ring`、`.ropes`）；產生 `design/draft_gunfittings.py` ⇒ `masks/gunfittings/side.vox.txt`、`verify_gunfittings.json`；下 CLI `design/apply_gunfittings.py <design> create|stamp|anchors|links|ropes`；讀數 `design/check_gunfittings.py`（只讀引擎匯出）。重跑逐位元組相同；`nf_state.py` 加 stage14（`fittings_S／_P`）。
+- 做法照 basecamp 憲法號階段二十一、二十二（Shipbuilding §4.4）：每門 5 條繩 —— breeching 兩條（cascabel → 兩側船牆的環）、side tackle 兩條（eye-aft／fwd → 同側的環）、train tackle 一條（train → 甲板的環）；滑車畫不出來，一條細繩代表一組 tackle。shot garland、rammer／sponge 這次不做（todo）。
+- **子作品** `summit-night-falcon-01m-gun-fittings`（parent 甲板-主、tags sub、0.1 m、框 175 × 40 × 34）：一舷（S）18 格鐵 73 —— 船牆的環 12（每門兩側）、甲板的環 6。組裝件關聯 `砲具` at 85,81,18、`砲具-鏡像` at 85,40,18 mirror=y（at.y ＝ 161 − 81 − 40）。固定點 18（`ring-<n>-aft|fwd`、`deck-<n>`）。
+- **環的位置**（設計決定；憲法號是 24 磅砲、砲門中線 ±8–11、甲板面 ＋8，照 4 磅砲縮）：船牆的環在砲門開口外側第一欄起（offset 0..4）、甲板頂格 ＋4（開口下緣下一格），牆內面第一格空氣；要求那一格空、不在任何一門砲裡、cascabel → 環與 eye → 環的線不穿過別的實心或別門砲；P 舷鏡過去再量一次。結果 offset 全是 0，只有 3 號是 1 —— offset 0 那兩格 (168,108,33)、(174,108,33) 落在 S3 自己的砲架格裡（量過；3 號砲退得最少、離牆最近）。🩸 這句原因我第一次寫進筆記時沒量，是寫完回頭才量的。甲板的環：train 往船裡 5 格（憲法號 9 × 砲架長比 0.62），6 門都第一個候選就過。
+- **繩**：breeching 0.4／slack 1.12／#b59a6a、tackle 0.25／1.03／#a08458、train 0.25／1.05／#a08458（粗細照砲縮；0.25 是本船 ratlines 的粗細）。分組 `guns/breeching`、`guns/tackle`、`guns/train`。端點 `model:甲板-主/砲-XN/<點>`、`砲具[-鏡像]/<環>`。
+- 落格：子作品一刀 placed 18 ＝ 清單；固定點 18、關聯 2、繩 60，全部一次成功（這一階段沒有撞到 IOException）。
+- 讀數：
+  - 引擎 stats（組裝件）：**95,404 格**（＋36）、link_overlap 0、1 個元件、空腔 0、左右差 0；繩 341（281＋60）、ropes_broken 0、ropes_ungrouped 0。
+  - `check_gunfittings.py`（讀組裝件 list、sub=ropes、obj）：結果帳 95,404／95,404 缺 0、多 0、色差 0；60 條都在、全 ok；兩端 引擎 vs 我算的（砲的固定點照 at／pivot／scale／mirror、環的格心、P 舷鏡過去）最大差 **0.05** —— 引擎讀數只印到小數一位，這是四捨五入的量；繩管頂點（離兩端 1.5 格以外）落在實心或別門砲 **0**。
+  - 反向對照：預期端點偏 3 ⇒ 報 3.0；繩網格往下 3 ⇒ 中段撞 1,690 個頂點。⚠ 往船頭 3 格 ⇒ 中段仍是 0：繩沿船長平移還在空氣裡，那個方向本來就量不到 —— 反向對照的方向要挑「一定會撞」的那個，⛔ 不是每個方向都證明尺會叫。
+  - ⚠ 中段只量了管子的頂點（同階段十三），頂點之間的線段沒逐段量。
+- 過程圖：`overlays/stage14_tackle_inside_S_yaw-70.png`（3、4 號）、`stage14_tackle_S56_yaw-110.png`（5、6 號）。
