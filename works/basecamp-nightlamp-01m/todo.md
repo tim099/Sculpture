@@ -16,14 +16,18 @@
 - [x] 護龍骨＋龍骨 13,510 格；結果帳 0 差、1 元件、空腔 0、原圖探針最大 0.56 格、反向對照 3.0（notes「階段一」）
 - [x] 提交（Tim「單層提交吧 然後繼續階段二」）
 
-## 下一步：階段二 船頭柱・gripe・船尾柱（新圖紙 03）
-- 船頭：rabbet（readings_LI_bodyplan stem_rabbet_profile）、船頭柱外緣＋gripe＋knee（readings_LI stem_outer）；龍骨前端台階（x 35.30／35.47）要接上
-- 船尾：船尾柱後面 8.24°（x 0.285＠龍骨頂）；前面那條線還沒讀（內艉柱／rabbet）—— 先讀 Pl. LI 側面圖船尾那幾條斜線
-- ⚠ 船頭柱頂以上是船頭 head 與船頭像（設計），這一階段只做到 knee 底
+## 階段二 船頭柱・gripe・船尾柱・內艉柱（10-13 深夜雕完）
+- [x] 10,830 格；結果帳 0 差、1 元件、空腔 0、原圖探針最大 0.71 格、反向對照 3.0（notes「階段二」）
+- [x] 提交（Tim「單層提交吧 然後繼續階段三」）
+
+## 下一步：階段三 apron・deadwood（船頭、船尾）
+- ⚠ 先把線形圖船殼後端改成照 L3 rabbet（現在是「船尾柱後面往前 0.40」，低處偏後約 0.28 m），重產線形圖
+- Pl. LI 側面圖上讀 cutting-down line／keelson 頂（憲法號的 A、B 線）—— 船中的肋底上升線（readings_LI rising_line）可能是虛線那條，先確認
+- 船尾 deadwood：內艉柱前面（L3）往前到 A 線；船頭 apron／deadwood：船頭柱後面（rabbet）往後
 
 ## ⚠ 還沒定、要問 Tim
 - 渲染圖要不要也真的發光（要擴充引擎、另開單）
 - 船名（暫名夜燈號）
 
-## ⚠ 沒提交
-- Sculpture：`references/chapman-architectura-navalis-1768/`、`works/basecamp-nightlamp-01m/`（work.json、events、notes、todo、design/ 全部）—— 等 Tim 說提交
+## 提交紀錄（Sculpture，單層、沒 bump、沒 push）
+- 68c3bc9 圖紙 01＋底圖；8755a6a 階段一 龍骨；階段二 見 git log（這一份 todo 跟著那一筆進去）

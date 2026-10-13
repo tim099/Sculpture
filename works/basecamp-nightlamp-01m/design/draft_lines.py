@@ -94,6 +94,9 @@ class Ship:
         s.rab_pts = rp[np.argsort(rp[:, 1])]
         s.rab_rake = H['rabbet_rake_above']
         s.stem_siding = H['stem_siding']
+        sf = B.get('stem_face_profile')                                      # 船頭柱前面（階段二讀的；z ≤ 5.95）
+        s.sf_pts = np.array(sf['x_z'], float) if sf else None
+        s.sf_rake = plan.get('posts', {}).get('stem_face_rake_above', 0.05)
 
         # 舷弧：主 wale 擬合
         w = np.array(B['main_wale']['x_z'], float)
@@ -151,8 +154,16 @@ class Ship:
         z = z + Si['bow_rise'] * np.clip((x - xb) / (xe - xb), 0, 1) ** 2
         return z
 
-    def fwd_end_top_x(s):                        # 船頭舷牆頂：rabbet ＋ 船頭柱寬
-        return float(s.rabbet_x(11.0)) + s.stem_siding
+    def stem_face_x(s, z):                       # 船頭柱前面：追線（z ≤ 5.95）＋往上每 m 往前 sf_rake；沒讀過就用 rabbet ＋ 船頭柱寬
+        z = np.asarray(z, float)
+        if s.sf_pts is None:
+            return s.rabbet_x(z) + s.stem_siding
+        p = s.sf_pts
+        low = np.interp(z, p[:, 1], p[:, 0])
+        return np.where(z > p[-1, 1], p[-1, 0] + (z - p[-1, 1]) * s.sf_rake, low)
+
+    def fwd_end_top_x(s):                        # 船頭舷牆頂 ＝ 船頭柱前面
+        return float(s.stem_face_x(11.0))
 
     # 船殼半寬 molded：hb(x, z)；船殼外（＝ 兩頭之間）以外 nan
     def ends(s, z):
@@ -353,7 +364,7 @@ def main():
     zz = np.linspace(ship.stem_outer_pts[0, 1], ship.stem_outer_pts[-1, 1], 80)
     stem = [(X(ship.stem_outer_x(z)), Z(z)) for z in zz]           # 船頭柱＋gripe＋knee 外緣（照圖）
     zb = np.linspace(4.0, float(ship.top(x_stem_top)), 30)
-    bowf = [(X(ship.rabbet_x(z) + ship.stem_siding), Z(z)) for z in zb]   # 船頭柱前面（吃水線以上、knee 後面）
+    bowf = [(X(ship.stem_face_x(z)), Z(z)) for z in zb]                 # 船頭柱前面（吃水線以上、knee 後面）
     keel = [(X(ship.sternpost_x(0)), Z(-kd)), (X(ship.stem_outer_pts[0, 0]), Z(-kd))]
     pr.line(keel, C_HULL, 3)
     pr.line(stem, C_HULL, 3)
@@ -499,7 +510,7 @@ def main():
     da.line([P(a, b) for a, b in so], fill=org, width=2)
     da.line([P(float(ship.stem_outer_x(z)), z) for z in zz], fill=red, width=2)
     da.line([P(float(ship.rabbet_x(z)), z) for z in np.linspace(0.05, 9.0, 60)], fill=red, width=2)
-    da.line([P(float(ship.rabbet_x(z) + ship.stem_siding), z) for z in zb], fill=org, width=2)
+    da.line([P(float(ship.stem_face_x(z)), z) for z in zb], fill=org, width=2)
     fx, fz = Si['head']['figurehead_box_x'], Si['head']['figurehead_box_z']
     da.rectangle([P(fx[0], fz[1]), P(fx[1], fz[0])], outline=org, width=2)
     da.line([P(float(ship.sternpost_x(z)), z) for z in spz], fill=red, width=2)

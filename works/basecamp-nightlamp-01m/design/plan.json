@@ -223,5 +223,50 @@
       "aft": "原圖讀數：龍骨這幾層的黑帶右緣 6790／6810／6830／6850 列 ＝ 1767.5／1770.5／1773.5／1776.5，船尾柱擬合線外推 1766.0／1768.9／1771.8／1774.7（差 ≤ 1.8 px）",
       "color": "設計決定：照憲法號（龍骨 177 橡木、護龍骨 104 深褐）；黑船殼的塗裝在外板階段"
     }
+  },
+  "posts": {
+    "title": "新圖紙 03：船頭柱・gripe・船尾柱・內艉柱 v1（階段二）",
+    "y": [
+      158,
+      162
+    ],
+    "stem": {
+      "color": 177,
+      "aft": "rabbet（readings_LI_bodyplan stem_rabbet_profile；z > 5.2 照 hull.rabbet_rake_above）",
+      "fore": "stem_face_profile（z > 5.95 每 m 往前 0.05）",
+      "z": [
+        "keel_top",
+        "bow_top"
+      ]
+    },
+    "gripe": {
+      "color": 104,
+      "aft": "船頭柱前面（z ≥ 0）／龍骨與護龍骨前端（z < 0）",
+      "fore": "readings_LI stem_outer",
+      "z_top": 5.12
+    },
+    "sternpost": {
+      "color": 177,
+      "aft": "hull.sternpost（8.24°）",
+      "fore": "stern_post_lines.L1",
+      "min_siding": 0.16,
+      "z_top": 7.3
+    },
+    "inner_post": {
+      "color": 173,
+      "aft": "船尾柱前面",
+      "fore": "stern_post_lines.L3（rabbet）",
+      "z_top": 7.3
+    },
+    "stem_face_rake_above": 0.05,
+    "provenance": {
+      "split": "推定（同憲法號分件）：船頭三條收攏線 ＝ rabbet（一對細線，各站停在船殼側那條）、船頭柱前面（中間那條）、外緣（船頭柱＋gripe＋knee）；船尾 L1 ＝ 船尾柱／內艉柱分界、L3 ＝ rabbet",
+      "y": "設計決定：跟龍骨同寬 5 格（未查原船尺寸）",
+      "gripe.z_top": "設計決定：gripe 做到船頭吃水線（5.12），再上面的外緣是船頭 knee，跟船頭像一起做",
+      "sternpost.min_siding": "設計決定：L1 往上收到 z 6.15 只剩 0.06 m ⇒ 船尾柱最少 0.16 底圖 m（2 格），免得上端只剩一條縫",
+      "z_top": "原圖讀數（目測）：tuck z 7.30（counter 下緣碰船尾柱）—— 再上面是船尾樓，之後的階段做",
+      "stem.z_top": "設計決定：船頭柱做到船頭舷牆頂（silhouette top 在船頭柱前面那個 x）",
+      "color": "設計決定：照憲法號（船頭柱／船尾柱 177、內艉柱 173、gripe 104）"
+    }
   }
 }
