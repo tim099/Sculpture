@@ -1,0 +1,559 @@
+{
+ "note": "draft_guns.py（階段十三）—— 子作品 gun4 與 12 門模型的擺放；現況 nf_state stage12（全部子作品）",
+ "gun": {
+  "work": "summit-night-falcon-01m-gun-4l",
+  "file": "masks/guns/gun4.vox.txt",
+  "size": [
+   15,
+   41,
+   16
+  ],
+  "mpv": 0.05,
+  "cells": 1452,
+  "colors": {
+   "36": 736,
+   "132": 596,
+   "136": 120
+  },
+  "asym": 0,
+  "components": 1,
+  "anchors": {
+   "muzzle": [
+    7,
+    40,
+    12
+   ],
+   "breech": [
+    7,
+    5,
+    12
+   ],
+   "cascabel": [
+    7,
+    1,
+    12
+   ],
+   "train": [
+    7,
+    7,
+    5
+   ],
+   "trunnion": [
+    7,
+    20,
+    12
+   ],
+   "eye-aft": [
+    1,
+    15,
+    8
+   ],
+   "eye-fwd": [
+    13,
+    15,
+    8
+   ]
+  },
+  "pivot": [
+   7.5,
+   26.0,
+   0.0
+  ]
+ },
+ "host": "summit-night-falcon-01m-deck-main",
+ "scale": 0.5,
+ "rows": [
+  {
+   "n": 1,
+   "side": "S",
+   "station": 95,
+   "at": [
+    95.5,
+    101.5,
+    25.0
+   ],
+   "dx": -1,
+   "back_from_outer": 6.5,
+   "muzzle_beyond_outer": 0.75,
+   "axis_z": 31.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    94,
+    98
+   ],
+   "opening_z": [
+    29,
+    33
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 24,
+   "wall_y": [
+    104,
+    108
+   ],
+   "model": "砲-S1",
+   "mirror": "none",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "S",
+    "port": 1,
+    "deck": "cabin"
+   }
+  },
+  {
+   "n": 1,
+   "side": "P",
+   "station": 95,
+   "at": [
+    95.5,
+    59.5,
+    25.0
+   ],
+   "dx": -1,
+   "back_from_outer": 6.5,
+   "muzzle_beyond_outer": 0.75,
+   "axis_z": 31.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    94,
+    98
+   ],
+   "opening_z": [
+    29,
+    33
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 24,
+   "wall_y": [
+    57,
+    53
+   ],
+   "model": "砲-P1",
+   "mirror": "y",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "P",
+    "port": 1,
+    "deck": "cabin"
+   }
+  },
+  {
+   "n": 2,
+   "side": "S",
+   "station": 115,
+   "at": [
+    117.5,
+    104.5,
+    23.0
+   ],
+   "dx": 1,
+   "back_from_outer": 4.5,
+   "muzzle_beyond_outer": 2.75,
+   "axis_z": 29.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    114,
+    118
+   ],
+   "opening_z": [
+    27,
+    31
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 22,
+   "wall_y": [
+    106,
+    109
+   ],
+   "model": "砲-S2",
+   "mirror": "none",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "S",
+    "port": 2,
+    "deck": "cabin"
+   }
+  },
+  {
+   "n": 2,
+   "side": "P",
+   "station": 115,
+   "at": [
+    117.5,
+    56.5,
+    23.0
+   ],
+   "dx": 1,
+   "back_from_outer": 4.5,
+   "muzzle_beyond_outer": 2.75,
+   "axis_z": 29.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    114,
+    118
+   ],
+   "opening_z": [
+    27,
+    31
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 22,
+   "wall_y": [
+    55,
+    52
+   ],
+   "model": "砲-P2",
+   "mirror": "y",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "P",
+    "port": 2,
+    "deck": "cabin"
+   }
+  },
+  {
+   "n": 3,
+   "side": "S",
+   "station": 170,
+   "at": [
+    171.5,
+    109.0,
+    30.0
+   ],
+   "dx": 0,
+   "back_from_outer": 3.0,
+   "muzzle_beyond_outer": 4.25,
+   "axis_z": 36.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    169,
+    173
+   ],
+   "opening_z": [
+    34,
+    38
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 29,
+   "wall_y": [
+    109,
+    112
+   ],
+   "model": "砲-S3",
+   "mirror": "none",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "S",
+    "port": 3,
+    "deck": "main"
+   }
+  },
+  {
+   "n": 3,
+   "side": "P",
+   "station": 170,
+   "at": [
+    171.5,
+    52.0,
+    30.0
+   ],
+   "dx": 0,
+   "back_from_outer": 3.0,
+   "muzzle_beyond_outer": 4.25,
+   "axis_z": 36.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    169,
+    173
+   ],
+   "opening_z": [
+    34,
+    38
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 29,
+   "wall_y": [
+    52,
+    49
+   ],
+   "model": "砲-P3",
+   "mirror": "y",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "P",
+    "port": 3,
+    "deck": "main"
+   }
+  },
+  {
+   "n": 4,
+   "side": "S",
+   "station": 185,
+   "at": [
+    186.5,
+    108.0,
+    31.0
+   ],
+   "dx": 0,
+   "back_from_outer": 4.0,
+   "muzzle_beyond_outer": 3.25,
+   "axis_z": 37.25,
+   "wheel_support": [
+    24,
+    48
+   ],
+   "opening_x": [
+    184,
+    188
+   ],
+   "opening_z": [
+    35,
+    39
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 30,
+   "wall_y": [
+    109,
+    112
+   ],
+   "model": "砲-S4",
+   "mirror": "none",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "S",
+    "port": 4,
+    "deck": "main"
+   }
+  },
+  {
+   "n": 4,
+   "side": "P",
+   "station": 185,
+   "at": [
+    186.5,
+    53.0,
+    31.0
+   ],
+   "dx": 0,
+   "back_from_outer": 4.0,
+   "muzzle_beyond_outer": 3.25,
+   "axis_z": 37.25,
+   "wheel_support": [
+    24,
+    48
+   ],
+   "opening_x": [
+    184,
+    188
+   ],
+   "opening_z": [
+    35,
+    39
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 30,
+   "wall_y": [
+    52,
+    49
+   ],
+   "model": "砲-P4",
+   "mirror": "y",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "P",
+    "port": 4,
+    "deck": "main"
+   }
+  },
+  {
+   "n": 5,
+   "side": "S",
+   "station": 225,
+   "at": [
+    225.5,
+    104.0,
+    34.0
+   ],
+   "dx": -1,
+   "back_from_outer": 3.0,
+   "muzzle_beyond_outer": 4.25,
+   "axis_z": 40.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    224,
+    228
+   ],
+   "opening_z": [
+    38,
+    42
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 33,
+   "wall_y": [
+    104,
+    107
+   ],
+   "model": "砲-S5",
+   "mirror": "none",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "S",
+    "port": 5,
+    "deck": "main"
+   }
+  },
+  {
+   "n": 5,
+   "side": "P",
+   "station": 225,
+   "at": [
+    225.5,
+    57.0,
+    34.0
+   ],
+   "dx": -1,
+   "back_from_outer": 3.0,
+   "muzzle_beyond_outer": 4.25,
+   "axis_z": 40.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    224,
+    228
+   ],
+   "opening_z": [
+    38,
+    42
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 33,
+   "wall_y": [
+    57,
+    54
+   ],
+   "model": "砲-P5",
+   "mirror": "y",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "P",
+    "port": 5,
+    "deck": "main"
+   }
+  },
+  {
+   "n": 6,
+   "side": "S",
+   "station": 240,
+   "at": [
+    240.5,
+    99.0,
+    36.0
+   ],
+   "dx": -1,
+   "back_from_outer": 4.0,
+   "muzzle_beyond_outer": 3.25,
+   "axis_z": 42.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    239,
+    243
+   ],
+   "opening_z": [
+    40,
+    44
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 35,
+   "wall_y": [
+    100,
+    103
+   ],
+   "model": "砲-S6",
+   "mirror": "none",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "S",
+    "port": 6,
+    "deck": "main"
+   }
+  },
+  {
+   "n": 6,
+   "side": "P",
+   "station": 240,
+   "at": [
+    240.5,
+    62.0,
+    36.0
+   ],
+   "dx": -1,
+   "back_from_outer": 4.0,
+   "muzzle_beyond_outer": 3.25,
+   "axis_z": 42.25,
+   "wheel_support": [
+    48,
+    48
+   ],
+   "opening_x": [
+    239,
+    243
+   ],
+   "opening_z": [
+    40,
+    44
+   ],
+   "hull_in_opening": 0,
+   "deck_top": 35,
+   "wall_y": [
+    61,
+    58
+   ],
+   "model": "砲-P6",
+   "mirror": "y",
+   "meta": {
+    "kind": "gun",
+    "gun": "4l",
+    "side": "P",
+    "port": 6,
+    "deck": "main"
+   }
+  }
+ ]
+}

@@ -29,7 +29,9 @@
 - [ ] 帆的鼓度：方帆最鼓 ≈ 寬的 32–35%（kotoko 說真的方帆約一到兩成）—— 旋鈕是風，等 Tim 看 stage11_sails_yaw45 與 _wind2.4 選
 - [ ] brace 角：帆桁都正橫（rz 0）；要轉時 course 下角的 sheet／tack 落在船上的 pin，轉很大會被拉歪（Shipbuilding §7）
 - [x] 旗（階段十二：v3 俯衝的隼定稿，主桅 truck 上 2.4 m 旗桿；作者決定，船設卡還沒寫 —— 等 Tim）
-- [ ] 砲（外部模型、退到零碰撞）、插板（外部模型，pivot）
+- [x] 砲（階段十三：4 磅長砲 12 門，子作品 -gun-4l 0.05 m＋模型；退到零碰撞）—— ⚠ 4 號一對船尾側兩輪懸空 0.1 m（甲板台階在砲門正下方）
+- [ ] 砲具與砲索（breeching、side／train tackle；固定點 cascabel、eye-aft／fwd、train 已登記）
+- [ ] 插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯
 
 ## 之後會撞到的（先記）

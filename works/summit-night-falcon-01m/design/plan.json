@@ -157,7 +157,23 @@
     "texture": "../../summit-night-falcon-01m-flag/textures/ensign.png", "texture_px": [24, 16],
     "res": 16, "fullness": 1.06
   },
+  "guns": {
+    "work": "summit-night-falcon-01m-gun-4l", "mpv": 0.05, "scale": 0.5, "kind": "4l",
+    "size": [15, 41, 16], "AX": 7, "AZ": 12, "yb": 5, "barrel_len": 36,
+    "profile": [[0, 3.05], [1.5, 3.05], [1.5, 2.5], [12, 2.5], [12, 2.9], [13, 2.9], [13, 2.3], [20, 2.3], [20, 2.05], [31.5, 2.05], [31.5, 1.5], [33, 1.5], [33, 2.3], [35, 2.3], [35, 2.05], [36, 2.05]],
+    "bore_r": 1.0, "bore_depth": 6, "trunnion_from_base": 15,
+    "carriage": { "front_from_trunnion": 5, "len": 19, "cheek_x": [4, 5], "cheek_steps": [[0, 12], [7, 10], [11, 9], [14, 7]], "cheek_bottom": 5, "arch": [6, 13, 6],
+                  "wheel_front_r": 2.6, "wheel_rear_r": 2.3, "axle_front_back": 3, "axle_rear_fwd": 2 },
+    "colors": { "barrel": 36, "carriage": 132, "quoin": 136, "iron": 36 },
+    "ports": "decks.ports", "pivot": "carriage front centre, deck level",
+    "search": { "dx": [0, 0.5, -0.5, 1, -1, 1.5, -1.5], "step": 0.5, "max_back": 30, "min_muzzle_out": 1.0 }
+  },
   "provenance": {
+    "guns": "設計決定（階段十三，2026-10-13）：4 磅長砲 12 門（每舷 6，照階段四已開的砲門）。口徑是我定的 —— 原作沒寫砲（查過：Books/summit-masthead-bet、-sequel 全文「砲／炮」0 處）；船設寫『小而快、靠靈活不靠火力』、參照船 Oswego 160 噸、RMG 的 brigantine 模型 10–12 門 ⇒ 取英國海軍最小的長砲 4 磅。",
+    "guns.barrel_len": "參考資料（弱）：4 磅砲砲管 6 ft（≈1.83 m）—— modelshipworld.com 論壇 6pd/4pd cannon measurements 一串（論壇，不是史料；有人說也有 5.5 ft）⇒ 36 格（0.05 m）＝ 1.80 m",
+    "guns.profile": "設計決定：外形比例照 basecamp 的 18 磅長砲（憲法號 draft_guns2.py long18）沿砲管 × 36/55、半徑 × 0.6（口徑比 3.2\"/5.3\"，3.2\" 是記憶的 4 磅口徑、沒查）；半徑再挑在格子上會換形狀的值（3.05／2.9／2.5／2.3／2.05／1.5 ⇒ 29／25／21／21／13／9 格的截面）",
+    "guns.AZ": "設計決定：砲軸離甲板面 0.625 m（12.5 格 × 0.05）—— 砲門開口離甲板面 0.4–0.9 m（decks.ports sill 4、height 5），軸落在開口中線下 0.025 m",
+    "guns.carriage": "設計決定：truck carriage 照 18 磅那座的比例縮（長 × 0.62、高 × 0.57、cheek 2 格厚）⇒ 長 0.95 m、cheek 外寬 0.55 m（砲門 0.5 m 寬，砲架留在舷牆裡面）",
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
     "keel.rabbet_z": "設計決定：龍骨深約 0.4 m",
