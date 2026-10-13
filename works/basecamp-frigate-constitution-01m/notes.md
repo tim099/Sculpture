@@ -783,3 +783,19 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 讀數：組裝件 **1,397,575**（＋200 ＝ davit 兩舷，新舊相減只多這些）、1 元件、空腔 0、link_overlap 0；models_broken 0、ropes_broken 0；既有繩穿過 0。
 - ⚠ 看得到的：gig 擋住船尾上半的鷹與星裝飾（1931 的配置就是這樣，照圖接受）。
 - 過程圖：`overlays/stage37_stern_gig.png`、`stage37_ship_stern.png`。
+
+## bumpkins —— 量過、這次不做（2026-10-13 晚）
+- 1931 plan 24474 有兩個：FORE TACK BUMPKIN（船頭、往前伸的短桿、八角端）、main brace BUMPKIN（船尾 quarter、往舷外伸，側面圖只看到端面）。
+- 換算（bridle port 當尺）：fore tack 在 X ≈ 678–690、Z ≈ 109 —— 已經在作品艏柱前面（船殼 X 673 收尖，那裡只有中線的 head knee），側面圖也讀不出離中線多遠。
+- main brace（chesstree 當尺）：X ≈ 136、Z ≈ 123 —— 落在作品 spar deck 第 1 號砲門的開口裡（X 128–137、z 111–124；1931 圖那裡沒有砲門，跟 1927 11 號圖對不上）。
+- 而且作品現在沒有 brace 繩（`sub=ropes` 裡 0 條），fore tack 綁在 pinrail-13 ⇒ bumpkin 做了也沒有繩接。
+⇒ 位置要靠猜、又沒有功能 ⇒ 不做；要做的話先把 braces／tack 的導向一起規劃（todo 139、190）。
+
+## 階段三十八 spar deck 絞盤（2026-10-13 晚，BTC；Tim：「繼續GO」）
+- 出處（查資料 agent 找到、裁切圖我自己看過標字）：USS Constitution Museum 模型資源 —— **Spar Deck General Arrangement, July 1931（plan #24422）**：中線上「CAPSTAN – 8 CAPSTAN BARS」、在主桅的船尾側、夾在兩個「DOWN」艙口中間（旁邊是 32 磅彈架）；**Capstans (Spar and Gun Decks), 1929（plan #29621）**：一根鐵軸穿 spar／gun 兩層（gun deck 那個不做）。agent 從圖上量（不是圖上寫的數）：主桅後約 17–18 ft、spar deck 絞盤頭約 4 ft。
+- 作品：主桅在 spar deck 高度 X 345–354（中心 349.5）⇒ 349.5 − 17.5 ft（53 格）＝ **X ≈ 296.5**；量作品 spar deck 中線：X 276–285 與 312–320 各一個艙口 ⇒ 296.5 正好在兩個艙口中間的實心甲板上（跟圖同一個樣子）。
+- 模型 `capstan`（組裝件）：沿用餘燼號 `-capstan`（Tim：子物件能重複用就重複用），at (297, 160.5, 105)（甲板頂 104 ＋1）、pivot 40,40,0、**scale 0.163**（餘燼號那件絞盤頭約 1.5 m ⇒ 縮到 4 ft）、meta kind=capstan。⚠ 餘燼號那件是 12 個插桿孔，圖上寫 8 根 bars —— 沒改。
+- 先量：格心＋九點取樣碰撞 0、腳印 120 欄正下方全是甲板；0.5 m 內的實心是兩邊艙口圍板（高 0.3 m，插桿在絞盤頭高度掃過去）。引擎外框 (291.1,154.6,105)–(302.9,166.4,115.8) 跟算的一致；models_broken 0。格子不變（1,397,575）。
+- ⚠ 同一張 #24422 量到：**舵輪在 mizzen 的船頭側**（輪心約在 mizzen 前 4 ft）；作品的舵輪（階段二十四之類）在 X 163–182、mizzen ≈ 206 的**船尾側** —— 跟 1931 相反，這次不動，記著。
+- binnacle：#24422、#29622（舵輪）都沒畫 ⇒ 沒出處，不做。
+- 過程圖：`overlays/stage38_capstan.png`（關帆、關繩）。

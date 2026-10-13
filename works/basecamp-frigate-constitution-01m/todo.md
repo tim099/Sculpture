@@ -311,3 +311,10 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 ## 階段三十七 船尾 davits 與 whale gig（2026-10-13；讀數見 notes.md 階段三十七）
 - [x] 橫吊 gig（沿用 -whaleboat、rotate 90）＋ -gig-davit-side＋鏡像＋吊索 2；組裝件 1,397,575
 - [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說 —— 三艘 kind=boat）
+- [x] bumpkins（1931 plan 24474）量過：位置跟作品對不上、作品也沒有 braces ⇒ 這次不做（notes「bumpkins」）
+
+## 階段三十八 spar deck 絞盤（2026-10-13；讀數見 notes.md 階段三十八）
+- [x] 1931 plan #24422／#29621 ⇒ 主桅後 17.5 ft、兩個艙口中間；沿用餘燼號 -capstan（scale 0.163、kind=capstan）
+- [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說 kind=capstan）
+- [ ] 舵輪位置跟 1931 #24422 相反（作品在 mizzen 船尾側、圖在船頭側）—— 要不要搬，問 Tim
+- [ ] gun deck 絞盤（同一根軸，#29621）、binnacle（沒出處）—— 之後
