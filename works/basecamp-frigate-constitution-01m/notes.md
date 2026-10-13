@@ -761,3 +761,14 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 自檢：新格與鏡像在空氣裡、兩舷船殼外緣逐點對稱、新格連到現況。
 - 讀數：一舷 33 格；組裝件 **1,395,903**（＋66，新舊相減只多這些、舊格 0 刪 0 換色）、1 元件、空腔 0、link_overlap 0；繩 901 條（直線＋下垂）碰到 0。
 - 過程圖：`overlays/stage35_chesstrees_waist.png`、`stage35_chesstree_quarter.png`（船外看）。
+
+## 階段三十六 quarter davits 與 28 ft whaleboat（2026-10-13 晚，BTC；Tim：「繼續GO」⇒ todo 102「davits 與小艇」）
+設計 `design/draft_quarter_boats.py`（輸入：組裝件 list 匯出＋`sub=ropes` 列表）⇒ `masks/quarter_boats/{davits_side,whaleboat}.vox.txt`、`verify_quarter_boats.json`；套用 `design/tools/quarter_boats_apply.py`。
+- 出處：Navy plan No. 24474（1931）—— quarterdeck 舷外兩根直立 davit、頂上橫桁、中間吊「28 FT WHALEBOAT」；船尾 davit 吊「28 FT WHALE GIG BOAT」（下一階段）。用 gun deck 砲門距當尺（500 px ≈ 31 格）：davit X 173／251、頂 ＝ 舷頂 ＋32、艇底 ＝ 舷頂 ＋6。
+- ⚠ 挪位置：X 173 正壓在 mizzen backstay 的 deadeye／lanyard（X 168–178、y 214–218）⇒ 兩根一起往船尾 10 格 ＝ **X 163／241**（間距照圖 78）。先量過這一段：繩全部 y ≤ 218、船殼與 channels 最外 y 219 ⇒ 艇放在 y ≥ 222。
+- 艇 `-whaleboat`（0.05 m、171×37×21、17,460 格）：28 ft、兩頭尖、外殼白 255、舷頂一條黑、舷緣 136、艇內 141、坐板 5、槳 5；固定點 ring-aft／ring-fwd（在 davit 正下方）。⚠ 寬 1.85 m、深 0.75 m 照一般 whaleboat 比例，未查證。v1 殼 1 格厚 ⇒ 斜的殼一層錯一格、散成 30 塊 ⇒ 殼 2 格。
+- 組裝件模型 `小艇-S` at (203, 233.5, 134)、`小艇-P` at (203, 87.5, 134) mirror=y；scale 0.5 明寫；meta kind=boat、boat=whaleboat、length_m=8.53。
+- davits `-davits-side`（一舷、固定框 at 150,200,100、110×50×80、736 格）＋鏡像關聯：2×2 黑柱貼船殼最寬那一格往上、頂前四分之一圓彎到艇中線上方（z 160）、頭下一格滑車、兩根頭之間一根橫桁；固定點 davit-aft／fwd.head。吊索 4 條（組 boats/falls、#a08458、0.35、拉直）：davit 頭 → 艇環，長 15.25、垂直（艉那條兩端 x 同、艏那條差 0.5）。
+- 自檢：davit 與鏡像在空氣裡、連到現況；艇（格心＋八角）不撞現況與 davit；既有 901 條繩（直線＋下垂）穿過 davit 或艇 0。
+- 讀數：組裝件 **1,397,375**（＋1,472 ＝ davit 兩舷，新舊相減只多這些）、1 元件、空腔 0、link_overlap 0；模型 210、models_broken 0；繩 905、ropes_broken 0。
+- 過程圖：`overlays/stage36_quarter_boat{,_end,_top,_out}.png`、`stage36_ship.png`（_out 是從船外看）。

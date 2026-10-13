@@ -302,3 +302,8 @@ Tim 2026-10-12 拍板（醒來不要重問）：
   - entry port 柱：X 373／383、色 146、頂 z 128（11 號讀到 129.6，source_entry.json）＋扶手繩，階段三十就做了；圖上兩柱之間沒有橫欄 ⇒ 沒有缺
 - [x] fenders／chesstree：02、04、11、15 號都沒畫 ⇒ 查資料 agent 找到 1931 plan 24474 ⇒ fenders 不做（1931 舷側沒有）、chesstrees 三個做了（階段三十五）
 - [x] 階段三十五 Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說）
+
+## 階段三十六 quarter davits 與 whaleboat（2026-10-13；讀數見 notes.md 階段三十六）
+- [x] 1931 plan 24474 讀位置；davit 挪 −10 避 mizzen backstay；-whaleboat、-davits-side＋鏡像、模型 2、吊索 4；組裝件 1,397,375
+- [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說 —— 多了兩艘 kind=boat）
+- [ ] 下一階段候選：船尾 davit 與 28 ft whale gig（同一張圖）
