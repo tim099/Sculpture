@@ -208,6 +208,38 @@ class Ship:
         return np.maximum(out, 0.0)
 
 
+# ───────────────────────── 船殼表與倍數（別支產生程式也用） ─────────────────────────
+def hull_table(ship):
+    """船殼半寬表：x 每 0.05、z 每 0.05（底圖公尺）；回傳最大半寬（z ≤ 9.5）與它的位置"""
+    xs = np.round(np.arange(-3.0, 42.5 + 1e-9, 0.05), 3)
+    zs = np.round(np.arange(0.0, ship.stern_top + 0.05, 0.05), 3)
+    T = np.full((len(zs), len(xs)), np.nan)
+    for j, z in enumerate(zs):
+        T[j] = ship.hb(xs, z)
+    with np.errstate(all='ignore'):
+        hb_max = float(np.nanmax(T[zs <= 9.5]))
+        jm, im = np.unravel_index(np.nanargmax(np.where(zs[:, None] <= 9.5, T, -1)), T.shape)
+    return xs, zs, T, hb_max, (jm, im)
+
+
+def scale_of(plan, ship, hb_max):
+    """倍數：寬度先碰上限；回傳 k、底圖 1 m ＝ 幾格、底圖 → 作品格的換算"""
+    Sc = plan['scale']
+    k = Sc['breadth_limit_m'] / (2 * (hb_max + ship.plank))
+    cpm = Sc['cells_per_m'] * k
+    X = lambda x: Sc['X_of_x0'] + np.asarray(x, float) * cpm
+    Z = lambda z: Sc['Z_of_keel_top'] + np.asarray(z, float) * cpm
+    Yh = lambda h: np.asarray(h, float) * cpm
+    return k, cpm, X, Z, Yh
+
+
+def load(design):
+    plan = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))
+    R = json.load(open(os.path.join(design, 'readings_LI.json'), encoding='utf-8'))
+    B = json.load(open(os.path.join(design, 'readings_LI_bodyplan.json'), encoding='utf-8'))
+    return plan, R, B, Ship(plan, R, B)
+
+
 # ───────────────────────── 畫圖工具 ─────────────────────────
 def font(size, bold=False):
     f = 'C:/Windows/Fonts/msjhbd.ttc' if bold else 'C:/Windows/Fonts/msjh.ttc'
@@ -250,21 +282,8 @@ def main():
     Si = plan['silhouette']
 
     # ── 船殼表：x 每 0.05、z 每 0.05（底圖公尺）
-    xs = np.round(np.arange(-3.0, 42.5 + 1e-9, 0.05), 3)
-    zmax = ship.stern_top + 0.05
-    zs = np.round(np.arange(0.0, zmax, 0.05), 3)
-    T = np.full((len(zs), len(xs)), np.nan)
-    for j, z in enumerate(zs):
-        T[j] = ship.hb(xs, z)
-    hb_max = float(np.nanmax(T[zs <= 9.5]))
-    jm, im = np.unravel_index(np.nanargmax(np.where(zs[:, None] <= 9.5, T, -1)), T.shape)
-
-    # ── 倍數：寬度先碰上限
-    k = Sc['breadth_limit_m'] / (2 * (hb_max + ship.plank))
-    cpm = Sc['cells_per_m'] * k                           # 底圖 1 m ＝ 幾格
-    X = lambda x: Sc['X_of_x0'] + np.asarray(x, float) * cpm
-    Z = lambda z: Sc['Z_of_keel_top'] + np.asarray(z, float) * cpm
-    Yh = lambda h: np.asarray(h, float) * cpm             # 半寬（格）
+    xs, zs, T, hb_max, (jm, im) = hull_table(ship)
+    k, cpm, X, Z, Yh = scale_of(plan, ship, hb_max)
     kd = ship.keel_depth
 
     # ── 輪廓上的幾個點
