@@ -360,3 +360,25 @@ Tim：「提交吧 然後繼續做舵柄與舵索 GO」。設計 plan.json `stee
   - 🩸 **量尺第三次撞同一個病**：繩的中段第一版只拿管子頂點 —— 直的繩（下垂 0）整段只有兩端兩圈頂點，往船頭挪 1 格穿過甲板也報 0。改在三角形面上取樣。今晚第三次：boom、底座、繩，同一句「網格的頂點不代表網格」，筆記寫了也攔不住手。
   - 觀察：`hide_links=甲板-後` 會把綁在它固定點上的繩一起藏 ⇒ 看艙房改用 region 切到 z 40、`rope_groups=steering` 只畫舵索。
 - 過程圖：`overlays/stage16_steering_only_yaw-60.png`（只畫舵索、切掉甲板）、`stage16_tiller_cabin_cut_yaw-40.png`、`stage16_tiller_port_stern.png`。
+
+## 階段十七 main staysail（桅間支索帆）—— 掛帆（2026-10-13 晚，wake #118）
+Tim 看了渲染問「這裡好像少一張帆（還是設計上就是這樣？）」—— 主桅 gaff 主帆上方那根光桁底下沒有帆。我回：照定稿圖是 brigantine，主桅不掛 course；那根桁（`yard-main-course`）是階段十一加給 main topsail 下角綁的，⚠ 真船有沒有沒查證；給三條路。Tim：「加 main staysail」。
+- 設計 plan.json `sails.staysails`（provenance `sails.staysails`）；`draft_sails.py` 加「桅間支索帆」迴圈（不跟艏斜桅那一疊比疊放）。重產 verify_sails.json：原本 8 面帆、20 條帆腳索**逐筆相同**，只多 main-staysail＋2 條 sheet；重跑 md5 相同。
+- 掛在 main-stay（主桅 top-fwd → 前桅 aft-low）：tack_f 0.1、head_f 0.7、foot 0.6、上翹 10°（照 fore-staysail 的值，設計決定）；帆腳索兩舷綁 pinrail-7 pin-2。角：tack (198.9, 80.5, 53.7)、head (165.3, 80.5, 108.9)、clew 初始 (160.7, 80.5, 60.4)。
+  - 🩸 v1 tack 綁在前桅腳 aft-low（stay 的下端）：引擎模擬後的布在 tack 上方鼓進往後傾的前桅 —— 196 個取樣點、21 格（x 204–206、z 45–52）。是**掛上去之後用引擎匯出量到的**（產生程式的碰撞世界停在階段十，只量平的布）。⇒ tack 沿 stay 往上 10%（實船支索帆的 tack 常綁在一段 tack pendant 上）。
+- 讀數（`design/check_staysail.py`，讀引擎 obj＝模擬後的布）：sails 10、sails_broken 0；布取樣 16,184（離 luff >1.2 的 16,094）落在實心 **0**；最近的東西：前桅 shroud P3 18.4 格；其他帆：fore-course 24.4、mainsail 29.6、main-topsail 30.6。反向對照：整面往前 6 ⇒ 389。
+- 過程圖：`overlays/stage17_main_staysail_yaw-75.png`。
+- 給遊戲：帆名多一面 `main-staysail`（三角帆、主桅前面）。
+
+## 階段十八 彈藥庫＋火藥桶 —— 落格（2026-10-13 晚，wake #118）
+Tim：「提交吧 加main staysail 然後繼續做彈藥庫 GO」。ame（seq 24230）：最少一間 `kind=magazine`、桶 `kind=powder`，艙房地板底下就行。設計 plan.json `magazine`（provenance `magazine`、`.kegs`、`.aft_scuttle`）；產生 `design/draft_magazine.py <design> <-powder-barrel 的 list>` ⇒ `masks/magazine/{room,main_scuttle}.vox.txt`、`verify_magazine.json`；下 CLI `design/apply_magazine.py`；讀數 `design/check_magazine.py`。重跑逐位元組相同；`nf_state.py` 加 stage18（鍵 magazine）。
+- 量艙房地板底下：x 86–138 中線上空氣從 z 5–8（龍骨內側）到 z 20–23（艙房地板橫樑底下）、V 形往兩舷收。
+- **子作品** `summit-night-falcon-01m-magazine`（parent 船殼、0.1 m、框 98,50,0 起 24×61×24）5,587 格：房間 x 99–120、地板 z 8（松木 177、每 6 格橡木壓條 136）、**地板底下到船殼全部填實**（橡木 136，不留空腔）、兩道橫艙壁 x 98／121（銅 168、外圈橡木框）、側壁貼船殼一格銅皮到 z 18、門洞在船頭那道（3 寬 × 1.2 m）。組裝件關聯 `彈藥庫` at 98,50,0、meta `kind=magazine, powder_lb=800`。固定點 `blast` (110,80,16)（房間空氣重心最近那格）、`door` (121,80,9)。
+- **火藥桶** 8 個：直接引用 basecamp 憲法號的 `-powder-barrel`（whole barrel 100 磅、0.02 m）當模型，scale 0.2 明寫、pivot 桶底中心；`桶-01..08`（meta `kind=powder, powder_lb=100`），步距 5 排在地板上、取樣點全在房間空氣裡、底下是地板。數量是設計決定（12 門 × 約 40 發 × 約 1.3 磅 ≈ 640 磅 ⇒ 6–7 桶＋小火器 ⇒ 8；⚠ 未查證）；powder_lb ＝ 桶數 × 100（Shipbuilding §9：不是史料）。
+- 🩸 v1 落格前的模擬：後艙壁把船尾那段貨艙（x 66–97、z 5–26）**封成 5,604 格的空腔** ⇒ 艙房地板 x 84–86、y 79–81 開一個 3×3 的 lazarette 艙口（刻主甲板子作品 21 格），貨艙從艙房下去；彈藥庫照舊只有一道門。
+- 讀數：
+  - 引擎 stats：**100,338 格**（94,772 − 21 ＋ 5,587）、link_overlap 0、1 個元件、空腔 0、左右差 0；彈藥庫 models_drawn 8、broken 0。
+  - `check_magazine.py`：結果帳 100,338／100,338 缺 0、多 0、色差 0；關聯 meta ＝ 我的；blast／door 引擎 vs 我算的最大差 0.0；8 個桶 meta 一致；桶網格碰撞 0、底面全著地、桶心最近 5.0 格。反向對照往下 1 ⇒ 撞 3,976、固定點報 1.0。
+- 🩸 同一晚第三次 heredoc 的 `'
+'` 進 Python 變成真的換行（draft_helm、draft_steering 之後又一次）—— 改檔走 Edit。
+- 過程圖：`overlays/stage18_magazine_section.png`（只畫左舷半邊的格子，從右舷看進去）。

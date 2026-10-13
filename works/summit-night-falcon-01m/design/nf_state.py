@@ -25,6 +25,7 @@ STAGES = [
     ('stage14', 'verify_gunfittings.json', {'fittings': 'fittings'}),   # 階段十三（砲）是外部模型，不動格；十四 砲具一舷＋鏡像
     ('stage15', 'verify_helm.json', {'hull': 'hull', 'rudder': 'rudder'}),   # gudgeon 從舵搬回船殼；舵改外部模型 ⇒ 之後不算組裝件的格（鍵改名 rudder_model）
     ('stage16', 'verify_steering.json', {'rudder': 'rudder_model', 'quarter': 'quarter', 'hull': 'hull', 'stern_deco': 'stern_deco'}),   # 舵柄（舵模型）、舵柄口、導索塊與繩孔
+    ('stage18', 'verify_magazine.json', {'main': 'main', 'magazine': 'magazine'}),   # 階段十七（main staysail）是布，不動格；十八 彈藥庫（關聯 at frame_at）＋艙房地板的 lazarette 艙口
 ]
 
 
@@ -42,7 +43,7 @@ def _apply(tgt, o, d, origin=(0, 0, 0), mirror=False):
 
 def state_after(d, upto):
     W = {k: np.zeros((NX, NY, NZ), np.int16) for k in ('hull', 'main', 'quarter', 'head', 'stern_deco', 'gallery_S', 'gallery_P', 'rudder',
-                                                       'mast_fore', 'mast_main', 'bowsprit', 'channels_S', 'channels_P', 'fife', 'side_S', 'side_P', 'fittings_S', 'fittings_P')}
+                                                       'mast_fore', 'mast_main', 'bowsprit', 'channels_S', 'channels_P', 'fife', 'side_S', 'side_P', 'fittings_S', 'fittings_P', 'magazine')}
     for name, fn, keys in STAGES:
         V = json.load(open(os.path.join(d, fn), encoding='utf-8'))['stamp_order']
         groups = [(None, V)] if isinstance(V, list) else list(V.items())

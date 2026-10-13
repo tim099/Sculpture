@@ -21,7 +21,7 @@
 - [ ] knightheads、cathead（錨要掛）
 - [x] 舵改外部模型（階段十五：轉軸 ＝ 舵柱中心線、meta hinge／axis；gudgeon 搬回船殼）；舵輪（輪轂上隼的疤）＋舵輪座 —— ⚠ 轉 ±35° 舵前緣的角擦進艉柱表面一層（沒削，削了舵會斷）
 - [x] 舵柄與舵索（階段十六：舵柄在艙房 z 37–38、艉板柱子開舵柄口；舵索 6 段：鼓輪 → 導索塊 → 舷側滑車 y 64／96 → 舵柄頭）
-- [ ] 主桅那根不掛帆的下桁（yard-main-course）：Tim 問是不是少一張帆 —— 回了「brigantine 照定稿圖不掛 main course；那根桁是我加給 topsail 下角綁的，⚠ 真船有沒有沒查證」；等 Tim 選：維持／main staysail／main course
+- [x] main staysail（階段十七：Tim 選；掛在 main-stay，tack 沿 stay 往上 10%）
 - [ ] 斷口艙壁：門／欄杆（breastwork rail）；後甲板舷牆上半是欄杆（定稿圖）
 - [x] 桅、艏斜桅、channels（階段七）
 - [x] 帆桁（階段八：6 件子作品＋外部模型；固定點 84 在 verify_yards.json 的 placements[].anchors）
@@ -37,7 +37,7 @@
 - [ ] 插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯
 - [x] 船殼關聯 meta kind=ship、waterline_z=15、crew=31（ame seq 24230 確認）
-- [ ] 彈藥庫（艙房地板底下一間 kind=magazine）＋火藥桶模型 kind=powder（powder_lb）
+- [x] 彈藥庫（階段十八：艙房地板底下 x 98–121、kind=magazine powder_lb 800）＋火藥桶 8（引用憲法號 -powder-barrel）；lazarette 艙口
 - [ ] 梯子：艙房 companion（x 110–117）一座 kind=ladders（foot／lo／hi／head）
 - [ ] 匯出 vxk（include=rig,models,parts,meta），格數與 checksum 寫在單上、跟 ame 說
 

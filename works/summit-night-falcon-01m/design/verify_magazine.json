@@ -1,0 +1,161 @@
+{
+ "note": "draft_magazine.py（階段十八）—— 現況 nf_state stage16",
+ "work": "summit-night-falcon-01m-magazine",
+ "frame_at": [
+  98,
+  50,
+  0
+ ],
+ "frame_size": [
+  24,
+  61,
+  24
+ ],
+ "stamp_order": {
+  "main": [
+   {
+    "name": "aft_scuttle",
+    "op": "carvevox",
+    "file": "masks/magazine/main_scuttle.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 21
+   }
+  ],
+  "magazine": [
+   {
+    "name": "room",
+    "op": "stampvox",
+    "file": "masks/magazine/room.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     98,
+     50,
+     0
+    ],
+    "voxels": 5587,
+    "sha256": "16bda93762c721a9d4d17f602cf0a51546bc9adf2a9db57be7b4dac42f7318e2"
+   }
+  ]
+ },
+ "link": {
+  "name": "彈藥庫",
+  "at": [
+   98,
+   50,
+   0
+  ],
+  "meta": {
+   "kind": "magazine",
+   "powder_lb": 800
+  }
+ },
+ "anchors": [
+  {
+   "name": "blast",
+   "world": [
+    110,
+    80,
+    16
+   ],
+   "at": [
+    12,
+    30,
+    16
+   ]
+  },
+  {
+   "name": "door",
+   "world": [
+    121,
+    80,
+    9
+   ],
+   "at": [
+    23,
+    30,
+    9
+   ]
+  }
+ ],
+ "kegs": {
+  "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+  "scale": 0.2,
+  "pivot": [
+   11.0,
+   11.0,
+   0.0
+  ],
+  "at_world": [
+   [
+    102.5,
+    80.5,
+    9.0
+   ],
+   [
+    107.5,
+    80.5,
+    9.0
+   ],
+   [
+    112.5,
+    80.5,
+    9.0
+   ],
+   [
+    112.5,
+    75.5,
+    9.0
+   ],
+   [
+    112.5,
+    85.5,
+    9.0
+   ],
+   [
+    117.5,
+    80.5,
+    9.0
+   ],
+   [
+    117.5,
+    75.5,
+    9.0
+   ],
+   [
+    117.5,
+    85.5,
+    9.0
+   ]
+  ],
+  "meta": {
+   "kind": "powder",
+   "powder_lb": 100
+  }
+ },
+ "counts": {
+  "scuttle": 21,
+  "cells": 5587,
+  "colors": {
+   "136": 3877,
+   "168": 1081,
+   "177": 629
+  },
+  "room_air": 8568,
+  "kegs": 8,
+  "components_after": 1,
+  "cavities_after": 0
+ }
+}

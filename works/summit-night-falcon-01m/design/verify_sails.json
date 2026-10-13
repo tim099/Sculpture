@@ -12,6 +12,7 @@
       "mast_fore": 68
     },
     "jib": {},
+    "main-staysail": {},
     "main-topsail": {
       "mast_main": 70
     },
@@ -28,6 +29,19 @@
     "jib": {
       "clew_below_own_luff": 63.262,
       "foot_above_inner_luff_min": 13.641
+    },
+    "main-staysail": {
+      "clew": [
+        160.716,
+        80.5,
+        60.433
+      ],
+      "clew_below_own_luff": 55.998,
+      "head": [
+        165.3,
+        80.5,
+        108.9
+      ]
     }
   },
   "pins_used_by_sails": [
@@ -35,11 +49,13 @@
     "繫繩欄-鏡像/pinrail-11.pin-2",
     "繫繩欄-鏡像/pinrail-12.pin-1",
     "繫繩欄-鏡像/pinrail-12.pin-2",
+    "繫繩欄-鏡像/pinrail-7.pin-2",
     "繫繩欄-鏡像/pinrail-8.pin-2",
     "繫繩欄/pinrail-10.pin-4",
     "繫繩欄/pinrail-11.pin-2",
     "繫繩欄/pinrail-12.pin-1",
     "繫繩欄/pinrail-12.pin-2",
+    "繫繩欄/pinrail-7.pin-2",
     "繫繩欄/pinrail-8.pin-2"
   ],
   "rope_hits_mid": {},
@@ -484,6 +500,50 @@
         66.5,
         46.5
       ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:main-staysail/clew",
+      "from_world": [
+        160.7159,
+        80.5,
+        60.4329
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 33.38,
+      "name": "main-staysail-sheet-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄/pinrail-7.pin-2",
+      "to_world": [
+        160.5,
+        106.5,
+        39.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:main-staysail/clew",
+      "from_world": [
+        160.7159,
+        80.5,
+        60.4329
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 33.38,
+      "name": "main-staysail-sheet-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄-鏡像/pinrail-7.pin-2",
+      "to_world": [
+        160.5,
+        54.5,
+        39.5
+      ]
     }
   ],
   "sails": [
@@ -801,6 +861,41 @@
       "fullness": 1.06,
       "name": "flying-jib",
       "note": "luff（邊 0）沿 fore-tg-stay"
+    },
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "tack",
+        "head",
+        "clew"
+      ],
+      "corners": [
+        "198.9000,80.5000,53.7000",
+        "165.3000,80.5000,108.9000",
+        "160.7159,80.5000,60.4329"
+      ],
+      "corners_world": [
+        [
+          198.9,
+          80.5,
+          53.7
+        ],
+        [
+          165.3,
+          80.5,
+          108.9
+        ],
+        [
+          160.7159,
+          80.5,
+          60.4329
+        ]
+      ],
+      "free": "clew",
+      "fullness": 1.06,
+      "name": "main-staysail",
+      "note": "luff（邊 0）沿 main-stay（桅間支索帆）"
     }
   ],
   "seconds": 4,

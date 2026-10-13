@@ -148,6 +148,7 @@
       { "name": "jib", "stay": "fore-tm-stay", "head_f": 0.7, "foot_ratio": 0.6, "foot_up_deg": 10, "sheet_rail": 11 },
       { "name": "flying-jib", "stay": "fore-tg-stay", "head_f": 0.75, "foot_ratio": 0.38, "foot_up_deg": 32, "sheet_rail": 12 }
     ],
+    "staysails": [{ "name": "main-staysail", "stay": "main-stay", "tack_f": 0.1, "head_f": 0.7, "foot_ratio": 0.6, "foot_up_deg": 10, "sheet_rail": 7 }],
     "stack_margin": 5,
     "sheet_thickness": { "course": 0.45, "topsail": 0.35, "head": 0.35 }
   },
@@ -194,6 +195,15 @@
     "block_color": 104, "base_hole_half": 1, "orphan_max": 8,
     "rope": { "thickness": 0.25, "slack": 1.02, "color": "#a08458" }
   },
+  "magazine": {
+    "work": "summit-night-falcon-01m-magazine", "frame_at": [98, 50, 0], "frame_size": [24, 61, 24],
+    "x": [98, 121], "floor_z": 8, "ceil_z": 23, "lining_top": 18, "batten_step": 6,
+    "door": { "half": 1, "height": 12 },
+    "colors": { "pine": 177, "oak": 136, "copper": 168 },
+    "keg_work": "basecamp-frigate-constitution-01m-powder-barrel", "keg_scale": 0.2, "keg_pivot": [11.0, 11.0, 0.0],
+    "keg_step": 5, "keg_clear": 1, "max_kegs": 8,
+    "aft_scuttle": { "x": [84, 86], "y": [79, 81] }
+  },
   "provenance": {
     "guns": "設計決定（階段十三，2026-10-13）：4 磅長砲 12 門（每舷 6，照階段四已開的砲門）。口徑是我定的 —— 原作沒寫砲（查過：Books/summit-masthead-bet、-sequel 全文「砲／炮」0 處）；船設寫『小而快、靠靈活不靠火力』、參照船 Oswego 160 噸、RMG 的 brigantine 模型 10–12 門 ⇒ 取英國海軍最小的長砲 4 磅。",
     "guns.barrel_len": "參考資料（弱）：4 磅砲砲管 6 ft（≈1.83 m）—— modelshipworld.com 論壇 6pd/4pd cannon measurements 一串（論壇，不是史料；有人說也有 5.5 ft）⇒ 36 格（0.05 m）＝ 1.80 m",
@@ -211,6 +221,10 @@
     "steering": "設計決定：有舵輪的船，舵柄通常在船尾艙房、後甲板底下，舵索從鼓輪往下穿過甲板、經滑車接到舵柄頭（憲法號階段二十七：舵索往下穿進甲板）。夜隼號的舵頭在艉板外 z 37–44，艙房就在後甲板下（x 64 起 z 31–41 是空的）⇒ 舵柄在 z 37–38、從舵頭（x 58）往前伸到 x 80（2.2 m），穿過艉板中間那根柱子（z 37 兩旁是船尾窗）",
     "steering.port": "設計決定：舵柄口 ＝ 舵柄繞舵軸轉 −35°..+35°（每 1°、每格 5×5×5 取樣）掃過的現況實心格，從所屬子作品刻掉",
     "steering.ropes": "設計決定：每舷 3 段（鼓輪底 → 板下導索塊 → 舷側滑車 → 舵柄頭）；導索塊在鼓輪正下方（x 93／94），滑車在 x 92、y 64／96 掛在甲板板下（2 格高；v1 放 y 74／86 已落格 ⇒ 舵柄 ±35° 時舵柄頭擺到 y 67.9／93.1，比滑車還外面，舵索會被反著拉 ⇒ 刻掉、往外移到舵柄頭擺不到的地方），避開橫樑（x 85–86、95–96 的 z 39–41）；繩孔：甲板板一格、舵輪座底板 3×3（0.02 m）。粗 0.25、slack 1.02、#a08458（同 tackle）",
+    "sails.staysails": "Tim 2026-10-13（TASK-0529 #21 之後）：主桅那根光桁底下要不要補帆 —— 選「加 main staysail」（brigantine 常見的桅間支索帆，船設不用改）。掛在 main-stay（主桅 top → 前桅腳）；head_f／foot_ratio／foot_up_deg 照 fore-staysail 的值（設計決定，沒查史料比例）；帆腳索綁 pinrail-7（x 156–166，clew 附近）。tack_f 0.1：tack 沿 stay 往上 10%（v1 綁在前桅腳 aft-low ⇒ 模擬後 tack 上方的布鼓進往後傾的前桅 21 格；實船的支索帆 tack 常綁在一段 tack pendant 上、離甲板一段）",
+    "magazine": "做法照 basecamp 憲法號階段三十二（Shipbuilding §8）；位置照 @ame（酒館 seq 24230）：最少一間 kind=magazine、桶 kind=powder，艙房地板底下就行。設計決定：x 98–121（2.4 m）、地板 z 8（龍骨內側之上）、天花板就是艙房地板；門在船頭那道艙壁（往前通到貨艙）",
+    "magazine.kegs": "設計決定（⚠ 未查證）：12 門 4 磅砲 × 每門約 40 發 × 每發約 ⅓ 砲彈重（1.3 磅）≈ 640 磅 ⇒ 約 6–7 桶，再留一點給小火器 ⇒ 最多 8 桶。桶直接引用 basecamp 憲法號的 -powder-barrel（whole barrel 100 磅，0.02 m；她查的 1813 英制尺寸），scale 0.2、pivot 桶底中心。powder_lb ＝ 桶數 × 100（Shipbuilding §9：不是史料）",
+    "magazine.aft_scuttle": "設計決定：艙房地板 x 84–86、y 79–81 開一個 3×3 艙口（lazarette：艙房底下放糧食的那一段，從艙房下去）。v1 沒有 ⇒ 彈藥庫的後艙壁把船尾那段貨艙（x 66–97、z 5–26）封成 5,604 格的空腔；彈藥庫照舊只有一道門",
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
     "keel.rabbet_z": "設計決定：龍骨深約 0.4 m",

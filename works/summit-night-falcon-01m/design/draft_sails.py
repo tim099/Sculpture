@@ -86,6 +86,24 @@ def main():
             pin = r.pick(r.rail(H['sheet_rail'], sd), clew[0])
             r.rope('%s-sheet-%s' % (H['name'], sd), 'sail:%s/clew' % H['name'], pin, 'sheet', 'running/sheets')
             r.ropes[-1]['thickness'] = S['sheet_thickness']['head']
+    # ── 桅間支索帆（階段十七：main staysail；不跟艏斜桅那一疊比疊放，掛在另一條 stay）──
+    for H in S.get('staysails', []):
+        st = stays[H['stay']]
+        Lw, Hw = np.array(st['to_world']), np.array(st['from_world'])
+        # tack 沿 stay 往上 tack_f（v1 綁在前桅腳 aft-low：模擬後 tack 上方的布鼓進往後傾的前桅 21 格）
+        Tw = Lw + H.get('tack_f', 0.0) * (Hw - Lw); T = G(Tw) if H.get('tack_f') else st['to']
+        Ll = float(np.linalg.norm(Hw - Lw)); head = Lw + H['head_f'] * (Hw - Lw)
+        a = math.radians(H['foot_up_deg']); fl = H['foot_ratio'] * (H['head_f'] - H.get('tack_f', 0.0)) * Ll
+        clew = Tw + np.array([-math.cos(a), 0, math.sin(a)]) * fl
+        luff_z = lambda x, A=Lw, B=Hw: A[2] + (A[0] - x) / (A[0] - B[0]) * (B[2] - A[2])
+        ck = {'clew_below_own_luff': round(float(luff_z(clew[0]) - clew[2]), 3), 'clew': [round(float(c), 3) for c in clew], 'head': [round(float(c), 3) for c in head]}
+        assert ck['clew_below_own_luff'] > 10, (H['name'], ck)
+        checks[H['name']] = ck
+        sail(H['name'], [T, G(head), G(clew)], ['tack', 'head', 'clew'], [Tw, head, clew], '0', 'clew', S['fullness']['head'], 'luff（邊 0）沿 %s（桅間支索帆）' % H['stay'])
+        for sd in ('S', 'P'):
+            pin = r.pick(r.rail(H['sheet_rail'], sd), clew[0])
+            r.rope('%s-sheet-%s' % (H['name'], sd), 'sail:%s/clew' % H['name'], pin, 'sheet', 'running/sheets')
+            r.ropes[-1]['thickness'] = S['sheet_thickness']['head']
     # ── 平的布碰撞 ──
     world = {k: v > 0 for k, v in r.W.items()}
     cloth = {}
