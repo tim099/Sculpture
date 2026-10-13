@@ -151,3 +151,16 @@
   ② 側面圖量到走道牆在 x 195–197 頂只到 136 ⇒ 是後桅的 **fife rail**（階段七從憲法號開放的 quarterdeck 搬來，被 poop 罩在這裡，x 195–214、|dy| ≤ 15、z 129–141），v1 的前艙壁 x 213 也穿過它 ⇒ v2：艙的前牆退到 x 193、前面留玄關；前艙壁移到 x 215，門改成 poop 梯子兩側兩扇。
 - 讀數：7,458 格、跟組裝件重疊 0；組裝件 **1,785,078**、1 元件、空腔 0、link_overlap 0。過程圖 `overlays/stage8c_cabin_only_{a,b,side,fwd}.png`。
 - ⚠ 待決定：後桅 fife rail 在 poop 底下（船長室玄關裡）—— 實船應在 poop 甲板上。搬上去只要動它和它身上 13 個固定點：**沒有任何一條繩綁在它上面**（2026-10-13 查組裝件 ropes，mizzen-fife／mizzen-bitt 0 條）。⚠ 回報 Tim 時我說「要連帶重綁後桅動索」是推的、錯的。
+
+## 階段九 船頭：knee、cheeks、trailboard、火焰紋章、hawse、head rails、cathead、錨、船首像 —— 新圖紙 10／10b（2026-10-13，Tim：「繼續造船吧 GO」）
+設計 plan.json `head_build`；產生 `design/draft_head.py`（憲法號 draft_head.py 照換算改寫；曲線現讀憲法號 plan.json `head`）、`design/draft_figurehead.py`（原創）⇒ `masks/head/{knee,side,figurehead}.vox.txt`、`knee_anchors.json`、`anchor_pick.json`、`verify_head.json`、`verify_figurehead.json`、`verify_head_ledger.json`、`sheet10_head_v1.png`、`sheet10b_figurehead_v1.png`；落格 `design/tools/head_apply.py`、結果帳 `design/tools/head_ledger.py`。
+- 換算（設計決定）：x ＋66；z ≤ 63 不動、63..131 線性拉到 63..154（×91/68）、≥ 131 ＋23 —— 船殼在 z 109 插了 23 層，knee 照搬會在插入段那 23 層變成一段直的 ⇒ 整片 knee 跟著船頭變高（比憲法號更直立）。連續、單調；cheeks、卷草、hawse、rails、cathead 的 (x, z) 都走同一個換算，貼表面的照舊從餘燼號自己的外殼算。
+- 配色：憲法號的白 → 金（cheeks、卷草、rails、head timbers）；盾牌 → 火焰紋章（金框、亮黃、橘、暗紅火心，x 759、z 109）；hawse 圈 v1 照抄鐵灰 146，貼在暗紅帶上像兩個字母（圖紙量到）⇒ 金圈＋圈裡一層黑當孔。billethead 不做 ⇒ 船首像。
+- **船首像「浴火的鳳凰」**（原創；kiara 的 `kiara-ember-phoenix` 是立在石台上的雕像、有台座與小燈、1 m＝32 格 ⇒ 不拿來當船首像）：身體趴在 knee 尖端（790, 154）往前上方傾、頭在艏斜桅底下（喙尖 x 813、艏斜桅底 z 175 那裡頭頂 171）、翅膀往後上方張開、尾羽是順著 cutwater 往下流的火舌（黃 → 橘 → 紅 → 暗紅，停在 bobstay 固定點上面）。每個部位是膠囊／球、|dy| 對稱。
+  v1 翅膀是一把分開的羽毛棒 ⇒ 鳳凰自己散成 31 塊、浮空 48 格 ⇒ v2 改成一片羽膜（平面過肩、翼尖、後下角；外緣那圈每根羽毛中間留、兩根之間切掉 ⇒ 羽尖），脖子縮短、頭放大 ⇒ 浮空 0、鏡像差 0。撞到現況不放：身體 165（埋進 knee 頂與 rails 尖）、尾 22、翅 14。
+- 錨：**直接關聯憲法號的 `-anchor`**（Tim：子物件能重複用就重複用）；掛法同憲法號（ring 頂貼 cathead 端那格正下方、兩舷都不撞）⇒ 第一個候選就過：cathead (721, 205, 152)、錨-S at 698,189,95、錨-P at 698,99,95 mirror=y（憲法號 630,189,73 ⇒ 差 (+68, 0, +22)）。
+- bobstay：憲法號 knee 的 bobstay-1／2（707,96）（713,104）照換算 ⇒ knee 中線那一層最前面那格 (772,160,107)、(780,160,118)；組裝件 bobstay-1／2 → 艏斜桅同名點（長 79.26／85.8，ok）。第一次拉 bobstay-1 IOException（檔案被佔用，同階段七）⇒ 重跑工具補上。繩 761、broken 0。
+- 子作品（parent 船殼、tags sub、0.1 m）：`-head-knee` 7,091（全黑）、`-head-side`（一舷，120×64×110 at 696,161,70）3,521（cheek 776、hawse 196＋孔 39、紋章 37、卷草 255、cathead 139、rail-top 418、rail-main 470、panel 1,093、timber 98）、`-figurehead` 1,717；組裝件關聯 `船頭-knee`、`船頭裝飾`、`船頭裝飾-鏡像`（at.y 96）、`船首像`、`錨-S`、`錨-P`。
+- 讀數：組裝件 **1,803,208**（＝ 1,785,078 ＋ 7,091 ＋ 2×3,521 ＋ 1,717 ＋ 2×1,140）、1 元件、空腔 0、link_overlap 0、models_broken 0；鏡像差 151／955／10 跟這一階段之前一樣（船長室與 EMBER 名牌）⇒ 這一階段沒有新增不對稱；**結果帳**（組裝件匯出 vs 設計）缺 0、多 0、色差 0；產生程式套用後重跑，三份清單逐位元組相同。
+- 過程圖：`overlays/stage9_head_{bowq,bowq_port,side,front}.png`、`stage9_figurehead_close.png`（ropes=0 models=0 才是真的特寫）。
+- ⚠ 看得到的：hawse 金圈在暗紅帶上仍有點像字；panel（兩道 rail 之間的黑板）貼在船殼黑外板上幾乎看不見。
