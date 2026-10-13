@@ -20,7 +20,8 @@
 - [x] 船頭欄杆、舵、開窗（階段六）
 - [ ] knightheads、cathead（錨要掛）
 - [x] 舵改外部模型（階段十五：轉軸 ＝ 舵柱中心線、meta hinge／axis；gudgeon 搬回船殼）；舵輪（輪轂上隼的疤）＋舵輪座 —— ⚠ 轉 ±35° 舵前緣的角擦進艉柱表面一層（沒削，削了舵會斷）
-- [ ] 舵柄與舵索：舵頭在艉板外（z 44），舵柄要穿過艉板（開舵柄口）或從船尾欄杆上方過；舵輪鼓輪 drum-rope-a／b → 舵柄
+- [x] 舵柄與舵索（階段十六：舵柄在艙房 z 37–38、艉板柱子開舵柄口；舵索 6 段：鼓輪 → 導索塊 → 舷側滑車 y 64／96 → 舵柄頭）
+- [ ] 主桅那根不掛帆的下桁（yard-main-course）：Tim 問是不是少一張帆 —— 回了「brigantine 照定稿圖不掛 main course；那根桁是我加給 topsail 下角綁的，⚠ 真船有沒有沒查證」；等 Tim 選：維持／main staysail／main course
 - [ ] 斷口艙壁：門／欄杆（breastwork rail）；後甲板舷牆上半是欄杆（定稿圖）
 - [x] 桅、艏斜桅、channels（階段七）
 - [x] 帆桁（階段八：6 件子作品＋外部模型；固定點 84 在 verify_yards.json 的 placements[].anchors）

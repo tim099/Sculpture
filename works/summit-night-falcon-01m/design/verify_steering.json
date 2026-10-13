@@ -1,0 +1,277 @@
+{
+ "note": "draft_steering.py（階段十六）—— 現況 nf_state stage15；舵軸 verify_helm.json",
+ "stamp_order": {
+  "rudder": [
+   {
+    "name": "tiller",
+    "op": "stampvox",
+    "file": "masks/steering/tiller.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 44
+   }
+  ],
+  "quarter": [
+   {
+    "name": "rope_holes",
+    "op": "carvevox",
+    "file": "masks/steering/quarter_holes.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 2
+   },
+   {
+    "name": "blocks",
+    "op": "stampvox",
+    "file": "masks/steering/quarter_blocks.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 6
+   },
+   {
+    "name": "sheaves_v1_out",
+    "op": "carvevox",
+    "file": "masks/steering/quarter_sheaves_v1.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 4
+   },
+   {
+    "name": "sheaves",
+    "op": "stampvox",
+    "file": "masks/steering/quarter_sheaves.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 4
+   }
+  ],
+  "hull": [
+   {
+    "name": "tiller_port",
+    "op": "carvevox",
+    "file": "masks/steering/port_hull.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 53
+   }
+  ],
+  "stern_deco": [
+   {
+    "name": "tiller_port",
+    "op": "carvevox",
+    "file": "masks/steering/port_stern_deco.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 6
+   }
+  ]
+ },
+ "stand_holes": {
+  "file": "masks/steering/stand_holes.vox.txt",
+  "voxels": 54,
+  "work": "summit-night-falcon-01m-helm-stand"
+ },
+ "anchors": {
+  "rudder": [
+   {
+    "name": "tiller-end",
+    "at": [
+     80,
+     80,
+     37
+    ]
+   }
+  ],
+  "quarter": [
+   {
+    "name": "lead-a",
+    "at": [
+     93,
+     80,
+     40
+    ]
+   },
+   {
+    "name": "lead-b",
+    "at": [
+     94,
+     80,
+     40
+    ]
+   },
+   {
+    "name": "sheave-P",
+    "at": [
+     92,
+     64,
+     40
+    ]
+   },
+   {
+    "name": "sheave-S",
+    "at": [
+     92,
+     96,
+     40
+    ]
+   }
+  ],
+  "wheel": [
+   {
+    "name": "tiller-rope-a",
+    "at": [
+     23,
+     37,
+     40
+    ]
+   },
+   {
+    "name": "tiller-rope-b",
+    "at": [
+     28,
+     37,
+     40
+    ]
+   }
+  ]
+ },
+ "ropes": [
+  {
+   "name": "舵索-a1",
+   "from": "model:甲板-後/舵輪/tiller-rope-a",
+   "to": "甲板-後/lead-a",
+   "thickness": 0.25,
+   "slack": 1.02,
+   "color": "#a08458",
+   "group": "steering"
+  },
+  {
+   "name": "舵索-a2",
+   "from": "甲板-後/lead-a",
+   "to": "甲板-後/sheave-P",
+   "thickness": 0.25,
+   "slack": 1.02,
+   "color": "#a08458",
+   "group": "steering"
+  },
+  {
+   "name": "舵索-a3",
+   "from": "甲板-後/sheave-P",
+   "to": "model:舵/tiller-end",
+   "thickness": 0.25,
+   "slack": 1.02,
+   "color": "#a08458",
+   "group": "steering"
+  },
+  {
+   "name": "舵索-b1",
+   "from": "model:甲板-後/舵輪/tiller-rope-b",
+   "to": "甲板-後/lead-b",
+   "thickness": 0.25,
+   "slack": 1.02,
+   "color": "#a08458",
+   "group": "steering"
+  },
+  {
+   "name": "舵索-b2",
+   "from": "甲板-後/lead-b",
+   "to": "甲板-後/sheave-S",
+   "thickness": 0.25,
+   "slack": 1.02,
+   "color": "#a08458",
+   "group": "steering"
+  },
+  {
+   "name": "舵索-b3",
+   "from": "甲板-後/sheave-S",
+   "to": "model:舵/tiller-end",
+   "thickness": 0.25,
+   "slack": 1.02,
+   "color": "#a08458",
+   "group": "steering"
+  }
+ ],
+ "counts": {
+  "orphans": 2,
+  "tiller": 44,
+  "tiller_touch_head": 2,
+  "port": {
+   "hull": 53,
+   "stern_deco": 6
+  },
+  "blocks": 6,
+  "sheaves_v1": 4,
+  "sheaves": 4,
+  "holes": 2,
+  "base_holes": 54,
+  "ropes": 6
+ },
+ "drum_points": {
+  "a": [
+   23,
+   37,
+   40
+  ],
+  "b": [
+   28,
+   37,
+   40
+  ]
+ }
+}

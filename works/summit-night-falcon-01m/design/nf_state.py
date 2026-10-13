@@ -24,6 +24,7 @@ STAGES = [
     ('stage12', 'verify_flag.json', {'mast_main': 'mast_main'}),          # 階段十一（帆）是布，不動格
     ('stage14', 'verify_gunfittings.json', {'fittings': 'fittings'}),   # 階段十三（砲）是外部模型，不動格；十四 砲具一舷＋鏡像
     ('stage15', 'verify_helm.json', {'hull': 'hull', 'rudder': 'rudder'}),   # gudgeon 從舵搬回船殼；舵改外部模型 ⇒ 之後不算組裝件的格（鍵改名 rudder_model）
+    ('stage16', 'verify_steering.json', {'rudder': 'rudder_model', 'quarter': 'quarter', 'hull': 'hull', 'stern_deco': 'stern_deco'}),   # 舵柄（舵模型）、舵柄口、導索塊與繩孔
 ]
 
 
