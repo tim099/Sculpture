@@ -211,3 +211,13 @@
 - 套用：420 筆、0 失敗、IOException 自動重試 5 次（TASK-0534 的讀數）。
 - 讀數：組裝件 **1,798,082**（＝ 1,793,806 ＋ 2×(1,221＋917)）、1 元件、空腔 0、link_overlap 0、鏡像差不變；繩 1,077（761 ＋ 316）、broken 0；兩件子作品匯出 vs 清單逐格 0 差；產生程式套用後重跑，四個檔 sha256 相同。
 - 過程圖：`overlays/stage12_fittings_{lower,upper}.png`（target＋zoom 才是真的近照；region 只裁格子、模型照畫）。
+
+## 階段十三 entry port 與 side steps —— 新圖紙 13（2026-10-13，Tim：「然後繼續」⇒ todo「entry port 跟著上甲板抬高」）
+設計 plan.json `entry_build`；產生 `design/draft_entry.py`（憲法號 draft_entry.py 新圖紙 23 v1.1 照換算；擋不擋含砲模型的格）⇒ `masks/entry/side.vox.txt`、`entry_anchors.json`、`entry_ropes.json`、`verify_entry.json`；落格 `design/tools/entry_apply.py`。
+- 開口：船殼本來就有（憲法號的 entry port 跟著 z ≥ 109 抬 23）：x 374–382 從 z 132 開到 cap rail；z 130–131 兩層牆（72 格）留著當門檻（上甲板面 129 ⇒ 0.2 m；憲法號也是 waterway 當門檻）⇒ 不刻。
+- 踏階：水線抬到 71 之後，z 74 起每 4 格一道到 126 ⇒ **14 道**（憲法號 10 道 66–102）；x 375–381、凸出 2（外面齊平、每一欄從那一欄的船殼外面貼上去：船殼外緣 y 226 → 215，船身往上收）；最下一道 x 374–382、凸出 4（v1.1：man rope 下端埋在外側兩角）。色 104。跨過兩條暗紅帶、在第 6／7 個砲門之間。
+- 柱：鐵 146，立在開口兩側 cap rail 最外那一格（y 216，頂 z 146／147）上、頂 z 151（憲法號 128 ＋23）。
+- man rope 每舷兩條：柱頂外面那一格 → 最下一道外側兩角；長 78.1、拉直；離實心（含砲模型）最近 0.39（在下端那一格旁）。
+- 子作品 `-entry-side`（11×15×78 at 373,216,74；229 格：踏階 220、柱 9）；組裝件關聯 `舷梯`、`舷梯-鏡像`（mirror=y、at.y 90）；固定點 post-aft.top／post-fwd.top／step-1.aft／step-1.fwd；繩組 entry/manropes。
+- 讀數：跟組裝件＋砲模型重疊 S 0／P 0；組裝件 **1,798,540**（＝ 1,798,082 ＋ 2×229）、1 元件、空腔 0、link_overlap 0、鏡像差不變；繩 1,081、broken 0；子作品 vs 清單 0 差；重跑 sha256 相同。
+- 過程圖：`overlays/stage13_entry_{oblique,side}.png`。
