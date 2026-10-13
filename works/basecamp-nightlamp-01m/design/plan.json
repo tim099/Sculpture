@@ -315,5 +315,45 @@
       "y": "設計決定：跟龍骨同寬 5 格",
       "color": "設計決定：照憲法號（deadwood 209、apron 173）"
     }
+  },
+  "floors": {
+    "title": "新圖紙 05：底肋・keelson v1（階段四）",
+    "frame_x0": 18.904,
+    "frame_spacing": 0.7066,
+    "n": [
+      -15,
+      20
+    ],
+    "sided_cells": 4,
+    "moulded_cells": 3.5,
+    "color": 141,
+    "head": "narrowing_line（底肋頭半寬）",
+    "throat_top": "A（每一欄用自己的 A）",
+    "keelson": {
+      "color": 209,
+      "y": [
+        158,
+        162
+      ],
+      "x": [
+        "station 16",
+        "station M"
+      ],
+      "z": [
+        "A",
+        "B"
+      ],
+      "rule": "中線 5 格（|y−160| ≤ 2）A 以上一律歸 keelson"
+    },
+    "provenance": {
+      "frame_x0/spacing": "原圖讀數：船尾 4–24 號站當肋位號最小平方（殘差 ≤ 0.018 m）；船頭照同一套肋距延伸（字母站對不上整數，沒用）",
+      "n": "設計決定：只在兩段 deadwood 之間（16 號站到 M 站）放底肋；兩頭的 half floors／cant frames 跟肋骨階段一起做",
+      "sided_cells": "設計決定：4 格（0.40 m）—— 這一級船的底肋尺寸沒查（沒有出處）；取跟肋距（9.08 格）搭起來好看的數，底肋之間空 5 格",
+      "moulded_cells": "設計決定：沿船殼 molded 線往裡 3.5 格（0.35 m）",
+      "head": "原圖讀數：半寬圖粗內線（readings_LI_bodyplan narrowing_line）",
+      "throat_top": "原圖讀數：A（cutting-down line）；設計決定：每一欄（x 格）用自己的 A —— 憲法號用一片中心的 A，keelson 底下空了 4 欄",
+      "keelson_rule": "設計決定：憲法號的底肋在 V 形船底凸進 keelson 205 格 ⇒ 中線 5 格 A 以上只給 keelson",
+      "color": "設計決定：照憲法號（底肋 141、keelson 209）"
+    }
   }
 }

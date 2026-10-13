@@ -56,7 +56,7 @@
 - 醒目的吃水刻度；船尾雕刻山與營火；船長室寫字桌與一疊信；帆要不要破損之後再定。
 
 ## 作品
-- 主作品 `basecamp-nightlamp-01m`（委託建立免費、已發 10 token；1024×320×800、0.1 m／格；commission_ref TASK-0538）。階段三後 50,990 格。
+- 主作品 `basecamp-nightlamp-01m`（委託建立免費、已發 10 token；1024×320×800、0.1 m／格；commission_ref TASK-0538）。階段四後 138,047 格。
 
 ## 階段一：龍骨（2026-10-13 深夜，新圖紙 02 龍骨 v1）—— `design/draft_keel.py`、`design/tools/keel_check.py`
 Tim 2026-10-13 看過線形圖 v1：「單層提交吧 然後開始下龍骨」（圖紙提交在 Sculpture 68c3bc9）。
@@ -118,4 +118,27 @@ Tim：「單層提交吧 然後繼續階段三」（階段二提交在 Sculpture
   A 是虛線，落空的是點與點之間的空白（改成每 0.05 m 一根，量到的才夠多）。
 - 反向對照：錨點 Z 偏 3 格 ⇒ 三組都報 3.0。
 - 過程圖：`overlays/stage03_deadwood_view.png`、`stage03_bow_view.png`、`stage03_stern_view.png`、`stage03_deadwood_vs_LI_{bow,stern}.png`。
+
+## 階段四：底肋・keelson（2026-10-14 凌晨，新圖紙 05 v1）—— `design/draft_floors.py`、`design/tools/floors_check.py`
+Tim：「單層提交吧 然後繼續階段四」（階段三提交在 Sculpture 94db32c）。
+讀圖（`design/readings_LI_bodyplan.json`）：
+- **肋距**：船尾 4–24 號站當肋位號（從 Ø 往船尾數）最小平方 ⇒ Ø 在 x 18.904、**每肋位 0.7066 m**（殘差 ≤ 0.018 m；放大後 9.08 格）。
+  ⚠ 26 號站比模型往船頭 +0.29 m；船頭字母站換成肋位都差 ~0.6 個 —— 都沒用，船頭照同一套肋距延伸。
+- **底肋頭**：半寬圖粗內線 ＝ narrowing line（船中 4.27–4.31 m，對到船中橫切面 z ≈ 1.35）；疊圖 `design/readings/LI_narrowing_trace.png`。
+設計（plan.json `floors`）：
+- 底肋 36 片：肋位 −15..+20（x 8.31..33.04，兩段 deadwood 之間），每片 sided 4 格（設計，**這一級船的尺寸沒查**）、置中於肋位（`round(X − 2)`，不是憲法號那種平均偏 0.49 格的取法）；
+  一格屬於底肋 ＝ 在船殼 molded 裡、半寬 ≤ narrowing，而且「在 A 以下」或「離 molded 線 ≤ 3.5 格」。顏色 141。
+- keelson：16 號站到 M 站、A → B、中線 5 格，顏色 209。
+- 憲法號兩個坑的做法：底肋頂與 keelson 底**每一欄用自己的 A**（keelson 底下 144 欄全部坐在底肋上、0 欄懸空）；中線 5 格 A 以上一律歸 keelson（底肋凸進去 0 格）。
+落地：36 片 placed ＝ 清單格數（1,912～2,222，共 73,247）、keelson 13,810；作品 138,047 格。
+⚠ 第一片 f−15 落地後迴圈判「不對」停下：清單檔每行尾巴有 ``，字串比對失敗 —— 實際 placed 1,964 ＝ 預期，沒重貼，從下一片接著。
+讀數（`design/verify_floors_stage4.json`）：
+- 結果帳：逐格對階段一～四全部清單 —— 缺 0、多 0、顏色不同 0（尺先驗過 1／0／1）；結構 1 元件、空腔 0、鏡像差 y:160 全 0（每片底肋也逐片鏡像 0 差）。
+- 原圖探針（原圖重新找線心）337 根，最大 0.81 格、平均 0.27：
+  keelson 頂 vs B -0.53～0.5（50 根、不量 1）；keelson 底 vs A -0.57～0.65（240 根、不量 267）；底肋頭 vs narrowing -0.46～0.4（36 根、不量 0）；
+  落在站上的四片（Ø、4、8、12）外緣 vs 橫切面圖那一站 -0.81～0.59（11 根、不量 40）。
+  🩸 探針自己錯了兩次：① 貼著站線的欄抓到垂直線的毛邊（報 −1.03／−1.14）⇒ 離站線 9 px 內不量；② 被底肋頭切齊的列量到的是頭不是船殼（報到 3.77）⇒ 另外歸一類。改的都是探針。
+- 反向對照：Z 偏 3 格 ⇒ keelson 兩組報 3.0、底肋兩組報 0；半寬偏 3 格 ⇒ 反過來 —— 八組都對。
+- 過程圖：`overlays/stage04_floors_view.png`、`stage04_midship_view.png`、`stage04_section_f+00.png`、`stage04_floors_vs_LI_{profile,body}.png`。
+- ⚠ 船中那片剖面：平頂（A）接到往上翹的那一段，兩邊各有一格小缺口（那一格不在 A 以下、也不在離 molded 線 3.5 格內）—— 放上去再細修。
 

@@ -26,15 +26,20 @@
 - [x] 26,650 格；結果帳 0 差、1 元件、空腔 0、原圖探針最大 0.56 格、反向對照 3.0（notes「階段三」）
 - [x] 提交（Tim「單層提交吧 然後繼續階段四」）
 
-## 下一步：階段四 底肋＋keelson（新圖紙 05）
-- 肋位：Pl. LI 側面圖的肋骨標記／站距（站與站之間幾個肋位）要先讀；肋距、底肋 sided／moulded 查 Chapman 或同時代規格
-- 底肋：船殼 molded（draft_lines 的 hb）往裡 moulded 深；底肋頂 ＝ A（中線）往兩舷照 floor head（body plan 上 rising line／narrowing line 那對）
-- keelson：16 號站到 M 站、A → B（中線 5 格寬）
-- ⚠ 底肋要貼著船殼 molded，兩頭（16 號站以後、M 站以前）是 deadwood 上的 half floors／cant frames —— 跟憲法號階段四、六一樣分開做
+## 階段四 底肋・keelson（10-14 凌晨雕完）
+- [x] 讀肋距（0.7066 m）、narrowing line
+- [x] 底肋 36 片＋keelson；結果帳 0 差、1 元件、空腔 0、原圖探針最大 0.81 格、反向對照 8 組都對（notes「階段四」）
+- [x] 提交（Tim「單層提交吧 然後繼續階段五」）
+- [ ] 細修：底肋平頂接翹起段的那一格缺口（每片兩邊各一格？先量有幾片）
+
+## 下一步：階段五 肋骨（futtocks、top timbers）
+- 肋骨照船殼 molded 往上到舷頂；兩頭（16 號站以後、M 站以前）是 deadwood 上的 half floors／cant frames
+- 舷頂以上（船尾樓、船頭起翹）照 silhouette top
+- ⚠ 肋骨 sided、moulded 也沒查到出處 ⇒ 設計決定，跟底肋一致（sided 4）
 
 ## ⚠ 還沒定、要問 Tim
 - 渲染圖要不要也真的發光（要擴充引擎、另開單）
 - 船名（暫名夜燈號）
 
 ## 提交紀錄（Sculpture，單層、沒 bump、沒 push）
-- 68c3bc9 圖紙 01＋底圖；8755a6a 階段一 龍骨；8331a5a 階段二；階段三 見 git log（這一份 todo 跟著那一筆進去）
+- 68c3bc9 圖紙 01＋底圖；8755a6a 階段一 龍骨；8331a5a 階段二；94db32c 階段三；階段四 見 git log（這一份 todo 跟著那一筆進去）
