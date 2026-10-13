@@ -1,0 +1,643 @@
+{
+ "subworks": {
+  "upper": {
+   "id": "basecamp-ember-01m-ladders-upper",
+   "title": "餘燼號 上甲板 → 上層砲甲板 的梯子",
+   "link_in": "basecamp-ember-01m-deck-upper",
+   "link": "梯子",
+   "path": "甲板-upper/梯子"
+  },
+  "spar": {
+   "id": "basecamp-ember-01m-ladders-spar",
+   "title": "餘燼號 poop → 上甲板 的梯子",
+   "link_in": "basecamp-ember-01m-deck-spar",
+   "link": "梯子",
+   "path": "甲板-spar/梯子"
+  }
+ },
+ "files": {
+  "spar": {
+   "cells": 200,
+   "sha256": "830b00cb8d7f66c0c3103b1662a7d5c58594a605c2eb261b47fabc495a0860b2",
+   "file": "masks/ladders/spar.vox.txt"
+  },
+  "upper": {
+   "cells": 568,
+   "sha256": "a467d97c430bd9bd8cb7101380323f97d9992c7c4d735ab1dd7d950a44c12b03",
+   "file": "masks/ladders/upper.vox.txt"
+  }
+ },
+ "anchors": [
+  {
+   "name": "manrope-after-upper-P-top",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    308,
+    156,
+    139
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-after-upper-P-bot",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    321,
+    156,
+    120
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-after-upper-S-top",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    308,
+    164,
+    139
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-after-upper-S-bot",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    321,
+    164,
+    120
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-fore-upper-P-top",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    682,
+    156,
+    142
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-fore-upper-P-bot",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    669,
+    156,
+    123
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-fore-upper-S-top",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    682,
+    164,
+    142
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-fore-upper-S-bot",
+   "work": "basecamp-ember-01m-ladders-upper",
+   "at": [
+    669,
+    164,
+    123
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-poop-P-top",
+   "work": "basecamp-ember-01m-ladders-spar",
+   "at": [
+    217,
+    156,
+    155
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-poop-P-bot",
+   "work": "basecamp-ember-01m-ladders-spar",
+   "at": [
+    225,
+    156,
+    143
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-poop-S-top",
+   "work": "basecamp-ember-01m-ladders-spar",
+   "at": [
+    217,
+    164,
+    155
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-poop-S-bot",
+   "work": "basecamp-ember-01m-ladders-spar",
+   "at": [
+    225,
+    164,
+    143
+   ],
+   "note": "stanchion（階段八b 新梯子）"
+  },
+  {
+   "name": "manrope-companion-P-top",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    224,
+    156,
+    91
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-companion-P-bot",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    235,
+    156,
+    75
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-companion-S-top",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    224,
+    164,
+    91
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-companion-S-bot",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    235,
+    164,
+    75
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-berth-P-top",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    308,
+    156,
+    93
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-berth-P-bot",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    320,
+    156,
+    75
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-berth-S-top",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    308,
+    164,
+    93
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-berth-S-bot",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    320,
+    164,
+    75
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-berth-P-top",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    682,
+    156,
+    96
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 66）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-berth-P-bot",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    670,
+    156,
+    78
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 66）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-berth-S-top",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    682,
+    164,
+    96
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 66）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-berth-S-bot",
+   "work": "basecamp-ember-01m-ladders-berth",
+   "at": [
+    670,
+    164,
+    78
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-berth 換算，dx 66）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-S-P-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    441,
+    164,
+    114
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-S-P-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    453,
+    164,
+    96
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-S-S-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    441,
+    172,
+    114
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-S-S-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    453,
+    172,
+    96
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-P-P-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    441,
+    148,
+    114
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-P-P-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    453,
+    148,
+    96
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-P-S-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    441,
+    156,
+    114
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-waist-P-S-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    453,
+    156,
+    96
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-gun-P-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    308,
+    156,
+    116
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-gun-P-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    321,
+    156,
+    97
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-gun-S-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    308,
+    164,
+    116
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-after-gun-S-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    321,
+    164,
+    97
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 0）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-gun-P-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    682,
+    156,
+    119
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 66）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-gun-P-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    669,
+    156,
+    100
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 66）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-gun-S-top",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    682,
+    164,
+    119
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 66）",
+   "on_post": true
+  },
+  {
+   "name": "manrope-fore-gun-S-bot",
+   "work": "basecamp-ember-01m-ladders-lower",
+   "at": [
+    669,
+    164,
+    100
+   ],
+   "note": "stanchion（憲法號 basecamp-frigate-constitution-01m-ladders-gun 換算，dx 66）",
+   "on_post": true
+  }
+ ],
+ "ropes": [
+  {
+   "name": "梯-after-upper.manrope-P",
+   "from": "甲板-upper/梯子/manrope-after-upper-P-top",
+   "to": "甲板-upper/梯子/manrope-after-upper-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-after-upper.manrope-S",
+   "from": "甲板-upper/梯子/manrope-after-upper-S-top",
+   "to": "甲板-upper/梯子/manrope-after-upper-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-fore-upper.manrope-P",
+   "from": "甲板-upper/梯子/manrope-fore-upper-P-top",
+   "to": "甲板-upper/梯子/manrope-fore-upper-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-fore-upper.manrope-S",
+   "from": "甲板-upper/梯子/manrope-fore-upper-S-top",
+   "to": "甲板-upper/梯子/manrope-fore-upper-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-poop.manrope-P",
+   "from": "甲板-spar/梯子/manrope-poop-P-top",
+   "to": "甲板-spar/梯子/manrope-poop-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-poop.manrope-S",
+   "from": "甲板-spar/梯子/manrope-poop-S-top",
+   "to": "甲板-spar/梯子/manrope-poop-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-after-berth.manrope-P",
+   "from": "甲板-berth/梯子/manrope-after-berth-P-top",
+   "to": "甲板-berth/梯子/manrope-after-berth-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-after-berth.manrope-S",
+   "from": "甲板-berth/梯子/manrope-after-berth-S-top",
+   "to": "甲板-berth/梯子/manrope-after-berth-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-companion.manrope-P",
+   "from": "甲板-berth/梯子/manrope-companion-P-top",
+   "to": "甲板-berth/梯子/manrope-companion-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-companion.manrope-S",
+   "from": "甲板-berth/梯子/manrope-companion-S-top",
+   "to": "甲板-berth/梯子/manrope-companion-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-fore-berth.manrope-P",
+   "from": "甲板-berth/梯子/manrope-fore-berth-P-top",
+   "to": "甲板-berth/梯子/manrope-fore-berth-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-fore-berth.manrope-S",
+   "from": "甲板-berth/梯子/manrope-fore-berth-S-top",
+   "to": "甲板-berth/梯子/manrope-fore-berth-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-after-gun.manrope-P",
+   "from": "甲板-lower/梯子/manrope-after-gun-P-top",
+   "to": "甲板-lower/梯子/manrope-after-gun-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-after-gun.manrope-S",
+   "from": "甲板-lower/梯子/manrope-after-gun-S-top",
+   "to": "甲板-lower/梯子/manrope-after-gun-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-fore-gun.manrope-P",
+   "from": "甲板-lower/梯子/manrope-fore-gun-P-top",
+   "to": "甲板-lower/梯子/manrope-fore-gun-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-fore-gun.manrope-S",
+   "from": "甲板-lower/梯子/manrope-fore-gun-S-top",
+   "to": "甲板-lower/梯子/manrope-fore-gun-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-waist-P.manrope-P",
+   "from": "甲板-lower/梯子/manrope-waist-P-P-top",
+   "to": "甲板-lower/梯子/manrope-waist-P-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-waist-P.manrope-S",
+   "from": "甲板-lower/梯子/manrope-waist-P-S-top",
+   "to": "甲板-lower/梯子/manrope-waist-P-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-waist-S.manrope-P",
+   "from": "甲板-lower/梯子/manrope-waist-S-P-top",
+   "to": "甲板-lower/梯子/manrope-waist-S-P-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-waist-S.manrope-S",
+   "from": "甲板-lower/梯子/manrope-waist-S-S-top",
+   "to": "甲板-lower/梯子/manrope-waist-S-S-bot",
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  }
+ ],
+ "assembly": "basecamp-ember-01m-assembly"
+}

@@ -794,5 +794,327 @@
   "reuse_note": "berth／下層砲甲板的舷側艙房整件都在 x < 439 ⇒ 換算之後跟憲法號逐格相同 ⇒ 直接關聯憲法號那件子作品（同帆桁的做法：一份事實源）。",
   "not_now": "新梯子（上層砲甲板 → 上甲板、上甲板 → poop）、上甲板 clamps、砲具（gun fittings，跟砲那一階段一起）",
   "provenance": "Tim 2026-10-13「可以繼續造船了」；todo 下一步照順序：房間與艙壁（憲法號的照換算搬）、梯子、上甲板 clamps ⇒ 這一刀先做房間、艙壁與憲法號原有的兩座梯子。"
+ },
+ "ladders_build": {
+  "title": "階段八b 新梯子與扶手繩 v1",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1774430,
+  "hide_links": [
+   "甲板-upper/梯子",
+   "甲板-spar/梯子"
+  ],
+  "surfaces": {
+   "note": "甲板面 ＝ 甲板板最上面那一格 ＋ 1（站的那一層；同憲法號 interior.decks.segments 的定義）。upper ＝ 憲法號 spar（高度不動、x 照拉長），spar ＝ 憲法號 spar ＋23，poop 新做（甲板板 z 148）。2026-10-13 從甲板子作品中線量過，每段都對上。",
+   "upper": [
+    [
+     null,
+     238,
+     106
+    ],
+    [
+     238,
+     636,
+     105
+    ],
+    [
+     636,
+     699,
+     108
+    ],
+    [
+     699,
+     null,
+     110
+    ]
+   ],
+   "spar": [
+    [
+     null,
+     238,
+     129
+    ],
+    [
+     238,
+     636,
+     128
+    ],
+    [
+     636,
+     699,
+     131
+    ],
+    [
+     699,
+     null,
+     133
+    ]
+   ],
+   "poop": [
+    [
+     null,
+     231,
+     149
+    ]
+   ]
+  },
+  "coaming": {
+   "spar": 3,
+   "poop": 0
+  },
+  "hatches": {
+   "after": {
+    "x": [
+     307,
+     319
+    ],
+    "note": "憲法號 after hatch（主桅後），spar deck 照 +23 搬來"
+   },
+   "fore_scuttle": {
+    "x": [
+     671,
+     683
+    ],
+    "note": "憲法號 fore scuttle（605..617）＋66"
+   },
+   "poop_break": {
+    "x": [
+     210,
+     222
+    ],
+    "note": "poop 前緣（甲板板 x ≤ 215、前緣欄杆 |dy| ≤ 5 留梯口）—— 不是艙口，是 poop 的斷口"
+   }
+  },
+  "geometry": {
+   "rise": 3,
+   "run": 2,
+   "band": [
+    4,
+    3
+   ],
+   "cap_up": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "headroom": 8,
+   "landing": 5,
+   "stanchion_h": 9,
+   "note": "照憲法號 ladders.geometry（56°、側板 1 格、踏板 1×2 開放式）"
+  },
+  "colors": {
+   "stringer": 136,
+   "tread": 250,
+   "iron": 36
+  },
+  "manrope": {
+   "thickness": 0.35,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  "subworks": {
+   "upper": {
+    "id": "basecamp-ember-01m-ladders-upper",
+    "title": "餘燼號 上甲板 → 上層砲甲板 的梯子",
+    "link_in": "basecamp-ember-01m-deck-upper",
+    "link": "梯子",
+    "path": "甲板-upper/梯子"
+   },
+   "spar": {
+    "id": "basecamp-ember-01m-ladders-spar",
+    "title": "餘燼號 poop → 上甲板 的梯子",
+    "link_in": "basecamp-ember-01m-deck-spar",
+    "link": "梯子",
+    "path": "甲板-spar/梯子"
+   }
+  },
+  "list": [
+   {
+    "id": "after-upper",
+    "deck": "upper",
+    "upper": "spar",
+    "hatch": "after",
+    "dir": [
+     1,
+     -1
+    ],
+    "y": [
+     156,
+     164
+    ],
+    "note": "after ladder（主桅後、往後甲板），同憲法號 after-gun"
+   },
+   {
+    "id": "fore-upper",
+    "deck": "upper",
+    "upper": "spar",
+    "hatch": "fore_scuttle",
+    "dir": [
+     -1,
+     1
+    ],
+    "y": [
+     156,
+     164
+    ],
+    "note": "fore ladder，同憲法號 fore-gun"
+   },
+   {
+    "id": "poop",
+    "deck": "spar",
+    "upper": "poop",
+    "hatch": "poop_break",
+    "dir": [
+     1
+    ],
+    "y": [
+     156,
+     164
+    ],
+    "note": "上 poop 的梯子：頂在 poop 前緣、往前斜下到 quarterdeck"
+   }
+  ],
+  "old_ladders": {
+   "note": "階段八a 從憲法號整座搬來的兩件（berth、lower）只有 voxel、沒有扶手 ⇒ 固定點照憲法號 ladders 子作品的固定點、用同一套整座平移（在 x ≥ 472 那座的 +66、其餘不動）換算，扶手繩照憲法號同名",
+   "berth": {
+    "from": "basecamp-frigate-constitution-01m-ladders-berth",
+    "work": "basecamp-ember-01m-ladders-berth",
+    "path": "甲板-berth/梯子",
+    "con_path": "甲板-berth/梯子"
+   },
+   "lower": {
+    "from": "basecamp-frigate-constitution-01m-ladders-gun",
+    "work": "basecamp-ember-01m-ladders-lower",
+    "path": "甲板-lower/梯子",
+    "con_path": "甲板-gun/梯子"
+   }
+  },
+  "not_here": "船腰那一對（憲法號 waist-S／P）不做到上甲板：餘燼號上甲板船腰是打開的，上去沒有甲板；上下層之間已經有下層 → 上層那兩座。",
+  "provenance": "Tim 2026-10-13「測試ok 單層提交吧 然後繼續」；todo 階段八b：新梯子（上層 → 上甲板、上甲板 → poop）。扶手繩：階段七 rigging 那時 skip_groups 跳過 ladders，等梯子做好再接 ⇒ 這一階段接。"
+ },
+ "clamps_build": {
+  "title": "階段八b 上甲板 clamps v1",
+  "hull": "basecamp-ember-01m",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1775198,
+  "lining": 177,
+  "color": 136,
+  "min_dy": 20,
+  "runs": [
+   [
+    112,
+    237,
+    [
+     123,
+     124
+    ]
+   ],
+   [
+    238,
+    635,
+    [
+     122,
+     123
+    ]
+   ],
+   [
+    636,
+    698,
+    [
+     125,
+     126
+    ]
+   ],
+   [
+    699,
+    718,
+    [
+     127
+    ]
+   ]
+  ],
+  "provenance": "憲法號 spar clamp（hull，色 136）量過：x 112–237 z 100–101、238–569 z 99–100、570–632 z 102–103、633–652 z 104（＝ 甲板面 −6…−5；甲板面 106／105／108／110）；內板 177 往船艙裡一格（x 300：clamp y 211、內板 212）。餘燼號：x 照拉長（−→ 112–718），z ＋23（甲板面 129／128／131／133）。todo：上甲板 clamps（階段五 notes：上甲板橫樑在插入段的牆上沒有 clamp，直接靠內板）"
+ },
+ "cabin_build": {
+  "title": "階段八c 船長室 v1（自由設計）",
+  "hide_links": ["甲板-spar/船長室"],
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1777620,
+  "floor_z": 129,
+  "front_x": 215,
+  "front_doors": [[7, 11]],
+  "cabin_front_x": 193,
+    "door_h": 13,
+  "partition_x": 166,
+  "arch_dy": 9,
+  "arch_h": 14,
+  "side_wall_dy": 10,
+  "side_door_x": [
+   180,
+   184
+  ],
+  "table": {
+   "x": [
+    118,
+    148
+   ],
+   "half_w": 4,
+   "height": 7,
+   "chairs_x": [
+    121,
+    127,
+    133,
+    139,
+    145
+   ]
+  },
+  "stern_bench": {
+   "half_w": 28,
+   "depth": 3,
+   "height": 4
+  },
+  "heart": {
+   "x": 133,
+   "z": 140,
+   "r": 2
+  },
+  "bed": {
+   "x": [172, 191],
+   "y": [
+    190,
+    200
+   ]
+  },
+  "desk": {
+   "x": [
+    176,
+    186
+   ],
+   "y": [
+    122,
+    128
+   ]
+  },
+  "colors": {
+   "panel": 177,
+   "frame": 136,
+   "gold": 248,
+   "dark": 136,
+   "wood": 141,
+   "cloth": 128,
+   "white": 255,
+   "iron": 36,
+   "flame": 245,
+   "flame_core": 252,
+   "chart": 250
+  },
+  "link": {
+   "work": "basecamp-ember-01m-great-cabin",
+   "title": "餘燼號 船長室（poop 底下）",
+   "link_in": "basecamp-ember-01m-deck-spar",
+   "link": "船長室"
+  },
+  "provenance": "Tim 2026-10-13「房間也自由發揮吧」。poop 底下量過：上甲板面 129、poop 甲板板 148（橫樑 x 110／126／142／158／174／190、z 145–147；前緣 215）、半寬 42–46、船尾面 x 97–104、後桅 x≈203 穿過；兩舷 z 138–146 有砲門 ⇒ 不做靠舷的隔間。設計 v2：前艙壁 x 215（poop 前緣橫樑底下；poop 梯子兩側各一扇門 |dy| 7–11）。後桅的 fife rail（階段七從憲法號開放的 quarterdeck 搬來，x 195–214、|dy| ≤ 15、z 129–141）被 poop 罩在這一塊 ⇒ 兩間艙的前牆退到 x 193、前面留一塊玄關（後桅＋fife rail）。v1 前艙壁在 x 213 穿過 fife rail、隔間 x 166（拱口 |dy|≤9）、走道兩側牆 |dy| 10（x 167–212，門 x 180–184）；大艙長桌 x 118–148、12 張椅子、船尾窗下長椅；右舷臥艙一張床、左舷海圖室一張桌；桌子上方吊「餘燼之心」—— 金籠 5×5×7、琥珀火芯 3×3×3（船名的那團火）。配色同憲法號房間（177 淡木板、136 深木框）＋暗紅 128、金 248。"
  }
 }
