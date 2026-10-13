@@ -1,0 +1,238 @@
+{
+  "channels_frame": {
+    "at": [
+      130,
+      100,
+      25
+    ],
+    "local_max": [
+      90,
+      17,
+      13
+    ],
+    "local_min": [
+      8,
+      8,
+      11
+    ],
+    "mirror_at_y": 33,
+    "size": [
+      100,
+      28,
+      25
+    ]
+  },
+  "counts": {
+    "assembly_after": 93122,
+    "bowsprit": 1111,
+    "channels_one_side": 576,
+    "hull_carve": 38,
+    "mast_fore": 3344,
+    "mast_main": 3382,
+    "other_hits_dropped": 0
+  },
+  "rig_points": {
+    "_dropped": {
+      "fore": 0,
+      "main": 0
+    },
+    "bowsprit": {
+      "end": [
+        334.85,
+        80.5,
+        77.33
+      ],
+      "heel": [
+        237.5,
+        80.5,
+        38.0
+      ],
+      "jib_end": [
+        358.03,
+        80.5,
+        90.04
+      ]
+    },
+    "channel_fore": {
+      "x": [
+        196,
+        220
+      ],
+      "z": [
+        37,
+        38
+      ]
+    },
+    "channel_main": {
+      "x": [
+        138,
+        162
+      ],
+      "z": [
+        36,
+        37
+      ]
+    },
+    "fore": {
+      "deck": [
+        206.5,
+        80.5,
+        32
+      ],
+      "lower_head": [
+        203.65,
+        80.5,
+        141
+      ],
+      "top_platform_z": 126,
+      "topgallant_offset_x": 7.5,
+      "topmast_head": [
+        206.34,
+        80.5,
+        206
+      ],
+      "topmast_offset_x": 4.4,
+      "truck": [
+        208.5,
+        80.5,
+        242
+      ],
+      "zdeck": 32
+    },
+    "main": {
+      "deck": [
+        148.5,
+        80.5,
+        30
+      ],
+      "lower_head": [
+        142.16,
+        80.5,
+        151
+      ],
+      "top_platform_z": 136,
+      "topgallant_offset_x": 7.5,
+      "topmast_head": [
+        143.31,
+        80.5,
+        213
+      ],
+      "topmast_offset_x": 4.4,
+      "truck": [
+        144.58,
+        80.5,
+        248
+      ],
+      "zdeck": 30
+    }
+  },
+  "stamp_order": {
+    "bowsprit": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/masts/bowsprit/bowsprit.vox.txt",
+        "name": "bowsprit",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "cf9a1ad22c6492b1765f220aff478d471ebacdd4603d8e2bebc19d257cce768b",
+        "voxels": 1111
+      }
+    ],
+    "channels": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/masts/channels/channels.vox.txt",
+        "name": "channels",
+        "op": "stampvox",
+        "origin_world": [
+          130,
+          100,
+          25
+        ],
+        "sha256": "9f7d3ee5ca8b7054c9262695a433fc492c2e7c6ddeb68fc71b2454fa2213120d",
+        "voxels": 576
+      }
+    ],
+    "hull": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/masts/hull/bowsprit_opening_carve.vox.txt",
+        "name": "bowsprit_opening_carve",
+        "op": "carvevox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "3963df3d48755c747ec673e60d12ba7b90b0e23f87fb2e6045bbdd0d01951ede",
+        "voxels": 38
+      }
+    ],
+    "mast_fore": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/masts/mast_fore/mast_fore.vox.txt",
+        "name": "mast_fore",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "37820404c87bc566f45866c5ff91d443f94d53fe5708bbc33bb9644449b22946",
+        "voxels": 3344
+      }
+    ],
+    "mast_main": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/masts/mast_main/mast_main.vox.txt",
+        "name": "mast_main",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "c44f6c2de4a3043cf1e9619bc90c0d391ee2416a5fe6b4fcec51290737bc322b",
+        "voxels": 3382
+      }
+    ]
+  },
+  "structure": {
+    "components_assembly": 1,
+    "components_parts": {
+      "bowsprit": 1,
+      "channels": 2,
+      "mast_fore": 1,
+      "mast_main": 1
+    },
+    "enclosed_cavity_assembly": 0,
+    "mirror_shape_assembly": 0,
+    "overlap_new_vs_now": 0
+  }
+}

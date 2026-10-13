@@ -21,7 +21,9 @@
 - [ ] knightheads、cathead（錨要掛）
 - [ ] 舵改外部模型＋pivot（給遊戲轉）；舵輪接舵柱頂（隼徽記被剝後的疤）
 - [ ] 斷口艙壁：門／欄杆（breastwork rail）；後甲板舷牆上半是欄杆（定稿圖）
-- [ ] 桅（暫定主桅 x 148、前桅 x 206 —— 桅孔已留）、channels、帆桁（外部模型）、繩、帆
+- [x] 桅、艏斜桅、channels（階段七）
+- [ ] 帆桁（一根一件子作品＋外部模型，rotate 繞 z；rig_points 在 verify_masts.json）→ 靜索（shrouds、stays、backstays；channels 上的 deadeyes 與 chain plates）→ 動索 → 帆
+- [ ] 旗：候選圖在 summit-night-falcon-01m-flag（⛔ 不是定稿）—— 掛在主桅 truck
 - [ ] 砲（外部模型、退到零碰撞）、插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯
 
