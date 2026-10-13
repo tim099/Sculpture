@@ -77,24 +77,6 @@
       },
       {
         "at": [
-          142,
-          81,
-          130
-        ],
-        "kind": "brace-block",
-        "name": "brace-S"
-      },
-      {
-        "at": [
-          142,
-          79,
-          130
-        ],
-        "kind": "brace-block",
-        "name": "brace-P"
-      },
-      {
-        "at": [
           141,
           80,
           130
@@ -237,6 +219,64 @@
         "name": "sheet"
       }
     ],
+    "summit-night-falcon-01m-yard-main-course": [
+      {
+        "at": [
+          2,
+          63,
+          1
+        ],
+        "kind": "footrope",
+        "name": "foot-in-S"
+      },
+      {
+        "at": [
+          2,
+          118,
+          2
+        ],
+        "kind": "footrope",
+        "name": "foot-out-S"
+      },
+      {
+        "at": [
+          2,
+          57,
+          1
+        ],
+        "kind": "footrope",
+        "name": "foot-in-P"
+      },
+      {
+        "at": [
+          2,
+          2,
+          2
+        ],
+        "kind": "footrope",
+        "name": "foot-out-P"
+      }
+    ],
+    "summit-night-falcon-01m-yard-main-gaff": [
+      {
+        "at": [
+          65,
+          2,
+          1
+        ],
+        "kind": "sail-head",
+        "name": "bot8"
+      },
+      {
+        "at": [
+          9,
+          2,
+          2
+        ],
+        "kind": "sail-head",
+        "name": "bot64"
+      }
+    ],
     "summit-night-falcon-01m-yard-main-topsail": [
       {
         "at": [
@@ -280,33 +320,33 @@
   "pins_used": [
     "繫繩欄-鏡像/pinrail-2.pin-3",
     "繫繩欄-鏡像/pinrail-3.pin-4",
+    "繫繩欄-鏡像/pinrail-4.pin-4",
     "繫繩欄-鏡像/pinrail-5.pin-3",
     "繫繩欄-鏡像/pinrail-5.pin-4",
-    "繫繩欄-鏡像/pinrail-6.pin-1",
+    "繫繩欄-鏡像/pinrail-6.pin-3",
     "繫繩欄-鏡像/pinrail-9.pin-4",
     "繫繩欄/pinrail-2.pin-3",
     "繫繩欄/pinrail-3.pin-4",
+    "繫繩欄/pinrail-4.pin-4",
     "繫繩欄/pinrail-5.pin-1",
     "繫繩欄/pinrail-5.pin-2",
     "繫繩欄/pinrail-5.pin-3",
     "繫繩欄/pinrail-5.pin-4",
-    "繫繩欄/pinrail-6.pin-1",
+    "繫繩欄/pinrail-6.pin-3",
     "繫繩欄/pinrail-9.pin-4"
   ],
   "rope_counts": {
-    "brace": 8,
-    "fall": 10,
-    "footrope": 8,
+    "brace": 10,
+    "fall": 14,
+    "footrope": 10,
     "halyard": 5,
-    "lift": 8,
+    "lift": 10,
     "sheet": 1,
     "topping_lift": 2,
     "vang": 2
   },
   "rope_hits_mid": {},
   "rope_landing_cells": {
-    "fore-course-brace-fall-P": 0.75,
-    "fore-course-brace-fall-S": 0.75,
     "fore-course-footrope-P": 0.25,
     "fore-course-footrope-S": 0.25,
     "fore-course-lift-P": 0.25,
@@ -321,6 +361,10 @@
     "fore-topsail-lift-S": 0.5,
     "main-boom-topping-lift-P": 1.25,
     "main-boom-topping-lift-S": 1.25,
+    "main-course-footrope-P": 0.25,
+    "main-course-footrope-S": 0.25,
+    "main-course-lift-P": 0.25,
+    "main-course-lift-S": 0.25,
     "main-gaff-peak-halyard-fall": 2.25,
     "main-gaff-peak-halyard-top24": 0.25,
     "main-topsail-footrope-P": 0.25,
@@ -383,36 +427,36 @@
       ],
       "group": "running/braces",
       "kind": "brace",
-      "length": 87.687,
+      "length": 103.754,
       "name": "fore-course-brace-S",
       "sag_est": 0.0,
       "slack": 1.0,
       "thickness": 0.35,
-      "to": "主桅/brace-S",
+      "to": "148.5000,107.7000,41.3000",
       "to_world": [
-        142.5,
-        81.5,
-        130.5
+        148.5,
+        107.7,
+        41.3
       ]
     },
     {
       "color": "#a08458",
-      "from": "主桅/brace-S",
+      "from": "148.5000,107.7000,41.3000",
       "from_world": [
-        142.5,
-        81.5,
-        130.5
+        148.5,
+        107.7,
+        41.3
       ],
       "group": "running/braces",
       "kind": "fall",
-      "length": 94.641,
-      "name": "fore-course-brace-fall-S",
+      "length": 1.811,
+      "name": "fore-course-brace-lead-S",
       "sag_est": 0.0,
       "slack": 1.0,
       "thickness": 0.3,
-      "to": "繫繩欄/pinrail-6.pin-1",
+      "to": "繫繩欄/pinrail-6.pin-3",
       "to_world": [
-        142.5,
+        148.5,
         107.5,
         39.5
       ]
@@ -471,36 +515,36 @@
       ],
       "group": "running/braces",
       "kind": "brace",
-      "length": 87.687,
+      "length": 103.754,
       "name": "fore-course-brace-P",
       "sag_est": 0.0,
       "slack": 1.0,
       "thickness": 0.35,
-      "to": "主桅/brace-P",
+      "to": "148.5000,53.3000,41.3000",
       "to_world": [
-        142.5,
-        79.5,
-        130.5
+        148.5,
+        53.3,
+        41.3
       ]
     },
     {
       "color": "#a08458",
-      "from": "主桅/brace-P",
+      "from": "148.5000,53.3000,41.3000",
       "from_world": [
-        142.5,
-        79.5,
-        130.5
+        148.5,
+        53.3,
+        41.3
       ],
       "group": "running/braces",
       "kind": "fall",
-      "length": 94.641,
-      "name": "fore-course-brace-fall-P",
+      "length": 1.811,
+      "name": "fore-course-brace-lead-P",
       "sag_est": 0.0,
       "slack": 1.0,
       "thickness": 0.3,
-      "to": "繫繩欄-鏡像/pinrail-6.pin-1",
+      "to": "繫繩欄-鏡像/pinrail-6.pin-3",
       "to_world": [
-        142.5,
+        148.5,
         53.5,
         39.5
       ]
@@ -999,11 +1043,33 @@
       ],
       "group": "running/braces",
       "kind": "brace",
-      "length": 155.962,
+      "length": 154.226,
       "name": "main-topsail-brace-S",
       "sag_est": 0.0,
       "slack": 1.0,
       "thickness": 0.35,
+      "to": "102.5000,102.7000,52.3000",
+      "to_world": [
+        102.5,
+        102.7,
+        52.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "102.5000,102.7000,52.3000",
+      "from_world": [
+        102.5,
+        102.7,
+        52.3
+      ],
+      "group": "running/braces",
+      "kind": "fall",
+      "length": 1.811,
+      "name": "main-topsail-brace-lead-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
       "to": "繫繩欄/pinrail-3.pin-4",
       "to_world": [
         102.5,
@@ -1065,11 +1131,33 @@
       ],
       "group": "running/braces",
       "kind": "brace",
-      "length": 155.962,
+      "length": 154.226,
       "name": "main-topsail-brace-P",
       "sag_est": 0.0,
       "slack": 1.0,
       "thickness": 0.35,
+      "to": "102.5000,58.3000,52.3000",
+      "to_world": [
+        102.5,
+        58.3,
+        52.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "102.5000,58.3000,52.3000",
+      "from_world": [
+        102.5,
+        58.3,
+        52.3
+      ],
+      "group": "running/braces",
+      "kind": "fall",
+      "length": 1.811,
+      "name": "main-topsail-brace-lead-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
       "to": "繫繩欄-鏡像/pinrail-3.pin-4",
       "to_world": [
         102.5,
@@ -1119,6 +1207,182 @@
         128.5,
         104.5,
         48.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "model:主桅/yard-main-course/arm-S",
+      "from_world": [
+        146.5,
+        139.5,
+        130.5
+      ],
+      "group": "running/lifts",
+      "kind": "lift",
+      "length": 59.498,
+      "name": "main-course-lift-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "主桅/cap-S",
+      "to_world": [
+        144.5,
+        83.5,
+        150.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "model:主桅/yard-main-course/foot-out-S",
+      "from_world": [
+        146.5,
+        138.5,
+        130.5
+      ],
+      "group": "running/footropes",
+      "kind": "footrope",
+      "length": 55.009,
+      "name": "main-course-footrope-S",
+      "sag_est": 5.835,
+      "slack": 1.03,
+      "thickness": 0.3,
+      "to": "model:主桅/yard-main-course/foot-in-S",
+      "to_world": [
+        146.5,
+        83.5,
+        129.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "model:主桅/yard-main-course/arm-S",
+      "from_world": [
+        146.5,
+        139.5,
+        130.5
+      ],
+      "group": "running/braces",
+      "kind": "brace",
+      "length": 91.314,
+      "name": "main-course-brace-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "118.5000,103.7000,51.3000",
+      "to_world": [
+        118.5,
+        103.7,
+        51.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "118.5000,103.7000,51.3000",
+      "from_world": [
+        118.5,
+        103.7,
+        51.3
+      ],
+      "group": "running/braces",
+      "kind": "fall",
+      "length": 1.811,
+      "name": "main-course-brace-lead-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "繫繩欄/pinrail-4.pin-4",
+      "to_world": [
+        118.5,
+        103.5,
+        49.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "model:主桅/yard-main-course/arm-P",
+      "from_world": [
+        146.5,
+        21.5,
+        130.5
+      ],
+      "group": "running/lifts",
+      "kind": "lift",
+      "length": 59.498,
+      "name": "main-course-lift-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "主桅/cap-P",
+      "to_world": [
+        144.5,
+        77.5,
+        150.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "model:主桅/yard-main-course/foot-out-P",
+      "from_world": [
+        146.5,
+        22.5,
+        130.5
+      ],
+      "group": "running/footropes",
+      "kind": "footrope",
+      "length": 55.009,
+      "name": "main-course-footrope-P",
+      "sag_est": 5.835,
+      "slack": 1.03,
+      "thickness": 0.3,
+      "to": "model:主桅/yard-main-course/foot-in-P",
+      "to_world": [
+        146.5,
+        77.5,
+        129.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "model:主桅/yard-main-course/arm-P",
+      "from_world": [
+        146.5,
+        21.5,
+        130.5
+      ],
+      "group": "running/braces",
+      "kind": "brace",
+      "length": 91.314,
+      "name": "main-course-brace-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "118.5000,57.3000,51.3000",
+      "to_world": [
+        118.5,
+        57.3,
+        51.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "118.5000,57.3000,51.3000",
+      "from_world": [
+        118.5,
+        57.3,
+        51.3
+      ],
+      "group": "running/braces",
+      "kind": "fall",
+      "length": 1.811,
+      "name": "main-course-brace-lead-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "繫繩欄-鏡像/pinrail-4.pin-4",
+      "to_world": [
+        118.5,
+        57.5,
+        49.5
       ]
     },
     {
@@ -1298,5 +1562,5 @@
       ]
     }
   ],
-  "ropes_total": 44
+  "ropes_total": 54
 }

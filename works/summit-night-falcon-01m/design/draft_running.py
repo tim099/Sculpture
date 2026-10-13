@@ -66,6 +66,12 @@ class Run:
                         y = piv[1] + sg * dy
                         col = a[(a[:, 0] == piv[0]) & (a[:, 1] == y)]
                         L.append(('%s-%s' % (tag, sd), (int(piv[0]), int(y), int(col[:, 2].min())), 'footrope'))
+            if nm == 'main-gaff':
+                # 帆頭沿 gaff 的底面（階段十一）—— 🩸 主帆第一版綁 gaff 的 top 點（頂面），模擬後布從 gaff 身體裡穿過去 12 點
+                for du in (8, 64):
+                    t = [p for p in P['anchors'] if p['name'] == 'top%d' % du][0]['at']
+                    col = a[(a[:, 0] == t[0]) & (a[:, 1] == t[1])]
+                    L.append(('bot%d' % du, (int(t[0]), int(t[1]), int(col[:, 2].min())), 'sail-head'))
             if nm == 'main-boom':
                 t = [p for p in P['anchors'] if p['name'] == 'top72'][0]['at']
                 col = a[(a[:, 0] == t[0]) & (a[:, 1] == t[1])]
@@ -86,7 +92,6 @@ class Run:
                 a, b = side_of(z, iron); L += [(tag + '-S', a, 'lift'), (tag + '-P', b, 'lift')]
             if m == 'main':
                 zb = S['top_z'] - s.R['points']['brace_block_below_top']
-                a, b = side_of(zb); L += [('brace-S', a, 'brace-block'), ('brace-P', b, 'brace-block')]
                 xs = np.nonzero(A[:, YC, zb])[0]; L.append(('top-aft', (int(xs.min()), YC, zb), 'topping-lift'))
                 zc = S['topmast_head_z'] - S['tm_doubling'] - 1
                 xs = np.nonzero(A[:, YC, zc])[0]; L.append(('tm-head-aft', (int(xs.min()), YC, zc), 'peak-halyard'))
@@ -112,6 +117,15 @@ class Run:
         assert c, ('沒有空的 pin', prefix)
         k = min(c, key=lambda k: (abs(s.pin[k][0] - near_x), k)); s.used.add(k); return k
 
+    def lead(s, pin):
+        # 導點：pin 那一欄船殼最高那一層（頂蓋）最靠裡那一格的內緣往裡 0.3、頂面上 0.3
+        p = s.pt[pin]; x = int(math.floor(p[0])); sg = 1 if p[1] > YC + 0.5 else -1
+        side = s.W['hull'][x, YC + 10:, :] if sg > 0 else s.W['hull'][x, :YC - 9, :][::-1]
+        zt = int(np.nonzero(side.any(0))[0].max())
+        dyi = int(np.nonzero(side[:, zt])[0].min()) + 10
+        y = YC + dyi - 0.3 if sg > 0 else 161.0 - (YC + dyi - 0.3)
+        return [p[0], y, zt + 1.3]
+
     def rail(s, n, side):
         return ('繫繩欄/pinrail-%d.' if side == 'S' else '繫繩欄-鏡像/pinrail-%d.') % n
 
@@ -122,9 +136,11 @@ class Run:
 
     def build(s):
         T = 'running/'
-        sq = {'fore-course': ('前桅', 'cap'), 'fore-topsail': ('前桅', 'tm-cap'), 'fore-topgallant': ('前桅', 'tg-head'), 'main-topsail': ('主桅', 'tm-cap')}
+        sq = {'fore-course': ('前桅', 'cap'), 'fore-topsail': ('前桅', 'tm-cap'), 'fore-topgallant': ('前桅', 'tg-head'), 'main-topsail': ('主桅', 'tm-cap'),
+              'main-course': ('主桅', 'cap')}
         # 🩸 v1：course 的 fall 落主桅 fife（貼著主桅跑 8 格）、topgallant brace 到主桅 tm-head（落點前先穿過 crosstrees）⇒ 都改
-        brace = {'fore-course': ('主桅/brace-%s', ('rail', 6)),
+        # 階段十一：主桅加了下桁（z 130，在主桅前面）—— 原本 fore course brace 的滑車就在主桅那一高度的側面 ⇒ 改直接落船腰 rail 6（一段）
+        brace = {'fore-course': (None, ('rail', 6)), 'main-course': (None, ('rail', 4)),
                  'fore-topsail': ('主桅/cross-%s', ('rail', 5)), 'fore-topgallant': ('主桅/cross-%s', ('rail', 5)),   # 🩸 v2 落 rail 7（往前下）⇒ 擦主桅 topsail yard 的背面 ⇒ 往後落後甲板
                  'main-topsail': (None, ('rail', 3))}
         # 🩸 v1：topsail 的 tye 從 sling 直上 cap 前面 —— 頂桅的跟就站在 topsail yard 正上方（doubling）⇒ 穿過 24–25 格；fall 從 cap 側面下 ⇒ 擦 crosstrees／穿過下面那根帆桁
@@ -145,8 +161,12 @@ class Run:
                     pin = s.pick(s.rail(fall[1], sd), s.pt[b][0])
                     s.rope('%s-brace-fall-%s' % (nm, sd), b, pin, 'fall', T + 'braces')
                 else:
+                    # 從舷外（yardarm）直接落舷牆裡的 pin，一定會在最後 1.5 格擦過頂蓋的內角（量到 104）⇒ 在頂蓋內緣上方放一個導點（真船：rail 上的 sheave／fairlead）
                     pin = s.pick(s.rail(fall[1], sd), s.pt[arm][0])
-                    s.rope('%s-brace-%s' % (nm, sd), arm, pin, 'brace', T + 'braces')
+                    lead = s.lead(pin)
+                    s.rope('%s-brace-%s' % (nm, sd), arm, G(lead), 'brace', T + 'braces')
+                    s.pt[G(lead)] = lead
+                    s.rope('%s-brace-lead-%s' % (nm, sd), G(lead), pin, 'fall', T + 'braces')
             if nm in halyard:
                 tie, top, (_, rn, sd) = halyard[nm]
                 s.rope('%s-halyard' % nm, s.ymodel(nm, 'sling'), tie, 'halyard', T + 'halyards')

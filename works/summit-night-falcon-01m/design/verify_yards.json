@@ -303,6 +303,98 @@
         67.5752
       ]
     },
+    "main-course": {
+      "arm-P": [
+        146.5,
+        21.5,
+        130.5
+      ],
+      "arm-S": [
+        146.5,
+        139.5,
+        130.5
+      ],
+      "earing-P": [
+        146.5,
+        27.5,
+        130.5
+      ],
+      "earing-S": [
+        146.5,
+        133.5,
+        130.5
+      ],
+      "jackstay-P16": [
+        146.5,
+        64.5,
+        131.5
+      ],
+      "jackstay-P24": [
+        146.5,
+        56.5,
+        131.5
+      ],
+      "jackstay-P32": [
+        146.5,
+        48.5,
+        131.5
+      ],
+      "jackstay-P40": [
+        146.5,
+        40.5,
+        131.5
+      ],
+      "jackstay-P48": [
+        146.5,
+        32.5,
+        130.5
+      ],
+      "jackstay-P8": [
+        146.5,
+        72.5,
+        131.5
+      ],
+      "jackstay-S16": [
+        146.5,
+        96.5,
+        131.5
+      ],
+      "jackstay-S24": [
+        146.5,
+        104.5,
+        131.5
+      ],
+      "jackstay-S32": [
+        146.5,
+        112.5,
+        131.5
+      ],
+      "jackstay-S40": [
+        146.5,
+        120.5,
+        131.5
+      ],
+      "jackstay-S48": [
+        146.5,
+        128.5,
+        130.5
+      ],
+      "jackstay-S8": [
+        146.5,
+        88.5,
+        131.5
+      ],
+      "pivot": [
+        146.5,
+        80.5,
+        130.5
+      ],
+      "sling": [
+        146.5,
+        80.5,
+        131.5
+      ]
+    },
     "main-gaff": {
       "peak": [
         82.7019,
@@ -440,9 +532,9 @@
     "x_stern": 53
   },
   "counts": {
-    "anchors": 84,
-    "cells": 2038,
-    "subworks": 6
+    "anchors": 102,
+    "cells": 2521,
+    "subworks": 7
   },
   "measure": {
     "fore-course": {
@@ -466,6 +558,11 @@
       "rotated_hits": {
         "mast_main": 5
       }
+    },
+    "main-course": {
+      "cells": 483,
+      "components_6": 1,
+      "rotated_hits": {}
     },
     "main-gaff": {
       "cells": 301,
@@ -596,6 +693,35 @@
         5
       ],
       "tier": "boom"
+    },
+    "main-course": {
+      "arm": 6.25,
+      "k": 1,
+      "kind": "square",
+      "label": "main yard",
+      "length": 119,
+      "mast": "main",
+      "mast_front_x": 144,
+      "origin": [
+        144,
+        20,
+        128
+      ],
+      "pivot": [
+        146,
+        80,
+        130
+      ],
+      "r0": 1.35,
+      "ry": 0.0,
+      "rz": 0.0,
+      "size": [
+        5,
+        121,
+        5
+      ],
+      "tier": "course",
+      "z": 130
     },
     "main-gaff": {
       "axis_to_aft": 1.5,
@@ -1660,6 +1786,306 @@
       ],
       "title": "夜隼號 帆桁 main topsail yard（8.9 m）",
       "work": "summit-night-falcon-01m-yard-main-topsail"
+    },
+    {
+      "anchors": [
+        {
+          "at": [
+            2,
+            1,
+            2
+          ],
+          "kind": "yardarm",
+          "name": "arm-P",
+          "world": [
+            146,
+            21,
+            130
+          ]
+        },
+        {
+          "at": [
+            2,
+            119,
+            2
+          ],
+          "kind": "yardarm",
+          "name": "arm-S",
+          "world": [
+            146,
+            139,
+            130
+          ]
+        },
+        {
+          "at": [
+            2,
+            7,
+            2
+          ],
+          "kind": "earing",
+          "name": "earing-P",
+          "world": [
+            146,
+            27,
+            130
+          ]
+        },
+        {
+          "at": [
+            2,
+            113,
+            2
+          ],
+          "kind": "earing",
+          "name": "earing-S",
+          "world": [
+            146,
+            133,
+            130
+          ]
+        },
+        {
+          "at": [
+            2,
+            60,
+            3
+          ],
+          "kind": "sling",
+          "name": "sling",
+          "world": [
+            146,
+            80,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            52,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-P8",
+          "world": [
+            146,
+            72,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            68,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-S8",
+          "world": [
+            146,
+            88,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            44,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-P16",
+          "world": [
+            146,
+            64,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            76,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-S16",
+          "world": [
+            146,
+            96,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            36,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-P24",
+          "world": [
+            146,
+            56,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            84,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-S24",
+          "world": [
+            146,
+            104,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            28,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-P32",
+          "world": [
+            146,
+            48,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            92,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-S32",
+          "world": [
+            146,
+            112,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            20,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-P40",
+          "world": [
+            146,
+            40,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            100,
+            3
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-S40",
+          "world": [
+            146,
+            120,
+            131
+          ]
+        },
+        {
+          "at": [
+            2,
+            12,
+            2
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-P48",
+          "world": [
+            146,
+            32,
+            130
+          ]
+        },
+        {
+          "at": [
+            2,
+            108,
+            2
+          ],
+          "kind": "jackstay",
+          "name": "jackstay-S48",
+          "world": [
+            146,
+            128,
+            130
+          ]
+        },
+        {
+          "at": [
+            2,
+            60,
+            2
+          ],
+          "kind": "pivot",
+          "name": "pivot",
+          "world": [
+            146,
+            80,
+            130
+          ]
+        }
+      ],
+      "at": [
+        146.5,
+        80.5,
+        130.5
+      ],
+      "cells": 483,
+      "file": "masks/yards/main-course.vox.txt",
+      "host": "summit-night-falcon-01m-mast-main",
+      "link": "主桅",
+      "member": "main-course",
+      "meta": {
+        "diameter_m": 0.27,
+        "kind": "yard",
+        "length_m": 11.9,
+        "mast": "main",
+        "pivot_anchor": "pivot",
+        "rotate_z_deg": 0.0,
+        "turn_axis": "z",
+        "yard": "course"
+      },
+      "model": "yard-main-course",
+      "origin": [
+        144,
+        20,
+        128
+      ],
+      "pivot": [
+        2.5,
+        60.5,
+        2.5
+      ],
+      "rotate": [
+        0,
+        0.0,
+        0.0
+      ],
+      "sha256": "57140e3658923fe16c790945b2137fd2261f3e651408eb07af15ce608fd4cb5c",
+      "size": [
+        5,
+        121,
+        5
+      ],
+      "title": "夜隼號 帆桁 main yard（11.9 m）",
+      "work": "summit-night-falcon-01m-yard-main-course"
     },
     {
       "anchors": [

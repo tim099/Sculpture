@@ -25,7 +25,9 @@
 - [x] 帆桁（階段八：6 件子作品＋外部模型；固定點 84 在 verify_yards.json 的 placements[].anchors）
 - [x] 靜索（階段九：channels v2＋下 deadeye＋chain plates；繩 207 —— shrouds、backstays、futtock、topmast／topgallant shrouds、stays 6＋bobstay、上 deadeye＋lanyards、ratlines）
 - [x] 繫繩點＋動索（階段十：fife rails＋bitts＋main sheet horse、舷牆 pin rails 12 根／舷、pins fife 20＋舷牆 80（兩舷）；動索 44 —— lifts、footropes、braces＋falls、halyards、gaff peak halyard＋vangs、topping lifts、main sheet）
-- [ ] 帆（掛帆時再定 brace 角、meta 加 sail；三角帆掛在 fore-tm-stay／fore-tg-stay、sheets／tacks 落 pin rails —— 已用 14 根 pin，空的還有 86）
+- [x] 帆（階段十一：方帆 4、gaff 主帆、三角帆 3；主桅加一根不掛帆的下桁；帆腳索 20；預設風 4.5,−1.5,0）
+- [ ] 帆的鼓度：方帆最鼓 ≈ 寬的 32–35%（kotoko 說真的方帆約一到兩成）—— 旋鈕是風，等 Tim 看 stage11_sails_yaw45 與 _wind2.4 選
+- [ ] brace 角：帆桁都正橫（rz 0）；要轉時 course 下角的 sheet／tack 落在船上的 pin，轉很大會被拉歪（Shipbuilding §7）
 - [ ] 旗：候選圖在 summit-night-falcon-01m-flag（⛔ 不是定稿）—— 掛在主桅 truck
 - [ ] 砲（外部模型、退到零碰撞）、插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯

@@ -256,3 +256,21 @@ Tim：「提交吧 然後繼續做 pin rails 和動索」。設計 plan.json `be
   - 🩸 量尺：① 繩長第一版拿引擎的「長」比我的直線長 ⇒ footrope 差 1.65 —— 兩種量 ⇒ 改比「直線」；② **pin 探針只認色 104 ⇒ 760 根 —— 104 也是頂蓋。這個病我在階段九才寫進筆記，一小時後同一把尺又這樣寫** ⇒ 改認形狀（rail 那一格上下各兩格 pin 色）。
   - 反向對照（pin x 偏 3、繩端偏 3）全報 3。
 - 過程圖：`overlays/stage10_assembly_yaw{45,-135,90}.png`、`stage10_main_fife_yaw60.png`、`stage10_quarterdeck_yaw120.png`、`stage10_fore_yards_yaw30.png`、`stage10_demo_course_braced_yaw35.png`。
+
+## 階段十一 新圖紙 11：掛帆（8 面）＋主桅下桁 —— 落格（2026-10-13 下午，wake #117）
+Tim：「提交吧 然後繼續掛帆」。設計 plan.json `sails`（provenance `sails.*`）、`yards.square` 加 main-course（provenance `yards.main_course`）；產生 `design/draft_sails.py` ⇒ `verify_sails.json`；下 CLI `design/apply_sails.py <design> wind|sails|ropes`；讀數 `design/check_sails.py`（讀引擎匯出的 OBJ —— 模擬過的帆網格）⇒ `verify_sails_post.json`。照 basecamp 憲法號（Shipbuilding §7、notes 掛帆試試／kotoko 兩點）。重跑逐位元組相同。一格 voxel 都沒動（組裝件仍 95,339）。
+- **主桅下桁（不掛帆）**：🩸 階段八寫「主桅頂上一根橫桁」就停了 —— 掛帆才發現 main topsail 的下兩角沒有地方去（top 邊緣 16 格寬、帆頭 89）。brigantine 的主桅多半有一根不掛 course 的下桁 ⇒ 子作品 `-yard-main-course`（規則照 fore course：119 格、z 130、483 格、模型 `主桅/yard-main-course`）。原有六根的清單重產逐位元組相同；靜索 207 條對它重新取樣，verify_rigging.json 逐位元組相同（中段 0）。
+  - 連帶：fore course 的 brace 原本落在主桅 top 下 6 格的桅側滑車 —— 那一高度現在是下桁 ⇒ 改直接落船腰 rail 6；拿掉兩條 fall（unrope）與 `brace-S／P`（unanchor；那一刻引擎報「1／2 條繩的綁定壞了」—— 是 brace 自己還指著它，下一步重寫 brace 之後 ropes_broken 0）。下桁加 lifts、footropes、braces（後甲板 rail 4）。
+  - 🩸 從舷外的 yardarm 直落舷牆裡的 pin，最後 1.5 格一定擦過頂蓋內角（量到 104）⇒ 加導點：pin 那一欄頂蓋最靠裡那一格的內緣往裡 0.3、頂面上 0.3（真船：rail 上的 sheave）⇒ brace 一段到導點、一段 1.81 格落 pin。動索 44 → **54**、中段 0。
+- **帆 8 面**（組裝件，#f2ead8）：方帆 4（fore course、fore topsail、fore topgallant、main topsail）上緣釘在帆桁模型的兩個 earing 之間、下兩角 free；topsail 以上的 sheet 綁下一根帆桁同舷的 earing；course 的 sheet（slack 0.85，船腰 rail 8）往後、tack（0.8，rail 12）往前，都經導點（🩸 v1 直落 pin 穿過舷牆 9／23 個取樣）。主帆（gaff）四角釘、邊 0／2／3 釘、只有 leech 自由。三角帆 3：fore staysail（fore stay）、jib（fore topmast stay）、flying jib（fore topgallant stay），luff 沿 stay、clew free、兩舷 sheet 落 rail 10／11／12。帆腳索 20。預設風 4.5,−1.5,0、模擬 4 秒。
+  - 🩸 三面三角帆都在中線那個平面：flying jib 第一版用跟 jib 一樣的比例，clew 落進 jib 的布面 ⇒ 加條件「每一面的 foot 與 clew 在裡面那根 stay 的 luff 之上 ≥ 5 格」：jib 13.6、flying jib 15.5（flying jib foot 0.38、上翹 32°）。
+  - 🩸 主帆第一版帆頭綁 gaff 的 top 點（頂面）—— 模擬後布從 gaff 身體穿過 12 點 ⇒ gaff 加底面固定點 bot8／bot64、帆頭綁底面 ⇒ 0。
+- 讀數：
+  - 引擎 `sub=sails`：8 面全部 ok、sails_broken 0、ropes_broken 0；最鼓 fore course −37.98、fore topsail −30.78、fore topgallant −20.69、main topsail −30.52（負 ＝ 往前鼓，離桅）、主帆 18.23、三角帆 6.74／11.44／10.71。繩 281（靜索 207、動索 54、帆腳索 20）。
+    - 🩸 第一次讀 fore topsail 是 −60.59 —— 它右舷的 sheet 寫入撞 IOException 沒進去，那一角在飛；補上之後 −30.78。
+  - 讀回：sails.json 8／8 角、名、bind、free、fullness、色跟設計相同；ropes.json 281／281。
+  - `check_sails.py`（讀 OBJ：帆是 o sail_<i>、頂點 v x z y —— 第一個角 head_p 對過，8 面最大差 0.05）：**模擬後**每面帆的頂點與三角形重心落在實心的 0（8 面；離釘住的邊 < 1.2 格的不算）；方帆離自己那根桅最近 2.45–3.61 格（EDT）、整份往桅推 3 格 ⇒ 0–1（量尺會叫）。
+  - ⚠ 平的布（模擬之前）方帆穿過桅 12–70 個取樣 —— 風（往 +x）把布往前推開才離開；**這不是我造成它不碰，是風**。風往後吹（或無風）時要重量。
+  - 鼓度：方帆最鼓 ≈ 寬的 32–35%（kotoko：真的方帆約一到兩成）。旋鈕是風（basecamp 試驗表）；`overlays/stage11_sails_wind2.4_yaw45.png` 是 2.4 m/s 的單次覆寫、預設沒改 —— 等 Tim 選。
+- 寫入失敗：IOException 2 次（main-course-lift-P、fore-topsail-sheet-S），重跑過。
+- 過程圖：`overlays/stage11_sails_yaw{45,-135,90,160,-30}.png`、`stage11_sails_wind2.4_yaw45.png`。

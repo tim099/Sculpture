@@ -1,0 +1,812 @@
+{
+  "flat_cloth_hits": {
+    "flying-jib": {},
+    "fore-course": {
+      "mast_fore": 24
+    },
+    "fore-staysail": {},
+    "fore-topgallant": {
+      "mast_fore": 12
+    },
+    "fore-topsail": {
+      "mast_fore": 68
+    },
+    "jib": {},
+    "main-topsail": {
+      "mast_main": 70
+    },
+    "mainsail": {}
+  },
+  "head_checks": {
+    "flying-jib": {
+      "clew_below_own_luff": 19.384,
+      "foot_above_inner_luff_min": 15.503
+    },
+    "fore-staysail": {
+      "clew_below_own_luff": 36.509
+    },
+    "jib": {
+      "clew_below_own_luff": 63.262,
+      "foot_above_inner_luff_min": 13.641
+    }
+  },
+  "pins_used_by_sails": [
+    "繫繩欄-鏡像/pinrail-10.pin-4",
+    "繫繩欄-鏡像/pinrail-11.pin-2",
+    "繫繩欄-鏡像/pinrail-12.pin-1",
+    "繫繩欄-鏡像/pinrail-12.pin-2",
+    "繫繩欄-鏡像/pinrail-8.pin-2",
+    "繫繩欄/pinrail-10.pin-4",
+    "繫繩欄/pinrail-11.pin-2",
+    "繫繩欄/pinrail-12.pin-1",
+    "繫繩欄/pinrail-12.pin-2",
+    "繫繩欄/pinrail-8.pin-2"
+  ],
+  "rope_hits_mid": {},
+  "rope_landing_cells": {},
+  "ropes": [
+    {
+      "color": "#a08458",
+      "from": "sail:fore-course/clew_s",
+      "from_world": [
+        207.5,
+        122.9,
+        55.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 33.679,
+      "name": "fore-course-sheet-S",
+      "sag_est": 0.0,
+      "slack": 0.85,
+      "thickness": 0.45,
+      "to": "180.5000,107.7000,42.3000",
+      "to_world": [
+        180.5,
+        107.7,
+        42.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "180.5000,107.7000,42.3000",
+      "from_world": [
+        180.5,
+        107.7,
+        42.3
+      ],
+      "group": "running/sheets",
+      "kind": "fall",
+      "length": 3.046,
+      "name": "fore-course-sheet-lead-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "繫繩欄/pinrail-8.pin-2",
+      "to_world": [
+        180.5,
+        106.5,
+        39.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-course/clew_s",
+      "from_world": [
+        207.5,
+        122.9,
+        55.5
+      ],
+      "group": "running/tacks",
+      "kind": "sheet",
+      "length": 48.217,
+      "name": "fore-course-tack-S",
+      "sag_est": 0.0,
+      "slack": 0.8,
+      "thickness": 0.45,
+      "to": "247.5000,96.7000,49.3000",
+      "to_world": [
+        247.5,
+        96.7,
+        49.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "247.5000,96.7000,49.3000",
+      "from_world": [
+        247.5,
+        96.7,
+        49.3
+      ],
+      "group": "running/tacks",
+      "kind": "fall",
+      "length": 2.807,
+      "name": "fore-course-tack-lead-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "繫繩欄/pinrail-12.pin-1",
+      "to_world": [
+        247.5,
+        96.5,
+        46.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-course/clew_p",
+      "from_world": [
+        207.5,
+        38.1,
+        55.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 33.679,
+      "name": "fore-course-sheet-P",
+      "sag_est": 0.0,
+      "slack": 0.85,
+      "thickness": 0.45,
+      "to": "180.5000,53.3000,42.3000",
+      "to_world": [
+        180.5,
+        53.3,
+        42.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "180.5000,53.3000,42.3000",
+      "from_world": [
+        180.5,
+        53.3,
+        42.3
+      ],
+      "group": "running/sheets",
+      "kind": "fall",
+      "length": 3.046,
+      "name": "fore-course-sheet-lead-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "繫繩欄-鏡像/pinrail-8.pin-2",
+      "to_world": [
+        180.5,
+        54.5,
+        39.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-course/clew_p",
+      "from_world": [
+        207.5,
+        38.1,
+        55.5
+      ],
+      "group": "running/tacks",
+      "kind": "sheet",
+      "length": 48.217,
+      "name": "fore-course-tack-P",
+      "sag_est": 0.0,
+      "slack": 0.8,
+      "thickness": 0.45,
+      "to": "247.5000,64.3000,49.3000",
+      "to_world": [
+        247.5,
+        64.3,
+        49.3
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "247.5000,64.3000,49.3000",
+      "from_world": [
+        247.5,
+        64.3,
+        49.3
+      ],
+      "group": "running/tacks",
+      "kind": "fall",
+      "length": 2.807,
+      "name": "fore-course-tack-lead-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.3,
+      "to": "繫繩欄-鏡像/pinrail-12.pin-1",
+      "to_world": [
+        247.5,
+        64.5,
+        46.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-topsail/clew_s",
+      "from_world": [
+        207.5,
+        133.5,
+        123.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 3.0,
+      "name": "fore-topsail-sheet-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "model:前桅/yard-fore-course/earing-S",
+      "to_world": [
+        207.5,
+        133.5,
+        120.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-topsail/clew_p",
+      "from_world": [
+        207.5,
+        27.5,
+        123.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 3.0,
+      "name": "fore-topsail-sheet-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "model:前桅/yard-fore-course/earing-P",
+      "to_world": [
+        207.5,
+        27.5,
+        120.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-topgallant/clew_s",
+      "from_world": [
+        209.5,
+        116.5,
+        194.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 3.0,
+      "name": "fore-topgallant-sheet-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "model:前桅/yard-fore-topsail/earing-S",
+      "to_world": [
+        209.5,
+        116.5,
+        191.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-topgallant/clew_p",
+      "from_world": [
+        209.5,
+        44.5,
+        194.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 3.0,
+      "name": "fore-topgallant-sheet-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "model:前桅/yard-fore-topsail/earing-P",
+      "to_world": [
+        209.5,
+        44.5,
+        191.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:main-topsail/clew_s",
+      "from_world": [
+        146.5,
+        133.5,
+        133.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 3.0,
+      "name": "main-topsail-sheet-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "model:主桅/yard-main-course/earing-S",
+      "to_world": [
+        146.5,
+        133.5,
+        130.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:main-topsail/clew_p",
+      "from_world": [
+        146.5,
+        27.5,
+        133.5
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 3.0,
+      "name": "main-topsail-sheet-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "model:主桅/yard-main-course/earing-P",
+      "to_world": [
+        146.5,
+        27.5,
+        130.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-staysail/clew",
+      "from_world": [
+        236.9413,
+        80.5,
+        64.1806
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 36.594,
+      "name": "fore-staysail-sheet-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄/pinrail-10.pin-4",
+      "to_world": [
+        218.5,
+        103.5,
+        42.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:fore-staysail/clew",
+      "from_world": [
+        236.9413,
+        80.5,
+        64.1806
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 36.594,
+      "name": "fore-staysail-sheet-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄-鏡像/pinrail-10.pin-4",
+      "to_world": [
+        218.5,
+        57.5,
+        42.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:jib/clew",
+      "from_world": [
+        258.8149,
+        80.5,
+        92.14
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 56.34,
+      "name": "jib-sheet-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄/pinrail-11.pin-2",
+      "to_world": [
+        235.5,
+        99.5,
+        44.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:jib/clew",
+      "from_world": [
+        258.8149,
+        80.5,
+        92.14
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 56.34,
+      "name": "jib-sheet-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄-鏡像/pinrail-11.pin-2",
+      "to_world": [
+        235.5,
+        61.5,
+        44.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:flying-jib/clew",
+      "from_world": [
+        305.7414,
+        80.5,
+        121.2175
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 93.97,
+      "name": "flying-jib-sheet-S",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄/pinrail-12.pin-2",
+      "to_world": [
+        250.5,
+        94.5,
+        46.5
+      ]
+    },
+    {
+      "color": "#a08458",
+      "from": "sail:flying-jib/clew",
+      "from_world": [
+        305.7414,
+        80.5,
+        121.2175
+      ],
+      "group": "running/sheets",
+      "kind": "sheet",
+      "length": 93.97,
+      "name": "flying-jib-sheet-P",
+      "sag_est": 0.0,
+      "slack": 1.0,
+      "thickness": 0.35,
+      "to": "繫繩欄-鏡像/pinrail-12.pin-2",
+      "to_world": [
+        250.5,
+        66.5,
+        46.5
+      ]
+    }
+  ],
+  "sails": [
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "head_p",
+        "head_s",
+        "clew_s",
+        "clew_p"
+      ],
+      "corners": [
+        "model:前桅/yard-fore-course/earing-P",
+        "model:前桅/yard-fore-course/earing-S",
+        "207.5000,122.9000,55.5000",
+        "207.5000,38.1000,55.5000"
+      ],
+      "corners_world": [
+        [
+          207.5,
+          27.5,
+          120.5
+        ],
+        [
+          207.5,
+          133.5,
+          120.5
+        ],
+        [
+          207.5,
+          122.9,
+          55.5
+        ],
+        [
+          207.5,
+          38.1,
+          55.5
+        ]
+      ],
+      "free": "clew_s,clew_p",
+      "fullness": 1.05,
+      "name": "fore-course",
+      "note": "course：sheet 往後（rail 8）、tack 往前（rail 12）落 pin"
+    },
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "head_p",
+        "head_s",
+        "clew_s",
+        "clew_p"
+      ],
+      "corners": [
+        "model:前桅/yard-fore-topsail/earing-P",
+        "model:前桅/yard-fore-topsail/earing-S",
+        "207.5000,133.5000,123.5000",
+        "207.5000,27.5000,123.5000"
+      ],
+      "corners_world": [
+        [
+          209.5,
+          44.5,
+          191.5
+        ],
+        [
+          209.5,
+          116.5,
+          191.5
+        ],
+        [
+          207.5,
+          133.5,
+          123.5
+        ],
+        [
+          207.5,
+          27.5,
+          123.5
+        ]
+      ],
+      "free": "clew_s,clew_p",
+      "fullness": 1.05,
+      "name": "fore-topsail",
+      "note": "sheet 綁下一根帆桁（fore-course）同舷的 earing"
+    },
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "head_p",
+        "head_s",
+        "clew_s",
+        "clew_p"
+      ],
+      "corners": [
+        "model:前桅/yard-fore-topgallant/earing-P",
+        "model:前桅/yard-fore-topgallant/earing-S",
+        "209.5000,116.5000,194.5000",
+        "209.5000,44.5000,194.5000"
+      ],
+      "corners_world": [
+        [
+          210.5,
+          53.5,
+          234.5
+        ],
+        [
+          210.5,
+          107.5,
+          234.5
+        ],
+        [
+          209.5,
+          116.5,
+          194.5
+        ],
+        [
+          209.5,
+          44.5,
+          194.5
+        ]
+      ],
+      "free": "clew_s,clew_p",
+      "fullness": 1.05,
+      "name": "fore-topgallant",
+      "note": "sheet 綁下一根帆桁（fore-topsail）同舷的 earing"
+    },
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "head_p",
+        "head_s",
+        "clew_s",
+        "clew_p"
+      ],
+      "corners": [
+        "model:主桅/yard-main-topsail/earing-P",
+        "model:主桅/yard-main-topsail/earing-S",
+        "146.5000,133.5000,133.5000",
+        "146.5000,27.5000,133.5000"
+      ],
+      "corners_world": [
+        [
+          146.5,
+          44.5,
+          198.5
+        ],
+        [
+          146.5,
+          116.5,
+          198.5
+        ],
+        [
+          146.5,
+          133.5,
+          133.5
+        ],
+        [
+          146.5,
+          27.5,
+          133.5
+        ]
+      ],
+      "free": "clew_s,clew_p",
+      "fullness": 1.05,
+      "name": "main-topsail",
+      "note": "sheet 綁下一根帆桁（main-course）同舷的 earing"
+    },
+    {
+      "bind": "0,2,3",
+      "color": "#f2ead8",
+      "corner_names": [
+        "throat",
+        "peak",
+        "clew",
+        "tack"
+      ],
+      "corners": [
+        "model:主桅/yard-main-gaff/bot8",
+        "model:主桅/yard-main-gaff/bot64",
+        "model:主桅/yard-main-boom/top96",
+        "model:主桅/yard-main-boom/top8"
+      ],
+      "corners_world": [
+        [
+          134.5541,
+          80.5,
+          132.843
+        ],
+        [
+          89.2551,
+          80.5,
+          165.7825
+        ],
+        [
+          49.6853,
+          80.5,
+          67.5752
+        ],
+        [
+          137.5647,
+          80.5,
+          62.9697
+        ]
+      ],
+      "free": "",
+      "fullness": 1.05,
+      "name": "mainsail",
+      "note": "gaff、boom、桅三條邊釘住，只有 leech 自由"
+    },
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "tack",
+        "head",
+        "clew"
+      ],
+      "corners": [
+        "艏斜桅/stay-fore",
+        "228.7500,80.5000,109.0000",
+        "236.9413,80.5000,64.1806"
+      ],
+      "corners_world": [
+        [
+          280.5,
+          80.5,
+          56.5
+        ],
+        [
+          228.75,
+          80.5,
+          109.0
+        ],
+        [
+          236.9413,
+          80.5,
+          64.1806
+        ]
+      ],
+      "free": "clew",
+      "fullness": 1.06,
+      "name": "fore-staysail",
+      "note": "luff（邊 0）沿 fore-stay"
+    },
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "tack",
+        "head",
+        "clew"
+      ],
+      "corners": [
+        "艏斜桅/stay-tm",
+        "247.2000,80.5000,167.7000",
+        "258.8149,80.5000,92.1400"
+      ],
+      "corners_world": [
+        [
+          330.5,
+          80.5,
+          79.5
+        ],
+        [
+          247.2,
+          80.5,
+          167.7
+        ],
+        [
+          258.8149,
+          80.5,
+          92.14
+        ]
+      ],
+      "free": "clew",
+      "fullness": 1.06,
+      "name": "jib",
+      "note": "luff（邊 0）沿 fore-tm-stay"
+    },
+    {
+      "bind": "0",
+      "color": "#f2ead8",
+      "corner_names": [
+        "tack",
+        "head",
+        "clew"
+      ],
+      "corners": [
+        "艏斜桅/stay-tg",
+        "245.5000,80.5000,201.2500",
+        "305.7414,80.5000,121.2175"
+      ],
+      "corners_world": [
+        [
+          356.5,
+          80.5,
+          89.5
+        ],
+        [
+          245.5,
+          80.5,
+          201.25
+        ],
+        [
+          305.7414,
+          80.5,
+          121.2175
+        ]
+      ],
+      "free": "clew",
+      "fullness": 1.06,
+      "name": "flying-jib",
+      "note": "luff（邊 0）沿 fore-tg-stay"
+    }
+  ],
+  "seconds": 4,
+  "wind": [
+    4.5,
+    -1.5,
+    0
+  ]
+}

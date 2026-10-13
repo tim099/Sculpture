@@ -96,7 +96,8 @@
       { "name": "fore-course", "mast": "fore", "label": "fore course yard", "over_course": 1.0, "d_over_mast": 0.5625, "mast_r": "r_lower", "arm_over_L": 0.0525, "z_ref": "top", "z_off": -6 },
       { "name": "fore-topsail", "mast": "fore", "label": "fore topsail yard", "over_course": 0.7552, "d_over_mast": 0.75, "mast_r": "r_top", "arm_over_L": 0.0858, "z_ref": "crosstrees", "z_off": -4 },
       { "name": "fore-topgallant", "mast": "fore", "label": "fore topgallant yard", "over_course": 0.5185, "d_over_mast": 1.0, "mast_r": "r_tg", "arm_over_L": 0.0476, "z_ref": "truck", "z_off": -6 },
-      { "name": "main-topsail", "mast": "main", "label": "main topsail yard", "over_course": 0.7552, "d_over_mast": 0.75, "mast_r": "r_top", "arm_over_L": 0.0858, "z_ref": "crosstrees", "z_off": -4 }
+      { "name": "main-topsail", "mast": "main", "label": "main topsail yard", "over_course": 0.7552, "d_over_mast": 0.75, "mast_r": "r_top", "arm_over_L": 0.0858, "z_ref": "crosstrees", "z_off": -4 },
+      { "name": "main-course", "mast": "main", "label": "main yard", "over_course": 1.0, "d_over_mast": 0.5625, "mast_r": "r_lower", "arm_over_L": 0.0525, "z_ref": "top", "z_off": -6 }
     ],
     "taper": { "s": [0.0, 0.25, 0.5, 0.75, 1.0], "k": [1.0, 0.968, 0.875, 0.7, 0.4286] },
     "r_min": 0.5,
@@ -133,7 +134,22 @@
     "thickness": { "lift": 0.3, "brace": 0.35, "footrope": 0.3, "halyard": 0.4, "fall": 0.3, "vang": 0.3, "topping_lift": 0.35, "sheet": 0.45 },
     "footrope": { "inner_dy": 3, "slack": 1.03 },
     "slack": 1.0,
-    "points": { "brace_block_below_top": 6 }
+    "points": { "brace_block_below_top": 6, "note": "brace_block_below_top 現在只給 topping lift 的 top-aft 用（階段十一拿掉了 brace-S／P）" }
+  },
+  "sails": {
+    "color": "#f2ead8", "wind": [4.5, -1.5, 0], "seconds": 4,
+    "square": { "fore-course": { "lower": null }, "fore-topsail": { "lower": "fore-course" }, "fore-topgallant": { "lower": "fore-topsail" }, "main-topsail": { "lower": "main-course" } },
+    "fullness": { "square": 1.05, "mainsail": 1.05, "head": 1.06 },
+    "course": { "foot_z": 55, "spread": 0.8, "sheet_rail": 8, "tack_rail": 12, "sheet_slack": 0.85, "tack_slack": 0.8 },
+    "topsail_clew_dz": 3,
+    "mainsail": { "throat": "bot8", "peak": "bot64", "clew": "top96", "tack": "top8" },
+    "head": [
+      { "name": "fore-staysail", "stay": "fore-stay", "head_f": 0.75, "foot_ratio": 0.6, "foot_up_deg": 10, "sheet_rail": 10 },
+      { "name": "jib", "stay": "fore-tm-stay", "head_f": 0.7, "foot_ratio": 0.6, "foot_up_deg": 10, "sheet_rail": 11 },
+      { "name": "flying-jib", "stay": "fore-tg-stay", "head_f": 0.75, "foot_ratio": 0.38, "foot_up_deg": 32, "sheet_rail": 12 }
+    ],
+    "stack_margin": 5,
+    "sheet_thickness": { "course": 0.45, "topsail": 0.35, "head": 0.35 }
   },
   "provenance": {
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
@@ -200,6 +216,7 @@
     "yards.course_over_beam": "參考資料（換算）：憲法號 fore yard 81 ft（basecamp 作品 plan.json yards，出處 Martin《Constitution Close Up》附錄 A 1815）÷ 型寬 43'6\"（basecamp notes：1927 11 號圖）＝ 1.862 ⇒ 夜隼號 fore course 119 格。⚠ 這是一艘 44 門巡防艦的比例搬到一艘 brigantine，沒查 brigantine 自己的史料",
     "yards.square": "參考資料（換算）：長度比（÷ fore course）、yardarm／長取憲法號前桅同一層的那一根（topsail 61.17 ft／5.25 ft、topgallant 42／2）；直徑 ＝ 夜隼號那一節桅的跟部直徑 × 憲法號「桁徑 ÷ 掛它那一節桅的徑」（fore yard 18 in ÷ 下桅 32 ＝ 0.5625、topsail 13.5 ÷ 中桅 18 ＝ 0.75、topgallant 9 ÷ 頂桅 9 ＝ 1.0；basecamp plan.json masts／yards）。⚠ 第一版用「徑 ÷ 長」⇒ topsail 1.6 格、在 0.1 m 的格子上只剩一格粗的線，跟我已經做了 4.8 格粗的下桅不成比例；改用跟桅的比 —— 我的桅本來就比憲法號的比例粗，桁跟著粗；主桅沒有 course（主帆是 gaff 帆），頂上那根照前桅 topsail 的比例。高度是設計決定：course 在 top 平台下 6 格、topsail 在中桅 crosstrees 下 4 格、topgallant 在 truck 下 6 格 —— 全部「升起」的位置（之後要掛帆）",
     "yards.taper": "參考資料（轉引）：basecamp 憲法號 plan.json yards.taper —— Steel 1794 two-tree yard，中間往兩端每四分之一：1、30/31、7/8、7/10、3/7（我沒讀 Steel 原文）",
+    "yards.main_course": "設計決定（階段十一 掛帆時加，2026-10-13）：主桅加一根下桁（main yard），不掛帆 —— 主帆是 gaff 帆，這根只拿來張 main topsail 的帆腳（sheets 綁它的 earing）。🩸 階段八我寫『主桅頂上一根橫桁』就停了：到掛帆才發現 main topsail 的下兩角沒有地方去（top 邊緣只有 16 格寬、帆頭 89）。規則照 fore course（長 119、徑 × 0.5625、top 下 6 ⇒ z 130）",
     "yards.r_min": "設計決定：直的桿（沿 y 或沿 x）核心那一排一定在格心上 ⇒ 半徑 0.5 也是 6 連通；斜的桿不做格子（見 gaff）",
     "yards.boom": "設計決定：boom 從主桅後緣往船尾、上翹 3°（憲法號 spanker boom 同）；尾端伸出船尾最後一格 10 格（1 m）；jaws 高度取「boom 下緣離它底下最高那一格 ≥ 2 格」的最低整數（底下最高的是船尾燈）；直徑 ＝ 主桅下桅跟部 × 0.5208（憲法號 spanker boom 12.5 in ÷ 後桅下桅 24 in）、尾端收到 0.75（同）",
     "yards.gaff": "設計決定：gaff jaws 在主桅 top 平台下 8 格；上翹 35°（basecamp 記：1817 帆圖 18–20°、現代照片 35–40° —— 我取照片那一端，看起來像翅膀）；長 ＝ boom × 0.7097（憲法號 44／62 ft）；直徑 ＝ 主桅下桅跟部 × 0.5（憲法號 gaff 12 in ÷ 後桅 24 in）、尾端 0.7。⭐ gaff／boom 在子作品裡做成水平的直桿，斜度交給模型的 rotate（繞 y）—— basecamp 階段三十三記下的『gaff 斜 35° 仍是格子的階梯』這裡不會有",
@@ -223,8 +240,14 @@
     "belaying.horse": "設計決定：main sheet 的 horse —— 後甲板 x 72（boom 的 top72 正下方附近、companion 110 之後、船尾燈 56 之前）一根橫的鐵桿，|dy| ≤ 8、甲板上 2 格，兩頭各一根 1 格柱",
     "belaying.colors": "設計決定：rail、bitts 136（跟甲板橫樑同）、pins 104、鐵件 73",
     "running": "設計決定（階段十）：動索 —— 憲法號只做了帆的 sheets／tacks，lifts、braces、halyards、footropes、gaff／boom 的動索是這艘船先做；做法是我照一般橫帆船的走法定的，⛔ 沒有一條是查來的史料。帆桁上的端點一律綁模型（model:<桅關聯>/yard-<帆桁>/<點>）⇒ 帆桁一轉、跟著走",
-    "running.lists": "設計決定：lifts（yardarm → 上一節桅的 cap 兩側；topgallant → 頂桅頭）、footropes（帆桁底下：yardarm 內一格 → 中心外 3 格，slack 1.03 垂下來）、braces（前桅的帆桁往船尾拉到主桅：course → 主桅 top 下 6 格桅側，再一段 fall 落主桅 fife rail；topsail → 主桅中桅 crosstrees 端、topgallant → 主桅 topmast head，fall 落舷牆 pin rail —— 從 top 外面下來；主桅 topsail → 後甲板舷牆 pin rail 一段）、halyards（topsail、topgallant：sling → 上一節桅頭前面一段 tye、桅頭側面 → 舷牆 pin rail 一段 fall）、gaff peak halyard 兩段（gaff 上 1/3、2/3 → 主桅 topmast head 後面）＋ fall 到主桅 fife rail、vangs 兩舷（peak → 後甲板 pin rail 最後一根）、topping lift（boom end → 主桅 top 下 6 格後面）、main sheet（boom 底下 → horse 中心）",
+    "running.lists": "設計決定：lifts（yardarm → 上一節桅的 cap 兩側；topgallant → 頂桅頭）、footropes（帆桁底下：yardarm 內一格 → 中心外 3 格，slack 1.03 垂下來）、braces（course → 船腰 pin rail 一段（階段十一改：主桅加了下桁，原本 top 下 6 格桅側的滑車被它佔了）；主桅下桁 → 後甲板 rail 4；topsail → 主桅中桅 crosstrees 端、topgallant → 主桅 topmast head，fall 落舷牆 pin rail —— 從 top 外面下來；主桅 topsail → 後甲板舷牆 pin rail 一段）、halyards（topsail、topgallant：sling → 上一節桅頭前面一段 tye、桅頭側面 → 舷牆 pin rail 一段 fall）、gaff peak halyard 兩段（gaff 上 1/3、2/3 → 主桅 topmast head 後面）＋ fall 到主桅 fife rail、vangs 兩舷（peak → 後甲板 pin rail 最後一根）、topping lift（boom end → 主桅 top 下 6 格後面）、main sheet（boom 底下 → horse 中心）",
     "running.color": "參考資料（轉引）：動索 #a08458（Shipbuilding §6，粗 0.35–0.5）⇒ 夜隼號 0.3–0.45",
+    "sails": "設計決定（階段十一，2026-10-13）：掛帆 —— 照 basecamp 憲法號（Shipbuilding §7、notes 掛帆試試／kotoko 兩點）：方帆上緣（邊 0）釘在帆桁模型的兩個 earing 之間、下兩角 free；topsail 以上的 sheet 綁下一根帆桁同舷的 earing；course 的 sheet 往後、tack 往前落 pin；gaff 帆三條邊釘住、只有 leech 自由；三角帆 luff 沿 stay（stay 已經 slack 1）、clew free、兩舷 sheet。8 面：方帆 4（fore course、fore topsail、fore topgallant、main topsail）、主帆（gaff）、三角帆 3（fore staysail、jib、flying jib）。主桅下桁不掛帆",
+    "sails.wind": "參考資料（轉引）：預設風 4.5,−1.5,0（4.7 m/s）、模擬 4 秒、方帆 fullness 1.05、三角帆 1.06、帆布 #f2ead8 —— 憲法號試過 7.6 m/s 像降落傘之後定的（Shipbuilding §7）",
+    "sails.course": "參考資料（轉引）＋設計決定：course 的 sheet slack 0.85、tack 0.8（憲法號照 kotoko 的試驗表採用）；下兩角初始位置在 earing 往中線收 0.8、z 55（甲板上約 2 m、離舷牆頂 1 m 多 —— 設計決定）；sheet 往後落船腰 rail 8、tack 往前落 rail 12",
+    "sails.topsail_clew_dz": "參考資料（轉引）：topsail 的下角初始在下一根帆桁同舷 earing 上 3 格（憲法號 sails_test）",
+    "sails.mainsail": "設計決定：gaff bot8 → bot64（throat、peak；gaff 底面 —— 🩸 第一版用 top 點（頂面），模擬後布穿過 gaff 身體 12 點）、boom top96 → top8（clew、tack）；邊 0（gaff）、2（boom）、3（桅）釘住，只有 leech 自由（憲法號 spanker 同）",
+    "sails.head": "設計決定：三根前 stay 各一面（brigantine 常見：fore staysail、jib、flying jib）；head 在 stay 上 head_f 處（憲法號 70–80%）、clew ＝ tack 往船尾 foot_ratio × luff 長、上翹 foot_up_deg。🩸 三面都在中線那個平面裡 —— 第一版 flying jib 用跟 jib 一樣的比例，算出它的 clew 落在 jib 布面裡（兩塊布會互相穿過）⇒ 加 stack_margin：每一面的 foot 與 clew 要在裡面那一根 stay 的 luff 之上 ≥ 5 格 ⇒ flying jib foot 0.38、上翹 32°",
     "upper.quarterdeck.drift": "設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
   }
 }
