@@ -1,5 +1,5 @@
 {
-	"schema": 2,
+	"schema": 3,
 	"wind": [
 		4.5,
 		-1.5,
@@ -40,7 +40,12 @@
 			"enabled": true,
 			"note": "course：sheet 往後、tack 往前綁到舷牆 belaying pin",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:45"
+			"created_at": "2026-10-12T23:23:45",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "course"
+			}
 		},
 		{
 			"name": "fore-topsail",
@@ -75,7 +80,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（course）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:46"
+			"created_at": "2026-10-12T23:23:46",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topsail"
+			}
 		},
 		{
 			"name": "fore-topgallant",
@@ -110,7 +120,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（topsail）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:46"
+			"created_at": "2026-10-12T23:23:46",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topgallant"
+			}
 		},
 		{
 			"name": "fore-royal",
@@ -145,7 +160,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:46"
+			"created_at": "2026-10-12T23:23:46",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "royal"
+			}
 		},
 		{
 			"name": "main-course",
@@ -180,7 +200,12 @@
 			"enabled": true,
 			"note": "course：sheet 往後、tack 往前綁到舷牆 belaying pin",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:47"
+			"created_at": "2026-10-12T23:23:47",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "course"
+			}
 		},
 		{
 			"name": "main-topsail",
@@ -215,7 +240,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（course）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:47"
+			"created_at": "2026-10-12T23:23:47",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topsail"
+			}
 		},
 		{
 			"name": "main-topgallant",
@@ -250,7 +280,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（topsail）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:47"
+			"created_at": "2026-10-12T23:23:47",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topgallant"
+			}
 		},
 		{
 			"name": "main-royal",
@@ -285,7 +320,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:48"
+			"created_at": "2026-10-12T23:23:48",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "royal"
+			}
 		},
 		{
 			"name": "mizzen-topsail",
@@ -320,7 +360,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（crossjack）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:48"
+			"created_at": "2026-10-12T23:23:48",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "topsail"
+			}
 		},
 		{
 			"name": "mizzen-topgallant",
@@ -355,7 +400,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（topsail）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:48"
+			"created_at": "2026-10-12T23:23:48",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "topgallant"
+			}
 		},
 		{
 			"name": "mizzen-royal",
@@ -390,7 +440,12 @@
 			"enabled": true,
 			"note": "sheet 綁到下一根帆桁（topgallant）同舷的 earing",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:49"
+			"created_at": "2026-10-12T23:23:49",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "royal"
+			}
 		},
 		{
 			"name": "spanker",
@@ -427,7 +482,12 @@
 			"enabled": true,
 			"note": "gaff、boom、桅三條邊釘住，只有 leech 自由",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:49"
+			"created_at": "2026-10-12T23:23:49",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "gaff"
+			}
 		},
 		{
 			"name": "fore-topmast-staysail",
@@ -457,7 +517,13 @@
 			"enabled": true,
 			"note": "luff（邊 0）沿 fore-topmast-stay",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:49"
+			"created_at": "2026-10-12T23:23:49",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "staysail",
+				"set": 2
+			}
 		},
 		{
 			"name": "jib",
@@ -487,7 +553,12 @@
 			"enabled": true,
 			"note": "luff（邊 0）沿 jib-stay",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:50"
+			"created_at": "2026-10-12T23:23:50",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "jib"
+			}
 		},
 		{
 			"name": "flying-jib",
@@ -517,7 +588,13 @@
 			"enabled": true,
 			"note": "luff（邊 0）沿 flying-jib-stay",
 			"persona": "basecamp",
-			"created_at": "2026-10-12T23:23:50"
+			"created_at": "2026-10-12T23:23:50",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "jib",
+				"set": 3
+			}
 		},
 		{
 			"name": "ensign",
@@ -553,7 +630,11 @@
 			"note": "船尾旗（餘燼號旗：暗紅底金邊、正中一團火）（階段十九）",
 			"persona": "basecamp",
 			"created_at": "2026-10-13T16:46:21",
-			"texture": "textures/ensign.png"
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
 		},
 		{
 			"name": "pennant",
@@ -584,7 +665,12 @@
 			"note": "長旗（靠桅金、暗紅、燕尾）（階段十九）",
 			"persona": "basecamp",
 			"created_at": "2026-10-13T16:46:22",
-			"texture": "textures/pennant.png"
+			"texture": "textures/pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main"
+			}
 		}
 	]
 }

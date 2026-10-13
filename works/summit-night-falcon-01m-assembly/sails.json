@@ -1,5 +1,5 @@
 {
-	"schema": 2,
+	"schema": 3,
 	"wind": [
 		4.5,
 		-1.5,
@@ -40,7 +40,12 @@
 			"enabled": true,
 			"note": "course：sheet 往後（rail 8）、tack 往前（rail 12）落 pin（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:14"
+			"created_at": "2026-10-13T15:57:14",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "course"
+			}
 		},
 		{
 			"name": "fore-topsail",
@@ -75,7 +80,12 @@
 			"enabled": true,
 			"note": "sheet 綁下一根帆桁（fore-course）同舷的 earing（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:14"
+			"created_at": "2026-10-13T15:57:14",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topsail"
+			}
 		},
 		{
 			"name": "fore-topgallant",
@@ -110,7 +120,12 @@
 			"enabled": true,
 			"note": "sheet 綁下一根帆桁（fore-topsail）同舷的 earing（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:15"
+			"created_at": "2026-10-13T15:57:15",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topgallant"
+			}
 		},
 		{
 			"name": "main-topsail",
@@ -145,7 +160,12 @@
 			"enabled": true,
 			"note": "sheet 綁下一根帆桁（main-course）同舷的 earing（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:15"
+			"created_at": "2026-10-13T15:57:15",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topsail"
+			}
 		},
 		{
 			"name": "mainsail",
@@ -182,7 +202,12 @@
 			"enabled": true,
 			"note": "gaff、boom、桅三條邊釘住，只有 leech 自由（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:15"
+			"created_at": "2026-10-13T15:57:15",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff"
+			}
 		},
 		{
 			"name": "fore-staysail",
@@ -212,7 +237,12 @@
 			"enabled": true,
 			"note": "luff（邊 0）沿 fore-stay（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:15"
+			"created_at": "2026-10-13T15:57:15",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "staysail"
+			}
 		},
 		{
 			"name": "jib",
@@ -242,7 +272,12 @@
 			"enabled": true,
 			"note": "luff（邊 0）沿 fore-tm-stay（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:16"
+			"created_at": "2026-10-13T15:57:16",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "jib"
+			}
 		},
 		{
 			"name": "flying-jib",
@@ -272,7 +307,13 @@
 			"enabled": true,
 			"note": "luff（邊 0）沿 fore-tg-stay（階段十一）",
 			"persona": "summit",
-			"created_at": "2026-10-13T15:57:16"
+			"created_at": "2026-10-13T15:57:16",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "jib",
+				"set": 3
+			}
 		},
 		{
 			"name": "ensign",
@@ -308,7 +349,11 @@
 			"note": "夜隼號的旗（v3：俯衝的隼）—— 階段十二，主桅 truck 上的旗桿",
 			"persona": "summit",
 			"created_at": "2026-10-13T16:13:44",
-			"texture": "textures/ensign.png"
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
 		},
 		{
 			"name": "main-staysail",
@@ -338,7 +383,12 @@
 			"enabled": true,
 			"note": "luff（邊 0）沿 main-stay（桅間支索帆）（階段十七；Tim 選 main staysail；tack 沿 stay 往上 10%）",
 			"persona": "summit",
-			"created_at": "2026-10-13T19:13:57"
+			"created_at": "2026-10-13T19:13:57",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "staysail"
+			}
 		}
 	]
 }
