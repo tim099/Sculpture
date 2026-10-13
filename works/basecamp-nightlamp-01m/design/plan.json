@@ -88,7 +88,7 @@
     "rail_above_wale": 2.99,
     "provenance": {
       "wale": "原圖讀數：側面圖主 wale 逐欄追（readings_LI_bodyplan.json main_wale），x 1.5–40.5 m 四次多項式擬合",
-      "wale_depth": "原圖讀數（目測）：wale 粗線約 17–19 px 再加上下兩條細線",
+      "wale_depth": "（舊，只用在線形圖的示意線）原圖目測 0.55；階段七重看：粗線只有 19 px（0.09 m）、上緣原圖沒畫 ⇒ 外板的 wale 帶改用 planking.wale_band（設計）",
       "rail_above_wale": "原圖讀數：船中一欄 舷牆頂 9.90 − 主 wale 6.91"
     }
   },
@@ -406,6 +406,49 @@
       "wing_transom": "設計決定：tuck（z 7.30）往上 0.30、從船尾輪廓往船頭 0.30 的一根橫樑（Pl. LI 船尾有 counter 下緣的線，沒畫 transom 的尺寸）",
       "stern_timbers": "設計決定：船尾板沿船尾輪廓（plan silhouette.stern_outline，tuck 以上）往裡 0.27 底圖 m；以中線為準每 9 格一根、一根 5 格（|dy| 在 9k−2..9k+2），中線那根接在內艉柱上、左右對稱",
       "color": "設計決定：肋骨與 stern timbers 141、wing transom 173"
+    }
+  },
+  "planking": {
+    "title": "新圖紙 08：外板・wale・塗裝・吃水刻度 v1（階段七）",
+    "S": "船殼 S ＝ 格中心在 molded 裡（HullGrid，跟肋骨同一套）、z ≥ 龍骨頂、≤ 舷牆頂",
+    "plank": "S 外面、跟 S 共用一個面的那一層（1 格；底圖 0.13 m × k ＝ 1.7 格 ⇒ 取 1，同憲法號）；z ≤ 舷牆頂（不封頂）；龍骨、柱、deadwood 那幾格不蓋（外板收進 rabbet）",
+    "wale_band": [
+      -0.1,
+      0.25
+    ],
+    "colors": {
+      "black": 36,
+      "bottom": 100,
+      "marks": 255
+    },
+    "draft_marks": {
+      "meters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "font": "3x5",
+      "where": [
+        "bow",
+        "stern"
+      ],
+      "sides": [
+        "P",
+        "S"
+      ]
+    },
+    "provenance": {
+      "plank": "設計決定：1 格（照憲法號；原圖外板 0.13 m × k ＝ 1.7 格）",
+      "wale_band": "原圖讀數：wale 下緣 ＝ 側面圖粗線（sheer 擬合的 wale(x)）；設計決定：往下 0.10、往上 0.25 底圖 m（上緣原圖沒畫），比外板多凸一格",
+      "colors": "設計決定：黑船殼 36（劇照）；吃水線以下 100 深鏽褐（劇照看不到水下）；露在外面的龍骨、柱、gripe、deadwood 跟著上色",
+      "draft_marks": "設計決定（營地特色：醒目的吃水刻度）：船頭、船尾兩舷各一排，從龍骨底起每 1 m（真實公尺 ＝ 10 格）一個數字 1–10，數字底邊 ＝ 那個吃水；3×5 格白字，從外面看左到右讀得正"
     }
   }
 }
