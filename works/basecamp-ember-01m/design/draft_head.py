@@ -161,7 +161,7 @@ class Head:
                         continue
                     if Gs[x - XA, y, z]:
                         continue
-                    s.knee[(x, y, z)] = s.col['black'] if z >= 63 else s.col['copper']
+                    s.knee[(x, y, z)] = s.col['black'] if z >= s.H.get('knee_copper_below', 63) else s.col['copper']   # 水線（抬高後 71）以下包銅
                     s.kind[(x, y, z)] = 'knee'
         # bobstay 固定點：換算後那一層 knee 中線最前面那格
         s.anchors = []

@@ -34,6 +34,9 @@
 - [x] 階段九：船頭（knee、cheeks、卷草、火焰紋章、hawse、rails、cathead、錨引用憲法號、bobstay、原創船首像「浴火的鳳凰」）；組裝件 1,803,208、結果帳 0 差
 - [x] 階段九 Tim 預覽 OK ⇒ 單層提交 —— 243172d
 - [x] 階段十：砲 90 門全部外部模型＋meta（32 磅長砲新做；24 磅、carronade、18 磅追擊砲用憲法號的）；下層船頭／船尾追擊砲與 carronade 砲口沒伸出去（照實記）
-- [ ] 階段十 Tim 預覽 OK ⇒ 單層提交
+- [x] 階段十 Tim 預覽 OK ⇒ 單層提交 —— 0c0f54d
+- [x] 水線抬高 z 63 → 71（Tim：船變高了水線也往上）；結果帳 0 差
+- [ ] 水線 Tim 預覽 OK ⇒ 單層提交
+- [ ] 舵（憲法號 -rudder 照換算；水線 71）
 - [ ] 砲索與砲具（breeching、tackle、train、環、rammer／sponge）
 - [ ] entry port 跟著上甲板抬高（舷梯要多 23 格）；彈藥庫照兩層甲板重配

@@ -1130,6 +1130,7 @@
    "錨-S",
    "錨-P"
   ],
+  "knee_copper_below": 71,
   "map": {
    "dx": 66,
    "z_keep_below": 63,
@@ -1625,5 +1626,16 @@
    }
   ],
   "decisions": "Tim 2026-10-13「單層提交吧 然後繼續」⇒ todo 下一項：砲。子物件能重複用就重複用：24 磅、carronade、18 磅追擊砲都是憲法號那一件；32 磅長砲新做（-gun-24 那一型照口徑放大，0.05 m 同 long18）。上甲板第 1–3 個砲門在 poop 底下的船長室 ⇒ 不放（每舷 9 門 ＝ 第 4–12）。另一舷一律 mirror=y（eye-aft／eye-fwd 不前後對調）。砲索與砲具下一階段。"
+ },
+ "waterline_raise": {
+  "title": "水線抬高 v1：z 63 → 71（銅 168 往上塗 8 層）",
+  "hull": "basecamp-ember-01m",
+  "world_mark": "上甲板clamp:end",
+  "world_voxels": 1056828,
+  "from_z": 63,
+  "to_z": 71,
+  "from_color": 36,
+  "to_color": 168,
+  "provenance": "Tim 2026-10-13：「另外我在想 船變高了 船底水線是否也要往上一點(用噴漆模式往上噴塗?)」。量：銅 ＝ 外板最外 1–2 格、z ≤ 62；水線一直照憲法號 62.86。設計決定 ＋8 格（0.8 m）：多一層砲甲板、拉長 66 格 ⇒ 吃水應該更深；下層砲門下緣（船中約 z 89）離水面 2.6 m → 1.8 m（74 砲約 1.5 m）。做法用換色清單（stampvox overwrite，同階段三／補漆）⇒ 結果帳逐格對；knee 由 draft_head.py 照 head_build.knee_copper_below 重產。"
  }
 }

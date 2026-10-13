@@ -180,3 +180,13 @@
 - 套用時 IOException（無法移除要被取代的檔案）兩門、重跑又兩門（都是已寫進去的那兩門 overwrite）—— 今天第三個階段遇到，另開工作卡。
 - 過程圖：`overlays/stage10_guns_{side,lower,upper,spar}.png`。
 - 還沒有：砲索與砲具（breeching、tackle、train、船牆的環、rammer／sponge）—— 下一階段；彈藥庫。
+
+## 水線抬高 z 63 → 71（2026-10-13，Tim：「船變高了 船底水線是否也要往上一點(用噴漆模式往上噴塗?)」）
+設計 plan.json `waterline_raise`、`head_build.knee_copper_below`；產生 `design/draft_waterline.py`（讀標記 `上甲板clamp:end`）⇒ `masks/paint/waterline.vox.txt`、`verify_waterline.json`；knee 由 `draft_head.py` 重產 ⇒ 差異 `masks/head/knee_waterline.vox.txt`；結果帳 `design/tools/waterline_ledger.py` ⇒ `verify_waterline_ledger.json`。
+- 先量：船底的銅（168）＝ 外板最外 1–2 格（跟上面的黑外板 36 同一層），z ≤ 62；水線一直照憲法號 62.86、水平。
+- 設計決定 ＋8 格（0.8 m）：多一層砲甲板、拉長 66 格 ⇒ 吃水應該更深；下層砲門下緣（船中約 z 89）離水面 2.6 m → 1.8 m（74 砲約 1.5 m）。
+- 做法：用換色清單（stampvox overwrite，同階段三與補漆）而不是 spray —— 清單可以逐格對結果帳。z 63–70「貼著船外空氣的黑（36）」＋同層相鄰也是 36 的那一格（外板 2 格厚處）→ 銅：19,180 格（第一格 10,670、第二格 8,510；每層 2,188–2,502，z 62 現有的銅 2,022）；鏡像缺 0；換完 z 63–70 外表剩下的黑 0。knee z 63–70 → 銅 150 格。
+- 落格：`水線:begin` → stampvox overwrite（placed 19,180）→ `水線:end`；-head-knee stampvox overwrite（placed 150）。
+- **結果帳**：船殼現在 vs（上甲板clamp:end ＋ 換色清單）缺 0、多 0、色差 0；knee 子作品 vs knee.vox.txt 缺 0、多 0、色差 0。組裝件 1,803,208（不變）、1 元件、空腔 0、link_overlap 0、鏡像差 151／955／10（不變）。產生程式重跑 sha256 相同。
+- 過程圖：`overlays/stage11_waterline_{side,bowq}.png`（之前的樣子 ＝ `stage10_guns_side.png`）。
+- ⚠ 還沒有舵（憲法號有 -rudder；餘燼號還沒做）—— 做的時候水線也照 71。
