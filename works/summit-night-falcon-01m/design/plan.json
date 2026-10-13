@@ -16,7 +16,18 @@
     },
     "stations": 11,
     "waterlines": [6, 9, 12, 15, 20, 25],
-    "shell_preview_thickness": 4
+    "shell_preview_thickness": 4,
+    "upper": { "bulwark": 10, "quarterdeck": { "x_break": 138, "rise": 10, "bulwark": 9, "drift": 6 } }
+  },
+  "framing": {
+    "backbone_half": 1,
+    "deadwood_hb": 3,
+    "moulded": 2,
+    "spacing": 5,
+    "sided": 2,
+    "station_x": 175,
+    "stern": { "x": 70, "spacing": 5, "sided": 2 },
+    "colors": { "backbone": 104, "frame": 141, "counter": 141 }
   },
   "provenance": {
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
@@ -33,6 +44,19 @@
     "midship.tumblehome": "設計決定：舷頂往內收 1.5 格",
     "transom": "設計決定：方艉，翼艉板在水線上 0.3 m（z 18），往後斜 0.35；virtual_extension 控制艉板寬度",
     "fullness": "設計決定：f(ξ) ＝ (1 − ξ^a)^b，ξ ＝ 離最大寬那一站的距離 ÷ 到那一層端點的距離；a、b 從底（rabbet）到頂（舷弧最低點）線性漸變 —— 底部尖、上面豐滿（首部外飄）",
-    "shell_preview_thickness": "設計決定：預覽用殼厚 0.4 m（外板＋肋骨；正式做法下一階段定）"
+    "shell_preview_thickness": "設計決定：預覽用殼厚 0.4 m（外板＋肋骨；正式做法下一階段定）",
+    "upper.bulwark": "設計決定（階段二，2026-10-13）：船腰舷牆高 1 m（甲板邊到舷牆頂）—— 小砲的砲門開在舷牆上；定稿圖船腰舷牆頂比本線形高（量法見 notes.md 階段二）",
+    "upper.quarterdeck.x_break": "設計決定：後甲板從艉板到 x 138（7.8 m，甲板長的 36%）。定稿圖（目測）斷在 x≈150、主桅穿過後甲板前緣；照一般做法讓主桅站在船腰 ⇒ 往後收 12 格，桅位等桅檣階段再定",
+    "upper.quarterdeck.rise": "設計決定：後甲板比主甲板高 1 m（拍板：水線以上補輪廓、不整體加高）",
+    "upper.quarterdeck.bulwark": "設計決定：後甲板舷牆 0.9 m（定稿圖是下半實心＋上半欄杆，欄杆在舷牆階段做）",
+    "framing": "設計決定（階段二，2026-10-13）：照真船順序 —— 骨架 → 肋骨 → 外板（階段三）。不做實心殼：① 0.1 m 格子分得出肋骨與空檔（3 格）；② 對轟裡打穿外板會露出肋骨、不是一整塊實心；③ 造船記每一階段要有東西可記",
+    "framing.backbone_half": "設計決定：龍骨、艏柱、艉柱寬 3 格（|dy| ≤ 1，跟 keel.half 1.5 同）",
+    "framing.deadwood_hb": "設計決定：船殼半寬 ≤ 3 格的地方（船尾龍骨上方、船頭腳）肋骨放不下 ⇒ 整個截面是 deadwood",
+    "framing.moulded": "設計決定：肋骨 moulded 2 格（0.2 m）；外板 1 格在它外面 ⇒ 船殼共 3 格（0.3 m）。Oswego 那個尺寸的船肋骨約 6–8 in，沒查到這艘的規格",
+    "framing.spacing": "設計決定：肋距 5 格（room and space 0.5 m）、sided 2 格（0.2 m）⇒ 肋骨之間空 3 格；單肋（憲法號是雙肋，船大）",
+    "framing.station_x": "設計決定：肋位從最大寬那一站（x 175）往兩頭每 5 格一根",
+    "framing.stern": "設計決定：艉柱後面那一段（x < 70，龍骨後端那一站）不立肋骨，改成橫的 transom —— 從翼艉板（z 18）起每 5 格一層、2 格厚，繞過船尾、中線釘上艉柱。第一版用直的 counter timber，腳下沒有東西接（船尾在翼艉板那層只有艉柱寬）⇒ 散件 878 格",
+    "framing.colors": "設計決定：骨架 104（#6D4800 深橡木）、肋骨 141（#916D55，跟憲法號的肋骨同色）；外板與塗裝階段三再上",
+    "upper.quarterdeck.drift": "設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
   }
 }
