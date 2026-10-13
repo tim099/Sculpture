@@ -176,6 +176,17 @@
                "tackle": { "thickness": 0.25, "slack": 1.03, "color": "#a08458" },
                "train": { "thickness": 0.25, "slack": 1.05, "color": "#a08458" } }
   },
+  "helm": {
+    "wheel_work": "summit-night-falcon-01m-wheel", "stand_work": "summit-night-falcon-01m-helm-stand", "mpv": 0.02, "scale": 0.2,
+    "size": [52, 75, 86], "CY": 37.5, "axle_z": 47.5,
+    "rim": { "x": [1, 4], "r_in": 27.0, "r_out": 30.0 }, "spokes": 8, "spoke_half": 1.0, "handle_r": 36.0, "handle_half": 1.3,
+    "boss": { "x": [0, 5], "r": 10.0 }, "axle_r": 1.5, "drum": { "x": [20, 41], "r": 7.0 },
+    "stanchion": { "x": [[13, 18], [43, 48]], "half_y": 5, "top": 54 }, "base": { "x": [11, 50], "half_y": 9, "z": [0, 2] },
+    "scar": { "texture": "../../summit-night-falcon-01m-flag/textures/ensign.png", "scale": 0.8, "depth": 1, "color": 177 },
+    "colors": { "wheel": 141, "boss": 104, "iron": 36, "stand": 136, "base": 104 },
+    "place": { "x_search": [82, 108], "x_target": 96, "step": 0.5 },
+    "rudder": { "hinge_bot": [68.5, 80.5, 0.0], "hinge_top": [55.5, 80.5, 45.0], "stock_top": [55, 80, 44], "max_deg": 35 }
+  },
   "provenance": {
     "guns": "設計決定（階段十三，2026-10-13）：4 磅長砲 12 門（每舷 6，照階段四已開的砲門）。口徑是我定的 —— 原作沒寫砲（查過：Books/summit-masthead-bet、-sequel 全文「砲／炮」0 處）；船設寫『小而快、靠靈活不靠火力』、參照船 Oswego 160 噸、RMG 的 brigantine 模型 10–12 門 ⇒ 取英國海軍最小的長砲 4 磅。",
     "guns.barrel_len": "參考資料（弱）：4 磅砲砲管 6 ft（≈1.83 m）—— modelshipworld.com 論壇 6pd/4pd cannon measurements 一串（論壇，不是史料；有人說也有 5.5 ft）⇒ 36 格（0.05 m）＝ 1.80 m",
@@ -186,6 +197,10 @@
     "gunfittings.ring": "設計決定：船牆上的環在砲門開口外側那一格起（offset 0 ＝ 緊貼開口邊的那一欄，往外最多 4 格）、開口下緣下一格（甲板頂格 ＋4）；一格鐵（73）貼在牆內面。憲法號是砲門中線 ±8–11、甲板面 ＋8（24 磅、0.1 m）—— 4 磅砲的砲架半寬只有 3.5 格，照比例縮。碰到東西、或繩（cascabel → 環、eye → 環）穿過別的實心或別門砲 ⇒ 換下一個 offset；都不行就不放、照實記",
     "gunfittings.deck_ring": "設計決定：砲架尾（train）往船裡 5 格的甲板上一格鐵環（憲法號 9 格 × 砲架長比 0.62 ≈ 5.6）；擋住就照 back 清單試",
     "gunfittings.ropes": "設計決定：粗細照砲縮（憲法號 breeching 0.6、tackle 0.35 ⇒ 0.4、0.25 —— 0.25 是本船 ratlines 的粗細，再細渲染看不到）；slack、顏色照憲法號",
+    "helm": "原文：舵輪正中央是一隻俯衝的隼，卡戎剝下來鑄了銅牌，留下一塊淺淺的疤（002:79、007:41）。其餘是設計決定：單輪（31 人的雙桅船；憲法號是雙輪）；輪徑 1.2 m、把手到 1.44 m、輪軸離甲板 0.96 m（⚠ 未查證，照憲法號 1.7 m／1.12 m 的比例縮給小船）；8 根輪幅",
+    "helm.scar": "作者決定：疤 ＝ 輪轂朝船尾那一面刻淺 1 格（0.02 m）的隼形凹痕、底色比輪轂淺（177 vs 104，剝掉之後露出的新木頭）；形狀用旗的隼（ensign.png 的剪影 × 0.8）—— 旗跟舵輪是同一隻隼（階段十二）",
+    "helm.parts": "設計決定：拆兩件 —— 會轉的（輪、輪幅、輪轂、輪軸、鼓輪）一件、不會轉的（底座、兩根支柱）一件；都是 0.02 m 子作品當外部模型（scale 0.2 明寫），同一個 at／pivot（輪軸中心）",
+    "helm.rudder": "設計決定：舵改外部模型（Shipbuilding §2：會動的做模型）；轉軸 ＝ 舵柱中心線 ＝ 前緣面往後 1.5 格（底 68.5,80.5,0 → 頂 55.5,80.5,45；前緣面量過：z 0 x 70 → z 44 x 57，近一直線，後傾 16.1°；舵柱 3 格深 ⇒ 中心在面後 1.5）。前緣面之前的 pintle 帶子是 gudgeon（釘在艉柱上、不轉）⇒ 搬回船殼。v1 想削前緣（bearding）讓轉 ±35° 零碰撞 ⇒ 量了：軸放在面上要削 141 格、往後 0.5–2 格要削 109–130 格，每一種都把斜的舵柱切成 2–3 塊（3×3 的斜棒每 3 層錯一格，削掉一欄就只剩斜角相接）⇒ 不削；量轉過去穿進多深（見 verify_helm.json rudder.turn.sweep）；max_deg 35 是一般舵角的設計值（⚠ 未查證）",
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
     "keel.rabbet_z": "設計決定：龍骨深約 0.4 m",

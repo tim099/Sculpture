@@ -19,7 +19,8 @@
 - [x] 船尾窗廊、船尾窗、船尾燈、隼形船首像（階段五）
 - [x] 船頭欄杆、舵、開窗（階段六）
 - [ ] knightheads、cathead（錨要掛）
-- [ ] 舵改外部模型＋pivot（給遊戲轉）；舵輪接舵柱頂（隼徽記被剝後的疤）
+- [x] 舵改外部模型（階段十五：轉軸 ＝ 舵柱中心線、meta hinge／axis；gudgeon 搬回船殼）；舵輪（輪轂上隼的疤）＋舵輪座 —— ⚠ 轉 ±35° 舵前緣的角擦進艉柱表面一層（沒削，削了舵會斷）
+- [ ] 舵柄與舵索：舵頭在艉板外（z 44），舵柄要穿過艉板（開舵柄口）或從船尾欄杆上方過；舵輪鼓輪 drum-rope-a／b → 舵柄
 - [ ] 斷口艙壁：門／欄杆（breastwork rail）；後甲板舷牆上半是欄杆（定稿圖）
 - [x] 桅、艏斜桅、channels（階段七）
 - [x] 帆桁（階段八：6 件子作品＋外部模型；固定點 84 在 verify_yards.json 的 placements[].anchors）
@@ -34,6 +35,10 @@
 - [ ] shot garland、rammer／sponge（憲法號階段二十二的做法；這次沒做）
 - [ ] 插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯
+- [x] 船殼關聯 meta kind=ship、waterline_z=15、crew=31（ame seq 24230 確認）
+- [ ] 彈藥庫（艙房地板底下一間 kind=magazine）＋火藥桶模型 kind=powder（powder_lb）
+- [ ] 梯子：艙房 companion（x 110–117）一座 kind=ladders（foot／lo／hi／head）
+- [ ] 匯出 vxk（include=rig,models,parts,meta），格數與 checksum 寫在單上、跟 ame 說
 
 ## 之後會撞到的（先記）
 - 插板放下會伸出龍骨底 ⇒ 插板做成會轉的外部模型（pivot），組裝件框往下加

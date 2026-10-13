@@ -1,0 +1,239 @@
+{
+ "note": "draft_helm.py（階段十五）—— 現況 nf_state stage14（舵以外）",
+ "wheel": {
+  "work": "summit-night-falcon-01m-wheel",
+  "file": "masks/helm/wheel.vox.txt",
+  "cells": 8267,
+  "scar_cells": 54,
+  "anchors": {
+   "axle": [
+    1,
+    37,
+    47
+   ],
+   "hub-aft": [
+    0,
+    37,
+    47
+   ],
+   "drum-rope-a": [
+    30,
+    37,
+    54
+   ],
+   "drum-rope-b": [
+    30,
+    37,
+    40
+   ]
+  }
+ },
+ "stand": {
+  "work": "summit-night-falcon-01m-helm-stand",
+  "file": "masks/helm/stand.vox.txt",
+  "cells": 9036,
+  "anchors": {
+   "base": [
+    30,
+    37,
+    0
+   ]
+  }
+ },
+ "size": [
+  52,
+  75,
+  86
+ ],
+ "mpv": 0.02,
+ "scale": 0.2,
+ "pivot": [
+  26.0,
+  37.5,
+  47.5
+ ],
+ "at": [
+  94.0,
+  80.5,
+  51.5
+ ],
+ "deck_top": 41,
+ "host": "summit-night-falcon-01m-deck-quarter",
+ "models": [
+  {
+   "name": "舵輪",
+   "work": "summit-night-falcon-01m-wheel",
+   "meta": {
+    "kind": "wheel",
+    "turn_axis": "x",
+    "pivot_anchor": "axle"
+   }
+  },
+  {
+   "name": "舵輪座",
+   "work": "summit-night-falcon-01m-helm-stand",
+   "meta": {
+    "kind": "wheel_stand"
+   }
+  }
+ ],
+ "stamp_order": {
+  "hull": [
+   {
+    "name": "gudgeons",
+    "op": "stampvox",
+    "file": "masks/helm/gudgeons_hull.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 32
+   }
+  ],
+  "rudder": [
+   {
+    "name": "rudder_gudgeons_out",
+    "op": "carvevox",
+    "file": "masks/helm/rudder_carve.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     0,
+     0,
+     0
+    ],
+    "voxels": 32
+   }
+  ]
+ },
+ "rudder": {
+  "work": "summit-night-falcon-01m-rudder",
+  "model": "舵",
+  "host": "summit-night-falcon-01m-assembly",
+  "unlink": "舵",
+  "pivot": [
+   68.5,
+   80.5,
+   0.0
+  ],
+  "at": [
+   68.5,
+   80.5,
+   0.0
+  ],
+  "anchors": {
+   "stock-top": [
+    55,
+    80,
+    44
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "turn_axis": "hinge",
+   "max_deg": 35,
+   "hinge_x": 68.5,
+   "hinge_y": 80.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.2775,
+   "axis_y": 0,
+   "axis_z": 0.9607
+  },
+  "rake_deg": 16.11,
+  "turn": {
+   "face_x_by_z": {
+    "0": 70,
+    "1": 70,
+    "2": 69,
+    "3": 69,
+    "4": 69,
+    "5": 69,
+    "6": 69,
+    "7": 68,
+    "8": 68,
+    "9": 68,
+    "10": 68,
+    "11": 67,
+    "12": 67,
+    "13": 67,
+    "14": 67,
+    "15": 67,
+    "16": 66,
+    "17": 66,
+    "18": 66,
+    "19": 65,
+    "20": 65,
+    "21": 65,
+    "22": 64,
+    "23": 64,
+    "24": 64,
+    "25": 63,
+    "26": 63,
+    "27": 63,
+    "28": 61,
+    "29": 62,
+    "30": 62,
+    "31": 61,
+    "32": 61,
+    "33": 61,
+    "34": 60,
+    "35": 60,
+    "36": 60,
+    "37": 59,
+    "38": 59,
+    "39": 57,
+    "40": 58,
+    "41": 58,
+    "42": 57,
+    "43": 57,
+    "44": 57
+   },
+   "gudgeons_to_hull": 32,
+   "rudder_after": 577,
+   "rudder_after_components": 1,
+   "sweep": {
+    "-35": {
+     "samples_in_solid": 2384,
+     "samples": 72125,
+     "rudder_cells_touching": 77,
+     "samples_deeper_than_surface": 35,
+     "max_edt": 1.41
+    },
+    "-20": {
+     "samples_in_solid": 2002,
+     "samples": 72125,
+     "rudder_cells_touching": 70,
+     "samples_deeper_than_surface": 8,
+     "max_edt": 1.41
+    },
+    "20": {
+     "samples_in_solid": 2002,
+     "samples": 72125,
+     "rudder_cells_touching": 70,
+     "samples_deeper_than_surface": 8,
+     "max_edt": 1.41
+    },
+    "35": {
+     "samples_in_solid": 2384,
+     "samples": 72125,
+     "rudder_cells_touching": 77,
+     "samples_deeper_than_surface": 35,
+     "max_edt": 1.41
+    }
+   },
+   "files": {
+    "carve": "masks/helm/rudder_carve.vox.txt",
+    "gudgeons": "masks/helm/gudgeons_hull.vox.txt"
+   }
+  }
+ }
+}

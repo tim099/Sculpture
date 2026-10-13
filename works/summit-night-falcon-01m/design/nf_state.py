@@ -23,6 +23,7 @@ STAGES = [
     ('stage10', 'verify_belaying.json', {'fiferails': 'fife', 'belaying_side': 'side'}),
     ('stage12', 'verify_flag.json', {'mast_main': 'mast_main'}),          # 階段十一（帆）是布，不動格
     ('stage14', 'verify_gunfittings.json', {'fittings': 'fittings'}),   # 階段十三（砲）是外部模型，不動格；十四 砲具一舷＋鏡像
+    ('stage15', 'verify_helm.json', {'hull': 'hull', 'rudder': 'rudder'}),   # gudgeon 從舵搬回船殼；舵改外部模型 ⇒ 之後不算組裝件的格（鍵改名 rudder_model）
 ]
 
 
@@ -52,11 +53,14 @@ def state_after(d, upto):
                     _apply(W[key + '_S'], o, d, org); _apply(W[key + '_P'], o, d, org, mirror=True)
                 else:
                     _apply(W[key], o, d, org)
+        if name == 'stage15':
+            W['rudder_model'] = W.pop('rudder')     # 舵從此是模型（組裝件 unlink 舵）；occupancy() 不算 *_model
         if name == upto: break
     return W
 
 
 def occupancy(W):
     occ = np.zeros((NX, NY, NZ), bool)
-    for v in W.values(): occ |= v > 0
+    for k, v in W.items():
+        if not k.endswith('_model'): occ |= v > 0
     return occ
