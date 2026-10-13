@@ -26,7 +26,10 @@ class HullGrid:
     def column(s, x):
         i = np.clip(np.searchsorted(s.xs, x) - 1, 0, len(s.xs) - 2)
         t = (x - s.xs[i]) / (s.xs[i + 1] - s.xs[i])
-        return s.T[:, i] * (1 - t) + s.T[:, i + 1] * t          # 每個 zs 的 hb（< 0 ＝ 外面）
+        a, b = s.T[:, i], s.T[:, i + 1]
+        out = a * (1 - t) + b * t                                # 每個 zs 的 hb（< 0 ＝ 外面）
+        out[(a < 0) | (b < 0)] = -1.0                            # 兩欄有一欄在外面就算外面（夾著 −1 會內插出假的小半寬）
+        return out
 
     def section(s, x):
         c = s.column(x)
