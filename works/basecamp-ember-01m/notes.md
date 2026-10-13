@@ -259,3 +259,11 @@
 - v1 從 x 228 搜：第一個 0 碰撞在 x 235.5，外框後緣 226.4 正好堵在梯子落腳處（梯腳 x ≈ 225）⇒ 留 1 m 走道，從 x 246 起搜 ⇒ x 246 第一個就過。
 - 讀數：at (246, 160.5, 128)、外框 (236.9,150.8,128.1)–(255.1,170.2,148.7)；腳印 24 欄正下方全是甲板（z 127）、外框正上方 0 格實心；舵索 2 條（#a08458、粗 0.35、組 steering）鼓輪 → 正下方甲板面，各長 9.9（同憲法號）。繩 **1,083**、ropes_broken 0；模型 **247**、models_broken 0；組裝件格數不變 **1,818,063**（模型不是 voxel）、1 元件、空腔 0、link_overlap 0。穿過舵輪外框的繩只有它自己那 2 條（直線近似）。重跑 sha256 相同。
 - 過程圖：`overlays/stage17_wheel_{deck,close}.png`（hide_rope_groups=standing、sails=0）。
+
+## 梯子給遊戲的點（2026-10-13，ame tavern 23321：預備水手爬梯子補砲班；Tim「叮」）
+- 格式（ame 定、Tim 要求在模型裡用 meta 標）：梯子所在的關聯 meta `kind=ladders`；每座 4 個固定點登記在梯子子作品，名字 `<梯名>.foot／.lo／.hi／.head`，都取「腳踩的那一格」（地板或踏板上面第一格空氣）。梯名照扶手繩固定點 `manrope-<梯名>-…`。
+- 算法 `basecamp-ember-01m/design/tools/ladder_points.py`：踏板 ＝ 兩條扶手之間的格（依 z 分階、兩格寬取靠梯子中段那格）；foot／head 沿梯子軸往外走，取第一段「連續 3 欄地板一樣高、上面至少 3 格空氣」的第一欄（艙口圍欄湊不成平地 ⇒ 跨過去）。v1 用「4..20 欄最常見的地板高度」⇒ fore-berth 被梯腳外 10 欄起一塊 z 66 的東西帶走、站不住 ⇒ 改成平地。
+- 餘燼號 10 座（berth 3：after-berth、companion、fore-berth；lower 4：after-gun、fore-gun、waist-P、waist-S；upper 2：after-upper、fore-upper；spar 1：poop）⇒ 固定點 40、meta 4 個關聯；`verify_ladder_points_basecamp-ember-01m-assembly.json`。
+- 讀回：`export format=parts` 的 kind=ladders 部件 4、四十個點的格心逐個 ＝ 算出來的 ＋0.5、差 0；格數 1,818,063 不變。after-berth 跟 ame 手量的參考差 1 格（foot 323 vs 324、head 304 vs 303）。
+- 看得到的：fore-upper 的 head 頭上 1.0 m 是艏斜桅根部（憲法號 fore-gun 同）；poop 的 foot (227,160,129) 跟舵輪外框後緣隔 10 格。沒有梯子通 orlop（兩艘船都沒有）。
+- 匯出 `exports/ember.vxk`：1,818,063 格、checksum 6a04b4a8、繩 1,083、帆 15、模型 247、帶 meta 252、固定點 1,509；封裝回讀對拍 ✓（含軍官室、舵輪）。

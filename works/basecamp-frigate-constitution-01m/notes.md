@@ -723,3 +723,10 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
   ⚠ course 的 sheet／tack 綁在甲板的 pin 上（不跟帆桁轉）⇒ 轉很大時 course 下角會被拉歪；遊戲那側要轉 course 的話，下角的繩也要跟著重算。
 - ⚠ 看得到的：帆桁是模型（網格），轉了 20° 之後中段往後那一側有一小段穿進桅裡（階段二十六用格子轉時那 6 格是「不放」，現在是網格互相穿過）。gaff 斜 35° 仍是格子的階梯（照當初的格子做、沒有改成「直桿＋轉」）。
 - 圖：overlays/stage33_yards_{bowq,above}.png、stage33_mast_main_models.png（主桅子作品自己：桅＋4 根帆桁模型）、stage33_yards_demo_porttack.png。
+
+## 梯子給遊戲的點（2026-10-13，ame tavern 23321；在餘燼號那邊一起做）
+- 格式（ame 定、Tim 要求在模型裡用 meta 標）：梯子所在的關聯 meta `kind=ladders`；每座 4 個固定點登記在梯子子作品，名字 `<梯名>.foot／.lo／.hi／.head`，都取「腳踩的那一格」（地板或踏板上面第一格空氣）。梯名照扶手繩固定點 `manrope-<梯名>-…`。
+- 算法 `basecamp-ember-01m/design/tools/ladder_points.py`：踏板 ＝ 兩條扶手之間的格（依 z 分階、兩格寬取靠梯子中段那格）；foot／head 沿梯子軸往外走，取第一段「連續 3 欄地板一樣高、上面至少 3 格空氣」的第一欄（艙口圍欄湊不成平地 ⇒ 跨過去）。v1 用「4..20 欄最常見的地板高度」⇒ fore-berth 被梯腳外 10 欄起一塊 z 66 的東西帶走、站不住 ⇒ 改成平地。
+- 憲法號 7 座（berth 3：after-berth、companion、fore-berth；gun 4：after-gun、fore-gun、waist-P、waist-S）⇒ 固定點 28、meta 2 個關聯；verify 在 `basecamp-ember-01m/design/verify_ladder_points_basecamp-frigate-constitution-01m-assembly.json`。
+- 讀回：parts 的 kind=ladders 部件 2、二十八個點差 0；格數 1,394,450 不變。fore-gun 的 head 頭上 1.0 m 是艏斜桅根部。沒有梯子通 orlop。
+- 匯出 `exports/constitution.vxk`：checksum 6bf2f49c、模型 208、帶 meta 211、固定點 1,165；對拍 ✓。

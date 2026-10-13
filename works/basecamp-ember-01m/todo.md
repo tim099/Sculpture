@@ -51,4 +51,6 @@
 - [x] 階段十六 Tim 預覽 OK ⇒ 單層提交
 - [x] 階段十七：舵輪（憲法號 -wheel 當外部模型掛甲板-spar、poop 梯子前 1 m、舵索 2 條）；繩 1,083、模型 247
 - [x] 階段十七 Tim 預覽 OK ⇒ 單層提交
-- [ ] （待 Tim）ember.vxk 要不要跟 ame 說（給之前再匯一次，含軍官室）
+- [x] 梯子給遊戲的點（ame 23321）：kind=ladders＋每座 foot／lo／hi／head；餘燼號 10 座、憲法號 7 座；vxk 重匯（含軍官室、舵輪）
+- [x] 梯子點 Tim 看過 ⇒ 單層提交
+- [x] ember.vxk 重匯（含軍官室、舵輪、梯子點），ame 自己來要（tavern 23321）
