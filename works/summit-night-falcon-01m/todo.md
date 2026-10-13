@@ -40,7 +40,8 @@
 - [x] 彈藥庫（階段十八：艙房地板底下 x 98–121、kind=magazine powder_lb 800）＋火藥桶 8（引用憲法號 -powder-barrel）；lazarette 艙口
 - [x] 梯子（階段十九：companion 後甲板 ↔ 艙房、break-S／P 主甲板 ↔ 後甲板；關聯 甲板-後/梯子 kind=ladders、每座 foot／lo／hi／head 用 basecamp 的 ladder_points.py 算）＋扶手繩 6
 - [x] 匯出 vxk：~~96,756 格、checksum 1278c741~~ ⇒ 階段十九後 **97,160 格、checksum 358bf2ac**（v1 208a1761 有錯：彈藥庫長到船外；已跟 ame 更正）—— ⚠ 新的要跟 ame 說
-- [ ] 羅經櫃（kind=binnacle）、錨與絞盤（kind=capstan，要 knightheads／cathead）、小艇（kind=boat）—— 規格 §9 有這幾種 kind（basecamp 餘燼號 10-13 補），這艘船一樣都還沒有；遊戲不靠它們開船
+- [x] 羅經櫃（階段二十：0.02 m 子作品當模型，舵輪正前方中線 at 102.5,80.5,41；kind=binnacle）
+- [ ] 錨與絞盤（kind=capstan，要 knightheads／cathead）、小艇（kind=boat）—— 規格 §9 有這幾種 kind（basecamp 餘燼號 10-13 補），這艘船還沒有；遊戲不靠它們開船
 - [ ] draft_flag.py 的貼圖路徑跟呼叫方式有關（要用絕對路徑呼叫才逐位元組相同）—— 要改得連 check_flag 一起改
 
 ## 之後會撞到的（先記）

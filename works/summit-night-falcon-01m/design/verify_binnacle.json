@@ -1,0 +1,217 @@
+{
+ "note": "draft_binnacle.py（階段二十）—— 現況 nf_state stage19 ＋ 組裝件 obj 的繩／帆／模型",
+ "work": "summit-night-falcon-01m-binnacle",
+ "title": "夜隼號 羅經櫃（0.02 m／格；當外部模型掛甲板-後）",
+ "size": [
+  18,
+  26,
+  52
+ ],
+ "mpv": 0.02,
+ "scale": 0.2,
+ "pivot": [
+  9.0,
+  13.0,
+  0.0
+ ],
+ "file": {
+  "path": "masks/binnacle/binnacle.vox.txt",
+  "cells": 15892,
+  "sha256": "87469c6cf006f308a0d014fd0c0c35d5a002520c011bb79b8e4d7d8d9ab2c974"
+ },
+ "colors": {
+  "104": 2884,
+  "136": 12182,
+  "208": 42,
+  "253": 56,
+  "37": 88,
+  "168": 544,
+  "36": 96
+ },
+ "components": 1,
+ "cavities": 0,
+ "asym_y": 0,
+ "top_m": 0.96,
+ "host": "summit-night-falcon-01m-deck-quarter",
+ "model": {
+  "name": "羅經櫃",
+  "meta": {
+   "kind": "binnacle"
+  }
+ },
+ "at": [
+  102.5,
+  80.5,
+  41.0
+ ],
+ "deck_top": 40,
+ "box_world": [
+  [
+   100.73,
+   77.93,
+   41.03
+  ],
+  [
+   104.27,
+   83.07,
+   50.57
+  ]
+ ],
+ "gap_to_wheel_box": 1.53,
+ "soft_cells_in_window": 3302,
+ "candidates": 3,
+ "tried": [
+  {
+   "x": 99,
+   "deck_top": 40,
+   "hit_cells": 9774,
+   "hit_soft": 47322,
+   "in_keep": false,
+   "support": "1456/1872"
+  },
+  {
+   "x": 99,
+   "deck_top": 41,
+   "hit_cells": 0,
+   "hit_soft": 53748,
+   "in_keep": false,
+   "support": "936/1872"
+  },
+  {
+   "x": 99.5,
+   "deck_top": 40,
+   "hit_cells": 6876,
+   "hit_soft": 32966,
+   "in_keep": false,
+   "support": "1716/1872"
+  },
+  {
+   "x": 99.5,
+   "deck_top": 41,
+   "hit_cells": 0,
+   "hit_soft": 37598,
+   "in_keep": false,
+   "support": "676/1872"
+  },
+  {
+   "x": 100.0,
+   "deck_top": 40,
+   "hit_cells": 4104,
+   "hit_soft": 19818,
+   "in_keep": false,
+   "support": "1872/1872"
+  },
+  {
+   "x": 100.0,
+   "deck_top": 41,
+   "hit_cells": 0,
+   "hit_soft": 22734,
+   "in_keep": false,
+   "support": "416/1872"
+  },
+  {
+   "x": 100.5,
+   "deck_top": 40,
+   "hit_cells": 1206,
+   "hit_soft": 7454,
+   "in_keep": false,
+   "support": "1872/1872"
+  },
+  {
+   "x": 100.5,
+   "deck_top": 41,
+   "hit_cells": 0,
+   "hit_soft": 8576,
+   "in_keep": false,
+   "support": "156/1872"
+  },
+  {
+   "x": 101.0,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 3240,
+   "in_keep": false,
+   "support": "1872/1872"
+  },
+  {
+   "x": 101.5,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 480,
+   "in_keep": false,
+   "support": "1872/1872"
+  },
+  {
+   "x": 102.0,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": false,
+   "support": "1872/1872"
+  },
+  {
+   "x": 102.5,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": false,
+   "support": "1872/1872"
+  },
+  {
+   "x": 103.0,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": false,
+   "support": "1872/1872"
+  },
+  {
+   "x": 103.5,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": true,
+   "support": "1872/1872"
+  },
+  {
+   "x": 104.0,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": true,
+   "support": "1872/1872"
+  },
+  {
+   "x": 104.5,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": true,
+   "support": "1872/1872"
+  },
+  {
+   "x": 105.0,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": true,
+   "support": "1872/1872"
+  },
+  {
+   "x": 105.5,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": true,
+   "support": "1872/1872"
+  },
+  {
+   "x": 106.0,
+   "deck_top": 40,
+   "hit_cells": 0,
+   "hit_soft": 0,
+   "in_keep": true,
+   "support": "1872/1872"
+  }
+ ]
+}

@@ -426,3 +426,20 @@ Tim：「夜隼號目前已經完工了嗎（可以匯入遊戲了嗎?）如果�
 - **.vxk 重匯**（`summit-night-falcon-01m-assembly/exports/night_falcon.vxk`）：**97,160 格、checksum 358bf2ac**（封裝回讀 ✓；繩 355、帆 10、模型 30、關聯外框 19、帶 meta 33、固定點 459）。
 - 沒做的：貨艙沒有地板 ⇒ 主艙口、前艙口不放梯子（餘燼號、憲法號也沒有通 orlop 的）；彈藥庫的門在貨艙那一側，要走 lazarette 艙口下去（沒有梯子）。
 - 過程圖：`overlays/stage19_ladders_yaw{135,-135}.png`（拿掉兩根桅與帆）、`stage19_ladders_break_yaw35.png`、`stage19_ladders_companion_yaw-60.png`。
+
+## 階段二十 羅經櫃（kind=binnacle）—— 外部模型（2026-10-13 晚，wake #118 小歇後）
+Tim：「提交吧 然後繼續做羅經櫃 GO」（階段十九提交 cc61f34）。規格 §9 有 kind=binnacle（basecamp 餘燼號 10-13 補）。設計 plan.json `binnacle`（provenance `binnacle`、`binnacle.place`）；產生 `design/draft_binnacle.py <design> <組裝件 obj>` ⇒ `masks/binnacle/binnacle.vox.txt`、`verify_binnacle.json`、`sheet20_binnacle_v1.png`；下 CLI `design/apply_binnacle.py create|stamp|model`；讀數 `design/check_binnacle.py`。模型不是格 ⇒ nf_state 不加階段。
+- 原作：夜隼號那具老羅盤是父親傳下來的，嘩變那夜指針被踩斷（001:35、007:61）；羅經櫃長什麼樣、船上現在用哪一具，原作沒寫 ⇒ ⛔ 不在櫃上加劇情記號（不像舵輪的疤有原文）。
+- **子作品** `summit-night-falcon-01m-binnacle`（parent 甲板-後、0.02 m、18×26×52）15,892 格、1 元件、空腔 0、左右差 0：底座（104）、櫃身（136）＋四角深色柱、簷、朝船尾一扇羅經窗（金框 208、玻璃 37 往裡一格）、兩側燈窗（琥珀 253）、頂上銅罩（168，半球 r 6.5）、兩根燈煙囪（36）。簷頂 0.78 m、銅罩頂 0.90 m、煙囪帽 0.96 m（量清單）。尺寸照一般比例，未查證。
+  - 🩸 第一版左右差 62：銅罩中心 cy 寫 12.5，框寬 26 的中線格心是 13.0 ⇒ 改了才 0。
+- **擺法**（同舵輪）：中線、x 每 0.5 試；格心＋八角不落在 nf_state stage19 的格或 obj 的繩／帆／模型；四角著地；外框不進 companion 梯子 head 那一段（keep x 105–109）；離 x_target 102.5 最近。試 19 個：x 99–100.5 撞格（後甲板 x ≤ 98 高一階）也撞 obj、101–101.5 只撞 obj（取樣 3,240／480 點；是哪一件沒分開量，舵輪座外框到 x 99.0、舵輪到 99.2）、103.5 以後進 keep，剩 102、102.5、103 ⇒ **at (102.5, 80.5, 41)**，外框 x 100.7–104.3。模型 `甲板-後/羅經櫃`、pivot 底面中心、scale 0.2、meta `{kind: binnacle}`（§9：只說這是什麼）。
+- 讀數（`check_binnacle.py`，只讀引擎 list／parts／obj）：
+  - 引擎：組裝件仍 **97,160 格**、1 元件、空腔 0；models_drawn 31、broken 0。
+  - ① 組裝件 ＝ stage19：缺 0、多 0、色差 0　② meta ＝ 我的；外框 引擎 [100.7, 77.9, 41]–[104.3, 83.1, 50.6] ＝ 我算的（兩位小數）
+  - ③ 碰撞三角形 0／534　④ 著地：底面 210 個取樣點正下方實心 1.000
+  - ⑤ 最近的模型：舵輪座 1.75 格、舵輪 3.2 格；外框外 6 格內沒有繩；companion head 那 9 格：在外框裡 0、實心 0
+  - 反向對照：往後 2 ⇒ 碰撞 4、離舵輪座 0.15、繩出現（舵索 4.1）；往下 0.5 ⇒ 碰撞 10；往前 4 ⇒ head 那段被外框蓋 6；往前 9（艙口上）⇒ 著地 0.067。
+  - 🩸 ④ 第一版只拿底面三角形的重心：底面被合併成 **2 個**三角形 ⇒ 2 個點代表整個底面（網格的頂點／重心不代表網格 —— 今晚第四次）。往前 9 的反向對照之前改成面上取樣。
+- 重跑逐位元組相同：用 `hide_models=甲板-後/羅經櫃` 的 obj 重跑 ⇒ verify、清單、圖紙 sha256 全 OK。
+- **.vxk 重匯**：格數與 checksum **不變**（97,160、358bf2ac —— checksum 只算格子）；檔案變了（模型 31、網格 14 份、帶 meta 34）⇒ 檔案 sha256 0a540537…。⚠ 遊戲那側不能只對 checksum。
+- 過程圖：`overlays/stage20_binnacle_yaw-135.png`（舵輪、羅經櫃、companion）。
