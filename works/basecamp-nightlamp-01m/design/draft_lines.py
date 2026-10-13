@@ -113,6 +113,9 @@ class Ship:
         s.stern_x_of_z = lin(so2[:, 1], so2[:, 0])
         s.Si = Si
         s.lwl_s, s.lwl_b = Si['lwl']['stern_z'], Si['lwl']['bow_z']
+        spl = B.get('stern_post_lines')                                      # 船尾 rabbet（階段二讀的 L3）
+        s.L3c = spl['L3']['off_px_vs_py'] if spl else None
+        s.pxm, s.kt = R['px_per_m'], R['datum']['keel_top_py']
         s.stern_top = s.lwl_s + Si['stern_top_above_lwl']
 
     # 船頭柱外緣 x(z)（頂上照最後 1 m 的斜度往上延）
@@ -128,6 +131,11 @@ class Ship:
         rp = s.rab_pts
         low = np.interp(z, rp[:, 1], rp[:, 0])
         return np.where(z > rp[-1, 1], rp[-1, 0] + (z - rp[-1, 1]) * s.rab_rake, low)
+
+    def rabbet_aft_x(s, z):                      # 船尾 rabbet（L3：離船尾柱後面幾 px 對 py 的直線）；沒讀過就用船尾柱後面往前 0.40
+        if s.L3c is None:
+            return s.sternpost_x(z) + 0.40
+        return s.sternpost_x(z) + np.polyval(s.L3c, s.kt - np.asarray(z, float) * s.pxm) / s.pxm
 
     def sternpost_x(s, z):                       # 船尾柱後面
         return s.sp_x0 - np.asarray(z, float) * s.sp_tan
@@ -169,7 +177,7 @@ class Ship:
     def ends(s, z):
         """這個高度的船尾端 (x, hb) 與船頭端 (x, hb)"""
         if z <= s.tuck_z:
-            xa = float(s.sternpost_x(z)) + 0.40          # rabbet 在船尾柱後面往前 0.40（設計）
+            xa = float(s.rabbet_aft_x(z))                # 船尾 rabbet（L3）
             ha = s.keel_half
         else:
             xa = float(s.stern_x_of_z(min(z, s.stern_outline[-1, 1])))

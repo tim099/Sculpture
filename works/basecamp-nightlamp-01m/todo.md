@@ -20,14 +20,21 @@
 - [x] 10,830 格；結果帳 0 差、1 元件、空腔 0、原圖探針最大 0.71 格、反向對照 3.0（notes「階段二」）
 - [x] 提交（Tim「單層提交吧 然後繼續階段三」）
 
-## 下一步：階段三 apron・deadwood（船頭、船尾）
-- ⚠ 先把線形圖船殼後端改成照 L3 rabbet（現在是「船尾柱後面往前 0.40」，低處偏後約 0.28 m），重產線形圖
-- Pl. LI 側面圖上讀 cutting-down line／keelson 頂（憲法號的 A、B 線）—— 船中的肋底上升線（readings_LI rising_line）可能是虛線那條，先確認
-- 船尾 deadwood：內艉柱前面（L3）往前到 A 線；船頭 apron／deadwood：船頭柱後面（rabbet）往後
+## 階段三 deadwood・apron（10-14 凌晨雕完）
+- [x] 線形圖船殼後端改成照 L3 rabbet
+- [x] 讀 A（cutting-down line）、B（keelson 頂）
+- [x] 26,650 格；結果帳 0 差、1 元件、空腔 0、原圖探針最大 0.56 格、反向對照 3.0（notes「階段三」）
+- [x] 提交（Tim「單層提交吧 然後繼續階段四」）
+
+## 下一步：階段四 底肋＋keelson（新圖紙 05）
+- 肋位：Pl. LI 側面圖的肋骨標記／站距（站與站之間幾個肋位）要先讀；肋距、底肋 sided／moulded 查 Chapman 或同時代規格
+- 底肋：船殼 molded（draft_lines 的 hb）往裡 moulded 深；底肋頂 ＝ A（中線）往兩舷照 floor head（body plan 上 rising line／narrowing line 那對）
+- keelson：16 號站到 M 站、A → B（中線 5 格寬）
+- ⚠ 底肋要貼著船殼 molded，兩頭（16 號站以後、M 站以前）是 deadwood 上的 half floors／cant frames —— 跟憲法號階段四、六一樣分開做
 
 ## ⚠ 還沒定、要問 Tim
 - 渲染圖要不要也真的發光（要擴充引擎、另開單）
 - 船名（暫名夜燈號）
 
 ## 提交紀錄（Sculpture，單層、沒 bump、沒 push）
-- 68c3bc9 圖紙 01＋底圖；8755a6a 階段一 龍骨；階段二 見 git log（這一份 todo 跟著那一筆進去）
+- 68c3bc9 圖紙 01＋底圖；8755a6a 階段一 龍骨；8331a5a 階段二；階段三 見 git log（這一份 todo 跟著那一筆進去）

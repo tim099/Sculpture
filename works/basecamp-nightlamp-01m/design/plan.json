@@ -64,7 +64,7 @@
     "tumble_per_m": 0.09,
     "provenance": {
       "stations": "原圖讀數：橫切面圖 14 站＋船中最外圈逐條追線（readings_LI_bodyplan.json；船中用重追的 mid_L，取代 readings_LI.json 在 z 1.3–1.7 跳線的舊讀數）；站的 x 是側面圖的站位格線",
-      "hb(x,z)": "設計決定：每個高度 z，把各站半寬沿船長用 PCHIP（單調、不過衝）接起來，兩頭收到船尾柱／船頭柱的 rabbet；不是描圖 —— 站與站之間是內插",
+      "hb(x,z)": "設計決定：每個高度 z，把各站半寬沿船長用 PCHIP（單調、不過衝）接起來，兩頭收到船尾 rabbet（L3，階段三起；之前是「船尾柱後面往前 0.40」的設計值）／船頭柱 rabbet；不是描圖 —— 站與站之間是內插",
       "keel_half": "原圖讀數：橫切面圖龍骨兩側 8622／8712 ⇒ 半寬 0.205 m；各站下端停在 0.11 附近（rabbet）⇒ 取 0.11",
       "stem_half": "設計決定：比照龍骨",
       "plank": "原圖讀數（推定）：半寬圖最大寬細線 5.15 對橫切面圖 5.02 ⇒ 外板約 0.13（z 1.38 水線也在 compare01 對）",
@@ -267,6 +267,53 @@
       "z_top": "原圖讀數（目測）：tuck z 7.30（counter 下緣碰船尾柱）—— 再上面是船尾樓，之後的階段做",
       "stem.z_top": "設計決定：船頭柱做到船頭舷牆頂（silhouette top 在船頭柱前面那個 x）",
       "color": "設計決定：照憲法號（船頭柱／船尾柱 177、內艉柱 173、gripe 104）"
+    }
+  },
+  "deadwood": {
+    "title": "新圖紙 04：deadwood・apron v1（階段三）",
+    "y": [
+      158,
+      162
+    ],
+    "aft": {
+      "color": 209,
+      "x_from": "船尾 rabbet（L3，內艉柱前面）",
+      "x_to_station": "16",
+      "z": [
+        "keel_top",
+        "B"
+      ]
+    },
+    "fore": {
+      "color": 209,
+      "x_from_station": "M",
+      "x_to": "船頭 rabbet（船頭柱後面）",
+      "z": [
+        "keel_top",
+        "A"
+      ]
+    },
+    "apron": {
+      "color": 173,
+      "x_from_station": "M",
+      "x_to": "船頭 rabbet",
+      "z": [
+        "A",
+        "B"
+      ],
+      "band": {
+        "thickness": 0.35,
+        "z_top": 9.0
+      }
+    },
+    "provenance": {
+      "A": "原圖讀數：虛線（readings_LI_bodyplan line_A_cutting_down；推定 ＝ cutting-down line）",
+      "B": "原圖讀數：實線（line_B_keelson_top；推定 ＝ keelson 頂，兩頭往上掃成 deadwood／apron 的頂）",
+      "split": "設計決定（照憲法號）：船尾 deadwood 含 sternson 到 B、一色；船頭 A 以下 deadwood、A 到 B apron；中段（16 號站到 M 站）留給底肋＋keelson",
+      "x_to_station": "設計決定：兩段 deadwood 停在站線上 —— 船尾 16 號站（A ≈ 1.2 m）、船頭 M 站（A ≈ 1.1 m）",
+      "band": "設計決定：B 在吃水線碰到 rabbet，原圖再往上沒有畫 apron ⇒ 船頭柱後面加一條 0.35 底圖 m 的帶子到 z 9.0（給船頭柱一個背）",
+      "y": "設計決定：跟龍骨同寬 5 格",
+      "color": "設計決定：照憲法號（deadwood 209、apron 173）"
     }
   }
 }

@@ -56,7 +56,7 @@
 - 醒目的吃水刻度；船尾雕刻山與營火；船長室寫字桌與一疊信；帆要不要破損之後再定。
 
 ## 作品
-- 主作品 `basecamp-nightlamp-01m`（委託建立免費、已發 10 token；1024×320×800、0.1 m／格；commission_ref TASK-0538）。階段二後 24,340 格。
+- 主作品 `basecamp-nightlamp-01m`（委託建立免費、已發 10 token；1024×320×800、0.1 m／格；commission_ref TASK-0538）。階段三後 50,990 格。
 
 ## 階段一：龍骨（2026-10-13 深夜，新圖紙 02 龍骨 v1）—— `design/draft_keel.py`、`design/tools/keel_check.py`
 Tim 2026-10-13 看過線形圖 v1：「單層提交吧 然後開始下龍骨」（圖紙提交在 Sculpture 68c3bc9）。
@@ -96,4 +96,26 @@ Tim：「單層提交吧 然後繼續階段二」（階段一提交在 Sculpture
 - 反向對照：錨點 X 偏 3 格 ⇒ 六組都報 3.0。
 - 過程圖：`overlays/stage02_posts_view.png`、`stage02_bow_view.png`、`stage02_stern_view.png`、`stage02_posts_vs_LI_{bow,stern}.png`。
 - ⚠ 下一階段會撞到：線形圖的船殼後端（`Ship.ends`：船尾柱後面往前 0.40）比 L3 rabbet 在低處偏後約 0.28 m —— 做 deadwood／肋骨前要改成照 L3。
+
+## 階段三：deadwood・apron（2026-10-14 凌晨，新圖紙 04 v1）—— `design/draft_deadwood.py`、`design/tools/deadwood_check.py`
+Tim：「單層提交吧 然後繼續階段三」（階段二提交在 Sculpture 8331a5a）。
+讀圖（`design/readings_LI_bodyplan.json`，疊圖 `design/readings/LI_lines_A_B_trace.png`）：
+- **A**（虛線，推定 cutting-down line）：船中在龍骨頂上 0.48 m；中段追線、兩頭點太稀改用「每欄 ±30 px 找小黑段＋三次擬合」（船尾 rms 0.37 px）。
+- **B**（實線，推定 keelson 頂）：船中 1.01 m；往船尾掃到內艉柱（z 5.17）、往船頭到 rabbet（x 38.89、z 5.06）。
+  ⚠ readings_LI.json 的 rising_line 就是 B，但兩頭跳到水線上（2.79／2.48）—— 兩頭作廢。
+- 先改線形圖：船殼後端從「船尾柱後面往前 0.40」改成 L3 rabbet（`Ship.rabbet_aft_x`）；倍數、verify 數字不變。
+| 部件 | 範圍（格） | 邊界 | 顏色 | 落地 |
+|---|---|---|---|---|
+| 船尾 deadwood（含 sternson） | x [90, 187]、z [6, 71] | L3 → 16 號站、龍骨頂 → B | 209 | 18,315 |
+| 船頭 deadwood | x [521, 570]、z [6, 31] | M 站 → rabbet、龍骨頂 → A | 209 | 2,565 |
+| apron | x [521, 591]、z [20, 121] | M 站 → rabbet、A → B；B 碰 rabbet 以上加一條 0.35 底圖 m 的帶子到 z 9.0（設計） | 173 | 5,770 |
+- 中段（16 號站到 M 站）的 A、B 之間留給底肋＋keelson（照憲法號）。
+- 落地：三刀 placed ＝ 清單格數。
+- 結果帳（`design/verify_deadwood_stage3.json`）：export list 50,990 格逐格對階段一～三全部清單 —— 缺 0、多 0、顏色不同 0（尺先驗過 1／0／1）。
+- 結構：1 元件、空腔 0、鏡像差 y:160 全 0。
+- 原圖探針（原圖那一欄重新找線心）51 根，最大 0.56 格、平均 0.27：
+  船尾 deadwood 頂 vs B -0.47～0.45（14 根、落空 0）、船頭 deadwood／apron 分界 vs A -0.56～0.52（21 根、落空 45）、apron 頂 vs B -0.47～0.43（16 根、落空 3）。
+  A 是虛線，落空的是點與點之間的空白（改成每 0.05 m 一根，量到的才夠多）。
+- 反向對照：錨點 Z 偏 3 格 ⇒ 三組都報 3.0。
+- 過程圖：`overlays/stage03_deadwood_view.png`、`stage03_bow_view.png`、`stage03_stern_view.png`、`stage03_deadwood_vs_LI_{bow,stern}.png`。
 
