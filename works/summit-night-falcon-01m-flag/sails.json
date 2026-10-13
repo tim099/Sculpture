@@ -1,0 +1,47 @@
+{
+	"schema": 2,
+	"wind": [
+		0,
+		0,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "hoist_top",
+					"at": "ht",
+					"pin": true
+				},
+				{
+					"name": "fly_top",
+					"at": "35,8,38",
+					"pin": false
+				},
+				{
+					"name": "fly_bottom",
+					"at": "35,8,18",
+					"pin": false
+				},
+				{
+					"name": "hoist_bottom",
+					"at": "hb",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#f2ead8",
+			"res": 16,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-10-13T10:03:22",
+			"texture": "textures/ensign.png"
+		}
+	]
+}
