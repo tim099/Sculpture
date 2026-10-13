@@ -36,10 +36,22 @@ def put(k, c):
     cells[k] = c
 
 
+# 艙內（v2）：同一個 (x, z) 那一列左右兩邊都有船殼、而且正下方 (x, y, <z) 有船殼 ＝ 船殼碗裡面。
+# 🩸 v1 只在 2D 橫切面從中線連空氣：外板在切面上是階梯、只靠斜角相接 ⇒ 艙內空氣從斜角縫漏到船外，
+#     地板與地板下的填實跟著長到船殼外（5,587 格裡 3,582 格在船底外，x 98–121、z 0–8）。1 塊／空腔 0／左右對稱 三把尺都量不到。
+inside = np.zeros((NX, NY, NZ), bool)
+for x in range(x0, x1 + 1):
+    hs = H[x] > 0
+    for z in range(NZ):
+        ys = np.nonzero(hs[:, z])[0]
+        if len(ys):
+            inside[x, ys.min() + 1:ys.max(), z] = True
+    inside[x] &= np.cumsum(hs, axis=1) > 0                 # 正下方有船殼
+inside &= ~occ
 room = np.zeros((NX, NY, NZ), bool)
 below = {}
 for x in range(x0, x1 + 1):
-    sl = ~occ[x, :, :]                                  # y × z 的空氣
+    sl = inside[x].copy()                               # y × z 的艙內空氣（v2）
     lab, n = ndimage.label(sl, st6)
     seed = lab[80, zf + 1]
     assert seed > 0, ('中線那格不是空氣', x)
@@ -54,7 +66,7 @@ for x in range(x0, x1 + 1):
     # 地板以下：這些 y 從 floor 往下到船殼的空氣全部填
     for y in ys:
         for z in range(zf, -1, -1):
-            if occ[x, y, z]:
+            if occ[x, y, z] or not inside[x, y, z]:
                 break
             below[(x, y, z)] = True
 for (x, y, z) in below:
@@ -68,7 +80,7 @@ for x in (x0, x1):
     for (xx, y, z) in below:
         if xx == x:
             sl[y, z] = True
-    lab, _ = ndimage.label(~occ[x], st6)
+    lab, _ = ndimage.label(inside[x], st6)
     reg = lab == lab[80, zf + 1]
     sl[:, zf + 1:zc + 1] |= reg[:, zf + 1:zc + 1]
     edge = sl & ~ndimage.binary_erosion(sl, st6)
@@ -131,6 +143,7 @@ for xc in xs:
         taken[i[:, 0], i[:, 1], i[:, 2]] = True
         kegs.append([round(float(v), 3) for v in at])
 fa = np.array(MG['frame_at']); fs = np.array(MG['frame_size'])
+assert all(inside[k] for k in cells), ('有格在船殼碗外面', sum(1 for k in cells if not inside[k]))
 for k in cells:
     assert (fa <= np.array(k)).all() and (np.array(k) < fa + fs).all(), ('框外', k)
 rc = np.argwhere(room)
@@ -146,18 +159,34 @@ with open(os.path.join(D, 'masks', 'magazine', 'main_scuttle.vox.txt'), 'w', enc
     f.write('# 艙房地板的 lazarette 艙口（從主甲板子作品刻掉，draft_magazine.py）x,y,z,color —— 世界座標\n')
     for k, c in sorted(scuttle.items()):
         f.write('%d,%d,%d,%d\n' % (k[0], k[1], k[2], c))
+v1 = {}
+for l in open(os.path.join(D, 'masks', 'magazine', 'room_v1.vox.txt'), encoding='utf-8'):
+    if l.startswith('#'):
+        continue
+    x_, y_, z_, c_ = map(int, l.split(','))
+    v1[(x_ + fa[0], y_ + fa[1], z_ + fa[2])] = c_
+v1_out = {k: c for k, c in v1.items() if cells.get(k) != c}
+v2_in = {k: c for k, c in cells.items() if v1.get(k) != c}
+for name, dd in (('room_v1_out', v1_out), ('room_v2_in', v2_in)):
+    with open(os.path.join(D, 'masks', 'magazine', name + '.vox.txt'), 'w', encoding='utf-8', newline='\n') as f:
+        f.write('# 彈藥庫 %s（draft_magazine.py）子作品座標 x,y,z,color\n' % name)
+        for k, c in sorted(dd.items()):
+            f.write('%d,%d,%d,%d\n' % (k[0] - fa[0], k[1] - fa[1], k[2] - fa[2], c))
 cnt = {}
 for c in cells.values():
     cnt[c] = cnt.get(c, 0) + 1
 out = {'note': 'draft_magazine.py（階段十八）—— 現況 nf_state stage16',
        'work': MG['work'], 'frame_at': MG['frame_at'], 'frame_size': MG['frame_size'],
        'stamp_order': {'main': [{'name': 'aft_scuttle', 'op': 'carvevox', 'file': 'masks/magazine/main_scuttle.vox.txt', 'at': [0, 0, 0], 'origin_world': [0, 0, 0], 'voxels': len(scuttle)}],
-                       'magazine': [{'name': 'room', 'op': 'stampvox', 'file': 'masks/magazine/room.vox.txt', 'at': [0, 0, 0], 'origin_world': MG['frame_at'],
-                                     'voxels': len(cells), 'sha256': hashlib.sha256(txt.encode('utf-8')).hexdigest()}]},
+                       'magazine': [{'name': 'room_v1', 'op': 'stampvox', 'file': 'masks/magazine/room_v1.vox.txt', 'at': [0, 0, 0], 'origin_world': MG['frame_at'],
+                                     'voxels': len(v1), 'note': 'v1 已落格（凍結，不重產）：2D 切面漏到船外'},
+                                    {'name': 'v1_out', 'op': 'carvevox', 'file': 'masks/magazine/room_v1_out.vox.txt', 'at': [0, 0, 0], 'origin_world': MG['frame_at'], 'voxels': len(v1_out)},
+                                    ] + ([{'name': 'v2_in', 'op': 'stampvox', 'file': 'masks/magazine/room_v2_in.vox.txt', 'at': [0, 0, 0], 'origin_world': MG['frame_at'], 'voxels': len(v2_in)}] if v2_in else [])},
+       'room_v2': {'file': 'masks/magazine/room.vox.txt', 'voxels': len(cells), 'sha256': hashlib.sha256(txt.encode('utf-8')).hexdigest()},
        'link': {'name': '彈藥庫', 'at': MG['frame_at'], 'meta': {'kind': 'magazine', 'powder_lb': 100 * len(kegs)}},
        'anchors': [{'name': 'blast', 'world': list(blast)}, {'name': 'door', 'world': list(door_pt)}],
        'kegs': {'source_work': MG['keg_work'], 'scale': KS, 'pivot': MG['keg_pivot'], 'at_world': kegs, 'meta': {'kind': 'powder', 'powder_lb': 100}},
-       'counts': {'scuttle': len(scuttle), 'cells': len(cells), 'colors': {str(k): v for k, v in sorted(cnt.items())}, 'room_air': int(room.sum()), 'kegs': len(kegs),
+       'counts': {'scuttle': len(scuttle), 'v1': len(v1), 'v1_out': len(v1_out), 'v2_in': len(v2_in), 'cells': len(cells), 'colors': {str(k): v for k, v in sorted(cnt.items())}, 'room_air': int(room.sum()), 'kegs': len(kegs),
                   'components_after': int(n), 'cavities_after': int(na - 1)}}
 for a in out['anchors']:
     a['at'] = [int(v) for v in np.array(a['world']) - fa]

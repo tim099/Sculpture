@@ -39,7 +39,8 @@
 - [x] 船殼關聯 meta kind=ship、waterline_z=15、crew=31（ame seq 24230 確認）
 - [x] 彈藥庫（階段十八：艙房地板底下 x 98–121、kind=magazine powder_lb 800）＋火藥桶 8（引用憲法號 -powder-barrel）；lazarette 艙口
 - [ ] 梯子：艙房 companion（x 110–117）一座 kind=ladders（foot／lo／hi／head）
-- [ ] 匯出 vxk（include=rig,models,parts,meta），格數與 checksum 寫在單上、跟 ame 說
+- [x] 匯出 vxk：96,756 格、checksum 1278c741（v1 208a1761 有錯：彈藥庫長到船外；已跟 ame 更正）
+- [ ] draft_flag.py 的貼圖路徑跟呼叫方式有關（要用絕對路徑呼叫才逐位元組相同）—— 要改得連 check_flag 一起改
 
 ## 之後會撞到的（先記）
 - 插板放下會伸出龍骨底 ⇒ 插板做成會轉的外部模型（pivot），組裝件框往下加

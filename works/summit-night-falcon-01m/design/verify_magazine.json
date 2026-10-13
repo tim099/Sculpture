@@ -32,9 +32,9 @@
   ],
   "magazine": [
    {
-    "name": "room",
+    "name": "room_v1",
     "op": "stampvox",
-    "file": "masks/magazine/room.vox.txt",
+    "file": "masks/magazine/room_v1.vox.txt",
     "at": [
      0,
      0,
@@ -46,9 +46,30 @@
      0
     ],
     "voxels": 5587,
-    "sha256": "16bda93762c721a9d4d17f602cf0a51546bc9adf2a9db57be7b4dac42f7318e2"
+    "note": "v1 已落格（凍結，不重產）：2D 切面漏到船外"
+   },
+   {
+    "name": "v1_out",
+    "op": "carvevox",
+    "file": "masks/magazine/room_v1_out.vox.txt",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "origin_world": [
+     98,
+     50,
+     0
+    ],
+    "voxels": 3582
    }
   ]
+ },
+ "room_v2": {
+  "file": "masks/magazine/room.vox.txt",
+  "voxels": 2005,
+  "sha256": "e9d6ba36abb78709226e8a4f71e2d20e26cb2a271c96417634ed015ebd3c60dc"
  },
  "link": {
   "name": "彈藥庫",
@@ -147,11 +168,14 @@
  },
  "counts": {
   "scuttle": 21,
-  "cells": 5587,
+  "v1": 5587,
+  "v1_out": 3582,
+  "v2_in": 0,
+  "cells": 2005,
   "colors": {
-   "136": 3877,
+   "136": 615,
    "168": 1081,
-   "177": 629
+   "177": 309
   },
   "room_air": 8568,
   "kegs": 8,
