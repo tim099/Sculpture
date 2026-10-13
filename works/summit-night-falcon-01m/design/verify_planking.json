@@ -1,0 +1,150 @@
+{
+  "counts": {
+    "cap": 1488,
+    "carve": 164,
+    "final_total": 54820,
+    "paint_structure": 2838,
+    "plank": 27732,
+    "stage2": 24306,
+    "trunk": 1458
+  },
+  "expected_total_after": 54820,
+  "final_colors": {
+    "104": 4365,
+    "141": 19885,
+    "254": 12681,
+    "36": 17889
+  },
+  "leak": {
+    "hold_cells": 178442,
+    "hold_cells_reached_from_outside": 0,
+    "z_below": 30
+  },
+  "stamp_order": [
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/trunk_slot_carve.vox.txt",
+      "name": "trunk_slot_carve",
+      "op": "carvevox",
+      "sha256": "ed5563a446e5ee987ac5437be9bb781e3a051d6b5845b0a7fddbc0131636afcd",
+      "voxels": 164
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/trunk.vox.txt",
+      "name": "trunk",
+      "op": "stampvox",
+      "sha256": "88372690a0d42097fce0ec229891c0adafab806ddb0284f1314e1cbe3e451133",
+      "voxels": 1458
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/plank_x050.vox.txt",
+      "name": "plank_x050",
+      "op": "stampvox",
+      "sha256": "157968ca50e83f7f9c6fcefcb55724fdac1e754cb37905ae82f15b0dd42a1150",
+      "voxels": 6286
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/plank_x100.vox.txt",
+      "name": "plank_x100",
+      "op": "stampvox",
+      "sha256": "da035114f2ab1710bd1d6e4db6d871ccbfbe292201a82c75641a2f4aa3076359",
+      "voxels": 6652
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/plank_x150.vox.txt",
+      "name": "plank_x150",
+      "op": "stampvox",
+      "sha256": "1b4a685d134c5208ee595bfc1949f81ba6c6e76946c2671d42b5e90b5ac6c670",
+      "voxels": 6252
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/plank_x200.vox.txt",
+      "name": "plank_x200",
+      "op": "stampvox",
+      "sha256": "355c2233d219768ccfbbc06c809a4b0b77336f032d2b31ed86bf9174c3dfe833",
+      "voxels": 6172
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/plank_x250.vox.txt",
+      "name": "plank_x250",
+      "op": "stampvox",
+      "sha256": "f6b954d8d588c30b1a957d4aca6aa1a23871ca012649ef75b95d56c0d46b46c9",
+      "voxels": 2370
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/cap_rail.vox.txt",
+      "name": "cap_rail",
+      "op": "stampvox",
+      "sha256": "dc4fe7a340edd144e8f355d5e4dbe98a20b17278a86b1821b5f237acc54af49d",
+      "voxels": 1488
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/planking/paint_structure.vox.txt",
+      "guard_colors": [
+        104
+      ],
+      "name": "paint_structure",
+      "op": "stampvox",
+      "overwrite": 1,
+      "sha256": "32304190600099b4575e20b6cff6443f3d25ae5a0e6a68cf51201bcd499fd259",
+      "voxels": 2838
+    }
+  ],
+  "structure": {
+    "components_6conn": 1,
+    "enclosed_cavity_voxels": 0,
+    "mirror_diff_y_vs_160_minus_y": 0
+  },
+  "trunk": {
+    "slot_cells_open_to_sea": 782,
+    "top_z": 22,
+    "x": [
+      158,
+      191
+    ]
+  }
+}
