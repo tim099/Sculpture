@@ -267,3 +267,16 @@
 - 讀回：`export format=parts` 的 kind=ladders 部件 4、四十個點的格心逐個 ＝ 算出來的 ＋0.5、差 0；格數 1,818,063 不變。after-berth 跟 ame 手量的參考差 1 格（foot 323 vs 324、head 304 vs 303）。
 - 看得到的：fore-upper 的 head 頭上 1.0 m 是艏斜桅根部（憲法號 fore-gun 同）；poop 的 foot (227,160,129) 跟舵輪外框後緣隔 10 格。沒有梯子通 orlop（兩艘船都沒有）。
 - 匯出 `exports/ember.vxk`：1,818,063 格、checksum 6a04b4a8、繩 1,083、帆 15、模型 247、帶 meta 252、固定點 1,509；封裝回讀對拍 ✓（含軍官室、舵輪）。
+## 可選三項的收尾（2026-10-13，Tim：「然後繼續」）
+### 船艙底斜肋重畫
+設計 plan.json `riders_fix`；產生 `design/draft_riders.py` ⇒ `masks/riders/{carve,stamp,over_rider,refill_limber}.vox.txt`、`verify_riders.json`；套用 `design/tools/riders_apply.py`（船殼標記 `斜肋:begin／end`）。
+- 原因：拉長是「一欄一欄」搬格子（x < 439 不動、439..471 三份、≥ 472 ＋66）⇒ 憲法號 12 根斜肋（live oak 104、6 對）裡，頭在船頭那 6 根（頭 x 519／535／554、尾巴伸到 424／443／465）跨過複製段，被剪成三截鋸齒。頭在船尾那 6 根整根在 x ≤ 408，沒動到。
+- 修法：整根照頭搬（頭 ≥ 472 ⇒ 整根 ＋66）。＋66 是 33 的倍數 ⇒ 搬過去的位置是同一份船中剖面。憲法號的 limber（dy 6–12、內板 177 上面一格）讓開斜肋 ⇒ 斜肋搬走的位置補回 limber、搬來的位置蓋過 limber。
+- 讀數：一欄一欄的 21,102 格 vs 整根的 16,774 格，已經對的 16,372；刻 4,480、補 limber 250、落 336（全是空氣）、limber 換斜肋 66；新落的浮空 0、鏡像差 0。船殼 1,051,720；組裝件 **1,813,919**（−4,144）、1 元件、空腔 0、link_overlap 0、鏡像差不變（1336／1017／10）。重跑（讀 `斜肋:begin`，組裝件 ＝ 現況 − 船殼現況 ＋ 船殼那一刻）四份清單與 verify sha256 相同。
+- 過程圖：`overlays/fix_riders_{before,after}.png`（只畫船殼、z ≤ 75 從上往下看）。兩組斜肋中間空出來的那一段 ＝ 拉長多出來的船中。
+### 軍官室艙壁頂金線
+- v1 照每一欄的天花板放：中段（y 141–179，甲板板底下）在 127、兩旁 4 欄在 125、外側 126–127 被別的構件佔住而**沒有金線**（筆記寫的「125／128 斷兩段」不準：量了才知道外側整段沒有）。
+- v2：plan `wardroom_build.gold_z` 125（每一欄都到得了的最高層），上面壁板 ⇒ 兩層艙壁各 87 欄、z 125 一條直線。格集合不變、換色 254（`masks/wardroom/gold_v2.vox.txt`，子作品標記 `金線:begin／end`）；子作品 vs 清單 0 差；`assembly_voxels` 跟著斜肋改成 1,809,302；重跑 sha256 相同。
+- 過程圖：`overlays/fix_wardroom_gold.png`（只畫軍官室，正對艙壁）。
+### 船尾頂角的舊翹角
+- 量：船殼在 x 80–140 最高 z 160（＝ taffrail 頂）、高過 160 的 0 格；整個船尾高過 160 的只有 gallery 設計的金尖頂 24 格（後廊-P／S 各 12，到 z 166）。正後方看兩角只剩 gallery 冠與金尖頂（`overlays/check_stern_astern_now.png`）；4b 的正後方圖裡那對金色翹角現在沒有了。⇒ 沒東西可修；哪一階段不見的沒追。

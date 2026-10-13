@@ -83,7 +83,11 @@ class Ward:
                     if abs(dy) == door + 1 and z < f + P['door_h'] + 1 or (abs(dy) <= door + 1 and z == f + P['door_h']):
                         s.put((x, y, z), K['frame'], 'door')        # 門框
                         continue
-                    c = K['gold'] if z == top else (K['frame'] if dy % 8 == 0 else K['panel'])
+                    gz = P.get('gold_z')                           # v2：金線統一一個高度（v1 照每一欄的天花板 ⇒ 中段 127、兩旁 125、外側被擋掉沒有）
+                    if gz is None:
+                        c = K['gold'] if z == top else (K['frame'] if dy % 8 == 0 else K['panel'])
+                    else:
+                        c = K['gold'] if z == gz else (K['panel'] if z > gz or dy % 8 else K['frame'])
                     s.put((x, y, z), c, 'bulkhead')
         # 長桌
         x0, x1 = P['table']['x']
