@@ -232,3 +232,10 @@
 - ⚠ powder_lb 是憲法號的量（桶數 × 100）；餘燼號 90 門砲沒有照比例加 —— 要不要多一間（例：74 砲的 hanging magazine）或加桶，等 Tim。
 - 過程圖：`overlays/stage14_magazine_{aft,fore}.png`（船殼切在 orlop 以下）。
 
+## 階段十五 舵（2026-10-13，Tim：「繼續GO」⇒ 水線那一階段記下的「還沒有舵」）
+設計 plan.json `rudder_build`；產生 `design/draft_rudder.py` ⇒ `masks/rudder/waterline.vox.txt`、`verify_rudder.json`。
+- 憲法號 -rudder（3,950 格）z 2–84 全在插層 z 109 以下、船尾不在拉長那一段 ⇒ 換算是恆等，位置照抄（at 0,0,0）；放進餘燼號組裝件重疊 0。
+- 不直接關聯：水線抬到 71，那件 z 63–70 是黑 ⇒ 新子作品 `-rudder`（parent 船殼、tags sub、0.1 m）`work sub=assemble source_work=…-rudder at=0,0,0`（Credit 1，`work sub=show` 的 credit_count 讀到；Credit 是從編輯歷史產生、不寫在 work.json）→ stampvox overwrite z 63–70 的黑 → 銅 257 格（pintle 帶 136 的 68 格不動）。組裝件關聯 `舵`。
+- 讀數：組裝件 **1,813,446**（＝ 1,809,496 ＋ 3,950）、1 元件、空腔 0、link_overlap 0、鏡像差不變（舵自己對稱，換色清單鏡像缺 0）；子作品 vs（憲法號的舵 ＋ 換色）逐格 0 差；重跑 sha256 相同。
+- 第一次跑：產生程式要藏「舵」這條還沒掛的關聯 ⇒ 匯出被擋（hide_links 打錯名 ⇒ 擋）⇒ 先查現有關聯再藏（同其他產生程式）。
+- 過程圖：`overlays/stage15_rudder_{side,quarter}.png`。
