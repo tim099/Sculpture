@@ -750,3 +750,14 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 自檢：新格與鏡像都在空氣裡、P 舷舷頂跟 S 舷逐欄同高同寬（不然停）、新格每一塊連到現況。
 - 讀數：一舷 662 格、支柱 37；組裝件 **1,395,837**（＋1,324）、反向對照：新舊相減只多出 S＋鏡像那 1,324 格、舊格 0 刪 0 換色；1 元件、空腔 0、link_overlap 0。繩 901 條直線取樣穿過新格 0、照最大下垂往下掃 0。
 - 過程圖：`overlays/stage34_rails_{ship,quarterdeck,forecastle}.png`（近照關帆）。
+
+## 階段三十五 chesstrees（2026-10-13 晚，BTC；Tim：「繼續GO」⇒ todo「fenders／chesstree」）
+設計 `design/draft_chesstrees.py`（輸入：組裝件 list 匯出）⇒ `masks/chesstrees/chesstrees_side.vox.txt`、`verify_chesstrees.json`；套用 `design/tools/chesstrees_apply.py`。
+- 先核對：02、04、11、15 號都沒畫 fenders／chesstree ⇒ 派查資料 agent（限時、只要位置高度尺寸、每個數附來源）。它找到 **Navy plan No. 24474「Restoration 1927–1931 … Outboard Profile, Fittings, Taken From Work」**（1931-09-30，USS Constitution Museum 模型資源 https://ussconstitutionmuseum.org/download/outboard-profile-fittings/）；標字我自己看裁切圖確認過。
+  - **fenders**：1931 舷側沒有；現代只有吃水線的白橡木護舷（museum 2017 文章）⇒ **不做**。
+  - **chesstrees** 右舷三個，都在 spar deck 舷牆那一帶、橫的圓頭滑輪板：FORE SHEET（船腰）、LOWER STUDDINGSAIL BOOM（船腰、更前）、MAIN BRACE（船尾 quarter、bumpkin 旁）。圖上沒有 main tack 的（fore tack 走船頭 bumpkin）。
+- 位置換算（1931 圖跟作品依據的 1927 11 號圖不是同一張 ⇒ 用砲門當尺）：圖上 entry port 往前第 1 個 gun deck 砲門 ＝ 作品第 7 號。fore sheet 在第 8／9 號中間（比例 0.493）⇒ X 438.6；studdingsail 第 9／10 號之間 0.78 ⇒ X 481.2；高度在 rail 與 planksheer 之間 48% ⇒ z 115。main brace：用 gun deck 第 1 號換 145.6、用最近的 spar deck 砲門換 139.7（兩張圖差 6 格）⇒ 取 143、z 123（砲門上緣一帶、舷頂下）。⚠ 位置是比例換算，不是逐像素校準；main brace 那個 ±3 格。
+- 形狀（設計；圖上沒尺寸，量起來約 14" 長、不到 1 ft 高）：5 長 × 3 高、四角去掉、中間一排 3 格黑 36（槽）、其餘橡木 136；每格貼在那一點 (x, z) 的船殼最外面 ＋1。子作品 `-chesstrees-side`（一舷 S、固定框 at 130,200,108、370×40×24）＋鏡像關聯（at 130,81,108）。
+- 自檢：新格與鏡像在空氣裡、兩舷船殼外緣逐點對稱、新格連到現況。
+- 讀數：一舷 33 格；組裝件 **1,395,903**（＋66，新舊相減只多這些、舊格 0 刪 0 換色）、1 元件、空腔 0、link_overlap 0；繩 901 條（直線＋下垂）碰到 0。
+- 過程圖：`overlays/stage35_chesstrees_waist.png`、`stage35_chesstree_quarter.png`（船外看）。

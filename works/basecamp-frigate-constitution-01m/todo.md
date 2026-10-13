@@ -297,4 +297,8 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 ## 階段三十四 quarterdeck／forecastle 舷頂欄杆（2026-10-13；讀數見 notes.md 階段三十四）
 - [x] 讀 11 號（三道線、waist 一道）、對作品舷頂；子作品 -rails-side＋鏡像關聯；組裝件 1,395,837、繩穿過 0
 - [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯）
-- [ ] 還沒做（同一條 todo 的其他幾樣）：gangway 板、fenders／chesstree、entry port 扶手欄杆
+- [x] 核對同一條 todo 的其他幾樣（2026-10-13 量）：
+  - gangway：spar deck 船腰已有長開口（X ≈ 430–515、中間 y 141–179 空、兩側走道），＝ 02 號圖的「Long Hatchway」⇒ 已經在
+  - entry port 柱：X 373／383、色 146、頂 z 128（11 號讀到 129.6，source_entry.json）＋扶手繩，階段三十就做了；圖上兩柱之間沒有橫欄 ⇒ 沒有缺
+- [x] fenders／chesstree：02、04、11、15 號都沒畫 ⇒ 查資料 agent 找到 1931 plan 24474 ⇒ fenders 不做（1931 舷側沒有）、chesstrees 三個做了（階段三十五）
+- [x] 階段三十五 Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯、跟 ame 說）
