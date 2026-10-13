@@ -158,6 +158,8 @@ class Yards:
                     'diameter_m': round(2 * M['r0'] * 0.1, 3), 'pivot_anchor': 'pivot', 'turn_axis': 'z', 'rotate_z_deg': M['rz']}
             if M['ry']:
                 meta['rotate_y_deg'] = M['ry']
+            if nm in s.P.get('sail_of', {}):
+                meta['sail'] = s.P['sail_of'][nm]          # 造船規格 §5（provenance yards.sail_of）
             s.place.append({'member': nm, 'work': s.P['prefix'] + nm, 'host': s.plan['work'] + '-mast-' + M['mast'], 'link': LINK[M['mast']],
                             'model': 'yard-' + nm, 'title': '夜隼號 帆桁 %s（%.1f m）' % (M['label'], M['length'] * 0.1),
                             'origin': M['origin'], 'size': M['size'], 'cells': len(M['cells']), 'at': at, 'pivot': pivot,

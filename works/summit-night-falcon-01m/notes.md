@@ -443,3 +443,12 @@ Tim：「提交吧 然後繼續做羅經櫃 GO」（階段十九提交 cc61f34�
 - 重跑逐位元組相同：用 `hide_models=甲板-後/羅經櫃` 的 obj 重跑 ⇒ verify、清單、圖紙 sha256 全 OK。
 - **.vxk 重匯**：格數與 checksum **不變**（97,160、358bf2ac —— checksum 只算格子）；檔案變了（模型 31、網格 14 份、帶 meta 34）⇒ 檔案 sha256 0a540537…。⚠ 遊戲那側不能只對 checksum。
 - 過程圖：`overlays/stage20_binnacle_yaw-135.png`（舵輪、羅經櫃、companion）。
+
+## 修正：帆桁 meta 補 `sail`（2026-10-13 晚，Tim 在遊戲裡抓到）
+Tim：「遊戲中發現夜隼號後面的帆好像不是固定在這桿上面」（截圖：boom 轉出舷外，mainsail 的下緣留在原地）。
+- 🩸 **不是帆角綁錯**：引擎裡 mainsail 四角綁的都是模型固定點（throat／peak ＝ `主桅/yard-main-gaff/bot8`／`bot64`，clew／tack ＝ `主桅/yard-main-boom/top96`／`top8`），釘住邊 0,2,3。.vxk 給遊戲的帆是**模擬好的網格**（只有頂點與三角形，沒有綁定）；遊戲靠**帆桁模型的 meta `sail`** 決定轉帆桁時哪面帆跟著（ame `10_ship.js`：`s.yards = sh.yards.filter(y => y.sail === s.name)`）。
+- 造船規格 §5 寫了 meta 要帶 `sail`（憲法號每根都有，spanker 的 gaff 與 boom 兩根都寫 sail=spanker）——**階段八我漏寫了**，七根帆桁一根都沒有 ⇒ 遊戲轉 boom，mainsail 不知道要跟。
+- 修：plan.json `yards.sail_of`（provenance `yards.sail_of`）、draft_yards.py 照它寫 `meta.sail` ⇒ verify_yards.json 只多了 sail（除了 sail 之外逐欄相同；遮罩逐位元組內容相同，只是換行符，已還原）⇒ `apply_yards.py models` 重下 7 個模型（meta 是合併的）。
+  - fore-course／fore-topsail／fore-topgallant／main-topsail 各掛同名的帆；main-boom、main-gaff ⇒ mainsail；main-course（不掛帆的下桁）不寫。
+- 讀回：parts 31 個模型，除了 sail 之外跟修之前逐欄相同、關聯相同；.vxk 解開後 6 個 `"sail"` 都在；格數與 checksum 不變（97,160／358bf2ac，模型 meta 不算在 checksum 裡），檔案 sha256 04f0ae5f…。
+- ⚠ 遊戲把船打包進 HTML（`ArtGallery/HtmlGames/ame_constitution_broadside.html`）⇒ 要 ame 用新的 .vxk 重 build 才會生效；**我沒在遊戲裡看過修好的樣子**。

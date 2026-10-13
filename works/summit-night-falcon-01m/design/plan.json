@@ -91,6 +91,7 @@
   },
   "yards": {
     "prefix": "summit-night-falcon-01m-yard-",
+    "sail_of": { "fore-course": "fore-course", "fore-topsail": "fore-topsail", "fore-topgallant": "fore-topgallant", "main-topsail": "main-topsail", "main-boom": "mainsail", "main-gaff": "mainsail" },
     "beam": 64, "course_over_beam": 1.862,
     "square": [
       { "name": "fore-course", "mast": "fore", "label": "fore course yard", "over_course": 1.0, "d_over_mast": 0.5625, "mast_r": "r_lower", "arm_over_L": 0.0525, "z_ref": "top", "z_off": -6 },
@@ -334,6 +335,7 @@
     "yards.boom": "設計決定：boom 從主桅後緣往船尾、上翹 3°（憲法號 spanker boom 同）；尾端伸出船尾最後一格 10 格（1 m）；jaws 高度取「boom 下緣離它底下最高那一格 ≥ 2 格」的最低整數（底下最高的是船尾燈）；直徑 ＝ 主桅下桅跟部 × 0.5208（憲法號 spanker boom 12.5 in ÷ 後桅下桅 24 in）、尾端收到 0.75（同）",
     "yards.gaff": "設計決定：gaff jaws 在主桅 top 平台下 8 格；上翹 35°（basecamp 記：1817 帆圖 18–20°、現代照片 35–40° —— 我取照片那一端，看起來像翅膀）；長 ＝ boom × 0.7097（憲法號 44／62 ft）；直徑 ＝ 主桅下桅跟部 × 0.5（憲法號 gaff 12 in ÷ 後桅 24 in）、尾端 0.7。⭐ gaff／boom 在子作品裡做成水平的直桿，斜度交給模型的 rotate（繞 y）—— basecamp 階段三十三記下的『gaff 斜 35° 仍是格子的階梯』這裡不會有",
     "yards.rotate_z_deg": "設計決定：預設全部 0（方帆桁正橫、gaff／boom 在中線）；還沒有帆、沒有風，轉角等掛帆那一階段再定",
+    "yards.sail_of": "造船規格 §5：帆桁 meta 要帶 `sail`（掛的那面帆的名字）—— 遊戲照它決定轉帆桁時哪面帆跟著走（ame 10_ship.js：`s.yards = yards.filter(y => y.sail === s.name)`）。階段八漏寫了 ⇒ Tim 2026-10-13 在遊戲裡看到 boom 轉出去、mainsail 留在原地。gaff 與 boom 都掛 mainsail（同憲法號 spanker 兩根都寫 sail=spanker）；主桅那根不掛帆的下桁（main-course）不寫",
     "yards.colors": "設計決定：桁身 177（跟桅同，plan masts.colors 已寫『桅與桁 177』）、yardarm 端 1 格 36（黑 —— 跟 cap、trestletrees、truck 一樣的鐵件色；憲法號是反過來：黑桁、原木端）",
     "rigging": "設計決定（階段九，2026-10-13）：靜索 —— 照 basecamp 憲法號（Sculpture_Shipbuilding §6、notes 靜索試掛／階段二十二／二十五）：下 deadeye 與 chain plates 是 channels 子作品的格（一舷＋鏡像），其他（shrouds、backstays、stays、上 deadeye、lanyards、ratlines）是組裝件上的繩。固定點量實際的格（桅、艏斜桅、船頭作品）",
     "rigging.channels_v2": "設計決定：每舷每根桅 3 根 lower shrouds＋2 根 backstays（topmast、topgallant）＝ 5 顆 deadeye，間距 4（3 格寬＋空 1）；最前一顆在桅孔前 2 格、往船尾排 ⇒ channel 改成 [最後一顆 − 3, 最前一顆 + 3]：fore 189–211、main 131–153。🩸 階段七的 channels（fore 196–220、main 138–162）是以桅為中心排的 —— shrouds 大多該在桅後面，backstays 更後面，原本的框裝不下。砲門（站 95／115／170／185／225／240，寬 5）仍然避開。高度、厚、往外、圓角照 masts.channels（同一支算法）",
