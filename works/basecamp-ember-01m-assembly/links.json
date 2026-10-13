@@ -542,54 +542,6 @@
 			"note": "階段十三 entry port 與 side steps（另一舷 mirror=y）"
 		},
 		{
-			"name": "彈藥庫-後",
-			"work": "basecamp-frigate-constitution-01m-magazine-aft",
-			"at": [
-				200,
-				129,
-				23
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				72,
-				62,
-				18
-			],
-			"enabled": true,
-			"created_at": "2026-10-13T14:23:02",
-			"persona": "basecamp",
-			"note": "階段十四：直接引用憲法號的彈藥庫（含火藥桶模型）；憲法號 at 換算（拉長 x≥472 ＋66）",
-			"meta": {
-				"kind": "magazine",
-				"powder_lb": 2200
-			}
-		},
-		{
-			"name": "彈藥庫-前",
-			"work": "basecamp-frigate-constitution-01m-magazine-fore",
-			"at": [
-				587,
-				110,
-				26
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				53,
-				101,
-				15
-			],
-			"enabled": true,
-			"created_at": "2026-10-13T14:23:02",
-			"persona": "basecamp",
-			"note": "階段十四：直接引用憲法號的彈藥庫（含火藥桶模型）；憲法號 at 換算（拉長 x≥472 ＋66）",
-			"meta": {
-				"kind": "magazine",
-				"powder_lb": 11600
-			}
-		},
-		{
 			"name": "舵",
 			"work": "basecamp-ember-01m-rudder",
 			"at": [
@@ -608,6 +560,30 @@
 			"created_at": "2026-10-13T14:25:24",
 			"persona": "basecamp",
 			"note": "階段十五：舵（憲法號 -rudder assemble＋水線 71 換色）"
+		},
+		{
+			"name": "彈藥庫-中",
+			"work": "basecamp-ember-01m-magazine-mid",
+			"at": [
+				461,
+				103,
+				22
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				84,
+				115,
+				20
+			],
+			"enabled": true,
+			"created_at": "2026-10-13T18:27:09",
+			"persona": "basecamp",
+			"note": "中央彈藥庫（階段二十一；Tim：另做自己的、試試放中央）",
+			"meta": {
+				"kind": "magazine",
+				"powder_lb": 23000
+			}
 		}
 	]
 }
