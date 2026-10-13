@@ -396,3 +396,33 @@ Tim：「提交吧 然後繼續做剩下的驗收 GO」。
   - 一樣：雙桅 brigantine（前桅三層橫帆；主桅縱帆＋頂上一面橫帆 —— 正面、船尾那兩格也看得出同一套）、張翅的隼船首像、長艏斜桅＋jib-boom、桅頂平台、ratlines、每舷約 6 個砲門、船尾窗。
   - 不一樣（決定過的）：① 旗：圖是骷髏旗，作品是隼（階段十二，作者決定）；② 舷牆與後甲板：圖比較高（階段二量過，後甲板圖上高約兩成半），照拍板不追。
   - 不一樣（沒決定過的）：③ 帆：圖畫得比較平，作品鼓得多（旋鈕是風，等 Tim）；④ 船尾雕飾、甲板上的細節：圖多，作品簡單；⑤ 船底顏色：作品水線以下是淺色船底漆，圖是黑白，沒辦法對。
+
+## 階段十九 梯子三座＋扶手繩（給遊戲 kind=ladders）—— 落格（2026-10-13 晚，wake #118 小歇後）
+Tim：「夜隼號目前已經完工了嗎（可以匯入遊戲了嗎?）如果還沒的話 繼續施工 GO」。拿造船規格 §10 換船檢查表（Senate `Docs/Workflows/Sculpture_Shipbuilding.md`，basecamp 下午 6f1902e 加了梯子那一行）逐行對：只差「梯子的關聯 meta `kind=ladders`、每座 foot／lo／hi／head」—— 這艘船一座梯子都沒有，補砲班的人從主甲板走不到艙房那兩門砲。
+設計 plan.json `ladders`（provenance `ladders`、`ladders.geometry`）；產生 `design/draft_ladders.py <design> <組裝件 obj>` ⇒ `masks/ladders/ladders.vox.txt`、`verify_ladders.json`、`sheet19_ladders_v1.png`；下 CLI `design/apply_ladders.py`；讀數 `design/check_ladders.py`。`nf_state.py` 加 stage19（鍵 ladders），重播 97,160 ＝ 引擎，逐格差 0。
+- **找位置與梯子形狀**照 basecamp 餘燼號 `design/draft_ladders.py` 的 edges／shape／try_one（她照憲法號；56°、側板 1 格、踏板 1×2 開放式、扶手柱 0.9 m ＋扶手繩）。改的：甲板面與邊從 plan 讀；障礙 ＝ nf_state 的格 ∪ 組裝件 obj 的繩／帆／模型（三角形面上每 0.25 格取樣）；扶手柱下那根多試 R−2、R−1（`post_gap_min` 3：斷口只高 1 m，梯子只有 5 欄，照她「柱距 ≥ 4」放不下）；鏡像 y ↔ 160 − y。
+- 量現況：後甲板板頂 x 99–113 z 40、x 114–138 z 39；艙房地板 z 23／22（同一處換階）；主甲板 z 29；companion 開口 x 110–117、y 76–84，圍板 2 格。斷口中線被主桅 fife rail 擋（x 142 起），兩舷夾在 fife rail（y 72–88）與舷側 pin rail（y ≤ 54／≥ 106）之間。
+- **三座**（子作品 `summit-night-falcon-01m-ladders`，parent 船殼、0.1 m；關聯 `甲板-後/梯子` at 0,0,0、meta `kind=ladders`）404 格（側板 174、踏板 126、扶手柱 104）：
+  - `companion`：後甲板艙口後緣 x 110 往前斜下到艙房 x 121，高 20 格、5 階；第一個候選就過。
+  - `break-S`／`break-P`：斷口 x 139 往前斜下到主甲板 x 143，高 10 格、2 階；y 94–102／58–66（兩舷逐格對稱）。
+  - 扶手柱頂固定點 12 個（`manrope-<梯>-<P|S>-<top|bot>`）、扶手繩 6 條（組 `ladders/manropes`，粗 0.3）。
+- **遊戲的點**用 basecamp 的 `ladder_points.py` 算（她的尺，不是我寫的；複製到 scratchpad 跑、不帶 --apply ⇒ 一格沒寫進她的資料夾），結果存 `design/verify_ladder_points.json`，`apply_ladders.py points` 登記成固定點：
+
+  | 梯 | foot | lo | hi | head | 頭頂（格） |
+  |---|---|---|---|---|---|
+  | companion | (121,80,23) | (119,80,28) | (112,80,40) | (108,80,41) | 16／40 |
+  | break-S | (144,98,30) | (142,98,34) | (141,98,37) | (138,98,40) | 40／40 |
+  | break-P | (144,62,30) | (142,62,34) | (141,62,37) | (138,62,40) | 40／40 |
+
+  ⚠ 第一階都高 0.4–0.5 m（foot → lo：companion 23 → 28、斷口 30 → 34）—— 她的踏板規則「最低一階離地 ≥ 2 格」，餘燼號 poop 那座也是 129 → 134。照抄，沒改。
+- 讀數（`check_ladders.py`，只讀引擎 list／parts／obj／sub=ropes）：
+  - 引擎 stats：**97,160 格**（96,756 ＋ 404）、link_overlap 0、1 個元件、空腔 0。
+  - ① 結果帳 97,160／97,160：缺 0、多 0、色差 0　② 左右對稱（含顏色）不同 0
+  - ③ kind=ladders 關聯 1 個、固定點 24；遊戲點 12 個 引擎 vs 算的（＋0.5）最大差 0；另一條路量「腳踩那格是空的、正下方實心（lo／hi 下面是踏板色）」12／12
+  - ④ 梯子的格被別的繩／帆／模型穿過 0；扶手繩中段落在實心：撞 0、貼自己的柱 6＋6（companion 兩條：繩從柱頂往下垂，先貼著自己那根柱走一段 —— P 那條離端點 1.5 格外落在柱裡的 6 個取樣點全在 (111,76,46) 那一格；v1 的尺沒分開，第一次報成「撞 6」，拿網格逐點查了才分）
+  - ⑤ 扶手繩 6 條 ok、兩端最大差 0；全船繩 355 條 broken 0
+  - 反向對照：往上 2 ⇒ 缺 214／多 214、點差 2、繩端差 2；往下 3 ⇒ 缺 240／多 258、點差 3；往 +y 20（推進 S2 砲）⇒ ④ 報 砲-S2 58、它的砲索 2＋2、主桅 lanyard／deadeye 各 1。
+- 重跑逐位元組相同：拿 `hide_links=甲板-後/梯子` 的 obj（藏梯子連同它的扶手繩 ＝ 階段十八的現況）重跑 ⇒ verify、清單、圖紙三個檔 sha256 全 OK。
+- **.vxk 重匯**（`summit-night-falcon-01m-assembly/exports/night_falcon.vxk`）：**97,160 格、checksum 358bf2ac**（封裝回讀 ✓；繩 355、帆 10、模型 30、關聯外框 19、帶 meta 33、固定點 459）。
+- 沒做的：貨艙沒有地板 ⇒ 主艙口、前艙口不放梯子（餘燼號、憲法號也沒有通 orlop 的）；彈藥庫的門在貨艙那一側，要走 lazarette 艙口下去（沒有梯子）。
+- 過程圖：`overlays/stage19_ladders_yaw{135,-135}.png`（拿掉兩根桅與帆）、`stage19_ladders_break_yaw35.png`、`stage19_ladders_companion_yaw-60.png`。

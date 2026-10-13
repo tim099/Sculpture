@@ -1,0 +1,271 @@
+{
+ "note": "draft_ladders.py（階段十九）—— 現況 nf_state stage18 ＋ 組裝件 obj 的繩／帆／模型",
+ "cells": 404,
+ "by_kind": {
+  "stringer": 174,
+  "tread": 126,
+  "stanchion": 104
+ },
+ "soft_cells_in_window": 13566,
+ "overlap_world": 0,
+ "overlap_soft": 0,
+ "mirror_mismatch": 0,
+ "components_after": 1,
+ "cavities_after": 0,
+ "assembly_expect": 97160,
+ "anchors": [
+  {
+   "name": "manrope-companion-P-top",
+   "at": [
+    111,
+    76,
+    48
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-companion-P-bot",
+   "at": [
+    119,
+    76,
+    36
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-companion-S-top",
+   "at": [
+    111,
+    84,
+    48
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-companion-S-bot",
+   "at": [
+    119,
+    84,
+    36
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-S-P-top",
+   "at": [
+    140,
+    94,
+    46
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-S-P-bot",
+   "at": [
+    143,
+    94,
+    42
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-S-S-top",
+   "at": [
+    140,
+    102,
+    46
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-S-S-bot",
+   "at": [
+    143,
+    102,
+    42
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-P-P-top",
+   "at": [
+    140,
+    58,
+    46
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-P-P-bot",
+   "at": [
+    143,
+    58,
+    42
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-P-S-top",
+   "at": [
+    140,
+    66,
+    46
+   ],
+   "note": "扶手柱頂（階段十九）"
+  },
+  {
+   "name": "manrope-break-P-S-bot",
+   "at": [
+    143,
+    66,
+    42
+   ],
+   "note": "扶手柱頂（階段十九）"
+  }
+ ],
+ "ropes": [
+  {
+   "name": "梯-companion.manrope-P",
+   "from": "甲板-後/梯子/manrope-companion-P-top",
+   "to": "甲板-後/梯子/manrope-companion-P-bot",
+   "thickness": 0.3,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-companion.manrope-S",
+   "from": "甲板-後/梯子/manrope-companion-S-top",
+   "to": "甲板-後/梯子/manrope-companion-S-bot",
+   "thickness": 0.3,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-break-S.manrope-P",
+   "from": "甲板-後/梯子/manrope-break-S-P-top",
+   "to": "甲板-後/梯子/manrope-break-S-P-bot",
+   "thickness": 0.3,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-break-S.manrope-S",
+   "from": "甲板-後/梯子/manrope-break-S-S-top",
+   "to": "甲板-後/梯子/manrope-break-S-S-bot",
+   "thickness": 0.3,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-break-P.manrope-P",
+   "from": "甲板-後/梯子/manrope-break-P-P-top",
+   "to": "甲板-後/梯子/manrope-break-P-P-bot",
+   "thickness": 0.3,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  },
+  {
+   "name": "梯-break-P.manrope-S",
+   "from": "甲板-後/梯子/manrope-break-P-S-top",
+   "to": "甲板-後/梯子/manrope-break-P-S-bot",
+   "thickness": 0.3,
+   "slack": 1.02,
+   "color": "#cdb88e",
+   "group": "ladders/manropes"
+  }
+ ],
+ "rows": [
+  {
+   "xe": 110,
+   "d": 1,
+   "y": [
+    76,
+    84
+   ],
+   "zcap": 42,
+   "zl": 23,
+   "band": 4,
+   "cap_up": 0,
+   "R": 12,
+   "xf": 121,
+   "treads": 5,
+   "post_bot": 9,
+   "post_h": 8,
+   "id": "companion",
+   "placed": true,
+   "cells": 196,
+   "rise": 20,
+   "tried_before": 0
+  },
+  {
+   "xe": 139,
+   "d": 1,
+   "y": [
+    94,
+    102
+   ],
+   "zcap": 39,
+   "zl": 30,
+   "band": 4,
+   "cap_up": 0,
+   "R": 5,
+   "xf": 143,
+   "treads": 2,
+   "post_bot": 4,
+   "post_h": 9,
+   "id": "break-S",
+   "placed": true,
+   "cells": 104,
+   "rise": 10,
+   "tried_before": 0
+  },
+  {
+   "xe": 139,
+   "d": 1,
+   "y": [
+    58,
+    66
+   ],
+   "zcap": 39,
+   "zl": 30,
+   "band": 4,
+   "cap_up": 0,
+   "R": 5,
+   "xf": 143,
+   "treads": 2,
+   "post_bot": 4,
+   "post_h": 9,
+   "id": "break-P",
+   "placed": true,
+   "cells": 104,
+   "rise": 10,
+   "tried_before": 0
+  }
+ ],
+ "notes": [],
+ "file": {
+  "path": "masks/ladders/ladders.vox.txt",
+  "cells": 404,
+  "sha256": "c1d6456f724a61f1f8b01726148463fa040ed1287ba9b3b86ec09147a9ce7e6f"
+ },
+ "work": "summit-night-falcon-01m-ladders",
+ "link_in": "summit-night-falcon-01m-deck-quarter",
+ "link": "梯子",
+ "path": "甲板-後/梯子",
+ "title": "夜隼號 梯子（後甲板 ↔ 艙房、主甲板 ↔ 後甲板）",
+ "stamp_order": {
+  "ladders": [
+   {
+    "name": "ladders",
+    "op": "stampvox",
+    "file": "masks/ladders/ladders.vox.txt",
+    "voxels": 404
+   }
+  ]
+ }
+}

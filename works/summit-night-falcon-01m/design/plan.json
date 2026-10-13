@@ -204,6 +204,29 @@
     "keg_step": 5, "keg_clear": 1, "max_kegs": 8,
     "aft_scuttle": { "x": [84, 86], "y": [79, 81] }
   },
+  "ladders": {
+    "work": "summit-night-falcon-01m-ladders", "title": "夜隼號 梯子（後甲板 ↔ 艙房、主甲板 ↔ 後甲板）",
+    "link_in": "summit-night-falcon-01m-deck-quarter", "link": "梯子", "path": "甲板-後/梯子",
+    "surfaces": {
+      "note": "站的那一層 ＝ 甲板板最上面那一格 ＋ 1；2026-10-13 晚從組裝件 export（96,756 格）y 56–104 量過，draft 會再對一次",
+      "quarter": [[99, 114, 41], [114, 139, 40]],
+      "cabin": [[99, 114, 24], [114, 138, 23]],
+      "main": [[139, 166, 30]]
+    },
+    "coaming": { "quarter": 2, "break": 0 },
+    "edges": {
+      "companion": { "x": [110, 117], "upper": "quarter", "coaming": "quarter" },
+      "break": { "x": [139, 146], "upper": "quarter", "coaming": "break" }
+    },
+    "geometry": { "rise": 3, "run": 2, "band": [4, 3], "cap_up": [0, 1, 2, 3], "headroom": 8, "landing": 5, "stanchion_h": 9, "post_gap_min": 3 },
+    "colors": { "stringer": 136, "tread": 250, "iron": 36 },
+    "manrope": { "thickness": 0.3, "slack": 1.02, "color": "#cdb88e", "group": "ladders/manropes" },
+    "list": [
+      { "id": "companion", "edge": "companion", "lower": "cabin", "dir": [1, -1], "y": [76, 84] },
+      { "id": "break-S", "edge": "break", "lower": "main", "dir": [1], "y": [94, 102] },
+      { "id": "break-P", "edge": "break", "lower": "main", "dir": [1], "y": [58, 66] }
+    ]
+  },
   "provenance": {
     "guns": "設計決定（階段十三，2026-10-13）：4 磅長砲 12 門（每舷 6，照階段四已開的砲門）。口徑是我定的 —— 原作沒寫砲（查過：Books/summit-masthead-bet、-sequel 全文「砲／炮」0 處）；船設寫『小而快、靠靈活不靠火力』、參照船 Oswego 160 噸、RMG 的 brigantine 模型 10–12 門 ⇒ 取英國海軍最小的長砲 4 磅。",
     "guns.barrel_len": "參考資料（弱）：4 磅砲砲管 6 ft（≈1.83 m）—— modelshipworld.com 論壇 6pd/4pd cannon measurements 一串（論壇，不是史料；有人說也有 5.5 ft）⇒ 36 格（0.05 m）＝ 1.80 m",
@@ -224,7 +247,9 @@
     "sails.staysails": "Tim 2026-10-13（TASK-0529 #21 之後）：主桅那根光桁底下要不要補帆 —— 選「加 main staysail」（brigantine 常見的桅間支索帆，船設不用改）。掛在 main-stay（主桅 top → 前桅腳）；head_f／foot_ratio／foot_up_deg 照 fore-staysail 的值（設計決定，沒查史料比例）；帆腳索綁 pinrail-7（x 156–166，clew 附近）。tack_f 0.1：tack 沿 stay 往上 10%（v1 綁在前桅腳 aft-low ⇒ 模擬後 tack 上方的布鼓進往後傾的前桅 21 格；實船的支索帆 tack 常綁在一段 tack pendant 上、離甲板一段）",
     "magazine": "做法照 basecamp 憲法號階段三十二（Shipbuilding §8）；位置照 @ame（酒館 seq 24230）：最少一間 kind=magazine、桶 kind=powder，艙房地板底下就行。設計決定：x 98–121（2.4 m）、地板 z 8（龍骨內側之上）、天花板就是艙房地板；門在船頭那道艙壁（往前通到貨艙）",
     "magazine.kegs": "設計決定（⚠ 未查證）：12 門 4 磅砲 × 每門約 40 發 × 每發約 ⅓ 砲彈重（1.3 磅）≈ 640 磅 ⇒ 約 6–7 桶，再留一點給小火器 ⇒ 最多 8 桶。桶直接引用 basecamp 憲法號的 -powder-barrel（whole barrel 100 磅，0.02 m；她查的 1813 英制尺寸），scale 0.2、pivot 桶底中心。powder_lb ＝ 桶數 × 100（Shipbuilding §9：不是史料）",
-    "magazine.aft_scuttle": "設計決定：艙房地板 x 84–86、y 79–81 開一個 3×3 艙口（lazarette：艙房底下放糧食的那一段，從艙房下去）。v1 沒有 ⇒ 彈藥庫的後艙壁把船尾那段貨艙（x 66–97、z 5–26）封成 5,604 格的空腔；彈藥庫照舊只有一道門",
+    "ladders": "給遊戲：@ame（酒館 seq 24230）梯子 kind=ladders 可選；Tim 2026-10-13 晚「如果還沒完工就繼續施工」⇒ 照造船規格 §9／§10（Sculpture_Shipbuilding.md：梯子關聯 kind=ladders、每座 foot／lo／hi／head）。做法與梯子形狀照 basecamp 餘燼號階段八b draft_ladders.py（edges／shape／try_one；56°、側板 1 格、踏板 1×2 開放式、扶手柱＋扶手繩）；固定點用她的 ladder_points.py 算（不是我寫的尺）。設計決定：三座 —— companion（後甲板艙口 x 110–117 ↔ 艙房，艙房裡兩門砲靠它）、break-S／break-P（斷口 x 138 前面，主甲板 ↔ 後甲板高 1 m；中線被主桅 fife rail 擋住 x 142 ⇒ 放兩舷，y 夾在 fife rail 與舷側 pin rail 之間）。貨艙沒有地板 ⇒ 主艙口、前艙口不放梯子（餘燼號、憲法號也沒有通 orlop 的梯子）",
+    "ladders.geometry": "照餘燼號 ladders_build.geometry（rise 3、run 2、band 4／3、headroom 8、landing 5、stanchion 9）；post_gap_min 3 是我加的：斷口只高 1 m，梯子只有 5 欄，照她的『柱距 ≥ 4』放不下扶手柱。扶手繩粗 0.3（她 0.35；我的 ratlines 0.25）",
+    "magazine.aft_scuttle":"設計決定：艙房地板 x 84–86、y 79–81 開一個 3×3 艙口（lazarette：艙房底下放糧食的那一段，從艙房下去）。v1 沒有 ⇒ 彈藥庫的後艙壁把船尾那段貨艙（x 66–97、z 5–26）封成 5,604 格的空腔；彈藥庫照舊只有一道門",
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
     "keel.rabbet_z": "設計決定：龍骨深約 0.4 m",
