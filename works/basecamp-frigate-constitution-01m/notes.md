@@ -740,3 +740,13 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 色：紅 #b22234、白 #f5f2ea（帆布色）、藍 #28346e。
 - 讀數：帆 **17**（15＋2）、sails_broken 0；ensign 最鼓 9.6、平均下垂 4.1；pennant 最鼓 17.5、平均下垂 5.0（同餘燼號）；組裝件 **1,394,513**（＋34＋29）、link_overlap 0。寫入時 IOException 重試 1 次。
 - 過程圖：`overlays/flags_{ship,ensign,pennant}.png`。
+
+## 階段三十四 quarterdeck／forecastle 舷頂欄杆（2026-10-13 晚，BTC；Tim：「繼續GO」⇒ todo「quarterdeck 那段欄杆比 waist 高（11 號有畫）」）
+設計 `design/draft_rails.py`（輸入：組裝件 list 匯出）⇒ `masks/rails/rail_side.vox.txt`、`verify_rails.json`；套用 `design/tools/rails_apply.py`。
+- 讀圖（11 號 sheer plan，逐 60 px 一欄找水平亮線；Z ＝ a·py ＋ b·px ＋ c 用 52 個砲門上下緣擬，rms 0.09、最大 0.22）：
+  quarterdeck X 208–364 三道（欄杆 129.2→126.4、舷頂 126.4→124.1、下面 121.7→119.5）；entry port X ≈ 372–384 沒線；waist X 393–510 一道 119.3–120.8；forecastle X 520–618 欄杆 128.2→132.8、舷頂 125.3→129.0。
+- 作品現況（S 舷舷側最高格 ＝ cap rail 104）：quarterdeck 126→124、waist 123、forecastle 124→129 ⇒ quarterdeck／forecastle 舷頂跟圖一致；**缺的是上面那道欄杆**。⚠ 作品 waist 比圖高 3.5 格 —— 不往下刻（舷頂上站著 pin rails 與繩，清理是動土），照實記。
+- 設計（只加不刻）：子作品 `-rails-side`（一舷 S、固定框 at 200,190,118、440×40×24）＋鏡像關聯 `欄杆-鏡像`（mirror=y、at 200,91,118）。欄杆 2 格寬、z ＝ 那一欄舷頂 ＋3（跟著舷弧走；換高度、換 y 的地方補到跟上一欄面接面）；每 8 格一根 1 格支柱（舷頂 ＋1..＋2，外側那格）、兩頭的柱高出欄杆 1 格（圖上的圓頭柱）；色 104 同 cap rail。範圍 quarterdeck X 206–372（程式撞到 entry port 開口自己停；圖的船尾柱 372.7）、forecastle X 515–626。
+- 自檢：新格與鏡像都在空氣裡、P 舷舷頂跟 S 舷逐欄同高同寬（不然停）、新格每一塊連到現況。
+- 讀數：一舷 662 格、支柱 37；組裝件 **1,395,837**（＋1,324）、反向對照：新舊相減只多出 S＋鏡像那 1,324 格、舊格 0 刪 0 換色；1 元件、空腔 0、link_overlap 0。繩 901 條直線取樣穿過新格 0、照最大下垂往下掃 0。
+- 過程圖：`overlays/stage34_rails_{ship,quarterdeck,forecastle}.png`（近照關帆）。

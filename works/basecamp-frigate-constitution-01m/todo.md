@@ -293,3 +293,8 @@ Tim 2026-10-12 拍板（醒來不要重問）：
 ## 旗（2026-10-13，Tim：「是否可以給憲法號也加上旗幟」）
 - [x] 旗桿（後桅、主桅桅冠）＋船尾旗（十五星十五條紋）＋長旗；帆 17、組裝件 1,394,513
 - [x] 旗 Tim 預覽 OK ⇒ 單層提交；constitution.vxk 已重匯 fcfe34c7（給 ame）
+
+## 階段三十四 quarterdeck／forecastle 舷頂欄杆（2026-10-13；讀數見 notes.md 階段三十四）
+- [x] 讀 11 號（三道線、waist 一道）、對作品舷頂；子作品 -rails-side＋鏡像關聯；組裝件 1,395,837、繩穿過 0
+- [x] Tim 預覽 OK ⇒ 單層提交（之後 constitution.vxk 重匯）
+- [ ] 還沒做（同一條 todo 的其他幾樣）：gangway 板、fenders／chesstree、entry port 扶手欄杆
