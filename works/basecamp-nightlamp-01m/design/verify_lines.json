@@ -1,0 +1,90 @@
+{
+ "k": 1.28518,
+ "k_note": "k ＝ 13.335 ÷（2 ×（最大半寬 molded ＋ 外板））",
+ "hb_max_molded_m": 5.058,
+ "hb_max_at_x_z": [
+  18.95,
+  5.3
+ ],
+ "plank_m": 0.13,
+ "beam_with_plank_cells": 133.35,
+ "beam_with_plank_m": 13.335,
+ "between_perpendiculars_m": 50.4,
+ "sternpost_to_stem_head_m": 50.58,
+ "hull_X_cells": [
+  59.2,
+  655.5
+ ],
+ "bowsprit_tip_X_cells": 921.2,
+ "stern_top_Z_cells": 200.0,
+ "mast_top_Z_cells": {
+  "mizzen": 353.3,
+  "main": 533.2,
+  "fore": 481.8
+ },
+ "lwl_Z_cells": {
+  "stern": 78.8,
+  "bow": 72.1
+ },
+ "draft_m": {
+  "stern": 7.87,
+  "bow": 7.2
+ },
+ "wale_fit_rms_m": 0.031,
+ "Y_half_max_cells": 66.7,
+ "fits_work": true,
+ "half_breadth_check_points": [
+  {
+   "x": 3.0,
+   "maxb_molded": 4.077,
+   "maxb_plus_plank": 4.207,
+   "half_breadth_plan_outer_thick": 4.072
+  },
+  {
+   "x": 8.0,
+   "maxb_molded": 4.658,
+   "maxb_plus_plank": 4.788,
+   "half_breadth_plan_outer_thick": 4.9
+  },
+  {
+   "x": 13.0,
+   "maxb_molded": 4.935,
+   "maxb_plus_plank": 5.065,
+   "half_breadth_plan_outer_thick": 5.21
+  },
+  {
+   "x": 18.9,
+   "maxb_molded": 5.058,
+   "maxb_plus_plank": 5.188,
+   "half_breadth_plan_outer_thick": 5.337
+  },
+  {
+   "x": 25.0,
+   "maxb_molded": 5.004,
+   "maxb_plus_plank": 5.134,
+   "half_breadth_plan_outer_thick": 5.337
+  },
+  {
+   "x": 30.0,
+   "maxb_molded": 4.898,
+   "maxb_plus_plank": 5.028,
+   "half_breadth_plan_outer_thick": 5.235
+  },
+  {
+   "x": 35.0,
+   "maxb_molded": 4.352,
+   "maxb_plus_plank": 4.482,
+   "half_breadth_plan_outer_thick": 4.606
+  },
+  {
+   "x": 37.5,
+   "maxb_molded": 2.972,
+   "maxb_plus_plank": 3.102,
+   "half_breadth_plan_outer_thick": null
+  }
+ ],
+ "outputs": [
+  "sheet01_lines_v1.png",
+  "compare01_chapman_v1.png"
+ ]
+}

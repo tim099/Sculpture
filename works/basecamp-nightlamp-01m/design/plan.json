@@ -1,0 +1,195 @@
+{
+  "title": "夜燈號（暫名）新圖紙 01：線形圖 v1 —— 船殼型線・舷弧・輪廓",
+  "author": "basecamp",
+  "date": "2026-10-13",
+  "task": "TASK-0538",
+  "units": "hull／sheer／silhouette 裡的長度都是「底圖公尺」（Chapman Pl. LI 上的尺寸，放大前）；scale 把它換成格（1 格 = 0.1 m）。X 船長方向、船頭朝 +X；Z 朝上；Y 船寬、中線 160",
+  "note": "以 Chapman 1768 Pl. LI（英國東印度商船）的線形為底、整艘等比放大，上層輪廓照黑珍珠號劇照的比例重新設計。每個數字在 provenance 標明是「原圖讀數」「劇照比例」還是「設計決定」。",
+  "reference": {
+    "plate": "Sculpture/references/chapman-architectura-navalis-1768/PlLI_Engelsk_Ostindiefarare.tif（sha1 16eec5c9…，Public Domain Mark 1.0）",
+    "readings": [
+      "readings_LI.json",
+      "readings_LI_bodyplan.json"
+    ],
+    "px_per_m": 219.4,
+    "x0_px": 1698.6,
+    "keel_top_py": 6756,
+    "half_breadth_centre_py": 6863,
+    "body_plan_centre_px": 8667.0,
+    "body_plan_keel_top_py": 4086.0,
+    "provenance": "原圖讀數：比例尺三排刻度平均 219.4 px/m（±0.6%）；x 原點與龍骨頂見 readings_LI.json datum"
+  },
+  "scale": {
+    "k": null,
+    "breadth_limit_m": 13.335,
+    "cells_per_m": 10,
+    "X_of_x0": 90.0,
+    "Z_of_keel_top": 6.3,
+    "Y_centre": 160.0,
+    "provenance": {
+      "k": "設計決定：整艘等比，倍數取「每個尺寸都不超過史上最大那一級」—— 寬度先碰上限：k ＝ 13.335 m（43 ft 9 in）÷（2 ×（最大半寬 molded ＋ 外板））；由 draft_lines.py 算、寫進 verify_lines.json（當初估的 1.308 是外板取 0.1 算的）",
+      "X_of_x0": "設計決定：船尾柱後面留 9 m（船尾樓懸出、舵、船尾大提燈）",
+      "Z_of_keel_top": "原圖讀數：龍骨頂到龍骨底 106 px ＝ 0.483 m，× k ＝ 0.63 m ⇒ 龍骨底在 Z 0",
+      "Y_centre": "作品 320 格寬的中線"
+    }
+  },
+  "hull": {
+    "stations_x": {
+      "26": 0.827,
+      "24": 1.964,
+      "22": 3.361,
+      "20": 4.76,
+      "16": 7.593,
+      "12": 10.414,
+      "8": 13.245,
+      "4": 16.094,
+      "mid": 18.919,
+      "D": 27.839,
+      "K": 30.686,
+      "M": 33.525,
+      "O": 34.947,
+      "Q": 36.328,
+      "S": 37.377
+    },
+    "keel_half": 0.11,
+    "stem_half": 0.12,
+    "plank": 0.13,
+    "sternpost": {
+      "x_at_keel_top": 0.285,
+      "rake_deg": 8.24
+    },
+    "tuck_z": 7.3,
+    "station_top_z": {},
+    "topside_z": 9.4,
+    "tumble_per_m": 0.09,
+    "provenance": {
+      "stations": "原圖讀數：橫切面圖 14 站＋船中最外圈逐條追線（readings_LI_bodyplan.json；船中用重追的 mid_L，取代 readings_LI.json 在 z 1.3–1.7 跳線的舊讀數）；站的 x 是側面圖的站位格線",
+      "hb(x,z)": "設計決定：每個高度 z，把各站半寬沿船長用 PCHIP（單調、不過衝）接起來，兩頭收到船尾柱／船頭柱的 rabbet；不是描圖 —— 站與站之間是內插",
+      "keel_half": "原圖讀數：橫切面圖龍骨兩側 8622／8712 ⇒ 半寬 0.205 m；各站下端停在 0.11 附近（rabbet）⇒ 取 0.11",
+      "stem_half": "設計決定：比照龍骨",
+      "plank": "原圖讀數（推定）：半寬圖最大寬細線 5.15 對橫切面圖 5.02 ⇒ 外板約 0.13（z 1.38 水線也在 compare01 對）",
+      "sternpost": "原圖讀數：舵前緣粗黑帶的船裡側，363 列擬合 rms 0.52 px（取代舊的 7.95°／3 列）",
+      "tuck_z": "原圖讀數（目測）：側面圖船尾 counter 下緣碰到船尾柱的高度（py ≈ 5155）",
+      "station_top_z": "原圖讀數：26、24 在 z 7.3 以上照樣用（疊圖看是船殼往上接 counter 的那段，讀數平順 3.69→3.42）—— 先前截掉讓兩站在 tuck 處往外跳一格，已改",
+      "topside": "設計決定：z 9.40（船中舷頂）以上沒有站可讀 ⇒ 照船中 z 8.9–9.4 的內傾 0.09 m／m 一路往上",
+      "rabbet": "原圖讀數：側面圖船頭柱內側細線（readings_LI_bodyplan.json stem_rabbet_profile，z ≤ 5.2）；再往上是設計決定：幾乎垂直（每 m 往前 0.05）到舷頂",
+      "stem_siding": "原圖讀數（目測）：吃水線以上船頭柱內外兩線相距約 0.45"
+    },
+    "stem_siding": 0.45,
+    "rabbet_rake_above": 0.05
+  },
+  "sheer": {
+    "wale_poly_deg": 4,
+    "wale_fit_x": [
+      1.5,
+      40.5
+    ],
+    "wale_depth": 0.55,
+    "rail_above_wale": 2.99,
+    "provenance": {
+      "wale": "原圖讀數：側面圖主 wale 逐欄追（readings_LI_bodyplan.json main_wale），x 1.5–40.5 m 四次多項式擬合",
+      "wale_depth": "原圖讀數（目測）：wale 粗線約 17–19 px 再加上下兩條細線",
+      "rail_above_wale": "原圖讀數：船中一欄 舷牆頂 9.90 − 主 wale 6.91"
+    }
+  },
+  "silhouette": {
+    "lwl": {
+      "stern_z": 5.64,
+      "bow_z": 5.12
+    },
+    "qd_break_x": 13.48,
+    "qd_rise": 0.7,
+    "qd_scroll": 1.0,
+    "poop_from_x": 5.0,
+    "poop_power": 1.6,
+    "stern_top_above_lwl": 9.43,
+    "taffrail_x": -2.4,
+    "stern_outline_x_z": [
+      [
+        -0.77,
+        7.3
+      ],
+      [
+        -1.2,
+        8.0
+      ],
+      [
+        -1.45,
+        8.6
+      ],
+      [
+        -1.65,
+        10.0
+      ],
+      [
+        -2.05,
+        12.9
+      ],
+      [
+        -2.4,
+        15.07
+      ]
+    ],
+    "bow_rise": 0.8,
+    "bow_rise_from_x": 37.0,
+    "head": {
+      "knee": "stem_outer（照圖：船頭柱＋gripe＋knee 的外緣，z 4.2–6.85）",
+      "figurehead_box_x": [
+        41.6,
+        44.0
+      ],
+      "figurehead_box_z": [
+        6.8,
+        10.8
+      ]
+    },
+    "rudder_back_at_keel_x": -1.13,
+    "rudder_top_z": 8.0,
+    "provenance": {
+      "lwl": "原圖讀數：吃水線 船尾 5.64、船頭 5.12（drag 0.5 m）",
+      "qd_break_x": "劇照比例（跟單位無關的那一種）：劇照後甲板盡頭在後桅與主桅之間 0.62 的地方 ⇒ 6.21 + 0.62 × (17.93 − 6.21)；Pl. LI 自己的在 ≈ 14.8，接近",
+      "qd_rise": "原圖讀數（目測）：Pl. LI 後甲板舷牆在 x 7.1 是 z ≈ 11.2，比船腰那條線（wale ＋ 2.99）高約 0.66 ⇒ 0.70；compare01 疊圖對",
+      "poop": "設計決定：從 x 5.0 往船尾翹上去（劇照：船尾樓再往上翹）",
+      "stern_top_above_lwl": "劇照比例：劇照「船尾頂離吃水線 ÷ 船腰舷牆離吃水線」＝ 0.23 ÷ 0.11 ＝ 2.09；× Pl. LI 船中的 4.51 ⇒ 9.43（Pl. LI 自己連雕飾約 8.2 ⇒ 加高約 1.2）",
+      "stern_outline": "原圖讀數（目測，z ≤ 12.9）＋設計決定（往上延到 15.07、多往後傾 0.35）",
+      "bow": "劇照：前段 0.84 L 起微升（沒有完整的前甲板）⇒ 設計決定：x 37 起舷牆往上翹 0.8",
+      "stem_head_z": "設計決定：船頭柱頂到 bow 舷牆",
+      "head": "原圖讀數：knee 照 stem_outer；設計決定：船頭像（舉燈的女像）放在 Pl. LI 獅子像的位置（x 41.5–42.4、z 6.9–10.6），框往前放大到 2.4 × 4.0 底圖 m（放大後約 3.1 × 5.1 m），上面是 bowsprit",
+      "rudder": "原圖讀數（目測）：舵後緣在龍骨處 px ≈ 1450",
+      "stem_head": "設計決定：船頭舷牆頂 x ＝ rabbet ＋ 船頭柱寬 0.45"
+    }
+  },
+  "masts": {
+    "x": {
+      "mizzen": 6.21,
+      "main": 17.93,
+      "fore": 35.18
+    },
+    "rake_deg": {
+      "mizzen": 3.0,
+      "main": 2.0,
+      "fore": 1.0
+    },
+    "lengths_above_keel": {
+      "mizzen": 27.0,
+      "main": 41.0,
+      "fore": 37.0
+    },
+    "bowsprit": {
+      "angle_deg": 22.0,
+      "outboard": 18.0,
+      "jibboom_outboard": 9.0
+    },
+    "provenance": {
+      "x": "原圖讀數：側面圖桅樁外框中點（px 3060／5633／9416）",
+      "rake": "設計決定：黑珍珠的桅往後傾一點",
+      "lengths": "設計決定（草案，帆裝階段再算）：主桅連頂桅、上桅約 4 × 船寬",
+      "bowsprit": "劇照：bowsprit 約 22°（角度跟單位無關）；起點在船頭舷牆頂；長度是設計決定（草案）"
+    }
+  },
+  "verify": {
+    "max_x_cells": 1024,
+    "max_y_cells": 320,
+    "max_z_cells": 800
+  }
+}
