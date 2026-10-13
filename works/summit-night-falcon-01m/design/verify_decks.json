@@ -1,0 +1,333 @@
+{
+  "cavity_filled": 26,
+  "checks": {
+    "components_assembly": 1,
+    "components_deck_main": 2,
+    "components_deck_quarter": 1,
+    "components_hull": 1,
+    "decks_outside_hull_volume": 0,
+    "enclosed_cavity_assembly": 0,
+    "mirror_deck_main": 0,
+    "mirror_deck_quarter": 0,
+    "mirror_hull": 0,
+    "overlap_decks": 0,
+    "overlap_hull_deckmain": 0,
+    "overlap_hull_deckquarter": 0,
+    "port_wall_holes": 0,
+    "ports_see_through_remaining": 0
+  },
+  "clamp_dropped_fragments": 0,
+  "counts": {
+    "assembly_total": 77092,
+    "deck_main": 13789,
+    "deck_quarter": 6892,
+    "hull_after": 56411,
+    "hull_carve": 584,
+    "hull_clamps": 1733,
+    "hull_lining": 442
+  },
+  "headroom_cabin_vox": {
+    "max": 14,
+    "min": 14
+  },
+  "levels": {
+    "cabin_plank_z_at": {
+      "100": 23,
+      "130": 22,
+      "70": 26
+    },
+    "main_plank_z_at": {
+      "140": 29,
+      "175": 29,
+      "210": 31,
+      "250": 37
+    },
+    "quarter_plank_z_at": {
+      "100": 40,
+      "130": 39,
+      "70": 43
+    }
+  },
+  "ports": [
+    {
+      "deck": "cabin",
+      "deck_plank_z": 24,
+      "station": 95,
+      "top_z": 51.22,
+      "x": [
+        94,
+        98
+      ],
+      "z": [
+        29,
+        33
+      ]
+    },
+    {
+      "deck": "cabin",
+      "deck_plank_z": 22,
+      "station": 115,
+      "top_z": 49.87,
+      "x": [
+        114,
+        118
+      ],
+      "z": [
+        27,
+        31
+      ]
+    },
+    {
+      "deck": "main",
+      "deck_plank_z": 29,
+      "station": 170,
+      "top_z": 40.37,
+      "x": [
+        169,
+        173
+      ],
+      "z": [
+        34,
+        38
+      ]
+    },
+    {
+      "deck": "main",
+      "deck_plank_z": 30,
+      "station": 185,
+      "top_z": 41.06,
+      "x": [
+        184,
+        188
+      ],
+      "z": [
+        35,
+        39
+      ]
+    },
+    {
+      "deck": "main",
+      "deck_plank_z": 33,
+      "station": 225,
+      "top_z": 44.64,
+      "x": [
+        224,
+        228
+      ],
+      "z": [
+        38,
+        42
+      ]
+    },
+    {
+      "deck": "main",
+      "deck_plank_z": 35,
+      "station": 240,
+      "top_z": 46.64,
+      "x": [
+        239,
+        243
+      ],
+      "z": [
+        40,
+        44
+      ]
+    }
+  ],
+  "ports_lintel_and_sill_planked": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "stamp_order": {
+    "hull": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/hull/ports_carve.vox.txt",
+        "name": "ports_carve",
+        "op": "carvevox",
+        "sha256": "f042f001f24ff40fc2eec1894ee967edf5d117c7cc4c3bdd11f4af3239b186ff",
+        "voxels": 584
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/hull/ports_lining.vox.txt",
+        "name": "ports_lining",
+        "op": "stampvox",
+        "sha256": "abdb1b32e106020e7c0b5f44e7636ca6e6693413971ed5552120f638de36c6e1",
+        "voxels": 442
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/hull/clamps.vox.txt",
+        "name": "clamps",
+        "op": "stampvox",
+        "sha256": "12037688bf91c8f42141d6468adc4faee19ea79da0e227ad77cfec53a3d75706",
+        "voxels": 1733
+      }
+    ],
+    "main": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/main/main_plank.vox.txt",
+        "name": "main_plank",
+        "op": "stampvox",
+        "sha256": "5f53079201dbf37450ba30c7df523a271df9ce53da5a2b76e30879e45ce5c740",
+        "voxels": 6707
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/main/main_beam.vox.txt",
+        "name": "main_beam",
+        "op": "stampvox",
+        "sha256": "7ed87c960dd2cc73daa9c3e985608621caf6059c29dc3502119d7047092f078b",
+        "voxels": 2325
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/main/main_carling.vox.txt",
+        "name": "main_carling",
+        "op": "stampvox",
+        "sha256": "19e14bda28950944462ca5d8e8912b5e086b9ff55a74ac682a444d5de11c94bd",
+        "voxels": 86
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/main/main_coaming.vox.txt",
+        "name": "main_coaming",
+        "op": "stampvox",
+        "sha256": "8e5631a4a409add8617d1e435498da6573bec18e249a276e3b6091e348dad21a",
+        "voxels": 192
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/main/cabin_plank.vox.txt",
+        "name": "cabin_plank",
+        "op": "stampvox",
+        "sha256": "1c264d23a7e9acd623914f8139e91d61c3e8b3b79e6d0c1e6ef728f40662b157",
+        "voxels": 3327
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/main/cabin_beam.vox.txt",
+        "name": "cabin_beam",
+        "op": "stampvox",
+        "sha256": "12574417ef5df78091a3b2f3502efdbc80207c27cc0f09030ffc82c12fe23b3c",
+        "voxels": 1126
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/main/cavity_fill.vox.txt",
+        "name": "cavity_fill",
+        "op": "stampvox",
+        "sha256": "79350ee5d35478269506fcd97f810e896b28fe191305b3364b5ca1e5ab409d39",
+        "voxels": 26
+      }
+    ],
+    "quarter": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/quarter/quarter_plank.vox.txt",
+        "name": "quarter_plank",
+        "op": "stampvox",
+        "sha256": "2f097330d19f5a6d9c1e8b9bb3a84f03755d918a847fdbfc86e2761d3f94d8be",
+        "voxels": 4288
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/quarter/quarter_beam.vox.txt",
+        "name": "quarter_beam",
+        "op": "stampvox",
+        "sha256": "90a102ab23182cccda40232b6e52bc96bcab20eebf6b84d6020d07e4997e51bc",
+        "voxels": 1554
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/quarter/quarter_carling.vox.txt",
+        "name": "quarter_carling",
+        "op": "stampvox",
+        "sha256": "c4cd1157618ad6c96100b07afd5ed7f7af8eead26c048fb5b76621bd7a0c2913",
+        "voxels": 30
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/quarter/quarter_coaming.vox.txt",
+        "name": "quarter_coaming",
+        "op": "stampvox",
+        "sha256": "232c040f47353a28fee46fa7661d39f7142e6301e9b29f14773ff0e4a1f904c9",
+        "voxels": 76
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/decks/quarter/break_bulkhead.vox.txt",
+        "name": "break_bulkhead",
+        "op": "stampvox",
+        "sha256": "baf13bb346f7633b0349128785bc1d2a48960ccb775412087f4b8ad067993553",
+        "voxels": 944
+      }
+    ]
+  }
+}
