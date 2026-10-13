@@ -1,0 +1,409 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "fore-course",
+			"corners": [
+				{
+					"name": "head-P",
+					"at": "model:fore/yard-fore-course/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head-S",
+					"at": "model:fore/yard-fore-course/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew-S",
+					"at": "510.5,195.3,145.5",
+					"pin": false
+				},
+				{
+					"name": "clew-P",
+					"at": "510.5,45.7,145.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:39",
+			"texture": "textures/fore-course.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "course"
+			}
+		},
+		{
+			"name": "fore-topsail",
+			"corners": [
+				{
+					"name": "head-P",
+					"at": "model:fore/yard-fore-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head-S",
+					"at": "model:fore/yard-fore-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew-S",
+					"at": "510.5,182.55,265.5",
+					"pin": false
+				},
+				{
+					"name": "clew-P",
+					"at": "510.5,58.45,265.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:42",
+			"texture": "textures/fore-topsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "fore-topgallant",
+			"corners": [
+				{
+					"name": "head-P",
+					"at": "model:fore/yard-fore-topgallant/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head-S",
+					"at": "model:fore/yard-fore-topgallant/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew-S",
+					"at": "510.5,161.3,355.5",
+					"pin": false
+				},
+				{
+					"name": "clew-P",
+					"at": "510.5,79.7,355.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:44",
+			"texture": "textures/fore-topgallant.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topgallant"
+			}
+		},
+		{
+			"name": "main-course",
+			"corners": [
+				{
+					"name": "head-P",
+					"at": "model:main/yard-main-course/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head-S",
+					"at": "model:main/yard-main-course/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew-S",
+					"at": "355.5,208.05,150.5",
+					"pin": false
+				},
+				{
+					"name": "clew-P",
+					"at": "355.5,32.95,150.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:46",
+			"texture": "textures/main-course.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "course"
+			}
+		},
+		{
+			"name": "main-topsail",
+			"corners": [
+				{
+					"name": "head-P",
+					"at": "model:main/yard-main-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head-S",
+					"at": "model:main/yard-main-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew-S",
+					"at": "355.5,193.175,285.5",
+					"pin": false
+				},
+				{
+					"name": "clew-P",
+					"at": "355.5,47.825,285.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:49",
+			"texture": "textures/main-topsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "main-topgallant",
+			"corners": [
+				{
+					"name": "head-P",
+					"at": "model:main/yard-main-topgallant/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head-S",
+					"at": "model:main/yard-main-topgallant/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew-S",
+					"at": "355.5,169.8,395.5",
+					"pin": false
+				},
+				{
+					"name": "clew-P",
+					"at": "355.5,71.2,395.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:51",
+			"texture": "textures/main-topgallant.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topgallant"
+			}
+		},
+		{
+			"name": "mizzen-topsail",
+			"corners": [
+				{
+					"name": "head-P",
+					"at": "model:mizzen/yard-mizzen-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head-S",
+					"at": "model:mizzen/yard-mizzen-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew-S",
+					"at": "205.5,157.05,275.5",
+					"pin": false
+				},
+				{
+					"name": "clew-P",
+					"at": "205.5,83.95,275.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:54",
+			"texture": "textures/mizzen-topsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "mizzen-lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:mizzen/yard-mizzen-gaff/jaws",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "model:mizzen/yard-mizzen-gaff/top",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:mizzen/yard-mizzen-boom/end",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#b7b28e",
+			"res": 16,
+			"fullness": 1.03,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:57",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "gaff"
+			}
+		},
+		{
+			"name": "jib",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "bowsprit/tip",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "fore/head",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "600.5,145.5,145.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b7b28e",
+			"res": 14,
+			"fullness": 1.02,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:57",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "jib"
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "",
+					"at": "105.5,120.5,205.5",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "75.5,120.5,205.5",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "75.5,120.5,189.5",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "105.5,120.5,189.5",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#31423d",
+			"res": 10,
+			"fullness": 1.02,
+			"enabled": true,
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-13T23:15:57",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
+		}
+	]
+}

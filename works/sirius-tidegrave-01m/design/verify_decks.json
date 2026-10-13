@@ -1,0 +1,245 @@
+{
+  "decks": [
+    {
+      "deck": "lower",
+      "surface_z": 65,
+      "cells": 85212,
+      "prior_overlap": 0,
+      "result_missing_extra_color": 0,
+      "hatches": "open; centre passages and mast holes reserved"
+    },
+    {
+      "deck": "upper",
+      "surface_z": 90,
+      "cells": 81346,
+      "prior_overlap": 0,
+      "result_missing_extra_color": 0,
+      "hatches": "open; centre passages and mast holes reserved"
+    },
+    {
+      "deck": "weather",
+      "surface_z": 115,
+      "cells": 68684,
+      "prior_overlap": 0,
+      "result_missing_extra_color": 0,
+      "hatches": "open; centre passages and mast holes reserved"
+    },
+    {
+      "deck": "quarter",
+      "surface_z": 138,
+      "cells": 14932,
+      "prior_overlap": 0,
+      "result_missing_extra_color": 0,
+      "hatches": "open; centre passages and mast holes reserved"
+    },
+    {
+      "deck": "poop",
+      "surface_z": 164,
+      "cells": 5228,
+      "prior_overlap": 0,
+      "result_missing_extra_color": 0,
+      "hatches": "open; centre passages and mast holes reserved"
+    },
+    {
+      "deck": "forecastle",
+      "surface_z": 138,
+      "cells": 3164,
+      "prior_overlap": 0,
+      "result_missing_extra_color": 0,
+      "hatches": "open; centre passages and mast holes reserved"
+    }
+  ],
+  "stairs": [
+    {
+      "name": "lower-upper-a",
+      "from_z": 65,
+      "to_z": 90,
+      "points": {
+        "foot": [
+          311,
+          120,
+          66
+        ],
+        "lo": [
+          305,
+          120,
+          69
+        ],
+        "hi": [
+          277,
+          120,
+          91
+        ],
+        "head": [
+          270,
+          120,
+          91
+        ]
+      }
+    },
+    {
+      "name": "lower-upper-b",
+      "from_z": 65,
+      "to_z": 90,
+      "points": {
+        "foot": [
+          446,
+          120,
+          66
+        ],
+        "lo": [
+          440,
+          120,
+          69
+        ],
+        "hi": [
+          412,
+          120,
+          91
+        ],
+        "head": [
+          405,
+          120,
+          91
+        ]
+      }
+    },
+    {
+      "name": "upper-weather-a",
+      "from_z": 90,
+      "to_z": 115,
+      "points": {
+        "foot": [
+          311,
+          120,
+          91
+        ],
+        "lo": [
+          305,
+          120,
+          94
+        ],
+        "hi": [
+          277,
+          120,
+          116
+        ],
+        "head": [
+          270,
+          120,
+          116
+        ]
+      }
+    },
+    {
+      "name": "upper-weather-b",
+      "from_z": 90,
+      "to_z": 115,
+      "points": {
+        "foot": [
+          446,
+          120,
+          91
+        ],
+        "lo": [
+          440,
+          120,
+          94
+        ],
+        "hi": [
+          412,
+          120,
+          116
+        ],
+        "head": [
+          405,
+          120,
+          116
+        ]
+      }
+    },
+    {
+      "name": "weather-quarter",
+      "from_z": 115,
+      "to_z": 138,
+      "points": {
+        "foot": [
+          258,
+          120,
+          116
+        ],
+        "lo": [
+          252,
+          120,
+          119
+        ],
+        "hi": [
+          224,
+          120,
+          139
+        ],
+        "head": [
+          217,
+          120,
+          139
+        ]
+      }
+    },
+    {
+      "name": "quarter-poop",
+      "from_z": 138,
+      "to_z": 164,
+      "points": {
+        "foot": [
+          198,
+          120,
+          139
+        ],
+        "lo": [
+          192,
+          120,
+          142
+        ],
+        "hi": [
+          164,
+          120,
+          165
+        ],
+        "head": [
+          157,
+          120,
+          165
+        ]
+      }
+    },
+    {
+      "name": "weather-forecastle",
+      "from_z": 115,
+      "to_z": 138,
+      "points": {
+        "foot": [
+          534,
+          120,
+          116
+        ],
+        "lo": [
+          540,
+          120,
+          119
+        ],
+        "hi": [
+          568,
+          120,
+          139
+        ],
+        "head": [
+          575,
+          120,
+          139
+        ]
+      }
+    }
+  ],
+  "ladder_cells": 16023,
+  "status": "geometry placed; tread/head/foot independently checked before final acceptance"
+}

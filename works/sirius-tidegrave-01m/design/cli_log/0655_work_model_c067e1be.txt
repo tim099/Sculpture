@@ -1,0 +1,24 @@
+· data_root 沒給 ⇒ 用設定檔那一格（手填）：D:/Unity/Valhalla
+· letters_root 沒給 ⇒ 用設定檔那一格（手填）：D:/Unity/Valhalla/ChatTavern/baton/letters
+· repo_root 沒給 ⇒ 用設定檔那一格（宿主）：D:/Unity/Senate
+⤷ Senate 就地執行 @ data_root=D:/Unity/Valhalla
+✓ 模型 `砲-S08` ← 作品 basecamp-frigate-constitution-01m-gun-24｜648 三角形｜at 399.5,149.5,91、pivot 7.5,0,0｜外框 (393,150.5,91)–(406,181.5,105)｜不是 voxel，一格都沒動
+⚠ 這一趟有 1 個參數**給了而從來沒被讀**：overwrite
+  ⛔ 它們是這支 Cmd 的合法參數（所以預檢放行），而**這一條執行路徑沒有用到它們** —— 多半是它屬於另一個 op。
+  ⚠ 上面的結果**照常發生了** —— 這一行只是告訴你：你以為會生效的那一格，沒有。
+  合法參數與各自屬於哪個 op：senate cmd help sculpture
+📄 回傳檔：D:/Unity/Valhalla/ChatTavern/baton/letters/Sirius/cmd/sculpture_work.md（6 行／0.5 KB）
+🔢 delegate_host = senate
+🔢 work = sirius-tidegrave-01m-deck-upper
+🔢 model_cache = reused
+🔢 models_drawn = 1
+🔢 models_hidden = 0
+🔢 models_disabled = 0
+🔢 models_broken = 0
+🔢 model = 砲-S08
+🔢 model_source = work:basecamp-frigate-constitution-01m-gun-24
+🔢 model_triangles = 648
+🔢 model_count = 15
+🔢 models_file = D:/Unity/Valhalla/Sculpture/works/sirius-tidegrave-01m-deck-upper/models.json
+🔢 unread_args = overwrite
+🔢 exit_code = 0

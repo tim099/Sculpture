@@ -1,0 +1,29 @@
+· data_root 沒給 ⇒ 用設定檔那一格（手填）：D:/Unity/Valhalla
+· letters_root 沒給 ⇒ 用設定檔那一格（手填）：D:/Unity/Valhalla/ChatTavern/baton/letters
+· repo_root 沒給 ⇒ 用設定檔那一格（宿主）：D:/Unity/Senate
+⤷ Senate 就地執行 @ data_root=D:/Unity/Valhalla
+✓ 帆 `mizzen-topsail`（四邊形、289 布點）｜不是 voxel，一格都沒動
+⚠ 這一趟有 1 個參數**給了而從來沒被讀**：overwrite
+  ⛔ 它們是這支 Cmd 的合法參數（所以預檢放行），而**這一條執行路徑沒有用到它們** —— 多半是它屬於另一個 op。
+  ⚠ 上面的結果**照常發生了** —— 這一行只是告訴你：你以為會生效的那一格，沒有。
+  合法參數與各自屬於哪個 op：senate cmd help sculpture
+📄 回傳檔：D:/Unity/Valhalla/ChatTavern/baton/letters/Sirius/cmd/sculpture_work.md（8 行／1.0 KB）
+🔢 delegate_host = senate
+🔢 work = sirius-tidegrave-01m-assembly
+🔢 owner = Sirius
+🔢 space_size = 800,241,640
+🔢 texture_file = D:/Unity/Valhalla/Sculpture/works/sirius-tidegrave-01m-assembly/textures/mizzen-topsail.png
+🔢 sail = mizzen-topsail
+🔢 sail_corners = 4
+🔢 sail_count = 7
+🔢 sails_file = D:/Unity/Valhalla/Sculpture/works/sirius-tidegrave-01m-assembly/sails.json
+🔢 sails_drawn = 1
+🔢 sails_hidden = 0
+🔢 sails_disabled = 0
+🔢 sails_broken = 0
+🔢 sail_seconds = 0
+🔢 sail_steps = 0
+🔢 sail_step_ms = 0
+🔢 sail_max_billow = 6.18
+🔢 unread_args = overwrite
+🔢 exit_code = 0
