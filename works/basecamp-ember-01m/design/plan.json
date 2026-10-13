@@ -1677,5 +1677,133 @@
    }
   ],
   "provenance": "Tim 2026-10-13：「窗戶部分可以直接開孔 這樣可以看到內部結構」。量：船尾窗本來就是開的；填滿的只有 quarter gallery 的窗（琥珀 245，一層 330 格），而 gallery 子作品是實心的黑塊 ⇒ 只拿玻璃看進去是黑的 ⇒ 掏空成兩間小房間、背後船殼各開一道門（實船 quarter gallery 從船長室進去）。門高 15：下層 107–121（106 是上層砲甲板的 waterway，v1 門底那一排後面被它擋住 7 格；上甲板 clamp 在 122 起，不切）、上層 130–144（v1 到 145，門角後面擋 1 格）。"
+ },
+ "gunfittings_build": {
+  "title": "新圖紙 12：砲具與砲索（下層、上層砲甲板的長砲；憲法號新圖紙 19／階段二十二照搬）",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1793806,
+  "hide_links": [
+   "甲板-lower/砲具",
+   "甲板-lower/砲具-鏡像",
+   "甲板-upper/砲具",
+   "甲板-upper/砲具-鏡像"
+  ],
+  "decks": [
+   {
+    "deck": "lower",
+    "id": "basecamp-ember-01m-gunfittings-lower",
+    "title": "餘燼號 下層砲甲板砲具（一舷）",
+    "link_in": "basecamp-ember-01m-deck-lower",
+    "link": "砲具",
+    "mirror_link": "砲具-鏡像",
+    "box": {
+     "at": [
+      160,
+      161,
+      78
+     ],
+     "size": [
+      590,
+      80,
+      26
+     ]
+    }
+   },
+   {
+    "deck": "upper",
+    "id": "basecamp-ember-01m-gunfittings-upper",
+    "title": "餘燼號 上層砲甲板砲具（一舷）",
+    "link_in": "basecamp-ember-01m-deck-upper",
+    "link": "砲具",
+    "mirror_link": "砲具-鏡像",
+    "box": {
+     "at": [
+      160,
+      161,
+      104
+     ],
+     "size": [
+      590,
+      80,
+      28
+     ]
+    }
+   }
+  ],
+  "colors": {
+   "iron": 36,
+   "garland": 136,
+   "shot": 36,
+   "staff": 136,
+   "rammer_head": 104,
+   "sponge_head": 218
+  },
+  "ring": {
+   "offset": [
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "z_above_deck": 8,
+   "partition": true
+  },
+  "deck_ring": {
+   "back": 9
+  },
+  "garland": {
+   "z_above_deck": 2,
+   "clear": 11,
+   "max_len": 12,
+   "shot_step": 2,
+   "note": "兩門砲之間靠牆：一條 2 格深的木條（136），甲板面 ＋2；上面每 2 格一顆黑色的 24 磅砲彈（5.6\" ⇒ 1 格）；離兩邊砲門中線各 clear 格，最長 max_len"
+  },
+  "implements": {
+   "lengths": [
+    28,
+    22
+   ],
+   "clear_wall": 3,
+   "ceiling_from": 16,
+   "dx_try": [
+    -2,
+    0,
+    -1,
+    1,
+    -3,
+    -4,
+    -5,
+    -6,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "bands": [
+    6,
+    22
+   ]
+  },
+  "ropes": {
+   "breeching": {
+    "thickness": 0.6,
+    "slack": 1.12,
+    "color": "#b59a6a"
+   },
+   "tackle": {
+    "thickness": 0.35,
+    "slack": 1.03,
+    "color": "#a08458"
+   },
+   "train": {
+    "thickness": 0.35,
+    "slack": 1.05,
+    "color": "#a08458"
+   },
+   "note": "每門 5 條（作品資料，掛在組裝件）：breeching 兩條（砲尾的環 → 兩側船牆的環；實船是一條繩穿過 cascabel 的環、兩頭扣在兩側 ⇒ 畫成兩段，留一點鬆）、side tackle 兩條（cheek 的 eye-aft／eye-fwd → 同側船牆的環）、train tackle 一條（砲架尾 → 甲板的環）；滑車畫不出來，用一條比較細的繩代表一組 tackle"
+  },
+  "decisions": "Tim 2026-10-13「然後繼續」⇒ todo 下一項：砲索與砲具。只做兩層長砲（32 磅、24 磅）；carronade 與追擊砲不掛（憲法號也只掛長砲）。45 對砲兩舷對稱 ⇒ 每層一件一舷子作品＋mirror=y 關聯（同憲法號）。offset 多試 12（32 磅砲架寬 1.05 m）。"
  }
 }

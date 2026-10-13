@@ -200,3 +200,14 @@
 - **結果帳**：gallery 現在 3,323 ＋ 刻掉 4,219 ＝ 原本 7,542、兩份不重疊；船殼 vs（窗廊門:begin − 清單）缺 0、多 0、色差 0。組裝件 **1,793,806**（＝ 1,803,208 − 2×4,219 − 964）、1 元件、空腔 0、link_overlap 0、鏡像差不變。
 - 過程圖：`overlays/stage12_gallery_{sternq,close,inside}.png`（inside ＝ 藏 poop 甲板從船長室看那道門）。
 
+## 階段十二 砲具與砲索 —— 新圖紙 12（2026-10-13，Tim：「然後繼續」）
+設計 plan.json `gunfittings_build`；產生 `design/draft_gunfittings.py`（憲法號 draft_gunfittings.py 改寫成兩層；import place_guns 算砲模型的格與固定點）⇒ `masks/gunfittings/{lower,upper}.vox.txt`、`gunfittings_points.json`、`gun_ropes.json`、`verify_gunfittings.json`；落格 `design/tools/gunfittings_apply.py`（IOException 自動重試 3 次）。
+- 只做兩層長砲（下層 32 磅、上層 24 磅，各 16 對）；carronade 與追擊砲不掛（憲法號也只掛長砲）。45 對砲兩舷對稱 ⇒ 每層一件一舷子作品＋mirror=y 關聯（同憲法號）：`-gunfittings-lower`（590×80×26 at 160,161,78）、`-gunfittings-upper`（590×80×28 at 160,161,104），關聯 `甲板-lower|upper/砲具`、`砲具-鏡像`（at.y 80）。
+- 牆從船殼量（環要釘在船殼上）；擋不擋從「組裝件 ＋ 90 門砲模型的格」量（模型不在 voxel 匯出裡 —— 不加進去的話繩會穿過隔壁的砲而量不到）。
+- 讀數：下層 1,221 格（環 63、甲板環 14、garland 302＋砲彈 74、rammer 408、sponge 360）、上層 917 格（環 64、甲板環 16、garland 306＋砲彈 75、rammer 228、sponge 228）；船牆環 64 個全部 offset 8（下層第 2 門船頭側除外）；跟現況重疊 0、鏡像那一舷重疊 0、浮空 0。
+  繩 316（breeching 128、tackle 128、train 60），組 guns/{breeching,tackle,train}；端點 `model:甲板-<層>/<砲>/<點>` → `甲板-<層>/砲具[-鏡像]/<環>`。
+- 沒放的（照實記）：下層第 2 門（艦長室側艙，同憲法號）船頭側的環牆上放不下 ⇒ 釘在艙房隔牆朝砲的那一面 (227, 205, 91)（憲法號是 (227, 189, 91)）；下層第 2、16 門甲板環找不到位置 ⇒ train 不掛；garland 兩層各 13 條（第 2–3、14–15 門之間放不下）；rammer／sponge 下層 26 支、上層 16 支 —— 上層第 7–12 門頭上是打開的船腰（沒有天花板可掛）、第 1、16 門頭上不平。
+  第一次跑隔牆那條路丟例外（砲中線那一欄是砲門開口、沒有牆 ⇒ None）、輸出被我導到 /dev/null 沒看到、讀到的是上一次的 verify ⇒ 改取附近的牆、看 rc 再讀。
+- 套用：420 筆、0 失敗、IOException 自動重試 5 次（TASK-0534 的讀數）。
+- 讀數：組裝件 **1,798,082**（＝ 1,793,806 ＋ 2×(1,221＋917)）、1 元件、空腔 0、link_overlap 0、鏡像差不變；繩 1,077（761 ＋ 316）、broken 0；兩件子作品匯出 vs 清單逐格 0 差；產生程式套用後重跑，四個檔 sha256 相同。
+- 過程圖：`overlays/stage12_fittings_{lower,upper}.png`（target＋zoom 才是真的近照；region 只裁格子、模型照畫）。

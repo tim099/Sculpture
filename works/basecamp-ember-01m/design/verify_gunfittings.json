@@ -1,0 +1,103 @@
+{
+ "read": {
+  "assembly_voxels": 1793806,
+  "hidden": [
+   "甲板-lower/砲具",
+   "甲板-lower/砲具-鏡像",
+   "甲板-upper/砲具",
+   "甲板-upper/砲具-鏡像"
+  ]
+ },
+ "decks": {
+  "lower": {
+   "cells": 1221,
+   "by_kind": {
+    "ring": 63,
+    "deck_ring": 14,
+    "garland": 302,
+    "shot": 74,
+    "rammer": 408,
+    "sponge": 360
+   },
+   "rings": 32,
+   "deck_rings": 14,
+   "garlands": 13,
+   "implements": 26,
+   "ring_offsets": {
+    "8": 31,
+    "partition": 1
+   },
+   "file": {
+    "cells": 1221,
+    "sha256": "269f2e5f6547b9b09dfdec3a321af7a630ef35d7b3702605c75cfdb24479c2a6"
+   }
+  },
+  "upper": {
+   "cells": 917,
+   "by_kind": {
+    "ring": 64,
+    "deck_ring": 16,
+    "garland": 306,
+    "shot": 75,
+    "rammer": 228,
+    "sponge": 228
+   },
+   "rings": 32,
+   "deck_rings": 16,
+   "garlands": 13,
+   "implements": 16,
+   "ring_offsets": {
+    "8": 32
+   },
+   "file": {
+    "cells": 917,
+    "sha256": "a9dcb86670a4fd69f414167f20313831eac0bff822894c546ba7dc7e2b2d3daf"
+   }
+  }
+ },
+ "notes": [
+  "砲L-S02 的 fwd 環釘在艙房隔牆上（[227, 205, 91]）",
+  "砲L-S02 的甲板環找不到位置 ⇒ train tackle 不掛",
+  "砲L-S16 的甲板環找不到位置 ⇒ train tackle 不掛",
+  "lower 第 2–3 門之間的 garland 放不下 ⇒ 不放",
+  "lower 第 14–15 門之間的 garland 放不下 ⇒ 不放",
+  "砲L-S01 上方放不下 rammer ⇒ 不放",
+  "砲L-S01 上方放不下 sponge ⇒ 不放",
+  "砲L-S02 上方放不下 rammer ⇒ 不放",
+  "砲L-S02 上方放不下 sponge ⇒ 不放",
+  "砲L-S03 上方放不下 sponge ⇒ 不放",
+  "砲L-S04 上方放不下 sponge ⇒ 不放",
+  "upper 第 2–3 門之間的 garland 放不下 ⇒ 不放",
+  "upper 第 14–15 門之間的 garland 放不下 ⇒ 不放",
+  "砲U-S01 上方放不下 rammer ⇒ 不放",
+  "砲U-S01 上方放不下 sponge ⇒ 不放",
+  "砲U-S07 上方放不下 rammer ⇒ 不放",
+  "砲U-S07 上方放不下 sponge ⇒ 不放",
+  "砲U-S08 上方放不下 rammer ⇒ 不放",
+  "砲U-S08 上方放不下 sponge ⇒ 不放",
+  "砲U-S09 上方放不下 rammer ⇒ 不放",
+  "砲U-S09 上方放不下 sponge ⇒ 不放",
+  "砲U-S10 上方放不下 rammer ⇒ 不放",
+  "砲U-S10 上方放不下 sponge ⇒ 不放",
+  "砲U-S11 上方放不下 rammer ⇒ 不放",
+  "砲U-S11 上方放不下 sponge ⇒ 不放",
+  "砲U-S12 上方放不下 rammer ⇒ 不放",
+  "砲U-S12 上方放不下 sponge ⇒ 不放",
+  "砲U-S16 上方放不下 rammer ⇒ 不放",
+  "砲U-S16 上方放不下 sponge ⇒ 不放"
+ ],
+ "overlap_world": 0,
+ "mirror_overlap_world": 0,
+ "mirror_overlap_self": 0,
+ "floating": {
+  "n": 0,
+  "first": []
+ },
+ "ropes": {
+  "guns/breeching": 128,
+  "guns/tackle": 128,
+  "guns/train": 60
+ },
+ "ropes_total": 316,
+ "expect_assembly_after": 1798082
+}
