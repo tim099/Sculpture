@@ -23,7 +23,8 @@
 - [ ] 斷口艙壁：門／欄杆（breastwork rail）；後甲板舷牆上半是欄杆（定稿圖）
 - [x] 桅、艏斜桅、channels（階段七）
 - [x] 帆桁（階段八：6 件子作品＋外部模型；固定點 84 在 verify_yards.json 的 placements[].anchors）
-- [ ] 靜索（shrouds、stays、backstays；channels 上的 deadeyes 與 chain plates）→ 動索（lifts、braces、footropes）→ 帆（掛帆時再定 brace 角、meta 加 sail）
+- [x] 靜索（階段九：channels v2＋下 deadeye＋chain plates；繩 207 —— shrouds、backstays、futtock、topmast／topgallant shrouds、stays 6＋bobstay、上 deadeye＋lanyards、ratlines）
+- [ ] 動索（lifts、braces、footropes、sheets／tacks 要 belaying pins —— 舷牆 pin rails 還沒做）→ 帆（掛帆時再定 brace 角、meta 加 sail；三角帆掛在 fore-tm-stay／fore-tg-stay）
 - [ ] 旗：候選圖在 summit-night-falcon-01m-flag（⛔ 不是定稿）—— 掛在主桅 truck
 - [ ] 砲（外部模型、退到零碰撞）、插板（外部模型，pivot）
 - [ ] 甲板拱度沒做（平的）；艙口梯

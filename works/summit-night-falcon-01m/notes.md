@@ -216,3 +216,23 @@ Tim：「接著繼續造船吧 GO」。設計 plan.json `yards`（每個數字�
     🩸 轉回那一趟 6 個呼叫有 1 個失敗（fore 那件先不同），原因沒存到 —— 我的 `grep "ok "` 把 ✗ 那一行濾掉了（「管道會把失敗濾掉」那一族）。重跑 fore 那三個 ⇒ 相同。⛔ 不說它是階段五那個 IOException，沒有讀數。
   - 觀察：`view region=` 只裁格子、模型照畫（主桅特寫裡前桅的帆桁浮在框外）⇒ 特寫用 hide_models。
 - 過程圖：`overlays/stage8_assembly_yaw{45,-135,90}.png`、`stage8_bow_yaw0.png`、`stage8_main_gaff_boom_yaw70.png`、`stage8_demo_braced_yaw{45,160}.png`。
+
+## 階段九 新圖紙 09：靜索（channels v2、deadeyes、chain plates、繩 207）—— 落格（2026-10-13 下午，wake #117）
+Tim：「提交吧 然後繼續做靜索」。設計 plan.json `rigging`（provenance `rigging.*`）；產生 `design/draft_rigging.py` ⇒ `verify_rigging.json`（channels 刻／貼、固定點、繩清單＋我算的兩端世界座標、碰撞）、`masks/rigging/channels_{carve,stamp}.vox.txt`；下 CLI `design/apply_rigging.py <design> channels|anchors|ropes`；讀數 `design/check_rigging.py` ⇒ `verify_rigging_post.json`。重跑逐位元組相同。`nf_state.py` 加 stage9（階段八是模型、不動格）。照 basecamp 憲法號（Shipbuilding §6、notes 靜索試掛／階段二十二／二十五）。
+- **channels v2**：每舷每根桅 3 根 lower shrouds＋2 根 backstays ＝ 5 顆 deadeye、間距 4，最前一顆在桅孔前 2 格 ⇒ fore 189–211、main 131–153（算法照階段七）。
+  🩸 階段七的 channels 以桅為中心排（196–220、138–162）—— shrouds 大多該在桅後面、backstays 更後面，原本的框裝不下；那時我寫「deadeyes 留給繩那一階段」，框的位置卻是先定的。
+  - 刻之前讀回：channels 子作品 export ＝ 階段七清單 576／576。carvevox 216（帶原色守門）、stampvox 390，每刀 placed ＝ 清單；標記 stage9 begin／end。一舷 576 → **750**（channel 528、deadeye 100、chain plate 122），鏡像關聯自動跟著。
+  - 下 deadeye 3×3 去四角、2 格厚、104、坐在 channel 頂面外緣；chain plate 每顆一條、73、從 channel 底面外緣往下 8 格、往內收到船殼外一格，往內走就同層橫補（6 連通）。
+- **固定點 52**：兩根桅各 hounds／futtock／tm-head／tg-head（S、P）、top 邊緣前後（S、P）、crosstrees 兩端、top-fwd、tm-cap-fwd、tg-head-fwd；前桅多 aft-low、cap-aft、tm-cap-aft（main stays 落點）；艏斜桅 stay-fore／stay-tm／stay-tg／bobstay；船頭 bobstay；channels deadeye-<桅>-1..5（只 S）。全部在實心格上（產生程式 assert）；登記完從各作品 anchors.json 讀回 52／52 名字與位置相同。
+  - ⭐ stays 不從桅頭前面出：course 在 top 下 6、topsail 在 crosstrees 下 4 —— 算過 fore stay 從桅頭前面出會在 z 121 過 x 208.7，course 的格到 x 208 ⇒ lower stay 從 top 平台前緣、topmast stay 從中桅 cap 前緣出。帆桁上一階段剛做，這一題是先算才定的。
+- **繩 207**（組裝件，全部拉直 slack 1、色 #2b2620）：lower shrouds 12、backstays 8、futtock 8、topmast shrouds 8、topgallant shrouds 4、stays 6＋bobstay 1、上 deadeye 20（短粗繩 #6d4900、直徑 3）、lanyards 60、ratlines 80（子繩 rope:<shroud>/比例：lower 每舷 11–13 道、topmast 8 道）。分 13 組（standing/…、ratlines/…）。
+  - 🩸 bobstay 第一版 x 325 → 船頭 z 22：直線穿過隼的胸口（62 個取樣在船頭作品裡）。隼的前緣從 z 16 的 x 271 斜到 z 44 的 x 298 —— 掃了 522 條直線（艏斜桅底面 x 300–334 × 船頭前緣 z 12–40），只有 2 條不碰 ⇒ x 330 → z 29（x 284）。量得中段離最近實心格心 1.0 格 —— 渲染上它從隼的翅膀前面擦過（`stage9_bobstay_yaw20`）。
+  - 碰撞量尺：🩸 第一版只跳兩端 1.2 格 ⇒ topmast shrouds 報撞桅 10–14 —— 全在最後 4 格、全是自己那根桅（陡的繩貼著細而後傾的桅收進固定點）。改成分「著陸」（從端點連續落在端點那件作品裡）跟「中段」：**中段 0（207 條）**、著陸最長 3.5 格（上限 6）。
+- **寫入失敗**：IOException「無法移除要被取代的檔案」—— 固定點 3 次（第一輪 2 次 —— 我只看到其中一個名字 cross-P，因為那一趟我用 tail 只看最後 12 行；重跑全部又撞 1 次，是前桅 hounds-P）、繩 5 次，共 8 次；繩那一輪另有 13 條 ratlines rc=2 是**連鎖**：它們掛在 main-shroud-P3 上、那條撞到 IOException 沒寫進去 ⇒ 引擎擋下、零寫入。只重跑失敗的 18 條（清單順序，shroud 在前）⇒ 全過。這一次 apply 腳本把失敗整段印出來，原因有存到（錯誤報告 `SenateData/runtime/_cmd_errors/20261013-152004-8f5e6e-sculpture.md`）；階段八那一次仍然沒有讀數。
+- 讀數：
+  - 引擎 stats：**93,470 格**（＝ 93,122 ＋ 2 × (390 − 216)）、link_overlap 0、1 個元件、空腔 0、左右差 0（含顏色）；`sub=ropes`：207 條全部 ok、ropes_broken 0、子繩 80、13 組、未分組 0。
+  - 讀回：組裝件 ropes.json 207／207 每條 from／to／色／組／粗／slack 跟清單相同。
+  - `check_rigging.py`（讀引擎匯出）：結果帳 93,470／93,470 缺 0、多 0、顏色不同 0；deadeye 兩根桅兩舷 20 顆的 x 中心 ＝ plan（誤差 0.0）、每顆 10 格；chain plates 244 格、20 欄最低那一格內側都是實心（釘在船殼上）；channels 子作品 6 連通 2 塊（前、主）；**引擎解出的繩兩端 vs 我算的：最大差 0.075（引擎印到 0.1）、長度最大差 0.005**；stays 中段淨空 fore 3.6、fore-tm 3.6、fore-tg 2.8、main 2.0、main-tm 2.8、main-tg 3.0、bobstay 1.0；反向對照（deadeye x 偏 3、繩端偏 3）25 個全報 3。
+  - 🩸 量尺：deadeye、chain plate 第一版只認顏色 —— 104 也是舷牆頂蓋（整條船長，五顆併成一群）、73 也是隼的背與舵的 pintle（1,851 格）⇒ 加上位置（船殼外、channel 範圍、channel 底面以下）。用顏色當身分證 —— 階段五量船尾窗混進窗廊玻璃也是這個病，今天又兩把。
+- 觀察：上 deadeye 是短粗的繩，渲染成開口的管 —— 斜看像一個 C（憲法號同一個做法）。`view region=` 不裁繩與模型 ⇒ 特寫改用 target＋zoom。
+- 過程圖：`overlays/stage9_assembly_yaw{45,-135,90}.png`、`stage9_bow_yaw0.png`、`stage9_channels_fore_yaw60.png`、`stage9_bobstay_yaw20.png`、`stage9_fore_tops_yaw50.png`。

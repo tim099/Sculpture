@@ -19,6 +19,7 @@ STAGES = [
     ('stage5', 'verify_stern_head.json', {'hull': 'hull', 'stern_deco': 'stern_deco', 'quarter_gallery': 'gallery', 'head': 'head'}),
     ('stage6', 'verify_rudder_rails.json', {'hull': 'hull', 'quarter_gallery': 'gallery', 'head': 'head', 'rudder': 'rudder'}),
     ('stage7', 'verify_masts.json', {'hull': 'hull', 'mast_fore': 'mast_fore', 'mast_main': 'mast_main', 'bowsprit': 'bowsprit', 'channels': 'channels'}),
+    ('stage9', 'verify_rigging.json', {'channels': 'channels'}),       # 階段八（帆桁）是外部模型，不動任何一件的格
 ]
 
 

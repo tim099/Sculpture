@@ -106,6 +106,19 @@
     "jackstay_spacing": 8,
     "colors": { "spar": 177, "tip": 36 }
   },
+  "rigging": {
+    "channels_v2": { "deadeyes": 5, "shrouds": 3, "backstays": 2, "spacing": 4, "first_fwd_of_mast": 2, "end_margin": 3 },
+    "deadeye": { "half": 1, "thick": 2, "color": 104 },
+    "chain_plate": { "down": 8, "color": 73 },
+    "upper_deadeye": { "along": 6, "diameter": 3, "length": 2, "color": "#6d4900", "lanyards": 3, "lanyard_spread": 0.9, "lanyard_color": "#a08458", "lanyard_thickness": 0.2 },
+    "points": { "hounds_below_top": 2, "futtock_below_top": 10, "rim_dx": 3, "tm_head_below_crosstrees": 1, "tg_head_below_truck": 2, "fore_low_above_deck": 12 },
+    "bowsprit": { "fore_stay_x": 280, "tm_stay_x": 330, "bobstay_x": 330, "stem_z": 29 },
+    "color": "#2b2620",
+    "thickness": { "shroud": 0.6, "backstay": 0.5, "futtock": 0.35, "tm_shroud": 0.4, "tg_shroud": 0.3, "stay": 0.8, "tm_stay": 0.5, "tg_stay": 0.35, "bobstay": 0.6, "ratline": 0.2 },
+    "slack": 1.0,
+    "ratlines": { "every": 4, "lower_from_deadeye": 4, "lower_below_hounds": 8, "tm_above_rim": 3, "tm_below_head": 6, "min_len": 3 },
+    "clear_ends": 1.2, "landing_max": 6
+  },
   "provenance": {
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
@@ -176,6 +189,17 @@
     "yards.gaff": "設計決定：gaff jaws 在主桅 top 平台下 8 格；上翹 35°（basecamp 記：1817 帆圖 18–20°、現代照片 35–40° —— 我取照片那一端，看起來像翅膀）；長 ＝ boom × 0.7097（憲法號 44／62 ft）；直徑 ＝ 主桅下桅跟部 × 0.5（憲法號 gaff 12 in ÷ 後桅 24 in）、尾端 0.7。⭐ gaff／boom 在子作品裡做成水平的直桿，斜度交給模型的 rotate（繞 y）—— basecamp 階段三十三記下的『gaff 斜 35° 仍是格子的階梯』這裡不會有",
     "yards.rotate_z_deg": "設計決定：預設全部 0（方帆桁正橫、gaff／boom 在中線）；還沒有帆、沒有風，轉角等掛帆那一階段再定",
     "yards.colors": "設計決定：桁身 177（跟桅同，plan masts.colors 已寫『桅與桁 177』）、yardarm 端 1 格 36（黑 —— 跟 cap、trestletrees、truck 一樣的鐵件色；憲法號是反過來：黑桁、原木端）",
-    "upper.quarterdeck.drift":"設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
+    "rigging": "設計決定（階段九，2026-10-13）：靜索 —— 照 basecamp 憲法號（Sculpture_Shipbuilding §6、notes 靜索試掛／階段二十二／二十五）：下 deadeye 與 chain plates 是 channels 子作品的格（一舷＋鏡像），其他（shrouds、backstays、stays、上 deadeye、lanyards、ratlines）是組裝件上的繩。固定點量實際的格（桅、艏斜桅、船頭作品）",
+    "rigging.channels_v2": "設計決定：每舷每根桅 3 根 lower shrouds＋2 根 backstays（topmast、topgallant）＝ 5 顆 deadeye，間距 4（3 格寬＋空 1）；最前一顆在桅孔前 2 格、往船尾排 ⇒ channel 改成 [最後一顆 − 3, 最前一顆 + 3]：fore 189–211、main 131–153。🩸 階段七的 channels（fore 196–220、main 138–162）是以桅為中心排的 —— shrouds 大多該在桅後面，backstays 更後面，原本的框裝不下。砲門（站 95／115／170／185／225／240，寬 5）仍然避開。高度、厚、往外、圓角照 masts.channels（同一支算法）",
+    "rigging.deadeye": "參考資料（轉引）：憲法號 channels 的下 deadeye 3×3 去四角、2 格厚、104、坐在外緣上（basecamp notes 階段十八）；夜隼號照抄尺寸 —— 0.3 m 對這艘小船偏大，但再小就只剩一格",
+    "rigging.chain_plate": "設計決定：每顆 deadeye 底下一條，從 channel 底面外緣往下 8 格、往內收到船殼表面外一格；一格粗、6 連通（往內走一步就先橫移再往下 —— 不靠斜角相接）；鐵 73（船身是黑 36，用 36 會看不見）",
+    "rigging.upper_deadeye": "參考資料（轉引）：憲法號階段二十五 —— 上 deadeye 是一段短而粗的繩（軸朝舷外、直徑 3、長 2、#6d4900）、lanyards 3 條排開 ±0.9（#a08458、0.25）；中心離下 deadeye 中心沿繩方向 8 格 ⇒ 夜隼號小 ⇒ 6 格；lanyard 0.2",
+    "rigging.points": "設計決定：hounds ＝ top 平台下 2 格（trestletrees 下一格）的桅側；futtock band ＝ top 下 10 格的桅側；top 邊緣兩點 ＝ 平台最外一排、桅軸前後 3 格；topmast head ＝ 中桅 crosstrees 下 1 格的桅側；topgallant head ＝ truck 下 2 格；main stay 接前桅後面、甲板上 12 格。⭐ stays 不從桅頭前面出：前桅 course 在 top 下 6、topsail 在 crosstrees 下 4，桅頭前面出去的 stay 會從帆桁上擦過（算過：fore stay 在 z 121 過 x 208.7、course 的格到 x 208）⇒ lower stay 從 top 平台前緣、topmast stay 從中桅 cap 前緣、topgallant stay 從頂桅 truck 下 2 格出",
+    "rigging.bowsprit": "設計決定：fore stay 落在艏斜桅 x 280 的頂面（艏柱頭前面）、fore topmast stay 在 x 330（cap 內側）、fore topgallant stay 在 jib-boom 端；bobstay 從艏斜桅 x 330 底面到船頭作品中線 z 29 那一層最前的格（x 284）。🩸 第一版 x 325 → z 22：直線從隼的胸口穿過去（62 個取樣在船頭作品裡，喙 252 在 x 298 z 44）—— 隼的前緣從 z 16 的 x 271 斜到 z 44 的 x 298，bobstay 只能貼著它跑。量過：艏斜桅底面 x 300–334（每 2 格）× 船頭前緣 z 12–40 的 522 條直線，兩端各跳 1.2 格之外一格實心都不碰的只有 2 條（x 328／330 → z 29）⇒ 取 330（跟 topmast stay 同一站）",
+    "rigging.thickness": "設計決定：憲法號 0.4–1.5（巡防艦）⇒ 夜隼號縮：lower shrouds 0.6、backstays 0.5、futtock 0.35、topmast shrouds 0.4、topgallant 0.3、lower stays 0.8、topmast stays 0.5、topgallant stays 0.35、bobstay 0.6、ratlines 0.2；色 #2b2620（上過焦油；Shipbuilding §6）",
+    "rigging.slack": "設計決定：全部 1.0（拉直）—— Shipbuilding §6：長而陡的繩一點點鬆就垂很多；stays 憲法號用 1.0006–1.0008，夜隼號的 stays 之後要掛三角帆（luff 沿 stay、那條要拉直）⇒ 一開始就 1",
+    "rigging.ratlines": "參考資料（轉引）＋設計決定：每 4 格一道、子繩 rope:<shroud>/比例（Shipbuilding §6）；lower 從上 deadeye 頂往上 4 格（憲法號 7、夜隼號的 deadeye 間距小）到 hounds 下 8 格、topmast 從 top 邊緣上 3 格到 topmast head 下 6 格；從最前那根拉到最後那根；短於 3 格不畫",
+    "rigging.clear_ends": "設計決定（量尺）：碰撞取樣跳過兩端各 1.2 格（端點是固定點那一格的格心，本來就在實心裡）；再往裡、從端點連續落在端點那件作品裡的取樣算「著陸」（繩貼著桅身收進固定點 —— 細而後傾的桅、陡的繩會貼 1–4 格），分開報、上限 landing_max 格；其他算「中段」，要 0。🩸 第一版只有 1.2 格 ⇒ topmast shrouds 報撞桅 10–14 —— 全在最後 4 格、全是那一根桅",
+    "upper.quarterdeck.drift": "設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
   }
 }
