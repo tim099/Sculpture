@@ -1,0 +1,95 @@
+{
+  "work": "summit-stormkaap-01m",
+  "meters_per_voxel": 0.1,
+  "frame": {
+    "NX": 736,
+    "NY": 261,
+    "NZ_hull": 176,
+    "NZ_work": 576,
+    "YC": 130,
+    "note": "X 船長、船頭朝 +X；Y 船寬、中線格 130（連續座標中線 y = 130.5，dy = y − 130）；Z 高度，z 0 ＝ 龍骨底面。格 k 佔 [k, k+1)，判斷一律用格心。NZ_hull 只是線形圖與殼預覽的高度，作品框另計。"
+  },
+  "scale_witsen": {
+    "k": 1.194,
+    "note": "Batavia 船長 45.3 m ÷ Witsen pinas 37.94 m（134 voet）＝ 1.194。Batavia 沒有的比例（艏柱前傾、艉柱高、艉板寬、桅、帆桁）照 Witsen 乘這個數。"
+  },
+  "reference_dims": {
+    "Batavia 原船 船長／寬／艙深": "45.3 m／10.19 m／5.45 m（B3）",
+    "Batavia 復刻 寬／最大吃水": "10.5 m／5.10 m（B1）",
+    "Witsen 艏柱前傾／艉柱高／艉柱後傾": "26／24／4 voet（W1 OCR）",
+    "Witsen 翼艉板寬／艉板頂寬／hekstutten 長": "19.5／10.5／23 voet（W1 OCR）",
+    "Witsen 龍骨到最大寬": "12.75 ft（W2 Hoving）"
+  },
+  "lines": {
+    "keel": { "x_aft": 120, "x_fwd": 463, "half": 2.5, "rabbet_z": 5 },
+    "sternpost": { "x_at_keel": 120, "rake": 13.5, "rake_height": 81, "siding": 4 },
+    "stem": { "x_at_keel": 463, "rx": 88, "rz": 112, "siding": 4 },
+    "sheer": { "x_low": 300, "z_low": 80, "x_aft": 100, "z_aft": 96, "x_fwd": 550, "z_fwd": 102 },
+    "dwl": 50,
+    "midship": {
+      "x": 300, "half_beam": 52.5, "z_max_beam": 43, "deadrise_deg": 3, "bilge_radius": 20,
+      "tumblehome": 6.3, "tumblehome_height": 37, "tumblehome_power": 1.6, "min_half_frac": 0.45
+    },
+    "transom": { "z": 81, "rake": 0.12, "virtual_extension": 110, "blend_height": 45 },
+    "fullness": {
+      "fore": { "a_bottom": 2.2, "a_top": 2.8, "b_bottom": 0.85, "b_top": 0.55 },
+      "aft": { "a_bottom": 1.8, "a_top": 2.4, "b_bottom": 1.3, "b_top": 0.6 }
+    },
+    "stations": 11,
+    "waterlines": [10, 20, 30, 40, 50, 60, 70],
+    "shell_preview_thickness": 4,
+    "upper": {
+      "bulwark": 12,
+      "tiers": [
+        { "name": "halfdek", "end": "aft", "x_break": 235, "rise": 20, "bulwark": 12, "drift": 8 },
+        { "name": "kampanje", "end": "aft", "x_break": 165, "rise": 18, "bulwark": 14, "drift": 6 },
+        { "name": "bak", "end": "fore", "x_break": 470, "rise": 20, "bulwark": 10, "drift": 8 }
+      ]
+    }
+  },
+  "framing": {
+    "backbone_half": 2, "deadwood_hb": 4, "moulded": 3, "spacing": 7, "sided": 3, "station_x": 300,
+    "sternpost_above_wing": 4,
+    "stern": { "x": 120, "spacing": 7, "sided": 3 },
+    "colors": { "backbone": 73, "frame": 109, "counter": 109 }
+  },
+  "planking": {
+    "max_depth": 1.4142135623730951,
+    "chunk_x": 64,
+    "leak_below_z": 60,
+    "algae": { "lo": 44, "hi": 55, "lo_wave": [[2.0, 23.0, 0.0], [1.2, 7.3, 1.0]], "hi_wave": [[2.5, 17.0, 2.0], [1.2, 5.1, 0.5]] },
+    "wales": [
+      { "name": "wale_lower", "lo": -24, "hi": -19 },
+      { "name": "wale_upper", "lo": -6, "hi": -3 }
+    ],
+    "colors": { "bottom": 72, "algae": 76, "topsides": 109, "wale": 73, "cap": 73 }
+  },
+  "provenance": {
+    "frame.NY": "設計決定：主帆桁 69 voet × 1.194 ＝ 23.3 m（233 格，W1）要放得進 ⇒ 261（中線 130）",
+    "frame.NX": "設計決定：艉板頂 x≈97 → 艏柱頂 x≈550（453 格）＋ galjoen 與船首斜桅（20.3 m、仰角約 35° ＝ 記憶）往前約 14 m ⇒ 736",
+    "lines.keel": "x_aft／x_fwd ＝ 艉柱、艏柱在龍骨底的位置（下兩行）；half 2.5 ＝ 龍骨寬 0.5 m —— 設計決定（沒找到 Batavia 的龍骨尺寸）",
+    "lines.stem.rx": "原圖讀數換算：Witsen 艏柱前傾 26 voet（W1 OCR）× 1.194 ＝ 8.8 m ⇒ 88",
+    "lines.stem.rz": "設計決定：艏柱頂 z 112（Witsen 的艏柱高是 OCR 亂碼）—— 比艏樓甲板高一點，好讓 galjoen 接上去",
+    "lines.stem.x_at_keel": "推算：艉板頂到艏柱頂 453 格（Batavia 船長 45.3 m，B3／B1）⇒ 463",
+    "lines.sternpost": "原圖讀數換算：艉柱高 24 voet × 1.194 ＝ 8.1 m（⇒ 翼艉板 z 81）、後傾 4 voet × 1.194 ＝ 1.35 m（W1 OCR；高也許是 24½）",
+    "lines.dwl": "設計決定：吃水 5.0 m（Batavia 復刻最大 5.10 m，B1）",
+    "lines.midship.half_beam": "參考資料：Batavia 復刻船寬 10.5 m（B1、B2）⇒ 半寬 52.5（|dy| ≤ 52.5 ＝ 105 格）",
+    "lines.midship.z_max_beam": "原圖讀數換算：龍骨到最大寬 12.75 ft（Hoving，W2）× 1.194 ≈ 4.3 m ⇒ z 43（水線下）",
+    "lines.midship.deadrise_deg": "設計決定：荷蘭船平底 —— 3°（沒查到數字）",
+    "lines.midship.bilge_radius": "設計決定：20（舭部硬；Witsen 全寬 29 vs 到舭部 27 voet 只差 7%）",
+    "lines.midship.tumblehome": "設計決定（電影荷蘭人號取 Vasa「極高、極窄」的比例 [A]）：上甲板邊 z 80 的半寬收到最大寬的約 88%，往上照冪次 1.6 繼續收、下限 45%",
+    "lines.transom": "原圖讀數換算＋設計決定：翼艉板 z 81（艉柱頂）；艉板面往後傾 0.12（設計決定）；艉板頂寬照 Witsen hekstutten 頂 10.5 voet × 1.194 ＝ 3.6 m 去調 virtual_extension",
+    "lines.transom.blend_height": "設計決定：翼艉板以上 4.5 m 內，船尾那幾層的後端點從艉柱漸變到艉板外 —— 第一版用 1.5 m（照夜隼號的寫法），船尾 0、1 站在 z 81–96 折出 Z 形",
+    "lines.sheer": "設計決定：上甲板在船中 z 80 ＝ 下甲板 z 60（艙深 5.45 m，B3，從龍骨頂 z 5 量）＋ 甲板間 2.0 m（Witsen 通則 6 voet × 1.194，W1）；船尾抬 1.6 m、船頭抬 2.2 m（荷蘭船舷弧大；數字是我定的）",
+    "lines.upper.bulwark": "設計決定：船腰舷牆 1.2 m",
+    "lines.upper.tiers": "設計決定：halfdek（後甲板）、kampanje（艉樓）、bak（艏樓）各抬約 2 m；斷口位置暫定，等桅的位置定了再對",
+    "framing": "設計決定：肋骨 sided 0.3 m、moulded 0.3 m、間距 0.7 m（沒查到 Batavia 的肋骨尺寸；夜隼號是 0.2／0.2／0.5）；骨架 5 格寬（龍骨 0.5 m）；艉柱只到翼艉板上 4 格（Witsen：艉柱高 ＝ 翼艉板）；艉柱後面（x < 120）改橫的 transom 木",
+    "framing.colors": "設計決定（鬼船的舊木頭）：骨架 73 ＝ RGB (72,72,85) 深灰；肋骨 109 ＝ (109,109,85) 橄欖灰（照 pal(k) 換算過才選，Blueprint_Build §4 的坑）",
+    "planking.max_depth": "照夜隼號階段三：d ≤ √2（只取 d ≤ 1 會在斜面上散成碎片）",
+    "planking.wales": "設計決定：兩道 wale 沿舷弧（上甲板邊）走 —— 下面那道在下甲板一帶（船中 z 56–61，下排砲門下面）、上面那道在兩排砲門之間（z 74–77）。荷蘭船身上有好幾道深色 wale（記憶，未查證道數與高度）",
+    "planking.algae": "設計決定（電影：船身長滿海草、貝殼 [A][C]）：水線附近一圈藻帶，下緣 z 44、上緣 z 55，各疊兩個 sin 起伏（±3 格上下）—— 長出來的東西邊緣不會是直線",
+    "planking.colors": "設計決定（照 pal(k) 換算過）：船底 72 ＝ (72,72,0) 深橄欖褐；藻帶 76 ＝ (72,109,0) 橄欖綠；船身 109 ＝ (109,109,85) 暗的暖灰（電影「風化的灰、像漂流木」[H]）—— 🩸 第一版 145 ＝ (145,145,85)，圖紙上是卡其黃、不像灰；wale／頂蓋 73 ＝ (72,72,85) 深灰",
+    "planking.leak_below_z": "下甲板 z 60（艙深 5.45 m，B3）以下量漏水",
+    "lines.fullness": "設計決定：船頭飽滿（荷蘭船的圓船頭）、船尾在水線下比較瘦；照讀數的 Cb 調"
+  }
+}

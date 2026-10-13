@@ -1,0 +1,193 @@
+{
+  "algae_band_z": {
+    "hi": [
+      51.34,
+      58.68
+    ],
+    "lo": [
+      40.82,
+      47.2
+    ]
+  },
+  "counts": {
+    "cap": 4612,
+    "final_total": 295705,
+    "paint_structure": 8636,
+    "plank": 123281,
+    "stage2": 158814,
+    "wales": 8998
+  },
+  "expected_total_after": 295705,
+  "final_colors": {
+    "109": 201346,
+    "72": 60790,
+    "73": 22931,
+    "76": 10638
+  },
+  "leak": {
+    "hold_cells": 1419414,
+    "hold_cells_reached_from_outside": 0,
+    "z_below": 60
+  },
+  "stamp_order": [
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 7857,
+      "file": "masks/planking/plank_x064.vox.txt",
+      "name": "plank_x064",
+      "op": "stampvox",
+      "sha256": "1cc4e0c92c76a0e5e8ebb7875c3c9a912f310c05756f18c919598f971b1232ee"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 20222,
+      "file": "masks/planking/plank_x128.vox.txt",
+      "name": "plank_x128",
+      "op": "stampvox",
+      "sha256": "e7e91cba727690fff88ac82b93cbe4c5fed755090c5fc29a742828f6d1ce96b7"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 18900,
+      "file": "masks/planking/plank_x192.vox.txt",
+      "name": "plank_x192",
+      "op": "stampvox",
+      "sha256": "7a232731a31472575d38cba80ad21fe9044f86f47bb32b81a314fbaf6bfc07cd"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 17464,
+      "file": "masks/planking/plank_x256.vox.txt",
+      "name": "plank_x256",
+      "op": "stampvox",
+      "sha256": "8973d27a8a18b292445b867f2542ba63936078f74ae5f55682c295951e0d88c9"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 17452,
+      "file": "masks/planking/plank_x320.vox.txt",
+      "name": "plank_x320",
+      "op": "stampvox",
+      "sha256": "40e38c639c80b4cf50dc873280b0279b9e8bfda74a69dd1a379d6be7b031b6d0"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 16892,
+      "file": "masks/planking/plank_x384.vox.txt",
+      "name": "plank_x384",
+      "op": "stampvox",
+      "sha256": "d104d9d9df7049ca422410858cde6f9206fd2bd13c21c3b6d6ea7e4bc5518609"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 17328,
+      "file": "masks/planking/plank_x448.vox.txt",
+      "name": "plank_x448",
+      "op": "stampvox",
+      "sha256": "088be4f3d6d062d8e1025ad42c5f45bf126671398b9f48b1c9a47245a7e9d8e9"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 7166,
+      "file": "masks/planking/plank_x512.vox.txt",
+      "name": "plank_x512",
+      "op": "stampvox",
+      "sha256": "0e614d6302feb6c27d282803e27cad8dd99e692679b02c35400d047546e6588f"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 8998,
+      "file": "masks/planking/wales.vox.txt",
+      "name": "wales",
+      "op": "stampvox",
+      "sha256": "dffdf65e2a67d4bcb3d1f017652a769549eb983b14722b3755e3cd15c439b0a5"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 4612,
+      "file": "masks/planking/cap_rail.vox.txt",
+      "name": "cap_rail",
+      "op": "stampvox",
+      "sha256": "23205a115456df7070051863793d9e51d51d99819116e982ba4ee7c02a6e3870"
+    },
+    {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "expect_pixels": 8636,
+      "file": "masks/planking/paint_structure.vox.txt",
+      "guard_colors": [
+        73
+      ],
+      "name": "paint_structure",
+      "op": "stampvox",
+      "overwrite": 1,
+      "sha256": "ec6658b75270cbdb4d4f61c41daa5721b01f6603680ce7f960a225d16e3e637b"
+    }
+  ],
+  "structure": {
+    "components_6conn": 1,
+    "enclosed_cavity_voxels": 0,
+    "mirror_diff": 0
+  },
+  "wales": [
+    {
+      "name": "wale_lower",
+      "voxels": 5560,
+      "z_at_midship": [
+        56.0,
+        61.0
+      ]
+    },
+    {
+      "name": "wale_upper",
+      "voxels": 3438,
+      "z_at_midship": [
+        74.0,
+        77.0
+      ]
+    }
+  ]
+}
