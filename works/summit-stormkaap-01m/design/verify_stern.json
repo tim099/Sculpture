@@ -1,0 +1,178 @@
+{
+  "checks": {
+    "components_assembly": 1,
+    "components_gallery": 1,
+    "components_stern_deco": 15,
+    "enclosed_cavity_assembly": 0,
+    "mirror_hull": 0,
+    "mirror_stern_deco": 0,
+    "overlap_deco_hull": 0,
+    "overlap_deco_others": 0,
+    "overlap_gallery_any": 0,
+    "overlap_gallery_mirror": 0,
+    "pair_overlap_all_parts": {},
+    "sum_of_parts": 454268
+  },
+  "counts": {
+    "assembly_total": 454268,
+    "face_cells": 756,
+    "gallery_S": 9460,
+    "hull_after": 300157,
+    "hull_carve": 857,
+    "hull_lining": 653,
+    "stern_deco": 3968
+  },
+  "dropped": {
+    "gallery_fragments": 5,
+    "stern_deco_floating": 0,
+    "stern_deco_floating_pieces": []
+  },
+  "lanterns": [
+    {
+      "top_z": 177,
+      "y": 130,
+      "z_base": 160
+    },
+    {
+      "top_z": 162,
+      "y": 113,
+      "z_base": 149
+    },
+    {
+      "top_z": 162,
+      "y": 147,
+      "z_base": 149
+    }
+  ],
+  "ports": [
+    {
+      "y": [
+        115,
+        121
+      ],
+      "z": [
+        99,
+        105
+      ]
+    },
+    {
+      "y": [
+        139,
+        145
+      ],
+      "z": [
+        99,
+        105
+      ]
+    }
+  ],
+  "stamp_order": {
+    "gallery": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 9460,
+        "file": "masks/stern/gallery/gallery_S.vox.txt",
+        "name": "gallery_S",
+        "op": "stampvox",
+        "sha256": "544243a505a56144917c4f66b7d0dccc4e019b5864dbfe9f581d50c8d197bed9"
+      }
+    ],
+    "hull": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 857,
+        "file": "masks/stern/hull/windows_ports_carve.vox.txt",
+        "name": "windows_ports_carve",
+        "op": "carvevox",
+        "sha256": "7c7b6d04f94721ff81dba744d192b9a6d8f4a29c2fa2f8ceafbadceb66cfc7e5"
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 653,
+        "file": "masks/stern/hull/windows_ports_lining.vox.txt",
+        "name": "windows_ports_lining",
+        "op": "stampvox",
+        "sha256": "806b2db5a831c663ac76e9ef318ae1734c1f90d90dab3eb31d639e9f88cb320d"
+      }
+    ],
+    "stern_deco": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 3968,
+        "file": "masks/stern/stern_deco/stern_deco.vox.txt",
+        "name": "stern_deco",
+        "op": "stampvox",
+        "sha256": "0fc33681c329fd36f87dd480daba2bc8456f3ba74a78f1349b5b77e6dd673a9d"
+      }
+    ]
+  },
+  "transom_top_z": 148,
+  "windows": [
+    {
+      "y": [
+        108,
+        112
+      ],
+      "z": [
+        118,
+        127
+      ]
+    },
+    {
+      "y": [
+        118,
+        122
+      ],
+      "z": [
+        118,
+        127
+      ]
+    },
+    {
+      "y": [
+        128,
+        132
+      ],
+      "z": [
+        118,
+        127
+      ]
+    },
+    {
+      "y": [
+        138,
+        142
+      ],
+      "z": [
+        118,
+        127
+      ]
+    },
+    {
+      "y": [
+        148,
+        152
+      ],
+      "z": [
+        118,
+        127
+      ]
+    }
+  ]
+}

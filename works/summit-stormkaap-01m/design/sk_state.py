@@ -9,9 +9,13 @@ STAGES = [
     ('stage2', 'verify_hull.json', {None: 'hull'}),
     ('stage3', 'verify_planking.json', {None: 'hull'}),
     ('stage4', 'verify_decks.json', {'hull': 'hull', 'lower': 'lower', 'upper': 'upper', 'half': 'half', 'kamp': 'kamp', 'bak': 'bak'}),
+    ('stage5a', 'verify_stern.json', {'hull': 'hull', 'stern_deco': 'stern_deco', 'gallery': 'gallery'}),   # gallery ＝ 右舷一份＋左舷鏡像關聯
+    ('stage5b', 'verify_head.json', {'hull': 'hull', 'bak': 'bak', 'head': 'head'}),
 ]
-KEYS = ('hull', 'lower', 'upper', 'half', 'kamp', 'bak')
-WORK_OF = {'hull': '', 'lower': '-deck-lower', 'upper': '-deck-upper', 'half': '-deck-half', 'kamp': '-deck-kampanje', 'bak': '-deck-bak'}
+KEYS = ('hull', 'lower', 'upper', 'half', 'kamp', 'bak', 'stern_deco', 'gallery_S', 'gallery_P', 'head')
+WORK_OF = {'hull': '', 'lower': '-deck-lower', 'upper': '-deck-upper', 'half': '-deck-half', 'kamp': '-deck-kampanje', 'bak': '-deck-bak',
+           'stern_deco': '-stern-deco', 'gallery_S': '-quarter-gallery', 'head': '-head'}
+MIRRORED = {'gallery': ('gallery_S', 'gallery_P')}      # 一舷＋鏡像（mirror=y、at 0,0,0 ⇒ y ↔ NY − 1 − y）
 
 
 def frame(d):
@@ -45,7 +49,12 @@ def state_after(d, upto, nz=None):
         for sub, L in groups:
             key = keys[sub]
             for o in L:
-                _apply(W[key], o, d, o.get('origin_world', (0, 0, 0)))
+                if key in MIRRORED:
+                    kS, kP = MIRRORED[key]
+                    _apply(W[kS], o, d, o.get('origin_world', (0, 0, 0)))
+                    _apply(W[kP], o, d, o.get('origin_world', (0, 0, 0)), mirror_ny=NY)
+                else:
+                    _apply(W[key], o, d, o.get('origin_world', (0, 0, 0)))
         if name == upto: break
     return W
 

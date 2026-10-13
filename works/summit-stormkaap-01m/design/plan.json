@@ -105,6 +105,35 @@
     ],
     "colors": { "plank": 104, "beam": 73, "coaming": 73, "bulkhead": 109, "lining": 109, "clamp": 73 }
   },
+  "stern": {
+    "transom_z_min": 88,
+    "cut_depth": 5,
+    "ports": { "y": [118, 142], "z": [99, 105] },
+    "windows": { "y": [110, 120, 130, 140, 150], "w": 5, "z": [118, 127], "glass_inset": 2 },
+    "balcony": { "floor_z": 114, "y": [107, 153], "depth": 12, "corner": 5, "rail_h": 8, "baluster_every": 3, "brackets_y": [111, 130, 149], "bracket_drop": 9 },
+    "crown": { "half_w": 18, "height": 11, "thick": 3 },
+    "face": { "center_z": 146, "half_w": 10, "half_h": 12, "beard": 8 },
+    "lanterns": [
+      { "y": 130, "on": "crown", "size": 7, "post": 3, "glass_h": 8, "x_off": 0 },
+      { "y": 113, "on": "rail", "size": 5, "post": 2, "glass_h": 6, "x_off": 2 },
+      { "y": 147, "on": "rail", "size": 5, "post": 2, "glass_h": 6, "x_off": 2 }
+    ],
+    "gallery": { "x_center": 121, "a": 13, "b": 11, "z_bottom": 94, "z_body": [104, 132], "z_top": 150, "attach_z_max": 140,
+                 "window_z": [[108, 116], [121, 129]], "window_every": 4, "finial": 5 },
+    "colors": { "frame": 109, "glass": 158, "floor": 104, "carve": 182, "crown": 109, "face": 182, "glow": 158, "mouth": 36, "beard": 145,
+                "iron": 73, "gallery": 109, "dome": 76 }
+  },
+  "head": {
+    "bulkhead_x": 520, "stem_head": 7, "deck_x_max": 551, "x_tip": 600,
+    "chase_ports": { "y": [118, 142], "sill": 4, "height": 7 },
+    "door": { "dy": 2, "h": 15 },
+    "knee": { "z0": 36, "z1": 100, "power": 2.6, "top_extra": 4 },
+    "grating": { "w0": 19, "w_tip": 3, "power": 1.3, "end_back": 8 },
+    "rails": { "y0_up": 15, "y0_lo": 18, "y_end": 4, "y_power": 0.8, "z_up0": 117, "z_up1": 107, "bend_up": 0, "z_lo0": 101, "z_lo1": 102, "bend_lo": -2,
+               "end_back": 10, "tooth_every": 4, "tooth_up": 4, "tooth_lo": 3, "post_every": 12 },
+    "figure": { "dx": 0, "z": 107, "scale": 1.3 },
+    "colors": { "bulkhead": 109, "tooth": 218, "rim": 73, "glow": 158, "knee": 73, "grating": 104, "rail": 73, "bone": 218, "mane": 145, "dark": 36 }
+  },
   "provenance": {
     "frame.NY": "設計決定：主帆桁 69 voet × 1.194 ＝ 23.3 m（233 格，W1）要放得進 ⇒ 261（中線 130）",
     "frame.NX": "設計決定：艉板頂 x≈97 → 艏柱頂 x≈550（453 格）＋ galjoen 與船首斜桅（20.3 m、仰角約 35° ＝ 記憶）往前約 14 m ⇒ 736",

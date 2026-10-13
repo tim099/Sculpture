@@ -1,0 +1,110 @@
+{
+  "bulkhead_x": 520,
+  "chase_ports": [
+    {
+      "y": [
+        115,
+        121
+      ],
+      "z": [
+        101,
+        107
+      ]
+    },
+    {
+      "y": [
+        139,
+        145
+      ],
+      "z": [
+        101,
+        107
+      ]
+    }
+  ],
+  "checks": {
+    "components_assembly": 1,
+    "components_bak": 1,
+    "components_head": 23,
+    "components_hull": 1,
+    "enclosed_cavity_assembly": 0,
+    "mirror_bak": 0,
+    "mirror_head": 0,
+    "mirror_hull": 0,
+    "pair_overlap_all_parts": {}
+  },
+  "counts": {
+    "assembly_total": 460700,
+    "bak_carve": 681,
+    "bulkhead": 1433,
+    "head": 10442,
+    "head_by_color": {
+      "104": 667,
+      "145": 819,
+      "158": 26,
+      "218": 2523,
+      "36": 12,
+      "73": 6395
+    },
+    "hull_carve": 4762,
+    "sum_of_parts": 460700
+  },
+  "floating_dropped": [],
+  "stamp_order": {
+    "bak": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 681,
+        "file": "masks/head/bak/bow_carve.vox.txt",
+        "name": "bow_carve",
+        "op": "carvevox",
+        "sha256": "8de70d6790e681aa8667aa1e42efa1ae4a9a7bfdb2f4166cd716379395f72b95"
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 1433,
+        "file": "masks/head/bak/beakhead_bulkhead.vox.txt",
+        "name": "beakhead_bulkhead",
+        "op": "stampvox",
+        "sha256": "4f1f5847a4ce4ee7b9ffffe859ca0d1cbdf1db0e7a0e46d1eb4288d21a3c39ca"
+      }
+    ],
+    "head": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 10442,
+        "file": "masks/head/head/head.vox.txt",
+        "name": "head",
+        "op": "stampvox",
+        "sha256": "950c8a23a82f0f41bd9adc71958f36072222aed8f9c6c5a50ad710f1005d41f4"
+      }
+    ],
+    "hull": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 4762,
+        "file": "masks/head/hull/bow_carve.vox.txt",
+        "name": "bow_carve",
+        "op": "carvevox",
+        "sha256": "e98c7f891d8fda6419da3f490a28dc1e61fa1f6b911303012680cc200da26c6a"
+      }
+    ]
+  },
+  "x_tip": 600
+}
