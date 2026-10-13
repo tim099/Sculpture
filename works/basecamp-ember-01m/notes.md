@@ -164,3 +164,19 @@
 - 讀數：組裝件 **1,803,208**（＝ 1,785,078 ＋ 7,091 ＋ 2×3,521 ＋ 1,717 ＋ 2×1,140）、1 元件、空腔 0、link_overlap 0、models_broken 0；鏡像差 151／955／10 跟這一階段之前一樣（船長室與 EMBER 名牌）⇒ 這一階段沒有新增不對稱；**結果帳**（組裝件匯出 vs 設計）缺 0、多 0、色差 0；產生程式套用後重跑，三份清單逐位元組相同。
 - 過程圖：`overlays/stage9_head_{bowq,bowq_port,side,front}.png`、`stage9_figurehead_close.png`（ropes=0 models=0 才是真的特寫）。
 - ⚠ 看得到的：hawse 金圈在暗紅帶上仍有點像字；panel（兩道 rail 之間的黑板）貼在船殼黑外板上幾乎看不見。
+
+## 階段十 砲 90 門（全部外部模型）—— 新圖紙 11（2026-10-13，Tim：「測試ok 單層提交吧 然後繼續」）
+設計 plan.json `guns_build`；新砲 `design/draft_gun32.py` ⇒ `masks/guns/long32.vox.txt`、`guns_points.json`；擺法 `design/place_guns.py` ⇒ `guns_placement.json`、`verify_guns.json`；落格 `design/tools/guns_apply.py`。
+- 配置：下層砲甲板 舷側 16 門／舷 ＝ **新做的 32 磅長砲** `-gun-long32`（0.05 m、31×74×31、8,393 格；憲法號 draft_guns2.py 的 long18 照口徑放大：外徑 ×1.2、砲身 58 格 ＝ 2.9 m、carriage 1.75×1.05 m、軸離甲板 1.125 m；⚠ 推算）；上層砲甲板 舷側 16 門／舷 ＝ 憲法號 `-gun-24`；上甲板 carronade 9 門／舷 ＝ 憲法號 `-gun-carronade32`（第 4–12 個砲門；1–3 在 poop 底下的船長室，不放）；追擊砲 ＝ 憲法號 `-gun-long18`：兩層各一對船頭（第 17 個砲門）＋一對船尾（transom 的砲門）。合計 32＋32＋18＋8 ＝ **90**。
+- 砲門從餘燼號船殼量（|dy| ≥ 10 沒有船殼格、上下都有牆）：下層、上層各 17／舷，上甲板 12／舷 —— 跟 plan 的數一致（程式斷言）。
+- 擺法（憲法號 place_carronades／place_chase）：從舷牆外面沿砲身往裡退（每步 0.5 格），退到模型每一格的格心＋八個角都不在組裝件實心格裡；追擊砲另外搜角度。模型掛在所在甲板的子作品（`甲板-lower／upper／spar/<名>`），P 舷一律 mirror=y（eye-aft／eye-fwd 不前後對調）、S／P 各自搜。meta：32l／24l／32c／18chase。
+- 擺的過程量到的錯：
+  ① -gun-24 的 pivot 照憲法號寫 (0,0,0)（砲尾）⇒ 搜尋從「pivot 在舷牆外面」開始退、第一步整門砲就在船外不撞 ⇒ 幾門砲口伸出 31 格（浮在船外）⇒ pivot 改砲架前緣 (7.5, 19.5, 0)（量 -gun-24：z ≤ 4 的格 y 最大 19）。
+  ② 甲板高從「船殼面往裡 d 格那一欄」取：v1 兩舷用同一個式子 ⇒ P 舷多往裡 1 格（格 y ↔ 320 − y 跟連續面差一格）⇒ 船頭 P 舷甲板讀低 1、陡的角度全撞 waterway（136）⇒ 改 S ＝ outer − d − 1、P ＝ outer ＋ d；之後 45 對兩舷 at 逐對對稱（at.y 和 ＝ 321）。
+  ③ 允許抬高 1 格之後，搜尋把「砲口伸得出去」排在「貼著甲板」前面 ⇒ 16 門 carronade 浮高 1 格 ⇒ 排序改成先貼甲板；之後 90 門 dz 全 0。
+- 讀數：90 門、彼此不撞、兩舷逐對對稱；退 下層 32 磅 3.5–9、上層 24 磅 4.5–6.5、carronade 5–6；**砲口伸出船殼外面** 32 磅 2–7.5、24 磅 5.5–7.5、上層追擊砲 船頭 2.81（±30°）／船尾 6.62（±80°）。
+  ⚠ 沒伸出去的（照實記，都貼著甲板）：**下層船頭一對**（±15°）縮在砲門裡 3.49 —— 抬高 1 格才能到 ±35° 齊平（v1 那樣），不浮空 ⇒ 留著；**下層船尾一對**（±85°）縮 2.02 —— 船尾內板（177、141，x 117–123、z 85–91）夾住；**carronade** 齊平到縮 1 格（憲法號階段二十九也是）。
+- 模型：甲板-lower 36、甲板-upper 36、甲板-spar 18；組裝件模型 108（18 ＋ 90）、models_broken 0；每門模型的 work／at／rotate／mirror／scale／pivot／meta 跟擺放表逐門比 0 不符。voxel 不變（模型不是格）。
+- 套用時 IOException（無法移除要被取代的檔案）兩門、重跑又兩門（都是已寫進去的那兩門 overwrite）—— 今天第三個階段遇到，另開工作卡。
+- 過程圖：`overlays/stage10_guns_{side,lower,upper,spar}.png`。
+- 還沒有：砲索與砲具（breeching、tackle、train、船牆的環、rammer／sponge）—— 下一階段；彈藥庫。

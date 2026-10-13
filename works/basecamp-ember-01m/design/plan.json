@@ -1384,5 +1384,246 @@
    "note": "憲法號 bobstay-1／2 在 knee 前緣（707,96）（713,104）→ 換算後取 knee 前緣那一格；另一端艏斜桅的 bobstay-1／2 已在"
   },
   "decisions": "Tim 2026-10-13「繼續造船吧 GO」；委託「原創船首像、奇幻、⛔ 不抄電影船」。kiara 的 kiara-ember-phoenix 是立在石台上的雕像（有台座、小燈、1 m＝32 格）⇒ 不拿來當船首像，船首像自己設計（鳳凰是船名「餘燼」的意思）。"
+ },
+ "guns_build": {
+  "title": "新圖紙 11：砲 90 門（全部外部模型）—— 下層 32 磅長砲（新做）、上層 24 磅（憲法號）、上甲板 carronade（憲法號）、船頭／船尾追擊砲 18 磅（憲法號）",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1803208,
+  "hull": "basecamp-ember-01m",
+  "deck_works": {
+   "lower": "basecamp-ember-01m-deck-lower",
+   "upper": "basecamp-ember-01m-deck-upper",
+   "spar": "basecamp-ember-01m-deck-spar"
+  },
+  "deck_links": {
+   "lower": "甲板-lower",
+   "upper": "甲板-upper",
+   "spar": "甲板-spar"
+  },
+  "types": {
+   "long32": {
+    "work": "basecamp-ember-01m-gun-long32",
+    "title": "餘燼號 32 磅長砲（一門）",
+    "cells": "masks/guns/long32.vox.txt",
+    "scale": 0.5,
+    "pivot": [
+     15.5,
+     43.5,
+     0
+    ],
+    "muzzle": [
+     15.5,
+     65.5,
+     22.5
+    ],
+    "meta": {
+     "kind": "gun",
+     "gun": "32l"
+    }
+   },
+   "gun24": {
+    "work": "basecamp-frigate-constitution-01m-gun-24",
+    "cells": "basecamp-frigate-constitution-01m-gun-24",
+    "scale": 1,
+    "pivot": [7.5, 19.5, 0],
+    "muzzle": [
+     7.5,
+     31.5,
+     11.5
+    ],
+    "meta": {
+     "kind": "gun",
+     "gun": "24l"
+    }
+   },
+   "long18": {
+    "work": "basecamp-frigate-constitution-01m-gun-long18",
+    "cells": "basecamp-frigate-constitution-01m-gun-long18",
+    "scale": 0.5,
+    "pivot": [
+     13.5,
+     38.5,
+     0
+    ],
+    "muzzle": [
+     13.5,
+     62,
+     21.5
+    ],
+    "meta": {
+     "kind": "gun",
+     "gun": "18chase"
+    }
+   },
+   "carr32": {
+    "work": "basecamp-frigate-constitution-01m-gun-carronade32",
+    "cells": "basecamp-frigate-constitution-01m-gun-carronade32",
+    "scale": 0.5,
+    "pivot": [
+     7.5,
+     42,
+     0
+    ],
+    "muzzle": [
+     7.5,
+     52,
+     19.5
+    ],
+    "meta": {
+     "kind": "gun",
+     "gun": "32c"
+    }
+   }
+  },
+  "rows": [
+   {
+    "deck": "lower",
+    "band": [
+     84,
+     108
+    ],
+    "ports_per_side": 17,
+    "use": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16
+    ],
+    "type": "long32",
+    "chase_port": 17,
+    "chase_type": "long18",
+    "chase_phis": [
+     0.0,
+     -5.0,
+     -10.0,
+     -15.0,
+     -20.0,
+     -25.0,
+     -30.0,
+     -35.0,
+     -40.0
+    ],
+    "wall_guess": 5
+   },
+   {
+    "deck": "upper",
+    "band": [
+     108,
+     131
+    ],
+    "ports_per_side": 17,
+    "use": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16
+    ],
+    "type": "gun24",
+    "chase_port": 17,
+    "chase_type": "long18",
+    "chase_phis": [
+     0.0,
+     -5.0,
+     -10.0,
+     -15.0,
+     -20.0,
+     -25.0,
+     -30.0,
+     -35.0,
+     -40.0
+    ],
+    "wall_guess": 5
+   },
+   {
+    "deck": "spar",
+    "band": [
+     131,
+     156
+    ],
+    "ports_per_side": 12,
+    "use": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "type": "carr32",
+    "wall_guess": 5
+   }
+  ],
+  "stern": [
+   {
+    "deck": "lower",
+    "band": [
+     86,
+     108
+    ],
+    "dy": [
+     12,
+     26
+    ],
+    "type": "long18",
+    "phis": [
+     90.0,
+     85.0,
+     80.0,
+     75.0,
+     70.0,
+     95.0,
+     100.0
+    ]
+   },
+   {
+    "deck": "upper",
+    "band": [
+     109,
+     131
+    ],
+    "dy": [
+     12,
+     26
+    ],
+    "type": "long18",
+    "phis": [
+     90.0,
+     85.0,
+     80.0,
+     75.0,
+     70.0,
+     95.0,
+     100.0
+    ]
+   }
+  ],
+  "decisions": "Tim 2026-10-13「單層提交吧 然後繼續」⇒ todo 下一項：砲。子物件能重複用就重複用：24 磅、carronade、18 磅追擊砲都是憲法號那一件；32 磅長砲新做（-gun-24 那一型照口徑放大，0.05 m 同 long18）。上甲板第 1–3 個砲門在 poop 底下的船長室 ⇒ 不放（每舷 9 門 ＝ 第 4–12）。另一舷一律 mirror=y（eye-aft／eye-fwd 不前後對調）。砲索與砲具下一階段。"
  }
 }

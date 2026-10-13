@@ -1,0 +1,3402 @@
+{
+ "note": "place_guns.py 的結果；at 是模型的 at（pivot 落點）、phi ＝ rotate z、P 舷 mirror=y",
+ "types": {
+  "long32": {
+   "work": "basecamp-ember-01m-gun-long32",
+   "title": "餘燼號 32 磅長砲（一門）",
+   "cells": "masks/guns/long32.vox.txt",
+   "scale": 0.5,
+   "pivot": [
+    15.5,
+    43.5,
+    0
+   ],
+   "muzzle": [
+    15.5,
+    65.5,
+    22.5
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "32l"
+   }
+  },
+  "gun24": {
+   "work": "basecamp-frigate-constitution-01m-gun-24",
+   "cells": "basecamp-frigate-constitution-01m-gun-24",
+   "scale": 1,
+   "pivot": [
+    7.5,
+    19.5,
+    0
+   ],
+   "muzzle": [
+    7.5,
+    31.5,
+    11.5
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "24l"
+   }
+  },
+  "long18": {
+   "work": "basecamp-frigate-constitution-01m-gun-long18",
+   "cells": "basecamp-frigate-constitution-01m-gun-long18",
+   "scale": 0.5,
+   "pivot": [
+    13.5,
+    38.5,
+    0
+   ],
+   "muzzle": [
+    13.5,
+    62,
+    21.5
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "18chase"
+   }
+  },
+  "carr32": {
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32",
+   "cells": "basecamp-frigate-constitution-01m-gun-carronade32",
+   "scale": 0.5,
+   "pivot": [
+    7.5,
+    42,
+    0
+   ],
+   "muzzle": [
+    7.5,
+    52,
+    19.5
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "32c"
+   }
+  }
+ },
+ "rows": [
+  {
+   "deck": "lower",
+   "port": 1,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    190.5,
+    204.5,
+    83.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 4.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     185,
+     195
+    ],
+    "z": [
+     91,
+     99
+    ]
+   },
+   "outer_y": 211,
+   "name": "砲L-S01"
+  },
+  {
+   "deck": "lower",
+   "port": 1,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    190.5,
+    116.5,
+    83.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 4.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     185,
+     195
+    ],
+    "z": [
+     91,
+     99
+    ]
+   },
+   "outer_y": 110,
+   "name": "砲L-P01"
+  },
+  {
+   "deck": "lower",
+   "port": 2,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    220.5,
+    207.5,
+    83.0
+   ],
+   "back": 5.5,
+   "dx": -1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     216,
+     226
+    ],
+    "z": [
+     91,
+     98
+    ]
+   },
+   "outer_y": 213,
+   "name": "砲L-S02"
+  },
+  {
+   "deck": "lower",
+   "port": 2,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    220.5,
+    113.5,
+    83.0
+   ],
+   "back": 5.5,
+   "dx": 1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     216,
+     226
+    ],
+    "z": [
+     91,
+     98
+    ]
+   },
+   "outer_y": 108,
+   "name": "砲L-P02"
+  },
+  {
+   "deck": "lower",
+   "port": 3,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    256.5,
+    210.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     251,
+     261
+    ],
+    "z": [
+     90,
+     98
+    ]
+   },
+   "outer_y": 215,
+   "name": "砲L-S03"
+  },
+  {
+   "deck": "lower",
+   "port": 3,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    256.5,
+    110.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     251,
+     261
+    ],
+    "z": [
+     90,
+     98
+    ]
+   },
+   "outer_y": 106,
+   "name": "砲L-P03"
+  },
+  {
+   "deck": "lower",
+   "port": 4,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    289.0,
+    212.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     284,
+     293
+    ],
+    "z": [
+     90,
+     98
+    ]
+   },
+   "outer_y": 217,
+   "name": "砲L-S04"
+  },
+  {
+   "deck": "lower",
+   "port": 4,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    289.0,
+    108.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     284,
+     293
+    ],
+    "z": [
+     90,
+     98
+    ]
+   },
+   "outer_y": 104,
+   "name": "砲L-P04"
+  },
+  {
+   "deck": "lower",
+   "port": 5,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    322.5,
+    214.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     317,
+     327
+    ],
+    "z": [
+     89,
+     97
+    ]
+   },
+   "outer_y": 219,
+   "name": "砲L-S05"
+  },
+  {
+   "deck": "lower",
+   "port": 5,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    322.5,
+    106.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     317,
+     327
+    ],
+    "z": [
+     89,
+     97
+    ]
+   },
+   "outer_y": 102,
+   "name": "砲L-P05"
+  },
+  {
+   "deck": "lower",
+   "port": 6,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    357.5,
+    216.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     352,
+     362
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 222,
+   "name": "砲L-S06"
+  },
+  {
+   "deck": "lower",
+   "port": 6,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    357.5,
+    104.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     352,
+     362
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 99,
+   "name": "砲L-P06"
+  },
+  {
+   "deck": "lower",
+   "port": 7,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    390.5,
+    218.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     385,
+     395
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 224,
+   "name": "砲L-S07"
+  },
+  {
+   "deck": "lower",
+   "port": 7,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    390.5,
+    102.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     385,
+     395
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 97,
+   "name": "砲L-P07"
+  },
+  {
+   "deck": "lower",
+   "port": 8,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    422.5,
+    220.5,
+    82.0
+   ],
+   "back": 3.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 7.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     417,
+     427
+    ],
+    "z": [
+     88,
+     96
+    ]
+   },
+   "outer_y": 224,
+   "name": "砲L-S08"
+  },
+  {
+   "deck": "lower",
+   "port": 8,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    422.5,
+    100.5,
+    82.0
+   ],
+   "back": 3.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 7.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     417,
+     427
+    ],
+    "z": [
+     88,
+     96
+    ]
+   },
+   "outer_y": 97,
+   "name": "砲L-P08"
+  },
+  {
+   "deck": "lower",
+   "port": 9,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    455.0,
+    218.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     450,
+     459
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 224,
+   "name": "砲L-S09"
+  },
+  {
+   "deck": "lower",
+   "port": 9,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    455.0,
+    102.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     450,
+     459
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 97,
+   "name": "砲L-P09"
+  },
+  {
+   "deck": "lower",
+   "port": 10,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    488.0,
+    218.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     483,
+     492
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 224,
+   "name": "砲L-S10"
+  },
+  {
+   "deck": "lower",
+   "port": 10,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    488.0,
+    102.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     483,
+     492
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 97,
+   "name": "砲L-P10"
+  },
+  {
+   "deck": "lower",
+   "port": 11,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    521.0,
+    218.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     516,
+     525
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 224,
+   "name": "砲L-S11"
+  },
+  {
+   "deck": "lower",
+   "port": 11,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    521.0,
+    102.5,
+    82.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     516,
+     525
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 97,
+   "name": "砲L-P11"
+  },
+  {
+   "deck": "lower",
+   "port": 12,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    554.5,
+    218.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     549,
+     559
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 223,
+   "name": "砲L-S12"
+  },
+  {
+   "deck": "lower",
+   "port": 12,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    554.5,
+    102.5,
+    82.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 93.25,
+   "opening": {
+    "x": [
+     549,
+     559
+    ],
+    "z": [
+     89,
+     96
+    ]
+   },
+   "outer_y": 98,
+   "name": "砲L-P12"
+  },
+  {
+   "deck": "lower",
+   "port": 13,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    586.5,
+    216.5,
+    83.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     581,
+     591
+    ],
+    "z": [
+     90,
+     97
+    ]
+   },
+   "outer_y": 222,
+   "name": "砲L-S13"
+  },
+  {
+   "deck": "lower",
+   "port": 13,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    586.5,
+    104.5,
+    83.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     581,
+     591
+    ],
+    "z": [
+     90,
+     97
+    ]
+   },
+   "outer_y": 99,
+   "name": "砲L-P13"
+  },
+  {
+   "deck": "lower",
+   "port": 14,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    620.0,
+    213.5,
+    83.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 4.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     615,
+     624
+    ],
+    "z": [
+     91,
+     98
+    ]
+   },
+   "outer_y": 220,
+   "name": "砲L-S14"
+  },
+  {
+   "deck": "lower",
+   "port": 14,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    620.0,
+    107.5,
+    83.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 4.5,
+   "muzzle_free": true,
+   "axis_z": 94.25,
+   "opening": {
+    "x": [
+     615,
+     624
+    ],
+    "z": [
+     91,
+     98
+    ]
+   },
+   "outer_y": 101,
+   "name": "砲L-P14"
+  },
+  {
+   "deck": "lower",
+   "port": 15,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    652.5,
+    207.5,
+    86.0
+   ],
+   "back": 7.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 3.5,
+   "muzzle_free": true,
+   "axis_z": 97.25,
+   "opening": {
+    "x": [
+     648,
+     656
+    ],
+    "z": [
+     92,
+     100
+    ]
+   },
+   "outer_y": 215,
+   "name": "砲L-S15"
+  },
+  {
+   "deck": "lower",
+   "port": 15,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    652.5,
+    113.5,
+    86.0
+   ],
+   "back": 7.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 3.5,
+   "muzzle_free": true,
+   "axis_z": 97.25,
+   "opening": {
+    "x": [
+     648,
+     656
+    ],
+    "z": [
+     92,
+     100
+    ]
+   },
+   "outer_y": 106,
+   "name": "砲L-P15"
+  },
+  {
+   "deck": "lower",
+   "port": 16,
+   "side": "S",
+   "type": "long32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    685.5,
+    201.0,
+    87.0
+   ],
+   "back": 9.0,
+   "dx": -1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 2.0,
+   "muzzle_free": true,
+   "axis_z": 98.25,
+   "opening": {
+    "x": [
+     682,
+     690
+    ],
+    "z": [
+     94,
+     101
+    ]
+   },
+   "outer_y": 210,
+   "name": "砲L-S16"
+  },
+  {
+   "deck": "lower",
+   "port": 16,
+   "side": "P",
+   "type": "long32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    685.5,
+    120.0,
+    87.0
+   ],
+   "back": 9.0,
+   "dx": 1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 2.0,
+   "muzzle_free": true,
+   "axis_z": 98.25,
+   "opening": {
+    "x": [
+     682,
+     690
+    ],
+    "z": [
+     94,
+     101
+    ]
+   },
+   "outer_y": 111,
+   "name": "砲L-P16"
+  },
+  {
+   "deck": "lower",
+   "port": 17,
+   "side": "S",
+   "type": "long18",
+   "chase": true,
+   "phi": -15.0,
+   "at": [
+    709.005,
+    184.158,
+    88.0
+   ],
+   "back": 15.5,
+   "dx": -0.5,
+   "dz": 0,
+   "muzzle_beyond_outer": -3.49,
+   "muzzle_free": true,
+   "axis_z": 98.75,
+   "opening": {
+    "x": [
+     709,
+     717
+    ],
+    "z": [
+     96,
+     103
+    ]
+   },
+   "outer_y": 199,
+   "tried": [
+    [
+     -40.0,
+     11.0,
+     1.5,
+     1,
+     -0.39,
+     true
+    ],
+    [
+     -35.0,
+     11.0,
+     1.0,
+     1,
+     0.04,
+     true
+    ],
+    [
+     -30.0,
+     12.0,
+     0.0,
+     1,
+     -0.22,
+     true
+    ],
+    [
+     -25.0,
+     14.5,
+     -0.5,
+     1,
+     -2.28,
+     true
+    ],
+    [
+     -20.0,
+     15.5,
+     2.0,
+     0,
+     -4.21,
+     true
+    ],
+    [
+     -15.0,
+     15.5,
+     -0.5,
+     0,
+     -3.49,
+     true
+    ],
+    [
+     -10.0,
+     17.0,
+     -1.5,
+     0,
+     -4.91,
+     true
+    ],
+    [
+     -5.0,
+     17.0,
+     -2.5,
+     0,
+     -5.01,
+     true
+    ],
+    [
+     0.0,
+     19.5,
+     -4.0,
+     0,
+     -7.75,
+     true
+    ]
+   ],
+   "name": "L-chase-bow-S"
+  },
+  {
+   "deck": "lower",
+   "port": 17,
+   "side": "P",
+   "type": "long18",
+   "chase": true,
+   "phi": 15.0,
+   "at": [
+    709.005,
+    136.842,
+    88.0
+   ],
+   "back": 15.5,
+   "dx": 0.5,
+   "dz": 0,
+   "muzzle_beyond_outer": -3.49,
+   "muzzle_free": true,
+   "axis_z": 98.75,
+   "opening": {
+    "x": [
+     709,
+     717
+    ],
+    "z": [
+     96,
+     103
+    ]
+   },
+   "outer_y": 122,
+   "tried": [
+    [
+     -0.0,
+     19.5,
+     4.0,
+     0,
+     -7.75,
+     true
+    ],
+    [
+     5.0,
+     17.0,
+     2.5,
+     0,
+     -5.01,
+     true
+    ],
+    [
+     10.0,
+     17.0,
+     1.5,
+     0,
+     -4.91,
+     true
+    ],
+    [
+     15.0,
+     15.5,
+     0.5,
+     0,
+     -3.49,
+     true
+    ],
+    [
+     20.0,
+     15.5,
+     -2.0,
+     0,
+     -4.21,
+     true
+    ],
+    [
+     25.0,
+     14.5,
+     0.5,
+     1,
+     -2.28,
+     true
+    ],
+    [
+     30.0,
+     12.0,
+     0.0,
+     1,
+     -0.22,
+     true
+    ],
+    [
+     35.0,
+     11.0,
+     -1.0,
+     1,
+     0.04,
+     true
+    ],
+    [
+     40.0,
+     11.0,
+     -1.5,
+     1,
+     -0.39,
+     true
+    ]
+   ],
+   "name": "L-chase-bow-P"
+  },
+  {
+   "deck": "upper",
+   "port": 1,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    190.5,
+    202.5,
+    106.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 117.5,
+   "opening": {
+    "x": [
+     185,
+     195
+    ],
+    "z": [
+     114,
+     122
+    ]
+   },
+   "outer_y": 208,
+   "name": "砲U-S01"
+  },
+  {
+   "deck": "upper",
+   "port": 1,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    190.5,
+    118.5,
+    106.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 117.5,
+   "opening": {
+    "x": [
+     185,
+     195
+    ],
+    "z": [
+     114,
+     122
+    ]
+   },
+   "outer_y": 113,
+   "name": "砲U-P01"
+  },
+  {
+   "deck": "upper",
+   "port": 2,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    222.5,
+    204.5,
+    106.0
+   ],
+   "back": 5.5,
+   "dx": 1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 117.5,
+   "opening": {
+    "x": [
+     216,
+     226
+    ],
+    "z": [
+     114,
+     121
+    ]
+   },
+   "outer_y": 210,
+   "name": "砲U-S02"
+  },
+  {
+   "deck": "upper",
+   "port": 2,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    222.5,
+    116.5,
+    106.0
+   ],
+   "back": 5.5,
+   "dx": -1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 117.5,
+   "opening": {
+    "x": [
+     216,
+     226
+    ],
+    "z": [
+     114,
+     121
+    ]
+   },
+   "outer_y": 111,
+   "name": "砲U-P02"
+  },
+  {
+   "deck": "upper",
+   "port": 3,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    256.5,
+    206.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     251,
+     261
+    ],
+    "z": [
+     113,
+     121
+    ]
+   },
+   "outer_y": 212,
+   "name": "砲U-S03"
+  },
+  {
+   "deck": "upper",
+   "port": 3,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    256.5,
+    114.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     251,
+     261
+    ],
+    "z": [
+     113,
+     121
+    ]
+   },
+   "outer_y": 109,
+   "name": "砲U-P03"
+  },
+  {
+   "deck": "upper",
+   "port": 4,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    289.0,
+    208.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     284,
+     293
+    ],
+    "z": [
+     113,
+     121
+    ]
+   },
+   "outer_y": 214,
+   "name": "砲U-S04"
+  },
+  {
+   "deck": "upper",
+   "port": 4,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    289.0,
+    112.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     284,
+     293
+    ],
+    "z": [
+     113,
+     121
+    ]
+   },
+   "outer_y": 107,
+   "name": "砲U-P04"
+  },
+  {
+   "deck": "upper",
+   "port": 5,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    322.5,
+    209.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     317,
+     327
+    ],
+    "z": [
+     112,
+     120
+    ]
+   },
+   "outer_y": 215,
+   "name": "砲U-S05"
+  },
+  {
+   "deck": "upper",
+   "port": 5,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    322.5,
+    111.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     317,
+     327
+    ],
+    "z": [
+     112,
+     120
+    ]
+   },
+   "outer_y": 106,
+   "name": "砲U-P05"
+  },
+  {
+   "deck": "upper",
+   "port": 6,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    357.5,
+    210.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     352,
+     362
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 216,
+   "name": "砲U-S06"
+  },
+  {
+   "deck": "upper",
+   "port": 6,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    357.5,
+    110.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     352,
+     362
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 105,
+   "name": "砲U-P06"
+  },
+  {
+   "deck": "upper",
+   "port": 7,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    390.5,
+    212.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     385,
+     395
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 218,
+   "name": "砲U-S07"
+  },
+  {
+   "deck": "upper",
+   "port": 7,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    390.5,
+    108.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     385,
+     395
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 103,
+   "name": "砲U-P07"
+  },
+  {
+   "deck": "upper",
+   "port": 8,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    422.5,
+    213.5,
+    105.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 7.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     417,
+     427
+    ],
+    "z": [
+     111,
+     119
+    ]
+   },
+   "outer_y": 218,
+   "name": "砲U-S08"
+  },
+  {
+   "deck": "upper",
+   "port": 8,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    422.5,
+    107.5,
+    105.0
+   ],
+   "back": 4.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 7.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     417,
+     427
+    ],
+    "z": [
+     111,
+     119
+    ]
+   },
+   "outer_y": 103,
+   "name": "砲U-P08"
+  },
+  {
+   "deck": "upper",
+   "port": 9,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    455.0,
+    213.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     450,
+     459
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 219,
+   "name": "砲U-S09"
+  },
+  {
+   "deck": "upper",
+   "port": 9,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    455.0,
+    107.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     450,
+     459
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 102,
+   "name": "砲U-P09"
+  },
+  {
+   "deck": "upper",
+   "port": 10,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    488.0,
+    213.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     483,
+     492
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 219,
+   "name": "砲U-S10"
+  },
+  {
+   "deck": "upper",
+   "port": 10,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    488.0,
+    107.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     483,
+     492
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 102,
+   "name": "砲U-P10"
+  },
+  {
+   "deck": "upper",
+   "port": 11,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    521.0,
+    213.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     516,
+     525
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 219,
+   "name": "砲U-S11"
+  },
+  {
+   "deck": "upper",
+   "port": 11,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    521.0,
+    107.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     516,
+     525
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 102,
+   "name": "砲U-P11"
+  },
+  {
+   "deck": "upper",
+   "port": 12,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    554.5,
+    213.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     549,
+     559
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 219,
+   "name": "砲U-S12"
+  },
+  {
+   "deck": "upper",
+   "port": 12,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    554.5,
+    107.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     549,
+     559
+    ],
+    "z": [
+     112,
+     119
+    ]
+   },
+   "outer_y": 102,
+   "name": "砲U-P12"
+  },
+  {
+   "deck": "upper",
+   "port": 13,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    586.5,
+    212.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     581,
+     591
+    ],
+    "z": [
+     113,
+     120
+    ]
+   },
+   "outer_y": 218,
+   "name": "砲U-S13"
+  },
+  {
+   "deck": "upper",
+   "port": 13,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    586.5,
+    108.5,
+    105.0
+   ],
+   "back": 5.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     581,
+     591
+    ],
+    "z": [
+     113,
+     120
+    ]
+   },
+   "outer_y": 103,
+   "name": "砲U-P13"
+  },
+  {
+   "deck": "upper",
+   "port": 14,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    620.0,
+    210.5,
+    105.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     615,
+     624
+    ],
+    "z": [
+     114,
+     121
+    ]
+   },
+   "outer_y": 217,
+   "name": "砲U-S14"
+  },
+  {
+   "deck": "upper",
+   "port": 14,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    620.0,
+    110.5,
+    105.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 116.5,
+   "opening": {
+    "x": [
+     615,
+     624
+    ],
+    "z": [
+     114,
+     121
+    ]
+   },
+   "outer_y": 104,
+   "name": "砲U-P14"
+  },
+  {
+   "deck": "upper",
+   "port": 15,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    652.5,
+    206.5,
+    108.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 119.5,
+   "opening": {
+    "x": [
+     648,
+     656
+    ],
+    "z": [
+     115,
+     123
+    ]
+   },
+   "outer_y": 213,
+   "name": "砲U-S15"
+  },
+  {
+   "deck": "upper",
+   "port": 15,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    652.5,
+    114.5,
+    108.0
+   ],
+   "back": 6.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 119.5,
+   "opening": {
+    "x": [
+     648,
+     656
+    ],
+    "z": [
+     115,
+     123
+    ]
+   },
+   "outer_y": 108,
+   "name": "砲U-P15"
+  },
+  {
+   "deck": "upper",
+   "port": 16,
+   "side": "S",
+   "type": "gun24",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    685.5,
+    202.5,
+    108.0
+   ],
+   "back": 6.5,
+   "dx": -1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 119.5,
+   "opening": {
+    "x": [
+     682,
+     690
+    ],
+    "z": [
+     117,
+     124
+    ]
+   },
+   "outer_y": 209,
+   "name": "砲U-S16"
+  },
+  {
+   "deck": "upper",
+   "port": 16,
+   "side": "P",
+   "type": "gun24",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    685.5,
+    118.5,
+    108.0
+   ],
+   "back": 6.5,
+   "dx": 1.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 5.5,
+   "muzzle_free": true,
+   "axis_z": 119.5,
+   "opening": {
+    "x": [
+     682,
+     690
+    ],
+    "z": [
+     117,
+     124
+    ]
+   },
+   "outer_y": 112,
+   "name": "砲U-P16"
+  },
+  {
+   "deck": "upper",
+   "port": 17,
+   "side": "S",
+   "type": "long18",
+   "chase": true,
+   "phi": -30.0,
+   "at": [
+    709.25,
+    190.639,
+    111.0
+   ],
+   "back": 8.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 2.81,
+   "muzzle_free": true,
+   "axis_z": 121.75,
+   "opening": {
+    "x": [
+     709,
+     717
+    ],
+    "z": [
+     119,
+     126
+    ]
+   },
+   "outer_y": 198,
+   "tried": [
+    [
+     -40.0,
+     8.0,
+     1.0,
+     0,
+     2.23,
+     true
+    ],
+    [
+     -35.0,
+     8.5,
+     0.5,
+     0,
+     2.38,
+     true
+    ],
+    [
+     -30.0,
+     8.5,
+     0.0,
+     0,
+     2.81,
+     true
+    ],
+    [
+     -25.0,
+     9.0,
+     -0.5,
+     0,
+     2.7,
+     true
+    ],
+    [
+     -20.0,
+     10.0,
+     -1.0,
+     0,
+     1.99,
+     true
+    ],
+    [
+     -15.0,
+     10.5,
+     -2.0,
+     0,
+     1.73,
+     true
+    ],
+    [
+     -10.0,
+     11.0,
+     -2.5,
+     0,
+     1.17,
+     true
+    ],
+    [
+     -5.0,
+     12.0,
+     -2.5,
+     0,
+     -0.03,
+     true
+    ],
+    [
+     0.0,
+     13.5,
+     -2.5,
+     0,
+     -1.75,
+     true
+    ]
+   ],
+   "name": "U-chase-bow-S"
+  },
+  {
+   "deck": "upper",
+   "port": 17,
+   "side": "P",
+   "type": "long18",
+   "chase": true,
+   "phi": 30.0,
+   "at": [
+    709.25,
+    130.361,
+    111.0
+   ],
+   "back": 8.5,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 2.81,
+   "muzzle_free": true,
+   "axis_z": 121.75,
+   "opening": {
+    "x": [
+     709,
+     717
+    ],
+    "z": [
+     119,
+     126
+    ]
+   },
+   "outer_y": 123,
+   "tried": [
+    [
+     -0.0,
+     13.5,
+     2.5,
+     0,
+     -1.75,
+     true
+    ],
+    [
+     5.0,
+     12.0,
+     2.5,
+     0,
+     -0.03,
+     true
+    ],
+    [
+     10.0,
+     11.0,
+     2.5,
+     0,
+     1.17,
+     true
+    ],
+    [
+     15.0,
+     10.5,
+     2.0,
+     0,
+     1.73,
+     true
+    ],
+    [
+     20.0,
+     10.0,
+     1.0,
+     0,
+     1.99,
+     true
+    ],
+    [
+     25.0,
+     9.0,
+     0.5,
+     0,
+     2.7,
+     true
+    ],
+    [
+     30.0,
+     8.5,
+     0.0,
+     0,
+     2.81,
+     true
+    ],
+    [
+     35.0,
+     8.5,
+     -0.5,
+     0,
+     2.38,
+     true
+    ],
+    [
+     40.0,
+     8.0,
+     -1.0,
+     0,
+     2.23,
+     true
+    ]
+   ],
+   "name": "U-chase-bow-P"
+  },
+  {
+   "deck": "spar",
+   "port": 4,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    231.0,
+    204.0,
+    129.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 0.0,
+   "muzzle_free": true,
+   "axis_z": 138.75,
+   "opening": {
+    "x": [
+     226,
+     235
+    ],
+    "z": [
+     134,
+     144
+    ]
+   },
+   "outer_y": 209,
+   "name": "砲C-S01"
+  },
+  {
+   "deck": "spar",
+   "port": 4,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    231.0,
+    117.0,
+    129.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -0.0,
+   "muzzle_free": true,
+   "axis_z": 138.75,
+   "opening": {
+    "x": [
+     226,
+     235
+    ],
+    "z": [
+     134,
+     144
+    ]
+   },
+   "outer_y": 112,
+   "name": "砲C-P01"
+  },
+  {
+   "deck": "spar",
+   "port": 5,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    262.0,
+    206.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     257,
+     266
+    ],
+    "z": [
+     134,
+     144
+    ]
+   },
+   "outer_y": 211,
+   "name": "砲C-S02"
+  },
+  {
+   "deck": "spar",
+   "port": 5,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    262.0,
+    115.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     257,
+     266
+    ],
+    "z": [
+     134,
+     144
+    ]
+   },
+   "outer_y": 110,
+   "name": "砲C-P02"
+  },
+  {
+   "deck": "spar",
+   "port": 6,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    293.5,
+    208.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     289,
+     297
+    ],
+    "z": [
+     134,
+     143
+    ]
+   },
+   "outer_y": 213,
+   "name": "砲C-S03"
+  },
+  {
+   "deck": "spar",
+   "port": 6,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    293.5,
+    113.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     289,
+     297
+    ],
+    "z": [
+     134,
+     143
+    ]
+   },
+   "outer_y": 108,
+   "name": "砲C-P03"
+  },
+  {
+   "deck": "spar",
+   "port": 7,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    325.5,
+    209.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     321,
+     329
+    ],
+    "z": [
+     134,
+     142
+    ]
+   },
+   "outer_y": 214,
+   "name": "砲C-S04"
+  },
+  {
+   "deck": "spar",
+   "port": 7,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    325.5,
+    112.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     321,
+     329
+    ],
+    "z": [
+     134,
+     142
+    ]
+   },
+   "outer_y": 107,
+   "name": "砲C-P04"
+  },
+  {
+   "deck": "spar",
+   "port": 8,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    356.5,
+    210.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     352,
+     360
+    ],
+    "z": [
+     134,
+     142
+    ]
+   },
+   "outer_y": 215,
+   "name": "砲C-S05"
+  },
+  {
+   "deck": "spar",
+   "port": 8,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    356.5,
+    111.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     352,
+     360
+    ],
+    "z": [
+     134,
+     142
+    ]
+   },
+   "outer_y": 106,
+   "name": "砲C-P05"
+  },
+  {
+   "deck": "spar",
+   "port": 9,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    593.0,
+    212.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     588,
+     597
+    ],
+    "z": [
+     134,
+     144
+    ]
+   },
+   "outer_y": 217,
+   "name": "砲C-S06"
+  },
+  {
+   "deck": "spar",
+   "port": 9,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    593.0,
+    109.0,
+    128.0
+   ],
+   "back": 5.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -0.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     588,
+     597
+    ],
+    "z": [
+     134,
+     144
+    ]
+   },
+   "outer_y": 104,
+   "name": "砲C-P06"
+  },
+  {
+   "deck": "spar",
+   "port": 10,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    623.0,
+    210.0,
+    128.0
+   ],
+   "back": 6.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -1.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     618,
+     627
+    ],
+    "z": [
+     134,
+     145
+    ]
+   },
+   "outer_y": 216,
+   "name": "砲C-S07"
+  },
+  {
+   "deck": "spar",
+   "port": 10,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    623.0,
+    111.0,
+    128.0
+   ],
+   "back": 6.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -1.0,
+   "muzzle_free": true,
+   "axis_z": 137.75,
+   "opening": {
+    "x": [
+     618,
+     627
+    ],
+    "z": [
+     134,
+     145
+    ]
+   },
+   "outer_y": 105,
+   "name": "砲C-P07"
+  },
+  {
+   "deck": "spar",
+   "port": 11,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    650.5,
+    207.0,
+    131.0
+   ],
+   "back": 6.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -1.0,
+   "muzzle_free": true,
+   "axis_z": 140.75,
+   "opening": {
+    "x": [
+     646,
+     654
+    ],
+    "z": [
+     134,
+     146
+    ]
+   },
+   "outer_y": 213,
+   "name": "砲C-S08"
+  },
+  {
+   "deck": "spar",
+   "port": 11,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    650.5,
+    114.0,
+    131.0
+   ],
+   "back": 6.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -1.0,
+   "muzzle_free": true,
+   "axis_z": 140.75,
+   "opening": {
+    "x": [
+     646,
+     654
+    ],
+    "z": [
+     134,
+     146
+    ]
+   },
+   "outer_y": 108,
+   "name": "砲C-P08"
+  },
+  {
+   "deck": "spar",
+   "port": 12,
+   "side": "S",
+   "type": "carr32",
+   "chase": false,
+   "phi": 0.0,
+   "at": [
+    669.0,
+    205.0,
+    131.0
+   ],
+   "back": 6.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -1.0,
+   "muzzle_free": true,
+   "axis_z": 140.75,
+   "opening": {
+    "x": [
+     662,
+     675
+    ],
+    "z": [
+     135,
+     147
+    ]
+   },
+   "outer_y": 211,
+   "name": "砲C-S09"
+  },
+  {
+   "deck": "spar",
+   "port": 12,
+   "side": "P",
+   "type": "carr32",
+   "chase": false,
+   "phi": -0.0,
+   "at": [
+    669.0,
+    116.0,
+    131.0
+   ],
+   "back": 6.0,
+   "dx": 0.0,
+   "dz": 0,
+   "muzzle_beyond_outer": -1.0,
+   "muzzle_free": true,
+   "axis_z": 140.75,
+   "opening": {
+    "x": [
+     662,
+     675
+    ],
+    "z": [
+     135,
+     147
+    ]
+   },
+   "outer_y": 110,
+   "name": "砲C-P09"
+  },
+  {
+   "deck": "lower",
+   "port": "stern",
+   "side": "S",
+   "type": "long18",
+   "chase": true,
+   "phi": 85.0,
+   "at": [
+    122.729,
+    175.789,
+    83.0
+   ],
+   "back": 14.0,
+   "dx": -2.5,
+   "dz": 0,
+   "muzzle_beyond_outer": -2.02,
+   "muzzle_free": true,
+   "axis_z": 93.75,
+   "opening": {
+    "y": [
+     174,
+     184
+    ],
+    "z": [
+     90,
+     101
+    ]
+   },
+   "outer_x": 109,
+   "tried": [
+    [
+     70.0,
+     16.5,
+     2.0,
+     0,
+     -5.15,
+     true
+    ],
+    [
+     75.0,
+     16.5,
+     0.5,
+     0,
+     -4.72,
+     true
+    ],
+    [
+     80.0,
+     15.5,
+     -1.0,
+     0,
+     -3.52,
+     true
+    ],
+    [
+     85.0,
+     14.0,
+     -2.5,
+     0,
+     -2.02,
+     true
+    ],
+    [
+     90.0,
+     16.5,
+     -3.0,
+     0,
+     -4.75,
+     true
+    ],
+    [
+     95.0,
+     14.0,
+     2.5,
+     0,
+     -2.02,
+     true
+    ],
+    [
+     100.0,
+     14.5,
+     1.5,
+     0,
+     -2.45,
+     true
+    ]
+   ],
+   "name": "L-chase-stern-S"
+  },
+  {
+   "deck": "lower",
+   "port": "stern",
+   "side": "P",
+   "type": "long18",
+   "chase": true,
+   "phi": -85.0,
+   "at": [
+    122.729,
+    145.211,
+    83.0
+   ],
+   "back": 14.0,
+   "dx": 2.5,
+   "dz": 0,
+   "muzzle_beyond_outer": -2.02,
+   "muzzle_free": true,
+   "axis_z": 93.75,
+   "opening": {
+    "y": [
+     174,
+     184
+    ],
+    "z": [
+     90,
+     101
+    ]
+   },
+   "outer_x": 109,
+   "tried": [
+    [
+     -100.0,
+     14.5,
+     -1.5,
+     0,
+     -2.45,
+     true
+    ],
+    [
+     -95.0,
+     14.0,
+     -2.5,
+     0,
+     -2.02,
+     true
+    ],
+    [
+     -90.0,
+     16.5,
+     -3.0,
+     0,
+     -4.75,
+     true
+    ],
+    [
+     -85.0,
+     14.0,
+     2.5,
+     0,
+     -2.02,
+     true
+    ],
+    [
+     -80.0,
+     15.5,
+     1.0,
+     0,
+     -3.52,
+     true
+    ],
+    [
+     -75.0,
+     16.5,
+     -0.5,
+     0,
+     -4.72,
+     true
+    ],
+    [
+     -70.0,
+     16.5,
+     -2.0,
+     0,
+     -5.15,
+     true
+    ]
+   ],
+   "name": "L-chase-stern-P"
+  },
+  {
+   "deck": "upper",
+   "port": "stern",
+   "side": "S",
+   "type": "long18",
+   "chase": true,
+   "phi": 80.0,
+   "at": [
+    108.953,
+    181.673,
+    106.0
+   ],
+   "back": 4.5,
+   "dx": 3.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.62,
+   "muzzle_free": true,
+   "axis_z": 116.75,
+   "opening": {
+    "y": [
+     174,
+     184
+    ],
+    "z": [
+     113,
+     124
+    ]
+   },
+   "outer_x": 104,
+   "tried": [
+    [
+     70.0,
+     6.5,
+     3.0,
+     0,
+     3.91,
+     true
+    ],
+    [
+     75.0,
+     6.0,
+     2.5,
+     0,
+     4.91,
+     true
+    ],
+    [
+     80.0,
+     4.5,
+     3.0,
+     0,
+     6.62,
+     true
+    ],
+    [
+     85.0,
+     5.0,
+     2.5,
+     0,
+     6.51,
+     true
+    ],
+    [
+     90.0,
+     5.5,
+     -3.0,
+     0,
+     6.25,
+     true
+    ],
+    [
+     95.0,
+     5.0,
+     -2.5,
+     0,
+     6.51,
+     true
+    ],
+    [
+     100.0,
+     4.5,
+     -3.0,
+     0,
+     6.62,
+     true
+    ]
+   ],
+   "name": "U-chase-stern-S"
+  },
+  {
+   "deck": "upper",
+   "port": "stern",
+   "side": "P",
+   "type": "long18",
+   "chase": true,
+   "phi": -80.0,
+   "at": [
+    108.953,
+    139.327,
+    106.0
+   ],
+   "back": 4.5,
+   "dx": -3.0,
+   "dz": 0,
+   "muzzle_beyond_outer": 6.62,
+   "muzzle_free": true,
+   "axis_z": 116.75,
+   "opening": {
+    "y": [
+     174,
+     184
+    ],
+    "z": [
+     113,
+     124
+    ]
+   },
+   "outer_x": 104,
+   "tried": [
+    [
+     -100.0,
+     4.5,
+     3.0,
+     0,
+     6.62,
+     true
+    ],
+    [
+     -95.0,
+     5.0,
+     2.5,
+     0,
+     6.51,
+     true
+    ],
+    [
+     -90.0,
+     5.5,
+     -3.0,
+     0,
+     6.25,
+     true
+    ],
+    [
+     -85.0,
+     5.0,
+     -2.5,
+     0,
+     6.51,
+     true
+    ],
+    [
+     -80.0,
+     4.5,
+     -3.0,
+     0,
+     6.62,
+     true
+    ],
+    [
+     -75.0,
+     6.0,
+     -2.5,
+     0,
+     4.91,
+     true
+    ],
+    [
+     -70.0,
+     6.5,
+     -3.0,
+     0,
+     3.91,
+     true
+    ]
+   ],
+   "name": "U-chase-stern-P"
+  }
+ ]
+}
