@@ -698,5 +698,101 @@
   ],
   "sail_color": "#57524c",
   "provenance": "channels 掛在船殼外面、chain plates 往下接 ⇒ 照船殼換算（z 109 插 23，chain plates 跟著加長）；pin rails、fife rails 站在上甲板上 ⇒ 整件抬 23（同上甲板）；兩者 x 照拉長。繩：砲索、梯子、entry、舵輪那幾組等那些部件做好再接；bobstays 要船頭 knee（還沒做）。帆色（設計決定，奇幻）：暖深灰 #57524c"
+ },
+ "rooms_build": {
+  "title": "階段八a 房間、艙壁與兩座梯子 v1 —— 憲法號的照換算搬",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_before": 1728778,
+  "rule": "房間、艙壁都在 z < 109（不插層）、而且**沒有一格落在拉長那一段 x 439..471**（量過 0 格）⇒ 換算退化成純平移：x < 439 不動、x ≥ 472 推 +66。梯子一座一座整座搬（26 連通的一塊算一座）：整座在 x < 472 ⇒ 不動（在拉長那一段裡的照『點只取原地那一份』）、整座在 x ≥ 472 ⇒ +66；跨界的 ⇒ 擋下。",
+  "decks": {
+   "orlop": {
+    "deck_work": "basecamp-ember-01m-deck-orlop",
+    "bulkheads": {
+     "from": "rooms-orlop-bulkheads",
+     "work": "basecamp-ember-01m-rooms-orlop-bulkheads",
+     "title": "餘燼號 orlop 艙壁",
+     "link": "艙壁"
+    },
+    "side": {
+     "from": "rooms-orlop-side",
+     "at": [
+      201,
+      168,
+      42
+     ],
+     "at_mirror": [
+      201,
+      101,
+      42
+     ],
+     "work": "basecamp-ember-01m-rooms-orlop-side",
+     "title": "餘燼號 orlop 舷側艙房（一舷）",
+     "link": "艙房"
+    }
+   },
+   "berth": {
+    "deck_work": "basecamp-ember-01m-deck-berth",
+    "bulkheads": {
+     "from": "rooms-berth-bulkheads",
+     "work": "basecamp-ember-01m-rooms-berth-bulkheads",
+     "title": "餘燼號 berth deck 艙壁",
+     "link": "艙壁"
+    },
+    "side": {
+     "from": "rooms-berth-side",
+     "at": [
+      173,
+      180,
+      60
+     ],
+     "at_mirror": [
+      173,
+      103,
+      60
+     ],
+     "reuse": true,
+     "link": "艙房"
+    },
+    "ladders": {
+     "from": "ladders-berth",
+     "work": "basecamp-ember-01m-ladders-berth",
+     "title": "餘燼號 下層砲甲板 → berth deck 的梯子",
+     "link": "梯子"
+    }
+   },
+   "lower": {
+    "deck_work": "basecamp-ember-01m-deck-lower",
+    "bulkheads": {
+     "from": "rooms-gun-bulkheads",
+     "work": "basecamp-ember-01m-rooms-lower-bulkheads",
+     "title": "餘燼號 下層砲甲板 艙壁",
+     "link": "艙壁"
+    },
+    "side": {
+     "from": "rooms-gun-side",
+     "at": [
+      201,
+      184,
+      83
+     ],
+     "at_mirror": [
+      201,
+      111,
+      83
+     ],
+     "reuse": true,
+     "link": "艙房"
+    },
+    "ladders": {
+     "from": "ladders-gun",
+     "work": "basecamp-ember-01m-ladders-lower",
+     "title": "餘燼號 上層砲甲板 → 下層砲甲板 的梯子",
+     "link": "梯子"
+    }
+   }
+  },
+  "reuse_note": "berth／下層砲甲板的舷側艙房整件都在 x < 439 ⇒ 換算之後跟憲法號逐格相同 ⇒ 直接關聯憲法號那件子作品（同帆桁的做法：一份事實源）。",
+  "not_now": "新梯子（上層砲甲板 → 上甲板、上甲板 → poop）、上甲板 clamps、砲具（gun fittings，跟砲那一階段一起）",
+  "provenance": "Tim 2026-10-13「可以繼續造船了」；todo 下一步照順序：房間與艙壁（憲法號的照換算搬）、梯子、上甲板 clamps ⇒ 這一刀先做房間、艙壁與憲法號原有的兩座梯子。"
  }
 }
