@@ -2046,5 +2046,61 @@
    "why": "憲法號 limber（dy 6–12、底肋頂上那層內板 177 再往上一格）讓開斜肋 ⇒ 斜肋搬走的地方補回 limber、搬來的地方蓋過 limber；餘燼號現有 limber 3,948 格底下全是 177（量過）"
   },
   "why": "拉長（plan stretch）是一欄一欄搬：x 439..471 三份、x ≥ 472 +66 ⇒ 跨過那一段的斜肋斷成鋸齒；整根照頭的位置搬 ⇒ 連續。頭在 439..471 的斜肋沒有（量過），有的話停。"
+ },
+ "fittings_build": {
+  "title": "階段十八 甲板屬具 v1（自由設計）：羅經櫃（舵輪正前方）、主絞盤（前甲板中線；v1 最靠主桅太擠），0.02 m 子作品當外部模型掛甲板-spar",
+  "assembly": "basecamp-ember-01m-assembly",
+  "assembly_voxels": 1813919,
+  "deck_work": "basecamp-ember-01m-deck-spar",
+  "scale": 0.2,
+  "y": 160.5,
+  "search_z": [
+   115,
+   140
+  ],
+  "deck_stand_z": 128,
+  "max_gap": 1,
+  "keep_x": 6,
+  "keep_y": 4,
+  "helm_gap": 6,
+  "items": [
+   {
+    "key": "binnacle",
+    "name": "羅經櫃",
+    "label": "羅經櫃",
+    "work": "basecamp-ember-01m-binnacle",
+    "cells": "masks/fittings/binnacle.vox.txt",
+    "pivot": [
+     12,
+     24,
+     0
+    ],
+    "half_x": 2.4,
+    "search_x": [
+     260,
+     300
+    ],
+    "pick": "first"
+   },
+   {
+    "key": "capstan",
+    "name": "主絞盤",
+    "label": "主絞盤",
+    "work": "basecamp-ember-01m-capstan",
+    "cells": "masks/fittings/capstan.vox.txt",
+    "pivot": [
+     40,
+     40,
+     0
+    ],
+    "clear": 5,
+    "search_x": [
+     262,
+     700
+    ],
+    "pick": "mid"
+   }
+  ],
+  "why": "兩艘船原本都沒有羅經櫃與絞盤。羅經櫃在舵輪正前方（舵手看得到），前一個輪與櫃之間留 0.6 m（helm_gap 6 格）站人；主絞盤取上甲板中線上四周 0.5 m 淨空（clear 5）、不壓梯口（foot／head 前後 6 格、兩側 4 格）、不蓋艙口（腳印正下方要是甲板、高低差 ≤ 1）的位置。插桿收起來不做。尺寸照一般比例，未查證。"
  }
 }

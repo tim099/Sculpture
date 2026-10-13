@@ -280,3 +280,14 @@
 - 過程圖：`overlays/fix_wardroom_gold.png`（只畫軍官室，正對艙壁）。
 ### 船尾頂角的舊翹角
 - 量：船殼在 x 80–140 最高 z 160（＝ taffrail 頂）、高過 160 的 0 格；整個船尾高過 160 的只有 gallery 設計的金尖頂 24 格（後廊-P／S 各 12，到 z 166）。正後方看兩角只剩 gallery 冠與金尖頂（`overlays/check_stern_astern_now.png`）；4b 的正後方圖裡那對金色翹角現在沒有了。⇒ 沒東西可修；哪一階段不見的沒追。
+## 階段十八 羅經櫃與主絞盤（2026-10-13，Tim：「然後繼續」⇒ todo 全做完；兩艘船原本都沒有，自由設計）
+設計 plan.json `fittings_build`；產生 `design/draft_fittings.py`（兩件模型）⇒ `masks/fittings/{binnacle,capstan}.vox.txt`、`verify_fittings.json`；擺放 `design/draft_fittings_place.py` ⇒ `fittings_placement.json`、`verify_fittings_place.json`；套用 `design/tools/fittings_apply.py parts|models`。
+- 子作品（0.02 m、parent 船殼、tags sub，當外部模型縮 0.2 掛 `甲板-spar`，同舵輪）：
+  - `-binnacle` 羅經櫃 24×48×64、46,600 格：三格木櫃（兩個羅經夾一盞燈）、朝船尾三扇琥珀窗、山形頂、黃銅頂飾。
+  - `-capstan` 主絞盤 80×80×66、134,892 格：鐵底圈、鼓身＋8 條肋、絞盤頭（直徑約 1.5 m）12 個插桿孔、上下鐵箍、黃銅蓋；插桿收起來不做。
+  - 兩件各 1 元件、左右差 0。尺寸照一般比例，未查證。
+- 擺法（同舵輪／砲）：中線、轉角 0、x 每 0.5 格試；格心＋八角不落在「組裝件＋spar carronade＋已擺的模型」；腳印正下方要是甲板、高低差 ≤ 1；保留區：梯子在上甲板的 foot／head 前後 6、兩側 4，舵輪前 0.6 m 給舵手站。
+  - 羅經櫃：舵輪正前方第一個 ⇒ at (264, 160.5, 128)，跟舵輪外框前緣隔 6.5 格。
+  - 主絞盤 v1：取最靠主桅 ⇒ x 333，0 碰撞但絞盤頭貼著主桅 fife rail、後面是 after-upper 梯口（看圖才發現）⇒ 加「四周 0.5 m 甲板以上淨空」⇒ 後半段一個位置都沒有，只剩前甲板 594.5..622.5 ⇒ 取中間 at (608.5, 160.5, 128)（前桅 x ≈ 656 之後）。不行的原因：艙口 594、高低差 176、太擠 36、保留區 14。
+- 讀數：模型 **249**、models_broken 0；組裝件格數不變 1,813,919（模型不是 voxel）；穿過兩件外框的繩 0；兩支程式重跑 sha256 相同。
+- 過程圖：`overlays/stage18_{binnacle_part,capstan_part,helm,capstan}.png`。
