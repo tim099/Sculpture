@@ -291,3 +291,11 @@
   - 主絞盤 v1：取最靠主桅 ⇒ x 333，0 碰撞但絞盤頭貼著主桅 fife rail、後面是 after-upper 梯口（看圖才發現）⇒ 加「四周 0.5 m 甲板以上淨空」⇒ 後半段一個位置都沒有，只剩前甲板 594.5..622.5 ⇒ 取中間 at (608.5, 160.5, 128)（前桅 x ≈ 656 之後）。不行的原因：艙口 594、高低差 176、太擠 36、保留區 14。
 - 讀數：模型 **249**、models_broken 0；組裝件格數不變 1,813,919（模型不是 voxel）；穿過兩件外框的繩 0；兩支程式重跑 sha256 相同。
 - 過程圖：`overlays/stage18_{binnacle_part,capstan_part,helm,capstan}.png`。
+## 階段十九 旗（2026-10-13，Tim：「遊戲用的 ⇒ 外部完成＆內部大致構造＆必要功能」⇒ 先補外觀）
+設計 plan.json `flags_build`；產生 `design/draft_flags.py` ⇒ `masks/flags/{ensign,pennant}.png`、`masks/flags/pole_{mizzen,main}.vox.txt`、`verify_flags.json`；套用 `design/tools/flags_apply.py`。
+- 旗是帆（貼像素圖，TASK-0530）：靠桅那條邊釘住（bind）、飛出去的角 free 給風吹；vxk 帶貼圖（遊戲那側跑布料）。
+- 船尾旗 `ensign` 4 m × 2.3 m、圖 48×28：暗紅底、金邊、正中一團手畫的火（16×19；v1 用公式畫 ⇒ 芯太高、像拱門 ⇒ 改手畫）。掛處：斜桁頂端不行（spanker 張在中線、旗會疊進帆面）；後桅 tg-head 也不行（mizzen-royal 帆張到 z 525，桅冠 534–536 底下只剩 0.9 m）⇒ 桅冠上加旗桿（後桅子作品 x 187、z 537–561、頂上 3×3 白冠，34 格）、旗掛旗桿船頭側。
+- 長旗 `pennant` 0.4 m × 4 m 三角、圖 64×6：靠桅 8 欄金、暗紅、尾端 10 欄燕尾。v1 8 m 直接掛主桅桅冠 ⇒ 4.7 m/s 的風吹不起來、整條垂下蓋在 main-royal 帆前面（布沒有碰撞）⇒ 主桅也加旗桿（x 341、z 673–692，29 格）、縮成 4 m、掛 z 687–691（royal 桁頂 662 以上留 25 格）⇒ 平均位移 z −5、最鼓 17.5。
+- 讀數：帆 **17**（15 ＋ 2）、sails_broken 0；組裝件 **1,813,982**（＋34＋29）、1 元件、空腔 0、link_overlap 0、鏡像差不變；重跑（扣掉本階段旗桿自己的格再對格數）sha256 相同。寫入時 IOException 1 次、重試過。
+- 過程圖：`overlays/stage19_flags_{ship,ensign,pennant}.png`。
+- ⚠ vxk 還沒重匯（上一次 6a04b4a8 是階段十八之前）⇒ 給 ame 前再匯。
