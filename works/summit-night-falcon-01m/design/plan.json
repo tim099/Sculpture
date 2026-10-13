@@ -1,0 +1,38 @@
+{
+  "work": "summit-night-falcon-01m",
+  "meters_per_voxel": 0.1,
+  "frame": "X 船長、船頭朝 +X；Y 船寬、中線格 80（連續座標中線 y = 80.5，dy = y − 80）；Z 高度，z 0 ＝ 龍骨底面。格 k 佔 [k, k+1)，判斷一律用格心。",
+  "lines": {
+    "keel": { "x_aft": 70, "x_fwd": 253, "half": 1.5, "rabbet_z": 4 },
+    "sternpost": { "x_at_keel": 70, "rake": 8, "rake_height": 36, "siding": 3 },
+    "stem": { "x_at_keel": 253, "rx": 23, "rz": 46, "siding": 3 },
+    "sheer": { "x_low": 150, "z_low": 30, "x_aft": 62, "z_aft": 36, "x_fwd": 273, "z_fwd": 42 },
+    "dwl": 15,
+    "midship": { "x": 175, "half_beam": 32, "z_max_beam": 24, "deadrise_deg": 8, "bilge_radius": 13, "tumblehome": 1.5, "tumblehome_height": 16 },
+    "transom": { "z": 18, "rake": 0.35, "virtual_extension": 60 },
+    "fullness": {
+      "fore": { "a_bottom": 1.8, "a_top": 2.2, "b_bottom": 1.0, "b_top": 0.55 },
+      "aft": { "a_bottom": 1.6, "a_top": 2.2, "b_bottom": 1.4, "b_top": 0.5 }
+    },
+    "stations": 11,
+    "waterlines": [6, 9, 12, 15, 20, 25],
+    "shell_preview_thickness": 4
+  },
+  "provenance": {
+    "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
+    "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
+    "keel.rabbet_z": "設計決定：龍骨深約 0.4 m",
+    "sternpost": "設計決定：艉柱後傾 8 格／36 格高（甲板長約 210 是龍骨 ×1.15 的估計，前後傾斜一起湊）",
+    "stem": "設計決定：艏柱前緣四分之一橢圓（往前 23、往上 46）",
+    "sheer": "設計決定：舷弧最低點靠中後（x 150、z 30），船尾 +6、船頭 +12",
+    "dwl": "設計決定：船殼吃水 1.5 m（插板收起）—— 原文「比鴴號只深半尺」字面撐不住 31 人 12 門砲，見 notes.md 第零階段",
+    "midship.half_beam": "參考資料：Oswego 船寬 21 ft ＝ 6.4 m ⇒ 半寬 32 格",
+    "midship.x": "設計決定：最大寬在水線長 55% 處（往船頭偏，十八世紀快船的「鱈魚頭、鯖魚尾」）",
+    "midship.deadrise_deg": "設計決定：斜升角 8°（淺吃水只撐得起平底）",
+    "midship.bilge_radius": "設計決定：舭部半徑 1.3 m",
+    "midship.tumblehome": "設計決定：舷頂往內收 1.5 格",
+    "transom": "設計決定：方艉，翼艉板在水線上 0.3 m（z 18），往後斜 0.35；virtual_extension 控制艉板寬度",
+    "fullness": "設計決定：f(ξ) ＝ (1 − ξ^a)^b，ξ ＝ 離最大寬那一站的距離 ÷ 到那一層端點的距離；a、b 從底（rabbet）到頂（舷弧最低點）線性漸變 —— 底部尖、上面豐滿（首部外飄）",
+    "shell_preview_thickness": "設計決定：預覽用殼厚 0.4 m（外板＋肋骨；正式做法下一階段定）"
+  }
+}

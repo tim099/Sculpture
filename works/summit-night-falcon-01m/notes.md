@@ -59,3 +59,16 @@
 - Maritime History of the Great Lakes（Oswego brigantine 殘片）：https://images.maritimehistoryofthegreatlakes.ca/126300/data
 - Tall Ships Adventure（SV Black Jack）：https://tallshipsadventure.org/our-fleet
 - Mercantile（centerboard schooner）：搜尋摘要引的是 NPS 國家史蹟登錄文件，結果裡有兩份 npgallery 文件（`NRHP/GetAsset/NHLS/82005265_text`、`GetAsset/5152a2f3-…`）—— ⚠ **沒核對哪一份是 Mercantile**，用到插板槽細節前要打開讀
+
+## 階段一 新圖紙 01：線形（2026-10-13，wake #117）
+設計 `design/plan.json`（lines 段，每個數字有 provenance）；產生 `design/draft_lines.py` ⇒ `sheet01_lines_v1.png`、`compare01_concept_v1.png`、`masks/hull/shell_preview.vox.txt`、`verify_lines.json`。重跑四個產物逐位元組相同。
+- 曲面：半寬 hb(x, z) ＝ 船中剖面 hb_mid(z) × 豐滿度 f(ξ) ＝ (1 − ξ^a)^b；船中剖面 ＝ 斜升 8° 的平底 → 舭部 R 13 → 直舷到 z 24 → 舷頂內收 1.5。龍骨／艏柱／艉柱半寬 1.5。方艉：z ≥ 18 在艉板面截斷。
+- 讀數（verify_lines.json）：水線長 19.35 m、水線寬 6.23 m、吃水 1.5 m；排水體積 67.4 m³ ⇒ **69 t**（海水）；Cb 0.372、Cm 0.573、Cp 0.65、Cwp 0.687；L/B 3.1、B/T 4.16；浮心在水線長 51.7%（從船尾量）。
+  - ⚠ Cm 低是因為吃水 15 格裡有 4 格是 3 格寬的龍骨（船身本體吃水 11 格），不是剖面瘦。
+  - ⚠ 69 t 不能跟 Oswego 的「160 噸」比：那是載重噸位（burthen），不是排水量 —— 兩把尺量的不是同一件事。
+- 平順度：七條水線（6、9、12、15、20、25、30）全部單峰；沿 x 的二階差分最大 0.60（舷弧那條）。
+- 殼的預覽（厚 4 格）：71,116 格、1 個元件、封閉空腔 0、左右鏡像差 0；貼進**草稿**看 3D（`overlays/stage1_shell_preview_yaw{45,0,-135,135}.png`（檔名照鏡頭 yaw 角；🩸 第一版照角度猜成 q／side／stern／bow，打開看才發現三個名不符實 —— 只記角度，不替畫面下結論）），看完 discard（作品 0 格、events 空）。
+- 🩸 v1 的錯：方艉那幾層的後端點在 z 18 直接切換 ⇒ 船尾 0、1 站剖面在翼艉板高度折出台階。改成 smoothstep 漸變（值與斜率都連續）⇒ 台階消失；排水量不變（改的是水線以上）。
+- 定稿圖第三方對照（`compare01_concept_v1.png`；龍骨底與船長照**像素量**對齊）：定稿圖龍骨底 y 497（x 94..414 逐欄最低深色像素）、船中欄杆 y≈390（±8）、船長 艉廊外緣 x≈54 → 艏柱頂 x≈545（兩端目測 ±10）⇒ 欄杆高 ÷ 船長 ≈ **0.22**；船尾有後甲板＋船尾樓。本線形到舷弧 0.14、加 1 m 舷牆 0.185 ⇒ **定稿圖的船舷約高兩成**（跟加了舷牆的比）。
+  - 🩸 第一版是目測（龍骨 y 545、船長 440 px）⇒ 寫成「0.24、約高三成」，對照圖還標「龍骨底兩邊同一條線」—— 其實差 48 px。做漫畫時看頁圖才發現，改用逐欄掃像素重量。
+  ⇒ 待 Tim 拍板（見 todo）：水線以下不動（淺吃水是船設「錯了劇情會垮」那一條），水線以上用後甲板／船尾樓／舷牆把輪廓補回來？
