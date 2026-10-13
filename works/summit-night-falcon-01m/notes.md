@@ -274,3 +274,17 @@ Tim：「提交吧 然後繼續掛帆」。設計 plan.json `sails`（provenance
   - 鼓度：方帆最鼓 ≈ 寬的 32–35%（kotoko：真的方帆約一到兩成）。旋鈕是風（basecamp 試驗表）；`overlays/stage11_sails_wind2.4_yaw45.png` 是 2.4 m/s 的單次覆寫、預設沒改 —— 等 Tim 選。
 - 寫入失敗：IOException 2 次（main-course-lift-P、fore-topsail-sheet-S），重跑過。
 - 過程圖：`overlays/stage11_sails_yaw{45,-135,90,160,-30}.png`、`stage11_sails_wind2.4_yaw45.png`。
+
+## 階段十二 新圖紙 12：旗 —— 落格（2026-10-13 下午，wake #117）
+Tim：「提交吧 然後繼續做旗」。設計 plan.json `flag`（provenance `flag`、`flag.place`、`flag.size`）；產生 `design/draft_flag.py` ⇒ `verify_flag.json`、`masks/flag/staff.vox.txt`；讀數 `design/check_flag.py` ⇒ `verify_flag_post.json`。重跑逐位元組相同；`nf_state.py` 加 stage12（主桅子作品）。
+- **圖案（作者決定）**：候選 v3 定稿 —— 正面俯衝的隼、金喙尖、深藍底（24×16，`summit-night-falcon-01m-flag/design/make_flag.py`）。原作《桅頂的賭注》只寫「這片海的船靠旗與徽記辨識」、沒寫旗的圖案；002 卡戎奪船、剝下舵輪的隼徽鑄成銅牌；007 凜回到船上按著那塊疤。我定：舵輪上的徽是被剝掉的傷，旗是她重新升起來的那一面 —— 還是隼。
+  ⚠ 船設卡（ArtGallery/Comic/summit-masthead-bet/Characters/night-falcon.md）**沒有改**：寫進去 gura 就會照畫，那是規格，等 Tim 說。⛔ 不照定稿圖的骷髏旗（第零階段已記）。
+  - 候選作品 `-flag` 改名「設計與試跑（v1–v3；v3 定稿，正式的那面掛在組裝件 ensign）」—— 標題原本寫「候選」，定稿之後就比事實小。
+- **位置**：主桅 truck 上一根 2.4 m 旗桿（一格粗、頂上十字鐵帽，29 格，加進主桅子作品）。別的三個地方用已經量過的位置對過（⚠ 沒有各試掛一次）都不行：gaff peak（旗往前飄壓在主帆上）、船尾旗桿（會撞 boom）、直接掛 truck（main topgallant stay 從 z 244.5 往前下，旗會橫過它）。
+  - 主桅標記 stage12 begin／end。🩸 第一次下標記時 note 裡有空格、我的 shell 小函式把它拆開 ⇒ 兩個標記沒下、旗桿先落了 ⇒ 用 upto= 補在落格前後那兩個事件上；讀回：stage12:begin 匯出 3,382（＝ 階段七）、現在 3,411（＋29）。
+- **旗**（組裝件的帆 `ensign`，貼圖 `textures/ensign.png`）：hoist 20 × fly 30（2 × 3 m）、hoist 那條邊釘在旗桿上（固定點 主桅/flag-top、flag-bot）、fly 兩角 free；res 16。
+- 讀數：
+  - 引擎 stats：**95,368 格**（＋29）、link_overlap 0、1 個元件、空腔 0、左右差 0；`sub=sails` 9 面（帆 8＋旗）全 ok、sails_broken 0、ropes_broken 0；旗最鼓 −15.6、平均位移 (−1.12, −4.19, −3.26)。
+  - `check_flag.py`：結果帳 95,368／95,368 缺 0、多 0、顏色不同 0；模擬後旗 3,504 個頂點落在實心（格、帆桁）0；離別的帆最近 40.1 格；281 條繩裡最近的是主桅 topgallant backstays／shrouds 6.0 格（旗的 hoist 底 250.5 到它們的上端 244.5）；最近那條繩往旗挪 3 格 ⇒ 報 3。貼圖：組裝件 textures/ensign.png 跟來源逐位元組相同。
+  - 🩸 量尺兩把：① OBJ 讀取用名字當鍵 —— **有貼圖的帆按顏色拆成三個同名物件**（旗 ＝ sail_8／9／10），後面的覆寫前面的，第一次只讀到 24 點的金喙、報「0 碰撞」（量的不是旗）⇒ 同名合併（帆 8 面重跑一樣）；② 拿旗的最低 z 比 stay 起點的 z —— 最低點在旗尾、stay 起點在桅邊，兩個不同地方 ⇒ 改量到每一條繩的距離。
+- 過程圖：`overlays/stage12_flag_close_yaw{90,-90}.png`、`stage12_ship_yaw{45,120}.png`。

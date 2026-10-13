@@ -21,6 +21,7 @@ STAGES = [
     ('stage7', 'verify_masts.json', {'hull': 'hull', 'mast_fore': 'mast_fore', 'mast_main': 'mast_main', 'bowsprit': 'bowsprit', 'channels': 'channels'}),
     ('stage9', 'verify_rigging.json', {'channels': 'channels'}),       # 階段八（帆桁）是外部模型，不動任何一件的格
     ('stage10', 'verify_belaying.json', {'fiferails': 'fife', 'belaying_side': 'side'}),
+    ('stage12', 'verify_flag.json', {'mast_main': 'mast_main'}),          # 階段十一（帆）是布，不動格
 ]
 
 

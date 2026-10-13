@@ -1,0 +1,111 @@
+{
+  "anchors": {
+    "mast_main": [
+      {
+        "at": [
+          144,
+          80,
+          270
+        ],
+        "kind": "flag-hoist",
+        "name": "flag-top",
+        "world": [
+          144,
+          80,
+          270
+        ]
+      },
+      {
+        "at": [
+          144,
+          80,
+          250
+        ],
+        "kind": "flag-hoist",
+        "name": "flag-bot",
+        "world": [
+          144,
+          80,
+          250
+        ]
+      }
+    ]
+  },
+  "flat_flag_hits": {},
+  "sail": {
+    "bind": "3",
+    "color": "#f2ead8",
+    "corner_names": [
+      "hoist_top",
+      "fly_top",
+      "fly_bottom",
+      "hoist_bottom"
+    ],
+    "corners": [
+      "主桅/flag-top",
+      "174.5000,80.5000,270.5000",
+      "174.5000,80.5000,250.5000",
+      "主桅/flag-bot"
+    ],
+    "corners_world": [
+      [
+        144.5,
+        80.5,
+        270.5
+      ],
+      [
+        174.5,
+        80.5,
+        270.5
+      ],
+      [
+        174.5,
+        80.5,
+        250.5
+      ],
+      [
+        144.5,
+        80.5,
+        250.5
+      ]
+    ],
+    "free": "fly_top,fly_bottom",
+    "fullness": 1.06,
+    "name": "ensign",
+    "note": "夜隼號的旗（v3：俯衝的隼）—— 階段十二，主桅 truck 上的旗桿",
+    "res": 16,
+    "texture": "D:/Unity/Valhalla/Sculpture/works/summit-night-falcon-01m-flag/textures/ensign.png",
+    "texture_sha256": "8ccfe6e24dba1406686b2d0c9023bde22dbb66c8519e6144b43e0af9e20d076d"
+  },
+  "staff": {
+    "cells": 29,
+    "mast_components_after": 1,
+    "truck_top_z": 247,
+    "x": 144,
+    "z": [
+      248,
+      272
+    ]
+  },
+  "stamp_order": {
+    "mast_main": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/flag/staff.vox.txt",
+        "name": "staff",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "af809be3a4a19c64ea3c5d2a59b1b62b8d2247a14fcd1f5743163f5488af59f9",
+        "voxels": 29
+      }
+    ]
+  }
+}

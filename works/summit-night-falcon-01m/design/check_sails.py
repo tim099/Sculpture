@@ -15,10 +15,17 @@ from draft_sails import seg_dist
 
 
 def read_obj(path):
+    # 同名的 o 要合併：有貼圖的帆按顏色拆成幾個物件（旗 ＝ sail_8／9／10 都叫 ensign）—— 🩸 v1 用名字當鍵直接覆寫，只剩最後那塊 24 點的金喙
     S = {}; cur = None; V = []; F = []; vbase = 0; nv = 0
+    def put(name, V, F):
+        V, F = np.array(V), np.array(F) - 1
+        if name in S:
+            V0, F0 = S[name]; S[name] = (np.vstack([V0, V]), np.vstack([F0, F + len(V0)]) if len(F) else F0)
+        else:
+            S[name] = (V, F)
     for l in open(path, encoding='utf-8'):
         if l.startswith('o '):
-            if cur: S[cur] = (np.array(V), np.array(F) - 1)
+            if cur: put(cur, V, F)
             m = re.match(r'o sail_\d+ # (.+)', l.strip()); cur = m.group(1) if m else None; V = []; F = []; vbase = nv
         elif l.startswith('v '):
             nv += 1
@@ -26,7 +33,7 @@ def read_obj(path):
                 x, z, y = map(float, l.split()[1:4]); V.append((x, y, z))
         elif l.startswith('f ') and cur:
             F.append([int(t.split('/')[0]) - vbase for t in l.split()[1:4]])
-    if cur: S[cur] = (np.array(V), np.array(F) - 1)
+    if cur: put(cur, V, F)
     return S
 
 

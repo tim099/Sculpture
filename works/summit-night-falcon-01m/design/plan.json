@@ -151,6 +151,12 @@
     "stack_margin": 5,
     "sheet_thickness": { "course": 0.45, "topsail": 0.35, "head": 0.35 }
   },
+  "flag": {
+    "mast": "main", "staff_len": 24, "staff_color": 177, "cap_color": 36,
+    "hoist": 20, "fly": 30, "top_below_staff_top": 1,
+    "texture": "../../summit-night-falcon-01m-flag/textures/ensign.png", "texture_px": [24, 16],
+    "res": 16, "fullness": 1.06
+  },
   "provenance": {
     "keel.x_aft..x_fwd": "參考資料：Oswego 雙桅橫帆船（1756）龍骨 60 ft ＝ 18.3 m ⇒ 183 格（70..253）",
     "keel.half": "設計決定：龍骨寬約 0.3 m ⇒ 3 格（y 79..81）",
@@ -248,6 +254,9 @@
     "sails.topsail_clew_dz": "參考資料（轉引）：topsail 的下角初始在下一根帆桁同舷 earing 上 3 格（憲法號 sails_test）",
     "sails.mainsail": "設計決定：gaff bot8 → bot64（throat、peak；gaff 底面 —— 🩸 第一版用 top 點（頂面），模擬後布穿過 gaff 身體 12 點）、boom top96 → top8（clew、tack）；邊 0（gaff）、2（boom）、3（桅）釘住，只有 leech 自由（憲法號 spanker 同）",
     "sails.head": "設計決定：三根前 stay 各一面（brigantine 常見：fore staysail、jib、flying jib）；head 在 stay 上 head_f 處（憲法號 70–80%）、clew ＝ tack 往船尾 foot_ratio × luff 長、上翹 foot_up_deg。🩸 三面都在中線那個平面裡 —— 第一版 flying jib 用跟 jib 一樣的比例，算出它的 clew 落在 jib 布面裡（兩塊布會互相穿過）⇒ 加 stack_margin：每一面的 foot 與 clew 要在裡面那一根 stay 的 luff 之上 ≥ 5 格 ⇒ flying jib foot 0.38、上翹 32°",
+    "flag": "設計決定（階段十二，2026-10-13）：夜隼號的旗 ＝ 候選 v3（正面俯衝的隼、金喙尖、深藍底；24×16 像素畫，summit-night-falcon-01m-flag/design/make_flag.py）。原作（summit《桅頂的賭注》）只寫『這片海的船靠旗與徽記辨識』、沒寫旗的圖案；002 卡戎奪船、剝下舵輪的隼徽；007 凜回到船上 —— 我（作者）定：舵輪的徽是被剝掉的傷，旗是她重新升起來的那一面，所以還是隼。⚠ 這是作者在造船時定的，《桅頂的賭注》的船設卡還沒寫這一條（要不要寫進去、gura 那邊要不要照畫，等 Tim）。⛔ 不照定稿圖的骷髏旗（第零階段已記）",
+    "flag.place": "設計決定：掛在主桅 truck 上面一根 2.4 m 的旗桿（staff_len 24）。別的三個地方用已經量過的位置對過（⚠ 沒有在那三處各試掛一次）都不行：gaff peak（旗往前飄就壓在主帆上）、船尾旗桿（boom 從船尾燈上方 2 格過去，桿會撞 boom）、直接掛 truck（main topgallant stay 從 z 244.5 往前下，往前飄的旗會橫過那條 stay）。旗桿頂一格鐵帽（36）",
+    "flag.size": "設計決定：hoist 20 × fly 30（2 × 3 m，3:2 ＝ 貼圖 24×16 的比例）；hoist 那條邊（角 3 → 角 0）整條釘在旗桿上、fly 兩角 free；res 16、fullness 1.06（候選試跑時用的值）",
     "upper.quarterdeck.drift": "設計決定：後甲板舷牆在斷口往前 6 格內降回船腰高度（smoothstep；真船的 drift 是渦卷裝飾，之後再雕）"
   }
 }

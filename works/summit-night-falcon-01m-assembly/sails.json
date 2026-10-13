@@ -1,5 +1,5 @@
 {
-	"schema": 1,
+	"schema": 2,
 	"wind": [
 		4.5,
 		-1.5,
@@ -273,6 +273,42 @@
 			"note": "luff（邊 0）沿 fore-tg-stay（階段十一）",
 			"persona": "summit",
 			"created_at": "2026-10-13T15:57:16"
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "hoist_top",
+					"at": "主桅/flag-top",
+					"pin": true
+				},
+				{
+					"name": "fly_top",
+					"at": "174.5000,80.5000,270.5000",
+					"pin": false
+				},
+				{
+					"name": "fly_bottom",
+					"at": "174.5000,80.5000,250.5000",
+					"pin": false
+				},
+				{
+					"name": "hoist_bottom",
+					"at": "主桅/flag-bot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#f2ead8",
+			"res": 16,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "夜隼號的旗（v3：俯衝的隼）—— 階段十二，主桅 truck 上的旗桿",
+			"persona": "summit",
+			"created_at": "2026-10-13T16:13:44",
+			"texture": "textures/ensign.png"
 		}
 	]
 }
