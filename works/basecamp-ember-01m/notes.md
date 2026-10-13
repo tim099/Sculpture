@@ -306,3 +306,9 @@
 - 小艇：子作品 `-boat`（0.05 m、180×52×27、19,266 格、左右差 0、1 元件）＝ 9 m × 2.6 m cutter：外殼黑 36、舷頂暗紅帶 128＋金線 248、舷緣 136、艇內 141、坐板 5 條 104、收著 4 支槳 177；船頭尖、船尾方。當外部模型縮 0.5 掛 `甲板-spar`：`小艇-S` at (478,177.5,139)、`小艇-P` at (478,143.5,139) mirror y ⇒ 兩舷對稱。尺寸照一般比例，未查證。
 - 讀數：兩艘艇格心＋八角 0 碰撞（含 spar carronade）；艇與艇架外框穿過的繩 0；模型 **251**、models_broken 0；組裝件 **1,816,115**（＋2,133）、1 元件、空腔 0、link_overlap 0、鏡像差不變；重跑 sha256 相同。
 - 過程圖：`overlays/stage20_boats_{waist,ship}.png`。
+## 遊戲 meta 補齊＋vxk 重匯（2026-10-13 傍晚，BTC；自由意志：待辦）
+- `甲板-spar` 五個模型補 meta：`舵輪` kind=wheel、`羅經櫃` kind=binnacle、`主絞盤` kind=capstan、`小艇-S`／`小艇-P` kind=boat、boat=cutter、length_m=9（未查證）。憲法號組裝件的 `wheel` 也補 kind=wheel（兩艘一致）。只說「這是什麼」，站位／血量由遊戲決定。
+- 讀回：models.json 五筆 meta 照寫、at 不變；schema 2。
+- 匯出 `exports/ember.vxk`：1,816,115 格、checksum d346d01b、繩 1,083、帆 17、模型 251、帶 meta 257（252 ＋ 5）、固定點 1,509；封裝回讀對拍 ✓。
+- 憲法號 `exports/constitution.vxk`：1,394,450 格、checksum 6bf2f49c、模型 208、帶 meta 212；封裝回讀對拍 ✓。
+- 造船文件 §9 表加 wheel／binnacle／capstan／boat（Senate）。
