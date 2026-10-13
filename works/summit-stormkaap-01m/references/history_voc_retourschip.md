@@ -82,3 +82,22 @@ Hoving 的重建（W2）跟原文略有出入：寬 29 ft 3 in（＝ rabbet 間�
 | Rijksmuseum William Rex 模型（1698、74 門，NG-MC-651；⚠ 是後期戰艦，不是東印度船） | https://www.rijksmuseum.nl/en/collection/NG-MC-651 | Public Domain Mark 1.0 |
 | Rijksmuseum Prins Willem（1651）、44 門荷蘭戰艦（1648）模型 | 只在列表看到：https://www.rijksmuseum.nl/nl/collectie/node/pronkmodel--1629ca62ef8d1c375306be55e5f7e9ed | 物件頁沒打開，⚠ 授權未查 |
 | Hoving〈A Pinasship of 134 feet〉（Model Shipwright 60, 1987） | 書目：https://museum.wa.gov.au/maritime-archaeology-db/bibliography/pinasship-134-feet | 有著作權，沒讀 |
+
+## Witsen 桅與帆桁 —— 查證（2026-10-14，第二個研究 agent；只讀網頁，沒下載）
+來源：A ＝ 1671 年版 archive.org OCR（同上 W1）；B ＝ 1690 年版 DBNL 抄本 https://www.dbnl.org/tekst/wits008arch01_01/wits008arch01_01_0016.php（同一節「Van de Masten onzes Schips」：「Dit Schip zy lang over steven 134 voet, wydt 29 voet, hol 13 voet…」）。⚠ 讀法是 WebFetch 的短引文，不是親看掃描頁。
+| 桿 | 長（voet） | 公尺 | dik（palm） | 怎麼讀的 |
+|---|---|---|---|---|
+| 主桅 | **80**（桅頂 7） | 22.65 | 18 | A「lang 8ö voet」；B「De groote mast zy lang 80 voet, dik 18 palm, de top lang 7 voet」⇒ ö 是 0 —— **第一次記的 85 是錯的** |
+| 前桅 | 70（頂 6½） | 19.82 | 16 | A、B 一致 |
+| 後桅 | 60（頂 4½） | 16.99 | 11½ | A、B 一致 |
+| 船首斜桅 | 60 | 16.99 | 18 | A、B 一致 |
+| 主上桅 | 51（頂 4½） | 14.44 | 11½ | B「lang 51 voet」確認 |
+| 前上桅 | 41（頂 3½） | 11.61 | 9½ | A、B 一致 |
+| 主上上桅 | 22 | 6.23 | 4½ | B |
+| 前上上桅 | 18 | 5.10 | 4 | A |
+| 後上桅（kruissteng） | 16（A）或 26（B） | 4.53／7.36 | 4½ | **兩版不同意，未定** |
+| 斜桅頂桅 | 20 | 5.66 | 4 | A、B 一致 |
+| 帆桁：主 69、前 60½、lateen 62、spritsail **45**、主上桅 36、前上桅 32、斜桅頂 20、主上上 22、前上上 16、後上桅帆桁（kruiszeils raatje）19 | | | | B；A 對得上的都一致；沒有 crossjack（begijnra） |
+- palm 的定義原文沒寫（直徑還是周長未查證）⇒ 桅徑換公尺 **未查證**。
+- 桅位（B「Noodige waarneeminge van de Groote en Fokke mast」）：「De groote mast zet men omtrent te midden van 't Schip, de fokke mast op een vyfde deel van vooren」⇒ 主桅約在船中、前桅離船頭五分之一。「Maakt het spoor onder vyf en een half voet uit de midden, na achteren toe」—— 多半是主桅腳在船中往後 5½ voet（是腳的位置還是傾斜量 **未查證**）。斜桅仰角沒寫（只說擱在 visscher 上）。
+- ⛔ 別用：「70 voet van voren komt het groote spoor…」那幾行是 Witsen 另一艘 160 voet 的計算船。

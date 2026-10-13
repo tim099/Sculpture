@@ -1,0 +1,71 @@
+{
+  "cavity_filled": 0,
+  "cavity_pieces": [],
+  "checks": {
+    "components_assembly": 1,
+    "components_head": 7,
+    "enclosed_cavity_assembly": 0,
+    "mirror_head": 0,
+    "pair_overlap_all_parts": {}
+  },
+  "counts": {
+    "assembly_total": 473394,
+    "by_color": {
+      "100": 602,
+      "109": 11649,
+      "182": 165,
+      "218": 624,
+      "36": 3634,
+      "73": 6462
+    },
+    "jaws": 23136,
+    "old_head_carved": 10442,
+    "teeth_lower": 28,
+    "teeth_upper": 32
+  },
+  "floating_dropped": 0,
+  "floating_pieces": [],
+  "geometry": {
+    "gape_at_back": 16.0,
+    "gape_at_lower_tip": 17.48,
+    "lower_gum_z": [
+      96.0,
+      90.0
+    ],
+    "upper_gum_z": [
+      112.0,
+      107.0
+    ],
+    "x_from": 522,
+    "x_tip_lower": 598,
+    "x_tip_upper": 606
+  },
+  "stamp_order": {
+    "head": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 10442,
+        "file": "masks/jaws/old_head_carve.vox.txt",
+        "name": "old_head_carve",
+        "op": "carvevox",
+        "sha256": "950c8a23a82f0f41bd9adc71958f36072222aed8f9c6c5a50ad710f1005d41f4"
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 23136,
+        "file": "masks/jaws/jaws.vox.txt",
+        "name": "jaws",
+        "op": "stampvox",
+        "sha256": "ab42356e69872265fd646339f840820e51d572cdcb551d07d15539705f95192e"
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "anchors": {
+    "bowsprit": {
+      "sprit_top_head": [
+        662,
+        130,
+        295
+      ],
+      "tip": [
+        662,
+        130,
+        228
+      ]
+    },
+    "fore": {
+      "cap": [
+        490,
+        130,
+        252
+      ],
+      "hounds": [
+        490,
+        130,
+        230
+      ],
+      "tgmast_head": [
+        501,
+        130,
+        417
+      ],
+      "topmast_head": [
+        497,
+        130,
+        368
+      ]
+    },
+    "main": {
+      "cap": [
+        295,
+        130,
+        279
+      ],
+      "hounds": [
+        295,
+        130,
+        255
+      ],
+      "tgmast_head": [
+        306,
+        130,
+        485
+      ],
+      "topmast_head": [
+        302,
+        130,
+        426
+      ]
+    },
+    "mizzen": {
+      "cap": [
+        178,
+        130,
+        211
+      ],
+      "hounds": [
+        178,
+        130,
+        196
+      ],
+      "topmast_head": [
+        183,
+        130,
+        283
+      ]
+    }
+  },
+  "checks": {
+    "components_assembly": 1,
+    "components_each": {
+      "bowsprit": 1,
+      "channels": 3,
+      "fore": 1,
+      "main": 1,
+      "mizzen": 1
+    },
+    "mirror_each": {
+      "bowsprit": 0,
+      "fore": 0,
+      "main": 0,
+      "mizzen": 0
+    },
+    "pair_overlap_all_parts": {}
+  },
+  "counts": {
+    "bowsprit": 6185,
+    "channels": 1572,
+    "fore": 15925,
+    "main": 18540,
+    "mizzen": 7438
+  },
+  "info": {
+    "bowsprit": {
+      "heel": [
+        496,
+        112.5
+      ],
+      "sprit_top_z": 296,
+      "tip_xz": [
+        662.29,
+        228.94
+      ]
+    },
+    "fore": {
+      "heel_z": 15,
+      "height_above_dwl_m": 36.8,
+      "hounds_z": 230,
+      "lower_top_z": 252,
+      "tg_top_z": 418,
+      "topmast_top_z": 369
+    },
+    "main": {
+      "heel_z": 9,
+      "height_above_dwl_m": 43.6,
+      "hounds_z": 255,
+      "lower_top_z": 279,
+      "tg_top_z": 486,
+      "topmast_top_z": 427
+    },
+    "mizzen": {
+      "heel_z": 8,
+      "height_above_dwl_m": 23.4,
+      "hounds_z": 196,
+      "lower_top_z": 211,
+      "tg_top_z": null,
+      "topmast_top_z": 284
+    }
+  },
+  "stamp_order": {
+    "bowsprit": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 6185,
+        "file": "masks/masts/bowsprit.vox.txt",
+        "name": "bowsprit",
+        "op": "stampvox",
+        "sha256": "606a0b62ae390fd2d517d5f8ba8bbd23b60b72cd5e05835e7413ffda67f1e44d"
+      }
+    ],
+    "channels": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 1572,
+        "file": "masks/masts/channels.vox.txt",
+        "name": "channels",
+        "op": "stampvox",
+        "sha256": "57894725a8345da6a62278b8b6684de67b21c2c0df8b7c5b9e66c6db861b5a35"
+      }
+    ],
+    "fore": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 15925,
+        "file": "masks/masts/fore.vox.txt",
+        "name": "fore",
+        "op": "stampvox",
+        "sha256": "ab0c625e4680754b138d47d7e3353473f609e7ef6834e21978a78119729878f0"
+      }
+    ],
+    "main": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 18540,
+        "file": "masks/masts/main.vox.txt",
+        "name": "main",
+        "op": "stampvox",
+        "sha256": "c914393d41d758890c5352cb03c30e5c439d66f2a4f6a1c19001ec542898352f"
+      }
+    ],
+    "mizzen": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 7438,
+        "file": "masks/masts/mizzen.vox.txt",
+        "name": "mizzen",
+        "op": "stampvox",
+        "sha256": "4e1e74e4dc8692813c54bfd8fafe423fb6d332d9a8d32c70bc64e9c9b5fe6384"
+      }
+    ]
+  }
+}

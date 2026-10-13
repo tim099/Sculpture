@@ -134,6 +134,31 @@
     "figure": { "dx": 0, "z": 107, "scale": 1.3 },
     "colors": { "bulkhead": 109, "tooth": 218, "rim": 73, "glow": 158, "knee": 73, "grating": 104, "rail": 73, "bone": 218, "mane": 145, "dark": 36 }
   },
+  "jaws": {
+    "x_tip": 606, "lo_short": 8, "W0": 19, "plan_p": 2.5, "plan_q": 0.6,
+    "upper": { "top0": 125, "top1": 114, "hump": 2, "gum0": 112, "gum1": 107 },
+    "lower": { "gum0": 96, "gum1": 90, "thick": 7 },
+    "cheek_len": 8, "cheek_thick": 3, "rib_every": 3, "wall": 2, "fill_max": 50,
+    "knee": { "z0": 36, "power": 2.6, "back": 4 },
+    "teeth": { "every": 5, "up_min": 4, "up_max": 12, "lo_min": 3, "lo_max": 8, "root_len": 2 },
+    "hook": { "forward": 8, "rise": 14, "r0": 2.0 },
+    "colors": { "skin": 109, "skin_dark": 73, "gum": 100, "mouth": 36, "tooth": 218, "knee": 73, "hook": 182 }
+  },
+  "rudder": {
+    "z_top": 96, "z_taper0": 16, "z_taper1": 60, "z_stock": 70,
+    "chord_bottom": 14, "chord_mid": 7, "stock_chord": 4, "stock_half": 2, "thick_frac": 0.66,
+    "pintles_z": [8, 28, 48, 68, 88], "iron": 73, "max_deg": 35
+  },
+  "masts": {
+    "list": [
+      { "name": "mizzen", "x": 178.5, "d_low": 6, "L_low": 203, "head": 15, "d_top": 4, "off_top": 5, "L_top": 88, "hoop_every": 24, "top_r": 9 },
+      { "name": "main", "x": 295.5, "d_low": 8, "L_low": 270, "head": 24, "d_top": 5, "off_top": 7, "L_top": 172, "head_top": 15, "d_tg": 3, "off_tg": 4, "L_tg": 74, "xtree": 5, "hoop_every": 24, "top_r": 15 },
+      { "name": "fore", "x": 490.5, "d_low": 8, "L_low": 237, "head": 22, "d_top": 5, "off_top": 7, "L_top": 139, "head_top": 12, "d_tg": 3, "off_tg": 4, "L_tg": 61, "xtree": 5, "hoop_every": 24, "top_r": 13 }
+    ],
+    "bowsprit": { "heel": [496, 112.5], "steeve": 35, "L": 203, "d": 7, "L_sprit_top": 68, "d_sprit_top": 3 },
+    "channels": { "dz": -2, "width": 10 },
+    "colors": { "mast": 109, "hoop": 73, "iron": 73, "top": 109, "top_rim": 73, "channel": 73 }
+  },
   "provenance": {
     "frame.NY": "設計決定：主帆桁 69 voet × 1.194 ＝ 23.3 m（233 格，W1）要放得進 ⇒ 261（中線 130）",
     "frame.NX": "設計決定：艉板頂 x≈97 → 艏柱頂 x≈550（453 格）＋ galjoen 與船首斜桅（20.3 m、仰角約 35° ＝ 記憶）往前約 14 m ⇒ 736",
@@ -166,6 +191,10 @@
     "decks.ports": "原圖讀數＋設計決定：砲門 7 格寬（Witsen 2 voet 2 duim ＝ 0.62 m × 1.194 ≈ 0.74 m，W1 OCR）；下排高 7、上排高 6（上排上面只剩舷牆，要留給「臉」的眼睛）；下沿離甲板 4 格。每舷下排 10、上排 9（避開 channels）—— 加船頭船尾的追擊砲約 42 門（Batavia 24–32，B1／B3；電影 46 以上，[B][E]）",
     "decks.bulkheads": "設計決定：halfdek 前緣、kampanje 前緣、bak 後緣各一道艙壁，中線開門（寬 0.7 m；kampanje 底下淨高只有 1.4 m ⇒ 門高 1.3 m）",
     "decks.colors": "設計決定：甲板板 104 ＝ (109,72,0) 褐（走的地方跟灰船身分得開）；橫樑、圍板、clamp 73；艙壁、砲門框 109",
+    "jaws": "Tim 2026-10-14：「可以嘗試復刻艦艏那像獠牙一樣的部分嗎」＋兩張電影劇照（只看、不收進 repo）⇒ 設計決定：上顎往前伸到 x 606（艙壁前 8.4 m）、圓頭長吻（半寬 1.9 m）；下顎短 0.8 m；嘴張開 1.6 m（後）～1.7 m（下顎尖）；牙每 0.5 m 一顆、上顎 0.4–1.2 m 往下、下顎 0.3–0.8 m 往上（錯開）—— 🩸 第一版每 0.4 m、長短差小、嘴只張 1.3 m ⇒ 側面連成一整條白帶，不像劇照那種稀疏參差、牙縫看得到暗嘴、長短照 x 的雜湊；牙齦 100 ＝ (109,36,0) 暗鏽紅、口腔與喉嚨 36；上顎尖端一根往前再往上的勾角（劇照第二張）。拆掉階段五 b 的 head rails、格柵、骷髏獅子 —— 大嘴本身就是那顆頭",
+    "masts": "長度：Witsen 1671（1690 版 DBNL 抄本查證）× 1.194 —— 主桅 80 voet → 270 格（⚠ 第一次記成 85，OCR「8ö」是 0）、桅頂 7 → 24；主上桅 51 → 172；主上上桅 22 → 74；前桅 70 → 237（頂 6½ → 22）；前上桅 41 → 139（頂 3½ → 12）；前上上桅 18 → 61；後桅 60 → 203（頂 4½ → 15）；後上桅 26 → 88（⚠ 1671 版 16、1690 版 26 不一致 —— 取 26 是設計判斷：後上桅帆的帆桁 19 voet，16 voet 的桅掛不起來）；船首斜桅 60 → 203；斜桅頂桅 20 → 68。直徑（設計決定；Witsen 的 palm 沒定義、未查證）：下桅 0.8／0.8／0.6 m、上桅 0.5、上上桅 0.3、斜桅 0.7。桅位沿用階段四（178.5／295.5／490.5）—— ⚠ Witsen 說主桅約在船中（＋5½ voet 往後？未查證）、前桅在前五分之一 ⇒ 我的主桅比他再往後約 1 m、前桅往前約 3 m（甲板開孔與砲門已照現位排，不搬）。桅是直的、不傾斜（設計決定）。平台半徑 1.5／1.3／0.9 m（設計決定）。斜桅仰角 35°（記憶，未查證；Witsen 沒寫）。斜桅腳 x 496、軸心 z 112.5：踩進艏樓甲板、貼著前桅、經過 beakhead 艙壁時擱在艙壁頂 —— 🩸 第一版腳在 x 500、z 117.5 ⇒ 正好在艏樓艙口（500–506）上方、到艙壁又差一格，整根 6,262 格浮空",
+    "masts.channels": "設計決定：channels 在上面那道 wale 上方一格（floor(sheer) − 2）、上排砲門下面，往外伸 1 m；x 範圍照階段四留的 channels_avoid",
+    "rudder": "設計決定：前緣貼艉柱後緣（量現況的格）；弦長底部 1.4 m、z 60 收到 0.7 m、z 70 以上是 0.4 m 見方的舵柱，頂到 z 96（翼艉板上、船尾砲門下）；厚 0.3 m、後三分之一 0.1 m；pintle／gudgeon 5 道。沒查到 Batavia 舵的尺寸（Vasa 那種底寬上窄的荷蘭舵形 ＝ 記憶，未查證）。轉角上限 35°（同夜隼號）",
     "lines.fullness": "設計決定：船頭飽滿（荷蘭船的圓船頭）、船尾在水線下比較瘦；照讀數的 Cb 調"
   }
 }

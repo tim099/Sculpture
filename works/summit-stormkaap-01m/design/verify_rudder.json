@@ -1,0 +1,89 @@
+{
+  "anchors": {
+    "stock-top": [
+      103,
+      130,
+      96
+    ]
+  },
+  "checks": {
+    "components_rudder": 1,
+    "leading_edge_touches_post": true,
+    "mirror_gudgeons": 0,
+    "mirror_rudder": 0,
+    "overlap_with_ship": 0
+  },
+  "counts": {
+    "by_color": {
+      "109": 694,
+      "72": 1232,
+      "73": 138,
+      "76": 324
+    },
+    "gudgeons": 48,
+    "rudder": 2388
+  },
+  "leading_edge_x": {
+    "0": 119,
+    "20": 116,
+    "40": 112,
+    "60": 109,
+    "80": 106,
+    "96": 104
+  },
+  "model": {
+    "at": [
+      120.0,
+      130.5,
+      0
+    ],
+    "meta": {
+      "axis_x": -0.1644,
+      "axis_y": 0,
+      "axis_z": 0.9864,
+      "hinge_x": 120.0,
+      "hinge_y": 130.5,
+      "hinge_z": 0.0,
+      "kind": "rudder",
+      "max_deg": 35,
+      "turn_axis": "hinge"
+    },
+    "name": "舵",
+    "pivot": [
+      120.0,
+      130.5,
+      0
+    ],
+    "scale": 1
+  },
+  "stamp_order": {
+    "hull": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 48,
+        "file": "masks/rudder/gudgeons.vox.txt",
+        "name": "gudgeons",
+        "op": "stampvox",
+        "sha256": "100255f91a801b340793eaf2c390326cca6e42ca6c5c40eadc6b805cb7c52eba"
+      }
+    ],
+    "rudder": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "expect_pixels": 2388,
+        "file": "masks/rudder/rudder.vox.txt",
+        "name": "rudder",
+        "op": "stampvox",
+        "sha256": "34875b10bc3155b02dc5f7366d42e61937842fcf2a289618efa4982f593daf98"
+      }
+    ]
+  }
+}

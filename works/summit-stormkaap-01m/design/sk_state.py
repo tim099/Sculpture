@@ -11,10 +11,12 @@ STAGES = [
     ('stage4', 'verify_decks.json', {'hull': 'hull', 'lower': 'lower', 'upper': 'upper', 'half': 'half', 'kamp': 'kamp', 'bak': 'bak'}),
     ('stage5a', 'verify_stern.json', {'hull': 'hull', 'stern_deco': 'stern_deco', 'gallery': 'gallery'}),   # gallery ＝ 右舷一份＋左舷鏡像關聯
     ('stage5b', 'verify_head.json', {'hull': 'hull', 'bak': 'bak', 'head': 'head'}),
+    ('stage5c', 'verify_jaws.json', {'head': 'head'}),       # Tim 要的大嘴：船頭作品整件刻掉 5b 的，再貼上下顎
+    ('stage6a', 'verify_rudder.json', {'rudder': 'rudder_model', 'hull': 'hull'}),   # 舵是外部模型（鍵帶 _model ⇒ occupancy() 不算）；gudgeon 在船殼
 ]
-KEYS = ('hull', 'lower', 'upper', 'half', 'kamp', 'bak', 'stern_deco', 'gallery_S', 'gallery_P', 'head')
+KEYS = ('hull', 'lower', 'upper', 'half', 'kamp', 'bak', 'stern_deco', 'gallery_S', 'gallery_P', 'head', 'rudder_model')
 WORK_OF = {'hull': '', 'lower': '-deck-lower', 'upper': '-deck-upper', 'half': '-deck-half', 'kamp': '-deck-kampanje', 'bak': '-deck-bak',
-           'stern_deco': '-stern-deco', 'gallery_S': '-quarter-gallery', 'head': '-head'}
+           'stern_deco': '-stern-deco', 'gallery_S': '-quarter-gallery', 'head': '-head', 'rudder_model': '-rudder'}
 MIRRORED = {'gallery': ('gallery_S', 'gallery_P')}      # 一舷＋鏡像（mirror=y、at 0,0,0 ⇒ y ↔ NY − 1 − y）
 
 
