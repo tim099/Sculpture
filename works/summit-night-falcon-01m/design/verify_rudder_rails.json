@@ -1,0 +1,110 @@
+{
+  "counts": {
+    "assembly_after": 84171,
+    "gallery_carve_one_side": 408,
+    "head_rails": 368,
+    "hull_carve": 552,
+    "hull_carve_gallery_tunnels": 332,
+    "hull_carve_stern_glass": 220,
+    "rudder": 609
+  },
+  "gallery_windows_see_into_cabin": {
+    "of": 90,
+    "ok": 90
+  },
+  "rails": {
+    "cells_dropped_by_overlap": 10,
+    "components_with_head": 1,
+    "dropped_hit": {
+      "head": 10
+    }
+  },
+  "rudder": {
+    "components": 1,
+    "z_top": 44
+  },
+  "stamp_order": {
+    "head": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/rudder_rails/head/head_rails.vox.txt",
+        "name": "head_rails",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "f3f2c717e91d869b1615f2d2439da29f54007e496488932add946d0bde88824a",
+        "voxels": 368
+      }
+    ],
+    "hull": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/rudder_rails/hull/windows_open_carve.vox.txt",
+        "name": "windows_open_carve",
+        "op": "carvevox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "0abf962f7ebc11cc63990357fc8bba1b2aae710915731f88f7498e77e0b99251",
+        "voxels": 552
+      }
+    ],
+    "quarter_gallery": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/rudder_rails/quarter_gallery/windows_open_carve.vox.txt",
+        "name": "windows_open_carve",
+        "op": "carvevox",
+        "origin_world": [
+          60,
+          96,
+          20
+        ],
+        "sha256": "8b4c73b5876122abe85cb9a969ea86bf3fe4ec720363cd525b7c5e67a7a92e3a",
+        "voxels": 408
+      }
+    ],
+    "rudder": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/rudder_rails/rudder/rudder.vox.txt",
+        "name": "rudder",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "b97f0f4df9ef39fcb634e1d00fd09d6bf44620432176a68edf5f34c8176e4273",
+        "voxels": 609
+      }
+    ]
+  },
+  "structure": {
+    "components_assembly": 1,
+    "enclosed_cavity_assembly": 0,
+    "mirror_shape_assembly": 0,
+    "overlap_new_vs_now": 0
+  }
+}
