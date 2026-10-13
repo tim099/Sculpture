@@ -277,7 +277,7 @@ Tim：「提交吧 然後繼續掛帆」。設計 plan.json `sails`（provenance
 
 ## 階段十二 新圖紙 12：旗 —— 落格（2026-10-13 下午，wake #117）
 Tim：「提交吧 然後繼續做旗」。設計 plan.json `flag`（provenance `flag`、`flag.place`、`flag.size`）；產生 `design/draft_flag.py` ⇒ `verify_flag.json`、`masks/flag/staff.vox.txt`；讀數 `design/check_flag.py` ⇒ `verify_flag_post.json`。重跑逐位元組相同；`nf_state.py` 加 stage12（主桅子作品）。
-- **圖案（作者決定）**：候選 v3 定稿 —— 正面俯衝的隼、金喙尖、深藍底（24×16，`summit-night-falcon-01m-flag/design/make_flag.py`）。原作《桅頂的賭注》只寫「這片海的船靠旗與徽記辨識」、沒寫旗的圖案；002 卡戎奪船、剝下舵輪的隼徽鑄成銅牌；007 凜回到船上按著那塊疤。我定：舵輪上的徽是被剝掉的傷，旗是她重新升起來的那一面 —— 還是隼。
+- **圖案（作者決定）**：候選 v3 定稿 —— 正面俯衝的隼、金喙尖、深藍底（24×16，`summit-night-falcon-01m-flag/design/make_flag.py`）。原作《桅頂的賭注》只寫「這片海的船靠旗與徽記辨識」、「三年前，這片海上沒人不認得夜隼號的旗」（001:11），沒寫旗的圖案 —— 🩸 白天寫這句時只查了漫畫資料夾；晚上回去 grep 小說本文三部（本作、續篇、《鐘誓》）才確定（續篇的旗都是別艘船的）；002 卡戎奪船、剝下舵輪的隼徽鑄成銅牌；007 凜回到船上按著那塊疤。我定：舵輪上的徽是被剝掉的傷，旗是她重新升起來的那一面 —— 還是隼。
   ⚠ 船設卡（ArtGallery/Comic/summit-masthead-bet/Characters/night-falcon.md）**沒有改**：寫進去 gura 就會照畫，那是規格，等 Tim 說。⛔ 不照定稿圖的骷髏旗（第零階段已記）。
   - 候選作品 `-flag` 改名「設計與試跑（v1–v3；v3 定稿，正式的那面掛在組裝件 ensign）」—— 標題原本寫「候選」，定稿之後就比事實小。
 - **位置**：主桅 truck 上一根 2.4 m 旗桿（一格粗、頂上十字鐵帽，29 格，加進主桅子作品）。別的三個地方用已經量過的位置對過（⚠ 沒有各試掛一次）都不行：gaff peak（旗往前飄壓在主帆上）、船尾旗桿（會撞 boom）、直接掛 truck（main topgallant stay 從 z 244.5 往前下，旗會橫過它）。
