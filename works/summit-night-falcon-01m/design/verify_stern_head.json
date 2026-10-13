@@ -1,0 +1,178 @@
+{
+  "counts": {
+    "assembly_after": 84562,
+    "carve": 280,
+    "glass": 220,
+    "head_total": 2593,
+    "quarter_gallery_one_side": 2347,
+    "stern_deco": 243
+  },
+  "gallery_frame": {
+    "at": [
+      60,
+      96,
+      20
+    ],
+    "local_max": [
+      24,
+      16,
+      23
+    ],
+    "local_min": [
+      3,
+      1,
+      5
+    ],
+    "mirror_at_y": 45,
+    "size": [
+      28,
+      20,
+      30
+    ]
+  },
+  "lantern_cap_z": 53,
+  "overlaps": {
+    "deco_vs_gallery": 0,
+    "deco_vs_gallery_mirror": 0,
+    "deco_vs_head": 0,
+    "deco_vs_now": 0,
+    "gallery_mirror_vs_head": 0,
+    "gallery_mirror_vs_now": 0,
+    "gallery_vs_gallery_mirror": 0,
+    "gallery_vs_head": 0,
+    "gallery_vs_now": 0,
+    "glass_vs_deco": 0,
+    "glass_vs_gallery": 0,
+    "glass_vs_gallery_mirror": 0,
+    "glass_vs_head": 0,
+    "glass_vs_now": 0,
+    "head_vs_now": 0
+  },
+  "stamp_order": {
+    "head": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/stern_head/head/knee.vox.txt",
+        "name": "knee",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "c79a3161008a50e100f6e2433b8a85692bb3ab6812cfa35613b9047e372a3666",
+        "voxels": 369
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/stern_head/head/falcon.vox.txt",
+        "name": "falcon",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "4e582f3cc62dbe1018e284cf2c9c43bb4b23c285965d31e6920796e574e5e02a",
+        "voxels": 2224
+      }
+    ],
+    "hull": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/stern_head/hull/stern_windows_carve.vox.txt",
+        "name": "stern_windows_carve",
+        "op": "carvevox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "ddb5b4b02ddc4910d550cb32b748e929d3c676e14de8201e1abf9a7b08822b3a",
+        "voxels": 280
+      },
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/stern_head/hull/stern_windows_glass.vox.txt",
+        "name": "stern_windows_glass",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "e0915ddf5b1bb92bf147707263ac09862d47047d9573d68213b2f99d8f772ca8",
+        "voxels": 220
+      }
+    ],
+    "quarter_gallery": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/stern_head/quarter_gallery/quarter_gallery.vox.txt",
+        "name": "quarter_gallery",
+        "op": "stampvox",
+        "origin_world": [
+          60,
+          96,
+          20
+        ],
+        "sha256": "088b9570003c8d39e17bea1739b82c34664a1ea01df2fa555f9beaefe94d09e5",
+        "voxels": 2347
+      }
+    ],
+    "stern_deco": [
+      {
+        "at": [
+          0,
+          0,
+          0
+        ],
+        "file": "masks/stern_head/stern_deco/stern_deco.vox.txt",
+        "name": "stern_deco",
+        "op": "stampvox",
+        "origin_world": [
+          0,
+          0,
+          0
+        ],
+        "sha256": "867362b323667d85ed33485f9a8a33b56c2d3039914d0ed86208e9d1d4e2eec6",
+        "voxels": 243
+      }
+    ]
+  },
+  "structure": {
+    "components_assembly": 1,
+    "components_gallery": 1,
+    "components_head": 1,
+    "components_stern_deco": 23,
+    "enclosed_cavity_assembly": 0,
+    "mirror_shape_assembly": 0
+  },
+  "windows": {
+    "cabin_air_behind_every_window": true,
+    "face_x_range": [
+      59,
+      62
+    ]
+  }
+}

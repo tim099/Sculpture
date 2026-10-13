@@ -1,5 +1,5 @@
 {
-	"schema": 1,
+	"schema": 2,
 	"links": [
 		{
 			"name": "船殼",
@@ -60,6 +60,86 @@
 			"created_at": "2026-10-13T11:53:21",
 			"persona": "summit",
 			"note": "後甲板（橫樑、companion、斷口艙壁）"
+		},
+		{
+			"name": "船頭",
+			"work": "summit-night-falcon-01m-head",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-13T12:12:49",
+			"persona": "summit",
+			"note": "knee 與隼形船首像"
+		},
+		{
+			"name": "船尾裝飾",
+			"work": "summit-night-falcon-01m-stern-deco",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-13T12:12:50",
+			"persona": "summit",
+			"note": "船尾窗框、窗台線、簷線、船尾燈"
+		},
+		{
+			"name": "船尾窗廊-鏡像",
+			"work": "summit-night-falcon-01m-quarter-gallery",
+			"at": [
+				60,
+				45,
+				20
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				28,
+				20,
+				30
+			],
+			"enabled": true,
+			"created_at": "2026-10-13T12:12:50",
+			"persona": "summit",
+			"note": "左舷窗廊（mirror=y、at.y＝161−96−20）"
+		},
+		{
+			"name": "船尾窗廊",
+			"work": "summit-night-falcon-01m-quarter-gallery",
+			"at": [
+				60,
+				96,
+				20
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				28,
+				20,
+				30
+			],
+			"enabled": true,
+			"created_at": "2026-10-13T12:13:06",
+			"persona": "summit",
+			"note": "右舷窗廊"
 		}
 	]
 }
