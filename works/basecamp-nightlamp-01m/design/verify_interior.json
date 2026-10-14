@@ -1,0 +1,193 @@
+{
+ "title": "新圖紙 10：船殼內部 v1（階段九）—— 甲板高度、內板、clamps／spirketting",
+ "world_voxels": 512433,
+ "start_ledger": {
+  "work_cells": 512433,
+  "missing": 0,
+  "extra": 0,
+  "color_diff": 0
+ },
+ "upper_fit": {
+  "coef": [
+   1.242427862337669e-05,
+   0.000717006491159302,
+   -0.058718204465947735,
+   8.1673781845676
+  ],
+  "rms_m": 0.0135,
+  "x_range": [
+   1.0,
+   40.0
+  ]
+ },
+ "deck_walk_Z_at": {
+  "100": {
+   "upper": 110,
+   "lower": 85,
+   "spar": 141
+  },
+  "150": {
+   "upper": 108,
+   "lower": 83,
+   "spar": 138
+  },
+  "200": {
+   "upper": 105,
+   "lower": 80,
+   "spar": 136
+  },
+  "260": {
+   "upper": 103,
+   "lower": 78,
+   "spar": 134
+  },
+  "340": {
+   "upper": 101,
+   "lower": 76,
+   "spar": 132
+  },
+  "420": {
+   "upper": 100,
+   "lower": 75,
+   "spar": 131
+  },
+  "500": {
+   "upper": 101,
+   "lower": 76,
+   "spar": 132
+  },
+  "560": {
+   "upper": 104,
+   "lower": 78,
+   "spar": 134
+  },
+  "620": {
+   "upper": 106,
+   "lower": 81,
+   "spar": 136
+  }
+ },
+ "gap_cells_x": 2847,
+ "frame_gap_cells": 298402,
+ "closed_cells_depth_bounded": 1115,
+ "files": {
+  "ceiling": {
+   "cells": 163265,
+   "color": 177,
+   "sha256": "d40072e78e131f9ebd63ce1d8e06f6bc674b01e22cfa4fc3e6328a0fa872e143"
+  },
+  "bands": {
+   "cells": 16120,
+   "color": 136,
+   "sha256": "89c2ad99f2830e35ef10263e56fc04497e2e9c6c61d14ac0c395561da62f627a"
+  },
+  "wall_fill": {
+   "cells": 302364,
+   "color": 141,
+   "sha256": "3f6158274710f22125ccaa50425e1716aa37d4f7a6600d19787b23f1e3a9e882"
+  },
+  "fill_cavities": {
+   "cells": 1,
+   "color": 141,
+   "sha256": "bbb985d66e6345d2d64a7f9f13468e6f4733e2d57c5c232141f6814c1ac3a5c0"
+  },
+  "recolor": {
+   "cells": 12767,
+   "overwrite": true,
+   "by": {
+    "209→136": 10946,
+    "173→104": 1821
+   },
+   "sha256": "0723fd92cd2ff2dc24abc9688094ca0fda53b88d654ca3a273b7dcf07eaef825"
+  }
+ },
+ "total_new": 481750,
+ "expect_after": 994183,
+ "recolor": {
+  "209→136": 10946,
+  "173→104": 1821
+ },
+ "visible_paint_faces": {
+  "before": 130216,
+  "after": 0,
+  "in_port_rows_before": 54,
+  "in_port_rows_after": 54
+ },
+ "port_cells_hit": 0,
+ "components_after": 1,
+ "cavities_after": 0,
+ "mirror_mismatch": 0,
+ "sill_above_upper_deck": [
+  {
+   "n": 1,
+   "sill": 115,
+   "deck": 110,
+   "above": 5
+  },
+  {
+   "n": 2,
+   "sill": 112,
+   "deck": 107,
+   "above": 5
+  },
+  {
+   "n": 3,
+   "sill": 109,
+   "deck": 105,
+   "above": 4
+  },
+  {
+   "n": 4,
+   "sill": 107,
+   "deck": 103,
+   "above": 4
+  },
+  {
+   "n": 5,
+   "sill": 106,
+   "deck": 102,
+   "above": 4
+  },
+  {
+   "n": 6,
+   "sill": 105,
+   "deck": 101,
+   "above": 4
+  },
+  {
+   "n": 7,
+   "sill": 105,
+   "deck": 100,
+   "above": 5
+  },
+  {
+   "n": 8,
+   "sill": 105,
+   "deck": 100,
+   "above": 5
+  },
+  {
+   "n": 9,
+   "sill": 105,
+   "deck": 101,
+   "above": 4
+  },
+  {
+   "n": 10,
+   "sill": 107,
+   "deck": 102,
+   "above": 5
+  },
+  {
+   "n": 11,
+   "sill": 109,
+   "deck": 103,
+   "above": 6
+  }
+ ],
+ "midship_X340": {
+  "upper": 101,
+  "lower": 76,
+  "spar": 132
+ }
+}

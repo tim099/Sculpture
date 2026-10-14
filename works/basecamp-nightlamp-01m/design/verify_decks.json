@@ -1,0 +1,150 @@
+{
+ "title": "新圖紙 11：甲板 v1（階段十）—— 下甲板、上甲板、後甲板・走道・前甲板、船尾樓甲板（各一件子作品）",
+ "hull_cells": 994183,
+ "hull_list_sha256": "0a7606392f89daf2e76f526deb6180846d50c03cf8386c97733013a81d1d57db",
+ "beam_x": [
+  49,
+  71,
+  93,
+  115,
+  137,
+  158,
+  182,
+  206,
+  229,
+  252,
+  276,
+  300,
+  321,
+  342,
+  363,
+  384,
+  404,
+  424,
+  445,
+  466,
+  489,
+  512,
+  534,
+  554,
+  576,
+  598,
+  620,
+  642,
+  664,
+  686
+ ],
+ "beam_step": 21.98,
+ "mast_hole_X": {
+  "lower/mizzen": 171.72,
+  "lower/main": 321.67,
+  "lower/fore": 543.03,
+  "upper/mizzen": 170.41,
+  "upper/main": 320.79,
+  "upper/fore": 542.59,
+  "spar/mizzen": 168.79,
+  "spar/main": 319.71,
+  "spar/fore": 542.05,
+  "poop/mizzen": 167.37,
+  "poop/main": 318.77,
+  "poop/fore": 541.58
+ },
+ "decks": {
+  "lower": {
+   "cells": 67245,
+   "plank": 51503,
+   "risers": 1503,
+   "beams": 13915,
+   "coaming": 308,
+   "X": [
+    92,
+    585
+   ],
+   "walk_Z_midship_X340": 76,
+   "holes_cells": 2051,
+   "cavity_fill": 16
+  },
+  "upper": {
+   "cells": 63689,
+   "plank": 48709,
+   "risers": 1407,
+   "beams": 12957,
+   "coaming": 616,
+   "X": [
+    79,
+    586
+   ],
+   "walk_Z_midship_X340": 101,
+   "holes_cells": 2051
+  },
+  "spar": {
+   "cells": 37513,
+   "plank": 31023,
+   "risers": 944,
+   "beams": 5354,
+   "coaming": 192,
+   "X": [
+    71,
+    589
+   ],
+   "walk_Z_midship_X340": 132,
+   "holes_cells": 627
+  },
+  "poop": {
+   "cells": 3905,
+   "plank": 3305,
+   "risers": 0,
+   "beams": 600,
+   "coaming": 0,
+   "X": [
+    68,
+    112
+   ],
+   "walk_Z_midship_X340": null,
+   "holes_cells": 0
+  }
+ },
+ "checks": {
+  "lower": {
+   "components_self": 1,
+   "components_with_hull": 1,
+   "mirror_missing": 0
+  },
+  "upper": {
+   "components_self": 1,
+   "components_with_hull": 1,
+   "mirror_missing": 0
+  },
+  "spar": {
+   "components_self": 1,
+   "components_with_hull": 1,
+   "mirror_missing": 0
+  },
+  "poop": {
+   "components_self": 1,
+   "components_with_hull": 1,
+   "mirror_missing": 0
+  }
+ },
+ "components_hull_plus_decks": 1,
+ "cavities_hull_plus_decks": 0,
+ "files": {
+  "lower": {
+   "cells": 67245,
+   "sha256": "8cb3d2ae4447001c34f380627521fb4176536aa700b0164e02e890eb1c73b7c7"
+  },
+  "upper": {
+   "cells": 63689,
+   "sha256": "9ec0cb46b7450b7d71db916a588f40094489fae792a465573d99c5c4145ab71d"
+  },
+  "spar": {
+   "cells": 37513,
+   "sha256": "2d5d7b86048b425e2f5fadea441db751f09a634c92a10aeb91ec8cb51edd62ec"
+  },
+  "poop": {
+   "cells": 3905,
+   "sha256": "fad2aed87cdda455350c900c8043f3ae4972965e4e701a2fe97859f52bb77400"
+  }
+ },
+ "total_cells": 172352
+}

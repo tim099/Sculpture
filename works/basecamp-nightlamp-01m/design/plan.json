@@ -494,5 +494,384 @@
       "wall_depth": "設計：從那一欄最外面的實心往裡 8 格內才算舷牆（外板 1 ＋ 肋骨 ≤ 3.5 ＋ 餘裕）；中線的 apron 等不會被當成舷牆",
       "lining_color": "照憲法號 141（跟肋骨同色）；船身全黑，不留白帶（憲法號那條白帶是它的塗裝）"
     }
+  },
+  "interior": {
+    "title": "新圖紙 10：船殼內部 v1（階段九）—— 甲板高度、內板、clamps／spirketting",
+    "source": "readings_LI_decks.json",
+    "seed": [
+      340,
+      160,
+      60
+    ],
+    "decks": {
+      "upper": {
+        "fit": "upper_deck",
+        "poly_deg": 3,
+        "plank": 1,
+        "beam": 3,
+        "clamp": 2,
+        "spirketting": "sill"
+      },
+      "lower": {
+        "from": "upper",
+        "offset_m": -1.95,
+        "plank": 1,
+        "beam": 3,
+        "clamp": 2,
+        "spirketting": 2
+      },
+      "spar": {
+        "from": "upper",
+        "offset_m": 2.39,
+        "plank": 1,
+        "beam": 2,
+        "clamp": 2,
+        "spirketting": 0
+      }
+    },
+    "colors": {
+      "ceiling": 177,
+      "bands": 136,
+      "cap": 141,
+      "cavity": 141
+    },
+    "centreline_recolor": {
+      "keelson": [
+        209,
+        136
+      ],
+      "apron_post": [
+        173,
+        104
+      ]
+    },
+    "provenance": {
+      "upper": "Pl. LI 側面圖上甲板虛線（read_decks.py 從 x 22.0 z 7.36 往兩邊追，x 1.0–40.0 共 122 點；絞盤下半截的底座站在這條線上）；三次擬合。甲板面 ＝ 線心；走的那一格 ＝ round(Z)",
+      "lower": "Pl. LI 下甲板虛線跟水線、下 wale 的粗線疊在一起，追線只追到 x 27–28.25（5.45–5.46）；逐欄挑的點（x 7.0 5.72、13.0 5.60、20.5 5.43、28.0 5.46、34.0 5.55、35.5 5.62）跟上甲板差 1.88–2.08 ⇒ 設計：上甲板 − 1.95（平行）",
+      "spar": "走道那一層（後甲板、船腰兩舷的 gangway、前甲板）：Pl. LI 船腰虛線 9.75（x 18.75–29.5，追線）＝ 上甲板 ＋ 2.39 ⇒ 設計：整條照上甲板平行；船腰的走道跟舷頂齊平（照圖，Tim 2026-10-14 選「照圖：開放船腰＋走道」）",
+      "plank_beam": "上甲板虛線一組三條（7.36／7.28／7.05）⇒ 甲板板＋橫樑 0.31 底圖 m ＝ 4 格（板 1、樑 3）；走道那一層一組兩條（9.75／9.55）⇒ 板 1、樑 2；下甲板照上甲板",
+      "clamp": "設計：每層橫樑底下 2 格（0.2 m）；上甲板 spirketting 從甲板面到砲門下緣 − 1，下甲板 2 格",
+      "colors": "照憲法號（Tim 2026-10-11「艙內可以用原木色」）：內板 177、構件 136；中線結構露在艙內那一層 keelson 209→136、apron／內艉柱 173→104",
+      "skipped": "設計（遊戲用 ⇒ 內部大致構造）：不做斜肋、hooks、limber 厚板（憲法號有）"
+    }
+  },
+  "deckworks": {
+    "title": "新圖紙 11：甲板 v1（階段十）—— 下甲板、上甲板、後甲板・走道・前甲板、船尾樓甲板（各一件子作品）",
+    "hull_cells": 994183,
+    "colors": {
+      "plank": 250,
+      "beam": 136,
+      "coaming": 104
+    },
+    "decks": {
+      "lower": {
+        "work": "basecamp-nightlamp-01m-deck-lower",
+        "title": "夜燈號 下甲板",
+        "link": "下甲板",
+        "level": "lower",
+        "beam": 3,
+        "coaming": 1,
+        "hatches": [
+          "after",
+          "main",
+          "fore"
+        ],
+        "capstan": true
+      },
+      "upper": {
+        "work": "basecamp-nightlamp-01m-deck-upper",
+        "title": "夜燈號 上甲板",
+        "link": "上甲板",
+        "level": "upper",
+        "beam": 3,
+        "coaming": 2,
+        "hatches": [
+          "after",
+          "main",
+          "fore"
+        ],
+        "capstan": true
+      },
+      "spar": {
+        "work": "basecamp-nightlamp-01m-deck-spar",
+        "title": "夜燈號 後甲板・走道・前甲板",
+        "link": "後甲板・走道・前甲板",
+        "level": "spar",
+        "beam": 2,
+        "coaming": 2,
+        "hatches": [
+          "fore"
+        ],
+        "capstan": false,
+        "qd_to_X": 263,
+        "fc_from_X": 469,
+        "gangway_width": 12
+      },
+      "poop": {
+        "work": "basecamp-nightlamp-01m-deck-poop",
+        "title": "夜燈號 船尾樓甲板",
+        "link": "船尾樓甲板",
+        "walk_Z": 163,
+        "X": [
+          68,
+          112
+        ],
+        "beam": 2,
+        "coaming": 0,
+        "hatches": [],
+        "capstan": false
+      }
+    },
+    "hatches": {
+      "after": {
+        "X": [
+          278,
+          298
+        ],
+        "dy": 10
+      },
+      "main": {
+        "X": [
+          336,
+          366
+        ],
+        "dy": 14
+      },
+      "fore": {
+        "X": [
+          495,
+          519
+        ],
+        "dy": 10
+      }
+    },
+    "capstan": {
+      "X": 400,
+      "r": 2.5
+    },
+    "masts": {
+      "mizzen": {
+        "r": 3.5
+      },
+      "main": {
+        "r": 4.5
+      },
+      "fore": {
+        "r": 4.5
+      }
+    },
+    "beams": {
+      "sided": 2,
+      "rule": "上甲板砲門中心＋兩個砲門之間的中點，兩頭照平均間距往外延；落在艙口（±1）、桅孔（半徑＋1）裡的不放"
+    },
+    "provenance": {
+      "levels": "甲板面照階段九（decks.json：上甲板讀數擬合、下甲板 −1.95、走道那一層 ＋2.39）；船尾樓甲板：Tim 2026-10-14 說「繼續造船吧」⇒ 本小姐決定 —— 舷頂從 X 103 往船尾才比走道那一層高 30 格以上（2 m 淨高＋1 m 牆），走的那一格 163、X 68–112",
+      "extent": "每一層：同一列兩舷之間的空格（兩邊 y 都還有實心）、甲板板那一格是空的；走道那一層：X ≤ 263 全寬（後甲板，照劇照的後甲板盡頭）、X ≥ 469 全寬（前甲板，Pl. LI 前甲板起點 ≈ x 29.5）、中間兩舷各 12 格寬（gangway，寬度是設計）",
+      "hatches": "設計：Pl. LI 沒有甲板平面圖 ⇒ 照一般的排法 —— 主艙口在主桅前、後艙口在主桅後、前艙口在前桅後；上下兩層對齊；前甲板蓋住前艙口那一段也開",
+      "capstan": "Pl. LI 側面圖虛線畫的絞盤 x 23.4–24.8（中心 ≈ 24.1 ⇒ X 400）；上甲板、下甲板開孔（絞盤本身之後做模型）",
+      "masts": "桅軸照 plan masts（x 照 Pl. LI 桅樁、rake 3°／2°／1° 往船尾倒）在每一層甲板的高度求 X；半徑是設計（主桅、前桅 0.9 m 直徑，後桅 0.7 m）",
+      "beam": "上甲板、下甲板：板 1＋樑 3（Pl. LI 上甲板虛線一組三條 0.31 m）；走道那一層、船尾樓：板 1＋樑 2",
+      "colors": "照憲法號：甲板板 250、樑 136、艙口圍欄 104"
+    }
+  },
+  "ladders": {
+    "title": "新圖紙 12：梯子 v1（階段十一）—— 8 座（後甲板前緣、前甲板後緣、船尾樓前緣各兩舷一座；上下甲板之間兩個梯口）",
+    "work": "basecamp-nightlamp-01m-ladders",
+    "work_title": "夜燈號 梯子",
+    "link": "梯子",
+    "assembly_cells": 1182756,
+    "geometry": {
+      "rise": 3,
+      "run": 2,
+      "width": 5,
+      "band": 3,
+      "headroom": 8,
+      "landing": 5,
+      "cap_up": 0
+    },
+    "colors": {
+      "stringer": 104,
+      "tread": 136
+    },
+    "scuttles": [
+      {
+        "name": "aft",
+        "X": [
+          234,
+          248
+        ],
+        "dy": 3
+      },
+      {
+        "name": "fore",
+        "X": [
+          428,
+          442
+        ],
+        "dy": 3
+      }
+    ],
+    "list": [
+      {
+        "name": "qd-P",
+        "xe": 264,
+        "d": 1,
+        "yc": 130,
+        "z_hint_top": 134,
+        "what": "上甲板（船腰）↔ 後甲板，後甲板前緣"
+      },
+      {
+        "name": "qd-S",
+        "xe": 264,
+        "d": 1,
+        "yc": 190,
+        "z_hint_top": 134,
+        "what": "上甲板（船腰）↔ 後甲板，後甲板前緣"
+      },
+      {
+        "name": "fc-P",
+        "xe": 468,
+        "d": -1,
+        "yc": 130,
+        "z_hint_top": 131,
+        "what": "上甲板（船腰）↔ 前甲板，前甲板後緣"
+      },
+      {
+        "name": "fc-S",
+        "xe": 468,
+        "d": -1,
+        "yc": 190,
+        "z_hint_top": 131,
+        "what": "上甲板（船腰）↔ 前甲板，前甲板後緣"
+      },
+      {
+        "name": "poop-P",
+        "xe": 113,
+        "d": 1,
+        "yc": 140,
+        "z_hint_top": 163,
+        "what": "後甲板 ↔ 船尾樓甲板，船尾樓前緣"
+      },
+      {
+        "name": "poop-S",
+        "xe": 113,
+        "d": 1,
+        "yc": 180,
+        "z_hint_top": 163,
+        "what": "後甲板 ↔ 船尾樓甲板，船尾樓前緣"
+      },
+      {
+        "name": "scuttle-aft",
+        "xe": 248,
+        "d": -1,
+        "yc": 160,
+        "z_hint_top": 104,
+        "what": "下甲板 ↔ 上甲板，後甲板底下的梯口"
+      },
+      {
+        "name": "scuttle-fore",
+        "xe": 428,
+        "d": 1,
+        "yc": 160,
+        "z_hint_top": 101,
+        "what": "下甲板 ↔ 上甲板，船腰的梯口"
+      }
+    ],
+    "provenance": {
+      "where": "設計：開放船腰 ⇒ 船腰的上甲板要上得去後甲板、前甲板（各兩舷一座，靠內側、讓開走道與艙口）；船尾樓前緣兩舷各一座；貨艙口上下兩層對齊（下一層同一處也是洞）⇒ 上下甲板之間另開兩個梯口（兩根橫樑之間：229／230 與 252／253 之間、424／425 與 445／446 之間）",
+      "geometry": "照憲法號：每階高 3、佔 2 欄（斜率 1.5）、寬 5（兩根側板＋3 格踏板）、側板高 3；量頭頂 8 格、梯腳外 5 欄",
+      "points": "造船規格 §9：腳踩的那一格；foot／head 往外第一段連續 3 欄一樣高的平地",
+      "colors": "側板 104、踏板 136（甲板構件那兩色）"
+    }
+  },
+  "rails": {
+    "title": "新圖紙 13：欄杆 v1（階段十二）—— 後甲板前緣、走道內緣、前甲板後緣、船尾樓前緣＋舷頂不夠高的地方",
+    "work": "basecamp-nightlamp-01m-rails",
+    "work_title": "夜燈號 欄杆",
+    "link": "欄杆",
+    "assembly_cells": 1183797,
+    "height": 10,
+    "post_every": 3,
+    "color": 36,
+    "qd_edge": 263,
+    "fc_edge": 469,
+    "poop_edge": 112,
+    "provenance": {
+      "height": "設計：扶手在走的那一格往上第 10 格（1 m）",
+      "post_every": "設計：立柱每 3 欄一根（0.3 m）",
+      "color": "設計：黑 36（跟船殼同色，劇照的黑珍珠欄杆是深色）",
+      "edges": "後甲板前緣 ＝ 後甲板全寬那一段的最後一欄（deckworks qd_to_X 263）；前甲板後緣 ＝ 全寬那一段的第一欄（fc_from_X 469）；船尾樓前緣 ＝ 船尾樓甲板最前一欄（112）；梯子到的地方（梯寬 ±1）留開口",
+      "outer": "走道那一層在船腰跟舷頂齊平（照圖）⇒ 舷頂比扶手低的地方在舷頂上補立柱與扶手（照圖的位置是 hammock netting，這裡用欄杆代替）"
+    }
+  },
+  "mastworks": {
+    "title": "新圖紙 14：桅杆 v1（階段十三）—— 後桅、主桅、前桅、艏斜桅（各一件子作品）",
+    "assembly_cells": 1188637,
+    "hull_cells": 994183,
+    "works": {
+      "mizzen": [
+        "basecamp-nightlamp-01m-mast-mizzen",
+        "夜燈號 後桅",
+        "後桅"
+      ],
+      "main": [
+        "basecamp-nightlamp-01m-mast-main",
+        "夜燈號 主桅",
+        "主桅"
+      ],
+      "fore": [
+        "basecamp-nightlamp-01m-mast-fore",
+        "夜燈號 前桅",
+        "前桅"
+      ],
+      "bowsprit": [
+        "basecamp-nightlamp-01m-bowsprit",
+        "夜燈號 艏斜桅",
+        "艏斜桅"
+      ]
+    },
+    "step": 3,
+    "radius": {
+      "mizzen": 3.0,
+      "main": 4.0,
+      "fore": 4.0
+    },
+    "ratios": {
+      "lower": 0.59,
+      "hounds": 0.88,
+      "topmast": 0.62,
+      "head_taper": 0.75,
+      "topmast_r": 0.6,
+      "topgallant_r": 0.55,
+      "top_w": 0.16,
+      "top_d": 0.75,
+      "crosstrees": 0.5,
+      "bowsprit_end": 0.6,
+      "jib_r": 0.5,
+      "jib_out": 0.7
+    },
+    "hoops": {
+      "every": 30
+    },
+    "bowsprit": {
+      "heel_X": 556,
+      "stem_X": 590,
+      "r": 4.5,
+      "heel_Z_min": 138
+    },
+    "colors": {
+      "spar": 136,
+      "black": 36,
+      "top": 104,
+      "step": 104
+    },
+    "provenance": {
+      "axis": "照 plan masts（x 照 Pl. LI 桅樁、rake 3°／2°／1°）；Zref ＝ 上甲板在桅位的走的那一格 —— 甲板開桅孔用同一條（draft_decks.mast_X）",
+      "height": "truck 高 ＝ plan masts.lengths_above_keel（草案：圖紙 01 時估的）；跟到 truck 的軸長 S",
+      "ratios": "設計（常用比例，沒有這艘的史料）：下桅 0.59 S、hounds 在一節的 0.88、topmast 0.62 下桅、topgallant＋royal 到 truck；topmast 半徑 0.6 下桅、topgallant 0.55 topmast；top 寬 0.16 下桅、深 0.75 寬；crosstrees 0.5 top 寬",
+      "radius": "設計：甲板桅孔半徑 3.5／4.5／4.5 ⇒ 桅 3.0／4.0／4.0（留 0.5 格）",
+      "bowsprit": "角度 22°、伸出船頭 18 m、jibboom 9 m（plan masts.bowsprit，底圖 m；草案）；跟在前甲板前桅前面 X 556，跟的高度從 138 往上抬到不碰船首像與甲板（碰到船殼的照憲法號刻掉）",
+      "colors": "設計：桅身 136、masthead／cap／crosstrees／tops 邊 黑 36、top 板與 step 104"
+    }
   }
 }

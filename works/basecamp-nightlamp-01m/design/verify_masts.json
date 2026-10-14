@@ -1,0 +1,225 @@
+{
+ "title": "新圖紙 14：桅杆 v1（階段十三）—— 後桅、主桅、前桅、艏斜桅（各一件子作品）",
+ "base": {
+  "assembly": "adce71a1ede4502118750295f2de32fa81dc9baa99773b0247001d948a649e79",
+  "hull": "0a7606392f89daf2e76f526deb6180846d50c03cf8386c97733013a81d1d57db"
+ },
+ "log": {
+  "mizzen": {
+   "members": {
+    "step": 363,
+    "lower": 3874,
+    "masthead": 512,
+    "hoops": 47,
+    "cap": 275,
+    "topmast": 786,
+    "topmast_head": 114,
+    "topgallant": 85,
+    "truck": 22,
+    "topmast_cap": 131,
+    "top": 426,
+    "top_rim": 86,
+    "trestle_cross_trees": 137,
+    "crosstrees": 40
+   },
+   "keelson_top": 35,
+   "heel": [
+    173.37,
+    39
+   ],
+   "span_cells": 314.4,
+   "lengths": {
+    "lower": 185.5,
+    "topmast": 115.0,
+    "topgallant_royal": 50.0
+   },
+   "heights": {
+    "top": 202,
+    "crosstrees": 303,
+    "truck": 353
+   },
+   "radii": {
+    "lower": 3.0,
+    "head_half": 2.25,
+    "topmast": 1.8,
+    "topgallant": 0.99
+   },
+   "top_size": [
+    29.7,
+    22.3
+   ]
+  },
+  "main": {
+   "members": {
+    "step": 507,
+    "lower": 11019,
+    "masthead": 1556,
+    "hoops": 117,
+    "cap": 348,
+    "topmast": 2228,
+    "topmast_head": 249,
+    "topgallant": 308,
+    "truck": 39,
+    "topmast_cap": 111,
+    "top": 1242,
+    "top_rim": 142,
+    "trestle_cross_trees": 249,
+    "crosstrees": 60
+   },
+   "keelson_top": 19,
+   "heel": [
+    323.16,
+    23
+   ],
+   "span_cells": 510.2,
+   "lengths": {
+    "lower": 301.0,
+    "topmast": 186.6,
+    "topgallant_royal": 81.1
+   },
+   "heights": {
+    "top": 288,
+    "crosstrees": 452,
+    "truck": 533
+   },
+   "radii": {
+    "lower": 4.0,
+    "head_half": 3.0,
+    "topmast": 2.4,
+    "topgallant": 1.32
+   },
+   "top_size": [
+    48.2,
+    36.1
+   ]
+  },
+  "fore": {
+   "members": {
+    "step": 507,
+    "lower": 9495,
+    "masthead": 1358,
+    "hoops": 85,
+    "cap": 339,
+    "topmast": 1943,
+    "topmast_head": 246,
+    "topgallant": 241,
+    "truck": 62,
+    "topmast_cap": 96,
+    "top": 868,
+    "top_rim": 122,
+    "trestle_cross_trees": 205,
+    "crosstrees": 49
+   },
+   "keelson_top": 36,
+   "heel": [
+    543.23,
+    40
+   ],
+   "span_cells": 441.6,
+   "lengths": {
+    "lower": 260.5,
+    "topmast": 161.5,
+    "topgallant_royal": 70.2
+   },
+   "heights": {
+    "top": 269,
+    "crosstrees": 411,
+    "truck": 482
+   },
+   "radii": {
+    "lower": 4.0,
+    "head_half": 3.0,
+    "topmast": 2.4,
+    "topgallant": 1.32
+   },
+   "top_size": [
+    41.7,
+    31.3
+   ]
+  },
+  "bowsprit": {
+   "members": {
+    "bowsprit": 11175,
+    "jibboom": 1798,
+    "cap": 232,
+    "step": 21
+   },
+   "heel": [
+    556,
+    138
+   ],
+   "heel_Z_tried_from": 138,
+   "steeve_deg": 22.0,
+   "length": 268.0,
+   "jibboom_length": 165.2,
+   "bowsprit_tip_XZ": [
+    804.5,
+    238.4
+   ],
+   "jibboom_tip_XZ": [
+    909.7,
+    286.7
+   ]
+  }
+ },
+ "collide_dropped_or_carved": {
+  "mizzen": {
+   "hull": 40
+  },
+  "main": {},
+  "fore": {
+   "hull": 55
+  },
+  "bowsprit": {
+   "hull": 62
+  }
+ },
+ "checks": {
+  "mizzen": {
+   "cells": 6858,
+   "components_self": 1,
+   "mirror_missing": 0
+  },
+  "main": {
+   "cells": 18175,
+   "components_self": 1,
+   "mirror_missing": 0
+  },
+  "fore": {
+   "cells": 15561,
+   "components_self": 1,
+   "mirror_missing": 0
+  },
+  "bowsprit": {
+   "cells": 13226,
+   "components_self": 1,
+   "mirror_missing": 0
+  }
+ },
+ "hull_carve": 62,
+ "components_after": 1,
+ "cavities_after": 0,
+ "expect_assembly_after": 1242395,
+ "files": {
+  "mizzen": {
+   "cells": 6858,
+   "sha256": "c3d78a0cfde0be7c7b5ff8b4f18085823171c46abc69da8b6fb33c1d637f16e6"
+  },
+  "main": {
+   "cells": 18175,
+   "sha256": "d38b359d639f2e56d7f1e97638fb235c43ac6b60feec3ed6fc7b5d7af68bb9d6"
+  },
+  "fore": {
+   "cells": 15561,
+   "sha256": "3e0e64741e808491cf000b7da2814534db7aecacb8f9dd9612a4bc29a8447d70"
+  },
+  "bowsprit": {
+   "cells": 13226,
+   "sha256": "bfeccc76e3b66b5504f3b23b9ec08a3c65ee842db00baf17ec6c9d4185c8577e"
+  },
+  "hull_bowsprit_carve": {
+   "cells": 62,
+   "sha256": "ffca032486c4db86e670ddc4872d990e2f8c58f1ca557a182c64eb842b8143c2"
+  }
+ }
+}
