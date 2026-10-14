@@ -1,0 +1,405 @@
+{
+  "schema": 3,
+  "wind": [
+    4.5,
+    -1.5,
+    0.0
+  ],
+  "sail_seconds": 3.0,
+  "sails": [
+    {
+      "name": "fore-course",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:前桅/yard-fore-course/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:前桅/yard-fore-course/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "140,150,70",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "140,30,70",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "前桅下帆（Fore Course）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "fore",
+        "sail": "course"
+      }
+    },
+    {
+      "name": "fore-topsail",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:前桅/yard-fore-topsail/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:前桅/yard-fore-topsail/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "140,155,132",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "140,25,132",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "前桅上帆（Fore Topsail）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "fore",
+        "sail": "topsail"
+      }
+    },
+    {
+      "name": "fore-topgallant",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:前桅/yard-fore-topgallant/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:前桅/yard-fore-topgallant/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "140,135,196",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "140,45,196",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "前桅頂帆（Fore Topgallant）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "fore",
+        "sail": "topgallant"
+      }
+    },
+    {
+      "name": "main-course",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:主桅/yard-main-course/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:主桅/yard-main-course/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "275,160,70",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "275,20,70",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "主桅下帆（Main Course）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "main",
+        "sail": "course"
+      }
+    },
+    {
+      "name": "main-topsail",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:主桅/yard-main-topsail/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:主桅/yard-main-topsail/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "275,165,142",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "275,15,142",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "主桅上帆（Main Topsail）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "main",
+        "sail": "topsail"
+      }
+    },
+    {
+      "name": "main-topgallant",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:主桅/yard-main-topgallant/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:主桅/yard-main-topgallant/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "275,140,212",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "275,40,212",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "主桅頂帆（Main Topgallant）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "main",
+        "sail": "topgallant"
+      }
+    },
+    {
+      "name": "mizzen-crossjack",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:後桅/yard-mizzen-crossjack/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:後桅/yard-mizzen-crossjack/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "395,145,78",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "395,35,78",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "後桅橫帆（Mizzen Crossjack）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "mizzen",
+        "sail": "course"
+      }
+    },
+    {
+      "name": "mizzen-topsail",
+      "corners": [
+        {
+          "name": "head_p",
+          "at": "model:後桅/yard-mizzen-topsail/earing-P",
+          "pin": true
+        },
+        {
+          "name": "head_s",
+          "at": "model:後桅/yard-mizzen-topsail/earing-S",
+          "pin": true
+        },
+        {
+          "name": "clew_s",
+          "at": "395,150,132",
+          "pin": false
+        },
+        {
+          "name": "clew_p",
+          "at": "395,30,132",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.05,
+      "enabled": true,
+      "note": "後桅上帆（Mizzen Topsail）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "mizzen",
+        "sail": "topsail"
+      }
+    },
+    {
+      "name": "jib",
+      "corners": [
+        {
+          "name": "tack",
+          "at": "530,90.5,95",
+          "pin": true
+        },
+        {
+          "name": "head",
+          "at": "140,90.5,210",
+          "pin": true
+        },
+        {
+          "name": "clew",
+          "at": "340,90.5,95",
+          "pin": false
+        }
+      ],
+      "bind": [
+        0
+      ],
+      "color": "#f2ead8",
+      "res": 0,
+      "fullness": 1.06,
+      "enabled": true,
+      "note": "前三角帆（Jib，luff 沿 stay）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sail",
+        "mast": "bowsprit",
+        "sail": "jib"
+      }
+    },
+    {
+      "name": "ensign",
+      "corners": [
+        {
+          "name": "head",
+          "at": "80,90.5,95",
+          "pin": true
+        },
+        {
+          "name": "peak",
+          "at": "60,90.5,95",
+          "pin": false
+        },
+        {
+          "name": "clew",
+          "at": "60,90.5,85",
+          "pin": false
+        },
+        {
+          "name": "tack",
+          "at": "80,90.5,85",
+          "pin": true
+        }
+      ],
+      "bind": [
+        3
+      ],
+      "color": "#d9483b",
+      "res": 0,
+      "fullness": 1.08,
+      "enabled": true,
+      "note": "炎羽號艦尾鳳凰海軍旗（Ensign）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:53:37",
+      "meta": {
+        "kind": "flag",
+        "flag": "ensign"
+      }
+    }
+  ]
+}

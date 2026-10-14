@@ -1,0 +1,64 @@
+{
+  "work": "kiara-phoenix-01m",
+  "meters_per_voxel": 0.1,
+  "frame": "X 船長、船頭朝 +X；Y 船寬、中線格 90（連續座標中線 y = 90.5，dy = y − 90）；Z 高度，z 0 ＝ 龍骨底面。格 k 佔 [k, k+1)，判斷一律用格心。",
+  "lines": {
+    "keel": { "x_aft": 110, "x_fwd": 420, "half": 2.0, "rabbet_z": 6 },
+    "sternpost": { "x_at_keel": 110, "rake": 12, "rake_height": 55, "siding": 4 },
+    "stem": { "x_at_keel": 420, "rx": 45, "rz": 65, "siding": 4 },
+    "sheer": { "x_low": 275, "z_low": 64, "x_aft": 75, "z_aft": 76, "x_fwd": 475, "z_fwd": 72 },
+    "dwl": 38,
+    "midship": { "x": 275, "half_beam": 48, "z_max_beam": 45, "deadrise_deg": 14, "bilge_radius": 18, "tumblehome": 2.5, "tumblehome_height": 25 },
+    "transom": { "z": 34, "rake": 0.45, "virtual_extension": 75 },
+    "fullness": {
+      "fore": { "a_bottom": 2.1, "a_top": 2.4, "b_bottom": 0.95, "b_top": 0.6 },
+      "aft": { "a_bottom": 1.9, "a_top": 2.3, "b_bottom": 1.3, "b_top": 0.55 }
+    },
+    "stations": 17,
+    "waterlines": [10, 18, 26, 32, 38, 45, 52, 60],
+    "shell_preview_thickness": 4,
+    "upper": { "bulwark": 12, "quarterdeck": { "x_break": 210, "rise": 8, "bulwark": 11, "drift": 8 } }
+  },
+  "framing": {
+    "backbone_half": 2,
+    "deadwood_hb": 4,
+    "moulded": 3,
+    "spacing": 6,
+    "sided": 3,
+    "station_x": 275,
+    "stern": { "x": 110, "spacing": 6, "sided": 3 },
+    "colors": { "backbone": 104, "frame": 141, "counter": 141 }
+  },
+  "planking": {
+    "paint_waterline_z": 38,
+    "colors": { "copper_bottom": 168, "black_topsides": 36, "gun_band_white": 208, "phoenix_crimson": 132, "cap": 104 }
+  },
+  "decks": {
+    "gun_deck_z": 50,
+    "beam_x0": 275, "beam_spacing": 12, "beam_sided": 3,
+    "ports": {
+      "stations": [135, 160, 185, 210, 235, 260, 285, 310, 335, 360, 385, 410],
+      "width": 6, "height": 6, "sill_above_deck": 4
+    },
+    "hatches": [
+      { "name": "main", "deck": "gun", "x": [265, 285], "dy": 8 },
+      { "name": "fore", "deck": "gun", "x": [370, 385], "dy": 6 },
+      { "name": "aft", "deck": "gun", "x": [170, 185], "dy": 6 }
+    ],
+    "colors": { "plank": 250, "beam": 136, "clamp": 136, "coaming": 104 }
+  },
+  "masts": {
+    "fore": { "x": 405, "rake_deg": 1.0, "lower_head_z": 210, "truck_z": 360, "r_lower": [3.6, 2.8] },
+    "main": { "x": 275, "rake_deg": 2.5, "lower_head_z": 225, "truck_z": 380, "r_lower": [4.0, 3.2] },
+    "mizzen": { "x": 155, "rake_deg": 3.5, "lower_head_z": 185, "truck_z": 320, "r_lower": [2.8, 2.2] },
+    "bowsprit": { "heel_x": 445, "angle_deg": 24, "length": 135, "r": [3.0, 2.0] },
+    "colors": { "spar": 177, "top": 104, "iron": 36 }
+  },
+  "guns": {
+    "broadside_18l": 24,
+    "carronade_24c": 6,
+    "chase_18l": 2,
+    "total": 32,
+    "colors": { "barrel": 36, "carriage": 132 }
+  }
+}

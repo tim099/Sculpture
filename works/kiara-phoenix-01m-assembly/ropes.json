@@ -1,0 +1,172 @@
+{
+  "schema": 3,
+  "ropes": [
+    {
+      "name": "fore-stay",
+      "from": "480,90.5,80",
+      "to": "140,90.5,160",
+      "color": "#2b2620",
+      "thickness": 1.2,
+      "slack": 1.0006,
+      "enabled": true,
+      "group": "standing/stays",
+      "note": "前桅前支索（Fore Stay）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "stay"
+      }
+    },
+    {
+      "name": "main-stay",
+      "from": "145,90.5,75",
+      "to": "275,90.5,170",
+      "color": "#2b2620",
+      "thickness": 1.2,
+      "slack": 1.0006,
+      "enabled": true,
+      "group": "standing/stays",
+      "note": "主桅前支索（Main Stay）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "stay"
+      }
+    },
+    {
+      "name": "mizzen-stay",
+      "from": "280,90.5,75",
+      "to": "395,90.5,160",
+      "color": "#2b2620",
+      "thickness": 1.2,
+      "slack": 1.0006,
+      "enabled": true,
+      "group": "standing/stays",
+      "note": "後桅前支索（Mizzen Stay）",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "stay"
+      }
+    },
+    {
+      "name": "fore-course-sheet-P",
+      "from": "sail:fore-course/clew_p",
+      "to": "140,30,70",
+      "color": "#a08458",
+      "thickness": 0.5,
+      "slack": 0.85,
+      "enabled": true,
+      "group": "running/sheets",
+      "note": "fore-course 左舷帆腳索",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sheet",
+        "sail": "fore-course"
+      }
+    },
+    {
+      "name": "fore-course-sheet-S",
+      "from": "sail:fore-course/clew_s",
+      "to": "140,150,70",
+      "color": "#a08458",
+      "thickness": 0.5,
+      "slack": 0.85,
+      "enabled": true,
+      "group": "running/sheets",
+      "note": "fore-course 右舷帆腳索",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sheet",
+        "sail": "fore-course"
+      }
+    },
+    {
+      "name": "main-course-sheet-P",
+      "from": "sail:main-course/clew_p",
+      "to": "275,20,70",
+      "color": "#a08458",
+      "thickness": 0.5,
+      "slack": 0.85,
+      "enabled": true,
+      "group": "running/sheets",
+      "note": "main-course 左舷帆腳索",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sheet",
+        "sail": "main-course"
+      }
+    },
+    {
+      "name": "main-course-sheet-S",
+      "from": "sail:main-course/clew_s",
+      "to": "275,160,70",
+      "color": "#a08458",
+      "thickness": 0.5,
+      "slack": 0.85,
+      "enabled": true,
+      "group": "running/sheets",
+      "note": "main-course 右舷帆腳索",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sheet",
+        "sail": "main-course"
+      }
+    },
+    {
+      "name": "mizzen-crossjack-sheet-P",
+      "from": "sail:mizzen-crossjack/clew_p",
+      "to": "395,35,78",
+      "color": "#a08458",
+      "thickness": 0.5,
+      "slack": 0.85,
+      "enabled": true,
+      "group": "running/sheets",
+      "note": "mizzen-crossjack 左舷帆腳索",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sheet",
+        "sail": "mizzen-crossjack"
+      }
+    },
+    {
+      "name": "mizzen-crossjack-sheet-S",
+      "from": "sail:mizzen-crossjack/clew_s",
+      "to": "395,145,78",
+      "color": "#a08458",
+      "thickness": 0.5,
+      "slack": 0.85,
+      "enabled": true,
+      "group": "running/sheets",
+      "note": "mizzen-crossjack 右舷帆腳索",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sheet",
+        "sail": "mizzen-crossjack"
+      }
+    },
+    {
+      "name": "jib-sheet",
+      "from": "sail:jib/clew",
+      "to": "340,90.5,78",
+      "color": "#a08458",
+      "thickness": 0.5,
+      "slack": 0.85,
+      "enabled": true,
+      "group": "running/sheets",
+      "note": "jib 前三角帆腳索",
+      "persona": "kiara",
+      "created_at": "2026-10-14T09:34:45",
+      "meta": {
+        "kind": "sheet",
+        "sail": "jib"
+      }
+    }
+  ]
+}
