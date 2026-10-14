@@ -1,0 +1,180 @@
+{
+ "note": "draft_helm.py（階段十五）—— 現況 ＝ 引擎匯出 exports/stage14（546913 格）＋ 組裝件 obj 的繩（51216 個頂點）",
+ "host_work": "summit-stormkaap-01m-deck-half",
+ "host_link": "甲板-後",
+ "wheel": {
+  "work": "summit-stormkaap-01m-wheel",
+  "title": "風暴角號｜舵輪（會轉的：輪、輪幅、輪轂、輪軸、鼓輪；斷了一個把手；0.02 m）",
+  "file": "masks/helm/wheel.vox.txt",
+  "sha256": "db6dfe7e28f2307116e5882bec1fcccd42d88a2d213cce3c2cedc8640f7b40cb",
+  "cells": 8303,
+  "broken_handle_skipped": 9,
+  "anchors": {
+   "axle": [
+    0,
+    37,
+    47
+   ],
+   "hub-aft": [
+    0,
+    37,
+    47
+   ],
+   "drum-rope-a": [
+    30,
+    37,
+    54
+   ],
+   "drum-rope-b": [
+    30,
+    37,
+    40
+   ]
+  }
+ },
+ "stand": {
+  "work": "summit-stormkaap-01m-helm-stand",
+  "title": "風暴角號｜舵輪座（底座、兩根支柱；0.02 m）",
+  "file": "masks/helm/stand.vox.txt",
+  "sha256": "6b7263f64ca5981e7b157dbe28d07a73005ab4821ec03bae16280787be87b15f",
+  "cells": 9036,
+  "anchors": {
+   "base": [
+    30,
+    37,
+    0
+   ]
+  }
+ },
+ "size": [
+  52,
+  75,
+  86
+ ],
+ "mpv": 0.02,
+ "models": [
+  {
+   "name": "舵輪",
+   "work": "summit-stormkaap-01m-wheel",
+   "at": [
+    194.0,
+    130.5,
+    113.5
+   ],
+   "pivot": [
+    26.0,
+    37.5,
+    47.5
+   ],
+   "scale": 0.2,
+   "meta": {
+    "kind": "wheel",
+    "turn_axis": "x",
+    "pivot_anchor": "axle"
+   },
+   "box": [
+    [
+     188.23,
+     122.63,
+     103.43
+    ],
+    [
+     199.57,
+     138.37,
+     121.37
+    ]
+   ]
+  },
+  {
+   "name": "舵輪座",
+   "work": "summit-stormkaap-01m-helm-stand",
+   "at": [
+    194.0,
+    130.5,
+    113.5
+   ],
+   "pivot": [
+    26.0,
+    37.5,
+    47.5
+   ],
+   "scale": 0.2,
+   "meta": {
+    "kind": "wheel_stand"
+   },
+   "box": [
+    [
+     188.23,
+     122.63,
+     103.43
+    ],
+    [
+     199.57,
+     138.37,
+     121.37
+    ]
+   ]
+  },
+  {
+   "name": "羅經櫃",
+   "work": "summit-night-falcon-01m-binnacle",
+   "at": [
+    204.0,
+    130.5,
+    103.0
+   ],
+   "pivot": [
+    9.0,
+    13.0,
+    0.0
+   ],
+   "scale": 0.2,
+   "meta": {
+    "kind": "binnacle"
+   },
+   "box": [
+    [
+     201.63,
+     127.33,
+     102.43
+    ],
+    [
+     206.37,
+     133.67,
+     113.17
+    ]
+   ]
+  }
+ ],
+ "deck_top": {
+  "wheel": 103,
+  "binnacle": 102
+ },
+ "candidates": {
+  "wheel": [
+   194.0,
+   194.5,
+   195.0,
+   203.0,
+   203.5,
+   204.0
+  ],
+  "binnacle": [
+   203.0,
+   203.5,
+   204.0,
+   204.5,
+   205.0,
+   205.5,
+   206.0,
+   206.5,
+   207.0,
+   207.5,
+   208.0,
+   208.5,
+   209.0,
+   209.5,
+   210.0
+  ]
+ }
+}
