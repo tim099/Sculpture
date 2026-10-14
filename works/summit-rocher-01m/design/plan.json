@@ -1,0 +1,206 @@
+{
+  "work": "summit-rocher-01m",
+  "meters_per_voxel": 0.1,
+  "palette": {
+    "plaster_white": 218,
+    "plaster_ochre": 213,
+    "plaster_salmon": 246,
+    "plaster_blue": 187,
+    "timber_dark": 68,
+    "wood": 104,
+    "wood_grey": 109,
+    "slate": 73,
+    "tile": 168,
+    "tile_dark": 132,
+    "thatch": 177,
+    "shutter_green": 49,
+    "shutter_blue": 42,
+    "shutter_red": 164,
+    "stone_light": 182,
+    "stone": 146,
+    "rock": 145,
+    "dirt": 141,
+    "grass": 76,
+    "grass_dark": 44,
+    "sand": 250,
+    "sea": 46,
+    "void_dark": 36,
+    "lantern": 245
+  },
+  "site": {
+    "NX": 1280,
+    "NY": 960,
+    "NZ": 320,
+    "z_sea": 10,
+    "shore": {"y0": 200, "bay_depth": 80, "bay_x": 620, "bay_sigma": 330},
+    "quay": {"x0": 300, "x1": 960, "y_face": 300, "z_top": 32, "promenade_y1": 360},
+    "piers": [
+      {"name": "west", "x": 450, "w": 30, "y_end": 120, "z_deck": 30},
+      {"name": "east", "x": 800, "w": 30, "y_end": 140, "z_deck": 30}
+    ],
+    "ground": {"z_quay": 32, "y_town_top": 640, "z_town_top": 70, "z_back": 110},
+    "fort_hill": {"cx": 920, "cy": 870, "amp": 70, "sx": 230, "sy": 150, "plateau_z": 150},
+    "rock": {"cx": 920, "cy": 875, "rx": 70, "ry": 50, "h": 90},
+    "streets": [
+      {"name": "Quai", "kind": "promenade", "x0": 300, "x1": 960, "y0": 300, "y1": 360},
+      {"name": "Rue des Boucaniers", "kind": "street", "x0": 260, "x1": 1000, "y0": 470, "y1": 520},
+      {"name": "Grande Rue", "kind": "street", "x0": 600, "x1": 660, "y0": 360, "y1": 700},
+      {"name": "Ruelle", "kind": "lane", "x0": 380, "x1": 420, "y0": 360, "y1": 640},
+      {"name": "Rue du Fort", "kind": "lane", "x0": 870, "x1": 910, "y0": 360, "y1": 700}
+    ],
+    "fort_path": [[630, 700], [700, 740], [820, 760], [880, 800]],
+    "terraces": [
+      {"name": "row1", "y0": 362, "y1": 468, "z": 34},
+      {"name": "boucaniers", "y0": 468, "y1": 522, "z0": 34, "z1": 46},
+      {"name": "row2", "y0": 522, "y1": 640, "z": 46}
+    ],
+    "town": {"x0": 260, "x1": 1000},
+    "lots": [
+      {"id": "Q1", "row": 1, "x0": 300, "x1": 380, "type": "C"},
+      {"id": "Q2", "row": 1, "x0": 422, "x1": 490, "type": "A"},
+      {"id": "Q3", "row": 1, "x0": 492, "x1": 600, "type": "B"},
+      {"id": "Q4", "row": 1, "x0": 662, "x1": 730, "type": "A"},
+      {"id": "Q5", "row": 1, "x0": 731, "x1": 799, "type": "A"},
+      {"id": "Q6", "row": 1, "x0": 800, "x1": 868, "type": "A"},
+      {"id": "Q7", "row": 1, "x0": 912, "x1": 960, "type": "D"},
+      {"id": "B1", "row": 2, "x0": 262, "x1": 330, "type": "A"},
+      {"id": "B2", "row": 2, "x0": 332, "x1": 378, "type": "D"},
+      {"id": "B3", "row": 2, "x0": 422, "x1": 490, "type": "A"},
+      {"id": "B4", "row": 2, "x0": 491, "x1": 559, "type": "A"},
+      {"id": "B5", "row": 2, "x0": 560, "x1": 600, "type": "D"},
+      {"id": "B6", "row": 2, "x0": 662, "x1": 730, "type": "A"},
+      {"id": "B7", "row": 2, "x0": 731, "x1": 799, "type": "A"},
+      {"id": "B8", "row": 2, "x0": 800, "x1": 868, "type": "A"},
+      {"id": "B9", "row": 2, "x0": 912, "x1": 992, "type": "C"}
+    ]
+  },
+  "houses": {
+    "A": {
+      "label": "兩層樓房（石砌一樓、木構二樓、臨街迴廊）",
+      "W": 60, "D": 80,
+      "plinth": 6, "plinth_color": "stone",
+      "floor_t": 2, "floor_color": "wood",
+      "floors": [
+        {"h": 32, "kind": "plaster", "t": 3},
+        {"h": 28, "kind": "timber", "t": 2, "post_step": 12, "frame": "timber_dark"}
+      ],
+      "gallery": {"depth": 14, "post_step": 20, "post_w": 2, "rail_h": 10, "baluster_step": 3, "roof_drop": 6, "color": "timber_dark", "floor": "wood", "roof": "wood_grey"},
+      "roof": {"type": "gable", "ridge": "x", "rise_per_run": 0.7, "t": 2, "over": 4, "ridge_cap": "tile_dark"},
+      "openings": [
+        {"face": "front", "floor": 0, "kind": "door", "u": 24, "w": 12, "h": 22},
+        {"face": "front", "floor": 0, "kind": "window", "u": 6, "w": 10, "h": 14, "sill": 10},
+        {"face": "front", "floor": 0, "kind": "window", "u": 44, "w": 10, "h": 14, "sill": 10},
+        {"face": "front", "floor": 1, "kind": "door", "u": 9, "w": 10, "h": 20},
+        {"face": "front", "floor": 1, "kind": "door", "u": 41, "w": 10, "h": 20},
+        {"face": "left", "floor": 0, "kind": "window", "u": 34, "w": 10, "h": 14, "sill": 10},
+        {"face": "right", "floor": 0, "kind": "window", "u": 34, "w": 10, "h": 14, "sill": 10},
+        {"face": "left", "floor": 1, "kind": "window", "u": 34, "w": 10, "h": 12, "sill": 9},
+        {"face": "right", "floor": 1, "kind": "window", "u": 34, "w": 10, "h": 12, "sill": 9},
+        {"face": "back", "floor": 0, "kind": "door", "u": 38, "w": 10, "h": 21},
+        {"face": "back", "floor": 1, "kind": "window", "u": 16, "w": 10, "h": 12, "sill": 9},
+        {"face": "back", "floor": 1, "kind": "window", "u": 36, "w": 10, "h": 12, "sill": 9}
+      ],
+      "variants": {
+        "A1": {"wall": "plaster_white", "infill": "plaster_white", "shutter": "shutter_green", "roof": "tile"},
+        "A2": {"wall": "plaster_ochre", "infill": "plaster_ochre", "shutter": "shutter_blue", "roof": "wood_grey", "ridge": "slate"},
+        "A3": {"wall": "plaster_salmon", "infill": "plaster_white", "shutter": "shutter_red", "roof": "tile"}
+      }
+    },
+    "B": {
+      "label": "酒館 Le Cochon Pendu（倒吊的豬；兩層、迴廊、三道拱門、煙囪、吊招牌）",
+      "W": 100, "D": 86,
+      "plinth": 6, "plinth_color": "stone",
+      "floor_t": 2, "floor_color": "wood",
+      "floors": [
+        {"h": 34, "kind": "plaster", "t": 3},
+        {"h": 30, "kind": "timber", "t": 2, "post_step": 12, "frame": "timber_dark"}
+      ],
+      "gallery": {"depth": 14, "post_step": 24, "post_w": 2, "rail_h": 10, "baluster_step": 3, "roof_drop": 6, "color": "timber_dark", "floor": "wood", "roof": "wood_grey"},
+      "roof": {"type": "gable", "ridge": "x", "rise_per_run": 0.7, "t": 2, "over": 4, "ridge_cap": "tile_dark"},
+      "chimney": {"face": "right", "u": 30, "w": 12, "d": 8, "above": 6, "color": "stone"},
+      "sign": {"face": "left", "reach": 10, "z": 58},
+      "openings": [
+        {"face": "front", "floor": 0, "kind": "door", "u": 8, "w": 18, "h": 26},
+        {"face": "front", "floor": 0, "kind": "door", "u": 41, "w": 18, "h": 26},
+        {"face": "front", "floor": 0, "kind": "door", "u": 74, "w": 18, "h": 26},
+        {"face": "front", "floor": 1, "kind": "door", "u": 12, "w": 10, "h": 20},
+        {"face": "front", "floor": 1, "kind": "door", "u": 45, "w": 10, "h": 20},
+        {"face": "front", "floor": 1, "kind": "door", "u": 78, "w": 10, "h": 20},
+        {"face": "left", "floor": 0, "kind": "window", "u": 30, "w": 10, "h": 14, "sill": 10},
+        {"face": "left", "floor": 0, "kind": "window", "u": 58, "w": 10, "h": 14, "sill": 10},
+        {"face": "left", "floor": 1, "kind": "window", "u": 30, "w": 10, "h": 12, "sill": 9},
+        {"face": "left", "floor": 1, "kind": "window", "u": 58, "w": 10, "h": 12, "sill": 9},
+        {"face": "right", "floor": 0, "kind": "window", "u": 58, "w": 10, "h": 14, "sill": 10},
+        {"face": "right", "floor": 1, "kind": "window", "u": 58, "w": 10, "h": 12, "sill": 9},
+        {"face": "back", "floor": 0, "kind": "door", "u": 70, "w": 12, "h": 22},
+        {"face": "back", "floor": 1, "kind": "window", "u": 20, "w": 10, "h": 12, "sill": 9},
+        {"face": "back", "floor": 1, "kind": "window", "u": 60, "w": 10, "h": 12, "sill": 9}
+      ],
+      "variants": {
+        "B1": {"wall": "plaster_ochre", "infill": "plaster_white", "shutter": "shutter_red", "roof": "tile"}
+      }
+    },
+    "C": {
+      "label": "倉庫（石砌單層挑高、四坡屋頂、貨門、閣樓門、吊貨梁）",
+      "W": 70, "D": 90,
+      "plinth": 4, "plinth_color": "stone",
+      "floor_t": 2, "floor_color": "wood",
+      "floors": [
+        {"h": 52, "kind": "stone", "t": 4}
+      ],
+      "roof": {"type": "hip", "rise_per_run": 0.6, "t": 2, "over": 4, "ridge_cap": "tile_dark"},
+      "hoist": {"u": 35, "reach": 10, "z": 51},
+      "openings": [
+        {"face": "front", "floor": 0, "kind": "door", "u": 25, "w": 20, "h": 32, "lintel": "timber_dark"},
+        {"face": "front", "floor": 0, "kind": "loft", "u": 29, "w": 12, "h": 12, "sill": 34, "shutters": true},
+        {"face": "left", "floor": 0, "kind": "window", "u": 20, "w": 6, "h": 8, "sill": 34, "shutters": false},
+        {"face": "left", "floor": 0, "kind": "window", "u": 62, "w": 6, "h": 8, "sill": 34, "shutters": false},
+        {"face": "right", "floor": 0, "kind": "window", "u": 20, "w": 6, "h": 8, "sill": 34, "shutters": false},
+        {"face": "right", "floor": 0, "kind": "window", "u": 62, "w": 6, "h": 8, "sill": 34, "shutters": false},
+        {"face": "back", "floor": 0, "kind": "door", "u": 29, "w": 12, "h": 24, "lintel": "timber_dark"}
+      ],
+      "variants": {
+        "C1": {"wall": "stone", "infill": "stone", "shutter": "wood", "roof": "tile_dark", "ridge": "slate"},
+        "C2": {"wall": "stone_light", "infill": "stone_light", "shutter": "shutter_green", "roof": "tile"}
+      }
+    },
+    "D": {
+      "label": "木板小屋（單層、單坡屋頂）",
+      "W": 40, "D": 50,
+      "plinth": 4, "plinth_color": "stone",
+      "floor_t": 2, "floor_color": "wood",
+      "floors": [
+        {"h": 26, "kind": "plank", "t": 2, "seam": "timber_dark"}
+      ],
+      "roof": {"type": "shed", "rise_per_run": 0.35, "t": 2, "over": 4, "ridge_cap": "thatch"},
+      "openings": [
+        {"face": "front", "floor": 0, "kind": "door", "u": 6, "w": 10, "h": 20},
+        {"face": "front", "floor": 0, "kind": "window", "u": 24, "w": 8, "h": 8, "sill": 9},
+        {"face": "left", "floor": 0, "kind": "window", "u": 20, "w": 8, "h": 8, "sill": 9}
+      ],
+      "variants": {
+        "D1": {"wall": "wood", "infill": "wood", "shutter": "timber_dark", "roof": "thatch"},
+        "D2": {"wall": "wood_grey", "infill": "wood_grey", "shutter": "shutter_blue", "roof": "wood_grey", "ridge": "slate"}
+      }
+    }
+  },
+  "provenance": {
+    "name": "設計決定：岩堡港（Port-du-Rocher）—— 典故 Fort de Rocher（Wikipedia『Fort de Rocher』：Levasseur、約 1640）",
+    "meters_per_voxel": "委託：Tim 2026-10-14「一樣用 0.1m 一格的精度」",
+    "palette": "設計決定：RGB332 色盤裡挑；同色在匯出時會合併 ⇒ 每型房屋只用 6–8 色",
+    "site.NX": "設計決定：沿岸 128 m（鎮的一條港灣街區，不是整個 Basse-Terre）",
+    "site.NY": "設計決定：海 → 山坡 96 m；岩堡放在北邊山坡上（史實：堡在港北邊約 0.5 km 的坡上 —— 縮短成 60 m，好讓鎮跟堡同框）",
+    "site.NZ": "設計決定：岩頂 z 240＋小堡 ⇒ 320（32 m）",
+    "site.z_sea": "設計決定：z 0 ＝ 海平面下 1 m（不做海床），海面在 z 10",
+    "site.quay": "設計決定：石砌碼頭，頂面高出海面 2.2 m",
+    "site.piers": "設計決定：兩座木棧橋（電影裡托圖嘉的碼頭是木棧橋＋停泊的船 —— 氛圍，沒逐格對）",
+    "site.fort_hill": "史實（Wikipedia『Fort de Rocher』）：堡在港北的山坡、坡上的樹砍光了好看海（約 180° 視野）⇒ 坡上只鋪草不放樹",
+    "site.rock": "史實（Wikipedia『Fort de Rocher』）：『a steep rock which stood thirty feet high』⇒ 30 ft ≈ 9.1 m ⇒ 90 格；平面大小是設計決定",
+    "site.terraces": "設計決定：鎮裡兩排房子各墊一層平台（坡度約 1:9，一塊地 10 m 深會高低差 1.2 m ⇒ 不墊就得逐棟做石基）；平台之間的街做成坡",
+    "site.lots": "設計決定：臨港一排（酒館 B 在大街口、倉庫 C 在西端靠碼頭）＋ 第二排；寬度照房屋外框（含屋簷）排，相鄰屋簷不碰；坡上的小屋與燻肉架之後再放",
+    "houses.B": "設計決定：酒館（電影托圖嘉的酒館是片場搭景、沒有名字 ⇒ 店名 Le Cochon Pendu 是 summit 取的；豬 ＝ 電影裡托圖嘉街上的豬＋buccaneer 打野豬的史實）",
+    "houses.C": "設計決定：碼頭邊的石砌倉庫（magasin）、吊貨梁；沒有逐件對照史料",
+    "houses.D": "設計決定：坡上、巷尾的木板小屋（buccaneer 的營地房）；茅草＝棕櫚葉的意思，色用 thatch",
+    "houses.A": "設計決定：法屬安地列斯殖民風（石基、一樓石砌粉刷、二樓木構、木百葉、臨街迴廊）＋電影托圖嘉的樓房與陽台的氛圍；尺寸照一般城鎮連棟樓（6 m 寬、8 m 深）—— 沒有逐件對照史料"
+  }
+}
