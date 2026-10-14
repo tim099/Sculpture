@@ -1,0 +1,335 @@
+{
+  "broken": {
+    "ropes_broken": 0,
+    "sails_broken": 0
+  },
+  "cloth_hits_design": {
+    "fore-course": {
+      "yard:fore-course": 763
+    },
+    "fore-topgallant": {
+      "yard:fore-topgallant": 645
+    },
+    "fore-topsail": {
+      "yard:fore-topsail": 673
+    },
+    "main-course": {
+      "yard:main-course": 491
+    },
+    "main-topgallant": {
+      "yard:main-topgallant": 488
+    },
+    "main-topsail": {
+      "yard:main-topsail": 497
+    },
+    "mizzen-lateen": {
+      "yard:mizzen-lateen": 132
+    },
+    "mizzen-topsail": {
+      "yard:mizzen-topsail": 765
+    },
+    "sprit-topsail": {
+      "yard:sprit-topsail": 50
+    },
+    "spritsail": {
+      "yard:spritsail": 919
+    }
+  },
+  "cloth_hits_engine": {
+    "fore-course": 0,
+    "fore-topgallant": 0,
+    "fore-topsail": 0,
+    "main-course": 0,
+    "main-topgallant": 0,
+    "main-topsail": 0,
+    "mizzen-lateen": 0,
+    "mizzen-topsail": 0,
+    "sprit-topsail": 0,
+    "spritsail": 0
+  },
+  "engine": {
+    "fore-course": {
+      "billow": -59.26,
+      "ropes": 4,
+      "state": "ok"
+    },
+    "fore-topgallant": {
+      "billow": -26.01,
+      "ropes": 2,
+      "state": "ok"
+    },
+    "fore-topsail": {
+      "billow": -44.07,
+      "ropes": 2,
+      "state": "ok"
+    },
+    "main-course": {
+      "billow": -88.88,
+      "ropes": 4,
+      "state": "ok"
+    },
+    "main-topgallant": {
+      "billow": -28.64,
+      "ropes": 2,
+      "state": "ok"
+    },
+    "main-topsail": {
+      "billow": -48.63,
+      "ropes": 2,
+      "state": "ok"
+    },
+    "mizzen-lateen": {
+      "billow": 28.8,
+      "ropes": 2,
+      "state": "ok"
+    },
+    "mizzen-topsail": {
+      "billow": -22.16,
+      "ropes": 2,
+      "state": "ok"
+    },
+    "sprit-topsail": {
+      "billow": -36.13,
+      "ropes": 2,
+      "state": "ok"
+    },
+    "spritsail": {
+      "billow": -46.28,
+      "ropes": 2,
+      "state": "ok"
+    }
+  },
+  "flat_known_answer": {
+    "fore-course": {
+      "design": {
+        "yard:fore-course": 94
+      },
+      "engine": 0,
+      "recorded": {
+        "yard:fore-course": 94
+      },
+      "same": true
+    },
+    "fore-topgallant": {
+      "design": {
+        "mast_fore": 58
+      },
+      "engine": 58,
+      "recorded": {
+        "mast_fore": 58
+      },
+      "same": true
+    },
+    "fore-topsail": {
+      "design": {
+        "mast_fore": 72,
+        "yard:fore-topsail": 60
+      },
+      "engine": 72,
+      "recorded": {
+        "mast_fore": 72,
+        "yard:fore-topsail": 60
+      },
+      "same": true
+    },
+    "main-course": {
+      "design": {
+        "yard:main-course": 60
+      },
+      "engine": 0,
+      "recorded": {
+        "yard:main-course": 60
+      },
+      "same": true
+    },
+    "main-topgallant": {
+      "design": {
+        "mast_main": 56
+      },
+      "engine": 56,
+      "recorded": {
+        "mast_main": 56
+      },
+      "same": true
+    },
+    "main-topsail": {
+      "design": {
+        "mast_main": 78
+      },
+      "engine": 78,
+      "recorded": {
+        "mast_main": 78
+      },
+      "same": true
+    },
+    "mizzen-lateen": {
+      "design": {
+        "yard:mizzen-lateen": 1
+      },
+      "engine": 0,
+      "recorded": {
+        "yard:mizzen-lateen": 1
+      },
+      "same": true
+    },
+    "mizzen-topsail": {
+      "design": {
+        "yard:mizzen-topsail": 60
+      },
+      "engine": 0,
+      "recorded": {
+        "yard:mizzen-topsail": 60
+      },
+      "same": true
+    },
+    "sprit-topsail": {
+      "design": {
+        "bowsprit": 14
+      },
+      "engine": 14,
+      "recorded": {
+        "bowsprit": 14
+      },
+      "same": true
+    },
+    "spritsail": {
+      "design": {
+        "yard:spritsail": 62
+      },
+      "engine": 0,
+      "recorded": {
+        "yard:spritsail": 62
+      },
+      "same": true
+    }
+  },
+  "mast_clearance": {
+    "fore-course": {
+      "mast": "fore",
+      "min": 4.0,
+      "pushed_3_toward_mast": 1.0
+    },
+    "fore-topgallant": {
+      "mast": "fore",
+      "min": 3.0,
+      "pushed_3_toward_mast": 0.0
+    },
+    "fore-topsail": {
+      "mast": "fore",
+      "min": 3.0,
+      "pushed_3_toward_mast": 0.0
+    },
+    "main-course": {
+      "mast": "main",
+      "min": 4.123,
+      "pushed_3_toward_mast": 1.414
+    },
+    "main-topgallant": {
+      "mast": "main",
+      "min": 3.0,
+      "pushed_3_toward_mast": 0.0
+    },
+    "main-topsail": {
+      "mast": "main",
+      "min": 3.0,
+      "pushed_3_toward_mast": 0.0
+    },
+    "mizzen-lateen": {
+      "mast": "mizzen",
+      "min": 6.403,
+      "pushed_3_toward_mast": null
+    },
+    "mizzen-topsail": {
+      "mast": "mizzen",
+      "min": 3.0,
+      "pushed_3_toward_mast": 0.0
+    },
+    "sprit-topsail": {
+      "mast": "bowsprit",
+      "min": 3.0,
+      "pushed_3_toward_mast": null
+    },
+    "spritsail": {
+      "mast": "bowsprit",
+      "min": 4.123,
+      "pushed_3_toward_mast": null
+    }
+  },
+  "mesh": {
+    "fore-course": {
+      "checked": 48338,
+      "corner0_dev": 0.05,
+      "tris": 16428,
+      "verts": 32484
+    },
+    "fore-topgallant": {
+      "checked": 79524,
+      "corner0_dev": 0.05,
+      "tris": 27340,
+      "verts": 53708
+    },
+    "fore-topsail": {
+      "checked": 67350,
+      "corner0_dev": 0.05,
+      "tris": 22944,
+      "verts": 44916
+    },
+    "main-course": {
+      "checked": 60240,
+      "corner0_dev": 0.05,
+      "tris": 20408,
+      "verts": 40372
+    },
+    "main-topgallant": {
+      "checked": 93580,
+      "corner0_dev": 0.05,
+      "tris": 32124,
+      "verts": 63040
+    },
+    "main-topsail": {
+      "checked": 61114,
+      "corner0_dev": 0.05,
+      "tris": 20828,
+      "verts": 40748
+    },
+    "mizzen-lateen": {
+      "checked": 35668,
+      "corner0_dev": 0.05,
+      "tris": 12472,
+      "verts": 24684
+    },
+    "mizzen-topsail": {
+      "checked": 63852,
+      "corner0_dev": 0.05,
+      "tris": 21932,
+      "verts": 42904
+    },
+    "sprit-topsail": {
+      "checked": 53842,
+      "corner0_dev": 0.05,
+      "tris": 18476,
+      "verts": 36168
+    },
+    "spritsail": {
+      "checked": 66820,
+      "corner0_dev": 0.05,
+      "tris": 27464,
+      "verts": 40674
+    }
+  },
+  "outside_frame": {
+    "fore-course": 0,
+    "fore-topgallant": 0,
+    "fore-topsail": 0,
+    "main-course": 0,
+    "main-topgallant": 0,
+    "main-topsail": 0,
+    "mizzen-lateen": 0,
+    "mizzen-topsail": 0,
+    "sprit-topsail": 0,
+    "spritsail": 0
+  },
+  "reverse_offset3": {
+    "main-course": 2.709
+  }
+}

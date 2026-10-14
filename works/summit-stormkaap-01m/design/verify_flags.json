@@ -1,0 +1,226 @@
+{
+  "anchors": {
+    "ensign": [
+      {
+        "at": [
+          98,
+          130,
+          202
+        ],
+        "kind": "flag-hoist",
+        "name": "ensign-top",
+        "work": "summit-stormkaap-01m-stern-deco"
+      },
+      {
+        "at": [
+          98,
+          130,
+          182
+        ],
+        "kind": "flag-hoist",
+        "name": "ensign-bot",
+        "work": "summit-stormkaap-01m-stern-deco"
+      }
+    ],
+    "pennant": [
+      {
+        "at": [
+          306,
+          130,
+          504
+        ],
+        "kind": "flag-hoist",
+        "name": "pennant-top",
+        "work": "summit-stormkaap-01m-mast-main"
+      },
+      {
+        "at": [
+          306,
+          130,
+          498
+        ],
+        "kind": "flag-hoist",
+        "name": "pennant-bot",
+        "work": "summit-stormkaap-01m-mast-main"
+      }
+    ]
+  },
+  "flat_flag_hits": {
+    "ensign": {},
+    "pennant": {}
+  },
+  "meta": [
+    [
+      "sail",
+      "ensign",
+      {
+        "flag": "ensign",
+        "kind": "flag"
+      }
+    ],
+    [
+      "sail",
+      "pennant",
+      {
+        "flag": "pennant",
+        "kind": "flag"
+      }
+    ]
+  ],
+  "sails": [
+    {
+      "bind": "3",
+      "color": "#5a5248",
+      "corner_names": [
+        "hoist_top",
+        "fly_top",
+        "fly_bottom",
+        "hoist_bottom"
+      ],
+      "corners": [
+        "船尾裝飾/ensign-top",
+        "128.5000,130.5000,202.5000",
+        "128.5000,130.5000,182.5000",
+        "船尾裝飾/ensign-bot"
+      ],
+      "corners_world": [
+        [
+          98.5,
+          130.5,
+          202.5
+        ],
+        [
+          128.5,
+          130.5,
+          202.5
+        ],
+        [
+          128.5,
+          130.5,
+          182.5
+        ],
+        [
+          98.5,
+          130.5,
+          182.5
+        ]
+      ],
+      "free": "fly_top,fly_bottom",
+      "fullness": 1.06,
+      "name": "ensign",
+      "note": "船尾旗（荷蘭三色＋VOC 字母，褪色撕爛）—— 船尾拱頂上的旗桿",
+      "res": 16,
+      "texture": "textures/ensign.png",
+      "texture_px": [
+        60,
+        40
+      ],
+      "texture_sha256": "0af297c1e9ac084f88b5932cb1fe833999c4004b19b93807aaadb9e35813d129"
+    },
+    {
+      "bind": "3",
+      "color": "#5a5248",
+      "corner_names": [
+        "hoist_top",
+        "fly_top",
+        "fly_bottom",
+        "hoist_bottom"
+      ],
+      "corners": [
+        "主桅/pennant-top",
+        "366.5000,130.5000,504.5000",
+        "366.5000,130.5000,498.5000",
+        "主桅/pennant-bot"
+      ],
+      "corners_world": [
+        [
+          306.5,
+          130.5,
+          504.5
+        ],
+        [
+          366.5,
+          130.5,
+          504.5
+        ],
+        [
+          366.5,
+          130.5,
+          498.5
+        ],
+        [
+          306.5,
+          130.5,
+          498.5
+        ]
+      ],
+      "free": "fly_top,fly_bottom",
+      "fullness": 1.06,
+      "name": "pennant",
+      "note": "長旗（三色、燕尾）—— 主桅頂的旗桿",
+      "res": 0,
+      "texture": "textures/pennant.png",
+      "texture_px": [
+        120,
+        12
+      ],
+      "texture_sha256": "bd9a89dbbf8a01c69eef8fc905c0769d51295f8be4cb4e44f1bdad024f7f90e1"
+    }
+  ],
+  "seconds": 4,
+  "staff": {
+    "ensign": {
+      "base_z": 177,
+      "cells": 31,
+      "on": "stern_deco",
+      "x": 98,
+      "z": [
+        178,
+        204
+      ]
+    },
+    "pennant": {
+      "base_z": 485,
+      "cells": 25,
+      "on": "mast_main",
+      "x": 306,
+      "z": [
+        486,
+        506
+      ]
+    }
+  },
+  "stamp": {
+    "ensign": {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/flags/ensign_staff.vox.txt",
+      "name": "ensign-staff",
+      "op": "stampvox",
+      "sha256": "49ed3195d031147bbc689beec36f1f2aa75e89e3517bea14a94ed65750ad4058",
+      "voxels": 31,
+      "work": "summit-stormkaap-01m-stern-deco"
+    },
+    "pennant": {
+      "at": [
+        0,
+        0,
+        0
+      ],
+      "file": "masks/flags/pennant_staff.vox.txt",
+      "name": "pennant-staff",
+      "op": "stampvox",
+      "sha256": "c0528970b2fd330ee7cc5f0dae6a901dcc8d62056448b3cbc299b4ed08361f17",
+      "voxels": 25,
+      "work": "summit-stormkaap-01m-mast-main"
+    }
+  },
+  "wind": [
+    4.5,
+    -1.5,
+    0
+  ]
+}

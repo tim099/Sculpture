@@ -412,6 +412,86 @@
 				"mast": "mizzen",
 				"sail": "gaff"
 			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "hoist_top",
+					"at": "船尾裝飾/ensign-top",
+					"pin": true
+				},
+				{
+					"name": "fly_top",
+					"at": "128.5000,130.5000,202.5000",
+					"pin": false
+				},
+				{
+					"name": "fly_bottom",
+					"at": "128.5000,130.5000,182.5000",
+					"pin": false
+				},
+				{
+					"name": "hoist_bottom",
+					"at": "船尾裝飾/ensign-bot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#5a5248",
+			"res": 16,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "船尾旗（荷蘭三色＋VOC 字母，褪色撕爛）—— 船尾拱頂上的旗桿（階段十一）",
+			"persona": "summit",
+			"created_at": "2026-10-14T16:30:00",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "hoist_top",
+					"at": "主桅/pennant-top",
+					"pin": true
+				},
+				{
+					"name": "fly_top",
+					"at": "366.5000,130.5000,504.5000",
+					"pin": false
+				},
+				{
+					"name": "fly_bottom",
+					"at": "366.5000,130.5000,498.5000",
+					"pin": false
+				},
+				{
+					"name": "hoist_bottom",
+					"at": "主桅/pennant-bot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "長旗（三色、燕尾）—— 主桅頂的旗桿（階段十一）",
+			"persona": "summit",
+			"created_at": "2026-10-14T16:30:00",
+			"texture": "textures/pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag"
+			}
 		}
 	]
 }

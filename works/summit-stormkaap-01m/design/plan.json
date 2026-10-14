@@ -224,6 +224,15 @@
     "texture": {"max_px": 96, "holes_per_10k_px": 6, "hole_r": [1.5, 4.0], "tatter_px": 6, "base": [90, 82, 72], "noise": 14, "patch": [70, 66, 58]},
     "stack_margin": 5
   },
+  "flags": {
+    "staff_color": 109,
+    "cap_color": 73,
+    "colors": {"red": [128, 62, 52], "white": [176, 168, 148], "blue": [50, 66, 86], "monogram": [40, 34, 30]},
+    "ensign": {"on": "stern_deco", "link": "船尾裝飾", "work": "summit-stormkaap-01m-stern-deco", "staff_len": 26, "hoist": 20, "fly": 30, "top_below_staff_top": 1,
+               "res": 16, "fullness": 1.06, "px": [60, 40], "holes": 3, "hole_r": [1.5, 3.0], "tatter_px": 5},
+    "pennant": {"on": "mast_main", "link": "主桅", "work": "summit-stormkaap-01m-mast-main", "staff_len": 20, "hoist": 6, "fly": 60, "top_below_staff_top": 1,
+                "res": 0, "fullness": 1.06, "px": [120, 12], "holes": 1, "hole_r": [1.0, 1.5], "tatter_px": 3, "fork_px": 24}
+  },
   "provenance": {
     "frame.NY": "設計決定：主帆桁 69 voet × 1.194 ＝ 23.3 m（233 格，W1）要放得進 ⇒ 261（中線 130）",
     "frame.NX": "設計決定：艉板頂 x≈97 → 艏柱頂 x≈550（453 格）＋ galjoen 與船首斜桅（20.3 m、仰角約 35° ＝ 記憶）往前約 14 m ⇒ 736",
@@ -265,6 +274,8 @@
     "rigging": "設計決定（階段八，2026-10-14）：靜索照夜隼號階段九（＝ basecamp 憲法號 Shipbuilding §6）。channels v2：每根桅一塊、從桅前 2 格往船尾每 4 格一顆 deadeye（後 4、主 7、前 6 ＝ lower shrouds 3／5／4 ＋ backstays 1／2／2），撞到上排砲門的 x（±1）就跳過、往船尾接下一格 —— 階段六的 channels 照砲門空檔排、大半在桅前面，shrouds 該在桅旁與桅後 ⇒ 重排。channel 比上排砲門下沿低 5 格，可以從砲門底下穿過；deadeye 與 shroud 不擋砲口。chain plate 往下 6 格、不進下排砲門的開口。shroud 數、粗細、繩色都是設計決定，沒有查 Batavia 的帆裝表（B1 只寫「麻繩 21 km」）。stays：後桅 → 主桅腳、後上桅 → 主桅平台後緣；主桅 → 前桅腳、主上桅 → 前桅下 cap、主上上桅 → 前上桅 cap；前桅 → 斜桅 45%、前上桅 → 斜桅 90%、前上上桅 → 斜桅頂桅頭；bobstay：斜桅 60% 底面 → 船頭大嘴上顎的中脊（大嘴佔了艏柱前面，沒有別的地方綁）。走法照一般 17 世紀荷蘭船的印象，⛔ 沒有查證。",
     "belaying": "設計決定（階段九，2026-10-14）：每根桅腳一組 U 形 fife rail（橫 rail 在桅後、兩側往前接 bitts），照夜隼號階段十的形狀放大（主、前桅半寬 9、後桅 7）；踩在那一根桅所在的最上層甲板上（後桅 ＝ 後甲板、主桅 ＝ 船腰的上甲板、前桅 ＝ 艏樓）。⛔ 舷牆 pin rails 這次不做：船腰、後甲板、艏樓、艉樓的舷牆高度都不同，夜隼號那套「掃舷牆內面」要重寫 —— 改在艉樓與艏樓的舷牆頂各取一個 kevel 固定點（船殼原有的格，不加格）給 course 與 spritsail 的 braces 綁。",
     "running": "設計決定（階段九）：走法照一般 17 世紀荷蘭船的印象，⛔ 沒有查證。lifts：course → 下桅 cap 兩側、topsail → 上桅 cap 兩側、topgallant → topgallant 桅頭、後上桅帆桁 → 後上桅頭、spritsail → 斜桅 90%、sprit topsail → 斜桅頂桅頭。braces：前 course → 主桅側面（前 course 那一高度）的滑車 ＋ fall 落主桅 fife；主 course → 艉樓舷牆頂 kevel；前 topsail／topgallant → 主桅平台前緣／crosstrees 端；主 topsail／topgallant → 後上桅頭；後上桅帆桁 → 主桅平台後緣；spritsail → 艏樓舷牆頂 kevel；sprit topsail → 前桅平台前緣。halyards：topsail、topgallant 的 tye 從 sling 到 crosstrees 端（後桅到後上桅頭），fall 收在桅頂平台邊緣 —— 平台很大、沒有 lubber hole，往甲板拉一定穿過平台。course 帆桁是吊死的（沒有 halyard）。lateen：halyard（sling → 後桅 hounds、fall 落後桅 fife）、vang（後端 → 艉樓舷牆頂 kevel）。footropes：9 根方帆桁每舷一條、slack 1.03。",
-    "sails": "設計決定（階段十，2026-10-14）：10 面帆照帆桁 meta 的 sail 名（plan yards.sail_of）。方帆上緣釘在兩個 earing 之間、下兩角 free；course 的帆腳離帆桁 0.55 × 桁長（方帆常見的深寬比，記憶 ⛔ 未查證），但至少在那一段甲板上 2 m；topsail 以上的帆角綁下一根帆桁同舷的 earing；後上桅帆沒有 crossjack（Witsen 沒列）⇒ 帆角收在後桅平台前緣；sprit topsail 的帆角綁 spritsail 帆桁。lateen：三角帆，沿帆桁那條邊釘住、後下角 free、sheet 落艉樓 kevel。course sheet／tack：主 → 艉樓 kevel／前桅 channel 最後一顆 deadeye，前 → 主桅 channel 第一顆 deadeye／艏樓 kevel（沒有舷牆 pin rails，見 belaying）。帆色深灰褐 ＋ 破帆貼圖（洞 ＝ alpha 0、帆腳撕爛）—— 粉絲作品與記憶，電影沒有官方說法；⚠ 遊戲照頂點取色、不挖洞（todo）。風照造船規格 §7 的預設 4.5,−1.5,0。meta 照 §9.1：spritsail ＝ bowsprit 的 course、sprit topsail ＝ bowsprit 的 topsail 加 set 3（不然收帆時也會開）、lateen ＝ gaff（縱帆）。"
+    "sails": "設計決定（階段十，2026-10-14）：10 面帆照帆桁 meta 的 sail 名（plan yards.sail_of）。方帆上緣釘在兩個 earing 之間、下兩角 free；course 的帆腳離帆桁 0.55 × 桁長（方帆常見的深寬比，記憶 ⛔ 未查證），但至少在那一段甲板上 2 m；topsail 以上的帆角綁下一根帆桁同舷的 earing；後上桅帆沒有 crossjack（Witsen 沒列）⇒ 帆角收在後桅平台前緣；sprit topsail 的帆角綁 spritsail 帆桁。lateen：三角帆，沿帆桁那條邊釘住、後下角 free、sheet 落艉樓 kevel。course sheet／tack：主 → 艉樓 kevel／前桅 channel 最後一顆 deadeye，前 → 主桅 channel 第一顆 deadeye／艏樓 kevel（沒有舷牆 pin rails，見 belaying）。帆色深灰褐 ＋ 破帆貼圖（洞 ＝ alpha 0、帆腳撕爛）—— 粉絲作品與記憶，電影沒有官方說法；⚠ 遊戲照頂點取色、不挖洞（todo）。風照造船規格 §7 的預設 4.5,−1.5,0。meta 照 §9.1：spritsail ＝ bowsprit 的 course、sprit topsail ＝ bowsprit 的 topsail 加 set 3（不然收帆時也會開）、lateen ＝ gaff（縱帆）。",
+    "flags": "設計決定（階段十一，2026-10-14 下午）：船尾旗 ＝ 荷蘭三色旗（紅白藍橫三條）＋ 白帶正中 VOC 交織字母 —— 查證（2026-10-14，搜尋摘要轉述）：VOC 的旗 ＝ 荷蘭三色旗、正中公司交織字母（FOTW https://crwflags.com/FOTW/flags/za_early.html ）；1630 年前後起紅條漸多、1660 以後橘條很少（FOTW https://crwflags.com/fotw/Flags/nl_prvlg.html ）—— 本船設定約 1640 ⇒ 取紅；⚠ 商船只用國旗、不用 Prinsenvlag 是論壇說法（shipstamps.co.uk），當旁證。顏色褪成鏽紅／髒白／暗藍、字母深褐，加洞與撕爛的 fly 邊（鬼船；跟帆同一套）。長旗（pennant）＝ 同三色沿長邊、尾巴燕尾撕爛 —— 荷蘭船桅頂掛長旗是記憶（畫作），⚠ 沒查證樣式。meta 照造船規格 §9.1：kind=flag、flag=ensign／pennant。",
+    "flags.place": "設計決定：① 船尾旗插在船尾拱頂（Adamastor 那座）最高那一格上，旗桿 2.6 m；船尾旗桿的位置是記憶（17 世紀荷蘭船的 hekstok），⚠ 這幾份來源都沒寫旗插在哪。量過的限制：三角帆的帆桁後端在拱頂正上方 z≈250（離中線 8.5 格）、模擬後的三角帆在 x < 140 只出現在 z 185 以上、y ≤ 121.8；預設風把旗往 −y 吹 ⇒ 旗不能大、不能高：hoist 20 × fly 30（2 × 3 m），旗面約 z 182–202。② 長旗插在主桅頂（z 485，木頭、沒有 truck）上面一根 2 m 的旗桿，hoist 0.6 m × fly 6 m；旗桿頂一圈鐵帽（73）。⛔ 旗與繩的距離要模擬之後量（繩不是格）。"
   }
 }

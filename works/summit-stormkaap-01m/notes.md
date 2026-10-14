@@ -288,5 +288,26 @@ Tim：「繼續造船 階段十 GO」。設計 plan.json `sails`（provenance `s
 - 讀數：
   - 引擎 `sub=sails`：10 面全部 ok；`sub=ropes`：537 條（靜索 443＋動索 70＋帆腳索 24）、ropes_broken 0、21 組、未分組 0；`sub=meta`：帆 10、沒標 0；繩 24 有標（靜索與動索 513 條不必標，§9.1 只要求帆自己的繩）。
   - draft 的平的布（模擬之前）：除了自己的帆桁（上緣綁在頂面，布往下一定穿過桁身 60–94 個取樣）以外，topsail／topgallant 穿過桅頭 56–78、sprit topsail 穿過斜桅 14 —— 跟夜隼號一樣，要靠風把布推開。
-  - ⚠ **還沒做**：模擬之後的布（OBJ）落在實心的數（夜隼號 check_sails.py 那一套）—— 量之前 ⛔ 不說「帆不穿模」。
+  - ✅ 模擬之後（2026-10-14 下午補量，`design/check_sails.py` ⇒ `verify_sails_post.json`；匯出在 `exports/stage10_post/`：OBJ ropes=0、格子清單、sub=sails）：
+    - 布點（頂點＋三角形重心，每面 3.6–9.4 萬個，離釘住的邊 < 1.2 格的不算）落在實心，**兩條路分開數**：① 引擎的格子清單（船、桅、斜桅、channels、fife —— 不經設計程式）**10 面全是 0**；② 設計那一側的標籤表（多看得到帆桁模型）只報**每面帆自己那根帆桁** 50–919 點、別的件 0。
+    - 自己帆桁那幾點（`design/check_sails_ownyard.py`）：全部離上緣 1.20–3.39 格、不超過桁徑（3.0–4.5 格）⇒ 是上緣綁在帆桁頂面、布往下穿過桁身那一條（藏在帆桁裡），跟模擬之前平的布同一個形狀，⛔ 不是布在別處繞回帆桁。
+    - 已知答案：同一支數法數模擬之前的平的布 ⇒ 10 面都等於 draft_sails 記的 flat_cloth_hits；引擎那條路也報出桅頭 56／58／72／78、斜桅 14（尺會叫）⇒ 風把 topsail／topgallant 從桅頭、sprit topsail 從斜桅推開了。
+    - 離自己那根桅最近（格心距離）：topsail／topgallant／後上桅帆 3.0、course 4.0–4.1、spritsail 4.1、sprit topsail 3.0、lateen 6.4；反向對照：方帆整份往桅推 3 格 ⇒ 3.0 → 0.0、4.0 → 1.0、main-course 4.12 → 1.41。
+    - 引擎：10 面 ok、最鼓 −22～−89（lateen ＋29：另一個方向）、sails_broken 0、ropes_broken 0；OBJ 第一個角跟 corners_world 差 0.05（軸 v x z y 對）。
+    - 過程圖：`overlays/stage10post_main_side_yaw90.png`、`_fore_q_yaw60.png`、`_sprit_side_yaw90.png`。
 - 過程圖：`overlays/stage10_sails_yaw{45,-135}.png`。
+
+## 階段十一 旗 2 面（船尾旗＋長旗）—— 落格（2026-10-14 下午，wake #119）
+Tim：「繼續造船GO」。設計 plan.json `flags`（provenance `flags`、`flags.place`）；產生 `design/draft_flags.py` ⇒ `verify_flags.json`、`masks/flags/`、`textures/ensign.png`、`pennant.png`、`flags_meta.tsv`（重跑 6 個產物逐位元組相同）；下 CLI `design/apply_flags.py <design> stamp|anchors|sails|meta`；讀數 `design/check_flags.py` ⇒ `verify_flags_post.json`。
+- **船尾旗**（ensign）：荷蘭三色（紅白藍）＋白帶正中 VOC 交織字母，褪色、3 個洞、fly 邊撕爛；2 × 3 m（hoist 20、fly 30）。旗桿插在船尾拱頂（Adamastor 那座）最高那一格 (98,130,177) 上：2.6 m、一欄 109、頂上十字鐵帽 73，31 格，放在船尾裝飾子作品。
+  - 查證（搜尋摘要轉述）：VOC 的旗 ＝ 荷蘭三色＋正中公司字母（FOTW za_early）；1630 前後起紅條漸多（FOTW nl_prvlg）⇒ 約 1640 取紅。⚠ 旗插在船尾旗桿是記憶，來源沒寫。
+  - 為什麼小、為什麼低（量的）：三角帆的帆桁後端就在拱頂正上方 z≈250；模擬後的三角帆在 x < 140 只出現在 z 185 以上、y ≤ 121.8，而預設風把旗往 −y 吹。
+- **長旗**（pennant）：三色沿長邊、燕尾、尾端撕爛；0.6 × 6 m。主桅頂（z 485，木頭、沒有 truck）上面 2 m 旗桿＋鐵帽，25 格，放在主桅子作品。
+- 固定點：船尾裝飾 `ensign-top／-bot`、主桅 `pennant-top／-bot`；旗 ＝ 帆（hoist 那條邊釘住、fly 兩角 free；res 16／0、fullness 1.06）；meta `kind=flag`、`flag=ensign／pennant`。
+- 讀數：
+  - 引擎 stats：組裝件 525,982 → **526,038**（＋56 ＝ 兩根旗桿）、1 元件、空腔 0、左右差 0、link_overlap 0；帆 12（10 帆＋2 旗）、繩 537，sails／ropes／models_broken 0；sub=sails 兩面旗 ok。
+  - 結果帳：旗桿 31／31、25／25 格在引擎格子清單裡、顏色一樣。
+  - 模擬後的旗布（離 hoist < 1.2 格的不算；船尾旗 25,400、長旗 33,224 點）落在實心：引擎格子 0、設計標籤表（含帆桁）0。最近的帆：船尾旗 ↔ 三角帆 11.2 格、長旗 ↔ main-topgallant 18.7 格；最近的繩（OBJ 管子頂點）：船尾旗 33.8 格（mizzen-lateen-sheet-P）、長旗 13.8 格（main-tg-stay）。
+  - 已知答案：船尾旗整份往下 30 格 ⇒ 落在實心 917；繩的樹、三角帆的樹拿自己的頂點去查 ⇒ 0。
+  - 模擬後長旗往前下垂到 z 468.6（旗桿頂 504）、fly 只伸到 x 356（平的 366）—— 4.7 m/s 的風撐不平 6 m 的布；圖上看是斜斜往前下飄，在 main-tg-stay 上面。
+- 過程圖：`overlays/stage11_ensign_q_yaw135.png`、`_ensign_side_yaw90.png`、`stage11_pennant_side_yaw90.png`、`_pennant_q_yaw45.png`。
