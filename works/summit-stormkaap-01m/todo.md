@@ -13,7 +13,9 @@ TASK-0547。筆記正本是 `notes.md`；這裡只放「下一步從哪接」。
 - [x] 階段六：舵（外部模型）、三根桅＋船首斜桅、平台、channels（組裝件 524,674；船殼 `stage6:end` 第 101 個事件）
 - [x] 補桅的探針＋反向對照（`check_masts.py`：全部差 0、17 根反向全報 3；2026-10-14 早）
 - [x] 階段七：帆桁 10 件（子作品＋外部模型、meta kind=yard／mast／sail；lateen 斜 40° 在後桅左舷）—— `check_yards.py` 固定點差 0.0、21 根反向全報 3（2026-10-14 早）
-- [ ] 階段八：靜索（shrouds、stays、ratlines、deadeyes 在 channels 外緣）→ 繫繩點 → 帆（貼圖：破帆）→ 動索 → 帆與帆自己的繩標 meta（§9.1）
+- [x] 階段八：靜索 —— channels v2（照 deadeye 重排、避開砲門）、deadeye 17×2、chain plates、繩 443；lateen 挪到離中線 9 格（2026-10-14 上午）
+- [ ] 階段九：繫繩點（fife rails、舷牆 pin rails）→ 動索（lifts、braces、halyards、footropes；lateen 的 brace／vang）
+- [ ] 階段十：帆 10 面（貼圖：破帆；帆名照 plan `yards.sail_of`）→ 帆自己的繩（sheet、tack）→ 帆與帆自己的繩標 meta（§9.1）
 
 ## 之後（照造船規格 §3 的順序）
 - 骨架與肋骨 → 外板與塗裝 → 砲門 → 甲板（每層一件子作品）→ 艉樓／船尾（spiegel）→ 船頭（galjoen、船首像）

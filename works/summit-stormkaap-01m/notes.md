@@ -220,7 +220,7 @@ Tim：「自由意志模式 處理待辦 GO」。設計 plan.json `yards`（prov
 - 長度照 Witsen（查證過那一節）× 1.194，1 voet ＝ 37.94 ÷ 134 m ⇒ **3.3806 格**，取奇數：主 233、主上桅 121、主上上 75、前 205、前上桅 109、前上上 55、後上桅帆桁 65、lateen 209、spritsail 153、斜桅頂帆桁 67。沒有 crossjack（Witsen 沒列）。
 - 方帆桁 8（沿 y、水平、貼在那一節桅／斜桅頂桅最前格的前面一格）：course 平台下 6（主 z 248、前 z 223）、topsail 上桅 crosstrees 下 4（407、352）、topgallant 頂下 6（479、411）、後上桅帆桁 z 277、sprit topsail z 289。徑照夜隼號的「桁徑 ÷ 那一節桅徑」（設計決定；palm 沒定義）。
 - spritsail：掛在斜桅底下、從腳往外 3／4（x 620，記憶：外段，未查證），頂面比那幾欄斜桅最低的格低 1 格（z 191）。
-- **lateen**（設計決定，沒有來源：角度、哪一舷、吊點）：子作品裡是水平直桿（沿 x、在後桅**左舷**、軸離中線 5 格），斜度交給模型 rotate 的 y ＝ **40°**（前端往下、後端往上）；pivot ＝ 帆桁中點（吊點）。吊點高度由產生程式找：轉好之後每一格底下離最近的實心 ≥ 2 m（人走得過）而且不撞的最低整數 ⇒ **z 183**（往下 83 個高度被擋；最緊在 x 234、離 z 114 那一格 20.17 格）。
+- **lateen**（設計決定，沒有來源：角度、哪一舷、吊點）：子作品裡是水平直桿（沿 x、在後桅**左舷**、軸離中線 5 格 —— ⚠ 階段八改成 9 格，見階段八），斜度交給模型 rotate 的 y ＝ **40°**（前端往下、後端往上）；pivot ＝ 帆桁中點（吊點）。吊點高度由產生程式找：轉好之後每一格底下離最近的實心 ≥ 2 m（人走得過）而且不撞的最低整數 ⇒ **z 183**（往下 83 個高度被擋；最緊在 x 234、離 z 114 那一格 20.17 格）。
 - 模型放在桅杆子作品裡（`後桅/yard-mizzen-lateen`…，跟著桅走；斜桅那兩根在 `船首斜桅/`）。meta：`kind=yard, mast, yard, length_m, diameter_m, pivot_anchor=pivot, turn_axis=z, rotate_z_deg, sail`；lateen 多 `rotate_y_deg 40`（⚠ 遊戲那側轉帆桁只換 z、要保留 y）。**sail 這次先寫**（帆名先定在 plan `sail_of`，帆那一階段照這張取名）—— 夜隼號是漏了才後補（b869b5c）。
 - 固定點 192（子作品座標）：方帆桁 arm-P／S、earing-P／S、sling、jackstay 每 8 格、pivot；lateen arm-F／A、earing-F／A、sling、top-F／A 每 8 格、pivot。
 - 落格：10 件各一刀，每刀 placed ＝ 清單（2,725／913／443／2,385／821／327／385／1,249／1,213／395，共 10,856）；固定點 192、模型 10，0 失敗。組裝件格數不變（**524,674**，模型不算格）。
@@ -231,3 +231,24 @@ Tim：「自由意志模式 處理待辦 GO」。設計 plan.json `yards`（prov
   - 🩸 **spritsail 第一版空隙 2（plan 1）**：draft 找「斜桅最低格」的窗開到 xi ± (k＋1)，比帆桁自己佔的欄（xi ± k）寬一欄 ⇒ 抓到更低的那一欄。check 照 plan 的字面量出來的 —— 尺是對的，是設計程式沒照自己寫的規則做。改窗之後帆桁清單（子作品座標）逐位元組相同、只有 origin 的 z ＋1 ⇒ 子作品不重雕、只重放模型（at z 190.5 → 191.5）。
   - 🩸 lateen 的淨空探針第一版只量前端一點（36.0）—— 最緊的地方不在前端（在 x 234）。改成沿整根軸線取樣才量到 20.16，跟 draft 那邊（逐格轉、對設計端的聯集）的 20.17 兩條路對上。
 - 過程圖：`overlays/stage7_yards_yaw{45,-135,90}.png`。
+
+## 階段八 靜索（channels v2、deadeyes、chain plates、繩 443）—— 落格（2026-10-14 上午，wake #119）
+Tim：「繼續造船 階段八 GO」。設計 plan.json `rigging`（provenance `rigging`）；產生 `design/draft_rigging.py` ⇒ `verify_rigging.json`（channels 刻／貼、固定點、繩清單＋我算的兩端世界座標、碰撞、擋砲門）、`masks/rigging/channels_{carve,stamp}.vox.txt`；下 CLI `design/apply_rigging.py <design> channels|anchors|ropes`；讀數 `design/check_rigging.py` ⇒ `verify_rigging_post.json`。重跑 3 個產物逐位元組相同。照夜隼號階段九（＝ 憲法號 Shipbuilding §6）。
+- **channels v2**：階段六的 channels 照砲門空檔排，大半在桅的**前面**（主桅 283–337，桅在 295.5）—— shrouds 該在桅旁與桅後。⇒ 照 deadeye 重排：從桅孔前 2 格往船尾每 4 格一顆，deadeye 的 x±1 碰到上排砲門（±1）、或 chain plate 那一欄碰到下排砲門 ⇒ 往船尾挪一格再試。
+  - 後桅 4 顆（x 180–168；3 shrouds＋1 topmast backstay）、主桅 7 顆（297／293／289／285／271／259／244：5 shrouds＋2 backstays —— 後面三顆被砲門 274–280、247–253 推開）、前桅 6 顆（492–472：4＋2）。
+  - channel 比上排砲門下沿低 5 格（主桅那段 z 78–79、砲門 z 84–89）⇒ 可以從砲門底下穿過；deadeye 與 shroud 不在砲口前面（取樣量過，0）。
+  - 刻之前讀回 channels 作品 ＝ 階段六清單 1,572／1,572。carvevox 971（帶原色守門）、stampvox 1,053，placed ＝ 清單；標記 stage8 begin／end。一舷 1,572 → **1,654**（channel 73、deadeye 104 × 170、chain plate 73）。
+  - 下 deadeye 3×3 去四角、2 格厚，坐在三欄 channel 最高那一格上；中間那一欄低就補墊木。chain plate 往下 6 格、往內收到船殼外一格，⛔ 不進任何砲門的開口（assert）。
+- **固定點 77**（全部世界座標；桅、斜桅、船頭、channels 的框都是整艘船）：三根桅 hounds／futtock／平台邊緣前後／topmast head（S、P）、平台前後緣；主、前桅多 crosstrees 兩端、topgallant head、上桅 cap 前後、下桅 cap 後、桅腳上 12 格（stays 落點）；後桅多 topmast head 前緣；斜桅 stays 落點兩個、斜桅頂桅頭、bobstay；船頭大嘴上顎中脊（bobstay 的另一頭）；channels deadeye-<桅>-<i> 17（只 S）。每一個都 assert 在那一件的實心格上。
+- **繩 443**（組裝件，靜索 #22201c）：lower shrouds 24、backstays 10、futtock 12、topmast shrouds 12、topgallant shrouds 4、stays 9（後 → 主桅腳、後上桅 → 主桅平台後緣、主 → 前桅腳、主上 → 前桅下 cap、主上上 → 前上桅 cap、前 → 斜桅 45%、前上 → 斜桅 90%、前上上 → 斜桅頂桅頭、bobstay）、上 deadeye 34、lanyards 102、ratlines 236。分 13 組。走法照一般 17 世紀荷蘭船的印象，⛔ 沒有查證。
+- 🩸 這一段的錯（都在落格前，draft 自己的 assert 與碰撞量到的）：
+  1. channel 下面幾層撞進船殼（舷側內傾、下層比較寬）⇒ 照階段六的規則跳過撞到的格。
+  2. **6 顆 deadeye 懸空一格**（channels 量成 9 塊）：坐在三欄最高那一格上，舷弧往前升的地方中間那一欄比較低。改坐自己那一欄 ⇒ 側邊兩格撞進較高那一欄的外緣加厚。⇒ 坐最高、底下補墊木 ⇒ 3 塊。
+  3. **後桅左舷三根 shroud 穿過 lateen**（2–4 個取樣）：lateen 在桅旁 5 格，shrouds 在桅頭下收攏時一定穿過它（量到 z 183.5 那一高度 shroud 在 y≈123.7，帆桁 124–126）。⇒ **lateen 改到離中線 9 格**（plan `yards.lateen.side_dy` −5 → −9；帆桁清單逐位元組不變、吊點仍是 z 183，只重放模型 at.y 125.5 → 121.5）。⚠ 代價：帆桁掛在 shrouds 外面、離桅表面 0.6 m；真船的 lateen 是靠在下風舷的 shrouds 上的 —— 這是為了不穿模做的取捨，照實記。
+  4. fore-tg-stay 擦到前桅 topgallant 帆桁 1 格：它從桅頭前面出發，帆桁在桅頭下 6 格 ⇒ topgallant head 的固定點從頂下 2 改頂下 1。同一條原本綁斜桅頂桅的**前緣**、要穿過頂桅、旁邊就是 sprit topsail 帆桁 ⇒ 改綁後緣。
+  5. 量尺：著陸上限一律 6 格 ⇒ topgallant shrouds 報 8 格。那是幾何：固定點是桅表面那一格的格心（往內半格），繩跟桅軸夾角 α 小時，貼著桅走的段 ≈ 1／sin α。⇒ 端點在桅上時上限取 max(6, 1／sin α)；超過的 0 條。⛔ 這不是把尺放寬到過關 —— 上限跟著每一條的角度算，中段（離開端點那一件之後）仍是 0 才算過。
+- 讀數：
+  - 引擎 stats（組裝件）：**524,838 格**（＝ 524,674 ＋ 2 × (1,654 − 1,572)）、link_overlap 0、link_clipped 0、1 個元件、空腔 0、左右差 0（含顏色）；`sub=ropes`：443 條全部 ok、ropes_broken 0、子繩 236、13 組、未分組 0。這一次 443 條**沒有一條撞 IOException**（夜隼號階段九撞了 8 次；0534 之後）。
+  - `check_rigging.py`（讀引擎匯出）：結果帳 524,838／524,838 缺 0、多 0、顏色不同 0；channels 子作品 1,654 vs 設計差 0、6 連通 3 塊。deadeye ⛔ 不只認顏色（104 也是甲板）—— 取「組裝件裡有、其他件都沒有」的格再取 104：三根桅兩舷顆數 ＝ plan、每顆 10 格、第一顆差 0、間距 ≥ 4、碰上排砲門 0；chain plates 17 欄底部全部釘在船殼上、進砲門開口 0 格；**引擎解的繩兩端 vs 我算的最大差 0.071、長度 0.005**；stays 中段淨空 3.0–4.1 格（最緊 bobstay 2.97）；反向對照 39 根全報 3（2.97 是引擎印到 0.1）。
+  - `check_yards.py` 重跑（lateen 挪了）：固定點 192 個最大差 0.0、lateen 軸 y 121.5 ＝ plan、沿軸最小淨空 20.16、21 根反向全報 3。
+- 過程圖：`overlays/stage8_rigging_yaw{45,-135,90}.png`、`stage8_mizzen_lateen_yaw-60.png`、`stage8_main_channels_yaw60.png`。
