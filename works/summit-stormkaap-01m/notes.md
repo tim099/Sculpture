@@ -207,5 +207,27 @@ Tim：「另外可以嘗試復刻艦艏那像獠牙一樣的部分嗎」＋兩�
   2. 前桅的 channel 散成 5 段（舷弧升階、段與段只靠邊角相接 —— 階段四甲板的同一個病，第二次）⇒ 升階處往下補一格。
   3. 斜桅跟前桅重疊 1 格（斜桅只躲船上原有的格）⇒ 也躲剛長出來的桅。
 - 讀數：五件 vs 清單全部缺 0、多 0、顏色不同 0；設計端所有件逐對重疊 0、每件 1 塊（channels 3 塊 ＝ 三根桅各一塊）、左右差 0；引擎 stats（組裝件）：link_overlap 0、link_clipped 0、1 個元件、空腔 0、鏡像差 0。
-- ⚠ 還沒做（這一段沒量到的）：桅的探針與反向對照（桅軸的 x、桅腳、平台高度 vs plan）—— 下一段第一件補。
+- 探針與反向對照（2026-10-14 早，wake #119 補；`design/check_masts.py` ⇒ `verify_masts_post.json`；六件 export list 讀回）：
+  - 基準從 plan 算；桅腳的基準 ＝ **組裝件匯出**扣掉那根桅之後、腳印裡最高一格的上面（不經 sk_state ⇒ 跟 draft 算桅腳不是同一條路），平台、cap、桅頂都從它往上加 plan 的長度。
+  - 結果帳：五件 vs 清單缺 0、多 0、顏色不同 0；組裝件 524,674 vs（stage6a 的船 ∪ 五件 ∪ channels 鏡像）差 0。
+  - 三根桅：桅軸 x／y（下桅身每一層的重心，後 177／主 235／前 204 層）最大差 0；桅腳差 0（後 z 8、主 z 9、前 z 15）；平台那一層差 0（195／254／229）、平台半徑差 0；下桅頂＋cap 差 0；整根最高一格差 0（283／485／417）。
+  - 船首斜桅：仰角 −0.009°、heel＋100 那一欄軸心 z −0.01（126 欄重心擬合）、最前一格差 0。
+  - 反向對照（桅與斜桅整份偏 3，支撐不動）：17 根位置探針全報 3；仰角偏 x 報 0.004°、偏 z 報 0（平移不改角度）。
 - 過程圖：`overlays/stage6_masts_yaw-125.png`。
+
+## 階段七 帆桁（10 件子作品＋外部模型）—— 落格（2026-10-14 早，wake #119）
+Tim：「自由意志模式 處理待辦 GO」。設計 plan.json `yards`（provenance `yards`）；產生 `design/draft_yards.py` ⇒ `verify_yards.json`（placements：每件的框、清單、固定點、模型 at／pivot／rotate／meta；anchors_expect：轉好之後的預期點）、`masks/yards/<帆桁>.vox.txt`。重跑 11 個產物逐位元組相同。下 CLI：`design/apply_yards.py <design> create|stamp|anchors|models|turn`（從夜隼號那支改）。讀數 `design/check_yards.py` ⇒ `verify_yards_post.json`。一開始就是子作品＋模型（造船規格 §3「事後才知道該一開始就這樣做的」）。
+- 長度照 Witsen（查證過那一節）× 1.194，1 voet ＝ 37.94 ÷ 134 m ⇒ **3.3806 格**，取奇數：主 233、主上桅 121、主上上 75、前 205、前上桅 109、前上上 55、後上桅帆桁 65、lateen 209、spritsail 153、斜桅頂帆桁 67。沒有 crossjack（Witsen 沒列）。
+- 方帆桁 8（沿 y、水平、貼在那一節桅／斜桅頂桅最前格的前面一格）：course 平台下 6（主 z 248、前 z 223）、topsail 上桅 crosstrees 下 4（407、352）、topgallant 頂下 6（479、411）、後上桅帆桁 z 277、sprit topsail z 289。徑照夜隼號的「桁徑 ÷ 那一節桅徑」（設計決定；palm 沒定義）。
+- spritsail：掛在斜桅底下、從腳往外 3／4（x 620，記憶：外段，未查證），頂面比那幾欄斜桅最低的格低 1 格（z 191）。
+- **lateen**（設計決定，沒有來源：角度、哪一舷、吊點）：子作品裡是水平直桿（沿 x、在後桅**左舷**、軸離中線 5 格），斜度交給模型 rotate 的 y ＝ **40°**（前端往下、後端往上）；pivot ＝ 帆桁中點（吊點）。吊點高度由產生程式找：轉好之後每一格底下離最近的實心 ≥ 2 m（人走得過）而且不撞的最低整數 ⇒ **z 183**（往下 83 個高度被擋；最緊在 x 234、離 z 114 那一格 20.17 格）。
+- 模型放在桅杆子作品裡（`後桅/yard-mizzen-lateen`…，跟著桅走；斜桅那兩根在 `船首斜桅/`）。meta：`kind=yard, mast, yard, length_m, diameter_m, pivot_anchor=pivot, turn_axis=z, rotate_z_deg, sail`；lateen 多 `rotate_y_deg 40`（⚠ 遊戲那側轉帆桁只換 z、要保留 y）。**sail 這次先寫**（帆名先定在 plan `sail_of`，帆那一階段照這張取名）—— 夜隼號是漏了才後補（b869b5c）。
+- 固定點 192（子作品座標）：方帆桁 arm-P／S、earing-P／S、sling、jackstay 每 8 格、pivot；lateen arm-F／A、earing-F／A、sling、top-F／A 每 8 格、pivot。
+- 落格：10 件各一刀，每刀 placed ＝ 清單（2,725／913／443／2,385／821／327／385／1,249／1,213／395，共 10,856）；固定點 192、模型 10，0 失敗。組裝件格數不變（**524,674**，模型不算格）。
+- 讀數：
+  - 引擎 `work sub=models`（組裝件）：11 個模型（舵＋帆桁 10）全部 ok、models_broken 0；stats link_overlap 0。
+  - `check_yards.py`（讀引擎匯出：十件帆桁 list、三根桅與斜桅 list、組裝件 list、parts）：結果帳十件缺 0、多 0、顏色不同 0；**引擎轉過的 192 個固定點 vs draft 用 rot() 算的：最大差 0.0**；meta kind=yard 10／10、sail 跟 plan 一致 10／10。
+  - 探針（基準 ＝ 引擎匯出的桅腳 ＋ plan 的長度，不讀 draft 的結果）：八根方帆桁高度差 0、長度 ＝ plan、背面離桅 0 格；spritsail x 620.5（plan 620.716，取格）、頂面離斜桅 1（plan 1）；lateen 仰角 40.0、長 209、軸 y 125.5（plan）、沿整根軸線取樣的最小淨空 20.16 格（x 234；plan ≥ 20）。反向對照（x 偏 3、z 偏 3、arm-A 多轉 3°、抬 3）21 根全報 3。
+  - 🩸 **spritsail 第一版空隙 2（plan 1）**：draft 找「斜桅最低格」的窗開到 xi ± (k＋1)，比帆桁自己佔的欄（xi ± k）寬一欄 ⇒ 抓到更低的那一欄。check 照 plan 的字面量出來的 —— 尺是對的，是設計程式沒照自己寫的規則做。改窗之後帆桁清單（子作品座標）逐位元組相同、只有 origin 的 z ＋1 ⇒ 子作品不重雕、只重放模型（at z 190.5 → 191.5）。
+  - 🩸 lateen 的淨空探針第一版只量前端一點（36.0）—— 最緊的地方不在前端（在 x 234）。改成沿整根軸線取樣才量到 20.16，跟 draft 那邊（逐格轉、對設計端的聯集）的 20.17 兩條路對上。
+- 過程圖：`overlays/stage7_yards_yaw{45,-135,90}.png`。
