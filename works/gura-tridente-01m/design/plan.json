@@ -1,0 +1,134 @@
+{
+  "title": "三叉戟號（Tridente）新圖紙 01：線形、側面、甲板高度、砲位表、桅帆表",
+  "task": "TASK-0553（傘）／TASK-0554（新圖紙）",
+  "author": "gura",
+  "date": "2026-10-14",
+  "meters_per_cell": 0.1,
+  "space": {"x": 1100, "y": 400, "z": 800, "yc": 200, "note": "中線 ＝ 第 200 格（鏡像 y ↔ 400 − y）；遊戲取船寬中心 size/2 ＝ 200"},
+  "lines": {
+    "half_beam": {
+      "v": 81.5,
+      "src": "es.wikipedia Santísima Trinidad (1769)（逐頁讀過）：1795 改裝後 manga 58 1/3 pies ＝ 16.254 m（頁面印成 116,254 m）⇒ 全寬 163 格（16.3 m）；threedecks 58′0″ ＝ 16.159 m。取 16.3（含外板）；半寬 81.5 ⇒ |dy| ≤ 81 ⇒ 163 格（格心判斷）"
+    },
+    "keel_top": {"v": 5, "src": "設計決定：龍骨（含 false keel）0.5 m"},
+    "keel_half": {"v": 2, "src": "設計決定：龍骨寬 5 格（0.5 m）"},
+    "max_breadth_z": {"v": 96, "src": "設計決定：最寬處在設計水線上 1.6 m 左右（一級艦常見的樣子）；沒查到聖特立尼達號的讀數"},
+    "tumblehome": {"v": 20, "src": "設計決定：每舷內收 2 m（四層甲板的高舷，上面窄、下面寬）；沒查到讀數"},
+    "tumblehome_ref_z": {"v": 180, "src": "設計決定"},
+    "tumblehome_pow": {"v": 1.6, "src": "設計決定"},
+    "bilge_pow": {"v": 2.8, "src": "設計決定：調飽滿度讓水線 z 79 以下的排水量對上參考值 4,902 t（tune：0.32/0.60/2.4 ⇒ 4,418 t；0.26/0.66/2.8 ⇒ 4,921 t）"},
+    "s_aft": {"v": 0.26, "src": "設計決定：調飽滿度讓水線 z 79 以下的排水量對上參考值 4,902 t（tune：0.32/0.60/2.4 ⇒ 4,418 t；0.26/0.66/2.8 ⇒ 4,921 t）"},
+    "s_fwd": {"v": 0.66, "src": "設計決定：調飽滿度讓水線 z 79 以下的排水量對上參考值 4,902 t（tune：0.32/0.60/2.4 ⇒ 4,418 t；0.26/0.66/2.8 ⇒ 4,921 t）"},
+    "sternpost_x0": {"v": 112, "src": "設計決定"},
+    "sternpost_rake_deg": {"v": 8, "src": "設計決定"},
+    "wing_transom_z": {"v": 84, "src": "設計決定"},
+    "counter_aft": {"v": 10, "src": "設計決定"},
+    "counter_top_z": {"v": 100, "src": "設計決定"},
+    "stern_rake_deg": {"v": 10, "src": "設計決定"},
+    "transom_ratio": {"v": 0.78, "src": "設計決定"},
+    "forefoot_x": {
+      "v": 640.3,
+      "src": "es.wikipedia Santísima Trinidad (1769)（逐頁讀過）：1795 改裝後 eslora 220 1/2 pies ＝ 61.44 m ⇒ 砲甲板長 614 格；forefoot 位置照這個長度倒推（設計決定：圓弧 forefoot r 70）"
+    },
+    "forefoot_r": {"v": 70, "src": "設計決定"},
+    "stem_rake_deg": {"v": 6, "src": "設計決定"},
+    "deadwood_aft_z": {"v": 60, "src": "設計決定"},
+    "deadwood_fwd_z": {"v": 28, "src": "設計決定"},
+    "bow_pow_low": {"v": 1.7, "src": "設計決定"},
+    "bow_pow_high": {"v": 2.4, "src": "設計決定"},
+    "aft_pow": {"v": 2.2, "src": "設計決定"},
+    "top": [[60, 207], [100, 205], [150, 198], [215, 195], [232, 184], [300, 180], [430, 178], [600, 180], [690, 184], [740, 186]]
+  },
+  "waterline": {
+    "z": 79,
+    "src": "es.wikipedia Santísima Trinidad (1769)（逐頁讀過）：1795 改裝後 calado 29 7/12 pies ＝ 8.243 m（船尾）、27 pies ＝ 7.523 m（船頭）⇒ 平均 7.88 m；遊戲只吃一條水線 ⇒ 取平龍骨 z 79（設計決定）"
+  },
+  "targets": {
+    "displacement_t": {"v": 4902, "src": "es.wikipedia Santísima Trinidad (1769)（逐頁讀過）：1795 改裝後 desplazamiento 4,902 t"},
+    "keel_m": {"v": 51.83, "src": "es.wikipedia Santísima Trinidad (1769)（逐頁讀過）：1795 改裝後 quilla limpia 186 pies ＝ 51.826 m"}
+  },
+  "readings_at": {"lower_deck_z": 89},
+  "hull_build": {
+    "wall": 4,
+    "frame_color": 141,
+    "inner_color": 177,
+    "side_color": 36,
+    "bottom_color": 168,
+    "bottom_top_z": 79,
+    "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1 —— 跟憲法號／餘燼號一樣的厚度與色號）；外板：水線下銅 168、水線上黑 36（四條紅帶與白線在砲門階段畫）"
+  },
+  "body_stations": [105, 130, 170, 230, 330, 430, 530, 610, 660, 690, 710],
+  "decks": {
+    "src": "設計決定：甲板間距 23 格（2.3 m，跟憲法號／餘燼號一樣 ⇒ 砲、船員站位、梯子沿用）；下砲甲板 z 89 ⇒ 砲門下緣 z 95、離水線 1.6 m —— Mejías Tavero 1797 表（UPC 論文 Burgos Pedrera《Análisis histórico del S/S Santísima Trinidad》轉載，研究 B 讀過表格圖）「batería en medio」5-08 ＝ 1.58 m。其餘甲板高度沒查到",
+    "sheer": {"x_mid": 430, "aft": 4, "fwd": 6, "src": "設計決定：甲板舷弧，船中最低、往船尾抬 4 格、往船頭抬 6 格（拋物線）"},
+    "rows": [
+      {"key": "orlop", "name": "orlop", "z": 66},
+      {"key": "lower", "name": "下砲甲板", "z": 89},
+      {"key": "middle", "name": "中砲甲板", "z": 112},
+      {"key": "upper", "name": "上砲甲板", "z": 135},
+      {"key": "spar", "name": "上甲板（quarterdeck＋forecastle 接成一層，第四層砲列）", "z": 158},
+      {"key": "poop", "name": "poop", "z": 180, "x_to": 228}
+    ]
+  },
+  "ports": {
+    "src": "threedecks.org id=2647（逐頁讀過）：1805 年 下層 32×36 磅、中層 34×24 磅、上層 36×12 磅、quarterdeck＋forecastle 18×8 磅＋16 門 24 磅 obús（＋4 門 pedrero 不做）⇒ 每舷 16／17／18／17；砲門數每舷沒查到 ⇒ 照砲數÷2（設計決定）。合計舷側 136 ＋ 追擊砲 4 ＝ 140（threedecks 1805 總數 140）",
+    "tiers": [
+      {"deck": "lower", "per_side": 16, "w": 12, "h": 9, "sill": 6, "x_from": 150, "x_to": 672, "gun": "36 磅（模型沿用餘燼號 -gun-long32，遊戲代碼 32l）"},
+      {"deck": "middle", "per_side": 17, "w": 11, "h": 9, "sill": 6, "x_from": 140, "x_to": 684, "gun": "24 磅（憲法號 -gun-24，24l）"},
+      {"deck": "upper", "per_side": 18, "w": 10, "h": 8, "sill": 6, "x_from": 132, "x_to": 694, "gun": "12 磅（待定：新做或沿用；砲種代碼跟 ame 對）"},
+      {"deck": "spar", "per_side": 17, "w": 9, "h": 8, "sill": 5, "x_from": 128, "x_to": 698, "gun": "8 磅＋24 磅 obús（待定：obús 用 carronade 32c 那一件）"}
+    ],
+    "chase": {"bow": 2, "stern": 2, "src": "設計決定：船頭 2（上砲甲板）、船尾 2（中砲甲板船尾窗那一列），湊 1805 年總數 140"}
+  },
+  "masts": {
+    "src": "Mejías Tavero 1793 arboladura 表（UPC 論文 Fig. 15，研究 B 讀過；⚠ 不保證是 1805 那一套）；表裡沒有的（頂桅以上、後桅上桅、各層帆桁）照同一張表的比例推（設計決定，標 design）。高度：桅腳 z、桅頭 z（含 masthead）、平台 z ＝ 桅頭 − masthead",
+    "rows": [
+      {
+        "key": "main",
+        "x": 430,
+        "rake_deg": 2,
+        "heel_z": 10,
+        "lower": {"len": 417, "head": 57, "src": "41.74 m、masthead 20-4 ＝ 5.67 m"},
+        "top": {"len": 227, "head": 30, "src": "22.71 m；head 設計"},
+        "tg": {"len": 161, "src": "16.07 m（含 royal pole）"},
+        "yards": {"course": [347, "34.69 m"], "topsail": [272, "27.16 m"], "topgallant": [170, "design 0.625 × topsail"], "royal": [110, "design"]}
+      },
+      {
+        "key": "fore",
+        "x": 650,
+        "rake_deg": 0,
+        "heel_z": 10,
+        "lower": {"len": 383, "head": 52, "src": "38.28 m；masthead 照主桅比例"},
+        "top": {"len": 208, "head": 27, "src": "20.76 m"},
+        "tg": {"len": 145, "src": "design 0.9 × 主頂桅"},
+        "yards": {"course": [304, "30.37 m"], "topsail": [238, "design 0.78 × course（同主桅比例）"], "topgallant": [150, "design"], "royal": [98, "design"]}
+      },
+      {
+        "key": "mizzen",
+        "x": 222,
+        "rake_deg": 4,
+        "heel_z": 66,
+        "lower": {"len": 280, "head": 38, "src": "28.00 m；桅腳立在 orlop（設計決定）"},
+        "top": {"len": 163, "head": 21, "src": "design 0.72 × 主上桅"},
+        "tg": {"len": 112, "src": "design"},
+        "yards": {"crossjack": [238, "design ＝ 前上桅帆桁"], "topsail": [170, "design"], "topgallant": [110, "design"], "gaff": [150, "design"], "boom": [215, "design"]}
+      }
+    ],
+    "bowsprit": {
+      "heel_x": 690,
+      "heel_z": 172,
+      "angle_deg": 32,
+      "length": 226,
+      "jibboom": 156,
+      "spritsail_yard": 222,
+      "src": "艏斜桅 81-0 ＝ 22.57 m、jib-boom 56-0 ＝ 15.60 m、spritsail yard 79-10 ＝ 22.24 m（Mejías Tavero 1793 arboladura 表（UPC 論文 Fig. 15，研究 B 讀過；⚠ 不保證是 1805 那一套））；仰角 32°、根部位置設計決定"
+    }
+  },
+  "paint": {
+    "base": 36,
+    "band": "TBD（紅；砲門階段看渲染定色號）",
+    "edge": 255,
+    "bottom": 168,
+    "src": "外觀查證（references/research_2026-10-14.md）：Trafalgar 目擊「four distinct lines of red, with a white ribbon between them」（HMS Neptune 見習生，Clowes vol. V 引）；RMG Haines 模型：黑船殼、四層砲甲板各一條粉紅帶、白邊 ⇒ 設計決定：黑 36 船殼、每層砲門一條紅帶、上下各一條白線；水線下銅 168（同憲法號）"
+  }
+}
