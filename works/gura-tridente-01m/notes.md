@@ -65,3 +65,18 @@
 - 換色：紅 74,005、白 11,378、玻璃 1,477、金 926；刻掉：外板 13,753、肋骨 24,622、內板 12,276。
 - 過程圖：`overlays/stage3_ports_{bowq,sternq,side,astern}.png`。
 - ⚠ 看得到的：艙裡沒甲板 ⇒ 從砲門看得到對面的牆；舷頂還是 4 層色的切面；船尾是平的大 transom（陽台、quarter galleries 在 TASK-0558）。
+
+## 階段四 甲板、艙口、梯子（2026-10-14，TASK-0557）
+設計 plan.json `decks_build`；產生 `design/draft_decks.py` ⇒ `masks/decks/<層>.vox.txt`、`masks/ladders/<上面那層>.vox.txt`、`ladder_points.json`、`verify_decks.json`、`sheet04_decks_v1.png`；落格 `design/tools/build_decks.py`。
+- 甲板（遊戲用的大致構造）：每層 ＝ 那個高度的艙裡（外形實心扣掉 4 格牆）鋪一格甲板板（砲甲板 177、上甲板與 poop 250）＋橫樑（每 16 格、2 寬 3 深、136）；高度照 `layout.deck_z`（舷弧）。poop 只到 x 228，前緣一道艙壁（兩道門 |dy| 16）＋poop 上的胸牆（梯頭留口）。
+- 開口：艙口三個疊在中線（後 300–318、主 470–500、前 585–605，|dy| ≤ 12；orlop 到上甲板每層都開）＋圍欄 2 格；梯子口；桅孔 ＝ `layout.mast_hit`（桅階段用同一支 ⇒ 剛好填滿；後桅腳立在 orlop、那層不開）。
+- 梯子：兩層之間前後各一座（after／fore），層與層錯開（x 340／520 ↔ 372／552，這一層的梯子不站在下一層梯子的開口上）；上甲板 → poop 兩舷各一座（|dy| 30，往船尾爬，梯頂踩上 poop 在 x 226）。每 3 格一階、每階 2 格（約 56°），踏板 7 寬、兩側 stringer 接到上下兩層。
+- 子作品（parent 船殼、tags sub、0.1 m、1100×400×800、at 0,0,0）：`-deck-{orlop,lower,middle,upper,spar,poop}`、`-ladders-{lower,middle,upper,spar,poop}`；梯子掛在它上面那一層甲板裡（關聯 `梯子`，meta `kind=ladders`），固定點 `<梯名>.foot／lo／hi／head`（腳踩的那一格）。組裝件關聯 `甲板-<層>`。
+- 🩸 第一版組起來有 **2 個封閉空腔、179 格**：船尾最後一欄（x 79）的 poop 甲板板因舷弧取整比旁邊高一格，底下夾著 x 80 的橫樑與船尾牆（176 格）；orlop 船尾龍骨上方 3 格。各部件自己量都沒事（空腔要組起來才出現）⇒ 產生程式最後一步：船殼＋甲板＋梯子組起來找封閉空腔、填進高度最近的那一層（橫樑色）；`tools/delta_list.py` 只補新增的格（poop 176、orlop 3）。
+
+讀數：
+- 子作品結果帳（`tools/check_decks.py`，每件從匯出讀）：11 件、581,397 格，缺 0、多 0、色差 0。
+- 跟船殼重疊 0、彼此重疊 0、梯子跟甲板重疊 0；每件鏡像差 0。
+- 梯子點（從組裝件 `export format=parts` 讀，就是遊戲讀的那一份）：10 座、40 點、跟設計（格心）差 0；每個點那一格是空的、腳下實心、頭頂 14 格空。**反向對照**：`draft_decks.py --probe=drop_ladder=fore-upper` ⇒ 9 座、少的正是那一座。
+- 組裝件：1,684,080 格、1 元件、空腔 0、link_overlap 0、鏡像差 0。
+- 過程圖：`overlays/stage4_decks_nohull_bowq.png`（拿掉船殼看甲板）、`stage4_decks_sternq.png`。

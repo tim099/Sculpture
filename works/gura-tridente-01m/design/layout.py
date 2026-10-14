@@ -58,3 +58,17 @@ def mast_spars(plan):
                     'top_top': z_tp_top, 'crosstrees': z_xtree, 'truck': z_tg_top, 'yard_z': yz,
                     'yard_len': {k: v[0] for k, v in Y.items()}})
     return out
+
+
+def mast_axis_x(plan, key, z):
+    """桅軸在高度 z 的 x（plan.masts 的 x 是上甲板 z 158 那一格；往上照 rake 往船尾倒）。"""
+    m = next(r for r in plan['masts']['rows'] if r['key'] == key)
+    return m['x'] - (np.asarray(z, float) - 158.0) * math.tan(math.radians(m['rake_deg']))
+
+
+def mast_hit(plan, key, x, y, z):
+    """格 (x, y, z) 在不在那根桅的截面裡（截面圓：(x − 軸)² ＋ (y − 中線)² ≤ r²，r ＝ decks_build.mast_r）—— 甲板開孔與桅本身共用這一支。"""
+    r = plan['decks_build']['mast_r'][key]
+    xa = mast_axis_x(plan, key, z)
+    yc = plan['space']['yc']
+    return (np.asarray(x, float) - xa) ** 2 + (np.asarray(y, float) - yc) ** 2 <= r * r

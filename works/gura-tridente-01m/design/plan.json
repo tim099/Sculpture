@@ -141,5 +141,48 @@
       {"deck": "spar", "sill": 5, "h": 9, "n": 7, "w": 7, "half": 42},
       {"deck": "poop", "sill": 5, "h": 8, "n": 5, "w": 7, "half": 34}
     ]
+  },
+  "decks_build": {
+    "src": "設計決定（遊戲用：甲板、艙口、梯子這些大致構造）",
+    "plank": {"gun": 177, "weather": 250},
+    "beam": {"color": 136, "every": 16, "w": 2, "depth": 3},
+    "coaming": {"color": 136, "h": 2},
+    "hatches": [
+      {"name": "後艙口", "x0": 300, "x1": 318, "half": 12},
+      {"name": "主艙口", "x0": 470, "x1": 500, "half": 12},
+      {"name": "前艙口", "x0": 585, "x1": 605, "half": 12}
+    ],
+    "hatch_decks": ["orlop", "lower", "middle", "upper", "spar"],
+    "mast_r": {"main": 5.5, "fore": 5.0, "mizzen": 4.0, "src": "主桅直徑 3 ft 11½ in ＝ 1.11 m（Mejías Tavero 1793）⇒ 半徑 5.5 格；前桅、後桅照長度比例（設計決定）；甲板開孔 ＝ 桅的截面（桅階段放進來剛好填滿）"},
+    "ladders": {
+      "color": 136,
+      "tread_half": 3,
+      "rise": 3,
+      "run": 2,
+      "pairs": [
+        {
+          "lo": "orlop",
+          "up": "lower",
+          "at": [["after", 340], ["fore", 520]]
+        },
+        {
+          "lo": "lower",
+          "up": "middle",
+          "at": [["after", 372], ["fore", 552]]
+        },
+        {
+          "lo": "middle",
+          "up": "upper",
+          "at": [["after", 340], ["fore", 520]]
+        },
+        {
+          "lo": "upper",
+          "up": "spar",
+          "at": [["after", 372], ["fore", 552]]
+        }
+      ],
+      "poop": {"foot_x": 244, "dy": 30, "src": "上甲板 → poop：兩舷各一座（P／S、|dy| 30），往船尾爬；梯腳 x 244 ⇒ 梯頂踩上 poop 在 x 226（poop 前緣 x 228、胸牆在梯頭留口）"},
+      "src": "每兩層之間前後各一座、層與層錯開（這一層的梯子不站在下一層梯子的開口上）；每 3 格一階、每階往前 2 格（約 56°）；梯子關聯 meta kind=ladders、固定點 <梯名>.foot／lo／hi／head（造船規格 §9）"
+    }
   }
 }

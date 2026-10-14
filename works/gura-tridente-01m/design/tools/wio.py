@@ -7,7 +7,7 @@ def export_list(work, mark):
     with tempfile.TemporaryDirectory() as d:
         out = os.path.join(d, 'w.txt').replace('\\', '/')
         r = subprocess.run(['senate', 'cmd', 'sculpture', '--arg', 'op=export', '--arg', 'format=list', '--arg', 'work=' + work, '--arg', 'out=' + out,
-                            '--arg', 'links=none', '--arg', 'mark=' + mark], capture_output=True, text=True, encoding='utf-8', errors='replace')
+                            '--arg', 'links=none'] + (['--arg', 'mark=' + mark] if mark else []), capture_output=True, text=True, encoding='utf-8', errors='replace')
         if r.returncode != 0 or not os.path.exists(out):
             raise SystemExit('匯出失敗：' + (r.stdout + r.stderr)[-800:])
         return np.loadtxt(out, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
