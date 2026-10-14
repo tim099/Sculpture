@@ -184,5 +184,109 @@
       "poop": {"foot_x": 244, "dy": 30, "src": "上甲板 → poop：兩舷各一座（P／S、|dy| 30），往船尾爬；梯腳 x 244 ⇒ 梯頂踩上 poop 在 x 226（poop 前緣 x 228、胸牆在梯頭留口）"},
       "src": "每兩層之間前後各一座、層與層錯開（這一層的梯子不站在下一層梯子的開口上）；每 3 格一階、每階往前 2 格（約 56°）；梯子關聯 meta kind=ladders、固定點 <梯名>.foot／lo／hi／head（造船規格 §9）"
     }
+  },
+  "stern_deco": {
+    "src": "設計決定（TASK-0558）：查證只到「平船尾＋陽台」（UPC 論文；Fig. 21 Mullan 114 砲艦是三層窗／陽台），1805 年幾層查不到 ⇒ 三層陽台（中砲甲板、上砲甲板、上甲板那三列窗外）＋ poop 甲板高度一道頂簷；兩舷 quarter gallery 三層（對齊三層陽台）＋冠＋垂飾；名牌、徽、燈是三叉戟號自己的",
+    "walk": {
+      "levels": ["middle", "upper", "spar"],
+      "roof": "poop",
+      "depth": 12,
+      "rail_h": 10,
+      "baluster_every": 2,
+      "bracket_dy": 12,
+      "bracket_h": 5,
+      "post_between": [[2, 3], [5, 6]],
+      "src": "陽台地板 ＝ 那一層甲板面那兩格（z_d − 1、z_d）、從船尾面往後 12 格（1.2 m）；欄杆 10 格高（扶手 1 m）、欄柱每 2 格一根；托架每 12 格；柱子在第 2–3、5–6 扇窗之間"
+    },
+    "gallery": {
+      "x_front": 124,
+      "depth": 8,
+      "front_r": 8,
+      "inset": 3,
+      "drop_z": 99,
+      "crown_top": 197,
+      "finial": 3,
+      "win_n": 3,
+      "win_w": 7,
+      "aft_win_w": 5,
+      "src": "前緣 x 124：上甲板第 1 個砲門 x 128 之前（留 3 格）；比船側（x 100 那一站）往外 8 格、前端四分之一圓 r 8；船尾面那一段往裡包 3 格蓋住轉角、往後跟陽台欄杆齊；每層對齊船尾窗那一列開 3 扇側窗＋1 扇後窗"
+    },
+    "name": {"text": "TRIDENTE", "z0": 100, "src": "名牌：counter（下砲甲板那條紅帶 z 97–109）寫 TRIDENTE（西班牙文「三叉戟」），5×7 字、金、凸 1；從船尾看觀者左手 ＝ −y ⇒ 字從 −y 往 +y 寫"},
+    "crest": {"r": 12, "src": "船尾頂（taffrail）中線立一面扇貝形徽（黑底金邊、金肋）＋金三叉戟（像素圖 15×21，齒尖伸出扇面），厚 2"},
+    "lantern": {"dy": 40, "scale": 0.5, "src": "船尾燈 2 盞（taffrail 上 |dy| 40）：自己的子作品 0.05 m、模型 scale 0.5（約 0.85 m 寬、1.65 m 高）；meta kind=light、固定點 wick／bail／base（造船規格 §9）"},
+    "colors": {"wall": 192, "trim": 248, "dark": 36, "glass": 87, "amber": 245}
+  },
+  "rudder": {
+    "z_bottom": 1,
+    "z_top": 100,
+    "head_z": 86,
+    "chord_bottom": 22,
+    "chord_wl": 15,
+    "chord_head": 6,
+    "half_front": 2,
+    "half_aft": 1,
+    "copper": 168,
+    "black": 36,
+    "band": 136,
+    "bands_z": [8, 22, 36, 50, 64, 76],
+    "band_back": 8,
+    "band_fwd": 8,
+    "band_dy": 8,
+    "src": "設計決定（TASK-0558；沒查到聖特立尼達號的舵）：舵板寬 底 2.2 m → 水線 1.5 m → 舵頭 0.6 m（counter 底下收進去）；厚 0.5 m（前半）／0.3 m（後半）；水線下銅 168、以上黑 36；六道 pintle／gudgeon 帶（深銅 136、凸 1 格、艉柱兩側只貼 |dy| ≤ 8 —— 憲法號階段十七：帶子放太寬會像一條腰帶）"
+  },
+  "head": {
+    "src": "設計決定（TASK-0558）：1805 年的船頭形式查不到（IHCN：1778 Ferrol 改過 cutwater）⇒ 照一級艦常見的 head：knee of the head＋cheeks＋trailboard＋head rails＋格柵平台（beakhead）＋cathead；船首像是三叉戟號自己的（鯊）",
+    "knee": {
+      "z0": 25,
+      "z1": 160,
+      "length": 66.5,
+      "pow": 1.7,
+      "top_stem": 148,
+      "top_front": 162,
+      "top_pow": 1.5,
+      "half": [3, 2, 1],
+      "taper_at": [10, 4],
+      "copper_to": 79,
+      "src": "前緣（cutwater）從 forefoot z 25 往前上方掃到 z 160、比艏柱前緣往前 6.65 m；上緣從艏柱 z 148 升到前端 z 162；厚 7 → 5 → 3 格（離前緣 ≥ 10／≥ 4／其餘）；水線下銅、以上黑"
+    },
+    "platform": {"x_from": 700, "x_to": 778, "colors": [136, 177], "src": "格柵平台（beakhead 的甲板）：knee 上緣那兩格、兩道 head rail 之間；深淺木色棋盤格"},
+    "cheeks": {
+      "x_from": 703,
+      "upper": [112, 44, 1.5],
+      "lower": [96, 56, 2.0],
+      "x_span": 79,
+      "src": "上 cheek z ＝ 112 ＋ 44·t^1.5、下 cheek z ＝ 96 ＋ 56·t²（t ＝ (x − 703)／79）；只包到 x 703（v1 從 696 起，從正面看像兩撇鬍子）；下 cheek 不低於 cutwater 前緣往上 4 格（留在 knee 上）；金、凸 1"
+    },
+    "trailboard": {
+      "x_from": 719,
+      "wave_amp": 2,
+      "wave_len": 10,
+      "trident_x": 719,
+      "trident_z": 143,
+      "src": "三叉戟（像素圖 36×11、金）水平放在 knee 上半那塊黑面（上 cheek 與格柵之間，x 719–754、z 138–148）—— v1 放在 trailboard 上順著斜板剪切，側面看像一團金線；trailboard（兩道 cheek 之間）改一道金色波浪（振幅 2、波長 10）"
+    },
+    "hawse": {"dy": [11, 21], "z": 104, "r": 3.4, "hole": 1.8, "src": "每舷 2 個 hawse（下砲甲板 z 94 往上 1 m）：金圈、圈裡一層黑當孔（凸 1）"},
+    "rails": {
+      "x_from": 702,
+      "x_to": 778,
+      "dy_from": 40,
+      "dy_to": 4,
+      "dy_pow": 1.2,
+      "main_above": 5,
+      "upper_above": 12,
+      "upper_rise": 16,
+      "upper_pow": 2.5,
+      "post_every": 10,
+      "src": "head rails：平面從 cathead 底下（x 702、|dy| 40）收到船首像背後（x 778、|dy| 4）；main rail 在平台上 5 格、底下一道紅板；upper rail 在平台上 12 格、往船尾抬到 cathead 底下；每 10 格一根黑立柱"
+    },
+    "cathead": {"x": 698, "z": 181, "angle": 55, "rise": 8, "length": 18, "half": 2, "src": "上甲板舷牆頂下（z 181）往前外伸 55°、上翹 8°、伸出 18 格、截面 5×5；黑、端面金（餘燼號 55°／8°／15 格）"},
+    "figurehead": {
+      "origin": [793, 172],
+      "lean": 35,
+      "src": "船首像：躍出的藍鯊（原創，三叉戟號的鯊鯊）—— 身體往前上方 35°、尾巴落在 knee 上緣前端；上藍下白（countershading）、張嘴露白牙、黑眼白點；背鰭、胸鰭、尾鰭；v1 長 3 m 從側面看比錨還小 ⇒ 放大 1.25（約 3.7 m）",
+      "scale": 1.25
+    },
+    "colors": {"black": 36, "copper": 168, "gold": 248, "red": 192, "shark": 83, "belly": 255},
+    "bobstay_z": [112, 126, 140]
   }
 }
