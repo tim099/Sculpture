@@ -382,7 +382,7 @@ Tim：「接著繼續造船 直到完成可以匯入遊戲吧」（/scp-shipbuil
 - 高度：course／crossjack 在 top 底下 10 格（Z 259／278／192）、topsail 在 crosstrees 底下 10 格（401／442／293）、topgallant 在 truck 底下 22 格（460／511）；中心貼著那一層桅的前面。
 - 轉角（brace）：course／crossjack 20°、topsail 22°、topgallant 24°（右舷那一頭往前，模型 rotate 0,0,−角）；gaff／boom 0。
 - spanker：後桅站在後甲板，後面是船尾樓甲板（163）與 taffrail（中線 X 60 高到 197）⇒ boom jaws Z 174（第一個試的高度就不碰；過得了船尾樓前緣的欄杆）、往船尾上翹 2°、末端停在 X 70（taffrail 前面），長 93.6；
-  gaff jaws 從 Z 197 往下、角度從 35° 起試 ⇒ **Z 195、35°** 第一個不碰 top／trestletrees，長 105、peak 到 X 76.5 Z 255。luff 只有 2.1 m、peak 拉高 —— 後桅矮（top 202）的代價，照實記。
+  gaff jaws 從 Z 197 往下、角度從 35° 起試 ⇒ **Z 195、35°** 第一個不碰 top／trestletrees，長 105、peak 到 X 76.5 Z 255。兩根的 jaws 只差 2.1 m（帆貼著桅那一邊 throat → tack 25 格）、peak 拉高 —— 後桅矮（top 202）的代價，照實記。（10-14 寫書回讀時改：原本寫成「luff 只有 2.1 m」，那是 jaws 的高度差）
 - meta（造船規格 §5）：`kind=yard, mast, yard, length_ft, diameter_in, pivot_anchor=pivot, turn_axis=z, rotate_z_deg, sail`（crossjack 沒有帆 ⇒ 不寫 sail）。
 - 固定點 225 個（每根：arm-P／S、earing-P／S、sling、jackstay-P／S<k> 每 8 格、pivot；gaff／boom：jaws、end、top<k>、pivot）。
 讀數（`design/verify_yards.json`）：
@@ -403,8 +403,8 @@ Tim：「接著繼續造船 直到完成可以匯入遊戲吧」（/scp-shipbuil
 讀數（`design/verify_standing.json`）：
 - 開工前 ＝ 組裝件 export list 1,243,013 格（sha 記在 verify）。索具台跟現況重疊 0、每一格都貼著船殼或索具台、鏡過去那一舷重疊 0。
 - 每條主繩兩端的直線每 0.5 格取樣（兩端各 4 格以內不算 —— 繩頭繞在桅頭上）：**落在實心裡 0**。
-  🩸 v1 讀到 56 條有取樣點落在實心裡，逐條看過位置：後桅的 shrouds 從後甲板的舷牆穿過去（15–17 點）⇒ 後桅索具台抬到 Z 145；main-topgallant-stay 的下端選到前桅 topmast head 前面那根 crosstree ⇒ 改成 topmast head 後面那一格；
-  fore-topmast-stay 綁 cap 頂、最後 10 點穿過 jibboom 根部 ⇒ 改綁 jibboom 上；bobstay 下端 Z 72 穿過船首像 123 點 ⇒ 從 72 往下找，Z 66 第一個不穿過；其他的都是最後 1–4 點擦過桅身（量法改成兩端各留 4 格）。
+  🩸 v1（619 條）讀到 54 條有取樣點落在實心裡（兩舷各 25＋stays 4；10-14 寫書回讀時重數，原本寫 56），逐條看過位置：後桅的 shrouds 從後甲板的舷牆穿過去（15–17 點）⇒ 後桅索具台抬到 Z 145；main-topgallant-stay 的下端選到 x 545（前桅 topmast head 前面那一格；是不是 crosstree 沒查）、9 點裡 8 點在離下端 5 格以內、落在前桅 x 541–542 那幾格（topmast head）⇒ 改成那一層所有格子裡最後面那一格（541）；
+  fore-topmast-stay 綁 cap 頂、最後 10 點落在艏斜桅那件的格裡（x 799–801，cap 那一帶；cap 是 800–807）⇒ 改綁 jibboom 上；bobstay 下端 Z 72 穿過船首像 123 點 ⇒ 從 72 往下找，Z 66 第一個不穿過；其他的（1–4 點）沒有逐條看，量法改成兩端各留 4 格之後全部歸零 ⇒ 都在離繩端 4 格以內（看過的幾條是桅頭那一端擦過桅身）。
 - 🩸 鏡像關聯第一次被擋：索具台用整艘船的框（at 0,0,0），鏡像要 at 0,1,0 ⇒ 超出組裝件。改成只框右舷：作品裡的格 move 0,−161,0、尺寸改 1024×159×800、關聯拿掉重加（`link` 記的是加關聯當下的尺寸，overwrite 不會更新）；產生程式改寫子作品座標，重跑繩的清單逐位元組不變。
 - 落地：stampvox 3,769 ＝ 清單；作品 export ＝ 清單（子作品座標）；組裝件 export list 1,250,551 ＝ 1,243,013 ＋ 2 × 3,769，逐格缺 0／多 0／顏色不同 0；link_overlap 0、link_clipped 0。
 - 讀回：固定點 93 缺 0 差 0；繩 609 缺 0、端點／slack／粗細／組 差 0、meta 差 0；`sub=ropes` broken 0；view ropes_broken 0、models_broken 0。
@@ -443,7 +443,7 @@ Tim：「接著繼續造船 直到完成可以匯入遊戲吧」（/scp-shipbuil
   每一層都有梯子通到：下↔上 4 個梯口、上↔spar 後甲板前緣／前甲板後緣／走道各兩座、spar↔船尾樓兩座。
 - **配件**（外部模型，scale 0.2 明寫，pivot ＝ 底面中心照餘燼號）：舵輪 ← 憲法號 -wheel（後甲板 X 140，`kind=wheel`）、羅經櫃 ← 餘燼號 -binnacle（X 156，`kind=binnacle`）、主絞盤 ← 餘燼號 -capstan（上甲板絞盤孔 X 400，`kind=capstan`）。三個都第一個高度就零碰撞（格心＋八個角），引擎回報的外框 ＝ 程式算的。
 - §10 檢查表（逐條量過）：
-  - [x] 組裝件「夜燈號」主作品、船殼「夜燈號 船殼」sub；28 件作品都記 meters_per_voxel（遊戲用的全 0.1；0.01 m 的船首像與提燈是雕像版）；每個模型明寫 scale。
+  - [x] 組裝件「夜燈號」主作品、船殼「夜燈號 船殼」sub；27 件作品都記 meters_per_voxel（10-14 寫書回讀重數，原本寫 28）（遊戲用的全 0.1；0.01 m 的船首像與提燈是雕像版）；每個模型明寫 scale。
   - [x] 砲 22、帆桁 10、舵輪是外部模型、帶 meta 與固定點；羅經櫃、絞盤帶 kind。
   - [x] 梯子 `kind=ladders` 14 座 56 點；甲板 4 層 `kind=deck`、每層都有梯子通到。
   - [ ] 空艙房：這艘沒有隔出來的艙房（跟夜隼號一樣）⇒ 沒有可標的。
