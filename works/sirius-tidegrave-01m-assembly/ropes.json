@@ -2010,7 +2010,7 @@
 		{
 			"name": "fore-course.sheet-S",
 			"from": "sail:fore-course/clew-S",
-			"to": "fore-chain-S0",
+			"to": "fairlead-fore-course-sheet-S",
 			"color": "#9f9673",
 			"thickness": 0.4,
 			"slack": 1,
@@ -2268,7 +2268,7 @@
 		{
 			"name": "main-course.sheet-S",
 			"from": "sail:main-course/clew-S",
-			"to": "main-chain-S0",
+			"to": "fairlead-main-course-sheet-S",
 			"color": "#9f9673",
 			"thickness": 0.4,
 			"slack": 1,
@@ -2483,10 +2483,10 @@
 		{
 			"name": "main-topgallant.brace-S",
 			"from": "model:main/yard-main-topgallant/arm-S",
-			"to": "main-chain-S0",
+			"to": "fairlead-main-topgallant-brace-S",
 			"color": "#3c453a",
 			"thickness": 0.4,
-			"slack": 1.015,
+			"slack": 1,
 			"enabled": true,
 			"group": "running/braces",
 			"note": "",
@@ -2595,7 +2595,7 @@
 		{
 			"name": "jib.sheet-S",
 			"from": "sail:jib/clew",
-			"to": "fore-chain-S1",
+			"to": "fairlead-jib-sheet-S",
 			"color": "#9f9673",
 			"thickness": 0.4,
 			"slack": 1,
@@ -2612,7 +2612,7 @@
 		{
 			"name": "mizzen-lateen.sheet-P",
 			"from": "sail:mizzen-lateen/clew",
-			"to": "mizzen-chain-P0",
+			"to": "fairlead-mizzen-lateen-sheet-P",
 			"color": "#9f9673",
 			"thickness": 0.4,
 			"slack": 1,
@@ -2629,7 +2629,7 @@
 		{
 			"name": "steer-wheel-P",
 			"from": "model:甲板-quarter/舵輪/drum-rope-a",
-			"to": "lead-P",
+			"to": "steering-route-P",
 			"color": "#3c453a",
 			"thickness": 0.5,
 			"slack": 1,
@@ -3951,6 +3951,19 @@
 			"note": "",
 			"persona": "Sirius",
 			"created_at": "2026-10-13T23:32:07"
+		},
+		{
+			"name": "steer-wheel-P-lead",
+			"from": "steering-route-P",
+			"to": "lead-P",
+			"color": "#8b6a3e",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "steering",
+			"note": "",
+			"persona": "Sirius",
+			"created_at": "2026-10-14T09:01:22"
 		}
 	],
 	"groups": []

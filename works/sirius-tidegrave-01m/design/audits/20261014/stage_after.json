@@ -1,0 +1,113 @@
+{
+  "method": "No author checker imported; independent list/PNG color ledger and events. For byte determinism ONLY, copied draft_general design generator executed in own gen folders; its verify JSON is ignored.",
+  "palette": [
+    {
+      "stage": "skeleton",
+      "pngSha256": "53b82406dcb4b7b0f7afc36ba2df41e87563eee5d1112bae5376e4512e8c586b",
+      "listSha256": "6660a6cd173f3b39620474e3dbb9d08f651c2731f9f8e31f4b1f6216055ff362",
+      "pixelsDifferent": 0,
+      "drawing_pixels_absent_in_replayed_asset": 0,
+      "extra_stage_projection_not_on_drawing": 0,
+      "colors": [
+        [
+          16,
+          38,
+          48
+        ],
+        [
+          109,
+          109,
+          85
+        ]
+      ],
+      "probe_from_drawing": [
+        105,
+        100
+      ],
+      "unshifted_distance": 0,
+      "full_actual_Xplus3_distance": 3
+    },
+    {
+      "stage": "shell",
+      "pngSha256": "aeb9e366b55bf3bd948fbaf278a18c13aaf9bc755322c6f36a8c006cf2029409",
+      "listSha256": "3b10a24ef92372b290f6c16ecd6f06ab5cda523d899218fdbc2167b8f1297a8c",
+      "pixelsDifferent": 0,
+      "drawing_pixels_absent_in_replayed_asset": 0,
+      "extra_stage_projection_not_on_drawing": 0,
+      "colors": [
+        [
+          16,
+          38,
+          48
+        ],
+        [
+          72,
+          72,
+          85
+        ],
+        [
+          109,
+          109,
+          85
+        ]
+      ],
+      "probe_from_drawing": [
+        100,
+        150
+      ],
+      "unshifted_distance": 0,
+      "full_actual_Xplus3_distance": 3
+    }
+  ],
+  "plan_revision": 3,
+  "planSha256": "97bd7507ead309b51fc7d8773fd9a5c3028f2c17e85f1723e8a7524f921a216b",
+  "generatorSha256": "a1a5f028f55f618e4b7d5974e85375338a396a75a872dbb68365a45763c6fc84",
+  "general_determinism": {
+    "run_hashes": [
+      "a8b41f07bfe0cd9ede803f30c285702e7be2b97ba72ac174ea921696e0bc26f8",
+      "a8b41f07bfe0cd9ede803f30c285702e7be2b97ba72ac174ea921696e0bc26f8"
+    ],
+    "two_runs_byte_identical": true,
+    "current_work_pngSha256": "a8b41f07bfe0cd9ede803f30c285702e7be2b97ba72ac174ea921696e0bc26f8",
+    "matches_current_work": true
+  },
+  "general_real_asset_control": {
+    "pixel": [
+      1031,
+      248
+    ],
+    "raster_read_z": 510.188679245283,
+    "design_top_z": 510,
+    "actual_event_top_cell": 510,
+    "asset_center_z": 510.5,
+    "replay_cells": 17430,
+    "baseline_center_distance": 0.3113207547169736,
+    "limitation": "Pixel datum nominal top_z vs actual top cell center differs half-cell, plus raster rounding; actual translation is applied to event geometry, not datum.",
+    "drawing_pixel_cell_index": 510,
+    "drawing_pixel_cell_center": 510.5,
+    "cell_center_baseline_distance": 0.0
+  },
+  "general_full_asset_nearest_probe": {
+    "asset_shift_vector": [
+      0,
+      0,
+      -3
+    ],
+    "all_event_cells_translated": 17430,
+    "drawing_pixel": [
+      1031,
+      248
+    ],
+    "pixel_read_z": 510.188679245283,
+    "pixel_to_cell_rule": "floor(z_read) + 0.5 (voxel cell center)",
+    "probe_center": [
+      355.5,
+      120.5,
+      510.5
+    ],
+    "unshifted_nearest_center_distance": 0.0,
+    "shifted_full_asset_nearest_center_distance": 3.0,
+    "raw_raster_distance_shifted": 2.6886792452830264,
+    "note": "Negative Z translation moves exposed mast top away from top probe; positive Z translation leaves probe inside mast and would read zero. No datum or image is shifted."
+  }
+}

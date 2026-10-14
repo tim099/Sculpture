@@ -30,7 +30,7 @@ def stamp(work,a,label):
     return now
 def draw_plan(a,label):
     # Independent drawable cell plan at z-axis; file contains exact top-projection pixels.
-    c=a.max(axis=2).T[::-1];rgb=np.zeros((241,800,3),np.uint8);rgb[:]=(16,38,48);m=c>0;v=c[m]
+    c=a.max(axis=2).T[::-1];rgb=np.zeros((241,800,3),np.uint8);rgb[:]=(16,38,48);m=c>0;v=c[m].astype(np.int32)
     rgb[m]=np.stack([((v>>5)&7)*255/7,((v>>2)&7)*255/7,(v&3)*255/3],axis=1).astype(np.uint8)
     Image.fromarray(rgb).save(ROOT/(label+'_cell_plan.png'))
 def main():

@@ -29,7 +29,7 @@ def main():
     F=lambda n:ImageFont.truetype(fontpath,n)
     def txt(x,y,s,n=22,c=ink):d.text((x,y),s,font=F(n),fill=c)
     def line(points,c=ink,w=2):d.line(points,fill=c,width=w)
-    txt(70,40,'潮墓號  /  TIDEGRAVE',44);txt(72,101,'SIRIUS  |  ORIGINAL GENERAL ARRANGEMENT  |  REV 02  |  0.1 m / voxel',22,teal)
+    txt(70,40,'潮墓號  /  TIDEGRAVE',44);txt(72,101,'SIRIUS  |  ORIGINAL GENERAL ARRANGEMENT  |  REV '+str(P['revision']).zfill(2)+'  |  0.1 m / voxel',22,teal)
     txt(1660,45,'三桅 · 雙砲層 · 54 門砲',27,gold)
     # Side elevation at a constant scale, metric grid at 5m.
     sx,sy,scale=90,1600,2.65
@@ -80,6 +80,22 @@ def main():
         a=Q(m['x']-5,CY-5);b=Q(m['x']+5,CY+5);d.ellipse([a,b],outline=ink,width=3)
     for x in (275,410):
         d.rectangle([Q(x-10,CY-8),Q(x+10,CY+8)],outline=teal,width=2)
+    for i,at in enumerate(P['guns']['chase_layout']['base_positions']):
+        x,y,z=at;d.ellipse([Q(x-2,y-2),Q(x+2,y+2)],fill=gold)
+    for name,item in P.get('equipment',{}).items():
+        if 'at' not in item:continue
+        x,y,z=item['at'];d.rectangle([Q(x-3,y-3),Q(x+3,y+3)],fill=teal)
+        txt(*Q(x+5,y),name,16,teal)
+    for x,y,z0,z1 in P.get('equipment',{}).get('fairlead_posts',{}).get('positions',[]):
+        for yy in (y,2*CY-y):
+            a,b=Q(x,yy);d.ellipse((a-3,b-3,a+3,b+3),fill=gold)
+            line([T(x,z0),T(x,z1)],gold,2)
+    staff=P.get('equipment',{}).get('flag_staff')
+    if staff:
+        x,y,z0=staff['base_cell'];z1=staff['top_cell'][2]
+        line([T(x,z0),T(x,z1)],gold,3)
+        corners=[T(q[0],q[2]) for q in staff['flag_corners']]
+        line(corners+[corners[0]],teal,2)
     txt(1750,1720,'新線形剖面 / BODY PLAN',23,teal)
     # Body plan from original station law, each colored curve independently labelled.
     for j,t in enumerate((.1,.25,.5,.75,.9)):
@@ -95,7 +111,7 @@ def main():
            '破舊帆以透明貼圖呈現；水線下殼體保留完整，通道與梯子可通行。',
            '船殼 / 各甲板 / 桅分件；砲、帆桁、舵輪、桶為模型；繩與帆獨立。',
            '歷史：Vasa 與 Batavia 比例及甲板概念；所有線形座標均為原創設計。',
-           '尺寸為遊戲資產設計；尚未宣稱實船穩性或遊戲浮力已驗收。']
+           'Rev04：新版艏砲／操舵導索、加高旗竿、鏡像導索柱；庫門淨高2.1m。']
     for i,s in enumerate(lines):txt(70,2060+i*37,s,21)
     line([(65,2400),(2235,2400)],dim,2);txt(70,2415,'T540 / T541   |   +X BOW  ·  +Y STARBOARD  ·  Z0 KEEL   |   DRAFT GENERAL — NOT CONSTRUCTION ACCEPTANCE',18,teal)
     out=ROOT/'general_arrangement.png';im.save(out)

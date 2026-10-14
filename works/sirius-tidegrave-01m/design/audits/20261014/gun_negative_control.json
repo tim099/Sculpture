@@ -1,0 +1,104 @@
+{
+  "method": "Exact original verify.py touched() compiled alone via AST; transformed source voxel AABBs and strict floor/ceil interior cell enumeration, same ruler as 105-model verification. Modifications exist only in in-memory test coordinates.",
+  "ruler_sha256": "b97c5c8c4856752484e26a28b332ffd64ed4dadaf817b2c0f9e5d681118ce713",
+  "ruler_function_sha256": "8270664461ef692f786c66666619fe43256fcfad4cd8d4fc2002c7f5bf89fc9d",
+  "base_snapshot_sha256": "0fbdf842d1626a9b07764dc78546359966357c8263c7e2f4acbc2f14fd80b488",
+  "model_ledger_sha256": "0ec0800d63ae4e7c251635c1e14bce04bb840ef12703ae3e097339ad67951ff0",
+  "gun_name": "砲-S01",
+  "gun_source_work": "basecamp-frigate-constitution-01m-gun-24",
+  "original_at": [
+    175.5,
+    135.5,
+    66
+  ],
+  "source_voxel_count": 1125,
+  "base_voxel_count": 1036066,
+  "baseline": {
+    "actual_delta": [
+      0,
+      0,
+      0
+    ],
+    "model_at_after": [
+      175.5,
+      135.5,
+      66.0
+    ],
+    "positive_volume_pairs": 0,
+    "unique_base_collision_voxels": 0,
+    "examples": []
+  },
+  "trials": [
+    {
+      "actual_delta": [
+        0,
+        0,
+        3
+      ],
+      "model_at_after": [
+        175.5,
+        135.5,
+        69.0
+      ],
+      "positive_volume_pairs": 0,
+      "unique_base_collision_voxels": 0,
+      "examples": []
+    },
+    {
+      "actual_delta": [
+        0,
+        3,
+        0
+      ],
+      "model_at_after": [
+        175.5,
+        138.5,
+        66.0
+      ],
+      "positive_volume_pairs": 2,
+      "unique_base_collision_voxels": 2,
+      "examples": [
+        {
+          "base_voxel": [
+            170,
+            158,
+            68
+          ],
+          "source_box_index": 43,
+          "model_box_lo": [
+            170.0,
+            157.5,
+            68.0
+          ],
+          "model_box_hi": [
+            171.0,
+            158.5,
+            69.0
+          ],
+          "positive_volume_voxel3": 0.5
+        },
+        {
+          "base_voxel": [
+            170,
+            158,
+            69
+          ],
+          "source_box_index": 44,
+          "model_box_lo": [
+            170.0,
+            157.5,
+            69.0
+          ],
+          "model_box_hi": [
+            171.0,
+            158.5,
+            70.0
+          ],
+          "positive_volume_voxel3": 0.5
+        }
+      ]
+    }
+  ],
+  "control_passed": true,
+  "files_modified_in_works": false
+}

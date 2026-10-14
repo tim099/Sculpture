@@ -1,0 +1,1581 @@
+{
+  "source": "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-assembly\\exports\\tidegrave_preview.vxk",
+  "sha256": "9f079ab5c5789d4f4253726e97d348e7e28a08dd461dc8b2c82a6269bece018d",
+  "checksum": "0xbdd5856b",
+  "voxels": 1036066,
+  "rig_counts": {
+    "ropes": 300,
+    "sails": 10,
+    "models": 116
+  },
+  "ropes": [
+    {
+      "name": "fore-course.sheet-S",
+      "ends": [
+        "sail:fore-course/clew-S",
+        "fairlead-fore-course-sheet-S"
+      ],
+      "radius": 0.2,
+      "pts": [
+        525.01,
+        161.12,
+        153.76,
+        490.5,
+        162.5,
+        132.5
+      ],
+      "cells": [
+        {
+          "cell": [
+            490,
+            162,
+            132
+          ],
+          "distance": 0.0,
+          "along": 39.969,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        }
+      ],
+      "interior_count": 0
+    },
+    {
+      "name": "main-course.sheet-S",
+      "ends": [
+        "sail:main-course/clew-S",
+        "fairlead-main-course-sheet-S"
+      ],
+      "radius": 0.2,
+      "pts": [
+        373.7,
+        169.86,
+        159.87,
+        335.5,
+        170.5,
+        136.5
+      ],
+      "cells": [
+        {
+          "cell": [
+            335,
+            170,
+            136
+          ],
+          "distance": 0.0,
+          "along": 44.2,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        }
+      ],
+      "interior_count": 0
+    },
+    {
+      "name": "main-topgallant.brace-S",
+      "ends": [
+        "model:main/yard-main-topgallant/arm-S",
+        "fairlead-main-topgallant-brace-S"
+      ],
+      "radius": 0.2,
+      "pts": [
+        374.04,
+        177.56,
+        460.5,
+        335.5,
+        170.5,
+        130.5
+      ],
+      "cells": [
+        {
+          "cell": [
+            335,
+            170,
+            136
+          ],
+          "distance": 0.14137,
+          "along": 326.796,
+          "kind": "interior_crossing",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        },
+        {
+          "cell": [
+            335,
+            170,
+            131
+          ],
+          "distance": 0.0,
+          "along": 330.807,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        },
+        {
+          "cell": [
+            335,
+            170,
+            133
+          ],
+          "distance": 0.0,
+          "along": 328.793,
+          "kind": "interior_crossing",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        },
+        {
+          "cell": [
+            335,
+            170,
+            135
+          ],
+          "distance": 0.02537,
+          "along": 327.789,
+          "kind": "interior_crossing",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        },
+        {
+          "cell": [
+            335,
+            170,
+            130
+          ],
+          "distance": 0.0,
+          "along": 331.814,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        },
+        {
+          "cell": [
+            335,
+            170,
+            132
+          ],
+          "distance": 0.0,
+          "along": 329.8,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        },
+        {
+          "cell": [
+            335,
+            170,
+            134
+          ],
+          "distance": 0.0,
+          "along": 328.007,
+          "kind": "interior_crossing",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        }
+      ],
+      "interior_count": 4
+    },
+    {
+      "name": "jib.sheet-S",
+      "ends": [
+        "sail:jib/clew",
+        "fairlead-jib-sheet-S"
+      ],
+      "radius": 0.2,
+      "pts": [
+        597.05,
+        129.98,
+        151.65,
+        510.5,
+        160.5,
+        156.5
+      ],
+      "cells": [
+        {
+          "cell": [
+            510,
+            160,
+            156
+          ],
+          "distance": 0.0,
+          "along": 91.371,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        }
+      ],
+      "interior_count": 0
+    },
+    {
+      "name": "mizzen-lateen.sheet-P",
+      "ends": [
+        "sail:mizzen-lateen/clew",
+        "fairlead-mizzen-lateen-sheet-P"
+      ],
+      "radius": 0.2,
+      "pts": [
+        125.5,
+        120.5,
+        205.5,
+        185.5,
+        86.5,
+        182.5
+      ],
+      "cells": [
+        {
+          "cell": [
+            185,
+            86,
+            182
+          ],
+          "distance": 0.0,
+          "along": 72.092,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m"
+          ]
+        }
+      ],
+      "interior_count": 0
+    },
+    {
+      "name": "steer-wheel-P",
+      "ends": [
+        "model:甲板-quarter/舵輪/drum-rope-a",
+        "steering-route-P"
+      ],
+      "radius": 0.25,
+      "pts": [
+        195.8,
+        142.2,
+        148.9,
+        225.5,
+        106.5,
+        151.5
+      ],
+      "cells": [
+        {
+          "cell": [
+            225,
+            106,
+            151
+          ],
+          "distance": 0.0,
+          "along": 45.86,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m-deck-quarter"
+          ]
+        }
+      ],
+      "interior_count": 0
+    },
+    {
+      "name": "steer-lead-P",
+      "ends": [
+        "lead-P",
+        "steer-P"
+      ],
+      "radius": 0.25,
+      "pts": [
+        175.5,
+        106.5,
+        135.5,
+        155.5,
+        106.5,
+        85.5
+      ],
+      "cells": [],
+      "interior_count": 0
+    },
+    {
+      "name": "steer-tiller-P",
+      "ends": [
+        "steer-P",
+        "model:舵/tiller-end"
+      ],
+      "radius": 0.25,
+      "pts": [
+        155.5,
+        106.5,
+        85.5,
+        155.5,
+        120.5,
+        74.5
+      ],
+      "cells": [],
+      "interior_count": 0
+    },
+    {
+      "name": "steer-wheel-S",
+      "ends": [
+        "model:甲板-quarter/舵輪/drum-rope-b",
+        "lead-S"
+      ],
+      "radius": 0.25,
+      "pts": [
+        201.2,
+        144.8,
+        148.9,
+        175.5,
+        134.5,
+        135.5
+      ],
+      "cells": [],
+      "interior_count": 0
+    },
+    {
+      "name": "steer-lead-S",
+      "ends": [
+        "lead-S",
+        "steer-S"
+      ],
+      "radius": 0.25,
+      "pts": [
+        175.5,
+        134.5,
+        135.5,
+        155.5,
+        134.5,
+        85.5
+      ],
+      "cells": [],
+      "interior_count": 0
+    },
+    {
+      "name": "steer-tiller-S",
+      "ends": [
+        "steer-S",
+        "model:舵/tiller-end"
+      ],
+      "radius": 0.25,
+      "pts": [
+        155.5,
+        134.5,
+        85.5,
+        155.5,
+        120.5,
+        74.5
+      ],
+      "cells": [],
+      "interior_count": 0
+    },
+    {
+      "name": "steer-wheel-P-lead",
+      "ends": [
+        "steering-route-P",
+        "lead-P"
+      ],
+      "radius": 0.25,
+      "pts": [
+        225.5,
+        106.5,
+        151.5,
+        175.5,
+        106.5,
+        135.5
+      ],
+      "cells": [
+        {
+          "cell": [
+            225,
+            106,
+            151
+          ],
+          "distance": 0.0,
+          "along": 0.262,
+          "kind": "endpoint_attachment_zone",
+          "source_work": [
+            "sirius-tidegrave-01m-deck-quarter"
+          ]
+        }
+      ],
+      "interior_count": 0
+    }
+  ],
+  "flag": {
+    "bbox": [
+      [
+        75.43,
+        117.41,
+        215.07
+      ],
+      [
+        105.53,
+        120.55,
+        231.56
+      ]
+    ],
+    "all_voxel_collision_cells": [
+      [
+        105,
+        120,
+        215
+      ],
+      [
+        105,
+        120,
+        216
+      ],
+      [
+        105,
+        120,
+        217
+      ],
+      [
+        105,
+        120,
+        218
+      ],
+      [
+        105,
+        120,
+        219
+      ],
+      [
+        105,
+        120,
+        220
+      ],
+      [
+        105,
+        120,
+        221
+      ],
+      [
+        105,
+        120,
+        222
+      ],
+      [
+        105,
+        120,
+        223
+      ],
+      [
+        105,
+        120,
+        224
+      ],
+      [
+        105,
+        120,
+        225
+      ],
+      [
+        105,
+        120,
+        226
+      ],
+      [
+        105,
+        120,
+        227
+      ],
+      [
+        105,
+        120,
+        228
+      ],
+      [
+        105,
+        120,
+        229
+      ],
+      [
+        105,
+        120,
+        230
+      ],
+      [
+        105,
+        120,
+        231
+      ]
+    ],
+    "collision_source_work": {
+      "(105, 120, 223)": [
+        "ornament"
+      ],
+      "(105, 120, 229)": [
+        "ornament"
+      ],
+      "(105, 120, 219)": [
+        "ornament"
+      ],
+      "(105, 120, 216)": [
+        "ornament"
+      ],
+      "(105, 120, 222)": [
+        "ornament"
+      ],
+      "(105, 120, 225)": [
+        "ornament"
+      ],
+      "(105, 120, 231)": [
+        "ornament"
+      ],
+      "(105, 120, 215)": [
+        "ornament"
+      ],
+      "(105, 120, 221)": [
+        "ornament"
+      ],
+      "(105, 120, 228)": [
+        "ornament"
+      ],
+      "(105, 120, 218)": [
+        "ornament"
+      ],
+      "(105, 120, 224)": [
+        "ornament"
+      ],
+      "(105, 120, 227)": [
+        "ornament"
+      ],
+      "(105, 120, 217)": [
+        "ornament"
+      ],
+      "(105, 120, 230)": [
+        "ornament"
+      ],
+      "(105, 120, 220)": [
+        "ornament"
+      ],
+      "(105, 120, 226)": [
+        "ornament"
+      ]
+    },
+    "strictly_interior_triangle_collision_cells": [],
+    "pole_attachment_cells": [
+      [
+        105,
+        120,
+        215
+      ],
+      [
+        105,
+        120,
+        216
+      ],
+      [
+        105,
+        120,
+        217
+      ],
+      [
+        105,
+        120,
+        218
+      ],
+      [
+        105,
+        120,
+        219
+      ],
+      [
+        105,
+        120,
+        220
+      ],
+      [
+        105,
+        120,
+        221
+      ],
+      [
+        105,
+        120,
+        222
+      ],
+      [
+        105,
+        120,
+        223
+      ],
+      [
+        105,
+        120,
+        224
+      ],
+      [
+        105,
+        120,
+        225
+      ],
+      [
+        105,
+        120,
+        226
+      ],
+      [
+        105,
+        120,
+        227
+      ],
+      [
+        105,
+        120,
+        228
+      ],
+      [
+        105,
+        120,
+        229
+      ],
+      [
+        105,
+        120,
+        230
+      ],
+      [
+        105,
+        120,
+        231
+      ]
+    ]
+  },
+  "supports": [
+    {
+      "name": "fairlead-fore-course-sheet-S",
+      "cell": [
+        490,
+        162,
+        132
+      ],
+      "occupied": true,
+      "contiguous_column_down": [
+        [
+          490,
+          162,
+          132
+        ],
+        [
+          490,
+          162,
+          131
+        ],
+        [
+          490,
+          162,
+          130
+        ],
+        [
+          490,
+          162,
+          129
+        ],
+        [
+          490,
+          162,
+          128
+        ],
+        [
+          490,
+          162,
+          127
+        ],
+        [
+          490,
+          162,
+          126
+        ],
+        [
+          490,
+          162,
+          125
+        ],
+        [
+          490,
+          162,
+          124
+        ],
+        [
+          490,
+          162,
+          123
+        ],
+        [
+          490,
+          162,
+          122
+        ],
+        [
+          490,
+          162,
+          121
+        ],
+        [
+          490,
+          162,
+          120
+        ],
+        [
+          490,
+          162,
+          119
+        ],
+        [
+          490,
+          162,
+          118
+        ],
+        [
+          490,
+          162,
+          117
+        ],
+        [
+          490,
+          162,
+          116
+        ],
+        [
+          490,
+          162,
+          115
+        ],
+        [
+          490,
+          162,
+          114
+        ]
+      ],
+      "base_cell": [
+        490,
+        162,
+        114
+      ],
+      "owners": [
+        "sirius-tidegrave-01m"
+      ],
+      "base_owner": [
+        "sirius-tidegrave-01m"
+      ]
+    },
+    {
+      "name": "fairlead-main-course-sheet-S",
+      "cell": [
+        335,
+        170,
+        136
+      ],
+      "occupied": true,
+      "contiguous_column_down": [
+        [
+          335,
+          170,
+          136
+        ],
+        [
+          335,
+          170,
+          135
+        ],
+        [
+          335,
+          170,
+          134
+        ],
+        [
+          335,
+          170,
+          133
+        ],
+        [
+          335,
+          170,
+          132
+        ],
+        [
+          335,
+          170,
+          131
+        ],
+        [
+          335,
+          170,
+          130
+        ],
+        [
+          335,
+          170,
+          129
+        ],
+        [
+          335,
+          170,
+          128
+        ],
+        [
+          335,
+          170,
+          127
+        ],
+        [
+          335,
+          170,
+          126
+        ],
+        [
+          335,
+          170,
+          125
+        ],
+        [
+          335,
+          170,
+          124
+        ],
+        [
+          335,
+          170,
+          123
+        ],
+        [
+          335,
+          170,
+          122
+        ],
+        [
+          335,
+          170,
+          121
+        ],
+        [
+          335,
+          170,
+          120
+        ],
+        [
+          335,
+          170,
+          119
+        ],
+        [
+          335,
+          170,
+          118
+        ],
+        [
+          335,
+          170,
+          117
+        ]
+      ],
+      "base_cell": [
+        335,
+        170,
+        117
+      ],
+      "owners": [
+        "sirius-tidegrave-01m"
+      ],
+      "base_owner": [
+        "sirius-tidegrave-01m"
+      ]
+    },
+    {
+      "name": "fairlead-main-topgallant-brace-S",
+      "cell": [
+        335,
+        170,
+        130
+      ],
+      "occupied": true,
+      "contiguous_column_down": [
+        [
+          335,
+          170,
+          130
+        ],
+        [
+          335,
+          170,
+          129
+        ],
+        [
+          335,
+          170,
+          128
+        ],
+        [
+          335,
+          170,
+          127
+        ],
+        [
+          335,
+          170,
+          126
+        ],
+        [
+          335,
+          170,
+          125
+        ],
+        [
+          335,
+          170,
+          124
+        ],
+        [
+          335,
+          170,
+          123
+        ],
+        [
+          335,
+          170,
+          122
+        ],
+        [
+          335,
+          170,
+          121
+        ],
+        [
+          335,
+          170,
+          120
+        ],
+        [
+          335,
+          170,
+          119
+        ],
+        [
+          335,
+          170,
+          118
+        ],
+        [
+          335,
+          170,
+          117
+        ]
+      ],
+      "base_cell": [
+        335,
+        170,
+        117
+      ],
+      "owners": [
+        "sirius-tidegrave-01m"
+      ],
+      "base_owner": [
+        "sirius-tidegrave-01m"
+      ]
+    },
+    {
+      "name": "fairlead-jib-sheet-S",
+      "cell": [
+        510,
+        160,
+        156
+      ],
+      "occupied": true,
+      "contiguous_column_down": [
+        [
+          510,
+          160,
+          156
+        ],
+        [
+          510,
+          160,
+          155
+        ],
+        [
+          510,
+          160,
+          154
+        ],
+        [
+          510,
+          160,
+          153
+        ],
+        [
+          510,
+          160,
+          152
+        ],
+        [
+          510,
+          160,
+          151
+        ],
+        [
+          510,
+          160,
+          150
+        ],
+        [
+          510,
+          160,
+          149
+        ],
+        [
+          510,
+          160,
+          148
+        ],
+        [
+          510,
+          160,
+          147
+        ],
+        [
+          510,
+          160,
+          146
+        ],
+        [
+          510,
+          160,
+          145
+        ],
+        [
+          510,
+          160,
+          144
+        ],
+        [
+          510,
+          160,
+          143
+        ],
+        [
+          510,
+          160,
+          142
+        ],
+        [
+          510,
+          160,
+          141
+        ],
+        [
+          510,
+          160,
+          140
+        ],
+        [
+          510,
+          160,
+          139
+        ],
+        [
+          510,
+          160,
+          138
+        ],
+        [
+          510,
+          160,
+          137
+        ],
+        [
+          510,
+          160,
+          136
+        ],
+        [
+          510,
+          160,
+          135
+        ],
+        [
+          510,
+          160,
+          134
+        ],
+        [
+          510,
+          160,
+          133
+        ],
+        [
+          510,
+          160,
+          132
+        ],
+        [
+          510,
+          160,
+          131
+        ],
+        [
+          510,
+          160,
+          130
+        ],
+        [
+          510,
+          160,
+          129
+        ],
+        [
+          510,
+          160,
+          128
+        ],
+        [
+          510,
+          160,
+          127
+        ],
+        [
+          510,
+          160,
+          126
+        ],
+        [
+          510,
+          160,
+          125
+        ],
+        [
+          510,
+          160,
+          124
+        ],
+        [
+          510,
+          160,
+          123
+        ],
+        [
+          510,
+          160,
+          122
+        ],
+        [
+          510,
+          160,
+          121
+        ],
+        [
+          510,
+          160,
+          120
+        ],
+        [
+          510,
+          160,
+          119
+        ],
+        [
+          510,
+          160,
+          118
+        ],
+        [
+          510,
+          160,
+          117
+        ],
+        [
+          510,
+          160,
+          116
+        ],
+        [
+          510,
+          160,
+          115
+        ],
+        [
+          510,
+          160,
+          114
+        ],
+        [
+          510,
+          160,
+          113
+        ],
+        [
+          510,
+          160,
+          112
+        ],
+        [
+          510,
+          160,
+          111
+        ]
+      ],
+      "base_cell": [
+        510,
+        160,
+        111
+      ],
+      "owners": [
+        "sirius-tidegrave-01m"
+      ],
+      "base_owner": [
+        "sirius-tidegrave-01m"
+      ]
+    },
+    {
+      "name": "fairlead-mizzen-lateen-sheet-P",
+      "cell": [
+        185,
+        86,
+        182
+      ],
+      "occupied": true,
+      "contiguous_column_down": [
+        [
+          185,
+          86,
+          182
+        ],
+        [
+          185,
+          86,
+          181
+        ],
+        [
+          185,
+          86,
+          180
+        ],
+        [
+          185,
+          86,
+          179
+        ],
+        [
+          185,
+          86,
+          178
+        ],
+        [
+          185,
+          86,
+          177
+        ],
+        [
+          185,
+          86,
+          176
+        ],
+        [
+          185,
+          86,
+          175
+        ],
+        [
+          185,
+          86,
+          174
+        ],
+        [
+          185,
+          86,
+          173
+        ],
+        [
+          185,
+          86,
+          172
+        ],
+        [
+          185,
+          86,
+          171
+        ],
+        [
+          185,
+          86,
+          170
+        ],
+        [
+          185,
+          86,
+          169
+        ],
+        [
+          185,
+          86,
+          168
+        ],
+        [
+          185,
+          86,
+          167
+        ],
+        [
+          185,
+          86,
+          166
+        ],
+        [
+          185,
+          86,
+          165
+        ],
+        [
+          185,
+          86,
+          164
+        ],
+        [
+          185,
+          86,
+          163
+        ],
+        [
+          185,
+          86,
+          162
+        ],
+        [
+          185,
+          86,
+          161
+        ],
+        [
+          185,
+          86,
+          160
+        ],
+        [
+          185,
+          86,
+          159
+        ],
+        [
+          185,
+          86,
+          158
+        ],
+        [
+          185,
+          86,
+          157
+        ],
+        [
+          185,
+          86,
+          156
+        ],
+        [
+          185,
+          86,
+          155
+        ],
+        [
+          185,
+          86,
+          154
+        ],
+        [
+          185,
+          86,
+          153
+        ],
+        [
+          185,
+          86,
+          152
+        ],
+        [
+          185,
+          86,
+          151
+        ],
+        [
+          185,
+          86,
+          150
+        ],
+        [
+          185,
+          86,
+          149
+        ],
+        [
+          185,
+          86,
+          148
+        ],
+        [
+          185,
+          86,
+          147
+        ],
+        [
+          185,
+          86,
+          146
+        ],
+        [
+          185,
+          86,
+          145
+        ],
+        [
+          185,
+          86,
+          144
+        ],
+        [
+          185,
+          86,
+          143
+        ],
+        [
+          185,
+          86,
+          142
+        ],
+        [
+          185,
+          86,
+          141
+        ],
+        [
+          185,
+          86,
+          140
+        ],
+        [
+          185,
+          86,
+          139
+        ],
+        [
+          185,
+          86,
+          138
+        ],
+        [
+          185,
+          86,
+          137
+        ]
+      ],
+      "base_cell": [
+        185,
+        86,
+        137
+      ],
+      "owners": [
+        "sirius-tidegrave-01m"
+      ],
+      "base_owner": [
+        "sirius-tidegrave-01m"
+      ]
+    }
+  ],
+  "limitations": [
+    "Static exported curves/cloth only; dynamic model sweep/human routes unverified. Endpoint attachment zone is first/last 3 voxel lengths; all its collision cells are retained and labelled."
+  ],
+  "ornament": {
+    "cells": 31768,
+    "export_missing_or_color_diff": 0,
+    "components": 219,
+    "unattached_components": 0,
+    "closed_air": 0,
+    "mirror_missing_or_color_diff": 0
+  },
+  "steering_route_support": {
+    "anchor_cell": [
+      225,
+      106,
+      151
+    ],
+    "occupied": true,
+    "column": [
+      [
+        225,
+        106,
+        151
+      ],
+      [
+        225,
+        106,
+        150
+      ],
+      [
+        225,
+        106,
+        149
+      ],
+      [
+        225,
+        106,
+        148
+      ],
+      [
+        225,
+        106,
+        147
+      ],
+      [
+        225,
+        106,
+        146
+      ],
+      [
+        225,
+        106,
+        145
+      ],
+      [
+        225,
+        106,
+        144
+      ],
+      [
+        225,
+        106,
+        143
+      ],
+      [
+        225,
+        106,
+        142
+      ],
+      [
+        225,
+        106,
+        141
+      ],
+      [
+        225,
+        106,
+        140
+      ],
+      [
+        225,
+        106,
+        139
+      ],
+      [
+        225,
+        106,
+        138
+      ],
+      [
+        225,
+        106,
+        137
+      ]
+    ],
+    "source": "quarter-deck guide post, from parent CLI and prior event source check"
+  }
+}

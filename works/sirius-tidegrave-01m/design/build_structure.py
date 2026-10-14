@@ -107,7 +107,7 @@ def sheet(a,name):
     # Exact cell raster is a separate design artefact, not decorated drafting lines.
     proj=np.max(a,axis=1).T[::-1];im=Image.new('RGB',(800,200),(16,38,48))
     rgb=np.zeros((200,800,3),np.uint8);rgb[:]=(16,38,48)
-    m=proj>0;c=proj[m];rgb[m]=np.stack([((c>>5)&7)*255/7,((c>>2)&7)*255/7,(c&3)*255/3],axis=1).astype(np.uint8)
+    m=proj>0;c=proj[m].astype(np.int32);rgb[m]=np.stack([((c>>5)&7)*255/7,((c>>2)&7)*255/7,(c&3)*255/3],axis=1).astype(np.uint8)
     im=Image.fromarray(rgb);im.save(ROOT/(name+'_cell_plan.png'))
     # draw annotated larger sheet without changing the exact raster.
     out=Image.new('RGB',(1800,760),'#102630');out.paste(im.resize((1600,400),Image.Resampling.NEAREST),(100,160))

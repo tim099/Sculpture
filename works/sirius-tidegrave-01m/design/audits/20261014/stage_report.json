@@ -1,0 +1,583 @@
+{
+  "method": "independent event replay and parameter implementation; no author module imported",
+  "event_history": [
+    {
+      "event": "230009_511_d5360c.json",
+      "op": "stampvox",
+      "before": 0,
+      "after": 744,
+      "payload_count": 744,
+      "reported_count": 744
+    },
+    {
+      "event": "230011_231_5c90a8.json",
+      "op": "stampvox",
+      "before": 744,
+      "after": 276713,
+      "payload_count": 275969,
+      "reported_count": 275969
+    },
+    {
+      "event": "230133_765_4d916b.json",
+      "op": "carve",
+      "before": 276713,
+      "after": 107095,
+      "payload_count": 169618,
+      "reported_count": 169618
+    },
+    {
+      "event": "230136_710_bc4cb9.json",
+      "op": "stampvox",
+      "before": 107095,
+      "after": 118405,
+      "payload_count": 11310,
+      "reported_count": 11310
+    },
+    {
+      "event": "230252_302_eb02ec.json",
+      "op": "stampvox",
+      "before": 118405,
+      "after": 668008,
+      "payload_count": 549603,
+      "reported_count": 549603
+    },
+    {
+      "event": "231407_639_50eb5b.json",
+      "op": "carve",
+      "before": 668008,
+      "after": 661528,
+      "payload_count": 6480,
+      "reported_count": 6480
+    },
+    {
+      "event": "232106_686_3a60a2.json",
+      "op": "carve",
+      "before": 661528,
+      "after": 660798,
+      "payload_count": 730,
+      "reported_count": 730
+    },
+    {
+      "event": "232425_095_e7d450.json",
+      "op": "carve",
+      "before": 660798,
+      "after": 660780,
+      "payload_count": 18,
+      "reported_count": 18
+    },
+    {
+      "event": "233050_061_6e0cf8.json",
+      "op": "carve",
+      "before": 660780,
+      "after": 655183,
+      "payload_count": 5597,
+      "reported_count": 5597
+    },
+    {
+      "event": "233539_558_46c1b3.json",
+      "op": "carve",
+      "before": 655183,
+      "after": 650931,
+      "payload_count": 4252,
+      "reported_count": 4252
+    },
+    {
+      "event": "234318_288_e593c9.json",
+      "op": "carve",
+      "before": 650931,
+      "after": 650673,
+      "payload_count": 258,
+      "reported_count": 258
+    },
+    {
+      "event": "235111_741_1007d0.json",
+      "op": "carve",
+      "before": 650673,
+      "after": 650663,
+      "payload_count": 10,
+      "reported_count": 10
+    }
+  ],
+  "replay_errors": [],
+  "source_hashes": [
+    {
+      "event": "230009_511_d5360c.json",
+      "source_name": "skeleton_first.vox.txt",
+      "current_source_sha_matches_event": false
+    },
+    {
+      "event": "230011_231_5c90a8.json",
+      "source_name": "skeleton_remaining.vox.txt",
+      "current_source_sha_matches_event": false
+    },
+    {
+      "event": "230133_765_4d916b.json",
+      "source_name": "skeleton_v1_remove.vox.txt",
+      "current_source_sha_matches_event": true
+    },
+    {
+      "event": "230136_710_bc4cb9.json",
+      "source_name": "skeleton_missing.vox.txt",
+      "current_source_sha_matches_event": false
+    },
+    {
+      "event": "230252_302_eb02ec.json",
+      "source_name": "shell_missing.vox.txt",
+      "current_source_sha_matches_event": false
+    },
+    {
+      "event": "231407_639_50eb5b.json",
+      "source_name": "ports_frame_correction.vox.txt",
+      "current_source_sha_matches_event": true
+    },
+    {
+      "event": "232106_686_3a60a2.json",
+      "source_name": "chase_port_cut.vox.txt",
+      "current_source_sha_matches_event": true
+    },
+    {
+      "event": "232425_095_e7d450.json",
+      "source_name": "chase_detached_remove.vox.txt",
+      "current_source_sha_matches_event": true
+    },
+    {
+      "event": "233050_061_6e0cf8.json",
+      "source_name": "tiller_port.vox.txt",
+      "current_source_sha_matches_event": true
+    },
+    {
+      "event": "233539_558_46c1b3.json",
+      "source_name": "stern_windows_cut.vox.txt",
+      "current_source_sha_matches_event": true
+    },
+    {
+      "event": "234318_288_e593c9.json",
+      "source_name": "chase_crew_fit_cut.vox.txt",
+      "current_source_sha_matches_event": true
+    },
+    {
+      "event": "235111_741_1007d0.json",
+      "source_name": "final_floating_strips.vox.txt",
+      "current_source_sha_matches_event": true
+    }
+  ],
+  "stages": {
+    "skeleton": {
+      "status": "pass_geometry_minor_drawing_color",
+      "count": 118405,
+      "result_ledger": {
+        "missing": 0,
+        "extra": 0,
+        "wrong_color": 0
+      },
+      "image_ledger": {
+        "drawing_pixels": 18014,
+        "drawing_pixels_absent": 0,
+        "stage_projection_extra_not_on_drawing": 0,
+        "projection_color_mismatch": 18014,
+        "actual_raster_colors": [
+          [
+            16,
+            38,
+            48
+          ],
+          [
+            36,
+            36,
+            85
+          ]
+        ],
+        "color_issue": "All component colors collapse to (36,36,85) through uint8 multiplication overflow. Occupancy is still exact; material color cannot be inferred from PNG.",
+        "negative_probe": [
+          105,
+          100
+        ],
+        "unshifted_distance": 0,
+        "shifted_actual_asset_distance": 3,
+        "shifted_stage_only_asset_distance": 3
+      },
+      "structure": {
+        "face_components": 1,
+        "closed_air_cells": 0,
+        "mirror_absent": 0,
+        "mirror_color": 0
+      }
+    },
+    "shell_initial": {
+      "count": 668008,
+      "shell_count": 549603,
+      "result_ledger": {
+        "missing": 0,
+        "extra": 0,
+        "wrong_color": 0
+      },
+      "image_ledger": {
+        "drawing_pixels": 57519,
+        "drawing_pixels_absent": 0,
+        "stage_projection_extra_not_on_drawing": 0,
+        "projection_color_mismatch": 57519,
+        "actual_raster_colors": [
+          [
+            16,
+            38,
+            48
+          ],
+          [
+            36,
+            36,
+            85
+          ]
+        ],
+        "color_issue": "All component colors collapse to (36,36,85) through uint8 multiplication overflow. Occupancy is still exact; material color cannot be inferred from PNG.",
+        "negative_probe": [
+          109,
+          100
+        ],
+        "unshifted_distance": 0,
+        "shifted_actual_asset_distance": 0,
+        "shifted_stage_only_asset_distance": 3,
+        "isolated_full_asset_probe": [
+          100,
+          150
+        ],
+        "isolated_full_asset_shift_distance": 3
+      },
+      "structure": {
+        "face_components": 1,
+        "closed_air_cells": 0,
+        "mirror_absent": 0,
+        "mirror_color": 0
+      }
+    },
+    "shell_ports": {
+      "result_ledger": {
+        "missing": 0,
+        "extra": 0,
+        "wrong_color": 0
+      },
+      "removed": 6480,
+      "removed_below_waterline": 0,
+      "structure": {
+        "face_components": 1,
+        "closed_air_cells": 0,
+        "mirror_absent": 0,
+        "mirror_color": 0
+      },
+      "side_rays": [
+        {
+          "x": 175,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 175,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 207,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 207,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 239,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 239,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 271,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 271,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 303,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 303,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 335,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 335,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 367,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 367,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 399,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 399,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 431,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 431,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 463,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 463,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 495,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 495,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 527,
+          "z": 77,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 527,
+          "z": 77,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 175,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 175,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 207,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 207,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 239,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 239,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 271,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 271,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 303,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 303,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 335,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 335,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 367,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 367,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 399,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 399,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 431,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 431,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 463,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 463,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 495,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 495,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        },
+        {
+          "x": 527,
+          "z": 102,
+          "side": -1,
+          "blocked": []
+        },
+        {
+          "x": 527,
+          "z": 102,
+          "side": 1,
+          "blocked": []
+        }
+      ]
+    }
+  },
+  "current_base_below_waterline": {
+    "baseline": "shell_ports",
+    "missing_since_baseline": 4685,
+    "bbox": [
+      [
+        105,
+        134
+      ],
+      [
+        118,
+        122
+      ],
+      [
+        6,
+        51
+      ]
+    ],
+    "note": "Base work only. Linked rudder/assembly may cover some points; requires independent link-aware watertightness check."
+  },
+  "general": {
+    "png_sha_matches": true,
+    "station_max_delta": 4.676513625589962e-05,
+    "negative_control": "General report correctly withdraws datum shift. Stage asset controls reconstructed separately.",
+    "historical_geometry": "unverified/not claimed; station law is explicitly original design decision"
+  }
+}

@@ -1,0 +1,3438 @@
+{
+  "method": "Independent event replay and exact axis-aligned transformed source voxel box intersection; no author checker imports. Models with non-right-angle rotation excluded. All units voxels (0.1 m).",
+  "inputs": {
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-assembly\\links.json": {
+      "sha256": "b25839dfd2e79edd0e3d03f46c3fa473898d9d36f72f3b3530345065e92b4dce",
+      "bytes": 5661
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230009_511_d5360c.json": {
+      "sha256": "9dff5b0bdacd840bf0a29287dface11bb9b606f7987562c1c4a02c6b2d217ba5",
+      "bytes": 13297
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230011_231_5c90a8.json": {
+      "sha256": "0890fc193c43fe7a5e49ccab129c497745ced1403bee1e6f2b3d98956334b6e7",
+      "bytes": 4615831
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230133_765_4d916b.json": {
+      "sha256": "e57c7feaa73722f2ceabc9dc4c2688bdfb685ec5a298f4135dd801dff7fb266c",
+      "bytes": 2166733
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230136_710_bc4cb9.json": {
+      "sha256": "77ab65980dc4ddb3583994492733bde47fdd046a886a2a7f60741b04fc75f644",
+      "bytes": 200473
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230252_302_eb02ec.json": {
+      "sha256": "5f3658598796880386d6b1cd4604225e66bf27b5629a28cd66145103510d65b0",
+      "bytes": 8767438
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\231407_639_50eb5b.json": {
+      "sha256": "0d2fbb803de0ed96249f76c3e0652084b43cb9c2a39b49ec84e64db4e494603e",
+      "bytes": 83640
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\232106_686_3a60a2.json": {
+      "sha256": "c896775ecfda206a19a2d8f461f00bc656c6bf1ff9c508ce63ba92902295a6e3",
+      "bytes": 10691
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\232425_095_e7d450.json": {
+      "sha256": "146ba50f8df15f9b739c6d0a91edb6f225cd6172ab9d07f1b8611be34aca3d80",
+      "bytes": 727
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\233050_061_6e0cf8.json": {
+      "sha256": "f23936e9f2647e5903c21e17bfadb35b13f6efa1f6df8649af501423f003fb52",
+      "bytes": 73149
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\233539_558_46c1b3.json": {
+      "sha256": "9449ca7cabd8ed0673a6e2ac7689a95f9b92bdd029a400407ea317d91aaa2b45",
+      "bytes": 60005
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\234318_288_e593c9.json": {
+      "sha256": "e8398fabe8fc21c5041dfe10a5864052ed432ed1473d67ff969a1d107878304f",
+      "bytes": 4087
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\235111_741_1007d0.json": {
+      "sha256": "a348d6abf5ad0c23ec2942910b0f91f322932aaf87d8ad2d5e10a54c50030989",
+      "bytes": 615
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-14\\085620_206_47fc4a.json": {
+      "sha256": "4283cb161021c2f3a07f261ce8b6ba33f583fc5fb58d0f4125360872a2c79157",
+      "bytes": 2980
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-14\\085935_966_ea42e4.json": {
+      "sha256": "86442cd46860b050431b39df0477fdb5857bf14d7596946c483103e87e668f80",
+      "bytes": 17395
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\sculpt_cache.json": {
+      "sha256": "ad56edeb11d308e62fb91e34acae21e93a9930ed0f0858a5e0dba9183f8fd732",
+      "bytes": 11735870
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-lower\\events\\2026-10-13\\230625_286_47b673.json": {
+      "sha256": "1f91a2a1ddc822ac127254815f8e8f728d912783bfedfca3bbbfa0d32c0b69fa",
+      "bytes": 1423240
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-lower\\sculpt_cache.json": {
+      "sha256": "6653e090bd3a7e223196e0c0fcf8abfe38ce4c83f9c876eeac601a59b9e41dc9",
+      "bytes": 1593277
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-lower\\models.json": {
+      "sha256": "0ec0800d63ae4e7c251635c1e14bce04bb840ef12703ae3e097339ad67951ff0",
+      "bytes": 15772
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-upper\\events\\2026-10-13\\230629_452_5bc8bc.json": {
+      "sha256": "220ace2b7deefa0dad48eaed08e53b859eb2eedc32cefc92369fb2642b70929c",
+      "bytes": 1360163
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-upper\\events\\2026-10-14\\090119_077_b07383.json": {
+      "sha256": "1450851203c6b686dad86a706d49d6f3eb203c7fd6a4bb9b4dc2a11d0a74f4d9",
+      "bytes": 573
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-upper\\sculpt_cache.json": {
+      "sha256": "9b0e25bf20a72ce03a555f6eae3d3d30077dd4044a830704617b5d232bcbf4af",
+      "bytes": 1522354
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-upper\\models.json": {
+      "sha256": "14c17b7c693a27d483ca5682dd581aaa29c3cd3a4a951d8cbbc209b42b7217bf",
+      "bytes": 15773
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-weather\\events\\2026-10-13\\230633_102_f1aa5c.json": {
+      "sha256": "11a8bb6f18339b8e302127ee89cbfdca68883cce3b878f5f361af9689e7e376f",
+      "bytes": 1218994
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-weather\\events\\2026-10-14\\090120_414_7f8493.json": {
+      "sha256": "5ccfbbb6a3aa34c4ecef4e968def59785295dfd677eaa39d9be5dcdeccbe61cb",
+      "bytes": 583
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-weather\\sculpt_cache.json": {
+      "sha256": "e6f2218ba021e90484d3991dcb3ae0fb6ab31e9798a491cc932faa0f8d2ff0f9",
+      "bytes": 1355851
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-weather\\models.json": {
+      "sha256": "cde41e40fc99ae9384df8d9f319f16e04dabaf388e96365ea7a80265da09598e",
+      "bytes": 4104
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-quarter\\events\\2026-10-13\\230636_200_57ac6e.json": {
+      "sha256": "7fb9abbfa5b4e717d71e891bff2d022fc0006b6d2e1dc9687b4d56db1aafc791",
+      "bytes": 266635
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-quarter\\events\\2026-10-14\\090117_756_4eb0e3.json": {
+      "sha256": "a0344f01cc27a42d3a99bdd60529cea72b888d6b6d454e3494aed54348988881",
+      "bytes": 1174
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-quarter\\events\\2026-10-14\\090121_062_462ffb.json": {
+      "sha256": "1a0c2d4ac23d23c68a72cc4b411db6009bdd6ef30e33f539ecbf77e3d3a326c4",
+      "bytes": 931
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-quarter\\sculpt_cache.json": {
+      "sha256": "8cb2a4ccd9f265a80e799fa9decd16397d66b73784571088f72cc037cbaf6874",
+      "bytes": 295668
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-quarter\\models.json": {
+      "sha256": "614601ff2ca358fa593883712aec136a50d85c254e8057437bea2be2721b8b91",
+      "bytes": 1221
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-poop\\events\\2026-10-13\\230638_507_0d82d4.json": {
+      "sha256": "6b0b508ae974d2fa947a2dabf30842def0c865d48703a6c7a614e61bd4a75bd8",
+      "bytes": 94298
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-poop\\sculpt_cache.json": {
+      "sha256": "e276461c5d812a253bbf6c9e5aed7ed4f2573aabd10ea53e32d4192f58f94fd4",
+      "bytes": 104369
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-forecastle\\events\\2026-10-13\\230640_732_4d651a.json": {
+      "sha256": "6c6ee877c697b6835340a0da983c2abd055d60689cf34b307816947cded46bd3",
+      "bytes": 57289
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-deck-forecastle\\sculpt_cache.json": {
+      "sha256": "0d515e4da7805171647e81bb21f9f5076395912769ffa77a663456cc2aa246fd",
+      "bytes": 63226
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\230642_928_436bdc.json": {
+      "sha256": "a84fa9bd1b643ca7070fa97e8388faa0df55601d3ffd7038de39686a7b945fbf",
+      "bytes": 245389
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\230839_643_d4b152.json": {
+      "sha256": "25261afe7acd7a4789d6046bed8b9c92c1af05256fdce721e303b4f0dd94318d",
+      "bytes": 77578
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\230840_594_33f602.json": {
+      "sha256": "47fe0d22f0ba36435e031965773c59cab20fd0c3a17238c9f1eacde33ae0512d",
+      "bytes": 129092
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\231458_842_4ac143.json": {
+      "sha256": "41137c76902048c23905dbf8ab5f8ff70dc06f67d3cf89f09cf6a64fd0e0b4a7",
+      "bytes": 8200
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-mast-mizzen\\events\\2026-10-13\\231247_134_16a499.json": {
+      "sha256": "d0eb293a85f3f9d3b0549795fe4faf6b72df3298a51605256ca139240c5a5c11",
+      "bytes": 257576
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-mast-mizzen\\models.json": {
+      "sha256": "15395498deadd76d44469e3f7240e3e2336736479a309acaf19aed098c36290c",
+      "bytes": 3119
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-mast-main\\events\\2026-10-13\\231252_930_ca8bd2.json": {
+      "sha256": "6fb607eb26f193e15b8fca30199dfbdd6e56bf8ae117e287a9d23f9f39d60b86",
+      "bytes": 309923
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-mast-main\\models.json": {
+      "sha256": "63a1db26d4b11285b17dfca8dd305b7683ada1e88a0e926e28d9a36bf3f66ab5",
+      "bytes": 2370
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-mast-fore\\events\\2026-10-13\\231257_542_e0ba8a.json": {
+      "sha256": "392def129d84b06d5f8a0fc9839ded46ff2660b391b69386dd12d94bb064771f",
+      "bytes": 281306
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-mast-fore\\models.json": {
+      "sha256": "9b1ab87882465c7fe5ddd39a9047ae04141c98eb4d62bd0cb0e1135ebf5527df",
+      "bytes": 2371
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-bowsprit\\events\\2026-10-13\\231304_792_928110.json": {
+      "sha256": "827ba13038595276e20876e9cc608fe4f214a3586623f0b393293a0c35a70402",
+      "bytes": 89104
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-bowsprit\\events\\2026-10-13\\231750_980_89e3dd.json": {
+      "sha256": "99380e481641160bae363e9ede0cb2b3d8d9177129772df0116731066531af14",
+      "bytes": 3578
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-bowsprit\\events\\2026-10-13\\232420_234_84207f.json": {
+      "sha256": "eb658a61eee46f4ee1f09aba895f4f6e0ed11527bed3f1530a6ba6ee26d7fb5b",
+      "bytes": 1121
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-chase-cradle\\events\\2026-10-13\\232120_537_46084b.json": {
+      "sha256": "b431198c73e9e2f33657f8d3f74bf82046563af913d01ad829d8f10256bcc73f",
+      "bytes": 22091
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-chase-cradle\\events\\2026-10-13\\234330_988_d01402.json": {
+      "sha256": "40e134045b969cc2ef290d11dd29e2220b2681cf050d65780f2fd9ff1f3d3bc2",
+      "bytes": 12223
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-aft\\events\\2026-10-13\\233015_164_c892ee.json": {
+      "sha256": "d66d703fa477b46506e22660ffdcbcebce0d5d41e8a48bea32dcb152be0860ce",
+      "bytes": 169699
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-aft\\events\\2026-10-13\\235114_331_5b8ca6.json": {
+      "sha256": "4c1a3b6e7409f382f59257b3f43ebab694e358afd8c18a22b9773b67ed3d3656",
+      "bytes": 1235
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-aft\\models.json": {
+      "sha256": "c7e9ac1b61efdc290a2746b0ea7306e65cdb070b2432e36d3565a2e500634fd2",
+      "bytes": 15460
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-fore\\events\\2026-10-13\\233028_243_3a691d.json": {
+      "sha256": "2f89c924fc719484b996f803f1a85e71c6fd9864e14cbed8bec0ccb9c25400f0",
+      "bytes": 169700
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-fore\\events\\2026-10-13\\235115_488_238f50.json": {
+      "sha256": "09f8d47b5d3d1f3b13a1eeaf406632c003d76f846c9cd3a3123cc096d045ae60",
+      "bytes": 1236
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-fore\\models.json": {
+      "sha256": "8f295926f4e7d1c169ed78ebed7412c5116647c951e6d4fd7a9033238a83687f",
+      "bytes": 15460
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-supports\\events\\2026-10-13\\233041_657_f80775.json": {
+      "sha256": "228b31b952d6c46afc14315c1fb6ca91cfc0fa4e7388347b888cc6582aadd5ba",
+      "bytes": 22527
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ornament\\events\\2026-10-13\\233553_827_00fca4.json": {
+      "sha256": "a8308c8239f98dbb07d76d9aef5b062d7ea3dcd2c311bedd893b020b85627a94",
+      "bytes": 539390
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ornament\\events\\2026-10-13\\234255_721_4d7d64.json": {
+      "sha256": "ca938a6d850aff13673f6a6323a0018124350d74b306bfd1c9b0ca318f1c027d",
+      "bytes": 6497
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ornament\\events\\2026-10-14\\090121_561_bc2f5c.json": {
+      "sha256": "962af76a95fd4d682be36bbcc12cf9a28f25743af174e2b36d0ac5de27489e9c",
+      "bytes": 871
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ornament\\sculpt_cache.json": {
+      "sha256": "50f36e748d71253896518c89c973eb02143c7b73b917e38efe5ff1ebe4bc0ccc",
+      "bytes": 608987
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-frigate-constitution-01m-gun-24\\events\\2026-10-11\\214535_396_7a1b96.json": {
+      "sha256": "742e9085ebb8a38b9e57b44ed5618921b404a703ddca4a991321b533c2c30395",
+      "bytes": 207127
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-frigate-constitution-01m-gun-24\\sculpt_cache.json": {
+      "sha256": "9aaa7d48f91881476c47068dad1812be810eb0c9bffd873c3e8ed9e7d86d0a29",
+      "bytes": 16649
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-chase-tube-low\\events\\2026-10-13\\234254_756_cdd071.json": {
+      "sha256": "5e287c6e34c9c92bf6754edaba9469f7001eb1d39e757ad496685205cce3b64f",
+      "bytes": 40184
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-chase-tube-low\\sculpt_cache.json": {
+      "sha256": "2862cb1b499892268864d8f4a7a87f05ad4d91ec9139fac1c5bdbce4757a7486",
+      "bytes": 45654
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-chase-tube-high\\events\\2026-10-13\\234259_240_a65b19.json": {
+      "sha256": "577a16c7db414d0708929126224ca6866f8277adf6e7185ea4d664e888990f51",
+      "bytes": 44665
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-chase-tube-high\\sculpt_cache.json": {
+      "sha256": "12b3e27deaf87894d88d27bb8d345429a55d5a6f7ba35904a2f9f390c232a972",
+      "bytes": 50774
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-ember-01m-capstan\\events\\2026-10-13\\163205_062_d3a41b.json": {
+      "sha256": "b7107a459f373143d758e9d2a046bdf0f14dbc42f0cbed91ec5129e48417f06b",
+      "bytes": 1978459
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-ember-01m-capstan\\sculpt_cache.json": {
+      "sha256": "e3799c758651c1d2f0f01d8c88f4d92b830fbf075052424e72fd5c4c4d0707b2",
+      "bytes": 2247845
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-frigate-constitution-01m-wheel\\events\\2026-10-12\\110438_197_a93ad6.json": {
+      "sha256": "ee33d252a79ec3af990928dfd1070fd59cd5fc83e882f60d276a925e049c54b0",
+      "bytes": 2613927
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-frigate-constitution-01m-wheel\\sculpt_cache.json": {
+      "sha256": "47fd5aaa764eff96d0afcfa2b6d74f55c4fa1ab519adba5e6e3fc698aa33cbc7",
+      "bytes": 746251
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\summit-night-falcon-01m-binnacle\\events\\2026-10-13\\201819_332_e53e5b.json": {
+      "sha256": "72b831f0ca3ce55a4257685dd43d2d763a6dd3e4eb977d93518bfad3b49a3ad4",
+      "bytes": 219743
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\summit-night-falcon-01m-binnacle\\sculpt_cache.json": {
+      "sha256": "81f0114bd364be19a2298407ce1b2db555a9285813424e6be12afc0740ca37bf",
+      "bytes": 251128
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-frigate-constitution-01m-powder-barrel\\events\\2026-10-12\\185616_319_561f68.json": {
+      "sha256": "b3b6a3f6fc1e380cd1ba12c2d3b1759571c7ac5b963546996c9faea0fd7e6476",
+      "bytes": 542641
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\basecamp-frigate-constitution-01m-powder-barrel\\sculpt_cache.json": {
+      "sha256": "62f6936200a88d9b7e54a1f4f4fba76f20413ff10ade8298598edeef2453e3ec",
+      "bytes": 147989
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\anchors.json": {
+      "sha256": "b02d6f522b790a44f0a66defe1bff790a16e70fcd9284eb69cabcd601fe8fd75",
+      "bytes": 4911
+    }
+  },
+  "unverified": [
+    "rudder sweep",
+    "rig collision",
+    "runtime simulation",
+    "drawing pixel comparison"
+  ],
+  "replay_cache_checks": {
+    "sirius-tidegrave-01m": {
+      "replay_count": 649489,
+      "cache_count": 649489,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-deck-lower": {
+      "replay_count": 85212,
+      "cache_count": 85212,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-deck-upper": {
+      "replay_count": 81340,
+      "cache_count": 81340,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-deck-weather": {
+      "replay_count": 68678,
+      "cache_count": 68678,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-deck-quarter": {
+      "replay_count": 14910,
+      "cache_count": 14910,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-deck-poop": {
+      "replay_count": 5228,
+      "cache_count": 5228,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-deck-forecastle": {
+      "replay_count": 3164,
+      "cache_count": 3164,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-ornament": {
+      "replay_count": 31768,
+      "cache_count": 31768,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "basecamp-frigate-constitution-01m-gun-24": {
+      "replay_count": 1125,
+      "cache_count": 1125,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-chase-tube-low": {
+      "replay_count": 2928,
+      "cache_count": 2928,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "sirius-tidegrave-01m-chase-tube-high": {
+      "replay_count": 3248,
+      "cache_count": 3248,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "basecamp-ember-01m-capstan": {
+      "replay_count": 134892,
+      "cache_count": 134892,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "basecamp-frigate-constitution-01m-wheel": {
+      "replay_count": 44456,
+      "cache_count": 44456,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "summit-night-falcon-01m-binnacle": {
+      "replay_count": 15892,
+      "cache_count": 15892,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "basecamp-frigate-constitution-01m-powder-barrel": {
+      "replay_count": 9384,
+      "cache_count": 9384,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    }
+  },
+  "base_count": 1036066,
+  "model_count": 105,
+  "gun_count": 54,
+  "model_base_collisions": [],
+  "model_model_collisions": [],
+  "model_bboxes": {
+    "甲板-lower/砲-S01": [
+      [
+        169.0,
+        136.5,
+        66.0
+      ],
+      [
+        182.0,
+        167.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P01": [
+      [
+        169.0,
+        73.5,
+        66.0
+      ],
+      [
+        182.0,
+        104.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S02": [
+      [
+        201.0,
+        146.5,
+        66.0
+      ],
+      [
+        214.0,
+        177.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P02": [
+      [
+        201.0,
+        63.5,
+        66.0
+      ],
+      [
+        214.0,
+        94.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S03": [
+      [
+        233.0,
+        150.5,
+        66.0
+      ],
+      [
+        246.0,
+        181.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P03": [
+      [
+        233.0,
+        59.5,
+        66.0
+      ],
+      [
+        246.0,
+        90.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S04": [
+      [
+        265.0,
+        154.5,
+        66.0
+      ],
+      [
+        278.0,
+        185.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P04": [
+      [
+        265.0,
+        55.5,
+        66.0
+      ],
+      [
+        278.0,
+        86.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S05": [
+      [
+        297.0,
+        156.5,
+        66.0
+      ],
+      [
+        310.0,
+        187.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P05": [
+      [
+        297.0,
+        53.5,
+        66.0
+      ],
+      [
+        310.0,
+        84.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S06": [
+      [
+        329.0,
+        156.5,
+        66.0
+      ],
+      [
+        342.0,
+        187.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P06": [
+      [
+        329.0,
+        53.5,
+        66.0
+      ],
+      [
+        342.0,
+        84.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S07": [
+      [
+        361.0,
+        156.5,
+        66.0
+      ],
+      [
+        374.0,
+        187.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P07": [
+      [
+        361.0,
+        53.5,
+        66.0
+      ],
+      [
+        374.0,
+        84.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S08": [
+      [
+        393.0,
+        155.5,
+        66.0
+      ],
+      [
+        406.0,
+        186.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P08": [
+      [
+        393.0,
+        54.5,
+        66.0
+      ],
+      [
+        406.0,
+        85.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S09": [
+      [
+        425.0,
+        153.5,
+        66.0
+      ],
+      [
+        438.0,
+        184.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P09": [
+      [
+        425.0,
+        56.5,
+        66.0
+      ],
+      [
+        438.0,
+        87.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S10": [
+      [
+        457.0,
+        149.5,
+        66.0
+      ],
+      [
+        470.0,
+        180.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P10": [
+      [
+        457.0,
+        60.5,
+        66.0
+      ],
+      [
+        470.0,
+        91.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S11": [
+      [
+        489.0,
+        144.5,
+        66.0
+      ],
+      [
+        502.0,
+        175.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P11": [
+      [
+        489.0,
+        65.5,
+        66.0
+      ],
+      [
+        502.0,
+        96.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-S12": [
+      [
+        521.0,
+        134.5,
+        66.0
+      ],
+      [
+        534.0,
+        165.5,
+        80.0
+      ]
+    ],
+    "甲板-lower/砲-P12": [
+      [
+        521.0,
+        75.5,
+        66.0
+      ],
+      [
+        534.0,
+        106.5,
+        80.0
+      ]
+    ],
+    "甲板-upper/砲-S01": [
+      [
+        169.0,
+        134.5,
+        91.0
+      ],
+      [
+        182.0,
+        165.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P01": [
+      [
+        169.0,
+        75.5,
+        91.0
+      ],
+      [
+        182.0,
+        106.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S02": [
+      [
+        201.0,
+        142.5,
+        91.0
+      ],
+      [
+        214.0,
+        173.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P02": [
+      [
+        201.0,
+        67.5,
+        91.0
+      ],
+      [
+        214.0,
+        98.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S03": [
+      [
+        233.0,
+        146.5,
+        91.0
+      ],
+      [
+        246.0,
+        177.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P03": [
+      [
+        233.0,
+        63.5,
+        91.0
+      ],
+      [
+        246.0,
+        94.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S04": [
+      [
+        265.0,
+        149.5,
+        91.0
+      ],
+      [
+        278.0,
+        180.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P04": [
+      [
+        265.0,
+        60.5,
+        91.0
+      ],
+      [
+        278.0,
+        91.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S05": [
+      [
+        297.0,
+        150.5,
+        91.0
+      ],
+      [
+        310.0,
+        181.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P05": [
+      [
+        297.0,
+        59.5,
+        91.0
+      ],
+      [
+        310.0,
+        90.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S06": [
+      [
+        329.0,
+        151.5,
+        91.0
+      ],
+      [
+        342.0,
+        182.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P06": [
+      [
+        329.0,
+        58.5,
+        91.0
+      ],
+      [
+        342.0,
+        89.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S07": [
+      [
+        361.0,
+        151.5,
+        91.0
+      ],
+      [
+        374.0,
+        182.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P07": [
+      [
+        361.0,
+        58.5,
+        91.0
+      ],
+      [
+        374.0,
+        89.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S08": [
+      [
+        393.0,
+        150.5,
+        91.0
+      ],
+      [
+        406.0,
+        181.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P08": [
+      [
+        393.0,
+        59.5,
+        91.0
+      ],
+      [
+        406.0,
+        90.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S09": [
+      [
+        425.0,
+        149.5,
+        91.0
+      ],
+      [
+        438.0,
+        180.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P09": [
+      [
+        425.0,
+        60.5,
+        91.0
+      ],
+      [
+        438.0,
+        91.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S10": [
+      [
+        457.0,
+        145.5,
+        91.0
+      ],
+      [
+        470.0,
+        176.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P10": [
+      [
+        457.0,
+        64.5,
+        91.0
+      ],
+      [
+        470.0,
+        95.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S11": [
+      [
+        489.0,
+        141.5,
+        91.0
+      ],
+      [
+        502.0,
+        172.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P11": [
+      [
+        489.0,
+        68.5,
+        91.0
+      ],
+      [
+        502.0,
+        99.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-S12": [
+      [
+        521.0,
+        133.5,
+        91.0
+      ],
+      [
+        534.0,
+        164.5,
+        105.0
+      ]
+    ],
+    "甲板-upper/砲-P12": [
+      [
+        521.0,
+        76.5,
+        91.0
+      ],
+      [
+        534.0,
+        107.5,
+        105.0
+      ]
+    ],
+    "甲板-weather/chase-1": [
+      [
+        586.5,
+        100.75,
+        117.0
+      ],
+      [
+        616.0,
+        106.25,
+        128.0
+      ]
+    ],
+    "甲板-weather/chase-2": [
+      [
+        586.5,
+        89.75,
+        117.0
+      ],
+      [
+        616.0,
+        95.25,
+        136.0
+      ]
+    ],
+    "甲板-weather/chase-3": [
+      [
+        586.5,
+        111.75,
+        117.0
+      ],
+      [
+        616.0,
+        117.25,
+        136.0
+      ]
+    ],
+    "甲板-weather/chase-4": [
+      [
+        586.5,
+        134.75,
+        117.0
+      ],
+      [
+        616.0,
+        140.25,
+        128.0
+      ]
+    ],
+    "甲板-weather/chase-5": [
+      [
+        586.5,
+        123.75,
+        117.0
+      ],
+      [
+        616.0,
+        129.25,
+        136.0
+      ]
+    ],
+    "甲板-weather/chase-6": [
+      [
+        586.5,
+        145.75,
+        117.0
+      ],
+      [
+        616.0,
+        151.25,
+        136.0
+      ]
+    ],
+    "甲板-weather/絞盤": [
+      [
+        458.3,
+        113.3,
+        116.0
+      ],
+      [
+        472.7,
+        127.7,
+        129.2
+      ]
+    ],
+    "甲板-quarter/舵輪": [
+      [
+        189.3,
+        133.7,
+        139.0
+      ],
+      [
+        207.7,
+        153.3,
+        159.8
+      ]
+    ],
+    "甲板-quarter/羅經櫃": [
+      [
+        213.7,
+        148.9,
+        139.0
+      ],
+      [
+        217.3,
+        154.1,
+        148.6
+      ]
+    ],
+    "彈藥庫-後/powder-01": [
+      [
+        244.3,
+        106.3,
+        32.0
+      ],
+      [
+        248.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-02": [
+      [
+        244.3,
+        112.3,
+        32.0
+      ],
+      [
+        248.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-03": [
+      [
+        244.3,
+        124.3,
+        32.0
+      ],
+      [
+        248.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-04": [
+      [
+        244.3,
+        130.3,
+        32.0
+      ],
+      [
+        248.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-05": [
+      [
+        250.3,
+        106.3,
+        32.0
+      ],
+      [
+        254.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-06": [
+      [
+        250.3,
+        112.3,
+        32.0
+      ],
+      [
+        254.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-07": [
+      [
+        250.3,
+        124.3,
+        32.0
+      ],
+      [
+        254.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-08": [
+      [
+        250.3,
+        130.3,
+        32.0
+      ],
+      [
+        254.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-09": [
+      [
+        256.3,
+        106.3,
+        32.0
+      ],
+      [
+        260.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-10": [
+      [
+        256.3,
+        112.3,
+        32.0
+      ],
+      [
+        260.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-11": [
+      [
+        256.3,
+        124.3,
+        32.0
+      ],
+      [
+        260.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-12": [
+      [
+        256.3,
+        130.3,
+        32.0
+      ],
+      [
+        260.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-13": [
+      [
+        262.3,
+        106.3,
+        32.0
+      ],
+      [
+        266.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-14": [
+      [
+        262.3,
+        112.3,
+        32.0
+      ],
+      [
+        266.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-15": [
+      [
+        262.3,
+        124.3,
+        32.0
+      ],
+      [
+        266.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-16": [
+      [
+        262.3,
+        130.3,
+        32.0
+      ],
+      [
+        266.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-17": [
+      [
+        268.3,
+        106.3,
+        32.0
+      ],
+      [
+        272.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-18": [
+      [
+        268.3,
+        112.3,
+        32.0
+      ],
+      [
+        272.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-19": [
+      [
+        268.3,
+        124.3,
+        32.0
+      ],
+      [
+        272.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-20": [
+      [
+        268.3,
+        130.3,
+        32.0
+      ],
+      [
+        272.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-21": [
+      [
+        274.3,
+        106.3,
+        32.0
+      ],
+      [
+        278.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-22": [
+      [
+        274.3,
+        112.3,
+        32.0
+      ],
+      [
+        278.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-23": [
+      [
+        274.3,
+        124.3,
+        32.0
+      ],
+      [
+        278.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-後/powder-24": [
+      [
+        274.3,
+        130.3,
+        32.0
+      ],
+      [
+        278.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-01": [
+      [
+        444.3,
+        106.3,
+        32.0
+      ],
+      [
+        448.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-02": [
+      [
+        444.3,
+        112.3,
+        32.0
+      ],
+      [
+        448.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-03": [
+      [
+        444.3,
+        124.3,
+        32.0
+      ],
+      [
+        448.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-04": [
+      [
+        444.3,
+        130.3,
+        32.0
+      ],
+      [
+        448.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-05": [
+      [
+        450.3,
+        106.3,
+        32.0
+      ],
+      [
+        454.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-06": [
+      [
+        450.3,
+        112.3,
+        32.0
+      ],
+      [
+        454.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-07": [
+      [
+        450.3,
+        124.3,
+        32.0
+      ],
+      [
+        454.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-08": [
+      [
+        450.3,
+        130.3,
+        32.0
+      ],
+      [
+        454.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-09": [
+      [
+        456.3,
+        106.3,
+        32.0
+      ],
+      [
+        460.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-10": [
+      [
+        456.3,
+        112.3,
+        32.0
+      ],
+      [
+        460.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-11": [
+      [
+        456.3,
+        124.3,
+        32.0
+      ],
+      [
+        460.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-12": [
+      [
+        456.3,
+        130.3,
+        32.0
+      ],
+      [
+        460.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-13": [
+      [
+        462.3,
+        106.3,
+        32.0
+      ],
+      [
+        466.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-14": [
+      [
+        462.3,
+        112.3,
+        32.0
+      ],
+      [
+        466.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-15": [
+      [
+        462.3,
+        124.3,
+        32.0
+      ],
+      [
+        466.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-16": [
+      [
+        462.3,
+        130.3,
+        32.0
+      ],
+      [
+        466.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-17": [
+      [
+        468.3,
+        106.3,
+        32.0
+      ],
+      [
+        472.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-18": [
+      [
+        468.3,
+        112.3,
+        32.0
+      ],
+      [
+        472.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-19": [
+      [
+        468.3,
+        124.3,
+        32.0
+      ],
+      [
+        472.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-20": [
+      [
+        468.3,
+        130.3,
+        32.0
+      ],
+      [
+        472.7,
+        134.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-21": [
+      [
+        474.3,
+        106.3,
+        32.0
+      ],
+      [
+        478.7,
+        110.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-22": [
+      [
+        474.3,
+        112.3,
+        32.0
+      ],
+      [
+        478.7,
+        116.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-23": [
+      [
+        474.3,
+        124.3,
+        32.0
+      ],
+      [
+        478.7,
+        128.7,
+        37.4
+      ]
+    ],
+    "彈藥庫-前/powder-24": [
+      [
+        474.3,
+        130.3,
+        32.0
+      ],
+      [
+        478.7,
+        134.7,
+        37.4
+      ]
+    ]
+  },
+  "ladder_endpoint_support": [
+    {
+      "name": "lower-upper-a.foot",
+      "at": [
+        311,
+        120,
+        66
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "lower-upper-a.head",
+      "at": [
+        270,
+        120,
+        91
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "lower-upper-b.foot",
+      "at": [
+        446,
+        120,
+        66
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "lower-upper-b.head",
+      "at": [
+        405,
+        120,
+        91
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "upper-weather-a.foot",
+      "at": [
+        311,
+        120,
+        91
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "upper-weather-a.head",
+      "at": [
+        270,
+        120,
+        116
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "upper-weather-b.foot",
+      "at": [
+        446,
+        120,
+        91
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "upper-weather-b.head",
+      "at": [
+        405,
+        120,
+        116
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "weather-quarter.foot",
+      "at": [
+        258,
+        120,
+        116
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "weather-quarter.head",
+      "at": [
+        217,
+        120,
+        139
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "quarter-poop.foot",
+      "at": [
+        198,
+        120,
+        139
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "quarter-poop.head",
+      "at": [
+        157,
+        120,
+        165
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "weather-forecastle.foot",
+      "at": [
+        534,
+        120,
+        116
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    },
+    {
+      "name": "weather-forecastle.head",
+      "at": [
+        575,
+        120,
+        139
+      ],
+      "floor_present": true,
+      "headroom_blocked_voxels": []
+    }
+  ],
+  "positive_controls": {
+    "known_base_voxel": [
+      105,
+      118,
+      0
+    ],
+    "present": true,
+    "strict_box_overlap_touch_is_not_collision": true
+  },
+  "wheel_collision_detail": {
+    "unique_base_voxels": 0,
+    "bounds": null,
+    "origins": {
+      "船殼": 0,
+      "甲板-lower": 0,
+      "甲板-upper": 0,
+      "甲板-weather": 0,
+      "甲板-quarter": 0,
+      "甲板-poop": 0,
+      "甲板-forecastle": 0,
+      "梯子": 0,
+      "mizzen": 0,
+      "main": 0,
+      "fore": 0,
+      "bowsprit": 0,
+      "艏砲支架": 0,
+      "彈藥庫-後": 0,
+      "彈藥庫-前": 0,
+      "彈藥庫承柱": 0,
+      "海蝕裝飾": 0
+    }
+  },
+  "wheel_candidate_shifts": [
+    {
+      "shift": [
+        10,
+        0,
+        0
+      ],
+      "at": [
+        205.5,
+        151.5,
+        139
+      ],
+      "status": "base collision clear; other models and movement not yet verified"
+    },
+    {
+      "shift": [
+        20,
+        0,
+        0
+      ],
+      "at": [
+        215.5,
+        151.5,
+        139
+      ],
+      "status": "base collision clear; other models and movement not yet verified"
+    },
+    {
+      "shift": [
+        25,
+        0,
+        0
+      ],
+      "at": [
+        220.5,
+        151.5,
+        139
+      ],
+      "status": "base collision clear; other models and movement not yet verified"
+    },
+    {
+      "shift": [
+        25,
+        -20,
+        0
+      ],
+      "at": [
+        220.5,
+        131.5,
+        139
+      ],
+      "status": "base collision clear; other models and movement not yet verified"
+    }
+  ],
+  "z139_navigation_components": [
+    {
+      "count": 1530,
+      "bounds": [
+        [
+          104,
+          84
+        ],
+        [
+          234,
+          156
+        ]
+      ],
+      "contains_near_quarter_head": true,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 373,
+      "bounds": [
+        [
+          556,
+          98
+        ],
+        [
+          616,
+          142
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": true
+    },
+    {
+      "count": 65,
+      "bounds": [
+        [
+          220,
+          76
+        ],
+        [
+          240,
+          164
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 52,
+      "bounds": [
+        [
+          102,
+          84
+        ],
+        [
+          112,
+          102
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 52,
+      "bounds": [
+        [
+          102,
+          138
+        ],
+        [
+          112,
+          156
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 13,
+      "bounds": [
+        [
+          550,
+          130
+        ],
+        [
+          554,
+          150
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 13,
+      "bounds": [
+        [
+          550,
+          90
+        ],
+        [
+          554,
+          110
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 11,
+      "bounds": [
+        [
+          202,
+          162
+        ],
+        [
+          222,
+          162
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 11,
+      "bounds": [
+        [
+          202,
+          78
+        ],
+        [
+          222,
+          78
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 10,
+      "bounds": [
+        [
+          620,
+          122
+        ],
+        [
+          628,
+          124
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 10,
+      "bounds": [
+        [
+          620,
+          116
+        ],
+        [
+          628,
+          118
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          192,
+          160
+        ],
+        [
+          200,
+          160
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          192,
+          80
+        ],
+        [
+          200,
+          80
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          184,
+          158
+        ],
+        [
+          192,
+          158
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          184,
+          82
+        ],
+        [
+          192,
+          82
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          174,
+          84
+        ],
+        [
+          182,
+          84
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          174,
+          156
+        ],
+        [
+          182,
+          156
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          164,
+          86
+        ],
+        [
+          172,
+          86
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 5,
+      "bounds": [
+        [
+          164,
+          154
+        ],
+        [
+          172,
+          154
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 4,
+      "bounds": [
+        [
+          156,
+          88
+        ],
+        [
+          162,
+          88
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 4,
+      "bounds": [
+        [
+          156,
+          152
+        ],
+        [
+          162,
+          152
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          320,
+          70
+        ],
+        [
+          320,
+          72
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          500,
+          160
+        ],
+        [
+          500,
+          162
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          280,
+          168
+        ],
+        [
+          280,
+          170
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          260,
+          166
+        ],
+        [
+          260,
+          168
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          480,
+          162
+        ],
+        [
+          480,
+          164
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          560,
+          92
+        ],
+        [
+          562,
+          92
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          380,
+          70
+        ],
+        [
+          380,
+          72
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          380,
+          168
+        ],
+        [
+          380,
+          170
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          150,
+          150
+        ],
+        [
+          152,
+          150
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          480,
+          76
+        ],
+        [
+          480,
+          78
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          134,
+          94
+        ],
+        [
+          136,
+          94
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          280,
+          70
+        ],
+        [
+          280,
+          72
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          142,
+          148
+        ],
+        [
+          144,
+          148
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          142,
+          92
+        ],
+        [
+          144,
+          92
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          440,
+          166
+        ],
+        [
+          440,
+          168
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          560,
+          148
+        ],
+        [
+          562,
+          148
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          500,
+          78
+        ],
+        [
+          500,
+          80
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          460,
+          74
+        ],
+        [
+          460,
+          76
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          134,
+          146
+        ],
+        [
+          136,
+          146
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          440,
+          72
+        ],
+        [
+          440,
+          74
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          300,
+          168
+        ],
+        [
+          300,
+          170
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          260,
+          72
+        ],
+        [
+          260,
+          74
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          150,
+          90
+        ],
+        [
+          152,
+          90
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          320,
+          168
+        ],
+        [
+          320,
+          170
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          460,
+          164
+        ],
+        [
+          460,
+          166
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          400,
+          70
+        ],
+        [
+          400,
+          72
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          400,
+          168
+        ],
+        [
+          400,
+          170
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 2,
+      "bounds": [
+        [
+          300,
+          70
+        ],
+        [
+          300,
+          72
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          612,
+          100
+        ],
+        [
+          612,
+          100
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          128,
+          144
+        ],
+        [
+          128,
+          144
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          592,
+          102
+        ],
+        [
+          592,
+          102
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          132,
+          94
+        ],
+        [
+          132,
+          94
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          340,
+          70
+        ],
+        [
+          340,
+          70
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          120,
+          142
+        ],
+        [
+          120,
+          142
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          586,
+          140
+        ],
+        [
+          586,
+          140
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          360,
+          70
+        ],
+        [
+          360,
+          70
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          558,
+          148
+        ],
+        [
+          558,
+          148
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          340,
+          170
+        ],
+        [
+          340,
+          170
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          118,
+          98
+        ],
+        [
+          118,
+          98
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          580,
+          142
+        ],
+        [
+          580,
+          142
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          126,
+          144
+        ],
+        [
+          126,
+          144
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          116,
+          98
+        ],
+        [
+          116,
+          98
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          590,
+          102
+        ],
+        [
+          590,
+          102
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          360,
+          170
+        ],
+        [
+          360,
+          170
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          592,
+          138
+        ],
+        [
+          592,
+          138
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          124,
+          144
+        ],
+        [
+          124,
+          144
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          570,
+          94
+        ],
+        [
+          570,
+          94
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          580,
+          98
+        ],
+        [
+          580,
+          98
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          570,
+          146
+        ],
+        [
+          570,
+          146
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          118,
+          142
+        ],
+        [
+          118,
+          142
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          520,
+          158
+        ],
+        [
+          520,
+          158
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          608,
+          130
+        ],
+        [
+          608,
+          130
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          148,
+          150
+        ],
+        [
+          148,
+          150
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          568,
+          146
+        ],
+        [
+          568,
+          146
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          116,
+          142
+        ],
+        [
+          116,
+          142
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          520,
+          82
+        ],
+        [
+          520,
+          82
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          602,
+          134
+        ],
+        [
+          602,
+          134
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          128,
+          96
+        ],
+        [
+          128,
+          96
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          612,
+          140
+        ],
+        [
+          612,
+          140
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          586,
+          100
+        ],
+        [
+          586,
+          100
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          140,
+          148
+        ],
+        [
+          140,
+          148
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          140,
+          92
+        ],
+        [
+          140,
+          92
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          590,
+          138
+        ],
+        [
+          590,
+          138
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          606,
+          132
+        ],
+        [
+          606,
+          132
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          602,
+          106
+        ],
+        [
+          602,
+          106
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          420,
+          168
+        ],
+        [
+          420,
+          168
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          132,
+          146
+        ],
+        [
+          132,
+          146
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          596,
+          104
+        ],
+        [
+          596,
+          104
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          112,
+          140
+        ],
+        [
+          112,
+          140
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          606,
+          108
+        ],
+        [
+          606,
+          108
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          568,
+          94
+        ],
+        [
+          568,
+          94
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          596,
+          136
+        ],
+        [
+          596,
+          136
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          608,
+          110
+        ],
+        [
+          608,
+          110
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          112,
+          100
+        ],
+        [
+          112,
+          100
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          420,
+          72
+        ],
+        [
+          420,
+          72
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          126,
+          96
+        ],
+        [
+          126,
+          96
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          558,
+          92
+        ],
+        [
+          558,
+          92
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          148,
+          90
+        ],
+        [
+          148,
+          90
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          124,
+          96
+        ],
+        [
+          124,
+          96
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    },
+    {
+      "count": 1,
+      "bounds": [
+        [
+          120,
+          98
+        ],
+        [
+          120,
+          98
+        ]
+      ],
+      "contains_near_quarter_head": false,
+      "contains_near_forecastle_head": false
+    }
+  ]
+}

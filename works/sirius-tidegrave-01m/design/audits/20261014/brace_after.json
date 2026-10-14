@@ -1,0 +1,88 @@
+{
+  "before_sha256": "9f079ab5c5789d4f4253726e97d348e7e28a08dd461dc8b2c82a6269bece018d",
+  "after_sha256": "5e92885eb98c095b41f21d80e0f69e287206e55be7815fe27c6a4e8abc42f8d1",
+  "voxels": 1036066,
+  "checksum": "0xbdd5856b",
+  "body_count_checksum_unchanged": true,
+  "name": "main-topgallant.brace-S",
+  "ends": [
+    "model:main/yard-main-topgallant/arm-S",
+    "fairlead-main-topgallant-brace-S"
+  ],
+  "pts": [
+    374.04,
+    177.56,
+    460.5,
+    335.5,
+    170.5,
+    136.5
+  ],
+  "radius": 0.2,
+  "endpoint_cell": [
+    335,
+    170,
+    136
+  ],
+  "endpoint_occupied": true,
+  "collisions": [
+    {
+      "cell": [
+        335,
+        170,
+        136
+      ],
+      "distance": 0.0,
+      "along": 325.857,
+      "kind": "endpoint_attachment_zone"
+    }
+  ],
+  "interior_count": 0,
+  "other_checked_curve_comparisons": [
+    {
+      "name": "fore-course.sheet-S",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "main-course.sheet-S",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "jib.sheet-S",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "mizzen-lateen.sheet-P",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "steer-wheel-P",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "steer-lead-P",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "steer-tiller-P",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "steer-wheel-S",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "steer-lead-S",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "steer-tiller-S",
+      "curve_and_ends_and_radius_unchanged": true
+    },
+    {
+      "name": "steer-wheel-P-lead",
+      "curve_and_ends_and_radius_unchanged": true
+    }
+  ],
+  "flag_bbox_unchanged": true,
+  "scope": "Only changed brace curve rerun. Eleven other previously checked curves/ends/radii match exactly. Body count/checksum and flag bbox match. Parent reports only named brace anchor changed; previous final static flag/support/ornament conclusions retained on this limited change basis; full body/flag triangles not rerun."
+}
