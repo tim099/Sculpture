@@ -211,3 +211,31 @@
 ⚠ 看得到的／留給之後：
 - 船頭追擊砲只偏 5°（借舷側砲門）；要更像追擊砲得在船頭開砲門（改船殼），目前不做。
 - 砲具與砲索（造船規格 §4.4：環首螺栓、breeching、side tackle、train tackle）還沒做。
+
+## 階段九 遊戲必要零件：彈藥庫、舵輪、羅經櫃、主絞盤、小艇、甲板 meta（2026-10-14 晚上，TASK-0562）
+Tim 2026-10-14：「繼續造船吧，要用在遊戲內所以要有對應的炮跟必要零件」。設計 plan.json `magazines`、`fittings`；產生 `design/draft_magazines.py`（改自餘燼號 draft_magazine_mid.py，basecamp）⇒ `masks/magazines/{aft,fore}.vox.txt`、`magazines_placement.json`、`verify_magazines.json`；`design/draft_fittings.py` ⇒ `verify_fittings.json`；落格 `tools/apply_stage9.py magazines|fittings`；讀數 `tools/check_stage9.py`。
+- **彈藥庫兩間**（子作品 `-magazine-aft`／`-magazine-fore`，0.1 m、parent 船殼、tags sub）：orlop 底下的貨艙（本船從艙底一路空到 orlop，沒有中線支柱）⇒ 自己鋪地板（z 30）與天花板（z 49），房高 1.8 m（同憲法號、餘燼號）；銅皮 168 包船殼側與艙壁、松木 177 地板每 6 格一道橡木壓條、天花板每 8 格一道樑；門 5 格寬、朝船中。
+  - 後 x 236–296（後桅站在 orlop 上、後艙口 x 300 之前）23,483 格；前 x 562–632（前桅 x 650 桅腳 z 10 之後）21,951 格。
+  - 桶：照砲數換算（憲法號 54 門 138 桶 ⇒ 140 門 ≈ 358 桶，⚠ 不是史料），兩間各 179、全在地板層（地板層容量 306／260，不用上架）；火藥桶引用憲法號 -powder-barrel（scale 0.2、meta kind=powder、powder_lb=100）。
+  - 組裝件關聯 `彈藥庫-後` @236,128,30、`彈藥庫-前` @562,131,30，meta kind=magazine、pos=aft／fore、powder_lb=17,900；固定點 blast（房間空氣重心最近的一格）、door。
+- **甲板零件**（外部模型掛 `甲板-spar`，pivot、scale 照餘燼號）：
+  - `舵輪`（憲法號 -wheel 雙舵輪，kind=wheel）at 246,200.5,160：poop 前緣 x 228 前面、外框後緣 236.9 ⇒ 留 0.9 m 給舵手站（v1 從 x 236 起搜 ⇒ 只剩 1.4 格；pivot 是舵輪中心不是後緣）；舵索 2 條（#a08458、0.35、組 steering、meta kind=steering）鼓輪 → 正下方甲板面。
+  - `羅經櫃`（餘燼號，kind=binnacle）at 262：舵輪正前方隔 6.5 格。
+  - `主絞盤`（餘燼號，kind=capstan）at 409.5：後艙口與主桅之間的中線、四周 0.5 m 淨空（可擺範圍 x 332.5–456.5，取離 400 最近的）。
+  - `小艇-S`／`小艇-P`（餘燼號 cutter 9 m，kind=boat、boat=cutter、length_m=9；P 舷 mirror=y）at 532.5,200.5±17：主艙口與前桅之間，擱在上甲板（本船上甲板整片平的、沒有船腰開口 ⇒ 不做艇架）；龍骨著地 244／340（舷弧讓兩頭翹起一點）。
+  - 保留區：梯子在 spar 那一端（foot／head）前後 6、兩側 4 格（本船梯子在中線）。
+- **甲板 meta**（造船規格 §9.3）：遊戲那側 `decks.py` 量六件甲板子作品的 vxk ⇒ `design/meta/decks.tsv` ⇒ `work sub=meta file=`：orlop 0、lower 1、middle 2、upper 3、spar 4、poop 5，厚 4；顯示名改成本船的（decks.py 的名字表是兩層砲甲板的船 ⇒ middle 沒有名字、upper 叫「上層砲甲板」）。
+
+讀數（`tools/check_stage9.py`）：
+- **彈藥庫結果帳**：兩間 清單 ↔ 子作品，缺 0、多 0、色差 0。**組裝件**：藏彈藥庫 1,956,522 ＋ 23,483 ＋ 21,951 ↔ 現在 2,001,956，缺 0、多 0、色差 0、重疊 0。
+- **parts**：兩條關聯 meta kind／pos／powder_lb 對（17,900 ＝ 179 × 100）、blast 點跟算的相同；火藥桶 kind=powder 358／358、state 全 ok；甲板零件 5 件 meta 不同 0。
+- **碰撞**：零件位置從引擎的外框反推（跟 draft 相同），每格格心＋八角碰到實心／其他模型外框 0。外框這把尺對小艇太粗（外框裡 137 格是艇底弧線底下的甲板板與艙口圍欄），以格子級為準。
+- 引擎：組裝件 2,001,956 格、1 元件、空腔 0、link_overlap 0；模型 517（＋358 桶＋5）broken 0；繩 420 broken 0。
+- **反向對照**（單子要的）：真的拿掉 `彈藥庫-前` 的 pos ⇒ parts 的 meta 少 1 欄；加回 ⇒ 跟原本相同。
+- 重跑：draft_magazines（讀藏彈藥庫的現況）三份檔、draft_fittings（藏彈藥庫、不算本階段的零件與火藥桶）verify 逐位元組相同。
+- 過程圖：`overlays/stage9_magazine_aft_open.png`（拿掉天花板看桶）、`stage9_deck_fittings.png`。
+
+⚠ 留給之後：
+- 桶數是照砲數換算的，不是史料；兩間各 17,900 磅 ⇒ 遊戲裡殉爆半徑照 powder_lb 算。
+- 貨艙沒有梯子通下去（orlop 以下），跟憲法號、餘燼號一樣；彈藥庫門通到的是貨艙。
+- 砲具與砲索（§4.4）還沒做；船頭追擊砲只偏 5°。

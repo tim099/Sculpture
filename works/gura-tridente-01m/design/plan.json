@@ -403,5 +403,87 @@
       "src": "設計決定：船頭沒有開追擊砲門 ⇒ 船頭追擊砲借上砲甲板最前面那個砲門（第 18 個），照角度搜往船頭偏（造船規格 §4.2，同憲法號），那個砲門的 12 磅讓給它；船尾用中砲甲板船尾窗那一列的兩個砲門（verify_ports windows kind=port）。舷側 136 − 2 ＋ 追擊 4 ＝ 138（1805 年 140：差的就是船頭那兩門 —— 已知偏差）"
     },
     "search": {"dl": [0, 0.5, -0.5, 1, -1, 1.5, -1.5], "step": 0.5, "max_back": 60, "min_muzzle_out": 0.5, "dz": [1, 0, 2]}
+  },
+  "magazines": {
+    "src": "設計決定（TASK-0562）：照憲法號前後兩間、在 orlop 底下的貨艙（水線下）；本船貨艙從艙底一路空到 orlop ⇒ 自己鋪地板（z 30）與天花板（z 49），房高 1.8 m（同憲法號、餘燼號）；門朝船中。桶數照砲數換算：憲法號 54 門 138 桶 ⇒ 140 門 ≈ 358 桶，兩間各一半（⚠ 不是史料）",
+    "base_links": "船殼,甲板-orlop,甲板-lower,甲板-middle,甲板-upper,甲板-spar,甲板-poop,船尾陽台,後廊-S,後廊-P,船尾名牌與徽,舵,船頭-knee,船頭裝飾,船頭裝飾-鏡像,船首像,錨-S,錨-P,主桅,前桅,後桅,艏斜桅,channels,channels-鏡像",
+    "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+    "barrel": {
+      "work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "scale": 0.2,
+      "pivot": [11, 11, 0],
+      "mpv": 0.02,
+      "d_bilge": 22,
+      "h": 27,
+      "pitch": 4.6,
+      "tier": 7
+    },
+    "rooms": {
+      "aft": {
+        "title": "後彈藥庫",
+        "work": "gura-tridente-01m-magazine-aft",
+        "link": "彈藥庫-後",
+        "pos": "aft",
+        "x": [236, 296],
+        "floor": 31,
+        "ceil": 49,
+        "door": "fore",
+        "door_w": 5,
+        "door_head": 3,
+        "cap": 179,
+        "src": "後桅（站在 orlop 上，x 222）與後艙口（x 300–318）之間"
+      },
+      "fore": {
+        "title": "前彈藥庫",
+        "work": "gura-tridente-01m-magazine-fore",
+        "link": "彈藥庫-前",
+        "pos": "fore",
+        "x": [562, 632],
+        "floor": 31,
+        "ceil": 49,
+        "door": "aft",
+        "door_w": 5,
+        "door_head": 3,
+        "cap": 179,
+        "src": "前桅（x 650，桅腳 z 10）之後"
+      }
+    }
+  },
+  "fittings": {
+    "src": "設計決定（TASK-0562）：遊戲要認的甲板零件（造船規格 §9 kind=wheel／binnacle／capstan／boat）—— 借現成的子作品當外部模型，pivot、scale 照餘燼號（階段十七、十八、二十）；位置自己定（尺寸照一般比例，未查證）",
+    "types": {
+      "wheel": {
+        "work": "basecamp-frigate-constitution-01m-wheel",
+        "pivot": [50, 52, 0],
+        "scale": 0.2,
+        "meta": {"kind": "wheel"}
+      },
+      "binnacle": {
+        "work": "basecamp-ember-01m-binnacle",
+        "pivot": [12, 24, 0],
+        "scale": 0.2,
+        "meta": {"kind": "binnacle"}
+      },
+      "capstan": {
+        "work": "basecamp-ember-01m-capstan",
+        "pivot": [40, 40, 0],
+        "scale": 0.2,
+        "meta": {"kind": "capstan"}
+      },
+      "boat": {
+        "work": "basecamp-ember-01m-boat",
+        "pivot": [90, 26, 0],
+        "scale": 0.5,
+        "meta": {"kind": "boat", "boat": "cutter", "length_m": 9}
+      }
+    },
+    "wheel": {
+      "x_from": 246,
+      "x_to": 300,
+      "src": "poop 前緣 x 228、後桅 x 222 ⇒ 舵輪放在 poop 前面的上甲板中線；pivot 是舵輪中心（前後各 10 格）⇒ 從 x 246 起搜，外框後緣離 poop 前緣 ≥ 0.8 m 給舵手站（v1 從 236 起 ⇒ 只剩 1.4 格）"
+    },
+    "binnacle": {"gap": 6.5, "src": "舵輪正前方（同餘燼號，隔 6.5 格）"},
+    "capstan": {"x_from": 320, "x_to": 470, "target": 400, "clear": 5, "src": "後艙口（到 x 318）與主桅（x 430）之間的中線，四周 0.5 m 淨空"},
+    "boats": {"x_from": 505, "x_to": 640, "target": 560, "dy": 17, "src": "主艙口（到 x 500）與前桅（x 650）之間，兩舷各一艘、擱在上甲板上（本船上甲板整片平的，沒有船腰開口 ⇒ 不做艇架）"}
   }
 }

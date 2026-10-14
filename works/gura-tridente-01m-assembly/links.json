@@ -43,7 +43,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T10:28:12",
 			"persona": "gura",
-			"note": "階段四"
+			"note": "階段四",
+			"meta": {
+				"deck": "orlop",
+				"floor": "118:71,314:67,513:67,705:72",
+				"kind": "deck",
+				"level": 0,
+				"name": "底艙甲板",
+				"thick": 4
+			}
 		},
 		{
 			"name": "甲板-lower",
@@ -63,7 +71,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T10:28:13",
 			"persona": "gura",
-			"note": "階段四"
+			"note": "階段四",
+			"meta": {
+				"deck": "lower",
+				"floor": "99:94,314:90,513:90,708:95",
+				"kind": "deck",
+				"level": 1,
+				"name": "下砲甲板",
+				"thick": 4
+			}
 		},
 		{
 			"name": "甲板-middle",
@@ -83,7 +99,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T10:28:13",
 			"persona": "gura",
-			"note": "階段四"
+			"note": "階段四",
+			"meta": {
+				"deck": "middle",
+				"floor": "91:117,314:113,513:113,651:116,710:119",
+				"kind": "deck",
+				"level": 2,
+				"name": "中砲甲板",
+				"thick": 4
+			}
 		},
 		{
 			"name": "甲板-upper",
@@ -103,7 +127,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T10:28:13",
 			"persona": "gura",
-			"note": "階段四"
+			"note": "階段四",
+			"meta": {
+				"deck": "upper",
+				"floor": "87:140,314:136,513:136,651:139,713:142",
+				"kind": "deck",
+				"level": 3,
+				"name": "上砲甲板",
+				"thick": 4
+			}
 		},
 		{
 			"name": "甲板-spar",
@@ -123,7 +155,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T10:28:13",
 			"persona": "gura",
-			"note": "階段四"
+			"note": "階段四",
+			"meta": {
+				"deck": "spar",
+				"floor": "83:163,314:159,513:159,651:162,715:165",
+				"kind": "deck",
+				"level": 4,
+				"name": "上甲板",
+				"thick": 4
+			}
 		},
 		{
 			"name": "甲板-poop",
@@ -143,7 +183,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T10:28:14",
 			"persona": "gura",
-			"note": "階段四"
+			"note": "階段四",
+			"meta": {
+				"deck": "poop",
+				"floor": "79:185,228:183",
+				"kind": "deck",
+				"level": 5,
+				"name": "船尾樓甲板",
+				"thick": 4
+			}
 		},
 		{
 			"name": "船尾陽台",
@@ -484,6 +532,56 @@
 			"created_at": "2026-10-14T17:22:51",
 			"persona": "gura",
 			"note": "階段七（TASK-0560）"
+		},
+		{
+			"name": "彈藥庫-後",
+			"work": "gura-tridente-01m-magazine-aft",
+			"at": [
+				236,
+				128,
+				30
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				61,
+				145,
+				20
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T19:45:11",
+			"persona": "gura",
+			"note": "三叉戟號 後彈藥庫（179 桶 ＝ 17900 磅）（階段九 TASK-0562）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 17900
+			}
+		},
+		{
+			"name": "彈藥庫-前",
+			"work": "gura-tridente-01m-magazine-fore",
+			"at": [
+				562,
+				131,
+				30
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				71,
+				139,
+				20
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T19:46:43",
+			"persona": "gura",
+			"note": "三叉戟號 前彈藥庫（179 桶 ＝ 17900 磅）（階段九 TASK-0562）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "fore",
+				"powder_lb": 17900
+			}
 		}
 	]
 }
