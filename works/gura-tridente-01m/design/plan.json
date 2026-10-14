@@ -126,9 +126,20 @@
   },
   "paint": {
     "base": 36,
-    "band": "TBD（紅；砲門階段看渲染定色號）",
+    "band": 192,
     "edge": 255,
     "bottom": 168,
-    "src": "外觀查證（references/research_2026-10-14.md）：Trafalgar 目擊「four distinct lines of red, with a white ribbon between them」（HMS Neptune 見習生，Clowes vol. V 引）；RMG Haines 模型：黑船殼、四層砲甲板各一條粉紅帶、白邊 ⇒ 設計決定：黑 36 船殼、每層砲門一條紅帶、上下各一條白線；水線下銅 168（同憲法號）"
+    "src": "外觀查證（references/research_2026-10-14.md）：Trafalgar 目擊「four distinct lines of red, with a white ribbon between them」（HMS Neptune 見習生，Clowes vol. V 引）；RMG Haines 模型：黑船殼、四層砲甲板各一條粉紅帶、白邊 ⇒ 設計決定：黑 36 船殼、每層砲門一條紅帶、上下各一條白線；水線下銅 168（同憲法號）；金 248（窗框，同餘燼號的金）、窗玻璃 87（海藍，設計決定：三叉戟號的海）；紅的色號渲染比過再定",
+    "gold": 248,
+    "glass": 87
+  },
+  "stern": {
+    "src": "設計決定：平的 transom（UPC 論文：聖特立尼達號是平船尾＋陽台；1805 年幾層查不到）。船尾面平的那一段半寬：z 120 → 62、140 → 58、160 → 54、180 → 48（draft_lines 量）；窗留兩邊各 8–12 格給之後的 quarter galleries。中砲甲板那一列第 2、6 個開成船尾追擊砲門（plan.ports.chase.stern ＝ 2）",
+    "rows": [
+      {"deck": "middle", "sill": 5, "h": 9, "n": 7, "w": 7, "half": 52, "ports": [2, 6]},
+      {"deck": "upper", "sill": 5, "h": 9, "n": 7, "w": 7, "half": 48},
+      {"deck": "spar", "sill": 5, "h": 9, "n": 7, "w": 7, "half": 42},
+      {"deck": "poop", "sill": 5, "h": 8, "n": 5, "w": 7, "half": 34}
+    ]
   }
 }

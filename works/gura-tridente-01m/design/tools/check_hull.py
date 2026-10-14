@@ -8,31 +8,13 @@ sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
 mark = next((a.split('=', 1)[1] for a in sys.argv[2:] if a.startswith('mark=')), '船殼:end')
 sys.path.insert(0, design)
+sys.path.insert(0, os.path.join(design, 'tools'))
 import hull_lines as HL
 
 WORK = 'gura-tridente-01m'
 
 
-def export_list(work, mark):
-    with tempfile.TemporaryDirectory() as d:
-        out = os.path.join(d, 'w.txt').replace('\\', '/')
-        r = subprocess.run(['senate', 'cmd', 'sculpture', '--arg', 'op=export', '--arg', 'format=list', '--arg', 'work=' + work, '--arg', 'out=' + out,
-                            '--arg', 'links=none', '--arg', 'mark=' + mark], capture_output=True, text=True, encoding='utf-8', errors='replace')
-        if r.returncode != 0 or not os.path.exists(out):
-            raise SystemExit('匯出失敗：' + (r.stdout + r.stderr)[-800:])
-        return np.loadtxt(out, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
-
-
-def load_lists(folder):
-    rows = []
-    for f in sorted(os.listdir(folder)):
-        if f.endswith('.vox.txt'):
-            rows.append(np.loadtxt(os.path.join(folder, f), delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8'))
-    return np.concatenate(rows)
-
-
-def key(a):
-    return (a[:, 0].astype(np.int64) * 1000 + a[:, 1]) * 1000 + a[:, 2]
+from wio import export_list, load_lists, key  # noqa: E402
 
 
 W = export_list(WORK, mark)
