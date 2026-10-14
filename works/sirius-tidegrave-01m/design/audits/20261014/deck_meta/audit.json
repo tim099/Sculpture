@@ -1,0 +1,710 @@
+{
+  "method": "Independent VXK decode / column support / meta and current-source algorithm reproduction; no game or author module imported. Static logic analysis does not assert runtime seven ladders pass.",
+  "decks": [
+    {
+      "deck": "lower",
+      "expected_first_air": 66,
+      "measured_meta": {
+        "path": "甲板-lower",
+        "kind": "deck",
+        "deck": "lower",
+        "level": 0,
+        "name": "下層砲甲板",
+        "floor": "124:66,583:66",
+        "thick": 2,
+        "poly": [
+          [
+            124,
+            66
+          ],
+          [
+            583,
+            66
+          ]
+        ],
+        "zmin": 66,
+        "zmax": 66
+      },
+      "voxel_count": 85212,
+      "actual_x_extent": [
+        124,
+        586
+      ],
+      "actual_top_histogram": {
+        "66": 42580,
+        "65": 82
+      },
+      "per_column_voxel_count_histogram": {
+        "2": 42550,
+        "1": 112
+      },
+      "sampled_top_outliers": [],
+      "raw_valid_x_extent": [
+        124,
+        583
+      ],
+      "raw_x_missing_inside_meta": [],
+      "floor_wrong_in_meta_range": [],
+      "geometry_outside_meta_x_columns": 15,
+      "sha256": "fcfe3c73d88f2489f960195c154131c2f6837015bd7e4c6e3c5fd860bc2dea0f"
+    },
+    {
+      "deck": "upper",
+      "expected_first_air": 91,
+      "measured_meta": {
+        "path": "甲板-upper",
+        "kind": "deck",
+        "deck": "upper",
+        "level": 1,
+        "name": "上層砲甲板",
+        "floor": "116:91,595:91",
+        "thick": 2,
+        "poly": [
+          [
+            116,
+            91
+          ],
+          [
+            595,
+            91
+          ]
+        ],
+        "zmin": 91,
+        "zmax": 91
+      },
+      "voxel_count": 81340,
+      "actual_x_extent": [
+        116,
+        598
+      ],
+      "actual_top_histogram": {
+        "91": 40634,
+        "90": 140
+      },
+      "per_column_voxel_count_histogram": {
+        "2": 40566,
+        "1": 208
+      },
+      "sampled_top_outliers": [],
+      "raw_valid_x_extent": [
+        116,
+        595
+      ],
+      "raw_x_missing_inside_meta": [],
+      "floor_wrong_in_meta_range": [],
+      "geometry_outside_meta_x_columns": 15,
+      "sha256": "9ecfa68ebd554f57de016a7ada778ec5f17660af2da498a23a3368522dba35bb"
+    },
+    {
+      "deck": "weather",
+      "expected_first_air": 116,
+      "measured_meta": {
+        "path": "甲板-weather",
+        "kind": "deck",
+        "deck": "weather",
+        "level": 2,
+        "name": "weather",
+        "floor": "109:116,605:116",
+        "thick": 2,
+        "poly": [
+          [
+            109,
+            116
+          ],
+          [
+            605,
+            116
+          ]
+        ],
+        "zmin": 116,
+        "zmax": 116
+      },
+      "voxel_count": 68678,
+      "actual_x_extent": [
+        109,
+        609
+      ],
+      "actual_top_histogram": {
+        "116": 34276,
+        "115": 142
+      },
+      "per_column_voxel_count_histogram": {
+        "2": 34260,
+        "1": 158
+      },
+      "sampled_top_outliers": [],
+      "raw_valid_x_extent": [
+        109,
+        605
+      ],
+      "raw_x_missing_inside_meta": [
+        142,
+        143,
+        144,
+        174,
+        175,
+        176,
+        206,
+        207,
+        208,
+        238,
+        239,
+        240,
+        270,
+        271,
+        272,
+        302,
+        303,
+        304,
+        334,
+        335,
+        336,
+        366,
+        367,
+        368,
+        398,
+        399,
+        400,
+        430,
+        431,
+        432,
+        462,
+        463,
+        464,
+        494,
+        495,
+        496,
+        526,
+        527,
+        528,
+        558,
+        559,
+        560
+      ],
+      "floor_wrong_in_meta_range": [],
+      "geometry_outside_meta_x_columns": 22,
+      "sha256": "211bde0a8c83a380497dcbc528e859797a486e56f7955fdd6d47b222bf4783be"
+    },
+    {
+      "deck": "quarter",
+      "expected_first_air": 139,
+      "measured_meta": {
+        "path": "甲板-quarter",
+        "kind": "deck",
+        "deck": "quarter",
+        "level": 3,
+        "name": "後甲板",
+        "floor": "104:139,240:139",
+        "thick": 2,
+        "poly": [
+          [
+            104,
+            139
+          ],
+          [
+            240,
+            139
+          ]
+        ],
+        "zmin": 139,
+        "zmax": 139
+      },
+      "voxel_count": 14910,
+      "actual_x_extent": [
+        104,
+        240
+      ],
+      "actual_top_histogram": {
+        "139": 7419,
+        "138": 56,
+        "152": 2
+      },
+      "per_column_voxel_count_histogram": {
+        "2": 7405,
+        "1": 70,
+        "15": 2
+      },
+      "sampled_top_outliers": [
+        {
+          "x": 133,
+          "tops": {
+            "138": 2,
+            "139": 6
+          }
+        },
+        {
+          "x": 158,
+          "tops": {
+            "138": 2,
+            "139": 8
+          }
+        },
+        {
+          "x": 181,
+          "tops": {
+            "139": 8,
+            "138": 2
+          }
+        },
+        {
+          "x": 182,
+          "tops": {
+            "139": 8,
+            "138": 2
+          }
+        }
+      ],
+      "raw_valid_x_extent": [
+        104,
+        240
+      ],
+      "raw_x_missing_inside_meta": [
+        236,
+        237,
+        238,
+        239
+      ],
+      "floor_wrong_in_meta_range": [],
+      "geometry_outside_meta_x_columns": 0,
+      "sha256": "aab97cb517eeeb2e337462de4ce7446b349b5c5555918b588678ec2fb9e50c66"
+    },
+    {
+      "deck": "forecastle",
+      "expected_first_air": 139,
+      "measured_meta": {
+        "path": "甲板-forecastle",
+        "kind": "deck",
+        "deck": "forecastle",
+        "level": 4,
+        "name": "艏樓甲板",
+        "floor": "550:139,610:139",
+        "thick": 2,
+        "poly": [
+          [
+            550,
+            139
+          ],
+          [
+            610,
+            139
+          ]
+        ],
+        "zmin": 139,
+        "zmax": 139
+      },
+      "voxel_count": 3164,
+      "actual_x_extent": [
+        550,
+        616
+      ],
+      "actual_top_histogram": {
+        "139": 1577,
+        "138": 10
+      },
+      "per_column_voxel_count_histogram": {
+        "2": 1577,
+        "1": 10
+      },
+      "sampled_top_outliers": [
+        {
+          "x": 569,
+          "tops": {
+            "138": 2,
+            "139": 4
+          }
+        }
+      ],
+      "raw_valid_x_extent": [
+        550,
+        610
+      ],
+      "raw_x_missing_inside_meta": [
+        551,
+        552,
+        553,
+        554
+      ],
+      "floor_wrong_in_meta_range": [],
+      "geometry_outside_meta_x_columns": 24,
+      "sha256": "a9c300075b37e2fe46c6ecb5ac9e411c48ae2b13988e44540fa97ab3e8fb8143"
+    },
+    {
+      "deck": "poop",
+      "expected_first_air": 165,
+      "measured_meta": {
+        "path": "甲板-poop",
+        "kind": "deck",
+        "deck": "poop",
+        "level": 5,
+        "name": "船尾樓甲板",
+        "floor": "104:165,180:165",
+        "thick": 2,
+        "poly": [
+          [
+            104,
+            165
+          ],
+          [
+            180,
+            165
+          ]
+        ],
+        "zmin": 165,
+        "zmax": 165
+      },
+      "voxel_count": 5228,
+      "actual_x_extent": [
+        104,
+        180
+      ],
+      "actual_top_histogram": {
+        "165": 2604,
+        "164": 20
+      },
+      "per_column_voxel_count_histogram": {
+        "2": 2604,
+        "1": 20
+      },
+      "sampled_top_outliers": [
+        {
+          "x": 121,
+          "tops": {
+            "164": 2,
+            "165": 4
+          }
+        },
+        {
+          "x": 148,
+          "tops": {
+            "164": 2,
+            "165": 6
+          }
+        }
+      ],
+      "raw_valid_x_extent": [
+        104,
+        180
+      ],
+      "raw_x_missing_inside_meta": [
+        176,
+        177,
+        178,
+        179
+      ],
+      "floor_wrong_in_meta_range": [],
+      "geometry_outside_meta_x_columns": 0,
+      "sha256": "cdee6421649c463a95877b0d57dc3b6acb93e20a413dc269d2205dabea54de35"
+    }
+  ],
+  "levels_current_42_hands": [
+    {
+      "deck": "lower",
+      "path": "甲板-lower",
+      "zr": [
+        56,
+        78
+      ],
+      "cache_key_height_prefix": "56,78",
+      "own_floor_outside_zr": false
+    },
+    {
+      "deck": "upper",
+      "path": "甲板-upper",
+      "zr": [
+        79,
+        103
+      ],
+      "cache_key_height_prefix": "79,103",
+      "own_floor_outside_zr": false
+    },
+    {
+      "deck": "weather",
+      "path": "甲板-weather",
+      "zr": [
+        104,
+        127
+      ],
+      "cache_key_height_prefix": "104,127",
+      "own_floor_outside_zr": false
+    },
+    {
+      "deck": "quarter",
+      "path": "甲板-quarter",
+      "zr": [
+        128,
+        139
+      ],
+      "cache_key_height_prefix": "128,139",
+      "own_floor_outside_zr": false
+    },
+    {
+      "deck": "forecastle",
+      "path": "甲板-forecastle",
+      "zr": [
+        140,
+        152
+      ],
+      "cache_key_height_prefix": "140,152",
+      "own_floor_outside_zr": true
+    },
+    {
+      "deck": "poop",
+      "path": "甲板-poop",
+      "zr": [
+        153,
+        185
+      ],
+      "cache_key_height_prefix": "153,185",
+      "own_floor_outside_zr": false
+    }
+  ],
+  "cache_height_prefixes_unique": true,
+  "ladders": [
+    {
+      "name": "lower-upper-a",
+      "ends": [
+        {
+          "kind": "foot",
+          "at": [
+            311,
+            120,
+            66
+          ],
+          "height_only_lvOf": "lower",
+          "spatial_floor_nearest": {
+            "deck": "lower",
+            "floor": 66,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        },
+        {
+          "kind": "head",
+          "at": [
+            270,
+            120,
+            91
+          ],
+          "height_only_lvOf": "upper",
+          "spatial_floor_nearest": {
+            "deck": "upper",
+            "floor": 91,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        }
+      ]
+    },
+    {
+      "name": "lower-upper-b",
+      "ends": [
+        {
+          "kind": "foot",
+          "at": [
+            446,
+            120,
+            66
+          ],
+          "height_only_lvOf": "lower",
+          "spatial_floor_nearest": {
+            "deck": "lower",
+            "floor": 66,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        },
+        {
+          "kind": "head",
+          "at": [
+            405,
+            120,
+            91
+          ],
+          "height_only_lvOf": "upper",
+          "spatial_floor_nearest": {
+            "deck": "upper",
+            "floor": 91,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        }
+      ]
+    },
+    {
+      "name": "upper-weather-a",
+      "ends": [
+        {
+          "kind": "foot",
+          "at": [
+            311,
+            120,
+            91
+          ],
+          "height_only_lvOf": "upper",
+          "spatial_floor_nearest": {
+            "deck": "upper",
+            "floor": 91,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        },
+        {
+          "kind": "head",
+          "at": [
+            270,
+            120,
+            116
+          ],
+          "height_only_lvOf": "weather",
+          "spatial_floor_nearest": {
+            "deck": "weather",
+            "floor": 116,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        }
+      ]
+    },
+    {
+      "name": "upper-weather-b",
+      "ends": [
+        {
+          "kind": "foot",
+          "at": [
+            446,
+            120,
+            91
+          ],
+          "height_only_lvOf": "upper",
+          "spatial_floor_nearest": {
+            "deck": "upper",
+            "floor": 91,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        },
+        {
+          "kind": "head",
+          "at": [
+            405,
+            120,
+            116
+          ],
+          "height_only_lvOf": "weather",
+          "spatial_floor_nearest": {
+            "deck": "weather",
+            "floor": 116,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        }
+      ]
+    },
+    {
+      "name": "weather-quarter",
+      "ends": [
+        {
+          "kind": "foot",
+          "at": [
+            258,
+            120,
+            116
+          ],
+          "height_only_lvOf": "weather",
+          "spatial_floor_nearest": {
+            "deck": "weather",
+            "floor": 116,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        },
+        {
+          "kind": "head",
+          "at": [
+            217,
+            120,
+            139
+          ],
+          "height_only_lvOf": "quarter",
+          "spatial_floor_nearest": {
+            "deck": "quarter",
+            "floor": 139,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        }
+      ]
+    },
+    {
+      "name": "quarter-poop",
+      "ends": [
+        {
+          "kind": "foot",
+          "at": [
+            198,
+            120,
+            139
+          ],
+          "height_only_lvOf": "quarter",
+          "spatial_floor_nearest": {
+            "deck": "quarter",
+            "floor": 139,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        },
+        {
+          "kind": "head",
+          "at": [
+            157,
+            120,
+            165
+          ],
+          "height_only_lvOf": "poop",
+          "spatial_floor_nearest": {
+            "deck": "poop",
+            "floor": 165,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        }
+      ]
+    },
+    {
+      "name": "weather-forecastle",
+      "ends": [
+        {
+          "kind": "foot",
+          "at": [
+            534,
+            120,
+            116
+          ],
+          "height_only_lvOf": "weather",
+          "spatial_floor_nearest": {
+            "deck": "weather",
+            "floor": 116,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": false
+        },
+        {
+          "kind": "head",
+          "at": [
+            575,
+            120,
+            139
+          ],
+          "height_only_lvOf": "quarter",
+          "spatial_floor_nearest": {
+            "deck": "forecastle",
+            "floor": 139,
+            "distance": 0
+          },
+          "height_vs_spatial_disagree": true
+        }
+      ]
+    }
+  ],
+  "obsolete_patch": "Current navRegions stores N.reg/N.regs and retains all sufficiently large components; old patch requires N.component/N.bestComponent from old largest-only implementation. Do not apply old patch. Position-aware endpoint selection remains needed for coheight decks."
+}

@@ -1,17 +1,17 @@
-# 《潮墓號》續作入口 — 2026-10-14（Tim 要求先告一段落）
+# 《潮墓號》續作入口 — 2026-10-14（Tim「繼續造船 GO」續作）
 
-主單TASK-0540；工作記憶sirius-tidegrave；設計者Sirius。任務仍in_progress，本次以整改與可讀回的驗收材料收尾，沒有把正式遊戲接入當成已完成。
+主單TASK-0540；工作記憶sirius-tidegrave；設計者Sirius。任務仍in_progress。前輪已提交a9b44e8；本輪補甲板meta、七梯實際淨空、桁碰撞及可驗證的舵手接入候選。正式遊戲未套入候選，索具動態仍有已知未結項。
 
 ## 當前資產
 
 - 船殼sirius-tidegrave-01m；組裝sirius-tidegrave-01m-assembly；0.1m/格，+X船頭、-Y左舷、鏡面y120格中心。
-- 1,036,066實體格，6鄰接1元件、封閉空腔0、鏡像缺格／異色0、link overlap/clipped0。
+- 1,034,267實體格，6鄰接1元件、封閉空腔0、鏡像缺格／異色0、link overlap/clipped0。
 - 六層甲板、七實體梯、三桅與艏斜桅；54砲、116模型（19網格）、300繩、10帆旗、17關聯外框。
 - preview絕對路徑：D:/Unity/Valhalla/Sculpture/works/sirius-tidegrave-01m-assembly/exports/tidegrave_preview.vxk。
-- 最新SHA256：`5e92885eb98c095b41f21d80e0f69e287206e55be7815fe27c6a4e8abc42f8d1`；voxel checksum `bdd5856b`。交付副本與逐格驗證：design/delivery/及design/verify_vxk_delivery.json。
-- 總圖Rev04：design/general_arrangement.png，SHA `0bda926677886c2a3e8601fcce9e664768805e2e376eb4ab1335b8c24a7aba9d`。照片final_review_20261014.png及final_stern_review_20261014.png；照片早於最後一條brace綁點升6格，船體／模型／帆／其他繩未變。
+- 最新SHA256：`a5994eeeacbb1155776145e3ebc2e69bd743815b7574df45ca6eb58653bdaf73`；voxel checksum `4cb88a33`。交付副本與逐格驗證：design/delivery/及design/verify_vxk_delivery.json。
+- 總圖Rev05：design/general_arrangement.png，SHA `5a4944533d5e6d803ee7da41c43e2c7bbaf6cd8a0260021f693bb5e66438b6bf`，桁高同步實物；最新照片continued_stern_20261014.png。Rev04及原5e928快照報告保留作歷史，不能拿其格數當最新。
 
-## 這輪完成
+## 前輪完成（a9b44e8；下面舊格數是當時觀測）
 
 1. 重建遺失的preview與早期驗收；骨架118405、外板549603格的逐格逐色兩帳、真實3格反向對照及水線洪泛證據收進design/audits/20261014。修正圖紙uint8 RGB溢位。甲板舊清單是零格增量，重新由CLI匯出完整當前甲板，沒有把空圖當通過。
 2. 舵輪移至(198.5,143.5,139)，保持scale .2/pivot(50,52,0)。105目標模型對船、彼此正體積碰撞0；舵輪40/40底足支持。54砲20m中心射線阻擋0；砲Y+3的真正反向對照報2相交格。
@@ -21,11 +21,20 @@
 6. 旗升26格，ornament旗竿以(105,120,208)為根延長23格。旗嚴格內片穿骨飾0；17格接觸均為新旗竿固定邊附着。裝飾31768格、鏡像0、空腔0，219個子件元件均face接船。
 7. 新版隔離fixture仍有348船員／2舵手，54砲均滿足crewMin、所有模型有foot、七梯候選版10秒運行與GL error0。報告各自帶source hash，不把不同快照混為同一場測量。
 
+## 續作完成
+
+1. 六甲板依CLI各自VXK量floor/厚2格、補kind=deck、level/name/floor/thick，獨立解碼核對。狹艏尖端延至實際floor-1支撐範圍；沒有捏造同高艏艉樓的高度。組裝件名改「潮墓號」，船殼帶sub；新增內部與六甲板預覽preset。
+2. 七梯lift3、淨高18格、橫寬y117..123的連續掃掠，精確color guard刻1799格（船殼1771、quarter14、poop14）。actual與guard逐格逐色完全一致，梯子source與14落腳地板全保留；足點穿格與指定掃掠均0。21格sprite框會撞上層梯，明確不宣稱完整sprite/pose淨空。施工圖與可重跑修復入口：design/ladder_clearance_20261014/、repair_20261014_ladder_clearance.py。
+3. 刻格最低z113，高於水線52；獨立前後洪泛同1,370,871格、兩內艙probe仍不通外水。恢復一格的反向對照能重現碰撞。actual報告design/audits/20261014/ladder_clearance/final_actual/。
+4. 後桅crossjack由255.5降至224.5，實體Z223..226與gaff229..317、boom204..207全連續角度分離。只有該模型、兩條mizzen-topsail.sheet與該帆改；兩sheet含半徑對body內穿0，該帆對十桁嚴格內片0。該帆對桅尚有既存1格微小擦碰，不能報全帆實內片0。
+5. 舊nav_candidate已過時。新版design/nav_deck_candidate保留navRegions，按位置選梯端層、cache含deck身份、補砲按meta身份、舵手出生與補位按舵輪位置；CLIMB_LIFT3僅在本船七梯驗過。最終a599快照：兩艘348人、2舵手、54砲班達最低、7梯14端region可達、10秒GL0；強制兩舵手傷亡後，實際stepHand35.133秒兩人到後甲板z139並轉ROLE.HELM。替補probe期間世界戰鬥凍結、每幀照常恢復HAND_PATHS額度；不是額外35秒整世界對戰測試。
+6. TASK-0545已簽第1/2/4格，剩兩本帳/反向尺與完整階段再生總整理那格；TASK-0546只簽帆旗與sheet meta那格，其餘不冒簽。新版候選已在tavern seq23593 @ame交付，工作記憶state_continued-clearance-20261014已保存。
+
 ## 尚未結清／下次順序
 
-1. 七梯正式接入仍在ame覆核：原遊戲按高度合層，只留最大walk component，丟了同高艏樓；幾何無須再造梯。design/nav_candidate/42_hands.patch、42_hands_candidate.js與source.json，酒館Florin seq23445已交付。不能用候選版七梯成功替代正式遊戲已套用。
+1. 七梯與舵手正式接入需ame覆核新版nav_deck_candidate的40_crew.patch、42_hands.patch及source hashes；不要套舊seq23445候選。正式源碼沒改。其他船的LIFT3、游泳登船、無梯home、多站操舵等分支未完成通用回歸。
 2. 從本檔、notes.md、design/audits/20261014、delivery/README.md及各子單新wrapup接起，逐項簽驗收與結單；本次未把尚未逐格簽完的單宣告done。
-3. 主單全結前仍需整理／簽收各階段兩本帳与完整再生入口、正式遊戲匯入後複驗。完整人體動線、所有帆桁動畫掃掠未由本輪靜態驗收涵蓋，見rig_final.json／model_final.md的限制。
+3. TASK-0546保留未完成：model-aware動態精測查出main/fore course lift直拉桅head、穿兩層上桁；main/fore shroud與course桁有非中央內穿；四條ratline端被遊戲yardNear幾何誤認綁桁；mizzen-topsail對桅既有1格內擦。先逐類修法與遊戲語意綁定，不能靠刪繩或泛豁免冒充零碰撞。完整人體/pose、navSnap接近離開路段、全階段安全再生入口與正式匯入後複驗也尚未全簽收。
 4. TASK-0516仍是藝廊素材採用與整合待決，不直接覆寫ame施工中的art或HTML。
 
 ## 操作界線

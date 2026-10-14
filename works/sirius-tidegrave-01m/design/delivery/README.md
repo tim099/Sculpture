@@ -8,8 +8,10 @@
 
 本地fixture的geo設定（需遊戲作者依正式介面覆核）：spar=[114,140]、marines=[180,215]、center=155、aim=90、aimZ=[30,480]、deckAim=[74,106]、rigAim=[210,410]、handsK=1。初始水密與質量只是在目前遊戲下的測量，未作真船穩性認證。
 
-七梯接入：`../nav_candidate/42_hands.patch`。兩個同高139但互不相通的艏／艉樓必須分成不同空間component；原版只留最大層，故只得到六梯。候選修法維持砲甲板政策，在有梯端點的h*次區另建空間層。採用前先對source.json的基底hash；遊戲源碼由ame與gura施工，不盲蓋。
+七梯與操舵接入：`../nav_deck_candidate/40_crew.patch`、`42_hands.patch`，對應source.json與crew_source.json。兩個同高139但互不相通的艏／艉樓按deckFloor與端點位置分層；保留新版navRegions。LIFT3對應本船已開好的1.8m高×0.7m寬淨空；其他船需回歸。操舵站位按wheel本身XY/Z，不用整船spar高度。原nav_candidate是舊版，只作歷史，不要套用。
 
-重驗：`python -I -X utf8 ../validate_vxk_delivery.py` 將VXK解碼與CLI當前清單逐格逐色對照，獨立scalar checksum，改一格的反向對照必須失敗；它會刷新本目錄副本与manifest。`../test_game_fixture.py 10 nav` 為隔離七梯候選10秒測試；不帶nav量原版。報告記錄VXK與當前JS來源hash。
+重驗：`python -I -X utf8 ../validate_vxk_delivery.py` 將VXK解碼與CLI當前清單逐格逐色對照，獨立scalar checksum，改一格的反向對照必須失敗；它會刷新本目錄副本与manifest。`python -I -X utf8 ../test_game_fixture.py 10 deck` 為新版隔離候選10秒＋操舵替補測試；`0 meta`量原版。報告記錄VXK與當前JS、兩候選檔來源hash。替補使用真stepHand、60Hz並恢復每幀HAND_PATHS，世界戰鬥於該補位probe凍結。
+
+最新a5994eee快照：348人、2舵手、54砲最低足額、7梯14端region可達、10秒GL0；強制兩舵手傷亡後35.133秒兩人實到quarter z139並轉舵手。仍有舊索具對模型的動態碰撞、ratline誤綁及一格桅邊帆擦，見../CONTINUED_20261014.md；不把候選交付宣告全船已正式驗收。
 
 靜態／舵連續包絡／模型／帆繩／旗的獨立報告在`../audits/20261014/`，總斷點在`../CHECKPOINT.md`。不同scope與快照的限制各自保留。

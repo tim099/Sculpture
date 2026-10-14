@@ -50,17 +50,23 @@ def main():
         for x in P['guns']['x']:
             a,b=T(x-8,dz+19),T(x+8,dz+5);d.rectangle([a,b],outline=gold,width=2)
     # Full rig schematic, angular braces still level in design.
-    yards={'fore':[(205,140),(310,120),(395,85)],'main':[(220,165),(340,145),(435,100)],'mizzen':[(300,80),(365,60)]}
+    yards=P['rig_layout']['square_yards']
     for m in P['masts']:
         x=m['x'];line([T(x,m['deck_z']),T(x,m['top_z'])],ink,6)
-        for z,span in yards[m['id']]:
+        for mast,yid,z,span,drop in yards:
+            if mast!=m['id']:continue
             # Side view yard cross section + sails behind mast.
             line([T(x-8,z),T(x+8,z)],gold,3)
-            drop=65 if z<300 else 58
-            line([T(x-5,z),T(x-15,z-drop),T(x+15,z-drop),T(x+5,z)],ink,2)
+            if drop:line([T(x-5,z),T(x-15,z-drop),T(x+15,z-drop),T(x+5,z)],ink,2)
+            if yid=='crossjack':txt(*T(x+10,z),'crossjack '+str((z+.5)/10)+'m',16,teal)
         line([T(x,m['platform_z']),T(max(105,x-60),120)],teal,1)
         line([T(x,m['platform_z']),T(min(615,x+70),120)],teal,1)
         txt(*T(x+5,m['top_z']),m['id']+' '+str(m['top_z']/10)+'m',18,teal)
+    gaff=P['rig_layout']['gaff'];boom=P['rig_layout']['boom']
+    A=lambda q:T(q[0],q[2])
+    line([A(gaff['pivot']),A(gaff['top'])],gold,4)
+    line([A(boom['pivot']),A(boom['end'])],gold,4)
+    line([A(gaff['pivot']),A(gaff['top']),A(boom['end']),A(gaff['pivot'])],ink,2)
     line([T(*[P['bowsprit']['root'][i] for i in (0,2)]),T(*[P['bowsprit']['tip'][i] for i in (0,2)])],ink,6)
     # stern crown and pointed prow are indicated as ornament, not hull openings.
     for i in range(7):
@@ -111,7 +117,7 @@ def main():
            '破舊帆以透明貼圖呈現；水線下殼體保留完整，通道與梯子可通行。',
            '船殼 / 各甲板 / 桅分件；砲、帆桁、舵輪、桶為模型；繩與帆獨立。',
            '歷史：Vasa 與 Batavia 比例及甲板概念；所有線形座標均為原創設計。',
-           'Rev04：新版艏砲／操舵導索、加高旗竿、鏡像導索柱；庫門淨高2.1m。']
+           'Rev05：桁高依實物同步；後桅橫桁降至22.45m，與斜桁分開旋轉。']
     for i,s in enumerate(lines):txt(70,2060+i*37,s,21)
     line([(65,2400),(2235,2400)],dim,2);txt(70,2415,'T540 / T541   |   +X BOW  ·  +Y STARBOARD  ·  Z0 KEEL   |   DRAFT GENERAL — NOT CONSTRUCTION ACCEPTANCE',18,teal)
     out=ROOT/'general_arrangement.png';im.save(out)

@@ -1,6 +1,7 @@
 # 接續驗收
 
-- 七梯隔離候選已交ame；正式遊戲接入需她覆核，TASK-0545這格不以隔離成功替代。
-- 整改後靜態讀數、舵連續包絡、VXK逐格解碼與反向對照已保存；從design/CHECKPOINT.md及audits/20261014接起，完整人體動線／帆桁動畫／帆附着邊仍按報告的未驗scope處理。
-- 各階段逐格簽收、完整再生整理與正式遊戲匯入後複驗仍待做；總圖Rev04、亮圖与本輪日記已落盤。
+- 正式接入用nav_deck_candidate/40_crew.patch與42_hands.patch；原nav_candidate已過時，不能套。七梯及操舵候選已驗，其他船LIFT3/泳返/無梯home/多站舵手仍需game作者覆核。
+- 優先修TASK-0546：main/fore course lift穿上桁、shroud穿course桁、四ratline端的yardNear誤綁、mizzen-topsail桅邊一格舊擦碰；model-aware證據與舊voxel-only讀數不同scope。
+- 七梯actual18高×7寬/lift3已驗，2.1m sprite/pose與navSnap接近離開段沒全驗；保護所有實體梯，不拿刪梯換通過。
+- 各階段剩餘簽收、完整安全再生與正式匯入後複驗待做；Rev05總圖與continued_stern_20261014.png已落盤。當前交付SHA/checksum見delivery/manifest.json。
 - 逐項check、必要單層commit與結單；主單不能因已有外觀就全勾。TASK-0516的藝廊素材採用/整合仍待原範圍決定。

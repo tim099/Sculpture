@@ -1,0 +1,559 @@
+{
+  "source_sha256": "5e92885eb98c095b41f21d80e0f69e287206e55be7815fe27c6a4e8abc42f8d1",
+  "codeHashes": {
+    "21_gunnery.js": "f9bb6b2f65b1fe6fbcd279ecd9923c4e202376d4c29d9fdd9bbccc4498544006",
+    "10_ship.js": "93e2aa5f412c733fb26e4a520a85b128b211cec1ba7c9494f09441ef904cfdfd",
+    "30_rig_physics.js": "9581535ac036cc6e8d977a2d31bb68701e6986df12cb8404f50045e393304324"
+  },
+  "actual_constants": "var BRACE_MAX = 0.70, BOOM_MIN = 0.14, BOOM_MAX = 1.40, BRACE_RATE = 0.14, BRACE_HYST = 2.7;",
+  "state_count": 970,
+  "angle_step_deg": 0.25,
+  "method": "Original source event unit cubes rotated at actual model pivot. Source mesh bounds independently match export within .005 voxel. OBB/unit-AABB separating axes test; quarter-degree interval envelope bound retained as conservative candidates.",
+  "body": [
+    {
+      "name": "mizzen/yard-mizzen-crossjack",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-crossjack",
+      "source_mesh_bounds_error": 0.0029720377476962767,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.12366033296455202,
+      "samples": 322,
+      "unique_guard_cells": 125,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "mizzen/yard-mizzen-topsail",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-topsail",
+      "source_mesh_bounds_error": 0.0031419814971798132,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.10185348370283334,
+      "samples": 322,
+      "unique_guard_cells": 35,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "mizzen/yard-mizzen-gaff",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-gaff",
+      "source_mesh_bounds_error": 0.0,
+      "absolute_angle_range_deg": [
+        -80.21409131831524,
+        80.21409131831524
+      ],
+      "relative_angle_range_deg": [
+        -80.21409131831524,
+        80.21409131831524
+      ],
+      "interval_envelope_margin": 0.11277828554316158,
+      "samples": 643,
+      "unique_guard_cells": 368,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "mizzen/yard-mizzen-boom",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-boom",
+      "source_mesh_bounds_error": 0.0,
+      "absolute_angle_range_deg": [
+        -80.21409131831524,
+        80.21409131831524
+      ],
+      "relative_angle_range_deg": [
+        -80.21409131831524,
+        80.21409131831524
+      ],
+      "interval_envelope_margin": 0.17819091662403266,
+      "samples": 643,
+      "unique_guard_cells": 123,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "main/yard-main-course",
+      "source_work": "sirius-tidegrave-01m-yard-main-course",
+      "source_mesh_bounds_error": 0.00310532462538049,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.23270486529393922,
+      "samples": 322,
+      "unique_guard_cells": 141,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "main/yard-main-topsail",
+      "source_work": "sirius-tidegrave-01m-yard-main-topsail",
+      "source_mesh_bounds_error": 0.004428217749421037,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.1934422506020518,
+      "samples": 322,
+      "unique_guard_cells": 35,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "main/yard-main-topgallant",
+      "source_work": "sirius-tidegrave-01m-yard-main-topgallant",
+      "source_mesh_bounds_error": 0.004484249339441249,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.13456375759541137,
+      "samples": 322,
+      "unique_guard_cells": 21,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "fore/yard-fore-course",
+      "source_work": "sirius-tidegrave-01m-yard-fore-course",
+      "source_mesh_bounds_error": 0.004803267431043423,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.1999962868041727,
+      "samples": 322,
+      "unique_guard_cells": 141,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "fore/yard-fore-topsail",
+      "source_work": "sirius-tidegrave-01m-yard-fore-topsail",
+      "source_mesh_bounds_error": 0.0026321502487576254,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.1672740314879894,
+      "samples": 322,
+      "unique_guard_cells": 35,
+      "outside_attachment_cells": []
+    },
+    {
+      "name": "fore/yard-fore-topgallant",
+      "source_work": "sirius-tidegrave-01m-yard-fore-topgallant",
+      "source_mesh_bounds_error": 0.003919086387895732,
+      "absolute_angle_range_deg": [
+        -40.10704565915762,
+        40.10704565915762
+      ],
+      "relative_angle_range_deg": [
+        -22.107045659157624,
+        58.10704565915762
+      ],
+      "interval_envelope_margin": 0.11275690833369267,
+      "samples": 322,
+      "unique_guard_cells": 15,
+      "outside_attachment_cells": []
+    }
+  ],
+  "model_pairs": [
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "mizzen/yard-mizzen-gaff",
+      "states_with_overlap": 350,
+      "examples": [
+        {
+          "wind_deg": 0,
+          "kind": "steady_actual_function",
+          "angle_a_deg": 0.0,
+          "angle_b_deg": -80.21409131831524,
+          "source_a_cells": [
+            [
+              3,
+              132,
+              4
+            ],
+            [
+              3,
+              133,
+              4
+            ],
+            [
+              3,
+              134,
+              4
+            ],
+            [
+              3,
+              135,
+              4
+            ],
+            [
+              3,
+              136,
+              4
+            ],
+            [
+              3,
+              137,
+              4
+            ]
+          ],
+          "world_centers": [
+            [
+              204.5,
+              132.5,
+              255.5
+            ],
+            [
+              204.5,
+              133.5,
+              255.5
+            ],
+            [
+              204.5,
+              134.5,
+              255.5
+            ],
+            [
+              204.5,
+              135.5,
+              255.5
+            ],
+            [
+              204.5,
+              136.5,
+              255.5
+            ],
+            [
+              204.5,
+              137.5,
+              255.5
+            ]
+          ]
+        },
+        {
+          "wind_deg": -87,
+          "kind": "steady_actual_function",
+          "angle_a_deg": -40.10704565915762,
+          "angle_b_deg": 46.5,
+          "source_a_cells": [
+            [
+              3,
+              104,
+              4
+            ],
+            [
+              3,
+              105,
+              4
+            ],
+            [
+              3,
+              106,
+              4
+            ],
+            [
+              3,
+              107,
+              4
+            ],
+            [
+              3,
+              108,
+              4
+            ],
+            [
+              4,
+              102,
+              5
+            ],
+            [
+              4,
+              103,
+              3
+            ],
+            [
+              4,
+              103,
+              4
+            ],
+            [
+              4,
+              103,
+              5
+            ],
+            [
+              4,
+              104,
+              3
+            ],
+            [
+              4,
+              104,
+              4
+            ],
+            [
+              4,
+              104,
+              5
+            ],
+            [
+              4,
+              105,
+              3
+            ],
+            [
+              4,
+              105,
+              4
+            ],
+            [
+              4,
+              105,
+              5
+            ],
+            [
+              4,
+              106,
+              3
+            ],
+            [
+              4,
+              106,
+              4
+            ],
+            [
+              4,
+              106,
+              5
+            ],
+            [
+              4,
+              107,
+              3
+            ],
+            [
+              4,
+              107,
+              4
+            ],
+            [
+              4,
+              107,
+              5
+            ],
+            [
+              4,
+              108,
+              3
+            ],
+            [
+              4,
+              108,
+              4
+            ],
+            [
+              5,
+              103,
+              4
+            ],
+            [
+              5,
+              104,
+              4
+            ],
+            [
+              5,
+              105,
+              4
+            ],
+            [
+              5,
+              106,
+              4
+            ],
+            [
+              5,
+              107,
+              4
+            ]
+          ],
+          "world_centers": [
+            [
+              194.42767481691246,
+              108.90674269068587,
+              255.5
+            ],
+            [
+              195.07189250415016,
+              109.67158487797036,
+              255.5
+            ],
+            [
+              195.71611019138783,
+              110.43642706525485,
+              255.5
+            ],
+            [
+              196.36032787862553,
+              111.20126925253933,
+              255.5
+            ],
+            [
+              197.00454556586322,
+              111.96611143982383,
+              255.5
+            ],
+            [
+              193.90408162972156,
+              106.7328406288792,
+              256.5
+            ],
+            [
+              194.54829931695926,
+              107.49768281616369,
+              254.5
+            ],
+            [
+              194.54829931695926,
+              107.49768281616369,
+              255.5
+            ],
+            [
+              194.54829931695926,
+              107.49768281616369,
+              256.5
+            ],
+            [
+              195.19251700419693,
+              108.26252500344819,
+              254.5
+            ],
+            [
+              195.19251700419693,
+              108.26252500344819,
+              255.5
+            ],
+            [
+              195.19251700419693,
+              108.26252500344819,
+              256.5
+            ],
+            [
+              195.83673469143463,
+              109.02736719073268,
+              254.5
+            ],
+            [
+              195.83673469143463,
+              109.02736719073268,
+              255.5
+            ],
+            [
+              195.83673469143463,
+              109.02736719073268,
+              256.5
+            ],
+            [
+              196.48095237867233,
+              109.79220937801716,
+              254.5
+            ],
+            [
+              196.48095237867233,
+              109.79220937801716,
+              255.5
+            ],
+            [
+              196.48095237867233,
+              109.79220937801716,
+              256.5
+            ],
+            [
+              197.12517006591003,
+              110.55705156530165,
+              254.5
+            ],
+            [
+              197.12517006591003,
+              110.55705156530165,
+              255.5
+            ],
+            [
+              197.12517006591003,
+              110.55705156530165,
+              256.5
+            ],
+            [
+              197.7693877531477,
+              111.32189375258613,
+              254.5
+            ],
+            [
+              197.7693877531477,
+              111.32189375258613,
+              255.5
+            ],
+            [
+              195.31314150424373,
+              106.853465128926,
+              255.5
+            ],
+            [
+              195.95735919148143,
+              107.61830731621049,
+              255.5
+            ],
+            [
+              196.60157687871913,
+              108.38314950349498,
+              255.5
+            ],
+            [
+              197.24579456595683,
+              109.14799169077946,
+              255.5
+            ],
+            [
+              197.8900122531945,
+              109.91283387806396,
+              255.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "main/yard-main-course",
+      "states_with_overlap": 0,
+      "examples": []
+    }
+  ]
+}

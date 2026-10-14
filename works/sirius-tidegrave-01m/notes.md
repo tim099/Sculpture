@@ -39,3 +39,18 @@ lower/upper/weather/quarter/poop/forecastle六子件，七座梯共14個foot/hea
 ## 兩本帳與重產界線
 
 結果帳、圖紙帳、獨立報告各自保存；design/audits/20261014收回先前只在scratchpad的證據。早期凍結階段可以重算，不代表全部初建main可在成船安全重跑。修正腳本走CLI，細胞清單、顏色守門與讀回計數都保留；書卡、events、模型與帆繩帳不手改。缺驗收的格仍保持未勾。
+
+
+# 2026-10-14 續造：七梯淨空、甲板標籤與操舵接入
+
+Tim在前輪a9b44e8後要求「繼續造船 GO」。本輪最新資產a5994eeeacbb1155776145e3ebc2e69bd743815b7574df45ca6eb58653bdaf73，checksum4cb88a33，1,034,267格。CLI及獨立actual皆1連通、0空腔、鏡像缺格/異色0、關聯重疊/裁切0；交付副本逐格逐色解碼0差，一格改色反向checksum31c2532c不同。
+
+六甲板獨立VXK量得floor66/91/116/139/139/165與thick2；已補kind=deck及level/name/floor/thick。quarter與forecastle真實同高但範圍分開；窄艏尖按floor-1實格補齊標籤範圍。組裝件主名為「潮墓號」，船殼帶sub；七個preset可看內部與各甲板。
+
+通道施工圖在ladder_clearance_20261014/clearance_plan.png。按lift3、直立高18格、橫向y117..123設計，精準color guard刻1799格：船殼1771、quarter14、poop14；梯source與十四處落腳地板完全保留。獨立連續掃掠及足點穿格皆0，恢復一格會再報碰撞。刻格最低z113，不動水線下；水下封閉空氣前後均1,370,871格。這是1.8m×0.7m指定路徑截面，不是遊戲人體碰撞器；2.1m含透明padding的sprite框會撞644格梯件，因此沒刻梯冒充21格通過。navSnap接近/離開段及動畫pose仍另驗。
+
+後桅crossjack原本與gaff動態互穿；已用CLI由z255.5降至224.5。木桁Z223..226、gaff229..317、boom204..207，任意繞Z連續轉角都分離；也避開yardNear將gaff jaws誤認crossjack。新圖Rev05同步實物桁高；修復入口repair_20261014_crossjack.py與build_rig的plan輸入同步，但初建main仍不能盲跑。actual只有crossjack模型、兩條mizzen-topsail.sheet與該帆改；兩sheet含半徑對body內穿0，該帆對十桁嚴格內片0。對桅仍有舊有一格微擦，不報全面0。
+
+正式遊戲檔未改；接入候選已改用nav_deck_candidate/40_crew.patch及42_hands.patch，舊nav_candidate僅歷史。新版保留navRegions，梯端按x/floor/snap選層、cache含deck身份、補砲按meta身份；操舵出生與補位按wheel實際XY/Z；LIFT3只驗本船七梯。fixture注入改成CFG.ships且斷言命中，防舊replace靜默失效。最新VXK兩艘各348人/2舵手、54砲都達最低、七梯十四端region可達，10秒整世界GL0。兩舵手強制傷亡後，使用真stepHand、60Hz及每幀HAND_PATHS額度，35.133秒兩人到quarter z139並轉ROLE.HELM；這段世界戰鬥凍結，僅驗補位分支。
+
+TASK-0546仍有model-aware新發現未結：main/fore course lift直拉桅head穿上層桁、部分shrouds穿course桁、4條ratline端被yardNear誤綁桁、mizzen-topsail對桅一格舊擦碰。既有voxel-only靜態通過不涵蓋這些。完整動態報告與候選scope需分開讀，不把本輪crossjack修正當全索具通過。完整安全再生與正式遊戲匯入複驗仍待。

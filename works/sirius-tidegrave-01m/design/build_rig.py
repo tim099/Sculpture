@@ -42,9 +42,7 @@ def main():
     for k,q in {'tip':(748,CY,215),'root':(580,CY,145),'stay':(700,CY,195)}.items():anchor(name,k,q)
     cli(op='work',sub='link',work=ASSEMBLY,name='bowsprit',source_work=name,at='0,0,0',overwrite=1)
     # Individual horizontal yards are full unrotated parts.
-    spec=[('fore','course',235,180,90),('fore','topsail',340,150,75),('fore','topgallant',420,100,65),
-          ('main','course',250,210,100),('main','topsail',375,175,90),('main','topgallant',460,120,65),
-          ('mizzen','crossjack',255,110,0),('mizzen','topsail',340,90,65)]
+    spec=P['rig_layout']['square_yards']
     yards={};rigplan=[]
     for mast,yid,z,length,drop in spec:
         source=BASE+'-yard-'+mast+'-'+yid;a=np.zeros((800,241,200),np.uint8)

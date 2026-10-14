@@ -31,12 +31,15 @@ def main():
     rig=header['rig'];counts={k:len(rig[k]) for k in ('ropes','sails','models','meshes')}
     counts['parts']=len(header['parts'])
     if counts!={'ropes':300,'sails':10,'models':116,'meshes':19,'parts':17}:raise RuntimeError('Rig/part preservation mismatch')
+    decks=[p for p in header['parts'] if p.get('meta',{}).get('kind')=='deck']
+    if len(decks)!=6:raise RuntimeError('Expected six game deck metadata records')
     delivery=ROOT/'delivery';delivery.mkdir(exist_ok=True)
     output=delivery/'tidegrave_candidate_20261014.vxk';output.write_bytes(source)
     report={'observedAtUtc':datetime.now(timezone.utc).isoformat(),'source':str(VXK),'delivery':str(output),
       'sha256':hashlib.sha256(source).hexdigest(),'bytes':len(source),'voxels':len(actual),'checksum':f'{chk:08x}',
       'voxelAndColorDifferences':0,'negativeControlChangedVoxels':changed,'negativeControlChecksum':f'{badchk:08x}',
       'counts':counts,'metadata':{'sailsWithMeta':sum(bool(s.get('meta')) for s in rig['sails']),
+        'deckMetadata':len(decks),
         'ropesWithMeta':sum(bool(r.get('meta')) for r in rig['ropes']),
         'ropesWithEnds':sum(bool(r.get('ends')) for r in rig['ropes'])},
       'decoder':'VoxelKit voxel_export.unpack; checksum independently recomputed scalar modulo-2^32',

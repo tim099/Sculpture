@@ -1,0 +1,581 @@
+{
+  "old_sha256": "5e92885eb98c095b41f21d80e0f69e287206e55be7815fe27c6a4e8abc42f8d1",
+  "actual_sha256": "a5994eeeacbb1155776145e3ebc2e69bd743815b7574df45ca6eb58653bdaf73",
+  "expected_actual_sha256": "a5994eeeacbb1155776145e3ebc2e69bd743815b7574df45ca6eb58653bdaf73",
+  "actual_hash_match": true,
+  "guard_files": {
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\design\\audits\\20261014\\ladder_clearance\\design18\\sirius-tidegrave-01m-deck-poop.color_guard.vox.txt": {
+      "sha256": "d4ae3da3c85c04f153840f10cf50033ac4cc13370edbfb31a6eda1dac19758a3",
+      "count": 14
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\design\\audits\\20261014\\ladder_clearance\\design18\\sirius-tidegrave-01m-deck-quarter.color_guard.vox.txt": {
+      "sha256": "0c1da98d75999183ad5930de856b59f7799a945e0af35e72d7b90273d4ebaf4a",
+      "count": 14
+    },
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\design\\audits\\20261014\\ladder_clearance\\design18\\sirius-tidegrave-01m.color_guard.vox.txt": {
+      "sha256": "78dc5c3a4f1f67a27768761ecfb85744429a556a5056d1b4676038a7ef6015d3",
+      "count": 1771
+    }
+  },
+  "delta": {
+    "old_voxels": 1036066,
+    "actual_voxels": 1034267,
+    "removed": 1799,
+    "added": 0,
+    "color_changed": 0,
+    "removed_minZ": 113,
+    "removed_maxZ": 176,
+    "exact_guard_match": true,
+    "removed_color_guard_match": true,
+    "below_waterline_removed": 0
+  },
+  "design_scope": {
+    "lift": 3,
+    "height": 18,
+    "y_range": [
+      117,
+      123
+    ],
+    "width": 7,
+    "source_rule": "Continuous linear swept strip, longitudinal radius0. Does not assert current game CLIMB_LIFT is already3."
+  },
+  "routes": [
+    {
+      "name": "lower-upper-a",
+      "path": [
+        [
+          311.5,
+          120.5,
+          66.0
+        ],
+        [
+          305.5,
+          120.5,
+          72.0
+        ],
+        [
+          277.5,
+          120.5,
+          94.0
+        ],
+        [
+          270.5,
+          120.5,
+          91.0
+        ]
+      ],
+      "segments": [
+        {
+          "segment": "foot->lo",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "lo->hi",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "hi->head",
+          "obstacle_count": 0,
+          "examples": []
+        }
+      ],
+      "total_obstacle_segments": 0,
+      "foot_inside_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "lower-upper-b",
+      "path": [
+        [
+          446.5,
+          120.5,
+          66.0
+        ],
+        [
+          440.5,
+          120.5,
+          72.0
+        ],
+        [
+          412.5,
+          120.5,
+          94.0
+        ],
+        [
+          405.5,
+          120.5,
+          91.0
+        ]
+      ],
+      "segments": [
+        {
+          "segment": "foot->lo",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "lo->hi",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "hi->head",
+          "obstacle_count": 0,
+          "examples": []
+        }
+      ],
+      "total_obstacle_segments": 0,
+      "foot_inside_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "quarter-poop",
+      "path": [
+        [
+          198.5,
+          120.5,
+          139.0
+        ],
+        [
+          192.5,
+          120.5,
+          145.0
+        ],
+        [
+          164.5,
+          120.5,
+          168.0
+        ],
+        [
+          157.5,
+          120.5,
+          165.0
+        ]
+      ],
+      "segments": [
+        {
+          "segment": "foot->lo",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "lo->hi",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "hi->head",
+          "obstacle_count": 0,
+          "examples": []
+        }
+      ],
+      "total_obstacle_segments": 0,
+      "foot_inside_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "upper-weather-a",
+      "path": [
+        [
+          311.5,
+          120.5,
+          91.0
+        ],
+        [
+          305.5,
+          120.5,
+          97.0
+        ],
+        [
+          277.5,
+          120.5,
+          119.0
+        ],
+        [
+          270.5,
+          120.5,
+          116.0
+        ]
+      ],
+      "segments": [
+        {
+          "segment": "foot->lo",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "lo->hi",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "hi->head",
+          "obstacle_count": 0,
+          "examples": []
+        }
+      ],
+      "total_obstacle_segments": 0,
+      "foot_inside_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "upper-weather-b",
+      "path": [
+        [
+          446.5,
+          120.5,
+          91.0
+        ],
+        [
+          440.5,
+          120.5,
+          97.0
+        ],
+        [
+          412.5,
+          120.5,
+          119.0
+        ],
+        [
+          405.5,
+          120.5,
+          116.0
+        ]
+      ],
+      "segments": [
+        {
+          "segment": "foot->lo",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "lo->hi",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "hi->head",
+          "obstacle_count": 0,
+          "examples": []
+        }
+      ],
+      "total_obstacle_segments": 0,
+      "foot_inside_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "weather-forecastle",
+      "path": [
+        [
+          534.5,
+          120.5,
+          116.0
+        ],
+        [
+          540.5,
+          120.5,
+          122.0
+        ],
+        [
+          568.5,
+          120.5,
+          142.0
+        ],
+        [
+          575.5,
+          120.5,
+          139.0
+        ]
+      ],
+      "segments": [
+        {
+          "segment": "foot->lo",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "lo->hi",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "hi->head",
+          "obstacle_count": 0,
+          "examples": []
+        }
+      ],
+      "total_obstacle_segments": 0,
+      "foot_inside_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "weather-quarter",
+      "path": [
+        [
+          258.5,
+          120.5,
+          116.0
+        ],
+        [
+          252.5,
+          120.5,
+          122.0
+        ],
+        [
+          224.5,
+          120.5,
+          142.0
+        ],
+        [
+          217.5,
+          120.5,
+          139.0
+        ]
+      ],
+      "segments": [
+        {
+          "segment": "foot->lo",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "lo->hi",
+          "obstacle_count": 0,
+          "examples": []
+        },
+        {
+          "segment": "hi->head",
+          "obstacle_count": 0,
+          "examples": []
+        }
+      ],
+      "total_obstacle_segments": 0,
+      "foot_inside_counts": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "endpoints": [
+    {
+      "name": "lower-upper-a.foot",
+      "at": [
+        311.5,
+        120.5,
+        66.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "lower-upper-a.head",
+      "at": [
+        270.5,
+        120.5,
+        91.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "lower-upper-b.foot",
+      "at": [
+        446.5,
+        120.5,
+        66.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "lower-upper-b.head",
+      "at": [
+        405.5,
+        120.5,
+        91.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "quarter-poop.foot",
+      "at": [
+        198.5,
+        120.5,
+        139.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "quarter-poop.head",
+      "at": [
+        157.5,
+        120.5,
+        165.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "upper-weather-a.foot",
+      "at": [
+        311.5,
+        120.5,
+        91.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "upper-weather-a.head",
+      "at": [
+        270.5,
+        120.5,
+        116.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "upper-weather-b.foot",
+      "at": [
+        446.5,
+        120.5,
+        91.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "upper-weather-b.head",
+      "at": [
+        405.5,
+        120.5,
+        116.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "weather-forecastle.foot",
+      "at": [
+        534.5,
+        120.5,
+        116.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "weather-forecastle.head",
+      "at": [
+        575.5,
+        120.5,
+        139.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "weather-quarter.foot",
+      "at": [
+        258.5,
+        120.5,
+        116.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    },
+    {
+      "name": "weather-quarter.head",
+      "at": [
+        217.5,
+        120.5,
+        139.0
+      ],
+      "floor_present": true,
+      "headroom14_blockers": []
+    }
+  ],
+  "ladder_source_events_unchanged": {
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\230642_928_436bdc.json": true,
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\230839_643_d4b152.json": true,
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\230840_594_33f602.json": true,
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-ladders\\events\\2026-10-13\\231458_842_4ac143.json": true
+  },
+  "all_ladder_source_events_unchanged": true,
+  "protected_landing_floor_removed": [],
+  "structure": {
+    "voxels": 1034267,
+    "components6": 1,
+    "component_sizes": [
+      1034267
+    ],
+    "enclosed_empty_voxels": 0,
+    "mirror_y120_missing": 0,
+    "mirror_y120_color_diff": 0
+  },
+  "water": {
+    "old_snapshot": {
+      "enclosed_air_voxels": 1370871,
+      "probe350_120_40_water": false,
+      "probe170_120_40_water": false
+    },
+    "actual_snapshot": {
+      "enclosed_air_voxels": 1370871,
+      "probe350_120_40_water": false,
+      "probe170_120_40_water": false
+    }
+  },
+  "reverse_control": {
+    "restored_voxel": [
+      176,
+      117,
+      157
+    ],
+    "hits": [
+      {
+        "ladder": "quarter-poop",
+        "segment": "lo->hi",
+        "restored_voxel": [
+          176,
+          117,
+          157
+        ],
+        "color": 73,
+        "collision_count": 1
+      }
+    ],
+    "passed": true,
+    "memory_only": true
+  },
+  "limitations": [
+    "Only fixed four-anchor strip and VXK static voxel layer.",
+    "navSnap approach/departure legs, model/rig geometry, pose/sprite alpha excluded.",
+    "Exact path geometry is for proposed lift3; current game constant remains independently reported."
+  ],
+  "assets_modified": false,
+  "passed": true
+}
