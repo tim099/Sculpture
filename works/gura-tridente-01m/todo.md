@@ -1,8 +1,11 @@
 # 三叉戟號 TODO
 
-## 下一步：階段八 砲（TASK-0561）
-- 階段七已驗收（notes.md 階段七讀數；`tools/check_stage7.py`）。
-- 先跟 ame 對砲種代碼：遊戲的 `GUNS`／`DMG` 是寫死的幾個鍵；本船上層 12 磅、第四層 8 磅＋obús 沒有對應 ⇒ 問要新增鍵（summit 提過 12l）還是照最近的砲種。對好之前不落砲。
+## 下一步：階段八 砲（TASK-0561，設計完成、等 ame 確認代碼）
+- 設計與讀數在 notes.md 階段八；`draft_guns.py` 已算好 138 門＋墊木 84 格（verify_guns.json）。
+- ame 回覆砲種代碼（酒館 seq 24438）之後：代碼有改就改 plan `guns.types.*.code` 重跑 draft；然後
+  1. 每層有墊木的甲板子作品打標記 `階段八墊木:begin` → `tools/apply_guns.py <design> pads` → `:end`
+  2. `tools/apply_guns.py <design> models`
+  3. `tools/check_stage8.py <design>`（墊木結果帳、parts、獨立碰撞、砲口、輪子、反向對照）、過程圖、notes 讀數、勾單。
 
 ## 再之後
 - 彈藥庫與甲板物件（TASK-0562）、匯進遊戲（TASK-0563）。

@@ -1,0 +1,8530 @@
+{
+ "by_code": {
+  "12l": 34,
+  "18chase": 4,
+  "24l": 34,
+  "32c": 16,
+  "32l": 32,
+  "6l": 18
+ },
+ "count": 138,
+ "fails": [],
+ "not_ideal": [],
+ "note": "draft_guns.py（階段八）—— 現況 ＝ 組裝件 links=all（1892654 格，z < 260）＋ 模型外框 16",
+ "pads": {
+  "gura-tridente-01m-deck-lower": {
+   "file": "masks/guns/pads_lower.vox.txt",
+   "voxels": 20
+  },
+  "gura-tridente-01m-deck-middle": {
+   "file": "masks/guns/pads_middle.vox.txt",
+   "voxels": 48
+  },
+  "gura-tridente-01m-deck-upper": {
+   "file": "masks/guns/pads_upper.vox.txt",
+   "voxels": 16
+  }
+ },
+ "rows": [
+  {
+   "at": [
+    156.0,
+    269.5,
+    93.0
+   ],
+   "back": 6.5,
+   "breech": [
+    156.0,
+    253.75,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    156.0,
+    282.25,
+    104.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 276.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    150,
+    161
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    156.0,
+    131.5,
+    93.0
+   ],
+   "back": 6.5,
+   "breech": [
+    156.0,
+    147.25,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    156.0,
+    118.75,
+    104.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 125.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    150,
+    161
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    190.0,
+    273.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    190.0,
+    257.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    190.0,
+    285.75,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    184,
+    195
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    190.0,
+    128.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    190.0,
+    143.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    190.0,
+    115.25,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    184,
+    195
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    224.0,
+    275.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    224.0,
+    259.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    224.0,
+    287.75,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 282.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    218,
+    229
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    224.0,
+    126.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    224.0,
+    141.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    224.0,
+    113.25,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 119.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    218,
+    229
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    258.0,
+    276.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    258.0,
+    260.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    258.0,
+    288.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    252,
+    263
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    258.0,
+    125.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    258.0,
+    140.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    258.0,
+    112.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    252,
+    263
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    292.0,
+    276.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    292.0,
+    260.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    292.0,
+    288.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    286,
+    297
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    292.0,
+    125.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    292.0,
+    140.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    292.0,
+    112.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    286,
+    297
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    326.0,
+    276.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    326.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    326.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    320,
+    331
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    326.0,
+    125.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    326.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    326.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    320,
+    331
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    360.0,
+    276.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    360.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    360.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    354,
+    365
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    360.0,
+    125.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    360.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    360.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    354,
+    365
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    394.0,
+    276.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    394.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    394.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    388,
+    399
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    394.0,
+    125.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    394.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    394.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    388,
+    399
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    428.0,
+    276.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    428.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    428.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    422,
+    433
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    428.0,
+    125.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    428.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    428.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    422,
+    433
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    462.0,
+    276.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    462.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    462.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    456,
+    467
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    462.0,
+    125.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    462.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    462.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    456,
+    467
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    496.0,
+    276.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    496.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    496.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    490,
+    501
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    496.0,
+    125.0,
+    90.0
+   ],
+   "back": 6.0,
+   "breech": [
+    496.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    496.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    490,
+    501
+   ],
+   "port_z": [
+    95,
+    103
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    530.0,
+    276.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    530.0,
+    260.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    530.0,
+    288.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    524,
+    535
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    530.0,
+    125.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    530.0,
+    140.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    530.0,
+    112.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    524,
+    535
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    564.0,
+    274.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    564.0,
+    258.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 13,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S13",
+   "muzzle": [
+    564.0,
+    286.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    558,
+    569
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    564.0,
+    127.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    564.0,
+    142.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 13,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P13",
+   "muzzle": [
+    564.0,
+    114.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    558,
+    569
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    598.0,
+    269.5,
+    92.0
+   ],
+   "back": 6.5,
+   "breech": [
+    598.0,
+    253.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 14,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S14",
+   "muzzle": [
+    598.0,
+    282.25,
+    103.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 276.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    592,
+    603
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    598.0,
+    131.5,
+    92.0
+   ],
+   "back": 6.5,
+   "breech": [
+    598.0,
+    147.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 14,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P14",
+   "muzzle": [
+    598.0,
+    118.75,
+    103.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 125.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    592,
+    603
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    632.0,
+    262.5,
+    93.0
+   ],
+   "back": 7.5,
+   "breech": [
+    632.0,
+    246.75,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 15,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S15",
+   "muzzle": [
+    632.0,
+    275.25,
+    104.25
+   ],
+   "muzzle_out": 5.25,
+   "outer": 270.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    626,
+    637
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    632.0,
+    138.5,
+    93.0
+   ],
+   "back": 7.5,
+   "breech": [
+    632.0,
+    154.25,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 15,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P15",
+   "muzzle": [
+    632.0,
+    125.75,
+    104.25
+   ],
+   "muzzle_out": 5.25,
+   "outer": 131.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    626,
+    637
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    666.0,
+    250.5,
+    94.0
+   ],
+   "back": 8.5,
+   "breech": [
+    666.0,
+    234.75,
+    105.25
+   ],
+   "deck_z": 93.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 16,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S16",
+   "muzzle": [
+    666.0,
+    263.25,
+    105.25
+   ],
+   "muzzle_out": 4.25,
+   "outer": 259.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    660,
+    671
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    666.0,
+    150.5,
+    94.0
+   ],
+   "back": 8.5,
+   "breech": [
+    666.0,
+    166.25,
+    105.25
+   ],
+   "deck_z": 93.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "gura-tridente-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 16,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P16",
+   "muzzle": [
+    666.0,
+    137.75,
+    105.25
+   ],
+   "muzzle_out": 4.25,
+   "outer": 142.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    660,
+    671
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    145.5,
+    267.0,
+    116.0
+   ],
+   "back": 6.0,
+   "breech": [
+    145.5,
+    251.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    145.5,
+    279.5,
+    127.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 273.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    140,
+    150
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    145.5,
+    134.0,
+    116.0
+   ],
+   "back": 6.0,
+   "breech": [
+    145.5,
+    149.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    145.5,
+    121.5,
+    127.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 128.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    140,
+    150
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    178.5,
+    271.0,
+    115.0
+   ],
+   "back": 6.0,
+   "breech": [
+    178.5,
+    255.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    178.5,
+    283.5,
+    126.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 277.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    173,
+    183
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    178.5,
+    130.0,
+    115.0
+   ],
+   "back": 6.0,
+   "breech": [
+    178.5,
+    145.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    178.5,
+    117.5,
+    126.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 124.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    173,
+    183
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    212.5,
+    274.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    212.5,
+    258.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    212.5,
+    286.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 279.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    207,
+    217
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    212.5,
+    127.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    212.5,
+    142.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    212.5,
+    114.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 122.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    207,
+    217
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    245.5,
+    275.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    245.5,
+    259.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    245.5,
+    287.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    240,
+    250
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    245.5,
+    126.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    245.5,
+    141.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    245.5,
+    113.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    240,
+    250
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    278.5,
+    275.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    278.5,
+    259.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    278.5,
+    287.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    273,
+    283
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    278.5,
+    126.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    278.5,
+    141.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    278.5,
+    113.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    273,
+    283
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    312.5,
+    275.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    312.5,
+    259.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    312.5,
+    287.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    307,
+    317
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    312.5,
+    126.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    312.5,
+    141.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    312.5,
+    113.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    307,
+    317
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    345.5,
+    275.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    345.5,
+    259.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    345.5,
+    287.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    340,
+    350
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    345.5,
+    126.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    345.5,
+    141.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    345.5,
+    113.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    340,
+    350
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    378.5,
+    275.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    378.5,
+    259.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    378.5,
+    287.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    373,
+    383
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    378.5,
+    126.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    378.5,
+    141.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    378.5,
+    113.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    373,
+    383
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    411.5,
+    275.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    411.5,
+    259.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    411.5,
+    287.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    406,
+    416
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    411.5,
+    126.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    411.5,
+    141.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    411.5,
+    113.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    406,
+    416
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    445.5,
+    275.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    445.5,
+    259.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    445.5,
+    287.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    440,
+    450
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    445.5,
+    126.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    445.5,
+    141.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    445.5,
+    113.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    440,
+    450
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    478.5,
+    275.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    478.5,
+    259.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    478.5,
+    287.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    473,
+    483
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    478.5,
+    126.0,
+    113.0
+   ],
+   "back": 5.0,
+   "breech": [
+    478.5,
+    141.5,
+    124.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    478.5,
+    113.5,
+    124.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    473,
+    483
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    511.5,
+    273.0,
+    114.0
+   ],
+   "back": 7.0,
+   "breech": [
+    511.5,
+    257.5,
+    125.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    511.5,
+    285.5,
+    125.5
+   ],
+   "muzzle_out": 5.5,
+   "outer": 280.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    506,
+    516
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    511.5,
+    128.0,
+    114.0
+   ],
+   "back": 7.0,
+   "breech": [
+    511.5,
+    143.5,
+    125.5
+   ],
+   "deck_z": 112.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    511.5,
+    115.5,
+    125.5
+   ],
+   "muzzle_out": 5.5,
+   "outer": 121.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    506,
+    516
+   ],
+   "port_z": [
+    118,
+    126
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    545.5,
+    274.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    545.5,
+    258.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 13,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S13",
+   "muzzle": [
+    545.5,
+    286.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 279.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    540,
+    550
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    545.5,
+    127.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    545.5,
+    142.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 13,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P13",
+   "muzzle": [
+    545.5,
+    114.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 122.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    540,
+    550
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    578.5,
+    271.0,
+    115.0
+   ],
+   "back": 6.0,
+   "breech": [
+    578.5,
+    255.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 14,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S14",
+   "muzzle": [
+    578.5,
+    283.5,
+    126.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 277.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    573,
+    583
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    578.5,
+    130.0,
+    115.0
+   ],
+   "back": 6.0,
+   "breech": [
+    578.5,
+    145.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 14,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P14",
+   "muzzle": [
+    578.5,
+    117.5,
+    126.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 124.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    573,
+    583
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    611.5,
+    267.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    611.5,
+    251.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 15,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S15",
+   "muzzle": [
+    611.5,
+    279.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 272.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    606,
+    616
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    611.5,
+    134.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    611.5,
+    149.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 15,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P15",
+   "muzzle": [
+    611.5,
+    121.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 129.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    606,
+    616
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    645.5,
+    259.0,
+    116.0
+   ],
+   "back": 6.0,
+   "breech": [
+    645.5,
+    243.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 16,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S16",
+   "muzzle": [
+    645.5,
+    271.5,
+    127.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 265.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    640,
+    650
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    645.5,
+    142.0,
+    116.0
+   ],
+   "back": 6.0,
+   "breech": [
+    645.5,
+    157.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 16,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P16",
+   "muzzle": [
+    645.5,
+    129.5,
+    127.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 136.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    640,
+    650
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    678.5,
+    245.0,
+    118.0
+   ],
+   "back": 8.0,
+   "breech": [
+    678.5,
+    229.5,
+    129.5
+   ],
+   "deck_z": 116.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 17,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S17",
+   "muzzle": [
+    678.5,
+    257.5,
+    129.5
+   ],
+   "muzzle_out": 4.5,
+   "outer": 253.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    673,
+    683
+   ],
+   "port_z": [
+    122,
+    130
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    678.5,
+    156.0,
+    118.0
+   ],
+   "back": 8.0,
+   "breech": [
+    678.5,
+    171.5,
+    129.5
+   ],
+   "deck_z": 116.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "deck": "middle",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 17,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P17",
+   "muzzle": [
+    678.5,
+    143.5,
+    129.5
+   ],
+   "muzzle_out": 4.5,
+   "outer": 148.0,
+   "pad_cells": 6,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    673,
+    683
+   ],
+   "port_z": [
+    122,
+    130
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    137.0,
+    261.5,
+    139.0
+   ],
+   "back": 6.5,
+   "breech": [
+    137.0,
+    247.75,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    137.0,
+    274.25,
+    146.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    132,
+    141
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    137.0,
+    139.5,
+    139.0
+   ],
+   "back": 6.5,
+   "breech": [
+    137.0,
+    153.25,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    137.0,
+    126.75,
+    146.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    132,
+    141
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    169.0,
+    265.5,
+    139.0
+   ],
+   "back": 5.5,
+   "breech": [
+    169.0,
+    251.75,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    169.0,
+    278.25,
+    146.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 271.0,
+   "pad_cells": 8,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    164,
+    173
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    169.0,
+    135.5,
+    139.0
+   ],
+   "back": 5.5,
+   "breech": [
+    169.0,
+    149.25,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    169.0,
+    122.75,
+    146.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 130.0,
+   "pad_cells": 8,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    164,
+    173
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    202.0,
+    267.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    202.0,
+    253.75,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    202.0,
+    280.25,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 273.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    197,
+    206
+   ],
+   "port_z": [
+    143,
+    150
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    202.0,
+    133.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    202.0,
+    147.25,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    202.0,
+    120.75,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 128.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    197,
+    206
+   ],
+   "port_z": [
+    143,
+    150
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    234.0,
+    268.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    234.0,
+    254.75,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    234.0,
+    281.25,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 274.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    229,
+    238
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    234.0,
+    132.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    234.0,
+    146.25,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    234.0,
+    119.75,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 127.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    229,
+    238
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    267.0,
+    269.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    267.0,
+    255.75,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    267.0,
+    282.25,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    262,
+    271
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    267.0,
+    131.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    267.0,
+    145.25,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    267.0,
+    118.75,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    262,
+    271
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    299.0,
+    269.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    299.0,
+    255.75,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    299.0,
+    282.25,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    294,
+    303
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    299.0,
+    131.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    299.0,
+    145.25,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    299.0,
+    118.75,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    294,
+    303
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    332.0,
+    269.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    332.0,
+    255.75,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    332.0,
+    282.25,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    327,
+    336
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    332.0,
+    131.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    332.0,
+    145.25,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    332.0,
+    118.75,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    327,
+    336
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    364.0,
+    269.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    364.0,
+    255.75,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    364.0,
+    282.25,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    359,
+    368
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    364.0,
+    131.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    364.0,
+    145.25,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    364.0,
+    118.75,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    359,
+    368
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    397.0,
+    269.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    397.0,
+    255.75,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    397.0,
+    282.25,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    392,
+    401
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    397.0,
+    131.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    397.0,
+    145.25,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    397.0,
+    118.75,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    392,
+    401
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    429.0,
+    269.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    429.0,
+    255.75,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    429.0,
+    282.25,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    424,
+    433
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    429.0,
+    131.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    429.0,
+    145.25,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    429.0,
+    118.75,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    424,
+    433
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    462.0,
+    269.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    462.0,
+    255.75,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    462.0,
+    282.25,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    457,
+    466
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    462.0,
+    131.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    462.0,
+    145.25,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    462.0,
+    118.75,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    457,
+    466
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    494.0,
+    269.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    494.0,
+    255.75,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    494.0,
+    282.25,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 275.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    489,
+    498
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    494.0,
+    131.5,
+    136.0
+   ],
+   "back": 5.5,
+   "breech": [
+    494.0,
+    145.25,
+    143.25
+   ],
+   "deck_z": 135.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    494.0,
+    118.75,
+    143.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 126.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    489,
+    498
+   ],
+   "port_z": [
+    141,
+    148
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    527.0,
+    268.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    527.0,
+    254.75,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 13,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S13",
+   "muzzle": [
+    527.0,
+    281.25,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 274.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    522,
+    531
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    527.0,
+    132.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    527.0,
+    146.25,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 13,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P13",
+   "muzzle": [
+    527.0,
+    119.75,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 127.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    522,
+    531
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    559.0,
+    267.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    559.0,
+    253.75,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 14,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S14",
+   "muzzle": [
+    559.0,
+    280.25,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 273.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    554,
+    563
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    559.0,
+    133.5,
+    137.0
+   ],
+   "back": 5.5,
+   "breech": [
+    559.0,
+    147.25,
+    144.25
+   ],
+   "deck_z": 136.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 14,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P14",
+   "muzzle": [
+    559.0,
+    120.75,
+    144.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 128.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    554,
+    563
+   ],
+   "port_z": [
+    142,
+    149
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    592.0,
+    264.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    592.0,
+    250.75,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 15,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S15",
+   "muzzle": [
+    592.0,
+    277.25,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 270.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    587,
+    596
+   ],
+   "port_z": [
+    143,
+    150
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    592.0,
+    136.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    592.0,
+    150.25,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 15,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P15",
+   "muzzle": [
+    592.0,
+    123.75,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 131.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    587,
+    596
+   ],
+   "port_z": [
+    143,
+    150
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    624.0,
+    259.5,
+    139.0
+   ],
+   "back": 6.5,
+   "breech": [
+    624.0,
+    245.75,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 16,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S16",
+   "muzzle": [
+    624.0,
+    272.25,
+    146.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 266.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    619,
+    628
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    624.0,
+    141.5,
+    139.0
+   ],
+   "back": 6.5,
+   "breech": [
+    624.0,
+    155.25,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 16,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P16",
+   "muzzle": [
+    624.0,
+    128.75,
+    146.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 135.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    619,
+    628
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    657.0,
+    251.5,
+    140.0
+   ],
+   "back": 6.5,
+   "breech": [
+    657.0,
+    237.75,
+    147.25
+   ],
+   "deck_z": 139.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 17,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S17",
+   "muzzle": [
+    657.0,
+    264.25,
+    147.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 258.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    652,
+    661
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    657.0,
+    149.5,
+    140.0
+   ],
+   "back": 6.5,
+   "breech": [
+    657.0,
+    163.25,
+    147.25
+   ],
+   "deck_z": 139.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 17,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P17",
+   "muzzle": [
+    657.0,
+    136.75,
+    147.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 143.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    652,
+    661
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    689.216,
+    236.034,
+    141.0
+   ],
+   "back": 9.0,
+   "breech": [
+    687.974,
+    221.838,
+    151.75
+   ],
+   "deck_z": 140.0,
+   "dl": 1,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "arc": "bow",
+    "deck": "upper",
+    "gun": "18chase",
+    "kind": "gun",
+    "port": 18,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S18",
+   "muzzle": [
+    690.327,
+    248.736,
+    151.75
+   ],
+   "muzzle_out": 4.736,
+   "outer": 245.0,
+   "pad_cells": 0,
+   "pivot": [
+    13.5,
+    36.0,
+    0.0
+   ],
+   "port_x": [
+    684,
+    693
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "rotate": [
+    0,
+    0,
+    -5
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "chase18",
+   "work": "basecamp-frigate-constitution-01m-gun-long18"
+  },
+  {
+   "at": [
+    689.216,
+    164.966,
+    141.0
+   ],
+   "back": 9.0,
+   "breech": [
+    687.974,
+    179.162,
+    151.75
+   ],
+   "deck_z": 140.0,
+   "dl": 1,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "arc": "bow",
+    "deck": "upper",
+    "gun": "18chase",
+    "kind": "gun",
+    "port": 18,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P18",
+   "muzzle": [
+    690.327,
+    152.264,
+    151.75
+   ],
+   "muzzle_out": 4.736,
+   "outer": 156.0,
+   "pad_cells": 0,
+   "pivot": [
+    13.5,
+    36.0,
+    0.0
+   ],
+   "port_x": [
+    684,
+    693
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "rotate": [
+    0,
+    0,
+    5
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "chase18",
+   "work": "basecamp-frigate-constitution-01m-gun-long18"
+  },
+  {
+   "at": [
+    132.5,
+    255.5,
+    162.0
+   ],
+   "back": 5.5,
+   "breech": [
+    132.5,
+    244.25,
+    168.75
+   ],
+   "deck_z": 161.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    132.5,
+    267.25,
+    168.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 261.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    128,
+    136
+   ],
+   "port_z": [
+    166,
+    173
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    132.5,
+    145.5,
+    162.0
+   ],
+   "back": 5.5,
+   "breech": [
+    132.5,
+    156.75,
+    168.75
+   ],
+   "deck_z": 161.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    132.5,
+    133.75,
+    168.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 140.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    128,
+    136
+   ],
+   "port_z": [
+    166,
+    173
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    166.0,
+    260.0,
+    162.0
+   ],
+   "back": 5.0,
+   "breech": [
+    166.0,
+    253.75,
+    171.75
+   ],
+   "deck_z": 161.0,
+   "dl": -1.5,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    166.0,
+    264.75,
+    171.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 265.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    163,
+    171
+   ],
+   "port_z": [
+    166,
+    173
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    166.0,
+    141.0,
+    162.0
+   ],
+   "back": 5.0,
+   "breech": [
+    166.0,
+    147.25,
+    171.75
+   ],
+   "deck_z": 161.0,
+   "dl": -1.5,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    166.0,
+    136.25,
+    171.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 136.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    163,
+    171
+   ],
+   "port_z": [
+    166,
+    173
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    202.5,
+    261.5,
+    161.0
+   ],
+   "back": 5.5,
+   "breech": [
+    202.5,
+    250.25,
+    167.75
+   ],
+   "deck_z": 160.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    202.5,
+    273.25,
+    167.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 267.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    198,
+    206
+   ],
+   "port_z": [
+    165,
+    172
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    202.5,
+    139.5,
+    161.0
+   ],
+   "back": 5.5,
+   "breech": [
+    202.5,
+    150.75,
+    167.75
+   ],
+   "deck_z": 160.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    202.5,
+    127.75,
+    167.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 134.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    198,
+    206
+   ],
+   "port_z": [
+    165,
+    172
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    237.5,
+    264.0,
+    160.0
+   ],
+   "back": 4.0,
+   "breech": [
+    237.5,
+    257.75,
+    169.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    237.5,
+    268.75,
+    169.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    233,
+    241
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    237.5,
+    137.0,
+    160.0
+   ],
+   "back": 4.0,
+   "breech": [
+    237.5,
+    143.25,
+    169.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    237.5,
+    132.25,
+    169.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    233,
+    241
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    272.5,
+    262.5,
+    160.0
+   ],
+   "back": 5.5,
+   "breech": [
+    272.5,
+    251.25,
+    166.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    272.5,
+    274.25,
+    166.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    268,
+    276
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    272.5,
+    138.5,
+    160.0
+   ],
+   "back": 5.5,
+   "breech": [
+    272.5,
+    149.75,
+    166.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    272.5,
+    126.75,
+    166.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    268,
+    276
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    307.5,
+    264.0,
+    160.0
+   ],
+   "back": 4.0,
+   "breech": [
+    307.5,
+    257.75,
+    169.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    307.5,
+    268.75,
+    169.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    303,
+    311
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    307.5,
+    137.0,
+    160.0
+   ],
+   "back": 4.0,
+   "breech": [
+    307.5,
+    143.25,
+    169.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    307.5,
+    132.25,
+    169.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    303,
+    311
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    342.5,
+    262.5,
+    159.0
+   ],
+   "back": 5.5,
+   "breech": [
+    342.5,
+    251.25,
+    165.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    342.5,
+    274.25,
+    165.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    338,
+    346
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    342.5,
+    138.5,
+    159.0
+   ],
+   "back": 5.5,
+   "breech": [
+    342.5,
+    149.75,
+    165.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    342.5,
+    126.75,
+    165.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    338,
+    346
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    377.5,
+    264.0,
+    159.0
+   ],
+   "back": 4.0,
+   "breech": [
+    377.5,
+    257.75,
+    168.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    377.5,
+    268.75,
+    168.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    373,
+    381
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    377.5,
+    137.0,
+    159.0
+   ],
+   "back": 4.0,
+   "breech": [
+    377.5,
+    143.25,
+    168.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    377.5,
+    132.25,
+    168.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    373,
+    381
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    412.5,
+    262.5,
+    159.0
+   ],
+   "back": 5.5,
+   "breech": [
+    412.5,
+    251.25,
+    165.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    412.5,
+    274.25,
+    165.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    408,
+    416
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    412.5,
+    138.5,
+    159.0
+   ],
+   "back": 5.5,
+   "breech": [
+    412.5,
+    149.75,
+    165.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    412.5,
+    126.75,
+    165.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    408,
+    416
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    448.5,
+    264.0,
+    159.0
+   ],
+   "back": 4.0,
+   "breech": [
+    448.5,
+    257.75,
+    168.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    448.5,
+    268.75,
+    168.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    444,
+    452
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    448.5,
+    137.0,
+    159.0
+   ],
+   "back": 4.0,
+   "breech": [
+    448.5,
+    143.25,
+    168.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    448.5,
+    132.25,
+    168.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    444,
+    452
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    483.5,
+    262.5,
+    159.0
+   ],
+   "back": 5.5,
+   "breech": [
+    483.5,
+    251.25,
+    165.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    483.5,
+    274.25,
+    165.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    479,
+    487
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    483.5,
+    138.5,
+    159.0
+   ],
+   "back": 5.5,
+   "breech": [
+    483.5,
+    149.75,
+    165.75
+   ],
+   "deck_z": 158.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    483.5,
+    126.75,
+    165.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    479,
+    487
+   ],
+   "port_z": [
+    163,
+    170
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    518.5,
+    264.0,
+    160.0
+   ],
+   "back": 4.0,
+   "breech": [
+    518.5,
+    257.75,
+    169.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    518.5,
+    268.75,
+    169.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    514,
+    522
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    518.5,
+    137.0,
+    160.0
+   ],
+   "back": 4.0,
+   "breech": [
+    518.5,
+    143.25,
+    169.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    518.5,
+    132.25,
+    169.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    514,
+    522
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    553.5,
+    261.5,
+    160.0
+   ],
+   "back": 5.5,
+   "breech": [
+    553.5,
+    250.25,
+    166.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 13,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S13",
+   "muzzle": [
+    553.5,
+    273.25,
+    166.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 267.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    549,
+    557
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    553.5,
+    139.5,
+    160.0
+   ],
+   "back": 5.5,
+   "breech": [
+    553.5,
+    150.75,
+    166.75
+   ],
+   "deck_z": 159.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 13,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P13",
+   "muzzle": [
+    553.5,
+    127.75,
+    166.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 134.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    549,
+    557
+   ],
+   "port_z": [
+    164,
+    171
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    589.0,
+    260.0,
+    161.0
+   ],
+   "back": 5.0,
+   "breech": [
+    589.0,
+    253.75,
+    170.75
+   ],
+   "deck_z": 160.0,
+   "dl": 0.5,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 14,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S14",
+   "muzzle": [
+    589.0,
+    264.75,
+    170.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 265.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    584,
+    592
+   ],
+   "port_z": [
+    165,
+    172
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    589.0,
+    141.0,
+    161.0
+   ],
+   "back": 5.0,
+   "breech": [
+    589.0,
+    147.25,
+    170.75
+   ],
+   "deck_z": 160.0,
+   "dl": 0.5,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 14,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P14",
+   "muzzle": [
+    589.0,
+    136.25,
+    170.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 136.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    584,
+    592
+   ],
+   "port_z": [
+    165,
+    172
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    623.5,
+    254.5,
+    162.0
+   ],
+   "back": 5.5,
+   "breech": [
+    623.5,
+    243.25,
+    168.75
+   ],
+   "deck_z": 161.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 15,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S15",
+   "muzzle": [
+    623.5,
+    266.25,
+    168.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 260.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    619,
+    627
+   ],
+   "port_z": [
+    166,
+    173
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    623.5,
+    146.5,
+    162.0
+   ],
+   "back": 5.5,
+   "breech": [
+    623.5,
+    157.75,
+    168.75
+   ],
+   "deck_z": 161.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 15,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P15",
+   "muzzle": [
+    623.5,
+    134.75,
+    168.75
+   ],
+   "muzzle_out": 6.25,
+   "outer": 141.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    619,
+    627
+   ],
+   "port_z": [
+    166,
+    173
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    659.0,
+    248.0,
+    163.0
+   ],
+   "back": 5.0,
+   "breech": [
+    659.0,
+    241.75,
+    172.75
+   ],
+   "deck_z": 162.0,
+   "dl": 0.5,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 16,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S16",
+   "muzzle": [
+    659.0,
+    252.75,
+    172.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 253.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    654,
+    662
+   ],
+   "port_z": [
+    167,
+    174
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    659.0,
+    153.0,
+    163.0
+   ],
+   "back": 5.0,
+   "breech": [
+    659.0,
+    159.25,
+    172.75
+   ],
+   "deck_z": 162.0,
+   "dl": 0.5,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 16,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P16",
+   "muzzle": [
+    659.0,
+    148.25,
+    172.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 148.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    654,
+    662
+   ],
+   "port_z": [
+    167,
+    174
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "obus",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    693.5,
+    232.5,
+    164.0
+   ],
+   "back": 7.5,
+   "breech": [
+    693.5,
+    221.25,
+    170.75
+   ],
+   "deck_z": 163.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 17,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S17",
+   "muzzle": [
+    693.5,
+    244.25,
+    170.75
+   ],
+   "muzzle_out": 4.25,
+   "outer": 240.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    689,
+    697
+   ],
+   "port_z": [
+    168,
+    175
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    693.5,
+    168.5,
+    164.0
+   ],
+   "back": 7.5,
+   "breech": [
+    693.5,
+    179.75,
+    170.75
+   ],
+   "deck_z": 163.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 17,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P17",
+   "muzzle": [
+    693.5,
+    156.75,
+    170.75
+   ],
+   "muzzle_out": 4.25,
+   "outer": 161.0,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "port_x": [
+    689,
+    697
+   ],
+   "port_z": [
+    168,
+    175
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long6",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    92.5,
+    168.5,
+    117.0
+   ],
+   "back": 5.5,
+   "breech": [
+    106.75,
+    168.5,
+    127.75
+   ],
+   "deck_z": 116.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "arc": "stern",
+    "deck": "middle",
+    "gun": "18chase",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "none",
+   "model": "追擊砲-船尾-P",
+   "muzzle": [
+    79.75,
+    168.5,
+    127.75
+   ],
+   "muzzle_out": 7.25,
+   "outer": 87.0,
+   "pad_cells": 0,
+   "pivot": [
+    13.5,
+    36.0,
+    0.0
+   ],
+   "port_y": [
+    165,
+    171
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "rotate": [
+    0,
+    0,
+    90
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "chase18",
+   "work": "basecamp-frigate-constitution-01m-gun-long18"
+  },
+  {
+   "at": [
+    92.5,
+    232.5,
+    117.0
+   ],
+   "back": 5.5,
+   "breech": [
+    106.75,
+    232.5,
+    127.75
+   ],
+   "deck_z": 116.0,
+   "dl": 0,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "arc": "stern",
+    "deck": "middle",
+    "gun": "18chase",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "追擊砲-船尾-S",
+   "muzzle": [
+    79.75,
+    232.5,
+    127.75
+   ],
+   "muzzle_out": 7.25,
+   "outer": 87.0,
+   "pad_cells": 0,
+   "pivot": [
+    13.5,
+    36.0,
+    0.0
+   ],
+   "port_y": [
+    229,
+    235
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "rotate": [
+    0,
+    0,
+    90
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "chase18",
+   "work": "basecamp-frigate-constitution-01m-gun-long18"
+  }
+ ],
+ "types": {
+  "chase18": {
+   "anchors": {
+    "breech": [
+     13,
+     7,
+     21
+    ],
+    "cascabel": [
+     13,
+     2,
+     21
+    ],
+    "eye-aft": [
+     3,
+     22,
+     14
+    ],
+    "eye-fwd": [
+     23,
+     22,
+     14
+    ],
+    "muzzle": [
+     13,
+     61,
+     21
+    ],
+    "train": [
+     13,
+     8,
+     8
+    ]
+   },
+   "asym_x": 0,
+   "cells": 6565,
+   "code": "18chase",
+   "pivot": [
+    13.5,
+    36.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    27,
+    62,
+    26
+   ],
+   "work": "basecamp-frigate-constitution-01m-gun-long18"
+  },
+  "long12": {
+   "anchors": {
+    "breech": [
+     9,
+     7,
+     14
+    ],
+    "cascabel": [
+     9,
+     1,
+     14
+    ],
+    "eye-aft": [
+     1,
+     22,
+     9
+    ],
+    "eye-fwd": [
+     17,
+     22,
+     9
+    ],
+    "muzzle": [
+     9,
+     60,
+     14
+    ],
+    "train": [
+     9,
+     10,
+     6
+    ],
+    "trunnion": [
+     9,
+     29,
+     14
+    ]
+   },
+   "asym_x": 0,
+   "cells": 3234,
+   "code": "12l",
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    19,
+    61,
+    19
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  "long24": {
+   "anchors": {
+    "breech": [
+     7,
+     3,
+     11
+    ],
+    "cascabel": [
+     7,
+     1,
+     11
+    ],
+    "eye-aft": [
+     2,
+     10,
+     7
+    ],
+    "eye-fwd": [
+     12,
+     10,
+     7
+    ],
+    "muzzle": [
+     7,
+     31,
+     11
+    ],
+    "train": [
+     7,
+     3,
+     4
+    ]
+   },
+   "asym_x": 0,
+   "cells": 1125,
+   "code": "24l",
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "scale": 1.0,
+   "size": [
+    14,
+    32,
+    14
+   ],
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  "long32": {
+   "anchors": {
+    "breech": [
+     15,
+     8,
+     22
+    ],
+    "cascabel": [
+     15,
+     2,
+     22
+    ],
+    "eye-aft": [
+     4,
+     25,
+     15
+    ],
+    "eye-fwd": [
+     26,
+     25,
+     15
+    ],
+    "muzzle": [
+     15,
+     65,
+     22
+    ],
+    "train": [
+     15,
+     9,
+     9
+    ]
+   },
+   "asym_x": 0,
+   "cells": 8393,
+   "code": "32l",
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    30,
+    66,
+    28
+   ],
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  "long6": {
+   "anchors": {
+    "breech": [
+     8,
+     7,
+     13
+    ],
+    "cascabel": [
+     8,
+     1,
+     13
+    ],
+    "eye-aft": [
+     1,
+     19,
+     9
+    ],
+    "eye-fwd": [
+     15,
+     19,
+     9
+    ],
+    "muzzle": [
+     8,
+     53,
+     13
+    ],
+    "train": [
+     8,
+     9,
+     5
+    ],
+    "trunnion": [
+     8,
+     26,
+     13
+    ]
+   },
+   "asym_x": 0,
+   "cells": 2165,
+   "code": "6l",
+   "pivot": [
+    8.5,
+    30.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    17,
+    53,
+    17
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  "obus": {
+   "anchors": {
+    "breech": [
+     7,
+     29,
+     19
+    ],
+    "cascabel": [
+     7,
+     25,
+     19
+    ],
+    "eye-aft": [
+     0,
+     40,
+     7
+    ],
+    "eye-fwd": [
+     14,
+     40,
+     7
+    ],
+    "muzzle": [
+     7,
+     51,
+     19
+    ],
+    "pivot": [
+     7,
+     38,
+     4
+    ]
+   },
+   "asym_x": 0,
+   "cells": 3498,
+   "code": "32c",
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    15,
+    52,
+    24
+   ],
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  }
+ }
+}

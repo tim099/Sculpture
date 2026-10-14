@@ -384,5 +384,24 @@
     },
     "wind": [4.5, -1.5, 0],
     "sail_seconds": 4
+  },
+  "guns": {
+    "src": "設計決定（TASK-0561）：砲一門一個外部模型，借現成的砲子作品（匯入自動 credit）—— 不新做砲；砲種代碼照提案（tavern seq 24438，等 ame 確認），新代碼只有風暴角號本來就要的 12l、6l",
+    "types": {
+      "long32": {"work": "basecamp-ember-01m-gun-long32", "code": "32l", "scale": 0.5, "title": "36 磅（餘燼號 32 磅長砲）"},
+      "long24": {"work": "basecamp-frigate-constitution-01m-gun-24", "code": "24l", "scale": 1.0, "title": "24 磅（憲法號 24 磅長砲）"},
+      "long12": {"work": "summit-stormkaap-01m-gun-12l", "code": "12l", "scale": 0.5, "title": "12 磅（風暴角號 12 磅長砲）"},
+      "long6": {"work": "summit-stormkaap-01m-gun-6l", "code": "6l", "scale": 0.5, "title": "8 磅（風暴角號 6 磅長砲）"},
+      "obus": {"work": "basecamp-frigate-constitution-01m-gun-carronade32", "code": "32c", "scale": 0.5, "title": "24 磅 obús（憲法號 32 磅 carronade）"},
+      "chase18": {"work": "basecamp-frigate-constitution-01m-gun-long18", "code": "18chase", "scale": 0.5, "title": "追擊砲（憲法號 18 磅長砲）"}
+    },
+    "rows": {"lower": "long32", "middle": "long24", "upper": "long12", "spar": ["long6", "obus"]},
+    "rows_src": "spar（第四層）17 門：單數號 8 磅、雙數號 obús ⇒ 9＋8（1805 年 18×8 磅＋16 obús 照 ÷2）",
+    "chase": {
+      "bow": {"deck": "upper", "port": 18, "type": "chase18", "angles": [5, 10, 15, 20, 25, 30, 35]},
+      "stern": {"deck": "middle", "type": "chase18"},
+      "src": "設計決定：船頭沒有開追擊砲門 ⇒ 船頭追擊砲借上砲甲板最前面那個砲門（第 18 個），照角度搜往船頭偏（造船規格 §4.2，同憲法號），那個砲門的 12 磅讓給它；船尾用中砲甲板船尾窗那一列的兩個砲門（verify_ports windows kind=port）。舷側 136 − 2 ＋ 追擊 4 ＝ 138（1805 年 140：差的就是船頭那兩門 —— 已知偏差）"
+    },
+    "search": {"dl": [0, 0.5, -0.5, 1, -1, 1.5, -1.5], "step": 0.5, "max_back": 60, "min_muzzle_out": 0.5, "dz": [1, 0, 2]}
   }
 }
