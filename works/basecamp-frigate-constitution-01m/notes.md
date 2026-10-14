@@ -844,3 +844,19 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 讀數：組裝件 **1,398,023**（＋470 ＝ 兩件子作品 × 兩舷、−22 ＝ 舊 chesstree 兩舷）、1 元件、空腔 0；繩 915、ropes_broken 0。新的 9 條繩（直線、半垂、全垂三種掃）穿過實心 0；跟其他繩最近：tack-S 與 guy-S 1.0（同一個 bumpkin 尖、上下差一格），其餘 ≥ 1.34。產生程式藏掉四條關聯重跑 ⇒ 兩件 sha 跟套用的那份逐位元組相同。
 - 其他 braces（fore、crossjack、topsail／topgallant 各桅）沒做 —— 1931 的平面圖只標了 main brace；#21227（Spar and Rigging Plan 1930）有畫 brace 的線但沒標名字。導向的通則見 todo「其他 braces（規劃）」（Steel 1794、Lever 1819）。
 - 過程圖：`overlays/stage41_main_brace{,_close}.png`、`stage41_foretack.png`。
+
+## berth → orlop 梯子（2026-10-14 晚，BTC；Tim：「orlop也補一下」—— ame 的配置頁 orlop 艙房標「走不到」）
+- 設計（`basecamp-frigate-constitution-01m/design/draft_orlop_ladders.py`，兩艘共用；幾何、顏色、扶手照新圖紙 20）：orlop 前後兩塊平台各一座，梯口只穿 berth deck（開在兩根橫樑之間），梯子落在 orlop 中線走道靠右舷那一側（y 162–168）—— 中線有一排柱子、桅也在中線。
+  新圖紙 20 當時三處都放不下（after hatch 底下是洞、fore scuttle 落進艙房、companion 正對中線柱子），所以另開。
+- 子作品 `basecamp-frigate-constitution-01m-ladders-orlop`「憲法號 berth → orlop 的梯子」（parent ＝ orlop 甲板、0.1 m、sub）；關聯 `甲板-orlop/梯子`（at 0,0,0、meta kind=ladders）；berth 甲板子作品 `basecamp-frigate-constitution-01m-deck-berth` 開梯口（carvevox 帶顏色，只准是甲板板 250）。
+- 兩座：orlop-aft（梯口 X 361–370：berth 橫樑 358–359 與 372–375 之間；往船頭下、梯腳 X 372，主桅 352 前面）、orlop-fore（梯口 X 540–551：橫樑 535–538 與 552–555 之間、fore hatch 前面；梯腳 X 552）
+- 每座 band 4、cap_up 0 第一次就放得下；367 格（側板 190、踏板 105、扶手柱 72）；梯口刻 198。扶手繩 4 條（`ladders/manropes`，0.35、slack 1.02）、柱頂固定點 8 個；給遊戲的點 8 個（`tools/ladder_points.py --draft --apply`，只對這一件）。
+讀數（草稿開著，等 Tim 預覽）：
+- 組裝件 export list 1,397,940 ＝ 1,397,771 − 198 ＋ 367，逐格缺 0／多 0／顏色不同 0；link_overlap 0、link_clipped 0；stats 1 元件、封閉空腔 0。
+- 梯子跟現況重疊 0、浮空 0；梯子每一格都不在任何一間艙房（kind=rooms 的 min／max，34 間）裡。
+- 扶手繩 4 條 ok（ropes 讀回、沒有斷的）。
+- `ladder_points.py` 帶齊全部梯子重算（不寫入）：舊梯子的 foot／lo／hi／head 一個都沒變，多了 orlop-aft、orlop-fore ⇒ verify_ladder_points_*.json 是完整的那一份。
+  ⚠ 這支工具原本只讀作品本體 ⇒ 加了 `--draft`（讀作品＋草稿；那件沒有草稿就照舊讀作品）。
+- 過程圖：`overlays/stage45_orlop_ladder_{aft,fore,aft_orlop}.png`。
+- 套用（Tim「測試ok 套用草稿然後單層提交吧 然後通知ame」）：梯子 367、berth 梯口 198，changed ＝ 清單格數、apply_mismatch 0；組裝件（不開草稿）export list 1,397,940 格，跟預覽時的草稿逐行相同；stats 1 元件、空腔 0。
+- constitution.vxk 重匯（include=rig,models,parts,meta；封裝回讀逐格對拍 ✓）：checksum 2725233c（繩 919、帆 17、模型 215、帶 meta 230、固定點 1,271）；ropes／sails／models_broken 0。

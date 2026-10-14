@@ -9,6 +9,7 @@
 #   foot／head：沿梯子的軸往外一欄一欄走，取那一欄（梯中線 y）最高的實心當地板；
 #   第一段「連續 3 欄地板一樣高、上面 headroom 格都是空氣」的第一欄 ⇒ 那一格（艙口圍欄湊不成平地 ⇒ 跨過去）。
 # 用法：python -I ladder_points.py <組裝件> <甲板子作品>:<關聯名>:<梯子子作品> [...] [--apply]
+#   --draft：讀「作品＋草稿」（2026-10-14 berth → orlop 梯子：格子還在草稿等預覽、點先登記；套用後格子不變 ⇒ 點照樣成立）
 #   不帶 --apply 只算、寫 verify（零寫入作品）；帶了才登記固定點、補 meta。⇒ <設計資料夾>/verify_ladder_points_<組裝件>.json
 import sys, os, json, re, subprocess, time, collections
 import numpy as np
@@ -33,7 +34,9 @@ def export(work):
     import tempfile
     with tempfile.TemporaryDirectory() as d:
         out = os.path.join(d, 'w.txt').replace('\\', '/')
-        r = cli(['op=export', 'format=list', 'work=' + work, 'out=' + out])
+        r = cli(['op=export', 'format=list', 'work=' + work, 'out=' + out] + (['draft=1'] if '--draft' in sys.argv else []))
+        if r.returncode and '沒有開著的草稿' in (r.stdout + r.stderr):      # --draft：這件沒有草稿 ⇒ 讀作品本身
+            r = cli(['op=export', 'format=list', 'work=' + work, 'out=' + out])
         if r.returncode or not os.path.exists(out):
             raise SystemExit('匯出失敗 %s：%s' % (work, (r.stdout + r.stderr)[-400:]))
         return np.loadtxt(out, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
