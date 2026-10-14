@@ -1,10 +1,13 @@
 # TASK-0576 落格：照 verify_implements.json —— 每層一件 rammer／sponge 子作品（整船框、0.1 m、parent 船殼、tags sub）→ stampvox（讀回 placed）→ 那一層甲板子作品裡的關聯
-#   用法：python -I -X utf8 tools/apply_implements.py <design>
+#   用法：python -I -X utf8 tools/apply_implements.py <design> [verify 檔名（預設 verify_implements.json；shot garland 用 verify_garlands.json）] [單號]
+#   ⇒ 「整船框、at 0,0,0、每層一件、關聯在甲板裡」這一型的子作品都走這一支
 import json, os, re, subprocess, sys, time
 
 sys.stdout.reconfigure(encoding='utf-8')
 D = os.path.abspath(sys.argv[1])
-V = json.load(open(os.path.join(D, 'verify_implements.json'), encoding='utf-8'))
+VF = sys.argv[2] if len(sys.argv) > 2 else 'verify_implements.json'
+TASK = sys.argv[3] if len(sys.argv) > 3 else 'TASK-0576'
+V = json.load(open(os.path.join(D, VF), encoding='utf-8'))
 retried = 0
 
 
@@ -42,6 +45,6 @@ for w in V['works']:
     elif have != w['voxels']:
         raise SystemExit('✗ %s 已有 %d 格 ≠ %d' % (w['work'], have, w['voxels']))
     cli('op=work', 'sub=link', 'persona=gura', 'work=' + w['host_work'], 'name=' + w['link'], 'source_work=' + w['work'], 'at=0,0,0', 'overwrite=1',
-        'note=rammer／sponge（TASK-0576）')
+        'note=%s（%s）' % (w['title'], TASK))
     print('✓', w['work'], w['voxels'], '關聯', w['host_work'], w['link'])
 print('IOException 重試', retried)
