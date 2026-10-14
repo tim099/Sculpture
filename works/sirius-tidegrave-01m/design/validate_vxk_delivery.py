@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 import numpy as np
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
-sys.path.insert(0,'D:/Unity/Valhalla/ArtGallery/VoxelKit')
+sys.path.insert(0,'D:/Unity/Valhalla/Blockside/VoxelKit')
 from build_structure import cli,BASE
 from voxel_export import unpack
 VXK=ROOT.parent.parent/(BASE+'-assembly')/'exports/tidegrave_preview.vxk'
@@ -30,11 +30,11 @@ def main():
     if changed!=1 or badchk==chk:raise RuntimeError('Tamper control did not detect change')
     rig=header['rig'];counts={k:len(rig[k]) for k in ('ropes','sails','models','meshes')}
     counts['parts']=len(header['parts'])
-    if counts!={'ropes':300,'sails':10,'models':116,'meshes':19,'parts':17}:raise RuntimeError('Rig/part preservation mismatch')
+    if counts!={'ropes':302,'sails':10,'models':116,'meshes':19,'parts':17}:raise RuntimeError('Rig/part preservation mismatch')
     decks=[p for p in header['parts'] if p.get('meta',{}).get('kind')=='deck']
     if len(decks)!=6:raise RuntimeError('Expected six game deck metadata records')
     delivery=ROOT/'delivery';delivery.mkdir(exist_ok=True)
-    output=delivery/'tidegrave_candidate_20261014.vxk';output.write_bytes(source)
+    output=delivery/'tidegrave_candidate_20261015.vxk';output.write_bytes(source)
     report={'observedAtUtc':datetime.now(timezone.utc).isoformat(),'source':str(VXK),'delivery':str(output),
       'sha256':hashlib.sha256(source).hexdigest(),'bytes':len(source),'voxels':len(actual),'checksum':f'{chk:08x}',
       'voxelAndColorDifferences':0,'negativeControlChangedVoxels':changed,'negativeControlChecksum':f'{badchk:08x}',

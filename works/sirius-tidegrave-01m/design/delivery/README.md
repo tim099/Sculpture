@@ -1,5 +1,13 @@
 # 潮墓號遊戲接入候選
 
+## 最新：2026-10-15
+
+使用 `tidegrave_candidate_20261015.vxk`，SHA256 `76d945aca4f55556f5b952b7a5a3b4183cbe00a6f1b9d44f7359a56fd3bc5036`；1,034,267格、checksum4cb88a33、302繩／10帆／116模型。`manifest.json`與`../verify_vxk_delivery.json`已刷新，CLI list逐格逐色0差，一格改色反向能失敗。驗證器已改讀搬家後的Blockside/VoxelKit。
+
+8lift、16standing、10brace與後桅帆頭整改及有限獨立後驗，見`../CONTINUED_20261015.md`與`../continued_20261015/independent/REPORT.md`。七梯/操舵的既有fixture證據屬舊a599快照，本輪未重跑正式遊戲，不能把它稱作最新資產的正式匯入通過。全302繩與自由布連續動態仍未全驗。舊nav候選需對當前Blockside源碼重審，不能直接套。
+
+## 以下為2026-10-14交付歷史（舊候選保留，非目前匯入檔）
+
 資產：`tidegrave_candidate_20261014.vxk`；精確SHA256、位元組數、checksum与保留段數以同目錄manifest.json為準。這是已驗收幾何的交付副本，正式選單與七梯修法仍由遊戲作者接入。
 
 0.1 m/格，+X船頭、-Y左舷、y120格中心為對稱面。ship meta waterline_z=52；六層甲板、54砲（48舷砲／6固定艏砲）、雙庫各24桶/2400lb、300繩、10帆旗、116模型。不要把旋轉三聯砲、潛航、海怪或舵動畫當作已實作功能。

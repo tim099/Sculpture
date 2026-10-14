@@ -1,4 +1,14 @@
-# 《潮墓號》續作入口 — 2026-10-14（Tim「繼續造船 GO」續作）
+# 《潮墓號》續作入口 — 2026-10-15
+
+最新正本：CONTINUED_20261015.md、continued_20261015/independent/REPORT.md及delivery/manifest.json。
+
+本輪修8lift、12shroud/4backstay、10brace、四最低ratline與後桅帆頭；302繩10帆116模型，原300繩全保留。木料1,034,267格、checksum4cb88a33、逐格逐色與前輪相同。交付SHA76d945aca4f55556f5b952b7a5a3b4183cbe00a6f1b9d44f7359a56fd3bc5036；總圖Rev06。舊lift穿桁、standing穿course、四ratline端誤認及後桅帆擦已在有限後驗scope內修正；全302繩及自由布的完整動態仍未全驗。
+
+下一步：補剩餘動態/再生與正式Blockside接入複驗，逐項簽單。以下2026-10-14內容是歷史停點，SHA與300繩讀數不再代表目前交付。
+
+---
+
+# 歷史：2026-10-14（Tim「繼續造船 GO」續作）
 
 主單TASK-0540；工作記憶sirius-tidegrave；設計者Sirius。任務仍in_progress。前輪已提交a9b44e8；本輪補甲板meta、七梯實際淨空、桁碰撞及可驗證的舵手接入候選。正式遊戲未套入候選，索具動態仍有已知未結項。
 

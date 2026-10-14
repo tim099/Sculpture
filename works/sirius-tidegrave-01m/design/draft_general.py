@@ -59,8 +59,16 @@ def main():
             line([T(x-8,z),T(x+8,z)],gold,3)
             if drop:line([T(x-5,z),T(x-15,z-drop),T(x+15,z-drop),T(x+5,z)],ink,2)
             if yid=='crossjack':txt(*T(x+10,z),'crossjack '+str((z+.5)/10)+'m',16,teal)
-        line([T(x,m['platform_z']),T(max(105,x-60),120)],teal,1)
-        line([T(x,m['platform_z']),T(min(615,x+70),120)],teal,1)
+        repair=P.get('rig_repair_20261015',{})
+        feet=repair.get('standing_feet',{}).get(m['id'])
+        if feet:
+            for foot in feet:
+                line([T(foot[0],foot[2]),T(x,m['platform_z']-5)],teal,1)
+            head=repair['backstay_heads'][m['id']]
+            line([T(feet[0][0],feet[0][2]),T(head[0],head[2])],teal,1)
+        else:
+            line([T(x,m['platform_z']),T(max(105,x-60),120)],teal,1)
+            line([T(x,m['platform_z']),T(min(615,x+70),120)],teal,1)
         txt(*T(x+5,m['top_z']),m['id']+' '+str(m['top_z']/10)+'m',18,teal)
     gaff=P['rig_layout']['gaff'];boom=P['rig_layout']['boom']
     A=lambda q:T(q[0],q[2])
