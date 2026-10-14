@@ -8,5 +8,5 @@
 ## 再之後
 - 砲具與砲索（階段十，TASK-0575）、rammer／sponge（階段十一，TASK-0576）、shot garland（階段十二，TASK-0577）已做。船頭追擊砲門＋三叉戟砲 6 門（階段十三，TASK-0578）已做；trident 砲種的遊戲數值等 ame。
 - jib-boom 尖 x 953、z 344（組裝件 x 1100 夠用）；之後若加 flying jib-boom 再量一次。
-- 本船沒有隔出來的艙房（§9.2 不適用，除非之後加）。
+- orlop 艙房 22 間（階段十四，TASK-0581）已做；其他層（軍官室、船長室）可以之後加。
 - 父層 Valhalla 的 Sculpture 指標還沒 bump。

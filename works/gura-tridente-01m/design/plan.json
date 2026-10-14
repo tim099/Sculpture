@@ -593,5 +593,20 @@
       "at": [700, 161, 37],
       "src": "knee（含 beakhead 格柵平台；關聯 船頭-knee at 700,161,37，沒有鏡像）—— 平台高度剛好是上砲甲板砲門下緣 ⇒ 門口碰到的那幾格一起刻、兩舷各刻"
     }
+  },
+  "rooms": {
+    "src": "設計決定（TASK-0581）：orlop 兩舷各一排艙房（遊戲的空艙房 §9.2，擺醫療艙等）；中線 |dy| ≤ 20 留走道（艙口 |dy| ≤ 13、梯子與桅在中線）；橫艙壁落在舷弧台階（地板平）；牆做法同憲法號階段十一（板 177、框 136、每 8 格立柱）；房間用途不寫死（遊戲配置頁選）",
+    "deck": "orlop",
+    "host_link": "甲板-orlop",
+    "host_work": "gura-tridente-01m-deck-orlop",
+    "work": "gura-tridente-01m-rooms-orlop",
+    "title": "三叉戟號 orlop 艙房（S 舷一件；另一舷鏡像）",
+    "link": "艙房",
+    "link_mirror": "艙房-鏡像",
+    "colors": {"plank": 177, "frame": 136},
+    "inner_dy": 21,
+    "door_w": 7,
+    "door_h": 18,
+    "cuts": [228, 271, 314, 354, 394, 434, 474, 514, 544, 575, 618, 652]
   }
 }
