@@ -252,3 +252,23 @@ Tim：「繼續造船 階段八 GO」。設計 plan.json `rigging`（provenance 
   - `check_rigging.py`（讀引擎匯出）：結果帳 524,838／524,838 缺 0、多 0、顏色不同 0；channels 子作品 1,654 vs 設計差 0、6 連通 3 塊。deadeye ⛔ 不只認顏色（104 也是甲板）—— 取「組裝件裡有、其他件都沒有」的格再取 104：三根桅兩舷顆數 ＝ plan、每顆 10 格、第一顆差 0、間距 ≥ 4、碰上排砲門 0；chain plates 17 欄底部全部釘在船殼上、進砲門開口 0 格；**引擎解的繩兩端 vs 我算的最大差 0.071、長度 0.005**；stays 中段淨空 3.0–4.1 格（最緊 bobstay 2.97）；反向對照 39 根全報 3（2.97 是引擎印到 0.1）。
   - `check_yards.py` 重跑（lateen 挪了）：固定點 192 個最大差 0.0、lateen 軸 y 121.5 ＝ plan、沿軸最小淨空 20.16、21 根反向全報 3。
 - 過程圖：`overlays/stage8_rigging_yaw{45,-135,90}.png`、`stage8_mizzen_lateen_yaw-60.png`、`stage8_main_channels_yaw60.png`。
+
+## 階段九 繫繩點（fife rails）與動索 70 條 —— 落格（2026-10-14 上午，wake #119）
+Tim：「繼續造船 階段九 GO」。設計 plan.json `belaying`、`running`（provenance 同名）；現況共用 `design/sk_world.py`（船＋桅＋channels v2＋帆桁轉好，一張 int8 標籤表 —— 從 draft_rigging.py 抽出來，那一支照舊不動）。
+產生 `design/draft_belaying.py` ⇒ `verify_belaying.json`、`masks/belaying/fiferails.vox.txt`；`design/draft_running.py` ⇒ `verify_running.json`。下 CLI `apply_belaying.py create|stamp|anchors|link`、`apply_running.py anchors|ropes`；讀數 `check_running.py` ⇒ `verify_running_post.json`。兩支產生程式重跑逐位元組相同。
+- **fife rails**（子作品 `-fiferails`，框 ＝ 整艘船、parent 船殼、tags sub、0.1 m；關聯 `fife-rails` at 0,0,0）：三根桅腳各一組 U 形（橫 rail 在桅後、兩側往前接 bitts 3×3、bitts 上鐵 cross pin），照夜隼號放大。
+  - 後桅踩後甲板（甲板面 z 105、rail z 112、半寬 7、pins 12）、主桅踩船腰上甲板（80／87、半寬 9、pins 12）、前桅踩艏樓（112／119、半寬 9、pins 14）。1,144 格，左右對稱差 0，加進船之後 1 個元件。
+  - ⛔ 舷牆 pin rails 不做（船腰、後甲板、艏樓、艉樓的舷牆高度都不一樣）—— 改在艉樓（x 150、z 141）與艏樓（x 510、z 126）舷牆頂各取一個 kevel 固定點（船殼原有的格）。
+- **動索 70 條**（組裝件 #6b5a40，分 6 組 running/…）：9 根方帆桁每舷 lift、footrope（slack 1.03）、brace；前 course 的 brace 經主桅側面的滑車、fall 落主桅 fife；topsail／topgallant／後上桅帆桁的 halyard（tye ＋ fall 收在桅頂平台邊緣 —— 平台大、沒有 lubber hole，往甲板拉一定穿過平台）；lateen halyard（fall 落後桅 fife）與兩條 vang（艉樓 kevel）。course 帆桁吊死、沒有 halyard。走法照印象，⛔ 沒有查證（provenance 寫明）。用掉 pin 3 根。
+- 新固定點 66：9 根方帆桁各 foot-in／foot-out／lift（S、P）；後桅 cap；主桅 cap、tm-cap、brace（前 course 那一高度的桅側）；前桅 cap、tm-cap。
+- 🩸 這一段的錯（落格前，assert 與碰撞量到的）：
+  1. 後桅 fife 後排 pin 用了主、前桅的 ±3、±6 ⇒ 後桅半寬 7、柱在 ±6 ⇒ 撞；改成每根桅自己的 aft_pins_dy（後桅 ±2、±4）。順手寫 plan 的時候 replace 順序寫錯，把剛加的兩筆也刪了，再補回去（plan diff 讀回才看到）。
+  2. **主桅 bitts 踩進艙口**（x 306 起是艙口，艙口圍在 y 120／140）⇒ 主桅 fwd_of_mast 9 → 7。
+  3. 艏樓 kevel 第一版只看船殼 ⇒ 量到 z 97，比艏樓甲板還低 —— x 530 已經過了船頭艙壁（522），那裡是大嘴 ⇒ 改 x 510、在船殼與各層甲板裡找最高那一格。
+  4. **footrope 兩端綁在帆桁底面那一格** ⇒ 帆桁中間粗、兩頭細，直線從底部穿過去（4–8 取樣）⇒ 綁底面下一格（框有 1 格餘裕）。
+  5. **lift 從 yardarm 軸心出發** ⇒ 出去之後又碰到往中間變粗的桁身；改從頂面那一格 ⇒ topsail 的 lift 每格只升 0.34、往內 4 格頂面升一格，又擦到 ⇒ 頂面上一格。改完中段 0（70 條）、著陸都在上限內。
+- 讀數：
+  - 引擎 stats（組裝件）：**525,982 格**（＝ 524,838 ＋ 1,144）、link_overlap 0、1 個元件、空腔 0、左右差 0（含顏色）；繩 513（靜索 443 ＋ 動索 70）全部 ok、ropes_broken 0、19 組、未分組 0；模型 11 個 broken 0。
+  - `check_running.py`（讀引擎匯出）：結果帳 525,982／525,982 缺 0、多 0、顏色不同 0；fife 子作品 1,144 vs 清單差 0；三組 rail 高度 ＝ 甲板面（從組裝件量）＋ 7，差 0；pin 38 根每根完整；柱與 bitts 84 欄全部站在甲板上；帆桁上 79 個點引擎 vs 我算的差 0.0；繩兩端最大差 0.059、直線長度差 0.005；反向對照 8 根全報 3。
+  - 🩸 量尺：柱的探針第一版認 bitt 色 ⇒ rail 也是 136（同色），懸空的 rail 被算成柱，報 236／320 沒站在甲板上（尺壞了，fife 沒壞）⇒ 改用形狀認（往下伸過 pin 底的那幾欄）。修完先餵已知答案：整份抬 1 格 ⇒ 84／84 報懸空，再回原樣 ⇒ 0。**顏色當身分證，這艘船第二次**（第一次是階段八的 deadeye ⇒ 甲板也是 104）。
+- 過程圖：`overlays/stage9_running_yaw{45,-135}.png`、`stage9_main_fife_yaw40.png`、`stage9_main_topsail_yaw60.png`。

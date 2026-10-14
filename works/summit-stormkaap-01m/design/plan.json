@@ -195,6 +195,19 @@
     "clear_ends": 1.2,
     "landing_max": 6
   },
+  "belaying": {
+    "fife": {"mizzen": {"aft_of_mast": 7, "fwd_of_mast": 7, "half_width": 7, "aft_pins_dy": [-4, -2, 2, 4]}, "main": {"aft_of_mast": 8, "fwd_of_mast": 7, "half_width": 9, "aft_pins_dy": [-6, -3, 3, 6]}, "fore": {"aft_of_mast": 8, "fwd_of_mast": 9, "half_width": 9, "aft_pins_dy": [-6, -3, 3, 6]}, "above_deck": 7, "rail_wide": 2, "bitt": 3, "bitt_tall": 10, "pin_every": 3},
+    "pin": {"up": 2, "down": 2},
+    "kevel": {"kamp_x": 150, "bak_x": 510},
+    "colors": {"rail": 136, "pin": 104, "bitt": 136, "cross": 73}
+  },
+  "running": {
+    "color": "#6b5a40",
+    "thickness": {"lift": 0.4, "brace": 0.45, "footrope": 0.35, "halyard": 0.5, "fall": 0.4, "vang": 0.4},
+    "footrope": {"inner_dy": 4, "slack": 1.03},
+    "slack": 1.0,
+    "points": {"fore_brace_block_z_from": "fore-course"}
+  },
   "provenance": {
     "frame.NY": "設計決定：主帆桁 69 voet × 1.194 ＝ 23.3 m（233 格，W1）要放得進 ⇒ 261（中線 130）",
     "frame.NX": "設計決定：艉板頂 x≈97 → 艏柱頂 x≈550（453 格）＋ galjoen 與船首斜桅（20.3 m、仰角約 35° ＝ 記憶）往前約 14 m ⇒ 736",
@@ -233,6 +246,8 @@
     "rudder": "設計決定：前緣貼艉柱後緣（量現況的格）；弦長底部 1.4 m、z 60 收到 0.7 m、z 70 以上是 0.4 m 見方的舵柱，頂到 z 96（翼艉板上、船尾砲門下）；厚 0.3 m、後三分之一 0.1 m；pintle／gudgeon 5 道。沒查到 Batavia 舵的尺寸（Vasa 那種底寬上窄的荷蘭舵形 ＝ 記憶，未查證）。轉角上限 35°（同夜隼號）",
     "lines.fullness": "設計決定：船頭飽滿（荷蘭船的圓船頭）、船尾在水線下比較瘦；照讀數的 Cb 調",
     "yards": "長度：Witsen（1690 版 DBNL 抄本＋1671 版 OCR，references 末節）× 1.194，1 voet ＝ 37.94 ÷ 134 m ⇒ 1 voet ＝ 3.3807 格；取奇數（中心那一格兩邊一樣長）。主 69、前 60½、lateen 62、spritsail 45、主上桅 36、前上桅 32、斜桅頂 20、主上上 22、前上上 16、後上桅帆桁 19 voet。沒有 crossjack（Witsen 沒列 begijnra）。直徑（設計決定；palm 沒定義）：照夜隼號／憲法號「桁徑 ÷ 掛它那一節桅徑」—— course 0.5625、topsail 0.75、topgallant 1.0；spritsail 照 course 比斜桅、sprit topsail 照 topgallant 比斜桅頂桅；lateen 0.5 × 後桅。錐度、arm／L 照夜隼號（Steel，轉引 basecamp）。高度（設計決定，照夜隼號）：course 平台下 6、topsail 上桅 crosstrees 下 4、topgallant 與後上桅帆桁頂下 6；sprit topsail 斜桅頂桅頂下 6。spritsail 掛在斜桅下、從腳往外 3／4 處（記憶：掛在斜桅外段，未查證）。lateen（設計決定；角度、掛哪一舷、吊點都沒有來源）：上翹 40°（前端往下）、在後桅左舷（軸離中線 9 格 —— 階段八從 5 格改：5 格時左舷三根 shroud 在桅頭下收攏時穿過它；9 格 ＝ 那一高度 shroud 的 y（≈123.7）往外再留半格；代價是帆桁離桅表面 0.6 m、掛在 shrouds 外面，真船的 lateen 是靠在 shrouds 上的）、吊點在帆桁中點；吊點高度 ＝ 前端底下離最近的實心 ≥ 2 m（人走得過）的最低整數。顏色：桁 109（跟桅同）、兩端 73（鐵）。帆名先定（sail_of），帆那一階段照這張表取名 —— 夜隼號帆桁 meta 漏 sail 是後補的（b869b5c），這次先寫。",
-    "rigging": "設計決定（階段八，2026-10-14）：靜索照夜隼號階段九（＝ basecamp 憲法號 Shipbuilding §6）。channels v2：每根桅一塊、從桅前 2 格往船尾每 4 格一顆 deadeye（後 4、主 7、前 6 ＝ lower shrouds 3／5／4 ＋ backstays 1／2／2），撞到上排砲門的 x（±1）就跳過、往船尾接下一格 —— 階段六的 channels 照砲門空檔排、大半在桅前面，shrouds 該在桅旁與桅後 ⇒ 重排。channel 比上排砲門下沿低 5 格，可以從砲門底下穿過；deadeye 與 shroud 不擋砲口。chain plate 往下 6 格、不進下排砲門的開口。shroud 數、粗細、繩色都是設計決定，沒有查 Batavia 的帆裝表（B1 只寫「麻繩 21 km」）。stays：後桅 → 主桅腳、後上桅 → 主桅平台後緣；主桅 → 前桅腳、主上桅 → 前桅下 cap、主上上桅 → 前上桅 cap；前桅 → 斜桅 45%、前上桅 → 斜桅 90%、前上上桅 → 斜桅頂桅頭；bobstay：斜桅 60% 底面 → 船頭大嘴上顎的中脊（大嘴佔了艏柱前面，沒有別的地方綁）。走法照一般 17 世紀荷蘭船的印象，⛔ 沒有查證。"
+    "rigging": "設計決定（階段八，2026-10-14）：靜索照夜隼號階段九（＝ basecamp 憲法號 Shipbuilding §6）。channels v2：每根桅一塊、從桅前 2 格往船尾每 4 格一顆 deadeye（後 4、主 7、前 6 ＝ lower shrouds 3／5／4 ＋ backstays 1／2／2），撞到上排砲門的 x（±1）就跳過、往船尾接下一格 —— 階段六的 channels 照砲門空檔排、大半在桅前面，shrouds 該在桅旁與桅後 ⇒ 重排。channel 比上排砲門下沿低 5 格，可以從砲門底下穿過；deadeye 與 shroud 不擋砲口。chain plate 往下 6 格、不進下排砲門的開口。shroud 數、粗細、繩色都是設計決定，沒有查 Batavia 的帆裝表（B1 只寫「麻繩 21 km」）。stays：後桅 → 主桅腳、後上桅 → 主桅平台後緣；主桅 → 前桅腳、主上桅 → 前桅下 cap、主上上桅 → 前上桅 cap；前桅 → 斜桅 45%、前上桅 → 斜桅 90%、前上上桅 → 斜桅頂桅頭；bobstay：斜桅 60% 底面 → 船頭大嘴上顎的中脊（大嘴佔了艏柱前面，沒有別的地方綁）。走法照一般 17 世紀荷蘭船的印象，⛔ 沒有查證。",
+    "belaying": "設計決定（階段九，2026-10-14）：每根桅腳一組 U 形 fife rail（橫 rail 在桅後、兩側往前接 bitts），照夜隼號階段十的形狀放大（主、前桅半寬 9、後桅 7）；踩在那一根桅所在的最上層甲板上（後桅 ＝ 後甲板、主桅 ＝ 船腰的上甲板、前桅 ＝ 艏樓）。⛔ 舷牆 pin rails 這次不做：船腰、後甲板、艏樓、艉樓的舷牆高度都不同，夜隼號那套「掃舷牆內面」要重寫 —— 改在艉樓與艏樓的舷牆頂各取一個 kevel 固定點（船殼原有的格，不加格）給 course 與 spritsail 的 braces 綁。",
+    "running": "設計決定（階段九）：走法照一般 17 世紀荷蘭船的印象，⛔ 沒有查證。lifts：course → 下桅 cap 兩側、topsail → 上桅 cap 兩側、topgallant → topgallant 桅頭、後上桅帆桁 → 後上桅頭、spritsail → 斜桅 90%、sprit topsail → 斜桅頂桅頭。braces：前 course → 主桅側面（前 course 那一高度）的滑車 ＋ fall 落主桅 fife；主 course → 艉樓舷牆頂 kevel；前 topsail／topgallant → 主桅平台前緣／crosstrees 端；主 topsail／topgallant → 後上桅頭；後上桅帆桁 → 主桅平台後緣；spritsail → 艏樓舷牆頂 kevel；sprit topsail → 前桅平台前緣。halyards：topsail、topgallant 的 tye 從 sling 到 crosstrees 端（後桅到後上桅頭），fall 收在桅頂平台邊緣 —— 平台很大、沒有 lubber hole，往甲板拉一定穿過平台。course 帆桁是吊死的（沒有 halyard）。lateen：halyard（sling → 後桅 hounds、fall 落後桅 fife）、vang（後端 → 艉樓舷牆頂 kevel）。footropes：9 根方帆桁每舷一條、slack 1.03。"
   }
 }
