@@ -255,6 +255,19 @@ def profile_points(H, P):
     return pts
 
 
+def scale_bar(g, x0, y0, px_per_m, meters, step, label, f):
+    """比例尺：每 step 公尺一格、黑白相間，刻度寫公尺（1 m ＝ 10 格）。"""
+    ink = (30, 30, 30)
+    n = int(round(meters / step))
+    for i in range(n):
+        a = x0 + i * step * px_per_m; b = a + step * px_per_m
+        g.rectangle([a, y0, b, y0 + 6], outline=ink, fill=ink if i % 2 == 0 else (250, 248, 242))
+    for i in range(n + 1):
+        v = i * step
+        g.text((x0 + i * step * px_per_m - 4, y0 + 9), str(int(v)) if v == int(v) else str(v), fill=ink, font=f)
+    g.text((x0 + meters * px_per_m + 10, y0 - 3), label, fill=ink, font=f)
+
+
 def draw_sheet(H, R, plan, path):
     S = 2.5
     W, Hh = 1900, 1240
@@ -313,6 +326,7 @@ def draw_sheet(H, R, plan, path):
             else: seg.append(Q(x, y))
         if len(seg) > 1: g.line(seg, fill=col, width=2 if zw in ('sheer', 'top', H.dwl) else 1)
     g.text(Q(H.NX - 230, H.B + 2), "粗黑 ＝ 舷弧（上甲板邊）　藍 ＝ DWL　紅 ＝ 舷牆頂", fill=ink, font=f14)
+    scale_bar(g, W - 440, top + 10, 10 * S, 10, 1, "m（側面、半寬）", f14)
     # ── 橫剖面 ──
     S2 = 3.2; cx = 1580; base3 = Hh - 40
     def B(y, z): return (cx + y * S2, base3 - z * S2)
@@ -332,6 +346,7 @@ def draw_sheet(H, R, plan, path):
                     seg = []
                 else: seg.append(B(side * y, z))
     g.text(B(-H.B - 8, -6), "站距 " + str(round(st[1] - st[0], 2)) + " 格；紅 ＝ 5 站", fill=ink, font=f14)
+    scale_bar(g, cx + 30, base3 + 10, 10 * S2, 5, 1, "m（橫剖面）", f14)
     # ── 讀數框 ──
     tx, ty = 40, cl + (H.B + 14) * S
     lines = [
