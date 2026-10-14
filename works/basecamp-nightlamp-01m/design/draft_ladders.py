@@ -1,4 +1,4 @@
-# 新圖紙 12 梯子 v1（階段十一，TASK-0538）：plan.json ladders ＋ 組裝件的 export list（梯子加進來之前）
+# 新圖紙 12 梯子（階段十一，TASK-0538；v2 加了沿 Y 的走道梯）：plan.json ladders ＋ 組裝件的 export list（梯子加進來之前）
 #   ⇒ masks/ladders/ladders.vox.txt（子作品 -ladders、船殼座標、關聯 at 0,0,0）、masks/ladders/scuttles_carve.vox.txt（上甲板子作品開梯口，carvevox 帶顏色）、
 #     ladder_points.json（每座 4 個給遊戲的點：<名>.foot／.lo／.hi／.head）、verify_ladders.json、sheet12_ladders_v1.png
 # 用法：python -I draft_ladders.py <design 資料夾> <組裝件 export list>
@@ -7,6 +7,8 @@
 #   · 每一座都量：梯子每一格是空氣、踏板上方 headroom 格是空氣（只量到上一層甲板底下）、梯腳外 landing 欄是空氣、梯腳兩根側板踩在實心上。
 #   · 給遊戲的點（造船規格 §9）：都取「腳踩的那一格」＝ 地板或踏板上面第一格空氣、梯子中線那一列；
 #     lo／hi ＝ 最低／最高那一階；foot ＝ 梯腳往 d 走、第一段連續 3 欄地板一樣高、上面 ≥ 3 格空氣的第一欄；head ＝ 梯頂往 −d 走、同樣條件。
+#   · v2：梯子可以沿 Y 走（L['axis'] ＝ 'y'：ae ＝ 最上一列的 y、cc ＝ 梯子中線的 x）—— 走道內緣往船中斜下到上甲板；
+#     沿 X 的照舊（xe、yc）。程式裡一律用「沿梯 a、橫跨 c」兩個座標，只在 at() 換成世界座標。
 import sys, os, json, hashlib
 import numpy as np
 from scipy import ndimage
@@ -41,6 +43,17 @@ class Ladders:
             s.W[c] = False
         s.cells, s.points, s.rows = {}, {}, []
 
+    @staticmethod
+    def axis(L):
+        """回 (沿梯起點 ae, 橫跨中線 cc, 是不是沿 Y)"""
+        if L.get('axis', 'x') == 'y':
+            return L['ae'], L['cc'], True
+        return L['xe'], L['yc'], False
+
+    @staticmethod
+    def at(a, c, z, ay):
+        return (c, a, z) if ay else (a, c, z)
+
     def floor_below(s, x, y, z):
         """(x, y) 這一欄從 z 往下第一格實心 ＋ 1（走的那一格）。"""
         for zz in range(z, 0, -1):
@@ -51,45 +64,50 @@ class Ladders:
     def free(s, c):
         return not s.W[c] and c not in s.cells
 
-    def flat_from(s, x, d, y, zhint):
-        """從 x 往 d 走：第一段連續 3 欄走的那一格一樣高、上面 ≥ 3 格空氣 ⇒ 回第一欄 (x, z)。"""
+    def flat_from(s, a, d, c, zhint, ay=False):
+        """從沿梯座標 a 往 d 走：第一段連續 3 欄走的那一格一樣高、上面 ≥ 3 格空氣 ⇒ 回第一欄 (a, z)。"""
         for k in range(0, 40):
             ok = True
             zs = []
             for j in range(3):
-                xx = x + d * (k + j)
-                z = s.floor_below(xx, y, zhint + 6)
-                if z is None or any(not s.free((xx, y, z + h)) for h in range(3)):
+                aa = a + d * (k + j)
+                x, y, _ = s.at(aa, c, 0, ay)
+                z = s.floor_below(x, y, zhint + 6)
+                if z is None or any(not s.free(s.at(aa, c, z + h, ay)) for h in range(3)):
                     ok = False
                     break
                 zs.append(z)
             if ok and len(set(zs)) == 1:
-                return x + d * k, zs[0]
+                return a + d * k, zs[0]
         return None
 
     def build_one(s, L):
         G = s.P['geometry']
         C = s.P['colors']
         slope = G['rise'] / G['run']
-        yc, d, xe = L['yc'], L['d'], L['xe']
-        y0, y1 = yc - G['width'] // 2, yc + G['width'] // 2
+        ae, cc, ay = s.axis(L)
+        d = L['d']
+
+        def A(a, c, z):
+            return s.at(a, c, z, ay)
+        c0, c1 = cc - G['width'] // 2, cc + G['width'] // 2
         # 上一層：梯頂那一欄往 −d 一欄的走的那一格
-        zu = s.floor_below(xe - d, yc, L['z_hint_top'] + 4)
+        zu = s.floor_below(*A(ae - d, cc, L['z_hint_top'] + 4))
         zcap = zu + G['cap_up']
         cells = {}
         cols = []
         t = 0
         while True:
             zs = int(np.floor(zcap - slope * t))
-            x = xe + d * t
-            zl = s.floor_below(x, yc, zs)
+            a = ae + d * t
+            zl = s.floor_below(*A(a, cc, zs))
             if zl is None:
-                return None, '梯子底下沒有地板 x %d' % x
+                return None, '梯子底下沒有地板 a %d' % a
             lo = max(zl, zs - G['band'] + 1)
-            for y in (y0, y1):
+            for c in (c0, c1):
                 for z in range(lo, zs + 1):
-                    cells[(x, y, z)] = C['stringer']
-            cols.append((t, x, zs, zl))
+                    cells[A(a, c, z)] = C['stringer']
+            cols.append((t, a, zs, zl))
             if zs - G['band'] + 1 <= zl:
                 break
             t += 1
@@ -106,30 +124,30 @@ class Ladders:
             for tt in (G['run'] * j + 1, G['run'] * j + 2):
                 if tt >= R:
                     continue
-                x = xe + d * tt
-                for y in range(y0 + 1, y1):
-                    cells[(x, y, zt)] = C['tread']
-            treads.append((xe + d * (G['run'] * j + 1), zt))
+                a = ae + d * tt
+                for c in range(c0 + 1, c1):
+                    cells[A(a, c, zt)] = C['tread']
+            treads.append((ae + d * (G['run'] * j + 1), zt))
             j += 1
         bad = [c for c in cells if not s.free(c)]
         if bad:
             return None, '梯子撞到 %d 格（第一格 %s）' % (len(bad), bad[0])
-        xf = cols[-1][1]
-        if not all(s.W[xf, y, zfoot - 1] for y in (y0, y1)):
+        af = cols[-1][1]
+        if not all(s.W[A(af, c, zfoot - 1)] for c in (c0, c1)):
             return None, '梯腳底下不是實心'
         head = []
-        for t, x, zs, zl in cols:
-            for y in range(y0 + 1, y1):
+        for t, a, zs, zl in cols:
+            for c in range(c0 + 1, c1):
                 for z in range(zs + 1, min(zs + 1 + G['headroom'], zu - 1)):
-                    if (x, y, z) not in cells and not s.free((x, y, z)):
-                        head.append((x, y, z))
+                    if A(a, c, z) not in cells and not s.free(A(a, c, z)):
+                        head.append(A(a, c, z))
         if head:
             return None, '頭頂撞到 %d 格（第一格 %s）' % (len(head), head[0])
-        land = [(xf + d * k, y, z) for k in range(1, G['landing'] + 1) for y in range(y0, y1 + 1) for z in range(zfoot, zfoot + G['headroom'])]
+        land = [A(af + d * k, c, z) for k in range(1, G['landing'] + 1) for c in range(c0, c1 + 1) for z in range(zfoot, zfoot + G['headroom'])]
         land = [c for c in land if not s.free(c)]
         if land:
             return None, '梯腳外撞到 %d 格（第一格 %s）' % (len(land), land[0])
-        return dict(cells=cells, cols=cols, treads=treads, zcap=zcap, zu=zu, zfoot=zfoot, xf=xf, y=[y0, y1]), None
+        return dict(cells=cells, cols=cols, treads=treads, zcap=zcap, zu=zu, zfoot=zfoot, af=af, c=[c0, c1], ay=ay), None
 
     def build(s):
         for L in s.P['list']:
@@ -138,17 +156,18 @@ class Ladders:
                 s.rows.append({'name': L['name'], 'placed': False, 'why': why})
                 continue
             s.cells.update(got['cells'])
-            yc, d = L['yc'], L['d']
+            ae, cc, ay = s.axis(L)
+            d = L['d']
             tr = got['treads']
-            lo = (tr[-1][0], yc, tr[-1][1] + 1)
-            hi = (tr[0][0], yc, tr[0][1] + 1)
-            f = s.flat_from(got['xf'] + d, d, yc, got['zfoot'])
-            h = s.flat_from(L['xe'] - d, -d, yc, got['zu'])
+            lo = s.at(tr[-1][0], cc, tr[-1][1] + 1, ay)
+            hi = s.at(tr[0][0], cc, tr[0][1] + 1, ay)
+            f = s.flat_from(got['af'] + d, d, cc, got['zfoot'], ay)
+            h = s.flat_from(ae - d, -d, cc, got['zu'], ay)
             assert f and h, ('站不住', L['name'], f, h)
-            pts = {'foot': (f[0], yc, f[1]), 'lo': lo, 'hi': hi, 'head': (h[0], yc, h[1])}
+            pts = {'foot': s.at(f[0], cc, f[1], ay), 'lo': lo, 'hi': hi, 'head': s.at(h[0], cc, h[1], ay)}
             for k, p in pts.items():
                 s.points['%s.%s' % (L['name'], k)] = [int(v) for v in p]
-            s.rows.append({'name': L['name'], 'placed': True, 'xe': L['xe'], 'xf': got['xf'], 'd': d, 'y': got['y'],
+            s.rows.append({'name': L['name'], 'placed': True, 'axis': 'y' if ay else 'x', 'ae': ae, 'af': got['af'], 'cc': cc, 'd': d, 'c': got['c'],
                            'zcap': got['zcap'], 'zfoot': got['zfoot'], 'rise': got['zcap'] - got['zfoot'], 'treads': len(tr),
                            'cells': len(got['cells']), 'points': {k: [int(v) for v in p] for k, p in pts.items()}})
 
@@ -165,6 +184,13 @@ class Ladders:
         fl = [c for c in s.cells if lab[c[0] - xa, c[1], c[2]] not in base]
         v['floating'] = len(fl)
         v['mirror_missing'] = sum(1 for (x, y, z) in s.cells if (x, 320 - y, z) not in s.cells)
+        # v2：走道梯兩舷故意前後錯開（同一發橫向的砲彈不會同時打斷兩舷）⇒ 「該成對」的那幾座另外量鏡像
+        asym = set()
+        for r in s.rows:
+            if r['placed'] and r.get('axis') == 'y':
+                asym |= {c for c in s.cells if r['c'][0] <= c[0] <= r['c'][1] and min(r['ae'], r['af']) <= c[1] <= max(r['ae'], r['af'])}
+        v['mirror_missing_paired'] = sum(1 for (x, y, z) in s.cells if (x, y, z) not in asym and (x, 320 - y, z) not in s.cells)
+        v['asymmetric_cells'] = len(asym)
         # 點：腳踩的那一格是空氣、底下是實心
         bad = []
         for k, p in s.points.items():
@@ -184,7 +210,7 @@ class Ladders:
                                   ('scuttles_carve', s.carve, '上甲板子作品開梯口（carvevox at=0,0,0，帶顏色守門）')):
             p = os.path.join(out, name + '.vox.txt')
             body = ''.join('%d,%d,%d,%d\n' % (c[0], c[1], c[2], v) for c, v in sorted(cells.items()))
-            open(p, 'w', encoding='utf-8', newline='\n').write('# 夜燈號 %s —— %s（新圖紙 12 v1，draft_ladders.py 產；%d 格）\n' % (name, note, len(cells)) + body)
+            open(p, 'w', encoding='utf-8', newline='\n').write('# 夜燈號 %s —— %s（新圖紙 12 %s，draft_ladders.py 產；%d 格）\n' % (name, note, s.P.get('version', 'v1'), len(cells)) + body)
             s.files[name] = {'cells': len(cells), 'sha256': hashlib.sha256(open(p, 'rb').read()).hexdigest()}
         json.dump({'note': '梯子給遊戲的點（造船規格 §9：<梯名>.foot／.lo／.hi／.head，腳踩的那一格）；船殼座標 ＝ 子作品座標（關聯 at 0,0,0）',
                    'points': s.points}, open(os.path.join(s.design, 'ladder_points.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
@@ -197,24 +223,27 @@ def render_sheet(F, path):
     for r in F.rows:
         if not r['placed']:
             continue
-        xa, xb = min(r['xe'], r['xf']) - 12, max(r['xe'], r['xf']) + 13
+        ay = r['axis'] == 'y'
+        aa, ab = min(r['ae'], r['af']) - 12, max(r['ae'], r['af']) + 13
         za, zb = r['zfoot'] - 5, r['zcap'] + 10
-        yc = (r['y'][0] + r['y'][1]) // 2
-        img = np.full((zb - za, xb - xa, 3), 250, np.uint8)
-        for ix, x in enumerate(range(xa, xb)):
+        cc = r['cc']
+        img = np.full((zb - za, ab - aa, 3), 250, np.uint8)
+        for ia, a in enumerate(range(aa, ab)):
             for iz, z in enumerate(range(zb - 1, za - 1, -1)):
-                c = F.cells.get((x, yc, z)) or F.cells.get((x, r['y'][0], z))
+                c = F.cells.get(F.at(a, cc, z, ay)) or F.cells.get(F.at(a, r['c'][0], z, ay))
                 if c:
-                    img[iz, ix] = DP.rgb332(c)
-                elif F.W[x, yc, z]:
-                    img[iz, ix] = (205, 198, 185)
-        im = Image.fromarray(img).resize(((xb - xa) * sc, (zb - za) * sc), Image.NEAREST)
+                    img[iz, ia] = DP.rgb332(c)
+                elif F.W[F.at(a, cc, z, ay)]:
+                    img[iz, ia] = (205, 198, 185)
+        im = Image.fromarray(img).resize(((ab - aa) * sc, (zb - za) * sc), Image.NEAREST)
         dr = ImageDraw.Draw(im)
         for k, p in r['points'].items():
-            px, pz = (p[0] - xa + 0.5) * sc, (zb - p[2] - 0.5) * sc
+            pa = p[1] if ay else p[0]
+            px, pz = (pa - aa + 0.5) * sc, (zb - p[2] - 0.5) * sc
             dr.ellipse([px - 4, pz - 4, px + 4, pz + 4], outline=(220, 30, 30), width=2)
             dr.text((px + 5, pz - 12), k, fill=(220, 30, 30))
-        dr.text((4, 4), '%s  x %d→%d  z %d→%d  %d steps' % (r['name'], r['xe'], r['xf'], r['zcap'], r['zfoot'], r['treads']), fill=(0, 0, 0))
+        dr.text((4, 4), '%s  %s %d->%d (%s %d)  z %d->%d  %d steps' % (r['name'], 'y' if ay else 'x', r['ae'], r['af'], 'x' if ay else 'y', cc,
+                                                                    r['zcap'], r['zfoot'], r['treads']), fill=(0, 0, 0))
         tiles.append(im)
     W = max(t.size[0] for t in tiles) * 2 + 30
     rows = [tiles[i:i + 2] for i in range(0, len(tiles), 2)]
@@ -241,7 +270,7 @@ def main():
     F.v['assembly_list_sha256'] = F.asm_sha
     json.dump(F.v, open(os.path.join(design, 'verify_ladders.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
     if any(r['placed'] for r in F.rows):
-        render_sheet(F, os.path.join(design, 'sheet12_ladders_v1.png'))
+        render_sheet(F, os.path.join(design, 'sheet12_ladders_%s.png' % F.P.get('version', 'v1')))
     print(json.dumps({k: F.v[k] for k in F.v if k not in ('ladders', 'files')}, ensure_ascii=False))
     for r in F.rows:
         print(json.dumps({k: r[k] for k in r if k != 'points'}, ensure_ascii=False))

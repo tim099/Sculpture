@@ -1,32 +1,36 @@
 {
- "cells": 1258,
- "placed": 8,
- "of": 8,
- "scuttle_carve": 217,
+ "cells": 2224,
+ "placed": 14,
+ "of": 14,
+ "scuttle_carve": 441,
  "overlap_world": 0,
  "floating": 0,
- "mirror_missing": 0,
- "points": 32,
+ "mirror_missing": 694,
+ "mirror_missing_paired": 0,
+ "asymmetric_cells": 694,
+ "points": 56,
  "points_not_standing": [],
- "expect_assembly_after": 1183797,
+ "expect_assembly_after": 1184539,
  "files": {
   "ladders": {
-   "cells": 1258,
-   "sha256": "263ef761d9223396d9e327759b1e77916920761e2a6c3bae42ec866261498ef1"
+   "cells": 2224,
+   "sha256": "a717f175d5a4e24ac4d1f4ef47609666400ffea4ff2b75e07d0e01b62f2d361b"
   },
   "scuttles_carve": {
-   "cells": 217,
-   "sha256": "94000502c4738a6a3acd421dcbf416dad8ba72ab572ae246c6b5e47e026f5884"
+   "cells": 441,
+   "sha256": "2a589a0c28aede8e7878aa0790e108403da33d8fd4622ad675b4a554391246e6"
   }
  },
  "ladders": [
   {
    "name": "qd-P",
    "placed": true,
-   "xe": 264,
-   "xf": 284,
+   "axis": "x",
+   "ae": 264,
+   "af": 284,
+   "cc": 130,
    "d": 1,
-   "y": [
+   "c": [
     128,
     132
    ],
@@ -61,10 +65,12 @@
   {
    "name": "qd-S",
    "placed": true,
-   "xe": 264,
-   "xf": 284,
+   "axis": "x",
+   "ae": 264,
+   "af": 284,
+   "cc": 190,
    "d": 1,
-   "y": [
+   "c": [
     188,
     192
    ],
@@ -99,10 +105,12 @@
   {
    "name": "fc-P",
    "placed": true,
-   "xe": 468,
-   "xf": 449,
+   "axis": "x",
+   "ae": 468,
+   "af": 449,
+   "cc": 130,
    "d": -1,
-   "y": [
+   "c": [
     128,
     132
    ],
@@ -137,10 +145,12 @@
   {
    "name": "fc-S",
    "placed": true,
-   "xe": 468,
-   "xf": 449,
+   "axis": "x",
+   "ae": 468,
+   "af": 449,
+   "cc": 190,
    "d": -1,
-   "y": [
+   "c": [
     188,
     192
    ],
@@ -175,10 +185,12 @@
   {
    "name": "poop-P",
    "placed": true,
-   "xe": 113,
-   "xf": 127,
+   "axis": "x",
+   "ae": 113,
+   "af": 127,
+   "cc": 140,
    "d": 1,
-   "y": [
+   "c": [
     138,
     142
    ],
@@ -213,10 +225,12 @@
   {
    "name": "poop-S",
    "placed": true,
-   "xe": 113,
-   "xf": 127,
+   "axis": "x",
+   "ae": 113,
+   "af": 127,
+   "cc": 180,
    "d": 1,
-   "y": [
+   "c": [
     178,
     182
    ],
@@ -251,10 +265,12 @@
   {
    "name": "scuttle-aft",
    "placed": true,
-   "xe": 248,
-   "xf": 233,
+   "axis": "x",
+   "ae": 248,
+   "af": 233,
+   "cc": 160,
    "d": -1,
-   "y": [
+   "c": [
     158,
     162
    ],
@@ -289,10 +305,12 @@
   {
    "name": "scuttle-fore",
    "placed": true,
-   "xe": 428,
-   "xf": 443,
+   "axis": "x",
+   "ae": 428,
+   "af": 443,
+   "cc": 160,
    "d": 1,
-   "y": [
+   "c": [
     158,
     162
    ],
@@ -323,7 +341,247 @@
      100
     ]
    }
+  },
+  {
+   "name": "scuttle-aft2",
+   "placed": true,
+   "axis": "x",
+   "ae": 201,
+   "af": 186,
+   "cc": 160,
+   "d": -1,
+   "c": [
+    158,
+    162
+   ],
+   "zcap": 105,
+   "zfoot": 81,
+   "rise": 24,
+   "treads": 7,
+   "cells": 136,
+   "points": {
+    "foot": [
+     185,
+     160,
+     81
+    ],
+    "lo": [
+     188,
+     160,
+     85
+    ],
+    "hi": [
+     200,
+     160,
+     103
+    ],
+    "head": [
+     202,
+     160,
+     105
+    ]
+   }
+  },
+  {
+   "name": "scuttle-fore2",
+   "placed": true,
+   "axis": "x",
+   "ae": 558,
+   "af": 573,
+   "cc": 160,
+   "d": 1,
+   "c": [
+    158,
+    162
+   ],
+   "zcap": 103,
+   "zfoot": 79,
+   "rise": 24,
+   "treads": 7,
+   "cells": 136,
+   "points": {
+    "foot": [
+     574,
+     160,
+     79
+    ],
+    "lo": [
+     571,
+     160,
+     83
+    ],
+    "hi": [
+     559,
+     160,
+     101
+    ],
+    "head": [
+     557,
+     160,
+     103
+    ]
+   }
+  },
+  {
+   "name": "gw-P1",
+   "placed": true,
+   "axis": "y",
+   "ae": 124,
+   "af": 143,
+   "cc": 306,
+   "d": 1,
+   "c": [
+    304,
+    308
+   ],
+   "zcap": 132,
+   "zfoot": 102,
+   "rise": 30,
+   "treads": 9,
+   "cells": 172,
+   "points": {
+    "foot": [
+     306,
+     144,
+     102
+    ],
+    "lo": [
+     306,
+     141,
+     106
+    ],
+    "hi": [
+     306,
+     125,
+     130
+    ],
+    "head": [
+     306,
+     123,
+     132
+    ]
+   }
+  },
+  {
+   "name": "gw-P2",
+   "placed": true,
+   "axis": "y",
+   "ae": 126,
+   "af": 145,
+   "cc": 392,
+   "d": 1,
+   "c": [
+    390,
+    394
+   ],
+   "zcap": 131,
+   "zfoot": 100,
+   "rise": 31,
+   "treads": 9,
+   "cells": 174,
+   "points": {
+    "foot": [
+     392,
+     146,
+     100
+    ],
+    "lo": [
+     392,
+     143,
+     105
+    ],
+    "hi": [
+     392,
+     127,
+     129
+    ],
+    "head": [
+     392,
+     125,
+     131
+    ]
+   }
+  },
+  {
+   "name": "gw-S1",
+   "placed": true,
+   "axis": "y",
+   "ae": 196,
+   "af": 177,
+   "cc": 330,
+   "d": -1,
+   "c": [
+    328,
+    332
+   ],
+   "zcap": 132,
+   "zfoot": 101,
+   "rise": 31,
+   "treads": 9,
+   "cells": 174,
+   "points": {
+    "foot": [
+     330,
+     176,
+     101
+    ],
+    "lo": [
+     330,
+     179,
+     106
+    ],
+    "hi": [
+     330,
+     195,
+     130
+    ],
+    "head": [
+     330,
+     197,
+     132
+    ]
+   }
+  },
+  {
+   "name": "gw-S2",
+   "placed": true,
+   "axis": "y",
+   "ae": 192,
+   "af": 173,
+   "cc": 425,
+   "d": -1,
+   "c": [
+    423,
+    427
+   ],
+   "zcap": 131,
+   "zfoot": 100,
+   "rise": 31,
+   "treads": 9,
+   "cells": 174,
+   "points": {
+    "foot": [
+     425,
+     172,
+     100
+    ],
+    "lo": [
+     425,
+     175,
+     105
+    ],
+    "hi": [
+     425,
+     191,
+     129
+    ],
+    "head": [
+     425,
+     193,
+     131
+    ]
+   }
   }
  ],
- "assembly_list_sha256": "f0f88e75f5e9441eb76b50d7c14d4ff7e7bf82f175042f6d5095f72b6a33fc80"
+ "assembly_list_sha256": "fd506ff82a503f4d9ebb4a1f2a0f9bfb79651c032a2f8d43ce120975a214568b"
 }

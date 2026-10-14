@@ -3,6 +3,7 @@
 # 用法：python -I draft_rails.py <design 資料夾> <組裝件 export list>
 #   · 欄杆 ＝ 立柱（每 post_every 欄一根，走的那一格起 height−1 格）＋ 扶手（走的那一格 ＋ height − 1 那一層，連續）。
 #   · 內側的邊：後甲板前緣（X qd_edge）、兩舷走道的內緣、前甲板後緣（X fc_edge）、船尾樓前緣（X poop_edge）—— 站在那一層甲板板上；梯子到的地方（梯寬 ±1）留開口。
+#     梯子 v2 起走道內緣也有梯子（沿 Y、名字 gw- 開頭）⇒ 那幾欄（梯子中線 ±（半寬＋1））的內緣也斷開。
 #   · 外側：走道那一層與船尾樓，舷頂比「走的那一格 ＋ height − 1」低的地方，立柱與扶手站在舷頂那一格上、補到同一個高度。
 #   · 扶手是一條連續的線：相鄰兩格差不只一個軸時補中間那一格（面接面，6 連通）。
 import sys, os, json, hashlib
@@ -51,7 +52,14 @@ class Rails:
     def ladder_gap(s, x, y, which):
         """這一格是不是梯子到的地方（梯寬 ±1；which ＝ 梯名的前綴）"""
         for L in s.ladders:
-            if L['name'].startswith(which) and abs(y - L['yc']) <= s.lw + 1:
+            if L['name'].startswith(which) and L.get('axis', 'x') == 'x' and abs(y - L['yc']) <= s.lw + 1:
+                return True
+        return False
+
+    def gangway_gap(s, x, side):
+        """走道內緣的這一欄是不是走道梯到的地方（沿 Y 的梯子：中線 cc ±（半寬＋1），同一舷）"""
+        for L in s.ladders:
+            if L.get('axis', 'x') == 'y' and (L['ae'] - YC) * side > 0 and abs(x - L['cc']) <= s.lw + 1:
                 return True
         return False
 
@@ -107,7 +115,8 @@ class Rails:
                 pts.append((R['qd_edge'], y, s.walk(R['qd_edge']) + H - 1, not gap and dy % E == 0, gap))
             for x in range(R['qd_edge'] + 1, R['fc_edge']):
                 dy = inner[(x, side)]
-                pts.append((x, YC + side * dy, s.walk(x) + H - 1, (x - R['qd_edge']) % E == 0, False))
+                gap = s.gangway_gap(x, side)
+                pts.append((x, YC + side * dy, s.walk(x) + H - 1, not gap and (x - R['qd_edge']) % E == 0, gap))
             df = inner[(R['fc_edge'] - 1, side)]
             for dy in range(df, -1, -1):
                 y = YC + side * dy
@@ -187,8 +196,11 @@ class Rails:
         v['floating_first'] = [list(c) for c in fl[:6]]
         v['mirror_missing'] = sum(1 for (x, y, z) in s.cells if (x, 320 - y, z) not in s.cells)
         # 梯子到的地方：扶手那一層、梯子中線那一格是空的
-        v['ladder_openings_blocked'] = [L['name'] for L in s.ladders if not L['name'].startswith('scuttle')
-                                        and any((x, L['yc'], z) in s.cells for x in range(L['xe'] - 2, L['xe'] + 3) for z in range(120, 180))]
+        def blocked(L):
+            if L.get('axis', 'x') == 'y':
+                return any((L['cc'], y, z) in s.cells for y in range(L['ae'] - 2, L['ae'] + 3) for z in range(120, 180))
+            return any((x, L['yc'], z) in s.cells for x in range(L['xe'] - 2, L['xe'] + 3) for z in range(120, 180))
+        v['ladder_openings_blocked'] = [L['name'] for L in s.ladders if not L['name'].startswith('scuttle') and blocked(L)]
         v['expect_assembly_after'] = s.P['assembly_cells'] + len(s.cells)
         s.v = v
 
