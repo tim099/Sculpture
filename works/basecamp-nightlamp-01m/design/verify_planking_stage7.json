@@ -1,0 +1,48 @@
+{
+ "work_cells": 515369,
+ "design_cells": 515369,
+ "ruler_check": {
+  "drop_one_and_recolor_one": [
+   1,
+   0,
+   1
+  ],
+  "expect": [
+   1,
+   0,
+   1
+  ]
+ },
+ "ledger": {
+  "missing": 0,
+  "extra": 0,
+  "color_diff": 0
+ },
+ "midship_vs_half_breadth": {
+  "X": 333,
+  "plank_outer_m": 5.097,
+  "half_breadth_line_m": 5.15,
+  "diff_m": -0.053,
+  "diff_cells": -0.69,
+  "expect": "外板 1 格 0.078 vs 原圖 0.13 ⇒ 約 −0.05 m（−0.67 格）"
+ },
+ "reverse_control": {
+  "plank_out_3_cells": {
+   "X": 333,
+   "plank_outer_m": 5.33,
+   "half_breadth_line_m": 5.15,
+   "diff_m": 0.18,
+   "diff_cells": 2.31
+  },
+  "expect_diff_cells_change": 3.0
+ },
+ "marks": {
+  "white_cells": 456,
+  "expect": 456
+ },
+ "mirror": {
+  "position_missing": 0,
+  "color_diff_cells": 200,
+  "expect_color_diff_cells": 200
+ }
+}
