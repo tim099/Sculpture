@@ -485,5 +485,25 @@
     "binnacle": {"gap": 6.5, "src": "舵輪正前方（同餘燼號，隔 6.5 格）"},
     "capstan": {"x_from": 320, "x_to": 470, "target": 400, "clear": 5, "src": "後艙口（到 x 318）與主桅（x 430）之間的中線，四周 0.5 m 淨空"},
     "boats": {"x_from": 505, "x_to": 640, "target": 560, "dy": 17, "src": "主艙口（到 x 500）與前桅（x 650）之間，兩舷各一艘、擱在上甲板上（本船上甲板整片平的，沒有船腰開口 ⇒ 不做艇架）"}
+  },
+  "gunfittings": {
+    "src": "設計決定（TASK-0575）：照造船規格 §4.4 與風暴角號階段十四（summit）的做法與數值；環首螺栓一格（色 73），每門兩個船牆環（砲門兩側）＋一個甲板環（砲架尾往裡）；每層砲甲板一件子作品，關聯在那一層甲板子作品裡（藏甲板一起藏）",
+    "works": {
+      "甲板-lower": "gura-tridente-01m-gunfittings-lower",
+      "甲板-middle": "gura-tridente-01m-gunfittings-middle",
+      "甲板-upper": "gura-tridente-01m-gunfittings-upper",
+      "甲板-spar": "gura-tridente-01m-gunfittings-spar"
+    },
+    "titles": {"甲板-lower": "三叉戟號 砲具（下砲甲板：船牆與甲板的環首螺栓）", "甲板-middle": "三叉戟號 砲具（中砲甲板與船尾追擊砲）", "甲板-upper": "三叉戟號 砲具（上砲甲板與船頭追擊砲）", "甲板-spar": "三叉戟號 砲具（上甲板）"},
+    "link": "砲具",
+    "margin": 2,
+    "sag_k": 1.1,
+    "ring": {"offset": [0, 1, 2, 3, 4, 5], "z_above_deck": [5, 6, 7, 8, 9], "color": 73, "scan_back": 6, "scan_beyond_outer": 2, "max_wall_depth": 8},
+    "deck_ring": {"back": [5, 4, 6, 3, 7, 8], "color": 73, "surface_down": 4},
+    "ropes": {
+      "breeching": {"thickness": 0.4, "slack": 1.12, "color": "#b59a6a"},
+      "tackle": {"thickness": 0.25, "slack": 1.03, "color": "#a08458"},
+      "train": {"thickness": 0.25, "slack": 1.05, "color": "#a08458"}
+    }
   }
 }

@@ -244,3 +244,27 @@ Tim 2026-10-14：「繼續造船吧，要用在遊戲內所以要有對應的炮
 - `export format=vxk include=rig,models,parts,meta,ends` ⇒ `gura-tridente-01m-assembly/exports/tridente.vxk`（不進版控）：2,001,956 格、header checksum 2530647134、檔案 sha256 5746110f…；繩 420、帆 15、模型 517、meshes 62、parts 31、帶 meta 531、固定點 1,496、rig_skipped 空。
 - 讀回（用遊戲那側 decks.py 的 load，另一個讀取器）：格 2,001,956、模型 517；砲 32l 32／24l 34／12l 34／6l 18／32c 16／18chase 4、火藥桶 358、帆桁 14、燈 2、小艇 2、舵輪 1、羅經櫃 1。
 - 交給 ame 匯入（酒館 seq 24486）—— 遊戲那側的 admin.py、船隻設定由她的流程走；12l、6l 等她加進砲種表。
+
+## 階段十 砲具與砲索（2026-10-14 晚上，TASK-0575）
+Tim 2026-10-14：「繼續做砲具與砲索」。設計 plan.json `gunfittings`（數值照風暴角號階段十四）；產生 `design/draft_gunfittings.py`（改自風暴角號 draft_gunfittings.py，summit）⇒ `masks/gunfittings/{lower,middle,upper,spar}.vox.txt`、`verify_gunfittings.json`；落格 `tools/apply_gunfittings.py works|anchors|links|ropes`；讀數 `tools/check_gunfittings.py [偏移]`。
+- 環首螺栓一格（色 73）：每門兩個船牆環（砲門兩側，從 train 往砲口方向掃到牆內面第一格空氣；offset 0–5、甲板面 ＋5…＋9 先試低的；牆離船殼最外那格 ≤ 8）＋一個甲板環（train 往船裡退 5…，甲板面照那一柱自己量）。
+- 子作品四件（parent 船殼、sub、0.1 m）`-gunfittings-{lower,middle,upper,spar}`：96／108／108／86 格；關聯 `砲具` 在各層甲板子作品裡（藏甲板一起藏）。固定點 398（`ring-<砲>-aft|fwd`、`deck-<砲>`）。
+- 繩 674 條（組裝件；端點 `model:甲板-lower/砲-S01/cascabel` → `甲板-lower/砲具/ring-砲-S01-aft`）：breeching 276（#b59a6a、0.4、1.12）、side tackle 276（#a08458、0.25、1.03）、train tackle 122（0.25、1.05）；組 guns/breeching、guns/tackle、guns/train。
+- 138 × 5 ＝ 690，少 16：obús（carronade）16 門沒有 train 固定點 ⇒ 不掛 train tackle（滑座砲）。環全部放得下（276＋122）：offset 0 ＋5 248 個、offset 1 ＋5 22、offset 0 ＋6 4、offset 0 ＋8 2。
+- 從風暴角號照帶的（她撞過的坑）：繩會下垂（拋物線、sag_k 1.1）、管子量中心＋最低一圈＋左右兩側、牆深上限、環的高度先試低的、甲板面照那一柱量、每門自己量。差別：四層、砲借別人的子作品 ⇒ 格子從引擎匯出、「自己這門砲」用記砲編號的格子陣列、obús 沒有 train。
+
+讀數（`tools/check_gunfittings.py`，只讀引擎的匯出）：
+- ① 四件子作品 清單 ↔ 匯出 0 差；組裝件 2,002,354 ＝ 藏砲具 2,001,956 ＋ 環 398，缺 0、多 0、色差 0、重疊 0。
+- ② 環的固定點 398：引擎（parts）vs 我算的格心 差 0.0000。
+- ③ 砲索 674：缺 0、非 ok 0；兩端 引擎 vs 我算的（砲的點照 verify_guns 的擺法自己算，不拿引擎的）差 0.050（引擎印到 0.1）；全部繩 1,094、ropes_broken 0。
+- ④ 引擎 obj（只匯 guns 那一組繩）的管子頂點，離兩端 1.5 格以外落在實心或別門砲的：**0**（105,408 個頂點）。
+- **反向對照**：預期整批往下 3 ⇒ ② 報 3.0、③ 報 3.05、④ 報 16,354 個頂點（318 條）。
+- 引擎：1 元件、空腔 0、link_overlap 0、link_clipped 0；模型 517 broken 0。draft 重跑（藏 砲具 關聯）逐位元組相同。
+- 過程圖：`overlays/stage10_gunfittings_close.png`（下砲甲板、剖半：船牆環、甲板環、breeching、tackle、train）。
+
+🩸 這一階段撞到的：
+- **兩舷差一格的牆深**：v1 有兩個環放不下（上砲甲板 S18、上甲板 S17 的船頭側），P 舷同一個位置卻過了。verify_guns 的 `outer` 在砲口朝 +y 那一舷記的是外側面（最外那格 ＋1）、朝 −y 那一舷記的是那一格本身 ⇒ 同一個環 S 舷量成 9 格深（上限 8）、P 舷 8 格。改成兩舷都從「最外那一格」量 ⇒ 全部放得下。船明明對稱、讀數卻不對稱 ⇒ 先懷疑尺的定義。
+
+- vxk 重匯：2,002,354 格、header checksum 3778507588、sha256 66f658bb…；繩 1,094、模型 517、固定點 1,894、rig_skipped 空（decks.py load 讀回格數相同）。
+
+⚠ 留給之後：rammer／sponge（§4.4 掛在橫樑底下）沒做。
