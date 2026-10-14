@@ -111,7 +111,13 @@
         "lower": {"len": 280, "head": 38, "src": "28.00 m；桅腳立在 orlop（設計決定）"},
         "top": {"len": 163, "head": 21, "src": "design 0.72 × 主上桅"},
         "tg": {"len": 112, "src": "design"},
-        "yards": {"crossjack": [238, "design ＝ 前上桅帆桁"], "topsail": [170, "design"], "topgallant": [110, "design"], "gaff": [150, "design"], "boom": [215, "design"]}
+        "yards": {
+          "crossjack": [238, "design ＝ 前上桅帆桁"],
+          "topsail": [170, "design"],
+          "topgallant": [110, "design"],
+          "gaff": [150, "design"],
+          "boom": [135, "design（v1 215：taffrail 中線有船尾徽與燈 ⇒ 尾端停在 x 84、jaws 抬到 z 204 才過得了 taffrail，TASK-0559）"]
+        }
       }
     ],
     "bowsprit": {
@@ -288,5 +294,31 @@
     },
     "colors": {"black": 36, "copper": 168, "gold": 248, "red": 192, "shark": 83, "belly": 255},
     "bobstay_z": [112, 126, 140]
+  },
+  "masts_build": {
+    "src": "設計決定（TASK-0559）：桅照 plan.masts（本船 1793 表＋比例推）；截面、tops、caps、crosstrees、帆桁粗細與 brace 角是設計決定（照憲法號的做法與比例）",
+    "r": {"main": [5.5, 3.3, 2.0], "fore": [5.0, 3.0, 1.8], "mizzen": [4.0, 2.3, 1.4], "src": "下桅照 decks_build.mast_r（甲板孔就是照它開的）；上桅 0.6、頂桅 0.36 × 下桅（設計）"},
+    "taper": {"lower_head": 0.8, "top_head": 0.75, "tg_head": 0.6},
+    "top": {"main": [72, 54], "fore": [66, 50], "mizzen": [50, 38], "fwd": 0.6, "src": "tops ＝ [橫寬, 前後深]（格）；平台 2 格厚、前緣圓、往前多一點（上桅在下桅前面）；設計（Victory 主桅 top 約 7 m 寬）"},
+    "crosstrees": {"main": 26, "fore": 24, "mizzen": 18},
+    "hoop_every": 12,
+    "colors": {"spar": 177, "black": 36, "top": 104, "truck": 255, "step": 136},
+    "bowsprit": {"r": [5.5, 3.8], "jib_r": [2.5, 1.5], "jib_start": 0.7, "step": [684, 696, 4], "src": "艏斜桅根部粗同主桅、往前收到 0.7；jib-boom 疊在艏斜桅上面、從 70% 起；根部底下一塊墊木到上甲板（不然根部懸空）"},
+    "yards": {
+      "brace": {"course": -20, "crossjack": -20, "topsail": -22, "topgallant": -24, "royal": -26, "spritsail": 0, "gaff": 0, "boom": 0},
+      "dia_ratio": 50,
+      "arm": {"course": 0.06, "crossjack": 0.06, "topsail": 0.08, "topgallant": 0.05, "royal": 0.05, "spritsail": 0.08},
+      "taper_s": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "taper_k": [1.0, 0.968, 0.875, 0.7, 0.4286],
+      "jackstay": 8,
+      "colors": {"spar": 36, "tip": 177},
+      "src": "每根一件子作品＋模型（造船規格 §5）：粗 ＝ 長 ÷ 50（憲法號主帆桁 95 ft × 22.5 in）；錐度 Steel 1794；brace 角照憲法號（course −20、topsail −22、topgallant −24、royal −26；右舷那一頭往前 ＝ 負角）"
+    },
+    "spanker": {
+      "gaff": {"jaws_z": 278, "angle": 35, "r": 1.7, "taper": 0.7},
+      "boom": {"jaws_z": 204, "angle": 3, "r": 2.0, "taper": 0.75},
+      "src": "gaff jaws 照 layout（後桅平台下 30）、往船尾上翹 35°（憲法號）；boom jaws 抬到 z 204、上翹 3° ⇒ 尾端底過得了 taffrail z 206，長縮到 135（尾端 x 84，船尾徽在中線 x 71–72）"
+    },
+    "spritsail": {"at": 0.85, "src": "掛在艏斜桅底下 85% 那裡、水平、跟中線垂直（憲法號：主要當 jibboom guys 的撐桿 ⇒ 沒有帆）"}
   }
 }

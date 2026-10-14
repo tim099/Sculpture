@@ -1,0 +1,2446 @@
+{
+ "masts": {
+  "main": {
+   "work": "gura-tridente-01m-mast-main",
+   "title": "三叉戟號 主桅",
+   "link": "主桅"
+  },
+  "fore": {
+   "work": "gura-tridente-01m-mast-fore",
+   "title": "三叉戟號 前桅",
+   "link": "前桅"
+  },
+  "mizzen": {
+   "work": "gura-tridente-01m-mast-mizzen",
+   "title": "三叉戟號 後桅",
+   "link": "後桅"
+  },
+  "bowsprit": {
+   "work": "gura-tridente-01m-bowsprit",
+   "title": "三叉戟號 艏斜桅",
+   "link": "艏斜桅"
+  }
+ },
+ "yards": [
+  {
+   "name": "fore-course",
+   "work": "gura-tridente-01m-yard-fore-course",
+   "parent": "gura-tridente-01m-mast-fore",
+   "title": "三叉戟號 帆桁 fore-course（30.5 m）",
+   "frame": [
+    9,
+    305,
+    9
+   ],
+   "anchors": {
+    "pivot": [
+     4,
+     152,
+     4
+    ],
+    "sling": [
+     4,
+     152,
+     5
+    ],
+    "arm-P": [
+     4,
+     1,
+     4
+    ],
+    "arm-S": [
+     4,
+     303,
+     4
+    ],
+    "earing-P": [
+     4,
+     18,
+     5
+    ],
+    "earing-S": [
+     4,
+     286,
+     5
+    ],
+    "jackstay-P8": [
+     4,
+     144,
+     5
+    ],
+    "jackstay-S8": [
+     4,
+     160,
+     5
+    ],
+    "jackstay-P16": [
+     4,
+     136,
+     5
+    ],
+    "jackstay-S16": [
+     4,
+     168,
+     5
+    ],
+    "jackstay-P24": [
+     4,
+     128,
+     5
+    ],
+    "jackstay-S24": [
+     4,
+     176,
+     5
+    ],
+    "jackstay-P32": [
+     4,
+     120,
+     5
+    ],
+    "jackstay-S32": [
+     4,
+     184,
+     5
+    ],
+    "jackstay-P40": [
+     4,
+     112,
+     5
+    ],
+    "jackstay-S40": [
+     4,
+     192,
+     5
+    ],
+    "jackstay-P48": [
+     4,
+     104,
+     5
+    ],
+    "jackstay-S48": [
+     4,
+     200,
+     5
+    ],
+    "jackstay-P56": [
+     4,
+     96,
+     5
+    ],
+    "jackstay-S56": [
+     4,
+     208,
+     5
+    ],
+    "jackstay-P64": [
+     4,
+     88,
+     5
+    ],
+    "jackstay-S64": [
+     4,
+     216,
+     5
+    ],
+    "jackstay-P72": [
+     4,
+     80,
+     5
+    ],
+    "jackstay-S72": [
+     4,
+     224,
+     5
+    ],
+    "jackstay-P80": [
+     4,
+     72,
+     5
+    ],
+    "jackstay-S80": [
+     4,
+     232,
+     5
+    ],
+    "jackstay-P88": [
+     4,
+     64,
+     5
+    ],
+    "jackstay-S88": [
+     4,
+     240,
+     5
+    ],
+    "jackstay-P96": [
+     4,
+     56,
+     5
+    ],
+    "jackstay-S96": [
+     4,
+     248,
+     5
+    ],
+    "jackstay-P104": [
+     4,
+     48,
+     5
+    ],
+    "jackstay-S104": [
+     4,
+     256,
+     5
+    ],
+    "jackstay-P112": [
+     4,
+     40,
+     5
+    ],
+    "jackstay-S112": [
+     4,
+     264,
+     5
+    ],
+    "jackstay-P120": [
+     4,
+     32,
+     5
+    ],
+    "jackstay-S120": [
+     4,
+     272,
+     5
+    ],
+    "jackstay-P128": [
+     4,
+     24,
+     5
+    ],
+    "jackstay-S128": [
+     4,
+     280,
+     5
+    ]
+   },
+   "model": {
+    "name": "yard-fore-course",
+    "at": [
+     659.5,
+     200.5,
+     329.5
+    ],
+    "pivot": [
+     4.5,
+     152.5,
+     4.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "course",
+     "length_ft": 100.07,
+     "diameter_in": 24.0,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20,
+     "sail": "fore-course"
+    }
+   }
+  },
+  {
+   "name": "fore-topsail",
+   "work": "gura-tridente-01m-yard-fore-topsail",
+   "parent": "gura-tridente-01m-mast-fore",
+   "title": "三叉戟號 帆桁 fore-topsail（23.9 m）",
+   "frame": [
+    7,
+    239,
+    7
+   ],
+   "anchors": {
+    "pivot": [
+     3,
+     119,
+     3
+    ],
+    "sling": [
+     3,
+     119,
+     4
+    ],
+    "arm-P": [
+     3,
+     1,
+     3
+    ],
+    "arm-S": [
+     3,
+     237,
+     3
+    ],
+    "earing-P": [
+     3,
+     19,
+     4
+    ],
+    "earing-S": [
+     3,
+     219,
+     4
+    ],
+    "jackstay-P8": [
+     3,
+     111,
+     4
+    ],
+    "jackstay-S8": [
+     3,
+     127,
+     4
+    ],
+    "jackstay-P16": [
+     3,
+     103,
+     4
+    ],
+    "jackstay-S16": [
+     3,
+     135,
+     4
+    ],
+    "jackstay-P24": [
+     3,
+     95,
+     4
+    ],
+    "jackstay-S24": [
+     3,
+     143,
+     4
+    ],
+    "jackstay-P32": [
+     3,
+     87,
+     4
+    ],
+    "jackstay-S32": [
+     3,
+     151,
+     4
+    ],
+    "jackstay-P40": [
+     3,
+     79,
+     4
+    ],
+    "jackstay-S40": [
+     3,
+     159,
+     4
+    ],
+    "jackstay-P48": [
+     3,
+     71,
+     4
+    ],
+    "jackstay-S48": [
+     3,
+     167,
+     4
+    ],
+    "jackstay-P56": [
+     3,
+     63,
+     4
+    ],
+    "jackstay-S56": [
+     3,
+     175,
+     4
+    ],
+    "jackstay-P64": [
+     3,
+     55,
+     4
+    ],
+    "jackstay-S64": [
+     3,
+     183,
+     4
+    ],
+    "jackstay-P72": [
+     3,
+     47,
+     4
+    ],
+    "jackstay-S72": [
+     3,
+     191,
+     4
+    ],
+    "jackstay-P80": [
+     3,
+     39,
+     4
+    ],
+    "jackstay-S80": [
+     3,
+     199,
+     4
+    ],
+    "jackstay-P88": [
+     3,
+     31,
+     4
+    ],
+    "jackstay-S88": [
+     3,
+     207,
+     4
+    ],
+    "jackstay-P96": [
+     3,
+     23,
+     4
+    ],
+    "jackstay-S96": [
+     3,
+     215,
+     4
+    ]
+   },
+   "model": {
+    "name": "yard-fore-topsail",
+    "at": [
+     664.5,
+     200.5,
+     504.5
+    ],
+    "pivot": [
+     3.5,
+     119.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "topsail",
+     "length_ft": 78.41,
+     "diameter_in": 18.8,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "sail": "fore-topsail"
+    }
+   }
+  },
+  {
+   "name": "fore-topgallant",
+   "work": "gura-tridente-01m-yard-fore-topgallant",
+   "parent": "gura-tridente-01m-mast-fore",
+   "title": "三叉戟號 帆桁 fore-topgallant（15.1 m）",
+   "frame": [
+    5,
+    151,
+    5
+   ],
+   "anchors": {
+    "pivot": [
+     2,
+     75,
+     2
+    ],
+    "sling": [
+     2,
+     75,
+     3
+    ],
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     2,
+     149,
+     2
+    ],
+    "earing-P": [
+     2,
+     8,
+     3
+    ],
+    "earing-S": [
+     2,
+     142,
+     3
+    ],
+    "jackstay-P8": [
+     2,
+     67,
+     3
+    ],
+    "jackstay-S8": [
+     2,
+     83,
+     3
+    ],
+    "jackstay-P16": [
+     2,
+     59,
+     3
+    ],
+    "jackstay-S16": [
+     2,
+     91,
+     3
+    ],
+    "jackstay-P24": [
+     2,
+     51,
+     3
+    ],
+    "jackstay-S24": [
+     2,
+     99,
+     3
+    ],
+    "jackstay-P32": [
+     2,
+     43,
+     3
+    ],
+    "jackstay-S32": [
+     2,
+     107,
+     3
+    ],
+    "jackstay-P40": [
+     2,
+     35,
+     3
+    ],
+    "jackstay-S40": [
+     2,
+     115,
+     3
+    ],
+    "jackstay-P48": [
+     2,
+     27,
+     3
+    ],
+    "jackstay-S48": [
+     2,
+     123,
+     3
+    ],
+    "jackstay-P56": [
+     2,
+     19,
+     3
+    ],
+    "jackstay-S56": [
+     2,
+     131,
+     3
+    ],
+    "jackstay-P64": [
+     2,
+     11,
+     3
+    ],
+    "jackstay-S64": [
+     2,
+     139,
+     3
+    ]
+   },
+   "model": {
+    "name": "yard-fore-topgallant",
+    "at": [
+     667.5,
+     200.5,
+     587.5
+    ],
+    "pivot": [
+     2.5,
+     75.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "topgallant",
+     "length_ft": 49.54,
+     "diameter_in": 11.9,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "sail": "fore-topgallant"
+    }
+   }
+  },
+  {
+   "name": "fore-royal",
+   "work": "gura-tridente-01m-yard-fore-royal",
+   "parent": "gura-tridente-01m-mast-fore",
+   "title": "三叉戟號 帆桁 fore-royal（9.9 m）",
+   "frame": [
+    3,
+    99,
+    3
+   ],
+   "anchors": {
+    "pivot": [
+     1,
+     49,
+     1
+    ],
+    "sling": [
+     1,
+     49,
+     2
+    ],
+    "arm-P": [
+     1,
+     1,
+     1
+    ],
+    "arm-S": [
+     1,
+     97,
+     1
+    ],
+    "earing-P": [
+     1,
+     5,
+     2
+    ],
+    "earing-S": [
+     1,
+     93,
+     2
+    ],
+    "jackstay-P8": [
+     1,
+     41,
+     2
+    ],
+    "jackstay-S8": [
+     1,
+     57,
+     2
+    ],
+    "jackstay-P16": [
+     1,
+     33,
+     2
+    ],
+    "jackstay-S16": [
+     1,
+     65,
+     2
+    ],
+    "jackstay-P24": [
+     1,
+     25,
+     2
+    ],
+    "jackstay-S24": [
+     1,
+     73,
+     2
+    ],
+    "jackstay-P32": [
+     1,
+     17,
+     2
+    ],
+    "jackstay-S32": [
+     1,
+     81,
+     2
+    ],
+    "jackstay-P40": [
+     1,
+     9,
+     2
+    ],
+    "jackstay-S40": [
+     1,
+     89,
+     2
+    ]
+   },
+   "model": {
+    "name": "yard-fore-royal",
+    "at": [
+     666.5,
+     200.5,
+     638.5
+    ],
+    "pivot": [
+     1.5,
+     49.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -26
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "royal",
+     "length_ft": 32.48,
+     "diameter_in": 7.8,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -26,
+     "sail": "fore-royal"
+    }
+   }
+  },
+  {
+   "name": "main-course",
+   "work": "gura-tridente-01m-yard-main-course",
+   "parent": "gura-tridente-01m-mast-main",
+   "title": "三叉戟號 帆桁 main-course（34.7 m）",
+   "frame": [
+    9,
+    347,
+    9
+   ],
+   "anchors": {
+    "pivot": [
+     4,
+     173,
+     4
+    ],
+    "sling": [
+     4,
+     173,
+     5
+    ],
+    "arm-P": [
+     4,
+     1,
+     4
+    ],
+    "arm-S": [
+     4,
+     345,
+     4
+    ],
+    "earing-P": [
+     4,
+     21,
+     5
+    ],
+    "earing-S": [
+     4,
+     325,
+     5
+    ],
+    "jackstay-P8": [
+     4,
+     165,
+     5
+    ],
+    "jackstay-S8": [
+     4,
+     181,
+     5
+    ],
+    "jackstay-P16": [
+     4,
+     157,
+     5
+    ],
+    "jackstay-S16": [
+     4,
+     189,
+     5
+    ],
+    "jackstay-P24": [
+     4,
+     149,
+     5
+    ],
+    "jackstay-S24": [
+     4,
+     197,
+     5
+    ],
+    "jackstay-P32": [
+     4,
+     141,
+     5
+    ],
+    "jackstay-S32": [
+     4,
+     205,
+     5
+    ],
+    "jackstay-P40": [
+     4,
+     133,
+     5
+    ],
+    "jackstay-S40": [
+     4,
+     213,
+     5
+    ],
+    "jackstay-P48": [
+     4,
+     125,
+     5
+    ],
+    "jackstay-S48": [
+     4,
+     221,
+     5
+    ],
+    "jackstay-P56": [
+     4,
+     117,
+     5
+    ],
+    "jackstay-S56": [
+     4,
+     229,
+     5
+    ],
+    "jackstay-P64": [
+     4,
+     109,
+     5
+    ],
+    "jackstay-S64": [
+     4,
+     237,
+     5
+    ],
+    "jackstay-P72": [
+     4,
+     101,
+     5
+    ],
+    "jackstay-S72": [
+     4,
+     245,
+     5
+    ],
+    "jackstay-P80": [
+     4,
+     93,
+     5
+    ],
+    "jackstay-S80": [
+     4,
+     253,
+     5
+    ],
+    "jackstay-P88": [
+     4,
+     85,
+     5
+    ],
+    "jackstay-S88": [
+     4,
+     261,
+     5
+    ],
+    "jackstay-P96": [
+     4,
+     77,
+     5
+    ],
+    "jackstay-S96": [
+     4,
+     269,
+     5
+    ],
+    "jackstay-P104": [
+     4,
+     69,
+     5
+    ],
+    "jackstay-S104": [
+     4,
+     277,
+     5
+    ],
+    "jackstay-P112": [
+     4,
+     61,
+     5
+    ],
+    "jackstay-S112": [
+     4,
+     285,
+     5
+    ],
+    "jackstay-P120": [
+     4,
+     53,
+     5
+    ],
+    "jackstay-S120": [
+     4,
+     293,
+     5
+    ],
+    "jackstay-P128": [
+     4,
+     45,
+     5
+    ],
+    "jackstay-S128": [
+     4,
+     301,
+     5
+    ],
+    "jackstay-P136": [
+     4,
+     37,
+     5
+    ],
+    "jackstay-S136": [
+     4,
+     309,
+     5
+    ],
+    "jackstay-P144": [
+     4,
+     29,
+     5
+    ],
+    "jackstay-S144": [
+     4,
+     317,
+     5
+    ]
+   },
+   "model": {
+    "name": "yard-main-course",
+    "at": [
+     432.5,
+     200.5,
+     358.5
+    ],
+    "pivot": [
+     4.5,
+     173.5,
+     4.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "course",
+     "length_ft": 113.85,
+     "diameter_in": 27.3,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20,
+     "sail": "main-course"
+    }
+   }
+  },
+  {
+   "name": "main-topsail",
+   "work": "gura-tridente-01m-yard-main-topsail",
+   "parent": "gura-tridente-01m-mast-main",
+   "title": "三叉戟號 帆桁 main-topsail（27.3 m）",
+   "frame": [
+    7,
+    273,
+    7
+   ],
+   "anchors": {
+    "pivot": [
+     3,
+     136,
+     3
+    ],
+    "sling": [
+     3,
+     136,
+     4
+    ],
+    "arm-P": [
+     3,
+     1,
+     3
+    ],
+    "arm-S": [
+     3,
+     271,
+     3
+    ],
+    "earing-P": [
+     3,
+     22,
+     4
+    ],
+    "earing-S": [
+     3,
+     250,
+     4
+    ],
+    "jackstay-P8": [
+     3,
+     128,
+     4
+    ],
+    "jackstay-S8": [
+     3,
+     144,
+     4
+    ],
+    "jackstay-P16": [
+     3,
+     120,
+     4
+    ],
+    "jackstay-S16": [
+     3,
+     152,
+     4
+    ],
+    "jackstay-P24": [
+     3,
+     112,
+     4
+    ],
+    "jackstay-S24": [
+     3,
+     160,
+     4
+    ],
+    "jackstay-P32": [
+     3,
+     104,
+     4
+    ],
+    "jackstay-S32": [
+     3,
+     168,
+     4
+    ],
+    "jackstay-P40": [
+     3,
+     96,
+     4
+    ],
+    "jackstay-S40": [
+     3,
+     176,
+     4
+    ],
+    "jackstay-P48": [
+     3,
+     88,
+     4
+    ],
+    "jackstay-S48": [
+     3,
+     184,
+     4
+    ],
+    "jackstay-P56": [
+     3,
+     80,
+     4
+    ],
+    "jackstay-S56": [
+     3,
+     192,
+     4
+    ],
+    "jackstay-P64": [
+     3,
+     72,
+     4
+    ],
+    "jackstay-S64": [
+     3,
+     200,
+     4
+    ],
+    "jackstay-P72": [
+     3,
+     64,
+     4
+    ],
+    "jackstay-S72": [
+     3,
+     208,
+     4
+    ],
+    "jackstay-P80": [
+     3,
+     56,
+     4
+    ],
+    "jackstay-S80": [
+     3,
+     216,
+     4
+    ],
+    "jackstay-P88": [
+     3,
+     48,
+     4
+    ],
+    "jackstay-S88": [
+     3,
+     224,
+     4
+    ],
+    "jackstay-P96": [
+     3,
+     40,
+     4
+    ],
+    "jackstay-S96": [
+     3,
+     232,
+     4
+    ],
+    "jackstay-P104": [
+     3,
+     32,
+     4
+    ],
+    "jackstay-S104": [
+     3,
+     240,
+     4
+    ],
+    "jackstay-P112": [
+     3,
+     24,
+     4
+    ],
+    "jackstay-S112": [
+     3,
+     248,
+     4
+    ]
+   },
+   "model": {
+    "name": "yard-main-topsail",
+    "at": [
+     430.5,
+     200.5,
+     549.5
+    ],
+    "pivot": [
+     3.5,
+     136.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "topsail",
+     "length_ft": 89.57,
+     "diameter_in": 21.5,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "sail": "main-topsail"
+    }
+   }
+  },
+  {
+   "name": "main-topgallant",
+   "work": "gura-tridente-01m-yard-main-topgallant",
+   "parent": "gura-tridente-01m-mast-main",
+   "title": "三叉戟號 帆桁 main-topgallant（17.1 m）",
+   "frame": [
+    5,
+    171,
+    5
+   ],
+   "anchors": {
+    "pivot": [
+     2,
+     85,
+     2
+    ],
+    "sling": [
+     2,
+     85,
+     3
+    ],
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     2,
+     169,
+     2
+    ],
+    "earing-P": [
+     2,
+     9,
+     3
+    ],
+    "earing-S": [
+     2,
+     161,
+     3
+    ],
+    "jackstay-P8": [
+     2,
+     77,
+     3
+    ],
+    "jackstay-S8": [
+     2,
+     93,
+     3
+    ],
+    "jackstay-P16": [
+     2,
+     69,
+     3
+    ],
+    "jackstay-S16": [
+     2,
+     101,
+     3
+    ],
+    "jackstay-P24": [
+     2,
+     61,
+     3
+    ],
+    "jackstay-S24": [
+     2,
+     109,
+     3
+    ],
+    "jackstay-P32": [
+     2,
+     53,
+     3
+    ],
+    "jackstay-S32": [
+     2,
+     117,
+     3
+    ],
+    "jackstay-P40": [
+     2,
+     45,
+     3
+    ],
+    "jackstay-S40": [
+     2,
+     125,
+     3
+    ],
+    "jackstay-P48": [
+     2,
+     37,
+     3
+    ],
+    "jackstay-S48": [
+     2,
+     133,
+     3
+    ],
+    "jackstay-P56": [
+     2,
+     29,
+     3
+    ],
+    "jackstay-S56": [
+     2,
+     141,
+     3
+    ],
+    "jackstay-P64": [
+     2,
+     21,
+     3
+    ],
+    "jackstay-S64": [
+     2,
+     149,
+     3
+    ],
+    "jackstay-P72": [
+     2,
+     13,
+     3
+    ],
+    "jackstay-S72": [
+     2,
+     157,
+     3
+    ]
+   },
+   "model": {
+    "name": "yard-main-topgallant",
+    "at": [
+     430.5,
+     200.5,
+     639.5
+    ],
+    "pivot": [
+     2.5,
+     85.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "topgallant",
+     "length_ft": 56.1,
+     "diameter_in": 13.5,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "sail": "main-topgallant"
+    }
+   }
+  },
+  {
+   "name": "main-royal",
+   "work": "gura-tridente-01m-yard-main-royal",
+   "parent": "gura-tridente-01m-mast-main",
+   "title": "三叉戟號 帆桁 main-royal（11.1 m）",
+   "frame": [
+    5,
+    111,
+    5
+   ],
+   "anchors": {
+    "pivot": [
+     2,
+     55,
+     2
+    ],
+    "sling": [
+     2,
+     55,
+     3
+    ],
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     2,
+     109,
+     2
+    ],
+    "earing-P": [
+     2,
+     6,
+     3
+    ],
+    "earing-S": [
+     2,
+     104,
+     3
+    ],
+    "jackstay-P8": [
+     2,
+     47,
+     3
+    ],
+    "jackstay-S8": [
+     2,
+     63,
+     3
+    ],
+    "jackstay-P16": [
+     2,
+     39,
+     3
+    ],
+    "jackstay-S16": [
+     2,
+     71,
+     3
+    ],
+    "jackstay-P24": [
+     2,
+     31,
+     3
+    ],
+    "jackstay-S24": [
+     2,
+     79,
+     3
+    ],
+    "jackstay-P32": [
+     2,
+     23,
+     3
+    ],
+    "jackstay-S32": [
+     2,
+     87,
+     3
+    ],
+    "jackstay-P40": [
+     2,
+     15,
+     3
+    ],
+    "jackstay-S40": [
+     2,
+     95,
+     3
+    ],
+    "jackstay-P48": [
+     2,
+     7,
+     3
+    ],
+    "jackstay-S48": [
+     2,
+     103,
+     3
+    ]
+   },
+   "model": {
+    "name": "yard-main-royal",
+    "at": [
+     428.5,
+     200.5,
+     695.5
+    ],
+    "pivot": [
+     2.5,
+     55.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -26
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "royal",
+     "length_ft": 36.42,
+     "diameter_in": 8.7,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -26,
+     "sail": "main-royal"
+    }
+   }
+  },
+  {
+   "name": "mizzen-crossjack",
+   "work": "gura-tridente-01m-yard-mizzen-crossjack",
+   "parent": "gura-tridente-01m-mast-mizzen",
+   "title": "三叉戟號 帆桁 mizzen-crossjack（23.9 m）",
+   "frame": [
+    7,
+    239,
+    7
+   ],
+   "anchors": {
+    "pivot": [
+     3,
+     119,
+     3
+    ],
+    "sling": [
+     3,
+     119,
+     4
+    ],
+    "arm-P": [
+     3,
+     1,
+     3
+    ],
+    "arm-S": [
+     3,
+     237,
+     3
+    ],
+    "earing-P": [
+     3,
+     14,
+     4
+    ],
+    "earing-S": [
+     3,
+     224,
+     4
+    ],
+    "jackstay-P8": [
+     3,
+     111,
+     4
+    ],
+    "jackstay-S8": [
+     3,
+     127,
+     4
+    ],
+    "jackstay-P16": [
+     3,
+     103,
+     4
+    ],
+    "jackstay-S16": [
+     3,
+     135,
+     4
+    ],
+    "jackstay-P24": [
+     3,
+     95,
+     4
+    ],
+    "jackstay-S24": [
+     3,
+     143,
+     4
+    ],
+    "jackstay-P32": [
+     3,
+     87,
+     4
+    ],
+    "jackstay-S32": [
+     3,
+     151,
+     4
+    ],
+    "jackstay-P40": [
+     3,
+     79,
+     4
+    ],
+    "jackstay-S40": [
+     3,
+     159,
+     4
+    ],
+    "jackstay-P48": [
+     3,
+     71,
+     4
+    ],
+    "jackstay-S48": [
+     3,
+     167,
+     4
+    ],
+    "jackstay-P56": [
+     3,
+     63,
+     4
+    ],
+    "jackstay-S56": [
+     3,
+     175,
+     4
+    ],
+    "jackstay-P64": [
+     3,
+     55,
+     4
+    ],
+    "jackstay-S64": [
+     3,
+     183,
+     4
+    ],
+    "jackstay-P72": [
+     3,
+     47,
+     4
+    ],
+    "jackstay-S72": [
+     3,
+     191,
+     4
+    ],
+    "jackstay-P80": [
+     3,
+     39,
+     4
+    ],
+    "jackstay-S80": [
+     3,
+     199,
+     4
+    ],
+    "jackstay-P88": [
+     3,
+     31,
+     4
+    ],
+    "jackstay-S88": [
+     3,
+     207,
+     4
+    ],
+    "jackstay-P96": [
+     3,
+     23,
+     4
+    ],
+    "jackstay-S96": [
+     3,
+     215,
+     4
+    ],
+    "jackstay-P104": [
+     3,
+     15,
+     4
+    ],
+    "jackstay-S104": [
+     3,
+     223,
+     4
+    ]
+   },
+   "model": {
+    "name": "yard-mizzen-crossjack",
+    "at": [
+     219.5,
+     200.5,
+     296.5
+    ],
+    "pivot": [
+     3.5,
+     119.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "crossjack",
+     "length_ft": 78.41,
+     "diameter_in": 18.8,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20
+    }
+   }
+  },
+  {
+   "name": "mizzen-topsail",
+   "work": "gura-tridente-01m-yard-mizzen-topsail",
+   "parent": "gura-tridente-01m-mast-mizzen",
+   "title": "三叉戟號 帆桁 mizzen-topsail（17.1 m）",
+   "frame": [
+    5,
+    171,
+    5
+   ],
+   "anchors": {
+    "pivot": [
+     2,
+     85,
+     2
+    ],
+    "sling": [
+     2,
+     85,
+     3
+    ],
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     2,
+     169,
+     2
+    ],
+    "earing-P": [
+     2,
+     14,
+     3
+    ],
+    "earing-S": [
+     2,
+     156,
+     3
+    ],
+    "jackstay-P8": [
+     2,
+     77,
+     3
+    ],
+    "jackstay-S8": [
+     2,
+     93,
+     3
+    ],
+    "jackstay-P16": [
+     2,
+     69,
+     3
+    ],
+    "jackstay-S16": [
+     2,
+     101,
+     3
+    ],
+    "jackstay-P24": [
+     2,
+     61,
+     3
+    ],
+    "jackstay-S24": [
+     2,
+     109,
+     3
+    ],
+    "jackstay-P32": [
+     2,
+     53,
+     3
+    ],
+    "jackstay-S32": [
+     2,
+     117,
+     3
+    ],
+    "jackstay-P40": [
+     2,
+     45,
+     3
+    ],
+    "jackstay-S40": [
+     2,
+     125,
+     3
+    ],
+    "jackstay-P48": [
+     2,
+     37,
+     3
+    ],
+    "jackstay-S48": [
+     2,
+     133,
+     3
+    ],
+    "jackstay-P56": [
+     2,
+     29,
+     3
+    ],
+    "jackstay-S56": [
+     2,
+     141,
+     3
+    ],
+    "jackstay-P64": [
+     2,
+     21,
+     3
+    ],
+    "jackstay-S64": [
+     2,
+     149,
+     3
+    ]
+   },
+   "model": {
+    "name": "yard-mizzen-topsail",
+    "at": [
+     213.5,
+     200.5,
+     432.5
+    ],
+    "pivot": [
+     2.5,
+     85.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "topsail",
+     "length_ft": 56.1,
+     "diameter_in": 13.5,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "sail": "mizzen-topsail"
+    }
+   }
+  },
+  {
+   "name": "mizzen-topgallant",
+   "work": "gura-tridente-01m-yard-mizzen-topgallant",
+   "parent": "gura-tridente-01m-mast-mizzen",
+   "title": "三叉戟號 帆桁 mizzen-topgallant（11.1 m）",
+   "frame": [
+    5,
+    111,
+    5
+   ],
+   "anchors": {
+    "pivot": [
+     2,
+     55,
+     2
+    ],
+    "sling": [
+     2,
+     55,
+     3
+    ],
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     2,
+     109,
+     2
+    ],
+    "earing-P": [
+     2,
+     6,
+     3
+    ],
+    "earing-S": [
+     2,
+     104,
+     3
+    ],
+    "jackstay-P8": [
+     2,
+     47,
+     3
+    ],
+    "jackstay-S8": [
+     2,
+     63,
+     3
+    ],
+    "jackstay-P16": [
+     2,
+     39,
+     3
+    ],
+    "jackstay-S16": [
+     2,
+     71,
+     3
+    ],
+    "jackstay-P24": [
+     2,
+     31,
+     3
+    ],
+    "jackstay-S24": [
+     2,
+     79,
+     3
+    ],
+    "jackstay-P32": [
+     2,
+     23,
+     3
+    ],
+    "jackstay-S32": [
+     2,
+     87,
+     3
+    ],
+    "jackstay-P40": [
+     2,
+     15,
+     3
+    ],
+    "jackstay-S40": [
+     2,
+     95,
+     3
+    ],
+    "jackstay-P48": [
+     2,
+     7,
+     3
+    ],
+    "jackstay-S48": [
+     2,
+     103,
+     3
+    ]
+   },
+   "model": {
+    "name": "yard-mizzen-topgallant",
+    "at": [
+     212.5,
+     200.5,
+     500.5
+    ],
+    "pivot": [
+     2.5,
+     55.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "topgallant",
+     "length_ft": 36.42,
+     "diameter_in": 8.7,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "sail": "mizzen-topgallant"
+    }
+   }
+  },
+  {
+   "name": "bowsprit-spritsail",
+   "work": "gura-tridente-01m-yard-bowsprit-spritsail",
+   "parent": "gura-tridente-01m-bowsprit",
+   "title": "三叉戟號 帆桁 bowsprit-spritsail（22.3 m）",
+   "frame": [
+    7,
+    223,
+    7
+   ],
+   "anchors": {
+    "pivot": [
+     3,
+     111,
+     3
+    ],
+    "sling": [
+     3,
+     111,
+     4
+    ],
+    "arm-P": [
+     3,
+     1,
+     3
+    ],
+    "arm-S": [
+     3,
+     221,
+     3
+    ],
+    "earing-P": [
+     3,
+     18,
+     4
+    ],
+    "earing-S": [
+     3,
+     204,
+     4
+    ],
+    "jackstay-P8": [
+     3,
+     103,
+     4
+    ],
+    "jackstay-S8": [
+     3,
+     119,
+     4
+    ],
+    "jackstay-P16": [
+     3,
+     95,
+     4
+    ],
+    "jackstay-S16": [
+     3,
+     127,
+     4
+    ],
+    "jackstay-P24": [
+     3,
+     87,
+     4
+    ],
+    "jackstay-S24": [
+     3,
+     135,
+     4
+    ],
+    "jackstay-P32": [
+     3,
+     79,
+     4
+    ],
+    "jackstay-S32": [
+     3,
+     143,
+     4
+    ],
+    "jackstay-P40": [
+     3,
+     71,
+     4
+    ],
+    "jackstay-S40": [
+     3,
+     151,
+     4
+    ],
+    "jackstay-P48": [
+     3,
+     63,
+     4
+    ],
+    "jackstay-S48": [
+     3,
+     159,
+     4
+    ],
+    "jackstay-P56": [
+     3,
+     55,
+     4
+    ],
+    "jackstay-S56": [
+     3,
+     167,
+     4
+    ],
+    "jackstay-P64": [
+     3,
+     47,
+     4
+    ],
+    "jackstay-S64": [
+     3,
+     175,
+     4
+    ],
+    "jackstay-P72": [
+     3,
+     39,
+     4
+    ],
+    "jackstay-S72": [
+     3,
+     183,
+     4
+    ],
+    "jackstay-P80": [
+     3,
+     31,
+     4
+    ],
+    "jackstay-S80": [
+     3,
+     191,
+     4
+    ],
+    "jackstay-P88": [
+     3,
+     23,
+     4
+    ],
+    "jackstay-S88": [
+     3,
+     199,
+     4
+    ]
+   },
+   "model": {
+    "name": "yard-bowsprit-spritsail",
+    "at": [
+     857.5,
+     200.5,
+     267.5
+    ],
+    "pivot": [
+     3.5,
+     111.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     0
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "bowsprit",
+     "yard": "spritsail",
+     "length_ft": 73.16,
+     "diameter_in": 17.6,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": 0
+    }
+   }
+  },
+  {
+   "name": "mizzen-gaff",
+   "work": "gura-tridente-01m-yard-mizzen-gaff",
+   "parent": "gura-tridente-01m-mast-mizzen",
+   "title": "三叉戟號 帆桁 mizzen-gaff（15.0 m）",
+   "frame": [
+    128,
+    3,
+    88
+   ],
+   "anchors": {
+    "pivot": [
+     127,
+     1,
+     1
+    ],
+    "throat": [
+     122,
+     1,
+     3
+    ],
+    "peak": [
+     1,
+     1,
+     87
+    ],
+    "top-8": [
+     117,
+     1,
+     7
+    ],
+    "top-16": [
+     110,
+     1,
+     12
+    ],
+    "top-24": [
+     104,
+     1,
+     16
+    ],
+    "top-32": [
+     97,
+     1,
+     21
+    ],
+    "top-40": [
+     90,
+     1,
+     26
+    ],
+    "top-48": [
+     84,
+     1,
+     30
+    ],
+    "top-56": [
+     77,
+     1,
+     35
+    ],
+    "top-64": [
+     71,
+     1,
+     39
+    ],
+    "top-72": [
+     64,
+     1,
+     44
+    ],
+    "top-80": [
+     58,
+     1,
+     48
+    ],
+    "top-88": [
+     51,
+     1,
+     53
+    ],
+    "top-96": [
+     45,
+     1,
+     57
+    ],
+    "top-104": [
+     38,
+     1,
+     62
+    ],
+    "top-112": [
+     31,
+     1,
+     67
+    ],
+    "top-120": [
+     25,
+     1,
+     71
+    ],
+    "top-128": [
+     18,
+     1,
+     76
+    ],
+    "top-136": [
+     12,
+     1,
+     80
+    ],
+    "top-144": [
+     5,
+     1,
+     85
+    ]
+   },
+   "model": {
+    "name": "yard-mizzen-gaff",
+    "at": [
+     213.5,
+     200.5,
+     278.5
+    ],
+    "pivot": [
+     127.5,
+     1.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     0
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "gaff",
+     "length_ft": 49.21,
+     "diameter_in": 13.4,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": 0,
+     "sail": "spanker"
+    }
+   }
+  },
+  {
+   "name": "mizzen-boom",
+   "work": "gura-tridente-01m-yard-mizzen-boom",
+   "parent": "gura-tridente-01m-mast-mizzen",
+   "title": "三叉戟號 帆桁 mizzen-boom（13.5 m）",
+   "frame": [
+    139,
+    3,
+    10
+   ],
+   "anchors": {
+    "pivot": [
+     138,
+     1,
+     1
+    ],
+    "jaws": [
+     133,
+     1,
+     3
+    ],
+    "end": [
+     0,
+     1,
+     9
+    ],
+    "foot-8": [
+     126,
+     1,
+     3
+    ],
+    "foot-16": [
+     118,
+     1,
+     3
+    ],
+    "foot-24": [
+     110,
+     1,
+     4
+    ],
+    "foot-32": [
+     102,
+     1,
+     4
+    ],
+    "foot-40": [
+     94,
+     1,
+     4
+    ],
+    "foot-48": [
+     86,
+     1,
+     5
+    ],
+    "foot-56": [
+     78,
+     1,
+     5
+    ],
+    "foot-64": [
+     70,
+     1,
+     6
+    ],
+    "foot-72": [
+     62,
+     1,
+     6
+    ],
+    "foot-80": [
+     54,
+     1,
+     6
+    ],
+    "foot-88": [
+     46,
+     1,
+     7
+    ],
+    "foot-96": [
+     38,
+     1,
+     7
+    ],
+    "foot-104": [
+     30,
+     1,
+     8
+    ],
+    "foot-112": [
+     22,
+     1,
+     8
+    ],
+    "foot-120": [
+     14,
+     1,
+     8
+    ],
+    "foot-128": [
+     6,
+     1,
+     9
+    ]
+   },
+   "model": {
+    "name": "yard-mizzen-boom",
+    "at": [
+     218.5,
+     200.5,
+     204.5
+    ],
+    "pivot": [
+     138.5,
+     1.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     0
+    ],
+    "scale": 1,
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "boom",
+     "length_ft": 44.29,
+     "diameter_in": 15.7,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": 0,
+     "sail": "spanker"
+    }
+   }
+  }
+ ]
+}

@@ -63,3 +63,30 @@ def write_local(path, cells, origin, head):
 def mirror_at_y(at_y, size_y, yc=200):
     """一舷子作品的另一舷關聯（mirror=y 在自己的框裡翻）：格 y ↔ 2·yc − y ⇒ at.y ＝ 2·yc ＋ 1 − at.y − 高。"""
     return 2 * yc + 1 - at_y - size_y
+
+
+STAGE5_LINKS = '船尾陽台,後廊-S,後廊-P,船尾名牌與徽,舵,船頭-knee,船頭裝飾,船頭裝飾-鏡像,船首像,錨-S,錨-P'
+
+
+def grid_of(arrays, nz=NZ):
+    G = np.zeros((NX, NY, nz), np.uint8)
+    for A in arrays:
+        if len(A) == 0:
+            continue
+        assert A[:, 2].max() < nz
+        G[A[:, 0], A[:, 1], A[:, 2]] = A[:, 3]
+    return G
+
+
+def stage6_base(hull_mark, nz=800):
+    """階段六之前：船殼（讀標記 hull_mark 那一刻；標記還沒打 ⇒ 讀現在）＋ 甲板（含梯子）＋ 階段五的部件。回 (格子, 船殼清單, 船殼讀的是哪一刻)。"""
+    try:
+        H = export_list('gura-tridente-01m', 'none', ('mark=' + hull_mark,))
+        when = hull_mark
+    except SystemExit:
+        H = export_list('gura-tridente-01m', 'none')
+        when = 'now（標記 %s 還沒打）' % hull_mark
+    decks = ','.join(l for l in BASE_LINKS.split(',') if l != '船殼')
+    R = export_list(ASM, decks + ',' + STAGE5_LINKS)
+    return grid_of([H, R], nz), H, when
+

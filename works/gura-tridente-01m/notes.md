@@ -120,3 +120,34 @@
 - quarter gallery 是實心的（窗是玻璃，沒開孔）；陽台跟船艙不通（船尾窗是玻璃）。
 - 艏斜桅還沒做：它在艏柱頂 x 718–721、z ≈ 184–196 會切過船頭舷牆頂（桅階段開孔）；gammoning 綁 knee 上緣靠艏柱那段。
 - 錨照憲法號的大小（一級艦的錨應該更大）；憲法號 -anchor 沒記 meters_per_voxel（關聯是逐格貼，不受影響）。
+
+## 階段六 桅與帆桁（2026-10-14，TASK-0559）
+設計 plan.json `masts_build`（`masts` 的 boom 改 135）；產生 `design/draft_masts.py`（讀「階段六之前」：`deco_base.stage6_base` ＝ 船殼讀標記 `艏斜桅開口:begin` ＋ 甲板 ＋ 階段五的部件）⇒ `masks/masts/{main,fore,mizzen,bowsprit}.vox.txt`（世界座標）、`masks/masts/hull_carve.vox.txt`、`masks/yards/<帆桁>.vox.txt`（子作品座標）、`masts_placement.json`、`verify_masts.json`、`sheet07_masts_v1.png`；落格 `tools/build_masts.py`（hull／masts／yards／models）；讀數 `tools/check_stage6.py`。
+- **桅**（每根一件子作品、整船的框、at 0,0,0；組裝件關聯 `主桅`、`前桅`、`後桅`、`艏斜桅`）：下桅在甲板那一段照 `layout.mast_hit`（甲板孔就是它開的 ⇒ 剛好填滿），上甲板以上收到 masthead（0.8）、每 12 格一圈黑箍；上桅在下桅前面、頂桅在上桅前面（各自的 masthead 黑）；tops（平台 2 格厚、前緣圓、黑邊、深色木 104）＋ trestletrees／crosstrees；兩個 cap；上桅頂的 crosstrees；頂上白 truck。
+  - 主桅 50,618（truck z 728 ＝ 水線上 64.9 m）、前桅 38,919（667）、後桅 19,347（562）。桅腳照 plan 往上找第一層整圈都空的：前桅 z 22（船頭 deadwood 往上收、實心到 21）、後桅 z 69（立在 orlop 上；舷弧讓 x 222 的甲板面高 2 格）。
+  - 艏斜桅 18,313：根部 (690, 172)、32°、粗 5.5 → 3.8、尖 x 882；jib-boom 疊在上面（從 70% 起、粗 2.5 → 1.5、尖 x 953、z 344）；兩個 cap；根部底下一塊墊木到上甲板 560 格（不然根部懸空）。穿過船頭舷牆頂 ⇒ 船殼 `艏斜桅開口:begin` → carvevox 21 格（顏色守門）→ `:end`。
+- **帆桁 14 根**（每根一件子作品 `-yard-<名>`、parent ＝ 它的桅子作品、0.1 m；子作品裡放沒轉、沿 y 的帆桁；模型掛在桅子作品裡：scale 1、`rotate=0,0,θ`、pivot ＝ 帆桁中心那一格的格心）：
+  - 方帆桁 12：前桅 course 305／topsail 239／topgallant 151／royal 99、主桅 347／273／171／111、後桅 crossjack 239／topsail 171／topgallant 111、艏斜桅底下 spritsail 223（長照 plan.masts，取奇數 ⇒ 有正中那一格）；粗 ＝ 長 ÷ 50、Steel 1794 錐度；黑、兩端一格原木。
+  - brace 角照憲法號：course／crossjack −20、topsail −22、topgallant −24、royal −26；spritsail 0。
+  - spanker gaff（150、往船尾上翹 35°、jaws z 278）、boom（**135**、上翹 3°、jaws z 204）：角度做進格子；pivot ＝ 後桅在 jaws 高度的軸心那一格（繞桅轉）。boom 從 plan 的 215 縮到 135：taffrail 中線有船尾徽（x 71–72、z 207–228），boom 要停在 x 84、jaws 抬到 204 才過得了 taffrail 頂 z 206。
+  - 固定點：pivot、sling、arm-P／S、earing-P／S、jackstay-P／S 每 8 格；gaff throat、peak、top-8…；boom jaws、end、foot-8…（共 364）。
+  - meta：`kind=yard, mast, yard, length_ft, diameter_in, pivot_anchor=pivot, turn_axis=z, rotate_z_deg`＋ `sail`（帆名 `<桅>-<帆>`；gaff／boom ＝ `spanker`；crossjack、spritsail 沒有帆）—— 帆階段（TASK-0560）照這些名字開帆。
+
+讀數：
+- **子作品結果帳**（`tools/check_stage6.py`）：18 件（桅 4、帆桁 14）、161,353 格，缺 0、多 0、色差 0。
+- **船殼結果帳**：現在 1,102,662 ＝ `艏斜桅開口:begin` 1,102,683 − 刻 21，缺 0、多 0、色差 0；刻掉那 21 格刻之前的顏色 21／21 對得上。
+- **組裝件結果帳**：設計 1,945,464（船殼 1,102,662 ＋ 甲板與階段五 715,605 ＋ 四根桅 127,197）↔ 組裝件，缺 0、多 0、色差 0；stats 1 元件、空腔 0、link_overlap 0、鏡像差 30／37／0（名牌，跟階段五一樣）。
+- 產生程式各自量：甲板孔沒填滿 0、桅撞到別的東西 0（船殼以外）、彼此重疊 0、每根左右不對稱 0、浮空 0、空腔 0；帆桁 14 根各自對稱 0。
+- **帆桁模型**（組裝件 `export format=parts`，遊戲讀的那一份）：14 根、364 點、跟產生程式算的最大差 0.0005 格；meta 0 不同；state 全 ok。
+- **反向對照**：主桅 course 的 rotate −20 → −15 ⇒ arm-S (491.33, 362.13) → (477.02, 366.64)、移 15.0 格 —— 跟產生程式 `--probe=main-course:-15` 預測的一樣（到小數第三位）；改回 −20 ⇒ 回到原值。
+- 產生程式從現讀組裝件重跑：20 檔逐位元組相同（船殼讀的是標記 `艏斜桅開口:begin`）。
+- 過程圖：`overlays/stage6_masts_{bowq,side,sternq}.png`、`stage6_main_top.png`、`stage6_bowsprit.png`（近照用 models=0：region 只裁格子、模型照畫）。
+
+🩸 這一階段撞到的：
+- **晚綁定**：每根桅的軸心／半徑函式寫在 `for key in …` 迴圈裡，迴圈跑完全部指到最後一根（後桅）⇒ 主桅、前桅的 topsail 以上帆桁擺到後桅那邊（圖紙一眼看到紅點跑錯桅）⇒ 每根桅包成一個函式 `build(key)`。
+- 桅腳：plan 的 heel 照「船中」想；前桅那裡船底實心到 z 21、後桅那裡 orlop 因舷弧高 2 格 ⇒ 撞到 631／60 格（全是船殼與 orlop 甲板）⇒ 往上找第一層整圈都空的。
+- 工具：carvevox 回的是 `placed`（不是 carved）⇒ 刻成功了但 end 標記沒打、我手補；第一次補標記 exit 1、再打一次就好（沒查原因）。
+
+⚠ 看得到的／留給之後：
+- royal 帆桁很細（前桅 royal 粗 0.98 格 ⇒ 截面一格）；帆桁轉 20° 之後中段靠後那一小段會穿進桅（網格互穿，同憲法號）。
+- 還沒有：繩（靜索、ratlines、動索）、帆、channels、fife rails、bobstays（knee 上的 `bobstay-1／2／3` 已登記）。
