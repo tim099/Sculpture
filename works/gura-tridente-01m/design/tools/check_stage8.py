@@ -134,7 +134,11 @@ for r in rows:
     i = np.floor(Wp).astype(int)
     guns[i[:, 0], i[:, 1], i[:, 2]] = True
     mu = np.array(m['points']['muzzle'])
-    if r['meta'].get('arc') == 'stern':
+    if 'Q' in r:                                                         # 船頭砲門（TASK-0578）：引擎的砲口點沿砲軸超過開門點 Q 多少
+        sg = 1 if r['meta']['side'] == 'S' else -1
+        th = math.radians(r['angle_deg'])
+        out = float((mu - np.array(r['Q'])) @ np.array([math.cos(th), sg * math.sin(th), 0.0]))
+    elif r['meta'].get('arc') == 'stern':
         row = np.nonzero(hull[:, int(mu[1]), r['port_z'][0] - 1])[0]
         out = float(row.min() - mu[0])
     else:

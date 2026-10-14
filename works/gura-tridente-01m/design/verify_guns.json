@@ -1,13 +1,14 @@
 {
  "by_code": {
-  "12l": 34,
-  "18chase": 4,
+  "12l": 36,
+  "18chase": 2,
   "24l": 34,
   "32c": 16,
   "32l": 32,
-  "6l": 18
+  "6l": 18,
+  "trident": 6
  },
- "count": 138,
+ "count": 144,
  "fails": [],
  "not_ideal": [],
  "note": "draft_guns.py（階段八）—— 現況 ＝ 組裝件 links=all（1892654 格，z < 260）＋ 模型外框 16",
@@ -25,6 +26,7 @@
    "voxels": 16
   }
  },
+ "patched_by": "draft_bowchase.py（TASK-0578）：上砲甲板 砲-S18／P18 換回 12 磅、加三叉戟砲 6 門 —— 這一份不再是 draft_guns.py 的直接輸出",
  "rows": [
   {
    "at": [
@@ -5976,24 +5978,23 @@
   },
   {
    "at": [
-    689.216,
-    236.034,
+    689.0,
+    237.0,
     141.0
    ],
-   "back": 9.0,
+   "back": 8.0,
    "breech": [
-    687.974,
-    221.838,
-    151.75
+    689.0,
+    223.25,
+    148.25
    ],
    "deck_z": 140.0,
-   "dl": 1,
+   "dl": 0,
    "host_link": "甲板-upper",
    "host_work": "gura-tridente-01m-deck-upper",
    "meta": {
-    "arc": "bow",
     "deck": "upper",
-    "gun": "18chase",
+    "gun": "12l",
     "kind": "gun",
     "port": 18,
     "side": "S"
@@ -6001,16 +6002,16 @@
    "mirror": "none",
    "model": "砲-S18",
    "muzzle": [
-    690.327,
-    248.736,
-    151.75
+    689.0,
+    249.75,
+    148.25
    ],
-   "muzzle_out": 4.736,
+   "muzzle_out": 4.75,
    "outer": 245.0,
    "pad_cells": 0,
    "pivot": [
-    13.5,
-    36.0,
+    9.5,
+    35.0,
     0.0
    ],
    "port_x": [
@@ -6024,36 +6025,35 @@
    "rotate": [
     0,
     0,
-    -5
+    0
    ],
    "scale": 0.5,
    "support": [
-    192,
-    192
+    48,
+    48
    ],
-   "type": "chase18",
-   "work": "basecamp-frigate-constitution-01m-gun-long18"
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
   },
   {
    "at": [
-    689.216,
-    164.966,
+    689.0,
+    164.0,
     141.0
    ],
-   "back": 9.0,
+   "back": 8.0,
    "breech": [
-    687.974,
-    179.162,
-    151.75
+    689.0,
+    177.75,
+    148.25
    ],
    "deck_z": 140.0,
-   "dl": 1,
+   "dl": 0,
    "host_link": "甲板-upper",
    "host_work": "gura-tridente-01m-deck-upper",
    "meta": {
-    "arc": "bow",
     "deck": "upper",
-    "gun": "18chase",
+    "gun": "12l",
     "kind": "gun",
     "port": 18,
     "side": "P"
@@ -6061,16 +6061,16 @@
    "mirror": "y",
    "model": "砲-P18",
    "muzzle": [
-    690.327,
-    152.264,
-    151.75
+    689.0,
+    151.25,
+    148.25
    ],
-   "muzzle_out": 4.736,
+   "muzzle_out": 4.75,
    "outer": 156.0,
    "pad_cells": 0,
    "pivot": [
-    13.5,
-    36.0,
+    9.5,
+    35.0,
     0.0
    ],
    "port_x": [
@@ -6084,15 +6084,15 @@
    "rotate": [
     0,
     0,
-    5
+    0
    ],
    "scale": 0.5,
    "support": [
-    192,
-    192
+    48,
+    48
    ],
-   "type": "chase18",
-   "work": "basecamp-frigate-constitution-01m-gun-long18"
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
   },
   {
    "at": [
@@ -8219,6 +8219,366 @@
    ],
    "type": "chase18",
    "work": "basecamp-frigate-constitution-01m-gun-long18"
+  },
+  {
+   "Q": [
+    711.0,
+    226.5,
+    128.5
+   ],
+   "angle_deg": 40,
+   "at": [
+    702.957,
+    219.751,
+    118.0
+   ],
+   "breech": [
+    691.658,
+    210.27,
+    126.25
+   ],
+   "fire_blocked": 0,
+   "free": true,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "middle",
+    "gun": "trident",
+    "kind": "gun",
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "三叉戟砲-S",
+   "muzzle": [
+    715.788,
+    230.518,
+    126.25
+   ],
+   "muzzle_out": 6.25,
+   "pad_cells": 0,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "port_z": [
+    124,
+    132
+   ],
+   "rotate": [
+    0,
+    0,
+    -50.0
+   ],
+   "scale": 0.5,
+   "support": [
+    80,
+    80
+   ],
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident"
+  },
+  {
+   "Q": [
+    711.0,
+    174.5,
+    128.5
+   ],
+   "angle_deg": 40,
+   "at": [
+    702.957,
+    181.249,
+    118.0
+   ],
+   "breech": [
+    691.658,
+    190.73,
+    126.25
+   ],
+   "fire_blocked": 0,
+   "free": true,
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "middle",
+    "gun": "trident",
+    "kind": "gun",
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "三叉戟砲-P",
+   "muzzle": [
+    715.788,
+    170.482,
+    126.25
+   ],
+   "muzzle_out": 6.25,
+   "pad_cells": 0,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "port_z": [
+    124,
+    132
+   ],
+   "rotate": [
+    0,
+    0,
+    50.0
+   ],
+   "scale": 0.5,
+   "support": [
+    80,
+    80
+   ],
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident"
+  },
+  {
+   "Q": [
+    681.0,
+    248.5,
+    150.5
+   ],
+   "angle_deg": 60,
+   "at": [
+    676.25,
+    240.273,
+    141.0
+   ],
+   "breech": [
+    668.875,
+    227.499,
+    149.25
+   ],
+   "fire_blocked": 0,
+   "free": true,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "upper",
+    "gun": "trident",
+    "kind": "gun",
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "三叉戟砲-S",
+   "muzzle": [
+    684.625,
+    254.779,
+    149.25
+   ],
+   "muzzle_out": 7.25,
+   "pad_cells": 16,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "port_z": [
+    147,
+    154
+   ],
+   "rotate": [
+    0,
+    0,
+    -30.0
+   ],
+   "scale": 0.5,
+   "support": [
+    5,
+    80
+   ],
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident"
+  },
+  {
+   "Q": [
+    681.0,
+    152.5,
+    150.5
+   ],
+   "angle_deg": 60,
+   "at": [
+    676.25,
+    160.727,
+    141.0
+   ],
+   "breech": [
+    668.875,
+    173.501,
+    149.25
+   ],
+   "fire_blocked": 0,
+   "free": true,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "upper",
+    "gun": "trident",
+    "kind": "gun",
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "三叉戟砲-P",
+   "muzzle": [
+    684.625,
+    146.221,
+    149.25
+   ],
+   "muzzle_out": 7.25,
+   "pad_cells": 16,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "port_z": [
+    147,
+    154
+   ],
+   "rotate": [
+    0,
+    0,
+    30.0
+   ],
+   "scale": 0.5,
+   "support": [
+    5,
+    80
+   ],
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident"
+  },
+  {
+   "Q": [
+    686.0,
+    242.5,
+    172.5
+   ],
+   "angle_deg": 60,
+   "at": [
+    681.5,
+    234.706,
+    165.0
+   ],
+   "breech": [
+    674.125,
+    221.932,
+    173.25
+   ],
+   "fire_blocked": 0,
+   "free": true,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "spar",
+    "gun": "trident",
+    "kind": "gun",
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "三叉戟砲-S",
+   "muzzle": [
+    689.875,
+    249.212,
+    173.25
+   ],
+   "muzzle_out": 7.75,
+   "pad_cells": 30,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "port_z": [
+    169,
+    176
+   ],
+   "rotate": [
+    0,
+    0,
+    -30.0
+   ],
+   "scale": 0.5,
+   "support": [
+    0,
+    80
+   ],
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident"
+  },
+  {
+   "Q": [
+    686.0,
+    158.5,
+    172.5
+   ],
+   "angle_deg": 60,
+   "at": [
+    681.5,
+    166.294,
+    165.0
+   ],
+   "breech": [
+    674.125,
+    179.068,
+    173.25
+   ],
+   "fire_blocked": 0,
+   "free": true,
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "spar",
+    "gun": "trident",
+    "kind": "gun",
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "三叉戟砲-P",
+   "muzzle": [
+    689.875,
+    151.788,
+    173.25
+   ],
+   "muzzle_out": 7.75,
+   "pad_cells": 30,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "port_z": [
+    169,
+    176
+   ],
+   "rotate": [
+    0,
+    0,
+    30.0
+   ],
+   "scale": 0.5,
+   "support": [
+    0,
+    80
+   ],
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident"
   }
  ],
  "types": {
@@ -8525,6 +8885,17 @@
     24
    ],
    "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  "trident": {
+   "code": "trident",
+   "note": "TASK-0578 三叉戟砲（draft_trident.py）",
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "work": "gura-tridente-01m-gun-trident"
   }
  }
 }

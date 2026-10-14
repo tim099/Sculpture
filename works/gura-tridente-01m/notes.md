@@ -295,3 +295,27 @@ Tim 2026-10-14：「繼續做 shot garland」。設計 plan.json `garlands`；�
 🩸 這一階段撞到的：
 - **牆深的基準拿錯一欄**：v1 拿前一門砲那一排的外緣當基準 ⇒ 船頭那一段船殼往內收，每層最靠船頭那一條兩舷都量成太深（8 條）；改成同一欄、同一高度的船殼最外那格 ⇒ 全放得下。
 - **反向對照太弱**：z −2 只報 22 格（甲板面上第一層空氣 ＋2 往下 2 還是空氣）；改 z −3 才真的插進甲板板。
+
+## 階段十三 船頭追擊砲門＋三叉戟砲（2026-10-14 晚上，TASK-0578）
+Tim 2026-10-14：「繼續做船頭追擊砲門」「另外可以強化前方火力嗎（用奇幻的超級炮種 例如神鬼奇航有三連裝速射炮 可以設計更強的）」「然後可以多裝幾門」。
+設計 plan.json `trident`、`bowchase`；產生 `design/draft_trident.py`（砲本身）、`design/draft_bowchase.py`（砲門、擺砲、還回第 18 門）⇒ `masks/guns/trident.vox.txt`、`masks/bowchase/{hull_carve,pads_upper,pads_spar,head_side_carve,knee_carve}.vox.txt`、`verify_trident.json`、`verify_bowchase.json`；落格 `tools/apply_bowchase.py hull|pads|models|verify`；讀數 `tools/check_bowchase.py`。
+- **三叉戟砲**（子作品 `-gun-trident`，0.05 m、33×73×34、10,544 格、1 元件、左右差 0）：本船自己設計的奇幻砲 —— 三管橫排（中管 3.2 m、側管 2.8 m ＝ 三叉戟的三尖）、深海軍藍管身（5）、兩道金色連結板與砲口金箍（248）、砲尾上方金箍速射彈鼓、紅褐寬砲架（132）四輪。固定點 muzzle、muzzle-a/b/c、breech、cascabel、train、trunnion、eye-aft／fwd。旋轉體畫法參考風暴角號 draft_guns.py（summit）。
+- **船頭砲門**：三層（中砲甲板、上砲甲板、上甲板）各兩個。每層照角度 θ（砲軸從船頭方向往外偏）試，在砲門中段高度的船頭輪廓上找表面朝向最接近 θ 的點 Q（離中線至少 dy_min），沿砲軸刻穿船殼到外表面（寬 12、高照那一層）；刻的範圍只准有船殼（船頭裝飾、knee 可以一起刻，這次都沒碰到）。S 舷算、P 舷鏡像（P 舷擺砲也真的量）。
+  - 中砲甲板 θ 40°；上砲甲板、上甲板 θ **60°**（40°～55° 砲口出不去或火線被船頭欄杆擋）。船殼刻 2,092 格（標記 `船頭砲門:begin／end`，顏色守門）。
+  - 砲：從 Q 沿砲軸往裡退到零碰撞、高度照砲所在那裡的甲板面、中管砲口伸出 Q ≥ 0.5、三個砲口往前 20 格火線沒有實心；上兩層輪子補墊木（上 32、上甲板 60，甲板板色；標記 `船頭砲墊木`）。
+  - meta：kind=gun、**gun=trident**、barrels=3、arc=bow、side、deck。
+- **上砲甲板第 18 門還回 12 磅**（v1 借它放船頭追擊砲、只偏 5°）：只重算這兩門（現況 ＝ 整船扣掉它們自己的砲具）；原本的環、砲索、rammer／sponge 留著（新砲的繩路徑重量過）。
+- 總數 **144**：12l 36、24l 34、32l 32、6l 18、32c 16、trident 6、18chase 2（船尾）。1805 年 140 ＋ 船頭三叉戟砲 —— 奇幻強化，不是史料。
+- verify_guns.json 由 apply_bowchase.py verify 補成現況（換回那兩門＋三叉戟砲 6 門、types 加 trident）—— 它不再是 draft_guns.py 的直接輸出（draft_guns.py 只能在砲上船之前重跑：它把現況的模型外框都當障礙）。draft_gunfittings.py 改成跳過沒有舷側砲門的砲（三叉戟砲不掛砲索）。
+
+讀數：
+- `check_bowchase.py`：① 船殼 begin 1,102,662 − 刻 2,092 ＝ 現在，0 差；刻之前顏色 2,092／2,092 ② 墊木兩件 0 差 ③ 三叉戟砲 6 ＋ 換回 2：parts 都在、state ok、meta 0 不同、固定點跟 draft 差 0.0003 ④ 火線：三個砲口沿砲軸（引擎 muzzle − breech）往前 20 格落在實心或別門砲 0 ⑤ 碰撞 0 ⑥ 反向對照：一門往前推 2 ⇒ 84；刻除清單少一格 ⇒ 缺 1。
+- 全船重驗：`check_stage8.py` 144 門 碰撞 0、砲口 0、輪子 0、meta 0 不同；`check_gunfittings.py` 674 條 ok、obj 中段 0；`check_implements.py`、`check_garlands.py` 碰砲 0、浮空／脫牆 0。引擎 2,010,194 格、1 元件、空腔 0、link_overlap 0、模型 523 broken 0。
+- vxk 重匯 2,010,194 格、header checksum 3999968624；讀回 gun 代碼分布同上。
+- 過程圖：`overlays/stage13_trident_{a,b,c}.png`（砲本身）、`stage13_bow_tridents.png`（船頭外面看砲門與砲口）。
+
+🩸 這一階段撞到的：
+- **draft_guns.py 不能在砲上船之後重跑**：它把現況的模型外框（包括已經掛上去的 138 門）都當障礙，整批重擺一定全亂 ⇒ 跑到一半停掉（verify_guns.json 還沒寫，sha256 對過沒壞），改寫只動船頭的 draft_bowchase.py。
+- **sub=model overwrite=1 的 meta 是合併**：第 18 門換回 12 磅，舊追擊砲的 `arc=bow` 留了下來（parts 讀數 meta 不同 2 抓到）⇒ sub=meta 拿掉；apply 改成先清空再寫完整的。
+- 刻門的範圍 v1 刻到外表面外 2 格 ⇒ 撞上 cheek 與 beakhead 平台；改成只刻到外表面。開門點 v1 選在離中線 18 格 ⇒ 上甲板那一層砲撞進艏斜桅根部 ⇒ 加 dy_min。擺砲的高度 v1 用 x 700 的甲板面 ⇒ 砲退到 x 676 時輪子懸空 ⇒ 照砲所在那裡的甲板面。
+- heredoc 裡寫 `\n` 又變成真的換行（記憶裡有記）⇒ 改用 Edit。

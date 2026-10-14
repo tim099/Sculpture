@@ -1,0 +1,606 @@
+{
+ "note": "draft_bowchase.py —— 現況 ＝ 組裝件 links=all（1948410 格）扣掉換掉那兩門的砲具 126 格 ＋ 其他模型外框 379 ＋ 不換的砲 136 門",
+ "redo_broadside": [
+  {
+   "at": [
+    689.0,
+    237.0,
+    141.0
+   ],
+   "back": 8.0,
+   "breech": [
+    689.0,
+    223.25,
+    148.25
+   ],
+   "deck_z": 140.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "kind": "gun",
+    "gun": "12l",
+    "side": "S",
+    "port": 18,
+    "deck": "upper"
+   },
+   "mirror": "none",
+   "model": "砲-S18",
+   "muzzle": [
+    689.0,
+    249.75,
+    148.25
+   ],
+   "muzzle_out": 4.75,
+   "outer": 245.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    684,
+    693
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    689.0,
+    164.0,
+    141.0
+   ],
+   "back": 8.0,
+   "breech": [
+    689.0,
+    177.75,
+    148.25
+   ],
+   "deck_z": 140.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "meta": {
+    "kind": "gun",
+    "gun": "12l",
+    "side": "P",
+    "port": 18,
+    "deck": "upper"
+   },
+   "mirror": "y",
+   "model": "砲-P18",
+   "muzzle": [
+    689.0,
+    151.25,
+    148.25
+   ],
+   "muzzle_out": 4.75,
+   "outer": 156.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    684,
+    693
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  }
+ ],
+ "trident": [
+  {
+   "model": "三叉戟砲-S",
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident",
+   "scale": 0.5,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    -50.0
+   ],
+   "mirror": "none",
+   "at": [
+    702.957,
+    219.751,
+    118.0
+   ],
+   "angle_deg": 40,
+   "Q": [
+    711.0,
+    226.5,
+    128.5
+   ],
+   "port_z": [
+    124,
+    132
+   ],
+   "support": [
+    80,
+    80
+   ],
+   "free": true,
+   "pad_cells": 0,
+   "muzzle_out": 6.25,
+   "fire_blocked": 0,
+   "muzzle": [
+    715.788,
+    230.518,
+    126.25
+   ],
+   "breech": [
+    691.658,
+    210.27,
+    126.25
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "trident",
+    "barrels": 3,
+    "arc": "bow",
+    "side": "S",
+    "deck": "middle"
+   }
+  },
+  {
+   "model": "三叉戟砲-P",
+   "host_link": "甲板-middle",
+   "host_work": "gura-tridente-01m-deck-middle",
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident",
+   "scale": 0.5,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    50.0
+   ],
+   "mirror": "y",
+   "at": [
+    702.957,
+    181.249,
+    118.0
+   ],
+   "angle_deg": 40,
+   "Q": [
+    711.0,
+    174.5,
+    128.5
+   ],
+   "port_z": [
+    124,
+    132
+   ],
+   "support": [
+    80,
+    80
+   ],
+   "free": true,
+   "pad_cells": 0,
+   "muzzle_out": 6.25,
+   "fire_blocked": 0,
+   "muzzle": [
+    715.788,
+    170.482,
+    126.25
+   ],
+   "breech": [
+    691.658,
+    190.73,
+    126.25
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "trident",
+    "barrels": 3,
+    "arc": "bow",
+    "side": "P",
+    "deck": "middle"
+   }
+  },
+  {
+   "model": "三叉戟砲-S",
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident",
+   "scale": 0.5,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    -30.0
+   ],
+   "mirror": "none",
+   "at": [
+    676.25,
+    240.273,
+    141.0
+   ],
+   "angle_deg": 60,
+   "Q": [
+    681.0,
+    248.5,
+    150.5
+   ],
+   "port_z": [
+    147,
+    154
+   ],
+   "support": [
+    5,
+    80
+   ],
+   "free": true,
+   "pad_cells": 16,
+   "muzzle_out": 7.25,
+   "fire_blocked": 0,
+   "muzzle": [
+    684.625,
+    254.779,
+    149.25
+   ],
+   "breech": [
+    668.875,
+    227.499,
+    149.25
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "trident",
+    "barrels": 3,
+    "arc": "bow",
+    "side": "S",
+    "deck": "upper"
+   }
+  },
+  {
+   "model": "三叉戟砲-P",
+   "host_link": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident",
+   "scale": 0.5,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    30.0
+   ],
+   "mirror": "y",
+   "at": [
+    676.25,
+    160.727,
+    141.0
+   ],
+   "angle_deg": 60,
+   "Q": [
+    681.0,
+    152.5,
+    150.5
+   ],
+   "port_z": [
+    147,
+    154
+   ],
+   "support": [
+    5,
+    80
+   ],
+   "free": true,
+   "pad_cells": 16,
+   "muzzle_out": 7.25,
+   "fire_blocked": 0,
+   "muzzle": [
+    684.625,
+    146.221,
+    149.25
+   ],
+   "breech": [
+    668.875,
+    173.501,
+    149.25
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "trident",
+    "barrels": 3,
+    "arc": "bow",
+    "side": "P",
+    "deck": "upper"
+   }
+  },
+  {
+   "model": "三叉戟砲-S",
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident",
+   "scale": 0.5,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    -30.0
+   ],
+   "mirror": "none",
+   "at": [
+    681.5,
+    234.706,
+    165.0
+   ],
+   "angle_deg": 60,
+   "Q": [
+    686.0,
+    242.5,
+    172.5
+   ],
+   "port_z": [
+    169,
+    176
+   ],
+   "support": [
+    0,
+    80
+   ],
+   "free": true,
+   "pad_cells": 30,
+   "muzzle_out": 7.75,
+   "fire_blocked": 0,
+   "muzzle": [
+    689.875,
+    249.212,
+    173.25
+   ],
+   "breech": [
+    674.125,
+    221.932,
+    173.25
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "trident",
+    "barrels": 3,
+    "arc": "bow",
+    "side": "S",
+    "deck": "spar"
+   }
+  },
+  {
+   "model": "三叉戟砲-P",
+   "host_link": "甲板-spar",
+   "host_work": "gura-tridente-01m-deck-spar",
+   "type": "trident",
+   "work": "gura-tridente-01m-gun-trident",
+   "scale": 0.5,
+   "pivot": [
+    16.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    30.0
+   ],
+   "mirror": "y",
+   "at": [
+    681.5,
+    166.294,
+    165.0
+   ],
+   "angle_deg": 60,
+   "Q": [
+    686.0,
+    158.5,
+    172.5
+   ],
+   "port_z": [
+    169,
+    176
+   ],
+   "support": [
+    0,
+    80
+   ],
+   "free": true,
+   "pad_cells": 30,
+   "muzzle_out": 7.75,
+   "fire_blocked": 0,
+   "muzzle": [
+    689.875,
+    151.788,
+    173.25
+   ],
+   "breech": [
+    674.125,
+    179.068,
+    173.25
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "trident",
+    "barrels": 3,
+    "arc": "bow",
+    "side": "P",
+    "deck": "spar"
+   }
+  }
+ ],
+ "carve": {
+  "file": "masks/bowchase/hull_carve.vox.txt",
+  "cells": 2092,
+  "sha256": "103474345995b170ca1f3e751046ce2eea98c4518544218f9ca00869edca0574"
+ },
+ "carve_head_side": {
+  "file": "masks/bowchase/head_side_carve.vox.txt",
+  "work": "gura-tridente-01m-head-side",
+  "cells": 0,
+  "sha256": "fe7453278f38a7fd47581a5d6bdccbe7ad595324bd753f32340a84d03e80d02e"
+ },
+ "pads": {
+  "gura-tridente-01m-deck-spar": {
+   "file": "masks/bowchase/pads_spar.vox.txt",
+   "voxels": 60,
+   "sha256": "1f30383cc74f0b42851f53ae46ab31d67f15a3c43e2c22f226ea015061333cd3"
+  },
+  "gura-tridente-01m-deck-upper": {
+   "file": "masks/bowchase/pads_upper.vox.txt",
+   "voxels": 32,
+   "sha256": "94e95f244bef5d171375ffdcf797c7f8b5c770aa90018e2a6e89d2e4ee3f1696"
+  }
+ },
+ "carve_knee": {
+  "file": "masks/bowchase/knee_carve.vox.txt",
+  "work": "gura-tridente-01m-head-knee",
+  "cells": 0,
+  "sha256": "81f43a0655ddb900f5cd9f09b6648f44e70ec7a629b7d59ea9830b033e701748"
+ },
+ "log": [
+  {
+   "deck": "middle",
+   "tries": [
+    [
+     40,
+     "ok"
+    ]
+   ]
+  },
+  {
+   "deck": "upper",
+   "tries": [
+    [
+     40,
+     "砲擺不好 (False, True, True)"
+    ],
+    [
+     35,
+     "砲擺不好 (False, True, True)"
+    ],
+    [
+     45,
+     "砲擺不好 (False, True, True)"
+    ],
+    [
+     30,
+     "砲擺不好 (False, True, False)"
+    ],
+    [
+     50,
+     "砲擺不好 (False, True, True)"
+    ],
+    [
+     25,
+     "砲擺不好 (False, False, True)"
+    ],
+    [
+     55,
+     "砲擺不好 (False, True, True)"
+    ],
+    [
+     60,
+     "ok"
+    ]
+   ]
+  },
+  {
+   "deck": "spar",
+   "tries": [
+    [
+     40,
+     "砲擺不好 (False, False, True)"
+    ],
+    [
+     35,
+     "砲擺不好 (False, True, False)"
+    ],
+    [
+     45,
+     "砲擺不好 None"
+    ],
+    [
+     30,
+     "砲擺不好 (False, True, False)"
+    ],
+    [
+     50,
+     "砲擺不好 None"
+    ],
+    [
+     25,
+     "砲擺不好 (False, True, False)"
+    ],
+    [
+     55,
+     "砲擺不好 (False, True, True)"
+    ],
+    [
+     60,
+     "ok"
+    ]
+   ]
+  }
+ ],
+ "counts": {
+  "trident": 6,
+  "carve": 2092,
+  "carve_head_side": 0,
+  "carve_knee": 0,
+  "redo": 2
+ }
+}

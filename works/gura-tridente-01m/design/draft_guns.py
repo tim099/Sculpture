@@ -168,7 +168,7 @@ def main():
         typ = GN['rows'][p['deck']]
         if isinstance(typ, list):
             typ = typ[(p['i'] - 1) % len(typ)]
-        chase = p['deck'] == bow['deck'] and p['i'] == bow['port']
+        chase = bool(bow.get('port')) and p['deck'] == bow['deck'] and p['i'] == bow['port']   # TASK-0578 之後船頭追擊砲有自己的砲門（draft_bowchase.py）⇒ plan 的 bow.port 拿掉、這裡不再借舷側砲門
         if chase:
             typ = bow['type']
         tp = types[typ]

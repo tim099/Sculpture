@@ -114,6 +114,8 @@ def main():
     cells, anchors, rows, notes = {}, [], [], []
     for g in guns:
         r = g['row']
+        if not (r.get('port_x') or r.get('port_y')):
+            continue                                                     # 三叉戟砲（TASK-0578，斜放在船頭砲門）：不掛砲索 —— 只當障礙
         ex, ey = g['ex'], g['ey']
         dt = int(round(r['at'][2])) - 1                                # 砲腳下那一格
         ax_lat = int(np.argmax(np.abs(ex)))
