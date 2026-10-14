@@ -151,3 +151,13 @@
 ⚠ 看得到的／留給之後：
 - royal 帆桁很細（前桅 royal 粗 0.98 格 ⇒ 截面一格）；帆桁轉 20° 之後中段靠後那一小段會穿進桅（網格互穿，同憲法號）。
 - 還沒有：繩（靜索、ratlines、動索）、帆、channels、fife rails、bobstays（knee 上的 `bobstay-1／2／3` 已登記）。
+
+## 階段七 索具與帆（進行中，2026-10-14 傍晚，TASK-0560）
+設計 plan.json `rigging`；產生 `design/draft_rigging.py`（讀 `deco_base.stage7_base` ＝ 船殼＋甲板＋階段五＋四根桅；帆桁上的點讀 verify_masts.json）⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/ensign.png`、`verify_rigging.json`；落格 `tools/rigging_apply.py`（channels／anchors／ropes／sails／sailropes／wind／meta）。
+- channels（`-channels` 右舷一件 5,487 格、關聯 `channels`／`channels-鏡像` mirror=y）：每根桅一塊板（上甲板砲門頂往上）、外緣 deadeye；跟現況重疊 0。
+- 固定點 164（船殼 14：belay、bowsprit shroud；channels 31；主 38、前 40、後 33；艏斜桅 8）。
+- 繩 418：shrouds 46、topmast shrouds 28、futtock 28、topgallant shrouds 12、backstays 16、stays 9、bowsprit 5、ratlines 246（下 146、上 100，一階一條子繩）、sheets 24、tacks 4；分組 standing／ratlines／running。
+- 帆 15：方帆 10（綁帆桁模型的 earing）、spanker（gaff＋boom）、fore-topmast-staysail、jib、旗 2（ensign：西班牙海軍旗 1785 像素畫、掛 gaff 頂；pennant 主桅頂）；預設風 4.5,−1.5,0、4 秒。
+- meta 43 筆（帆 13＋旗 2＋帆自己的 sheet／tack 28）。
+- 讀數（套用後）：ropes_broken 0、sails_broken 0、models_broken 0；`sub=meta part=sail` 15 面都有；最鼓 −91.56 格（憲法號 −96.6）。
+- ⚠ **還沒做**（下一次接）：結果帳（channels 子作品、組裝件）、繩逐條 vs plan、帆自己的繩「沒有 meta」0 與反向對照（拿掉一條 sheet 的 meta 要報 1）、產生程式重跑逐位元組、過程圖（現在只有 `overlays/stage7_wip_sails_bowq.png`）、看帆形狀細修。

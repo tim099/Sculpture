@@ -320,5 +320,69 @@
       "src": "gaff jaws 照 layout（後桅平台下 30）、往船尾上翹 35°（憲法號）；boom jaws 抬到 z 204、上翹 3° ⇒ 尾端底過得了 taffrail z 206，長縮到 135（尾端 x 84，船尾徽在中線 x 71–72）"
     },
     "spritsail": {"at": 0.85, "src": "掛在艏斜桅底下 85% 那裡、水平、跟中線垂直（憲法號：主要當 jibboom guys 的撐桿 ⇒ 沒有帆）"}
+  },
+  "rigging": {
+    "src": "設計決定（TASK-0560；遊戲用 ⇒ 帆、帆自己的繩、旗照造船規格 §9.1 標 meta；靜索與 ratlines 是外觀）；數值照憲法號（造船規格 §6、§7）",
+    "channels": {
+      "shrouds": {"main": 9, "fore": 8, "mizzen": 6},
+      "backstays": {"main": 2, "fore": 2, "mizzen": 1},
+      "fwd": 8,
+      "spacing": 7,
+      "above_deck": 17,
+      "width": 12,
+      "color": 36,
+      "deadeye": 136,
+      "src": "每根桅一塊 channel：上甲板砲門頂往上（甲板面 ＋ 17：砲門 sill 5 ＋ 高 8 ＋ 4），往外 12 格、2 格厚；外緣一排 deadeye（3×1×3、深色木），從桅前 8 格往船尾每 7 格一個：shrouds（主 9、前 8、後 6）＋ topmast backstays（2／2／1）＋ topgallant backstay 1"
+    },
+    "topmast_shrouds": {"main": 5, "fore": 5, "mizzen": 4},
+    "belay": {"main-sheet": 330, "main-tack": 520, "fore-sheet": 560, "fore-tack": 700, "fts": 680, "jib": 690},
+    "bowsprit_shroud_hull": [705, 165],
+    "thick": {
+      "shroud": {"main": 1.2, "fore": 1.1, "mizzen": 0.9},
+      "topmast_shroud": 0.8,
+      "futtock": 0.6,
+      "tg_shroud": 0.5,
+      "backstay": 0.8,
+      "tg_backstay": 0.6,
+      "stay": 1.5,
+      "tm_stay": 1.0,
+      "tg_stay": 0.6,
+      "bobstay": 1.0,
+      "course_sheet": 0.5,
+      "sheet": 0.35
+    },
+    "colors": {"standing": "#2b2620", "running": "#a08458"},
+    "ratlines": {
+      "lower_every": 6,
+      "topmast_every": 8,
+      "start": 7,
+      "stop": 0.9,
+      "min_len": 5,
+      "lower_th": 0.3,
+      "topmast_th": 0.25,
+      "src": "一階一條子繩、從第一根拉到最後一根（同一個比例 ⇒ 同一個高度）；下桅每 6 格、上桅每 8 格（憲法號每 4 格；遊戲用放寬）；從 deadeye 往上 7 格起、到 90% 停；短於 5 格不畫"
+    },
+    "sails": {
+      "fullness": 1.05,
+      "color": "#f2ead8",
+      "course_in": 0.7,
+      "course_clew_z": 195,
+      "clew_in": 0.04,
+      "course_sheet_slack": 0.85,
+      "course_tack_slack": 0.8,
+      "jib_head": 0.75,
+      "jib_clew": [0.3, 30, 25],
+      "jib_fullness": 1.06,
+      "src": "方帆上緣釘在帆桁的兩個 earing 之間（綁帆桁模型 ⇒ 帆桁一轉帆跟著走）；topsail 以上的 clew 綁下一根帆桁同舷的 earing；course 的 clew 在 z 195、sheet 往後、tack 往前綁舷頂（憲法號 0.85／0.8）；spanker 三邊釘住只有 leech 自由；三角帆 tack 在 stay 下端、head 在 stay 上 75%（那條 stay 拉直）"
+    },
+    "flags": {
+      "ensign": [45, 30],
+      "ensign_color": "#c60b1e",
+      "pennant": [60, 4],
+      "pennant_color": "#c60b1e",
+      "src": "船尾旗：西班牙海軍旗（1785，紅黃紅 1:2:1＋盾與冠，像素畫 60×40）掛 gaff 頂、旗桿那一邊跟著 gaff 走；長旗掛主桅頂（遊戲：降旗降 ensign）"
+    },
+    "wind": [4.5, -1.5, 0],
+    "sail_seconds": 4
   }
 }

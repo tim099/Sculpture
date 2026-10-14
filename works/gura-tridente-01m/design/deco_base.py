@@ -90,3 +90,12 @@ def stage6_base(hull_mark, nz=800):
     R = export_list(ASM, decks + ',' + STAGE5_LINKS)
     return grid_of([H, R], nz), H, when
 
+
+MAST_LINKS = '主桅,前桅,後桅,艏斜桅'
+
+
+def stage7_base(nz=260):
+    """階段七之前：船殼（現在）＋ 甲板 ＋ 階段五 ＋ 四根桅（channels 那兩條關聯不讀 ⇒ 套用之後重跑讀到的還是同一份）。"""
+    A = export_list(ASM, BASE_LINKS + ',' + STAGE5_LINKS + ',' + MAST_LINKS)
+    return grid_of([A[A[:, 2] < nz]], nz)
+

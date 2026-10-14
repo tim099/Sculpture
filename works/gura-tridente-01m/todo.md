@@ -1,10 +1,7 @@
 # 三叉戟號 TODO
 
-## 下一步：階段七 索具與帆（TASK-0560）
-- 帆名照帆桁 meta 的 `sail`：`<桅>-<course|topsail|topgallant|royal>`、`spanker`（gaff＋boom）；crossjack、spritsail 沒有帆；三角帆（jib、staysail）自己取名、`mast=bowsprit`。每面帆、帆自己的繩照造船規格 §9.1 標 meta。
-- 帆角綁帆桁模型：`model:<桅關聯>/yard-<帆桁>/earing-P|S`（帆桁一轉帆跟著走）；topsail 以上的 sheet 綁下一根帆桁同舷的 earing。
-- 先做 channels（上甲板砲門 x 128–698 那一排要讓開 —— 憲法號階段二十九的坑）、再拉靜索（shrouds、backstays、stays）、ratlines、動索；bobstay 綁 `船頭-knee/bobstay-1|2|3`。
-- boom 的尾端 x 84、z 211：spanker 的 sheet 往 taffrail 綁。
+## 下一步：階段七收尾（TASK-0560，已套用、還沒驗收）
+- 索具與帆已經落到組裝件（notes.md 階段七）；剩：`tools/check_stage7.py`（channels 結果帳、組裝件結果帳、繩／帆逐條 vs rigging_plan.json、帆自己的繩沒有 meta 0）、反向對照（拿掉一條 sheet 的 meta ⇒ 報 1，再加回）、draft_rigging.py 重跑逐位元組、過程圖、看帆形狀（course clew、三角帆、旗）細修、勾單提交（Fixes TASK-0560）。
 
 ## 再之後
 - 砲（TASK-0561：四層，砲種代碼跟 ame 對）、彈藥庫與甲板物件（TASK-0562）、匯進遊戲（TASK-0563）。
