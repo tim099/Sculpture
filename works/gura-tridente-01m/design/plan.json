@@ -505,5 +505,19 @@
       "tackle": {"thickness": 0.25, "slack": 1.03, "color": "#a08458"},
       "train": {"thickness": 0.25, "slack": 1.05, "color": "#a08458"}
     }
+  },
+  "implements": {
+    "src": "設計決定（TASK-0576）：照造船規格 §4.4、憲法號階段二十二、餘燼號階段十二的 rammer／sponge（數值照搬）；只做有天花板的三層砲甲板；量牆與天花板從甲板面 ＋16 起（砲門上緣 ＋14 再上 2 格 —— v1 從 ＋14 起 ⇒ 砲門那幾欄量到的是砲門口、桿伸進楣樑，同憲法號「找牆的高度取 ＋12 ＝ 砲門那一層」的坑）；橫移 ±8",
+    "decks": ["lower", "middle", "upper"],
+    "works": {"lower": "gura-tridente-01m-implements-lower", "middle": "gura-tridente-01m-implements-middle", "upper": "gura-tridente-01m-implements-upper"},
+    "titles": {"lower": "三叉戟號 rammer／sponge（下砲甲板）", "middle": "三叉戟號 rammer／sponge（中砲甲板）", "upper": "三叉戟號 rammer／sponge（上砲甲板）"},
+    "link": "推彈桿與洗膛桿",
+    "colors": {"staff": 136, "rammer_head": 104, "sponge_head": 218, "iron": 36},
+    "lengths": [28, 22],
+    "clear_wall": 3,
+    "ceiling_from": 16,
+    "ceiling_max": 24,
+    "dx_try": [-2, 0, -1, 1, -3, -4, -5, -6, 2, 3, 4, 5, 6, -7, 7, -8, 8],
+    "bands": [6, 22]
   }
 }

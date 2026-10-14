@@ -268,3 +268,17 @@ Tim 2026-10-14：「繼續做砲具與砲索」。設計 plan.json `gunfittings`
 - vxk 重匯：2,002,354 格、header checksum 3778507588、sha256 66f658bb…；繩 1,094、模型 517、固定點 1,894、rig_skipped 空（decks.py load 讀回格數相同）。
 
 ⚠ 留給之後：rammer／sponge（§4.4 掛在橫樑底下）沒做。
+
+## 階段十一 rammer／sponge（2026-10-14 晚上，TASK-0576）
+Tim 2026-10-14：「繼續做 rammer 跟 sponge」。設計 plan.json `implements`；產生 `design/draft_implements.py`（改自餘燼號 draft_gunfittings.py 的 rammer／sponge 段，basecamp；它照憲法號階段二十二）⇒ `masks/implements/{lower,middle,upper}.vox.txt`（世界座標）、`verify_implements.json`；落格 `tools/apply_implements.py`；讀數 `tools/check_implements.py`。
+- 每門舷側砲正上方天花板底下一對，平行砲身（沿 y）、外端離船殼內面 3 格：長 28、桿 136、頭 2×2（rammer 104、sponge 218）、離外端 6、22 格兩道鐵箍 36。候選：長的 ＞ 低的（掛在橫樑底下）＞ 靠砲中線；兩支至少隔 2 欄。
+- 三層（lower、middle、upper）102 門 × 2 ＝ **204 支全放得下**；上甲板（spar）露天、頭上沒東西掛 ⇒ 不做；船尾兩門追擊砲砲軸是 x ⇒ 不做。
+- 子作品三件 `-implements-{lower,middle,upper}`（整船框、at 0,0,0、0.1 m、parent 船殼、sub）1,920／2,040／2,160 格；關聯 `推彈桿與洗膛桿` 在各層甲板子作品裡。
+- 讀數：① 三件 清單 ↔ 子作品 0 差；組裝件 2,008,474 ＝ 藏本階段 2,002,354 ＋ 6,120，0 差、重疊 0 ② 桿的格裡落了砲（砲的變換從引擎固定點反推）0 ③ 浮空 0 欄（5,446 欄）④ 反向對照：清單 y ＋1 ⇒ 結果帳 缺 374／多 408／色差 1,054；z −1 ⇒ 浮空 5,446 欄全報。引擎 1 元件、空腔 0、link_overlap 0。draft 重跑逐位元組相同。
+- vxk 重匯：2,008,474 格、header checksum 2355970976、繩 1,094、模型 517、rig_skipped 空（decks.py load 讀回格數相同）。
+- 過程圖：`overlays/stage11_implements_lower.png`（下砲甲板剖半，切掉上一層甲板 ⇒ 桿看起來像飄著，③ 證明頭上就是天花板）。
+
+🩸 這一階段撞到的：
+- **把砲的外框當實心**：v1 下砲甲板一根都放不上 —— 36 磅砲外框頂到 z 107，正好在橫樑底下那一段 ⇒ 同一根桿下面有的 y 碰到外框、有的碰到樑，天花板「不一樣高」。天花板只看格子、碰撞改用砲的實際格。
+- **量牆的高度落在砲門口**：v2 sponge 還是大半放不下 —— 從甲板面 ＋14 起量，而砲門上緣就在 ＋14 ⇒ 砲門那幾欄量到的「牆」是砲門口、桿伸進楣樑；只剩砲門外側一欄，rammer 先拿走。改 ＋16、橫移 ±8 ⇒ 全放得下。憲法號階段二十二同一個坑（「找牆的高度取 ＋12 ＝ 砲門那一層」）。
+- **反向對照選錯方向**：浮空的反向第一次拿 y ＋1 ⇒ 0（桿本來就沿 y，平移後還在同一片天花板底下）；改 z −1 ⇒ 全報。
