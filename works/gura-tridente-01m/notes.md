@@ -181,8 +181,8 @@
 - crossjack、spritsail 帆桁沒有帆（照 1793 表的平常帆裝）；main／mizzen staysail 沒做。
 - 帆桁轉 20° 之後中段穿進桅（網格互穿，同階段六）；帆是布料模擬，鼓的樣子跟風、秒數有關（預設 4.5,−1.5,0、4 秒）。
 
-## 階段八 砲（設計完成、還沒落格，2026-10-14 晚上，TASK-0561）
-設計 plan.json `guns`；產生 `design/draft_guns.py`（做法照風暴角號 draft_guns.py ＋ 造船規格 §4.2：橫向對準砲門中線、從牆外沿砲口方向每 0.5 格往裡退，退到模型每一格的格心＋八角都不在實心裡；排序 輪子著地 ＞ 砲口伸出 ≥ 0.5 ＞ 置中 ＞ 推得出去）⇒ `verify_guns.json`、`masks/guns/pads_{lower,middle,upper}.vox.txt`；落格 `tools/apply_guns.py`（pads／models／meta）；讀數 `tools/check_stage8.py`（還沒跑 —— 要落格之後）。
+## 階段八 砲（2026-10-14 晚上落格、驗收，TASK-0561）
+設計 plan.json `guns`；產生 `design/draft_guns.py`（做法照風暴角號 draft_guns.py ＋ 造船規格 §4.2：橫向對準砲門中線、從牆外沿砲口方向每 0.5 格往裡退，退到模型每一格的格心＋八角都不在實心裡；排序 輪子著地 ＞ 砲口伸出 ≥ 0.5 ＞ 置中 ＞ 推得出去）⇒ `verify_guns.json`、`masks/guns/pads_{lower,middle,upper}.vox.txt`；落格 `tools/apply_guns.py`（pads／models／meta）；讀數 `tools/check_stage8.py`。
 - 砲一門一個外部模型，**借現成的砲子作品**（匯入自動 credit），不新做：下層 36 磅 ← 餘燼號 -gun-long32（32l）、中層 24 磅 ← 憲法號 -gun-24（24l，0.1 m、scale 1）、上層 12 磅 ← 風暴角號 -gun-12l（12l）、第四層 8 磅 ← 風暴角號 -gun-6l（6l）＋ obús ← 憲法號 -gun-carronade32（32c）、追擊 ← 憲法號 -gun-long18（18chase）；0.05 m 的 scale 0.5。六件都左右對稱 0 ⇒ P 舷一律 mirror=y。
 - 第四層 17 門：單數號 8 磅、雙數號 obús（9＋8）。
 - 船尾追擊 2：中砲甲板船尾窗那一列的兩個砲門（rotate 90）。船頭追擊 2：**沒有開船頭砲門** ⇒ 借上砲甲板第 18 個砲門照角度搜（5°～35°，取推得出去的最大角）⇒ 只推得出 **5°**；那個砲門的 12 磅讓給它。
@@ -191,4 +191,23 @@
 - 讀數（draft）：138 門全放得進去；第一版 12 門輪子一半懸空 —— 甲板舷弧取整是一階一階的，一階落在砲架底下 ⇒ 照風暴角號補墊木（甲板板色、放在那一層甲板子作品）：下層 20、中層 48、上層 16 格；墊完懸空 0、砲口沒伸出 0。
 - 重跑（不用快取、從引擎重讀現況）：verify_guns.json 與三份墊木清單逐位元組相同。
 - 預覽 preset 9 組（造船規格 §2）：只看船殼、剖半-看右舷／左舷內側、不掛帆、只看桅與索具、只看甲板-lower／middle／upper／spar。
-- ⏳ **砲種代碼等 ame 確認**（酒館 seq 24438：提案新代碼只有 12l、6l，風暴角號本來就要）—— 確認之前不落格。代碼要改 ⇒ 改 plan `guns.types.*.code` → 重跑 draft → `apply_guns.py meta`。
+- 砲種代碼：提案在酒館 seq 24438（新代碼只有 12l、6l，風暴角號本來就要）；Tim 2026-10-14「繼續造船、要用在遊戲內」⇒ 照提案落格。遊戲遇到不認得的代碼當長砲（`10_ship.js` modelKind：`GUN_CODE[mt.gun] || 'long'`）⇒ 12l、6l 在 ame 加進砲種表之前照 24 磅算。代碼要改 ⇒ 改 plan `guns.types.*.code` → 重跑 draft → `apply_guns.py meta`。
+
+落格：三層甲板子作品打標記 `階段八墊木:begin` → stampvox 墊木（下 20、中 48、上 16，placed ＝ 清單格數）→ `:end`；138 個模型（`apply_guns.py models`，IOException 重試 0）。
+
+讀數（`tools/check_stage8.py`）：
+- **墊木結果帳**：三層甲板 現在 ＝ `階段八墊木:begin` ＋ 墊木清單，缺 0、多 0、色差 0；墊木跟 begin 重疊 0。
+- **parts（遊戲讀的那一份）**：砲 138 門，找不到 0、state 不是 ok 0、meta 不同 0；muzzle／breech 跟 draft 算的最大差 0.0005 格。
+- **碰撞（獨立的尺）**：每門的變換從引擎匯出的固定點反推（最小平方仿射，殘差 0.0000），把來源砲每一格（格心＋八角）搬上船，對現讀組裝件 links=all ＋ 其他模型外框 ＋ 已量過的砲 ⇒ 碰到 0。
+- **砲口在船殼外**：沒伸出 0。**輪子著地**：懸空 0。
+- **反向對照**：砲-S08@甲板-lower 往外推 2 格 ⇒ 碰撞 1,755 個取樣點；往船頭推 2 格 ⇒ 0（兩門之間有空）；抬高 1 格 ⇒ 懸空 192／192；meta 改 gun=xx ⇒ meta 不同 1。
+- 引擎：models 154（砲 138 ＋ 帆桁 14 ＋ 燈籠 2）models_broken 0；組裝件 1,956,522 格（＝ 階段七 1,956,438 ＋ 墊木 84）、1 元件、空腔 0、link_overlap 0。
+- 過程圖：`overlays/stage8_guns_{lower_deck,side,section}.png`。
+
+🩸 這一階段撞到的：
+- **量具的浮點邊界**：check 第一版報 124 門輪子懸空，draft 說 0。錯在 check：仿射是最小平方解的，輪底那層 z 剛好是整數（93.0）⇒ 解出來 92.99999… ⇒ floor 多掉一格，看到甲板板底下的空氣。輪底取樣改用格心（z 0.5），並補「抬高 1 格要全報」的反向對照，證明修過的尺抓得到。兩把尺打架的時候，先查尺。
+- 甲板舷弧取整是一階一階的 ⇒ 一階落在砲架底下（墊木，見上）。
+
+⚠ 看得到的／留給之後：
+- 船頭追擊砲只偏 5°（借舷側砲門）；要更像追擊砲得在船頭開砲門（改船殼），目前不做。
+- 砲具與砲索（造船規格 §4.4：環首螺栓、breeching、side tackle、train tackle）還沒做。

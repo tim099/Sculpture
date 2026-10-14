@@ -85,7 +85,7 @@ for k, T in V['types'].items():
     C = DB.export_list(T['work'], None)
     an = json.load(open(os.path.join(WORKS, T['work'], 'anchors.json'), encoding='utf-8'))['anchors']
     src[k] = {'samp': (C[:, :3].astype(float)[:, None, :] + offs[None]).reshape(-1, 3),
-              'bot': np.array([[x + ox, y + oy, 0.0] for x, y, _ in C[C[:, 2] == 0][:, :3] for ox in (0.3, 0.7) for oy in (0.3, 0.7)]),
+              'bot': np.array([[x + ox, y + oy, 0.5] for x, y, _ in C[C[:, 2] == 0][:, :3] for ox in (0.3, 0.7) for oy in (0.3, 0.7)]),   # z 取格心：最小平方解出的仿射把 z 0.0 算成 92.99999 ⇒ floor 會多掉一格（第一版報 124 門懸空，錯在尺）
               'an': {a['name']: a['at'] for a in an}}
 
 
@@ -161,3 +161,7 @@ g2[i[:, 0], i[:, 1], i[:, 2]] = False                                      # 拿
 print('⑥ 反向對照：砲-S08@甲板-lower 原位 %d、往外（+y）推 2 格 ⇒ %d、往船頭推 2 格 ⇒ %d；meta 改 gun=xx ⇒ meta 不同 %d' % (
     collide(Wp, g2), collide(Wp + np.array([0, 2.0, 0]), g2), collide(Wp + np.array([2.0, 0, 0]), g2),
     sum(1 for r in rows if dict(r['meta'], **({'gun': 'xx'} if r is r0 else {})) != by['%s/%s' % (r['host_link'], r['model'])].get('meta'))))
+wb0 = np.floor(src[r0['type']]['bot'] @ M + t).astype(int)
+wb1 = np.floor(src[r0['type']]['bot'] @ M + t + np.array([0, 0, 1.0])).astype(int)
+print('   輪子：砲-S08@甲板-lower 原位懸空取樣 %d／%d、抬高 1 格 ⇒ %d' % (
+    int((~occ[wb0[:, 0], wb0[:, 1], wb0[:, 2] - 1]).sum()), len(wb0), int((~occ[wb1[:, 0], wb1[:, 1], wb1[:, 2] - 1]).sum())))
