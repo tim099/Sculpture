@@ -40,3 +40,12 @@
 - 產生程式重跑：9 個輸出檔逐位元組相同。
 
 ⚠ 已知、之後的階段處理：船尾是一整片平的 transom＋counter（船尾廊與 quarter galleries 在 TASK-0558）；船頭是圓的艏柱（beakhead／head 在 TASK-0558）；最大寬那一格的高度 z 96 沒有出處（設計決定）。
+
+## 階段二 船殼落格（2026-10-14，TASK-0555）
+- 標記 `船殼:begin`（upto=start）→ `design/tools/stamp_lists.py gura-tridente-01m 0 masks/hull/hull_01..05.vox.txt`（5 刀：250,000 ×4 ＋ 153,334，每刀讀回 placed ＝ 清單格數）→ `船殼:end`。
+- **結果帳**（`design/tools/check_hull.py`：作品那側從 `export format=list links=none mark=船殼:end` 讀）：作品 1,153,334 ＝ 設計 1,153,334，缺 0、多 0、色差 0。
+- **結構**（引擎 `stats structure=1 mirror=y:200`）：1 元件、封閉空腔 0、鏡像差 0／0／0。
+- **線形對照**：右舷外緣（每個 (x, z) 最大的 dy）vs `hull_lines.hb` 取 floor，x 80..720 每 25、z 6..176 每 5，836 點、差 0。反向對照：設計那一站（x 430）+3 ⇒ 報 3（34 點，那一站每個高度）。
+- **組裝件** `gura-tridente-01m-assembly`「三叉戟號（組裝）」：0.1 m、1100×400×800（parent 船殼，沒標 sub ＝ 主作品）；關聯 `船殼` at 0,0,0、meta `kind=ship, waterline_z=79`（遊戲 `hullZW` 讀它）。
+- 過程圖：`overlays/stage2_hull_{bowq,sternq,side,top}.png`（鏡頭：yaw 30 ＝ 船頭四分之三、150 ＝ 船尾四分之三、90 ＝ 側面）。
+- ⚠ 看得到的：船殼是一整片黑（紅帶、白線、砲門在階段三）；舷頂是 4 層色的切面（cap rail 之後）；艙裡是空的（甲板在階段四）。
