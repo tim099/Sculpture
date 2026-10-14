@@ -1,5 +1,5 @@
 {
-	"schema": 2,
+	"schema": 3,
 	"ropes": [
 		{
 			"name": "mizzen-shroud-S1",
@@ -6669,6 +6669,414 @@
 			"note": "vang（階段九）",
 			"persona": "summit",
 			"created_at": "2026-10-14T10:19:24"
+		},
+		{
+			"name": "main-course-sheet-S",
+			"from": "sail:main-course/clew_s",
+			"to": "船殼/kevel-kamp-S",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:41",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-course-tack-S",
+			"from": "sail:main-course/clew_s",
+			"to": "channels/deadeye-fore-6",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "tack（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:41",
+			"meta": {
+				"kind": "tack",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-course-sheet-P",
+			"from": "sail:main-course/clew_p",
+			"to": "船殼/kevel-kamp-P",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:42",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-course-tack-P",
+			"from": "sail:main-course/clew_p",
+			"to": "channels-鏡像/deadeye-fore-6",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "tack（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:42",
+			"meta": {
+				"kind": "tack",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-topsail-sheet-S",
+			"from": "sail:main-topsail/clew_s",
+			"to": "model:主桅/yard-main-course/earing-S",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:42",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topsail"
+			}
+		},
+		{
+			"name": "main-topsail-sheet-P",
+			"from": "sail:main-topsail/clew_p",
+			"to": "model:主桅/yard-main-course/earing-P",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:43",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topsail"
+			}
+		},
+		{
+			"name": "main-topgallant-sheet-S",
+			"from": "sail:main-topgallant/clew_s",
+			"to": "model:主桅/yard-main-topsail/earing-S",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:43",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topgallant"
+			}
+		},
+		{
+			"name": "main-topgallant-sheet-P",
+			"from": "sail:main-topgallant/clew_p",
+			"to": "model:主桅/yard-main-topsail/earing-P",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:43",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topgallant"
+			}
+		},
+		{
+			"name": "fore-course-sheet-S",
+			"from": "sail:fore-course/clew_s",
+			"to": "channels/deadeye-main-1",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:44",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-course-tack-S",
+			"from": "sail:fore-course/clew_s",
+			"to": "船殼/kevel-bak-S",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "tack（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:44",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-course-sheet-P",
+			"from": "sail:fore-course/clew_p",
+			"to": "channels-鏡像/deadeye-main-1",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:44",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-course-tack-P",
+			"from": "sail:fore-course/clew_p",
+			"to": "船殼/kevel-bak-P",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "tack（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:45",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-topsail-sheet-S",
+			"from": "sail:fore-topsail/clew_s",
+			"to": "model:前桅/yard-fore-course/earing-S",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:45",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topsail"
+			}
+		},
+		{
+			"name": "fore-topsail-sheet-P",
+			"from": "sail:fore-topsail/clew_p",
+			"to": "model:前桅/yard-fore-course/earing-P",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:45",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topsail"
+			}
+		},
+		{
+			"name": "fore-topgallant-sheet-S",
+			"from": "sail:fore-topgallant/clew_s",
+			"to": "model:前桅/yard-fore-topsail/earing-S",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:46",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topgallant"
+			}
+		},
+		{
+			"name": "fore-topgallant-sheet-P",
+			"from": "sail:fore-topgallant/clew_p",
+			"to": "model:前桅/yard-fore-topsail/earing-P",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:46",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topgallant"
+			}
+		},
+		{
+			"name": "mizzen-topsail-sheet-S",
+			"from": "sail:mizzen-topsail/clew_s",
+			"to": "後桅/top-fwd",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:47",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-topsail"
+			}
+		},
+		{
+			"name": "mizzen-topsail-sheet-P",
+			"from": "sail:mizzen-topsail/clew_p",
+			"to": "後桅/top-fwd",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:47",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-topsail"
+			}
+		},
+		{
+			"name": "spritsail-sheet-S",
+			"from": "sail:spritsail/clew_s",
+			"to": "船殼/kevel-bak-S",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:47",
+			"meta": {
+				"kind": "sheet",
+				"sail": "spritsail"
+			}
+		},
+		{
+			"name": "spritsail-sheet-P",
+			"from": "sail:spritsail/clew_p",
+			"to": "船殼/kevel-bak-P",
+			"color": "#6b5a40",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:48",
+			"meta": {
+				"kind": "sheet",
+				"sail": "spritsail"
+			}
+		},
+		{
+			"name": "sprit-topsail-sheet-S",
+			"from": "sail:sprit-topsail/clew_s",
+			"to": "model:船首斜桅/yard-spritsail/earing-S",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:48",
+			"meta": {
+				"kind": "sheet",
+				"sail": "sprit-topsail"
+			}
+		},
+		{
+			"name": "sprit-topsail-sheet-P",
+			"from": "sail:sprit-topsail/clew_p",
+			"to": "model:船首斜桅/yard-spritsail/earing-P",
+			"color": "#6b5a40",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:48",
+			"meta": {
+				"kind": "sheet",
+				"sail": "sprit-topsail"
+			}
+		},
+		{
+			"name": "mizzen-lateen-sheet-S",
+			"from": "sail:mizzen-lateen/clew",
+			"to": "船殼/kevel-kamp-S",
+			"color": "#6b5a40",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:49",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-lateen"
+			}
+		},
+		{
+			"name": "mizzen-lateen-sheet-P",
+			"from": "sail:mizzen-lateen/clew",
+			"to": "船殼/kevel-kamp-P",
+			"color": "#6b5a40",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "sheet（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:49",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-lateen"
+			}
 		}
 	],
 	"groups": []

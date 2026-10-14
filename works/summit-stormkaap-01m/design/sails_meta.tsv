@@ -1,0 +1,35 @@
+# 階段十：帆與帆自己的繩的 meta（造船規格 §9.1）—— senate cmd sculpture --arg op=work --arg sub=meta --arg file=<這個檔的絕對路徑>
+sail	main-course	{"kind": "sail", "mast": "main", "sail": "course"}
+rope	main-course-sheet-S	{"kind": "sheet", "sail": "main-course"}
+rope	main-course-tack-S	{"kind": "tack", "sail": "main-course"}
+rope	main-course-sheet-P	{"kind": "sheet", "sail": "main-course"}
+rope	main-course-tack-P	{"kind": "tack", "sail": "main-course"}
+sail	main-topsail	{"kind": "sail", "mast": "main", "sail": "topsail"}
+rope	main-topsail-sheet-S	{"kind": "sheet", "sail": "main-topsail"}
+rope	main-topsail-sheet-P	{"kind": "sheet", "sail": "main-topsail"}
+sail	main-topgallant	{"kind": "sail", "mast": "main", "sail": "topgallant"}
+rope	main-topgallant-sheet-S	{"kind": "sheet", "sail": "main-topgallant"}
+rope	main-topgallant-sheet-P	{"kind": "sheet", "sail": "main-topgallant"}
+sail	fore-course	{"kind": "sail", "mast": "fore", "sail": "course"}
+rope	fore-course-sheet-S	{"kind": "sheet", "sail": "fore-course"}
+rope	fore-course-tack-S	{"kind": "tack", "sail": "fore-course"}
+rope	fore-course-sheet-P	{"kind": "sheet", "sail": "fore-course"}
+rope	fore-course-tack-P	{"kind": "tack", "sail": "fore-course"}
+sail	fore-topsail	{"kind": "sail", "mast": "fore", "sail": "topsail"}
+rope	fore-topsail-sheet-S	{"kind": "sheet", "sail": "fore-topsail"}
+rope	fore-topsail-sheet-P	{"kind": "sheet", "sail": "fore-topsail"}
+sail	fore-topgallant	{"kind": "sail", "mast": "fore", "sail": "topgallant"}
+rope	fore-topgallant-sheet-S	{"kind": "sheet", "sail": "fore-topgallant"}
+rope	fore-topgallant-sheet-P	{"kind": "sheet", "sail": "fore-topgallant"}
+sail	mizzen-topsail	{"kind": "sail", "mast": "mizzen", "sail": "topsail"}
+rope	mizzen-topsail-sheet-S	{"kind": "sheet", "sail": "mizzen-topsail"}
+rope	mizzen-topsail-sheet-P	{"kind": "sheet", "sail": "mizzen-topsail"}
+sail	spritsail	{"kind": "sail", "mast": "bowsprit", "sail": "course"}
+rope	spritsail-sheet-S	{"kind": "sheet", "sail": "spritsail"}
+rope	spritsail-sheet-P	{"kind": "sheet", "sail": "spritsail"}
+sail	sprit-topsail	{"kind": "sail", "mast": "bowsprit", "sail": "topsail", "set": 3}
+rope	sprit-topsail-sheet-S	{"kind": "sheet", "sail": "sprit-topsail"}
+rope	sprit-topsail-sheet-P	{"kind": "sheet", "sail": "sprit-topsail"}
+sail	mizzen-lateen	{"kind": "sail", "mast": "mizzen", "sail": "gaff"}
+rope	mizzen-lateen-sheet-S	{"kind": "sheet", "sail": "mizzen-lateen"}
+rope	mizzen-lateen-sheet-P	{"kind": "sheet", "sail": "mizzen-lateen"}

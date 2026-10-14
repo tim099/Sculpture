@@ -272,3 +272,21 @@ Tim：「繼續造船 階段九 GO」。設計 plan.json `belaying`、`running`�
   - `check_running.py`（讀引擎匯出）：結果帳 525,982／525,982 缺 0、多 0、顏色不同 0；fife 子作品 1,144 vs 清單差 0；三組 rail 高度 ＝ 甲板面（從組裝件量）＋ 7，差 0；pin 38 根每根完整；柱與 bitts 84 欄全部站在甲板上；帆桁上 79 個點引擎 vs 我算的差 0.0；繩兩端最大差 0.059、直線長度差 0.005；反向對照 8 根全報 3。
   - 🩸 量尺：柱的探針第一版認 bitt 色 ⇒ rail 也是 136（同色），懸空的 rail 被算成柱，報 236／320 沒站在甲板上（尺壞了，fife 沒壞）⇒ 改用形狀認（往下伸過 pin 底的那幾欄）。修完先餵已知答案：整份抬 1 格 ⇒ 84／84 報懸空，再回原樣 ⇒ 0。**顏色當身分證，這艘船第二次**（第一次是階段八的 deadeye ⇒ 甲板也是 104）。
 - 過程圖：`overlays/stage9_running_yaw{45,-135}.png`、`stage9_main_fife_yaw40.png`、`stage9_main_topsail_yaw60.png`。
+
+## 階段十 帆 10 面（破帆貼圖）、帆腳索 24、meta —— 落格（2026-10-14 上午，wake #119）
+Tim：「繼續造船 階段十 GO」。設計 plan.json `sails`（provenance `sails`）；產生 `design/draft_sails.py` ⇒ `verify_sails.json`、`textures/<帆名>.png`、`sails_meta.tsv`（重跑 12 個產物逐位元組相同）；下 CLI `design/apply_sails.py <design> wind|sails|ropes|meta`。一格 voxel 都沒動（組裝件仍 525,982）。
+- **帆 10 面**（組裝件，#5a5248 ＋ 貼圖）：方帆 8（主、前各 course／topsail／topgallant；後上桅帆；spritsail）＋ sprit topsail ＋ lateen（三角帆）。方帆上緣釘在帆桁模型的兩個 earing 之間、下兩角 free；lateen 沿帆桁那條邊釘住、後下角 free。帆名 ＝ 帆桁 meta 的 sail（plan `yards.sail_of`）。
+  - course 帆腳 ＝ max(帆桁高 − 0.55 × 桁長, 甲板面 ＋ 2 m)：主 z 120、前 z 133（艏樓）；spritsail 深 0.35 × 桁長。topsail 以上帆角綁下一根帆桁同舷 earing（＋2）；sprit topsail 綁 spritsail 帆桁。
+  - 帆腳索 24：主 course sheet → 艉樓 kevel、tack → 前桅 channel 最後一顆 deadeye；前 course sheet → 主桅 channel 第一顆 deadeye、tack → 艏樓 kevel；spritsail、lateen 的 sheet → 艏樓／艉樓 kevel；上層帆的 sheet → 下一根帆桁的 earing；後上桅帆的 sheet → 後桅平台前緣。
+  - **破帆貼圖**：每面一張像素畫（最長邊 96），底色＋雜訊＋補丁、圓洞（alpha 0）、帆腳隨機漫步的鋸齒邊＋1–3 道往上的撕裂口；種子 ＝ 帆名的 crc32。⚠ 遊戲照頂點取色、不挖洞 —— 洞只在雕刻視圖看得到。
+  - 風：預設 4.5,−1.5,0（4.74 m/s）、模擬 4 秒（造船規格 §7）。
+- **meta（§9.1）**：帆 10／10（kind=sail、mast、sail；spritsail ＝ bowsprit 的 course、sprit topsail ＝ bowsprit 的 topsail＋set 3、lateen ＝ gaff）；帆自己的繩 24／24（kind=sheet／tack、sail）。走 `work sub=meta file=sails_meta.tsv` 一次批次。帆桁 meta 的 sail 是階段七就寫好的（這次不用補）。
+- 🩸 這一段的錯：
+  1. **後上桅帆的帆角收在平台 rim-fwd**（桅軸前 3 格）⇒ 帆從前面的帆桁斜到後面、整張穿過上桅（平的布 294 個取樣）⇒ 帆角放在帆桁正下方的平台上、sheet 綁平台前緣中線。
+  2. 貼圖第一版帆腳每一欄各自隨機 ⇒ 像一排梳齒 ⇒ 隨機漫步＋撕裂口。
+  3. 寫 apply_sails.py 時用 python -c 塞字串，`\n` 被拆成真的換行、程式壞掉（讀檔才看到）—— heredoc／-c 吃反斜線那一族，這個月第 N 次；改用 chr(10)。
+- 讀數：
+  - 引擎 `sub=sails`：10 面全部 ok；`sub=ropes`：537 條（靜索 443＋動索 70＋帆腳索 24）、ropes_broken 0、21 組、未分組 0；`sub=meta`：帆 10、沒標 0；繩 24 有標（靜索與動索 513 條不必標，§9.1 只要求帆自己的繩）。
+  - draft 的平的布（模擬之前）：除了自己的帆桁（上緣綁在頂面，布往下一定穿過桁身 60–94 個取樣）以外，topsail／topgallant 穿過桅頭 56–78、sprit topsail 穿過斜桅 14 —— 跟夜隼號一樣，要靠風把布推開。
+  - ⚠ **還沒做**：模擬之後的布（OBJ）落在實心的數（夜隼號 check_sails.py 那一套）—— 量之前 ⛔ 不說「帆不穿模」。
+- 過程圖：`overlays/stage10_sails_yaw{45,-135}.png`。

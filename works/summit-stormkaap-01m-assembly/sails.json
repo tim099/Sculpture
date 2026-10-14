@@ -1,0 +1,417 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 4,
+	"sails": [
+		{
+			"name": "main-course",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:主桅/yard-main-course/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:主桅/yard-main-course/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "302.5000,218.9000,120.3500",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "302.5000,42.1000,120.3500",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "course 型：sheet／tack 照 plan（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:38",
+			"texture": "textures/main-course.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "course"
+			}
+		},
+		{
+			"name": "main-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:主桅/yard-main-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:主桅/yard-main-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "302.5000,234.5000,251.5000",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "302.5000,26.5000,251.5000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁下一根帆桁（main-course）同舷的 earing（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:38",
+			"texture": "textures/main-topsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "main-topgallant",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:主桅/yard-main-topgallant/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:主桅/yard-main-topgallant/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "306.5000,180.5000,410.5000",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "306.5000,80.5000,410.5000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁下一根帆桁（main-topsail）同舷的 earing（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:38",
+			"texture": "textures/main-topgallant.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topgallant"
+			}
+		},
+		{
+			"name": "fore-course",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:前桅/yard-fore-course/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:前桅/yard-fore-course/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "497.5000,207.8500,133.0000",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "497.5000,53.1500,133.0000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "course 型：sheet／tack 照 plan（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:38",
+			"texture": "textures/fore-course.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "course"
+			}
+		},
+		{
+			"name": "fore-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:前桅/yard-fore-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:前桅/yard-fore-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "497.5000,221.5000,226.5000",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "497.5000,39.5000,226.5000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁下一根帆桁（fore-course）同舷的 earing（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:39",
+			"texture": "textures/fore-topsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "fore-topgallant",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:前桅/yard-fore-topgallant/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:前桅/yard-fore-topgallant/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "501.5000,175.5000,355.5000",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "501.5000,85.5000,355.5000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁下一根帆桁（fore-topsail）同舷的 earing（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:39",
+			"texture": "textures/fore-topgallant.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topgallant"
+			}
+		},
+		{
+			"name": "mizzen-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:後桅/yard-mizzen-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:後桅/yard-mizzen-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "187.5000,138.5000,198.5000",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "187.5000,122.5000,198.5000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "後上桅帆：帆角在帆桁正下方的平台上（沒有 crossjack）（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:39",
+			"texture": "textures/mizzen-topsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "spritsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:船首斜桅/yard-spritsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:船首斜桅/yard-spritsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "620.5000,184.9000,137.9500",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "620.5000,76.1000,137.9500",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "course 型：sheet／tack 照 plan（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:40",
+			"texture": "textures/spritsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "course"
+			}
+		},
+		{
+			"name": "sprit-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:船首斜桅/yard-sprit-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:船首斜桅/yard-sprit-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "620.5000,198.5000,194.5000",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "620.5000,62.5000,194.5000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "sheet 綁下一根帆桁（spritsail）同舷的 earing（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:40",
+			"texture": "textures/sprit-topsail.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "topsail",
+				"set": 3
+			}
+		},
+		{
+			"name": "mizzen-lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:後桅/yard-mizzen-lateen/earing-F",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:後桅/yard-mizzen-lateen/earing-A",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "120.5000,121.5000,155.5000",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a5248",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "lateen：沿帆桁那條邊釘住、後下角 free（階段十）（階段十）",
+			"persona": "summit",
+			"created_at": "2026-10-14T10:30:40",
+			"texture": "textures/mizzen-lateen.png",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "gaff"
+			}
+		}
+	]
+}

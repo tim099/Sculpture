@@ -15,7 +15,9 @@ TASK-0547。筆記正本是 `notes.md`；這裡只放「下一步從哪接」。
 - [x] 階段七：帆桁 10 件（子作品＋外部模型、meta kind=yard／mast／sail；lateen 斜 40° 在後桅左舷）—— `check_yards.py` 固定點差 0.0、21 根反向全報 3（2026-10-14 早）
 - [x] 階段八：靜索 —— channels v2（照 deadeye 重排、避開砲門）、deadeye 17×2、chain plates、繩 443；lateen 挪到離中線 9 格（2026-10-14 上午）
 - [x] 階段九：fife rails ×3（舷牆 pin rails 不做、改 kevel）＋ 動索 70 條（lifts、footropes、braces、halyards、lateen halyard／vang）（2026-10-14 上午）
-- [ ] 階段十：帆 10 面（貼圖：破帆；帆名照 plan `yards.sail_of`）→ 帆自己的繩（sheet、tack）→ 帆與帆自己的繩標 meta（§9.1）
+- [x] 階段十：帆 10 面（破帆貼圖）、帆腳索 24、帆與帆自己的繩的 meta（2026-10-14 上午）
+- [ ] **下一段第一件**：模擬之後的帆（OBJ）落在實心的數 —— 照夜隼號 check_sails.py；topsail 穿桅頭、sprit topsail 穿斜桅要靠風推開，量了才算
+- [ ] 之後：旗（船尾旗、長旗）→ 砲（外部模型，砲門已開：每舷 19＋船尾 2＋追擊 2）→ 彈藥庫、梯子、舵輪、羅經櫃 → 匯出 vxk、跟 ame 對
 
 ## 之後（照造船規格 §3 的順序）
 - 骨架與肋骨 → 外板與塗裝 → 砲門 → 甲板（每層一件子作品）→ 艉樓／船尾（spiegel）→ 船頭（galjoen、船首像）
