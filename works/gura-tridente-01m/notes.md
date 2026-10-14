@@ -152,7 +152,7 @@
 - royal 帆桁很細（前桅 royal 粗 0.98 格 ⇒ 截面一格）；帆桁轉 20° 之後中段靠後那一小段會穿進桅（網格互穿，同憲法號）。
 - 還沒有：繩（靜索、ratlines、動索）、帆、channels、fife rails、bobstays（knee 上的 `bobstay-1／2／3` 已登記）。
 
-## 階段七 索具與帆（進行中，2026-10-14 傍晚，TASK-0560）
+## 階段七 索具與帆（2026-10-14 傍晚套用、晚上驗收，TASK-0560）
 設計 plan.json `rigging`；產生 `design/draft_rigging.py`（讀 `deco_base.stage7_base` ＝ 船殼＋甲板＋階段五＋四根桅；帆桁上的點讀 verify_masts.json）⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/ensign.png`、`verify_rigging.json`；落格 `tools/rigging_apply.py`（channels／anchors／ropes／sails／sailropes／wind／meta）。
 - channels（`-channels` 右舷一件 5,487 格、關聯 `channels`／`channels-鏡像` mirror=y）：每根桅一塊板（上甲板砲門頂往上）、外緣 deadeye；跟現況重疊 0。
 - 固定點 164（船殼 14：belay、bowsprit shroud；channels 31；主 38、前 40、後 33；艏斜桅 8）。
@@ -160,4 +160,23 @@
 - 帆 15：方帆 10（綁帆桁模型的 earing）、spanker（gaff＋boom）、fore-topmast-staysail、jib、旗 2（ensign：西班牙海軍旗 1785 像素畫、掛 gaff 頂；pennant 主桅頂）；預設風 4.5,−1.5,0、4 秒。
 - meta 43 筆（帆 13＋旗 2＋帆自己的 sheet／tack 28）。
 - 讀數（套用後）：ropes_broken 0、sails_broken 0、models_broken 0；`sub=meta part=sail` 15 面都有；最鼓 −91.56 格（憲法號 −96.6）。
-- ⚠ **還沒做**（下一次接）：結果帳（channels 子作品、組裝件）、繩逐條 vs plan、帆自己的繩「沒有 meta」0 與反向對照（拿掉一條 sheet 的 meta 要報 1）、產生程式重跑逐位元組、過程圖（現在只有 `overlays/stage7_wip_sails_bowq.png`）、看帆形狀細修。
+
+讀數（`tools/check_stage7.py`，2026-10-14 晚上）：
+- **channels 結果帳**：清單 5,487 ↔ 子作品 5,487，缺 0、多 0、色差 0。
+- **組裝件結果帳**：設計 1,956,438（階段七之前 1,945,464 ＋ channels 右 5,487 ＋ 左 5,487；左舷照清單自己翻：框高 27、at 125）↔ 組裝件（links=all）1,956,438，缺 0、多 0、色差 0；設計那一份自己重疊 0；兩舷 y 249..275 ↔ 125..151，加起來都是 400。
+- **固定點**：plan 164 ↔ 六件作品的 anchors.json，缺 0、多 0、位置不同 0。
+- **繩**：plan 418 ↔ 組裝件 ropes.json，缺 0、多 0、欄位（from／to／group／thickness／slack／color、enabled）不同 0、meta 不同 0。**帆**：15 ↔ 15，角（端點、名字、釘不釘）／bind／色／fullness／貼圖不同 0、meta 不同 0；預設風、秒數跟 plan 一樣。
+- **帆自己的繩**（任一端 `sail:`）：28 條，沒有 meta 0、kind 不是 sheet／tack 0、meta 的 sail ≠ 端點那面帆 0。帆 15 面都有 meta（旗 2：ensign、pennant）。
+- **引擎**：ropes 418（子繩 246）broken 0、ungrouped 0；sails 15 broken 0；`sub=meta part=rope` 有 28、沒有 390（＝ 418）。
+- **反向對照**：
+  - 真的拿掉一次（CLI `sub=meta meta=none`，`fore-course.sheet-S`）⇒ 檢查 ⑤ 沒有 meta **1**、引擎 meta_rope_without 391；加回 ⇒ 0／390（meta_log.jsonl 兩筆）。
+  - 同一支比對拿副本動手腳：tack 的 sail 改錯 ⇒ 1；一條繩鬆緊 +0.01 ⇒ 1；帆一角釘／不釘對調 ⇒ 1（方帆、ensign 各一次）；channels 固定點偏 1 ⇒ 1；組裝件一格改色 ⇒ 色差 1；鏡像那件 y 錯 1 ⇒ 缺 318、多 713。
+- 產生程式從現讀組裝件重跑：4 檔（channels.vox.txt、rigging_plan.json、verify_rigging.json、ensign.png）sha256 跟 HEAD 的 blob 逐位元組相同（git 標 M 只是 autocrlf 換行，已還原）。
+- 過程圖：`overlays/stage7_sails_{side,bowq,sternq,bow}.png`（＋ 傍晚那張 `stage7_wip_sails_bowq.png`）。帆形狀看過：方帆順風往船頭鼓、spanker 與旗在 gaff 上、三角帆從艏斜桅拉到前桅 —— 不細修。
+
+🩸 這一階段撞到的：
+- 量具自己錯：第一次跑帆報「欄位不同 2」（ensign、pennant）。是 check 的錯，不是船的錯：旗的 free 寫序號（int）、方帆寫角名（字串），我拿字串比 ⇒ 序號全當成「釘」。改成一律當字串比，並補一個 ensign 的反向對照，確認 int 那條路也抓得到。
+
+⚠ 看得到的／留給之後：
+- crossjack、spritsail 帆桁沒有帆（照 1793 表的平常帆裝）；main／mizzen staysail 沒做。
+- 帆桁轉 20° 之後中段穿進桅（網格互穿，同階段六）；帆是布料模擬，鼓的樣子跟風、秒數有關（預設 4.5,−1.5,0、4 秒）。
