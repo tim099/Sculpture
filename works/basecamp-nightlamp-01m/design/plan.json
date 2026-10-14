@@ -945,5 +945,576 @@
       "bowsprit": "角度 22°、伸出船頭 18 m、jibboom 9 m（plan masts.bowsprit，底圖 m；草案）；跟在前甲板前桅前面 X 556，跟的高度從 138 往上抬到不碰船首像與甲板（碰到船殼的照憲法號刻掉）",
       "colors": "設計：桅身 136、masthead／cap／crosstrees／tops 邊 黑 36、top 板與 step 104"
     }
+  },
+  "yards": {
+    "title": "新圖紙 15：帆桁 v1（階段十四）—— 每根一件子作品＋外部模型（造船規格 §5）",
+    "assembly_cells": 1243013,
+    "mast_cells": {
+      "mizzen": 6858,
+      "main": 18175,
+      "fore": 15561,
+      "bowsprit": 13226
+    },
+    "works": {
+      "mizzen": "basecamp-nightlamp-01m-mast-mizzen",
+      "main": "basecamp-nightlamp-01m-mast-main",
+      "fore": "basecamp-nightlamp-01m-mast-fore"
+    },
+    "links": {
+      "mizzen": "後桅",
+      "main": "主桅",
+      "fore": "前桅"
+    },
+    "prefix": "basecamp-nightlamp-01m-yard-",
+    "colors": {
+      "spar": 36,
+      "tip": 136
+    },
+    "taper": {
+      "s": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "k": [
+        1.0,
+        0.968,
+        0.875,
+        0.7,
+        0.4286
+      ]
+    },
+    "jackstay_spacing": 8,
+    "yards": [
+      {
+        "mast": "fore",
+        "name": "fore-course",
+        "tier": "course",
+        "label": "前桅 course",
+        "len": 240,
+        "r": 2.5,
+        "arm": 13,
+        "below": "top",
+        "dz": 10
+      },
+      {
+        "mast": "fore",
+        "name": "fore-topsail",
+        "tier": "topsail",
+        "label": "前桅 topsail",
+        "len": 178,
+        "r": 1.9,
+        "arm": 16,
+        "below": "crosstrees",
+        "dz": 10
+      },
+      {
+        "mast": "fore",
+        "name": "fore-topgallant",
+        "tier": "topgallant",
+        "label": "前桅 topgallant",
+        "len": 114,
+        "r": 1.25,
+        "arm": 6,
+        "below": "truck",
+        "dz": 22
+      },
+      {
+        "mast": "main",
+        "name": "main-course",
+        "tier": "course",
+        "label": "主桅 course",
+        "len": 270,
+        "r": 2.8,
+        "arm": 13,
+        "below": "top",
+        "dz": 10
+      },
+      {
+        "mast": "main",
+        "name": "main-topsail",
+        "tier": "topsail",
+        "label": "主桅 topsail",
+        "len": 200,
+        "r": 2.1,
+        "arm": 16,
+        "below": "crosstrees",
+        "dz": 10
+      },
+      {
+        "mast": "main",
+        "name": "main-topgallant",
+        "tier": "topgallant",
+        "label": "主桅 topgallant",
+        "len": 128,
+        "r": 1.4,
+        "arm": 6,
+        "below": "truck",
+        "dz": 22
+      },
+      {
+        "mast": "mizzen",
+        "name": "mizzen-crossjack",
+        "tier": "crossjack",
+        "label": "後桅 crossjack",
+        "len": 176,
+        "r": 1.9,
+        "arm": 18,
+        "below": "top",
+        "dz": 10,
+        "sail": ""
+      },
+      {
+        "mast": "mizzen",
+        "name": "mizzen-topsail",
+        "tier": "topsail",
+        "label": "後桅 topsail",
+        "len": 130,
+        "r": 1.4,
+        "arm": 15,
+        "below": "crosstrees",
+        "dz": 10
+      }
+    ],
+    "heights": {
+      "mizzen": {
+        "top": 202,
+        "crosstrees": 303,
+        "truck": 353
+      },
+      "main": {
+        "top": 288,
+        "crosstrees": 452,
+        "truck": 533
+      },
+      "fore": {
+        "top": 269,
+        "crosstrees": 411,
+        "truck": 482
+      }
+    },
+    "spanker": {
+      "boom": {
+        "r": 1.7,
+        "taper_end": 0.75,
+        "angle_deg": 2.0,
+        "z_from": 174,
+        "end_x_min": 70
+      },
+      "gaff": {
+        "r": 1.6,
+        "taper_end": 0.7,
+        "len": 105,
+        "angles_deg": [
+          35,
+          38,
+          40,
+          42,
+          45,
+          48,
+          50
+        ],
+        "z_from": 197,
+        "z_min": 186
+      }
+    },
+    "brace_deg": {
+      "course": 20,
+      "crossjack": 20,
+      "topsail": 22,
+      "topgallant": 24
+    },
+    "provenance": {
+      "yards": "設計（這艘沒有史料）：主桅 course 270 格（27 m，跟憲法號 95 ft ≈ 290 同一級、這艘的桅比較矮 ⇒ 短一點）；topsail ＝ 0.74、topgallant ＝ 0.47 course（憲法號 70.5／95、46／95）；前桅 ≈ 0.89 主桅；後桅 crossjack 176、topsail 130；不做 royal（桅頂到 truck 太短）",
+      "radius": "設計：中徑約 1／50 長（憲法號 22.5 in／95 ft ≈ 1／50）；錐度照憲法號（Steel 1794 四分點）",
+      "height": "設計：升起的高度 —— course／crossjack 在 top 底下 10 格、topsail 在 crosstrees 底下 10 格、topgallant 在 truck 底下 22 格；中心 x ＝ 那一層桅的最前緣 ＋ 0.5 ＋ r（貼著桅前面，同憲法號）",
+      "spanker": "設計：後桅站在後甲板、後面是船尾樓甲板（走的那一格 163、X 68–112）與 taffrail（中線 X 60 高到 197）⇒ boom 的 jaws 要高過船尾樓前緣的欄杆（173）、末端停在 taffrail 前面（X ≥ 70）；gaff 的 jaws 在後桅 top（202）底下、照角度搜到不碰 top 與 trestletrees。luff 很短、peak 拉高 ⇒ 像一面高頂的縱帆",
+      "brace": "照憲法號（造船規格 §5）：預設風 4.5,−1.5,0，右舷那一頭往前 ⇒ course／crossjack 20°、topsail 22°、topgallant 24°（繞世界 z、模型 rotate 負角）；gaff／boom 0",
+      "colors": "設計：帆桁黑 36（跟船殼、欄杆同色），yardarm 端 1 格 136（桅身色）"
+    },
+    "not_now": "royal、studdingsail booms、spritsail yard、footropes、parrels、lifts、braces"
+  },
+  "standing": {
+    "title": "新圖紙 16：channels 與靜索 v1（階段十五）—— shrouds、backstays、stays、deadeyes、ratlines",
+    "assembly_cells": 1243013,
+    "channels": {
+      "work": "basecamp-nightlamp-01m-channels",
+      "title": "夜燈號 索具台（右舷）",
+      "link": "索具台",
+      "link_mirror": "索具台-鏡像",
+      "z": [
+        125,
+        126
+      ],
+      "deadeye_z": [
+        127,
+        129
+      ],
+      "color": 36,
+      "deadeye_color": 104,
+      "masts": {
+        "mizzen": {
+          "shrouds": 4,
+          "backstays": 1,
+          "spacing": 7,
+          "width": 7,
+          "fwd": 5,
+          "z": [
+            145,
+            146
+          ],
+          "deadeye_z": [
+            147,
+            149
+          ]
+        },
+        "main": {
+          "shrouds": 7,
+          "backstays": 3,
+          "spacing": 8,
+          "width": 10,
+          "fwd": 6
+        },
+        "fore": {
+          "shrouds": 6,
+          "backstays": 3,
+          "spacing": 8,
+          "width": 9,
+          "fwd": 6
+        }
+      },
+      "origin": [
+        0,
+        161,
+        0
+      ],
+      "size": [
+        1024,
+        159,
+        800
+      ]
+    },
+    "deadeye": {
+      "rise": 7,
+      "disc_d": 3,
+      "disc_len": 2,
+      "lanyard_spread": 0.9,
+      "disc_color": "#6d4900",
+      "lanyard_color": "#a08458",
+      "lanyard_t": 0.25
+    },
+    "tar": "#2b2620",
+    "thick": {
+      "shroud": {
+        "mizzen": 0.7,
+        "main": 0.9,
+        "fore": 0.85
+      },
+      "backstay": {
+        "mizzen": 0.6,
+        "main": 0.8,
+        "fore": 0.75
+      },
+      "tm_shroud": 0.6,
+      "tg_shroud": 0.45,
+      "ratline": 0.3,
+      "ratline_tm": 0.25,
+      "stay": {
+        "mizzen-stay": 0.9,
+        "main-stay": 1.5,
+        "fore-stay": 1.4,
+        "mizzen-topmast-stay": 0.6,
+        "main-topmast-stay": 0.9,
+        "fore-topmast-stay": 0.9,
+        "main-topgallant-stay": 0.6,
+        "fore-topgallant-stay": 0.55,
+        "jib-stay": 0.55,
+        "bobstay": 1.0
+      }
+    },
+    "stay_slack": 1.0008,
+    "straight_stays": [
+      "fore-topmast-stay",
+      "jib-stay"
+    ],
+    "topmast_shrouds": {
+      "mizzen": 2,
+      "main": 3,
+      "fore": 3
+    },
+    "topgallant_shrouds": {
+      "mizzen": 0,
+      "main": 2,
+      "fore": 2
+    },
+    "ratlines": {
+      "every": 4,
+      "from_above_deadeye": 3,
+      "below_top": 10
+    },
+    "provenance": {
+      "channels": "設計（照憲法號的做法、這艘的數字）：每根桅一塊、兩層板、在砲門上緣之上（Z 125–126；砲門上緣最高 123）、從船殼外緣往外 7／10／9 格；只做右舷一件、左舷用 mirror=y 關聯（at 0,1,0）；chain plates 不做（會從砲門前面穿過）",
+      "count": "設計：shrouds 主桅 7、前桅 6、後桅 4（每舷），backstays 主桅／前桅 3（topmast 2＋topgallant 1）、後桅 1；第一條在桅前 fwd 格、往船尾每 spacing 格一條",
+      "deadeye": "照造船規格 §6：下 deadeye 是格子（索具台上 3×2×3）、上 deadeye 一段短而粗的繩當圓盤（軸朝舷外、直徑 3、長 2）、lanyards 3 條排開 ±0.9",
+      "ropes": "照造船規格 §6：靜索上過焦油 #2b2620、slack 1（stays 1.0008；要掛三角帆的 fore-topmast-stay、jib-stay 拉直）；ratlines 子繩每 4 格一道、從上 deadeye 往上 3 格起、到 top 底下 10 格",
+      "stays": "設計：main-stay 下端在前甲板、前桅右舷旁（讓開前桅）；mizzen-stay 到主桅後面 Z 150；topmast stays 到前一根桅的 top 前緣、topgallant stays 到 crosstrees 前緣；fore-stay 到艏斜桅上面、fore-topmast-stay 到艏斜桅 cap、jib-stay 到 jibboom 尖；bobstay 艏斜桅 cap 底下 → 船頭柱",
+      "channels_mizzen": "後桅那一段是後甲板、舷牆頂到 Z 150–153 ⇒ 後桅的索具台抬到 Z 145–146（v1 跟另外兩根一樣 125–126，shrouds 從舷牆裡穿過去 15–17 個取樣點）",
+      "clearance": "量法：每條繩兩端的直線每 0.5 格取樣，兩端各 4 格以內不算（繩頭繞在桅頭上，擦過桅身那一兩格是對的）",
+      "fore_topmast_stay": "fore-topmast-stay 下端在 jibboom 上面、cap 往前 8 格（v1 綁 cap 頂，最後 10 個取樣點從 jibboom 根部穿過）",
+      "bobstay": "bobstay 下端從船頭柱 Z 72 往下找，取第一個不穿過船首像的高度（v1 在 Z 72，123 個取樣點穿過船首像）",
+      "channels_frame": "索具台子作品的框只包右舷（y 161–319）：關聯 at 0,161,0、左舷 mirror=y at 0,1,0（321 − 161 − 159）。v1 用整艘船的框（at 0,0,0），鏡像那條要 at 0,1,0 ⇒ 超出組裝件一格、引擎擋下"
+    },
+    "not_now": "chain plates、futtock shrouds、catharpins、preventer stays、martingale／dolphin striker、braces、lifts、footropes",
+    "clearance_end_skip": 4.0
+  },
+  "sails": {
+    "title": "新圖紙 17：帆 v1（階段十六）—— 方帆 7、spanker、三角帆 2、旗 2；帆自己的 sheet／tack；給遊戲的 meta",
+    "assembly_cells": 1250551,
+    "color": "#3b3631",
+    "fullness": 1.05,
+    "rope_color": "#a08458",
+    "thick": {
+      "course": 0.5,
+      "sheet_upper": 0.35
+    },
+    "square": [
+      {
+        "name": "fore-course",
+        "mast": "fore",
+        "type": "course",
+        "course": {
+          "sheet_x": 480,
+          "tack_x": 596,
+          "clew_above_rail": 15,
+          "sheet_slack": 0.85,
+          "tack_slack": 0.8
+        }
+      },
+      {
+        "name": "fore-topsail",
+        "mast": "fore",
+        "type": "topsail",
+        "sheet_to": "fore-course"
+      },
+      {
+        "name": "fore-topgallant",
+        "mast": "fore",
+        "type": "topgallant",
+        "sheet_to": "fore-topsail"
+      },
+      {
+        "name": "main-course",
+        "mast": "main",
+        "type": "course",
+        "course": {
+          "sheet_x": 258,
+          "tack_x": 392,
+          "clew_above_rail": 15,
+          "sheet_slack": 0.85,
+          "tack_slack": 0.8
+        }
+      },
+      {
+        "name": "main-topsail",
+        "mast": "main",
+        "type": "topsail",
+        "sheet_to": "main-course"
+      },
+      {
+        "name": "main-topgallant",
+        "mast": "main",
+        "type": "topgallant",
+        "sheet_to": "main-topsail"
+      },
+      {
+        "name": "mizzen-topsail",
+        "mast": "mizzen",
+        "type": "topsail",
+        "sheet_to": "mizzen-crossjack"
+      }
+    ],
+    "headsails": [
+      {
+        "name": "fore-topmast-staysail",
+        "stay": "fore-topmast-stay",
+        "head_frac": 0.75,
+        "clew_along": 0.6,
+        "clew_drop": 90,
+        "sheet_x": 505,
+        "fullness": 1.06,
+        "meta": {
+          "kind": "sail",
+          "mast": "fore",
+          "sail": "staysail",
+          "set": 2
+        }
+      },
+      {
+        "name": "jib",
+        "stay": "jib-stay",
+        "head_frac": 0.75,
+        "clew_along": 0.55,
+        "clew_drop": 105,
+        "sheet_x": 520,
+        "fullness": 1.06,
+        "meta": {
+          "kind": "sail",
+          "mast": "bowsprit",
+          "sail": "jib"
+        }
+      }
+    ],
+    "flags": {
+      "ensign": {
+        "mast": "mizzen",
+        "shape": "rect",
+        "below_truck": 4,
+        "length": 30,
+        "height": 20,
+        "fullness": 1.06,
+        "color": "#141416",
+        "texture": "textures/ensign.png",
+        "meta": {
+          "kind": "flag",
+          "flag": "ensign"
+        }
+      },
+      "pennant": {
+        "mast": "main",
+        "shape": "tri",
+        "below_truck": 3,
+        "length": 70,
+        "height": 4,
+        "fullness": 1.06,
+        "color": "#c8962e",
+        "meta": {
+          "kind": "flag",
+          "flag": "pennant",
+          "mast": "main"
+        }
+      }
+    },
+    "wind": [
+      4.5,
+      -1.5,
+      0
+    ],
+    "sail_seconds": 3,
+    "provenance": {
+      "color": "設計：帆是深灰黑 #3b3631（黑珍珠號的黑帆；整艘船唯一的光是船首像與船尾的燈 —— 帆也不搶）",
+      "square": "照造船規格 §7：上緣兩角綁帆桁模型的 earing、bind 邊 0；topsail 以上的 sheet 綁下一根帆桁同舷的 earing；course 的 sheet 往後、tack 往前綁到舷頂（風從右舷後方來 ⇒ tack 綁右舷 clew）；數值照憲法號（fullness 1.05、course sheet slack 0.85、tack 0.8）",
+      "belay": "設計：繫繩點在那一欄最高的實心、最外面那一格（欄杆或舷牆頂）；fore-course sheet X 480、tack X 596，main-course sheet X 258、tack X 392，三角帆 sheet X 505／520",
+      "spanker": "throat ＝ gaff 第一個 top 點、peak ＝ gaff 最後一個、clew ＝ boom 最後一個、tack ＝ boom 第一個；三條邊釘住（bind 0,2,3），只有 leech 自由（造船規格 §7）",
+      "headsails": "fore-topmast-staysail 掛在 fore-topmast-stay、jib 掛在 jib-stay（兩條 stay 都拉直）；tack ＝ stay 下端、head ＝ stay 上 75% 那一格（登記在前桅子作品）、clew free，sheet 兩舷各一條",
+      "flags": "設計（營地特色）：ensign 掛在後桅 truck 底下，黑底、正中一盞暖黃的提燈（30×20 像素畫）；pennant 掛在主桅 truck 底下，燈的金色 #c8962e",
+      "meta": "照造船規格 §9.1：帆 kind／mast／sail（＋ set）、旗 kind=flag／flag、帆自己的 sheet／tack kind＋sail",
+      "wind": "照憲法號：預設風 4.5,−1.5,0（從右舷後方來）、模擬 3 秒"
+    },
+    "not_now": "royal、studdingsails、mizzen topgallant、braces、clewlines／buntlines、收帆、破帆（Tim 沒說要不要）"
+  },
+  "guns": {
+    "title": "新圖紙 18：砲 v1（階段十七）—— 上甲板 11 個砲門 × 兩舷 24 磅長砲（外部模型）",
+    "assembly_cells": 1250551,
+    "gun_cells": 1125,
+    "source_work": "basecamp-frigate-constitution-01m-gun-24",
+    "host": "basecamp-nightlamp-01m-deck-upper",
+    "link": "上甲板",
+    "anchors": {
+      "muzzle": [
+        7,
+        31,
+        11
+      ],
+      "breech": [
+        7,
+        3,
+        11
+      ]
+    },
+    "inset": 0.05,
+    "meta": {
+      "kind": "gun",
+      "gun": "24l"
+    },
+    "provenance": {
+      "gun": "沿用憲法號的 24 磅長砲子作品 -gun-24（0.1 m、15×32×16、砲口固定點 7,31,11）—— 夜燈號砲門 0.9–1.0 m 寬、0.8–0.9 m 高，跟憲法號 gun deck 同一級；黑珍珠的砲數（32）沒有出處 ⇒ 照 Pl. LI 的 11 個砲門、每個一門",
+      "placement": "照造船規格 §4.2：從舷牆外面往裡退到零碰撞（格心＋八個角往裡縮 0.05 格），再要求砲口在船殼外；右舷照原樣、左舷 mirror=y at.y＝321−右舷（照憲法號）；模型掛在上甲板子作品（藏甲板一起藏）",
+      "meta": "照造船規格 §9：kind=gun、gun=24l（跟憲法號同一個代號，遊戲的砲種表已經有）"
+    },
+    "not_now": "砲具與砲索（環首螺栓、breeching、tackle）、船頭船尾追擊砲、砲門蓋、spar deck 的 carronade",
+    "start_inside": 10
+  },
+  "fittings": {
+    "title": "階段十八：甲板上的配件（外部模型）—— 舵輪、羅經櫃、主絞盤",
+    "assembly_cells": 1250551,
+    "inset": 0.05,
+    "items": [
+      {
+        "name": "舵輪",
+        "key": "wheel",
+        "source_work": "basecamp-frigate-constitution-01m-wheel",
+        "host": "basecamp-nightlamp-01m-deck-spar",
+        "link": "後甲板・走道・前甲板",
+        "deck_list": "spar.txt",
+        "x": 140,
+        "probe_y": 160,
+        "pivot": [
+          50,
+          52,
+          0
+        ],
+        "scale": 0.2,
+        "meta": {
+          "kind": "wheel"
+        }
+      },
+      {
+        "name": "羅經櫃",
+        "key": "binnacle",
+        "source_work": "basecamp-ember-01m-binnacle",
+        "host": "basecamp-nightlamp-01m-deck-spar",
+        "link": "後甲板・走道・前甲板",
+        "deck_list": "spar.txt",
+        "x": 156,
+        "probe_y": 160,
+        "pivot": [
+          12,
+          24,
+          0
+        ],
+        "scale": 0.2,
+        "meta": {
+          "kind": "binnacle"
+        }
+      },
+      {
+        "name": "主絞盤",
+        "key": "capstan",
+        "source_work": "basecamp-ember-01m-capstan",
+        "host": "basecamp-nightlamp-01m-deck-upper",
+        "link": "上甲板",
+        "deck_list": "upper.txt",
+        "x": 400,
+        "probe_y": 170,
+        "x_center_cell": true,
+        "pivot": [
+          40,
+          40,
+          0
+        ],
+        "scale": 0.2,
+        "meta": {
+          "kind": "capstan"
+        }
+      }
+    ],
+    "provenance": {
+      "sources": "沿用：憲法號雙舵輪 -wheel、餘燼號羅經櫃 -binnacle、主絞盤 -capstan（都是 basecamp 的、0.02 m ⇒ scale 0.2 明寫；pivot 照餘燼號的擺法 ＝ 底面中心）",
+      "where": "設計：舵輪在後甲板、船尾樓前緣（X 112）與後桅（X 168）之間的 X 140；羅經櫃在舵輪前面 X 156；主絞盤在上甲板階段十開的絞盤孔（X 400）上 —— 夜燈號船腰露天，絞盤在砲甲板上",
+      "meta": "照造船規格 §9：kind=wheel／binnacle／capstan，只說這是什麼"
+    },
+    "not_now": "舵（rudder）、舵索（wheel ropes）—— 這艘還沒有舵"
   }
 }

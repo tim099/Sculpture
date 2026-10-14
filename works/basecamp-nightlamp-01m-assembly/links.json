@@ -59,7 +59,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T14:33:07",
 			"persona": "basecamp",
-			"note": ""
+			"note": "",
+			"meta": {
+				"deck": "lower",
+				"floor": "92:85,114:85,243:78,369:75,503:76,584:80",
+				"kind": "deck",
+				"level": 0,
+				"name": "下甲板",
+				"thick": 2
+			}
 		},
 		{
 			"name": "上甲板",
@@ -79,7 +87,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T14:33:09",
 			"persona": "basecamp",
-			"note": ""
+			"note": "",
+			"meta": {
+				"deck": "upper",
+				"floor": "79:110,115:110,245:103,375:100,501:101,586:105",
+				"kind": "deck",
+				"level": 1,
+				"name": "上甲板（砲甲板）",
+				"thick": 2
+			}
 		},
 		{
 			"name": "後甲板・走道・前甲板",
@@ -99,7 +115,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T14:33:11",
 			"persona": "basecamp",
-			"note": ""
+			"note": "",
+			"meta": {
+				"deck": "spar",
+				"floor": "72:141,110:141,237:134,511:132,588:135",
+				"kind": "deck",
+				"level": 2,
+				"name": "後甲板・走道・前甲板",
+				"thick": 2
+			}
 		},
 		{
 			"name": "船尾樓甲板",
@@ -119,7 +143,15 @@
 			"enabled": true,
 			"created_at": "2026-10-14T14:33:12",
 			"persona": "basecamp",
-			"note": ""
+			"note": "",
+			"meta": {
+				"deck": "poop",
+				"floor": "69:163,112:163",
+				"kind": "deck",
+				"level": 3,
+				"name": "船尾樓甲板",
+				"thick": 1
+			}
 		},
 		{
 			"name": "梯子",
@@ -243,6 +275,46 @@
 			"created_at": "2026-10-14T15:53:25",
 			"persona": "basecamp",
 			"note": ""
+		},
+		{
+			"name": "索具台-鏡像",
+			"work": "basecamp-nightlamp-01m-channels",
+			"at": [
+				0,
+				1,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				1024,
+				159,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T20:39:53",
+			"persona": "basecamp",
+			"note": "索具台（左舷 ＝ 右舷 mirror=y；格 y ↔ 320 − y）"
+		},
+		{
+			"name": "索具台",
+			"work": "basecamp-nightlamp-01m-channels",
+			"at": [
+				0,
+				161,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1024,
+				159,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T20:40:08",
+			"persona": "basecamp",
+			"note": "索具台（右舷；階段十五）"
 		}
 	]
 }

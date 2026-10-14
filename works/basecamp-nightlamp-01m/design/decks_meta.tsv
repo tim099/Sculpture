@@ -1,0 +1,5 @@
+# 甲板關聯的 meta（造船規格 §9.3；階段十八）—— 用 ame 的 decks.py 從四件甲板子作品的 .vxk 量 floor／thick，代號與顯示名改成這艘的（decks.py 從關聯名猜，中文名猜不出代號）
+link	下甲板	{"kind":"deck","deck":"lower","level":0,"name":"下甲板","floor":"92:85,114:85,243:78,369:75,503:76,584:80","thick":2}
+link	上甲板	{"kind":"deck","deck":"upper","level":1,"name":"上甲板（砲甲板）","floor":"79:110,115:110,245:103,375:100,501:101,586:105","thick":2}
+link	後甲板・走道・前甲板	{"kind":"deck","deck":"spar","level":2,"name":"後甲板・走道・前甲板","floor":"72:141,110:141,237:134,511:132,588:135","thick":2}
+link	船尾樓甲板	{"kind":"deck","deck":"poop","level":3,"name":"船尾樓甲板","floor":"69:163,112:163","thick":1}

@@ -1,0 +1,141 @@
+{
+ "base": {
+  "assembly": "f896ae2f277905d27ebd536dbc9a5236d45c253f208db5d41ee4d0c8df9fde0e",
+  "hull": "bfd0dd84e55158d30d725caca746cc51411bc7db666e9b2ef8805dd6d5dd3a11",
+  "spar": "67ddb7b37b6b4dde96518c93ab3160c50e4e17989c882fe82a7a1d761aea4f20",
+  "mizzen": "86db89a7fe221d9603db5578f635539c6070b382e4064c336428f3655ff7e081",
+  "main": "a817a982d31ff6bec153bc31ad948f33f0cdb40b84dfc1c662779740b3086c5e",
+  "fore": "1de6a4d058edb8f7cd0f116a36d906fc3929d1015df14a5f1e7df15f60c540ef",
+  "bowsprit": "cc226576c4a7fd0e1c3fe99d6d08614b62874c8d5d8efd290d1ff22b3931b423"
+ },
+ "read": {
+  "channel_cells_not_attached": 0,
+  "channels_overlap_existing": 0
+ },
+ "channels": {
+  "mizzen": {
+   "mast_x_at_130": 168,
+   "deadeye_x": [
+    173,
+    166,
+    159,
+    152,
+    145
+   ],
+   "cells": 576,
+   "overlap_existing": 0
+  },
+  "main": {
+   "mast_x_at_130": 320,
+   "deadeye_x": [
+    326,
+    318,
+    310,
+    302,
+    294,
+    286,
+    278,
+    270,
+    262,
+    254
+   ],
+   "cells": 1756,
+   "overlap_existing": 0
+  },
+  "fore": {
+   "mast_x_at_130": 542,
+   "deadeye_x": [
+    548,
+    540,
+    532,
+    524,
+    516,
+    508,
+    500,
+    492,
+    484
+   ],
+   "cells": 1437,
+   "overlap_existing": 0
+  }
+ },
+ "ratlines": {
+  "mizzen-S": {
+   "lower": 9,
+   "topmast": 23
+  },
+  "mizzen-P": {
+   "lower": 9,
+   "topmast": 23
+  },
+  "main-S": {
+   "lower": 35,
+   "topmast": 38
+  },
+  "main-P": {
+   "lower": 35,
+   "topmast": 38
+  },
+  "fore-S": {
+   "lower": 30,
+   "topmast": 33
+  },
+  "fore-P": {
+   "lower": 30,
+   "topmast": 33
+  }
+ },
+ "bobstay_tried": [
+  [
+   72,
+   593,
+   118
+  ],
+  [
+   70,
+   608,
+   16
+  ],
+  [
+   68,
+   606,
+   11
+  ],
+  [
+   66,
+   605,
+   0
+  ]
+ ],
+ "rope_clearance_hits": {},
+ "ropes": 609,
+ "ropes_by_group": {
+  "standing/deadeyes/upper": 48,
+  "standing/deadeyes/lanyards": 144,
+  "standing/shrouds": 34,
+  "standing/backstays": 14,
+  "standing/topmast-shrouds": 16,
+  "standing/topgallant-shrouds": 8,
+  "standing/stays": 9,
+  "ratlines/lower": 148,
+  "ratlines/topmast": 188
+ },
+ "points": 93,
+ "channel_cells": 3769,
+ "mirror_side_overlap": 0,
+ "mirror_side_not_attached": 0,
+ "files": {
+  "channels": {
+   "cells": 3769,
+   "sha256": "f7d4c92ae2a61268312f8d04ba6a68a1bcf2c6dfc6b51a35b4757611dc29d8d9"
+  },
+  "points": {
+   "n": 93,
+   "sha256": "7fc48441f12c85fe92a3bcb53e250206846ebb2f8f639a751b35e2d722a9ece4"
+  },
+  "ropes": {
+   "n": 609,
+   "sha256": "a4ba43fbcab7e5bdb192ee8aa7f3a4d3131b706ebb1802a09c343a117c6f684b"
+  }
+ }
+}

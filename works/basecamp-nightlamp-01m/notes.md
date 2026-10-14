@@ -374,3 +374,84 @@ Tim：「GO」（照造船規格的順序先做桅）。落在**草稿**，等 T
 - 每一件自己 1 塊、鏡像缺 0；組裝件（草稿開著）export list 1,242,395 ＝ 1,188,637 − 62 ＋ 53,820，逐格 0 差；link_overlap 0、link_clipped 0；stats 1 元件、空腔 0。
 - 🩸 第一版前桅 2 塊：top 那片自己浮著 —— trestletrees 在 top 底下一格，那一格的下桅還是圓的、只有斜角相接 ⇒ masthead 方的那段從 hounds 往下 2 格起（topmast head 同樣）；主桅剛好碰得到所以沒浮。
 - 過程圖：`design/sheet14_masts_v1.png`（右舷側面）、`overlays/stage13_masts_{ship,bow}.png`。
+
+## 階段十四：帆桁（2026-10-14 晚，新圖紙 15 v1）—— `design/draft_yards.py`、`design/tools/yards_apply.py`
+Tim：「接著繼續造船 直到完成可以匯入遊戲吧」（/scp-shipbuilding）。照造船規格 §5：**每根一件子作品＋外部模型**（一開始就這樣做，不走憲法號先貼進桅再拆的路）。
+- 10 件子作品（parent ＝ 所在的桅杆子作品、sub、0.1 m）：前桅 course／topsail／topgallant、主桅 course／topsail／topgallant、後桅 crossjack／topsail、spanker gaff／boom。模型 `yard-<名>` 放在桅杆子作品裡（藏桅就一起藏）。
+- 尺寸（plan.json `yards`；設計，這艘沒有史料）：主桅 course 270 格、topsail 200、topgallant 128；前桅 240／178／114；crossjack 176、後桅 topsail 130；中徑約長的 1／50、錐度照憲法號。不做 royal（truck 到 crosstrees 太短）、不做 spritsail yard。
+- 高度：course／crossjack 在 top 底下 10 格（Z 259／278／192）、topsail 在 crosstrees 底下 10 格（401／442／293）、topgallant 在 truck 底下 22 格（460／511）；中心貼著那一層桅的前面。
+- 轉角（brace）：course／crossjack 20°、topsail 22°、topgallant 24°（右舷那一頭往前，模型 rotate 0,0,−角）；gaff／boom 0。
+- spanker：後桅站在後甲板，後面是船尾樓甲板（163）與 taffrail（中線 X 60 高到 197）⇒ boom jaws Z 174（第一個試的高度就不碰；過得了船尾樓前緣的欄杆）、往船尾上翹 2°、末端停在 X 70（taffrail 前面），長 93.6；
+  gaff jaws 從 Z 197 往下、角度從 35° 起試 ⇒ **Z 195、35°** 第一個不碰 top／trestletrees，長 105、peak 到 X 76.5 Z 255。luff 只有 2.1 m、peak 拉高 —— 後桅矮（top 202）的代價，照實記。
+- meta（造船規格 §5）：`kind=yard, mast, yard, length_ft, diameter_in, pivot_anchor=pivot, turn_axis=z, rotate_z_deg, sail`（crossjack 沒有帆 ⇒ 不寫 sail）。
+- 固定點 225 個（每根：arm-P／S、earing-P／S、sling、jackstay-P／S<k> 每 8 格、pivot；gaff／boom：jaws、end、top<k>、pivot）。
+讀數（`design/verify_yards.json`）：
+- 開工前 ＝ 組裝件 export list 1,243,013 格、三件桅 6,858／18,175／15,561（sha 記在 verify）。
+- 每件自己 1 塊、y:160 鏡像缺 0；轉過之後每一格的格心＋八個角落在組裝件實心（自己那根桅除外）：10 件全 0。
+- 落地：10 件 stampvox placed ＝ 清單格數（共 16,534）；固定點 225 個讀回 0 缺 0 差；模型 meta 逐件 ＝ placement。
+- parts 匯出：`kind=yard` 的模型 10 個；225 個固定點跟程式預算的轉過位置（braced）最大差 0.0007 格。models_drawn 11、broken 0；組裝件格數不變（模型不是格子）。
+- 過程圖：`design/sheet15_yards_v1.png`（右舷側面＋從上往下看轉過的）、`overlays/stage14_yards_ship.png`。
+
+## 階段十五：索具台與靜索（2026-10-14 晚，新圖紙 16 v1）—— `design/draft_standing.py`、`design/tools/standing_apply.py`
+- 子作品 `basecamp-nightlamp-01m-channels`「夜燈號 索具台（右舷）」（parent 船殼、sub、0.1 m）：**只框右舷**（1024×159×800），關聯 `索具台` at 0,161,0、`索具台-鏡像` mirror=y at 0,1,0（造船規格 §2：一舷＋鏡像）。
+  每根桅一塊兩層板（黑 36）、從船殼外緣往外 7／10／9 格，板上每條 shroud／backstay 一個下 deadeye（3×2×3，104）。主桅、前桅在 Z 125–126（砲門上緣最高 123）；**後桅在 Z 145–146**（後甲板的舷牆頂到 150–153）。chain plates 不做（會從砲門前面穿過）。3,769 格／舷。
+- 靜索（plan.json `standing`；設計）：shrouds 主 7／前 6／後 4（每舷）、backstays 3／3／1、topmast shrouds 3／3／2（top 邊 → topmast head）、topgallant shrouds 2／2（crosstrees 兩端 → topgallant head）；
+  stays 9 條：mizzen-stay（→ 主桅後面 Z 150）、mizzen-topmast-stay（→ 主桅 top 後緣）、main-stay（→ 前甲板、前桅右舷旁）、main-topmast-stay（→ 前桅 top 後緣）、main-topgallant-stay（→ 前桅 topmast head 後面）、fore-stay（→ 艏斜桅）、fore-topmast-stay（→ jibboom 上、cap 往前 8 格）、jib-stay（→ jibboom 尖）、bobstay（艏斜桅 cap 底下 → 船頭柱）。
+  deadeye 照造船規格 §6：上 deadeye 是短而粗的繩（直徑 3、長 2）、lanyards 3 條；ratlines 子繩每 4 格（lower 148、topmast 188）。焦油色 #2b2620；stays slack 1.0008，要掛三角帆的 fore-topmast-stay、jib-stay 拉直。
+- 固定點 93 個：桅（shrouds-P／S、tm-P／S、tg-head、stay-out、tmstay-out、tgstay-out、top-front／aft、toprim-P／S<k>、ct-P／S<k>、ct-aft；主桅多 stay-in-low）、艏斜桅（cap、bobstay、jibboom-end、forestay、fore-tmstay）、船殼（stem-bobstay）、前甲板（mainstay）、索具台（dl-<桅>-<k>，24 個；左舷走鏡像關聯自己翻過去）。
+- 繩 609 條（主繩 273、子繩 336），繩的 meta `kind` 417 條（shroud／backstay／stay／ratline；deadeye 與 lanyard 不標）。
+讀數（`design/verify_standing.json`）：
+- 開工前 ＝ 組裝件 export list 1,243,013 格（sha 記在 verify）。索具台跟現況重疊 0、每一格都貼著船殼或索具台、鏡過去那一舷重疊 0。
+- 每條主繩兩端的直線每 0.5 格取樣（兩端各 4 格以內不算 —— 繩頭繞在桅頭上）：**落在實心裡 0**。
+  🩸 v1 讀到 56 條有取樣點落在實心裡，逐條看過位置：後桅的 shrouds 從後甲板的舷牆穿過去（15–17 點）⇒ 後桅索具台抬到 Z 145；main-topgallant-stay 的下端選到前桅 topmast head 前面那根 crosstree ⇒ 改成 topmast head 後面那一格；
+  fore-topmast-stay 綁 cap 頂、最後 10 點穿過 jibboom 根部 ⇒ 改綁 jibboom 上；bobstay 下端 Z 72 穿過船首像 123 點 ⇒ 從 72 往下找，Z 66 第一個不穿過；其他的都是最後 1–4 點擦過桅身（量法改成兩端各留 4 格）。
+- 🩸 鏡像關聯第一次被擋：索具台用整艘船的框（at 0,0,0），鏡像要 at 0,1,0 ⇒ 超出組裝件。改成只框右舷：作品裡的格 move 0,−161,0、尺寸改 1024×159×800、關聯拿掉重加（`link` 記的是加關聯當下的尺寸，overwrite 不會更新）；產生程式改寫子作品座標，重跑繩的清單逐位元組不變。
+- 落地：stampvox 3,769 ＝ 清單；作品 export ＝ 清單（子作品座標）；組裝件 export list 1,250,551 ＝ 1,243,013 ＋ 2 × 3,769，逐格缺 0／多 0／顏色不同 0；link_overlap 0、link_clipped 0。
+- 讀回：固定點 93 缺 0 差 0；繩 609 缺 0、端點／slack／粗細／組 差 0、meta 差 0；`sub=ropes` broken 0；view ropes_broken 0、models_broken 0。
+- 過程圖：`design/sheet16_standing_v1.png`（右舷側面，ratlines 不畫）、`overlays/stage15_standing_ship.png`。
+
+## 階段十六：帆（2026-10-14 晚，新圖紙 17 v1）—— `design/draft_sails.py`、`design/tools/sails_apply.py`
+- 帆 12 面（組裝件，plan.json `sails`；照造船規格 §7）：方帆 7（前桅、主桅 course／topsail／topgallant、後桅 topsail；crossjack 不掛帆）、spanker、fore-topmast-staysail、jib、旗 2。
+  方帆上緣兩角綁帆桁模型 `model:<桅>/yard-<帆>/earing-P|S`、bind 0；topsail 以上的 sheet 綁下一根帆桁同舷的 earing（帆桁一轉帆腳跟著轉）；course 的 sheet 往後（slack 0.85）、tack 往前（0.8，風從右舷後方來 ⇒ 綁右舷 clew）。
+  spanker 三條邊釘住（gaff、boom、桅）；三角帆 tack ＝ stay 下端、head ＝ stay 上 75% 那一格（登記在前桅子作品，離 stay 直線 0.22 格）、clew free。
+- **帆是深灰黑 #3b3631**（黑珍珠號的黑帆；夜燈號整艘黑，光只留給燈）。旗（營地特色）：ensign 在後桅 truck 底下，黑底、正中一盞暖黃提燈（`design/textures/ensign.png`，30×20 像素畫）；pennant 在主桅 truck 底下，燈的金色 #c8962e。
+- 繫繩點 10 個（那一欄最高的實心、最外面那一格；欄杆上的登記在欄杆子作品、舷牆頂的登記在船殼）＋ 三角帆 head 2 個；帆自己的繩 20 條（sheet 17、tack 2 —— 方帆 topsail 以上的 sheet 兩端同點、長 0）。
+- meta（造船規格 §9.1）：帆 12 面全標（kind／mast／sail，staysail `set=2`；旗 kind=flag、flag=ensign｜pennant）；帆自己的繩 20 條 kind＋sail。帆桁 meta 的 `sail` 跟帆名逐一對上（crossjack 沒有）。預設風 4.5,−1.5,0、3 秒（照憲法號）。
+讀數：
+- 讀回：固定點 14 缺 0 差 0；帆 12 缺 0、角／bind／free／meta 差 0；繩 20 缺 0 差 0。`sub=meta part=sail` 沒有 meta 的 0。
+- `sub=sails`：12 面全 ok；最鼓 course −78／−92、topsail −42／−47（憲法號同一套數值 −73／−97、−53／−59，同一級）；三角帆 25／33；ensign 貼圖 30×20、5 色、畫 600 像素。
+- view：sails_drawn 12、sails_broken 0、ropes_broken 0、models_broken 0；組裝件格數不變（帆不是格子）。
+- 過程圖：`design/sheet17_sails_v1.png`（設計角，布料模擬之前）、`overlays/stage16_sails_ship.png`。
+
+## 階段十七：砲（2026-10-14 晚，新圖紙 18 v1）—— `design/place_guns.py`、`design/tools/guns_apply.py`
+- 上甲板 11 個砲門 × 兩舷 ＝ **22 門 24 磅長砲**，外部模型 ← 憲法號 `basecamp-frigate-constitution-01m-gun-24`（0.1 m、15×32×16、1,125 格；scale 1 明寫），掛在上甲板子作品（`上甲板/砲-S01`…`砲-P11`，藏甲板一起藏）。
+  黑珍珠的砲數（32）沒有出處 ⇒ 照 Pl. LI 的砲門、每個一門。meta `kind=gun, gun=24l`（跟憲法號同一個代號，遊戲的砲種表已經有）。
+- 擺法照造船規格 §4.2：從砲架跨在舷牆上的位置（砲尾在船殼外緣往裡 10 格）往裡退，直到模型每一格的格心＋八個角（往裡縮 0.05 格）都不在組裝件的實心裡；z ＝ 上甲板在砲門中心那一欄走的那一格，碰到就 +1。
+  右舷照原樣（砲口 +y）、左舷 mirror=y、at.y ＝ 321 − 右舷（照憲法號）。
+- 🩸 v1 從船外起算：整門砲在船外本來就零碰撞，第一步就停（22 門都在 Y 232，砲尾在船外）⇒ 改成起點要「一定碰」（程式先斷言起點有碰到）。
+讀數（`design/verify_guns.json`）：
+- 22 門都零碰撞；砲口出船殼外緣 3.5–5.5 格；砲口中心在砲門下檻上 5.5–7.5、離上緣 1.5–3.5 格；兩舷同一個砲門的兩門重疊 0。第 1、11 門（船尾、船頭）那一欄的甲板有舷弧台階 ⇒ 墊高 1 格（z 110、104）。
+- 梯子的 56 個點（連同往上 1.8 m）沒有一格被砲佔到。
+- 讀回：22 個模型 at／mirror／scale／meta／來源 差 0。parts 匯出 `kind=gun` 22 個、全 ok；砲軸（muzzle − breech）右舷 +y、左舷 −y 全對；砲-S06／P06 砲口 y 224.5／96.5（321 − 224.5 ＝ 96.5）。
+- 過程圖：`design/sheet18_guns_v1.png`（上甲板平面）、`overlays/stage17_guns_deck.png`（拿掉上面兩層從上往下看）。
+- 沒做：砲具與砲索、追擊砲、砲門蓋、spar deck 的 carronade。
+
+## 階段十八：甲板 meta、甲板上的配件、給遊戲的 vxk（2026-10-14 晚）—— `design/decks_meta.tsv`、`design/place_fittings.py`、`design/tools/fittings_apply.py`
+- **甲板 meta**（造船規格 §9.3）：用 ame 的 `ArtGallery/HtmlGames/_build/ame_constitution_broadside/decks.py`（只讀）從四件甲板子作品各自的 .vxk 量 floor／thick；
+  decks.py 從關聯名猜代號，這艘的關聯名是中文 ⇒ 代號與顯示名我改：下甲板 `lower`（level 0）、上甲板 `upper`「上甲板（砲甲板）」（1）、後甲板・走道・前甲板 `spar`（2）、船尾樓甲板 `poop`（3）。
+  floor 跟階段九的 decks.json 差 ≤ 1 格（X 340：下 75.7／76、上 100.5／101）。⚠ spar 那一層船腰只有兩舷的走道（離中線 33–45 格，decks.py 量不到）⇒ floor 在 X 237–511 之間是內插的直線 —— 高度對（走道就在那個高度），但中間是露天的船腰，要跟 ame 說。
+  每一層都有梯子通到：下↔上 4 個梯口、上↔spar 後甲板前緣／前甲板後緣／走道各兩座、spar↔船尾樓兩座。
+- **配件**（外部模型，scale 0.2 明寫，pivot ＝ 底面中心照餘燼號）：舵輪 ← 憲法號 -wheel（後甲板 X 140，`kind=wheel`）、羅經櫃 ← 餘燼號 -binnacle（X 156，`kind=binnacle`）、主絞盤 ← 餘燼號 -capstan（上甲板絞盤孔 X 400，`kind=capstan`）。三個都第一個高度就零碰撞（格心＋八個角），引擎回報的外框 ＝ 程式算的。
+- §10 檢查表（逐條量過）：
+  - [x] 組裝件「夜燈號」主作品、船殼「夜燈號 船殼」sub；28 件作品都記 meters_per_voxel（遊戲用的全 0.1；0.01 m 的船首像與提燈是雕像版）；每個模型明寫 scale。
+  - [x] 砲 22、帆桁 10、舵輪是外部模型、帶 meta 與固定點；羅經櫃、絞盤帶 kind。
+  - [x] 梯子 `kind=ladders` 14 座 56 點；甲板 4 層 `kind=deck`、每層都有梯子通到。
+  - [ ] 空艙房：這艘沒有隔出來的艙房（跟夜隼號一樣）⇒ 沒有可標的。
+  - [x] 砲零碰撞、砲口在船殼外；（沒有追擊砲）。
+  - [x] ropes_broken 0、sails_broken 0、models_broken 0。
+  - [x] 帆 12、旗 2、帆自己的繩 20 照 §9.1 標 meta（`meta_sail_without 0`）；帆桁 meta 的 sail ＝ 帆名、mast 都有。
+  - [x] 組裝件 1 元件、空腔 0、link_overlap 0；索具台兩舷鏡像（同一件、mirror=y）。
+  - [x] 產生程式重跑逐位元組相同：從作品重新匯出每一階段開工前的狀態（組裝件藏起索具台兩條關聯 ＝ 階段十四、十五的起點；現在 ＝ 十六～十八的起點）⇒ 10 份輸入跟當初用的逐位元組相同；五支程式重跑，28 個產物逐位元組相同。
+  - [x] 匯出 vxk：`basecamp-nightlamp-01m-assembly/exports/nightlamp.vxk`（不入版控）—— 1,250,551 格、header checksum **1693584913（0x64f20e11）**、繩 629（子繩 336）、帆 12、模型 36、parts 14、固定點 551、繩 meta 437、帆 meta 12、sha256 828c9d94…；
+    解開逐格對回組裝件 export list：缺 0、多 0、顏色不同 0。⇒ 還沒跟 ame 說（等 Tim）。
+- 沒做（照實記）：舵（rudder）與舵索、彈藥庫與火藥桶、空艙房、砲具與砲索、追擊砲、船尾窗與船尾樓前牆、chain plates、braces／lifts、royal。
