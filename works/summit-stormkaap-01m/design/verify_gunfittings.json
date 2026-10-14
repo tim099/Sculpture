@@ -1,0 +1,5409 @@
+{
+ "note": "draft_gunfittings.py（階段十四）—— 現況 ＝ 引擎匯出 exports/stage13（546789 格）＋ verify_guns.json",
+ "works": [
+  {
+   "deck": "甲板-下",
+   "work": "summit-stormkaap-01m-gunfittings-lower",
+   "title": "風暴角號｜砲具（下砲甲板：船牆與甲板的環首螺栓）",
+   "frame_at": [
+    128,
+    81,
+    58
+   ],
+   "frame_size": [
+    333,
+    99,
+    20
+   ],
+   "link_in": "summit-stormkaap-01m-deck-lower",
+   "link": "砲具"
+  },
+  {
+   "deck": "甲板-上",
+   "work": "summit-stormkaap-01m-gunfittings-upper",
+   "title": "風暴角號｜砲具（上砲甲板、船尾、船頭：船牆與甲板的環首螺栓）",
+   "frame_at": [
+    104,
+    88,
+    78
+   ],
+   "frame_size": [
+    418,
+    85,
+    25
+   ],
+   "link_in": "summit-stormkaap-01m-deck-upper",
+   "link": "砲具"
+  }
+ ],
+ "stamp_order": [
+  {
+   "work": "summit-stormkaap-01m-gunfittings-lower",
+   "op": "stampvox",
+   "file": "masks/gunfittings/lower.vox.txt",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "voxels": 60,
+   "sha256": "43a81056161a2d50cf167c6bd82a134e1929f8697c9f0a5eeb6f671358304302"
+  },
+  {
+   "work": "summit-stormkaap-01m-gunfittings-upper",
+   "op": "stampvox",
+   "file": "masks/gunfittings/upper.vox.txt",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "voxels": 64,
+   "sha256": "c533a1ffc63e115db963fc063f20ffd58cf586cdbf6b75629a49df3bc113a345"
+  }
+ ],
+ "anchors": [
+  {
+   "deck": "甲板-下",
+   "name": "ring-S1-aft",
+   "kind": "ring",
+   "world": [
+    132,
+    144,
+    74
+   ],
+   "gun": "甲板-下/砲-S1",
+   "side": "aft",
+   "at": [
+    4,
+    63,
+    16
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S1-fwd",
+   "kind": "ring",
+   "world": [
+    140,
+    148,
+    74
+   ],
+   "gun": "甲板-下/砲-S1",
+   "side": "fwd",
+   "at": [
+    12,
+    67,
+    16
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S1",
+   "kind": "deck_ring",
+   "world": [
+    138,
+    129,
+    70
+   ],
+   "gun": "甲板-下/砲-S1",
+   "at": [
+    10,
+    48,
+    12
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P1-aft",
+   "kind": "ring",
+   "world": [
+    130,
+    114,
+    75
+   ],
+   "gun": "甲板-下/砲-P1",
+   "side": "aft",
+   "at": [
+    2,
+    33,
+    17
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P1-fwd",
+   "kind": "ring",
+   "world": [
+    140,
+    112,
+    75
+   ],
+   "gun": "甲板-下/砲-P1",
+   "side": "fwd",
+   "at": [
+    12,
+    31,
+    17
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P1",
+   "kind": "deck_ring",
+   "world": [
+    136,
+    132,
+    70
+   ],
+   "gun": "甲板-下/砲-P1",
+   "at": [
+    8,
+    51,
+    12
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S2-aft",
+   "kind": "ring",
+   "world": [
+    157,
+    157,
+    71
+   ],
+   "gun": "甲板-下/砲-S2",
+   "side": "aft",
+   "at": [
+    29,
+    76,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S2-fwd",
+   "kind": "ring",
+   "world": [
+    167,
+    158,
+    71
+   ],
+   "gun": "甲板-下/砲-S2",
+   "side": "fwd",
+   "at": [
+    39,
+    77,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S2",
+   "kind": "deck_ring",
+   "world": [
+    163,
+    137,
+    67
+   ],
+   "gun": "甲板-下/砲-S2",
+   "at": [
+    35,
+    56,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P2-aft",
+   "kind": "ring",
+   "world": [
+    157,
+    103,
+    71
+   ],
+   "gun": "甲板-下/砲-P2",
+   "side": "aft",
+   "at": [
+    29,
+    22,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P2-fwd",
+   "kind": "ring",
+   "world": [
+    167,
+    102,
+    71
+   ],
+   "gun": "甲板-下/砲-P2",
+   "side": "fwd",
+   "at": [
+    39,
+    21,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P2",
+   "kind": "deck_ring",
+   "world": [
+    163,
+    123,
+    67
+   ],
+   "gun": "甲板-下/砲-P2",
+   "at": [
+    35,
+    42,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S3-aft",
+   "kind": "ring",
+   "world": [
+    203,
+    167,
+    67
+   ],
+   "gun": "甲板-下/砲-S3",
+   "side": "aft",
+   "at": [
+    75,
+    86,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S3-fwd",
+   "kind": "ring",
+   "world": [
+    214,
+    169,
+    67
+   ],
+   "gun": "甲板-下/砲-S3",
+   "side": "fwd",
+   "at": [
+    86,
+    88,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S3",
+   "kind": "deck_ring",
+   "world": [
+    208,
+    149,
+    63
+   ],
+   "gun": "甲板-下/砲-S3",
+   "at": [
+    80,
+    68,
+    5
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P3-aft",
+   "kind": "ring",
+   "world": [
+    203,
+    93,
+    67
+   ],
+   "gun": "甲板-下/砲-P3",
+   "side": "aft",
+   "at": [
+    75,
+    12,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P3-fwd",
+   "kind": "ring",
+   "world": [
+    214,
+    91,
+    67
+   ],
+   "gun": "甲板-下/砲-P3",
+   "side": "fwd",
+   "at": [
+    86,
+    10,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P3",
+   "kind": "deck_ring",
+   "world": [
+    208,
+    111,
+    63
+   ],
+   "gun": "甲板-下/砲-P3",
+   "at": [
+    80,
+    30,
+    5
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S4-aft",
+   "kind": "ring",
+   "world": [
+    233,
+    172,
+    65
+   ],
+   "gun": "甲板-下/砲-S4",
+   "side": "aft",
+   "at": [
+    105,
+    91,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S4-fwd",
+   "kind": "ring",
+   "world": [
+    241,
+    173,
+    65
+   ],
+   "gun": "甲板-下/砲-S4",
+   "side": "fwd",
+   "at": [
+    113,
+    92,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S4",
+   "kind": "deck_ring",
+   "world": [
+    237,
+    153,
+    61
+   ],
+   "gun": "甲板-下/砲-S4",
+   "at": [
+    109,
+    72,
+    3
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P4-aft",
+   "kind": "ring",
+   "world": [
+    233,
+    88,
+    65
+   ],
+   "gun": "甲板-下/砲-P4",
+   "side": "aft",
+   "at": [
+    105,
+    7,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P4-fwd",
+   "kind": "ring",
+   "world": [
+    241,
+    87,
+    65
+   ],
+   "gun": "甲板-下/砲-P4",
+   "side": "fwd",
+   "at": [
+    113,
+    6,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P4",
+   "kind": "deck_ring",
+   "world": [
+    237,
+    107,
+    61
+   ],
+   "gun": "甲板-下/砲-P4",
+   "at": [
+    109,
+    26,
+    3
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S5-aft",
+   "kind": "ring",
+   "world": [
+    259,
+    174,
+    64
+   ],
+   "gun": "甲板-下/砲-S5",
+   "side": "aft",
+   "at": [
+    131,
+    93,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S5-fwd",
+   "kind": "ring",
+   "world": [
+    268,
+    175,
+    64
+   ],
+   "gun": "甲板-下/砲-S5",
+   "side": "fwd",
+   "at": [
+    140,
+    94,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S5",
+   "kind": "deck_ring",
+   "world": [
+    264,
+    156,
+    60
+   ],
+   "gun": "甲板-下/砲-S5",
+   "at": [
+    136,
+    75,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P5-aft",
+   "kind": "ring",
+   "world": [
+    259,
+    86,
+    64
+   ],
+   "gun": "甲板-下/砲-P5",
+   "side": "aft",
+   "at": [
+    131,
+    5,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P5-fwd",
+   "kind": "ring",
+   "world": [
+    268,
+    85,
+    64
+   ],
+   "gun": "甲板-下/砲-P5",
+   "side": "fwd",
+   "at": [
+    140,
+    4,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P5",
+   "kind": "deck_ring",
+   "world": [
+    264,
+    104,
+    60
+   ],
+   "gun": "甲板-下/砲-P5",
+   "at": [
+    136,
+    23,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S6-aft",
+   "kind": "ring",
+   "world": [
+    341,
+    175,
+    64
+   ],
+   "gun": "甲板-下/砲-S6",
+   "side": "aft",
+   "at": [
+    213,
+    94,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S6-fwd",
+   "kind": "ring",
+   "world": [
+    349,
+    175,
+    64
+   ],
+   "gun": "甲板-下/砲-S6",
+   "side": "fwd",
+   "at": [
+    221,
+    94,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S6",
+   "kind": "deck_ring",
+   "world": [
+    345,
+    156,
+    60
+   ],
+   "gun": "甲板-下/砲-S6",
+   "at": [
+    217,
+    75,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P6-aft",
+   "kind": "ring",
+   "world": [
+    341,
+    85,
+    64
+   ],
+   "gun": "甲板-下/砲-P6",
+   "side": "aft",
+   "at": [
+    213,
+    4,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P6-fwd",
+   "kind": "ring",
+   "world": [
+    349,
+    85,
+    64
+   ],
+   "gun": "甲板-下/砲-P6",
+   "side": "fwd",
+   "at": [
+    221,
+    4,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P6",
+   "kind": "deck_ring",
+   "world": [
+    345,
+    104,
+    60
+   ],
+   "gun": "甲板-下/砲-P6",
+   "at": [
+    217,
+    23,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S7-aft",
+   "kind": "ring",
+   "world": [
+    366,
+    177,
+    65
+   ],
+   "gun": "甲板-下/砲-S7",
+   "side": "aft",
+   "at": [
+    238,
+    96,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S7-fwd",
+   "kind": "ring",
+   "world": [
+    376,
+    174,
+    65
+   ],
+   "gun": "甲板-下/砲-S7",
+   "side": "fwd",
+   "at": [
+    248,
+    93,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S7",
+   "kind": "deck_ring",
+   "world": [
+    370,
+    156,
+    61
+   ],
+   "gun": "甲板-下/砲-S7",
+   "at": [
+    242,
+    75,
+    3
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P7-aft",
+   "kind": "ring",
+   "world": [
+    366,
+    83,
+    65
+   ],
+   "gun": "甲板-下/砲-P7",
+   "side": "aft",
+   "at": [
+    238,
+    2,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P7-fwd",
+   "kind": "ring",
+   "world": [
+    376,
+    86,
+    65
+   ],
+   "gun": "甲板-下/砲-P7",
+   "side": "fwd",
+   "at": [
+    248,
+    5,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P7",
+   "kind": "deck_ring",
+   "world": [
+    370,
+    104,
+    61
+   ],
+   "gun": "甲板-下/砲-P7",
+   "at": [
+    242,
+    23,
+    3
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S8-aft",
+   "kind": "ring",
+   "world": [
+    395,
+    172,
+    67
+   ],
+   "gun": "甲板-下/砲-S8",
+   "side": "aft",
+   "at": [
+    267,
+    91,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S8-fwd",
+   "kind": "ring",
+   "world": [
+    403,
+    172,
+    67
+   ],
+   "gun": "甲板-下/砲-S8",
+   "side": "fwd",
+   "at": [
+    275,
+    91,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S8",
+   "kind": "deck_ring",
+   "world": [
+    399,
+    153,
+    63
+   ],
+   "gun": "甲板-下/砲-S8",
+   "at": [
+    271,
+    72,
+    5
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P8-aft",
+   "kind": "ring",
+   "world": [
+    395,
+    88,
+    67
+   ],
+   "gun": "甲板-下/砲-P8",
+   "side": "aft",
+   "at": [
+    267,
+    7,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P8-fwd",
+   "kind": "ring",
+   "world": [
+    403,
+    88,
+    67
+   ],
+   "gun": "甲板-下/砲-P8",
+   "side": "fwd",
+   "at": [
+    275,
+    7,
+    9
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P8",
+   "kind": "deck_ring",
+   "world": [
+    399,
+    107,
+    63
+   ],
+   "gun": "甲板-下/砲-P8",
+   "at": [
+    271,
+    26,
+    5
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S9-aft",
+   "kind": "ring",
+   "world": [
+    422,
+    170,
+    69
+   ],
+   "gun": "甲板-下/砲-S9",
+   "side": "aft",
+   "at": [
+    294,
+    89,
+    11
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S9-fwd",
+   "kind": "ring",
+   "world": [
+    430,
+    169,
+    69
+   ],
+   "gun": "甲板-下/砲-S9",
+   "side": "fwd",
+   "at": [
+    302,
+    88,
+    11
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S9",
+   "kind": "deck_ring",
+   "world": [
+    426,
+    150,
+    65
+   ],
+   "gun": "甲板-下/砲-S9",
+   "at": [
+    298,
+    69,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P9-aft",
+   "kind": "ring",
+   "world": [
+    422,
+    90,
+    69
+   ],
+   "gun": "甲板-下/砲-P9",
+   "side": "aft",
+   "at": [
+    294,
+    9,
+    11
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P9-fwd",
+   "kind": "ring",
+   "world": [
+    430,
+    91,
+    69
+   ],
+   "gun": "甲板-下/砲-P9",
+   "side": "fwd",
+   "at": [
+    302,
+    10,
+    11
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P9",
+   "kind": "deck_ring",
+   "world": [
+    426,
+    110,
+    65
+   ],
+   "gun": "甲板-下/砲-P9",
+   "at": [
+    298,
+    29,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S10-aft",
+   "kind": "ring",
+   "world": [
+    449,
+    166,
+    72
+   ],
+   "gun": "甲板-下/砲-S10",
+   "side": "aft",
+   "at": [
+    321,
+    85,
+    14
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-S10-fwd",
+   "kind": "ring",
+   "world": [
+    459,
+    167,
+    72
+   ],
+   "gun": "甲板-下/砲-S10",
+   "side": "fwd",
+   "at": [
+    331,
+    86,
+    14
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-S10",
+   "kind": "deck_ring",
+   "world": [
+    455,
+    146,
+    68
+   ],
+   "gun": "甲板-下/砲-S10",
+   "at": [
+    327,
+    65,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P10-aft",
+   "kind": "ring",
+   "world": [
+    449,
+    94,
+    72
+   ],
+   "gun": "甲板-下/砲-P10",
+   "side": "aft",
+   "at": [
+    321,
+    13,
+    14
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "ring-P10-fwd",
+   "kind": "ring",
+   "world": [
+    459,
+    93,
+    72
+   ],
+   "gun": "甲板-下/砲-P10",
+   "side": "fwd",
+   "at": [
+    331,
+    12,
+    14
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-下",
+   "name": "deck-P10",
+   "kind": "deck_ring",
+   "world": [
+    455,
+    114,
+    68
+   ],
+   "gun": "甲板-下/砲-P10",
+   "at": [
+    327,
+    33,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-lower"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S1-aft",
+   "kind": "ring",
+   "world": [
+    144,
+    157,
+    93
+   ],
+   "gun": "甲板-上/砲-S1",
+   "side": "aft",
+   "at": [
+    40,
+    69,
+    15
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S1-fwd",
+   "kind": "ring",
+   "world": [
+    154,
+    156,
+    93
+   ],
+   "gun": "甲板-上/砲-S1",
+   "side": "fwd",
+   "at": [
+    50,
+    68,
+    15
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S1",
+   "kind": "deck_ring",
+   "world": [
+    150,
+    138,
+    88
+   ],
+   "gun": "甲板-上/砲-S1",
+   "at": [
+    46,
+    50,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P1-aft",
+   "kind": "ring",
+   "world": [
+    144,
+    103,
+    93
+   ],
+   "gun": "甲板-上/砲-P1",
+   "side": "aft",
+   "at": [
+    40,
+    15,
+    15
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P1-fwd",
+   "kind": "ring",
+   "world": [
+    154,
+    104,
+    93
+   ],
+   "gun": "甲板-上/砲-P1",
+   "side": "fwd",
+   "at": [
+    50,
+    16,
+    15
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P1",
+   "kind": "deck_ring",
+   "world": [
+    150,
+    122,
+    88
+   ],
+   "gun": "甲板-上/砲-P1",
+   "at": [
+    46,
+    34,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S2-aft",
+   "kind": "ring",
+   "world": [
+    219,
+    167,
+    86
+   ],
+   "gun": "甲板-上/砲-S2",
+   "side": "aft",
+   "at": [
+    115,
+    79,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S2-fwd",
+   "kind": "ring",
+   "world": [
+    227,
+    167,
+    86
+   ],
+   "gun": "甲板-上/砲-S2",
+   "side": "fwd",
+   "at": [
+    123,
+    79,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S2",
+   "kind": "deck_ring",
+   "world": [
+    223,
+    151,
+    82
+   ],
+   "gun": "甲板-上/砲-S2",
+   "at": [
+    119,
+    63,
+    4
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P2-aft",
+   "kind": "ring",
+   "world": [
+    219,
+    93,
+    86
+   ],
+   "gun": "甲板-上/砲-P2",
+   "side": "aft",
+   "at": [
+    115,
+    5,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P2-fwd",
+   "kind": "ring",
+   "world": [
+    227,
+    93,
+    86
+   ],
+   "gun": "甲板-上/砲-P2",
+   "side": "fwd",
+   "at": [
+    123,
+    5,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P2",
+   "kind": "deck_ring",
+   "world": [
+    223,
+    109,
+    82
+   ],
+   "gun": "甲板-上/砲-P2",
+   "at": [
+    119,
+    21,
+    4
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S3-aft",
+   "kind": "ring",
+   "world": [
+    246,
+    169,
+    85
+   ],
+   "gun": "甲板-上/砲-S3",
+   "side": "aft",
+   "at": [
+    142,
+    81,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S3-fwd",
+   "kind": "ring",
+   "world": [
+    254,
+    169,
+    85
+   ],
+   "gun": "甲板-上/砲-S3",
+   "side": "fwd",
+   "at": [
+    150,
+    81,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S3",
+   "kind": "deck_ring",
+   "world": [
+    250,
+    153,
+    80
+   ],
+   "gun": "甲板-上/砲-S3",
+   "at": [
+    146,
+    65,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P3-aft",
+   "kind": "ring",
+   "world": [
+    246,
+    91,
+    85
+   ],
+   "gun": "甲板-上/砲-P3",
+   "side": "aft",
+   "at": [
+    142,
+    3,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P3-fwd",
+   "kind": "ring",
+   "world": [
+    254,
+    91,
+    85
+   ],
+   "gun": "甲板-上/砲-P3",
+   "side": "fwd",
+   "at": [
+    150,
+    3,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P3",
+   "kind": "deck_ring",
+   "world": [
+    250,
+    107,
+    80
+   ],
+   "gun": "甲板-上/砲-P3",
+   "at": [
+    146,
+    19,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S4-aft",
+   "kind": "ring",
+   "world": [
+    273,
+    170,
+    84
+   ],
+   "gun": "甲板-上/砲-S4",
+   "side": "aft",
+   "at": [
+    169,
+    82,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S4-fwd",
+   "kind": "ring",
+   "world": [
+    281,
+    170,
+    84
+   ],
+   "gun": "甲板-上/砲-S4",
+   "side": "fwd",
+   "at": [
+    177,
+    82,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S4",
+   "kind": "deck_ring",
+   "world": [
+    277,
+    155,
+    80
+   ],
+   "gun": "甲板-上/砲-S4",
+   "at": [
+    173,
+    67,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P4-aft",
+   "kind": "ring",
+   "world": [
+    273,
+    90,
+    84
+   ],
+   "gun": "甲板-上/砲-P4",
+   "side": "aft",
+   "at": [
+    169,
+    2,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P4-fwd",
+   "kind": "ring",
+   "world": [
+    281,
+    90,
+    84
+   ],
+   "gun": "甲板-上/砲-P4",
+   "side": "fwd",
+   "at": [
+    177,
+    2,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P4",
+   "kind": "deck_ring",
+   "world": [
+    277,
+    105,
+    80
+   ],
+   "gun": "甲板-上/砲-P4",
+   "at": [
+    173,
+    17,
+    2
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S5-aft",
+   "kind": "ring",
+   "world": [
+    355,
+    170,
+    85
+   ],
+   "gun": "甲板-上/砲-S5",
+   "side": "aft",
+   "at": [
+    251,
+    82,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S5-fwd",
+   "kind": "ring",
+   "world": [
+    363,
+    170,
+    85
+   ],
+   "gun": "甲板-上/砲-S5",
+   "side": "fwd",
+   "at": [
+    259,
+    82,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S5",
+   "kind": "deck_ring",
+   "world": [
+    359,
+    154,
+    81
+   ],
+   "gun": "甲板-上/砲-S5",
+   "at": [
+    255,
+    66,
+    3
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P5-aft",
+   "kind": "ring",
+   "world": [
+    355,
+    90,
+    85
+   ],
+   "gun": "甲板-上/砲-P5",
+   "side": "aft",
+   "at": [
+    251,
+    2,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P5-fwd",
+   "kind": "ring",
+   "world": [
+    363,
+    90,
+    85
+   ],
+   "gun": "甲板-上/砲-P5",
+   "side": "fwd",
+   "at": [
+    259,
+    2,
+    7
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P5",
+   "kind": "deck_ring",
+   "world": [
+    359,
+    106,
+    81
+   ],
+   "gun": "甲板-上/砲-P5",
+   "at": [
+    255,
+    18,
+    3
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S6-aft",
+   "kind": "ring",
+   "world": [
+    382,
+    169,
+    86
+   ],
+   "gun": "甲板-上/砲-S6",
+   "side": "aft",
+   "at": [
+    278,
+    81,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S6-fwd",
+   "kind": "ring",
+   "world": [
+    390,
+    168,
+    86
+   ],
+   "gun": "甲板-上/砲-S6",
+   "side": "fwd",
+   "at": [
+    286,
+    80,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S6",
+   "kind": "deck_ring",
+   "world": [
+    386,
+    153,
+    82
+   ],
+   "gun": "甲板-上/砲-S6",
+   "at": [
+    282,
+    65,
+    4
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P6-aft",
+   "kind": "ring",
+   "world": [
+    382,
+    91,
+    86
+   ],
+   "gun": "甲板-上/砲-P6",
+   "side": "aft",
+   "at": [
+    278,
+    3,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P6-fwd",
+   "kind": "ring",
+   "world": [
+    390,
+    92,
+    86
+   ],
+   "gun": "甲板-上/砲-P6",
+   "side": "fwd",
+   "at": [
+    286,
+    4,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P6",
+   "kind": "deck_ring",
+   "world": [
+    386,
+    107,
+    82
+   ],
+   "gun": "甲板-上/砲-P6",
+   "at": [
+    282,
+    19,
+    4
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S7-aft",
+   "kind": "ring",
+   "world": [
+    409,
+    167,
+    88
+   ],
+   "gun": "甲板-上/砲-S7",
+   "side": "aft",
+   "at": [
+    305,
+    79,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S7-fwd",
+   "kind": "ring",
+   "world": [
+    417,
+    166,
+    88
+   ],
+   "gun": "甲板-上/砲-S7",
+   "side": "fwd",
+   "at": [
+    313,
+    78,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S7",
+   "kind": "deck_ring",
+   "world": [
+    413,
+    150,
+    84
+   ],
+   "gun": "甲板-上/砲-S7",
+   "at": [
+    309,
+    62,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P7-aft",
+   "kind": "ring",
+   "world": [
+    409,
+    93,
+    88
+   ],
+   "gun": "甲板-上/砲-P7",
+   "side": "aft",
+   "at": [
+    305,
+    5,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P7-fwd",
+   "kind": "ring",
+   "world": [
+    417,
+    94,
+    88
+   ],
+   "gun": "甲板-上/砲-P7",
+   "side": "fwd",
+   "at": [
+    313,
+    6,
+    10
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P7",
+   "kind": "deck_ring",
+   "world": [
+    413,
+    110,
+    84
+   ],
+   "gun": "甲板-上/砲-P7",
+   "at": [
+    309,
+    22,
+    6
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S8-aft",
+   "kind": "ring",
+   "world": [
+    436,
+    164,
+    91
+   ],
+   "gun": "甲板-上/砲-S8",
+   "side": "aft",
+   "at": [
+    332,
+    76,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S8-fwd",
+   "kind": "ring",
+   "world": [
+    444,
+    163,
+    91
+   ],
+   "gun": "甲板-上/砲-S8",
+   "side": "fwd",
+   "at": [
+    340,
+    75,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S8",
+   "kind": "deck_ring",
+   "world": [
+    440,
+    147,
+    86
+   ],
+   "gun": "甲板-上/砲-S8",
+   "at": [
+    336,
+    59,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P8-aft",
+   "kind": "ring",
+   "world": [
+    436,
+    96,
+    91
+   ],
+   "gun": "甲板-上/砲-P8",
+   "side": "aft",
+   "at": [
+    332,
+    8,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P8-fwd",
+   "kind": "ring",
+   "world": [
+    444,
+    97,
+    91
+   ],
+   "gun": "甲板-上/砲-P8",
+   "side": "fwd",
+   "at": [
+    340,
+    9,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P8",
+   "kind": "deck_ring",
+   "world": [
+    440,
+    113,
+    86
+   ],
+   "gun": "甲板-上/砲-P8",
+   "at": [
+    336,
+    25,
+    8
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-S9-aft",
+   "kind": "ring",
+   "world": [
+    462,
+    160,
+    93
+   ],
+   "gun": "甲板-上/砲-S9",
+   "side": "aft",
+   "at": [
+    358,
+    72,
+    15
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-S9",
+   "kind": "deck_ring",
+   "world": [
+    465,
+    143,
+    89
+   ],
+   "gun": "甲板-上/砲-S9",
+   "at": [
+    361,
+    55,
+    11
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-P9-aft",
+   "kind": "ring",
+   "world": [
+    462,
+    100,
+    93
+   ],
+   "gun": "甲板-上/砲-P9",
+   "side": "aft",
+   "at": [
+    358,
+    12,
+    15
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-P9",
+   "kind": "deck_ring",
+   "world": [
+    465,
+    117,
+    89
+   ],
+   "gun": "甲板-上/砲-P9",
+   "at": [
+    361,
+    29,
+    11
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-AP-aft",
+   "kind": "ring",
+   "world": [
+    110,
+    114,
+    99
+   ],
+   "gun": "甲板-上/砲-AP",
+   "side": "aft",
+   "at": [
+    6,
+    26,
+    21
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-AP-fwd",
+   "kind": "ring",
+   "world": [
+    110,
+    122,
+    99
+   ],
+   "gun": "甲板-上/砲-AP",
+   "side": "fwd",
+   "at": [
+    6,
+    34,
+    21
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-AP",
+   "kind": "deck_ring",
+   "world": [
+    129,
+    118,
+    91
+   ],
+   "gun": "甲板-上/砲-AP",
+   "at": [
+    25,
+    30,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-AS-aft",
+   "kind": "ring",
+   "world": [
+    110,
+    138,
+    99
+   ],
+   "gun": "甲板-上/砲-AS",
+   "side": "aft",
+   "at": [
+    6,
+    50,
+    21
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-AS-fwd",
+   "kind": "ring",
+   "world": [
+    110,
+    146,
+    99
+   ],
+   "gun": "甲板-上/砲-AS",
+   "side": "fwd",
+   "at": [
+    6,
+    58,
+    21
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-AS",
+   "kind": "deck_ring",
+   "world": [
+    129,
+    142,
+    91
+   ],
+   "gun": "甲板-上/砲-AS",
+   "at": [
+    25,
+    54,
+    13
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-FP-aft",
+   "kind": "ring",
+   "world": [
+    519,
+    122,
+    100
+   ],
+   "gun": "甲板-上/砲-FP",
+   "side": "aft",
+   "at": [
+    415,
+    34,
+    22
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-FP-fwd",
+   "kind": "ring",
+   "world": [
+    517,
+    114,
+    100
+   ],
+   "gun": "甲板-上/砲-FP",
+   "side": "fwd",
+   "at": [
+    413,
+    26,
+    22
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-FP",
+   "kind": "deck_ring",
+   "world": [
+    502,
+    118,
+    94
+   ],
+   "gun": "甲板-上/砲-FP",
+   "at": [
+    398,
+    30,
+    16
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-FS-aft",
+   "kind": "ring",
+   "world": [
+    517,
+    146,
+    100
+   ],
+   "gun": "甲板-上/砲-FS",
+   "side": "aft",
+   "at": [
+    413,
+    58,
+    22
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "ring-FS-fwd",
+   "kind": "ring",
+   "world": [
+    519,
+    138,
+    100
+   ],
+   "gun": "甲板-上/砲-FS",
+   "side": "fwd",
+   "at": [
+    415,
+    50,
+    22
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  },
+  {
+   "deck": "甲板-上",
+   "name": "deck-FS",
+   "kind": "deck_ring",
+   "world": [
+    502,
+    142,
+    94
+   ],
+   "gun": "甲板-上/砲-FS",
+   "at": [
+    398,
+    54,
+    16
+   ],
+   "work": "summit-stormkaap-01m-gunfittings-upper"
+  }
+ ],
+ "ropes": [
+  {
+   "name": "甲板-下.砲-S1.breeching-aft",
+   "from": "model:甲板-下/砲-S1/cascabel",
+   "to": "甲板-下/砲具/ring-S1-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S1.tackle-aft",
+   "from": "model:甲板-下/砲-S1/eye-aft",
+   "to": "甲板-下/砲具/ring-S1-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S1.breeching-fwd",
+   "from": "model:甲板-下/砲-S1/cascabel",
+   "to": "甲板-下/砲具/ring-S1-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S1.tackle-fwd",
+   "from": "model:甲板-下/砲-S1/eye-fwd",
+   "to": "甲板-下/砲具/ring-S1-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S1.train",
+   "from": "model:甲板-下/砲-S1/train",
+   "to": "甲板-下/砲具/deck-S1",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P1.breeching-aft",
+   "from": "model:甲板-下/砲-P1/cascabel",
+   "to": "甲板-下/砲具/ring-P1-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P1.tackle-aft",
+   "from": "model:甲板-下/砲-P1/eye-aft",
+   "to": "甲板-下/砲具/ring-P1-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P1.breeching-fwd",
+   "from": "model:甲板-下/砲-P1/cascabel",
+   "to": "甲板-下/砲具/ring-P1-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P1.tackle-fwd",
+   "from": "model:甲板-下/砲-P1/eye-fwd",
+   "to": "甲板-下/砲具/ring-P1-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P1.train",
+   "from": "model:甲板-下/砲-P1/train",
+   "to": "甲板-下/砲具/deck-P1",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S2.breeching-aft",
+   "from": "model:甲板-下/砲-S2/cascabel",
+   "to": "甲板-下/砲具/ring-S2-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S2.tackle-aft",
+   "from": "model:甲板-下/砲-S2/eye-aft",
+   "to": "甲板-下/砲具/ring-S2-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S2.breeching-fwd",
+   "from": "model:甲板-下/砲-S2/cascabel",
+   "to": "甲板-下/砲具/ring-S2-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S2.tackle-fwd",
+   "from": "model:甲板-下/砲-S2/eye-fwd",
+   "to": "甲板-下/砲具/ring-S2-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S2.train",
+   "from": "model:甲板-下/砲-S2/train",
+   "to": "甲板-下/砲具/deck-S2",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P2.breeching-aft",
+   "from": "model:甲板-下/砲-P2/cascabel",
+   "to": "甲板-下/砲具/ring-P2-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P2.tackle-aft",
+   "from": "model:甲板-下/砲-P2/eye-aft",
+   "to": "甲板-下/砲具/ring-P2-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P2.breeching-fwd",
+   "from": "model:甲板-下/砲-P2/cascabel",
+   "to": "甲板-下/砲具/ring-P2-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P2.tackle-fwd",
+   "from": "model:甲板-下/砲-P2/eye-fwd",
+   "to": "甲板-下/砲具/ring-P2-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P2.train",
+   "from": "model:甲板-下/砲-P2/train",
+   "to": "甲板-下/砲具/deck-P2",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S3.breeching-aft",
+   "from": "model:甲板-下/砲-S3/cascabel",
+   "to": "甲板-下/砲具/ring-S3-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S3.tackle-aft",
+   "from": "model:甲板-下/砲-S3/eye-aft",
+   "to": "甲板-下/砲具/ring-S3-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S3.breeching-fwd",
+   "from": "model:甲板-下/砲-S3/cascabel",
+   "to": "甲板-下/砲具/ring-S3-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S3.tackle-fwd",
+   "from": "model:甲板-下/砲-S3/eye-fwd",
+   "to": "甲板-下/砲具/ring-S3-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S3.train",
+   "from": "model:甲板-下/砲-S3/train",
+   "to": "甲板-下/砲具/deck-S3",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P3.breeching-aft",
+   "from": "model:甲板-下/砲-P3/cascabel",
+   "to": "甲板-下/砲具/ring-P3-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P3.tackle-aft",
+   "from": "model:甲板-下/砲-P3/eye-aft",
+   "to": "甲板-下/砲具/ring-P3-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P3.breeching-fwd",
+   "from": "model:甲板-下/砲-P3/cascabel",
+   "to": "甲板-下/砲具/ring-P3-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P3.tackle-fwd",
+   "from": "model:甲板-下/砲-P3/eye-fwd",
+   "to": "甲板-下/砲具/ring-P3-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P3.train",
+   "from": "model:甲板-下/砲-P3/train",
+   "to": "甲板-下/砲具/deck-P3",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S4.breeching-aft",
+   "from": "model:甲板-下/砲-S4/cascabel",
+   "to": "甲板-下/砲具/ring-S4-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S4.tackle-aft",
+   "from": "model:甲板-下/砲-S4/eye-aft",
+   "to": "甲板-下/砲具/ring-S4-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S4.breeching-fwd",
+   "from": "model:甲板-下/砲-S4/cascabel",
+   "to": "甲板-下/砲具/ring-S4-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S4.tackle-fwd",
+   "from": "model:甲板-下/砲-S4/eye-fwd",
+   "to": "甲板-下/砲具/ring-S4-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S4.train",
+   "from": "model:甲板-下/砲-S4/train",
+   "to": "甲板-下/砲具/deck-S4",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P4.breeching-aft",
+   "from": "model:甲板-下/砲-P4/cascabel",
+   "to": "甲板-下/砲具/ring-P4-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P4.tackle-aft",
+   "from": "model:甲板-下/砲-P4/eye-aft",
+   "to": "甲板-下/砲具/ring-P4-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P4.breeching-fwd",
+   "from": "model:甲板-下/砲-P4/cascabel",
+   "to": "甲板-下/砲具/ring-P4-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P4.tackle-fwd",
+   "from": "model:甲板-下/砲-P4/eye-fwd",
+   "to": "甲板-下/砲具/ring-P4-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P4.train",
+   "from": "model:甲板-下/砲-P4/train",
+   "to": "甲板-下/砲具/deck-P4",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S5.breeching-aft",
+   "from": "model:甲板-下/砲-S5/cascabel",
+   "to": "甲板-下/砲具/ring-S5-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S5.tackle-aft",
+   "from": "model:甲板-下/砲-S5/eye-aft",
+   "to": "甲板-下/砲具/ring-S5-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S5.breeching-fwd",
+   "from": "model:甲板-下/砲-S5/cascabel",
+   "to": "甲板-下/砲具/ring-S5-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S5.tackle-fwd",
+   "from": "model:甲板-下/砲-S5/eye-fwd",
+   "to": "甲板-下/砲具/ring-S5-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S5.train",
+   "from": "model:甲板-下/砲-S5/train",
+   "to": "甲板-下/砲具/deck-S5",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P5.breeching-aft",
+   "from": "model:甲板-下/砲-P5/cascabel",
+   "to": "甲板-下/砲具/ring-P5-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P5.tackle-aft",
+   "from": "model:甲板-下/砲-P5/eye-aft",
+   "to": "甲板-下/砲具/ring-P5-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P5.breeching-fwd",
+   "from": "model:甲板-下/砲-P5/cascabel",
+   "to": "甲板-下/砲具/ring-P5-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P5.tackle-fwd",
+   "from": "model:甲板-下/砲-P5/eye-fwd",
+   "to": "甲板-下/砲具/ring-P5-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P5.train",
+   "from": "model:甲板-下/砲-P5/train",
+   "to": "甲板-下/砲具/deck-P5",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S6.breeching-aft",
+   "from": "model:甲板-下/砲-S6/cascabel",
+   "to": "甲板-下/砲具/ring-S6-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S6.tackle-aft",
+   "from": "model:甲板-下/砲-S6/eye-aft",
+   "to": "甲板-下/砲具/ring-S6-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S6.breeching-fwd",
+   "from": "model:甲板-下/砲-S6/cascabel",
+   "to": "甲板-下/砲具/ring-S6-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S6.tackle-fwd",
+   "from": "model:甲板-下/砲-S6/eye-fwd",
+   "to": "甲板-下/砲具/ring-S6-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S6.train",
+   "from": "model:甲板-下/砲-S6/train",
+   "to": "甲板-下/砲具/deck-S6",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P6.breeching-aft",
+   "from": "model:甲板-下/砲-P6/cascabel",
+   "to": "甲板-下/砲具/ring-P6-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P6.tackle-aft",
+   "from": "model:甲板-下/砲-P6/eye-aft",
+   "to": "甲板-下/砲具/ring-P6-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P6.breeching-fwd",
+   "from": "model:甲板-下/砲-P6/cascabel",
+   "to": "甲板-下/砲具/ring-P6-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P6.tackle-fwd",
+   "from": "model:甲板-下/砲-P6/eye-fwd",
+   "to": "甲板-下/砲具/ring-P6-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P6.train",
+   "from": "model:甲板-下/砲-P6/train",
+   "to": "甲板-下/砲具/deck-P6",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S7.breeching-aft",
+   "from": "model:甲板-下/砲-S7/cascabel",
+   "to": "甲板-下/砲具/ring-S7-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S7.tackle-aft",
+   "from": "model:甲板-下/砲-S7/eye-aft",
+   "to": "甲板-下/砲具/ring-S7-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S7.breeching-fwd",
+   "from": "model:甲板-下/砲-S7/cascabel",
+   "to": "甲板-下/砲具/ring-S7-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S7.tackle-fwd",
+   "from": "model:甲板-下/砲-S7/eye-fwd",
+   "to": "甲板-下/砲具/ring-S7-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S7.train",
+   "from": "model:甲板-下/砲-S7/train",
+   "to": "甲板-下/砲具/deck-S7",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P7.breeching-aft",
+   "from": "model:甲板-下/砲-P7/cascabel",
+   "to": "甲板-下/砲具/ring-P7-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P7.tackle-aft",
+   "from": "model:甲板-下/砲-P7/eye-aft",
+   "to": "甲板-下/砲具/ring-P7-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P7.breeching-fwd",
+   "from": "model:甲板-下/砲-P7/cascabel",
+   "to": "甲板-下/砲具/ring-P7-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P7.tackle-fwd",
+   "from": "model:甲板-下/砲-P7/eye-fwd",
+   "to": "甲板-下/砲具/ring-P7-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P7.train",
+   "from": "model:甲板-下/砲-P7/train",
+   "to": "甲板-下/砲具/deck-P7",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S8.breeching-aft",
+   "from": "model:甲板-下/砲-S8/cascabel",
+   "to": "甲板-下/砲具/ring-S8-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S8.tackle-aft",
+   "from": "model:甲板-下/砲-S8/eye-aft",
+   "to": "甲板-下/砲具/ring-S8-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S8.breeching-fwd",
+   "from": "model:甲板-下/砲-S8/cascabel",
+   "to": "甲板-下/砲具/ring-S8-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S8.tackle-fwd",
+   "from": "model:甲板-下/砲-S8/eye-fwd",
+   "to": "甲板-下/砲具/ring-S8-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S8.train",
+   "from": "model:甲板-下/砲-S8/train",
+   "to": "甲板-下/砲具/deck-S8",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P8.breeching-aft",
+   "from": "model:甲板-下/砲-P8/cascabel",
+   "to": "甲板-下/砲具/ring-P8-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P8.tackle-aft",
+   "from": "model:甲板-下/砲-P8/eye-aft",
+   "to": "甲板-下/砲具/ring-P8-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P8.breeching-fwd",
+   "from": "model:甲板-下/砲-P8/cascabel",
+   "to": "甲板-下/砲具/ring-P8-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P8.tackle-fwd",
+   "from": "model:甲板-下/砲-P8/eye-fwd",
+   "to": "甲板-下/砲具/ring-P8-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P8.train",
+   "from": "model:甲板-下/砲-P8/train",
+   "to": "甲板-下/砲具/deck-P8",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S9.breeching-aft",
+   "from": "model:甲板-下/砲-S9/cascabel",
+   "to": "甲板-下/砲具/ring-S9-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S9.tackle-aft",
+   "from": "model:甲板-下/砲-S9/eye-aft",
+   "to": "甲板-下/砲具/ring-S9-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S9.breeching-fwd",
+   "from": "model:甲板-下/砲-S9/cascabel",
+   "to": "甲板-下/砲具/ring-S9-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S9.tackle-fwd",
+   "from": "model:甲板-下/砲-S9/eye-fwd",
+   "to": "甲板-下/砲具/ring-S9-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S9.train",
+   "from": "model:甲板-下/砲-S9/train",
+   "to": "甲板-下/砲具/deck-S9",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P9.breeching-aft",
+   "from": "model:甲板-下/砲-P9/cascabel",
+   "to": "甲板-下/砲具/ring-P9-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P9.tackle-aft",
+   "from": "model:甲板-下/砲-P9/eye-aft",
+   "to": "甲板-下/砲具/ring-P9-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P9.breeching-fwd",
+   "from": "model:甲板-下/砲-P9/cascabel",
+   "to": "甲板-下/砲具/ring-P9-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P9.tackle-fwd",
+   "from": "model:甲板-下/砲-P9/eye-fwd",
+   "to": "甲板-下/砲具/ring-P9-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P9.train",
+   "from": "model:甲板-下/砲-P9/train",
+   "to": "甲板-下/砲具/deck-P9",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-S10.breeching-aft",
+   "from": "model:甲板-下/砲-S10/cascabel",
+   "to": "甲板-下/砲具/ring-S10-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S10.tackle-aft",
+   "from": "model:甲板-下/砲-S10/eye-aft",
+   "to": "甲板-下/砲具/ring-S10-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S10.breeching-fwd",
+   "from": "model:甲板-下/砲-S10/cascabel",
+   "to": "甲板-下/砲具/ring-S10-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-S10.tackle-fwd",
+   "from": "model:甲板-下/砲-S10/eye-fwd",
+   "to": "甲板-下/砲具/ring-S10-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-S10.train",
+   "from": "model:甲板-下/砲-S10/train",
+   "to": "甲板-下/砲具/deck-S10",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-下.砲-P10.breeching-aft",
+   "from": "model:甲板-下/砲-P10/cascabel",
+   "to": "甲板-下/砲具/ring-P10-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P10.tackle-aft",
+   "from": "model:甲板-下/砲-P10/eye-aft",
+   "to": "甲板-下/砲具/ring-P10-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P10.breeching-fwd",
+   "from": "model:甲板-下/砲-P10/cascabel",
+   "to": "甲板-下/砲具/ring-P10-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-下.砲-P10.tackle-fwd",
+   "from": "model:甲板-下/砲-P10/eye-fwd",
+   "to": "甲板-下/砲具/ring-P10-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-下.砲-P10.train",
+   "from": "model:甲板-下/砲-P10/train",
+   "to": "甲板-下/砲具/deck-P10",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S1.breeching-aft",
+   "from": "model:甲板-上/砲-S1/cascabel",
+   "to": "甲板-上/砲具/ring-S1-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S1.tackle-aft",
+   "from": "model:甲板-上/砲-S1/eye-aft",
+   "to": "甲板-上/砲具/ring-S1-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S1.breeching-fwd",
+   "from": "model:甲板-上/砲-S1/cascabel",
+   "to": "甲板-上/砲具/ring-S1-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S1.tackle-fwd",
+   "from": "model:甲板-上/砲-S1/eye-fwd",
+   "to": "甲板-上/砲具/ring-S1-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S1.train",
+   "from": "model:甲板-上/砲-S1/train",
+   "to": "甲板-上/砲具/deck-S1",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P1.breeching-aft",
+   "from": "model:甲板-上/砲-P1/cascabel",
+   "to": "甲板-上/砲具/ring-P1-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P1.tackle-aft",
+   "from": "model:甲板-上/砲-P1/eye-aft",
+   "to": "甲板-上/砲具/ring-P1-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P1.breeching-fwd",
+   "from": "model:甲板-上/砲-P1/cascabel",
+   "to": "甲板-上/砲具/ring-P1-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P1.tackle-fwd",
+   "from": "model:甲板-上/砲-P1/eye-fwd",
+   "to": "甲板-上/砲具/ring-P1-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P1.train",
+   "from": "model:甲板-上/砲-P1/train",
+   "to": "甲板-上/砲具/deck-P1",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S2.breeching-aft",
+   "from": "model:甲板-上/砲-S2/cascabel",
+   "to": "甲板-上/砲具/ring-S2-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S2.tackle-aft",
+   "from": "model:甲板-上/砲-S2/eye-aft",
+   "to": "甲板-上/砲具/ring-S2-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S2.breeching-fwd",
+   "from": "model:甲板-上/砲-S2/cascabel",
+   "to": "甲板-上/砲具/ring-S2-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S2.tackle-fwd",
+   "from": "model:甲板-上/砲-S2/eye-fwd",
+   "to": "甲板-上/砲具/ring-S2-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S2.train",
+   "from": "model:甲板-上/砲-S2/train",
+   "to": "甲板-上/砲具/deck-S2",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P2.breeching-aft",
+   "from": "model:甲板-上/砲-P2/cascabel",
+   "to": "甲板-上/砲具/ring-P2-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P2.tackle-aft",
+   "from": "model:甲板-上/砲-P2/eye-aft",
+   "to": "甲板-上/砲具/ring-P2-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P2.breeching-fwd",
+   "from": "model:甲板-上/砲-P2/cascabel",
+   "to": "甲板-上/砲具/ring-P2-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P2.tackle-fwd",
+   "from": "model:甲板-上/砲-P2/eye-fwd",
+   "to": "甲板-上/砲具/ring-P2-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P2.train",
+   "from": "model:甲板-上/砲-P2/train",
+   "to": "甲板-上/砲具/deck-P2",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S3.breeching-aft",
+   "from": "model:甲板-上/砲-S3/cascabel",
+   "to": "甲板-上/砲具/ring-S3-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S3.tackle-aft",
+   "from": "model:甲板-上/砲-S3/eye-aft",
+   "to": "甲板-上/砲具/ring-S3-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S3.breeching-fwd",
+   "from": "model:甲板-上/砲-S3/cascabel",
+   "to": "甲板-上/砲具/ring-S3-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S3.tackle-fwd",
+   "from": "model:甲板-上/砲-S3/eye-fwd",
+   "to": "甲板-上/砲具/ring-S3-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S3.train",
+   "from": "model:甲板-上/砲-S3/train",
+   "to": "甲板-上/砲具/deck-S3",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P3.breeching-aft",
+   "from": "model:甲板-上/砲-P3/cascabel",
+   "to": "甲板-上/砲具/ring-P3-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P3.tackle-aft",
+   "from": "model:甲板-上/砲-P3/eye-aft",
+   "to": "甲板-上/砲具/ring-P3-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P3.breeching-fwd",
+   "from": "model:甲板-上/砲-P3/cascabel",
+   "to": "甲板-上/砲具/ring-P3-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P3.tackle-fwd",
+   "from": "model:甲板-上/砲-P3/eye-fwd",
+   "to": "甲板-上/砲具/ring-P3-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P3.train",
+   "from": "model:甲板-上/砲-P3/train",
+   "to": "甲板-上/砲具/deck-P3",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S4.breeching-aft",
+   "from": "model:甲板-上/砲-S4/cascabel",
+   "to": "甲板-上/砲具/ring-S4-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S4.tackle-aft",
+   "from": "model:甲板-上/砲-S4/eye-aft",
+   "to": "甲板-上/砲具/ring-S4-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S4.breeching-fwd",
+   "from": "model:甲板-上/砲-S4/cascabel",
+   "to": "甲板-上/砲具/ring-S4-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S4.tackle-fwd",
+   "from": "model:甲板-上/砲-S4/eye-fwd",
+   "to": "甲板-上/砲具/ring-S4-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S4.train",
+   "from": "model:甲板-上/砲-S4/train",
+   "to": "甲板-上/砲具/deck-S4",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P4.breeching-aft",
+   "from": "model:甲板-上/砲-P4/cascabel",
+   "to": "甲板-上/砲具/ring-P4-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P4.tackle-aft",
+   "from": "model:甲板-上/砲-P4/eye-aft",
+   "to": "甲板-上/砲具/ring-P4-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P4.breeching-fwd",
+   "from": "model:甲板-上/砲-P4/cascabel",
+   "to": "甲板-上/砲具/ring-P4-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P4.tackle-fwd",
+   "from": "model:甲板-上/砲-P4/eye-fwd",
+   "to": "甲板-上/砲具/ring-P4-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P4.train",
+   "from": "model:甲板-上/砲-P4/train",
+   "to": "甲板-上/砲具/deck-P4",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S5.breeching-aft",
+   "from": "model:甲板-上/砲-S5/cascabel",
+   "to": "甲板-上/砲具/ring-S5-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S5.tackle-aft",
+   "from": "model:甲板-上/砲-S5/eye-aft",
+   "to": "甲板-上/砲具/ring-S5-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S5.breeching-fwd",
+   "from": "model:甲板-上/砲-S5/cascabel",
+   "to": "甲板-上/砲具/ring-S5-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S5.tackle-fwd",
+   "from": "model:甲板-上/砲-S5/eye-fwd",
+   "to": "甲板-上/砲具/ring-S5-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S5.train",
+   "from": "model:甲板-上/砲-S5/train",
+   "to": "甲板-上/砲具/deck-S5",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P5.breeching-aft",
+   "from": "model:甲板-上/砲-P5/cascabel",
+   "to": "甲板-上/砲具/ring-P5-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P5.tackle-aft",
+   "from": "model:甲板-上/砲-P5/eye-aft",
+   "to": "甲板-上/砲具/ring-P5-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P5.breeching-fwd",
+   "from": "model:甲板-上/砲-P5/cascabel",
+   "to": "甲板-上/砲具/ring-P5-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P5.tackle-fwd",
+   "from": "model:甲板-上/砲-P5/eye-fwd",
+   "to": "甲板-上/砲具/ring-P5-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P5.train",
+   "from": "model:甲板-上/砲-P5/train",
+   "to": "甲板-上/砲具/deck-P5",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S6.breeching-aft",
+   "from": "model:甲板-上/砲-S6/cascabel",
+   "to": "甲板-上/砲具/ring-S6-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S6.tackle-aft",
+   "from": "model:甲板-上/砲-S6/eye-aft",
+   "to": "甲板-上/砲具/ring-S6-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S6.breeching-fwd",
+   "from": "model:甲板-上/砲-S6/cascabel",
+   "to": "甲板-上/砲具/ring-S6-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S6.tackle-fwd",
+   "from": "model:甲板-上/砲-S6/eye-fwd",
+   "to": "甲板-上/砲具/ring-S6-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S6.train",
+   "from": "model:甲板-上/砲-S6/train",
+   "to": "甲板-上/砲具/deck-S6",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P6.breeching-aft",
+   "from": "model:甲板-上/砲-P6/cascabel",
+   "to": "甲板-上/砲具/ring-P6-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P6.tackle-aft",
+   "from": "model:甲板-上/砲-P6/eye-aft",
+   "to": "甲板-上/砲具/ring-P6-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P6.breeching-fwd",
+   "from": "model:甲板-上/砲-P6/cascabel",
+   "to": "甲板-上/砲具/ring-P6-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P6.tackle-fwd",
+   "from": "model:甲板-上/砲-P6/eye-fwd",
+   "to": "甲板-上/砲具/ring-P6-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P6.train",
+   "from": "model:甲板-上/砲-P6/train",
+   "to": "甲板-上/砲具/deck-P6",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S7.breeching-aft",
+   "from": "model:甲板-上/砲-S7/cascabel",
+   "to": "甲板-上/砲具/ring-S7-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S7.tackle-aft",
+   "from": "model:甲板-上/砲-S7/eye-aft",
+   "to": "甲板-上/砲具/ring-S7-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S7.breeching-fwd",
+   "from": "model:甲板-上/砲-S7/cascabel",
+   "to": "甲板-上/砲具/ring-S7-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S7.tackle-fwd",
+   "from": "model:甲板-上/砲-S7/eye-fwd",
+   "to": "甲板-上/砲具/ring-S7-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S7.train",
+   "from": "model:甲板-上/砲-S7/train",
+   "to": "甲板-上/砲具/deck-S7",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P7.breeching-aft",
+   "from": "model:甲板-上/砲-P7/cascabel",
+   "to": "甲板-上/砲具/ring-P7-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P7.tackle-aft",
+   "from": "model:甲板-上/砲-P7/eye-aft",
+   "to": "甲板-上/砲具/ring-P7-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P7.breeching-fwd",
+   "from": "model:甲板-上/砲-P7/cascabel",
+   "to": "甲板-上/砲具/ring-P7-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P7.tackle-fwd",
+   "from": "model:甲板-上/砲-P7/eye-fwd",
+   "to": "甲板-上/砲具/ring-P7-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P7.train",
+   "from": "model:甲板-上/砲-P7/train",
+   "to": "甲板-上/砲具/deck-P7",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S8.breeching-aft",
+   "from": "model:甲板-上/砲-S8/cascabel",
+   "to": "甲板-上/砲具/ring-S8-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S8.tackle-aft",
+   "from": "model:甲板-上/砲-S8/eye-aft",
+   "to": "甲板-上/砲具/ring-S8-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S8.breeching-fwd",
+   "from": "model:甲板-上/砲-S8/cascabel",
+   "to": "甲板-上/砲具/ring-S8-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S8.tackle-fwd",
+   "from": "model:甲板-上/砲-S8/eye-fwd",
+   "to": "甲板-上/砲具/ring-S8-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S8.train",
+   "from": "model:甲板-上/砲-S8/train",
+   "to": "甲板-上/砲具/deck-S8",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P8.breeching-aft",
+   "from": "model:甲板-上/砲-P8/cascabel",
+   "to": "甲板-上/砲具/ring-P8-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P8.tackle-aft",
+   "from": "model:甲板-上/砲-P8/eye-aft",
+   "to": "甲板-上/砲具/ring-P8-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P8.breeching-fwd",
+   "from": "model:甲板-上/砲-P8/cascabel",
+   "to": "甲板-上/砲具/ring-P8-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P8.tackle-fwd",
+   "from": "model:甲板-上/砲-P8/eye-fwd",
+   "to": "甲板-上/砲具/ring-P8-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P8.train",
+   "from": "model:甲板-上/砲-P8/train",
+   "to": "甲板-上/砲具/deck-P8",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-S9.breeching-aft",
+   "from": "model:甲板-上/砲-S9/cascabel",
+   "to": "甲板-上/砲具/ring-S9-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-S9.tackle-aft",
+   "from": "model:甲板-上/砲-S9/eye-aft",
+   "to": "甲板-上/砲具/ring-S9-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-S9.train",
+   "from": "model:甲板-上/砲-S9/train",
+   "to": "甲板-上/砲具/deck-S9",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-P9.breeching-aft",
+   "from": "model:甲板-上/砲-P9/cascabel",
+   "to": "甲板-上/砲具/ring-P9-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-P9.tackle-aft",
+   "from": "model:甲板-上/砲-P9/eye-aft",
+   "to": "甲板-上/砲具/ring-P9-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-P9.train",
+   "from": "model:甲板-上/砲-P9/train",
+   "to": "甲板-上/砲具/deck-P9",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-AP.breeching-aft",
+   "from": "model:甲板-上/砲-AP/cascabel",
+   "to": "甲板-上/砲具/ring-AP-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-AP.tackle-aft",
+   "from": "model:甲板-上/砲-AP/eye-aft",
+   "to": "甲板-上/砲具/ring-AP-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-AP.breeching-fwd",
+   "from": "model:甲板-上/砲-AP/cascabel",
+   "to": "甲板-上/砲具/ring-AP-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-AP.tackle-fwd",
+   "from": "model:甲板-上/砲-AP/eye-fwd",
+   "to": "甲板-上/砲具/ring-AP-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-AP.train",
+   "from": "model:甲板-上/砲-AP/train",
+   "to": "甲板-上/砲具/deck-AP",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-AS.breeching-aft",
+   "from": "model:甲板-上/砲-AS/cascabel",
+   "to": "甲板-上/砲具/ring-AS-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-AS.tackle-aft",
+   "from": "model:甲板-上/砲-AS/eye-aft",
+   "to": "甲板-上/砲具/ring-AS-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-AS.breeching-fwd",
+   "from": "model:甲板-上/砲-AS/cascabel",
+   "to": "甲板-上/砲具/ring-AS-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-AS.tackle-fwd",
+   "from": "model:甲板-上/砲-AS/eye-fwd",
+   "to": "甲板-上/砲具/ring-AS-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-AS.train",
+   "from": "model:甲板-上/砲-AS/train",
+   "to": "甲板-上/砲具/deck-AS",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-FP.breeching-aft",
+   "from": "model:甲板-上/砲-FP/cascabel",
+   "to": "甲板-上/砲具/ring-FP-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-FP.tackle-aft",
+   "from": "model:甲板-上/砲-FP/eye-aft",
+   "to": "甲板-上/砲具/ring-FP-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-FP.breeching-fwd",
+   "from": "model:甲板-上/砲-FP/cascabel",
+   "to": "甲板-上/砲具/ring-FP-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-FP.tackle-fwd",
+   "from": "model:甲板-上/砲-FP/eye-fwd",
+   "to": "甲板-上/砲具/ring-FP-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-FP.train",
+   "from": "model:甲板-上/砲-FP/train",
+   "to": "甲板-上/砲具/deck-FP",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  },
+  {
+   "name": "甲板-上.砲-FS.breeching-aft",
+   "from": "model:甲板-上/砲-FS/cascabel",
+   "to": "甲板-上/砲具/ring-FS-aft",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-FS.tackle-aft",
+   "from": "model:甲板-上/砲-FS/eye-aft",
+   "to": "甲板-上/砲具/ring-FS-aft",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-FS.breeching-fwd",
+   "from": "model:甲板-上/砲-FS/cascabel",
+   "to": "甲板-上/砲具/ring-FS-fwd",
+   "thickness": 0.4,
+   "slack": 1.12,
+   "color": "#b59a6a",
+   "group": "guns/breeching"
+  },
+  {
+   "name": "甲板-上.砲-FS.tackle-fwd",
+   "from": "model:甲板-上/砲-FS/eye-fwd",
+   "to": "甲板-上/砲具/ring-FS-fwd",
+   "thickness": 0.25,
+   "slack": 1.03,
+   "color": "#a08458",
+   "group": "guns/tackle"
+  },
+  {
+   "name": "甲板-上.砲-FS.train",
+   "from": "model:甲板-上/砲-FS/train",
+   "to": "甲板-上/砲具/deck-FS",
+   "thickness": 0.25,
+   "slack": 1.05,
+   "color": "#a08458",
+   "group": "guns/train"
+  }
+ ],
+ "rows": [
+  {
+   "gun": "甲板-下/砲-S1",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      132,
+      144,
+      74
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      140,
+      148,
+      74
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     138,
+     129,
+     70
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P1",
+   "rings": {
+    "aft": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      130,
+      114,
+      75
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      140,
+      112,
+      75
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     136,
+     132,
+     70
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S2",
+   "rings": {
+    "aft": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      157,
+      157,
+      71
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      167,
+      158,
+      71
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     163,
+     137,
+     67
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P2",
+   "rings": {
+    "aft": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      157,
+      103,
+      71
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      167,
+      102,
+      71
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     163,
+     123,
+     67
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S3",
+   "rings": {
+    "aft": {
+     "offset": 3,
+     "z_above_deck": 5,
+     "cell": [
+      203,
+      167,
+      67
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      214,
+      169,
+      67
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     208,
+     149,
+     63
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P3",
+   "rings": {
+    "aft": {
+     "offset": 3,
+     "z_above_deck": 5,
+     "cell": [
+      203,
+      93,
+      67
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      214,
+      91,
+      67
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     208,
+     111,
+     63
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S4",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      233,
+      172,
+      65
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      241,
+      173,
+      65
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     237,
+     153,
+     61
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P4",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      233,
+      88,
+      65
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      241,
+      87,
+      65
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     237,
+     107,
+     61
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S5",
+   "rings": {
+    "aft": {
+     "offset": 1,
+     "z_above_deck": 5,
+     "cell": [
+      259,
+      174,
+      64
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      268,
+      175,
+      64
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     264,
+     156,
+     60
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P5",
+   "rings": {
+    "aft": {
+     "offset": 1,
+     "z_above_deck": 5,
+     "cell": [
+      259,
+      86,
+      64
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      268,
+      85,
+      64
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     264,
+     104,
+     60
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S6",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      341,
+      175,
+      64
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      349,
+      175,
+      64
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     345,
+     156,
+     60
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P6",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      341,
+      85,
+      64
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      349,
+      85,
+      64
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     345,
+     104,
+     60
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S7",
+   "rings": {
+    "aft": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      366,
+      177,
+      65
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      376,
+      174,
+      65
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     370,
+     156,
+     61
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P7",
+   "rings": {
+    "aft": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      366,
+      83,
+      65
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      376,
+      86,
+      65
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     370,
+     104,
+     61
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S8",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      395,
+      172,
+      67
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      403,
+      172,
+      67
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     399,
+     153,
+     63
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P8",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      395,
+      88,
+      67
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      403,
+      88,
+      67
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     399,
+     107,
+     63
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S9",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      422,
+      170,
+      69
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      430,
+      169,
+      69
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     426,
+     150,
+     65
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P9",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      422,
+      90,
+      69
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      430,
+      91,
+      69
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     426,
+     110,
+     65
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-S10",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      449,
+      166,
+      72
+     ]
+    },
+    "fwd": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      459,
+      167,
+      72
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     455,
+     146,
+     68
+    ]
+   }
+  },
+  {
+   "gun": "甲板-下/砲-P10",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      449,
+      94,
+      72
+     ]
+    },
+    "fwd": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      459,
+      93,
+      72
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     455,
+     114,
+     68
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S1",
+   "rings": {
+    "aft": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      144,
+      157,
+      93
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      154,
+      156,
+      93
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     150,
+     138,
+     88
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P1",
+   "rings": {
+    "aft": {
+     "offset": 2,
+     "z_above_deck": 5,
+     "cell": [
+      144,
+      103,
+      93
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      154,
+      104,
+      93
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     150,
+     122,
+     88
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S2",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      219,
+      167,
+      86
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      227,
+      167,
+      86
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     223,
+     151,
+     82
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P2",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      219,
+      93,
+      86
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      227,
+      93,
+      86
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     223,
+     109,
+     82
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S3",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      246,
+      169,
+      85
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      254,
+      169,
+      85
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     250,
+     153,
+     80
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P3",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      246,
+      91,
+      85
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      254,
+      91,
+      85
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     250,
+     107,
+     80
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S4",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      273,
+      170,
+      84
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      281,
+      170,
+      84
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     277,
+     155,
+     80
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P4",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      273,
+      90,
+      84
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      281,
+      90,
+      84
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     277,
+     105,
+     80
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S5",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      355,
+      170,
+      85
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      363,
+      170,
+      85
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     359,
+     154,
+     81
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P5",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      355,
+      90,
+      85
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      363,
+      90,
+      85
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     359,
+     106,
+     81
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S6",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      382,
+      169,
+      86
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      390,
+      168,
+      86
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     386,
+     153,
+     82
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P6",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      382,
+      91,
+      86
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      390,
+      92,
+      86
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     386,
+     107,
+     82
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S7",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      409,
+      167,
+      88
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      417,
+      166,
+      88
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     413,
+     150,
+     84
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P7",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      409,
+      93,
+      88
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      417,
+      94,
+      88
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     413,
+     110,
+     84
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S8",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      436,
+      164,
+      91
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      444,
+      163,
+      91
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     440,
+     147,
+     86
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P8",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      436,
+      96,
+      91
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      444,
+      97,
+      91
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     440,
+     113,
+     86
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-S9",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      462,
+      160,
+      93
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     465,
+     143,
+     89
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-P9",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      462,
+      100,
+      93
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     465,
+     117,
+     89
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-AP",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 6,
+     "cell": [
+      110,
+      114,
+      99
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 6,
+     "cell": [
+      110,
+      122,
+      99
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     129,
+     118,
+     91
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-AS",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 6,
+     "cell": [
+      110,
+      138,
+      99
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 6,
+     "cell": [
+      110,
+      146,
+      99
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     129,
+     142,
+     91
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-FP",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      519,
+      122,
+      100
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      517,
+      114,
+      100
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     502,
+     118,
+     94
+    ]
+   }
+  },
+  {
+   "gun": "甲板-上/砲-FS",
+   "rings": {
+    "aft": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      517,
+      146,
+      100
+     ]
+    },
+    "fwd": {
+     "offset": 0,
+     "z_above_deck": 5,
+     "cell": [
+      519,
+      138,
+      100
+     ]
+    }
+   },
+   "deck_ring": {
+    "back": 5,
+    "cell": [
+     502,
+     142,
+     94
+    ]
+   }
+  }
+ ],
+ "notes": [
+  "甲板-上/砲-S9 的 fwd 環：offset [0, 1, 2, 3, 4, 5] 都不行 ⇒ 不放，那一側 breeching／tackle 不掛",
+  "甲板-上/砲-P9 的 fwd 環：offset [0, 1, 2, 3, 4, 5] 都不行 ⇒ 不放，那一側 breeching／tackle 不掛"
+ ],
+ "counts": {
+  "ring_cells": 124,
+  "anchors": 124,
+  "ropes": 206,
+  "guns": 42
+ }
+}
