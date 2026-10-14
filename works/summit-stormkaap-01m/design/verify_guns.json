@@ -1,0 +1,2550 @@
+{
+ "note": "draft_guns.py（階段十二）—— 三種砲的子作品與 42 門模型的擺放；現況 ＝ 引擎匯出 exports/stage11（526038 格）＋ 模型外框 11",
+ "pads": {
+  "summit-stormkaap-01m-deck-lower": {
+   "file": "masks/guns/pads_lower.vox.txt",
+   "sha256": "e1162ec9468a4fa4d381cdb9a80d8cf2bc7f604f67db7cbaebb4c4d1b9094490",
+   "voxels": 4
+  },
+  "summit-stormkaap-01m-deck-upper": {
+   "file": "masks/guns/pads_upper.vox.txt",
+   "sha256": "10b0a3eec3662fd12e561264fec1289cc038a8a81fecab9a3e3633660c51a318",
+   "voxels": 112
+  }
+ },
+ "rows": [
+  {
+   "at": [
+    138.0,
+    146.0,
+    70.0
+   ],
+   "axis_z": 76.75,
+   "back_from_outer": 5.0,
+   "deck_top": 69,
+   "dl": 1.5,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S1",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    133,
+    139
+   ],
+   "opening_z": [
+    74,
+    80
+   ],
+   "outer": 151,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    68,
+    69,
+    70
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    136.0,
+    116.0,
+    71.0
+   ],
+   "axis_z": 77.75,
+   "back_from_outer": 6.0,
+   "deck_top": 70,
+   "dl": -0.5,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P1",
+   "muzzle_beyond_outer": 4.25,
+   "opening_lat": [
+    133,
+    139
+   ],
+   "opening_z": [
+    74,
+    80
+   ],
+   "outer": 110,
+   "pad_cells": 4,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    68,
+    69,
+    70
+   ],
+   "type": "6l",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    163.5,
+    156.0,
+    67.0
+   ],
+   "axis_z": 74.25,
+   "back_from_outer": 6.0,
+   "deck_top": 66,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S2",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    160,
+    166
+   ],
+   "opening_z": [
+    71,
+    77
+   ],
+   "outer": 162,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    65,
+    66,
+    67
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    163.5,
+    105.0,
+    67.0
+   ],
+   "axis_z": 74.25,
+   "back_from_outer": 6.0,
+   "deck_top": 66,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P2",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    160,
+    166
+   ],
+   "opening_z": [
+    71,
+    77
+   ],
+   "outer": 99,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    65,
+    66,
+    67
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    208.5,
+    168.0,
+    63.0
+   ],
+   "axis_z": 70.25,
+   "back_from_outer": 5.0,
+   "deck_top": 62,
+   "dl": -2,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S3",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    207,
+    213
+   ],
+   "opening_z": [
+    67,
+    73
+   ],
+   "outer": 173,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    61,
+    62,
+    63
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    208.5,
+    93.0,
+    63.0
+   ],
+   "axis_z": 70.25,
+   "back_from_outer": 5.0,
+   "deck_top": 62,
+   "dl": -2,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P3",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    207,
+    213
+   ],
+   "opening_z": [
+    67,
+    73
+   ],
+   "outer": 88,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    61,
+    62,
+    63
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    237.5,
+    172.0,
+    61.0
+   ],
+   "axis_z": 68.25,
+   "back_from_outer": 5.0,
+   "deck_top": 60,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S4",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    234,
+    240
+   ],
+   "opening_z": [
+    65,
+    71
+   ],
+   "outer": 177,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    60,
+    61
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    237.5,
+    89.0,
+    61.0
+   ],
+   "axis_z": 68.25,
+   "back_from_outer": 5.0,
+   "deck_top": 60,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P4",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    234,
+    240
+   ],
+   "opening_z": [
+    65,
+    71
+   ],
+   "outer": 84,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    60
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    264.5,
+    175.0,
+    60.0
+   ],
+   "axis_z": 67.25,
+   "back_from_outer": 5.0,
+   "deck_top": 59,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S5",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    261,
+    267
+   ],
+   "opening_z": [
+    64,
+    70
+   ],
+   "outer": 180,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    59,
+    60
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    264.5,
+    86.0,
+    60.0
+   ],
+   "axis_z": 67.25,
+   "back_from_outer": 5.0,
+   "deck_top": 59,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P5",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    261,
+    267
+   ],
+   "opening_z": [
+    64,
+    70
+   ],
+   "outer": 81,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    59
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    345.5,
+    175.0,
+    60.0
+   ],
+   "axis_z": 67.25,
+   "back_from_outer": 5.0,
+   "deck_top": 59,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S6",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    342,
+    348
+   ],
+   "opening_z": [
+    64,
+    70
+   ],
+   "outer": 180,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    59
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    345.5,
+    86.0,
+    60.0
+   ],
+   "axis_z": 67.25,
+   "back_from_outer": 5.0,
+   "deck_top": 59,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P6",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    342,
+    348
+   ],
+   "opening_z": [
+    64,
+    70
+   ],
+   "outer": 81,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    59
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    370.5,
+    175.0,
+    61.0
+   ],
+   "axis_z": 68.25,
+   "back_from_outer": 4.0,
+   "deck_top": 60,
+   "dl": -2,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S7",
+   "muzzle_beyond_outer": 7.25,
+   "opening_lat": [
+    369,
+    375
+   ],
+   "opening_z": [
+    65,
+    71
+   ],
+   "outer": 179,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    60,
+    61
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    370.5,
+    86.0,
+    61.0
+   ],
+   "axis_z": 68.25,
+   "back_from_outer": 4.0,
+   "deck_top": 60,
+   "dl": -2,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P7",
+   "muzzle_beyond_outer": 7.25,
+   "opening_lat": [
+    369,
+    375
+   ],
+   "opening_z": [
+    65,
+    71
+   ],
+   "outer": 82,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    60,
+    61
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    399.5,
+    172.0,
+    63.0
+   ],
+   "axis_z": 70.25,
+   "back_from_outer": 5.0,
+   "deck_top": 62,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S8",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    396,
+    402
+   ],
+   "opening_z": [
+    67,
+    73
+   ],
+   "outer": 177,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    62,
+    63
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    399.5,
+    89.0,
+    63.0
+   ],
+   "axis_z": 70.25,
+   "back_from_outer": 5.0,
+   "deck_top": 62,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P8",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    396,
+    402
+   ],
+   "opening_z": [
+    67,
+    73
+   ],
+   "outer": 84,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    62
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    426.5,
+    169.0,
+    65.0
+   ],
+   "axis_z": 72.25,
+   "back_from_outer": 5.0,
+   "deck_top": 64,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S9",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    423,
+    429
+   ],
+   "opening_z": [
+    69,
+    75
+   ],
+   "outer": 174,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    64,
+    65
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    426.5,
+    92.0,
+    65.0
+   ],
+   "axis_z": 72.25,
+   "back_from_outer": 5.0,
+   "deck_top": 64,
+   "dl": 0,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P9",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    423,
+    429
+   ],
+   "opening_z": [
+    69,
+    75
+   ],
+   "outer": 87,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    64,
+    65
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    455.5,
+    165.0,
+    68.0
+   ],
+   "axis_z": 75.25,
+   "back_from_outer": 5.0,
+   "deck_top": 67,
+   "dl": 2,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    450,
+    456
+   ],
+   "opening_z": [
+    72,
+    78
+   ],
+   "outer": 170,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    66,
+    67,
+    68
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    455.5,
+    96.0,
+    68.0
+   ],
+   "axis_z": 75.25,
+   "back_from_outer": 5.0,
+   "deck_top": 67,
+   "dl": 2,
+   "host_link": "甲板-下",
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    450,
+    456
+   ],
+   "opening_z": [
+    72,
+    78
+   ],
+   "outer": 91,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "lower",
+   "tops": [
+    66,
+    67
+   ],
+   "type": "12l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    150.5,
+    155.0,
+    89.0
+   ],
+   "axis_z": 95.75,
+   "back_from_outer": 5.0,
+   "deck_top": 88,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S1",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    147,
+    153
+   ],
+   "opening_z": [
+    92,
+    97
+   ],
+   "outer": 160,
+   "pad_cells": 8,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    87,
+    88
+   ],
+   "type": "6l",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    150.5,
+    106.0,
+    89.0
+   ],
+   "axis_z": 95.75,
+   "back_from_outer": 5.0,
+   "deck_top": 88,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P1",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    147,
+    153
+   ],
+   "opening_z": [
+    92,
+    97
+   ],
+   "outer": 101,
+   "pad_cells": 8,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    87,
+    88
+   ],
+   "type": "6l",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    223.5,
+    168.0,
+    82.0
+   ],
+   "axis_z": 88.75,
+   "back_from_outer": 4.0,
+   "deck_top": 81,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S2",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    220,
+    226
+   ],
+   "opening_z": [
+    86,
+    91
+   ],
+   "outer": 172,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    80,
+    81,
+    82
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    223.5,
+    93.0,
+    82.0
+   ],
+   "axis_z": 88.75,
+   "back_from_outer": 4.0,
+   "deck_top": 81,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P2",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    220,
+    226
+   ],
+   "opening_z": [
+    86,
+    91
+   ],
+   "outer": 89,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    80,
+    81
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    250.5,
+    170.0,
+    81.0
+   ],
+   "axis_z": 87.75,
+   "back_from_outer": 5.0,
+   "deck_top": 80,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S3",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    247,
+    253
+   ],
+   "opening_z": [
+    84,
+    89
+   ],
+   "outer": 175,
+   "pad_cells": 8,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    79,
+    80
+   ],
+   "type": "6l",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    250.5,
+    91.0,
+    81.0
+   ],
+   "axis_z": 87.75,
+   "back_from_outer": 5.0,
+   "deck_top": 80,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P3",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    247,
+    253
+   ],
+   "opening_z": [
+    84,
+    89
+   ],
+   "outer": 86,
+   "pad_cells": 8,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    79,
+    80
+   ],
+   "type": "6l",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    277.5,
+    172.0,
+    80.0
+   ],
+   "axis_z": 86.75,
+   "back_from_outer": 4.0,
+   "deck_top": 79,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S4",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    274,
+    280
+   ],
+   "opening_z": [
+    84,
+    89
+   ],
+   "outer": 176,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    79,
+    80
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    277.5,
+    89.0,
+    80.0
+   ],
+   "axis_z": 86.75,
+   "back_from_outer": 4.0,
+   "deck_top": 79,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P4",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    274,
+    280
+   ],
+   "opening_z": [
+    84,
+    89
+   ],
+   "outer": 85,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    79
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    359.5,
+    171.0,
+    81.0
+   ],
+   "axis_z": 87.75,
+   "back_from_outer": 4.0,
+   "deck_top": 80,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S5",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    356,
+    362
+   ],
+   "opening_z": [
+    85,
+    90
+   ],
+   "outer": 175,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    80
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    359.5,
+    90.0,
+    81.0
+   ],
+   "axis_z": 87.75,
+   "back_from_outer": 4.0,
+   "deck_top": 80,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P5",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    356,
+    362
+   ],
+   "opening_z": [
+    85,
+    90
+   ],
+   "outer": 86,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    80
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    386.5,
+    170.0,
+    82.0
+   ],
+   "axis_z": 88.75,
+   "back_from_outer": 4.0,
+   "deck_top": 81,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S6",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    383,
+    389
+   ],
+   "opening_z": [
+    86,
+    91
+   ],
+   "outer": 174,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    81,
+    82
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    386.5,
+    91.0,
+    82.0
+   ],
+   "axis_z": 88.75,
+   "back_from_outer": 4.0,
+   "deck_top": 81,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P6",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    383,
+    389
+   ],
+   "opening_z": [
+    86,
+    91
+   ],
+   "outer": 87,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    81,
+    82
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    413.5,
+    167.0,
+    84.0
+   ],
+   "axis_z": 90.75,
+   "back_from_outer": 5.0,
+   "deck_top": 83,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S7",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    410,
+    416
+   ],
+   "opening_z": [
+    88,
+    93
+   ],
+   "outer": 172,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    83,
+    84
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    413.5,
+    94.0,
+    84.0
+   ],
+   "axis_z": 90.75,
+   "back_from_outer": 5.0,
+   "deck_top": 83,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P7",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    410,
+    416
+   ],
+   "opening_z": [
+    88,
+    93
+   ],
+   "outer": 89,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    83,
+    84
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    440.5,
+    164.0,
+    87.0
+   ],
+   "axis_z": 93.75,
+   "back_from_outer": 5.0,
+   "deck_top": 86,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S8",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    437,
+    443
+   ],
+   "opening_z": [
+    90,
+    95
+   ],
+   "outer": 169,
+   "pad_cells": 8,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    85,
+    86
+   ],
+   "type": "6l",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    440.5,
+    97.0,
+    87.0
+   ],
+   "axis_z": 93.75,
+   "back_from_outer": 5.0,
+   "deck_top": 86,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P8",
+   "muzzle_beyond_outer": 5.25,
+   "opening_lat": [
+    437,
+    443
+   ],
+   "opening_z": [
+    90,
+    95
+   ],
+   "outer": 92,
+   "pad_cells": 8,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    85,
+    86
+   ],
+   "type": "6l",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    465.0,
+    160.0,
+    89.0
+   ],
+   "axis_z": 95.75,
+   "back_from_outer": 4.0,
+   "deck_top": 88,
+   "dl": -1.5,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S9",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    463,
+    469
+   ],
+   "opening_z": [
+    93,
+    98
+   ],
+   "outer": 164,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    88,
+    89
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    465.0,
+    101.0,
+    89.0
+   ],
+   "axis_z": 95.75,
+   "back_from_outer": 4.0,
+   "deck_top": 88,
+   "dl": -1.5,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P9",
+   "muzzle_beyond_outer": 6.25,
+   "opening_lat": [
+    463,
+    469
+   ],
+   "opening_z": [
+    93,
+    98
+   ],
+   "outer": 97,
+   "pad_cells": 0,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "upper",
+   "tops": [
+    88,
+    89
+   ],
+   "type": "6l",
+   "wheel_support": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    113.0,
+    118.5,
+    94.0
+   ],
+   "axis_z": 100.75,
+   "back_from_outer": 9.0,
+   "deck_top": 93,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "arc": "stern",
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "none",
+   "model": "砲-AP",
+   "muzzle_beyond_outer": 1.25,
+   "opening_lat": [
+    115,
+    121
+   ],
+   "opening_z": [
+    99,
+    105
+   ],
+   "outer": 104,
+   "pad_cells": 24,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    90
+   ],
+   "row": "stern",
+   "tops": [
+    90,
+    91,
+    92,
+    93
+   ],
+   "type": "6l",
+   "wheel_support": [
+    0,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    113.0,
+    142.5,
+    94.0
+   ],
+   "axis_z": 100.75,
+   "back_from_outer": 9.0,
+   "deck_top": 93,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "arc": "stern",
+    "deck": "upper",
+    "gun": "6l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-AS",
+   "muzzle_beyond_outer": 1.25,
+   "opening_lat": [
+    139,
+    145
+   ],
+   "opening_z": [
+    99,
+    105
+   ],
+   "outer": 104,
+   "pad_cells": 24,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    90
+   ],
+   "row": "stern",
+   "tops": [
+    90,
+    91,
+    92,
+    93
+   ],
+   "type": "6l",
+   "wheel_support": [
+    0,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  {
+   "at": [
+    517.0,
+    118.5,
+    96.0
+   ],
+   "axis_z": 105.25,
+   "back_from_outer": 5.0,
+   "deck_top": 95,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "upper",
+    "gun": "3chase",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "none",
+   "model": "砲-FP",
+   "muzzle_beyond_outer": 2.25,
+   "opening_lat": [
+    115,
+    121
+   ],
+   "opening_z": [
+    101,
+    107
+   ],
+   "outer": 522,
+   "pad_cells": 8,
+   "pivot": [
+    10.5,
+    26.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "row": "chase",
+   "tops": [
+    92,
+    93,
+    94,
+    95
+   ],
+   "type": "chase3",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-chase3"
+  },
+  {
+   "at": [
+    517.0,
+    142.5,
+    96.0
+   ],
+   "axis_z": 105.25,
+   "back_from_outer": 5.0,
+   "deck_top": 95,
+   "dl": 0,
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "arc": "bow",
+    "barrels": 3,
+    "deck": "upper",
+    "gun": "3chase",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-FS",
+   "muzzle_beyond_outer": 2.25,
+   "opening_lat": [
+    139,
+    145
+   ],
+   "opening_z": [
+    101,
+    107
+   ],
+   "outer": 522,
+   "pad_cells": 8,
+   "pivot": [
+    10.5,
+    26.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "row": "chase",
+   "tops": [
+    92,
+    93,
+    94,
+    95
+   ],
+   "type": "chase3",
+   "wheel_support": [
+    24,
+    48
+   ],
+   "wheel_support_after_pad": [
+    48,
+    48
+   ],
+   "work": "summit-stormkaap-01m-gun-chase3"
+  }
+ ],
+ "scale": 0.5,
+ "types": {
+  "12l": {
+   "anchors": {
+    "breech": [
+     9,
+     7,
+     14
+    ],
+    "cascabel": [
+     9,
+     1,
+     14
+    ],
+    "eye-aft": [
+     1,
+     22,
+     9
+    ],
+    "eye-fwd": [
+     17,
+     22,
+     9
+    ],
+    "muzzle": [
+     9,
+     60,
+     14
+    ],
+    "train": [
+     9,
+     10,
+     6
+    ],
+    "trunnion": [
+     9,
+     29,
+     14
+    ]
+   },
+   "asym_x": 0,
+   "cells": 3234,
+   "colors": {
+    "132": 1055,
+    "136": 126,
+    "36": 2045,
+    "73": 8
+   },
+   "components": 1,
+   "file": "masks/guns/12l.vox.txt",
+   "mpv": 0.05,
+   "pivot": [
+    9.5,
+    38.0,
+    0.0
+   ],
+   "sha256": "90411d1c9f1f5a449ddf134d2e7aa06ac7a72025012f6b5a75bf78fcbd51ee89",
+   "size": [
+    19,
+    62,
+    21
+   ],
+   "title": "風暴角號｜12 磅長砲（下砲甲板）",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  "6l": {
+   "anchors": {
+    "breech": [
+     8,
+     7,
+     13
+    ],
+    "cascabel": [
+     8,
+     1,
+     13
+    ],
+    "eye-aft": [
+     1,
+     19,
+     9
+    ],
+    "eye-fwd": [
+     15,
+     19,
+     9
+    ],
+    "muzzle": [
+     8,
+     53,
+     13
+    ],
+    "train": [
+     8,
+     9,
+     5
+    ],
+    "trunnion": [
+     8,
+     26,
+     13
+    ]
+   },
+   "asym_x": 0,
+   "cells": 2165,
+   "colors": {
+    "132": 879,
+    "136": 120,
+    "36": 1158,
+    "73": 8
+   },
+   "components": 1,
+   "file": "masks/guns/6l.vox.txt",
+   "mpv": 0.05,
+   "pivot": [
+    8.5,
+    33.0,
+    0.0
+   ],
+   "sha256": "f62d42ceb0c4764ce0ebb620c5839400dda5fe63ab8e24c65c2792d2e61c5749",
+   "size": [
+    17,
+    55,
+    19
+   ],
+   "title": "風暴角號｜6 磅長砲（上甲板、船尾）",
+   "work": "summit-stormkaap-01m-gun-6l"
+  },
+  "chase3": {
+   "anchors": {
+    "breech": [
+     10,
+     5,
+     18
+    ],
+    "cascabel": [
+     10,
+     1,
+     18
+    ],
+    "eye-aft": [
+     1,
+     15,
+     9
+    ],
+    "eye-fwd": [
+     19,
+     15,
+     9
+    ],
+    "muzzle": [
+     10,
+     40,
+     18
+    ],
+    "muzzle-a": [
+     7,
+     40,
+     12
+    ],
+    "muzzle-b": [
+     13,
+     40,
+     12
+    ],
+    "muzzle-c": [
+     10,
+     40,
+     18
+    ],
+    "train": [
+     10,
+     7,
+     6
+    ],
+    "trunnion": [
+     10,
+     20,
+     15
+    ]
+   },
+   "asym_x": 0,
+   "cells": 2507,
+   "colors": {
+    "132": 1032,
+    "136": 84,
+    "36": 1285,
+    "73": 106
+   },
+   "components": 1,
+   "file": "masks/guns/chase3.vox.txt",
+   "mpv": 0.05,
+   "pivot": [
+    10.5,
+    26.0,
+    0.0
+   ],
+   "sha256": "b10e346b06b633387e39bacc114d85e0bb076983462711d7f6e6dec9a866398b",
+   "size": [
+    21,
+    42,
+    23
+   ],
+   "title": "風暴角號｜三管追擊砲（船頭大嘴）",
+   "work": "summit-stormkaap-01m-gun-chase3"
+  }
+ }
+}

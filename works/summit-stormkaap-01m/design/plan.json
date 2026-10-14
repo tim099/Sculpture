@@ -233,6 +233,24 @@
     "pennant": {"on": "mast_main", "link": "主桅", "work": "summit-stormkaap-01m-mast-main", "staff_len": 20, "hoist": 6, "fly": 60, "top_below_staff_top": 1,
                 "res": 0, "fullness": 1.06, "px": [120, 12], "holes": 1, "hole_r": [1.0, 1.5], "tatter_px": 3, "fork_px": 24}
   },
+  "guns": {
+    "mpv": 0.05,
+    "scale": 0.5,
+    "colors": {"barrel": 36, "carriage": 132, "quoin": 136, "iron": 73},
+    "base": {"barrel_len": 36, "AZ": 12, "trunnion_from_base": 15, "bore_r": 1.0, "bore_depth": 6,
+             "profile": [[0, 3.05], [1.5, 3.05], [1.5, 2.5], [12, 2.5], [12, 2.9], [13, 2.9], [13, 2.3], [20, 2.3], [20, 2.05], [31.5, 2.05], [31.5, 1.5], [33, 1.5], [33, 2.3], [35, 2.3], [35, 2.05], [36, 2.05]],
+             "carriage": {"front_from_trunnion": 5, "len": 19, "cheek_x": [4, 5], "cheek_steps": [[0, 12], [7, 10], [11, 9], [14, 7]], "cheek_bottom": 5, "arch": [6, 13, 6],
+                          "wheel_front_r": 2.6, "wheel_rear_r": 2.3, "axle_front_back": 3, "axle_rear_fwd": 2}},
+    "types": {
+      "12l": {"work": "summit-stormkaap-01m-gun-12l", "title": "風暴角號｜12 磅長砲（下砲甲板）", "sl": 1.5, "sr": 1.45, "sh": 1.17, "sw": 1.4, "AZ": 14, "bore_r": 1.2},
+      "6l": {"work": "summit-stormkaap-01m-gun-6l", "title": "風暴角號｜6 磅長砲（上甲板、船尾）", "sl": 1.28, "sr": 1.15, "sh": 1.08, "sw": 1.2, "AZ": 13, "bore_r": 1.0},
+      "chase3": {"work": "summit-stormkaap-01m-gun-chase3", "title": "風暴角號｜三管追擊砲（船頭大嘴）", "sl": 1.0, "sr": 0.8, "sh": 1.17, "sw": 1.6, "AZ": 15, "bore_r": 0.8,
+                 "barrels": [[-3, -3], [3, -3], [0, 3]], "bands_at": [1, 15, 28]}
+    },
+    "rows": {"lower": "12l", "upper": "6l", "stern": "6l", "chase": "chase3"},
+    "override": {"lower:1": "6l"},
+    "search": {"dx": [0, 0.5, -0.5, 1, -1, 1.5, -1.5, 2, -2, 2.5, -2.5, 3, -3], "step": 0.5, "max_back": 40, "min_muzzle_out": 1.0}
+  },
   "provenance": {
     "frame.NY": "設計決定：主帆桁 69 voet × 1.194 ＝ 23.3 m（233 格，W1）要放得進 ⇒ 261（中線 130）",
     "frame.NX": "設計決定：艉板頂 x≈97 → 艏柱頂 x≈550（453 格）＋ galjoen 與船首斜桅（20.3 m、仰角約 35° ＝ 記憶）往前約 14 m ⇒ 736",
@@ -276,6 +294,13 @@
     "running": "設計決定（階段九）：走法照一般 17 世紀荷蘭船的印象，⛔ 沒有查證。lifts：course → 下桅 cap 兩側、topsail → 上桅 cap 兩側、topgallant → topgallant 桅頭、後上桅帆桁 → 後上桅頭、spritsail → 斜桅 90%、sprit topsail → 斜桅頂桅頭。braces：前 course → 主桅側面（前 course 那一高度）的滑車 ＋ fall 落主桅 fife；主 course → 艉樓舷牆頂 kevel；前 topsail／topgallant → 主桅平台前緣／crosstrees 端；主 topsail／topgallant → 後上桅頭；後上桅帆桁 → 主桅平台後緣；spritsail → 艏樓舷牆頂 kevel；sprit topsail → 前桅平台前緣。halyards：topsail、topgallant 的 tye 從 sling 到 crosstrees 端（後桅到後上桅頭），fall 收在桅頂平台邊緣 —— 平台很大、沒有 lubber hole，往甲板拉一定穿過平台。course 帆桁是吊死的（沒有 halyard）。lateen：halyard（sling → 後桅 hounds、fall 落後桅 fife）、vang（後端 → 艉樓舷牆頂 kevel）。footropes：9 根方帆桁每舷一條、slack 1.03。",
     "sails": "設計決定（階段十，2026-10-14）：10 面帆照帆桁 meta 的 sail 名（plan yards.sail_of）。方帆上緣釘在兩個 earing 之間、下兩角 free；course 的帆腳離帆桁 0.55 × 桁長（方帆常見的深寬比，記憶 ⛔ 未查證），但至少在那一段甲板上 2 m；topsail 以上的帆角綁下一根帆桁同舷的 earing；後上桅帆沒有 crossjack（Witsen 沒列）⇒ 帆角收在後桅平台前緣；sprit topsail 的帆角綁 spritsail 帆桁。lateen：三角帆，沿帆桁那條邊釘住、後下角 free、sheet 落艉樓 kevel。course sheet／tack：主 → 艉樓 kevel／前桅 channel 最後一顆 deadeye，前 → 主桅 channel 第一顆 deadeye／艏樓 kevel（沒有舷牆 pin rails，見 belaying）。帆色深灰褐 ＋ 破帆貼圖（洞 ＝ alpha 0、帆腳撕爛）—— 粉絲作品與記憶，電影沒有官方說法；⚠ 遊戲照頂點取色、不挖洞（todo）。風照造船規格 §7 的預設 4.5,−1.5,0。meta 照 §9.1：spritsail ＝ bowsprit 的 course、sprit topsail ＝ bowsprit 的 topsail 加 set 3（不然收帆時也會開）、lateen ＝ gaff（縱帆）。",
     "flags": "設計決定（階段十一，2026-10-14 下午）：船尾旗 ＝ 荷蘭三色旗（紅白藍橫三條）＋ 白帶正中 VOC 交織字母 —— 查證（2026-10-14，搜尋摘要轉述）：VOC 的旗 ＝ 荷蘭三色旗、正中公司交織字母（FOTW https://crwflags.com/FOTW/flags/za_early.html ）；1630 年前後起紅條漸多、1660 以後橘條很少（FOTW https://crwflags.com/fotw/Flags/nl_prvlg.html ）—— 本船設定約 1640 ⇒ 取紅；⚠ 商船只用國旗、不用 Prinsenvlag 是論壇說法（shipstamps.co.uk），當旁證。顏色褪成鏽紅／髒白／暗藍、字母深褐，加洞與撕爛的 fly 邊（鬼船；跟帆同一套）。長旗（pennant）＝ 同三色沿長邊、尾巴燕尾撕爛 —— 荷蘭船桅頂掛長旗是記憶（畫作），⚠ 沒查證樣式。meta 照造船規格 §9.1：kind=flag、flag=ensign／pennant。",
-    "flags.place": "設計決定：① 船尾旗插在船尾拱頂（Adamastor 那座）最高那一格上，旗桿 2.6 m；船尾旗桿的位置是記憶（17 世紀荷蘭船的 hekstok），⚠ 這幾份來源都沒寫旗插在哪。量過的限制：三角帆的帆桁後端在拱頂正上方 z≈250（離中線 8.5 格）、模擬後的三角帆在 x < 140 只出現在 z 185 以上、y ≤ 121.8；預設風把旗往 −y 吹 ⇒ 旗不能大、不能高：hoist 20 × fly 30（2 × 3 m），旗面約 z 182–202。② 長旗插在主桅頂（z 485，木頭、沒有 truck）上面一根 2 m 的旗桿，hoist 0.6 m × fly 6 m；旗桿頂一圈鐵帽（73）。⛔ 旗與繩的距離要模擬之後量（繩不是格）。"
+    "flags.place": "設計決定：① 船尾旗插在船尾拱頂（Adamastor 那座）最高那一格上，旗桿 2.6 m；船尾旗桿的位置是記憶（17 世紀荷蘭船的 hekstok），⚠ 這幾份來源都沒寫旗插在哪。量過的限制：三角帆的帆桁後端在拱頂正上方 z≈250（離中線 8.5 格）、模擬後的三角帆在 x < 140 只出現在 z 185 以上、y ≤ 121.8；預設風把旗往 −y 吹 ⇒ 旗不能大、不能高：hoist 20 × fly 30（2 × 3 m），旗面約 z 182–202。② 長旗插在主桅頂（z 485，木頭、沒有 truck）上面一根 2 m 的旗桿，hoist 0.6 m × fly 6 m；旗桿頂一圈鐵帽（73）。⛔ 旗與繩的距離要模擬之後量（繩不是格）。",
+    "guns": "設計決定（階段十二，2026-10-14 下午）：下砲甲板 12 磅長砲（每舷 10）、上甲板 6 磅（每舷 9）、船尾兩門 6 磅（砲口朝後）、船頭大嘴兩門三管追擊砲（電影特徵：三管砲在刻成大嘴的門後 —— 只做外形，⛔ 不會轉）。查證（2026-10-14，搜尋摘要轉述）：Batavia 至少 22 門鑄鐵、6 門青銅、2 門複合（Wikipedia Batavia (1628 ship)）、1630 年 VOC 規定這型船配 32 門（澳洲國家海事博物館 collections.sea.museum 34054）；**口徑沒有查到** ⇒ 12／6 磅是記憶裡的一般 VOC 大船配置，⚠ 未查證。本船 42 門（19×2＋4）比 Batavia 多 —— 照電影的火力（設計決定，第零階段已記）。給遊戲的代碼 12l、6l、6chase3 遊戲還不認得（config guns 只有 24l／32l／32c／18chase／4l，不認得的照 24l 算）⇒ 要請 ame 補砲種表。",
+    "guns.base": "外形與砲架的基準 ＝ 夜隼號 4 磅長砲（summit-night-falcon-01m plan guns，那份照 basecamp 憲法號 long18 縮的）；本船三種照倍數放大：sl 沿砲管、sr 半徑、sh 砲架高、sw 砲架寬。12 磅 sl 1.5（管長 2.7 m —— 英國 12 磅長砲 9 ft 是記憶，⚠ 未查證荷蘭砲）、sr 1.45（口徑比 4.62″/3.2″，兩個口徑都是記憶）；6 磅 sl 1.28（2.3 m）、sr 1.15（3.67″/3.2″）。三管砲 sl 1.0、sr 0.8（三根要塞進 0.7 m 的砲門），三根排成倒三角、三道鐵箍。",
+    "guns.AZ": "砲軸離甲板面：下排砲門開口在甲板面上 0.4–1.1 m（sill 4、height 7）、上排 0.4–1.0 m ⇒ 12 磅 AZ 14（0.725 m）、6 磅 AZ 13（0.675 m）、三管砲 AZ 15（中心 0.775 m，上下各一根）—— 設計決定",
+    "guns.override": "設計決定（量出來的）：下排最後面那對砲門（x 133–139）船殼內側到中線只剩約 1.7 m，12 磅砲連砲架往裡 1.5 m ⇒ S 舷那門的尾巴過中線一格、P 舷塞不進去（draft_guns 第一版：砲-P1 退到 40 格還塞不進去）⇒ 那一對改 6 磅（短 0.4 m）。",
+    "guns.search": "橫向試到 ±3 格（夜隼號 ±1.5）：第一版 ±1.5 時 14 門舷側砲一側兩輪懸空 0.1 m —— 甲板沿船長的台階（舷弧格子化，0.1 m 一階）落在砲架寬度裡；砲管在 0.7 m 的砲門裡還能往旁邊挪，挪太多撞到砲門邊會被碰撞擋掉。",
+    "guns.pads": "設計決定：放寬到 ±3 格之後還有 7 門舷側砲一側兩輪懸空 0.1 m、船尾兩門前輪 0.1／後輪 0.2 m（艉板前甲板沿舷弧往上翹）、船頭兩門後輪 0.1 m ⇒ 懸空的輪子正下方補墊木（甲板色 104），往下補到碰到實心、每欄最多 3 格（assert），格放在那一層甲板的子作品。⛔ 不把砲歪著放、不刻甲板（夜隼號 4 號那一對是照實留著懸空；這艘量到 11 門，留著太多）。",
+    "guns.place": "擺法照造船規格 §4.2（夜隼號階段十三同一支）：對引擎匯出的組裝件格子（＋模型外框）從舷牆外面往裡退，每步 0.5 格，退到模型每一格的格心＋八個角都不在實心裡；排序 ＝ 四輪著地 ＞ 砲口伸出 ≥ 1 格 ＞ 置中 ＞ 推得最出去。舷側 S 照原樣、P mirror=y；船尾兩門 rotate z 90（砲口 −x）、船頭兩門 rotate z −90（砲口 +x），不鏡。"
   }
 }

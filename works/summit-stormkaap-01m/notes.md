@@ -311,3 +311,20 @@ Tim：「繼續造船GO」。設計 plan.json `flags`（provenance `flags`、`fl
   - 已知答案：船尾旗整份往下 30 格 ⇒ 落在實心 917；繩的樹、三角帆的樹拿自己的頂點去查 ⇒ 0。
   - 模擬後長旗往前下垂到 z 468.6（旗桿頂 504）、fly 只伸到 x 356（平的 366）—— 4.7 m/s 的風撐不平 6 m 的布；圖上看是斜斜往前下飄，在 main-tg-stay 上面。
 - 過程圖：`overlays/stage11_ensign_q_yaw135.png`、`_ensign_side_yaw90.png`、`stage11_pennant_side_yaw90.png`、`_pennant_q_yaw45.png`。
+
+## 階段十二 砲 42 門（12 磅、6 磅、三管追擊砲）—— 落格（2026-10-14 下午，wake #119）
+Tim：「繼續 GO」。設計 plan.json `guns`（provenance `guns`、`guns.base`、`guns.AZ`、`guns.override`、`guns.search`、`guns.pads`、`guns.place`）；產生 `design/draft_guns.py <design> exports/stage11` ⇒ `verify_guns.json`、`masks/guns/{12l,6l,chase3,pads_lower,pads_upper}.vox.txt`（重跑逐位元組相同）；下 CLI `design/apply_guns.py <design> create|stamp|anchors|models`；讀數 `design/check_guns.py <design> exports/stage12 exports/stage11 [偏移]` ⇒ `verify_guns_post.json`。照造船規格 §4（夜隼號階段十三那一支改的）。
+- **三種砲**（子作品 0.05 m、模型 scale 0.5；外形 ＝ 夜隼號 4 磅 × 倍數）：`-gun-12l` 19×62×21、3,234 格（管長 2.7 m）；`-gun-6l` 17×55×19、2,165 格（2.3 m）；`-gun-chase3` 21×42×23、2,507 格（三根倒三角、三道鐵箍、耳軸穿過中間那道）。左右差 0、各 1 塊。固定點 muzzle（挖空那一格）／breech／cascabel／train／trunnion／eye-aft／eye-fwd（三管砲多 muzzle-a／b／c）。
+- **擺法**：下排 12 磅每舷 10（最後那對改 6 磅）、上排 6 磅每舷 9、船尾 6 磅 2（rotate z 90，砲口 −x）、船頭大嘴 三管 2（rotate z −90）；舷側 P mirror=y。模型掛在 甲板-下／甲板-上。meta kind=gun、gun=12l／6l／3chase（三管砲多 barrels 3）、side、port、deck（船尾、船頭多 arc）。
+  - 現況 ＝ 引擎匯出的組裝件格子（階段十一，526,038）＋ 模型外框；已經擺好的砲也當障礙（兩舷的砲彼此是模型、不在格子裡）。
+  - 🩸 第一版三個錯（都是草稿那一側抓到的）：① 下排最後那對（x 136）船殼內側到中線只剩 1.7 m，12 磅的尾巴過中線 ⇒ P 舷塞不進去 ⇒ 改 6 磅；② 甲板面那一圈用「離中線 ≥ 10 格」取，船尾窄到取不到 ⇒ 改牆內 4–20 格；③ 三管砲 2 塊 —— 耳軸那根棒在三根管中間的空隙、碰不到管 ⇒ 中間那道鐵箍挪到耳軸那一排。
+  - 輪子：橫向 ±1.5 時 18 門有一側兩輪懸空 0.1 m（甲板沿船長的台階落在砲架寬度裡）⇒ 放寬到 ±3 剩 7 門；船尾兩門前輪 0.1、後輪 0.2 m（艉板前甲板往上翹）、船頭兩門後輪 0.1 m ⇒ 懸空的輪子正下方補**墊木**（104）：甲板-下 4、甲板-上 112 格。
+- 讀數（`check_guns.py`，只讀引擎匯出）：
+  - stats：組裝件 526,038 → **526,154**（＋116 墊木）、1 元件、空腔 0、link_overlap 0；⚠ 左右差 **4**（下排 P1 的墊木：S1 橫移 1.5 就全著地、P1 要躲 S1 不能對稱）；模型 53（＋42）、models_broken 0。
+  - 結果帳 526,154／526,154，缺 0、多 0、顏色差 0；固定點 42 門 × 7–10 個，引擎 vs 我算的最大差 **0.0**。
+  - 碰撞（OBJ 三角形重心往裡 0.02 落在實心）**0**；著地（底面三角形正下方實心）42 門全 1.0；砲口伸出牆外最少 1.25 格（船尾兩門）；砲碰砲：最近一對是下排 S1／P1（船尾最窄處）0.71 格、不重疊。
+  - 🩸 尺的錯：第一版碰撞報每門 8–13 個三角形（共 398）—— 讀 OBJ 時 y、z 對調 ⇒ 左右手性反了，算出來的法線朝內（頂面法線 z 平均 −1，量過），「往裡 0.02」其實是往外、量到輪底下的甲板 ⇒ 改 ＋0.02 n。著地第一版看最低那層**頂點**、邊上的頂點落到隔壁欄 ⇒ 改看底面三角形的重心。
+  - 反向對照：往下 1 格 ⇒ 42 門全撞（2,618）、著地 0；往旁 3 格 ⇒ 23 門撞；往船尾 3 格 ⇒ 船頭砲口 −0.75（縮進牆裡）；固定點的差 ＝ 偏移。
+- ⚠ 遊戲：`12l`、`6l`、`3chase` 遊戲的砲種表還沒有（config guns 只有 24l／32l／32c／18chase／4l，不認得的照 24l 算）—— 要跟 ame 說。
+- ⚠ 還沒做：砲具與砲索（船牆的環、breeching／tackle，§4.4）。
+- 過程圖：`overlays/stage12_broadside_S_yaw100.png`、`stage12_lower_deck_yaw60_pitch50.png`（藏上層看下砲甲板）、`stage12_bow_mouth_yaw-20.png`、`stage12_stern_yaw170.png`。
