@@ -328,3 +328,16 @@ Tim：「繼續 GO」。設計 plan.json `guns`（provenance `guns`、`guns.base
 - ⚠ 遊戲：`12l`、`6l`、`3chase` 遊戲的砲種表還沒有（config guns 只有 24l／32l／32c／18chase／4l，不認得的照 24l 算）—— 要跟 ame 說。
 - ⚠ 還沒做：砲具與砲索（船牆的環、breeching／tackle，§4.4）。
 - 過程圖：`overlays/stage12_broadside_S_yaw100.png`、`stage12_lower_deck_yaw60_pitch50.png`（藏上層看下砲甲板）、`stage12_bow_mouth_yaw-20.png`、`stage12_stern_yaw170.png`。
+
+## 階段十三 彈藥庫＋梯子 6 座 —— 落格（2026-10-14 下午，wake #119）
+Tim：「繼續 GO」（我推薦先做這兩樣：遊戲靠梯子判斷水手走不走得到那一層）。設計 plan.json `magazine`、`ladders`（provenance `magazine`、`magazine.kegs`、`ladders`）；產生 `design/draft_magazine.py <design> exports/stage12`、`design/draft_ladders.py <design> exports/stage12` ⇒ `verify_magazine.json`、`verify_ladders.json`、`masks/{magazine,ladders}/`（重跑逐位元組相同）；下 CLI `design/apply_stage13.py <design> mag_*|lad_*`；讀數 `design/check_stage13.py <design> exports/stage13 exports/stage12 [偏移]` ⇒ `verify_stage13_post.json`。
+- **彈藥庫**（子作品 `-magazine`，框 at 140,100,0、33×61×48；關聯 `彈藥庫` meta kind=magazine、pos=aft、powder_lb 1700）：船尾貨艙 x 140–172（後桅腳之後、舵之前），地板 z 28、房間到 z 45、**頂板 z 46**（夜隼號那間頂著艙房地板，這間在貨艙中段 ⇒ 自己加）—— 整間在吃水線 z 50 以下。銅皮 1,771、松木 1,816、橡木 15,758（地板以下填實到船殼 15,180：當壓艙、不留空腔）；19,345 格。門洞在前艙壁（往後桅）。固定點 blast (158,130,38)、door (172,130,29)。
+  - 火藥桶 17 個（引用 basecamp 憲法號 -powder-barrel，scale 0.2）—— 估要 45 桶，船尾窄、地板只放得下 17（照實，powder_lb ＝ 桶數 × 100）。
+  - 草稿那一側：框裡引擎匯出與 sk_world 的實心格逐格相同（assert）才算艙內。
+- **梯子 6 座**（子作品 `-ladders`，關聯 `甲板-上/梯子` meta kind=ladders；側板 136、踏板 177、扶手柱 73；扶手繩 12）：下↔上甲板 aft（上甲板後艙口）、fore（前艙口）；上↔後甲板 half（halfdek companion）；後甲板↔艉樓 kamp；上甲板↔艏樓 bak-S、bak-P。1,368 格。
+  - 從夜隼號那支改：甲板面直接量（那一層的**板色**最上面那格 ＋1，圍板不算）、下一層也有艙口 ⇒ 找梯腳時跳過、軟障礙含 42 門砲的模型。
+  - 🩸 草稿裡被擋下來的（都是量的）：① 船尾、船頭舷弧陡 ⇒ 「梯腳最後三欄甲板一樣高」放寬到 zl−1..zl；② **艏樓的 scuttle（x 500–506）被船首斜桅的根壓住**（x 500–508、z 111–121 全是斜桅）⇒ 改成艏樓前緣艙壁兩舷各一座（同夜隼號斷口梯），避開中線的門、S9／P9 的砲尾、前艙口圍板（y 138–145、115–122）；③ 艏樓前緣有幾條橫跨全寬、一格粗、只靠兩端接舷牆的**飛簷**（船殼 73，x 465–468、z 109→116）正好在爬梯子的人頭上 ⇒ 梯子那段刻缺口 48 格；缺口把 x 465、466 兩條的中段（y 123–137，各 15 格）切成浮空 ⇒ 一起刻（規則：整塊都是船殼、≤ 50 格才刻）—— 刻掉共 78 格，門上方最下面兩條飛簷在兩座梯子之間那段沒了。
+  - 給遊戲的 foot／lo／hi／head（24 個固定點）：**自己算**，規則照 basecamp 餘燼號 `design/tools/ladder_points.py`。🩸 先跑了她那支：aft（下↔上）與 half（上↔後）在同一段 x 上下疊著，她挑踏板不分高度 ⇒ 兩座混在一起（aft 的 hi 落到 z 101、half 的 foot 落到下甲板 z 62）；**而且它把讀數檔寫進她的 design 資料夾**（`verify_ladder_points_summit-stormkaap-01m-assembly.json`，沒進版控，我刪了）⇒ 改在 draft_ladders 裡照她的規則逐行重寫、每座只看自己的踏板。對照：沒疊的四座（fore、kamp、bak-S、bak-P）四個點跟她那支逐格相同；aft 的 foot、lo 也相同。
+- 讀數（`check_stage13.py`，只讀引擎匯出）：stats 組裝件 526,154 → **546,789**（＋19,345＋1,368−78）、1 元件、空腔 0、link_overlap 0、左右差 4（跟階段十二一樣：下排 P1 的墊木）；繩 549（＋12 扶手）、ropes／sails／models_broken 0；模型 70（＋17 桶）。結果帳 546,789／546,789 缺 0、多 0、色差 0；meta 兩條對；固定點引擎 vs 我算的最大差 0.0；梯子 24 點每一格是空氣、腳下實心、頭上 3 格空；桶 obj 碰撞 0、著地 1.0。反向對照：往下 1 ⇒ 24 點全壞、桶撞 8,262；往前 3 ⇒ 15 點壞、桶撞 976。
+- ⚠ 彈藥庫門外是貨艙的空氣、沒有地板也沒有梯子（夜隼號、憲法號也一樣）。
+- 過程圖：`overlays/stage13_bak_ladders_yaw200.png`、`stage13_magazine_yaw60.png`（藏船殼與甲板）、`stage13_bak_lip_yaw200.png`（刻之前的飛簷）。
