@@ -1,0 +1,292 @@
+{
+ "title": "新圖紙 09：gun deck 砲門 v1（階段八）",
+ "world_cells": 515369,
+ "start_ledger": {
+  "work_cells": 515369,
+  "missing": 0,
+  "extra": 0,
+  "color_diff": 0
+ },
+ "ports": [
+  {
+   "n": 1,
+   "read_cells": [
+    110.64,
+    120.46,
+    115.01,
+    124.33
+   ],
+   "X": [
+    111,
+    119
+   ],
+   "Z": [
+    115,
+    123
+   ],
+   "carve": [
+    193,
+    193
+   ],
+   "lining_frame_layer": 192,
+   "wall_holes": 0
+  },
+  {
+   "n": 2,
+   "read_cells": [
+    154.34,
+    164.24,
+    111.96,
+    121.28
+   ],
+   "X": [
+    154,
+    163
+   ],
+   "Z": [
+    112,
+    120
+   ],
+   "carve": [
+    202,
+    202
+   ],
+   "lining_frame_layer": 204,
+   "wall_holes": 0
+  },
+  {
+   "n": 3,
+   "read_cells": [
+    201.14,
+    210.99,
+    109.39,
+    118.74
+   ],
+   "X": [
+    201,
+    210
+   ],
+   "Z": [
+    109,
+    118
+   ],
+   "carve": [
+    224,
+    224
+   ],
+   "lining_frame_layer": 216,
+   "wall_holes": 0
+  },
+  {
+   "n": 4,
+   "read_cells": [
+    248.0,
+    257.84,
+    107.31,
+    116.77
+   ],
+   "X": [
+    248,
+    257
+   ],
+   "Z": [
+    107,
+    116
+   ],
+   "carve": [
+    225,
+    225
+   ],
+   "lining_frame_layer": 144,
+   "wall_holes": 0
+  },
+  {
+   "n": 5,
+   "read_cells": [
+    295.04,
+    305.06,
+    106.05,
+    115.45
+   ],
+   "X": [
+    295,
+    304
+   ],
+   "Z": [
+    106,
+    114
+   ],
+   "carve": [
+    223,
+    223
+   ],
+   "lining_frame_layer": 126,
+   "wall_holes": 0
+  },
+  {
+   "n": 6,
+   "read_cells": [
+    338.01,
+    347.96,
+    105.05,
+    114.57
+   ],
+   "X": [
+    338,
+    347
+   ],
+   "Z": [
+    105,
+    114
+   ],
+   "carve": [
+    222,
+    222
+   ],
+   "lining_frame_layer": 216,
+   "wall_holes": 0
+  },
+  {
+   "n": 7,
+   "read_cells": [
+    379.04,
+    388.83,
+    104.7,
+    114.11
+   ],
+   "X": [
+    379,
+    388
+   ],
+   "Z": [
+    105,
+    113
+   ],
+   "carve": [
+    223,
+    223
+   ],
+   "lining_frame_layer": 126,
+   "wall_holes": 0
+  },
+  {
+   "n": 8,
+   "read_cells": [
+    420.07,
+    430.03,
+    104.77,
+    114.22
+   ],
+   "X": [
+    420,
+    429
+   ],
+   "Z": [
+    105,
+    113
+   ],
+   "carve": [
+    204,
+    204
+   ],
+   "lining_frame_layer": 212,
+   "wall_holes": 0
+  },
+  {
+   "n": 9,
+   "read_cells": [
+    461.13,
+    470.91,
+    105.34,
+    114.75
+   ],
+   "X": [
+    461,
+    470
+   ],
+   "Z": [
+    105,
+    114
+   ],
+   "carve": [
+    255,
+    255
+   ],
+   "lining_frame_layer": 134,
+   "wall_holes": 0
+  },
+  {
+   "n": 10,
+   "read_cells": [
+    508.24,
+    518.11,
+    106.93,
+    116.29
+   ],
+   "X": [
+    508,
+    517
+   ],
+   "Z": [
+    107,
+    115
+   ],
+   "carve": [
+    198,
+    198
+   ],
+   "lining_frame_layer": 208,
+   "wall_holes": 0
+  },
+  {
+   "n": 11,
+   "read_cells": [
+    550.0,
+    559.6,
+    108.98,
+    118.38
+   ],
+   "X": [
+    550,
+    559
+   ],
+   "Z": [
+    109,
+    117
+   ],
+   "carve": [
+    219,
+    219
+   ],
+   "lining_frame_layer": 62,
+   "wall_holes": 0
+  }
+ ],
+ "carve_cells": 4776,
+ "carve_by_kind": {
+  "frame": 2734,
+  "plank": 2042
+ },
+ "blocked_in_openings": [],
+ "lining_cells": 1840,
+ "wall_hole_cells": 0,
+ "mirror_diff": 0,
+ "cavities_after": 0,
+ "cavity_where": [],
+ "components_after": 1,
+ "expect_after": 512433,
+ "lists": [
+  {
+   "name": "carve",
+   "file": "masks/ports/carve.vox.txt",
+   "cells": 4776,
+   "sha256": "4d448c9c9db5a0d0e95006b0100799f5a7a8a45a605220737125e4ab30ce8b9b"
+  },
+  {
+   "name": "lining",
+   "file": "masks/ports/lining.vox.txt",
+   "cells": 1840,
+   "sha256": "b405c852cd2d5fffea01cc42acc499644ddc450f63ab1eae328d12b1e43b689f"
+  }
+ ]
+}

@@ -475,5 +475,24 @@
       "colors": "設計決定：黑船殼 36（劇照）；吃水線以下 100 深鏽褐（劇照看不到水下）；露在外面的龍骨、柱、gripe、deadwood 跟著上色",
       "draft_marks": "設計決定（營地特色：醒目的吃水刻度）：船頭、船尾兩舷各一排，從龍骨底起每 1 m（真實公尺 ＝ 10 格）一個數字 1–10，數字底邊 ＝ 那個吃水；3×5 格白字，從外面看左到右讀得正"
     }
+  },
+  "gunports": {
+    "title": "新圖紙 09：gun deck 砲門 v1（階段八）",
+    "source": "readings_LI_ports.json",
+    "sheet": "sheet09_ports_v1.png",
+    "carve_members": [
+      "plank",
+      "wale",
+      "frame"
+    ],
+    "wall_depth": 8,
+    "lining_color": 141,
+    "provenance": {
+      "source": "Pl. LI 側面圖：gun deck 一排 11 個方砲門（每舷），四邊線心（read_ports.py、疊圖 readings/LI_ports_trace.png）；換算跟船殼同一套 X ＝ 90 ＋ x·cpm、Z ＝ 6 ＋ z·cpm",
+      "count": "設計決定：照 Pl. LI 的 11 個（黑珍珠劇照的砲門排法沒有再看 —— 要看更多劇照要先問 Tim）",
+      "carve_members": "設計決定：只刻外板、wale、肋骨（照憲法號）；其他木料在開口裡 ⇒ 不刻、記在 verify",
+      "wall_depth": "設計：從那一欄最外面的實心往裡 8 格內才算舷牆（外板 1 ＋ 肋骨 ≤ 3.5 ＋ 餘裕）；中線的 apron 等不會被當成舷牆",
+      "lining_color": "照憲法號 141（跟肋骨同色）；船身全黑，不留白帶（憲法號那條白帶是它的塗裝）"
+    }
   }
 }
