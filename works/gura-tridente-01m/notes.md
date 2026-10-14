@@ -239,3 +239,8 @@ Tim 2026-10-14：「繼續造船吧，要用在遊戲內所以要有對應的炮
 - 桶數是照砲數換算的，不是史料；兩間各 17,900 磅 ⇒ 遊戲裡殉爆半徑照 powder_lb 算。
 - 貨艙沒有梯子通下去（orlop 以下），跟憲法號、餘燼號一樣；彈藥庫門通到的是貨艙。
 - 砲具與砲索（§4.4）還沒做；船頭追擊砲只偏 5°。
+
+## 匯出給遊戲（2026-10-14 晚上，TASK-0563）
+- `export format=vxk include=rig,models,parts,meta,ends` ⇒ `gura-tridente-01m-assembly/exports/tridente.vxk`（不進版控）：2,001,956 格、header checksum 2530647134、檔案 sha256 5746110f…；繩 420、帆 15、模型 517、meshes 62、parts 31、帶 meta 531、固定點 1,496、rig_skipped 空。
+- 讀回（用遊戲那側 decks.py 的 load，另一個讀取器）：格 2,001,956、模型 517；砲 32l 32／24l 34／12l 34／6l 18／32c 16／18chase 4、火藥桶 358、帆桁 14、燈 2、小艇 2、舵輪 1、羅經櫃 1。
+- 交給 ame 匯入（酒館 seq 24486）—— 遊戲那側的 admin.py、船隻設定由她的流程走；12l、6l 等她加進砲種表。
