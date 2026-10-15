@@ -299,3 +299,23 @@ Tim：「cofa 補吧」「補完 GO」。改 plan `rig_build.tops`（mizzen 9 �
 - 帆桁穿船 7 根全 0；組起來（hide_links=船名板）655,231 格、1 元件、空腔 0、鏡像差 0；draft_masts 重跑逐位元組相同（其他 8 個輸出跟改之前一樣）。
 - Blockside 暫存副本 `reimport`：.vxk 655,518 格、checksum 2993321142（模型 173、繩 368、帆 9）；**shipcheck「桅頂水手」那一條沒了**（暫存那份設定是預設員額 4／根：船員 265 → 273）；✗ 0、⚠ 3（geo —— 暫存那份沒有 ame 填的 geo、送藥手 21／22、陸戰隊 6／12）。真的 Blockside 要請 ame reimport（checksum 變了）。
 - 過程圖：`overlays/stage11_tops.png`（region 框船尾上空；模型不跟著裁）。
+- ame 重匯了（Blockside d3e3a72）：回讀 `_cache/cosecha.vxk` 655,518 格、checksum 2993321142 ＝ 上面暫存副本量的。
+
+## 階段十二 砲具與砲索（2026-10-15，TASK-0624）
+Tim：「繼續 GO」—— todo 上剩的第一件。設計 plan.json `gunfittings_build`；產生 `design/draft_gunfittings.py`（讀組裝件現在的格子、扣掉本階段的砲具；所有砲模型取樣成格一起擋繩）⇒ `masks/gunfittings/gunfittings.vox.txt`、`gunfittings_points.json`、`gun_ropes.json`、`verify_gunfittings.json`；落格 `design/tools/build_gunfittings.py`。做法照造船規格 §4.4（憲法號／餘燼號 draft_gunfittings.py），改成本船慣例：一件子作品（`-gunfittings`，關聯 `砲具`）、世界座標、兩舷都在裡面（S 舷算、P 舷鏡過去照樣量）。
+- **船牆的環**：從砲的 pivot 往兩側偏 offset 格（8，不行就 9／10／7／11／6／12），沿砲口方向往外走到第一格船殼 ⇒ 牆裡面那兩格（一格鐵釘 stem、一格環），高度 ＝ 那一側 eye 的高度；舷側砲與船尾追擊砲同一個算法。cascabel → 環、eye → 環兩條線不准穿過別的實心（自己這門砲不算），另一舷鏡過去也量。
+- **甲板環**：train 往船裡 9 格（不行就 8／10／7…）、站在甲板上；train → 環不准穿過別的實心。鐵 73。
+- **砲索**（§4.4 的數值，掛在組裝件）：breeching（cascabel → 兩側的環）slack 1.12、粗 0.6；side tackle（eye-aft／eye-fwd → 同側的環）1.03、0.35；train tackle（train → 甲板環）1.05、0.35；#b59a6a；分組 `guns/breeching`、`guns/tackle`、`guns/train`；端點 `model:甲板-<層>/<砲>/<固定點>` → `砲具/ring-<砲>-<aft|fwd>`、`砲具/deck-<砲>`。
+- 🩸 v1 有 7 處放不下（A01 船尾側、C01／C02／U07／U08 船頭側的環；M07 與船尾追擊砲的甲板環）。逐一量了擋在哪：
+  ① 環：找牆從 pivot 起 —— 船頭收窄、船樓隔艙壁那一段的牆面比 pivot 還靠船裡 ⇒ 起點已經在牆裡、stem 落在船殼上 ⇒ 改成從船裡 25 格開始往外找第一格牆。
+  ② 甲板環：沿用砲站的高度 —— 跨在舷弧台階上的砲站在高的那一階、環在低的那一階 ⇒ 腳下是空的 ⇒ 改成往下 3 格內找站得住的高度。
+  ⇒ v2：44 門全放得下（43 對 offset 8、1 對 6；甲板環 back 全 9）、沒有放不下的。
+- ⚠ 沒做 shot garland 與 rammer／sponge（憲法號、餘燼號有）。
+
+讀數（`design/tools/check_stage12.py`，從作品讀）：
+- ① 結果帳：砲具 220 格，缺 0、多 0、色差 0（環 176、甲板環 44）。② 固定點 132，都落在實心格上。
+- ③ 砲索 220（breeching 88、tackle 88、train 44），CLI 狀態全 ok（ropes_broken 0）；44 門每門五條、缺 0。④ 端點對不上 0（砲那一端是來源作品有的固定點、環那一端是砲具有的固定點）。
+- **反向對照**：`--drop=ring-砲M-S04-aft` ⇒ 固定點 131、只報 `砲M-S04.breeching-aft`、`砲M-S04.tackle-aft` 兩條。
+- 設計那一側：新格落在實心上 0、鏡像差 0、浮空 0；組起來（hide_links=船名板）655,451 格（＋220）、1 元件、空腔 0、鏡像差 0；產生程式重跑 4 個輸出檔逐位元組相同。
+- Blockside 暫存副本 `reimport`：.vxk 655,738 格、checksum 2914371776、繩 588（＋220）、模型 173、帆 9；shipcheck ✗ 0（沒有開場浮空的繩）、砲班 0 門缺人、⚠ 3 照舊（geo —— 暫存那份沒有 ame 填的 geo、送藥手 21／22、陸戰隊 6／12）。真的 Blockside 要請 ame reimport（繩多了 220 條）。
+- 過程圖：`overlays/stage12_guntackle.png`（主甲板、從船裡看砲架尾的 train tackle 與甲板環）、`overlays/stage12_breeching.png`（從船裡往右舷牆看：兩門砲之間的兩個環、breeching 與 side tackle）。
