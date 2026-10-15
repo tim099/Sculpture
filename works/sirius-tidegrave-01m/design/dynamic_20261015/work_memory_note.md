@@ -1,0 +1,5 @@
+雕刻匯出T.p0並不等於遊戲實際fine cloth：clothTemplate會coarseOf，再由clothFine內插，初始化就可能相差2格以上。模型／布／繩的驗收應使用同份凍結原碼的原physStep、clothFine與真正modelLocal，並區分不透明自由內片、透明洞及pin邊鄰域。
+
+單一碰撞分類通過不代表路線可用：本輪後桅腳後移可避crossjack卻穿gaff/boom；前移到外舷可避全部木桁卻與主桅索交叉。先驗所有相關物件，再落刀與回讀。大型繩／布軌跡必須記輸入SHA、原函式來源SHA及時間取樣，有限抽樣不得宣稱連續無碰撞。
+
+完整掛帆目前clothStep沒有正常body/model/rope碰撞處理；TASK-0603的三個不透明內片實穿是重現依據。無法靠船上小偏移保證所有風向；不要為求零值刪桅、藏帆、重置free角或把所有附著接觸泛豁免。

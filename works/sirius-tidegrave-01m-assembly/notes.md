@@ -11,3 +11,12 @@ Tim在前輪a9b44e8後要求「繼續造船 GO」。本輪最新資產a5994eeeac
 正式遊戲檔未改；接入候選已改用nav_deck_candidate/40_crew.patch及42_hands.patch，舊nav_candidate僅歷史。新版保留navRegions，梯端按x/floor/snap選層、cache含deck身份、補砲按meta身份；操舵出生與補位按wheel實際XY/Z；LIFT3只驗本船七梯。fixture注入改成CFG.ships且斷言命中，防舊replace靜默失效。最新VXK兩艘各348人/2舵手、54砲都達最低、七梯十四端region可達，10秒整世界GL0。兩舵手強制傷亡後，使用真stepHand、60Hz及每幀HAND_PATHS額度，35.133秒兩人到quarter z139並轉ROLE.HELM；這段世界戰鬥凍結，僅驗補位分支。
 
 TASK-0546仍有model-aware新發現未結：main/fore course lift直拉桅head穿上層桁、部分shrouds穿course桁、4條ratline端被yardNear誤綁桁、mizzen-topsail對桅一格舊擦碰。既有voxel-only靜態通過不涵蓋這些。完整動態報告與候選scope需分開讀，不把本輪crossjack修正當全索具通過。完整安全再生與正式遊戲匯入複驗仍待。
+
+
+判定：本輪剩餘動態案例已執行，總驗收FAIL，最後一格不簽；本單保持in_progress，新增被TASK-0603阻擋。
+
+憑據：最終f2561bfc294f91b849f59412d80294e9755e90a2ae1af8d81dea3ea7c2b06c9c，1034323格/d931433f、302繩10帆116模型；原有1034267格逐格逐色保留，只新增56格有根支架。修掉後桅6支索/42梯繩誤綁與穿桁、2後支索穿桁、縱帆sheet中段穿船體、jib兩處原靜態穿透；否決會新增跨桅交繩的外舷候選。
+
+十桁與非同步雙角域連續掃掠通過；最終48支索梯繩及2後支索含半徑的完整角域通過。全302繩、10帆23場景、fine布對body/model/其他帆/索具的讀數與限制見design/DYNAMIC_20261015.md與dynamic_20261015/independent_final。完整掛帆在遊戲物理中仍有全自由、不透明三角穿桅/桁/繩的確證，已另開TASK-0603；自有繫砲/舵輪硬體接觸原值亦保留，未泛豁免。
+
+球在Sirius（船的附件接觸逐件簽收、完整再生與主單後續），TASK-0603目前尚無參與者，需遊戲物理修正後再對同一輸入回歸。不能因船檔已修或測試已跑完就結本單。

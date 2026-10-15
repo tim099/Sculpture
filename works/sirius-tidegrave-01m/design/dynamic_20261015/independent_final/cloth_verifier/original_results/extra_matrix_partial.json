@@ -1,0 +1,4211 @@
+{
+  "hashes": {
+    "VoxelKit/voxelkit.js": "015d5d41909c7f18cf95b1eb7394e6ba5a2a69833a9697df4234632febf31de4",
+    "src/js/00_core.js": "fe3733e49c522377ce8e3a5899353c2408d5eaabcc6819020f7e484f3a365527",
+    "src/js/21_gunnery.js": "4567214e01789cea01bea189677abbe52d971e4a491f55b12d7340df6d10c3ba",
+    "src/js/10_ship.js": "c8773b6a1ec7e96b833bad1c59e477c8b2b97fa128f831d9e46671c14f88acef",
+    "src/js/31_sailing.js": "41f9ed37f529965f142b2b00cb03dfdcdbe8ef2f4cbe1833f5182362175f7e59",
+    "src/js/30_rig_physics.js": "3b7c4eda78637a056ec8615ee311bc09a8c25ac9c47c94b21c16d9f6e193f625",
+    "src/js/11_rig_gpu.js": "1f8550bfaeaed62f9273182d8c7122b13ba7cfa77239d4b4d08421bb9e6bcc17",
+    "src/js/32_hull.js": "1438f7dba894bcb1ac6eafdec98eeb1b93d0112d14f425e7cb87395f33af41c5",
+    "src/js/34_shreds.js": "88ff00125b2c0e8cdbd9a844933b47088194a3726b14c469153645f4e74b06f3",
+    "src/js/09_phx.js": "1a9e947005dc69660526422d2ecb709addb1d5059936b85d2c36d01022e03a46"
+  },
+  "file": "D:/Unity/Valhalla/Sculpture/works/sirius-tidegrave-01m/design/continued_20261015/final_heads.vxk",
+  "reports": [
+    {
+      "scenario": {
+        "name": "static-off-all",
+        "lv": 3,
+        "psi": 0,
+        "duration": 0,
+        "off": true
+      },
+      "frames": 1,
+      "active": [
+        "fore-course",
+        "fore-topsail",
+        "fore-topgallant",
+        "main-course",
+        "main-topsail",
+        "main-topgallant",
+        "mizzen-topsail",
+        "mizzen-lateen",
+        "jib",
+        "ensign"
+      ],
+      "checks": {
+        "body": 4236,
+        "models": 491376,
+        "sailSail": 45
+      },
+      "counts": {
+        "body": 4,
+        "models": 8,
+        "sailSail": 1,
+        "transparent": 0,
+        "attachment": 2
+      },
+      "hits": [
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 14,
+          "time": 0,
+          "p": [
+            510.43999226888025,
+            116.52000172932942,
+            233.87666829427081
+          ],
+          "cell": [
+            510,
+            116,
+            233
+          ],
+          "alpha": 255,
+          "physics": false,
+          "pins": [
+            0,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 30,
+          "time": 0,
+          "p": [
+            373.933339436849,
+            172.77666727701822,
+            460.0533447265625
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 0,
+          "time": 0,
+          "p": [
+            202.7999979654948,
+            120.44999694824219,
+            231.74666341145831
+          ],
+          "cell": [
+            202,
+            120,
+            231
+          ],
+          "alpha": 255,
+          "physics": false,
+          "pins": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 8,
+          "time": 0,
+          "p": [
+            190.4633331298828,
+            119.55999755859375,
+            253.04999287923175
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 10,
+          "time": 0,
+          "p": [
+            187.23666381835938,
+            119.78666432698569,
+            258.3333282470703
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 12,
+          "time": 0,
+          "p": [
+            184.00999959309897,
+            120.34333038330078,
+            263.5433349609375
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 16,
+          "time": 0,
+          "p": [
+            178.02333068847656,
+            119.543332417806,
+            274.2799987792969
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 22,
+          "time": 0,
+          "p": [
+            168.41666666666669,
+            120.07999674479169,
+            290.14000447591144
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 28,
+          "time": 0,
+          "p": [
+            159.3000030517578,
+            119.43666585286459,
+            306.25334676106775
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 30,
+          "time": 0,
+          "p": [
+            156.46000162760416,
+            119.0866673787435,
+            311.7233378092448
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": false
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 192,
+          "time": 0,
+          "p": [
+            610.1466674804688,
+            121.23333485921225,
+            156.3133290608724
+          ],
+          "cell": [
+            610,
+            121,
+            156
+          ],
+          "alpha": 255,
+          "physics": false,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "sail-sail",
+          "sail": "fore-topsail",
+          "tri": 403,
+          "other": "jib",
+          "otherTri": 22,
+          "time": 0,
+          "p": [
+            546.7194480666603,
+            120.41117380128162,
+            287.31944285903836
+          ],
+          "alpha": [
+            255,
+            255
+          ]
+        }
+      ],
+      "deadRopes": []
+    },
+    {
+      "scenario": {
+        "name": "fine-init-all",
+        "lv": 3,
+        "psi": 0,
+        "duration": 0,
+        "init": true
+      },
+      "frames": 1,
+      "active": [
+        "fore-course",
+        "fore-topsail",
+        "fore-topgallant",
+        "main-course",
+        "main-topsail",
+        "main-topgallant",
+        "mizzen-topsail",
+        "mizzen-lateen",
+        "jib",
+        "ensign"
+      ],
+      "checks": {
+        "body": 4236,
+        "models": 491376,
+        "sailSail": 45
+      },
+      "counts": {
+        "body": 4,
+        "models": 11,
+        "sailSail": 1,
+        "transparent": 0,
+        "attachment": 2
+      },
+      "hits": [
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 14,
+          "time": 0,
+          "p": [
+            510.5716654459635,
+            116.56333414713541,
+            234.0116678873698
+          ],
+          "cell": [
+            510,
+            116,
+            234
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 16,
+          "time": 0,
+          "p": [
+            514.0199890136719,
+            126.9858373006185,
+            234.06416829427081
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 18,
+          "time": 0,
+          "p": [
+            517.4733479817709,
+            137.40666707356772,
+            234.11166890462238
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 20,
+          "time": 0,
+          "p": [
+            520.8941853841146,
+            147.85582987467447,
+            234.1683400472005
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 22,
+          "time": 0,
+          "p": [
+            524.3116658528646,
+            158.30500284830728,
+            234.22667439778644
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 0,
+          "time": 0,
+          "p": [
+            202.79667154947919,
+            120.44999694824219,
+            231.74833170572913
+          ],
+          "cell": [
+            202,
+            120,
+            231
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 2,
+          "time": 0,
+          "p": [
+            199.68167114257812,
+            120.44999694824219,
+            237.06333414713538
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 8,
+          "time": 0,
+          "p": [
+            190.3800048828125,
+            119.77166493733725,
+            253.02666727701825
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 10,
+          "time": 0,
+          "p": [
+            187.25,
+            119.76666514078775,
+            258.336669921875
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 12,
+          "time": 0,
+          "p": [
+            184.0449981689453,
+            120.1249974568685,
+            263.5983378092448
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 22,
+          "time": 0,
+          "p": [
+            168.48500569661456,
+            119.92333221435547,
+            290.1750081380208
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 28,
+          "time": 0,
+          "p": [
+            159.3499959309896,
+            119.36999766031903,
+            306.29833984375
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 30,
+          "time": 0,
+          "p": [
+            156.2249959309896,
+            119.375,
+            311.6133321126302
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 192,
+          "time": 0,
+          "p": [
+            610.1566569010417,
+            121.38833363850912,
+            156.5633341471354
+          ],
+          "cell": [
+            610,
+            121,
+            156
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "sail-sail",
+          "sail": "fore-topsail",
+          "tri": 403,
+          "other": "jib",
+          "otherTri": 22,
+          "time": 0,
+          "p": [
+            546.4322613956286,
+            120.3074134371817,
+            287.22209644379626
+          ],
+          "alpha": [
+            255,
+            255
+          ]
+        }
+      ],
+      "deadRopes": []
+    },
+    {
+      "scenario": {
+        "name": "pressure-min-config",
+        "lv": 3,
+        "psi": 1.4,
+        "wind": 0.25,
+        "duration": 12
+      },
+      "frames": 13,
+      "active": [
+        "fore-course",
+        "fore-topsail",
+        "fore-topgallant",
+        "main-course",
+        "main-topsail",
+        "main-topgallant",
+        "mizzen-topsail",
+        "mizzen-lateen",
+        "jib",
+        "ensign"
+      ],
+      "checks": {
+        "body": 55068,
+        "models": 6387888,
+        "sailSail": 585
+      },
+      "counts": {
+        "body": 908,
+        "models": 159,
+        "sailSail": 2,
+        "transparent": 62,
+        "attachment": 38
+      },
+      "hits": [
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 14,
+          "time": 0,
+          "p": [
+            510.57976277669275,
+            116.56063334147134,
+            234.0116678873698
+          ],
+          "cell": [
+            510,
+            116,
+            234
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 16,
+          "time": 0,
+          "p": [
+            514.0077718098958,
+            126.98971811930338,
+            234.06416829427081
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 18,
+          "time": 0,
+          "p": [
+            517.4407958984375,
+            137.41714986165366,
+            234.11166890462238
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 20,
+          "time": 0,
+          "p": [
+            520.8412679036459,
+            147.8728993733724,
+            234.1683400472005
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 22,
+          "time": 0,
+          "p": [
+            524.2383829752604,
+            158.32864379882812,
+            234.22667439778644
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 0,
+          "time": 0,
+          "p": [
+            202.79654947916663,
+            120.45630391438803,
+            231.74833170572913
+          ],
+          "cell": [
+            202,
+            120,
+            231
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 2,
+          "time": 0,
+          "p": [
+            199.68155924479163,
+            120.46356964111328,
+            237.06333414713538
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 8,
+          "time": 0,
+          "p": [
+            190.39649454752603,
+            119.69782002766928,
+            253.08021545410156
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 10,
+          "time": 0,
+          "p": [
+            187.26648966471353,
+            119.70012156168622,
+            258.39021809895837
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 12,
+          "time": 0,
+          "p": [
+            184.0292002360026,
+            120.22645060221353,
+            263.6117350260417
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 16,
+          "time": 0,
+          "p": [
+            177.99178568522134,
+            119.59908294677734,
+            274.32696533203125
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 22,
+          "time": 0,
+          "p": [
+            168.45358276367188,
+            120.04111989339194,
+            290.20033772786456
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 28,
+          "time": 0,
+          "p": [
+            159.34085591634116,
+            119.39556376139325,
+            306.3556416829427
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 30,
+          "time": 0,
+          "p": [
+            156.21587117513022,
+            119.4078598022461,
+            311.6706237792969
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 192,
+          "time": 0,
+          "p": [
+            610.1566569010417,
+            121.38833363850912,
+            156.5633341471354
+          ],
+          "cell": [
+            610,
+            121,
+            156
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "sail-sail",
+          "sail": "fore-topsail",
+          "tri": 403,
+          "other": "jib",
+          "otherTri": 22,
+          "time": 0,
+          "p": [
+            547.061980330808,
+            120.28088771767686,
+            286.91120756927535
+          ],
+          "alpha": [
+            255,
+            255
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 17,
+          "time": 1,
+          "p": [
+            512.6478474934895,
+            123.88091532389323,
+            231.70756022135419
+          ],
+          "cell": [
+            512,
+            123,
+            231
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 18,
+          "time": 1,
+          "p": [
+            512.4879760742188,
+            130.27277119954428,
+            419.02644856770837
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 20,
+          "time": 1,
+          "p": [
+            513.657958984375,
+            136.14317321777344,
+            419.068115234375
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 24,
+          "time": 1,
+          "p": [
+            515.7102661132812,
+            147.95301818847656,
+            419.05179850260413
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 28,
+          "time": 1,
+          "p": [
+            517.7147827148438,
+            159.78772481282553,
+            419.0549011230469
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 49,
+          "time": 1,
+          "p": [
+            510.662109375,
+            122.65309143066406,
+            412.9945170084635
+          ],
+          "cell": [
+            510,
+            122,
+            412
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 81,
+          "time": 1,
+          "p": [
+            510.82222493489587,
+            122.70911661783853,
+            408.58365885416663
+          ],
+          "cell": [
+            510,
+            122,
+            408
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 110,
+          "time": 1,
+          "p": [
+            510.31233723958337,
+            118.86390431722006,
+            405.65067545572913
+          ],
+          "cell": [
+            510,
+            118,
+            405
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 142,
+          "time": 1,
+          "p": [
+            510.77531941731775,
+            118.83229573567706,
+            401.29787190755206
+          ],
+          "cell": [
+            510,
+            118,
+            401
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "main-course",
+          "tri": 14,
+          "time": 1,
+          "p": [
+            355.88067626953125,
+            116.11274210611978,
+            248.50013224283853
+          ],
+          "cell": [
+            355,
+            116,
+            248
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 0,
+          "time": 1,
+          "p": [
+            346.1399841308594,
+            68.2429224650065,
+            459.0292663574219
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 14,
+          "time": 1,
+          "p": [
+            355.21726481119794,
+            118.07381439208984,
+            458.96842447916674
+          ],
+          "cell": [
+            355,
+            118,
+            458
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            4,
+            4
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 20,
+          "time": 1,
+          "p": [
+            359.09958902994794,
+            139.46145629882812,
+            459.0652058919271
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 26,
+          "time": 1,
+          "p": [
+            362.9487609863281,
+            160.83010864257812,
+            459.0403035481771
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 28,
+          "time": 1,
+          "p": [
+            364.1503601074219,
+            167.98694864908853,
+            459.04900105794275
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 30,
+          "time": 1,
+          "p": [
+            365.35573323567706,
+            175.14096069335938,
+            459.0560404459636
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 78,
+          "time": 1,
+          "p": [
+            355.640380859375,
+            118.02301279703775,
+            450.01314290364587
+          ],
+          "cell": [
+            355,
+            118,
+            450
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 110,
+          "time": 1,
+          "p": [
+            355.53760782877606,
+            118.22493743896484,
+            445.61333211263025
+          ],
+          "cell": [
+            355,
+            118,
+            445
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 142,
+          "time": 1,
+          "p": [
+            355.683827718099,
+            118.34422302246094,
+            441.1983439127604
+          ],
+          "cell": [
+            355,
+            118,
+            441
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 24,
+          "time": 1,
+          "p": [
+            165.6649424235026,
+            126.2938003540039,
+            295.39556884765625
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "mizzen-lateen",
+          "tri": 26,
+          "time": 1,
+          "p": [
+            162.5771993001302,
+            126.741335550944,
+            300.7105712890625
+          ],
+          "other": "mizzen/yard-mizzen-gaff",
+          "modelIndex": 60,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 52,
+          "time": 1,
+          "p": [
+            719.0309448242188,
+            118.86781819661456,
+            205.12143961588544
+          ],
+          "cell": [
+            719,
+            118,
+            205
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 147,
+          "time": 1,
+          "p": [
+            666.687235514323,
+            130.01864115397137,
+            176.97483317057294
+          ],
+          "cell": [
+            666,
+            130,
+            176
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 148,
+          "time": 1,
+          "p": [
+            657.1592610677084,
+            129.2945048014323,
+            176.99312845865887
+          ],
+          "cell": [
+            657,
+            129,
+            176
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 160,
+          "time": 1,
+          "p": [
+            655.937255859375,
+            128.3794148763021,
+            171.34353129069012
+          ],
+          "cell": [
+            655,
+            128,
+            171
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 172,
+          "time": 1,
+          "p": [
+            636.3290608723958,
+            122.47246297200522,
+            166.30404663085938
+          ],
+          "cell": [
+            636,
+            122,
+            166
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 181,
+          "time": 1,
+          "p": [
+            625.2086385091145,
+            120.68203226725262,
+            161.45599873860675
+          ],
+          "cell": [
+            625,
+            120,
+            161
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 188,
+          "time": 1,
+          "p": [
+            613.9513956705729,
+            119.37088521321616,
+            156.48403930664062
+          ],
+          "cell": [
+            613,
+            119,
+            156
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 193,
+          "time": 1,
+          "p": [
+            602.5045369466146,
+            120.19678243001303,
+            155.0951385498047
+          ],
+          "cell": [
+            602,
+            120,
+            155
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "ensign",
+          "tri": 1,
+          "time": 1,
+          "p": [
+            105.15766652425131,
+            120.49394989013672,
+            229.71566263834637
+          ],
+          "cell": [
+            105,
+            120,
+            229
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 56,
+          "time": 1,
+          "p": [
+            93.14543914794922,
+            126.60643005371094,
+            207.78783671061194
+          ],
+          "cell": [
+            93,
+            126,
+            207
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 57,
+          "time": 1,
+          "p": [
+            94.0033187866211,
+            126.99649047851562,
+            208.4271697998047
+          ],
+          "cell": [
+            94,
+            126,
+            208
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "ensign",
+          "tri": 79,
+          "time": 1,
+          "p": [
+            93.66940816243489,
+            127.67668151855469,
+            204.98204549153647
+          ],
+          "cell": [
+            93,
+            127,
+            204
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "ensign",
+          "tri": 98,
+          "time": 1,
+          "p": [
+            93.97081247965494,
+            128.16959635416669,
+            203.5384063720703
+          ],
+          "cell": [
+            93,
+            128,
+            203
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "ensign",
+          "tri": 99,
+          "time": 1,
+          "p": [
+            94.75644938151041,
+            128.6730499267578,
+            204.19558207194012
+          ],
+          "cell": [
+            94,
+            128,
+            204
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "ensign",
+          "tri": 118,
+          "time": 1,
+          "p": [
+            95.0016123453776,
+            129.25698852539062,
+            202.75217183430988
+          ],
+          "cell": [
+            95,
+            129,
+            202
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "ensign",
+          "tri": 119,
+          "time": 1,
+          "p": [
+            95.86691284179688,
+            129.64956665039062,
+            203.38598124186194
+          ],
+          "cell": [
+            95,
+            129,
+            203
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 175,
+          "time": 1,
+          "p": [
+            100.35765075683594,
+            126.02339172363281,
+            205.06688435872394
+          ],
+          "cell": [
+            100,
+            126,
+            205
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 194,
+          "time": 1,
+          "p": [
+            100.41847229003906,
+            126.02794138590494,
+            203.54857889811194
+          ],
+          "cell": [
+            100,
+            126,
+            203
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "sail-sail",
+          "sail": "fore-topsail",
+          "tri": 305,
+          "other": "jib",
+          "otherTri": 25,
+          "time": 1,
+          "p": [
+            525.5195485076016,
+            119.51181712904075,
+            293.1388422167724
+          ],
+          "alpha": [
+            255,
+            255
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 334,
+          "time": 2,
+          "p": [
+            510.12577311197913,
+            118.00369771321616,
+            289.20598347981775
+          ],
+          "cell": [
+            510,
+            118,
+            289
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 398,
+          "time": 2,
+          "p": [
+            514.2230021158854,
+            117.77490234375,
+            280.2112528483073
+          ],
+          "cell": [
+            514,
+            117,
+            280
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 400,
+          "time": 2,
+          "p": [
+            518.5103352864584,
+            124.61280314127603,
+            281.79542032877606
+          ],
+          "cell": [
+            518,
+            124,
+            281
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 6,
+          "time": 2,
+          "p": [
+            509.2412109375,
+            94.62037150065105,
+            419.02294921875
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 26,
+          "time": 2,
+          "p": [
+            511.7953389485677,
+            154.3961639404297,
+            419.0302530924479
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 4,
+          "time": 2,
+          "p": [
+            353.92626953125,
+            81.9596939086914,
+            459.0349426269531
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "transparent",
+          "sail": "main-topgallant",
+          "tri": 494,
+          "time": 2,
+          "p": [
+            355.57750447591144,
+            118.00904337565106,
+            394.31783040364576
+          ],
+          "cell": [
+            355,
+            118,
+            394
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 142,
+          "time": 2,
+          "p": [
+            205.94676717122394,
+            118.9587376912435,
+            321.5445149739583
+          ],
+          "cell": [
+            205,
+            118,
+            321
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 174,
+          "time": 2,
+          "p": [
+            205.59514363606775,
+            118.99407450358072,
+            317.14739990234375
+          ],
+          "cell": [
+            205,
+            118,
+            317
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 177,
+          "time": 2,
+          "p": [
+            205.865966796875,
+            122.46298726399739,
+            315.66661580403644
+          ],
+          "cell": [
+            205,
+            122,
+            315
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 206,
+          "time": 2,
+          "p": [
+            205.44554138183594,
+            119.03108978271484,
+            312.75218709309894
+          ],
+          "cell": [
+            205,
+            119,
+            312
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "mizzen-topsail",
+          "tri": 238,
+          "time": 2,
+          "p": [
+            205.6550801595052,
+            119.07127380371094,
+            308.36353556315106
+          ],
+          "cell": [
+            205,
+            119,
+            308
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 270,
+          "time": 2,
+          "p": [
+            206.06747945149743,
+            119.1051991780599,
+            304.0040690104167
+          ],
+          "cell": [
+            206,
+            119,
+            304
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 302,
+          "time": 2,
+          "p": [
+            206.86574808756507,
+            119.13446553548178,
+            299.69110107421875
+          ],
+          "cell": [
+            206,
+            119,
+            299
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 27,
+          "time": 2,
+          "p": [
+            728.8904825846354,
+            118.67806498209634,
+            209.93411763509118
+          ],
+          "cell": [
+            728,
+            118,
+            209
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 161,
+          "time": 2,
+          "p": [
+            646.953369140625,
+            134.678227742513,
+            172.67468770345053
+          ],
+          "cell": [
+            646,
+            134,
+            172
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 20,
+          "time": 2,
+          "p": [
+            105.0959243774414,
+            120.9862569173177,
+            228.14670817057294
+          ],
+          "cell": [
+            105,
+            120,
+            228
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 21,
+          "time": 2,
+          "p": [
+            105.01093292236328,
+            120.00157928466797,
+            228.3409372965495
+          ],
+          "cell": [
+            105,
+            120,
+            228
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 46,
+          "time": 3,
+          "p": [
+            512.5894673665365,
+            117.31085713704428,
+            227.71685791015625
+          ],
+          "cell": [
+            512,
+            117,
+            227
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 367,
+          "time": 3,
+          "p": [
+            507.71270751953125,
+            116.01848602294922,
+            281.9547017415365
+          ],
+          "cell": [
+            507,
+            116,
+            281
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 430,
+          "time": 3,
+          "p": [
+            508.14848836263025,
+            118.97858428955078,
+            273.7439270019531
+          ],
+          "cell": [
+            508,
+            118,
+            273
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 462,
+          "time": 3,
+          "p": [
+            508.52848307291663,
+            119.06926981608072,
+            268.8316345214844
+          ],
+          "cell": [
+            508,
+            119,
+            268
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "fore-topsail",
+          "tri": 494,
+          "time": 3,
+          "p": [
+            509.03664143880206,
+            119.18509928385416,
+            263.94244384765625
+          ],
+          "cell": [
+            509,
+            119,
+            263
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 2,
+          "time": 3,
+          "p": [
+            514.0980224609375,
+            82.76073710123698,
+            419.050313313802
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 4,
+          "time": 3,
+          "p": [
+            513.5130615234375,
+            88.73019409179688,
+            419.0313720703125
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 399,
+          "time": 3,
+          "p": [
+            347.96759033203125,
+            114.36372884114584,
+            300.16304524739587
+          ],
+          "cell": [
+            347,
+            114,
+            300
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 401,
+          "time": 3,
+          "p": [
+            349.2033996582031,
+            124.02154032389325,
+            300.26275634765625
+          ],
+          "cell": [
+            349,
+            124,
+            300
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 46,
+          "time": 3,
+          "p": [
+            355.2863362630208,
+            118.06822713216147,
+            454.42169189453125
+          ],
+          "cell": [
+            355,
+            118,
+            454
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 174,
+          "time": 3,
+          "p": [
+            355.21940104166663,
+            118.19902292887372,
+            436.7021179199219
+          ],
+          "cell": [
+            355,
+            118,
+            436
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 206,
+          "time": 3,
+          "p": [
+            355.38597615559894,
+            118.2165273030599,
+            432.28633626302087
+          ],
+          "cell": [
+            355,
+            118,
+            432
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "main-topgallant",
+          "tri": 238,
+          "time": 3,
+          "p": [
+            355.6244405110677,
+            118.26046752929688,
+            427.91357421875
+          ],
+          "cell": [
+            355,
+            118,
+            427
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 241,
+          "time": 3,
+          "p": [
+            355.07623291015625,
+            122.85059102376302,
+            426.418223063151
+          ],
+          "cell": [
+            355,
+            122,
+            426
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 270,
+          "time": 3,
+          "p": [
+            355.9043782552083,
+            118.28437805175781,
+            423.549326578776
+          ],
+          "cell": [
+            355,
+            118,
+            423
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 273,
+          "time": 3,
+          "p": [
+            355.51490275065106,
+            122.84026845296225,
+            422.06535847981763
+          ],
+          "cell": [
+            355,
+            122,
+            422
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 305,
+          "time": 3,
+          "p": [
+            355.9950358072917,
+            122.8099085489909,
+            417.72100830078125
+          ],
+          "cell": [
+            355,
+            122,
+            417
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 334,
+          "time": 3,
+          "p": [
+            206.60623168945312,
+            119.85218302408856,
+            295.3155008951823
+          ],
+          "cell": [
+            206,
+            119,
+            295
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 366,
+          "time": 3,
+          "p": [
+            206.74197387695312,
+            119.91824595133464,
+            291.00974527994794
+          ],
+          "cell": [
+            206,
+            119,
+            291
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 398,
+          "time": 3,
+          "p": [
+            206.8272247314453,
+            119.9841537475586,
+            286.70752970377606
+          ],
+          "cell": [
+            206,
+            119,
+            286
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 430,
+          "time": 3,
+          "p": [
+            206.8590850830078,
+            120.04579416910806,
+            282.41668701171875
+          ],
+          "cell": [
+            206,
+            120,
+            282
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 462,
+          "time": 3,
+          "p": [
+            206.87648010253906,
+            120.12900034586588,
+            278.1396993001302
+          ],
+          "cell": [
+            206,
+            120,
+            278
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "mizzen-topsail",
+          "tri": 494,
+          "time": 3,
+          "p": [
+            206.8640899658203,
+            120.24446360270181,
+            273.8845723470052
+          ],
+          "cell": [
+            206,
+            120,
+            273
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 49,
+          "time": 4,
+          "p": [
+            510.4655456542969,
+            124.39855194091797,
+            225.7131805419922
+          ],
+          "cell": [
+            510,
+            124,
+            225
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 78,
+          "time": 4,
+          "p": [
+            511.9291890462239,
+            117.51471964518228,
+            221.67124938964844
+          ],
+          "cell": [
+            511,
+            117,
+            221
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 110,
+          "time": 4,
+          "p": [
+            513.5033976236979,
+            118.31552124023438,
+            215.93905639648438
+          ],
+          "cell": [
+            513,
+            118,
+            215
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 369,
+          "time": 4,
+          "p": [
+            509.1953430175781,
+            123.46747334798178,
+            281.7422281901042
+          ],
+          "cell": [
+            509,
+            123,
+            281
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topsail",
+          "tri": 401,
+          "time": 4,
+          "p": [
+            509.7781066894531,
+            123.64288330078125,
+            276.80867513020837
+          ],
+          "cell": [
+            509,
+            123,
+            276
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "fore-topsail",
+          "tri": 433,
+          "time": 4,
+          "p": [
+            510.37418619791674,
+            123.82122548421225,
+            271.88962809244794
+          ],
+          "cell": [
+            510,
+            123,
+            271
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "fore-topsail",
+          "tri": 465,
+          "time": 4,
+          "p": [
+            510.9459025065104,
+            123.98352305094403,
+            266.99749755859375
+          ],
+          "cell": [
+            510,
+            123,
+            266
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 46,
+          "time": 4,
+          "p": [
+            510.95905558268225,
+            118.60474904378256,
+            414.4563903808594
+          ],
+          "cell": [
+            510,
+            118,
+            414
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 78,
+          "time": 4,
+          "p": [
+            510.72266642252606,
+            118.58679707845053,
+            410.01146443684894
+          ],
+          "cell": [
+            510,
+            118,
+            410
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 302,
+          "time": 4,
+          "p": [
+            510.10196940104163,
+            118.44207763671875,
+            379.4751790364583
+          ],
+          "cell": [
+            510,
+            118,
+            379
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 334,
+          "time": 4,
+          "p": [
+            510.3916320800781,
+            118.44553883870444,
+            375.15180460611975
+          ],
+          "cell": [
+            510,
+            118,
+            375
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 337,
+          "time": 4,
+          "p": [
+            510.3896789550781,
+            122.19141133626303,
+            373.71988932291663
+          ],
+          "cell": [
+            510,
+            122,
+            373
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 366,
+          "time": 4,
+          "p": [
+            510.84554036458337,
+            118.4396718343099,
+            370.86517333984375
+          ],
+          "cell": [
+            510,
+            118,
+            370
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 396,
+          "time": 4,
+          "p": [
+            356.8247782389323,
+            108.10085805257162,
+            300.9914957682292
+          ],
+          "cell": [
+            356,
+            108,
+            300
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 398,
+          "time": 4,
+          "p": [
+            354.44727579752606,
+            117.61885579427084,
+            301.0970458984375
+          ],
+          "cell": [
+            354,
+            117,
+            301
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 400,
+          "time": 4,
+          "p": [
+            354.2405700683594,
+            127.37502034505206,
+            301.4023742675781
+          ],
+          "cell": [
+            354,
+            127,
+            301
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 430,
+          "time": 4,
+          "p": [
+            355.10933430989587,
+            117.88638051350912,
+            295.1887410481771
+          ],
+          "cell": [
+            355,
+            117,
+            295
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 462,
+          "time": 4,
+          "p": [
+            355.7233072916667,
+            118.15719350179037,
+            289.29526774088544
+          ],
+          "cell": [
+            355,
+            118,
+            289
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "main-topsail",
+          "tri": 465,
+          "time": 4,
+          "p": [
+            355.546142578125,
+            124.57705942789713,
+            287.5278625488281
+          ],
+          "cell": [
+            355,
+            124,
+            287
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "main-topsail",
+          "tri": 494,
+          "time": 4,
+          "p": [
+            356.30084228515625,
+            118.42996470133463,
+            283.4302571614583
+          ],
+          "cell": [
+            356,
+            118,
+            283
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 302,
+          "time": 4,
+          "p": [
+            355.07322184244794,
+            118.15376027425131,
+            419.3643493652344
+          ],
+          "cell": [
+            355,
+            118,
+            419
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 334,
+          "time": 4,
+          "p": [
+            355.4704284667969,
+            118.21801503499347,
+            415.0376180013021
+          ],
+          "cell": [
+            355,
+            118,
+            415
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 337,
+          "time": 4,
+          "p": [
+            355.48636881510413,
+            122.7531026204427,
+            413.63212076822913
+          ],
+          "cell": [
+            355,
+            122,
+            413
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 366,
+          "time": 4,
+          "p": [
+            355.9724629720052,
+            118.27373250325519,
+            410.7474670410156
+          ],
+          "cell": [
+            355,
+            118,
+            410
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 177,
+          "time": 4,
+          "p": [
+            101.61320495605469,
+            132.5530242919922,
+            203.9693145751953
+          ],
+          "cell": [
+            101,
+            132,
+            203
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 196,
+          "time": 4,
+          "p": [
+            101.00955454508463,
+            132.87610880533853,
+            202.6231740315755
+          ],
+          "cell": [
+            101,
+            132,
+            202
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "ensign",
+          "tri": 199,
+          "time": 4,
+          "p": [
+            101.32574462890625,
+            133.35211690266925,
+            200.5522918701172
+          ],
+          "cell": [
+            101,
+            133,
+            200
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 142,
+          "time": 5,
+          "p": [
+            513.2046305338542,
+            118.80021667480469,
+            210.3789520263672
+          ],
+          "cell": [
+            513,
+            118,
+            210
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "fore-topsail",
+          "tri": 497,
+          "time": 5,
+          "p": [
+            510.5689595540365,
+            123.91109975179036,
+            262.67295328776044
+          ],
+          "cell": [
+            510,
+            123,
+            262
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 270,
+          "time": 5,
+          "p": [
+            510.0823059082031,
+            118.21240997314453,
+            383.99481201171875
+          ],
+          "cell": [
+            510,
+            118,
+            383
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 273,
+          "time": 5,
+          "p": [
+            509.380849202474,
+            121.93336995442706,
+            382.50732421875
+          ],
+          "cell": [
+            509,
+            121,
+            382
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 369,
+          "time": 5,
+          "p": [
+            510.9768981933594,
+            122.13078053792317,
+            369.6675313313802
+          ],
+          "cell": [
+            510,
+            122,
+            369
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-course",
+          "tri": 142,
+          "time": 5,
+          "p": [
+            355.9292907714844,
+            117.22933451334634,
+            222.5232391357422
+          ],
+          "cell": [
+            355,
+            117,
+            222
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-course",
+          "tri": 174,
+          "time": 5,
+          "p": [
+            358.8005065917969,
+            118.1678237915039,
+            216.70682271321618
+          ],
+          "cell": [
+            358,
+            118,
+            216
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "main-topsail",
+          "tri": 497,
+          "time": 5,
+          "p": [
+            355.69681803385413,
+            124.59356943766275,
+            282.5605875651042
+          ],
+          "cell": [
+            355,
+            124,
+            282
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 10,
+          "time": 5,
+          "p": [
+            361.45880126953125,
+            104.66689046223959,
+            459.02435302734375
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 12,
+          "time": 5,
+          "p": [
+            358.6999816894531,
+            111.36804962158203,
+            459.0228373209635
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "main-topgallant",
+          "tri": 369,
+          "time": 5,
+          "p": [
+            355.87804158528644,
+            122.42941538492838,
+            409.77971394856775
+          ],
+          "cell": [
+            355,
+            122,
+            409
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 145,
+          "time": 5,
+          "p": [
+            205.93385823567706,
+            122.52652994791669,
+            319.8184814453125
+          ],
+          "cell": [
+            205,
+            122,
+            319
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 209,
+          "time": 5,
+          "p": [
+            205.85240681966144,
+            122.41933186848959,
+            310.9557596842448
+          ],
+          "cell": [
+            205,
+            122,
+            310
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 241,
+          "time": 5,
+          "p": [
+            205.9427998860677,
+            122.43156941731772,
+            306.56238810221356
+          ],
+          "cell": [
+            205,
+            122,
+            306
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 26,
+          "time": 6,
+          "p": [
+            480.4708557128906,
+            174.85964965820312,
+            234.0450388590495
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 177,
+          "time": 6,
+          "p": [
+            508.86332194010413,
+            123.59737650553384,
+            204.37227884928387
+          ],
+          "cell": [
+            508,
+            123,
+            204
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 206,
+          "time": 6,
+          "p": [
+            511.7970275878906,
+            117.25146484375,
+            200.786860148112
+          ],
+          "cell": [
+            511,
+            117,
+            200
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 14,
+          "time": 6,
+          "p": [
+            511.071299235026,
+            118.53519185384116,
+            419.02091471354174
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 305,
+          "time": 6,
+          "p": [
+            509.2154134114583,
+            121.4989293416341,
+            378.42618815104163
+          ],
+          "cell": [
+            509,
+            121,
+            378
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 401,
+          "time": 6,
+          "p": [
+            511.792978922526,
+            121.77306620279947,
+            365.8412577311198
+          ],
+          "cell": [
+            511,
+            121,
+            365
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-course",
+          "tri": 209,
+          "time": 6,
+          "p": [
+            355.4802958170573,
+            124.07102457682292,
+            211.25455220540363
+          ],
+          "cell": [
+            355,
+            124,
+            211
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-topsail",
+          "tri": 403,
+          "time": 6,
+          "p": [
+            355.35582478841144,
+            132.88501993815106,
+            301.6117248535156
+          ],
+          "cell": [
+            355,
+            132,
+            301
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "main-topsail",
+          "tri": 433,
+          "time": 6,
+          "p": [
+            354.7864685058594,
+            123.48611450195312,
+            294.8851623535156
+          ],
+          "cell": [
+            354,
+            123,
+            294
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 8,
+          "time": 6,
+          "p": [
+            367.2926432291667,
+            99.44969431559244,
+            459.03936767578125
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "main-topgallant",
+          "tri": 16,
+          "time": 6,
+          "p": [
+            352.6853841145833,
+            124.43822224934897,
+            459.02829996744794
+          ],
+          "other": "main/yard-main-topgallant",
+          "modelIndex": 64,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 81,
+          "time": 6,
+          "p": [
+            205.38362630208331,
+            122.41282145182292,
+            328.8177795410156
+          ],
+          "cell": [
+            205,
+            122,
+            328
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 110,
+          "time": 6,
+          "p": [
+            206.67606608072913,
+            119.11101277669272,
+            325.9491882324219
+          ],
+          "cell": [
+            206,
+            119,
+            325
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 273,
+          "time": 6,
+          "p": [
+            204.85276794433594,
+            121.80682627360028,
+            302.33815511067706
+          ],
+          "cell": [
+            204,
+            121,
+            302
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 305,
+          "time": 6,
+          "p": [
+            205.12927754720053,
+            121.89708455403647,
+            297.9468282063802
+          ],
+          "cell": [
+            205,
+            121,
+            297
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 337,
+          "time": 6,
+          "p": [
+            205.4339599609375,
+            122.01299540201822,
+            293.62168375651044
+          ],
+          "cell": [
+            205,
+            122,
+            293
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 369,
+          "time": 6,
+          "p": [
+            205.7755228678385,
+            122.14474741617839,
+            289.32961018880206
+          ],
+          "cell": [
+            205,
+            122,
+            289
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "jib",
+          "tri": 134,
+          "time": 6,
+          "p": [
+            660.0360310872396,
+            131.86505126953125,
+            188.97994486490887
+          ],
+          "cell": [
+            660,
+            131,
+            188
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 209,
+          "time": 7,
+          "p": [
+            508.45747884114587,
+            122.0038324991862,
+            200.769765218099
+          ],
+          "cell": [
+            508,
+            122,
+            200
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-course",
+          "tri": 241,
+          "time": 7,
+          "p": [
+            512.4049886067709,
+            123.38241831461588,
+            196.69383239746094
+          ],
+          "cell": [
+            512,
+            123,
+            196
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 8,
+          "time": 7,
+          "p": [
+            522.5432739257812,
+            104.58542378743488,
+            419.0428161621094
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-topgallant",
+          "tri": 16,
+          "time": 7,
+          "p": [
+            507.6874084472656,
+            123.37424214680988,
+            419.0257466634115
+          ],
+          "other": "fore/yard-fore-topgallant",
+          "modelIndex": 67,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 241,
+          "time": 7,
+          "p": [
+            508.0731201171875,
+            120.43415832519531,
+            387.270263671875
+          ],
+          "cell": [
+            508,
+            120,
+            387
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "fore-topgallant",
+          "tri": 336,
+          "time": 7,
+          "p": [
+            510.387929280599,
+            122.88009643554688,
+            376.0770975748698
+          ],
+          "cell": [
+            510,
+            122,
+            376
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "main-course",
+          "tri": 241,
+          "time": 7,
+          "p": [
+            356.90777587890625,
+            123.54531351725262,
+            207.64365132649738
+          ],
+          "cell": [
+            356,
+            123,
+            207
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 49,
+          "time": 7,
+          "p": [
+            205.509033203125,
+            122.62734731038412,
+            333.2817789713542
+          ],
+          "cell": [
+            205,
+            122,
+            333
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 113,
+          "time": 7,
+          "p": [
+            204.2712910970052,
+            121.60820261637369,
+            324.55008951822913
+          ],
+          "cell": [
+            204,
+            121,
+            324
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 401,
+          "time": 7,
+          "p": [
+            206.02496846516925,
+            121.90278371175131,
+            285.1246337890625
+          ],
+          "cell": [
+            206,
+            121,
+            285
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "attachment",
+          "sail": "fore-course",
+          "tri": 12,
+          "time": 11,
+          "p": [
+            518.8129069010416,
+            108.33948771158856,
+            234.0308329264323
+          ],
+          "other": "fore/yard-fore-course",
+          "modelIndex": 65,
+          "alpha": 255,
+          "physics": true
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 46,
+          "time": 11,
+          "p": [
+            207.8787078857422,
+            120.04951477050781,
+            334.84918212890625
+          ],
+          "cell": [
+            207,
+            120,
+            334
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 78,
+          "time": 11,
+          "p": [
+            206.78090922037762,
+            119.08611806233725,
+            330.5806884765625
+          ],
+          "cell": [
+            206,
+            119,
+            330
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "transparent",
+          "sail": "mizzen-topsail",
+          "tri": 433,
+          "time": 11,
+          "p": [
+            206.5018259684245,
+            121.90563456217447,
+            281.0201416015625
+          ],
+          "cell": [
+            206,
+            121,
+            281
+          ],
+          "alpha": 0,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "body",
+          "sail": "mizzen-topsail",
+          "tri": 336,
+          "time": 12,
+          "p": [
+            205.00246175130212,
+            122.89639536539715,
+            295.17535400390625
+          ],
+          "cell": [
+            205,
+            122,
+            295
+          ],
+          "alpha": 255,
+          "physics": true,
+          "pins": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "rigM": 1,
+      "deadRopes": []
+    }
+  ]
+}

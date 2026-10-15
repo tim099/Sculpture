@@ -1,0 +1,4116 @@
+{
+  "input_sha256": "76d945aca4f55556f5b952b7a5a3b4183cbe00a6f1b9d44f7359a56fd3bc5036",
+  "body_cells": 1034267,
+  "models": 116,
+  "fixed_models": 106,
+  "results": [
+    {
+      "name": "mizzen/yard-mizzen-crossjack",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 557,
+      "cuboid_count": 15,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        223.0,
+        226.0
+      ]
+    },
+    {
+      "name": "mizzen/yard-mizzen-topsail",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 457,
+      "cuboid_count": 15,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        339.0,
+        342.0
+      ]
+    },
+    {
+      "name": "mizzen/yard-mizzen-gaff",
+      "range": [
+        -1.4,
+        1.4
+      ],
+      "cube_count": 972,
+      "cuboid_count": 364,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              186.0
+            ],
+            [
+              116.0,
+              122.0,
+              187.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              187.0
+            ],
+            [
+              116.0,
+              122.0,
+              188.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              188.0
+            ],
+            [
+              116.0,
+              122.0,
+              189.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              189.0
+            ],
+            [
+              116.0,
+              122.0,
+              190.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              190.0
+            ],
+            [
+              116.0,
+              122.0,
+              191.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              191.0
+            ],
+            [
+              116.0,
+              122.0,
+              192.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              120.0,
+              185.0
+            ],
+            [
+              116.0,
+              121.0,
+              186.0
+            ]
+          ],
+          "pivot_radius_max": 5.522680508593631,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368694534e-05,
+          "point": [
+            205.00385263189324,
+            124.99832102338831
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              120.0,
+              192.0
+            ],
+            [
+              116.0,
+              121.0,
+              193.0
+            ]
+          ],
+          "pivot_radius_max": 5.522680508593631,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368694534e-05,
+          "point": [
+            205.00385263189324,
+            124.99832102338831
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              184.0
+            ],
+            [
+              117.0,
+              122.0,
+              185.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              185.0
+            ],
+            [
+              117.0,
+              122.0,
+              186.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              186.0
+            ],
+            [
+              117.0,
+              122.0,
+              187.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              187.0
+            ],
+            [
+              117.0,
+              122.0,
+              188.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              188.0
+            ],
+            [
+              117.0,
+              122.0,
+              189.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              189.0
+            ],
+            [
+              117.0,
+              122.0,
+              190.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              120.0,
+              190.0
+            ],
+            [
+              117.0,
+              121.0,
+              191.0
+            ]
+          ],
+          "pivot_radius_max": 4.527692569068709,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              183.0
+            ],
+            [
+              118.0,
+              122.0,
+              184.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              184.0
+            ],
+            [
+              118.0,
+              122.0,
+              185.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              185.0
+            ],
+            [
+              118.0,
+              122.0,
+              186.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              186.0
+            ],
+            [
+              118.0,
+              122.0,
+              187.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              187.0
+            ],
+            [
+              118.0,
+              122.0,
+              188.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              188.0
+            ],
+            [
+              118.0,
+              122.0,
+              189.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              120.0,
+              182.0
+            ],
+            [
+              118.0,
+              121.0,
+              183.0
+            ]
+          ],
+          "pivot_radius_max": 3.5355339059327378,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              181.0
+            ],
+            [
+              119.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              182.0
+            ],
+            [
+              119.0,
+              122.0,
+              183.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              183.0
+            ],
+            [
+              119.0,
+              122.0,
+              184.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              184.0
+            ],
+            [
+              119.0,
+              122.0,
+              185.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              185.0
+            ],
+            [
+              119.0,
+              122.0,
+              186.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              186.0
+            ],
+            [
+              119.0,
+              122.0,
+              187.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              120.0,
+              180.0
+            ],
+            [
+              119.0,
+              121.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 2.5495097567963922,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              179.0
+            ],
+            [
+              120.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              180.0
+            ],
+            [
+              120.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              181.0
+            ],
+            [
+              120.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              182.0
+            ],
+            [
+              120.0,
+              122.0,
+              183.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              183.0
+            ],
+            [
+              120.0,
+              122.0,
+              184.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              184.0
+            ],
+            [
+              120.0,
+              122.0,
+              185.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              120.0,
+              185.0
+            ],
+            [
+              120.0,
+              121.0,
+              186.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              119.0,
+              179.0
+            ],
+            [
+              121.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              119.0,
+              180.0
+            ],
+            [
+              121.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              119.0,
+              181.0
+            ],
+            [
+              121.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              119.0,
+              182.0
+            ],
+            [
+              121.0,
+              122.0,
+              183.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              120.0,
+              183.0
+            ],
+            [
+              121.0,
+              121.0,
+              184.0
+            ]
+          ],
+          "pivot_radius_max": 0.7071067811865476,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              121.0,
+              119.0,
+              179.0
+            ],
+            [
+              122.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              121.0,
+              119.0,
+              180.0
+            ],
+            [
+              122.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              121.0,
+              119.0,
+              181.0
+            ],
+            [
+              122.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        229.0,
+        317.0
+      ]
+    },
+    {
+      "name": "mizzen/yard-mizzen-boom",
+      "range": [
+        -1.4,
+        1.4
+      ],
+      "cube_count": 747,
+      "cuboid_count": 249,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              179.0
+            ],
+            [
+              116.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              180.0
+            ],
+            [
+              116.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              115.0,
+              119.0,
+              181.0
+            ],
+            [
+              116.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 5.70087712549569,
+          "angle": -1.35625,
+          "intersection_area_xy": 2.5873915368851753e-05,
+          "point": [
+            205.0038526318932,
+            124.9983210233883
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              179.0
+            ],
+            [
+              117.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              180.0
+            ],
+            [
+              117.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              116.0,
+              119.0,
+              181.0
+            ],
+            [
+              117.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 4.743416490252569,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            201.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              179.0
+            ],
+            [
+              118.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              180.0
+            ],
+            [
+              118.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              117.0,
+              119.0,
+              181.0
+            ],
+            [
+              118.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 3.8078865529319543,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            202.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              179.0
+            ],
+            [
+              119.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              180.0
+            ],
+            [
+              119.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              118.0,
+              119.0,
+              181.0
+            ],
+            [
+              119.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 2.9154759474226504,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            203.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              179.0
+            ],
+            [
+              120.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              180.0
+            ],
+            [
+              120.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              119.0,
+              119.0,
+              181.0
+            ],
+            [
+              120.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            204.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              119.0,
+              179.0
+            ],
+            [
+              121.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              119.0,
+              180.0
+            ],
+            [
+              121.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              120.0,
+              119.0,
+              181.0
+            ],
+            [
+              121.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 1.5811388300841898,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            205.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              121.0,
+              119.0,
+              179.0
+            ],
+            [
+              122.0,
+              122.0,
+              180.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              121.0,
+              119.0,
+              180.0
+            ],
+            [
+              122.0,
+              122.0,
+              181.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              121.0,
+              119.0,
+              181.0
+            ],
+            [
+              122.0,
+              122.0,
+              182.0
+            ]
+          ],
+          "pivot_radius_max": 2.1213203435596424,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            206.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        204.0,
+        207.0
+      ]
+    },
+    {
+      "name": "main/yard-main-course",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 1909,
+      "cuboid_count": 27,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              3.0
+            ],
+            [
+              4.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            354.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            354.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              5.0
+            ],
+            [
+              4.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            354.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              3.0
+            ],
+            [
+              6.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            356.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            356.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              5.0
+            ],
+            [
+              6.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            356.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        249.0,
+        252.0
+      ]
+    },
+    {
+      "name": "main/yard-main-topsail",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 877,
+      "cuboid_count": 15,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            354.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            356.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        374.0,
+        377.0
+      ]
+    },
+    {
+      "name": "main/yard-main-topgallant",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 607,
+      "cuboid_count": 15,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            354.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            355.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            356.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        459.0,
+        462.0
+      ]
+    },
+    {
+      "name": "fore/yard-fore-course",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 1639,
+      "cuboid_count": 27,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              3.0
+            ],
+            [
+              4.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            509.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            509.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              5.0
+            ],
+            [
+              4.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            509.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 9.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              3.0
+            ],
+            [
+              6.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            511.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            511.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              5.0
+            ],
+            [
+              6.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 7.0,
+          "point": [
+            511.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        234.0,
+        237.0
+      ]
+    },
+    {
+      "name": "fore/yard-fore-topsail",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 757,
+      "cuboid_count": 15,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            509.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 5.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            511.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        339.0,
+        342.0
+      ]
+    },
+    {
+      "name": "fore/yard-fore-topgallant",
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "cube_count": 507,
+      "cuboid_count": 15,
+      "z_eliminated_models": [
+        "\u8235",
+        "\u7532\u677f-lower/\u7832-S01",
+        "\u7532\u677f-lower/\u7832-P01",
+        "\u7532\u677f-lower/\u7832-S02",
+        "\u7532\u677f-lower/\u7832-P02",
+        "\u7532\u677f-lower/\u7832-S03",
+        "\u7532\u677f-lower/\u7832-P03",
+        "\u7532\u677f-lower/\u7832-S04",
+        "\u7532\u677f-lower/\u7832-P04",
+        "\u7532\u677f-lower/\u7832-S05",
+        "\u7532\u677f-lower/\u7832-P05",
+        "\u7532\u677f-lower/\u7832-S06",
+        "\u7532\u677f-lower/\u7832-P06",
+        "\u7532\u677f-lower/\u7832-S07",
+        "\u7532\u677f-lower/\u7832-P07",
+        "\u7532\u677f-lower/\u7832-S08",
+        "\u7532\u677f-lower/\u7832-P08",
+        "\u7532\u677f-lower/\u7832-S09",
+        "\u7532\u677f-lower/\u7832-P09",
+        "\u7532\u677f-lower/\u7832-S10",
+        "\u7532\u677f-lower/\u7832-P10",
+        "\u7532\u677f-lower/\u7832-S11",
+        "\u7532\u677f-lower/\u7832-P11",
+        "\u7532\u677f-lower/\u7832-S12",
+        "\u7532\u677f-lower/\u7832-P12",
+        "\u7532\u677f-upper/\u7832-S01",
+        "\u7532\u677f-upper/\u7832-P01",
+        "\u7532\u677f-upper/\u7832-S02",
+        "\u7532\u677f-upper/\u7832-P02",
+        "\u7532\u677f-upper/\u7832-S03",
+        "\u7532\u677f-upper/\u7832-P03",
+        "\u7532\u677f-upper/\u7832-S04",
+        "\u7532\u677f-upper/\u7832-P04",
+        "\u7532\u677f-upper/\u7832-S05",
+        "\u7532\u677f-upper/\u7832-P05",
+        "\u7532\u677f-upper/\u7832-S06",
+        "\u7532\u677f-upper/\u7832-P06",
+        "\u7532\u677f-upper/\u7832-S07",
+        "\u7532\u677f-upper/\u7832-P07",
+        "\u7532\u677f-upper/\u7832-S08",
+        "\u7532\u677f-upper/\u7832-P08",
+        "\u7532\u677f-upper/\u7832-S09",
+        "\u7532\u677f-upper/\u7832-P09",
+        "\u7532\u677f-upper/\u7832-S10",
+        "\u7532\u677f-upper/\u7832-P10",
+        "\u7532\u677f-upper/\u7832-S11",
+        "\u7532\u677f-upper/\u7832-P11",
+        "\u7532\u677f-upper/\u7832-S12",
+        "\u7532\u677f-upper/\u7832-P12",
+        "\u7532\u677f-weather/chase-1",
+        "\u7532\u677f-weather/chase-2",
+        "\u7532\u677f-weather/chase-3",
+        "\u7532\u677f-weather/chase-4",
+        "\u7532\u677f-weather/chase-5",
+        "\u7532\u677f-weather/chase-6",
+        "\u7532\u677f-weather/\u7d5e\u76e4",
+        "\u7532\u677f-quarter/\u8235\u8f2a",
+        "\u7532\u677f-quarter/\u7f85\u7d93\u6ac3",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-01",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-02",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-03",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-04",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-05",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-06",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-07",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-08",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-09",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-10",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-11",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-12",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-13",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-14",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-15",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-16",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-17",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-18",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-19",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-20",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-21",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-22",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-23",
+        "\u5f48\u85e5\u5eab-\u5f8c/powder-24",
+        "\u5f48\u85e5\u5eab-\u524d/powder-01",
+        "\u5f48\u85e5\u5eab-\u524d/powder-02",
+        "\u5f48\u85e5\u5eab-\u524d/powder-03",
+        "\u5f48\u85e5\u5eab-\u524d/powder-04",
+        "\u5f48\u85e5\u5eab-\u524d/powder-05",
+        "\u5f48\u85e5\u5eab-\u524d/powder-06",
+        "\u5f48\u85e5\u5eab-\u524d/powder-07",
+        "\u5f48\u85e5\u5eab-\u524d/powder-08",
+        "\u5f48\u85e5\u5eab-\u524d/powder-09",
+        "\u5f48\u85e5\u5eab-\u524d/powder-10",
+        "\u5f48\u85e5\u5eab-\u524d/powder-11",
+        "\u5f48\u85e5\u5eab-\u524d/powder-12",
+        "\u5f48\u85e5\u5eab-\u524d/powder-13",
+        "\u5f48\u85e5\u5eab-\u524d/powder-14",
+        "\u5f48\u85e5\u5eab-\u524d/powder-15",
+        "\u5f48\u85e5\u5eab-\u524d/powder-16",
+        "\u5f48\u85e5\u5eab-\u524d/powder-17",
+        "\u5f48\u85e5\u5eab-\u524d/powder-18",
+        "\u5f48\u85e5\u5eab-\u524d/powder-19",
+        "\u5f48\u85e5\u5eab-\u524d/powder-20",
+        "\u5f48\u85e5\u5eab-\u524d/powder-21",
+        "\u5f48\u85e5\u5eab-\u524d/powder-22",
+        "\u5f48\u85e5\u5eab-\u524d/powder-23",
+        "\u5f48\u85e5\u5eab-\u524d/powder-24"
+      ],
+      "tested_models": [
+        "body"
+      ],
+      "contacts": [],
+      "central_attachments": [
+        {
+          "static": "body",
+          "source_box": [
+            [
+              3.0,
+              113.0,
+              4.0
+            ],
+            [
+              4.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            509.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              3.0
+            ],
+            [
+              5.0,
+              128.0,
+              4.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              4.0
+            ],
+            [
+              5.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              4.0,
+              113.0,
+              5.0
+            ],
+            [
+              5.0,
+              128.0,
+              6.0
+            ]
+          ],
+          "pivot_radius_max": 7.516648189186454,
+          "angle": 0.0,
+          "intersection_area_xy": 3.0,
+          "point": [
+            510.5,
+            120.5
+          ]
+        },
+        {
+          "static": "body",
+          "source_box": [
+            [
+              5.0,
+              113.0,
+              4.0
+            ],
+            [
+              6.0,
+              128.0,
+              5.0
+            ]
+          ],
+          "pivot_radius_max": 7.648529270389178,
+          "angle": 0.0,
+          "intersection_area_xy": 1.0,
+          "point": [
+            511.5,
+            120.5
+          ]
+        }
+      ],
+      "z_span": [
+        419.0,
+        422.0
+      ]
+    }
+  ],
+  "yard_pairs": [
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "mizzen/yard-mizzen-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "mizzen/yard-mizzen-gaff",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "mizzen/yard-mizzen-boom",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "main/yard-main-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "main/yard-main-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "main/yard-main-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "fore/yard-fore-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "fore/yard-fore-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-crossjack",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "mizzen/yard-mizzen-gaff",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "mizzen/yard-mizzen-boom",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "main/yard-main-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "main/yard-main-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "main/yard-main-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "fore/yard-fore-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "fore/yard-fore-topsail",
+      "proof": "independent two-angle recursive conservative envelopes",
+      "cuboid_pairs_tested": 99,
+      "hits": []
+    },
+    {
+      "a": "mizzen/yard-mizzen-topsail",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "mizzen/yard-mizzen-boom",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "main/yard-main-course",
+      "proof": "independent two-angle recursive conservative envelopes",
+      "cuboid_pairs_tested": 108,
+      "hits": []
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "main/yard-main-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "main/yard-main-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "fore/yard-fore-course",
+      "proof": "independent two-angle recursive conservative envelopes",
+      "cuboid_pairs_tested": 117,
+      "hits": []
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "fore/yard-fore-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-gaff",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-boom",
+      "b": "main/yard-main-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-boom",
+      "b": "main/yard-main-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-boom",
+      "b": "main/yard-main-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-boom",
+      "b": "fore/yard-fore-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-boom",
+      "b": "fore/yard-fore-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "mizzen/yard-mizzen-boom",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-course",
+      "b": "main/yard-main-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-course",
+      "b": "main/yard-main-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-course",
+      "b": "fore/yard-fore-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-course",
+      "b": "fore/yard-fore-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-course",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-topsail",
+      "b": "main/yard-main-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-topsail",
+      "b": "fore/yard-fore-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-topsail",
+      "b": "fore/yard-fore-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-topsail",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-topgallant",
+      "b": "fore/yard-fore-course",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-topgallant",
+      "b": "fore/yard-fore-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "main/yard-main-topgallant",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "fore/yard-fore-course",
+      "b": "fore/yard-fore-topsail",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "fore/yard-fore-course",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    },
+    {
+      "a": "fore/yard-fore-topsail",
+      "b": "fore/yard-fore-topgallant",
+      "proof": "disjoint invariant z slabs; independent asynchronous angles irrelevant"
+    }
+  ],
+  "stats": {
+    "intervals": 2736,
+    "proof_leaves": 1606,
+    "unresolved": 0
+  },
+  "seconds": 7.328544616699219,
+  "method": "Exact source unit cubes merged only as contiguous same-x,z y runs. Rotation is absolute game angle; z invariant. Static triangle surfaces clipped exactly to moving prism z slab then projected to XY. Continuous interval swept OBB contains corner trajectories: convex hull endpoint+midpoint with outward sagitta r*delta^2/8, circumscribed numerical buffer. Recursive disjointness proof; midpoint positive-area intersection witnesses. Body union of occupied unit cubes. Central <=8 voxel-radius source boxes against body are quantified attachments, never removes noncentral or model contacts. Mesh-interior containment without surface crossing is not certified.",
+  "yard_pair_stats": {
+    "intervals": 324,
+    "proof_leaves": 324,
+    "unresolved": 0
+  },
+  "negative_control": {
+    "mutation": "crossjack at.z restored from 224.5 to 255.5",
+    "against_gaff": {
+      "cuboid_pairs_tested": 1,
+      "hits": [
+        {
+          "source_boxes": [
+            [
+              [
+                3.0,
+                65.0,
+                4.0
+              ],
+              [
+                4.0,
+                113.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                104.0,
+                119.0,
+                205.0
+              ],
+              [
+                105.0,
+                122.0,
+                206.0
+              ]
+            ]
+          ],
+          "z_overlap": [
+            255.0,
+            256.0
+          ],
+          "angles": [
+            -0.69991455078125,
+            0.6779541015624999
+          ],
+          "intersection_area_xy": 2.5218806413464087e-07,
+          "point": [
+            194.36778305833286,
+            109.6095962482114
+          ]
+        }
+      ]
+    },
+    "unchanged_new_crossjack_z": 224.5,
+    "robust_exact_witness": {
+      "angles": [
+        0.5,
+        -1.2
+      ],
+      "intersection_area_xy": 1.0084052488902602,
+      "z_overlap": [
+        255.0,
+        256.0
+      ],
+      "point": [
+        199.67149989233317,
+        133.25482752601732
+      ],
+      "source_boxes": [
+        [
+          [
+            5.0,
+            128.0,
+            4.0
+          ],
+          [
+            6.0,
+            176.0,
+            5.0
+          ]
+        ],
+        [
+          [
+            106.0,
+            119.0,
+            205.0
+          ],
+          [
+            107.0,
+            122.0,
+            206.0
+          ]
+        ]
+      ]
+    }
+  },
+  "negative_control_interval_stats": {
+    "intervals": 38,
+    "proof_leaves": 11,
+    "unresolved": 0
+  },
+  "input_frozen_yards_sha256": "dfce03af58d8bd67905f46a06925855e466bdde121af01a5b4f6303f173f8690",
+  "frozen_yards_match_snapshot": true,
+  "fixed_model_invariant_z_eliminations": 1060,
+  "central_attachment_box_count": 113,
+  "central_attachment_max_witness_radius": 4.525599876296684,
+  "geometry_hashes": {
+    "body_cell_coordinates_sha256": "3cf7cc04b46608a448172adc69ca588c733c64b04cda570d20f7e4d236d81b76",
+    "models_meshes_canonical_sha256": "ff9bdd4ad33fe39ef467b1bee585e15bfe2fd9c07da1d32b30c3d22d038875d0",
+    "yard_geometry_canonical_sha256": "0388a54f00ab65ec362862f92b2d8bc9090a7eaed05ba16fc4cb09340a0623b7",
+    "serialization": "body: VXK chunk traversal, little-endian int64 XYZ rows; models/meshes and yard fields: json sort_keys=True,separators=(comma,colon),ensure_ascii=True, ASCII"
+  }
+}

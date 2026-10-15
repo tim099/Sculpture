@@ -3,7 +3,7 @@
 	"ropes": [
 		{
 			"name": "mizzen-shroud-P0",
-			"from": "mizzen-chain-P0",
+			"from": "mizzen-standing-chain-P0",
 			"to": "mizzen/hounds-P",
 			"color": "#3c453a",
 			"thickness": 0.8,
@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "mizzen-shroud-P1",
-			"from": "mizzen-chain-P1",
+			"from": "mizzen-standing-chain-P1",
 			"to": "mizzen/hounds-P",
 			"color": "#3c453a",
 			"thickness": 0.8,
@@ -29,7 +29,7 @@
 		},
 		{
 			"name": "mizzen-shroud-P2",
-			"from": "mizzen-chain-P2",
+			"from": "mizzen-standing-chain-P2",
 			"to": "mizzen/hounds-P",
 			"color": "#3c453a",
 			"thickness": 0.8,
@@ -42,8 +42,8 @@
 		},
 		{
 			"name": "mizzen-ratline-P-1",
-			"from": "rope:mizzen-shroud-P0/0.04",
-			"to": "rope:mizzen-shroud-P2/0.04",
+			"from": "rope:mizzen-shroud-P0/0.065",
+			"to": "rope:mizzen-shroud-P2/0.065",
 			"color": "#3c453a",
 			"thickness": 0.25,
 			"slack": 1,
@@ -315,7 +315,7 @@
 		},
 		{
 			"name": "mizzen-shroud-S0",
-			"from": "mizzen-chain-S0",
+			"from": "mizzen-standing-chain-S0",
 			"to": "mizzen/hounds-S",
 			"color": "#3c453a",
 			"thickness": 0.8,
@@ -328,7 +328,7 @@
 		},
 		{
 			"name": "mizzen-shroud-S1",
-			"from": "mizzen-chain-S1",
+			"from": "mizzen-standing-chain-S1",
 			"to": "mizzen/hounds-S",
 			"color": "#3c453a",
 			"thickness": 0.8,
@@ -341,7 +341,7 @@
 		},
 		{
 			"name": "mizzen-shroud-S2",
-			"from": "mizzen-chain-S2",
+			"from": "mizzen-standing-chain-S2",
 			"to": "mizzen/hounds-S",
 			"color": "#3c453a",
 			"thickness": 0.8,
@@ -354,8 +354,8 @@
 		},
 		{
 			"name": "mizzen-ratline-S-1",
-			"from": "rope:mizzen-shroud-S0/0.04",
-			"to": "rope:mizzen-shroud-S2/0.04",
+			"from": "rope:mizzen-shroud-S0/0.065",
+			"to": "rope:mizzen-shroud-S2/0.065",
 			"color": "#3c453a",
 			"thickness": 0.25,
 			"slack": 1,
@@ -640,8 +640,8 @@
 		},
 		{
 			"name": "mizzen-backstay-P",
-			"from": "mizzen/truck",
-			"to": "mizzen-chain-P0",
+			"from": "mizzen-backstay-aft-head",
+			"to": "mizzen-crown-backstay-P",
 			"color": "#3c453a",
 			"thickness": 0.6,
 			"slack": 1,
@@ -653,8 +653,8 @@
 		},
 		{
 			"name": "mizzen-backstay-S",
-			"from": "mizzen/truck",
-			"to": "mizzen-chain-S0",
+			"from": "mizzen-backstay-aft-head",
+			"to": "mizzen-crown-backstay-S",
 			"color": "#3c453a",
 			"thickness": 0.6,
 			"slack": 1,

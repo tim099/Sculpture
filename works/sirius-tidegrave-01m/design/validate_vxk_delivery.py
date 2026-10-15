@@ -43,7 +43,7 @@ def main():
         'ropesWithMeta':sum(bool(r.get('meta')) for r in rig['ropes']),
         'ropesWithEnds':sum(bool(r.get('ends')) for r in rig['ropes'])},
       'decoder':'VoxelKit voxel_export.unpack; checksum independently recomputed scalar modulo-2^32',
-      'status':'candidate; navigation integration remains with game author'}
+      'status':'candidate; dynamic acceptance FAIL (TASK-0603); navigation integration and attachment contact signoff remain pending'}
     (ROOT/'verify_vxk_delivery.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     (delivery/'manifest.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report))

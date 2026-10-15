@@ -65,7 +65,8 @@ def main():
             for foot in feet:
                 line([T(foot[0],foot[2]),T(x,m['platform_z']-5)],teal,1)
             head=repair['backstay_heads'][m['id']]
-            line([T(feet[0][0],feet[0][2]),T(head[0],head[2])],teal,1)
+            foot=repair.get('backstay_feet',{}).get(m['id'],feet[0])
+            line([T(foot[0],foot[2]),T(head[0],head[2])],teal,1)
         else:
             line([T(x,m['platform_z']),T(max(105,x-60),120)],teal,1)
             line([T(x,m['platform_z']),T(min(615,x+70),120)],teal,1)
@@ -76,6 +77,12 @@ def main():
     line([A(boom['pivot']),A(boom['end'])],gold,4)
     line([A(gaff['pivot']),A(gaff['top']),A(boom['end']),A(gaff['pivot'])],ink,2)
     line([T(*[P['bowsprit']['root'][i] for i in (0,2)]),T(*[P['bowsprit']['tip'][i] for i in (0,2)])],ink,6)
+    dynamic=P.get('rig_repair_20261015',{}).get('dynamic_audit_repair',{})
+    if dynamic:
+        jib=dynamic['jib'];hc=jib['head_ring_cell'];head=[c+.5 for c in hc]
+        line([A(jib['tack']),A(head),A(jib['clew']),A(jib['tack'])],teal,2)
+        foot=dynamic['lateen_sheet_fairlead']
+        line([A(boom['end']),T(foot[0]+.5,foot[2]+.5)],teal,2)
     # stern crown and pointed prow are indicated as ornament, not hull openings.
     for i in range(7):
         x=105+i*10;line([T(x,186),T(x+2,203+(i%3)*5),T(x+5,186)],gold,2)

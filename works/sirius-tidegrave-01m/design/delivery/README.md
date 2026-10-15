@@ -2,6 +2,12 @@
 
 ## 最新：2026-10-15
 
+目前 `tidegrave_candidate_20261015.vxk` 已更新為動態驗收後修正版，SHA256 `f2561bfc294f91b849f59412d80294e9755e90a2ae1af8d81dea3ea7c2b06c9c`；1,034,323格、checksum `d931433f`，302繩／10帆／116模型。CLI list逐格逐色差0，一格改色負向checksum `be3b0c38`。權威讀數是本目錄manifest.json。
+
+驗收結果 **FAIL**：船上的後桅索路、縱帆sheet與jib靜態穿透已修，但完整掛帆物理仍穿桅／桁／索具（TASK-0603），附件局部硬體接觸也未全簽。詳見 `../DYNAMIC_20261015.md`。這是可重現的候選，尚非正式遊戲接入通過。
+
+## 以下為較早2026-10-15歷史
+
 使用 `tidegrave_candidate_20261015.vxk`，SHA256 `76d945aca4f55556f5b952b7a5a3b4183cbe00a6f1b9d44f7359a56fd3bc5036`；1,034,267格、checksum4cb88a33、302繩／10帆／116模型。`manifest.json`與`../verify_vxk_delivery.json`已刷新，CLI list逐格逐色0差，一格改色反向能失敗。驗證器已改讀搬家後的Blockside/VoxelKit。
 
 8lift、16standing、10brace與後桅帆頭整改及有限獨立後驗，見`../CONTINUED_20261015.md`與`../continued_20261015/independent/REPORT.md`。七梯/操舵的既有fixture證據屬舊a599快照，本輪未重跑正式遊戲，不能把它稱作最新資產的正式匯入通過。全302繩與自由布連續動態仍未全驗。舊nav候選需對當前Blockside源碼重審，不能直接套。

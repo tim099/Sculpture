@@ -1,5 +1,5 @@
 {
-  "id": "sirius-tidegrave-01m", "name": "潮墓號 / TIDEGRAVE", "revision": 6,
+  "id": "sirius-tidegrave-01m", "name": "潮墓號 / TIDEGRAVE", "revision": 7,
   "meters_per_voxel": 0.1, "size": [800,241,640], "center_y": 120,
   "hull": {"stern_x":100,"bow_x":620,"beam_half":67,"waterline_z":52,"shell_thickness":4,"stern_rake":40,"bow_rake":60,"rake_height":128,
     "stations":[[0,24],[0.1,42],[0.2,57],[0.35,66],[0.5,67],[0.65,64],[0.8,53],[0.9,36],[0.97,18],[1,1]],
@@ -14,13 +14,15 @@
   "bowsprit":{"root":[580,120,120],"tip":[748,120,195]},
   "rig_layout":{"square_yards":[["fore","course",235,180,90],["fore","topsail",340,150,75],["fore","topgallant",420,100,65],["main","course",250,210,100],["main","topsail",375,175,90],["main","topgallant",460,120,65],["mizzen","crossjack",224,110,0],["mizzen","topsail",340,90,65]],"rest_yaw_deg":-18,"gaff":{"pivot":[205.5,120.5,230.5],"top":[155.5,120.5,315.5]},"boom":{"pivot":[205.5,120.5,205.5],"end":[125.5,120.5,205.5]},"crossjack_repair":"2026-10-14 lowered pivot31 cells to224.5: wood Z223..226, gaff229..317, boom204..207; continuous rotations about Z preserve separation. Extra2 cells also prevent game yardNear misbinding the gaff jaws to crossjack. Sheets and cloth require revalidation."},
   "rig_repair_20261015": {
-    "standing_feet": {"main":[[245,73,128],[265,71,128],[285,70,128]],"fore":[[390,70,128],[410,71,128],[430,71,128]]},
+    "standing_feet": {"mizzen":[[290,86,115],[310,86,115],[330,86,115]],"main":[[245,73,128],[265,71,128],[285,70,128]],"fore":[[390,70,128],[410,71,128],[430,71,128]]},
     "standing_feet_note":"P-side intended roots; S mirrors about cell y120. Fore final coordinates must match continued_20261015/standing_plan.json; source timber checked before writes.",
     "lifts":{"course":"own hounds-P/S","main_topsail":[355,118,420],"fore_topsail":[510,118,380],"topsail_note":"P-side, S mirror y240; existing mast timber"},
     "braces":{"main-topsail":"mizzen/truck","main-topgallant":"mizzen/truck","fore-topsail":"main/head","fore-topgallant":"main/truck","mizzen-topsail":"main/hounds-P/S"},
-    "backstay_heads":{"main":[354,120,510],"fore":[509,120,465]},
+    "backstay_heads":{"mizzen":[204,120,405],"main":[354,120,510],"fore":[509,120,465]},
+    "backstay_feet":{"mizzen":[84,70,226]},
     "ratline_first_ratio":0.065,
     "mizzen_robbands":{"source_x":8,"source_y":[77,163],"source_z":4,"length_m":0.4,"free_clews_preserved":true},
+    "dynamic_audit_repair":{"mizzen_feet":"Real inboard weather-deck ties separate mizzen and main shrouds; rejected aft feet crossed gaff/boom, rejected rail feet crossed main shrouds.","mizzen_first_ratline_ratio":0.065,"jib":{"tack":[748.5,120.5,215.5],"head_ring_cell":[567,120,269],"head_on_fore_stay_arc_ratio":0.3,"clew":[600.5,145.5,190.5],"free_clew_preserved":true},"lateen_sheet_fairlead":[145,86,190],"brackets":{"x":145,"beam_z":[185,186],"upright_z":[187,190],"mirrored_y":[86,154],"added_voxels":56},"audit_status":"Ship geometry repairs checked; intact cloth physics still FAILS body/model/rope penetration. Do not sign full dynamic acceptance."},
     "method":"Original design decision: supported existing timber feet, adjacent-mast braces, retained parent ratlines, two short sail-head robbands. All mutations through CLI. Scripts are guarded repairs, not a full clean-stage constructor."
   },
   "guns": {"broadside_per_deck_per_side":12,"x":[175,207,239,271,303,335,367,399,431,463,495,527],
