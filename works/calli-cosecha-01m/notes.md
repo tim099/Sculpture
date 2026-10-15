@@ -246,4 +246,39 @@
 - 組起來（hide_links=船名板）：652,099 格（＝ 641,680 ＋ 9,807 ＋ 612）、1 元件、空腔 0、鏡像差 0。梯子點 9 座 36／36、問題 0（小艇架沒擋到前梯子井）。
 - 產生程式重跑：4 個輸出檔逐位元組相同。
 - 過程圖：`overlays/stage9_{magazine,waist,full}.png`（magazine：只看彈藥庫＋底艙；waist 用 region 框 —— 模型不跟著 region 裁，浮在空中的帆桁與三盞燈是框外的）。
-- ⚠ 這艘船**還沒有舵、也沒有錨**（船殼裡沒有，也沒有模型）—— 不在 TASK-0598 的範圍，照實記；交船前要不要補看 Tim（舵沒有 ⇒ 外觀缺一塊；錨可以用共用元件 `-anchor`）。
+- ⚠ 這艘船**還沒有舵、也沒有錨**（船殼裡沒有，也沒有模型）—— 不在 TASK-0598 的範圍，照實記；交船前要不要補看 Tim（舵沒有 ⇒ 外觀缺一塊；錨可以用共用元件 `-anchor`）。⇒ Tim：「開一張單先補舵與錨」＝ TASK-0619（階段九半）。
+
+## 階段九半 舵與錨（2026-10-15，TASK-0619）
+設計 plan.json `rudder_anchor_build`；產生 `design/draft_rudder_anchor.py`（讀組裝件現在的格子、扣掉本階段的錨架；船首樓的砲取樣成格一起算）⇒ `masks/rudder/{rudder,anchor_gear}.vox.txt`、`rudder_anchor_placement.json`、`verify_rudder_anchor.json`；落格 `design/tools/build_rudder_anchor.py`。
+- **舵**（新子作品 `-rudder`，0.1 m；舵是這艘船自己的形狀 ⇒ 不沿用）：沿艉柱後緣（`lines.x_post`，斜 23.8°）從龍骨底到 z 76，3 格厚（y 159–161）；舵葉 1.4 m 往上收到 1 m、水線以上 0.5 m 的舵頭；水線下白 182、上黑 36、每 12 格一道鐵箍 73；2,243 格。
+  組裝件的外部模型 `舵`：at ＝ pivot ＝ 鉸鏈下端 (150, 160.5, 0)（子作品的世界座標原樣），meta `kind=rudder、hinge_x／y／z、axis (−0.4035, 0, 0.915)、max_deg 35、turn_axis=hinge`；固定點 `stock-top` (113,160,76)，3 格內就是船殼（遊戲找 8 格內）。
+  🩸 前緣兩側削 1 格（bearding）：v1 沒削 ⇒ 轉 ±35° 時兩側前緣掃進艉柱 39 格（寫程式前就推得出來：鉸鏈在艉柱面上、舵 3 格厚）；削 1 ⇒ 0（試過 1／2／3）。
+  ⚠ galleon 的舵頭從 espejo 下面的 limera 穿進船裡、接舵柄與 whipstaff —— 本船舵頭貼在 espejo 外面、沒有開孔、沒有舵柄。
+- **錨**（共用元件 `basecamp-frigate-constitution-01m-anchor`，scale 0.85 同夜燈號 ⇒ 遊戲裡同一份網格；meta `kind=anchor、anchor=bower`）：兩舷各一，掛在新子作品 `-anchor-gear`（關聯 `錨架`）裡。吊在船頭舷外 x 490：錨臂順著船殼切線（rz ±45°，P 舷不鏡像、只轉 −45° ⇒ 取樣格兩舷對稱差 0）、橫桿越過船首樓欄杆、ring 在 z 131.5、離船殼 2.5 格。
+  **錨架**：錨冠底下一塊 billboard 托板（3 格厚、橡木 136），兩舷 872 格 —— 遊戲判斷掉不掉是外框中心往下找實心 ⇒ 錨的腳是托板（間距 0）。⚠ 沒有吊錨桿（cathead）、沒有 fish tackle。
+  🩸 搜尋 v1 每個 x 一找到可行的高度就停 ⇒ 橫桿下緣擦到欄杆頂（z 116），整隻錨被推出去 18 格（＝ 半根橫桿）；改成每個高度都試完、取最貼船的 ⇒ 2.5 格。
+- **錨鏈孔**：船殼固定點 `hawse-S` (494,181,88)、`hawse-P` (494,139,88)（上甲板那一層的船殼外緣格；⚠ 只登記固定點，沒有開孔）。
+
+讀數（`design/tools/check_stage95.py`，從作品讀）：
+- 結果帳：舵 2,243、錨架 872，缺 0、多 0、色差 0（舵削斜走 `delta_apply` 刻 154）。
+- 舵：模型 1、CLI ok；meta 齊；stock-top 8 格內有船格（曼哈頓 3）；舵的格跟組裝件重疊 0；轉 ±35° 掃進實心 0（資訊：遊戲轉舵不做格子碰撞）。
+- 錨：2 隻、CLI ok、撞實心 0、腳是錨架、來源有 ring；hawse-S／P 在船殼格上、各在那一舷。問題 0。
+- **反向對照**：`--drop=stock-top` ⇒ 只報舵沒有 stock-top；`--drop=錨-S` ⇒ 只報 S 舷沒有錨；`--drop=hawse-P` ⇒ 只報 hawse-P；`draft_rudder_anchor.py --probe=shift=錨-S:-3` ⇒ 只報 錨-S（1,195 樣本）。
+- 組起來（hide_links=船名板）：652,971 格（＋錨架 872）、1 元件、空腔 0、鏡像差 0（舵是模型、不在格子裡）。
+- 產生程式重跑：4 個輸出檔逐位元組相同。
+- 過程圖：`overlays/stage95_{stern,bow,full}.png`（stern、bow 用 region 框 —— 模型不跟著裁）。
+
+## 階段十 匯進 Blockside（2026-10-15，TASK-0599）—— 在暫存副本驗
+- ⚠ **沒有動真的 Blockside**：Blockside 工作樹裡有一批還沒提交的改動（TASK-0616 材質那一批，`src/config/game.json` 也在裡面），`admin.py import` 會改寫 game.json、template、成品 ⇒ 匯進去等於把我的船混進別人做到一半的檔案。照造船規格 §9.4「自己在 Blockside 的暫存副本跑」：`git archive HEAD`（Blockside 7884463）＋ `VoxelKit/_cache` 複製到 scratchpad，在那裡 `admin.py import --work calli-cosecha-01m-assembly --id cosecha --name 收穫號`。真的匯入交給遊戲那側（ame）／Tim。
+- 匯入：成品多一艘 `ship-cosecha`（設定檔船隻清單、`index.html` 標籤都有），壓縮還原驗算 8 艘逐位元組相同；`admin.py verify` ✓。.vxk：653,268 格、checksum 1150694525、繩 368、帆 9、模型 173（砲 44＋甲板物件與桶 116＋錨 2＋舵 1＋帆桁 7＋燈 3）、關聯外框 25；格子鏡射差 29 格（＝ 船名板的字）。
+- **shipcheck**（遊戲開一場跑 2 秒）：v1 ✗ 0 ⚠ 6 —— 其中「砲班站不滿」2 門（船首樓前面那對 6 磅砲 2／3）。
+  🩸 原因是階段九半剛掛上去的錨：錨轉 45°，遊戲拿模型的**軸對齊外框**（外擴 1 格、往下 3 格）當佔位（Blockside 40_crew.js `blocked`）⇒ 錨外框 x 478–506 蓋到那門砲第二個砲手的站位 (483,183) 四格內。寫了 `design/tools/crew_sim.py` 照遊戲的 standNear／standZ／blocked 模擬 ⇒ 同樣兩門、同樣 2／3、指出擋路的是 `錨架/錨-S`（第二把尺：模擬 vs 遊戲，同一個結果）。
+  ⇒ 船首樓第二對砲門往後挪：plan `ports.tiers.castillo.x_to` 480 → 461（第二門 474–479 → 455–460，在前桅 channels x 431–472 底下，跟第一門一樣）。船殼走 hull_expected＋delta_apply：刻 288、補 298、換色 438，標記 `船首樓砲門後移`；套完 0 差；階段三的砲門檢查換到 `船首樓砲門後移:end`：開口裡實心 0。砲重擺（check_stage8：碰撞 0、砲口在船殼外 0 門不合、meta 0 不合）；錨位置不變（錨架、舵 0 差）。
+  v2：crew_sim 站不滿 0；**shipcheck ✗ 0 ⚠ 4、砲班 0 門缺 0 人**。剩下 4 個都是遊戲那側的設定：geo 沒填、送藥手 21／22、陸戰隊 6／12、桅頂水手 8／16。
+- **反向對照**（checksum）：組裝件開草稿貼 1 格、匯出 ⇒ 653,269 格、checksum 3969875597（≠ 1150694525）；丟掉草稿再匯 ⇒ 653,268、1150694525。
+  🩸 第一次匯出沒帶 `draft=1` ⇒ 草稿那一格沒進匯出、checksum 照舊 —— 量的是「草稿進不進匯出」，不是 checksum 會不會變；帶上 `draft=1` 才量到。
+- **rooms.py**：候選艙房 0 間（這艘船沒有隔艙房）。**decks.py**：六層甲板子作品各匯出（`links=none`）⇒ floor、thick 跟作品上的 meta（decks_meta.tsv）完全相同。
+  🩸 第一次又沒帶 `links=none`（階段四踩過、寫在本檔上面）⇒ 三座船樓的 floor 多了往下的尾巴；照規矩重量才相同。
+- **給遊戲那側填 geo 的高度**（格、z 0 ＝ 龍骨底）：設計水線 52；甲板地板（站的那一格）底艙 46、主甲板 66–72（舷弧）、上甲板 86–92、後甲板 103、船首樓 103、船尾樓 120；砲口（砲軸）主甲板 76.75–79.75、船尾追擊 82.75、上甲板 93.25–95.25、船樓 109.75；桅頂平台（cofa 底）前 289、主 287、後桅頂 251、bonaventure 頂 208；帆桁 course 前 277／主 275、topsail 前 410／主 411；船殼 x 91–500（船尾面到船頭）、組裝件 x 91–687（含艏斜桅）、y 99–221、z 0–437。
+- **開得了戰**：暫存副本的成品用無頭 Chrome 開 `index.html?ship=cosecha,constitution&demo=8&still=1`（照 admin.py shipcheck 的 Chrome 參數加 `--screenshot`）⇒ `overlays/stage10_battle.png`：收穫號張帆、course 的勃艮第十字、砲班站在甲板上、船腰的小艇、船尾三盞燈亮著，憲法號在後面（旗是遊戲換的陣營旗）。
+- ⚠ 還沒對好：新砲種（18l、12l、6l、18chase 都在遊戲砲種表）與三角帆（lateen 標 yard=gaff、sail=gaff）—— 酒館 seq 24898 交船時跟 ame 一起問了（seq 24767 那則還沒回）；真的匯入也等她。

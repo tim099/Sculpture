@@ -94,7 +94,7 @@
       {"deck": "main", "per_side": 9, "x_from": 168, "x_to": 452, "w": 7, "h": 8, "sill": 6, "ref_pad": 4, "ref_src": "階段八：門檻從砲門左右各多 4 格那一段甲板的最高處量（18 磅砲架 13.5 格寬 vs 砲門 7 ⇒ 兩邊各多 3.25；舷弧是一格一格的台階，砲站在高的那一階 —— 第 7 門照中心量 ⇒ 砲管頂到門楣）", "gun": "18l", "src": "設計決定：每舷 9 門（Atocha 20 門大砲 ≈ 一層每舷 10，WP；1613 年 17 codos 的船每舷 6，只讀到摘要）；18 磅 culebrina。h 7 → 8（階段八）：沿用的憲法號 18 磅砲管頂在站立面上 12.5 格，art.42 的 1¼ codos（7 格）門楣在站立面上 12 格 ⇒ 砲管頂到門楣、砲口伸不出去（draft_guns 量：主甲板 18 門砲口全在牆裡 4.5–5.5 格，碰到的全是門楣那一層）；門檻照 art.42 不動，門楣往上 1 格 —— ⚠ 偏離 art.42"},
       {"deck": "puente", "per_side": 8, "x_from": 188, "x_to": 440, "w": 7, "h": 7, "sill": 6, "gun": "12l", "src": "設計決定：上甲板每舷 8 門 12 磅（San José 中層 10 磅，WP）"},
       {"deck": "alcazar", "per_side": 2, "x_from": 210, "x_to": 262, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定：船樓 6 磅（San José 船樓 6 磅，WP）"},
-      {"deck": "castillo", "per_side": 2, "x_from": 430, "x_to": 480, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定"}
+      {"deck": "castillo", "per_side": 2, "x_from": 430, "x_to": 461, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定。x_to 480 → 461（階段九半 TASK-0599 交船前）：第二門原本在 x 474–479，船頭吊的錨轉 45°、遊戲拿它的軸對齊外框當佔位（Blockside 40_crew.js blocked）⇒ 那門砲第三個砲手站不到（shipcheck：2／3）；第一門不動、第二門挪到 455–460"}
     ],
     "stern_chasers": {"deck": "main", "n": 2, "w": 7, "h": 8, "sill": 6, "gun": "18l", "src": "設計決定：主甲板船尾兩門追擊砲，從 espejo 開出去（1618 art.46：alcázar break 底下 artillery 打得到船尾）；h 7 → 8 同舷側主甲板砲門（階段八）"}
   },
@@ -231,6 +231,19 @@
     "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（甲板舷弧、小艇架頂）",
     "foot_reach": 12,
     "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js:47）"
+  },
+  "rudder_anchor_build": {
+    "rudder": {"work": "calli-cosecha-01m-rudder", "title": "收穫號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 76,
+               "width": [[0, 14], [20, 14], [50, 10], [58, 5], [76, 5]], "below": 182, "above": 36, "iron": 73, "strap_every": 12, "waterline_z": 52,
+               "max_deg": 35, "bevel": 1,
+               "bevel_src": "舵前緣兩側各削 1 格（bearding）：v1 沒削 ⇒ 轉 ±35° 時兩側前緣掃進艉柱 39 格；削 1 ⇒ 0（試過 1／2／3，取最少的）",
+               "src": "設計決定：舵沿艉柱後緣（lines.x_post，斜 23.8°）從龍骨底到 z 76（主甲板追擊砲門那一帶，貼著 espejo）；3 格厚（y 159–161）、舵葉 1.4 m 往上收到 1 m、水線以上是 0.5 m 的舵頭；水線下白、上黑（同船殼）、每 12 格一道鐵箍（pintle／gudgeon 的位置，⚠ 只畫在舵上）。max_deg 35 同夜隼號／風暴角號。⚠ galleon 的舵頭從 espejo 下面的 limera 穿進船裡、接舵柄與 whipstaff —— 本船舵頭貼在 espejo 外面、沒有開孔、沒有舵柄"},
+    "anchor": {"gear_work": "calli-cosecha-01m-anchor-gear", "gear_title": "收穫號 錨架（兩舷 billboard）", "gear_link": "錨架",
+               "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.85, "pivot": [23.5, 16.5, 56.5],
+               "x_try": [482, 484, 486, 488, 490, 492], "z_try": [127, 127.5, 128, 128.5, 129, 129.5, 130, 130.5, 131, 131.5, 132], "d_step": 0.5, "d_max": 24,
+               "ledge_half": 13, "ledge_out": 3, "ledge_t": 3, "color": 136,
+               "src": "沿用共用錨元件（造船規格 §9 anchor；scale 0.85 同夜燈號 ⇒ 遊戲裡同一份網格）、meta anchor=bower；兩舷各一，吊在船頭舷外：錨臂順著船殼切線、橫桿擱在船首樓欄杆上方。錨冠底下一塊 billboard 托板（新子作品）—— 遊戲判斷掉不掉是外框中心往下找實心（10_ship.js:47），吊在舷外的錨正下方要有東西。⚠ 沒有吊錨桿（cathead）、沒有 fish tackle"},
+    "hawse": {"x": 494, "z": 88, "src": "設計決定：錨鏈孔在船頭、上甲板（puente）那一層的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
   },
   "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 36, "bottom_color": 182, "bottom_top_z": 52,
                  "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同三叉戟號）；水線下灰白（white stuff 防船蛆，研究只讀到論壇摘要）、水線上黑；塗裝帶在 TASK-0592"}

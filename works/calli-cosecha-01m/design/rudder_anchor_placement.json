@@ -1,0 +1,92 @@
+{
+ "note": "draft_rudder_anchor.py 的結果（世界座標）",
+ "rudder": {
+  "work": "calli-cosecha-01m-rudder",
+  "model": "舵",
+  "host": "calli-cosecha-01m-assembly",
+  "at": [
+   150.0,
+   160.5,
+   0.0
+  ],
+  "pivot": [
+   150.0,
+   160.5,
+   0.0
+  ],
+  "anchors": {
+   "stock-top": [
+    113,
+    160,
+    76
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "hinge_x": 150.0,
+   "hinge_y": 160.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.4035,
+   "axis_y": 0.0,
+   "axis_z": 0.915,
+   "max_deg": 35,
+   "turn_axis": "hinge"
+  }
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "calli-cosecha-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    492.268,
+    187.768,
+    131.5
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.85,
+   "rotate": 45.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  },
+  {
+   "name": "錨-P",
+   "host": "calli-cosecha-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    492.268,
+    133.232,
+    131.5
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.85,
+   "rotate": -45.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  }
+ ],
+ "hawse": {
+  "hawse-S": [
+   494,
+   181,
+   88
+  ],
+  "hawse-P": [
+   494,
+   139,
+   88
+  ]
+ }
+}
