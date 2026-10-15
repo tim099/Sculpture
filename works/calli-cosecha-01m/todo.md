@@ -1,11 +1,9 @@
 # 收穫號 TODO
 
-## 下一步：索具與帆（TASK-0596）
-- 桅與帆桁已落（階段六，notes）；**階段六還沒提交**（Sculpture 7f013ec 只到階段五）。
-- ⚠ 等 ame 回 lateen 的標法（酒館 seq 24767）：她要別的（例如 `yard=lateen`）就改帆桁 meta 與帆的 `sail=`。
-- 帆名已定（帆桁 meta 的 sail）：fore-course、fore-topsail、main-course、main-topsail、spritsail、mizzen-lateen、bonaventure-lateen。
-- 方帆：上緣釘在兩個 earing 之間；topsail 的 sheet 綁到下一根帆桁同舷的 earing；course 的 sheet／tack 綁舷牆。lateen：前緣沿帆桁（fore → peak）、clew 自由、sheet 往後綁。
-- 靜索：shrouds 綁到 channels（還沒做 channels ⇒ 先做，或直接綁舷牆外的固定點）、stays；ratlines。
-- bonaventure 的 lateen 後端伸出船尾 2.55 m ⇒ sheet 要一根船尾 outrigger（bumpkin）。
+## 下一步：砲（TASK-0597）
+- 索具與帆已套上（階段七，notes）；**階段七還沒提交**（Sculpture e062f76 只到階段六）。
+- 砲照 layout.ports：主甲板每舷 9 門 18l（`basecamp-frigate-constitution-01m-gun-long18`，meta gun:18l）、puente 8 門 12l（`summit-stormkaap-01m-gun-12l`）、船樓 4 門 6l（`summit-stormkaap-01m-gun-6l`）、船尾追擊 2 門 18l；從砲門往裡退到零碰撞、砲口在船殼外（§4.2）。
+- ⚠ 砲的模型掛在所在甲板的子作品上；channels 的 deadeye 在舷外、不擋砲門（channels 在舷頂下 3 格、主桅那一塊在 puente 砲門頂上 1 格）—— 砲口伸出去時再量一次。
+- ⚠ lateen 的 meta 等 ame（seq 24767）。
 
 ## 再之後

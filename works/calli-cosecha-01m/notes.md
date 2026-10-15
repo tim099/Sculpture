@@ -166,3 +166,21 @@
 - 梯子點（組裝件 parts）照樣 36／36、0 問題（甲板桅孔搬位之後重量）。
 - 產生程式重跑：18 個輸出檔逐位元組相同。
 - 過程圖：`overlays/stage6_{sheet,full,side,sternq}.png`。
+
+## 階段七 索具與帆（2026-10-15，TASK-0596）
+設計 plan.json `rigging`；產生 `design/draft_rigging.py`（結構參考三叉戟號 draft_rigging）⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/{ensign,cross_course}.png`、`verify_rigging.json`；套用 `design/tools/rigging_apply.py`。
+- **channels**（`-channels`，關聯 `支索板`，兩舷一件、照 |dy| 算 ⇒ 對稱）：每根桅一塊 4 格寬的板、舷頂下 3 格，外緣一排 deadeye（3 格高）；2,164 格、跟船重疊 0。每舷 shrouds 前 5、主 6、後 3、bonaventure 2，前／主各加 1 條 topmast backstay。
+- **固定點 113**：桅上 hound／stay-head／futtock／tm-hound／tm-stay-head／cofa 邊（rim、rim-low）／top-aft；stay 下端（前桅 castillo 上、主桅 puente 上、後桅 alcázar 上）；艏斜桅 forestay-foot／cap-top／side／bob；船首喙 cutwater 上的 bobstay 腳；船殼舷頂的 belay；puente／toldilla 甲板上的 lateen tack。cofa 邊那 26 個點落在籃子的實心上 —— 就是要綁在那裡。
+- **繩 368 條**：shrouds 32、topmast shrouds 12、futtock 12、backstays 4、stays 6、艏斜桅 4、ratlines 278（下 190、上 88，子繩）、sheets 14、tacks 6。色、粗、slack 照造船規格 §6。
+- **帆 9 面**：fore／main course（很深、帆腳在舷頂上 5 格；**畫勃艮第十字**）＋ topsail（sheet 綁下一根帆桁同舷 earing）、spritsail（sheet 往後綁船首樓舷頂）、mizzen／bonaventure lateen（前緣沿帆桁 fore → peak、clew 自由、兩舷 sheet 綁船尾舷頂、tack 從帆桁前端綁甲板）、ensign（**勃艮第十字**，掛在 bonaventure 帆桁後端）、pennant（主桅頂、玫瑰粉）。預設風 4.5,−1.5,0、3 秒。
+- **meta**（§9.1）：帆 9（course、topsail、spritsail、gaff ×2、flag ×2）、帆自己的繩 20（sheet／tack ＋ sail ＝ 帆名）。lateen 標 `sail=gaff`（遊戲預設戰鬥帆才開）；spritsail 標 `sail=spritsail`（遊戲不認得的帆種照滿帆，31_sailing.js）。
+
+讀數（`design/tools/check_stage7.py`，從作品／CLI 讀）：
+- channels 結果帳 2,164 ＝ 2,164，缺 0、多 0、色差 0。
+- CLI：繩 368、**ropes_broken 0**；帆 9、**sails_broken 0**。
+- meta（從作品讀回）：帆 9／9、帆自己的繩 20／20、sail 標錯 0；帆桁 meta 的 sail 都是某一面帆的名字（7／7）。
+- **反向對照**：check 讀完作品之後當作 `main-course.sheet-S` 沒標 ⇒ 只報那一條；`draft_rigging.py --probe=nometa=fore-topsail.sheet-P` ⇒ 只報那一條。
+- 組起來（hide_links=船名板）：642,240 格、1 元件、空腔 0、鏡像差 0。
+- 產生程式重跑：5 個輸出檔逐位元組相同。
+- 過程圖：`overlays/stage7_{full,side,sternq}.png`、`overlays/stage7_ensign_texture.png`。
+- ⚠ lateen 的標法 ame 還沒回（酒館 seq 24767）；她要別的就改帆桁與帆的 meta（不動格子）。
