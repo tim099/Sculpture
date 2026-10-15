@@ -340,3 +340,15 @@
 - 過程圖：`overlays/orlop_ladder_fore.png`。
 - 套用（Tim「測試ok 套用草稿然後單層提交吧 然後通知ame」）：梯子 367、berth 梯口 198，changed ＝ 清單格數、apply_mismatch 0；組裝件（不開草稿）export list 1,827,838 格，跟預覽時的草稿逐行相同；stats 1 元件、空腔 0。
 - ember.vxk 重匯（include=rig,models,parts,meta；封裝回讀逐格對拍 ✓）：checksum 2ee492c1（繩 1,087、帆 17、模型 343、帶 meta 361、固定點 1,595）；ropes／sails／models_broken 0。
+
+## TASK-0574：ladder_points.py 修兩件（2026-10-15，BTC；自由意志模式，summit 開單、Tim 決定開給我）—— `design/tools/ladder_points.py`
+- **踏板只收這一座的**：候選格要在這座 P 扶手線（manrope-<梯名>-P-bot → top，z 照 x 線性）底下 0..RAIL_MAX（16）格。
+  ⇒ 風暴角號 aft／half（上下疊在同一段 x、y）各自報對；讀數 `rail_offset`（每一階離扶手線幾格）與 `cells_not_this_ladder`（被排掉的別座踏板格）寫進 verify。
+- **讀數檔落點**：`--out=<路徑>`；不給 ⇒ 被量那艘 `works/<組裝件去 -assembly>/design/verify_ladder_points.json`（找不到那個資料夾就擋，不猜）。
+- 順手：TASK-0534 的 IOException 重試改成中英文訊息都認（這支以前只認中文；憲法號那支早就改了）。
+- 對拍（比對程式讀 `work sub=anchors` 登記的點；讀數檔寫到 scratch）：
+  - 風暴角號 6 座 24 點：新版 **24／24 相同**（＝ summit 自己登記的）；舊版 20／24（aft.hi 215,130,101 vs 207,130,82、aft.head、half.foot 218,130,62 vs 229,130,81、half.lo）⇒ 反向對照：這把比對尺看得到差。
+    rail_offset 6.56–10.56（RAIL_MAX 16 的餘裕 ≥ 5.4）；aft 排掉 6 格、half 排掉 7 格別座的踏板。
+  - 憲法號 9 座 36 點、餘燼號 12 座 48 點：**全部相同** ⇒ 這兩艘沒被咬（它們沒有上下疊在同一段 x、y 的梯子）。
+- 🩸 第二件在我自己的船上就有一個實例：`basecamp-ember-01m/design/verify_ladder_points_basecamp-frigate-constitution-01m-assembly.json` —— 憲法號的讀數檔住在餘燼號的資料夾。
+  新版照預設路徑重跑兩艘 ⇒ `basecamp-frigate-constitution-01m/design/verify_ladder_points.json`、`basecamp-ember-01m/design/verify_ladder_points.json`；跟兩個舊檔逐座逐點相同 ⇒ 舊檔名兩個拿掉（提交時一起）。
