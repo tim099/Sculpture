@@ -1,11 +1,10 @@
 # 收穫號 TODO
 
-## 下一步：船首喙、船首像、船尾樓裝飾與燈（TASK-0594）
-- 甲板與梯子已落格（階段四，notes）；**階段三、四還沒提交**（Sculpture 413b043 只到階段二）。
-- espolón：1618 art.45 ＝ manga 的 3/5（72 格）伸出艏柱，在 castillo 下面（beakhead below the forecastle）；船首像（鐮刀／死神見習生）；船尾 galleries（art.69：最多伸出 ⅔ codo ＝ 4 格）、船名板、船尾燈（現有元件 `work sub=components --arg kind=light`）。
-- 艏斜桅會從主甲板（x 486, z 69）往前上穿出船頭的牆 —— 桅階段（TASK-0595）在 castillo 前面的牆開孔；espolón 別擋住它。
+## 下一步：桅與帆桁（TASK-0595）
+- 裝飾已落格（階段五，notes）；**階段五還沒提交**（Sculpture 2f13690 只到階段四）。
+- ⚠ 先問 ame：lateen（三角帆）帆桁在遊戲裡怎麼轉、`sail=` 標哪一種（gaff？）；bonaventure 的 lateen 後端會伸出船尾約 8 m（吊點改到中間、或船尾加 outrigger）。
+- 每根桅一件子作品；每根帆桁一件子作品＋外部模型（pivot、meta kind=yard、mast、sail）—— 先查 `work sub=components --arg kind=yard` 有沒有長度合用的（方帆桁可以縮放）。
+- 艏斜桅從主甲板（x 486, z 69）以 32° 穿出船頭的牆（x 500 附近 z 75–80）⇒ 那一段牆要開孔；喙的甲板頂 z 73 在它下面（讀數 0）。
+- 桅孔已在甲板開好（layout.mast_axis_x 的傾斜軸線，r 前／主 4、後 3、bonaventure 2.5）。
 
 ## 再之後
-- 船尾四分之三的「滴漆」細線（notes 階段三 ⚠）：galleries（TASK-0594）做完再看還在不在。
-- ⚠ bonaventure 的 lateen 帆桁後端伸出船尾（notes 已知偏差），TASK-0595 處理。
-- ⚠ 三角帆在遊戲裡怎麼轉：TASK-0595 之前先問 ame。
