@@ -1,223 +1,239 @@
 {
-  "schema": 3,
-  "links": [
-    {
-      "name": "船殼",
-      "work": "kiara-phoenix-01m",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        400
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:11:48",
-      "persona": "kiara",
-      "note": "",
-      "meta": {
-        "kind": "ship",
-        "waterline_z": 38,
-        "crew": 120
-      }
-    },
-    {
-      "name": "主砲甲板",
-      "work": "kiara-phoenix-01m-deck-gun",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        100
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:17:58",
-      "persona": "kiara",
-      "note": ""
-    },
-    {
-      "name": "露天甲板",
-      "work": "kiara-phoenix-01m-deck-upper",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        100
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:18:02",
-      "persona": "kiara",
-      "note": ""
-    },
-    {
-      "name": "前桅",
-      "work": "kiara-phoenix-01m-mast-fore",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        400
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:27:21",
-      "persona": "kiara",
-      "note": "前桅桿子作品關聯"
-    },
-    {
-      "name": "主桅",
-      "work": "kiara-phoenix-01m-mast-main",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        400
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:27:21",
-      "persona": "kiara",
-      "note": "主桅桿子作品關聯"
-    },
-    {
-      "name": "後桅",
-      "work": "kiara-phoenix-01m-mast-mizzen",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        400
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:27:21",
-      "persona": "kiara",
-      "note": "後桅桿子作品關聯"
-    },
-    {
-      "name": "艏斜桅",
-      "work": "kiara-phoenix-01m-bowsprit",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        400
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:27:21",
-      "persona": "kiara",
-      "note": "艏斜桅子作品關聯"
-    },
-    {
-      "name": "彈藥庫-前",
-      "work": "kiara-phoenix-01m-magazine-fore",
-      "at": [
-        350,
-        71,
-        18
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        40,
-        40,
-        16
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:32:47",
-      "persona": "kiara",
-      "note": "炎羽號專屬前部彈藥庫（完全收納於水線下尖底艙底）",
-      "meta": {
-        "kind": "magazine",
-        "pos": "fore",
-        "powder_lb": 1600
-      }
-    },
-    {
-      "name": "彈藥庫-後",
-      "work": "kiara-phoenix-01m-magazine-aft",
-      "at": [
-        180,
-        71,
-        18
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        40,
-        40,
-        16
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:32:47",
-      "persona": "kiara",
-      "note": "炎羽號專屬後部主彈藥庫（完全收納於水線下尖底艙底）",
-      "meta": {
-        "kind": "magazine",
-        "pos": "aft",
-        "powder_lb": 1600
-      }
-    },
-    {
-      "name": "梯子",
-      "work": "kiara-phoenix-01m-ladders",
-      "at": [
-        0,
-        0,
-        0
-      ],
-      "turn": 0,
-      "mirror": "",
-      "pivot": [
-        576,
-        181,
-        100
-      ],
-      "enabled": true,
-      "created_at": "2026-10-14T09:52:29",
-      "persona": "kiara",
-      "note": "炎羽號三座甲板通聯舷梯（含 12 個寻路導航固定點）",
-      "meta": {
-        "kind": "ladders"
-      }
-    }
-  ]
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "kiara-phoenix-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:11:48",
+			"persona": "kiara",
+			"note": "",
+			"meta": {
+				"crew": 120,
+				"kind": "ship",
+				"waterline_z": 38
+			}
+		},
+		{
+			"name": "主砲甲板",
+			"work": "kiara-phoenix-01m-deck-gun",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				100
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:17:58",
+			"persona": "kiara",
+			"note": "",
+			"meta": {
+				"deck": "gun",
+				"floor": "101:49,109:49,110:51,449:51",
+				"kind": "deck",
+				"level": 0,
+				"name": "主砲甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "露天甲板",
+			"work": "kiara-phoenix-01m-deck-upper",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				100
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:18:02",
+			"persona": "kiara",
+			"note": "",
+			"meta": {
+				"deck": "spar",
+				"floor": "86:83,194:74,215:74,216:66,218:65,345:65,346:66,374:66,375:67,380:67,449:71,450:71",
+				"kind": "deck",
+				"level": 1,
+				"name": "露天甲板",
+				"thick": 2
+			}
+		},
+		{
+			"name": "前桅",
+			"work": "kiara-phoenix-01m-mast-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:27:21",
+			"persona": "kiara",
+			"note": "前桅桿子作品關聯"
+		},
+		{
+			"name": "主桅",
+			"work": "kiara-phoenix-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:27:21",
+			"persona": "kiara",
+			"note": "主桅桿子作品關聯"
+		},
+		{
+			"name": "後桅",
+			"work": "kiara-phoenix-01m-mast-mizzen",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:27:21",
+			"persona": "kiara",
+			"note": "後桅桿子作品關聯"
+		},
+		{
+			"name": "艏斜桅",
+			"work": "kiara-phoenix-01m-bowsprit",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:27:21",
+			"persona": "kiara",
+			"note": "艏斜桅子作品關聯"
+		},
+		{
+			"name": "彈藥庫-前",
+			"work": "kiara-phoenix-01m-magazine-fore",
+			"at": [
+				350,
+				71,
+				18
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				40,
+				40,
+				16
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:32:47",
+			"persona": "kiara",
+			"note": "炎羽號專屬前部彈藥庫（完全收納於水線下尖底艙底）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "fore",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "彈藥庫-後",
+			"work": "kiara-phoenix-01m-magazine-aft",
+			"at": [
+				180,
+				71,
+				18
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				40,
+				40,
+				16
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:32:47",
+			"persona": "kiara",
+			"note": "炎羽號專屬後部主彈藥庫（完全收納於水線下尖底艙底）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "梯子",
+			"work": "kiara-phoenix-01m-ladders",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				576,
+				181,
+				100
+			],
+			"enabled": true,
+			"created_at": "2026-10-14T09:52:29",
+			"persona": "kiara",
+			"note": "炎羽號三座甲板通聯舷梯（含 12 個寻路導航固定點）",
+			"meta": {
+				"kind": "ladders"
+			}
+		}
+	]
 }

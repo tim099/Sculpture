@@ -1,172 +1,494 @@
 {
-  "schema": 3,
-  "ropes": [
-    {
-      "name": "fore-stay",
-      "from": "480,90.5,80",
-      "to": "140,90.5,160",
-      "color": "#2b2620",
-      "thickness": 1.2,
-      "slack": 1.0006,
-      "enabled": true,
-      "group": "standing/stays",
-      "note": "前桅前支索（Fore Stay）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "stay"
-      }
-    },
-    {
-      "name": "main-stay",
-      "from": "145,90.5,75",
-      "to": "275,90.5,170",
-      "color": "#2b2620",
-      "thickness": 1.2,
-      "slack": 1.0006,
-      "enabled": true,
-      "group": "standing/stays",
-      "note": "主桅前支索（Main Stay）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "stay"
-      }
-    },
-    {
-      "name": "mizzen-stay",
-      "from": "280,90.5,75",
-      "to": "395,90.5,160",
-      "color": "#2b2620",
-      "thickness": 1.2,
-      "slack": 1.0006,
-      "enabled": true,
-      "group": "standing/stays",
-      "note": "後桅前支索（Mizzen Stay）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "stay"
-      }
-    },
-    {
-      "name": "fore-course-sheet-P",
-      "from": "sail:fore-course/clew_p",
-      "to": "140,30,70",
-      "color": "#a08458",
-      "thickness": 0.5,
-      "slack": 0.85,
-      "enabled": true,
-      "group": "running/sheets",
-      "note": "fore-course 左舷帆腳索",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "sheet",
-        "sail": "fore-course"
-      }
-    },
-    {
-      "name": "fore-course-sheet-S",
-      "from": "sail:fore-course/clew_s",
-      "to": "140,150,70",
-      "color": "#a08458",
-      "thickness": 0.5,
-      "slack": 0.85,
-      "enabled": true,
-      "group": "running/sheets",
-      "note": "fore-course 右舷帆腳索",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "sheet",
-        "sail": "fore-course"
-      }
-    },
-    {
-      "name": "main-course-sheet-P",
-      "from": "sail:main-course/clew_p",
-      "to": "275,20,70",
-      "color": "#a08458",
-      "thickness": 0.5,
-      "slack": 0.85,
-      "enabled": true,
-      "group": "running/sheets",
-      "note": "main-course 左舷帆腳索",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "sheet",
-        "sail": "main-course"
-      }
-    },
-    {
-      "name": "main-course-sheet-S",
-      "from": "sail:main-course/clew_s",
-      "to": "275,160,70",
-      "color": "#a08458",
-      "thickness": 0.5,
-      "slack": 0.85,
-      "enabled": true,
-      "group": "running/sheets",
-      "note": "main-course 右舷帆腳索",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "sheet",
-        "sail": "main-course"
-      }
-    },
-    {
-      "name": "mizzen-crossjack-sheet-P",
-      "from": "sail:mizzen-crossjack/clew_p",
-      "to": "395,35,78",
-      "color": "#a08458",
-      "thickness": 0.5,
-      "slack": 0.85,
-      "enabled": true,
-      "group": "running/sheets",
-      "note": "mizzen-crossjack 左舷帆腳索",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "sheet",
-        "sail": "mizzen-crossjack"
-      }
-    },
-    {
-      "name": "mizzen-crossjack-sheet-S",
-      "from": "sail:mizzen-crossjack/clew_s",
-      "to": "395,145,78",
-      "color": "#a08458",
-      "thickness": 0.5,
-      "slack": 0.85,
-      "enabled": true,
-      "group": "running/sheets",
-      "note": "mizzen-crossjack 右舷帆腳索",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "sheet",
-        "sail": "mizzen-crossjack"
-      }
-    },
-    {
-      "name": "jib-sheet",
-      "from": "sail:jib/clew",
-      "to": "340,90.5,78",
-      "color": "#a08458",
-      "thickness": 0.5,
-      "slack": 0.85,
-      "enabled": true,
-      "group": "running/sheets",
-      "note": "jib 前三角帆腳索",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:34:45",
-      "meta": {
-        "kind": "sheet",
-        "sail": "jib"
-      }
-    }
-  ]
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "fore-course-sheet-S",
+			"from": "sail:fore-course/clew_s",
+			"to": "405,121,80",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:14",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-course-tack-S",
+			"from": "sail:fore-course/clew_s",
+			"to": "464,92,83",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:14",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-course-sheet-P",
+			"from": "sail:fore-course/clew_p",
+			"to": "356,50,78",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:15",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-course-tack-P",
+			"from": "sail:fore-course/clew_p",
+			"to": "416,62,81",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:15",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore-course"
+			}
+		},
+		{
+			"name": "fore-topsail-sheet-S",
+			"from": "sail:fore-topsail/clew_s",
+			"to": "model:前桅/yard-fore-course/earing-S",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:16",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topsail"
+			}
+		},
+		{
+			"name": "fore-topsail-sheet-P",
+			"from": "sail:fore-topsail/clew_p",
+			"to": "model:前桅/yard-fore-course/earing-P",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:16",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topsail"
+			}
+		},
+		{
+			"name": "fore-topgallant-sheet-S",
+			"from": "sail:fore-topgallant/clew_s",
+			"to": "model:前桅/yard-fore-topsail/earing-S",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:17",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topgallant"
+			}
+		},
+		{
+			"name": "fore-topgallant-sheet-P",
+			"from": "sail:fore-topgallant/clew_p",
+			"to": "model:前桅/yard-fore-topsail/earing-P",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:17",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-topgallant"
+			}
+		},
+		{
+			"name": "main-course-sheet-S",
+			"from": "sail:main-course/clew_s",
+			"to": "279,134,77",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:18",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-course-tack-S",
+			"from": "sail:main-course/clew_s",
+			"to": "339,132,78",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:18",
+			"meta": {
+				"kind": "tack",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-course-sheet-P",
+			"from": "sail:main-course/clew_p",
+			"to": "224,47,78",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:19",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-course-tack-P",
+			"from": "sail:main-course/clew_p",
+			"to": "284,46,77",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:19",
+			"meta": {
+				"kind": "tack",
+				"sail": "main-course"
+			}
+		},
+		{
+			"name": "main-topsail-sheet-S",
+			"from": "sail:main-topsail/clew_s",
+			"to": "model:主桅/yard-main-course/earing-S",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:20",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topsail"
+			}
+		},
+		{
+			"name": "main-topsail-sheet-P",
+			"from": "sail:main-topsail/clew_p",
+			"to": "model:主桅/yard-main-course/earing-P",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:20",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topsail"
+			}
+		},
+		{
+			"name": "main-topgallant-sheet-S",
+			"from": "sail:main-topgallant/clew_s",
+			"to": "model:主桅/yard-main-topsail/earing-S",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:21",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topgallant"
+			}
+		},
+		{
+			"name": "main-topgallant-sheet-P",
+			"from": "sail:main-topgallant/clew_p",
+			"to": "model:主桅/yard-main-topsail/earing-P",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:22",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-topgallant"
+			}
+		},
+		{
+			"name": "mizzen-crossjack-sheet-S",
+			"from": "sail:mizzen-crossjack/clew_s",
+			"to": "147,126,89",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:22",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-crossjack"
+			}
+		},
+		{
+			"name": "mizzen-crossjack-tack-S",
+			"from": "sail:mizzen-crossjack/clew_s",
+			"to": "207,131,82",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:23",
+			"meta": {
+				"kind": "tack",
+				"sail": "mizzen-crossjack"
+			}
+		},
+		{
+			"name": "mizzen-crossjack-sheet-P",
+			"from": "sail:mizzen-crossjack/clew_p",
+			"to": "112,58,92",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:23",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-crossjack"
+			}
+		},
+		{
+			"name": "mizzen-crossjack-tack-P",
+			"from": "sail:mizzen-crossjack/clew_p",
+			"to": "172,52,87",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:24",
+			"meta": {
+				"kind": "tack",
+				"sail": "mizzen-crossjack"
+			}
+		},
+		{
+			"name": "mizzen-topsail-sheet-S",
+			"from": "sail:mizzen-topsail/clew_s",
+			"to": "model:後桅/yard-mizzen-crossjack/earing-S",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:24",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-topsail"
+			}
+		},
+		{
+			"name": "mizzen-topsail-sheet-P",
+			"from": "sail:mizzen-topsail/clew_p",
+			"to": "model:後桅/yard-mizzen-crossjack/earing-P",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:25",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-topsail"
+			}
+		},
+		{
+			"name": "fore-stay",
+			"from": "408,90.5,190",
+			"to": "500,90.5,81",
+			"color": "#2b2620",
+			"thickness": 1.2,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:25",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "fore-topmast-stay",
+			"from": "407,90.5,280",
+			"to": "566,90.5,112",
+			"color": "#2b2620",
+			"thickness": 1.2,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:26",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "main-stay",
+			"from": "279,90.5,205",
+			"to": "401,90.5,70",
+			"color": "#2b2620",
+			"thickness": 1.2,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:26",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "main-topmast-stay",
+			"from": "278,90.5,300",
+			"to": "395,90.5,193",
+			"color": "#2b2620",
+			"thickness": 1.2,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:27",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "mizzen-stay",
+			"from": "158,90.5,165",
+			"to": "270,90.5,100",
+			"color": "#2b2620",
+			"thickness": 1.2,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:28",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "jib-sheet-S",
+			"from": "sail:jib/clew",
+			"to": "425,115,82",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:28",
+			"meta": {
+				"kind": "sheet",
+				"sail": "jib"
+			}
+		},
+		{
+			"name": "jib-sheet-P",
+			"from": "sail:jib/clew",
+			"to": "425,65,82",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-10-15T07:54:29",
+			"meta": {
+				"kind": "sheet",
+				"sail": "jib"
+			}
+		}
+	],
+	"groups": []
 }

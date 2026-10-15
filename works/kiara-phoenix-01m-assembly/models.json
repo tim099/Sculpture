@@ -1,127 +1,127 @@
 {
-  "schema": 2,
-  "models": [
-    {
-      "name": "船舵",
-      "source": "work",
-      "file": "",
-      "bytes": 0,
-      "sha256": "",
-      "work": "kiara-phoenix-01m-rudder",
-      "axes": "sculpt",
-      "at": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pivot": [
-        95.0,
-        90.5,
-        2.0
-      ],
-      "rotate": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "mirror": "",
-      "color": "",
-      "enabled": true,
-      "note": "炎羽號可動船舵（帶 hinge 鉸鏈旋轉 meta）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:53:37",
-      "meta": {
-        "kind": "rudder",
-        "turn_axis": "hinge",
-        "max_deg": 35,
-        "hinge_x": 95.0,
-        "hinge_y": 90.5,
-        "hinge_z": 2.0,
-        "axis_x": -0.2723,
-        "axis_y": 0.0,
-        "axis_z": 0.9622
-      }
-    },
-    {
-      "name": "anchor-S",
-      "source": "work",
-      "file": "",
-      "bytes": 0,
-      "sha256": "",
-      "work": "basecamp-frigate-constitution-01m-anchor",
-      "axes": "sculpt",
-      "at": [
-        445.0,
-        116.0,
-        62.0
-      ],
-      "pivot": [
-        23.5,
-        16.5,
-        29.0
-      ],
-      "rotate": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "mirror": "",
-      "color": "",
-      "enabled": true,
-      "note": "右舷船首鑄鐵大錨",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:53:37",
-      "meta": {
-        "kind": "anchor"
-      }
-    },
-    {
-      "name": "anchor-P",
-      "source": "work",
-      "file": "",
-      "bytes": 0,
-      "sha256": "",
-      "work": "basecamp-frigate-constitution-01m-anchor",
-      "axes": "sculpt",
-      "at": [
-        445.0,
-        65.0,
-        62.0
-      ],
-      "pivot": [
-        23.5,
-        16.5,
-        29.0
-      ],
-      "rotate": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "mirror": "y",
-      "color": "",
-      "enabled": true,
-      "note": "左舷船首鑄鐵大錨（mirror=y）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:53:37",
-      "meta": {
-        "kind": "anchor"
-      }
-    }
-  ]
+	"schema": 2,
+	"models": [
+		{
+			"name": "船舵",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kiara-phoenix-01m-rudder",
+			"axes": "sculpt",
+			"at": [
+				107,
+				90.5,
+				2
+			],
+			"pivot": [
+				95,
+				90.5,
+				2
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "炎羽號可動船舵（帶 hinge 鉸鏈旋轉 meta）",
+			"persona": "kiara",
+			"created_at": "2026-10-14T09:53:37",
+			"meta": {
+				"axis_x": -0.2723,
+				"axis_y": 0.0,
+				"axis_z": 0.9622,
+				"hinge_x": 107.0,
+				"hinge_y": 90.5,
+				"hinge_z": 2.0,
+				"kind": "rudder",
+				"max_deg": 35,
+				"turn_axis": "hinge"
+			}
+		},
+		{
+			"name": "anchor-S",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "basecamp-frigate-constitution-01m-anchor",
+			"axes": "sculpt",
+			"at": [
+				445,
+				121,
+				62
+			],
+			"pivot": [
+				23.5,
+				16.5,
+				29
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "右舷船首鑄鐵大錨",
+			"persona": "kiara",
+			"created_at": "2026-10-14T09:53:37",
+			"meta": {
+				"kind": "anchor"
+			}
+		},
+		{
+			"name": "anchor-P",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "basecamp-frigate-constitution-01m-anchor",
+			"axes": "sculpt",
+			"at": [
+				445,
+				60,
+				62
+			],
+			"pivot": [
+				23.5,
+				16.5,
+				29
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "y",
+			"color": "",
+			"enabled": true,
+			"note": "左舷船首鑄鐵大錨（mirror=y）",
+			"persona": "kiara",
+			"created_at": "2026-10-14T09:53:37",
+			"meta": {
+				"kind": "anchor"
+			}
+		}
+	]
 }

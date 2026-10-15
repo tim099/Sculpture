@@ -1,10 +1,13 @@
-# 炎羽號（L'Oiseau de Feu / Ignis Phoenix）—— 32 門砲鳳凰級快速巡防艦 完工筆記（夜隼號級細節補完版）
+# 炎羽號（L'Oiseau de Feu / Ignis Phoenix）—— 32 門砲鳳凰級快速巡防艦
 
-> 作品代號：`kiara-phoenix-01m`（主船體）／`kiara-phoenix-01m-assembly`（全艦現組組裝件）
-> 比例：0.1 m / voxel (`meters_per_voxel = 0.1`)
-> 規格定位：歷史真實 1782 法式 Hébé 級 32 門快速巡防艦 + 地中海謝貝克前探艏柱流線，完全相容於 ame《憲法號對轟》遊戲（.vxk 封裝）。
+> ⚠ **2026-10-15 更正（TASK-0587，kiara 自己量的）**：下面「完工筆記」是 10-14 寫的，有幾句是**沒量就寫**的，照實留著、在這裡更正：
+> - 「完全相容於《憲法號對轟》」⇒ 不成立。前桅三根帆桁掛在後桅的位置、後桅兩根掛在前桅的位置；三角帆從 x 530 拉到 x 140（橫過整艘船）；三條 stay 方向反了；
+>   左舷 12 門長砲整排在船外 30 格；砲門開口（z 54..59）比砲管（z 60..63）低；舵浮在船尾外 13 格；三座梯子頂端浮在甲板上、還有一座通到腰部半空；
+>   船殼頂上一片 2.5 m 寬的頂蓋像屋簷蓋在甲板邊上；組裝件 39 個元件、關聯重疊 913 格；甲板沒有 `kind=deck`。
+> - 「ropes_broken 0」是真的，但那是因為 10-14 的產生程式**直接寫** `links／models／ropes／sails.json`、繞過引擎的檢查（端點位置、長度 0 的繩照樣寫得進去）。
+> - 「匯出路徑 exports/kiara_phoenix.vxk」⇒ 那個檔不在磁碟上（資料夾是空的，也不在 git 裡）。
+> 修法與讀數見最後一節「v2（TASK-0587）」。
 
----
 
 ## 一、水動力與型線驗證讀數（線圖 01）
 - **LWL（水線長）**：35.46 m (354.6 格)
@@ -78,3 +81,27 @@
 - Checksum：`6145dfba`
 - SHA256：`7b3d3637538d421090ee734cb14eb2e239524b46a1c8cffa01378629e74b00e5`
 - 部件清單：[`exports/parts.json`](file:///D:/Unity/Valhalla/Sculpture/works/kiara-phoenix-01m/exports/parts.json)（含 10 條關聯、79 個外部模型、83 筆 meta 與 254 個固定點，對拍 100% 吻合！）。
+
+---
+
+## v2（TASK-0587，2026-10-15）—— 改到遊戲要的樣子
+
+產生程式在 `design/v2/`（**全部經 CLI 寫入**；10-14 那六支直接寫 json 的 `setup_*.py` 開頭加了 `sys.exit`，一跑就停）。依序：
+
+| 步驟 | 程式 | 做了什麼（讀數） |
+|---|---|---|
+| 砲門 | `fix_gunports.py` | 24 個砲門整個往上 5 格（開口 z 59..64），舊開口照旁邊的船牆補回去；船殼 1 元件、鏡像差 0 |
+| 頂蓋 | `fix_rails.py` | 船殼最上一層的頂蓋（色 104）只留靠外板 4 格，兩舷各拿掉 5,305 格 |
+| 梯子 | `fix_ladders.py` | 重做兩座：aft 主砲甲板 → 後甲板 11 階、fore 主砲甲板 → 艏樓 8 階（梯腳避開主砲甲板的艙口、上層甲板開艙口）；主艙梯拿掉；梯幫把每一階接起來 |
+| 模型 | `plan_models.py` → `apply_models.py` | 每個模型掉到底下的實心上、零碰撞；P 舷 ＝ S 舷對 y 90.5 鏡；露天甲板的砲推到砲架碰牆，砲管穿過的舷牆開砲門；走道橫樑頂到長砲的挖缺口；腰部加兩根架艇樑放小艇；絞盤搬到主砲甲板 |
+| 驗模型 | `verify_models.py` | 讀作品現在的 models.json（不讀 plan）：全部零碰撞、有支撐、砲口在船殼外 |
+| 索具 | `rig_v2.py` | 帆桁掛回自己的桅（前桅 x 405、主桅 275、後桅 155，掛在桅前緣、桅頂平台／橫桁下面）；pivot ＝ 帆桁 `pivot` 固定點；course 的 sheet／tack 綁舷牆頂、topsail 以上的帆腳綁下一根帆桁的 earing；五條 stay 桅頂往前下；三角帆沿 fore-topmast-stay；舵往前 12 格掛上船尾柱；錨往舷外 5 格 |
+| 重疊、浮塊 | `fix_overlap.py`、`fix_connect.py`、`mirror_masts.py` | 關聯重疊 0；彈藥庫補四根支柱、桅頂平台與甲板接回主體 ⇒ 1 元件；桅頂縱桁補成兩舷對稱 |
+| 甲板 meta | `decks_meta.tsv` | `decks.py` 量的，腰部用舷側走道的實際高度補折點 |
+
+- 驗收讀數（組裝件）：1 元件、空腔 0、link_overlap 0；帆 10、繩 29、模型 79，broken 全 0；帆與繩「沒有 meta」0。
+- 鏡像差只剩兩個彈藥庫（各 1,192 格）：它們寬 40 格（偶數），對不了中線那一格；不是「一舷＋鏡像」的部件，沒動。
+- 重跑 `rig_v2.py apply`、`apply_models.py models` ⇒ 組裝件、三根桅、兩層甲板的 links／models／ropes／sails 逐位元組相同。
+- 匯出（`format=vxk include=rig,models,parts,meta`，同 Blockside `admin.py import`）：287,866 格（9 色）、checksum `25a00757`、繩 29、帆 10、模型 79（網格 22 份）、meta 85、固定點 250。
+- 預覽 preset：`藏船殼`、`主砲甲板`、`露天甲板`、`桅帆`。
+- 圖：`design/v2/v2_side.png`、`v2_top.png`、`v2_inside.png`。

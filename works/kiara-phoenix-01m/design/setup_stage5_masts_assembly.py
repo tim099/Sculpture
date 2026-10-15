@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import sys as _sys; _sys.exit("⛔ 這支直接寫 links／models／ropes／sails.json、繞過引擎檢查；已由 design/v2/ 取代（TASK-0587，2026-10-15）。要改請改 v2 的產生程式。")
 """
 炎羽號（kiara-phoenix-01m）：桅桿關聯與帆桁外部模型安裝
 依據：Sculpture_Shipbuilding.md §5、§9

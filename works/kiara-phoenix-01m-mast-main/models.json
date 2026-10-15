@@ -1,143 +1,143 @@
 {
-  "schema": 2,
-  "models": [
-    {
-      "name": "yard-main-course",
-      "source": "work",
-      "file": "",
-      "bytes": 0,
-      "sha256": "",
-      "work": "kiara-phoenix-01m-yard-main-course",
-      "axes": "sculpt",
-      "at": [
-        275,
-        90.5,
-        140.5
-      ],
-      "pivot": [
-        10.5,
-        105.5,
-        20.5
-      ],
-      "rotate": [
-        0,
-        0,
-        -18
-      ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "mirror": "",
-      "color": "",
-      "enabled": true,
-      "note": "炎羽號帆桁模型（繞 pivot 轉 -18°）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:27:21",
-      "meta": {
-        "kind": "yard",
-        "mast": "main",
-        "yard": "course",
-        "sail": "main-course",
-        "pivot_anchor": "pivot",
-        "turn_axis": "z",
-        "rotate_z_deg": -18,
-        "length_ft": 84.0,
-        "diameter_in": 18.0
-      }
-    },
-    {
-      "name": "yard-main-topsail",
-      "source": "work",
-      "file": "",
-      "bytes": 0,
-      "sha256": "",
-      "work": "kiara-phoenix-01m-yard-main-topsail",
-      "axes": "sculpt",
-      "at": [
-        275,
-        90.5,
-        210.5
-      ],
-      "pivot": [
-        10.5,
-        80.5,
-        15.5
-      ],
-      "rotate": [
-        0,
-        0,
-        -20
-      ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "mirror": "",
-      "color": "",
-      "enabled": true,
-      "note": "炎羽號帆桁模型（繞 pivot 轉 -20°）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:27:21",
-      "meta": {
-        "kind": "yard",
-        "mast": "main",
-        "yard": "topsail",
-        "sail": "main-topsail",
-        "pivot_anchor": "pivot",
-        "turn_axis": "z",
-        "rotate_z_deg": -20,
-        "length_ft": 64.0,
-        "diameter_in": 14.0
-      }
-    },
-    {
-      "name": "yard-main-topgallant",
-      "source": "work",
-      "file": "",
-      "bytes": 0,
-      "sha256": "",
-      "work": "kiara-phoenix-01m-yard-main-topgallant",
-      "axes": "sculpt",
-      "at": [
-        275,
-        90.5,
-        275.5
-      ],
-      "pivot": [
-        10.5,
-        50.5,
-        15.5
-      ],
-      "rotate": [
-        0,
-        0,
-        -22
-      ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "mirror": "",
-      "color": "",
-      "enabled": true,
-      "note": "炎羽號帆桁模型（繞 pivot 轉 -22°）",
-      "persona": "kiara",
-      "created_at": "2026-10-14T09:27:21",
-      "meta": {
-        "kind": "yard",
-        "mast": "main",
-        "yard": "topgallant",
-        "sail": "main-topgallant",
-        "pivot_anchor": "pivot",
-        "turn_axis": "z",
-        "rotate_z_deg": -22,
-        "length_ft": 40.0,
-        "diameter_in": 10.0
-      }
-    }
-  ]
+	"schema": 2,
+	"models": [
+		{
+			"name": "yard-main-course",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kiara-phoenix-01m-yard-main-course",
+			"axes": "sculpt",
+			"at": [
+				281.5,
+				90.5,
+				201.5
+			],
+			"pivot": [
+				10.5,
+				100.5,
+				15.5
+			],
+			"rotate": [
+				0,
+				0,
+				-18
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "TASK-0587 v2：掛在桅前緣、pivot ＝ 帆桁 pivot 固定點（design/v2/rig_v2.py）",
+			"persona": "kiara",
+			"created_at": "2026-10-14T09:27:21",
+			"meta": {
+				"diameter_in": 18.0,
+				"kind": "yard",
+				"length_ft": 59.4,
+				"mast": "main",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -18,
+				"sail": "main-course",
+				"turn_axis": "z",
+				"yard": "course"
+			}
+		},
+		{
+			"name": "yard-main-topsail",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kiara-phoenix-01m-yard-main-topsail",
+			"axes": "sculpt",
+			"at": [
+				279.5,
+				90.5,
+				296.5
+			],
+			"pivot": [
+				10.5,
+				77.5,
+				15.5
+			],
+			"rotate": [
+				0,
+				0,
+				-20
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "TASK-0587 v2：掛在桅前緣、pivot ＝ 帆桁 pivot 固定點（design/v2/rig_v2.py）",
+			"persona": "kiara",
+			"created_at": "2026-10-14T09:27:21",
+			"meta": {
+				"diameter_in": 14.0,
+				"kind": "yard",
+				"length_ft": 44.3,
+				"mast": "main",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -20,
+				"sail": "main-topsail",
+				"turn_axis": "z",
+				"yard": "topsail"
+			}
+		},
+		{
+			"name": "yard-main-topgallant",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kiara-phoenix-01m-yard-main-topgallant",
+			"axes": "sculpt",
+			"at": [
+				278.5,
+				90.5,
+				372.5
+			],
+			"pivot": [
+				10.5,
+				55.5,
+				15.5
+			],
+			"rotate": [
+				0,
+				0,
+				-22
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "TASK-0587 v2：掛在桅前緣、pivot ＝ 帆桁 pivot 固定點（design/v2/rig_v2.py）",
+			"persona": "kiara",
+			"created_at": "2026-10-14T09:27:21",
+			"meta": {
+				"diameter_in": 10.0,
+				"kind": "yard",
+				"length_ft": 29.9,
+				"mast": "main",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -22,
+				"sail": "main-topgallant",
+				"turn_axis": "z",
+				"yard": "topgallant"
+			}
+		}
+	]
 }
