@@ -1,0 +1,206 @@
+{
+ "ports": {
+  "main": {
+   "n_per_side": 9,
+   "gap_min": 27,
+   "gap_max": 28,
+   "gaps": [
+    28,
+    27,
+    28,
+    27,
+    28,
+    28,
+    27,
+    28
+   ],
+   "clear_above_min": 5.0,
+   "half_breadth_at_port_min": 46.3,
+   "x0s": [
+    168,
+    203,
+    237,
+    272,
+    306,
+    341,
+    376,
+    410,
+    445
+   ]
+  },
+  "puente": {
+   "n_per_side": 8,
+   "gap_min": 28,
+   "gap_max": 28,
+   "gaps": [
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28
+   ],
+   "clear_above_min": 2.0,
+   "half_breadth_at_port_min": 49.5,
+   "x0s": [
+    188,
+    223,
+    258,
+    293,
+    328,
+    363,
+    398,
+    433
+   ]
+  },
+  "alcazar": {
+   "n_per_side": 2,
+   "gap_min": 40,
+   "gap_max": 40,
+   "gaps": [
+    40
+   ],
+   "clear_above_min": 4.0,
+   "half_breadth_at_port_min": 52.2,
+   "x0s": [
+    210,
+    256
+   ]
+  },
+  "castillo": {
+   "n_per_side": 2,
+   "gap_min": 38,
+   "gap_max": 38,
+   "gaps": [
+    38
+   ],
+   "clear_above_min": 4.1,
+   "half_breadth_at_port_min": 34.1,
+   "x0s": [
+    430,
+    474
+   ]
+  }
+ },
+ "ports_total": 44,
+ "decks": {
+  "orlop": {
+   "z": 45,
+   "span": [
+    190,
+    430
+   ]
+  },
+  "main": {
+   "z": 65,
+   "span": [
+    122,
+    500
+   ]
+  },
+  "puente": {
+   "z": 85,
+   "span": [
+    113,
+    500
+   ]
+  },
+  "alcazar": {
+   "z": 102,
+   "span": [
+    105,
+    268
+   ]
+  },
+  "toldilla": {
+   "z": 119,
+   "span": [
+    98,
+    196
+   ]
+  },
+  "castillo": {
+   "z": 102,
+   "span": [
+    422,
+    500
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "fore",
+   "x": 472,
+   "heel": 16.5,
+   "platform": 288.8,
+   "truck": 436.8,
+   "above_wl_m": 38.48,
+   "yards": {
+    "course": {
+     "z": 276.8,
+     "len_m": 21.7
+    },
+    "topsail": {
+     "z": 410.2,
+     "len_m": 9.7
+    }
+   }
+  },
+  {
+   "key": "main",
+   "x": 296,
+   "heel": 9.0,
+   "platform": 286.8,
+   "truck": 437.8,
+   "above_wl_m": 38.58,
+   "yards": {
+    "course": {
+     "z": 274.8,
+     "len_m": 27.2
+    },
+    "topsail": {
+     "z": 410.7,
+     "len_m": 12.1
+    }
+   }
+  },
+  {
+   "key": "mizzen",
+   "x": 205,
+   "heel": 67.0,
+   "platform": 236.3,
+   "truck": 251.0,
+   "above_wl_m": 19.9,
+   "yards": {
+    "lateen": {
+     "z": 223.4,
+     "len_m": 24.5
+    }
+   }
+  },
+  {
+   "key": "bonaventure",
+   "x": 120,
+   "heel": 71.0,
+   "platform": 198.0,
+   "truck": 209.0,
+   "above_wl_m": 15.7,
+   "yards": {
+    "lateen": {
+     "z": 188.3,
+     "len_m": 17.0
+    }
+   }
+  }
+ ],
+ "bowsprit": {
+  "x0": 486,
+  "z0": 69.0,
+  "x1": 687.0,
+  "z1": 194.6,
+  "angle": 32,
+  "len": 237.0,
+  "spritsail_len": 145.0
+ }
+}

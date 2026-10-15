@@ -1,0 +1,90 @@
+{
+  "title": "收穫號（La Cosecha）新圖紙 01：線形、側面、甲板與船樓高度、砲位表、桅帆表",
+  "task": "TASK-0589（傘）／TASK-0590（新圖紙）",
+  "author": "calli",
+  "date": "2026-10-15",
+  "sources": {
+    "FG": "F. Fernández-González, The Spanish Regulations for Shipbuilding (Ordenanzas) of the Seventeenth Century, 2009 Naval History Symposium（UPM https://oa.upm.es/id/eprint/1878/contents；兩個研究 agent 都逐頁讀過）—— 1618 年 Ordenanza 表 4 與條文翻譯",
+    "CIHCN": "Cuadernos de Historia Naval 33 cap. 7（https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/33cuaderno/07cap.pdf，讀過）—— 各作者的比例表、codo 換算",
+    "MP": "Modelismo Naval Metodología「Parte cuarta: la arboladura」（https://modelismoperianes.wordpress.com/tag/proporciones-de-cuenta-y-medida/）—— Cano 1611／Palacio 1587 桅桁比例的轉述；⚠ 二手、只讀過摘要，沒對過原典",
+    "AND": "Galeón Andalucía 複製船新聞資料（Vigo 2023 dossier https://www.vigoe.es/wp-content/uploads/2023/03/dossier_prensa_gale_vigo.pdf，讀過）",
+    "WP": "en.wikipedia Galleon／Nuestra Señora de Atocha／Spanish galleon San José（讀過）",
+    "codo": "codo de ribera ＝ 0.57468 m（1590 年起；FG 表 2–4 全用這個）⇒ 1 codo ＝ 5.7468 格"
+  },
+  "class": {"v": "1618 年 Ordenanza 的 manga 21 codos（946½ toneladas）", "src": "FG 表 4（讀過）：設計決定挑這一級 —— 遊戲裡其他船多在 40–60 m，這一級連 espolón 約 46 m"},
+  "meters_per_cell": 0.1,
+  "space": {"x": 800, "y": 320, "z": 640, "yc": 160, "note": "中線 ＝ 第 160 格（鏡像 y ↔ 320 − y）"},
+  "lines": {
+    "half_beam": {"v": 60.5, "src": "FG 表 4：manga 21 codos ＝ 12.068 m ⇒ 全寬 121 格（|dy| ≤ 60）"},
+    "keel_top": {"v": 5, "src": "設計決定：龍骨（含 false keel）0.5 m；puntal 從這裡量"},
+    "keel_half": {"v": 2, "src": "設計決定：龍骨寬 5 格（0.5 m）"},
+    "plan_half": {"v": 30, "src": "FG 表 4：plan 10½ codos ＝ 6.03 m（＝ manga／2）⇒ 半寬 30"},
+    "astilla": {"v": 7, "src": "FG 表 4：astilla（rise of floor）1¼ codos ＝ 0.72 m"},
+    "max_breadth_z": {"v": 62, "src": "FG p.14：最寬處在 puntal 的高度（10 codos ＝ 57.5 格，從龍骨頂量）⇒ z 5 ＋ 57.5"},
+    "tumblehome": {"v": 1.4, "src": "FG 1618 art.22：從 hold beams（甲板下 3½ codos）張開多少、到 puente 就收回多少 ⇒ puente 那一層的全寬 ＝ hold beams 那一層（讀數 ordenanza_check：beam_hold_beams ＝ beam_puente）"},
+    "tumblehome_ref_z": {"v": 85, "src": "＝ puente 的甲板面（decks.rows）"},
+    "tumblehome_pow": {"v": 1.0, "src": "設計決定"},
+    "tumblehome_above_per_cell": {"v": 0.12, "src": "設計決定：art.22「puente 以上 toptimbers 稍微拉直」—— 仍往內收一點（每 10 格收 1.2 格／舷），船樓頂（z 133）每舷再收約 6 格，看得出 galleon 上窄的樣子"},
+    "bilge_pow": {"v": 2.2, "src": "設計決定：圓舭的飽滿度"},
+    "s_aft": {"v": 0.45, "src": "設計決定：調到 cuadra（艉柱往前 L/4＋2 codos）的寬 ≈ manga − 2 codos（FG art.21）"},
+    "s_fwd": {"v": 0.59, "src": "設計決定：調到 mura（艏柱往後 L/4＋1 codo）的寬 ≈ manga − 1 codo（FG art.21）"},
+    "sternpost_x0": {"v": 150, "src": "設計決定：艉柱腳的位置（整艘船在 X 上的擺放）"},
+    "sternpost_rake_deg": {"v": 23.8, "src": "FG 表 4：lanzamiento a popa 5 codos ＝ 28.7 格，量到主甲板（z 65、龍骨底起 65 格）⇒ atan(28.7／65)"},
+    "wing_transom_z": {"v": 62, "src": "設計決定：yugo（wing transom）放在最寬處那一層（主甲板下緣）"},
+    "transom_ratio": {"v": 0.5, "src": "FG 表 4：yugo 10½ codos ＝ 60 格寬 ⇒ 半寬 30 ÷ 60.5"},
+    "forefoot_x": {"v": 443, "src": "FG 表 4：quilla 51 codos ＝ 293 格 ⇒ 150 ＋ 293"},
+    "stem_radius": {"v": 57.5, "src": "FG 表 4：lanzamiento a proa 10 codos ＝ 57.5 格；設計決定：艏柱是半徑 57.5 的圓弧，z 57.5 以上直立 ⇒ 主甲板高度的 rake 正好 10 codos"},
+    "deadwood_aft_z": {"v": 45, "src": "FG 表 4：rasel aft 7 codos ＝ 40 格（＋龍骨頂 5）"},
+    "deadwood_fwd_z": {"v": 18, "src": "FG 表 4：rasel fwd 2⅓ codos ＝ 13 格（＋龍骨頂 5）"},
+    "bow_pow_low": {"v": 1.7, "src": "設計決定"},
+    "bow_pow_high": {"v": 2.3, "src": "設計決定：上面鈍（galleon 圓圓的船頭）"},
+    "aft_pow": {"v": 2.0, "src": "設計決定"},
+    "top": [[80, 133], [196, 133], [200, 116], [268, 116], [272, 100], [418, 100], [422, 116], [520, 117]],
+    "top_src": "舷頂（舷牆頂）折線：每一層甲板面 ＋ 舷牆 12 格（toldilla、alcázar、castillo）／puente ＋ 15（船腰：上甲板砲門 z 91–97 頂上要留 2 格舷牆）；船樓前後緣與長度是設計決定（castillo 比較長：Andalucía 的 castillo 41.75 m² 是 toldilla 的 3 倍，AND 讀過）"
+  },
+  "waterline": {"z": 52, "src": "設計決定：吃水 5.2 m（含龍骨）—— Ordenanza 沒給吃水；Atocha 550 t 4.3 m（WP）、San José 依 codo 換算 4.9／6.75 m（WP）。主甲板砲門下緣 z 71 離水線 1.9 m"},
+  "readings_at": {"deck_z": 65, "rail_z": 116, "hold_beams_z": 45, "puente_z": 85},
+  "decks": {
+    "src": "FG 表 4：主甲板 ＝ puntal ＋ ½ codo ＝ 10½ codos（60 格，從龍骨頂量）；1618 art.5：puente、alcázar、castillo 各 3 codos（17 格）；FG 表 1：1589 年 galleon 甲板間距 3½ codos（20 格）",
+    "rows": [
+      {"key": "orlop", "name": "底艙（bodega）", "z": 45, "x_from": 190, "x_to": 430, "src": "FG art.32：21 codos 以上 hold beams 兩層、把 puntal 分成三份 ⇒ 下層在 z 45（甲板下 3½ codos，art.22）；只鋪中段給彈藥庫（設計決定）"},
+      {"key": "main", "name": "主甲板（primera cubierta）", "z": 65, "src": "FG 表 4：puntal ＋ ½ codo"},
+      {"key": "puente", "name": "上甲板（puente）", "z": 85, "src": "設計決定：主甲板 ＋ 3½ codos（20 格，1589 年 galleon 的甲板間距，FG 表 1）—— 1618 年是 3 codos（17 格），多 3 格給遊戲裡站人的頭頂"},
+      {"key": "alcazar", "name": "後甲板（alcázar）", "z": 102, "x_to": 268, "src": "1618 art.5：3 codos ＝ 17 格"},
+      {"key": "toldilla", "name": "船尾樓（toldilla）", "z": 119, "x_to": 196, "src": "1618 art.5：船尾樓 3 codos ＝ 17 格"},
+      {"key": "castillo", "name": "船首樓（castillo）", "z": 102, "x_from": 422, "src": "1618 art.5：castillo 3 codos ＝ 17 格"}
+    ],
+    "sheer": {"aft": 6, "fwd": 3, "x_mid": 300, "src": "FG 表 4：arrufadura（甲板舷弧）aft 1 codo、fwd ½ codo"}
+  },
+  "decks_preview": {"orlop": 45, "main": 65, "puente": 85, "alcazar": 102, "toldilla": 119},
+  "ports": {
+    "src": "1618 art.42：砲門下緣在甲板上 1 codo（6 格）、砲門 1¼ codos 見方（7 格）",
+    "tiers": [
+      {"deck": "main", "per_side": 9, "x_from": 168, "x_to": 452, "w": 7, "h": 7, "sill": 6, "gun": "18l", "src": "設計決定：每舷 9 門（Atocha 20 門大砲 ≈ 一層每舷 10，WP；1613 年 17 codos 的船每舷 6，只讀到摘要）；18 磅 culebrina"},
+      {"deck": "puente", "per_side": 8, "x_from": 188, "x_to": 440, "w": 7, "h": 7, "sill": 6, "gun": "12l", "src": "設計決定：上甲板每舷 8 門 12 磅（San José 中層 10 磅，WP）"},
+      {"deck": "alcazar", "per_side": 2, "x_from": 210, "x_to": 262, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定：船樓 6 磅（San José 船樓 6 磅，WP）"},
+      {"deck": "castillo", "per_side": 2, "x_from": 430, "x_to": 480, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定"}
+    ],
+    "stern_chasers": {"deck": "main", "n": 2, "w": 7, "h": 7, "sill": 6, "gun": "18l", "src": "設計決定：主甲板船尾兩門追擊砲，從 espejo 開出去（1618 art.46：alcázar break 底下 artillery 打得到船尾）"}
+  },
+  "masts": {
+    "src": "1618 art.66–68（FG 讀過）：主桅腳在龍骨中點、前桅腳在艏柱 rake 的中點、艏斜桅腳在主甲板。長度比例照 Cano 1611／Palacio 1587（MP，⚠ 二手）",
+    "manga_m": 12.068,
+    "rows": [
+      {"key": "fore", "x_step": 472, "rake_deg": -3, "lower_m": 29.6, "top_m": 14.8, "yards": {"course": 21.7, "topsail": 9.7},
+       "src": "x：艏柱 rake 中點 443 ＋ 57.5／2（art.68）；長：Cano 主桅 − 1 codo、上桅 ½（MP）；course yard：Cano 主帆桁少 1/5（MP）；topsail yard：Palacio 主上桅帆桁少 1/5（MP）；rake −3°（往前傾）設計決定"},
+      {"key": "main", "x_step": 296, "rake_deg": 1, "lower_m": 30.2, "top_m": 15.1, "yards": {"course": 27.2, "topsail": 12.1},
+       "src": "x：龍骨中點 150 ＋ 293／2（art.66）；長：Cano 2½ manga、上桅 ½（MP）；course yard：Cano 戰艦 2¼ manga（MP）；topsail yard：Palacio ＝ manga（MP）"},
+      {"key": "mizzen", "x_step": 205, "rake_deg": 3, "lower_m": 18.4, "yards": {"lateen": 24.5},
+       "src": "長：Palacio mesana ＝ bauprés（主桅的 28／46，MP）；lateen yard ＝ 桅 ＋ 1/3（Palacio，MP）；位置設計決定（Ordenanza 沒給）"},
+      {"key": "bonaventure", "x_step": 120, "rake_deg": 4, "lower_m": 13.8, "yards": {"lateen": 17.0},
+       "src": "設計決定：mizzen 的 3/4；大的 galleon 常有第四根 lateen 桅（WP Galleon 讀過）"},
+      {"key": "bowsprit", "x_step": 486, "angle_deg": 32, "len_m": 23.7, "yards": {"spritsail": 14.5},
+       "src": "長：Palacio bauprés ＝ trinquete 少 1/5（MP）；spritsail yard：Cano 前帆桁少 1/3（MP）；仰角 32° 設計決定；腳在主甲板（art.68）、前桅（x 472）與艏柱（x 500）之間 —— 設計決定（史實是從前桅旁邊穿過去）"}
+    ],
+    "check": "主桅頂（上桅頂）離水線 ≈ 38.6 m ⇔ Andalucía 複製船 air draft 37 m（AND 讀過）—— 只當量級對照"
+  },
+  "espolon": {"len_beyond_stem": 72, "src": "1618 art.45：espolón ＝ manga 的 3/5 伸出艏柱 ⇒ 7.24 m（在 TASK-0594 做）"},
+  "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 36, "bottom_color": 182, "bottom_top_z": 52,
+                 "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同三叉戟號）；水線下灰白（white stuff 防船蛆，研究只讀到論壇摘要）、水線上黑；塗裝帶在 TASK-0592"}
+}
