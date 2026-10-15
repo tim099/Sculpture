@@ -342,6 +342,7 @@
 			"persona": "meadow",
 			"note": "",
 			"meta": {
+				"hoist": "梯子/turret",
 				"kind": "magazine",
 				"pos": "mid",
 				"powder_lb": 1600
@@ -388,6 +389,57 @@
 			"note": "",
 			"meta": {
 				"kind": "ladders"
+			}
+		},
+		{
+			"name": "砲塔裝甲",
+			"work": "meadow-monitor-01m-turret-armor",
+			"at": [
+				269,
+				33,
+				35
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				65,
+				65,
+				28
+			],
+			"enabled": true,
+			"created_at": "2026-10-16T00:21:40",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "armor",
+				"material": "iron",
+				"mount": "甲板-main/砲塔",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "砲塔頂",
+			"work": "meadow-monitor-01m-turret-roof",
+			"at": [
+				269,
+				33,
+				63
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				65,
+				65,
+				2
+			],
+			"enabled": true,
+			"created_at": "2026-10-16T00:21:41",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "armor",
+				"material": "iron",
+				"mount": "甲板-main/砲塔"
 			}
 		}
 	]
