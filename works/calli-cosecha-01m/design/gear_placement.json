@@ -1,0 +1,2687 @@
+{
+ "note": "draft_gear.py 的結果；模型 at ＝ pivot 落點（世界座標；host 子作品都在 0,0,0）",
+ "magazine": {
+  "work": "calli-cosecha-01m-magazine",
+  "anchors": {
+   "blast": [
+    220,
+    160,
+    54
+   ],
+   "door": [
+    244,
+    160,
+    47
+   ]
+  },
+  "meta": {
+   "kind": "magazine",
+   "pos": "aft",
+   "powder_lb": 11200
+  }
+ },
+ "models": [
+  {
+   "name": "舵輪",
+   "host": "calli-cosecha-01m-deck-alcazar",
+   "work": "basecamp-frigate-constitution-01m-wheel",
+   "at": [
+    224.0,
+    160.5,
+    103.0
+   ],
+   "pivot": [
+    50,
+    52,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "wheel"
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "羅經櫃",
+   "host": "calli-cosecha-01m-deck-alcazar",
+   "work": "summit-night-falcon-01m-binnacle",
+   "at": [
+    243.0,
+    160.5,
+    103.0
+   ],
+   "pivot": [
+    9,
+    13,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "binnacle"
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "主絞盤",
+   "host": "calli-cosecha-01m-deck-puente",
+   "work": "basecamp-ember-01m-capstan",
+   "at": [
+    280.5,
+    160.5,
+    86.0
+   ],
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "capstan"
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "小艇",
+   "host": "calli-cosecha-01m-deck-puente",
+   "work": "basecamp-ember-01m-boat",
+   "at": [
+    345.0,
+    160.5,
+    98.0
+   ],
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "kind": "boat",
+    "boat": "cutter",
+    "length_m": 9
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-001",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    166.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-002",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    154.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-003",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    170.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-004",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    150.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-005",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    175.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-006",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    145.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-007",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    180.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-008",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    141.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-009",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    184.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-010",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    136.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-011",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    189.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-012",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    131.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-013",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    166.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-014",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    154.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-015",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    170.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-016",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    150.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-017",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    175.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-018",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    145.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-019",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    180.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-020",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    141.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-021",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    184.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-022",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    136.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-023",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    189.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-024",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    202.8,
+    131.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-025",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    166.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-026",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    154.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-027",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    170.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-028",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    150.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-029",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    175.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-030",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    145.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-031",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    180.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-032",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    141.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-033",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    184.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-034",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    136.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-035",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    189.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-036",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    131.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-037",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    193.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-038",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    127.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-039",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    166.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-040",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    154.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-041",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    170.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-042",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    150.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-043",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    175.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-044",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    145.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-045",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    180.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-046",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    141.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-047",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    184.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-048",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    136.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-049",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    189.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-050",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    131.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-051",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    193.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-052",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    127.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-053",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    198.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-054",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    122.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-055",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    203.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-056",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.0,
+    118.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-057",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    166.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-058",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    154.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-059",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    170.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-060",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    150.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-061",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    175.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-062",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    145.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-063",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    180.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-064",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    141.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-065",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    184.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-066",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    136.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-067",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    189.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-068",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    131.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-069",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    193.8,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-070",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    127.2,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-071",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    198.4,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-072",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    122.6,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-073",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    203.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-074",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    239.6,
+    118.0,
+    47
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-075",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    175.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-076",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    145.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-077",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    184.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-078",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    136.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-079",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    193.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-080",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    198.2,
+    127.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-081",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    166.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-082",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    154.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-083",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    180.0,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-084",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    141.0,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-085",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    189.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-086",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    131.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-087",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    198.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-088",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    207.4,
+    122.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-089",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    166.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-090",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    154.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-091",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    175.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-092",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    145.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-093",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    184.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-094",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    136.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-095",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    193.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-096",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    127.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-097",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    198.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-098",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    216.6,
+    122.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-099",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    166.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-100",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    154.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-101",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    175.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-102",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    145.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-103",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    184.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-104",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    136.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-105",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    193.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-106",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    127.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-107",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    198.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-108",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    225.8,
+    122.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-109",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.4,
+    166.2,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-110",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.4,
+    154.8,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-111",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.4,
+    175.4,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-112",
+   "host": "calli-cosecha-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.4,
+    145.6,
+    54
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  }
+ ]
+}

@@ -207,6 +207,31 @@
     "support_min": 0.5,
     "support_src": "設計決定：砲最底下那層格子正下方有實心的比例 ≥ 0.5（不壓在艙口上）。v1 取 0.6 ⇒ 跨在舷弧台階上的砲（一半在低的那一階上懸 1 格）不算 ok；遊戲判斷掉不掉是從外框中心往下 12 格內找甲板（Blockside/src/js/10_ship.js:47）⇒ 0.5 不會掉，看起來是砲架後半懸 0.1 m（照實記）"
   },
+  "gear_build": {
+    "assembly": "calli-cosecha-01m-assembly",
+    "magazine": {"work": "calli-cosecha-01m-magazine", "link": "彈藥庫", "title": "收穫號 彈藥庫（pañol de la pólvora）",
+                 "x0": 194, "x1": 244, "floor": 46, "ztop": 61, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft",
+                 "cap": 112, "cap_src": "照砲數換算：憲法號 54 門 138 桶 ⇒ ×44／54 ≈ 112 桶（11,200 磅）—— ⚠ 換算，不是史料（1618 Ordenanza 沒讀到火藥量）",
+                 "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+                 "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 3},
+                 "src": "位置設計決定：底艙（orlop 只鋪 x 190–430 就是留給它的）船尾那一段 —— galleon 的 pañol de la pólvora 在船尾下層（研究只讀到一般說法，⚠ 未查證）；門開在船頭那道艙壁、對著底艙梯子（foot x 269）。做法照夜燈號 draft_magazine.py（造船規格 §8：銅皮 168、松木地板 177、橡木壓條 136、門洞 5 格寬；固定點 blast、door）"},
+    "skids": {"work": "calli-cosecha-01m-boat-skids", "link": "小艇架", "title": "收穫號 小艇架（船腰三座 cradle）", "deck": "puente",
+              "xs": [305, 344, 372], "y_half": 15, "post_dy": 13, "beam_z": 96, "color": 136,
+              "src": "設計決定：船腰沒有連續 90 格的空甲板（主桅 x 292–298、主艙口 x 312–330、前梯子井 x 376–390）⇒ 小艇擱在兩座橫架上、跨過主艙口（餘燼號的小艇也墊高 11 格）；架在主桅與主艙口之間、主艙口與前梯子井之間；橫樑底在甲板上 1 m。中間那座（x 344）在小艇外框中心正下方：遊戲的「腳」是外框中心往下第一格實心（Blockside/src/js/10_ship.js:47）⇒ 腳是架子、不是 1.2 m 下面的甲板（v1 兩座 ⇒ 中心底下 12 格才碰到甲板）"},
+    "models": [
+      {"name": "舵輪", "host": "calli-cosecha-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel", "at": [224, 160.5, null], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel"},
+       "src": "沿用憲法號雙舵輪（6 艘在用）；後甲板中線、後桅（x 205）前面。⚠ 1618 年的 galleon 用 whipstaff（舵桿），舵輪要到 18 世紀 —— 遊戲的舵手要 kind=wheel，照遊戲；放在 toldilla 底下站不下（舵輪 2.1 m、那裡淨高 1.4 m）"},
+      {"name": "羅經櫃", "host": "calli-cosecha-01m-deck-alcazar", "work": "summit-night-falcon-01m-binnacle", "at": [243, 160.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"},
+       "src": "沿用夜隼號羅經櫃（4 艘在用）；舵輪前面"},
+      {"name": "主絞盤", "host": "calli-cosecha-01m-deck-puente", "work": "basecamp-ember-01m-capstan", "at": [280.5, 160.5, null], "pivot": [40, 40, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "capstan"},
+       "src": "沿用餘燼號主絞盤（7 艘在用）；上甲板中線、主桅後面（x 268 後甲板隔艙壁與主桅 x 292 之間）"},
+      {"name": "小艇", "host": "calli-cosecha-01m-deck-puente", "work": "basecamp-ember-01m-boat", "at": [345, 160.5, null], "pivot": [90, 26, 0], "scale": 0.5, "rotate": 0, "meta": {"kind": "boat", "boat": "cutter", "length_m": 9},
+       "src": "沿用餘燼號 cutter 9 m（三叉戟號也在用）；擱在小艇架上（beam 頂 z 97）、跨過主艙口 —— galleon 的 batel（⚠ 長度照元件，沒查證）"}
+    ],
+    "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（甲板舷弧、小艇架頂）",
+    "foot_reach": 12,
+    "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js:47）"
+  },
   "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 36, "bottom_color": 182, "bottom_top_z": 52,
                  "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同三叉戟號）；水線下灰白（white stuff 防船蛆，研究只讀到論壇摘要）、水線上黑；塗裝帶在 TASK-0592"}
 }
