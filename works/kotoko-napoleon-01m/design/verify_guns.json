@@ -1,0 +1,5695 @@
+{
+ "by_code": {
+  "12l": 14,
+  "24l": 30,
+  "32c": 10,
+  "32l": 36
+ },
+ "count": 90,
+ "fails": [],
+ "not_ideal": [],
+ "note": "draft_guns.py（階段八）—— 現況 ＝ 組裝件 links=all（1671785 格，z < 260）＋ 模型外框 16",
+ "pads": {
+  "kotoko-napoleon-01m-deck-lower": {
+   "file": "masks/guns/pads_lower.vox.txt",
+   "voxels": 158
+  },
+  "kotoko-napoleon-01m-deck-spar": {
+   "file": "masks/guns/pads_spar.vox.txt",
+   "voxels": 52
+  },
+  "kotoko-napoleon-01m-deck-upper": {
+   "file": "masks/guns/pads_upper.vox.txt",
+   "voxels": 24
+  }
+ },
+ "rows": [
+  {
+   "at": [
+    225.604,
+    254.724,
+    96.0
+   ],
+   "back": 12.0,
+   "breech": [
+    230.991,
+    239.924,
+    107.25
+   ],
+   "deck_z": 93.0,
+   "dl": 1.5,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    221.243,
+    266.705,
+    107.25
+   ],
+   "muzzle_out": 0.705,
+   "outer": 266.0,
+   "pad_cells": 39,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    215,
+    224
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 3,
+   "rotate": [
+    0,
+    0,
+    20
+   ],
+   "scale": 0.5,
+   "support": [
+    36,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    225.604,
+    146.276,
+    96.0
+   ],
+   "back": 12.0,
+   "breech": [
+    230.991,
+    161.076,
+    107.25
+   ],
+   "deck_z": 93.0,
+   "dl": 1.5,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    221.243,
+    134.295,
+    107.25
+   ],
+   "muzzle_out": 0.705,
+   "outer": 135.0,
+   "pad_cells": 39,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    215,
+    224
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 3,
+   "rotate": [
+    0,
+    0,
+    -20
+   ],
+   "scale": 0.5,
+   "support": [
+    36,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    256.0,
+    260.0,
+    94.0
+   ],
+   "back": 12.0,
+   "breech": [
+    256.0,
+    244.25,
+    105.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    256.0,
+    272.75,
+    105.25
+   ],
+   "muzzle_out": 0.75,
+   "outer": 272.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    251,
+    260
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    256.0,
+    141.0,
+    94.0
+   ],
+   "back": 12.0,
+   "breech": [
+    256.0,
+    156.75,
+    105.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    256.0,
+    128.25,
+    105.25
+   ],
+   "muzzle_out": 0.75,
+   "outer": 129.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    251,
+    260
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    291.0,
+    268.0,
+    93.0
+   ],
+   "back": 10.0,
+   "breech": [
+    291.0,
+    252.25,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    291.0,
+    280.75,
+    104.25
+   ],
+   "muzzle_out": 2.75,
+   "outer": 278.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    286,
+    295
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    291.0,
+    133.0,
+    93.0
+   ],
+   "back": 10.0,
+   "breech": [
+    291.0,
+    148.75,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    291.0,
+    120.25,
+    104.25
+   ],
+   "muzzle_out": 2.75,
+   "outer": 123.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    286,
+    295
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    327.0,
+    274.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    327.0,
+    258.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    327.0,
+    286.75,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    322,
+    331
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    327.0,
+    127.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    327.0,
+    142.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    327.0,
+    114.25,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    322,
+    331
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    362.0,
+    277.5,
+    92.0
+   ],
+   "back": 6.5,
+   "breech": [
+    362.0,
+    261.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    362.0,
+    290.25,
+    103.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    357,
+    366
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    362.0,
+    123.5,
+    92.0
+   ],
+   "back": 6.5,
+   "breech": [
+    362.0,
+    139.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    362.0,
+    110.75,
+    103.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    357,
+    366
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    398.0,
+    279.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    398.0,
+    263.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    398.0,
+    291.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 285.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    393,
+    402
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    398.0,
+    122.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    398.0,
+    137.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    398.0,
+    109.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 116.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    393,
+    402
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    434.0,
+    279.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    434.0,
+    263.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    434.0,
+    291.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 285.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    429,
+    438
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    434.0,
+    122.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    434.0,
+    137.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    434.0,
+    109.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 116.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    429,
+    438
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    469.0,
+    279.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    469.0,
+    263.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    469.0,
+    291.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 285.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    464,
+    473
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    469.0,
+    122.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    469.0,
+    137.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    469.0,
+    109.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 116.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    464,
+    473
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    505.0,
+    279.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    505.0,
+    263.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    505.0,
+    291.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 285.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    500,
+    509
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    505.0,
+    122.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    505.0,
+    137.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    505.0,
+    109.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 116.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    500,
+    509
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    540.0,
+    279.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    540.0,
+    263.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    540.0,
+    291.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 285.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    535,
+    544
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    540.0,
+    122.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    540.0,
+    137.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    540.0,
+    109.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 116.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    535,
+    544
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    576.0,
+    279.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    576.0,
+    263.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    576.0,
+    291.75,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 285.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    571,
+    580
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    576.0,
+    122.0,
+    91.0
+   ],
+   "back": 6.0,
+   "breech": [
+    576.0,
+    137.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    576.0,
+    109.25,
+    102.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 116.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    571,
+    580
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    611.0,
+    279.0,
+    92.0
+   ],
+   "back": 6.0,
+   "breech": [
+    611.0,
+    263.25,
+    103.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    611.0,
+    291.75,
+    103.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 285.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    606,
+    615
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    611.0,
+    122.0,
+    92.0
+   ],
+   "back": 6.0,
+   "breech": [
+    611.0,
+    137.75,
+    103.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    611.0,
+    109.25,
+    103.25
+   ],
+   "muzzle_out": 6.75,
+   "outer": 116.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    606,
+    615
+   ],
+   "port_z": [
+    96,
+    104
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    647.0,
+    278.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    647.0,
+    262.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 13,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S13",
+   "muzzle": [
+    647.0,
+    290.75,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 285.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    642,
+    651
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    647.0,
+    123.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    647.0,
+    138.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 13,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P13",
+   "muzzle": [
+    647.0,
+    110.25,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 116.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    642,
+    651
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    683.0,
+    277.5,
+    92.0
+   ],
+   "back": 6.5,
+   "breech": [
+    683.0,
+    261.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 14,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S14",
+   "muzzle": [
+    683.0,
+    290.25,
+    103.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    678,
+    687
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    683.0,
+    123.5,
+    92.0
+   ],
+   "back": 6.5,
+   "breech": [
+    683.0,
+    139.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 14,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P14",
+   "muzzle": [
+    683.0,
+    110.75,
+    103.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    678,
+    687
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    718.0,
+    275.5,
+    93.0
+   ],
+   "back": 6.5,
+   "breech": [
+    718.0,
+    259.75,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 15,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S15",
+   "muzzle": [
+    718.0,
+    288.25,
+    104.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 282.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    713,
+    722
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    718.0,
+    125.5,
+    93.0
+   ],
+   "back": 6.5,
+   "breech": [
+    718.0,
+    141.25,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 15,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P15",
+   "muzzle": [
+    718.0,
+    112.75,
+    104.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 119.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    713,
+    722
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    754.0,
+    272.0,
+    93.0
+   ],
+   "back": 7.0,
+   "breech": [
+    754.0,
+    256.25,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 16,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S16",
+   "muzzle": [
+    754.0,
+    284.75,
+    104.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 279.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    749,
+    758
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    754.0,
+    129.0,
+    93.0
+   ],
+   "back": 7.0,
+   "breech": [
+    754.0,
+    144.75,
+    104.25
+   ],
+   "deck_z": 92.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 16,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P16",
+   "muzzle": [
+    754.0,
+    116.25,
+    104.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 122.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    749,
+    758
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    789.0,
+    266.5,
+    94.0
+   ],
+   "back": 7.5,
+   "breech": [
+    789.0,
+    250.75,
+    105.25
+   ],
+   "deck_z": 93.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 17,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S17",
+   "muzzle": [
+    789.0,
+    279.25,
+    105.25
+   ],
+   "muzzle_out": 5.25,
+   "outer": 274.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    784,
+    793
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    789.0,
+    134.5,
+    94.0
+   ],
+   "back": 7.5,
+   "breech": [
+    789.0,
+    150.25,
+    105.25
+   ],
+   "deck_z": 93.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 17,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P17",
+   "muzzle": [
+    789.0,
+    121.75,
+    105.25
+   ],
+   "muzzle_out": 5.25,
+   "outer": 127.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    784,
+    793
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    825.0,
+    255.0,
+    94.0
+   ],
+   "back": 10.0,
+   "breech": [
+    825.0,
+    239.25,
+    105.25
+   ],
+   "deck_z": 93.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 18,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S18",
+   "muzzle": [
+    825.0,
+    267.75,
+    105.25
+   ],
+   "muzzle_out": 2.75,
+   "outer": 265.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    820,
+    829
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    825.0,
+    146.0,
+    94.0
+   ],
+   "back": 10.0,
+   "breech": [
+    825.0,
+    161.75,
+    105.25
+   ],
+   "deck_z": 93.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 18,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P18",
+   "muzzle": [
+    825.0,
+    133.25,
+    105.25
+   ],
+   "muzzle_out": 2.75,
+   "outer": 136.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    820,
+    829
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    250.0,
+    279.0,
+    117.0
+   ],
+   "back": 5.0,
+   "breech": [
+    250.0,
+    263.5,
+    128.5
+   ],
+   "deck_z": 116.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    250.0,
+    291.5,
+    128.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 12,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    245,
+    254
+   ],
+   "port_z": [
+    122,
+    130
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    250.0,
+    122.0,
+    117.0
+   ],
+   "back": 5.0,
+   "breech": [
+    250.0,
+    137.5,
+    128.5
+   ],
+   "deck_z": 116.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    250.0,
+    109.5,
+    128.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 12,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    245,
+    254
+   ],
+   "port_z": [
+    122,
+    130
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    24,
+    48
+   ],
+   "support_after_pad": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    287.0,
+    279.0,
+    116.0
+   ],
+   "back": 5.0,
+   "breech": [
+    287.0,
+    263.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    287.0,
+    291.5,
+    127.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    282,
+    291
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    287.0,
+    122.0,
+    116.0
+   ],
+   "back": 5.0,
+   "breech": [
+    287.0,
+    137.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    287.0,
+    109.5,
+    127.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    282,
+    291
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    324.0,
+    279.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    324.0,
+    263.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    324.0,
+    291.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    319,
+    328
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    324.0,
+    122.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    324.0,
+    137.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    324.0,
+    109.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    319,
+    328
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    361.0,
+    279.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    361.0,
+    263.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    361.0,
+    291.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    356,
+    365
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    361.0,
+    122.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    361.0,
+    137.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    361.0,
+    109.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    356,
+    365
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    399.0,
+    279.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    399.0,
+    263.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    399.0,
+    291.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    394,
+    403
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    399.0,
+    122.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    399.0,
+    137.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    399.0,
+    109.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    394,
+    403
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    436.0,
+    279.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    436.0,
+    263.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    436.0,
+    291.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    431,
+    440
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    436.0,
+    122.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    436.0,
+    137.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    436.0,
+    109.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    431,
+    440
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    473.0,
+    279.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    473.0,
+    263.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    473.0,
+    291.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    468,
+    477
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    473.0,
+    122.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    473.0,
+    137.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    473.0,
+    109.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    468,
+    477
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    510.0,
+    279.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    510.0,
+    263.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    510.0,
+    291.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    505,
+    514
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    510.0,
+    122.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    510.0,
+    137.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    510.0,
+    109.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    505,
+    514
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    547.0,
+    279.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    547.0,
+    263.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    547.0,
+    291.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    542,
+    551
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    547.0,
+    122.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    547.0,
+    137.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    547.0,
+    109.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    542,
+    551
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    584.0,
+    279.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    584.0,
+    263.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    584.0,
+    291.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    579,
+    588
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    584.0,
+    122.0,
+    114.0
+   ],
+   "back": 5.0,
+   "breech": [
+    584.0,
+    137.5,
+    125.5
+   ],
+   "deck_z": 113.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    584.0,
+    109.5,
+    125.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    579,
+    588
+   ],
+   "port_z": [
+    119,
+    127
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    621.0,
+    279.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    621.0,
+    263.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    621.0,
+    291.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 284.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    616,
+    625
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    621.0,
+    122.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    621.0,
+    137.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    621.0,
+    109.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 117.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    616,
+    625
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    659.0,
+    278.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    659.0,
+    262.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    659.0,
+    290.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    654,
+    663
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    659.0,
+    123.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    659.0,
+    138.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    659.0,
+    110.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    654,
+    663
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    696.0,
+    277.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    696.0,
+    261.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 13,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S13",
+   "muzzle": [
+    696.0,
+    289.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    691,
+    700
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    696.0,
+    124.0,
+    115.0
+   ],
+   "back": 5.0,
+   "breech": [
+    696.0,
+    139.5,
+    126.5
+   ],
+   "deck_z": 114.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 13,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P13",
+   "muzzle": [
+    696.0,
+    111.5,
+    126.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    691,
+    700
+   ],
+   "port_z": [
+    120,
+    128
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    733.0,
+    275.0,
+    116.0
+   ],
+   "back": 5.0,
+   "breech": [
+    733.0,
+    259.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 14,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S14",
+   "muzzle": [
+    733.0,
+    287.5,
+    127.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    728,
+    737
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    733.0,
+    126.0,
+    116.0
+   ],
+   "back": 5.0,
+   "breech": [
+    733.0,
+    141.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 14,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P14",
+   "muzzle": [
+    733.0,
+    113.5,
+    127.5
+   ],
+   "muzzle_out": 7.5,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    728,
+    737
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    770.0,
+    271.0,
+    116.0
+   ],
+   "back": 6.0,
+   "breech": [
+    770.0,
+    255.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 15,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S15",
+   "muzzle": [
+    770.0,
+    283.5,
+    127.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 277.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    765,
+    774
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    770.0,
+    130.0,
+    116.0
+   ],
+   "back": 6.0,
+   "breech": [
+    770.0,
+    145.5,
+    127.5
+   ],
+   "deck_z": 115.0,
+   "dl": 0,
+   "host_link": "甲板-upper",
+   "host_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deck": "upper",
+    "gun": "24l",
+    "kind": "gun",
+    "port": 15,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P15",
+   "muzzle": [
+    770.0,
+    117.5,
+    127.5
+   ],
+   "muzzle_out": 6.5,
+   "outer": 124.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "port_x": [
+    765,
+    774
+   ],
+   "port_z": [
+    121,
+    129
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1.0,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long24",
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  {
+   "at": [
+    209.5,
+    277.0,
+    142.0
+   ],
+   "back": 4.0,
+   "breech": [
+    209.5,
+    270.75,
+    151.75
+   ],
+   "deck_z": 141.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    209.5,
+    281.75,
+    151.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 281.0,
+   "pad_cells": 7,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    205,
+    213
+   ],
+   "port_z": [
+    148,
+    155
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    206,
+    244
+   ],
+   "support_after_pad": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    209.5,
+    124.0,
+    142.0
+   ],
+   "back": 4.0,
+   "breech": [
+    209.5,
+    130.25,
+    151.75
+   ],
+   "deck_z": 141.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    209.5,
+    119.25,
+    151.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 120.0,
+   "pad_cells": 7,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    205,
+    213
+   ],
+   "port_z": [
+    148,
+    155
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    206,
+    244
+   ],
+   "support_after_pad": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    265.5,
+    277.0,
+    140.0
+   ],
+   "back": 4.0,
+   "breech": [
+    265.5,
+    270.75,
+    149.75
+   ],
+   "deck_z": 139.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    265.5,
+    281.75,
+    149.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    261,
+    269
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    265.5,
+    124.0,
+    140.0
+   ],
+   "back": 4.0,
+   "breech": [
+    265.5,
+    130.25,
+    149.75
+   ],
+   "deck_z": 139.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    265.5,
+    119.25,
+    149.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    261,
+    269
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    321.5,
+    275.5,
+    139.0
+   ],
+   "back": 5.5,
+   "breech": [
+    321.5,
+    261.75,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    321.5,
+    288.25,
+    146.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    317,
+    325
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    321.5,
+    125.5,
+    139.0
+   ],
+   "back": 5.5,
+   "breech": [
+    321.5,
+    139.25,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    321.5,
+    112.75,
+    146.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    317,
+    325
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    377.5,
+    275.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    377.5,
+    261.75,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    377.5,
+    288.25,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    373,
+    381
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    377.5,
+    125.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    377.5,
+    139.25,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    377.5,
+    112.75,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    373,
+    381
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    433.5,
+    275.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    433.5,
+    261.75,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    433.5,
+    288.25,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    429,
+    437
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    433.5,
+    125.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    433.5,
+    139.25,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    433.5,
+    112.75,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    429,
+    437
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    489.5,
+    275.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    489.5,
+    261.75,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    489.5,
+    288.25,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    485,
+    493
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    489.5,
+    125.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    489.5,
+    139.25,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    489.5,
+    112.75,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    485,
+    493
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    545.5,
+    275.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    545.5,
+    261.75,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    545.5,
+    288.25,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    541,
+    549
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    545.5,
+    125.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    545.5,
+    139.25,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    545.5,
+    112.75,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    541,
+    549
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    601.5,
+    275.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    601.5,
+    261.75,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    601.5,
+    288.25,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    597,
+    605
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    601.5,
+    125.5,
+    138.0
+   ],
+   "back": 5.5,
+   "breech": [
+    601.5,
+    139.25,
+    145.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    601.5,
+    112.75,
+    145.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    597,
+    605
+   ],
+   "port_z": [
+    144,
+    151
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    657.5,
+    275.5,
+    139.0
+   ],
+   "back": 5.5,
+   "breech": [
+    657.5,
+    261.75,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    657.5,
+    288.25,
+    146.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    653,
+    661
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    657.5,
+    125.5,
+    139.0
+   ],
+   "back": 5.5,
+   "breech": [
+    657.5,
+    139.25,
+    146.25
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "12l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    657.5,
+    112.75,
+    146.25
+   ],
+   "muzzle_out": 7.25,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "port_x": [
+    653,
+    661
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    48,
+    48
+   ],
+   "type": "long12",
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  {
+   "at": [
+    713.5,
+    276.0,
+    140.0
+   ],
+   "back": 4.0,
+   "breech": [
+    713.5,
+    269.75,
+    149.75
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    713.5,
+    280.75,
+    149.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 280.0,
+   "pad_cells": 19,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    709,
+    717
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    38,
+    244
+   ],
+   "support_after_pad": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    713.5,
+    125.0,
+    140.0
+   ],
+   "back": 4.0,
+   "breech": [
+    713.5,
+    131.25,
+    149.75
+   ],
+   "deck_z": 138.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    713.5,
+    120.25,
+    149.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 121.0,
+   "pad_cells": 19,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    709,
+    717
+   ],
+   "port_z": [
+    145,
+    152
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    38,
+    244
+   ],
+   "support_after_pad": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    769.5,
+    272.0,
+    140.0
+   ],
+   "back": 4.0,
+   "breech": [
+    769.5,
+    265.75,
+    149.75
+   ],
+   "deck_z": 139.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    769.5,
+    276.75,
+    149.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 276.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    765,
+    773
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    769.5,
+    129.0,
+    140.0
+   ],
+   "back": 4.0,
+   "breech": [
+    769.5,
+    135.25,
+    149.75
+   ],
+   "deck_z": 139.0,
+   "dl": 0,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    769.5,
+    124.25,
+    149.75
+   ],
+   "muzzle_out": 0.75,
+   "outer": 125.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    765,
+    773
+   ],
+   "port_z": [
+    146,
+    153
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    823.305,
+    264.061,
+    141.0
+   ],
+   "back": 4.0,
+   "breech": [
+    822.22,
+    257.906,
+    150.75
+   ],
+   "deck_z": 140.0,
+   "dl": -1.5,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    824.13,
+    268.739,
+    150.75
+   ],
+   "muzzle_out": 0.739,
+   "outer": 268.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    821,
+    829
+   ],
+   "port_z": [
+    147,
+    154
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -10
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  {
+   "at": [
+    823.305,
+    136.939,
+    141.0
+   ],
+   "back": 4.0,
+   "breech": [
+    822.22,
+    143.094,
+    150.75
+   ],
+   "deck_z": 140.0,
+   "dl": -1.5,
+   "host_link": "甲板-spar",
+   "host_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deck": "spar",
+    "gun": "32c",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    824.13,
+    132.261,
+    150.75
+   ],
+   "muzzle_out": 0.739,
+   "outer": 133.0,
+   "pad_cells": 0,
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "port_x": [
+    821,
+    829
+   ],
+   "port_z": [
+    147,
+    154
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    10
+   ],
+   "scale": 0.5,
+   "support": [
+    244,
+    244
+   ],
+   "type": "carr",
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  }
+ ],
+ "types": {
+  "carr": {
+   "anchors": {
+    "breech": [
+     7,
+     29,
+     19
+    ],
+    "cascabel": [
+     7,
+     25,
+     19
+    ],
+    "eye-aft": [
+     0,
+     40,
+     7
+    ],
+    "eye-fwd": [
+     14,
+     40,
+     7
+    ],
+    "muzzle": [
+     7,
+     51,
+     19
+    ],
+    "pivot": [
+     7,
+     38,
+     4
+    ]
+   },
+   "asym_x": 0,
+   "cells": 3498,
+   "code": "32c",
+   "pivot": [
+    7.5,
+    42.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    15,
+    52,
+    24
+   ],
+   "work": "basecamp-frigate-constitution-01m-gun-carronade32"
+  },
+  "long12": {
+   "anchors": {
+    "breech": [
+     9,
+     7,
+     14
+    ],
+    "cascabel": [
+     9,
+     1,
+     14
+    ],
+    "eye-aft": [
+     1,
+     22,
+     9
+    ],
+    "eye-fwd": [
+     17,
+     22,
+     9
+    ],
+    "muzzle": [
+     9,
+     60,
+     14
+    ],
+    "train": [
+     9,
+     10,
+     6
+    ],
+    "trunnion": [
+     9,
+     29,
+     14
+    ]
+   },
+   "asym_x": 0,
+   "cells": 3234,
+   "code": "12l",
+   "pivot": [
+    9.5,
+    35.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    19,
+    61,
+    19
+   ],
+   "work": "summit-stormkaap-01m-gun-12l"
+  },
+  "long24": {
+   "anchors": {
+    "breech": [
+     7,
+     3,
+     11
+    ],
+    "cascabel": [
+     7,
+     1,
+     11
+    ],
+    "eye-aft": [
+     2,
+     10,
+     7
+    ],
+    "eye-fwd": [
+     12,
+     10,
+     7
+    ],
+    "muzzle": [
+     7,
+     31,
+     11
+    ],
+    "train": [
+     7,
+     3,
+     4
+    ]
+   },
+   "asym_x": 0,
+   "cells": 1125,
+   "code": "24l",
+   "pivot": [
+    7.5,
+    19.0,
+    0.0
+   ],
+   "scale": 1.0,
+   "size": [
+    14,
+    32,
+    14
+   ],
+   "work": "basecamp-frigate-constitution-01m-gun-24"
+  },
+  "long32": {
+   "anchors": {
+    "breech": [
+     15,
+     8,
+     22
+    ],
+    "cascabel": [
+     15,
+     2,
+     22
+    ],
+    "eye-aft": [
+     4,
+     25,
+     15
+    ],
+    "eye-fwd": [
+     26,
+     25,
+     15
+    ],
+    "muzzle": [
+     15,
+     65,
+     22
+    ],
+    "train": [
+     15,
+     9,
+     9
+    ]
+   },
+   "asym_x": 0,
+   "cells": 8393,
+   "code": "32l",
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    30,
+    66,
+    28
+   ],
+   "work": "basecamp-ember-01m-gun-long32"
+  }
+ }
+}

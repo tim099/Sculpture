@@ -172,3 +172,66 @@
 - 組起來（引擎 stats，`hide_links=船名板`）：1,710,081 格、1 元件、空腔 0、鏡像差 0。
 - 產生程式重跑：5 個輸出檔逐位元組相同。
 - 過程圖：`overlays/stage7_{full,side,sternq}.png`、`overlays/stage7_ensign_texture.png`。
+
+## 階段八 砲（2026-10-15 下午，TASK-0613）
+Tim 2026-10-15：「接著 繼續造船直到完成吧（然後通知 ame 匯入遊戲內）」。設計 plan.json `guns`；產生 `design/draft_guns.py`（抄三叉戟號，檔頭註明；改：沒有追擊砲、每個砲門可以給自己的型、船頭船尾收窄的砲門照角度搜／墊高、落格之後可以重跑）⇒ `verify_guns.json`、`masks/guns/pads_{lower,upper,spar}.vox.txt`；落格 `design/tools/apply_guns.py`（pads／models）；讀數 `design/tools/check_stage8.py`（都抄三叉戟號）。
+- **全部沿用現有砲元件**（造船規格 §2.1；一門一個外部模型，掛在所在甲板的子作品 `甲板-<層>/砲-S01`…，P 舷 mirror=y）：
+
+| 層 | 每舷 | 史料（SS，1852 年配置） | 元件（遊戲代碼） | scale |
+|---|---|---|---|---|
+| 下砲甲板 | 18 | 30 磅 No.1／22 cm 砲 | 餘燼號 `-gun-long32`（32l） | 0.5 |
+| 上砲甲板 | 15 | 30 磅 No.2／22 cm 砲 | 憲法號 `-gun-24`（24l） | 1 |
+| 上甲板 | 12 | 16 cm 砲 14 ＋ carronade 10 | 風暴角號 `-gun-12l`（12l）× 7、憲法號 `-gun-carronade32`（32c）× 5 | 0.5 |
+
+  - 上甲板哪幾個砲門放 carronade 沒查到 ⇒ 設計決定：兩頭（後甲板 1–2、艏樓 10–12；船頭收窄、carronade 短），16 cm 砲在船腰 3–9。
+  - 合計 **90 門**（32l 36、24l 30、12l 14、32c 10）＝ SS 的 90。meta：kind=gun、gun、side、port、deck。
+- 擺法（三叉戟號／風暴角號的做法）：對準砲門中線、從牆外往裡每 0.5 格退到零碰撞；排序 輪子全著地 ＞ 砲口伸出 ≥ 0.5 ＞ 置中。
+  - 🩸 **本船加的：收窄的砲門照角度搜、還不行就墊高**。下砲甲板第 1 個砲門在圓船尾開始收的地方，砲架碰到砲門底下往裡斜的牆：正橫放砲口縮在牆裡 4–7 格，0°～45° 都出不去（32l、24l、carronade 都試過）⇒ 墊高 3 格（0.3 m 砲座）＋往船尾偏 20° 才出得去（砲口伸出 0.7）。上甲板第 12 門（carronade）往船頭偏 10°。其他 84 門正橫。
+  - 🩸 角度條件第一版寫太寬（「不理想」就轉）⇒ 輪子懸空（墊木補得掉）的也被轉了，連船腰都歪 20°；改成只有砲口出不去才轉。
+  - 墊木（甲板舷弧取整一階一階的 ⇒ 一側輪子懸空 1 格；照三叉戟號補甲板板色）：下砲甲板 158（含第 1 門的砲座 39×2）、上砲甲板 24、上甲板 52 格。
+- 落格：三層甲板子作品標記 `階段八墊木:begin` → stampvox（placed ＝ 清單）→ `:end`；90 個模型（IOException 重試 0）。
+
+讀數（`check_stage8.py`，只讀引擎的匯出）：
+- ① 墊木結果帳：三層 begin ＋ 墊木 ↔ 現在，缺 0、多 0、色差 0。
+- ② parts：砲 90 門，找不到 0、state 不是 ok 0、meta 不同 0；muzzle／breech 跟 draft 算的最大差 0.0003 格。
+- ③ 碰撞（變換從引擎的固定點反推，殘差 0.0000；每格格心＋八角 vs 組裝件 links=all ＋ 其他模型外框 ＋ 別門砲）：0。④ 砲口在船殼外：沒伸出 0。⑤ 輪子著地：懸空 0。
+- ⑥ **反向對照**（單子要的）：砲-S08@甲板-lower 往外推 3 格 ⇒ 碰撞 4,041 個取樣點；往船頭推 2 ⇒ 0；抬高 1 ⇒ 懸空 192／192；meta 改 gun=xx ⇒ meta 不同 1。
+- 產生程式重跑（不用快取、從引擎重讀；藏後面階段的關聯、扣掉本階段的墊木、跳過已上船的模型）：verify_guns.json 與三份墊木清單逐位元組相同。
+- 遊戲（Blockside 暫存副本的匯入檢查，見階段十）：**90 門站滿、缺 0 人**。
+- 過程圖：`overlays/stage8_spar_guns.png`、`overlays/stage8_lower_guns.png`。
+- ⚠ 砲具與砲索（環首螺栓、breeching、tackle）、rammer／sponge、shot garland 沒做（三叉戟號是後來另外幾個階段做的）。
+
+## 階段九 彈藥庫、舵、甲板零件、艙房、錨、煙囪 meta（2026-10-15 下午，TASK-0614）
+設計 plan.json `magazines`、`rudder`、`fittings`、`rooms`、`anchors`；產生 `design/draft_{magazines,fittings,rooms}.py`（抄三叉戟號）、`design/draft_rudder.py`（改自三叉戟號）、`design/draft_anchors.py`（自己寫的）；落格 `design/tools/apply_stage9.py magazines|fittings|rudder`、`apply_rooms.py`、`split_funnels.py`；讀數 `design/tools/check_stage9.py`。
+- **彈藥庫兩間**（`-magazine-aft`／`-fore`，0.1 m、parent 船殼、sub；組裝件 `彈藥庫-後` @252,139,49、`彈藥庫-前` @716,140,30，meta kind=magazine、pos、powder_lb 11,500）：faux-pont 底下的貨艙，避開機艙與鍋爐（x 330–650）。
+  - 後 x 252–294（後梯子之後、後艙口之前）：螺旋槳軸（z 42，hub 半徑 4）在底下 ⇒ 地板抬到 z 49、天花板就是 faux-pont（樑從天花板凸下來）；12,153 格。前 x 716–750（前艙口之後、前桅之前）：照三叉戟號地板 z 30、天花板 z 49；12,206 格。
+  - 桶：照砲數換算（憲法號 54 門 138 桶 ⇒ 90 門 ≈ 230 桶，⚠ 不是史料），兩間各 115；後間全在地板層，前間地板 84 ＋ 上架 31（架 1,145 格）。火藥桶引用憲法號 -powder-barrel（scale 0.2、kind=powder、powder_lb 100）。固定點 blast、door。
+- **舵**（`-rudder`，外部模型 `舵`，0.1 m、整船的框、世界座標，同收穫號）：掛在螺旋槳 aperture 後面的艉柱上；寬 2.0 → 1.7（水線）→ 0.7 m、厚 0.5／0.3 m；水線下銅、以上黑；pintle 帶。meta kind=rudder、hinge 160,200.5,1、axis（艉柱後傾 3°）−0.0523,0,0.9986、max_deg 35、turn_axis hinge；固定點 **stock-top** 153,200,103（旁邊 8 格內船尾格 672）。6,476 格。
+  - 🩸 新加的尺「鉸鏈軸轉 ±15°、±35°，舵每一格的格心落在船裡幾格」第一版報 240：① 舵前緣是方的 ⇒ 一轉前角吃進艉柱；② 舵頂那一段掛在 counter 後面（前緣跟著 counter 往後挑）⇒ 一轉掃進 counter 兩側。改：前緣削斜角（離前緣第 k 欄只留 |dy| ≤ k）、舵頂停在 counter 開始往後挑的地方、pintle 帶離前緣 3 格起 ⇒ 0／0／0／0（draft 與 check 兩把尺都是 0）。子作品用 delta_apply 刻掉 794 格。
+- **甲板零件**（掛 `甲板-spar`，沿用三叉戟號用的那幾件）：`舵輪`（憲法號 -wheel，kind=wheel）at 152,200.5,143（後桅後面；本船沒有 poop ⇒ taffrail 內面 x 134 前面留 0.9 m 給舵手站）、`羅經櫃`（餘燼號，kind=binnacle）at 168、`主絞盤`（餘燼號，kind=capstan）at 335（後艙口與後煙囪之間）、`小艇-S`／`-P`（餘燼號 cutter 9 m，kind=boat、boat=cutter、length_m 9）at 560,200.5±30。舵索 2 條（steering）。
+  - 🩸 小艇 dy 17（三叉戟號）只放得進 x 470–477、騎在主桅兩邊壓到主艙口 ⇒ dy 30（坐在艙口圍欄外側），x 560。
+- **faux-pont 艙房**（造船規格 §9.2；`-rooms-orlop` S 舷一件 12,162 格，`甲板-orlop/艙房` @229,221,69、`艙房-鏡像` @229,123,69 mirror=y，meta kind=rooms）：中線 |dy| ≤ 20 留走道；faux-pont 中間是機艙 ⇒ 前後兩段（切點 229／251／276／301／329、651／683／715／751／787／820，落在舷弧台階 ⇒ 地板平），每舷 9 間（2.1×1.1 m 到 3.5×4.6 m，高 1.9 m）。固定點 27（.min／.max／.door）。
+- **錨**（造船規格 §9 anchor）：共用錨元件（憲法號 -anchor）縮 0.9 ⇒ 5.2 m，`錨-S`／`錨-P` 掛在組裝件（meta kind=anchor、anchor=bower），at 875,251／150,105.75、轉 ±120°（錨爪順著船頭弧面），錨環 z 130 貼著船頭；船殼登記 **hawse-S／P** 878,241／159,126（船頭外表面、上砲甲板那一層）。
+  - 🩸 第一版錨環在舷頂外 > 8 格 ⇒ 遊戲（`10_ship.js`：錨的掛點 ＝ ring 旁 8 格內的實心）判「開場就掉」×2 ⇒ 搜尋加「ring 離實心 ≤ 5 格」。
+- **煙囪拆成兩件**（`split_funnels.py`）：遊戲（`78_funnel.js`）一條 `kind=funnel` 關聯冒一股煙 ⇒ 階段五的 `-funnels` 拆成 `-funnel-aft`（14,512）／`-funnel-fore`（14,388），各登記 **smoke**（煙囪口中心 406／615,200,205），關聯 `煙囪-後`／`煙囪-前` meta kind=funnel、**material=iron**、render=smooth（照維吉尼亞號 ame-virginia-01m-funnel）；舊關聯 `煙囪` 拿掉（-funnels 那件留著、改名註明不再使用）。組裝件拆之前／之後缺 0、多 0、色差 0。
+
+讀數（`check_stage9.py`）：
+- ① 彈藥庫結果帳 兩間 0 差；② 組裝件 藏彈藥庫 1,735,009 ＋ 12,153 ＋ 12,206 ＝ 1,759,368，0 差、重疊 0。
+- ③ parts：兩條彈藥庫關聯 meta（pos、powder_lb 11,500 ＝ 115 × 100）、blast 對；火藥桶 230／230 state ok；甲板零件 5 件 meta 不同 0。④b 零件格子級碰撞（位置從引擎外框反推）0（④ 外框這把尺對舵輪報 38 格 ＝ 舷弧台階那一階甲板板，格子級 0）。
+- ⑤ 引擎：1,759,368 格、1 元件、空腔 0、link_overlap 0；模型 344 broken 0；繩 383 broken 0。
+- ⑥ 反向對照：拿掉 `彈藥庫-前` 的 pos ⇒ 少 1 欄；加回 ⇒ 相同。⑧ **反向對照（單子要的）：拿掉羅經櫃的 kind ⇒ 報 ['羅經櫃']；加回 ⇒ []**。
+- ⑦ 舵：結果帳 0 差、meta 相同、stock-top 對；轉 ±15°／±35° 落在船裡 0。⑨ 錨：state ok、meta 相同、固定點差 0.0001；hawse 對；碰撞 0、往船裡推 3 格 ⇒ 322。
+- 產生程式重跑：彈藥庫、零件、舵、艙房、煙囪清單逐位元組相同（艙房的 verify 第一次跑時砲還沒上船 ⇒ note 的模型外框數不同、牆與框相同；現在這份重跑相同）。
+- 過程圖：`overlays/stage9_{magazine_aft_open,magazine_fore_open,rudder_sternq,deck_fittings_aft,orlop_rooms,anchors_bow}.png`。
+
+## 階段十 匯進遊戲的準備（2026-10-15 下午，TASK-0615）
+- 匯出 `kotoko-napoleon-01m-assembly/exports/napoleon.vxk`（不進版控）：1,759,368 格、header checksum **2227734757**、sha256 ccc71331…；繩 383、帆 15、模型 344、meshes 61、parts 25、帶 meta 358、固定點 1,192、rig_skipped 空、材質 iron 28,900（兩根煙囪）、render smooth 28,900。
+  - ⚠ 發布版 `publish/senate.exe` 是 09:02 的（早於 646eb3a 材質匯出）⇒ 它匯出的檔頭沒有 `materials`／`render`（格子與 checksum 相同）；這份是用 `src/Senate.Cli/bin/Debug/net10.0/senate.exe`（16:52）匯的。`render` 那段還在 Senate 工作區沒提交（不是我的改動）。遊戲那側 `admin.py import` 用的是 PATH 上的 senate ⇒ 要材質就要用新的 build。
+- **甲板 meta**（`decks.py` 重量四層甲板子作品）：跟階段四標的逐欄相同（墊木沒動到 floor）。
+- **艙房**（遊戲那側 `rooms.py`，讀這份 vxk）：check 18 間全過（框裡實心 0、地板全實心、不重疊、都有門）；scan 獨立找到 18 間。反向對照：框往下 1 ⇒ 撞地板 19,488。
+- **匯入檢查**（Blockside 複製到暫存、`admin.py import --work kotoko-napoleon-01m-assembly --id napoleon --name 拿破崙號`，⛔ 沒動 ame 的工作區）：**✗ 0、⚠ 1**（geo 沒填 ⇒ 遊戲那側填）。砲 90、站不滿 0 門缺 0 人、船員 567、模型 362（含陣營旗）、繩 383、帆 15（＋陣營旗 3）、桅 3、彈藥庫 2、甲板 4、梯子 6、艙房 18、錨兩舷 模型＋ring＋hawse、水線 79；材質 橡木 1,730,468 格 1,211 t、鐵 28,900 格 225 t。建置「還原驗算 9 艘逐個相同」、格子鏡射 diff 57 格（船名板）。
+  - 第一次跑 ⚠ 5（geo、兩舷沒錨、沒 hawse）⇒ 補了錨（階段九）⇒ 錨第一版 ✗ 2 開場就掉 ⇒ 改 ⇒ ✗ 0。
+- **反向對照**（單子要的）：甲板-spar 一格改色重匯 ⇒ checksum 2227734757 → 2562792970；改回 ⇒ 2227734757。
+- 給遊戲那側填 geo 的高度（格，z 0 ＝ 龍骨底）：水線 79；甲板地板（第一層空氣）faux-pont 69–72、下砲甲板 91–96、上砲甲板 114–120、上甲板 138–144；砲口 下 102–107、上 125–129、上甲板 145–152；桅頂平台 主 304、前 288、後 278；帆頂（royal 帆桁）主 590、前 545；船殼 x 126–911（艏斜桅尖 1,022、jib-boom 1,098）、寬 y 116–284。
+- 蒸汽：史料航速 12.14 kn 連續（1852-08-30 Toulon→Ajaccio）、13.86 kn（1852-09-25）、機器 900 nhp ⇒ 遊戲 `cfg.base`（額外動力）參考；螺旋槳在遊戲裡沒有對應（只是外觀）。
+- ⚠ 還沒做（由遊戲那側）：正式匯入（`admin.py import`）、`ships[].geo`／`cfg`（航速、額外動力）／`crew`／`names`；faux-pont 的 floor meta 是一條折線（中間機艙沒有地板，遊戲照折線看不出來）。

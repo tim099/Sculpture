@@ -64,3 +64,21 @@ def bbox(cells):
 def mirror_at_y(at_y, size_y, yc=200):
     """一舷子作品的另一舷關聯（mirror=y 在自己的框裡翻）：格 y ↔ 2·yc − y ⇒ at.y ＝ 2·yc ＋ 1 − at.y − 高。（抄三叉戟號 deco_base.mirror_at_y）"""
     return 2 * yc + 1 - at_y - size_y
+
+
+# ── 從引擎讀現況（階段八起：砲要對「已經落格的組裝件」量）—— export_list 抄自三叉戟號 deco_base.py（gura）──
+import subprocess, tempfile
+
+ASM = 'kotoko-napoleon-01m-assembly'
+
+
+def export_list(work, links, extra=()):
+    """links ＝ None ⇒ 不帶 links（沒有關聯的作品給 links= 會被擋）。"""
+    with tempfile.TemporaryDirectory() as d:
+        out = os.path.join(d, 'a.txt').replace('\\', '/')
+        r = subprocess.run(['senate', 'cmd', 'sculpture', '--arg', 'op=export', '--arg', 'format=list', '--arg', 'work=' + work,
+                            '--arg', 'out=' + out] + (['--arg', 'links=' + links] if links else []) + [a for kv in extra for a in ('--arg', kv)],
+                           capture_output=True, text=True, encoding='utf-8', errors='replace')
+        if r.returncode != 0 or not os.path.exists(out):
+            raise SystemExit('匯出失敗：' + (r.stdout + r.stderr)[-800:])
+        return np.loadtxt(out, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')

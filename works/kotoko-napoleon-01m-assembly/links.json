@@ -218,26 +218,6 @@
 			"note": "階段五（TASK-0610）"
 		},
 		{
-			"name": "煙囪",
-			"work": "kotoko-napoleon-01m-funnels",
-			"at": [
-				0,
-				0,
-				0
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				1200,
-				400,
-				800
-			],
-			"enabled": true,
-			"created_at": "2026-10-15T15:49:34",
-			"persona": "kotoko",
-			"note": "階段五（TASK-0610）"
-		},
-		{
 			"name": "螺旋槳",
 			"work": "kotoko-napoleon-01m-screw",
 			"at": [
@@ -376,6 +356,106 @@
 			"created_at": "2026-10-15T16:19:14",
 			"persona": "kotoko",
 			"note": "階段七（TASK-0612）"
+		},
+		{
+			"name": "彈藥庫-後",
+			"work": "kotoko-napoleon-01m-magazine-aft",
+			"at": [
+				252,
+				139,
+				49
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				43,
+				123,
+				20
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T17:20:52",
+			"persona": "kotoko",
+			"note": "拿破崙號 後彈藥庫（115 桶 ＝ 11500 磅）（階段九 TASK-0614）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 11500
+			}
+		},
+		{
+			"name": "彈藥庫-前",
+			"work": "kotoko-napoleon-01m-magazine-fore",
+			"at": [
+				716,
+				140,
+				30
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				35,
+				121,
+				20
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T17:21:41",
+			"persona": "kotoko",
+			"note": "拿破崙號 前彈藥庫（115 桶 ＝ 11500 磅）（階段九 TASK-0614）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "fore",
+				"powder_lb": 11500
+			}
+		},
+		{
+			"name": "煙囪-後",
+			"work": "kotoko-napoleon-01m-funnel-aft",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1200,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T17:23:52",
+			"persona": "kotoko",
+			"note": "階段九（TASK-0614）煙囪拆成兩件（遊戲一條 kind=funnel 關聯冒一股煙）",
+			"meta": {
+				"kind": "funnel",
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "煙囪-前",
+			"work": "kotoko-napoleon-01m-funnel-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1200,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T17:23:55",
+			"persona": "kotoko",
+			"note": "階段九（TASK-0614）煙囪拆成兩件（遊戲一條 kind=funnel 關聯冒一股煙）",
+			"meta": {
+				"kind": "funnel",
+				"material": "iron",
+				"render": "smooth"
+			}
 		}
 	]
 }

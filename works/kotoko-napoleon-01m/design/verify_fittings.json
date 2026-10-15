@@ -1,0 +1,252 @@
+{
+ "note": "draft_fittings.py（階段九）—— 現況 ＝ 組裝件 links=all（1696343 格）＋ 模型外框 106",
+ "ranges": {
+  "boat_range": [
+   470.0,
+   569.5
+  ],
+  "capstan_range": [
+   328.5,
+   352.5
+  ]
+ },
+ "reserved_ladder_ends": [
+  [
+   "after-spar",
+   "head",
+   380,
+   200
+  ],
+  [
+   "fore-spar",
+   "head",
+   658,
+   200
+  ]
+ ],
+ "ropes": [
+  {
+   "color": "#a08458",
+   "from": "model:甲板-spar/舵輪/drum-rope-a",
+   "group": "steering",
+   "name": "wheel-rope-a",
+   "slack": 1,
+   "thickness": 0.35,
+   "to": "149.3,199.2,143.0"
+  },
+  {
+   "color": "#a08458",
+   "from": "model:甲板-spar/舵輪/drum-rope-b",
+   "group": "steering",
+   "name": "wheel-rope-b",
+   "slack": 1,
+   "thickness": 0.35,
+   "to": "154.7,201.8,143.0"
+  }
+ ],
+ "rows": [
+  {
+   "at": [
+    152.0,
+    200.5,
+    143.0
+   ],
+   "box": [
+    142.86,
+    190.76,
+    143.06,
+    161.14,
+    210.24,
+    163.74
+   ],
+   "meta": {
+    "kind": "wheel"
+   },
+   "mirror": "none",
+   "model": "舵輪",
+   "pivot": [
+    50,
+    52,
+    0
+   ],
+   "scale": 0.2,
+   "support": [
+    448,
+    448
+   ],
+   "type": "wheel",
+   "work": "basecamp-frigate-constitution-01m-wheel"
+  },
+  {
+   "at": [
+    168.0,
+    200.5,
+    143.0
+   ],
+   "box": [
+    165.66,
+    196.16,
+    143.06,
+    170.34,
+    204.84,
+    155.74
+   ],
+   "meta": {
+    "kind": "binnacle"
+   },
+   "mirror": "none",
+   "model": "羅經櫃",
+   "pivot": [
+    12,
+    24,
+    0
+   ],
+   "scale": 0.2,
+   "support": [
+    1056,
+    1056
+   ],
+   "type": "binnacle",
+   "work": "basecamp-ember-01m-binnacle"
+  },
+  {
+   "at": [
+    335.0,
+    200.5,
+    139.0
+   ],
+   "box": [
+    327.86,
+    193.36,
+    139.06,
+    342.14,
+    207.64,
+    152.14
+   ],
+   "candidates": 49,
+   "meta": {
+    "kind": "capstan"
+   },
+   "mirror": "none",
+   "model": "主絞盤",
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.2,
+   "support": [
+    3640,
+    3640
+   ],
+   "type": "capstan",
+   "work": "basecamp-ember-01m-capstan"
+  },
+  {
+   "at": [
+    560.0,
+    230.5,
+    138.0
+   ],
+   "box": [
+    515.15,
+    217.65,
+    138.15,
+    604.85,
+    243.35,
+    148.85
+   ],
+   "meta": {
+    "boat": "cutter",
+    "kind": "boat",
+    "length_m": 9
+   },
+   "mirror": "none",
+   "model": "小艇-S",
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    340,
+    340
+   ],
+   "type": "boat",
+   "work": "basecamp-ember-01m-boat"
+  },
+  {
+   "at": [
+    560.0,
+    170.5,
+    138.0
+   ],
+   "box": [
+    515.15,
+    157.65,
+    138.15,
+    604.85,
+    183.35,
+    148.85
+   ],
+   "meta": {
+    "boat": "cutter",
+    "kind": "boat",
+    "length_m": 9
+   },
+   "mirror": "y",
+   "model": "小艇-P",
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    340,
+    340
+   ],
+   "type": "boat",
+   "work": "basecamp-ember-01m-boat"
+  }
+ ],
+ "types": {
+  "binnacle": {
+   "cells": 46600,
+   "size": [
+    24,
+    46,
+    64
+   ],
+   "work": "basecamp-ember-01m-binnacle"
+  },
+  "boat": {
+   "cells": 19266,
+   "size": [
+    180,
+    52,
+    22
+   ],
+   "work": "basecamp-ember-01m-boat"
+  },
+  "capstan": {
+   "cells": 134892,
+   "size": [
+    76,
+    76,
+    66
+   ],
+   "work": "basecamp-ember-01m-capstan"
+  },
+  "wheel": {
+   "cells": 44456,
+   "size": [
+    96,
+    101,
+    104
+   ],
+   "work": "basecamp-frigate-constitution-01m-wheel"
+  }
+ }
+}
