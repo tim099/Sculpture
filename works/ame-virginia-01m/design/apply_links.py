@@ -25,8 +25,8 @@ LINKS = [
     ('撞角', W + '-ram', {'material': 'iron', 'render': 'smooth'}),
     ('機艙', W + '-engine', {'material': 'iron'}),
     ('梯子', W + '-ladders', {'kind': 'ladders'}),
-    ('彈藥庫-前', W + '-magazine-fore', {'kind': 'magazine', 'powder_lb': M['mags']['magazine-fore']['kegs'] * 100}),
-    ('彈藥庫-後', W + '-magazine-aft', {'kind': 'magazine', 'powder_lb': M['mags']['magazine-aft']['kegs'] * 100}),
+    ('彈藥庫-前', W + '-magazine-fore', {'kind': 'magazine', 'pos': 'fore', 'powder_lb': M['mags']['magazine-fore']['kegs'] * 100}),
+    ('彈藥庫-後', W + '-magazine-aft', {'kind': 'magazine', 'pos': 'aft', 'powder_lb': M['mags']['magazine-aft']['kegs'] * 100}),
 ]
 for nm, src, meta in LINKS:
     a = [('op', 'work'), ('sub', 'link'), ('work', W + '-assembly'), ('persona', 'ame'), ('name', nm), ('source_work', src), ('at', '0,0,0')]
