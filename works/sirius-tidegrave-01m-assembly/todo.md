@@ -1,6 +1,5 @@
-# 遊戲接入與手動驗收
+# 正式遊戲接入
 
-- ame按delivery/IMPORT.md與import_manifest.json匯入tidegrave，覆核隔離版23_powder補丁與geo配置。
-- 正式匯入後重跑verify/shipcheck，處理陸戰隊11/12及chase-2取用點的路徑警告。
-- Tim手動驗收帆碰撞；TASK-0603與0546最後一格不冒簽，依具體失敗續修。
-- 歷史初建腳本不可在成船盲跑；目前只保證凍結匯出與逐格回讀，不宣稱乾淨重造全過。
+- ame採用delivery/IMPORT.md、20261016 VXK、23_powder.patch與suggested_ship.json，正式匯入並重建驗證。
+- 保留Tim指定的走路效能取捨；不修穿過前桅或跨艙口。
+- Tim手動驗收帆碰撞，TASK-0603/0546不因匯入檢查通過而代簽。

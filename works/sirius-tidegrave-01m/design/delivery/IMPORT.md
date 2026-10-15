@@ -3,7 +3,7 @@
 Tim 2026-10-15 授權完成造船，並通知 ame 加入遊戲。
 
 匯入作品 `sirius-tidegrave-01m-assembly`，建議遊戲 ID `tidegrave`、名稱「潮墓號」。
-交付檔 `tidegrave_import_20261015.vxk`，精確 SHA256、格數、部件數見
+最新交付檔 `tidegrave_import_20261016.vxk`，精確 SHA256、格數、部件數見
 `import_manifest.json`。請勿再拿歷史 candidate_20261014/20261015 當最新檔。
 
 正常匯入命令（由 ame 在自己的 Blockside 工作區執行）：
@@ -34,13 +34,14 @@ parts/meta/ends 逐值核對，不能把只有時間不同誤報為幾何變更�
 
 `geo/cfg/crew/names/rooms/lamps` 屬遊戲配置，由 ame 依最新介面填。
 本次已在隔離版套用 `game_integration/suggested_ship.json` 及
-`game_integration/23_powder.patch` 跑過最新遊戲：**0 errors / 2 warnings**，
-54砲全滿編、352船員、左右錨/ring/hawse與7梯均可讀。兩警告是陸戰隊11/12、
-chase-2 的取用點與砲尾在尋路格上不連通（送藥手目前照直線走）。請在正式匯入時
-調整站位/取用點；原報告 `shipcheck_tidegrave.md` 保留，不刪警告冒稱全過。
+`game_integration/23_powder.patch` 跑過最新遊戲：**0 errors / 0 warnings**，
+54砲全滿編、353船員、陸戰隊12/12、送藥連通54/54，左右錨/ring/hawse與7梯均可讀。
+陸戰隊採 `marines=12, marineGap=30`，艏砲側通道實體開通，取代舊版兩項警告。
+正式報告見 `shipcheck_tidegrave.md`；結構差分見 `../service_access_20261016/geometry_report.json`。
 
 `23_powder.patch` 修正艏艉向砲的送藥手出生位置：砲口可能伸出甲板，改用砲尾後方；
-正橫舷砲沿用原規則。這份補丁與配置目前只套在隔離副本，正式Blockside由ame覆核採用。
+交藥點也依艏艉砲軸置於砲尾後方，正橫舷砲沿用原規則。
+這份補丁與配置目前只套在隔離副本，正式Blockside由ame覆核採用。
 未套補丁與geo的同一份船曾報6 errors / 7 warnings，不能只匯入模型而漏接配置。
 
 舊 fixture 的 geo 僅可作初值：spar[114,140]、marines[180,215]、center155、aim90、
@@ -60,8 +61,14 @@ Tim 選擇手動動態驗收，TASK-0603/0546 尚未簽完整PASS。正常1.5ms�
 檢查最大誤差0。完整20場景沒有重跑，500繩任意非同步角組合亦未全域簽收。
 這些後續由手動結果與 TASK-0603 追蹤，不把 shipcheck 成功等同所有碰撞通過。
 
-目前格子1,034,323、連通1、封閉空腔0、鏡像缺格/異色0、link overlap/clipped0。
-重匯兩次除 exported_at 外內容相同，VXK對CLI list逐格逐色相同，一格改色負向能失敗。
-這是目前狀態的可重現匯出；未宣稱所有歷史階段的初建腳本可直接安全重跑。
+目前格子1,033,347、checksum `55c4e759`、連通1、封閉空腔0、鏡像缺格/異色0、link overlap/clipped0。
+新VXK對CLI list逐格逐色相同；原完整rig逐值不變、水線及以下不變。
+舊20261015匯出曾做重匯與改色負向檢查，歷史manifest另存 `import_manifest_20261015.json`。
+未宣稱所有歷史階段的初建腳本可直接安全重跑。
 
-歷史證據與圖紙保持原樣。新的錨與接觸修正，不搬動既有帆固定點，也不改船殼格子。
+20261016服務通道：X574..581、Y94..103與137..146、淨空Z117..134，補地板Z115..116。
+經sculpture CLI切1152格、補176格；未搬動帆固定點、砲、桅或梯。圖紙plan.json為Rev09。
+
+Tim明確指定穿過前桅、跨過艙口不處理，部分細節為刻意的效能取捨。
+本候選保留原始 `monkeyTo` 直線走法；沒有額外逐格導航或人體碰撞負擔。
+送藥54/54指現行遊戲的連通檢查，不擴大成逐步碰撞驗收。

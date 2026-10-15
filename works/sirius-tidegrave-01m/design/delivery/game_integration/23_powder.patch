@@ -1,8 +1,14 @@
 --- a/src/js/23_powder.js
 +++ b/src/js/23_powder.js
-@@ -288,6 +288,9 @@
+@@ -288,8 +288,14 @@
+     var gs = pairs[k], deck = gunDeck(gs[0]), zr = sh.deckZ[deck], x = Math.round(gs[0].muz[0]);
+     gs.forEach(function (g) {
        var br = g.model.pts.breech || g.model.c, sg = g.side === 'P' ? -1 : 1;
-       g.drop = standNear(BASE, Math.floor(br[0]) + 3, Math.floor(br[1] - sg * 7), zr[0], zr[1], 12, {}) || (g.spots.length ? g.spots[g.spots.length - 1].at : null);
+-      g.drop = standNear(BASE, Math.floor(br[0]) + 3, Math.floor(br[1] - sg * 7), zr[0], zr[1], 12, {}) || (g.spots.length ? g.spots[g.spots.length - 1].at : null);
++      var foreAft = Math.abs(g.ax[0]) > Math.abs(g.ax[1]), ex = g.ax[0] > 0 ? 1 : -1;
++      var dropX = foreAft ? Math.floor(br[0] - ex * 7) : Math.floor(br[0]) + 3;
++      var dropY = foreAft ? Math.floor(br[1]) : Math.floor(br[1] - sg * 7);
++      g.drop = standNear(BASE, dropX, dropY, zr[0], zr[1], 12, {}) || (g.spots.length ? g.spots[g.spots.length - 1].at : null);
      });
 +    // Fore/aft guns: the muzzle can be outside the deck. Spawn behind the breech.
 +    if (Math.abs(gs[0].ax[0]) > Math.abs(gs[0].ax[1]) && gs[0].model.pts.breech)

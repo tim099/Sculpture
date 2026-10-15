@@ -1,20 +1,18 @@
-# 2026-10-15 潮墓號：遊戲匯入交付
+# 2026-10-16 潮墓號：兩項匯入警告已清除
 
-Tim要求完成造船至可加入遊戲，並通知ame。作者側已補左右共用bower錨、短索與hawse，
-錨後移2m避開艏砲班的模型外框。原船體1034323格/d931433f、十帆及固定帆點保留。
-最終502繩/10帆/168模型，broken全0；結構1元件/0空腔/鏡像0/關聯重疊裁切0。
+隔離最新遊戲正式 shipcheck：0 errors / 0 warnings，陸戰隊12/12、353船員、54砲全滿編、
+送藥取用點到砲尾54/54連通。build與verify通過。正式Blockside仍由ame接入。
 
-交付 D:\Unity\Valhalla\Sculpture\works\sirius-tidegrave-01m\design\delivery\tidegrave_import_20261015.vxk
-SHA256 9d296dd5831602b831eaf00fc5fd1926b2d8f57487f3b053d361456a5019b367
-0.1m格，水線52，54砲、6甲板、7梯、兩庫各24桶/2400lb。
-重匯兩次除exported_at外內容相同；VXK/CLI逐格逐色0差，一格負向可失敗。
-這不是所有歷史階段的乾淨初建重跑聲明。
+對稱艏砲側通道X574..581、Y94..103及137..146、淨空Z117..134；補地板Z115..116。
+經sculpture CLI移除1152格、補176格，成船1033347格/checksum55c4e759。
+CLI/VXK逐格逐色差0、水線以下不變，原502繩/10帆/168模型/25mesh及固定帆點逐值不變。
+交付delivery/tidegrave_import_20261016.vxk，
+SHA256 850566c50d4b7b022f3124ec88e36a6154b672ad7201ef44ce9602da1a43322b。
 
-隔離最新遊戲：0 errors / 2 warnings、54砲全滿編、352船員、左右錨/ring/hawse。
-配套game_integration/23_powder.patch修艏艉砲送藥手誤生在甲板外的砲口X；舷砲不變。
-suggested_ship.json提供geo。未改ame正式遊戲工作樹，需ame覆核採用、匯入及重建。
-兩警告保留：陸戰隊11/12，chase-2送藥路徑尋路格不連通（現走直線）。
+配套game_integration/23_powder.patch修艏艉砲送藥手出生與交藥點至砲尾後方；
+suggested_ship.json設marines=12、marineGap=30並保留geo。補丁只套隔離版。
+Tim明確說穿過前桅、跨過艙口不用處理，部分細節故意節省效能；保留原monkeyTo，
+不提交額外逐格導航或人體碰撞限制。此處連通驗收依現行遊戲標準，未擴大成逐步碰撞驗收。
 
-ame已接手帆物理並提交ebd55ff；TASK-0603/0546按Tim選擇維持手動動態驗收，
-不把匯入成功當作穿帆全過。已知自由布接觸與凍結證據保留在design/task0603。
-最新圖Rev08、overlays/import_bow_20261015.png；正式匯入說明design/delivery/IMPORT.md。
+TASK-0603/0546帆碰撞仍依Tim先前選擇手動驗收；本次不代簽完整動態PASS。
+最新交付取代20261015版本；歷史初建腳本不可在成船盲跑。

@@ -1,5 +1,5 @@
 {
-  "id": "sirius-tidegrave-01m", "name": "潮墓號 / TIDEGRAVE", "revision": 8,
+  "id": "sirius-tidegrave-01m", "name": "潮墓號 / TIDEGRAVE", "revision": 9,
   "meters_per_voxel": 0.1, "size": [800,241,640], "center_y": 120,
   "hull": {"stern_x":100,"bow_x":620,"beam_half":67,"waterline_z":52,"shell_thickness":4,"stern_rake":40,"bow_rake":60,"rake_height":128,
     "stations":[[0,24],[0.1,42],[0.2,57],[0.35,66],[0.5,67],[0.65,64],[0.8,53],[0.9,36],[0.97,18],[1,1]],
@@ -51,5 +51,6 @@
     "guns":{"kind":"design_decision","value":"48 broadside guns and six fixed forward guns. 24l / 18chase are current supported game codes, not a claim about movie or Vasa calibres. Triple appearance has no new rotation mechanic."},
     "ornament":{"kind":"visual_observation_and_design","value":"D23 miniature personally inspected: tall projecting stern, concentric galleries, gothic ribs, branching coral crest; bow close-up shows paired triangular three-barrel clusters and pointed rail fins. Astrolabe motif is Sirius's invention."},
     "waterline":{"kind":"design_decision","value":"52 cells; pass explicitly as ship meta; tune ballast only after game hydrostatics measurement."}
-  }
+  },
+  "service_access_20261016": {"portals": {"x": [574, 581], "y": [[94, 103], [137, 146]], "z": [117, 134]}, "floor_z": [115, 116], "removed": 1152, "added": 176, "evidence": "service_access_20261016/geometry_report.json", "actor_walking": "Original game shortcuts retained per Tim; foremast and hatch crossing out of scope."}
 }
