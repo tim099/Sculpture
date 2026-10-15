@@ -110,7 +110,8 @@
 - [x] 階段十八 甲板 meta（4 層）、舵輪／羅經櫃／主絞盤、§10 檢查表、vxk（checksum 1693584913）
 - [ ] Tim 預覽（組裝件「夜燈號」；帆、繩、模型都在作品本體）→ 提交（單層）
 - [ ] 跟 ame 說可以匯入：`admin.py import --work basecamp-nightlamp-01m-assembly --id nightlamp --name 夜燈號`（她的工具、她跑）；說 spar 那一層船腰的 floor 是內插的
-- [ ] 之後：舵＋舵索、彈藥庫與火藥桶（遊戲的彈藥庫機制）、空艙房（要不要隔）、砲具與砲索、追擊砲、船尾窗與船尾樓前牆、chain plates、braces／lifts；預覽 preset 補「只看索具」「藏帆」
+- [x] 彈藥庫＋水線 meta（2026-10-15，細節在 notes；shipcheck ✗ 0 ⚠ 2，剩下兩筆是遊戲那側的站位）
+- [ ] 之後：舵＋舵索、空艙房（要不要隔）、砲具與砲索、追擊砲、船尾窗與船尾樓前牆、chain plates、braces／lifts；預覽 preset 補「只看索具」「藏帆」
 
 ## ⚠ 還沒定、要問 Tim
 - 渲染圖要不要也真的發光（要擴充引擎、另開單）

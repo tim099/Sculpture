@@ -1,0 +1,97 @@
+{
+ "cut": {
+  "hull": 7782,
+  "deck-spar": 642,
+  "rails": 46
+ },
+ "bulkhead": 7247,
+ "panel_cells": 260,
+ "platform": 172,
+ "port_carve": 798,
+ "guns": [
+  {
+   "name": "追擊砲-P",
+   "at": [
+    573.25,
+    144.5,
+    104
+   ],
+   "floor": 104,
+   "outer": 586
+  },
+  {
+   "name": "追擊砲-S",
+   "at": [
+    573.25,
+    176.5,
+    104
+   ],
+   "floor": 104,
+   "outer": 586
+  }
+ ],
+ "gun_bbox_hits_rough": 310,
+ "head_rails": 698,
+ "cathead": {
+  "cells": 126,
+  "length": 13,
+  "side": 207,
+  "anchor_bottom_z": 88.6
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "at": [
+    570.55,
+    220.5,
+    134.5
+   ],
+   "mirror": false
+  },
+  {
+   "name": "錨-P",
+   "at": [
+    570.55,
+    100.5,
+    134.5
+   ],
+   "mirror": false
+  }
+ ],
+ "hawse": {
+  "hawse-P": [
+   585,
+   143,
+   108
+  ],
+  "hawse-S": [
+   585,
+   177,
+   108
+  ]
+ },
+ "asym_hull": 0,
+ "asym_carve_hull": 0,
+ "overlap_hull": 0,
+ "overlap_deck-spar": 0,
+ "overlap_rails": 0,
+ "overlap_deck-upper": 0,
+ "files": {
+  "hull": {
+   "add": 9047,
+   "carve": 8580
+  },
+  "deck-upper": {
+   "add": 0,
+   "carve": 0
+  },
+  "rails": {
+   "add": 0,
+   "carve": 46
+  },
+  "deck-spar": {
+   "add": 0,
+   "carve": 642
+  }
+ }
+}
