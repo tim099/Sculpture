@@ -25,7 +25,10 @@ def stern_windows(plan, YC):
     for row in plan['stern']['rows']:
         n, w, h, half = row['n'], row['w'], row['h'], row['half']
         assert w % 2 == 1, '船尾窗寬要奇數（才能對中線對稱）'
-        zc = int(LY.deck_z(plan, row['deck'], 130)) + row['sill']
+        if 'ref_x' in row:     # 從一段甲板的最高處量（追擊砲站的那一段；階段八：船尾最後那一階比 x 130 高 1 格，砲管頂到門楣）
+            zc = max(int(LY.deck_z(plan, row['deck'], x + 0.5)) for x in range(row['ref_x'][0], row['ref_x'][1] + 1)) + row['sill']
+        else:
+            zc = int(LY.deck_z(plan, row['deck'], 130)) + row['sill']
         cs = np.linspace(-half + w / 2.0, half - w / 2.0, n)
         for j, c in enumerate(cs):
             k = int(math.floor(abs(c) + 0.5)) * (1 if c >= 0 else -1)   # 對稱取整：±c ⇒ ±k

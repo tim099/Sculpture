@@ -91,12 +91,12 @@
   "ports": {
     "src": "1618 art.42：砲門下緣在甲板上 1 codo（6 格）、砲門 1¼ codos 見方（7 格）",
     "tiers": [
-      {"deck": "main", "per_side": 9, "x_from": 168, "x_to": 452, "w": 7, "h": 7, "sill": 6, "gun": "18l", "src": "設計決定：每舷 9 門（Atocha 20 門大砲 ≈ 一層每舷 10，WP；1613 年 17 codos 的船每舷 6，只讀到摘要）；18 磅 culebrina"},
+      {"deck": "main", "per_side": 9, "x_from": 168, "x_to": 452, "w": 7, "h": 8, "sill": 6, "ref_pad": 4, "ref_src": "階段八：門檻從砲門左右各多 4 格那一段甲板的最高處量（18 磅砲架 13.5 格寬 vs 砲門 7 ⇒ 兩邊各多 3.25；舷弧是一格一格的台階，砲站在高的那一階 —— 第 7 門照中心量 ⇒ 砲管頂到門楣）", "gun": "18l", "src": "設計決定：每舷 9 門（Atocha 20 門大砲 ≈ 一層每舷 10，WP；1613 年 17 codos 的船每舷 6，只讀到摘要）；18 磅 culebrina。h 7 → 8（階段八）：沿用的憲法號 18 磅砲管頂在站立面上 12.5 格，art.42 的 1¼ codos（7 格）門楣在站立面上 12 格 ⇒ 砲管頂到門楣、砲口伸不出去（draft_guns 量：主甲板 18 門砲口全在牆裡 4.5–5.5 格，碰到的全是門楣那一層）；門檻照 art.42 不動，門楣往上 1 格 —— ⚠ 偏離 art.42"},
       {"deck": "puente", "per_side": 8, "x_from": 188, "x_to": 440, "w": 7, "h": 7, "sill": 6, "gun": "12l", "src": "設計決定：上甲板每舷 8 門 12 磅（San José 中層 10 磅，WP）"},
       {"deck": "alcazar", "per_side": 2, "x_from": 210, "x_to": 262, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定：船樓 6 磅（San José 船樓 6 磅，WP）"},
       {"deck": "castillo", "per_side": 2, "x_from": 430, "x_to": 480, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定"}
     ],
-    "stern_chasers": {"deck": "main", "n": 2, "w": 7, "h": 7, "sill": 6, "gun": "18l", "src": "設計決定：主甲板船尾兩門追擊砲，從 espejo 開出去（1618 art.46：alcázar break 底下 artillery 打得到船尾）"}
+    "stern_chasers": {"deck": "main", "n": 2, "w": 7, "h": 8, "sill": 6, "gun": "18l", "src": "設計決定：主甲板船尾兩門追擊砲，從 espejo 開出去（1618 art.46：alcázar break 底下 artillery 打得到船尾）；h 7 → 8 同舷側主甲板砲門（階段八）"}
   },
   "masts": {
     "src": "1618 art.66–68（FG 讀過）：主桅腳在龍骨中點、前桅腳在艏柱 rake 的中點、艏斜桅腳在主甲板。長度比例照 Cano 1611／Palacio 1587（MP，⚠ 二手）",
@@ -133,7 +133,7 @@
   "stern": {
     "src": "設計決定：船尾 espejo 三排窗（puente 船長室、alcázar、toldilla）＋主甲板兩個追擊砲門（plan.ports.stern_chasers）；1618 art.69 的 galleries（最多伸出 ⅔ codo）在 TASK-0594",
     "rows": [
-      {"deck": "main", "kind": "port", "n": 2, "w": 7, "h": 7, "sill": 6, "half": 26},
+      {"deck": "main", "kind": "port", "n": 2, "w": 7, "h": 8, "sill": 6, "half": 26, "ref_x": [118, 141], "ref_src": "階段八：門檻從船尾面往裡到砲架尾那一段甲板的最高處量（x 118–141；船尾最後那一階 x 122–127 比 x 130 高 1 格，追擊砲站在那裡）"},
       {"deck": "puente", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 24},
       {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 24},
       {"deck": "toldilla", "kind": "window", "n": 3, "w": 5, "h": 6, "sill": 4, "half": 18}
@@ -189,6 +189,23 @@
     "quarter_gallery": {"x0": 102, "x1": 140, "z0": 86, "z1": 118, "out": 4, "roof_h": 6, "src": "1618 art.69：15 codos 以上的船可以有 galleries，兩舷最多伸出 ⅔ codo（3.8 格 ⇒ 4）；位置與高度設計決定（puente 到 alcázar 兩層，蓋住階段三船尾肩膀的「滴漆」）"},
     "name_board": {"text": "LA COSECHA", "z0": 113, "z1": 119, "src": "設計決定：船尾 espejo、alcázar 那排窗上面；3×5 字型、金字黑底玫瑰粉框 —— 字不對稱 ⇒ 這一件的鏡像差照實報"},
     "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [-18, 0, 18], "x": 93, "src": "沿用現有元件（work sub=components kind=light：三叉戟號船尾燈，0.05 m、scale 0.5 ＝ 0.85 m 寬、1.8 m 高、固定點 wick／bail／base）；三盞（旗艦掛三盞，研究只讀到未查證的說法）、站在 toldilla 船尾的舷頂上"}
+  },
+  "guns_build": {
+    "assembly": "calli-cosecha-01m-assembly", "hull": "calli-cosecha-01m",
+    "deck_works": {"main": "calli-cosecha-01m-deck-main", "puente": "calli-cosecha-01m-deck-puente", "alcazar": "calli-cosecha-01m-deck-alcazar", "castillo": "calli-cosecha-01m-deck-castillo"},
+    "prefix": {"main": "M", "puente": "U", "alcazar": "A", "castillo": "C"},
+    "types": {
+      "18l": {"work": "basecamp-frigate-constitution-01m-gun-long18", "scale": 0.5, "pivot": [13.5, 38.5, 0], "meta": {"kind": "gun", "gun": "18l"}, "src": "沿用憲法號 18 磅長砲（components kind=gun：0.05 m、已有 6 艘在用）；pivot ＝ 砲架前緣中間、甲板面（同餘燼號 guns_build）"},
+      "18chase": {"work": "basecamp-frigate-constitution-01m-gun-long18", "scale": 0.5, "pivot": [13.5, 38.5, 0], "meta": {"kind": "gun", "gun": "18chase"}, "src": "同一件 18 磅長砲；船尾追擊砲標 gun=18chase（憲法號、餘燼號的追擊砲都這樣標）"},
+      "12l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.5, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "12l"}, "src": "沿用風暴角號 12 磅長砲（0.05 m）；pivot 照風暴角號 deck-lower/models.json"},
+      "6l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.5, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "6l"}, "src": "沿用風暴角號 6 磅長砲（0.05 m）；pivot 照風暴角號 deck-upper/models.json"}
+    },
+    "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-2, -1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2,
+               "src": "造船規格 §4.2：從舷牆外面往裡退（每步 0.5 格），退到模型每一格的格心＋八個角（往裡縮 0.2）都不在組裝件的實心格裡；先挑 ok（砲口伸出、砲口空、腳下有甲板）、再挑低的、再退得少 —— 同餘燼號 place_guns.py。dz 從 −2 起：甲板高度取砲腳那幾點的最高，船尾那一段舷弧是台階（v1 船尾追擊砲浮在甲板上 1–2 格、support 0）"},
+    "chase": {"deck": "main", "type": "18chase", "phis": [90, 85, 95, 80, 100, 75, 105], "dl": 3,
+              "src": "主甲板船尾兩個追擊砲門（plan.ports.stern_chasers、verify_ports windows kind=port）；砲口朝 −x ＝ φ 90，照角度搜（造船規格 §4.2 追擊砲照角度搜）"},
+    "support_min": 0.5,
+    "support_src": "設計決定：砲最底下那層格子正下方有實心的比例 ≥ 0.5（不壓在艙口上）。v1 取 0.6 ⇒ 跨在舷弧台階上的砲（一半在低的那一階上懸 1 格）不算 ok；遊戲判斷掉不掉是從外框中心往下 12 格內找甲板（Blockside/src/js/10_ship.js:47）⇒ 0.5 不會掉，看起來是砲架後半懸 0.1 m（照實記）"
   },
   "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 36, "bottom_color": 182, "bottom_top_z": 52,
                  "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同三叉戟號）；水線下灰白（white stuff 防船蛆，研究只讀到論壇摘要）、水線上黑；塗裝帶在 TASK-0592"}

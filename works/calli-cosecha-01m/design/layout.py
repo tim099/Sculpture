@@ -42,7 +42,11 @@ def ports(plan):
         for i, c in enumerate(cs):
             x0 = int(round(c - w / 2.0))
             x1 = x0 + w - 1
-            zc = float(deck_z(plan, t['deck'], (x0 + x1) / 2.0))
+            pad = t.get('ref_pad')
+            if pad:       # 量砲門左右各多 pad 格那一段甲板的最高處（砲架比砲門寬、舷弧是一格一格的台階 ⇒ 砲站在高的那一階；階段八主甲板第 7 門）
+                zc = float(max(int(deck_z(plan, t['deck'], x + 0.5)) for x in range(x0 - pad, x1 + pad + 1)))
+            else:
+                zc = float(deck_z(plan, t['deck'], (x0 + x1) / 2.0))
             z0 = int(zc) + t['sill']
             out.append({'deck': t['deck'], 'i': i + 1, 'x0': x0, 'x1': x1, 'z0': z0, 'z1': z0 + h - 1, 'gun': t['gun']})
     return out
