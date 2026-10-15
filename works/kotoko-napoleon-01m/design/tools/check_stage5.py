@@ -9,7 +9,9 @@ sys.path.insert(0, os.path.join(design, 'tools'))
 from wio import export_list, key  # noqa: E402
 
 HULL = 'kotoko-napoleon-01m'
-SUBID = {'head': 'head', 'figurehead': 'figurehead', 'stern': 'stern-deco', 'name': 'name-board', 'funnels': 'funnels', 'screw': 'screw'}
+#   煙囪讀階段九拆出來、現在掛在組裝件上的兩件（-funnels 那件已不關聯）；螺旋槳階段十二改成外部模型，同一件 -screw。
+SUBID = {'head': 'head', 'figurehead': 'figurehead', 'stern': 'stern-deco', 'name': 'name-board',
+         'funnel_aft': 'funnel-aft', 'funnel_fore': 'funnel-fore', 'screw': 'screw'}
 tot = [0, 0, 0, 0]
 for k, sub in SUBID.items():
     W = export_list('%s-%s' % (HULL, sub), None)

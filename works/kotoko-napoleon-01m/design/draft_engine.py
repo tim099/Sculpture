@@ -118,7 +118,7 @@ def main():
             for z in range(sz - SH['r'], sz + SH['r'] + 1):
                 if (y - YC) ** 2 + (z - sz) ** 2 <= SH['r'] ** 2 and (x, y, z) not in parts['engine']:
                     put('shaft', x, y, z, C['steel'])
-    for px in range(SH['x'][0] + 24, SH['x'][1] - 10, SH['plummer_every']):   # 軸承座：從船底到軸底下
+    for px in range(SH['plummer_from'], SH['x'][1] - 10, SH['plummer_every']):   # 軸承座：從船底到軸底下（起點寫死：軸往後延到螺旋槳柱之後不挪它們）
         for x in range(px, px + 3):
             for y in range(YC - 3, YC + 4):
                 for z in range(0, sz - SH['r']):
@@ -236,10 +236,16 @@ def main():
                                          dict(E['boiler_meta'], funnel=row['funnel']))
     anchors = {'engine': {'core': [int((ex0 + ex1) // 2), YC, ck['z']], 'cyl-1': [cy['x'], YC - cy['dy'], (cy['z'][0] + cy['z'][1]) // 2],
                           'cyl-2': [cy['x'], YC + cy['dy'], (cy['z'][0] + cy['z'][1]) // 2], 'gear': [gr['x'], YC, ck['z']]},
-               'shaft': {'aft': [min(x for (x, y, z) in parts['shaft'] if y == YC and z == sz), YC, sz], 'fwd': [SH['x'][1], YC, sz]}}   # aft ＝ 軸露出 deadwood 的第一格
+               'shaft': {'aft': [SH['x'][0], YC, sz], 'fwd': [SH['x'][1], YC, sz]}}   # aft ＝ 軸穿過 stern tube 碰到螺旋槳柱那一格（那一段是船殼、沒有軸的格；框照固定點撐開）
     anchors.update(anchors_b)
     for k, P in parts.items():
         org, size = mio.bbox(P)
+        for v in anchors[k].values():                                    # 框一定包到自己的固定點（軸的 aft 在 deadwood 那一段、沒有格）
+            for i in range(3):
+                if v[i] < org[i]:
+                    size[i] += org[i] - v[i]; org[i] = v[i]
+                if v[i] >= org[i] + size[i]:
+                    size[i] = v[i] - org[i] + 1
         n, h = mio.write_local(os.path.join(D, 'masks', 'engine', k + '.vox.txt'), P, org, '# 拿破崙號 %s（draft_engine.py；子作品座標，原點 ＝ 組裝件 %s）\n' % (k, org))
         an_local = {nm: [v[i] - org[i] for i in range(3)] for nm, v in anchors[k].items()}
         bad_an = [nm for nm, v in anchors[k].items() if not (0 <= v[0] - org[0] < size[0] and 0 <= v[1] - org[1] < size[1] and 0 <= v[2] - org[2] < size[2])]

@@ -258,3 +258,15 @@ Tim 2026-10-15：「是否可以建造 拿破崙號 的蒸汽引擎」「同時�
 - vxk 重匯：2,133,255 格、header checksum 1066745730、材質 iron 60,408（煙囪 28,900 ＋ 主機 28,976 ＋ 軸 2,532）、render smooth 28,900；暫存副本 reimport ＋ 匯入檢查 ✗ 0、⚠ 1（geo）；全船 橡木 2,072,847 格 1,451 t ＋ 鐵 471 t（排水量 5,121 t ⇒ 照樣浮在設計水線，壓艙物補）。
 - 過程圖：`design/sheet07_engine_v1.png`（中線側面＋俯視）、`overlays/stage11_engine_room_half.png`（剖半：軸、主機、後鍋爐、主桅、前鍋爐）。
 - ⚠ 沒做：煤艙（570 t 煤，research_french90）、機艙的走道與梯子（遊戲裡沒人進機艙）、冷凝器與泵。
+
+## 階段十二 螺旋槳拆成外部模型（2026-10-16 凌晨，TASK-0625 續）
+ame 2026-10-16（酒館 seq 25026，Tim：「可以通知kotoko拆出螺旋槳」）：Blockside 的動力串上了（主機 → 軸 → 螺旋槳，鍋爐供汽；TASK-0630／0628），階段十一的 meta 遊戲讀得到 —— 完好 12.25 節、打掉主機 ⇒ 額外動力 0%、兩根煙囪停煙、打掉 1／8 座鍋爐 ⇒ 87.5%。螺旋槳原本是關聯（格子）⇒ 轉不了 ⇒ 拆成外部模型（造船規格 §9 propeller，同光榮號 kaguya-gloire-01m-screw）。工具 `design/tools/split_screw.py plan|apply|check`。
+- 同一件 `-screw`（整船的框、世界座標）改當外部模型「螺旋槳」：at ＝ pivot ＝ hub 格心 (178.5, 200.5, 42.5)、scale 1；原本的關聯「螺旋槳」拿掉。固定點 `hub` (178, 200, 42)、`shaft-fwd` (193, 200, 42)（軸線上最前面那格的下一格 ＝ 螺旋槳柱）。
+- meta `kind=propeller, axis=(1,0,0), blades=3, diameter_m=5.2`。轉向沒查到 ⇒ 取最常見的右旋槳（從船尾往前看、前進時順時針 ⇒ 右手定則繞 +x）；`rpm_max` 沒查到不寫（遊戲預設 80）。
+- **軸的 aft 改到螺旋槳柱**：遊戲照「軸的 aft 離 hub／shaft-fwd 24 格以內」找螺旋槳接哪根軸；階段十一的 aft 在軸露出 deadwood 的第一格 x 224（離 shaft-fwd 31 格）⇒ 照構造改成軸穿過 stern tube 碰到螺旋槳柱那一格 x 193（plan `engine.shaft.x` 193、軸承座起點寫死 220 ⇒ 軸的格一格不動）；軸子作品的框往後撐到 x 193（框 127 → 154、關聯 at 220 → 193，delta_apply 搬局部座標）。組裝件前後逐格相同；主機、鍋爐的清單逐位元組相同。
+讀數：
+- 組裝件 2,133,255 → 2,129,382：少掉的 ＝ 螺旋槳的 3,873 格（逐格）；1 元件、空腔 0、link_overlap 0；`check_engine.py` 四件結果帳 0 差、固定點差 0、反向對照照報。
+- parts：模型「螺旋槳」state ok、meta 相同、hub／shaft-fwd 對；關聯「螺旋槳」沒了。轉一圈（每 15°）螺旋槳每一格的格心落在船殼裡最多 0 格（葉片在 aperture 裡轉得開）。軸的 aft 離 hub 15.0、離 shaft-fwd 0.0 格。models_broken 0（模型 345）。
+- vxk：2,129,382 格、header checksum **95738965**、sha256 5675265b…；模型 345、meshes 62、parts 28、iron 60,408。Blockside HEAD 乾淨副本 `admin.py reimport --id napoleon` ⇒ 匯入檢查 **✗ 0、⚠ 0**（90／90 門拿得到火藥、取用點 6；橡木 1,448 t ＋ 鐵 471 t）。
+- ⚠ 沒做：遊戲裡的正式 reimport（ame）；螺旋槳的平滑金屬（ame 跟 meadow 在對做法）。
+- `design/tools/check_stage5.py`（2026-10-16 午）：它讀的是子作品不是關聯，本來就沒壞；改成讀現在掛著的 `-funnel-aft`／`-funnel-fore`（不再讀已不關聯的 `-funnels`）⇒ 7 件、46,760 格、缺 0、多 0、色差 0（兩根 14,512 ＋ 14,388 ＝ 舊的 28,900）。
