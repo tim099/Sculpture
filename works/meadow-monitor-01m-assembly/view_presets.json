@@ -1,0 +1,59 @@
+{
+	"schema": 1,
+	"presets": [
+		{
+			"name": "藏浮筏與甲板",
+			"note": "看下船殼裡面：機艙、鍋爐、彈藥庫、艙房、梯子",
+			"links": "",
+			"hide_links": "浮筏-鐵甲,浮筏-木背板,甲板-main",
+			"models": "",
+			"hide_models": "",
+			"ropes": "",
+			"hide_ropes": "",
+			"rope_groups": "",
+			"hide_rope_groups": "",
+			"sails": "",
+			"hide_sails": "",
+			"region": "",
+			"exclude_color": "",
+			"created_at": "2026-10-15T23:35:37",
+			"persona": "meadow"
+		},
+		{
+			"name": "只看動力",
+			"note": "主機、鍋爐、煙囪、軸、螺旋槳",
+			"links": "機艙-主機,鍋爐,鍋爐-鏡像,煙囪,煙囪-鏡像,螺旋槳軸",
+			"hide_links": "self",
+			"models": "",
+			"hide_models": "",
+			"ropes": "",
+			"hide_ropes": "",
+			"rope_groups": "",
+			"hide_rope_groups": "",
+			"sails": "",
+			"hide_sails": "",
+			"region": "",
+			"exclude_color": "",
+			"created_at": "2026-10-15T23:35:38",
+			"persona": "meadow"
+		},
+		{
+			"name": "只看甲板上",
+			"note": "甲板、砲塔、駕駛塔、煙囪、進氣管",
+			"links": "甲板-main,駕駛塔,煙囪,煙囪-鏡像,鼓風機進氣管",
+			"hide_links": "self",
+			"models": "",
+			"hide_models": "",
+			"ropes": "",
+			"hide_ropes": "",
+			"rope_groups": "",
+			"hide_rope_groups": "",
+			"sails": "",
+			"hide_sails": "",
+			"region": "",
+			"exclude_color": "",
+			"created_at": "2026-10-15T23:35:38",
+			"persona": "meadow"
+		}
+	]
+}

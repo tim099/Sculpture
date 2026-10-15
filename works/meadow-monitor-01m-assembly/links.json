@@ -1,0 +1,394 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "meadow-monitor-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:22",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "ship",
+				"material": "iron",
+				"waterline_z": 30
+			}
+		},
+		{
+			"name": "浮筏-木背板",
+			"work": "meadow-monitor-01m-raft-wood",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:22",
+			"persona": "meadow",
+			"note": ""
+		},
+		{
+			"name": "浮筏-鐵甲",
+			"work": "meadow-monitor-01m-raft-iron",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:23",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "甲板-berth",
+			"work": "meadow-monitor-01m-deck-berth",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:23",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "berth",
+				"floor": "140:5,480:5",
+				"kind": "deck",
+				"level": 0,
+				"name": "住艙甲板",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "meadow-monitor-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:23",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "main",
+				"floor": "8:35,535:35",
+				"kind": "deck",
+				"level": 1,
+				"name": "主甲板（砲塔甲板）",
+				"thick": 6
+			}
+		},
+		{
+			"name": "駕駛塔",
+			"work": "meadow-monitor-01m-pilothouse",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:24",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"material": "iron"
+			}
+		},
+		{
+			"name": "煙囪",
+			"work": "meadow-monitor-01m-funnel",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:24",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "funnel",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "煙囪-鏡像",
+			"work": "meadow-monitor-01m-funnel",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:24",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "funnel",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "鍋爐",
+			"work": "meadow-monitor-01m-boilers",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:24",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"boilers": 1,
+				"funnel": "煙囪",
+				"kind": "boiler"
+			}
+		},
+		{
+			"name": "鍋爐-鏡像",
+			"work": "meadow-monitor-01m-boilers",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:25",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"boilers": 1,
+				"funnel": "煙囪-鏡像",
+				"kind": "boiler"
+			}
+		},
+		{
+			"name": "機艙-主機",
+			"work": "meadow-monitor-01m-engine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:25",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"cylinders": 2,
+				"engine": "direct",
+				"kind": "engine",
+				"kn": 6,
+				"kn_max": 8,
+				"material": "iron"
+			}
+		},
+		{
+			"name": "螺旋槳軸",
+			"work": "meadow-monitor-01m-shaft",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:25",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "shaft",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "鼓風機進氣管",
+			"work": "meadow-monitor-01m-deck-fittings",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:26",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"material": "iron"
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "meadow-monitor-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:26",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "magazine",
+				"pos": "mid",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "艙房",
+			"work": "meadow-monitor-01m-cabins",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:26",
+			"persona": "meadow",
+			"note": ""
+		},
+		{
+			"name": "梯子",
+			"work": "meadow-monitor-01m-ladders",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				544,
+				131,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T23:35:26",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"kind": "ladders"
+			}
+		}
+	]
+}
