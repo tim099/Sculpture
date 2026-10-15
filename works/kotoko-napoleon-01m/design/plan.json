@@ -576,5 +576,64 @@
     "hawse": {"x": 878, "z": 126},
     "ring_reach": 5,
     "ring_src": "Blockside 10_ship.js：錨（kind=anchor）的掛點 ＝ 錨環 ring 旁 8 格內最近的實心（第一版錨環離舷頂 > 8 格 ⇒ shipcheck 報開場就掉）⇒ 要求 ≤ 5 格"
+  },
+  "engine": {
+    "src": "TASK（拿破崙號 蒸汽機）：Tim 2026-10-15「是否可以建造 拿破崙號 的蒸汽引擎」「同時可能要標記 meta」「遊戲中如果引擎被破壞 引擎提供的額外動力要消失（且煙會停掉）因此需要標記」。史料：SS／WP（research_napoleon §機器）—— 1850 原裝 Indret 齒輪傳動雙缸、960 nhp、574 ihp；1852 試航 12.14 kn 連續、13.86 kn 最高；鍋爐數沒查到（姊妹艦 Algésiras 8 座，research_french90）；機艙與鍋爐位置沒查到 ⇒ 研究 A 的推論：兩根煙囪夾著主桅 ⇒ 鍋爐在主桅前後、主機在後鍋爐的後面。其他尺寸都是設計決定（遊戲用：外觀＋給遊戲判斷壞了沒有）",
+    "room": {"x": [330, 650], "deck_under": 86},
+    "colors": {"iron": 36, "steel": 73, "brass": 248, "fire": 232, "brick": 132, "plate": 73},
+    "engine": {
+      "x": [334, 378],
+      "bed": {"half": 20, "top": 16},
+      "cyl": {"x": 356, "dy": 13, "r": 8, "z": [17, 46]},
+      "crank": {"z": 64, "r": 3, "x": [336, 378]},
+      "pedestals_x": [341, 373],
+      "gear": {"x": 338, "r": 18, "hub": 4, "spokes": 6, "th": 3},
+      "pinion": {"r": 4},
+      "meta": {"kind": "engine", "engine": "geared", "cylinders": 2, "nhp": 960, "ihp": 574, "kn": 12.14, "kn_max": 13.86, "maker": "Indret", "material": "iron"},
+      "src": "設計決定：兩缸立在底座上、連桿斜接到沿 x 的曲軸，曲軸上的大齒輪帶螺旋槳軸上的小齒輪（geared：曲軸 z 64、軸 z 42 ⇒ 中心距 22 ＝ 18 ＋ 4，增速約 4.5 倍）"
+    },
+    "boilers": {
+      "rows": [
+        {
+          "key": "aft",
+          "link": "機艙-鍋爐-後",
+          "work": "kotoko-napoleon-01m-boilers-aft",
+          "funnel": "煙囪-後",
+          "funnel_x": 406,
+          "x": [[384, 412], [418, 446]],
+          "doors": "in"
+        },
+        {
+          "key": "fore",
+          "link": "機艙-鍋爐-前",
+          "work": "kotoko-napoleon-01m-boilers-fore",
+          "funnel": "煙囪-前",
+          "funnel_x": 615,
+          "x": [[578, 606], [618, 646]],
+          "doors": "in"
+        }
+      ],
+      "dy": [3, 38],
+      "z": [13, 50],
+      "crown": 5,
+      "uptake_z": [51, 89],
+      "funnel_r": 11,
+      "src": "設計決定：每組 4 座（x 兩排 × 兩舷），箱形鍋爐、頂收圓（crown 5 格），爐門朝兩排之間的燒火通道；頂上一段煙道（鐵殼 1 格）從整組的外框收成煙囪的圓、接到下砲甲板底下（煙囪從甲板孔往上）；鍋爐底照船殼內面切（不穿船）"
+    },
+    "shaft": {
+      "y": 200,
+      "z": 42,
+      "r": 2,
+      "x": [196, 346],
+      "plummer_every": 30,
+      "work": "kotoko-napoleon-01m-shaft",
+      "link": "螺旋槳軸",
+      "meta": {"kind": "shaft", "material": "iron"},
+      "src": "螺旋槳軸心 (z 42) 從螺旋槳柱（aperture 前緣）往前接到主機小齒輪；只畫在空氣裡（穿 deadwood 那一段是船殼）；每 30 格一座軸承座落到船底"
+    },
+    "work_engine": "kotoko-napoleon-01m-engine",
+    "link_engine": "機艙-主機",
+    "boiler_meta": {"kind": "boiler", "boilers": 4},
+    "boiler_meta_src": "鍋爐不標 material：實心的格子代表「鐵殼＋滿水」，平均密度接近水；標 iron 兩組 34 萬格 ≈ 2,600 t（全船排水量 5,121 t）⇒ 照全船預設（橡木 0.7，≈ 240 t）。主機標 iron（2.9 萬格 ≈ 226 t）"
   }
 }

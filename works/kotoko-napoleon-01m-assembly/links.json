@@ -456,6 +456,111 @@
 				"material": "iron",
 				"render": "smooth"
 			}
+		},
+		{
+			"name": "螺旋槳軸",
+			"work": "kotoko-napoleon-01m-shaft",
+			"at": [
+				220,
+				197,
+				14
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				127,
+				7,
+				31
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T19:03:09",
+			"persona": "kotoko",
+			"note": "機艙：拿破崙號 螺旋槳軸與軸承座（0.1 m）",
+			"meta": {
+				"kind": "shaft",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "機艙-主機",
+			"work": "kotoko-napoleon-01m-engine",
+			"at": [
+				334,
+				179,
+				7
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				45,
+				43,
+				76
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T19:03:12",
+			"persona": "kotoko",
+			"note": "機艙：拿破崙號 主機（Indret 齒輪傳動雙缸、960 nhp；0.1 m）",
+			"meta": {
+				"cylinders": 2,
+				"engine": "geared",
+				"ihp": 574,
+				"kind": "engine",
+				"kn": 12.14,
+				"kn_max": 13.86,
+				"maker": "Indret",
+				"material": "iron",
+				"nhp": 960
+			}
+		},
+		{
+			"name": "機艙-鍋爐-後",
+			"work": "kotoko-napoleon-01m-boilers-aft",
+			"at": [
+				384,
+				162,
+				9
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				63,
+				77,
+				81
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T19:03:16",
+			"persona": "kotoko",
+			"note": "機艙：拿破崙號 後鍋爐 4 座與煙道（0.1 m）",
+			"meta": {
+				"boilers": 4,
+				"funnel": "煙囪-後",
+				"kind": "boiler"
+			}
+		},
+		{
+			"name": "機艙-鍋爐-前",
+			"work": "kotoko-napoleon-01m-boilers-fore",
+			"at": [
+				578,
+				162,
+				9
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				69,
+				77,
+				81
+			],
+			"enabled": true,
+			"created_at": "2026-10-15T19:03:21",
+			"persona": "kotoko",
+			"note": "機艙：拿破崙號 前鍋爐 4 座與煙道（0.1 m）",
+			"meta": {
+				"boilers": 4,
+				"funnel": "煙囪-前",
+				"kind": "boiler"
+			}
 		}
 	]
 }

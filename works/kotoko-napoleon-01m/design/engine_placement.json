@@ -1,0 +1,271 @@
+{
+ "boilers_aft": {
+  "anchors": {
+   "boiler-1": [
+    14,
+    17,
+    22
+   ],
+   "boiler-2": [
+    14,
+    58,
+    22
+   ],
+   "boiler-3": [
+    48,
+    17,
+    22
+   ],
+   "boiler-4": [
+    48,
+    58,
+    22
+   ],
+   "uptake": [
+    31,
+    38,
+    42
+   ]
+  },
+  "anchors_world": {
+   "boiler-1": [
+    398,
+    179,
+    31
+   ],
+   "boiler-2": [
+    398,
+    220,
+    31
+   ],
+   "boiler-3": [
+    432,
+    179,
+    31
+   ],
+   "boiler-4": [
+    432,
+    220,
+    31
+   ],
+   "uptake": [
+    415,
+    200,
+    51
+   ]
+  },
+  "at": [
+   384,
+   162,
+   9
+  ],
+  "cells": 171951,
+  "link": "機艙-鍋爐-後",
+  "meta": {
+   "boilers": 4,
+   "funnel": "煙囪-後",
+   "kind": "boiler"
+  },
+  "sha256": "7ff556925d9d2739945c5767e500bf5b7e4fb067ad9fb995a738d0f6f8ad17e5",
+  "size": [
+   63,
+   77,
+   81
+  ],
+  "title": "拿破崙號 後鍋爐 4 座與煙道（0.1 m）",
+  "work": "kotoko-napoleon-01m-boilers-aft"
+ },
+ "boilers_fore": {
+  "anchors": {
+   "boiler-1": [
+    14,
+    17,
+    22
+   ],
+   "boiler-2": [
+    14,
+    58,
+    22
+   ],
+   "boiler-3": [
+    54,
+    17,
+    22
+   ],
+   "boiler-4": [
+    54,
+    58,
+    22
+   ],
+   "uptake": [
+    34,
+    38,
+    42
+   ]
+  },
+  "anchors_world": {
+   "boiler-1": [
+    592,
+    179,
+    31
+   ],
+   "boiler-2": [
+    592,
+    220,
+    31
+   ],
+   "boiler-3": [
+    632,
+    179,
+    31
+   ],
+   "boiler-4": [
+    632,
+    220,
+    31
+   ],
+   "uptake": [
+    612,
+    200,
+    51
+   ]
+  },
+  "at": [
+   578,
+   162,
+   9
+  ],
+  "cells": 170428,
+  "link": "機艙-鍋爐-前",
+  "meta": {
+   "boilers": 4,
+   "funnel": "煙囪-前",
+   "kind": "boiler"
+  },
+  "sha256": "52ff51973101fd2932eebb9ceff0cd3eb59adca55e2abf9bb56d40a01780769e",
+  "size": [
+   69,
+   77,
+   81
+  ],
+  "title": "拿破崙號 前鍋爐 4 座與煙道（0.1 m）",
+  "work": "kotoko-napoleon-01m-boilers-fore"
+ },
+ "engine": {
+  "anchors": {
+   "core": [
+    22,
+    21,
+    57
+   ],
+   "cyl-1": [
+    22,
+    8,
+    24
+   ],
+   "cyl-2": [
+    22,
+    34,
+    24
+   ],
+   "gear": [
+    4,
+    21,
+    57
+   ]
+  },
+  "anchors_world": {
+   "core": [
+    356,
+    200,
+    64
+   ],
+   "cyl-1": [
+    356,
+    187,
+    31
+   ],
+   "cyl-2": [
+    356,
+    213,
+    31
+   ],
+   "gear": [
+    338,
+    200,
+    64
+   ]
+  },
+  "at": [
+   334,
+   179,
+   7
+  ],
+  "cells": 28976,
+  "link": "機艙-主機",
+  "meta": {
+   "cylinders": 2,
+   "engine": "geared",
+   "ihp": 574,
+   "kind": "engine",
+   "kn": 12.14,
+   "kn_max": 13.86,
+   "maker": "Indret",
+   "material": "iron",
+   "nhp": 960
+  },
+  "sha256": "4d8b454c85a038a27cc82055246bec96a89550fe0e451453c7d1eb0e9c05d428",
+  "size": [
+   45,
+   43,
+   76
+  ],
+  "title": "拿破崙號 主機（Indret 齒輪傳動雙缸、960 nhp；0.1 m）",
+  "work": "kotoko-napoleon-01m-engine"
+ },
+ "shaft": {
+  "anchors": {
+   "aft": [
+    4,
+    3,
+    28
+   ],
+   "fwd": [
+    126,
+    3,
+    28
+   ]
+  },
+  "anchors_world": {
+   "aft": [
+    224,
+    200,
+    42
+   ],
+   "fwd": [
+    346,
+    200,
+    42
+   ]
+  },
+  "at": [
+   220,
+   197,
+   14
+  ],
+  "cells": 2532,
+  "link": "螺旋槳軸",
+  "meta": {
+   "kind": "shaft",
+   "material": "iron"
+  },
+  "sha256": "ab45f3260737be2df9c59abcfabafc254469c9af059c9c380b3b605297857caa",
+  "size": [
+   127,
+   7,
+   31
+  ],
+  "title": "拿破崙號 螺旋槳軸與軸承座（0.1 m）",
+  "work": "kotoko-napoleon-01m-shaft"
+ }
+}
