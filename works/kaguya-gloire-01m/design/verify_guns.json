@@ -1,0 +1,2256 @@
+{
+ "by_code": {
+  "32l": 36
+ },
+ "count": 36,
+ "fails": [],
+ "not_ideal": [],
+ "note": "draft_guns.py（階段八）—— 現況 ＝ 組裝件 links=all（2076338 格，z < 260）＋ 模型外框 16",
+ "pads": {
+  "kaguya-gloire-01m-deck-fcsle": {
+   "file": "masks/guns/pads_fcsle.vox.txt",
+   "voxels": 30
+  },
+  "kaguya-gloire-01m-deck-lower": {
+   "file": "masks/guns/pads_lower.vox.txt",
+   "voxels": 148
+  }
+ },
+ "rows": [
+  {
+   "at": [
+    238.084,
+    264.182,
+    95.0
+   ],
+   "back": 12.0,
+   "breech": [
+    240.819,
+    248.672,
+    106.25
+   ],
+   "deck_z": 90.0,
+   "dl": 1,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    235.87,
+    276.739,
+    106.25
+   ],
+   "muzzle_out": 0.739,
+   "outer": 276.0,
+   "pad_cells": 64,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    230,
+    239
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 5,
+   "rotate": [
+    0,
+    0,
+    10
+   ],
+   "scale": 0.5,
+   "support": [
+    3,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    238.084,
+    136.818,
+    95.0
+   ],
+   "back": 12.0,
+   "breech": [
+    240.819,
+    152.328,
+    106.25
+   ],
+   "deck_z": 90.0,
+   "dl": 1,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    235.87,
+    124.261,
+    106.25
+   ],
+   "muzzle_out": 0.739,
+   "outer": 125.0,
+   "pad_cells": 64,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    230,
+    239
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 5,
+   "rotate": [
+    0,
+    0,
+    -10
+   ],
+   "scale": 0.5,
+   "support": [
+    3,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    273.084,
+    267.182,
+    91.0
+   ],
+   "back": 12.0,
+   "breech": [
+    275.819,
+    251.672,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 1,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 2,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S02",
+   "muzzle": [
+    270.87,
+    279.739,
+    102.25
+   ],
+   "muzzle_out": 0.739,
+   "outer": 279.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    265,
+    274
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    10
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    273.084,
+    133.818,
+    91.0
+   ],
+   "back": 12.0,
+   "breech": [
+    275.819,
+    149.328,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 1,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 2,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P02",
+   "muzzle": [
+    270.87,
+    121.261,
+    102.25
+   ],
+   "muzzle_out": 0.739,
+   "outer": 122.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    265,
+    274
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -10
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    305.0,
+    272.0,
+    91.0
+   ],
+   "back": 9.0,
+   "breech": [
+    305.0,
+    256.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 3,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S03",
+   "muzzle": [
+    305.0,
+    284.75,
+    102.25
+   ],
+   "muzzle_out": 3.75,
+   "outer": 281.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    300,
+    309
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    305.0,
+    129.0,
+    91.0
+   ],
+   "back": 9.0,
+   "breech": [
+    305.0,
+    144.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 3,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P03",
+   "muzzle": [
+    305.0,
+    116.25,
+    102.25
+   ],
+   "muzzle_out": 3.75,
+   "outer": 120.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    300,
+    309
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    340.0,
+    275.5,
+    90.0
+   ],
+   "back": 6.5,
+   "breech": [
+    340.0,
+    259.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 4,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S04",
+   "muzzle": [
+    340.0,
+    288.25,
+    101.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    335,
+    344
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    340.0,
+    125.5,
+    90.0
+   ],
+   "back": 6.5,
+   "breech": [
+    340.0,
+    141.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 4,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P04",
+   "muzzle": [
+    340.0,
+    112.75,
+    101.25
+   ],
+   "muzzle_out": 6.25,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    335,
+    344
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    375.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    375.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 5,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S05",
+   "muzzle": [
+    375.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    370,
+    379
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    375.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    375.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 5,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P05",
+   "muzzle": [
+    375.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    370,
+    379
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    410.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    410.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 6,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S06",
+   "muzzle": [
+    410.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    405,
+    414
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    410.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    410.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 6,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P06",
+   "muzzle": [
+    410.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    405,
+    414
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    445.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    445.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 7,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S07",
+   "muzzle": [
+    445.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    440,
+    449
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    445.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    445.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 7,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P07",
+   "muzzle": [
+    445.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    440,
+    449
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    480.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    480.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 8,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S08",
+   "muzzle": [
+    480.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    475,
+    484
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    480.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    480.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 8,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P08",
+   "muzzle": [
+    480.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    475,
+    484
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    515.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    515.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 9,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S09",
+   "muzzle": [
+    515.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    510,
+    519
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    515.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    515.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 9,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P09",
+   "muzzle": [
+    515.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    510,
+    519
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    550.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    550.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 10,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S10",
+   "muzzle": [
+    550.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    545,
+    554
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    550.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    550.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 10,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P10",
+   "muzzle": [
+    550.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    545,
+    554
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    585.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    585.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 11,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S11",
+   "muzzle": [
+    585.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    580,
+    589
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    585.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    585.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 11,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P11",
+   "muzzle": [
+    585.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    580,
+    589
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    620.0,
+    276.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    620.0,
+    260.25,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S12",
+   "muzzle": [
+    620.0,
+    288.75,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 283.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    615,
+    624
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    620.0,
+    125.0,
+    90.0
+   ],
+   "back": 7.0,
+   "breech": [
+    620.0,
+    140.75,
+    101.25
+   ],
+   "deck_z": 89.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P12",
+   "muzzle": [
+    620.0,
+    112.25,
+    101.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 118.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    615,
+    624
+   ],
+   "port_z": [
+    97,
+    105
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    655.0,
+    275.0,
+    91.0
+   ],
+   "back": 7.0,
+   "breech": [
+    655.0,
+    259.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 13,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S13",
+   "muzzle": [
+    655.0,
+    287.75,
+    102.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 282.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    650,
+    659
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    655.0,
+    126.0,
+    91.0
+   ],
+   "back": 7.0,
+   "breech": [
+    655.0,
+    141.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 13,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P13",
+   "muzzle": [
+    655.0,
+    113.25,
+    102.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 119.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    650,
+    659
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    690.0,
+    273.0,
+    91.0
+   ],
+   "back": 7.0,
+   "breech": [
+    690.0,
+    257.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 14,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S14",
+   "muzzle": [
+    690.0,
+    285.75,
+    102.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 280.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    685,
+    694
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    690.0,
+    128.0,
+    91.0
+   ],
+   "back": 7.0,
+   "breech": [
+    690.0,
+    143.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 14,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P14",
+   "muzzle": [
+    690.0,
+    115.25,
+    102.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 121.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    685,
+    694
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    725.0,
+    270.0,
+    91.0
+   ],
+   "back": 7.0,
+   "breech": [
+    725.0,
+    254.25,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 15,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S15",
+   "muzzle": [
+    725.0,
+    282.75,
+    102.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 277.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    720,
+    729
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    725.0,
+    131.0,
+    91.0
+   ],
+   "back": 7.0,
+   "breech": [
+    725.0,
+    146.75,
+    102.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 15,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P15",
+   "muzzle": [
+    725.0,
+    118.25,
+    102.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 124.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    720,
+    729
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    760.0,
+    266.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    760.0,
+    250.25,
+    103.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 16,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S16",
+   "muzzle": [
+    760.0,
+    278.75,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 273.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    755,
+    764
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    760.0,
+    135.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    760.0,
+    150.75,
+    103.25
+   ],
+   "deck_z": 90.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 16,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P16",
+   "muzzle": [
+    760.0,
+    122.25,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 128.0,
+   "pad_cells": 10,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    755,
+    764
+   ],
+   "port_z": [
+    98,
+    106
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    795.0,
+    260.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    795.0,
+    244.25,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 17,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S17",
+   "muzzle": [
+    795.0,
+    272.75,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 267.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    790,
+    799
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    795.0,
+    141.0,
+    92.0
+   ],
+   "back": 7.0,
+   "breech": [
+    795.0,
+    156.75,
+    103.25
+   ],
+   "deck_z": 91.0,
+   "dl": 0,
+   "host_link": "甲板-lower",
+   "host_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deck": "lower",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 17,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P17",
+   "muzzle": [
+    795.0,
+    128.25,
+    103.25
+   ],
+   "muzzle_out": 5.75,
+   "outer": 134.0,
+   "pad_cells": 0,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    790,
+    799
+   ],
+   "port_z": [
+    99,
+    107
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    842.5,
+    243.0,
+    139.0
+   ],
+   "back": 10.0,
+   "breech": [
+    842.5,
+    227.25,
+    150.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-fcsle",
+   "host_work": "kaguya-gloire-01m-deck-fcsle",
+   "meta": {
+    "deck": "fcsle",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-S01",
+   "muzzle": [
+    842.5,
+    255.75,
+    150.25
+   ],
+   "muzzle_out": 2.75,
+   "outer": 253.0,
+   "pad_cells": 15,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    838,
+    846
+   ],
+   "port_z": [
+    141,
+    145
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    842.5,
+    158.0,
+    139.0
+   ],
+   "back": 10.0,
+   "breech": [
+    842.5,
+    173.75,
+    150.25
+   ],
+   "deck_z": 137.0,
+   "dl": 0,
+   "host_link": "甲板-fcsle",
+   "host_work": "kaguya-gloire-01m-deck-fcsle",
+   "meta": {
+    "deck": "fcsle",
+    "gun": "32l",
+    "kind": "gun",
+    "port": 1,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-P01",
+   "muzzle": [
+    842.5,
+    145.25,
+    150.25
+   ],
+   "muzzle_out": 2.75,
+   "outer": 148.0,
+   "pad_cells": 15,
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "port_x": [
+    838,
+    846
+   ],
+   "port_z": [
+    141,
+    145
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    96,
+    192
+   ],
+   "support_after_pad": [
+    192,
+    192
+   ],
+   "type": "long32",
+   "work": "basecamp-ember-01m-gun-long32"
+  }
+ ],
+ "types": {
+  "long32": {
+   "anchors": {
+    "breech": [
+     15,
+     8,
+     22
+    ],
+    "cascabel": [
+     15,
+     2,
+     22
+    ],
+    "eye-aft": [
+     4,
+     25,
+     15
+    ],
+    "eye-fwd": [
+     26,
+     25,
+     15
+    ],
+    "muzzle": [
+     15,
+     65,
+     22
+    ],
+    "train": [
+     15,
+     9,
+     9
+    ]
+   },
+   "asym_x": 0,
+   "cells": 8393,
+   "code": "32l",
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "scale": 0.5,
+   "size": [
+    30,
+    66,
+    28
+   ],
+   "work": "basecamp-ember-01m-gun-long32"
+  }
+ }
+}

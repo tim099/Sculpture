@@ -1,0 +1,509 @@
+{
+  "title": "光榮號（Gloire，1859）新圖紙 01：線形、側面、甲板高度、砲位表、桅帆表、鐵甲帶、蒸汽機外觀",
+  "task": "TASK-0622（傘）",
+  "author": "kaguya",
+  "date": "2026-10-15",
+  "meters_per_cell": 0.1,
+  "space": {"x": 1200, "y": 400, "z": 800, "yc": 200, "note": "中線 ＝ 第 200 格（鏡像 y ↔ 400 − y）"},
+  "refs": {
+    "RES": "references/gloire_research_2026-10-15.md（kaguya 派的研究 agent，2026-10-15；每個數字附網址與 opened／snippet／plan reading）",
+    "NARA": "Plans for the French Ship La Gloire（NARA 78116333，1862-08-21，Commons，公有領域）：側面、半寬、排水量表 —— 研究 agent 在 6000 px 版上量（71.5 px/m；兩項對照：砲門下緣 1.86 m vs 出版 1.88 m、舷頂 5.4 m vs 鐵甲頂 5.4 m）",
+    "NP": "Navypedia Gloire class（opened）",
+    "WP": "Wikipedia EN／FR Gloire（opened；引 Gille、Campbell／Conway、de Balincourt）",
+    "PH1863": "1863 Rijksmuseum 照片（CC0）、\"1869\" 照片（PD）、Musée national de la Marine 模型照片（CC BY-SA 3.0）",
+    "NAP": "拿破崙號（kotoko-napoleon-01m，TASK-0605）—— 本船的管線與大部分做法照它改（同一位設計師 Dupuy de Lôme）"
+  },
+  "lines": {
+    "half_beam": {"v": 85.5, "src": "NP／WP：寬 17.0 m extreme（各來源一致；NARA 半寬 16.2 m 是肋骨外緣、不含外板與鐵甲）⇒ 半寬 85.5 ⇒ 171 格（格數只能奇數）"},
+    "keel_top": {"v": 5, "src": "設計決定：龍骨（含 false keel）0.5 m"},
+    "keel_half": {"v": 2, "src": "設計決定：龍骨寬 5 格（0.5 m）"},
+    "max_breadth_z": {"v": 82, "src": "設計決定：最寬處在水線附近（鐵甲帶中段）"},
+    "tumblehome": {"v": 7, "src": "設計決定：NARA 半寬圖看得到舷頂往內收，量不到數 ⇒ 每舷 0.7 m"},
+    "tumblehome_ref_z": {"v": 132, "src": "設計決定：船腰舷頂"},
+    "tumblehome_pow": {"v": 1.6, "src": "設計決定"},
+    "bilge_pow": {"v": 2.07, "src": "設計決定：調飽滿度讓水線 z 78 以下排水量對上 5,630 t（船頭收細之後重調：2.0 ⇒ 5,562 t）"},
+    "s_aft": {"v": 0.34, "src": "設計決定：Dupuy de Lôme 為了航速把船拉長、兩頭收得細（同上，調排水量）"},
+    "s_fwd": {"v": 0.6, "src": "設計決定（同上）"},
+    "sternpost_x0": {"v": 135, "src": "倒推：水線 z 78 的艏柱到艉柱 ＝ 779 格（NP／Conway：LWL 77.9 m）"},
+    "sternpost_rake_deg": {"v": 3, "src": "設計決定：螺旋槳船的艉柱幾乎直立（MODEL 的舵與螺旋槳框是直的）"},
+    "wing_transom_z": {"v": 92, "src": "設計決定：counter 從砲甲板那一層開始往後挑（NARA：圓船尾、counter 蓋在舵上面）"},
+    "counter_aft": {"v": 14, "src": "倒推：taffrail 在 x ≈ 111 ⇒ 全長（taffrail 到艏柱頂）80.4 m（NP oa；NARA 讀 80.3 m）"},
+    "counter_top_z": {"v": 115, "src": "設計決定"},
+    "stern_rake_deg": {"v": 10, "src": "設計決定"},
+    "transom_ratio": {"v": 0.15, "src": "SS113＋MODEL＋LEBRETON：圓船尾（1840 年 Inflexible 起、Tourville 級改裝也是）⇒ 船尾面不留寬的 transom，俯視收成圓弧（設計決定 0.3）"},
+    "forefoot_x": {"v": 876.5, "src": "倒推：水線 z 78 的長度 ＝ 77.9 m（NP LWL）；艏柱頂落在 x 912（全長 80.2 m，NP oa 80.4／NARA 80.3）"},
+    "forefoot_r": {"v": 30, "src": "NARA／RES：forefoot 是圓的（3 m 圓弧，設計決定）"},
+    "stem_rake_deg": {"v": 4, "src": "NARA／照片／模型：接近垂直的直艏柱，沒有撞角、沒有船首像 ⇒ 前傾 4°（設計決定）"},
+    "deadwood_aft_z": {"v": 74, "src": "設計決定：螺旋槳 aperture 要容得下 5.8 m 的六葉螺旋槳"},
+    "deadwood_fwd_z": {"v": 24, "src": "設計決定"},
+    "bow_pow_low": {"v": 1.5, "src": "設計決定：直艏柱的入水線收細（拿破崙號 1.6）"},
+    "bow_pow_high": {"v": 2.2, "src": "設計決定：船頭上半不像拿破崙號那麼飽滿（3.0 渲出來太鈍；NARA 半寬圖的船頭是尖的）"},
+    "aft_pow": {"v": 2.0, "src": "設計決定"},
+    "round_stern": {"r": 75, "z0": 80, "z1": 106, "src": "NARA＋照片：圓船尾 ⇒ 照拿破崙號的做法（水線以上俯視收成半徑 7.5 m 的圓弧）"},
+    "top": [[104, 146], [272, 146], [275, 132], [761, 132], [764, 147], [930, 148]]
+  },
+  "top_src": "NARA：船腰舷頂離水線 5.4 m（z 132）；艏樓約 15 m（艏柱往後到 x 764）、艉樓約 16 m（taffrail 往前到 x 272），兩段都高起來（甲板 z 135 ＋ 舷牆）",
+  "waterline": {"z": 78, "src": "NARA 排水量表：平均吃水 7.830 m（WP／NP 最大 8.38–8.48 m；NARA 前 7.0、後 8.0 m，遊戲只吃一條水線 ⇒ 平龍骨 z 78）"},
+  "targets": {
+    "displacement_t": {"v": 5630, "src": "WP／NP：5,630 t（各來源 5,617–5,650；NARA 表 5,737.7 tonneaux）"},
+    "length_wl_m": {"v": 77.9, "src": "NP：LWL 77.9 m（Conway 77.88）"},
+    "length_oa_m": {"v": 80.4, "src": "NP：oa 80.4 m（NARA 讀 80.3）"}
+  },
+  "readings_at": {"lower_deck_z": 78, "deck_len_target": 779, "note": "光榮號改：長度在水線量（史料給的是 LWL）"},
+  "hull_build": {
+    "wall": 6,
+    "frame_color": 141,
+    "inner_color": 177,
+    "side_color": 36,
+    "bottom_color": 168,
+    "bottom_top_z": 58,
+    "src": "設計決定：牆 6 格（鐵甲 2 ＋ 外板與肋骨 3 ＋ 內板 1 ＝ 0.6 m；史料木背板 0.76–0.80 m）；鐵甲帶以下銅 168、艏樓艉樓的舷牆（鐵甲以上）黑 36",
+    "armor": {
+      "t": 2,
+      "z0": 58,
+      "z1": 132,
+      "color": 36,
+      "src": "NP／WP：鍛鐵 120 mm（NP：水線帶 120、砲列 110）、整條船長、從水線下 2.0 m 到水線上 5.4 m（＝ 整個舷側到船腰舷頂；NARA 水線下 2.1 m 那條實線）⇒ 牆最外 2 格（0.2 m；遊戲 render=smooth 要 ≥ 2 格厚）、z 58–132；黑（照片）"
+    }
+  },
+  "aperture": {"x_aft_off": 5, "len": 30, "z0": 9, "z1": 74, "src": "NARA：艉柱與舵柱之間一個高的開口 ⇒ 設計決定 z 9–74（容得下 5.8 m）"},
+  "body_stations": [175, 200, 240, 300, 400, 500, 600, 700, 780, 830, 860],
+  "decks": {
+    "src": "NARA：orlop 約在水線下 1.1 m、砲甲板水線上 1.1 m、上甲板 3.35 m（砲甲板到上甲板 2.25 m）、船腰舷頂 5.4 m ⇒ orlop z 66、砲甲板 z 89、上甲板 z 112（間距 23，遊戲站人頭頂 14 格夠）；艏樓、艉樓甲板 z 135",
+    "sheer": {"x_mid": 480, "x_aft": 160, "x_fwd": 880, "aft": 2, "fwd": 3, "src": "NARA：舷弧很平 ⇒ 設計決定兩頭只抬 2／3 格"},
+    "rows": [
+      {
+        "key": "orlop",
+        "name": "底艙（faux-pont）",
+        "z": 66,
+        "x_from": 190,
+        "x_to": 860,
+        "skip": [[400, 650]],
+        "skip_src": "設計決定：機艙（主機、八座鍋爐，煙囪底下）不鋪 faux-pont"
+      },
+      {"key": "lower", "name": "砲甲板（batterie）", "z": 89},
+      {"key": "spar", "name": "上甲板（pont）", "z": 112},
+      {"key": "poop", "name": "艉樓甲板（dunette）", "z": 135, "x_from": 112, "x_to": 271},
+      {"key": "fcsle", "name": "艏樓甲板（gaillard d'avant）", "z": 135, "x_from": 765, "x_to": 915}
+    ]
+  },
+  "ports": {
+    "src": "NARA：每舷 17 個砲門、間距 3.5 m（35 格）、1.0 × 0.93 m、第一個中心在艏柱後 12 m（x 795）、最後一個 68 m（x 235）；下緣離水線 1.86 m（出版 1.88）⇒ sill 8（z 97）。1860 年 36 門 16 cm Mle 1858：砲甲板 34 ＋ 艏樓追擊砲 2（Scientific American 1861 via RES）",
+    "tiers": [
+      {"deck": "lower", "per_side": 17, "w": 10, "h": 9, "sill": 8, "x_from": 230, "x_to": 800, "gun": "16 cm Mle 1858 前裝線膛砲（模型沿用餘燼號 -gun-long32，遊戲代碼 32l）"},
+      {"deck": "fcsle", "per_side": 1, "w": 9, "h": 5, "sill": 4, "x_from": 838, "x_to": 847, "gun": "16 cm 追擊砲（艏樓，同型）"}
+    ],
+    "chase": {"bow": 0, "stern": 0, "src": "艏樓那 2 門照舷側砲門擺（每舷 1）"}
+  },
+  "funnels": {
+    "src": "NARA：一根、在前桅與主桅之間、中心離艏柱 0.44 L（x 563）、直徑約 2.6 m、頂離水線 7.3 m（z 151）；Musée 模型：淺黃（buff）黑頂",
+    "rows": [
+      {"key": "main", "x": 563, "r": 13, "top_z": 151}
+    ],
+    "color": 213
+  },
+  "propeller": {"blades": 6, "diameter": 58, "hub_z": 41, "x": 153, "src": "RES：單軸、六葉、直徑 5.8 m（能不能吊起沒查到 ⇒ 固定式）；軸心 z 41、在 aperture 中間"},
+  "masts": {
+    "src": "位置：NARA＋1863／1869 照片（±3%）—— 離艏柱 fore 0.24 L、main 0.55 L、mizzen 0.745 L ⇒ x 720／473／316。帆裝：設計決定採後期的全帆裝（ship rig，2,508 m²，RES：1860 年下水時是 1,100 m² 的輕帆裝、改裝年份沒查到）—— 遊戲要帆推力、管線沿用拿破崙號；帆桁與桅長 ＝ 拿破崙號 × 0.94（帆面積比的平方根）",
+    "rows": [
+      {
+        "key": "main",
+        "x": 473,
+        "rake_deg": 1.5,
+        "heel_z": 12,
+        "lower": {"len": 300, "head": 45, "src": "design：拿破崙號 × 0.94（帆面積 2,508 vs 2,852 m² 的平方根）並配合低一層的甲板"},
+        "top": {"len": 178, "head": 24, "src": "design：拿破崙號 × 0.94"},
+        "tg": {"len": 140, "src": "design：拿破崙號 × 0.94"},
+        "yards": {"course": [318, "design：拿破崙號 338 × 0.94"], "topsail": [228, "design"], "topgallant": [162, "design"], "royal": [103, "design"]}
+      },
+      {
+        "key": "fore",
+        "x": 720,
+        "rake_deg": 0,
+        "heel_z": 22,
+        "lower": {"len": 278, "head": 41, "src": "design：主桅 × 0.92"},
+        "top": {"len": 162, "head": 22, "src": "design"},
+        "tg": {"len": 127, "src": "design"},
+        "yards": {"course": [286, "design：拿破崙號 304 × 0.94"], "topsail": [206, "design"], "topgallant": [146, "design"], "royal": [93, "design"]}
+      },
+      {
+        "key": "mizzen",
+        "x": 316,
+        "rake_deg": 3,
+        "heel_z": 68,
+        "lower": {"len": 215, "head": 32, "src": "design：桅腳立在 faux-pont 的甲板面上"},
+        "top": {"len": 132, "head": 18, "src": "design"},
+        "tg": {"len": 94, "src": "design"},
+        "yards": {
+          "crossjack": [228, "design ＝ main topsail"],
+          "topsail": [162, "design"],
+          "topgallant": [111, "design"],
+          "gaff": [132, "design"],
+          "boom": [141, "design：往後伸到艉樓上面"]
+        },
+        "boom_z": 172
+      }
+    ],
+    "bowsprit": {
+      "heel_x": 888,
+      "heel_z": 146,
+      "angle_deg": 17,
+      "length": 190,
+      "jibboom": 140,
+      "src": "NARA／照片：艏斜桅＋jib-boom、仰角 15–20° ⇒ 17°；根部 z 146：艏樓甲板面 z 139 以上（v0 的 141 讓半徑 5 的底穿過艏樓甲板板與 cutwater 48 格）；長度 design（拿破崙號 × 0.94）"
+    }
+  },
+  "paint": {
+    "base": 36,
+    "band": 255,
+    "bottom": 168,
+    "gold": 36,
+    "glass": 87,
+    "banded": [],
+    "band_overrun": 14,
+    "src": "照片／模型（沒有文字描述）：黑船殼、沒有白帶、水線下銅 ⇒ 不畫帶；舷頂與窗框也黑（gold 填 36 ＝ 不畫金）"
+  },
+  "stern": {
+    "src": "NARA：counter 與 quarter 有兩排艙窗 ⇒ 設計決定：砲甲板 5 扇、上甲板 5 扇（寬 5、高 6），黑框、玻璃 87",
+    "x_max": 175,
+    "x_ref": 150,
+    "rows": [
+      {"deck": "lower", "sill": 4, "h": 6, "n": 5, "w": 5, "half": 34},
+      {"deck": "spar", "sill": 6, "h": 6, "n": 5, "w": 5, "half": 40}
+    ]
+  },
+  "decks_build": {
+    "src": "設計決定（遊戲用：甲板、艙口、梯子這些大致構造；結構與色號照三叉戟號）",
+    "plank": {"gun": 177, "weather": 250},
+    "beam": {"color": 136, "every": 16, "w": 2, "depth": 3},
+    "coaming": {"color": 136, "h": 2},
+    "hatches": [
+      {"name": "後艙口", "x0": 380, "x1": 398, "half": 12},
+      {"name": "主艙口", "x0": 505, "x1": 533, "half": 12},
+      {"name": "前艙口", "x0": 640, "x1": 658, "half": 12}
+    ],
+    "hatch_decks": ["orlop", "lower", "spar"],
+    "funnel_decks": ["lower", "spar"],
+    "funnel_src": "設計決定：鍋爐在砲甲板以下的艙裡 ⇒ 煙囪穿過砲甲板、上甲板兩層",
+    "mast_r": {"main": 5.0, "fore": 4.5, "mizzen": 3.5, "src": "設計決定：主桅直徑 1.0 m（沒查到；三叉戟號一級艦 1.11 m 的九成）、前桅、後桅照長度比例；甲板開孔 ＝ 桅的截面（桅階段放進來剛好填滿）"},
+    "ladders": {
+      "color": 136,
+      "tread_half": 3,
+      "rise": 3,
+      "run": 2,
+      "pairs": [
+        {
+          "lo": "orlop",
+          "up": "lower",
+          "at": [["after", 280], ["fore", 680]]
+        },
+        {
+          "lo": "lower",
+          "up": "spar",
+          "at": [["after", 420], ["fore", 600]]
+        },
+        {
+          "lo": "spar",
+          "up": "poop",
+          "at": [["after", 240]]
+        },
+        {
+          "lo": "spar",
+          "up": "fcsle",
+          "at": [["fore", 775]]
+        }
+      ],
+      "src": "每兩層之間前後各一座、層與層錯開；艉樓、艏樓各一座（在它底下的上甲板往上爬）；避開艙口、桅、煙囪"
+    }
+  },
+  "deco": {
+    "src": "階段五。NARA／照片／模型：直艏柱、沒有船首像、沒有撞角、沒有船尾陽台 ⇒ 只做撐艏斜桅的 cutwater；船名、船尾燈、指揮塔外形是設計決定",
+    "knee": {
+      "profile": [[50, 0], [80, 2], [110, 4], [130, 6], [141, 5], [147, 0]],
+      "half": 2,
+      "half_low": 1,
+      "src": "RES：直艏柱前一條小 cutwater＋knee 撐艏斜桅 ⇒ 設計決定：最多伸出 0.6 m、5 格寬（水線下 3 格）"
+    },
+    "rails": null,
+    "figurehead": null,
+    "balcony": null,
+    "name": {"text": "GLOIRE", "z": [127, 133], "half": 14, "fg": 248, "bg": 36, "src": "沒查到船尾的船名 ⇒ 設計決定：艉樓甲板底下一塊船名板（3×5 字型、金字黑底、凸出一格、貼著曲面）"},
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [-20, 0, 20], "min_z": 140, "src": "沿用現有元件（三叉戟號船尾燈）；三盞站在艉樓 taffrail 上（設計決定）"},
+    "funnel": {"wall": 2, "rim": 36, "rim_h": 8, "lip": 1, "src": "Musée 模型、Roux 水彩：淺黃（buff 213）煙囪、頂上一段黑（0.8 m，設計決定）；2 格厚的管子、中間空，從砲甲板穿上來（剛好填滿甲板的煙囪孔）"},
+    "screw": {
+      "hub_r": 4,
+      "hub_x": [147, 160],
+      "shaft_r": 2,
+      "shaft_x": [160, 168],
+      "blade_x": [151, 155],
+      "blade_x_tip": [152, 154],
+      "hw_deg": [[4, 13], [8, 15], [16, 17], [22, 13], [28, 6]],
+      "color": 176,
+      "src": "plan.propeller（六葉、直徑 58、軸心 x 153 z 41）⇒ 葉片角寬照半徑表（設計決定）；青銅 176"
+    },
+    "conning": {
+      "x": 353,
+      "r": 13,
+      "wall": 2,
+      "h": 37,
+      "door_half": 3,
+      "door_h": 18,
+      "color": 36,
+      "src": "WP／NP：開頂的鐵指揮塔 100 mm、高「超過 3.7 m」、在後桅前面（NARA 約 0.70 L ⇒ x 353）⇒ 設計決定：直徑 2.6 m、牆 2 格、高 3.7 m、船尾那一側一道門；遊戲 material=iron、render=smooth"
+    },
+    "catheads": {"x": 868, "z": 145, "half": 1, "out": 16, "color": 36, "src": "RES：NARA 上錨直立收在艏樓側面、cathead 後面 ⇒ 設計決定：兩舷各一根 3×3 的黑橫木，從艏樓舷牆頂（z 145）伸出舷外 1.6 m"}
+  },
+  "masts_build": {
+    "src": "設計決定（TASK-0611）：桅照 plan.masts；截面、tops、caps、crosstrees、艏斜桅的作法與色號照三叉戟號（gura，TASK-0559）",
+    "r": {"main": [5.0, 3.0, 1.8], "fore": [4.5, 2.7, 1.6], "mizzen": [3.5, 2.1, 1.3], "src": "下桅照 decks_build.mast_r（甲板孔就是照它開的）；上桅 0.6、頂桅 0.36 × 下桅（同三叉戟號的比例）"},
+    "taper": {"lower_head": 0.8, "top_head": 0.75, "tg_head": 0.6},
+    "top": {"main": [66, 50], "fore": [60, 46], "mizzen": [46, 34], "fwd": 0.6, "src": "tops ＝ [橫寬, 前後深]（格）；三叉戟號 72×54 的九成多（本船帆桁約小 3%、桅低）"},
+    "crosstrees": {"main": 24, "fore": 22, "mizzen": 17},
+    "hoop_every": 12,
+    "colors": {"spar": 177, "black": 36, "top": 104, "truck": 255, "step": 136},
+    "bowsprit": {"r": [5.0, 3.5], "jib_r": [2.3, 1.4], "jib_start": 0.7, "step": [884, 896, 4], "src": "艏斜桅根部粗同主桅、往前收到 0.7；jib-boom 疊在艏斜桅上面、從 70% 起；根部底下一塊墊木到上甲板（同三叉戟號）"},
+    "yards": {
+      "brace": {"course": -20, "crossjack": -20, "topsail": -22, "topgallant": -24, "royal": -26, "gaff": 0, "boom": 0},
+      "source_placement": "D:/Unity/Valhalla/Sculpture/works/gura-tridente-01m/design/masts_placement.json",
+      "source": {
+        "main-course": "main-course",
+        "main-topsail": "main-topsail",
+        "main-topgallant": "main-topgallant",
+        "main-royal": "main-royal",
+        "fore-course": "fore-course",
+        "fore-topsail": "fore-topsail",
+        "fore-topgallant": "fore-topgallant",
+        "fore-royal": "fore-royal",
+        "mizzen-crossjack": "mizzen-crossjack",
+        "mizzen-topsail": "mizzen-topsail",
+        "mizzen-topgallant": "mizzen-topgallant",
+        "mizzen-gaff": "mizzen-gaff",
+        "mizzen-boom": "mizzen-boom"
+      },
+      "src": "造船規格 §2.1（Tim 2026-10-14）：帆桁沿用現有元件 ⇒ 三叉戟號（gura，一級艦、主帆桁 34.7 m，跟本船 33.8 m 最接近）的同名帆桁、只沿長度縮放（scale 0,L/L₀,0）；brace 角照三叉戟號／憲法號（course −20、topsail −22、topgallant −24、royal −26）；spritsail 不掛（1850 年，design）"
+    },
+    "spanker": {
+      "gaff": {"jaws_z": 221, "scale": "uniform", "src": "jaws ＝ layout 的 gaff 高度（後桅平台 251 下 30）；三叉戟號 gaff 等比縮"},
+      "boom": {"jaws_z": 172, "scale": "x", "src": "boom 只沿 x 縮；jaws z 172 ⇒ 過船尾時在艉樓欄杆（z 146）與船尾燈（約 z 165）上面（設計決定）"}
+    }
+  },
+  "rigging": {
+    "src": "設計決定（TASK-0612；遊戲用 ⇒ 帆、帆自己的繩、旗照造船規格 §9.1 標 meta；靜索與 ratlines 是外觀）；數值與作法照三叉戟號／憲法號（造船規格 §6、§7）",
+    "channels": {
+      "shrouds": {"main": 8, "fore": 8, "mizzen": 6},
+      "backstays": {"main": 2, "fore": 2, "mizzen": 1},
+      "fwd": 8,
+      "spacing": 7,
+      "above_deck": 17,
+      "width": 12,
+      "color": 36,
+      "deadeye": 136,
+      "src": "每根桅一塊 channel：上甲板面 ＋ 17（z 約 130，船腰舷頂 132 下面）、往外 12 格、2 格厚；外緣一排 deadeye；shrouds 主 8、前 8、後 6 ＋ topmast backstays 2／2／1 ＋ topgallant backstay 1（照拿破崙號）"
+    },
+    "topmast_shrouds": {"main": 5, "fore": 5, "mizzen": 4},
+    "belay": {"main-sheet": 373, "main-tack": 563, "fore-sheet": 628, "fore-tack": 800, "fts": 820, "jib": 835},
+    "bowsprit_shroud_hull": [898, 147],
+    "mizzenstay_foot_z": 120,
+    "bob_at": [0.97, 1.0],
+    "bobstay_knee_z": [128, 131],
+    "thick": {
+      "shroud": {"main": 1.2, "fore": 1.1, "mizzen": 0.9},
+      "topmast_shroud": 0.8,
+      "futtock": 0.6,
+      "tg_shroud": 0.5,
+      "backstay": 0.8,
+      "tg_backstay": 0.6,
+      "stay": 1.5,
+      "tm_stay": 1.0,
+      "tg_stay": 0.6,
+      "bobstay": 1.0,
+      "course_sheet": 0.5,
+      "sheet": 0.35
+    },
+    "colors": {"standing": "#2b2620", "running": "#a08458"},
+    "ratlines": {
+      "lower_every": 6,
+      "topmast_every": 8,
+      "start": 7,
+      "stop": 0.9,
+      "min_len": 5,
+      "lower_th": 0.3,
+      "topmast_th": 0.25,
+      "src": "同三叉戟號：一階一條子繩、從第一根拉到最後一根；下桅每 6 格、上桅每 8 格；從 deadeye 往上 7 格起、到 90% 停；短於 5 格不畫"
+    },
+    "sails": {
+      "fullness": 1.05,
+      "color": "#f2ead8",
+      "course_in": 0.7,
+      "course_clew_z": 148,
+      "clew_in": 0.04,
+      "course_sheet_slack": 0.85,
+      "course_tack_slack": 0.8,
+      "jib_head": 0.75,
+      "jib_clew": [0.3, 30, 25],
+      "jib_fullness": 1.06,
+      "src": "同三叉戟號；course 的 clew 在 z 148（上甲板 113 ＋ 35，比船腰舷頂 132 高 1.6 m）"
+    },
+    "flags": {
+      "ensign": [45, 30],
+      "ensign_color": "#ffffff",
+      "pennant": [60, 4],
+      "pennant_color": "#ffffff",
+      "src": "LEBRETON（研究 A）：法國三色旗掛在後桅 gaff ⇒ 船尾旗 ＝ 三色旗（藍白紅直條 1:1:1，像素畫 60×40、旗桿那一邊藍）掛 gaff 頂；長旗（flamme）掛主桅頂，也是藍白紅（設計決定）；遊戲：降旗降 ensign"
+    },
+    "mizzenstay_src": "光榮號：煙囪在主桅前面，後桅 stay 照三叉戟號綁主桅腳（上甲板 ＋ 7）；拉直的繩過指揮塔（x 353，頂 z 150）那裡 z 約 215",
+    "bobstay_src": "設計決定：bobstay 兩條，從 knee 最往前那一段的前緣（z 128／131）拉到艏斜桅 97／100% 的底下 ⇒ 從帝國鷹前面過。試過的（讀數 rope_hits）：v1 z 100–120 → 80–96%：繩貼在 knee 裡 106 格、穿過鷹 25 格（knee 前緣比繩斜，低處起的繩一定在 knee 裡）；z 58–74 → 90–99%：同樣貼在 knee 裡；第三條（z 134）擦過鷹嘴 1 格 ⇒ 只留兩條；艏斜桅側索的船殼端從 (880, z 150) 改到 (900, z 158)（v1 穿過船頭舷牆 10 格）",
+    "wind": [4.5, -1.5, 0],
+    "sail_seconds": 4,
+    "belay_src": "設計決定：照拿破崙號離桅的距離換到本船的桅位（main-sheet 主桅後 100、main-tack 前 90、fore-sheet 前桅後 92；fore-tack、三角帆的 sheet 在艏樓舷頂）"
+  },
+  "guns": {
+    "src": "造船規格 §2.1：砲一門一個外部模型，沿用現有砲元件（work sub=components kind=gun），不新做；代碼沿用來源的 meta（遊戲認得的那幾個）",
+    "types": {
+      "long32": {"work": "basecamp-ember-01m-gun-long32", "code": "32l", "scale": 0.5, "title": "16 cm Mle 1858 前裝線膛砲（餘燼號 32 磅長砲；16 cm 砲彈 ≈ 30 kg ≈ 法國 30 磅級）"}
+    },
+    "rows": {"lower": "long32", "fcsle": "long32"},
+    "rows_src": "WP／RES：1860 年 36 門 16 cm Mle 1858 前裝線膛砲（砲甲板 34 ＋ 艏樓追擊砲 2）⇒ 同一型；元件沿用餘燼號 -gun-long32（造船規格 §2.1；拿破崙號的 30 磅砲也是這一件）",
+    "search": {
+      "dl": [0, 0.5, -0.5, 1, -1, 1.5, -1.5],
+      "step": 0.5,
+      "max_back": 60,
+      "min_muzzle_out": 0.5,
+      "dz": [1, 0, 2],
+      "src": "照三叉戟號 plan.json guns.search",
+      "angles": [5, 10, 15, 20, 25, 30, 35, 40, 45],
+      "angles_src": "設計決定（本船加的）：正橫放砲口出不去的砲門（船頭、船尾收窄那幾個；輪子懸空不算，墊木補）⇒ 往近的那一頭照角度搜，取第一個砲口出得去的角；角度都不行 ⇒ 墊高 raise 格（砲座，墊木補到甲板）再搜 —— 下砲甲板第 1 個砲門在圓船尾開始收的地方，砲架碰到砲門底下往裡斜的牆",
+      "raise": [3, 4, 5, 6]
+    }
+  },
+  "rudder": {
+    "work": "kaguya-gloire-01m-rudder",
+    "model": "舵",
+    "z_bottom": 1,
+    "z_top": 92,
+    "head_z": 84,
+    "chord_bottom": 22,
+    "chord_wl": 20,
+    "chord_head": 8,
+    "half_front": 2,
+    "half_aft": 1,
+    "copper": 168,
+    "black": 36,
+    "band": 136,
+    "bands_z": [8, 22, 36, 50, 64, 78],
+    "band_back": 7,
+    "band_fwd": 6,
+    "band_dy": 8,
+    "max_deg": 35,
+    "src": "NARA：舵很大、下緣圓、掛在螺旋槳 aperture 後面、頂端收進 counter 底下 ⇒ 設計決定：寬 底 2.2 → 水線 2.0 → 舵頭 0.8 m、厚 0.5／0.3 m；水線下銅、以上黑；pintle 帶照拿破崙號。外部模型 kind=rudder（造船規格 §9）；舵頂 z 92（v0 的 96 轉 ±35° 時掃進 counter 2 格）"
+  },
+  "magazines": {
+    "src": "設計決定（沒查到光榮號的彈藥庫位置）：照拿破崙號／三叉戟號前後兩間、在 faux-pont 底下的貨艙（水線下）、避開機艙與鍋爐（x 400–650）。桶數照砲數換算：憲法號 54 門 138 桶 ⇒ 36 門 ≈ 92 桶，兩間各 46（⚠ 不是史料）",
+    "base_links": "船殼,鐵甲帶,甲板-orlop,甲板-lower,甲板-spar,甲板-poop,甲板-fcsle,船頭,船名板,煙囪,螺旋槳,指揮塔,主桅,前桅,後桅,艏斜桅,channels,channels-鏡像",
+    "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+    "barrel": {
+      "work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "scale": 0.2,
+      "pivot": [11, 11, 0],
+      "mpv": 0.02,
+      "d_bilge": 22,
+      "h": 27,
+      "pitch": 4.6,
+      "tier": 7
+    },
+    "rooms": {
+      "aft": {
+        "title": "後彈藥庫",
+        "work": "kaguya-gloire-01m-magazine-aft",
+        "link": "彈藥庫-後",
+        "pos": "aft",
+        "x": [322, 362],
+        "floor": 45,
+        "ceil": 65,
+        "door": "fore",
+        "door_w": 5,
+        "door_head": 3,
+        "cap": 46,
+        "src": "faux-pont 後段底下、舷弧台階（x 320）之前的平段 ⇒ 天花板 z 65 貼著 faux-pont 甲板板（z 66；v0 的 x 300–345 跨過台階，天花板與甲板之間夾出 1,936 格封閉空腔）；後艙口（x 380）之前"
+      },
+      "fore": {
+        "title": "前彈藥庫",
+        "work": "kaguya-gloire-01m-magazine-fore",
+        "link": "彈藥庫-前",
+        "pos": "fore",
+        "x": [665, 712],
+        "floor": 31,
+        "ceil": 50,
+        "door": "aft",
+        "door_w": 5,
+        "door_head": 3,
+        "cap": 46,
+        "src": "前艙口（x 640–658）之前、前桅（x 720，半徑 4.5）之後；高度照三叉戟號"
+      }
+    }
+  },
+  "fittings": {
+    "src": "造船規格 §2.1：遊戲要認的甲板零件沿用現成的子作品當外部模型（pivot、scale 照拿破崙號／三叉戟號）；位置是設計決定",
+    "types": {
+      "wheel": {
+        "work": "basecamp-frigate-constitution-01m-wheel",
+        "pivot": [50, 52, 0],
+        "scale": 0.2,
+        "meta": {"kind": "wheel"}
+      },
+      "binnacle": {
+        "work": "basecamp-ember-01m-binnacle",
+        "pivot": [12, 24, 0],
+        "scale": 0.2,
+        "meta": {"kind": "binnacle"}
+      },
+      "capstan": {
+        "work": "basecamp-ember-01m-capstan",
+        "pivot": [40, 40, 0],
+        "scale": 0.2,
+        "meta": {"kind": "capstan"}
+      },
+      "boat": {
+        "work": "basecamp-ember-01m-boat",
+        "pivot": [90, 26, 0],
+        "scale": 0.5,
+        "meta": {"kind": "boat", "boat": "cutter", "length_m": 9}
+      }
+    },
+    "wheel": {"deck": "poop", "x_from": 140, "x_to": 240, "src": "設計決定：舵輪在艉樓甲板中線（光榮號有艉樓；放上甲板會被艉樓蓋住）；從 taffrail 內面往船頭搜"},
+    "binnacle": {"gap": 6.5, "src": "舵輪正前方（同三叉戟號、餘燼號，隔 6.5 格）"},
+    "capstan": {"x_from": 278, "x_to": 300, "target": 290, "clear": 5, "src": "設計決定：上甲板、艉樓前緣（x 272）與後桅（x 316）之間的中線，四周 0.5 m 淨空（v0 放主桅後面：後梯子口與主桅之間只剩 1 m，放不下）"},
+    "boats": {"x_from": 590, "x_to": 640, "target": 610, "dy": 30, "src": "RES（naval-encyclopedia，低可信度）：whaler 與工作艇在煙囪後面…⇒ 設計決定：煙囪（x 563）與前艙口（x 640）之間兩舷各一艘擱在上甲板（不做艇架）"}
+  },
+  "rooms": {
+    "src": "設計決定（造船規格 §9.2 空艙房）：照拿破崙號 —— faux-pont 兩舷各一排艙房、中線 |dy| ≤ 20 留走道；中間 x 400–650 是機艙 ⇒ 前後兩段；橫艙壁落在舷弧台階（x 204、320、643、763、845）⇒ 每間地板平；船尾最後一段（x 204–235）只有 0.4 m 寬 ⇒ 不隔",
+    "deck": "orlop",
+    "host_link": "甲板-orlop",
+    "host_work": "kaguya-gloire-01m-deck-orlop",
+    "work": "kaguya-gloire-01m-rooms-orlop",
+    "title": "光榮號 faux-pont 艙房（S 舷一件；另一舷鏡像）",
+    "link": "艙房",
+    "link_mirror": "艙房-鏡像",
+    "colors": {"plank": 177, "frame": 136},
+    "inner_dy": 21,
+    "door_w": 7,
+    "door_h": 18,
+    "segments": [[235, 262, 291, 320, 350, 399], [651, 683, 715, 763, 804, 845]]
+  },
+  "anchors": {
+    "src": "造船規格 §9 anchor ＋ §2.1：沿用共用錨元件（憲法號 -anchor），縮 0.85 ⇒ 4.9 m（設計決定）；兩舷各一隻掛在艏樓側面（RES：NARA 上錨直立收在艏樓側、cathead 後面）；hawse 在船頭、砲門頂那一層（RES：NARA 兩個錨鏈孔靠近艏柱、約砲門頂高度）",
+    "work": "basecamp-frigate-constitution-01m-anchor",
+    "name": "錨",
+    "scale": 0.85,
+    "pivot": [23.5, 16.5, 29],
+    "meta": {"kind": "anchor", "anchor": "bower"},
+    "x": [858, 878],
+    "x_pref": 868,
+    "ring_z": [128, 143],
+    "angles": [90, 80, 100, 70, 110, 60, 120],
+    "y_out": 290,
+    "hawse": {"x": 890, "z": 108},
+    "ring_reach": 5,
+    "ring_src": "Blockside 10_ship.js：錨（kind=anchor）的掛點 ＝ 錨環 ring 旁 8 格內最近的實心（第一版錨環離舷頂 > 8 格 ⇒ shipcheck 報開場就掉）⇒ 要求 ≤ 5 格"
+  }
+}

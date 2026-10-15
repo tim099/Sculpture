@@ -1,0 +1,307 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 68622,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 18388,
+    "177": 50234
+   },
+   "mirror_diff": 0
+  },
+  "lower": {
+   "cells": 136781,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 37504,
+    "177": 99277
+   },
+   "mirror_diff": 0
+  },
+  "spar": {
+   "cells": 146478,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 40498,
+    "250": 105980
+   },
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 26964,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 7153,
+    "250": 19811
+   },
+   "mirror_diff": 0
+  },
+  "fcsle": {
+   "cells": 17888,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 5072,
+    "250": 12816
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "lower": {
+   "cells": 480,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  },
+  "spar": {
+   "cells": 480,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 234,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  },
+  "fcsle": {
+   "cells": 240,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "problems": [],
+ "overlap_between_parts": 0,
+ "ladder_points": {
+  "after-lower": {
+   "up": "lower",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     279,
+     200,
+     68
+    ],
+    "lo": [
+     282,
+     200,
+     71
+    ],
+    "hi": [
+     294,
+     200,
+     89
+    ],
+    "head": [
+     298,
+     200,
+     91
+    ]
+   },
+   "steps": 7
+  },
+  "fore-lower": {
+   "up": "lower",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     679,
+     200,
+     68
+    ],
+    "lo": [
+     682,
+     200,
+     71
+    ],
+    "hi": [
+     694,
+     200,
+     89
+    ],
+    "head": [
+     698,
+     200,
+     91
+    ]
+   },
+   "steps": 7
+  },
+  "after-spar": {
+   "up": "spar",
+   "lo": "lower",
+   "points": {
+    "foot": [
+     419,
+     200,
+     90
+    ],
+    "lo": [
+     422,
+     200,
+     93
+    ],
+    "hi": [
+     434,
+     200,
+     111
+    ],
+    "head": [
+     438,
+     200,
+     113
+    ]
+   },
+   "steps": 7
+  },
+  "fore-spar": {
+   "up": "spar",
+   "lo": "lower",
+   "points": {
+    "foot": [
+     599,
+     200,
+     90
+    ],
+    "lo": [
+     602,
+     200,
+     93
+    ],
+    "hi": [
+     614,
+     200,
+     111
+    ],
+    "head": [
+     618,
+     200,
+     113
+    ]
+   },
+   "steps": 7
+  },
+  "after-poop": {
+   "up": "poop",
+   "lo": "spar",
+   "points": {
+    "foot": [
+     239,
+     200,
+     114
+    ],
+    "lo": [
+     242,
+     200,
+     117
+    ],
+    "hi": [
+     254,
+     200,
+     135
+    ],
+    "head": [
+     258,
+     200,
+     137
+    ]
+   },
+   "steps": 7
+  },
+  "fore-fcsle": {
+   "up": "fcsle",
+   "lo": "spar",
+   "points": {
+    "foot": [
+     774,
+     200,
+     115
+    ],
+    "lo": [
+     777,
+     200,
+     118
+    ],
+    "hi": [
+     789,
+     200,
+     136
+    ],
+    "head": [
+     793,
+     200,
+     138
+    ]
+   },
+   "steps": 7
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 6,
+ "holes": {
+  "orlop": 1820,
+  "lower": 2674,
+  "spar": 2677,
+  "poop": 329,
+  "fcsle": 329
+ },
+ "cavities_filled": [
+  {
+   "deck": "spar",
+   "cells": 25,
+   "x": [
+    122,
+    122
+   ],
+   "z": [
+    114,
+    114
+   ]
+  }
+ ],
+ "lists": {
+  "deck-orlop": [
+   68622,
+   "25671cb3058cdf38c8825f5a2a022b8c723b8fc2ad0aa1b402d3b76d09512710"
+  ],
+  "deck-lower": [
+   136781,
+   "20e430ae928fef85b3b363f4fedf0945615b1ee60f5f1cb2eac7328f70266af9"
+  ],
+  "deck-spar": [
+   146478,
+   "ffb36f3ff55a5b21056ce6b020ad7d9aede6edcf346f5aea74fee4153731d748"
+  ],
+  "deck-poop": [
+   26964,
+   "e0d35da94a0718f8e37e9e8da0b56fd7156cf20d3e7fa0ac401db3e8aefb51d1"
+  ],
+  "deck-fcsle": [
+   17888,
+   "6ce7478572d98d3ab1f8afa4b030a955de4e637c2ecd8f9e1ece1301268e3be8"
+  ],
+  "ladders-lower": [
+   480,
+   "b627b5a9afe95b974fd7db7b62de540c4db43e9a4cf199610d9a97047fda7ffd"
+  ],
+  "ladders-spar": [
+   480,
+   "b170b87749706160582cdfeb72f6065e2ad5d07a99f269deb7920d3623b7ca28"
+  ],
+  "ladders-poop": [
+   234,
+   "c2667e6b54209cfd1dceee982be86671dc92b5bd6f03ba96dbda54bb6d5b468f"
+  ],
+  "ladders-fcsle": [
+   240,
+   "fb4ef433b4d9edbfad581de7ccafe724400572a22f1a6c501242253c6db9d06e"
+  ]
+ }
+}

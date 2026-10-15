@@ -1,0 +1,313 @@
+{
+ "ports": {
+  "lower": {
+   "per_side": 17,
+   "min_gap": 25,
+   "max_gap": 25,
+   "max_surface_step": 5,
+   "x_first": 230,
+   "x_last": 799,
+   "z_sill_range": [
+    97,
+    99
+   ],
+   "below_next_deck_min": 7
+  },
+  "fcsle": {
+   "per_side": 1,
+   "min_gap": null,
+   "max_gap": null,
+   "max_surface_step": 3,
+   "x_first": 838,
+   "x_last": 846,
+   "z_sill_range": [
+    141,
+    141
+   ]
+  }
+ },
+ "problems": [],
+ "vertical_clear": [
+  {
+   "between": [
+    "lower",
+    "fcsle"
+   ],
+   "min_clear": 999
+  }
+ ],
+ "decks": {
+  "orlop": {
+   "z_mid": 66,
+   "z_ends": [
+    69,
+    70
+   ],
+   "inside_x": [
+    170,
+    905
+   ]
+  },
+  "lower": {
+   "z_mid": 89,
+   "z_ends": [
+    92,
+    93
+   ],
+   "inside_x": [
+    132,
+    908
+   ]
+  },
+  "spar": {
+   "z_mid": 112,
+   "z_ends": [
+    115,
+    116
+   ],
+   "inside_x": [
+    116,
+    910
+   ]
+  },
+  "poop": {
+   "z_mid": 135,
+   "z_ends": [
+    138,
+    139
+   ],
+   "inside_x": [
+    112,
+    911
+   ]
+  },
+  "fcsle": {
+   "z_mid": 135,
+   "z_ends": [
+    138,
+    139
+   ],
+   "inside_x": [
+    112,
+    911
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "main",
+   "x": 473,
+   "heel": 12,
+   "platform": 267,
+   "crosstrees": 421,
+   "truck": 561,
+   "truck_above_wl_m": 48.3,
+   "max_yard_half": 159.0,
+   "yard_in_frame": true
+  },
+  {
+   "key": "fore",
+   "x": 720,
+   "heel": 22,
+   "platform": 259,
+   "crosstrees": 399,
+   "truck": 526,
+   "truck_above_wl_m": 44.8,
+   "max_yard_half": 143.0,
+   "yard_in_frame": true
+  },
+  {
+   "key": "mizzen",
+   "x": 316,
+   "heel": 68,
+   "platform": 251,
+   "crosstrees": 365,
+   "truck": 459,
+   "truck_above_wl_m": 38.1,
+   "max_yard_half": 114.0,
+   "yard_in_frame": true
+  }
+ ],
+ "guns_broadside": 36,
+ "guns_total": 36,
+ "funnels": [
+  {
+   "key": "main",
+   "x": 563,
+   "r": 13,
+   "deck_inner_half": 76,
+   "nearest_mast_dx": 90.0,
+   "top_z": 151,
+   "top_above_wl_m": 7.3,
+   "clear_to_lowest_course_yard": 88
+  }
+ ],
+ "propeller": {
+  "x": 153,
+  "hub_z": 41,
+  "diameter": 58,
+  "blades": 6,
+  "aperture_z": [
+   9,
+   74
+  ],
+  "aperture_x_at_hub": [
+   137.9,
+   167.9
+  ],
+  "margin_z": [
+   3.0,
+   4.0
+  ],
+  "margin_x": [
+   13.7,
+   13.4
+  ]
+ },
+ "port_list": [
+  {
+   "deck": "lower",
+   "i": 1,
+   "x0": 230,
+   "x1": 239,
+   "z0": 98,
+   "z1": 106
+  },
+  {
+   "deck": "lower",
+   "i": 2,
+   "x0": 265,
+   "x1": 274,
+   "z0": 98,
+   "z1": 106
+  },
+  {
+   "deck": "lower",
+   "i": 3,
+   "x0": 300,
+   "x1": 309,
+   "z0": 98,
+   "z1": 106
+  },
+  {
+   "deck": "lower",
+   "i": 4,
+   "x0": 335,
+   "x1": 344,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 5,
+   "x0": 370,
+   "x1": 379,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 6,
+   "x0": 405,
+   "x1": 414,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 7,
+   "x0": 440,
+   "x1": 449,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 8,
+   "x0": 475,
+   "x1": 484,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 9,
+   "x0": 510,
+   "x1": 519,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 10,
+   "x0": 545,
+   "x1": 554,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 11,
+   "x0": 580,
+   "x1": 589,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 12,
+   "x0": 615,
+   "x1": 624,
+   "z0": 97,
+   "z1": 105
+  },
+  {
+   "deck": "lower",
+   "i": 13,
+   "x0": 650,
+   "x1": 659,
+   "z0": 98,
+   "z1": 106
+  },
+  {
+   "deck": "lower",
+   "i": 14,
+   "x0": 685,
+   "x1": 694,
+   "z0": 98,
+   "z1": 106
+  },
+  {
+   "deck": "lower",
+   "i": 15,
+   "x0": 720,
+   "x1": 729,
+   "z0": 98,
+   "z1": 106
+  },
+  {
+   "deck": "lower",
+   "i": 16,
+   "x0": 755,
+   "x1": 764,
+   "z0": 98,
+   "z1": 106
+  },
+  {
+   "deck": "lower",
+   "i": 17,
+   "x0": 790,
+   "x1": 799,
+   "z0": 99,
+   "z1": 107
+  },
+  {
+   "deck": "fcsle",
+   "i": 1,
+   "x0": 838,
+   "x1": 846,
+   "z0": 141,
+   "z1": 145
+  }
+ ]
+}

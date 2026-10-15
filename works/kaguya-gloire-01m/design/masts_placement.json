@@ -1,0 +1,558 @@
+{
+ "masts": {
+  "main": {
+   "work": "kaguya-gloire-01m-mast-main",
+   "title": "光榮號 主桅",
+   "link": "主桅"
+  },
+  "fore": {
+   "work": "kaguya-gloire-01m-mast-fore",
+   "title": "光榮號 前桅",
+   "link": "前桅"
+  },
+  "mizzen": {
+   "work": "kaguya-gloire-01m-mast-mizzen",
+   "title": "光榮號 後桅",
+   "link": "後桅"
+  },
+  "bowsprit": {
+   "work": "kaguya-gloire-01m-bowsprit",
+   "title": "光榮號 艏斜桅",
+   "link": "艏斜桅"
+  }
+ },
+ "yards": [
+  {
+   "name": "fore-course",
+   "parent": "kaguya-gloire-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-course",
+   "src_L": 305,
+   "model": {
+    "name": "yard-fore-course",
+    "at": [
+     728.5,
+     200.5,
+     247.5
+    ],
+    "pivot": [
+     4.5,
+     152.5,
+     4.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": [
+     1,
+     0.9377,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "course",
+     "length_ft": 93.83,
+     "length_m": 28.6,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20,
+     "diameter_in": 24.0,
+     "sail": "fore-course"
+    }
+   }
+  },
+  {
+   "name": "fore-topsail",
+   "parent": "kaguya-gloire-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-topsail",
+   "src_L": 239,
+   "model": {
+    "name": "yard-fore-topsail",
+    "at": [
+     733.5,
+     200.5,
+     381.5
+    ],
+    "pivot": [
+     3.5,
+     119.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": [
+     1,
+     0.8619,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "topsail",
+     "length_ft": 67.59,
+     "length_m": 20.6,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "diameter_in": 18.8,
+     "sail": "fore-topsail"
+    }
+   }
+  },
+  {
+   "name": "fore-topgallant",
+   "parent": "kaguya-gloire-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-topgallant",
+   "src_L": 151,
+   "model": {
+    "name": "yard-fore-topgallant",
+    "at": [
+     735.5,
+     200.5,
+     456.5
+    ],
+    "pivot": [
+     2.5,
+     75.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": [
+     1,
+     0.9669,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "topgallant",
+     "length_ft": 47.9,
+     "length_m": 14.6,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "diameter_in": 11.9,
+     "sail": "fore-topgallant"
+    }
+   }
+  },
+  {
+   "name": "fore-royal",
+   "parent": "kaguya-gloire-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-royal",
+   "src_L": 99,
+   "model": {
+    "name": "yard-fore-royal",
+    "at": [
+     734.5,
+     200.5,
+     500.5
+    ],
+    "pivot": [
+     1.5,
+     49.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -26
+    ],
+    "scale": [
+     1,
+     0.9394,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "royal",
+     "length_ft": 30.51,
+     "length_m": 9.3,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -26,
+     "diameter_in": 7.8,
+     "sail": "fore-royal"
+    }
+   }
+  },
+  {
+   "name": "main-course",
+   "parent": "kaguya-gloire-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-course",
+   "src_L": 347,
+   "model": {
+    "name": "yard-main-course",
+    "at": [
+     478.5,
+     200.5,
+     255.5
+    ],
+    "pivot": [
+     4.5,
+     173.5,
+     4.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": [
+     1,
+     0.9164,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "course",
+     "length_ft": 104.33,
+     "length_m": 31.8,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20,
+     "diameter_in": 27.3,
+     "sail": "main-course"
+    }
+   }
+  },
+  {
+   "name": "main-topsail",
+   "parent": "kaguya-gloire-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-topsail",
+   "src_L": 273,
+   "model": {
+    "name": "yard-main-topsail",
+    "at": [
+     479.5,
+     200.5,
+     403.5
+    ],
+    "pivot": [
+     3.5,
+     136.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": [
+     1,
+     0.8352,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "topsail",
+     "length_ft": 74.8,
+     "length_m": 22.8,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "diameter_in": 21.5,
+     "sail": "main-topsail"
+    }
+   }
+  },
+  {
+   "name": "main-topgallant",
+   "parent": "kaguya-gloire-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-topgallant",
+   "src_L": 171,
+   "model": {
+    "name": "yard-main-topgallant",
+    "at": [
+     480.5,
+     200.5,
+     484.5
+    ],
+    "pivot": [
+     2.5,
+     85.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": [
+     1,
+     0.9474,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "topgallant",
+     "length_ft": 53.15,
+     "length_m": 16.2,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "diameter_in": 13.5,
+     "sail": "main-topgallant"
+    }
+   }
+  },
+  {
+   "name": "main-royal",
+   "parent": "kaguya-gloire-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-royal",
+   "src_L": 111,
+   "model": {
+    "name": "yard-main-royal",
+    "at": [
+     479.5,
+     200.5,
+     533.5
+    ],
+    "pivot": [
+     2.5,
+     55.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -26
+    ],
+    "scale": [
+     1,
+     0.9279,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "royal",
+     "length_ft": 33.79,
+     "length_m": 10.3,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -26,
+     "diameter_in": 8.7,
+     "sail": "main-royal"
+    }
+   }
+  },
+  {
+   "name": "mizzen-crossjack",
+   "parent": "kaguya-gloire-01m-mast-mizzen",
+   "source_work": "gura-tridente-01m-yard-mizzen-crossjack",
+   "src_L": 239,
+   "model": {
+    "name": "yard-mizzen-crossjack",
+    "at": [
+     316.5,
+     200.5,
+     239.5
+    ],
+    "pivot": [
+     3.5,
+     119.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": [
+     1,
+     0.954,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "crossjack",
+     "length_ft": 74.8,
+     "length_m": 22.8,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20,
+     "diameter_in": 18.8
+    }
+   }
+  },
+  {
+   "name": "mizzen-topsail",
+   "parent": "kaguya-gloire-01m-mast-mizzen",
+   "source_work": "gura-tridente-01m-yard-mizzen-topsail",
+   "src_L": 171,
+   "model": {
+    "name": "yard-mizzen-topsail",
+    "at": [
+     313.5,
+     200.5,
+     347.5
+    ],
+    "pivot": [
+     2.5,
+     85.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": [
+     1,
+     0.9474,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "topsail",
+     "length_ft": 53.15,
+     "length_m": 16.2,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "diameter_in": 13.5,
+     "sail": "mizzen-topsail"
+    }
+   }
+  },
+  {
+   "name": "mizzen-topgallant",
+   "parent": "kaguya-gloire-01m-mast-mizzen",
+   "source_work": "gura-tridente-01m-yard-mizzen-topgallant",
+   "src_L": 111,
+   "model": {
+    "name": "yard-mizzen-topgallant",
+    "at": [
+     312.5,
+     200.5,
+     407.5
+    ],
+    "pivot": [
+     2.5,
+     55.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": [
+     1,
+     1.0,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "topgallant",
+     "length_ft": 36.42,
+     "length_m": 11.1,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "diameter_in": 8.7,
+     "sail": "mizzen-topgallant"
+    }
+   }
+  },
+  {
+   "name": "mizzen-gaff",
+   "parent": "kaguya-gloire-01m-mast-mizzen",
+   "source_work": "gura-tridente-01m-yard-mizzen-gaff",
+   "src_L": 150,
+   "model": {
+    "name": "yard-mizzen-gaff",
+    "at": [
+     310.5,
+     200.5,
+     221.5
+    ],
+    "pivot": [
+     127.5,
+     1.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     0.88,
+     0.88,
+     0.88
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "gaff",
+     "length_ft": 43.31,
+     "length_m": 13.2,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": 0,
+     "diameter_in": 11.8,
+     "sail": "spanker"
+    }
+   }
+  },
+  {
+   "name": "mizzen-boom",
+   "parent": "kaguya-gloire-01m-mast-mizzen",
+   "source_work": "gura-tridente-01m-yard-mizzen-boom",
+   "src_L": 135,
+   "model": {
+    "name": "yard-mizzen-boom",
+    "at": [
+     312.5,
+     200.5,
+     172.5
+    ],
+    "pivot": [
+     138.5,
+     1.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1.0444,
+     1,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "boom",
+     "length_ft": 46.26,
+     "length_m": 14.1,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": 0,
+     "diameter_in": 15.7,
+     "sail": "spanker"
+    }
+   }
+  }
+ ]
+}
