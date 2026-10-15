@@ -1,0 +1,108 @@
+{
+  "observedAtUtc": "2026-10-15T16:59:39.517792+00:00",
+  "game": "D:\\Unity\\Valhalla\\Blockside",
+  "artifact": "D:\\Unity\\Valhalla\\Blockside\\index.html",
+  "html_sha256": "d9b260564f9be820aacfdf20723ea18f8f5e4bd6fb1212c5dcd11f401745c6cb",
+  "htmlStableAcrossVerifyAndShipcheck": true,
+  "errors": 0,
+  "warnings": 0,
+  "ship": {
+    "id": "tidegrave",
+    "el": "ship-tidegrave",
+    "name": "潮墓號",
+    "vxk": "tidegrave.vxk",
+    "work": "sirius-tidegrave-01m-assembly",
+    "author": "Sirius",
+    "crew": {
+      "marines": 12,
+      "marineGap": 30
+    },
+    "geo": {
+      "spar": [
+        114,
+        140
+      ],
+      "marines": [
+        100,
+        80
+      ],
+      "center": 155,
+      "aim": 90,
+      "aimZ": [
+        30,
+        480
+      ],
+      "deckAim": [
+        74,
+        106
+      ],
+      "rigAim": [
+        210,
+        410
+      ]
+    }
+  },
+  "shipCount": 12,
+  "asset_sha256": "850566c50d4b7b022f3124ec88e36a6154b672ad7201ef44ce9602da1a43322b",
+  "head": "e801af9b77a187ec530d09ab07d08dcde40c7040",
+  "sources": {
+    "src/js/00_config.js": "73c95413483ee75ff71664ecbd3ad4fa51e6d12636389f92a7c1bfdc21f08137",
+    "src/js/00_core.js": "6ee25e0e52d49923a9b447e0fd1cde5ed2983e77021e2af3c5923ca50a069842",
+    "src/js/01_gl.js": "85a2dadacb7e4f0c534eae98daaa76fa5d29060ad53004df73853bd39e8e7912",
+    "src/js/02_audio.js": "3e5fb66549588ad37dff6dd0ae7d25b9551e5c1d41a3beef560710b09463dd91",
+    "src/js/03_camera.js": "5e3cb2ae73430200fddb0cbde74149d99e7a858e270d5960fc550d862edfd91c",
+    "src/js/04_state.js": "2ff47f7f6413d3387a80646ea7358d337b13c999854fb585b58ef04417750211",
+    "src/js/05_hull.js": "56522e6c6142679891c20a32d7bd87ca14c55f3b385bb3871a5c9d8198452885",
+    "src/js/05_material.js": "54e36e860c3c37da02d3aecf69a35dcf63aa18dbe7863c446437b253dccee690",
+    "src/js/06_cache.js": "9ecace031d0d9cc387e429a5c81f562d1056e2999f0f426cc423fe671279b163",
+    "src/js/07_gfx.js": "09e20223073385feadbc674b2dda4f8cf5d33f48a5b4be32370d6f401aa4fbbb",
+    "src/js/08_sea.js": "901790ecc0ea50f4b8328d2c288d6918890fceb0111dce8c4c6b716ab9f35fbd",
+    "src/js/08_weather.js": "0088f2afa355d30c2acdd1701576b43173867e530d1e354b877a96e302b9da64",
+    "src/js/09_phx.js": "36484e0e16e4103d11f5ffb581a0f46305fae5a9f55f278cc6a1cdefe73a40f6",
+    "src/js/10_ship.js": "83cb741dffa9ae6afbe1550744a391bb6e5db888cf6a7580a6ac2baa2f91f002",
+    "src/js/11_rig_gpu.js": "63086c3f45cf8bd5551bb73127898865db2ee3b6f79427a06daee3de01d4d9b5",
+    "src/js/12_effects.js": "4a6e861e8936f90d0fb3bc15e921dd2d099a59e10bb37fb5ae740b334120ea36",
+    "src/js/13_water.js": "16b5a0e3947681535989b3661affd1c958efc36eef24ea15764796f4223769f3",
+    "src/js/14_rain.js": "0686d7500c48dafb3e0dc82374ecc05d0b6d9ead46655b10689c62df069eb6b3",
+    "src/js/15_smooth.js": "fa5efdc651e2140d8bed46a0b5aad513a530bb2bc9c8029a20823bbe5f9db8af",
+    "src/js/20_shatter.js": "20376aa49fa683bf0ea5011a51bc24be24e45ae73770836e78ef7b94d407f870",
+    "src/js/21_gunnery.js": "05f7b5100f8be7f9adf271e761a3fe04e2b46e19de75ae2fc2f914f7254bc2f4",
+    "src/js/22_pieces.js": "615dfe669179fd8c29e67fd62c42a1825d7c092f10bb078e23bdbd757b726775",
+    "src/js/23_powder.js": "9c6f18000f0aa1cfbfe2eca41a03920422f243194734fc9f2d8e412b23216add",
+    "src/js/24_armor.js": "34c96e44c59b7a9c2e2f38c9744d7841ed31d2529f556b94042048cb48fb04ec",
+    "src/js/30_rig_physics.js": "698163d8d8015d970da35b8963de95a7931766eee3c3c40fd3c54d927d49e76d",
+    "src/js/31_drive.js": "31fb0282c51a0f5a694536f1d1905d09ae3f8ccde677defcd0493c5aa13dc4f0",
+    "src/js/31_sailing.js": "007020c179b71f6bbf549f0f93885129a15d5e5c147009867a5dc069e40eda3c",
+    "src/js/32_hull.js": "c3dfaaccea3b13e536b05f850d811ee22fe08224a238b69e14390a075411404f",
+    "src/js/33_flood.js": "dc73c2ba3f794cf49b233a69f5cf2a68025806307566645e4fc678d4285b0e6c",
+    "src/js/34_shreds.js": "88ff00125b2c0e8cdbd9a844933b47088194a3726b14c469153645f4e74b06f3",
+    "src/js/35_decks.js": "fb2ca322a54e98a3572e74a9a3f2ab2de732a67e844d8f5429747a407e27cc33",
+    "src/js/36_rooms.js": "39c7f95693219740bde84aa088c810ee0ecb747c0a7797e54b85d71aa72c93c7",
+    "src/js/40_crew.js": "34acbf1799c53717718d1e644668d099449b108b21552ea4d141e3ea2546e0a8",
+    "src/js/41_crew_art.js": "e52ab82631daf732072ef23bb729dab3a07588109eb6e4cb62e62b231a904d6b",
+    "src/js/42_hands.js": "3e5d4066680b12cb20c4d354265b7f3653440bfcef9ce180f92092488da894e3",
+    "src/js/43_swim.js": "9635eef8925653b4931cfc3459c7a461c6bb7d6cc14f94858442dfac4347d281",
+    "src/js/44_medic.js": "9af7d9a4ef32e44007a53f16ab2734d233434617ba8cfa0e453b3f8596721943",
+    "src/js/50_sim.js": "b5643809f98c6bcfc0ae640262178779efcf788858415ccc252861f2d3d4a7e4",
+    "src/js/51_captain.js": "1c213f9482362c08325d55856d62bcc35d06fc2db49914fbb91fa475b63018d2",
+    "src/js/52_fleet.js": "aca5fdb2e89c325f3465dffd454d544bee0375b4b57b19c8655e2ce4bf0939b5",
+    "src/js/53_commander.js": "3511a2e82ad854cbfd5854672c044cfe6aeb7b15aef39475b374f0dac54575a7",
+    "src/js/60_render.js": "a3f7256ea3f64a29660b79328d16db9013884e701ca5b4c35b216157fd944f8a",
+    "src/js/61_hud.js": "6e6367486132ad139d7acc2bfc4ba78d0ba94b72c753edb0ecc879ec7d99df5a",
+    "src/js/68_guncfg.js": "88c21223c752a366d02194f7202f2333281231a18cd72802aceb118fef54c778",
+    "src/js/69_prefs.js": "9c8462fc25ff4921a768a9d19f4de2d1e781f14374dea3293fa75a7aa7c389d0",
+    "src/js/70_flow.js": "e0af5f248ed93fd222ba1c47b7f5854dabc8ad4e310bd2c956f1ed702c52b177",
+    "src/js/71_input.js": "07b69f7a55b2fb3e25fb5363ccc304d22e37a01147d6763303bdb3ef0082c757",
+    "src/js/72_floodui.js": "0670ed3700393aee771fc79d809ca183e49598aeb79028cb8727edcf7b1bf298",
+    "src/js/73_slowmo.js": "5cc09786223291663f95eeeb9129af4649f42157c23e54b44f0587c314b9a77e",
+    "src/js/74_cutaway.js": "7a9763187d6ac177e730d8fe15c86e8b152977d876311929d0fb7c15ebd2d635",
+    "src/js/75_shipcheck.js": "93479fe9def3513b29ac5761a33d4ec71358a1695feda9da5b9a128887396aa9",
+    "src/js/76_anchor.js": "26660ce2ab547b9b024bafaab154e19052c951d0c2d1921b7f8ba3685c58a083",
+    "src/js/77_colours.js": "893deb2abd605decf3df842bac56525ac3d46d42f9842a8b3723ad0973812b2b",
+    "src/js/78_funnel.js": "e87d057d632f32ed75d7a14a20d59d63f80684a3f5dddb6a09c3826a716af4c8",
+    "src/js/90_main.js": "73828633141dcf33fe85c44df86a9cfc66818eb38392f3a80267c3b632ba5c89",
+    "src/js/sb_sim.js": "091c3e7fddcd82e229b95ddc8178764dc278885d1b624320fe80e6aeff9a661a",
+    "src/js/sb_ui.js": "87428f39f9f277e2565d5a0680037a93d78ce4332b75e25d5884bd266e866d68"
+  },
+  "status": "Formal local working artifact verified. Shared changes remain uncommitted; no push/deployment performed."
+}

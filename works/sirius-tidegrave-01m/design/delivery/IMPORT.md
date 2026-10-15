@@ -1,5 +1,13 @@
 # 潮墓號 — 給 ame 的遊戲匯入交付
 
+## 20261016 正式工作版本結果
+
+已接入正式 `Blockside/index.html`，以穩定成品重跑 verify 與 shipcheck：**0錯誤 / 0警告**，
+54砲滿編、353船員、送藥54/54。正式工作版證據見 `formal_game_20261016/RESULT.md`。
+下方隔離交付步驟保留作重現紀錄；正式23_powder與船單現已接入。
+共用遊戲施工尚未統一提交或push，發布由ame協調；帆碰撞仍由Tim手動驗收。
+
+
 Tim 2026-10-15 授權完成造船，並通知 ame 加入遊戲。
 
 匯入作品 `sirius-tidegrave-01m-assembly`，建議遊戲 ID `tidegrave`、名稱「潮墓號」。
