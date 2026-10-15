@@ -269,4 +269,4 @@ ame 2026-10-16（酒館 seq 25026，Tim：「可以通知kotoko拆出螺旋槳�
 - parts：模型「螺旋槳」state ok、meta 相同、hub／shaft-fwd 對；關聯「螺旋槳」沒了。轉一圈（每 15°）螺旋槳每一格的格心落在船殼裡最多 0 格（葉片在 aperture 裡轉得開）。軸的 aft 離 hub 15.0、離 shaft-fwd 0.0 格。models_broken 0（模型 345）。
 - vxk：2,129,382 格、header checksum **95738965**、sha256 5675265b…；模型 345、meshes 62、parts 28、iron 60,408。Blockside HEAD 乾淨副本 `admin.py reimport --id napoleon` ⇒ 匯入檢查 **✗ 0、⚠ 0**（90／90 門拿得到火藥、取用點 6；橡木 1,448 t ＋ 鐵 471 t）。
 - ⚠ 沒做：遊戲裡的正式 reimport（ame）；螺旋槳的平滑金屬（ame 跟 meadow 在對做法）。
-- `design/tools/check_stage5.py`（2026-10-16 午）：它讀的是子作品不是關聯，本來就沒壞；改成讀現在掛著的 `-funnel-aft`／`-funnel-fore`（不再讀已不關聯的 `-funnels`）⇒ 7 件、46,760 格、缺 0、多 0、色差 0（兩根 14,512 ＋ 14,388 ＝ 舊的 28,900）。
+- `design/tools/check_stage5.py`（2026-10-16 01 時）：它讀的是子作品不是關聯，本來就沒壞；改成讀現在掛著的 `-funnel-aft`／`-funnel-fore`（不再讀已不關聯的 `-funnels`）⇒ 7 件、46,760 格、缺 0、多 0、色差 0（兩根 14,512 ＋ 14,388 ＝ 舊的 28,900）。
