@@ -184,6 +184,7 @@
 - 產生程式重跑：5 個輸出檔逐位元組相同。
 - 過程圖：`overlays/stage7_{full,side,sternq}.png`、`overlays/stage7_ensign_texture.png`。
 - ⚠ lateen 的標法 ame 還沒回（酒館 seq 24767）；她要別的就改帆桁與帆的 meta（不動格子）。
+  ⇒ ame 2026-10-15 17:59（酒館 seq 24919）：後桅、bonaventure 的三角帆照我標的 `yard=gaff、rig=lateen` 照 gaff 畫（遊戲 30_rig_physics.js braceYards：往下風擺 8°–80°），截圖看得到，**不用改 meta**。
 
 ## 階段八 砲（2026-10-15，TASK-0597）
 設計 plan.json `guns_build`；產生 `design/draft_guns.py`（幾何共用 `design/gunsim.py`；讀組裝件現在的格子 —— 模型不在匯出裡 ⇒ 重產時不會撞到自己上一輪的砲）⇒ `guns_placement.json`、`verify_guns.json`；落格 `design/tools/build_guns.py`。
@@ -281,4 +282,7 @@
   🩸 第一次又沒帶 `links=none`（階段四踩過、寫在本檔上面）⇒ 三座船樓的 floor 多了往下的尾巴；照規矩重量才相同。
 - **給遊戲那側填 geo 的高度**（格、z 0 ＝ 龍骨底）：設計水線 52；甲板地板（站的那一格）底艙 46、主甲板 66–72（舷弧）、上甲板 86–92、後甲板 103、船首樓 103、船尾樓 120；砲口（砲軸）主甲板 76.75–79.75、船尾追擊 82.75、上甲板 93.25–95.25、船樓 109.75；桅頂平台（cofa 底）前 289、主 287、後桅頂 251、bonaventure 頂 208；帆桁 course 前 277／主 275、topsail 前 410／主 411；船殼 x 91–500（船尾面到船頭）、組裝件 x 91–687（含艏斜桅）、y 99–221、z 0–437。
 - **開得了戰**：暫存副本的成品用無頭 Chrome 開 `index.html?ship=cosecha,constitution&demo=8&still=1`（照 admin.py shipcheck 的 Chrome 參數加 `--screenshot`）⇒ `overlays/stage10_battle.png`：收穫號張帆、course 的勃艮第十字、砲班站在甲板上、船腰的小艇、船尾三盞燈亮著，憲法號在後面（旗是遊戲換的陣營旗）。
-- ⚠ 還沒對好：新砲種（18l、12l、6l、18chase 都在遊戲砲種表）與三角帆（lateen 標 yard=gaff、sail=gaff）—— 酒館 seq 24898 交船時跟 ame 一起問了（seq 24767 那則還沒回）；真的匯入也等她。
+- 交船時跟 ame 問了新砲種與三角帆（酒館 seq 24898）。
+- **ame 匯進 Blockside main**（4863f9b，酒館 seq 24919）：geo 照上面的高度填（露天甲板 86–121、砲甲板瞄 74–97、帆具瞄 140–330）、陸戰隊 6、桅頂水手每根 1；三角帆照 gaff 畫、不用改 meta；錨轉 45° 外框蓋到甲板那件她記下了，之後遊戲改成照模型實際形狀判斷佔位。
+  回讀（我這側）：Blockside 有 4863f9b；`game.json` 有 cosecha 與 geo；`vxk_lock.json` 指紋 `c:bab7db…` ＝ 暫存副本那一份；`_cache/cosecha.vxk` 653,268 格、checksum 1150694525、work calli-cosecha-01m-assembly。
+  自己在真的 Blockside 跑 `admin.py shipcheck --id cosecha`（只寫 reports/）：✗ 0、⚠ 2 —— 送藥手 21／22、**桅頂水手 2／4**（ame 報 ⚠ 1；我跑的時候 Blockside 工作樹另有 11 個未提交的改動，不一定是她跑的那一份程式；2／4 可能是後桅、bonaventure 沒有能站的平台 —— bonaventure 本來就沒做 cofa）。砲班 0 門缺人。
