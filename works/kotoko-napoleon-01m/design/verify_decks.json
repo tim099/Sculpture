@@ -1,0 +1,306 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 50186,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 13823,
+    "177": 36363
+   },
+   "mirror_diff": 0
+  },
+  "lower": {
+   "cells": 132638,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 36539,
+    "177": 96099
+   },
+   "mirror_diff": 0
+  },
+  "upper": {
+   "cells": 147513,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 40562,
+    "177": 106951
+   },
+   "mirror_diff": 0
+  },
+  "spar": {
+   "cells": 148366,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 40940,
+    "250": 107426
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "lower": {
+   "cells": 458,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  },
+  "upper": {
+   "cells": 480,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  },
+  "spar": {
+   "cells": 478,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "problems": [],
+ "overlap_between_parts": 0,
+ "ladder_points": {
+  "after-lower": {
+   "up": "lower",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     249,
+     200,
+     71
+    ],
+    "lo": [
+     252,
+     200,
+     74
+    ],
+    "hi": [
+     262,
+     200,
+     89
+    ],
+    "head": [
+     268,
+     200,
+     93
+    ]
+   },
+   "steps": 6
+  },
+  "fore-lower": {
+   "up": "lower",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     719,
+     200,
+     70
+    ],
+    "lo": [
+     722,
+     200,
+     73
+    ],
+    "hi": [
+     734,
+     200,
+     91
+    ],
+    "head": [
+     738,
+     200,
+     93
+    ]
+   },
+   "steps": 7
+  },
+  "after-upper": {
+   "up": "upper",
+   "lo": "lower",
+   "points": {
+    "foot": [
+     339,
+     200,
+     92
+    ],
+    "lo": [
+     342,
+     200,
+     95
+    ],
+    "hi": [
+     354,
+     200,
+     113
+    ],
+    "head": [
+     358,
+     200,
+     115
+    ]
+   },
+   "steps": 7
+  },
+  "fore-upper": {
+   "up": "upper",
+   "lo": "lower",
+   "points": {
+    "foot": [
+     547,
+     200,
+     91
+    ],
+    "lo": [
+     550,
+     200,
+     94
+    ],
+    "hi": [
+     562,
+     200,
+     112
+    ],
+    "head": [
+     566,
+     200,
+     114
+    ]
+   },
+   "steps": 7
+  },
+  "after-spar": {
+   "up": "spar",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     361,
+     200,
+     115
+    ],
+    "lo": [
+     364,
+     200,
+     118
+    ],
+    "hi": [
+     376,
+     200,
+     136
+    ],
+    "head": [
+     380,
+     200,
+     138
+    ]
+   },
+   "steps": 7
+  },
+  "fore-spar": {
+   "up": "spar",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     639,
+     200,
+     115
+    ],
+    "lo": [
+     642,
+     200,
+     118
+    ],
+    "hi": [
+     654,
+     200,
+     136
+    ],
+    "head": [
+     658,
+     200,
+     139
+    ]
+   },
+   "steps": 7
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 6,
+ "holes": {
+  "orlop": 1820,
+  "lower": 2901,
+  "upper": 2897,
+  "spar": 2904
+ },
+ "cavities_filled": [
+  {
+   "deck": "upper",
+   "cells": 27,
+   "x": [
+    143,
+    143
+   ],
+   "z": [
+    118,
+    118
+   ]
+  },
+  {
+   "deck": "lower",
+   "cells": 149,
+   "x": [
+    866,
+    867
+   ],
+   "z": [
+    91,
+    93
+   ]
+  },
+  {
+   "deck": "spar",
+   "cells": 27,
+   "x": [
+    895,
+    895
+   ],
+   "z": [
+    141,
+    141
+   ]
+  }
+ ],
+ "lists": {
+  "deck-orlop": [
+   50186,
+   "e68cd77ad9a3e21ba96d8f86824a319800bcb63a7f98a8278c4020e67ed7ed74"
+  ],
+  "deck-lower": [
+   132638,
+   "7c478e9da2cbbf50928080235a4a73a04372ec562cd5ae38d00cedb9383b0bef"
+  ],
+  "deck-upper": [
+   147513,
+   "78906093c78df08f1190321d10ba140be93cf94e851c7f85a4e171d1069ef75a"
+  ],
+  "deck-spar": [
+   148366,
+   "b3d7e5fbd09f5fc1710d3a4ebb2d3e1ba188f64b22914741df30a3f4285e5166"
+  ],
+  "ladders-lower": [
+   458,
+   "d726aa235cb34e72f9615757f6c804fadef56bdb63b32dd8e279c2239cd8093a"
+  ],
+  "ladders-upper": [
+   480,
+   "5bd8d415d51726efa28adad2ab67025b2322658487031145e6d2dd973bb1aed1"
+  ],
+  "ladders-spar": [
+   478,
+   "9853e188e153a70aac172aea6ed6c1a73a2aaaecd90901580bdb08035750d12f"
+  ]
+ }
+}
