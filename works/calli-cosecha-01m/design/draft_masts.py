@@ -51,6 +51,7 @@ def main():
     for key, m in M.items():
         r0, r1 = RB['mast_r'][key]
         zh, zt, zp = int(math.floor(m['heel'])) + 1, int(math.floor(m['lower_top'])), int(math.floor(m['platform']))
+        zp = RB['tops'].get('tops_z', {}).get(key, zp)          # 平台高度覆寫（TASK-0623：bonaventure 放到 hound 上面）
         part = 'mast-' + key
         for z in range(zh, zt + 1):
             r = r0 + (r1 - r0) * (z - zh) / max(1, zt - zh)

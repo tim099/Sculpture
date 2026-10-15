@@ -286,3 +286,16 @@
 - **ame 匯進 Blockside main**（4863f9b，酒館 seq 24919）：geo 照上面的高度填（露天甲板 86–121、砲甲板瞄 74–97、帆具瞄 140–330）、陸戰隊 6、桅頂水手每根 1；三角帆照 gaff 畫、不用改 meta；錨轉 45° 外框蓋到甲板那件她記下了，之後遊戲改成照模型實際形狀判斷佔位。
   回讀（我這側）：Blockside 有 4863f9b；`game.json` 有 cosecha 與 geo；`vxk_lock.json` 指紋 `c:bab7db…` ＝ 暫存副本那一份；`_cache/cosecha.vxk` 653,268 格、checksum 1150694525、work calli-cosecha-01m-assembly。
   自己在真的 Blockside 跑 `admin.py shipcheck --id cosecha`（只寫 reports/）：✗ 0、⚠ 2 —— 送藥手 21／22、**桅頂水手 2／4**（ame 報 ⚠ 1；我跑的時候 Blockside 工作樹另有 11 個未提交的改動，不一定是她跑的那一份程式；2／4 可能是後桅、bonaventure 沒有能站的平台 —— bonaventure 本來就沒做 cofa）。砲班 0 門缺人。
+
+## 階段十一 後桅與 bonaventure 的桅頂平台（2026-10-15，TASK-0623）
+Tim：「cofa 補吧」「補完 GO」。改 plan `rig_build.tops`（mizzen 9 → 12、bonaventure 新加 13、`tops_z.bonaventure` 206）＋ `draft_masts.py` 吃平台高度覆寫；兩件桅子作品走 `delta_apply`。
+- 遊戲怎麼找桅頂站位（Blockside 10_ship.js findMasts ＋ 40_crew.js topSpot）：桅的 x ＝ 最低橫帆桁（沒有 ⇒ 最低的非 boom 帆桁）吊點附近、吊點下 10–40 格中線格子最多的那一欄；從吊點高度往上，第一層「半徑 9／12／15／18、16 個角度」有 6 個以上站得住（腳下實心、頭頂 14 格空）的就是平台。後桅 cofa r 9 的牆正好落在 r 9 那一圈、bonaventure 沒有 cofa ⇒ 兩根都找不到。
+- `tools/crew_sim.py` 加桅頂那一段（照上面的規則）：改之前模擬 ⇒ 前、主找得到、後桅與 bonaventure ✗ ＝ shipcheck 的 2／4（第二把尺對得上）。
+- **後桅** cofa r 9 → 12（plan 先試 13 ⇒ 三角帆桁往船尾斜上去擦到地板邊 2 格 ⇒ 12 ⇒ 帆桁穿船 0）：刻 438、補 986。**bonaventure** 新加 cofa r 13、平台 z 206（照平台公式是 197，在 hound z 204 下面 ⇒ shrouds 會穿過平台 ⇒ 放到 hound 上面）：補 1,702、換色 12。兩件 0 差、鏡像差 0。
+  ⚠ 後桅 r 12、bonaventure r 13 比照前桅 15 是設計決定（遊戲要站人），沒有史料。
+讀數：
+- 模擬：bonaventure 平台 z 207（22 點）、前 289（32）、主 287（53）、後桅 237（16）；砲班照樣 0 門站不滿。**反向對照**：`crew_sim.py --nocofa=mizzen`（拿掉後桅 cofa 的 1,486 格）⇒ 只報後桅找不到。
+- 繩（直線近似、兩端 2 格不算）：後桅、bonaventure 的繩穿過 cofa 0 條。⚠ 另外量到 8 條前／主桅 topmast shrouds 穿過自己 cofa 的籃子牆 6–9 個取樣 —— 階段七就有（綁在 cofa 邊上、尾段擦過牆），這次沒動。
+- 帆桁穿船 7 根全 0；組起來（hide_links=船名板）655,231 格、1 元件、空腔 0、鏡像差 0；draft_masts 重跑逐位元組相同（其他 8 個輸出跟改之前一樣）。
+- Blockside 暫存副本 `reimport`：.vxk 655,518 格、checksum 2993321142（模型 173、繩 368、帆 9）；**shipcheck「桅頂水手」那一條沒了**（暫存那份設定是預設員額 4／根：船員 265 → 273）；✗ 0、⚠ 3（geo —— 暫存那份沒有 ame 填的 geo、送藥手 21／22、陸戰隊 6／12）。真的 Blockside 要請 ame reimport（checksum 變了）。
+- 過程圖：`overlays/stage11_tops.png`（region 框船尾上空；模型不跟著裁）。

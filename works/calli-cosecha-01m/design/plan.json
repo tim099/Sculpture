@@ -145,7 +145,8 @@
     "mast_r": {"fore": [3.5, 2.5], "main": [3.5, 2.5], "mizzen": [2.5, 1.8], "bonaventure": [2.0, 1.4]},
     "mast_r_src": "設計決定：桅半徑（腳、頂）；比甲板桅孔（plan.decks_build.mast_r：4／4／3／2.5）小 ⇒ 用同一個圓的判斷式，桅格一定落在孔裡",
     "topmast_r": {"fore": [2.5, 1.5], "main": [2.5, 1.5]},
-    "tops": {"main": 19, "fore": 15, "mizzen": 9, "rim_h": 6,
+    "tops": {"main": 19, "fore": 15, "mizzen": 12, "bonaventure": 13, "rim_h": 6, "tops_z": {"bonaventure": 206},
+             "game_src": "TASK-0623：遊戲的桅頂水手站在桅軸半徑 9／12／15／18 的一圈上、一層要 6 點以上（Blockside 40_crew.js topSpot）—— 後桅 r 9 太小、bonaventure 沒有 cofa ⇒ shipcheck 桅頂水手 2／4；兩根都改 r 13（tools/crew_sim.py 模擬挑的）；bonaventure 的平台放在 hound（z 204）上面 z 206，shrouds 才不會穿過平台（照平台公式 ＝ 197，在 hound 下面）",
              "src": "Palacio：主桅樓（cofa）上緣周長 ＝ manga（MP，⚠ 二手）⇒ 直徑 3.84 m、半徑 19 格；前桅樓小 1/5（設計決定，比照帆桁）；後桅一個小 cofa（設計決定）；cofa 是一圈籃子（rim 6 格高）"},
     "bowsprit_r": [3.0, 2.0],
     "yards": [
