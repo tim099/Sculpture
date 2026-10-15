@@ -166,6 +166,9 @@ def main():
     # 舵：舵的格子前緣跟船尾柱平行、但整片在船尾柱後面 12..14 格 ⇒ 往前 12 格（每一層離船尾柱 0..1 格、零碰撞），鉸鏈 meta 跟著搬
     cmds.append(["op=work", "sub=model", f"work={ASM}", "persona=kiara", "name=船舵", "at=107,90.5,2",
                  "meta=" + json.dumps({"hinge_x": 107.0})])
+    # 舵頭固定點（造船規格 §9 kind=rudder）：舵子作品最上一層 z 55、靠鉸鏈那一側 x 80、中線 ⇒ 遊戲在它旁邊找掛住的船尾格（ame 2026-10-15 量到開局就掉）
+    cmds.append(["op=work", "sub=anchor", "work=kiara-phoenix-01m-rudder", "persona=kiara", "name=stock-top", "at=80,90,55",
+                 "overwrite=1", "note=舵頭（TASK-0587；遊戲在旁邊 8 格內找船尾）"])
     cmds.append(["op=work", "sub=model", f"work={ASM}", "persona=kiara", "name=anchor-S", "at=445,121,62"])
     cmds.append(["op=work", "sub=model", f"work={ASM}", "persona=kiara", "name=anchor-P", "at=445,60,62"])
 
