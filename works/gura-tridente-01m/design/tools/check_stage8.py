@@ -141,6 +141,9 @@ for r in rows:
     elif r['meta'].get('arc') == 'stern':
         row = np.nonzero(hull[:, int(mu[1]), r['port_z'][0] - 1])[0]
         out = float(row.min() - mu[0])
+    elif r['meta'].get('deck') == 'battery':                           # 船頭砲台（TASK-0588）：砲管從船頭舷牆上面伸出去 ⇒ 砲口超過那一排（砲口的 y、砲台面那一層）船殼最前面那格多少
+        row = np.nonzero(hull[:, int(mu[1]), int(r['at'][2]) - 1])[0]
+        out = float(mu[0] - (row.max() + 1))
     else:
         side = 1 if r['meta']['side'] == 'S' else -1
         ob = outer_face(math.floor(mu[0]), r['port_z'][0] - 1, side)

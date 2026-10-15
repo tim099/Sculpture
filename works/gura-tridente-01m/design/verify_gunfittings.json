@@ -1,5 +1,5 @@
 {
- "note": "draft_gunfittings.py —— 現況 ＝ 組裝件 links=all 藏 砲具（z 60..200：1422689 格）＋ 模型外框 5 ＋ verify_guns.json 的 138 門",
+ "note": "draft_gunfittings.py —— 現況 ＝ 組裝件 links=all 藏 砲具（z 60..200：1422689 格）＋ 模型外框 5 ＋ verify_guns.json 的 138 門；TASK-0588：兩門船尾追擊砲拿掉（環 6、繩 10），三叉戟砲照階段十三不掛砲索",
  "works": [
   {
    "deck": "甲板-lower",
@@ -24,7 +24,7 @@
   {
    "deck": "甲板-middle",
    "work": "gura-tridente-01m-gunfittings-middle",
-   "title": "三叉戟號 砲具（中砲甲板與船尾追擊砲）",
+   "title": "三叉戟號 砲具（中砲甲板）",
    "frame_at": [
     88,
     123,
@@ -38,8 +38,8 @@
    "host_work": "gura-tridente-01m-deck-middle",
    "link": "砲具",
    "file": "masks/gunfittings/middle.vox.txt",
-   "voxels": 108,
-   "sha256": "f58900ecb0f855ea48be2017b44392e9122a81bb599ac293bdd1d652bc6d35f4"
+   "voxels": 102,
+   "sha256": "fbd7100f2753e987d5048131d75e14a920c80aa0f23cad48cbf16da12ae2f90a"
   },
   {
    "deck": "甲板-spar",
@@ -7018,112 +7018,6 @@
     7
    ],
    "work": "gura-tridente-01m-gunfittings-spar"
-  },
-  {
-   "deck": "甲板-middle",
-   "name": "ring-追擊砲-船尾-P-aft",
-   "kind": "ring",
-   "world": [
-    90,
-    164,
-    122
-   ],
-   "gun": "甲板-middle/追擊砲-船尾-P",
-   "side": "aft",
-   "at": [
-    2,
-    41,
-    11
-   ],
-   "work": "gura-tridente-01m-gunfittings-middle"
-  },
-  {
-   "deck": "甲板-middle",
-   "name": "ring-追擊砲-船尾-P-fwd",
-   "kind": "ring",
-   "world": [
-    90,
-    172,
-    122
-   ],
-   "gun": "甲板-middle/追擊砲-船尾-P",
-   "side": "fwd",
-   "at": [
-    2,
-    49,
-    11
-   ],
-   "work": "gura-tridente-01m-gunfittings-middle"
-  },
-  {
-   "deck": "甲板-middle",
-   "name": "deck-追擊砲-船尾-P",
-   "kind": "deck_ring",
-   "world": [
-    111,
-    168,
-    117
-   ],
-   "gun": "甲板-middle/追擊砲-船尾-P",
-   "at": [
-    23,
-    45,
-    6
-   ],
-   "work": "gura-tridente-01m-gunfittings-middle"
-  },
-  {
-   "deck": "甲板-middle",
-   "name": "ring-追擊砲-船尾-S-aft",
-   "kind": "ring",
-   "world": [
-    90,
-    228,
-    122
-   ],
-   "gun": "甲板-middle/追擊砲-船尾-S",
-   "side": "aft",
-   "at": [
-    2,
-    105,
-    11
-   ],
-   "work": "gura-tridente-01m-gunfittings-middle"
-  },
-  {
-   "deck": "甲板-middle",
-   "name": "ring-追擊砲-船尾-S-fwd",
-   "kind": "ring",
-   "world": [
-    90,
-    236,
-    122
-   ],
-   "gun": "甲板-middle/追擊砲-船尾-S",
-   "side": "fwd",
-   "at": [
-    2,
-    113,
-    11
-   ],
-   "work": "gura-tridente-01m-gunfittings-middle"
-  },
-  {
-   "deck": "甲板-middle",
-   "name": "deck-追擊砲-船尾-S",
-   "kind": "deck_ring",
-   "world": [
-    111,
-    232,
-    117
-   ],
-   "gun": "甲板-middle/追擊砲-船尾-S",
-   "at": [
-    23,
-    109,
-    6
-   ],
-   "work": "gura-tridente-01m-gunfittings-middle"
   }
  ],
  "ropes": [
@@ -13102,96 +12996,6 @@
    "slack": 1.05,
    "color": "#a08458",
    "group": "guns/train"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-P.breeching-aft",
-   "from": "model:甲板-middle/追擊砲-船尾-P/cascabel",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-P-aft",
-   "thickness": 0.4,
-   "slack": 1.12,
-   "color": "#b59a6a",
-   "group": "guns/breeching"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-P.tackle-aft",
-   "from": "model:甲板-middle/追擊砲-船尾-P/eye-aft",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-P-aft",
-   "thickness": 0.25,
-   "slack": 1.03,
-   "color": "#a08458",
-   "group": "guns/tackle"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-P.breeching-fwd",
-   "from": "model:甲板-middle/追擊砲-船尾-P/cascabel",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-P-fwd",
-   "thickness": 0.4,
-   "slack": 1.12,
-   "color": "#b59a6a",
-   "group": "guns/breeching"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-P.tackle-fwd",
-   "from": "model:甲板-middle/追擊砲-船尾-P/eye-fwd",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-P-fwd",
-   "thickness": 0.25,
-   "slack": 1.03,
-   "color": "#a08458",
-   "group": "guns/tackle"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-P.train",
-   "from": "model:甲板-middle/追擊砲-船尾-P/train",
-   "to": "甲板-middle/砲具/deck-追擊砲-船尾-P",
-   "thickness": 0.25,
-   "slack": 1.05,
-   "color": "#a08458",
-   "group": "guns/train"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-S.breeching-aft",
-   "from": "model:甲板-middle/追擊砲-船尾-S/cascabel",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-S-aft",
-   "thickness": 0.4,
-   "slack": 1.12,
-   "color": "#b59a6a",
-   "group": "guns/breeching"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-S.tackle-aft",
-   "from": "model:甲板-middle/追擊砲-船尾-S/eye-aft",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-S-aft",
-   "thickness": 0.25,
-   "slack": 1.03,
-   "color": "#a08458",
-   "group": "guns/tackle"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-S.breeching-fwd",
-   "from": "model:甲板-middle/追擊砲-船尾-S/cascabel",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-S-fwd",
-   "thickness": 0.4,
-   "slack": 1.12,
-   "color": "#b59a6a",
-   "group": "guns/breeching"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-S.tackle-fwd",
-   "from": "model:甲板-middle/追擊砲-船尾-S/eye-fwd",
-   "to": "甲板-middle/砲具/ring-追擊砲-船尾-S-fwd",
-   "thickness": 0.25,
-   "slack": 1.03,
-   "color": "#a08458",
-   "group": "guns/tackle"
-  },
-  {
-   "name": "甲板-middle.追擊砲-船尾-S.train",
-   "from": "model:甲板-middle/追擊砲-船尾-S/train",
-   "to": "甲板-middle/砲具/deck-追擊砲-船尾-S",
-   "thickness": 0.25,
-   "slack": 1.05,
-   "color": "#a08458",
-   "group": "guns/train"
   }
  ],
  "rows": [
@@ -17298,76 +17102,14 @@
      164
     ]
    }
-  },
-  {
-   "gun": "甲板-middle/追擊砲-船尾-P",
-   "rings": {
-    "aft": {
-     "offset": 0,
-     "z_above_deck": 6,
-     "cell": [
-      90,
-      164,
-      122
-     ]
-    },
-    "fwd": {
-     "offset": 0,
-     "z_above_deck": 6,
-     "cell": [
-      90,
-      172,
-      122
-     ]
-    }
-   },
-   "deck_ring": {
-    "back": 5,
-    "cell": [
-     111,
-     168,
-     117
-    ]
-   }
-  },
-  {
-   "gun": "甲板-middle/追擊砲-船尾-S",
-   "rings": {
-    "aft": {
-     "offset": 0,
-     "z_above_deck": 6,
-     "cell": [
-      90,
-      228,
-      122
-     ]
-    },
-    "fwd": {
-     "offset": 0,
-     "z_above_deck": 6,
-     "cell": [
-      90,
-      236,
-      122
-     ]
-    }
-   },
-   "deck_ring": {
-    "back": 5,
-    "cell": [
-     111,
-     232,
-     117
-    ]
-   }
   }
  ],
  "notes": [],
  "counts": {
-  "ring_cells": 398,
-  "anchors": 398,
-  "ropes": 674,
-  "guns": 138,
+  "ring_cells": 392,
+  "anchors": 392,
+  "ropes": 664,
+  "guns": 136,
   "no_train_guns": 16
  }
 }

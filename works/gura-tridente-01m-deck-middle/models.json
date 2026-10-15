@@ -1430,21 +1430,21 @@
 			}
 		},
 		{
-			"name": "追擊砲-船尾-P",
+			"name": "三叉戟砲-船尾-P",
 			"source": "work",
 			"file": "",
 			"bytes": 0,
 			"sha256": "",
-			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"work": "gura-tridente-01m-gun-trident",
 			"axes": "sculpt",
 			"at": [
-				92.5,
+				98.75,
 				168.5,
 				117
 			],
 			"pivot": [
-				13.5,
-				36,
+				16.5,
+				38,
 				0
 			],
 			"rotate": [
@@ -1460,34 +1460,34 @@
 			"mirror": "",
 			"color": "",
 			"enabled": true,
-			"note": "三叉戟號 chase18（階段八 draft_guns.py：退到零碰撞；pivot ＝ 砲架底層最前緣、軸線中間、甲板面）",
+			"note": "TASK-0588 三叉戟砲重配（draft_relayout.py）",
 			"persona": "gura",
-			"created_at": "2026-10-14T19:33:02",
+			"created_at": "2026-10-15T07:56:35",
 			"meta": {
 				"arc": "stern",
+				"barrels": 3,
 				"deck": "middle",
-				"gun": "18chase",
+				"gun": "trident",
 				"kind": "gun",
-				"port": 2,
 				"side": "P"
 			}
 		},
 		{
-			"name": "追擊砲-船尾-S",
+			"name": "三叉戟砲-船尾-S",
 			"source": "work",
 			"file": "",
 			"bytes": 0,
 			"sha256": "",
-			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"work": "gura-tridente-01m-gun-trident",
 			"axes": "sculpt",
 			"at": [
-				92.5,
+				98.75,
 				232.5,
 				117
 			],
 			"pivot": [
-				13.5,
-				36,
+				16.5,
+				38,
 				0
 			],
 			"rotate": [
@@ -1503,102 +1503,16 @@
 			"mirror": "",
 			"color": "",
 			"enabled": true,
-			"note": "三叉戟號 chase18（階段八 draft_guns.py：退到零碰撞；pivot ＝ 砲架底層最前緣、軸線中間、甲板面）",
+			"note": "TASK-0588 三叉戟砲重配（draft_relayout.py）",
 			"persona": "gura",
-			"created_at": "2026-10-14T19:33:03",
+			"created_at": "2026-10-15T07:56:36",
 			"meta": {
 				"arc": "stern",
-				"deck": "middle",
-				"gun": "18chase",
-				"kind": "gun",
-				"port": 6,
-				"side": "S"
-			}
-		},
-		{
-			"name": "三叉戟砲-S",
-			"source": "work",
-			"file": "",
-			"bytes": 0,
-			"sha256": "",
-			"work": "gura-tridente-01m-gun-trident",
-			"axes": "sculpt",
-			"at": [
-				702.957,
-				219.751,
-				118
-			],
-			"pivot": [
-				16.5,
-				38,
-				0
-			],
-			"rotate": [
-				0,
-				0,
-				-50
-			],
-			"scale": [
-				0.5,
-				0.5,
-				0.5
-			],
-			"mirror": "",
-			"color": "",
-			"enabled": true,
-			"note": "TASK-0578（draft_bowchase.py）",
-			"persona": "gura",
-			"created_at": "2026-10-14T21:15:42",
-			"meta": {
-				"arc": "bow",
 				"barrels": 3,
 				"deck": "middle",
 				"gun": "trident",
 				"kind": "gun",
 				"side": "S"
-			}
-		},
-		{
-			"name": "三叉戟砲-P",
-			"source": "work",
-			"file": "",
-			"bytes": 0,
-			"sha256": "",
-			"work": "gura-tridente-01m-gun-trident",
-			"axes": "sculpt",
-			"at": [
-				702.957,
-				181.249,
-				118
-			],
-			"pivot": [
-				16.5,
-				38,
-				0
-			],
-			"rotate": [
-				0,
-				0,
-				50
-			],
-			"scale": [
-				0.5,
-				0.5,
-				0.5
-			],
-			"mirror": "y",
-			"color": "",
-			"enabled": true,
-			"note": "TASK-0578（draft_bowchase.py）",
-			"persona": "gura",
-			"created_at": "2026-10-14T21:15:42",
-			"meta": {
-				"arc": "bow",
-				"barrels": 3,
-				"deck": "middle",
-				"gun": "trident",
-				"kind": "gun",
-				"side": "P"
 			}
 		}
 	]

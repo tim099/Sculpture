@@ -608,5 +608,46 @@
     "door_w": 7,
     "door_h": 18,
     "cuts": [228, 271, 314, 354, 394, 434, 474, 514, 544, 575, 618, 652]
+  },
+  "relayout": {
+    "src": "設計決定（TASK-0588；Tim 2026-10-15：船頭斜放的三叉戟砲跟舷側砲互相佔站位、站不滿 ⇒ 拍板「船頭抬高砲台 2 門朝前、船尾中砲甲板 2 門取代 18 磅追擊砲、上砲甲板船長室 2 門、封船頭斜砲門」）。參考：galley／galleass 的前堡砲台（La Real 五門全在船頭）、Sovereign of the Seas 重建後的船尾追擊砲（下 4／中 4／上 2）、船尾追擊砲放船長室；風帆戰列艦上的抬高砲台是奇幻延伸",
+    "trident": {"work": "gura-tridente-01m-gun-trident", "scale": 0.5, "code": "trident"},
+    "battery": {
+      "work": "gura-tridente-01m-bow-battery",
+      "link": "甲板-battery",
+      "xa": 660,
+      "under": 180,
+      "top": 181,
+      "plank": 250,
+      "under_color": 136,
+      "post": 136,
+      "rail": {"color": 136, "cap": 248, "h": 4},
+      "bowsprit_clear": 1,
+      "probe_z": 176,
+      "guns_dy": 16,
+      "host": "gura-tridente-01m-deck-spar",
+      "host_link": "甲板-spar",
+      "ladders": {"work": "gura-tridente-01m-ladders-battery", "dy": 14, "tread_half": 3, "rise": 3, "run": 2, "color": 136},
+      "deck_meta": {"kind": "deck", "deck": "battery", "level": 6, "name": "前砲台", "thick": 2},
+      "src": "上甲板最前段架高一層（底 z 180、面 181、站人 182）：底下留 1.6 m 給原本的 6 磅、carronade 砲班；中線讓艏斜桅穿過（離 1 格）；兩門三叉戟砲在艏斜桅兩側（中心 |dy| 16）朝正前方、砲管高過船頭舷牆；兩舷各一座梯子從上甲板爬上來"
+    },
+    "stern": {
+      "rows": [
+        {
+          "deck": "middle",
+          "host": "gura-tridente-01m-deck-middle",
+          "host_link": "甲板-middle",
+          "yc": [168, 232],
+          "w": 15,
+          "sill": 5,
+          "h": 9,
+          "replace": "18chase"
+        },
+        {"deck": "upper", "host": "gura-tridente-01m-deck-upper", "host_link": "甲板-upper", "window": [2, 6], "w": 15, "sill": 5, "h": 9}
+      ],
+      "walk": {"work": "gura-tridente-01m-stern-walk", "at": [67, 142, 110]},
+      "src": "船尾面的窗（第 2、6 扇）開成三叉戟砲門：寬 15（三根管連管徑 13 格、兩邊各留 1）、高照窗那一列；陽台欄杆在火線上的那一段開口（像舷牆的砲門）"
+    },
+    "search": {"dl": [0, 0.5, -0.5, 1, -1], "dz": [0, 1], "max_back": 30, "step": 0.5, "fire_clear": 20, "min_muzzle_out": 0.5}
   }
 }
