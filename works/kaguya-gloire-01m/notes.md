@@ -49,6 +49,11 @@
 - 船殼 x 111–914（艏斜桅尖 1,070、jib-boom 1,147）、寬 y 115–285。
 - 蒸汽：史料 2,500 ihp（試航 2,699）、試航 13.5 kn（其他說法 11.75／12.3）⇒ cfg 參考。
 
+## 後續：螺旋槳改成外部模型（Tim 2026-10-15：「螺旋槳拆成子模組，讓遊戲中跟著前進速度旋轉」）
+- `tools/apply_propeller.py`：拿掉關聯 `螺旋槳`、改掛外部模型 `螺旋槳`（來源 -screw、at ＝ pivot ＝ 轉軸中心 153.5, 200.5, 41.5、scale 1），meta kind=propeller、axis 1,0,0、blades 6、diameter_m 5.8；子作品固定點 hub、shaft-fwd。約定寫進造船規格 §9 表 propeller 那一列。
+- 讀數：組裝件少 4,823 格（＝ 螺旋槳子作品）、1 元件、空腔 0、鏡像差 0；模型外框 (147,174,12)–(168,227,71) ＝ 原本格子的位置；parts 的 hub／shaft-fwd 對；models_broken 0。重匯 vxk checksum 98ba40ad（模型 153）；Blockside 暫存副本 reimport ⇒ ✗ 0、⚠ 0（照一般模型掛在正下方 deadwood，開局不掉）。
+- 遊戲那側的旋轉 ⇒ TASK-0628（Blockside，酒館 @ame seq 24981）；本小姐沒動 Blockside。
+
 ## 已知、照實留著
 - faux-pont 的 floor meta 是一條折線，中間 x 400–650 是機艙沒有地板（同拿破崙號，遊戲照折線看不出來）。
 - 三條繩拉直時擦到 1–2 格（fore-futtock-S／P-5、fore-topmast-stay，都在綁點旁）。
