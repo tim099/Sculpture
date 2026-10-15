@@ -1,0 +1,68 @@
+template.html 的船標籤跟設定一致
+✓ D:\Unity\Valhalla\scratchpad\sirius-tidegrave\task0603\manual-preview\src\template.html → D:\Unity\Valhalla\scratchpad\sirius-tidegrave\task0603\manual-preview\index.html（3.95 MB）
+  .vxk  #ship ← ../VoxelKit/_cache/constitution.vxk（1.66 MB → base64 2.22 MB）
+  .vxk  #ship-tidegrave ← ../VoxelKit/_cache/tidegrave.vxk（0.41 MB → base64 0.55 MB）
+  素材  #game-config ← config/game.json（7.6 KB）
+  素材  #art-crew ← art/crew.png（32.4 KB）
+  素材  #art-fx ← art/fx.png（不存在，optional ⇒ 展品用替代品）
+  素材  #art-hud ← art/hud.png（不存在，optional ⇒ 展品用替代品）
+  JS    ← js/00_config.js（14 行，bundle game）
+  JS    ← js/00_core.js（72 行，bundle game）
+  JS    ← js/01_gl.js（193 行，bundle game）
+  JS    ← js/02_audio.js（43 行，bundle game）
+  JS    ← js/03_camera.js（132 行，bundle game）
+  JS    ← js/04_state.js（111 行，bundle game）
+  JS    ← js/05_hull.js（188 行，bundle game）
+  JS    ← js/05_material.js（89 行，bundle game）
+  JS    ← js/06_cache.js（83 行，bundle game）
+  JS    ← js/07_gfx.js（47 行，bundle game）
+  JS    ← js/08_sea.js（77 行，bundle game）
+  JS    ← js/08_weather.js（76 行，bundle game）
+  JS    ← js/09_phx.js（44 行，bundle game）
+  JS    ← js/10_ship.js（409 行，bundle game）
+  JS    ← js/11_rig_gpu.js（102 行，bundle game）
+  JS    ← js/12_effects.js（154 行，bundle game）
+  JS    ← js/13_water.js（243 行，bundle game）
+  JS    ← js/14_rain.js（87 行，bundle game）
+  JS    ← js/15_smooth.js（143 行，bundle game）
+  JS    ← js/20_shatter.js（46 行，bundle game）
+  JS    ← js/21_gunnery.js（491 行，bundle game）
+  JS    ← js/22_pieces.js（117 行，bundle game）
+  JS    ← js/23_powder.js（409 行，bundle game）
+  JS    ← js/30_rig_physics.js（978 行，bundle game）
+  JS    ← js/31_sailing.js（376 行，bundle game）
+  JS    ← js/32_hull.js（147 行，bundle game）
+  JS    ← js/33_flood.js（385 行，bundle game）
+  JS    ← js/34_shreds.js（84 行，bundle game）
+  JS    ← js/35_decks.js（41 行，bundle game）
+  JS    ← js/36_rooms.js（362 行，bundle game）
+  JS    ← js/40_crew.js（265 行，bundle game）
+  JS    ← js/41_crew_art.js（284 行，bundle game）
+  JS    ← js/42_hands.js（410 行，bundle game）
+  JS    ← js/43_swim.js（141 行，bundle game）
+  JS    ← js/44_medic.js（176 行，bundle game）
+  JS    ← js/50_sim.js（101 行，bundle game）
+  JS    ← js/51_captain.js（82 行，bundle game）
+  JS    ← js/52_fleet.js（297 行，bundle game）
+  JS    ← js/53_commander.js（100 行，bundle game）
+  JS    ← js/60_render.js（483 行，bundle game）
+  JS    ← js/61_hud.js（532 行，bundle game）
+  JS    ← js/68_guncfg.js（106 行，bundle game）
+  JS    ← js/69_prefs.js（240 行，bundle game）
+  JS    ← js/70_flow.js（41 行，bundle game）
+  JS    ← js/71_input.js（717 行，bundle game）
+  JS    ← js/72_floodui.js（103 行，bundle game）
+  JS    ← js/73_slowmo.js（85 行，bundle game）
+  JS    ← js/74_cutaway.js（126 行，bundle game）
+  JS    ← js/75_shipcheck.js（123 行，bundle game）
+  JS    ← js/76_anchor.js（263 行，bundle game）
+  JS    ← js/77_colours.js（140 行，bundle game）
+  JS    ← js/78_funnel.js（58 行，bundle game）
+  JS    ← js/90_main.js（329 行，bundle game）
+  JS    ← ../VoxelKit/voxelkit.js（478 行）
+  零外部依賴：沒有外部 src／fetch／import／http(s) 資源 ✓
+✓ 還原驗算：2 艘、81 份網格的三角形跟 _cache 原檔逐個相同，格子、繩、帆一位元組不差
+  格子 ship：鏡射 y ↔ 320 − y、一半 1528 塊、diff 1870 格　175 KB → 97 KB
+  格子 ship-tidegrave：鏡射 y ↔ 240 − y、一半 1072 塊、diff 0 格　91 KB → 50 KB
+✓ 壓縮模式：2 艘、網格池 80 份（542 KB）；成品 3.77 MB → 2.42 MB（−36%）
+✓ 成品（壓縮版）跟 _cache 原檔相同：81 份網格的三角形逐個比過，格子、header 一致

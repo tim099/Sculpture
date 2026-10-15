@@ -1,0 +1,186 @@
+{
+  "input_sha256": "9081f22cb8b25c33d65b25420e670e2c6af30571bfadbaaf8805228956f93d80",
+  "source_cache_sha256": "d0eb50d4ca123b5a2d8855cf7542077aa0b570c5ed945a65bd745ad20b5a5a51",
+  "source_voxels": 1140,
+  "models_checked": 166,
+  "ropes_checked": 500,
+  "placements": [
+    {
+      "side": "P",
+      "source": "basecamp-frigate-constitution-01m-anchor",
+      "at": [
+        560.5,
+        88.5,
+        155.5
+      ],
+      "pivot": [
+        23.5,
+        16.5,
+        56.5
+      ],
+      "rotate": [
+        -20,
+        0,
+        0
+      ],
+      "scale": 1,
+      "hawse_anchor": "hawse-P",
+      "hawse_at_cell": [
+        560,
+        94,
+        150
+      ],
+      "hawse_world": [
+        560.5,
+        94.5,
+        150.5
+      ],
+      "ring_world": [
+        560.5,
+        88.5,
+        155.5
+      ],
+      "short_rope_radius": 0.35,
+      "short_rope_length": 7.810249675906654,
+      "anchor_body_penetrations": 0,
+      "anchor_model_contacts": [],
+      "anchor_old_rope_contacts": [],
+      "cable_body_cells": [
+        [
+          560.0,
+          94.0,
+          150.0
+        ]
+      ],
+      "cable_model_contacts": [],
+      "cable_old_rope_contacts": [],
+      "cable_own_ring_contact_source_cells": [
+        [
+          23.0,
+          16.0,
+          56.0
+        ],
+        [
+          23.0,
+          17.0,
+          55.0
+        ],
+        [
+          23.0,
+          17.0,
+          56.0
+        ],
+        [
+          23.0,
+          18.0,
+          55.0
+        ],
+        [
+          23.0,
+          18.0,
+          56.0
+        ],
+        [
+          23.0,
+          19.0,
+          54.0
+        ],
+        [
+          23.0,
+          19.0,
+          55.0
+        ]
+      ],
+      "nearest_wood_center": 7.3484692283495345
+    },
+    {
+      "side": "S",
+      "source": "basecamp-frigate-constitution-01m-anchor",
+      "at": [
+        560.5,
+        152.5,
+        155.5
+      ],
+      "pivot": [
+        23.5,
+        16.5,
+        56.5
+      ],
+      "rotate": [
+        20,
+        0,
+        0
+      ],
+      "scale": 1,
+      "hawse_anchor": "hawse-S",
+      "hawse_at_cell": [
+        560,
+        146,
+        150
+      ],
+      "hawse_world": [
+        560.5,
+        146.5,
+        150.5
+      ],
+      "ring_world": [
+        560.5,
+        152.5,
+        155.5
+      ],
+      "short_rope_radius": 0.35,
+      "short_rope_length": 7.810249675906654,
+      "anchor_body_penetrations": 0,
+      "anchor_model_contacts": [],
+      "anchor_old_rope_contacts": [],
+      "cable_body_cells": [
+        [
+          560.0,
+          146.0,
+          150.0
+        ]
+      ],
+      "cable_model_contacts": [],
+      "cable_old_rope_contacts": [],
+      "cable_own_ring_contact_source_cells": [
+        [
+          23.0,
+          13.0,
+          54.0
+        ],
+        [
+          23.0,
+          13.0,
+          55.0
+        ],
+        [
+          23.0,
+          14.0,
+          55.0
+        ],
+        [
+          23.0,
+          14.0,
+          56.0
+        ],
+        [
+          23.0,
+          15.0,
+          55.0
+        ],
+        [
+          23.0,
+          15.0,
+          56.0
+        ],
+        [
+          23.0,
+          16.0,
+          56.0
+        ]
+      ],
+      "nearest_wood_center": 7.3484692283495345
+    }
+  ],
+  "scope": "Exact source voxel OBB/body SAT; transformed actual model triangle SAT plus solid containment; capsule/cube source-space and segment/segment old rope checks in exported author pose. No full arbitrary moving-yard proof claimed."
+}

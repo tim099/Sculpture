@@ -1,0 +1,12 @@
+--- a/src/js/23_powder.js
++++ b/src/js/23_powder.js
+@@ -288,6 +288,9 @@
+       var br = g.model.pts.breech || g.model.c, sg = g.side === 'P' ? -1 : 1;
+       g.drop = standNear(BASE, Math.floor(br[0]) + 3, Math.floor(br[1] - sg * 7), zr[0], zr[1], 12, {}) || (g.spots.length ? g.spots[g.spots.length - 1].at : null);
+     });
++    // Fore/aft guns: the muzzle can be outside the deck. Spawn behind the breech.
++    if (Math.abs(gs[0].ax[0]) > Math.abs(gs[0].ax[1]) && gs[0].model.pts.breech)
++      x = Math.round(gs[0].model.pts.breech[0] - (gs[0].ax[0] > 0 ? 6 : -6));
+     sh.pmWant += sh.cw.monkeys;                                      // 船員配置：每一對砲幾個（0 ＝ 沒有送藥手，砲旁的藥箱用完就停；2 ＝ 第二個站另一邊）
+     for (var m = 0; m < sh.cw.monkeys; m++) {
+       var at = standNear(BASE, x, CY + ((i + m) % 2 ? 9 : -9), zr[0], zr[1], 12, taken); if (!at) continue;

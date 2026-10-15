@@ -1,5 +1,5 @@
 {
-  "id": "sirius-tidegrave-01m", "name": "潮墓號 / TIDEGRAVE", "revision": 7,
+  "id": "sirius-tidegrave-01m", "name": "潮墓號 / TIDEGRAVE", "revision": 8,
   "meters_per_voxel": 0.1, "size": [800,241,640], "center_y": 120,
   "hull": {"stern_x":100,"bow_x":620,"beam_half":67,"waterline_z":52,"shell_thickness":4,"stern_rake":40,"bow_rake":60,"rake_height":128,
     "stations":[[0,24],[0.1,42],[0.2,57],[0.35,66],[0.5,67],[0.65,64],[0.8,53],[0.9,36],[0.97,18],[1,1]],
@@ -31,7 +31,8 @@
     "chase_layout":{"base_positions":[[585.5,103.5,119],[585.5,92.5,127],[585.5,114.5,127],[585.5,137.5,119],[585.5,126.5,127],[585.5,148.5,127]],"yaw_deg":[-90,-90,-90,-90,-90,-90],"source_pivots":{"low":[12.5,0,4],"high":[12.5,0,20]},"model_scale":0.5,"operator_platform":[582,602,82,158,116],"notes":"Final repair_chase_crew.py geometry: lower one/upper two per cluster, raised tube sources with wooden supports and wider crew spacing. Current-game fixture 2026-10-14 confirms all six satisfy crewMin; collision and muzzle rays are separate evidence."}},
   "magazines":[{"id":"aft","x":[240,284],"y":[100,140],"z":[30,53],"powder_lb":2400,"barrels":24,"door_clear_height_cells":21},
     {"id":"fore","x":[440,484],"y":[100,140],"z":[30,53],"powder_lb":2400,"barrels":24,"door_clear_height_cells":21}],
-  "equipment":{"wheel":{"at":[198.5,143.5,139],"pivot":[50,52,0],"scale":0.2,"kind":"wheel"},
+  "equipment":{"anchors":{"source":"basecamp-frigate-constitution-01m-anchor","scale":1,"pivot":[23.5,16.5,56.5],"P":{"at":[560.5,88.5,155.5],"rotate":[-20,0,0],"hawse_cell":[560,94,150]},"S":{"at":[560.5,152.5,155.5],"rotate":[20,0,0],"hawse_cell":[560,146,150]},"cable_diameter_cells":0.7,"note":"Existing shared bower anchor source, supported by local bow timber; exact exported-pose checks in delivery/anchor_placement.json. Moved aft20 cells to keep crew clear of anchor bounding boxes. Original hull and sail attachment points preserved."},
+    "wheel":{"at":[198.5,143.5,139],"pivot":[50,52,0],"scale":0.2,"kind":"wheel"},
     "binnacle":{"at":[215.5,151.5,139],"pivot":[9,13,0],"scale":0.2,"kind":"binnacle"},
     "fairlead_posts":{"symmetric_y_datum":120,"positions":[[490,162,128,132],[335,170,128,136],[510,160,128,156],[185,86,150,182]],"notes":"One-cell rooted timber fairleads on both sides; routes checked separately from the post geometry."},
     "steering_route":{"at":[225.5,106.5,151.5],"base_cell":[225,106,138],"mirror_base_cell":[225,134,138],"symmetric_fairlead_holes_cells":{"quarter":48,"upper":6,"weather":6}},

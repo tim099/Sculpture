@@ -107,6 +107,15 @@ def main():
         if 'at' not in item:continue
         x,y,z=item['at'];d.rectangle([Q(x-3,y-3),Q(x+3,y+3)],fill=teal)
         txt(*Q(x+5,y),name,16,teal)
+    anchors=P.get('equipment',{}).get('anchors')
+    if anchors:
+        for side in ('P','S'):
+            item=anchors[side];x,y,z=item['at'];hx,hy,hz=item['hawse_cell']
+            line([Q(x,y),Q(hx+.5,hy+.5)],gold,3)
+            d.ellipse([Q(x-3,y-3),Q(x+3,y+3)],outline=gold,width=2)
+        x,y,z=anchors['P']['at']
+        line([T(x,z),T(x,z-52)],gold,3)
+        line([T(x-12,z-44),T(x,z-52),T(x+12,z-44)],gold,3)
     for x,y,z0,z1 in P.get('equipment',{}).get('fairlead_posts',{}).get('positions',[]):
         for yy in (y,2*CY-y):
             a,b=Q(x,yy);d.ellipse((a-3,b-3,a+3,b+3),fill=gold)
@@ -132,7 +141,7 @@ def main():
            '破舊帆以透明貼圖呈現；水線下殼體保留完整，通道與梯子可通行。',
            '船殼 / 各甲板 / 桅分件；砲、帆桁、舵輪、桶為模型；繩與帆獨立。',
            '歷史：Vasa 與 Batavia 比例及甲板概念；所有線形座標均為原創設計。',
-           'Rev05：桁高依實物同步；後桅橫桁降至22.45m，與斜桁分開旋轉。']
+           'Rev08：補左右共用bower錨與hawse；後桅橫桁22.45m，固定帆點保留。']
     for i,s in enumerate(lines):txt(70,2060+i*37,s,21)
     line([(65,2400),(2235,2400)],dim,2);txt(70,2415,'T540 / T541   |   +X BOW  ·  +Y STARBOARD  ·  Z0 KEEL   |   DRAFT GENERAL — NOT CONSTRUCTION ACCEPTANCE',18,teal)
     out=ROOT/'general_arrangement.png';im.save(out)

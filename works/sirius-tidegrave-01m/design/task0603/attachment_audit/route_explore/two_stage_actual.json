@@ -1,0 +1,46 @@
+{
+  "sha256": "f5ca14a452111715a4fbc1dee4cf046f17769b3b26b3c85f734a05a3c415d638",
+  "bytes": 402421,
+  "ropes": 499,
+  "models": 166,
+  "body_bytes_unchanged": true,
+  "all_ten_export_sails_exact_same_as_routes_candidate": true,
+  "all_sail_design_records_equal_git_HEAD": true,
+  "git_HEAD": "6f33bc157d0c0547a16ee8ae054508972e8f84cd",
+  "source_geometry_all_mesh_bytes_values_unchanged": true,
+  "all_original_model_points_unchanged": true,
+  "only_model_change_two_brace_out_points": [
+    "mizzen/yard-mizzen-topsail"
+  ],
+  "only_existing_rope_changes": [
+    "mizzen-topsail.brace-P",
+    "mizzen-topsail.brace-S"
+  ],
+  "only_rope_additions": [
+    "mizzen-topsail.brace-P.upper",
+    "mizzen-topsail.brace-S.upper"
+  ],
+  "outboard_support_proof": [
+    {
+      "side": "P",
+      "point": [
+        191.2852,
+        76.7514,
+        340.5
+      ],
+      "inside_actual_original_yard_mesh": true
+    },
+    {
+      "side": "S",
+      "point": [
+        219.7148,
+        164.2486,
+        340.5
+      ],
+      "inside_actual_original_yard_mesh": true
+    }
+  ],
+  "all_angle_same_side_lift_distance_lower_bound_after_roundoff": 0.6101765233540078,
+  "radius_sum": 0.4,
+  "verdict": "PASS exact two-stage implementation; general rope sweep discovery is a separate scope, not certified by byte comparison"
+}
