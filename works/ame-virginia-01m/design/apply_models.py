@@ -20,6 +20,9 @@ for i, px in enumerate(P_PORTS):
     fwd = px == max(P_PORTS); gun('砲-P%d' % (i + 1), (px + 0.5, 54.5, 69), 0, 0.55, '64b' if fwd else '9d', 'y')
 gun('砲-船頭', (700.5, 90.5, 69), -90, 0.6, '7b')
 gun('砲-船尾', (270.5, 90.5, 69), 90, 0.6, '7b')
+# 船頭、船尾的 7 吋砲是迴旋砲（TASK-0626）：3 個砲門（中線、±45°）都從砲廓圓頭的圓心（x 670／302）放射 ⇒ 繞那一點轉；pivot ＝ 從砲尾沿砲軸量幾格（負 ＝ 往後）
+for nm, pv in (('砲-船頭', -9.5), ('砲-船尾', -10.5)):
+    run(('op', 'work'), ('sub', 'meta'), ('part', 'model'), ('work', W + '-deck-main'), ('persona', 'ame'), ('name', nm), ('meta', json.dumps({'mount': 'pivot', 'ports': '0,45,-45', 'pivot': pv, 'runin': 6})))   # runin：換砲門前往後拉 6 格（不拉 ⇒ 轉到 22° 穿進砲廓牆）
 run(('op', 'work'), ('sub', 'model'), ('work', W + '-deck-main'), ('persona', 'ame'), ('name', '舵輪'), ('source_work', 'basecamp-frigate-constitution-01m-wheel'),
     ('at', '650.5,90.5,69'), ('pivot', '50,52,0'), ('rotate', '0,0,0'), ('scale', '0.2'), ('meta', json.dumps({'kind': 'wheel'})))
 for side, y in (('S', 146.5), ('P', 34.5)):
