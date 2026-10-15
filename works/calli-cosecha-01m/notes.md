@@ -134,3 +134,35 @@
 - 產生程式重跑：6 個輸出檔逐位元組相同。
 - 過程圖：`overlays/stage5_{sheet,full,bow,stern}.png`（bow 那張用 region 框，模型不跟著 region 裁 ⇒ 左上角的三盞燈是船尾的，不是浮在那裡）。
 - 階段三的「船尾肩膀滴漆」：galleries 蓋住了那一段（stage5_stern.png）。
+
+## 階段六 桅與帆桁（2026-10-15，TASK-0595）
+設計 plan.json `rig_build`（桅帆尺寸與位置在 `masts`）；產生 `design/draft_masts.py`（讀組裝件現在的格子、扣掉本階段自己的件）⇒ `masks/masts/<桅>.vox.txt`、`masks/yards/lateen-<桅>.vox.txt`＋`yards_lateen.json`、`masks/bowsprit_hole/carve.vox.txt`、`yards_placement.json`、`verify_masts.json`、`sheet06_masts_v1.png`；落格 `design/tools/build_masts.py`。
+- **桅**（每根一件子作品，關聯 `前桅`／`主桅`／`後桅`／`bonaventure`）：下桅（半徑 3.5→2.5；後桅 2.5→1.8；bonaventure 2→1.4，都比甲板桅孔小、用同一個圓的判斷式）＋**cofa**（圓的桅樓籃子：主 r 19（Palacio：上緣周長 ＝ manga，⚠ 二手）、前 r 15、後 r 9；地板 2 格、籃子 6 格高、玫瑰粉腰帶、金頂）＋上桅（前、主；半徑 2.5→1.5、頂一格金）。桅照 plan 的傾斜軸線（前 −3°、主 1°、後 3°、bonaventure 4°）。
+  前桅腳插進船頭 deadwood 的那 112 格是船殼 ⇒ 不放（桅坐在船殼上）。
+- **bonaventure 往前挪到 x 140**（v0 x 120）：桅腳往上 z 72–79 那一段落在船尾 espejo 的牆裡（被船殼擋 74 格）。甲板的桅孔照差量重開（puente／alcázar／toldilla 各刻補約 20 格，`delta_apply.py`）；lateen 後端伸出船尾從 4.55 m 降到 2.55 m。
+- **艏斜桅**（`-bowsprit`，關聯 `艏斜桅`）：主甲板 (486, 69) 起 32°、23.7 m、半徑 3→2；**船頭牆開孔** 180 格（船殼 carvevox 帶顏色守門，標記 `艏斜桅孔`），孔整個由艏斜桅填滿。
+  🩸 v1 牆裡那段當成船殼跳過 ⇒ 艏斜桅在牆裡斷開、牆外那段 4,273 格浮空（組起來 2 個元件）；v2 孔比桿大半格 ⇒ 牆裡 10 個小空腔（16 格）；v3 孔整個填滿 ⇒ 1 元件、空腔 0。設計那一側讀開孔之前的船殼（`砲門:end`），重產時孔的清單才不會變空。
+- **方帆桁 5 根**（外部模型、放在各自的桅子作品裡）—— 沿用憲法號的帆桁元件，只沿長度（y）縮放到本船的長度（造船規格 §2.1）：
+
+| 帆桁 | 長 | 來源（憲法號） | scale y | brace |
+|---|---|---|---|---|
+| fore course | 21.7 m | yard-fore-course（24.9） | 0.8715 | −15° |
+| fore topsail | 9.7 m | yard-main-royal（9.3） | 1.043 | −17° |
+| main course | 27.2 m | yard-main-course（29.1） | 0.9347 | −15° |
+| main topsail | 12.1 m | yard-main-topgallant（14.3） | 0.8462 | −17° |
+| spritsail | 14.5 m | yard-spritsail（18.5） | 0.7838 | 0 |
+
+  meta `kind=yard、mast、yard、sail（帆名，階段七用）、length_m、pivot_anchor=pivot、turn_axis=z、rotate_z_deg`。吊點在桅軸前面（桅半徑 ＋3.5）；spritsail 在艏斜桅 85% 處、往下 5 格。
+- **lateen 帆桁 2 根**（新做的子作品 `-yard-mizzen-lateen`、`-yard-bonaventure-lateen`；沒有現成的）：斜桿，前端低、後端高；後桅 24.5 m／40°／吊點在前端往後 40%；bonaventure 17 m／45°／45%。固定點 pivot、sling、fore、peak、jackstay-NN（每 8 格）。模型 rotate 0（水平投影沿船長），放在桅的左舷側（y − (桅半徑＋2.5)），不穿過桅。meta `yard=gaff`、`rig=lateen`。
+  **遊戲怎麼轉**：讀 `Blockside/src/js/30_rig_physics.js` 的 braceYards —— `yard` 是 gaff／boom 的照縱帆往下風擺（8°–80°），其他當方帆桁；所以 lateen 標 `yard=gaff`。已在酒館問 ame（seq 24767），**她還沒回**。⚠ 擺動時前端會掃向主桅那一側（後桅帆桁前端 x 271、主桅 x 296）。
+
+讀數：
+- **結果帳**（`design/tools/check_stage6.py`，每件從匯出讀）：前桅 11,932、主桅 13,264、後桅 3,597、bonaventure 1,229、艏斜桅 4,766、lateen 1,620／1,096，缺 0、多 0、色差 0；船殼 ＝ 砲門:end − 艏斜桅孔 180 ＝ 418,008，缺 0、多 0、色差 0；四層甲板（桅孔搬位）缺 0、多 0、色差 0。
+- 帆桁模型 7 根：meta 齊全、來源固定點齊全；models_broken 0（五件桅子作品）。
+- **組起來**（引擎 stats，`hide_links=船名板`）：640,084 格、1 元件、空腔 0、鏡像差 0。
+- **帆桁穿船**：沿線每 0.5 格取樣、半徑約 1 內有實心（離自己吊點 7 格內不算）⇒ 7 根全 0。**反向對照**：`--probe=pivot=yard-main-course:-200`（往下放到船殼的高度）⇒ 只有那一根報 34 格。
+- 作品裡每根帆桁模型的 at／pivot／rotate／scale ＝ 設計（yards_placement.json）：7 根 0 差。**反向對照**：暫時把設計的 yard-main-course at.z −3 ⇒ 只報那一根（作品 274.84 ≠ 設計 271.84）；設計檔已還原、雜湊對過。
+- lateen 後端伸出船尾：後桅 0.65 m、bonaventure 2.55 m。
+- 梯子點（組裝件 parts）照樣 36／36、0 問題（甲板桅孔搬位之後重量）。
+- 產生程式重跑：18 個輸出檔逐位元組相同。
+- 過程圖：`overlays/stage6_{sheet,full,side,sternq}.png`。

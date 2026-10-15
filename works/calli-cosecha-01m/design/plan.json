@@ -108,8 +108,8 @@
        "src": "x：龍骨中點 150 ＋ 293／2（art.66）；長：Cano 2½ manga、上桅 ½（MP）；course yard：Cano 戰艦 2¼ manga（MP）；topsail yard：Palacio ＝ manga（MP）"},
       {"key": "mizzen", "x_step": 205, "rake_deg": 3, "lower_m": 18.4, "yards": {"lateen": 24.5},
        "src": "長：Palacio mesana ＝ bauprés（主桅的 28／46，MP）；lateen yard ＝ 桅 ＋ 1/3（Palacio，MP）；位置設計決定（Ordenanza 沒給）"},
-      {"key": "bonaventure", "x_step": 120, "rake_deg": 4, "lower_m": 13.8, "yards": {"lateen": 17.0},
-       "src": "設計決定：mizzen 的 3/4；大的 galleon 常有第四根 lateen 桅（WP Galleon 讀過）"},
+      {"key": "bonaventure", "x_step": 140, "rake_deg": 4, "lower_m": 13.8, "yards": {"lateen": 17.0},
+       "src": "設計決定：mizzen 的 3/4；大的 galleon 常有第四根 lateen 桅（WP Galleon 讀過）。x 140：v0 在 x 120，桅腳往上 z 72–79 那一段落在船尾 espejo 的牆裡（階段六 draft_masts 量到 74 格被船殼擋）⇒ 往前 20 格"},
       {"key": "bowsprit", "x_step": 486, "angle_deg": 32, "len_m": 23.7, "yards": {"spritsail": 14.5},
        "src": "長：Palacio bauprés ＝ trinquete 少 1/5（MP）；spritsail yard：Cano 前帆桁少 1/3（MP）；仰角 32° 設計決定；腳在主甲板（art.68）、前桅（x 472）與艏柱（x 500）之間 —— 設計決定（史實是從前桅旁邊穿過去）"}
     ],
@@ -138,6 +138,28 @@
       {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 24},
       {"deck": "toldilla", "kind": "window", "n": 3, "w": 5, "h": 6, "sill": 4, "half": 18}
     ]
+  },
+  "rig_build": {
+    "src": "設計決定（桅帆比例與位置在 plan.masts）；造船規格 §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡",
+    "colors": {"mast": 141, "top": 136, "rim_band": 242, "rim_cap": 248, "truck": 248},
+    "mast_r": {"fore": [3.5, 2.5], "main": [3.5, 2.5], "mizzen": [2.5, 1.8], "bonaventure": [2.0, 1.4]},
+    "mast_r_src": "設計決定：桅半徑（腳、頂）；比甲板桅孔（plan.decks_build.mast_r：4／4／3／2.5）小 ⇒ 用同一個圓的判斷式，桅格一定落在孔裡",
+    "topmast_r": {"fore": [2.5, 1.5], "main": [2.5, 1.5]},
+    "tops": {"main": 19, "fore": 15, "mizzen": 9, "rim_h": 6,
+             "src": "Palacio：主桅樓（cofa）上緣周長 ＝ manga（MP，⚠ 二手）⇒ 直徑 3.84 m、半徑 19 格；前桅樓小 1/5（設計決定，比照帆桁）；後桅一個小 cofa（設計決定）；cofa 是一圈籃子（rim 6 格高）"},
+    "bowsprit_r": [3.0, 2.0],
+    "yards": [
+      {"name": "yard-fore-course", "mast": "fore", "yard": "course", "sail": "fore-course", "src_work": "basecamp-frigate-constitution-01m-yard-fore-course", "src_len": 249, "brace": -15},
+      {"name": "yard-fore-topsail", "mast": "fore", "yard": "topsail", "sail": "fore-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-royal", "src_len": 93, "brace": -17},
+      {"name": "yard-main-course", "mast": "main", "yard": "course", "sail": "main-course", "src_work": "basecamp-frigate-constitution-01m-yard-main-course", "src_len": 291, "brace": -15},
+      {"name": "yard-main-topsail", "mast": "main", "yard": "topsail", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-topgallant", "src_len": 143, "brace": -17},
+      {"name": "yard-spritsail", "mast": "bowsprit", "yard": "spritsail", "sail": "spritsail", "src_work": "basecamp-frigate-constitution-01m-yard-spritsail", "src_len": 185, "brace": 0, "at_t": 0.85, "drop": 5}
+    ],
+    "yards_src": "造船規格 §2.1：方帆桁沿用憲法號的帆桁元件，只沿長度（y）縮放到本船的長度（plan.masts）；挑長度最近、固定點（arm／earing／sling／pivot／jackstay）齊全的那一根。縮過的在遊戲裡是另一份網格（§2.1）",
+    "lateen": [
+      {"mast": "mizzen", "len_m": 24.5, "angle_deg": 40, "hoist_frac": 0.4, "sail": "mizzen-lateen"},
+      {"mast": "bonaventure", "len_m": 17.0, "angle_deg": 45, "hoist_frac": 0.45, "sail": "bonaventure-lateen"}],
+    "lateen_src": "沒有現成的 lateen 帆桁 ⇒ 新做（一根斜桿，前端低、後端高）。吊點在前端往後 hoist_frac、角度設計決定：bonaventure 改 45°、吊點 45% ⇒ 後端伸出船尾約 3.7 m（v0 照 35°／40% 畫 ⇒ 8 m）。meta yard=gaff：遊戲 30_rig_physics.js 的 gaff 往下風擺（縱帆）—— 已在酒館問 ame（seq 24767）。帆桁放在桅的左舷側（y − (桅半徑＋2)），不穿過桅"
   },
   "espolon": {"len_beyond_stem": 72, "src": "1618 art.45：espolón ＝ manga 的 3/5 伸出艏柱 ⇒ 7.24 m",
     "deck_top_z": 73, "thick": 3, "half_at_stem": 24, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 20, "cutwater_half": 2, "cutwater_pow": 1.5, "cutwater_band": 10,
