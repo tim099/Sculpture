@@ -63,3 +63,49 @@
 - 產生程式重跑（EXTRA 60 之後）：清單、verify、圖逐位元組相同。
 - 過程圖：`overlays/stage2_hull_{bowq,sternq,side}.png`（yaw 30／150／90）。
 - ⚠ 看得到的：船殼一整片黑（帶子、砲門在階段三）；船頭是平的圓頭到舷頂（espolón 在階段五）；艙裡是空的（甲板在階段四）。
+
+## 階段三 砲門、塗裝、船尾窗（2026-10-15，TASK-0592）
+設計 plan.json `paint`、`stern`；產生 `design/draft_ports.py`（船殼照 draft_lines.hull_volume ＝ 作品，階段二證過；結構照三叉戟號的 draft_ports）⇒ `masks/ports/carve.vox.txt`（8,633，帶刻之前的顏色守門）、`masks/ports/paint.vox.txt`（19,278，換色）、`verify_ports.json`、`sheet03_ports_paint_v1.png`。
+- 砲門 ＝ `layout.ports`（每舷 9／8／2／2，兩舷同一組 x）：開口 (x, z) 範圍裡、那一舷 |dy| ≥ 6 的牆全刻；外擴 1 格那一圈牆漆玫瑰粉 242（reveal）。
+- 塗裝（只換外板那一層的黑 36；水線下灰白不動）：
+  - **wale 三條**（art.52：主甲板下 1 codo、主甲板上 2½ codos；puente 上 14 格比照）：玫瑰粉 2 列＋上下各一列金 248，照甲板舷弧走。
+  - **船樓菱格**：toldilla（z 121–131）、alcázar 與 castillo（z 107–114／115）舷牆外面玫瑰粉菱形配黑底（週期 10、半徑 3，只照 x、z 算 ⇒ 兩舷對稱），上下金邊。
+  - 舷頂最上一格金。
+- 船尾 espejo（每個 (y, z) 從最後面往前那一段牆）：puente 5 扇、alcázar 5 扇、toldilla 3 扇窗（寬 5、刻最外一格、第二格玻璃 87、外一圈金框）；主甲板兩個追擊砲門（寬 7，整段牆刻穿）。窗寬一律奇數、對稱取整。
+- 🩸 v1 每層砲列一整條 11 格的帶子（三叉戟號的作法）⇒ 舷側一半是粉的，不像 galleon；改成 wale 細帶＋砲門框。
+- 🩸 wale 漏漆讀數（wale 高度裡外板還是黑的）兩次不是 0：① puente 的 wale 照舷弧在兩頭抬到 z 105，被從 z 104 起的船樓菱格蓋黑（184 格）⇒ 菱格改從 z 107 起；② 舷弧拋物線過了 x 120 還外推，最船尾 x 105–112 的 wale 抬到 z 107（16 格）⇒ `layout.deck_z` 的舷弧在 x 120／500 夾住（甲板範圍都在 x ≥ 113，主甲板與 puente 那一段 deck_z 變了；砲門 x ≥ 168 不受影響，verify_layout 重產）。
+- 落格：`砲門:begin` → carvevox（顏色守門，carved 8,633）→ stampvox overwrite=1（placed 19,278）→ `砲門:end`。
+
+讀數（`design/tools/check_stage3.py`，作品從 export 讀）：
+- **結果帳**：作品 418,188 ＝ 設計（船殼 − 刻 ＋ 換色），缺 0、多 0、色差 0。
+- 42 個舷側砲門開口（兩舷）：**從作品的格子量**，開口裡還有實心的 0 個；船尾兩個追擊砲門：船尾面那一段牆 0 格。
+  **正向對照**（同一把尺量刻之前的 `船殼修正`）⇒ 42 個全報（每個 196 格）、追擊砲門各 49 —— 尺會說話。
+  **反向對照**：`draft_ports.py --probe=skip_port=puente:4` ⇒ 只報 puente 第 4 個（兩舷各 196 格）。
+- wale 漏漆 0；引擎 stats：1 元件、空腔 0、鏡像差 0。
+- 換色：玫瑰粉 11,741、金 7,122、玻璃 415；刻掉：外板 2,467、肋骨 4,114、內板 2,052。
+- 產生程式重跑：8 個輸出檔（船殼清單、砲門清單、verify、圖）逐位元組相同。
+- 過程圖：`overlays/stage3_sheet.png`、`overlays/stage3_ports_{bowq,sternq,side,astern}.png`。
+- ⚠ 看得到的：船尾四分之三那個角上，wale 與菱格在圓弧的船尾肩膀上從船尾看成一條一條直的粉色細線（像滴下來的漆）—— 先放著，船尾 galleries（TASK-0594）會蓋住那一段；艙裡沒甲板 ⇒ 從砲門看得到對面的牆。
+
+## 階段四 甲板、船樓、艙口、梯子（2026-10-15，TASK-0593）
+設計 plan.json `decks_build`；產生 `design/draft_decks.py`（結構照三叉戟號：甲板板＋橫樑＋圍欄、梯子踏板與 stringer、組起來找封閉空腔）⇒ `masks/decks/<層>.vox.txt`、`masks/ladders/<上面那層>.vox.txt`、`ladder_points.json`、`verify_decks.json`、`sheet04_decks_v1.png`；落格 `design/tools/build_decks.py`。
+- 甲板（甲板面 z；主甲板與 puente 有舷弧）：底艙 orlop 45（只 x 190–430）、主甲板 65、puente 85、alcázar 102（x ≤ 268）、toldilla 119（x ≤ 196）、castillo 102（x ≥ 422）。艙裡的甲板板 177、露天的（puente、三座船樓）209；橫樑每 16 格、寬 2、深 3（船樓 2）136；圍欄與 break 141。
+- 開口：艙口三個疊在中線（後 214–226、主 312–332、前 395–409，orlop／主甲板／puente 都開）＋圍欄 2 格；梯子井；桅孔照桅的傾斜軸線（r：前、主 4、後 3、bonaventure 2.5；桅腳立在那一層 ⇒ 不開）。
+- **break**（1618 art.5）：alcázar 前緣 x 268、toldilla 前緣 x 196、castillo 後緣 x 422 —— 一道艙壁（從下一層甲板到船樓甲板，兩扇門 寬 5 高 15）＋船樓甲板邊上一道 7 格高的胸牆（梯子頭留口）；放在船樓那一層的子作品裡。
+- 梯子 9 座（每 3 格一階、每階 2 格、踏板 7 寬）：艙裡 3 座（orlop→主甲板 x 270、主甲板→puente 後 x 262／前 x 372，在上一層開井）；船樓 6 座（puente→alcázar、alcázar→toldilla、puente→castillo 各兩舷），靠在 break 外面、頭踩上船樓甲板。每一層要讓人走得到的甲板都有梯子（reach：orlop 1、主甲板 3、puente 6、alcázar 4、toldilla 2、castillo 2）。
+- 子作品（parent 船殼、tags sub、0.1 m、800×320×640、at 0,0,0）：`-deck-{orlop,main,puente,alcazar,toldilla,castillo}`、`-ladders-{main,puente,alcazar,toldilla,castillo}`；梯子掛在它上面那一層甲板裡（關聯 `梯子`，meta `kind=ladders`），固定點 `<梯名>.foot／lo／hi／head`。組裝件關聯 `甲板-<層>`。
+- **甲板 meta**（§9.3）：每層甲板子作品 `export format=vxk links=none` ⇒ `Blockside/src/decks.py` ⇒ `design/decks_meta.tsv`（name 換成 plan 的中文名）⇒ `work sub=meta`：kind=deck、deck、level 0–5、name、floor、thick（艙裡 4、船樓 3）。
+  🩸 第一次匯出沒帶 `links=none` ⇒ 甲板子作品把關聯的梯子一起匯出，三座船樓的 floor 多了往下走的尾巴（alcázar 271–279 從 z 103 降到 92 ＝ 梯子踏板）。遊戲照 floor 判斷梯子接哪一層 —— 這條尾巴會讓 puente 的梯子腳被判到 alcázar。
+- 預覽 preset（組裝件）：`藏船殼`、`只看主甲板以下`。
+- 🩸 設計時抓到的兩個：① orlop 梯子的 lo 點頭頂 14 格碰到主甲板的橫樑（梯子井從第 4 格才開）⇒ 井從第 2 格開；② 主甲板多開了後桅的孔 —— 拿「整層甲板最高的 z」跟桅腳比，主甲板船尾舷弧抬到 71 > 後桅腳 67 ⇒ 改拿桅那一格的甲板高度。
+
+讀數：
+- 設計那一側：重疊（船殼／彼此）0、砲門往艙裡 20 格內被甲板／樑／艙壁擋到的 0、梯子點問題 0、封閉空腔 0、每件鏡像差 0。
+- **結果帳**（`design/tools/check_decks.py`，每件從匯出讀）：11 件、168,839 格，缺 0、多 0、色差 0；跟船殼重疊 0、彼此重疊 0。
+- **組起來**（引擎 `stats structure=1 mirror=y:160`，組裝件）：587,027 格、1 元件、空腔 0、鏡像差 0。
+- **梯子點**（組裝件 `export format=parts`，遊戲讀的那一份）：9 座、36／36 點、跟設計差 0；每個點那一格是空的、腳下實心、頭頂 14 格空。
+  **尺的反向對照**：把設計的 main-fwd.head 偏 3 格 ⇒ 報「跟設計差 1」、腳下不是實心（設計檔已還原，雜湊對過）。
+  **反向對照**：`draft_decks.py --probe=drop_ladder=castillo-S` ⇒ 8 座、castillo 只剩 castillo-P。
+- 產生程式重跑：14 個輸出檔逐位元組相同。
+- 過程圖：`overlays/stage4_sheet.png`、`overlays/stage4_decks_{nohull,bowq,sternq}.png`。
+- ⚠ 還沒做：船樓的艙房（遊戲空艙房 §9.2，之後要配功能艙可以加）；彈藥庫（TASK-0598，orlop 上）。

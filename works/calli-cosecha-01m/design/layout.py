@@ -19,8 +19,8 @@ def deck_z(plan, key, x):
         return np.full(x.shape, float(row['z']))
     s = plan['decks']['sheer']
     xm = s['x_mid']
-    t_aft = np.clip((xm - x) / (xm - 120.0), 0, None)
-    t_fwd = np.clip((x - xm) / (500.0 - xm), 0, None)
+    t_aft = np.clip((xm - x) / (xm - 120.0), 0, 1)       # 舷弧量到 x 120（艉柱）／500（艏柱）為止，再過去不外推（v1 外推 ⇒ 最船尾 wale 抬進船樓菱格）
+    t_fwd = np.clip((x - xm) / (500.0 - xm), 0, 1)
     return row['z'] + np.round(s['aft'] * t_aft ** 2 + s['fwd'] * t_fwd ** 2)
 
 
