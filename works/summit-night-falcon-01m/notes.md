@@ -464,3 +464,13 @@ Tim：「請標記一下艙房吧（只要標記妳建造的船）」。做法�
 - ⚠ 遊戲那側要 **reimport**（新的部件 `甲板-主/艙房`；metasync 只換既有部件的 meta 與固定點）—— 留給 ame；**我沒在遊戲裡看過**。
 - **2026-10-14 晚補：2.door 挪到一端**（ame 在 TASK-0573 回報：遊戲現在讀 .door，門在長邊正中 ⇒ 兩邊各剩 1.5 m，放不下 1.9 m 的病床）。(111,80,24) → **(111,63,24)**（左舷那一端，z 24 站得住）。
   讀數：把 36_rooms.js 的排床逐行移植成 Python（風暴角號那段用的同一支），先對 ame 報的兩個已知答案（正中 0 張、沒門 1 張）都對；挪到任一端 ⇒ 床 1、藥箱 1。1 號不變（床 1、手術台 1、藥箱 1）。格子沒動（97,160、checksum 358bf2ac）；rooms.py check 2／2 ✓。⚠ 遊戲那側要 metasync 才看得到，我沒在遊戲裡看過。
+
+## 錨與吊錨架（2026-10-16，wake #121）
+
+Tim：「你的船好像都沒有設定錨 先加上吧」「會導致無法拋錨」。設計 `design/draft_anchors.py`（跟風暴角號同一支，照 design 資料夾認船；寫法與理由見風暴角號 notes 同名一節）⇒ `verify_anchors.json`、`masks/anchors/cathead.vox.txt`；下 CLI `design/apply_anchors.py <design> create|stamp|link|models|hawse`。重跑兩次逐位元組相同。
+- **錨**：共用元件 `basecamp-frigate-constitution-01m-anchor`，放在船殼作品（`船殼/錨-S`、`錨-P`），pivot ＝ ring、rotate 0、**scale 0.3**（(69／2200)^(1/3) ≈ 0.315；⚠ 估算，憲法號那隻錨的比例與排水量都沒查證）、meta `kind=anchor, anchor=bower`。
+  錨-S at 265,101.5,49.5；錨-P at 265,59.5,49.5（左舷 y ＝ 161 − 101.5）。錨冠 z 33.3（水線 15 之上 1.83 m）。
+- **吊錨架**：子作品 `-cathead`（2×3×2、12 格、色 36），右舷 `吊錨架` at 264,99,50，左舷 `吊錨架-鏡像` mirror=y at 264,59,50。長度 3 是搜出來的最短；根貼在那一站最外面的格 —— 是繫繩欄（pin rail）的外側，不是船殼舷牆。
+- **錨鏈孔**：船殼固定點 hawse-S (269,87,39)、hawse-P (269,73,39)。
+- 讀數（引擎匯出）：格 97,160 → 97,184（+24 ＝ 2 × 12）、link_overlap 0、models_broken 0；四個固定點 × 兩隻跟設計檔差 0.0。
+- .vxk 重匯 `exports/night_falcon.vxk`：97,184 格、checksum 958ca2a0、模型 33（網格 15 份）、固定點 474；sha256 e4e199a6…。⚠ 遊戲那側要 ame reimport 才有錨；**我沒在遊戲裡拋過**。

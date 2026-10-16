@@ -437,3 +437,18 @@ Tim：「管風琴 GO」（第零階段特徵表的最後一格，選做）。�
   - 另一條路對比例尺：側面 0–10 m ＝ 250 px；第 0 站到第 10 站（343 格 ＝ 34.3 m）在圖上 861 px ⇒ 都是 25 px／m；照尺量船長 45.2 m（讀數 45.26 m）。
   - 🩸 第一版刻度把 10 寫成 1（rstrip('0') 連整數的 0 一起削）、0 變成空白；位置擠到橫剖面標題 ⇒ 改整數判斷、挪到空白處。
 - **四向渲染**（驗收 #2，給 Tim 看）：`overlays/final_side_S_yaw90_p10.png`、`final_bow_yaw0_p10.png`、`final_stern_yaw180_p10.png`、`final_top_yaw90_p89.png`、`final_q_bow_yaw-35_p20.png`（預設鏡頭與天空，全部關聯照開關）。
+
+## 錨與吊錨架（2026-10-16，wake #121）
+
+Tim：「你的船好像都沒有設定錨 先加上吧」「會導致無法拋錨」。遊戲（Blockside 76_anchor.js anchorsOf）每舷找一個 meta `kind=anchor` 的模型、鍊子綁 `ring`，錨鏈孔讀船殼固定點 `hawse-P／S`；兩艘都沒有 ⇒ 6／7／8 只會停船。
+設計 `design/draft_anchors.py`（夜隼號同一支，照 design 資料夾認船）⇒ `verify_anchors.json`、`masks/anchors/cathead.vox.txt`；下 CLI `design/apply_anchors.py <design> create|stamp|link|models|hawse`。照夜燈號的掛法（basecamp 階段十九-b）。重跑兩次逐位元組相同。
+- **錨**：共用元件 `basecamp-frigate-constitution-01m-anchor`，放在船殼作品（`船殼/錨-S`、`錨-P`），pivot ＝ ring 格心 (23.5,16.5,56.5)、rotate 0、**scale 0.85**、meta `kind=anchor, anchor=bower`。scale 照排水量立方根對憲法號縮（(1286／2200)^(1/3) ≈ 0.84）—— ⚠ 估算：憲法號那隻錨的比例與排水量都沒查證。
+  錨-S at 506.5,171,122.5；錨-P at 506.5,90,122.5（錨不鏡像，左舷 y ＝ 261 − 171）。錨冠 z 76.6（水線 50 之上 2.66 m）。
+- **吊錨架**：子作品 `-cathead`（3×23×3、207 格、色 109），右舷關聯 `吊錨架` at 505,149,123，左舷 `吊錨架-鏡像` mirror=y at 505,89,123。橫樑垂直船身、根貼在舷牆外第一格空氣、頂在舷牆頂 z 125。
+  長度 23（2.3 m）是搜出來的：從 4 起，取第一個讓錨的每一格 3×3×3 鄰域沒有現有格、離每條繩的直線 ≥ 2 的長度 —— 限制來自 tumblehome（錨垂到 z 80 附近那裡船身最寬，L 20／21／22 各還碰 305／84／3 格）。
+- **錨鏈孔**：船殼固定點 hawse-S (530,145,92)、hawse-P (530,115,92)（x 530 那一站、z 92 最外那一格船殼）。
+- 🩸 v1 兩個錯：① 吊錨架站在 x 575 —— 那是船頭子作品的 beakhead，船殼作品自己到 x 550 就結束了（hawse 那一站找不到船殼格才抓到）；② 舷牆頂取「最外那幾欄最高的格」⇒ 抓到 z 93 的外板最寬處、錨冠落到水線下 —— 程式只印沒擋，改成 assert。
+  ③ x 517 那一站被 `spritsail-sheet-S`（帆角 → kevel-bak-S x 510.5）擋住 0.64 格 ⇒ 挪到 kevel 後面 x 505。
+  ④ 左舷的錨 v1 照鏡像算格與固定點（實際放的模型不鏡像）⇒ fluke-a／b 對調、格差 1；引擎匯出對出來的（差 23.8）。修掉後左舷照真的擺法重驗，同一長度通過。
+- 讀數（引擎匯出，不是設計程式）：格 547,911 → 548,325（+414 ＝ 2 × 207）、link_overlap 0、models_broken 0；兩隻錨的 ring／crown／fluke 跟設計檔差 0.0；hawse 在船殼關聯的 points。看圖：`overlays` 沒存，暫存的船頭特寫看過（錨在船殼外、吊錨架端下）。
+- .vxk 重匯 `exports/stormkaap.vxk`：548,325 格、checksum 3cf9c17e、模型 76（網格 26 份；錨 scale 0.85 跟夜燈號同一份）、固定點 908；sha256 36d0cf61…。⚠ 遊戲那側要 ame reimport 才有錨；**我沒在遊戲裡拋過**。
