@@ -16,7 +16,7 @@ import mio
 
 NX, NY, NZ = 1200, 400, 120
 YC = 200
-HIDE = '機艙-主機,機艙-鍋爐-後,機艙-鍋爐-前,螺旋槳軸'
+HIDE = '機艙-主機,機艙-鍋爐-後,機艙-鍋爐-前,螺旋槳軸,甲板-engine,甲板-lower/梯子-機艙'   # 後兩條是階段十三、十四（在本件之後）
 
 
 def main():
@@ -125,6 +125,12 @@ def main():
                     if inside[x, y, z]:
                         parts['shaft'][(x, y, z)] = C['iron']
 
+    gc = os.path.join(D, 'masks', 'engine', 'gears_from_engine.json')    # 2026-10-16：大小齒輪拆成會轉的外部模型（tools/split_gears.py）⇒ 那些格不在主機件裡（⛔ 要在畫完軸之後拿：軸照「主機沒有的格」補，先拿 ⇒ 軸補進小齒輪那 39 格）
+    if os.path.exists(gc):
+        for v in json.load(open(gc, encoding='utf-8')).values():
+            for k in v:
+                parts['engine'].pop(tuple(map(int, k.split(','))), None)
+
     # ── 鍋爐與煙道 ──
     BO = E['boilers']
     anchors_b = {}
@@ -156,6 +162,9 @@ def main():
                                 P[(x, y, z)] = C['brick']
                 bi += 1
                 an['boiler-%d' % bi] = [int((x0 + x1) // 2), int((y0 + y1) // 2), int((BO['z'][0] + BO['z'][1]) // 2)]
+                # 站位（階段十四，Tim 2026-10-16：「動力部件可以設定需要船員工作(鍋爐)」「參數都在遊戲端設定 模型只提供meta標記」）：
+                #   爐門前往燒火通道 4 格、這座鍋爐的中線（兩舷鏡像：YC ∓ 21）、跟鍋爐底同高（機艙鐵地板上第一格空氣）—— 要幾個人、人不夠怎麼扣出力，遊戲那側定
+                an['stoke-%d' % bi] = [door_x + (4 if door_x == x1 else -4), YC + s * ((BO['dy'][0] + BO['dy'][1] + 1) // 2), BO['z'][0]]
         # 煙道：從整組外框（z 51 一整片 smoke box）收成煙囪的圓（z 89），鐵殼 1 格
         gx0, gx1 = xa0, xb1
         cx0, fx = (gx0 + gx1) / 2.0, float(row['funnel_x'])
@@ -235,7 +244,10 @@ def main():
         works['boilers_' + row['key']] = (row['work'], row['link'], '拿破崙號 %s鍋爐 4 座與煙道（0.1 m）' % ('後' if row['key'] == 'aft' else '前'),
                                          dict(E['boiler_meta'], funnel=row['funnel']))
     anchors = {'engine': {'core': [int((ex0 + ex1) // 2), YC, ck['z']], 'cyl-1': [cy['x'], YC - cy['dy'], (cy['z'][0] + cy['z'][1]) // 2],
-                          'cyl-2': [cy['x'], YC + cy['dy'], (cy['z'][0] + cy['z'][1]) // 2], 'gear': [gr['x'], YC, ck['z']]},
+                          'cyl-2': [cy['x'], YC + cy['dy'], (cy['z'][0] + cy['z'][1]) // 2], 'gear': [gr['x'], YC, ck['z']],
+                          # 站位（階段十四）：兩缸外側各一（缸外緣再往舷外 3 格、機艙鐵地板上）—— 機匠；框照固定點撐開（y 179 → 176）
+                          'tend-1': [cy['x'], YC - cy['dy'] - cy['r'] - 3, plan['engine']['boilers']['z'][0]],
+                          'tend-2': [cy['x'], YC + cy['dy'] + cy['r'] + 3, plan['engine']['boilers']['z'][0]]},
                'shaft': {'aft': [SH['x'][0], YC, sz], 'fwd': [SH['x'][1], YC, sz]}}   # aft ＝ 軸穿過 stern tube 碰到螺旋槳柱那一格（那一段是船殼、沒有軸的格；框照固定點撐開）
     anchors.update(anchors_b)
     for k, P in parts.items():

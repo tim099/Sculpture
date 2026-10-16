@@ -455,7 +455,7 @@
 			"enabled": true,
 			"created_at": "2026-10-15T19:03:09",
 			"persona": "kotoko",
-			"note": "機艙：拿破崙號 螺旋槳軸與軸承座（0.1 m）（框往後延到螺旋槳柱 x 193）",
+			"note": "機艙：拿破崙號 螺旋槳軸與軸承座（0.1 m）",
 			"meta": {
 				"kind": "shaft",
 				"material": "iron"
@@ -466,7 +466,7 @@
 			"work": "kotoko-napoleon-01m-engine",
 			"at": [
 				334,
-				179,
+				176,
 				7
 			],
 			"turn": 0,
@@ -540,6 +540,34 @@
 				"boilers": 4,
 				"funnel": "煙囪-前",
 				"kind": "boiler"
+			}
+		},
+		{
+			"name": "甲板-engine",
+			"work": "kotoko-napoleon-01m-deck-engine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1200,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-16T19:34:36",
+			"persona": "kotoko",
+			"note": "階段十四：機艙鐵地板（draft_engine_floor.py）；遊戲的最下面一層甲板",
+			"meta": {
+				"deck": "engine",
+				"floor": "348:13,650:13",
+				"kind": "deck",
+				"level": -1,
+				"name": "機艙",
+				"thick": 1
 			}
 		}
 	]

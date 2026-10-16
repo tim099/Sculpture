@@ -1,0 +1,38 @@
+{
+	"schema": 1,
+	"anchors": [
+		{
+			"name": "spin-a",
+			"at": [
+				338,
+				200,
+				42
+			],
+			"note": "轉軸（中間那一片的中心格）",
+			"persona": "kotoko",
+			"created_at": "2026-10-16T19:29:31"
+		},
+		{
+			"name": "spin-b",
+			"at": [
+				339,
+				200,
+				42
+			],
+			"note": "轉軸往船頭 1 格（spin-a → spin-b ＝ +x）",
+			"persona": "kotoko",
+			"created_at": "2026-10-16T19:29:31"
+		},
+		{
+			"name": "bail",
+			"at": [
+				340,
+				200,
+				42
+			],
+			"note": "掛點：遊戲（10_ship.js）從這一點旁 8 格內找船上的格掛住 ⇒ 那一段螺旋槳軸被打斷就掉（不寫 ⇒ 外框底下 12 格內沒有格 ⇒ 被當成吊著的小艇、spin 不收）",
+			"persona": "kotoko",
+			"created_at": "2026-10-16T19:43:26"
+		}
+	]
+}
