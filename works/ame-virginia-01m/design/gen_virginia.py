@@ -102,10 +102,10 @@ def build():
     aperture = (X3 >= 67) & (X3 <= 79) & (Z3 >= 10) & (Z3 <= 46) & (DY3 <= 4)
     solid = (hull | keel | stem | post | dead) & ~aperture
     # 殼厚：船外往裡的距離（頂面往上複製 ⇒ 甲板那一面不算船外）
-    # ⛔ 2026-10-17 修：以前用 concatenate 把那 6 層接到陣列最頂端（z 170 以上）、沒接在船殼頂面（z 65）正上方 ⇒ 頂面被當成船外、
-    #    往下 5 格（z 61–65）整片算成「殼」⇒ 砲甲板底下多一層 0.5 m 的實心夾層，梯口被封死（Tim：「第一人稱下看到甲板梯子出口被填滿」）
-    ext = solid.copy(); ext[:, :, ZDK:ZDK + 6] |= solid[:, :, ZDK - 1:ZDK]
-    d = ndimage.distance_transform_edt(ext)
+    # ⚠ 這行的 concatenate 把那 6 層接到陣列最頂端（z 170 以上）、不是船殼頂面（z 65）正上方 ⇒ 頂面算成船外、往下 5 格（z 61–65）整片是「殼」
+    #   ＝ 砲甲板底下一層 0.5 m 的實心夾層。2026-10-17 一度修掉，Tim：「可以改成在夾層挖樓梯口嗎」⇒ 夾層照舊，只在砲甲板的梯口挖穿（下面 hatch_main）
+    ext = np.concatenate([solid, np.repeat(solid[:, :, ZDK - 1:ZDK], 6, axis=2)], axis=2)
+    d = ndimage.distance_transform_edt(ext)[:, :, :NZ]
     shell = solid & (d <= 5.0)
     inner = solid & ~shell                                         # 船艙（空的）
     backbone = (keel | stem | post | dead) & ~aperture
@@ -114,7 +114,11 @@ def build():
     claim('sheathing', outer & (Z3 <= ZW - 3) & ~backbone, C_COPPER)
     hullcol = np.where(Z3 >= ZW - 2, C_BLACK, C_OAK)
     claim('hull', backbone, C_OAK_D)
-    claim('hull', shell, np.broadcast_to(hullcol, shell.shape))
+    # 砲甲板的梯口（兩座往住艙的梯子）：主甲板板、橫樑、夾層（z 61–65）都挖穿（2026-10-17，Tim：「可以改成在夾層挖樓梯口嗎」；以前只挖了板子 ⇒ 梯口被夾層封死）
+    HATCH_MAIN = [(420, YC), (560, YC)]
+    hatch_main = np.zeros((NX, NY, NZ), bool)
+    for hx, hy in HATCH_MAIN: hatch_main |= (np.abs(X3 - hx) <= 7) & (np.abs(Y3 - hy) <= 5)
+    claim('hull', shell & ~(hatch_main & (Z3 >= ZDK - 5)), np.broadcast_to(hullcol, shell.shape))
     # 舵（艉柱後面：x 50–59、z 4–56，中線 ±1）、龍骨往後伸的 skeg 撐著舵底
     rudder = (DY3 <= 1) & (X3 >= 50) & (X3 <= 59) & (Z3 >= 4) & (Z3 <= 56)
     skeg = (DY3 <= 3) & (X3 >= 48) & (X3 < 60) & (Z3 <= 3)
@@ -127,7 +131,7 @@ def build():
     claim('engine', hub | blade, C_COPPER)
     # ── 煙道（Tim 2026-10-16：「煙囪跟發動機中間沒有連接(中間是炮甲板)」）：鍋爐頂 → 煙箱 → 直煙道穿住艙甲板以上、主甲板、砲甲板、颶風甲板 → 煙囪（z 101 起）──
     #   兩排鍋爐（y ＝ YC ∓ 17）頂上各一條橫煙道（x 336–437，避開中線 x 414–426 的梯子與艙口）匯到前排鍋爐前端頂上的煙箱（x 436–462），
-    #   直煙道 ＝ 煙囪的延長（中心 x 450、外半徑 10、內半徑 8）。牆 2 格、裡面空的（hole：甲板在那裡開洞）；牆先佔 ⇒ 穿過甲板的那幾層是煙道牆。
+    #   直煙道 ＝ 煙囪的延長（中心 x 450、外半徑 10、內半徑 8；部件「煙囪」）。牆 2 格、裡面空的（hole：甲板在那裡開洞）；牆先佔 ⇒ 穿過甲板的那幾層是煙道牆。
     FNX = 450
     rt = np.hypot(X3 - FNX, Y3 - YC)
     sbox = (X3 >= 436) & (X3 <= 462) & (DY3 <= 26) & (Z3 >= 44) & (Z3 <= 52)
@@ -140,7 +144,9 @@ def build():
     trunk = (rt <= 10) & (Z3 >= 51) & (Z3 <= ZTOP)
     trunk_in = (rt <= 8) & (Z3 >= 50) & (Z3 <= ZTOP)
     hole['m'] = sbox_in | flue_in | trunk_in
-    claim('boiler', (sbox | flue | trunk) & ~hole['m'], C_IRON_D)
+    claim('boiler', (sbox | flue) & ~hole['m'], C_IRON_D)
+    # 直煙道歸煙囪（2026-10-17，Tim：「煙囪是否能跟原本在頂上的合併」）：同一個部件、同一個黑 ⇒ 從煙箱頂一路到颶風甲板上面是同一根（以前歸鍋爐、暗鐵色 ⇒ 看起來是兩根）
+    claim('funnel', trunk & ~hole['m'], C_BLACK)
     # ── 撞角（鑄鐵：船頭水線下，x 851–868、z 34–54）──
     tr = (X3 - XB) / 18.0
     ram = (X3 > XB) & (X3 <= XB + 18) & (Z3 >= 34 + tr * 6) & (Z3 <= 54 - tr * 8) & (DY3 <= 7 * (1 - tr) + 1)
@@ -176,9 +182,6 @@ def build():
     # 颶風甲板的邊（砲廓頂的木頭邊上那一圈欄杆座）
     # ── 主甲板（66–68，整個船殼；梯子的艙口挖掉）＋橫樑（63–65 每 24 格一根，只在船艙裡）──
     deck_area = (DY3 <= hbd[:, None, None]) & (hbd[:, None, None] > 0)
-    HATCH_MAIN = [(420, YC), (560, YC)]
-    hatch_main = np.zeros((NX, NY, NZ), bool)
-    for hx, hy in HATCH_MAIN: hatch_main |= (np.abs(X3 - hx) <= 7) & (np.abs(Y3 - hy) <= 5)
     plank = deck_area & (Z3 >= ZDK) & (Z3 <= ZDK + 2) & ~hatch_main
     pcol = np.where((Y3 % 4) == 0, C_OAK, C_PINE)
     claim('deck-main', plank, np.broadcast_to(pcol, plank.shape))
