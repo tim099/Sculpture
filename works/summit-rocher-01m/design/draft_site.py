@@ -50,9 +50,10 @@ def heightmap(S):
     # 大街往上坡接到自然地面
     for st in S['streets']:
         if st['name'] == 'Grande Rue':
-            sx_ = (x >= st['x0']) & (x < st['x1']) & (y >= 640) & (y < st['y1'])
+            sx_ = (x >= st['x0']) & (x < st['x1']) & (y >= S['terraces'][-1]['y1']) & (y < st['y1'])
             ztop = z[int((st['x0'] + st['x1']) / 2), st['y1']]
-            z = np.where(sx_, 46 + (ztop - 46) * (y - 640) / (st['y1'] - 640), z)
+            z0 = S['terraces'][-1]['z']; y0 = S['terraces'][-1]['y1']                                     # 接第二排平台（2026-10-16：原本寫死 46、640）
+            z = np.where(sx_, z0 + (ztop - z0) * (y - y0) / (st['y1'] - y0), z)
     H = np.floor(z).astype(np.int16)
     H[H < S['z_sea']] = -1                                                                           # 海（不做海床）
     return H
@@ -93,7 +94,7 @@ def main():
             elif h < S['z_sea'] + 6:
                 c = np.array(c332(pal['sand']))
             else:
-                k = 0.75 + 0.25 * min(1.0, (h - 30) / 140.0)
+                k = 0.75 + 0.25 * min(1.0, (h - S['z_sea'] - 20) / 140.0)
                 c = np.array(c332(pal['grass'])) * k
             img[NY - 1 - yi, xi] = c
     T = S['town']
@@ -140,10 +141,10 @@ def main():
     # 北向、比例尺
     g.polygon([(NX - 60, 40), (NX - 70, 70), (NX - 50, 70)], fill=INK)
     g.text((NX - 66, 74), "N", fill=INK, font=f18)
-    sheet = Image.new('RGB', (NX + 2 * M, NY + 2 * M + 320), BG)
+    sheet = Image.new('RGB', (NX + 2 * M, NY + 2 * M + 380), BG)
     sheet.paste(im, (M, M))
     gs = ImageDraw.Draw(sheet)
-    gs.text((20, 14), "岩堡港 Port-du-Rocher　新圖紙 01　平面圖（俯視；上 = 北）　0.1 m／格（1 px = 1 格）　summit 2026-10-14　（設計；底本 托圖嘉 Basse-Terre，沒有描圖）", fill=INK, font=f18)
+    gs.text((20, 14), "岩堡港 Port-du-Rocher　新圖紙 01　平面圖（俯視；上 = 北）　0.1 m／格（1 px = 1 格）　summit 2026-10-14（v2 2026-10-16：海面 z 60）　（設計；底本 托圖嘉 Basse-Terre，沒有描圖）", fill=INK, font=f18)
     yb = M + NY + 16
     for i in range(20):
         a = M + i * 50
@@ -155,7 +156,7 @@ def main():
     # 剖面（南北）：大街 x 630 與岩堡 x 920
     ys = M + NY + 70
     gs.text((M, ys), "剖面（南 → 北；1:1）：灰 = 大街 x 630、褐 = 岩堡 x 920（含 9 m 的岩）；藍 = 海面", fill=INK, font=f14)
-    base = ys + 300
+    base = ys + 360
     gs.line([(M, base - S['z_sea']), (M + NY, base - S['z_sea'])], fill=(30, 90, 200), width=1)
     for xc, cc in ((630, (110, 110, 110)), (920, (130, 80, 30))):
         pts = []
@@ -166,7 +167,7 @@ def main():
                 zz = zz + R['h']
             pts.append((M + yi, base - zz))
         gs.line(pts, fill=cc, width=2)
-    sheet.save(os.path.join(d, 'sheet01_site_v1.png'), optimize=False)
+    sheet.save(os.path.join(d, 'sheet01_site_v2.png'), optimize=False)
 
     # ── 讀數 ──
     lots = {}
