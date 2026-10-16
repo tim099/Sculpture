@@ -113,10 +113,13 @@ def main():
 
     # ── 螺旋槳軸 ──
     SH = E['shaft']
+    gc = os.path.join(D, 'masks', 'engine', 'gears_from_engine.json')
+    bore_xs = set(range(SH['x'][0], SH['x'][1] + 1)) if os.path.exists(gc) else set()   # 齒輪拆成模型之後（ame 2026-10-16 seq 25400）：軸線上的格一律歸軸（穿過小齒輪的軸孔、軸承座）⇒ 軸的格子從頭到尾不斷（遊戲照軸的格子判斷斷了沒有）
     for x in range(SH['x'][0], SH['x'][1] + 1):
         for y in range(YC - SH['r'], YC + SH['r'] + 1):
             for z in range(sz - SH['r'], sz + SH['r'] + 1):
-                if (y - YC) ** 2 + (z - sz) ** 2 <= SH['r'] ** 2 and (x, y, z) not in parts['engine']:
+                if (y - YC) ** 2 + (z - sz) ** 2 <= SH['r'] ** 2 and ((x, y, z) not in parts['engine'] or x in bore_xs):
+                    parts['engine'].pop((x, y, z), None) if x in bore_xs else None
                     put('shaft', x, y, z, C['steel'])
     for px in range(SH['plummer_from'], SH['x'][1] - 10, SH['plummer_every']):   # 軸承座：從船底到軸底下（起點寫死：軸往後延到螺旋槳柱之後不挪它們）
         for x in range(px, px + 3):
@@ -125,7 +128,7 @@ def main():
                     if inside[x, y, z]:
                         parts['shaft'][(x, y, z)] = C['iron']
 
-    gc = os.path.join(D, 'masks', 'engine', 'gears_from_engine.json')    # 2026-10-16：大小齒輪拆成會轉的外部模型（tools/split_gears.py）⇒ 那些格不在主機件裡（⛔ 要在畫完軸之後拿：軸照「主機沒有的格」補，先拿 ⇒ 軸補進小齒輪那 39 格）
+    # 2026-10-16：大小齒輪拆成會轉的外部模型（tools/split_gears.py）⇒ 那些格不在主機件裡（⛔ 要在畫完軸之後拿：軸照「主機沒有的格」補，先拿 ⇒ 軸補進小齒輪那 39 格）
     if os.path.exists(gc):
         for v in json.load(open(gc, encoding='utf-8')).values():
             for k in v:

@@ -91,6 +91,26 @@ print('大齒輪 %d 格、小齒輪 %d 格；鏡像差 %s；轉軸 %s；spin_k %
 if step == 'plan':
     raise SystemExit(0)
 
+if step == 'bore':
+    # 🩸 ame 2026-10-16（酒館 seq 25400，TASK-0653 的新檢查）：軸的格子在小齒輪那三片斷開（小齒輪拆成模型之後軸線上空了）⇒ 遊戲判軸「開局 0 條路」、
+    #    打斷也不停。⇒ 小齒輪挖軸孔（軸半徑以內那幾格）、還給軸（draft_engine.py 的軸照樣畫過那三片；齒輪本來就套在軸上）
+    SR = plan['engine']['shaft']['r']
+    bore = {k: v for k, v in small.items() if (k[1] - 200) ** 2 + (k[2] - sz) ** 2 <= SR ** 2}
+    print('小齒輪軸孔 %d 格 ⇒ 還給軸' % len(bore))
+    if bore:
+        od = os.path.join(D, 'masks', 'engine')
+        cp = os.path.join(od, 'pinion_bore_carve.vox.txt')
+        write(cp, bore, '# 小齒輪要挖掉的軸孔（世界座標 ＝ 子作品座標；x,y,z,原色 ＝ 守門）\n')
+        W = SPEC['小齒輪']['work']
+        cli('op=work', 'sub=mark', 'persona=kotoko', 'work=' + W, 'name=軸孔', 'phase=begin', 'note=軸穿過小齒輪（ame seq 25400）')
+        cli('op=carvevox', 'persona=kotoko', 'work=' + W, 'voxels=' + cp.replace(os.sep, '/'), 'at=0,0,0', 'expect_pixels=%d' % len(bore))
+        cli('op=work', 'sub=mark', 'persona=kotoko', 'work=' + W, 'name=軸孔', 'phase=end', 'note=挖 %d 格（顏色守門）' % len(bore))
+        for k in bore:
+            small.pop(k)
+        with open(cache, 'w', encoding='utf-8', newline='\n') as f:
+            json.dump({'大齒輪': {'%d,%d,%d' % k: v for k, v in sorted(big.items())}, '小齒輪': {'%d,%d,%d' % k: v for k, v in sorted(small.items())}}, f, sort_keys=True)
+        cells['小齒輪'] = small
+
 if step == 'extend':
     # 🩸 拆完量到主機件浮空 29 格：曲軸在齒輪後面那一段（x ck.x0 … 齒輪第一片 − 1）只靠齒輪那三片接著 ⇒ 一起搬進大齒輪（本來就跟著曲軸轉）
     E = world(ENG, ORG)
