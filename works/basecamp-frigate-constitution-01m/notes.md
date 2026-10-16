@@ -866,3 +866,20 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 鉸鏈自己量過一次（前緣直線擬合，82 層留 68 —— 丟掉的成對層是 pintle／gudgeon 帶）：跟 summit 的數一致。
 - 讀回：models_broken 0、ropes_broken 0、沒有東西引用「舵/…」；export parts 的舵模型 meta 帶 spin。
 - ⚠ 舵的子作品裡有往前貼到船殼上的 gudgeon 帶（憲法號新圖紙 15）⇒ 遊戲裡轉舵時那幾截會跟著轉（只是畫面）。
+
+## 往下通貨艙的梯子（2026-10-16 晚，BTC；Tim：「憲法號彈藥庫掉下去後上不去了」「需要梯子」「憲法號可以參考實際船加上更多梯子嗎」）
+- 量的（Blockside 第一人稱，constitution.vxk）：orlop 地板（z 41、站 42）往下通到貨艙底（站 17）的開口 —— after hatch X 274–285（後彈藥庫 X 200–271 前面，上面 berth、gun 都開著 ⇒ 從上甲板一路掉到底）、X 307–319 一處（落差 2.5 m）；
+  船中段沒有 orlop（前後兩塊平台）⇒ main hatch X 392–419 從 berth deck（站 60）直接到貨艙底（4.3 m）。三處往下都沒有梯子；登記過的 9 座梯子都在 orlop 以上。
+- 實船：模型論壇說 orlop 有兩個艙口往下通彈藥庫、1927 配置艙口放一座梯子（權威圖紙沒找到；現在船上的梯子照遊客擺，未必是 1812 年的）。
+- 艙口底下是隔開的豎井（after hatch 前後艙壁 X 271–273、287–289，左右縱牆 y 151–152、168–169 ⇒ 1.3 × 1.5 m）；貨艙底是 V 形船殼（中線 y 158–162 頂面 z 16，y 157／163 低一格）。
+- 設計 `design/draft_hold_ladders.py`（沿用 draft_orlop_ladders.py 的幾何、顏色、扶手與檢查）：rise 3／run 2 三處都放不下（伸出豎井撞艙壁、貨艙裡的東西）⇒ 陡梯 rise 3／run 1（實船往下通貨艙的梯子本來就陡；第一人稱照固定點爬）；
+  梯腳外空地 5 → 3 格（豎井只有 1.3 m；ladder_points.py 找梯腳點要連續 3 格）；放在中線 y 158–162（兩條側板都踩在 z 16）。
+  - hold-aft：梯頂 X 274 → 梯腳 X 282，orlop → 貨艙，8 階，151 格
+  - hold-mid：X 319 → 311，orlop → 貨艙，8 階，151 格
+  - hold-main：X 419 → 405，berth → 貨艙，14 階，235 格
+  合計 537 格（側板 258、踏板 171、扶手柱 108）；跟現況重疊 0、浮空 0。
+- 子作品 `basecamp-frigate-constitution-01m-ladders-hold`「憲法號 往下通貨艙的梯子」（parent ＝ orlop 甲板、0.1 m、sub）；關聯 `甲板-orlop/梯子-貨艙`（at 0,0,0、meta kind=ladders）。
+  扶手柱頂 12 個、扶手繩 6 條（組裝件，`ladders/manropes`，0.35、slack 1.02；讀回都 ok）；給遊戲的點 12 個（`tools/ladder_points.py --draft --apply`，只對這一件；讀數 `design/verify_ladder_points_hold.json`）：
+  hold-aft foot (283,160,17)／head (271,160,42)、hold-mid foot (310,160,17)／head (322,160,42)、hold-main foot (404,160,17)／head (422,160,60)。
+- 讀數（草稿開著，等 Tim 預覽）：組裝件 export list 1,394,527 ＝ 1,393,990 ＋ 537，多的那 537 格跟清單逐行相同、少 0；stats 1 元件、封閉空腔 0。過程圖 `overlays/stage46_hold_ladders.png`（沿中線剖開、yaw 90）。
+- ⚠ 遊戲那一側：梯腳落在貨艙底 ⇒ 預備水手的「走得到的甲板」多一層（42_hands.js：梯子一頭落在砲甲板以外的高度就算）⇒ 重匯之後有憲法號的戰局不再跟之前逐位元組相同（內容改了，不是程式）。
