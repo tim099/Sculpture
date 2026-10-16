@@ -392,8 +392,8 @@
 			}
 		},
 		{
-			"name": "砲塔裝甲",
-			"work": "meadow-monitor-01m-turret-armor",
+			"name": "砲塔",
+			"work": "meadow-monitor-01m-turret-assy",
 			"at": [
 				269,
 				33,
@@ -404,42 +404,17 @@
 			"pivot": [
 				65,
 				65,
-				28
+				30
 			],
 			"enabled": true,
-			"created_at": "2026-10-16T00:21:40",
+			"created_at": "2026-10-16T23:02:52",
 			"persona": "meadow",
 			"note": "",
 			"meta": {
-				"kind": "armor",
-				"material": "iron",
-				"mount": "甲板-main/砲塔",
-				"render": "smooth"
-			}
-		},
-		{
-			"name": "砲塔頂",
-			"work": "meadow-monitor-01m-turret-roof",
-			"at": [
-				269,
-				33,
-				63
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				65,
-				65,
-				2
-			],
-			"enabled": true,
-			"created_at": "2026-10-16T00:21:41",
-			"persona": "meadow",
-			"note": "",
-			"meta": {
-				"kind": "armor",
-				"material": "iron",
-				"mount": "甲板-main/砲塔"
+				"arc": "-180,180",
+				"fire": "-174,174",
+				"kind": "turret",
+				"rate": 16
 			}
 		}
 	]
