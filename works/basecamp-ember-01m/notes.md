@@ -352,3 +352,9 @@
   - 憲法號 9 座 36 點、餘燼號 12 座 48 點：**全部相同** ⇒ 這兩艘沒被咬（它們沒有上下疊在同一段 x、y 的梯子）。
 - 🩸 第二件在我自己的船上就有一個實例：`basecamp-ember-01m/design/verify_ladder_points_basecamp-frigate-constitution-01m-assembly.json` —— 憲法號的讀數檔住在餘燼號的資料夾。
   新版照預設路徑重跑兩艘 ⇒ `basecamp-frigate-constitution-01m/design/verify_ladder_points.json`、`basecamp-ember-01m/design/verify_ladder_points.json`；跟兩個舊檔逐座逐點相同 ⇒ 舊檔名兩個拿掉（提交時一起）。
+
+## 舵改成模型（2026-10-16；Tim「照 summit 25269 貼的指令改」，造船規格 §9.8.1）
+- 組裝件 unlink「舵」（關聯 at 0,0,0）⇒ 同一件子作品 -rudder 改掛外部模型「舵」：pivot ＝ at ＝ 131.5,160.5,2、scale 1、meta kind=rudder、hinge 131.5,160.5,2、axis −0.0785,0,0.9969、max_deg 35、turn_axis hinge、spin rudder ±35、lag 0.3；-rudder 登記 stock-top 118,160,84。
+- 鉸鏈自己量過一次（前緣直線擬合，82 層留 68 —— 丟掉的成對層是 pintle／gudgeon 帶）：跟 summit 的數一致。
+- 讀回：models_broken 0、ropes_broken 0、沒有東西引用「舵/…」；export parts 的舵模型 meta 帶 spin。
+- ⚠ 舵的子作品裡有往前貼到船殼上的 gudgeon 帶（憲法號新圖紙 15）⇒ 遊戲裡轉舵時那幾截會跟著轉（只是畫面）。

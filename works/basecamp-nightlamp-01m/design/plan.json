@@ -1516,5 +1516,44 @@
       "meta": "照造船規格 §9：kind=wheel／binnacle／capstan，只說這是什麼"
     },
     "not_now": "舵（rudder）、舵索（wheel ropes）—— 這艘還沒有舵"
+  },
+  "rudder": {
+    "title": "新圖紙 20：舵 v1（Tim 2026-10-16：每艘船的舵跟著轉向轉，§9.8.1）",
+    "subwork": {
+      "id": "basecamp-nightlamp-01m-rudder",
+      "title": "夜燈號 舵",
+      "model": "舵",
+      "note": "舵＋舵板上的 pintle 帶；外部模型掛在組裝件（at ＝ pivot ＝ 鉸鏈）"
+    },
+    "base": {
+      "assembly_voxels": 1287385,
+      "note": "現況 ＝ 組裝件（舵加進來之前；模型不算格子）⇒ 套用之後重跑逐位元組一樣"
+    },
+    "colors": {
+      "bottom": 100,
+      "black": 36,
+      "strap": 73
+    },
+    "aft_edge_m": [[-1.13, -0.4588], [-1.323, 8.0]],
+    "top_z_m": 8.0,
+    "half_width": {
+      "fore": 2,
+      "aft": 1,
+      "note": "前緣 5 格（|dy| ≤ 2，跟船尾柱一樣 sided：y 158–162）、往後緣那一半收到 3 格（|dy| ≤ 1）"
+    },
+    "straps": {
+      "count": 6,
+      "rows": 2,
+      "rudder_aft_gap": 2,
+      "note": "只貼在舵板上（兩側凸 1 格），⛔ 不往前貼到船殼 —— 舵會轉，貼在船殼上的那一截會跟著轉出去"
+    },
+    "provenance": {
+      "aft_edge_m": "原圖讀數（目測，階段一 silhouette）：舵後緣在龍骨處 −1.13；舵頂 z 8.0、頂寬 0.45（draft_lines.py 畫的那條線）⇒ 頂端後緣 ＝ 船尾柱後面(8.0) − 0.45 ＝ −1.323；龍骨底 z ＝ −0.4588（Z 0）",
+      "fore_edge": "設計：前緣貼著作品的船尾柱後面（每一層中線那一欄最後面的實心前一格）⇒ 鉸鏈線 ＝ 船尾柱的 8.24°",
+      "top": "設計：頂端順著船尾 counter 的下緣收進去（實船從 helm port 穿進船裡；這裡不刻船殼）",
+      "colors": "設計：跟船殼同一套塗裝 —— 吃水線以下 100、以上 36（換色的高度照船尾柱後面那一欄的實際塗色量）；pintle 帶 73",
+      "straps": "設計：Pl. LI 的舵鐵件看得到但數不清 ⇒ 六道等距；寬度、厚度查不到 ⇒ 設計"
+    },
+    "not_now": "舵頭在船裡的那一段、tiller、舵索（wheel ropes）、rudder pendant chains、船殼上的 gudgeon"
   }
 }

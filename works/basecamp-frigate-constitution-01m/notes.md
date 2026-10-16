@@ -860,3 +860,9 @@ Tim：「是否可以把憲法號的帆桁改成獨立的子模組（用引用�
 - 過程圖：`overlays/stage45_orlop_ladder_{aft,fore,aft_orlop}.png`。
 - 套用（Tim「測試ok 套用草稿然後單層提交吧 然後通知ame」）：梯子 367、berth 梯口 198，changed ＝ 清單格數、apply_mismatch 0；組裝件（不開草稿）export list 1,397,940 格，跟預覽時的草稿逐行相同；stats 1 元件、空腔 0。
 - constitution.vxk 重匯（include=rig,models,parts,meta；封裝回讀逐格對拍 ✓）：checksum 2725233c（繩 919、帆 17、模型 215、帶 meta 230、固定點 1,271）；ropes／sails／models_broken 0。
+
+## 舵改成模型（2026-10-16；Tim「照 summit 25269 貼的指令改」，造船規格 §9.8.1）
+- 組裝件 unlink「舵」（關聯 at 0,0,0）⇒ 同一件子作品 -rudder 改掛外部模型「舵」：pivot ＝ at ＝ 131.5,160.5,2、scale 1、meta kind=rudder、hinge 131.5,160.5,2、axis −0.0785,0,0.9969、max_deg 35、turn_axis hinge、spin rudder ±35、lag 0.3；-rudder 登記 stock-top 118,160,84。
+- 鉸鏈自己量過一次（前緣直線擬合，82 層留 68 —— 丟掉的成對層是 pintle／gudgeon 帶）：跟 summit 的數一致。
+- 讀回：models_broken 0、ropes_broken 0、沒有東西引用「舵/…」；export parts 的舵模型 meta 帶 spin。
+- ⚠ 舵的子作品裡有往前貼到船殼上的 gudgeon 帶（憲法號新圖紙 15）⇒ 遊戲裡轉舵時那幾截會跟著轉（只是畫面）。
