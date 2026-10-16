@@ -102,8 +102,10 @@ def build():
     aperture = (X3 >= 67) & (X3 <= 79) & (Z3 >= 10) & (Z3 <= 46) & (DY3 <= 4)
     solid = (hull | keel | stem | post | dead) & ~aperture
     # 殼厚：船外往裡的距離（頂面往上複製 ⇒ 甲板那一面不算船外）
-    ext = np.concatenate([solid, np.repeat(solid[:, :, ZDK - 1:ZDK], 6, axis=2)], axis=2)
-    d = ndimage.distance_transform_edt(ext)[:, :, :NZ]
+    # ⛔ 2026-10-17 修：以前用 concatenate 把那 6 層接到陣列最頂端（z 170 以上）、沒接在船殼頂面（z 65）正上方 ⇒ 頂面被當成船外、
+    #    往下 5 格（z 61–65）整片算成「殼」⇒ 砲甲板底下多一層 0.5 m 的實心夾層，梯口被封死（Tim：「第一人稱下看到甲板梯子出口被填滿」）
+    ext = solid.copy(); ext[:, :, ZDK:ZDK + 6] |= solid[:, :, ZDK - 1:ZDK]
+    d = ndimage.distance_transform_edt(ext)
     shell = solid & (d <= 5.0)
     inner = solid & ~shell                                         # 船艙（空的）
     backbone = (keel | stem | post | dead) & ~aperture
@@ -190,7 +192,7 @@ def build():
     HATCH_BERTH = [(475, YC), (620, YC)]
     hatch_b = np.zeros((NX, NY, NZ), bool)
     for hx, hy in HATCH_BERTH: hatch_b |= (np.abs(X3 - hx) <= 7) & (np.abs(Y3 - hy) <= 5)
-    berth = inner & (Z3 >= ZB) & (Z3 <= ZB + 2) & (X3 >= 110) & (X3 <= 800) & ~hatch_main & ~hatch_b
+    berth = inner & (Z3 >= ZB) & (Z3 <= ZB + 2) & (X3 >= 110) & (X3 <= 800) & ~hatch_b   # ⛔ 不扣 hatch_main（2026-10-17 修：以前把砲甲板梯口的位置也從住艙甲板挖掉 ⇒ 梯子底下一個通到艙底的洞）
     claim('deck-berth', berth, np.broadcast_to(pcol, berth.shape))
     hold = inner & (Z3 >= ZH) & (Z3 <= ZH + 2) & (X3 >= 190) & (X3 <= 720)
     claim('deck-hold', hold, np.broadcast_to(np.where((Y3 % 4) == 0, C_OAK_D, C_OAK), hold.shape))

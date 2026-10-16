@@ -1,5 +1,8 @@
-# 把作品現在的格子同步成新清單：刻掉多的（與換色的），補上缺的。用法：python -I -X utf8 sync_part.py <作品> <新清單> [<新清單2>…]
+# 把作品現在的格子同步成新清單：刻掉多的（與換色的），補上缺的。用法：python -I -X utf8 sync_part.py [--carve-only] <作品> <新清單> [<新清單2>…]
+#   --carve-only：只刻、不補（船殼、機艙：舵與螺旋槳已拆成模型，新清單裡還有它們的格 ⇒ 補了就長回去；apply_links.py 底部的警告）
 import sys, subprocess, shutil, os, tempfile
+CARVE_ONLY = len(sys.argv) > 1 and sys.argv[1] == '--carve-only'
+if CARVE_ONLY: del sys.argv[1]
 S = shutil.which('senate'); W = sys.argv[1]
 
 
@@ -32,6 +35,7 @@ for f in sys.argv[2:]: new.update(load(f))
 rm = [k for k, c in old.items() if new.get(k) != c]
 add = [k for k, c in new.items() if old.get(k) != c]
 print('%s：現在 %d 格、新的 %d 格 ⇒ 刻 %d、補 %d' % (W, len(old), len(new), len(rm), len(add)))
+if CARVE_ONLY: print('  --carve-only：補的 %d 格不補' % len(add)); add = []
 for name, lst, op in (('rm', rm, 'carvevox'), ('add', add, 'stampvox')):
     for i in range(0, len(lst), 900000):
         part = lst[i:i + 900000]; fn = fwd(os.path.join(tmp, '%s%d.txt' % (name, i)))
