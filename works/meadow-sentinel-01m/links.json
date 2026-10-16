@@ -21,6 +21,7 @@
 			"persona": "meadow",
 			"note": "改裝船的原船（TASK-0656）：拿掉方形駕駛塔、照遮罩挖格子",
 			"hide": [
+				"砲塔",
 				"駕駛塔"
 			],
 			"carve": "meadow-sentinel-01m-carve"
@@ -277,6 +278,32 @@
 				"kind": "turret",
 				"material": "iron",
 				"rate": 40
+			}
+		},
+		{
+			"name": "砲塔",
+			"work": "meadow-sentinel-01m-turret",
+			"at": [
+				269,
+				33,
+				35
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				65,
+				65,
+				43
+			],
+			"enabled": true,
+			"created_at": "2026-10-17T00:26:02",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"arc": "-180,180",
+				"fire": "-174,174",
+				"kind": "turret",
+				"rate": 16
 			}
 		}
 	]
