@@ -70,8 +70,11 @@ def build():
     names = [None]
     stat = {}
 
+    hole = {'m': None}                                           # 煙道裡面（空的）：誰都不能佔 ⇒ 甲板、颶風甲板在那裡開洞
+
     def claim(name, mask, color):
         m = mask & (own == 0)
+        if hole['m'] is not None: m = m & ~hole['m']
         if name not in names: names.append(name)
         i = names.index(name)
         own[m] = i
@@ -120,6 +123,22 @@ def build():
     blade = (np.abs(X3 - 73) <= 1) & (np.abs(Z3 - 28) <= 17) & (np.abs(Z3 - 28) >= 2) & (DY3 <= 5 - np.abs(Z3 - 28) / 6)
     shaft = (X3 >= 77) & (X3 <= 250) & (DY3 <= 1) & (np.abs(Z3 - 28) <= 1)
     claim('engine', hub | blade, C_COPPER)
+    # ── 煙道（Tim 2026-10-16：「煙囪跟發動機中間沒有連接(中間是炮甲板)」）：鍋爐頂 → 煙箱 → 直煙道穿住艙甲板以上、主甲板、砲甲板、颶風甲板 → 煙囪（z 101 起）──
+    #   兩排鍋爐（y ＝ YC ∓ 17）頂上各一條橫煙道（x 336–437，避開中線 x 414–426 的梯子與艙口）匯到前排鍋爐前端頂上的煙箱（x 436–462），
+    #   直煙道 ＝ 煙囪的延長（中心 x 450、外半徑 10、內半徑 8）。牆 2 格、裡面空的（hole：甲板在那裡開洞）；牆先佔 ⇒ 穿過甲板的那幾層是煙道牆。
+    FNX = 450
+    rt = np.hypot(X3 - FNX, Y3 - YC)
+    sbox = (X3 >= 436) & (X3 <= 462) & (DY3 <= 26) & (Z3 >= 44) & (Z3 <= 52)
+    sbox_in = (X3 >= 438) & (X3 <= 460) & (DY3 <= 24) & (Z3 >= 44) & (Z3 <= 50)          # 底是開的（接鍋爐頂）
+    flue = np.zeros((NX, NY, NZ), bool); flue_in = np.zeros((NX, NY, NZ), bool)
+    for ry in (YC - 17, YC + 17):
+        dr = np.abs(Y3 - ry)
+        flue |= (X3 >= 336) & (X3 <= 437) & (dr <= 7) & (Z3 >= 44) & (Z3 <= 50)
+        flue_in |= (X3 >= 338) & (X3 <= 438) & (dr <= 5) & (Z3 >= 44) & (Z3 <= 48)   # 底是開的、前端通煙箱
+    trunk = (rt <= 10) & (Z3 >= 51) & (Z3 <= ZTOP)
+    trunk_in = (rt <= 8) & (Z3 >= 50) & (Z3 <= ZTOP)
+    hole['m'] = sbox_in | flue_in | trunk_in
+    claim('boiler', (sbox | flue | trunk) & ~hole['m'], C_IRON_D)
     # ── 撞角（鑄鐵：船頭水線下，x 851–868、z 34–54）──
     tr = (X3 - XB) / 18.0
     ram = (X3 > XB) & (X3 <= XB + 18) & (Z3 >= 34 + tr * 6) & (Z3 <= 54 - tr * 8) & (DY3 <= 7 * (1 - tr) + 1)
@@ -175,13 +194,16 @@ def build():
     claim('deck-berth', berth, np.broadcast_to(pcol, berth.shape))
     hold = inner & (Z3 >= ZH) & (Z3 <= ZH + 2) & (X3 >= 190) & (X3 <= 720)
     claim('deck-hold', hold, np.broadcast_to(np.where((Y3 % 4) == 0, C_OAK_D, C_OAK), hold.shape))
-    # ── 機艙：四座鍋爐（橫躺的圓筒，空心）＋主機（箱，空心）＋軸 ──
-    eng = np.zeros((NX, NY, NZ), bool)
+    # ── 機艙：四座鍋爐（橫躺的圓筒，空心；部件「鍋爐」，跟煙道一起，造船規格 §9.6）＋主機（箱，空心）＋軸 ──
+    boil = np.zeros((NX, NY, NZ), bool); boilers = []
     for bx0, bx1 in ((330, 392), (400, 462)):
         for by in (YC - 17, YC + 17):
             r = np.hypot(Y3 - by, Z3 - 35)
-            eng |= (X3 >= bx0) & (X3 <= bx1) & (r <= 12) & ((r >= 10.5) | (X3 <= bx0 + 1) | (X3 >= bx1 - 1))
-    box = (X3 >= 255) & (X3 <= 318) & (DY3 <= 20) & (Z3 >= ZH + 3) & (Z3 <= 42)
+            boil |= (X3 >= bx0) & (X3 <= bx1) & (r <= 12) & ((r >= 10.5) | (X3 <= bx0 + 1) | (X3 >= bx1 - 1))
+            boilers.append([(bx0 + bx1) // 2, by, 35])
+    claim('boiler', boil & inner, C_IRON_D)
+    eng = np.zeros((NX, NY, NZ), bool)
+    box =(X3 >= 255) & (X3 <= 318) & (DY3 <= 20) & (Z3 >= ZH + 3) & (Z3 <= 42)
     boxin = (X3 >= 257) & (X3 <= 316) & (DY3 <= 18) & (Z3 >= ZH + 3) & (Z3 <= 40)
     eng |= box & ~boxin
     claim('engine', eng & inner, C_IRON_D)
@@ -235,7 +257,8 @@ def build():
         lo, hi = steps[0], steps[-1]
         ladders.append({'name': nm, 'foot': [int(xa - 3), YC, z0_], 'lo': [lo[0], YC, lo[1] + 1], 'hi': [hi[0], YC, hi[1] + 1], 'head': [hx + 9, YC, z1_]})
     claim('ladders', lad | ltread, C_OAK)
-    meta = {'names': names, 'stat': stat, 'ladders': ladders, 'mags': mags, 'ports': {'S': S_PORTS, 'P': P_PORTS}, 'pilothouse': PH, 'funnel': FN, 'flagstaff': [FS[0], FS[1], ZTOP + 40]}
+    meta = {'names': names, 'stat': stat, 'ladders': ladders, 'mags': mags, 'ports': {'S': S_PORTS, 'P': P_PORTS}, 'pilothouse': PH, 'funnel': FN, 'flagstaff': [FS[0], FS[1], ZTOP + 40],
+            'boilers': boilers, 'uptake': [449, YC, 44]}   # 鍋爐：每座中心（boiler-1…4）、煙道底（煙箱底那一片的中心）
     return own, col, names, meta
 
 

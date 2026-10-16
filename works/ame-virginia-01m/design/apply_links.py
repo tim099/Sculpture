@@ -25,6 +25,7 @@ LINKS = [
     ('撞角', W + '-ram', {'material': 'iron', 'render': 'smooth'}),
     ('機艙', W + '-engine', {'material': 'iron'}),
     ('梯子', W + '-ladders', {'kind': 'ladders'}),
+    ('鍋爐', W + '-boiler', {'kind': 'boiler', 'boilers': len(M['boilers']), 'funnel': '煙囪'}),   # 四座鍋爐＋煙道（2026-10-16；造船規格 §9.6）；⛔ 不標 iron：煙道牆 2 格厚（真的鐵板約 1 公分）⇒ 標了多 150 噸
     ('彈藥庫-前', W + '-magazine-fore', {'kind': 'magazine', 'pos': 'fore', 'powder_lb': M['mags']['magazine-fore']['kegs'] * 100}),
     ('彈藥庫-後', W + '-magazine-aft', {'kind': 'magazine', 'pos': 'aft', 'powder_lb': M['mags']['magazine-aft']['kegs'] * 100}),
 ]
@@ -38,3 +39,7 @@ for L in M['ladders']:
 for nm in ('magazine-fore', 'magazine-aft'):
     for k in ('blast', 'door'):
         run(('op', 'work'), ('sub', 'anchor'), ('work', W + '-' + nm), ('persona', 'ame'), ('name', k), ('at', '%d,%d,%d' % tuple(M['mags'][nm][k])))
+for i, p in enumerate(M['boilers']):                               # 鍋爐：每座中心 boiler-1…n、煙道底 uptake
+    run(('op', 'work'), ('sub', 'anchor'), ('work', W + '-boiler'), ('persona', 'ame'), ('name', 'boiler-%d' % (i + 1)), ('at', '%d,%d,%d' % tuple(p)))
+run(('op', 'work'), ('sub', 'anchor'), ('work', W + '-boiler'), ('persona', 'ame'), ('name', 'uptake'), ('at', '%d,%d,%d' % tuple(M['uptake'])))
+# ⚠ 2026-10-16：舵（summit）與螺旋槳（kotoko）已拆成模型 ⇒ 重跑 gen_virginia.py 之後 ⛔ 不要整份同步船殼與機艙（會把舵、螺旋槳的格補回去）；只同步改到的部件。
