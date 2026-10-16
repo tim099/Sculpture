@@ -203,12 +203,13 @@ def build():
             boilers.append([(bx0 + bx1) // 2, by, 35])
     claim('boiler', boil & inner, C_IRON_D)
     eng = np.zeros((NX, NY, NZ), bool)
-    box =(X3 >= 255) & (X3 <= 318) & (DY3 <= 20) & (Z3 >= ZH + 3) & (Z3 <= 42)
+    box = (X3 >= 255) & (X3 <= 318) & (DY3 <= 20) & (Z3 >= ZH + 3) & (Z3 <= 42)
     boxin = (X3 >= 257) & (X3 <= 316) & (DY3 <= 18) & (Z3 >= ZH + 3) & (Z3 <= 40)
     eng |= box & ~boxin
     claim('engine', eng & inner, C_IRON_D)
-    claim('engine', shaft & ~solid, C_IRON_D)
-    claim('engine', shaft & solid & (own == 0), C_IRON_D)
+    # 軸（部件「軸」，kind=shaft；TASK-0653：傳動件 ⇒ 照「通不通、還有幾條路」把主機的動力傳到螺旋槳）：x 77（轂後）–250（主機前）、中線 ±1、z 27–29
+    claim('shaft', shaft & ~solid, C_IRON_D)
+    claim('shaft', shaft & solid & (own == 0), C_IRON_D)
     # ── 彈藥庫（艙底甲板上：前 x 640–690、後 x 200–245）：銅皮內襯的房間、門洞 5 格寬 ──
     mags = {}
     for nm, x0_, x1_ in (('magazine-fore', 640, 690), ('magazine-aft', 200, 245)):
