@@ -135,7 +135,7 @@ def build():
     deck = raft & (Z3 >= ZDB) & (e > T_IRON) & ~hatches & ~fhole
     TX = P['turret_x']
     rt = np.hypot(X3 - TX, Y3 - YC)
-    claim('deck-main', (Z3 == ZD) & (np.abs(rt - (P['turret_r_out'] - 1.5)) <= 0.8) & deck, C['brass'])   # 砲塔底下嵌在甲板裡的青銅環
+    # 砲塔底下原本嵌一圈青銅環（C['brass']）；Tim 2026-10-16：遊戲裡砲塔外緣露出黃色鋸齒、像破圖 ⇒ 拿掉，那一圈照甲板的顏色
     claim('deck-main', deck & (Z3 == ZD), C['deck'])
     claim('deck-main', deck & (Z3 < ZD), C['oak'])
     beams = hold & (Z3 >= ZDB - 3) & (Z3 < ZDB) & ((X3.astype(int) % P['beam_pitch']) < 2) & ~hatches & ~cut & ~fhole

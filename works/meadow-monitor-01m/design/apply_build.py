@@ -23,7 +23,7 @@ PARTS = [
     ('hull', W, '莫尼特號 船殼', 'part_hull.txt', HULL, 0.1),
     ('raft-iron', W + '-raft-iron', '莫尼特號 浮筏鐵甲（5×1 in）', 'part_raft-iron.txt', HULL, 0.1),
     ('raft-wood', W + '-raft-wood', '莫尼特號 浮筏橡木背襯與底板', 'part_raft-wood.txt', HULL, 0.1),
-    ('deck-main', W + '-deck-main', '莫尼特號 主甲板（鐵板＋木、樑、青銅座圈）', 'part_deck-main.txt', HULL, 0.1),
+    ('deck-main', W + '-deck-main', '莫尼特號 主甲板（鐵板＋木、樑）', 'part_deck-main.txt', HULL, 0.1),
     ('deck-berth', W + '-deck-berth', '莫尼特號 住艙甲板', 'part_deck-berth.txt', HULL, 0.1),
     ('pilothouse', W + '-pilothouse', '莫尼特號 駕駛塔', 'part_pilothouse.txt', HULL, 0.1),
     ('funnel', W + '-funnel', '莫尼特號 煙囪（右舷；左舷鏡像）', 'part_funnel.txt', HULL, 0.1),
