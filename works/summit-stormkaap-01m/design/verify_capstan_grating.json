@@ -1,0 +1,75 @@
+{
+ "grating": {
+  "cells": 1562,
+  "coaming_top_all_solid": true,
+  "file": {
+   "cells": 1562,
+   "path": "masks/grating/main.vox.txt",
+   "sha256": "ae15ba95832d8f4c43c32c3c3941d10d761a5bf7764c738ad972037920883f04"
+  },
+  "hit_world": 0,
+  "mpv": 0.05,
+  "rotten": 10,
+  "size": [
+   34,
+   38,
+   4
+  ],
+  "title": "風暴角號｜上甲板主艙口的格柵（0.05 m；外部模型 scale 0.5）",
+  "work": "summit-stormkaap-01m-grating-main",
+  "world_box": [
+   [
+    306,
+    121,
+    80
+   ],
+   [
+    323.0,
+    140.0,
+    82
+   ]
+  ]
+ },
+ "models": [
+  {
+   "at": [
+    268,
+    130,
+    80
+   ],
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "kind": "capstan"
+   },
+   "name": "絞盤",
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.163,
+   "work": "basecamp-ember-01m-capstan"
+  },
+  {
+   "at": [
+    306,
+    121,
+    80
+   ],
+   "host_link": "甲板-上",
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "meta": {
+    "kind": "grating"
+   },
+   "name": "格柵-主艙口",
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "work": "summit-stormkaap-01m-grating-main"
+  }
+ ]
+}
