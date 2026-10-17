@@ -105,3 +105,26 @@
 - 匯出（`format=vxk include=rig,models,parts,meta`，同 Blockside `admin.py import`）：287,866 格（9 色）、checksum `25a00757`、繩 29、帆 10、模型 79（網格 22 份）、meta 85、固定點 250。
 - 預覽 preset：`藏船殼`、`主砲甲板`、`露天甲板`、`桅帆`。
 - 圖：`design/v2/v2_side.png`、`v2_top.png`、`v2_inside.png`。
+
+---
+
+## v3（2026-10-17）—— 照憲法號的規格補靜索、繩梯、舵頭與舵索，加船首像
+
+Tim：「請參考憲法號的規格 優化一下妳的船吧(包含桅杆的繩梯 船舵等)」「另外可以試著加船頭像(這是妳的船 加上個人特色吧)」。
+產生程式在 `design/v3/`（全部經 CLI；重跑 ⇒ links／models／ropes／sails、channels 與三根桅、舵的固定點逐位元組相同，10-17 量過）。
+
+| 步驟 | 程式 | 做了什麼（讀數） |
+|---|---|---|
+| channels | `rig_standing.py` | 新子作品 `kiara-phoenix-01m-channels`（一舷，框 at 120,120,64、300×30×14）＋關聯 `channels`／`channels-鏡像`（mirror=y、at.y 31）：板 z 70..71、往外 8 格、兩頭收 4 格圓角；下 deadeye 3×3 去四角 2 格厚（104）坐在外緣；chain plate 從板底斜到船殼 z 65（下層砲門頂 64 之上）。一舷 2,923 格；碰撞 0 |
+| deadeye 位置 | 同上 | 間距 6、第一個在桅前 4：前桅 6＋2（backstays）、主桅 7＋2、後桅 5＋1；**後桅避開 carronade 砲門 x 157..161**（第一個放 165、接著 152…，shroud 幾乎直上、砲門前面不能有繩 —— 憲法號 channels v2 的教訓） |
+| 桅的固定點 | 同上 | 每根桅：`shrouds-S/P`（hounds：平台下一格的桅側）、`futtock-S/P`、`rim-S/Pn`／`rimlow-S/Pn`（平台頂／底層邊緣）、`tm-S/P`（topmast head）、`xtree-S/Pn`、`tg-head`（前、主桅） |
+| 靜索 | 同上 | lower shrouds 36、backstays 10、上 deadeye 46（粗 3 的短繩當圓盤）＋lanyards 138、futtock 16、topmast shrouds 16、topgallant shrouds 8；色 #2b2620、拉直；meta `kind=shroud／backstay` |
+| ratlines | 同上 | 橫繩組 12（`<桅>-<lower|topmast>-<P|S>`，step 4、lower start 7／stop 16、topmast 4／10、min_span 5）⇒ 170 道；**lower 6 組標繩梯 climb=1**：foot ＝ 舷牆內側甲板再往內 2 格（照露天甲板 floor ±2、站得住 ＝ 腳下實心＋上 7 格空），head ＝ 桅頂平台靠這一舷的邊往內 2 格 |
+| 舵 | `fix_rudder.py` | 舵頭原本停在 z 55、正上方只有 x 92 一欄碰到船尾 ⇒ 舵柱 3×3 往上長到 z 60（前緣 ＝ min(舵軸延長, 船尾柱 − 1)，z 58 一道鐵箍），頂在 counter 底下；`stock-top` 改 77,90,60（子作品座標）。舵索 2 條（共用舵輪的 drum-rope-a／b → 正下方甲板面，組 steering） |
+| 船首像 | `gen_figurehead.py` | 新子作品 `kiara-phoenix-01m-figurehead`《炎羽》（62×57×31、at 428,62,40）＋關聯 `船首像`：前傾的鳳凰貼艏柱前緣，S 形頸往前伸、頭在艏斜桅下緣下 2 格以上；金喙、深藍眼、紅冠金尖；翅膀往後收、貼著船頭兩舷的 2 格浮雕（內紅 → 橙 → 琥珀、上緣暗紅勾邊）；翅下兩道尾焰到 x 450（避開錨爪 445,107,45）。3,297 格、兩舷對稱、碰撞 0 |
+
+- 驗收讀數（組裝件，10-17）：297,009 格、1 元件、空腔 0、link_overlap 0；鏡像差照舊只有兩個彈藥庫（1,104／1,280）；繩 471（ratlines 子繩 170）、帆 10、模型 80，broken 全 0。
+- 匯出 `exports/kiara_phoenix_v3.vxk`（`include=rig,models,parts,meta`）：297,009 格（18 色）、checksum `01552606`、繩 471、帆 10、模型 80（網格 23 份）、meta 86、固定點 365；封裝回讀逐格相同。
+- 🩸 這一輪自己抓到的：①落腳點第一版站到了舷牆頂與船殼側面的凸緣上（從舷外往內找「第一格站得住」）⇒ 改成從中線往外、照甲板 floor 找；②`fix_rudder.py` 第一版重跑會把「現在的舵頂」當起點再長一段（第二次多了 36 格，已 undo）⇒ 改成只看原本的舵板（z ≤ 55）。
+- ⚠ 沒做／沒量：遊戲那側還沒重匯（`admin.py reimport`／`shipcheck` 要 ame 那側跑）；繩梯在遊戲裡爬不爬得上去沒實測；砲索、梯子扶手繩、braces 還沒掛（憲法號有）。
+- 圖：`design/v3/v3_side.png`、`v3_figurehead.png`、`v3_full_sails.png`。

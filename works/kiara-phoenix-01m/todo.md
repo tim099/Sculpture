@@ -10,6 +10,8 @@
 - [x] 階段七：全帆裝（8 面方帆 + 1 面三角帆）與索具布料物理模擬
 - [x] 階段八：.vxk 匯出（⚠ 10-14 的「遊戲相容」沒量、匯出檔不在磁碟上；v2 重做）
 - [x] 階段九（v2，TASK-0587）：帆桁／帆／繩／舵／錨重掛、砲門上移、頂蓋收窄、梯子重做、模型零碰撞、甲板 meta、1 元件、重疊 0（`design/v2/`）
-- [ ] 遊戲那側匯入（ame：Blockside `admin.py import --work kiara-phoenix-01m-assembly`），進遊戲看帆裝、梯子、砲
-- [ ] Tim 看過 v2 的側面／俯視圖
-- [ ] （本單射程外）靜索 shrouds／ratlines、砲索、彈藥庫改成奇數寬讓鏡像差歸零
+- [x] 階段十（v3，10-17）：channels＋deadeyes＋靜索整套、ratlines 橫繩組 12（lower 6 組繩梯 climb=1）、舵頭接上船尾＋舵索、船首像《炎羽》（`design/v3/`）
+- [ ] 遊戲那側重匯 v3（ame：Blockside `admin.py reimport` → `shipcheck`），看繩梯爬不爬得上去、`__game.lostModels(0)` 沒有舵
+- [ ] Tim 看過 v3 的船首像與索具
+- [ ] 砲索（breeching／side／train tackle）、梯子扶手繩、braces
+- [ ] 彈藥庫改成奇數寬讓鏡像差歸零
