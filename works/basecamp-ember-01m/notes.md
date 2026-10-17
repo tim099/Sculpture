@@ -358,3 +358,23 @@
 - 鉸鏈自己量過一次（前緣直線擬合，82 層留 68 —— 丟掉的成對層是 pintle／gudgeon 帶）：跟 summit 的數一致。
 - 讀回：models_broken 0、ropes_broken 0、沒有東西引用「舵/…」；export parts 的舵模型 meta 帶 spin。
 - ⚠ 舵的子作品裡有往前貼到船殼上的 gudgeon 帶（憲法號新圖紙 15）⇒ 遊戲裡轉舵時那幾截會跟著轉（只是畫面）。
+
+## 往下通貨艙的梯子（2026-10-17，BTC；Tim「補吧」—— 接 TASK-0519 留言 #4）
+- 量的（組裝件 export list，沿中線 y 160 看 z 15–65）：x < 406 跟憲法號同形 ⇒ after hatch X 274–285、X 307–319 從 orlop（站 42）往下、main hatch X 401–419 從 berth（站 60）往下，三處都沒有梯子。
+  🆕 **前艙口 X 574–600 從上甲板一路通到貨艙底**：憲法號這底下是前彈藥庫、頂擋著；餘燼號階段二十一換成中央彈藥庫、拿掉前後兩間（10-13）⇒ 前艙口直接掉到底 —— 那天拿掉的時候沒量到它上面還站著一個艙口（碎片 lesson_cleanup-is-digging 的又一個樣本）。
+- 判準：walkback.py 照遊戲走法報前貨艙 0 格回不來（沿船殼內壁爬得上去）、只算 0.3 m 台階報 10,294。憲法號同一種情形 Tim 10-16 在遊戲裡就是上不來 ⇒ 這把尺的「走得回」比現場寬，不拿它當不用補的理由；照憲法號：掉得下去的艙口都放一座。
+- 設計 `design/draft_hold_ladders.py`（引用憲法號 draft_hold_ladders.py／draft_orlop_ladders.py 的幾何、顏色、扶手、檢查；只換船、候選位置、陣列寬 1100）：
+  - hold-aft、hold-mid、hold-main：跟憲法號同位置同形（陡梯 rise 3／run 1；151／151／235 格）—— 跟憲法號那份清單逐格逐色相同（537／537）。
+  - hold-fore：梯頂 X 574（接 orlop 前平台後緣 X 566–573）往船頭下到 X 589，rise 3／run 2，8 階，209 格。
+  合計 746 格（側板 386、踏板 216、扶手柱 144）；跟現況重疊 0、浮空 0。
+- 子作品 `basecamp-ember-01m-ladders-hold`「餘燼號 往下通貨艙的梯子」（parent ＝ orlop 甲板、1024×320×800、0.1 m、sub）；關聯 `甲板-orlop/梯子-貨艙`（at 0,0,0、meta kind=ladders）。**格子在草稿**，等 Tim 預覽。
+  扶手柱頂 16 個（子作品）、扶手繩 8 條（組裝件 `ladders/manropes`，0.35、slack 1.02；`work ropes` 讀回 8 條都 ok）。
+  給遊戲的點 16 個（`tools/ladder_points.py --draft --apply`，只對這一件；讀數另存 `design/verify_ladder_points_hold.json`，不蓋全船那份）：後三座的點跟憲法號一樣；hold-fore foot (590,160,17)／head (571,160,42)。
+- 讀數（草稿開著）：組裝件 export list 1,823,888 → **1,824,634**，多的 746 格跟清單逐格逐色相同、少 0、改色 0；stats structure 1 元件、封閉空腔 0、link_overlap 0。
+  walkback（同一份）：只算 0.3 m 台階時前貨艙 10,294 → **0**、全船 11,404 → 1,110；照遊戲走法 892 不變（船頭與舷邊，不在貨艙）。剩一小塊 X 162–166、z 35–39 的 47 格（船尾最後面、orlop 底下）嚴格版回不來，照遊戲走法回得來 —— 沒動，記著。
+- 過程圖 `overlays/stage_hold_ladders_section.png`（region 240..640 × 100..163、yaw 90、沿中線剖開；左船尾右船頭，中間紅框是中央彈藥庫）。
+- **套用**（Tim「測試ok 套用草稿，重匯 vxk 跑 shipcheck，跟 ame 說，然後單層提交」）：746 格、一筆事件、沒有殘留草稿；套用後的 export list 跟草稿那份格子逐行相同（只差檔頭的草稿標記與雜湊）。
+- 匯出 `exports/ember.vxk`（include=rig,models,parts,meta）：1,824,634 格、checksum **1edf1130**、封裝回讀逐格對拍 ✓；繩 1,095、帆 17、模型 345；ropes／sails／models_broken 0。⚠ 同一份格子匯兩次檔案 sha256 不同（格子 checksum 相同）—— 哪一欄在變沒查。
+  Blockside `reimport` 對 _cache 舊版：格子 1,823,888 → 1,824,634（＋746）、繩 1,087 → 1,095（＋8）、零件 49 → 50（＋`甲板-orlop/梯子-貨艙`），其他欄位不變。
+- **匯入檢查**（Blockside HEAD 6ac8d2d 的 git archive＋共用工作區 _cache 複製、沒有舊 reports；共用工作區沒動）：✗ 0、⚠ 11；同一個 HEAD、舊 _cache 的成品跑出來的報告逐行相同 ⇒ 這次沒有新增警告（水線退路、站位兩筆、火藥取用點八筆，都是之前就有的）。
+  報告「梯子 12」沒變：預備水手只收兩頭都落在某一層甲板的梯子（Blockside 42_hands.js:27），貨艙底不是一層 ⇒ 貨艙梯子不進水手的路網（憲法號同：登記 12 座、報告 9 座）。第一人稱（81_fps.js）直接讀所有 kind=ladders 的部件 ⇒ 四座都在 —— ⚠ 遊戲裡沒實測。
