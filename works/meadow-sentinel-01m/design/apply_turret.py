@@ -1,6 +1,6 @@
 # 哨兵號的主砲塔改成自己的一座（TASK-0659／0661；Tim 2026-10-17：「哨兵號真的去用新功能造砲塔」「因為我想用真實用在遊戲內的船確認功能ok」）：
 #   原船（莫尼特號）的砲塔藏起來（link_hide 加「砲塔」），換一座 -turret（砲塔層 kind=turret，造船規格 §4.8）：
-#     圓筒、頂（沿用莫尼特號的 -turret-armor、-turret-roof）＋吊籃地板 -turret-basket（半徑 8–28，中間留洞給住艙甲板上來的艙口梯；會轉的甲板）
+#     圓筒、頂（沿用莫尼特號的 -turret-armor、-turret-roof）＋吊籃地板 -turret-basket（半徑 14–28，中間留洞給住艙甲板上來的艙口梯；會轉的甲板）
 #     ＋砲塔裡的備便彈藥箱 -turret-locker（8×7×7、一桶，kind=magazine；Tim 2026-10-17「減成一桶」—— 原本 8×12 兩桶；放在砲尾後面靠圓筒內側，跟砲尾之間留走道 ——
 #       ⛔ 先用甲板上那件 14×14 的 -locker ⇒ 剛好擋在兩門砲放藥箱的位置中間，砲-b 那邊走不到取用點）＋兩門 XI 吋（照原本的擺法，固定在砲塔上）
 #     ＋頂上正中央疊一座開放的砲房 -turret-top（kind=turret、arc ±180、30°／秒；平台＋前盾＋兩片側翼，跟速射砲的砲房同一型）＋一門三叉戟速射砲。
@@ -95,7 +95,10 @@ def model(wid, nm, src, at, pivot, rotate, scale, meta, mirror=''):
 
 
 # ── 吊籃地板（主砲塔座標，z 0 ＝ 船的 z 35）──
-basket = {(x, y, 0): IRON for x in range(65) for y in range(65) if 8 <= math.hypot(x + 0.5 - 32.5, y + 0.5 - 32.5) <= 28}
+RIN = 14                                                                 # 中間的洞：原本 8；Tim 2026-10-17「如果把炮塔下方洞口開大一些可行嗎」—— 住艙甲板上來的艙口梯是斜的，最後一段（半徑 10–13）以前從吊籃底下穿上來（第一人稱往上看是一整片鐵板）；XI 吋砲班最近的站位在半徑 16
+basket = {(x, y, 0): IRON for x in range(65) for y in range(65) if RIN <= math.hypot(x + 0.5 - 32.5, y + 0.5 - 32.5) <= 28}
+if '--basket' in sys.argv:                                                # 只同步吊籃（不重跑整份：關聯的 meta 已經用 sub=meta 改過）
+    sync(BASKET, basket, '65,65,1'); sys.exit(0)
 
 # ── 砲塔裡的彈藥箱（作品座標，框 8×7×7、箱底 z 0）：鐵殼、鉛灰的蓋、兩個黃銅提把；一桶憲法號火藥桶（Tim 2026-10-17：「減成一桶」）──
 BRASS = 180
@@ -163,5 +166,5 @@ link(TUR, '頂砲房', TOP, (tlo[0] - AT[0], tlo[1] - AT[1], tlo[2] - AT[2]), {'
 for nm, mir in (('砲-a', ''), ('砲-b', 'x')):
     model(TUR, nm, 'meadow-monitor-01m-turret-gun', (32.5, 32.5, 0), (66.5, 66.5, 0), (0, 0, 90), (0.5, 0.5, 0.5), {'kind': 'gun', 'gun': '11d'}, mir)
 model(TOP, '速射砲-頂', GW, (gat[0] - tlo[0], gat[1] - tlo[1], gat[2] - tlo[2]), PIV, (0, 0, ROT), (SC, SC, SC), {'kind': 'gun', 'gun': 'trident', 'barrels': 3, 'deck': 'main', 'side': 'C'})
-link(W, '砲塔', TUR, AT, {'kind': 'turret', 'arc': '-180,180', 'fire': '-174,174', 'rate': 16})
+link(W, '砲塔', TUR, AT, {'kind': 'turret', 'arc': '-180,180', 'rate': 16})   # 沒有開火死角（Tim 2026-10-17：靠砲線檢查 safe=1）
 print('done')

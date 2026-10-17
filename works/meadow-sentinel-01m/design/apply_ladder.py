@@ -19,10 +19,10 @@ def run(*a):
 
 for nm, y in (('繩梯-a', YA), ('繩梯-b', YB)):
     run(('op', 'work'), ('sub', 'rope'), ('persona', PER), ('work', TUR), ('name', nm), ('from', '%g,%g,%g' % (X, y, ZT)), ('to', '%g,%g,%g' % (X, y, ZB)),
-        ('slack', 1), ('color', '#2b2620'), ('thickness', 0.4), ('group', 'ladders/hatch'), ('note', '後艙口的繩梯：直繩（垂到吊籃）'))
+        ('slack', 1), ('color', '#2b2620'), ('thickness', 0.8), ('group', 'ladders/hatch'), ('note', '後艙口的繩梯：直繩（垂到吊籃）'), ('overwrite', 1))
     print('  繩 %s' % nm)
 run(('op', 'work'), ('sub', 'ratlines'), ('persona', PER), ('work', TUR), ('name', '繩梯-後艙口'), ('rope_a', '繩梯-a'), ('rope_b', '繩梯-b'),
-    ('step', 3), ('start', 2), ('stop', 2), ('thickness', 0.3), ('color', '#2b2620'), ('group', 'ladders/hatch'),
-    ('climb', 1), ('foot', '48,32,1'), ('head', '46,32,29'), ('note', '後艙口的繩梯：吊籃 ⇄ 砲塔頂'))
+    ('step', 3), ('start', 2), ('stop', 2), ('thickness', 0.6), ('color', '#2b2620'), ('group', 'ladders/hatch'),
+    ('climb', 1), ('foot', '48,32,1'), ('head', '46,32,29'), ('note', '後艙口的繩梯：吊籃 ⇄ 砲塔頂'), ('overwrite', 1))
 print('  橫繩組 繩梯-後艙口（climb）')
 print('done')
