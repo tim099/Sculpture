@@ -318,3 +318,21 @@ Tim 2026-10-16：「動力部件可以設定需要船員工作(鍋爐) 沒有會
   - 預覽讀數：平滑 325,182 格｜材質 boiler 266,195、iron 58,987。過程圖 `overlays/metal_engine_before.png`、`metal_engine_after.png`、`metal_engine_close.png`。主機的斜連桿（十字截面）平滑後扭成麻花狀，跟主機同一件、蓋不回方塊 ⇒ 留著；鍋爐頂的煙道殼是逐層內收的格 ⇒ 平滑後看得到一圈一圈的稜。
   - 遊戲對拍（Blockside HEAD 乾淨副本＋_cache 複本：reimport → build → shipcheck，⛔ 沒動工作區）：🩸 **metasync 不夠**，材質與平滑是匯出時烤進 .vxk 檔頭的（metasync 後讀數一格沒變）⇒ 要整份 reimport。reimport 後：平滑 6 條關聯 325,182 格；**⚠ 1「材質表沒有 boiler ⇒ 照全船預設 oak」**（boiler 266,195 格算橡木 186.3 噸，重量跟改之前一樣，但遊戲裡不反光）。⇒ 遊戲材質表要加 `boiler`（kind metal、metal／rough 同上、density 由遊戲端定）才會反光、⚠ 消失。Tim 2026-10-17：「boiler 的數值…妳自己加」⇒ 遊戲材質表加 `boiler`：kind metal、density 0.9（一座 39.7 m³ 估鐵約 18 t＋水約 20 t ≈ 0.95，格裡另含空心煙道殼與磚座 ⇒ 0.9）、hard 1.5、flammable 0、metal 0.85、rough 0.45；⛔ 不寫 pen（鍋爐不是裝甲）。
   - 遊戲：Blockside 56f8535（材質表＋整份 reimport）合進 dev f4ac89c、推上測試站（`git push dev heads/dev:dev`）；shipcheck **✗ 0、⚠ 0**，boiler 266,195 格 **239.6 噸**（之前照 oak 186.3 噸，+53.3 噸）；平滑 6 條關聯 325,182 格。還沒發版到 main／origin（等 Tim 在測試站看過）。
+
+## 階段十五 內部陳設第一批（2026-10-17，TASK-0682 裝飾 meta）
+
+Tim：「試著繼續裝修拿破崙號吧(裝飾可以額外標meta 之後遊戲會有性能選項隱藏裝飾)」→ 開了 TASK-0682（遊戲畫質「裝飾」；Blockside e27d835、合進 dev 5012386）。
+設計 `design/draft_furnish.py`（擺放照階段九 draft_fittings：取樣點不撞「組裝件 links=all ＋ 模型外框」、梯子端點保留區、腳下要有甲板）；落格 `design/tools/apply_furnish.py`。
+全部是外部模型、meta `deco=1`（造船規格 §9.9：畫質「裝飾」關著載入時就不載入；開著只畫，不算重量、不被打）。0.05 m 子作品、scale 0.5、pivot ＝ 底面中心。
+- `-galley` 爐灶（32,684 格）：`甲板-upper/爐灶` @726,200.5,116 —— 前艙口與前桅之間的中線（候選 726–735；715 起擋到東西）。磚座、鑄鐵身（色 36；37 畫出來是藏青，改掉了）、朝船尾兩扇烤爐門＋火門、兩只銅鍋、煙管照頭上第一個實心接到上甲板底面（世界 z 139）。
+- `-bitts` 錨鏈繫纜柱（5,610）：`甲板-upper/繫纜柱` @838 —— 錨鏈孔（hawse x 878）後面。
+- `-fiferail` 繫索栓圍欄（1,980）：`甲板-spar/繫索栓圍欄-main` @460、`-fore` @757（中心 ＝ 桅軸；柱腳 72／72 著地）。
+- `-shotrack` 砲彈架（1,543）：`甲板-lower`／`甲板-upper` 的 `砲彈架-S`／`-P`，主艙口兩舷圍欄外側（y 214／187，P mirror=y）。
+- ⛔ 沒放：主桅旁的水泵 —— 遊戲有抽水機功能（45_pumps.js pumpModels），不能標裝飾；要做就照功能件做。
+
+讀數：
+- 產生程式重跑：擺放與四份清單逐位元組相同；四件子作品匯出 ＝ 清單（缺 0、多 0，含色）。
+- 遊戲（Blockside worktree，之後合進 dev）：拿破崙號匯入檢查表格那一列（模型 366、水線 79…）跟加陳設之前逐字相同 ⇒ 裝飾不算重量；「裝飾：8 個模型」。
+  瀏覽器 g_deco=1 ⇒ 畫 8、模型網格 70、111,152 三角形；g_deco=0 ⇒ 0、65、107,628。同種子 90 秒對戰（seed 7、合併後 seed 11）開／關 dump 逐字相同。
+- 過程圖 `overlays/furnish_{galley_piece,fiferail_piece,bow_upper,spar_main,lower_main_hatch}.png`。
+- ⚠ 另外看到的（不是本階段）：dev 新的梯子檢查對鍋爐頂四座梯子報 ⚠ 4（上端落在鍋爐頂、不是 kind=deck 的甲板）—— 見 todo。

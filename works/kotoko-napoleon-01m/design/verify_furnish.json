@@ -1,0 +1,361 @@
+{
+ "note": "draft_furnish.py（階段十五）—— 現況 ＝ 組裝件 links=all（2027812 格）＋ 模型外框 348",
+ "pieces": {
+  "bitts": {
+   "cells": 5610,
+   "pivot": [
+    7.5,
+    20.5,
+    0
+   ],
+   "sha256": "f1b5d5d56af4f61a3f145946b4438d3765579c4cc586c1962da1b81bff68b04b",
+   "size": [
+    15,
+    41,
+    24
+   ]
+  },
+  "fiferail": {
+   "cells": 1980,
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "sha256": "d63364a53f4751d5044579926f8d527737064fb58851e64f78ef8e80c422497a",
+   "size": [
+    39,
+    39,
+    19
+   ]
+  },
+  "galley": {
+   "cells": 32684,
+   "chimney_to_z": 139,
+   "pivot": [
+    22.0,
+    16.0,
+    0
+   ],
+   "sha256": "a3ff02ed84de394c5975985cd58c4d2e30dd93df065834775f41c771943de20b",
+   "size": [
+    44,
+    32,
+    46
+   ]
+  },
+  "shotrack": {
+   "cells": 1543,
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "sha256": "0993b999e5a9effbbc9cba3360b15a3e372c514d26c8af661ba03d1164e3d055",
+   "size": [
+    54,
+    4,
+    9
+   ]
+  }
+ },
+ "ranges": {
+  "爐灶": [
+   726.0,
+   735.0
+  ],
+  "砲彈架-P": [
+   519.5,
+   519.5
+  ],
+  "砲彈架-S": [
+   519.5,
+   519.5
+  ],
+  "繫索栓圍欄-fore": [
+   757.0,
+   757.0
+  ],
+  "繫索栓圍欄-main": [
+   460.0,
+   460.0
+  ],
+  "繫纜柱": [
+   800.0,
+   860.0
+  ]
+ },
+ "rows": [
+  {
+   "at": [
+    726.0,
+    200.5,
+    116.0
+   ],
+   "box": [
+    715.15,
+    192.65,
+    116.15,
+    736.85,
+    208.35,
+    138.85
+   ],
+   "deck_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "爐灶",
+   "path": "甲板-upper/爐灶",
+   "piece": "galley",
+   "pivot": [
+    22.0,
+    16.0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    1408,
+    1408
+   ]
+  },
+  {
+   "at": [
+    838.0,
+    200.5,
+    117.0
+   ],
+   "box": [
+    834.4,
+    190.4,
+    117.15,
+    841.6,
+    210.6,
+    128.85
+   ],
+   "candidates": 113,
+   "deck_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫纜柱",
+   "path": "甲板-upper/繫纜柱",
+   "piece": "bitts",
+   "pivot": [
+    7.5,
+    20.5,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    162,
+    162
+   ]
+  },
+  {
+   "at": [
+    460.0,
+    200.5,
+    138.0
+   ],
+   "box": [
+    450.4,
+    190.9,
+    138.15,
+    469.6,
+    210.1,
+    147.35
+   ],
+   "candidates": 1,
+   "deck_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫索栓圍欄-main",
+   "path": "甲板-spar/繫索栓圍欄-main",
+   "piece": "fiferail",
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    72,
+    72
+   ]
+  },
+  {
+   "at": [
+    757.0,
+    200.5,
+    140.0
+   ],
+   "box": [
+    747.4,
+    190.9,
+    140.15,
+    766.6,
+    210.1,
+    149.35
+   ],
+   "candidates": 1,
+   "deck_work": "kotoko-napoleon-01m-deck-spar",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫索栓圍欄-fore",
+   "path": "甲板-spar/繫索栓圍欄-fore",
+   "piece": "fiferail",
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    72,
+    72
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    214.0,
+    91.0
+   ],
+   "box": [
+    506.15,
+    214.15,
+    91.15,
+    532.85,
+    215.85,
+    95.35
+   ],
+   "candidates": 14,
+   "deck_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "砲彈架-S",
+   "path": "甲板-lower/砲彈架-S",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    216,
+    216
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    187.0,
+    91.0
+   ],
+   "box": [
+    506.15,
+    185.15,
+    91.15,
+    532.85,
+    186.85,
+    95.35
+   ],
+   "candidates": 14,
+   "deck_work": "kotoko-napoleon-01m-deck-lower",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "y",
+   "model": "砲彈架-P",
+   "path": "甲板-lower/砲彈架-P",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    216,
+    216
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    214.0,
+    114.0
+   ],
+   "box": [
+    506.15,
+    214.15,
+    114.15,
+    532.85,
+    215.85,
+    118.35
+   ],
+   "candidates": 14,
+   "deck_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "砲彈架-S",
+   "path": "甲板-upper/砲彈架-S",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    216,
+    216
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    187.0,
+    114.0
+   ],
+   "box": [
+    506.15,
+    185.15,
+    114.15,
+    532.85,
+    186.85,
+    118.35
+   ],
+   "candidates": 14,
+   "deck_work": "kotoko-napoleon-01m-deck-upper",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "y",
+   "model": "砲彈架-P",
+   "path": "甲板-upper/砲彈架-P",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "support": [
+    216,
+    216
+   ]
+  }
+ ]
+}
