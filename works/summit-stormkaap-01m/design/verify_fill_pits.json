@@ -1,0 +1,57 @@
+{
+ "assembly_list_sha256": "7ca8c717ea4d6b9adad9adcd5184ce4bcb9b95491d9599466a3366376b28d03f",
+ "carve": {
+  "summit-stormkaap-01m-decor": 1
+ },
+ "expect_assembly_after": 552291,
+ "files": {
+  "summit-stormkaap-01m-decor.carve": {
+   "cells": 1,
+   "op": "carvevox",
+   "path": "masks/fill_pits/summit-stormkaap-01m-decor.carve.vox.txt",
+   "sha256": "e9fe9b7c30457d59c7c3a18e405e41fe758a13418f7ace29eab9011e436f8725",
+   "work": "summit-stormkaap-01m-decor"
+  },
+  "summit-stormkaap-01m-head.fill": {
+   "cells": 58,
+   "op": "stampvox",
+   "path": "masks/fill_pits/summit-stormkaap-01m-head.fill.vox.txt",
+   "sha256": "dfc99c1bfe9359b20afff144441502fdeb014bce80dd5c5fe57867a3697dbc7f",
+   "work": "summit-stormkaap-01m-head"
+  },
+  "summit-stormkaap-01m-quarter-gallery.fill": {
+   "cells": 1,
+   "op": "stampvox",
+   "path": "masks/fill_pits/summit-stormkaap-01m-quarter-gallery.fill.vox.txt",
+   "sha256": "aa49f271aa04db93d829586b1f272b7d7afbafe927ef85875d4398e17509576b",
+   "work": "summit-stormkaap-01m-quarter-gallery"
+  },
+  "summit-stormkaap-01m.fill": {
+   "cells": 2,
+   "op": "stampvox",
+   "path": "masks/fill_pits/summit-stormkaap-01m.fill.vox.txt",
+   "sha256": "a2c2a5a3912caa847090bee823cdce3b5c1545d86242779d10e4b4801fe0e689",
+   "work": "summit-stormkaap-01m"
+  }
+ },
+ "fill": {
+  "summit-stormkaap-01m": 2,
+  "summit-stormkaap-01m-head": 58,
+  "summit-stormkaap-01m-quarter-gallery": 1
+ },
+ "rounds": [
+  {
+   "back": 124283,
+   "reachable": 123726,
+   "reachable_not_back": 63,
+   "round": 0
+  },
+  {
+   "back": 124343,
+   "reachable": 123723,
+   "reachable_not_back": 0,
+   "round": 1
+  }
+ ],
+ "walkback_dump_sha256": "9b667042a825fa5963de1435c760c6031f93e477cc5dcbc4b40923297b3d9673"
+}

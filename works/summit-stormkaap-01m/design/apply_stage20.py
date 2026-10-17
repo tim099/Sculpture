@@ -1,6 +1,6 @@
 # 階段二十 下 CLI（TASK-0685）：往下通貨艙的梯子＋彈藥庫門口踏板／船長室 ↔ 船尾陽台的門／絞盤＋上甲板主艙口格柵
 #   讀 verify_hold_ladders.json、verify_stern_door.json、verify_capstan_grating.json（三支 draft_* 產的）。
-#   步驟：hold_create｜hold_stamp｜hold_link｜hold_anchors｜hold_ropes｜door_carve｜grat_create｜grat_stamp｜models
+#   步驟：hold_create｜hold_stamp｜hold_link｜hold_anchors｜hold_ropes｜door_carve｜grat_create｜grat_stamp｜models｜pits
 #   · 格的那幾步只跑一次（每刀讀回 placed）；其餘 overwrite=1。⛔ 失敗那一行整段印出來
 # 用法：python -I -X utf8 -B apply_stage20.py <design> <步驟>
 import sys, os, json, re, subprocess
@@ -75,6 +75,10 @@ elif step == 'grat_create':
     g = VG['grating']; create(g['work'], g['title'], g['size'], g['mpv'])
 elif step == 'grat_stamp':
     g = VG['grating']; stamp(g['work'], 'stampvox', g['file']['path'], g['file']['cells'])
+elif step == 'pits':                                                    # 階段二十 d：填坑（verify_fill_pits.json）
+    VP = json.load(open(os.path.join(D, 'verify_fill_pits.json'), encoding='utf-8'))
+    for k, f in sorted(VP['files'].items()):
+        stamp(f['work'], f['op'], f['path'], f['cells'])
 elif step == 'models':
     for m in VG['models']:
         cli(['op=work', 'sub=model', 'persona=summit', 'work=' + m['host_work'], 'name=' + m['name'], 'source_work=' + m['work'], 'at=' + xyz(m['at']),

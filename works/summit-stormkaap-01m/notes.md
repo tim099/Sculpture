@@ -484,3 +484,9 @@ Tim：「接著參考憲法號 完成風暴角號的貨倉梯&其他細節吧」
   - 遊戲（Blockside worktree reimport；匯入檢查）：✗ 0、⚠ 3 → 7 —— 多的 4 筆是四座貨艙梯「尋路沒收」（foot 在貨艙底、不是宣告過的甲板；第一人稱照樣爬）—— 憲法號的三座貨艙梯同一個警告（同一個 worktree 量）。
 - ⚠ 沒做：船頭頭欄底下的坑（58 格；要動 Tim 的獠牙大嘴那一帶或填坑）—— 等 Tim。⛔ 第一人稱實際爬沒試（只有 walkback 照遊戲走法量）。
 - 過程圖：`overlays/stage20_hold_ladders.png`（藏船殼與上面幾層甲板）、`stage20_stern_door.png`、`stage20_capstan_grating.png`。
+
+### 階段二十 d 填坑（2026-10-17 晚；Tim「船頭頭欄底下的坑直接填掉，外觀改一點沒關係」）
+- `design/draft_fill_pits.py <design> exports/stage21_pre design/walkback_dump.py` ⇒ `masks/fill_pits/*.vox.txt`、`verify_fill_pits.json`；下 CLI `apply_stage20.py <design> pits`。
+  一輪一輪：walkback（`design/walkback_dump.py` ＝ basecamp 那支加 `dump=` 參數）量出回不來的站位格 ⇒ 每格填一層（顏色、歸屬照坑底那一格；側窗廊是鏡像關聯 ⇒ 子作品填一格、兩舷都有）；船外水線附近（z ≤ 55）的那一格是海草尖 ⇒ 刻掉它腳下那一格（往上填會越長越高）。
+- 第 0 輪 63 ⇒ 第 1 輪 0：船頭 galjoen 格柵上頭欄底下的坑墊高一層（58 格、109）、船長室兩個角落（船殼 2）、側窗廊一對（1 格 ×鏡像）；刻掉右舷水線上的海草尖 (301,183,50)（裝飾 1）。
+- 讀數（引擎）：組裝件 552,230 → 552,291（多 62、少 1、色差 0，跟預期一樣）；1 元件、空腔 0、link_overlap 0；walkback 在引擎匯出上 **回不來 0**（走得到 123,723、走得回 124,343）。重跑產物逐位元組相同。
