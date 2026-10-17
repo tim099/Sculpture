@@ -1,4 +1,5 @@
 # ratlines（shrouds 之間的橫繩）：照 design/rig_standing.json 的 shrouds 幾何算 ⇒ design/ratlines.json（給 ropes_apply.py）
+# ⚠ 2026-10-17 起不再用（TASK-0678）：ratlines 改成組裝件的橫繩組 work sub=ratlines（觀測時照 shroud 現在的形狀展開）；留著看當初怎麼算的。
 # 用法：python -I ratlines.py <design 資料夾>
 #   · lower shrouds：每根桅每一舷，從 deadeye 頂上 start 格起、每 step 格一道，到桅頂（hounds）下 stop 格為止；
 #     每一道從最前面那根 shroud 拉到最後面那根（shrouds 從一排 deadeye 收到同一個點，大致在一個面上 ⇒ 橫線會貼著中間每一根過）

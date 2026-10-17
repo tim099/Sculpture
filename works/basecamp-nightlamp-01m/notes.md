@@ -518,3 +518,10 @@ Tim：「接著繼續造船 直到完成可以匯入遊戲吧」（/scp-shipbuil
 - 組裝件模型「舵」：pivot ＝ at ＝ 95,160.5,0、scale 1、meta kind=rudder＋hinge／axis＋max_deg 35＋turn_axis hinge＋spin rudder ±35、lag 0.3；外框 [73,157,0]–[94,164,103] ＝ 子作品格子範圍（原位）；models_broken 0。組裝件格數不變（模型不算格子）。
 - 舵輪的 spin（540、無上限）是 summit 補的 meta（2026-10-16，TASK-0640）。
 - ⚠ 還沒做：舵頭在船裡那一段、tiller、舵索、船殼上的 gudgeon；遊戲那側要重匯才轉得起來（summit metasync／ame reimport）。
+
+## 階段二十一：ratlines 換成橫繩組、lower ratlines 標成繩梯（2026-10-17，TASK-0678；Tim「把妳的船都翻新繩吧」）
+
+- 引擎新增 `work sub=ratlines`（Senate af344f5、SCP_Core 07ff5b3）。組裝件拿掉 336 條 `<桅>-[tm-]ratline-<舷><N>`（meta kind=ratline），換成 12 組 `<桅>-<lower|topmast>-<P|S>`：step 4、start 3、stop lower 6／topmast 5.5、min_span 0（照舊：topmast 最上面幾道 0.4–0.7 格照留）；rope_a／rope_b 照舊的 from／to。展開的每道引擎自己帶 kind=ratline（跟舊的一樣）。
+  stop 是反推的：每組 (stop_max − 4, stop_max] 的交集（lower 都在 4.6–8.4、topmast 3–6）⇒ 道數逐組同舊的。
+- 讀數：`sub=ropes` 629 條、ok 629、broken 0、橫繩組 336 道；其他 293 條逐筆不變；座標差 108 道 0、158 道 0.01、52 道 0.02、18 道 0.07–0.08 格（後桅 lower：舊的起點 3.07，新的 3）。
+- 繩梯（lower 6 組；foot 規則同餘燼號 —— 主桅那一段是開放的 waist，foot 落在舷側走道 z 132 上，⛔ 不是走道底下的下層甲板 z 102，第一版規則量錯過一次）：fore P (529, 119, 133)→(536, 140, 271)；fore S (529, 201, 133)→(536, 180, 271)；main P (303, 113, 132)→(310, 136, 290)；main S (303, 207, 132)→(310, 184, 290)；mizzen P (163, 120, 138)→(164, 146, 204)；mizzen S (163, 200, 138)→(164, 174, 204)。topmast 不標。
