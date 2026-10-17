@@ -1,0 +1,53 @@
+{
+	"schema": 4,
+	"ropes": [
+		{
+			"name": "繩梯-a",
+			"from": "47,30.5,28.5",
+			"to": "47,30.5,1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "ladders/hatch",
+			"note": "後艙口的繩梯：直繩（垂到吊籃）",
+			"persona": "meadow",
+			"created_at": "2026-10-17T17:17:52"
+		},
+		{
+			"name": "繩梯-b",
+			"from": "47,34.5,28.5",
+			"to": "47,34.5,1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "ladders/hatch",
+			"note": "後艙口的繩梯：直繩（垂到吊籃）",
+			"persona": "meadow",
+			"created_at": "2026-10-17T17:17:52"
+		}
+	],
+	"groups": [],
+	"ratlines": [
+		{
+			"name": "繩梯-後艙口",
+			"a": "繩梯-a",
+			"b": "繩梯-b",
+			"step": 3,
+			"start": 2,
+			"stop": 2,
+			"min_span": 0,
+			"color": "#2b2620",
+			"thickness": 0.3,
+			"enabled": true,
+			"group": "ladders/hatch",
+			"climb": true,
+			"foot": "48,32,1",
+			"head": "46,32,29",
+			"note": "後艙口的繩梯：吊籃 ⇄ 砲塔頂",
+			"persona": "meadow",
+			"created_at": "2026-10-17T17:17:52"
+		}
+	]
+}
