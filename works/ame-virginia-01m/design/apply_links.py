@@ -43,6 +43,6 @@ for nm in ('magazine-fore', 'magazine-aft'):
 for i, p in enumerate(M['boilers']):                               # 鍋爐：每座中心 boiler-1…n、煙道底 uptake
     run(('op', 'work'), ('sub', 'anchor'), ('work', W + '-boiler'), ('persona', 'ame'), ('name', 'boiler-%d' % (i + 1)), ('at', '%d,%d,%d' % tuple(p)))
 run(('op', 'work'), ('sub', 'anchor'), ('work', W + '-boiler'), ('persona', 'ame'), ('name', 'uptake'), ('at', '%d,%d,%d' % tuple(M['uptake'])))
-for k, p in (('aft', (77, 90, 28)), ('fwd', (250, 90, 28))):          # 軸的兩頭（gen_virginia.py shaft：x 77–250、z 28）
+for k, p in (('aft', (77, 90, 28)), ('fwd', (254, 90, 28))):          # 軸的兩頭（gen_virginia.py shaft：x 77–254、z 28；fwd 貼著主機前牆）
     run(('op', 'work'), ('sub', 'anchor'), ('work', W + '-shaft'), ('persona', 'ame'), ('name', k), ('at', '%d,%d,%d' % p))
 # ⚠ 2026-10-16：舵（summit）與螺旋槳（kotoko）已拆成模型 ⇒ 重跑 gen_virginia.py 之後 ⛔ 不要整份同步船殼與機艙（會把舵、螺旋槳的格補回去）；只同步改到的部件。
