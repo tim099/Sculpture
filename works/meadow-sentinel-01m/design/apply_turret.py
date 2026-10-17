@@ -1,7 +1,7 @@
 # 哨兵號的主砲塔改成自己的一座（TASK-0659／0661；Tim 2026-10-17：「哨兵號真的去用新功能造砲塔」「因為我想用真實用在遊戲內的船確認功能ok」）：
 #   原船（莫尼特號）的砲塔藏起來（link_hide 加「砲塔」），換一座 -turret（砲塔層 kind=turret，造船規格 §4.8）：
 #     圓筒、頂（沿用莫尼特號的 -turret-armor、-turret-roof）＋吊籃地板 -turret-basket（半徑 8–28，中間留洞給住艙甲板上來的艙口梯；會轉的甲板）
-#     ＋砲塔裡的備便彈藥箱 -turret-locker（8×12×7、兩桶，kind=magazine；放在砲尾後面靠圓筒內側，跟砲尾之間留走道 ——
+#     ＋砲塔裡的備便彈藥箱 -turret-locker（8×7×7、一桶，kind=magazine；Tim 2026-10-17「減成一桶」—— 原本 8×12 兩桶；放在砲尾後面靠圓筒內側，跟砲尾之間留走道 ——
 #       ⛔ 先用甲板上那件 14×14 的 -locker ⇒ 剛好擋在兩門砲放藥箱的位置中間，砲-b 那邊走不到取用點）＋兩門 XI 吋（照原本的擺法，固定在砲塔上）
 #     ＋頂上正中央疊一座開放的砲房 -turret-top（kind=turret、arc ±180、30°／秒；平台＋前盾＋兩片側翼，跟速射砲的砲房同一型）＋一門三叉戟速射砲。
 #   站在吊籃、砲塔頂上的人跟著主砲塔轉；站在頂上砲房平台的人再跟著那一座轉（Tim：「就只有砲塔頂部會是一塊跟著轉的甲板」）。
@@ -97,17 +97,17 @@ def model(wid, nm, src, at, pivot, rotate, scale, meta, mirror=''):
 # ── 吊籃地板（主砲塔座標，z 0 ＝ 船的 z 35）──
 basket = {(x, y, 0): IRON for x in range(65) for y in range(65) if 8 <= math.hypot(x + 0.5 - 32.5, y + 0.5 - 32.5) <= 28}
 
-# ── 砲塔裡的彈藥箱（作品座標，框 8×12×7、箱底 z 0）：鐵殼、鉛灰的蓋、兩個黃銅提把；兩桶憲法號火藥桶 ──
+# ── 砲塔裡的彈藥箱（作品座標，框 8×7×7、箱底 z 0）：鐵殼、鉛灰的蓋、兩個黃銅提把；一桶憲法號火藥桶（Tim 2026-10-17：「減成一桶」）──
 BRASS = 180
-LX, LY, LZ = 8, 12, 7
+LX, LY, LZ = 8, 7, 7
 lock = {}
 for x in range(LX):
     for y in range(LY):
         for z in range(LZ):
             if z == LZ - 1: lock[(x, y, z)] = BRASS if (x in (3, 4) and y in (1, LY - 2)) else LEAD
             elif x in (0, LX - 1) or y in (0, LY - 1) or z == 0: lock[(x, y, z)] = IRON_BLACK
-LKEGS = [{'name': '桶-%d' % (i + 1), 'at': (4, ky, 1)} for i, ky in enumerate((3.5, 8.5))]
-LAT = (51, 26, 1)                                                        # 主砲塔座標 ⇒ 船的 x 320–327、y 59–70：離轉軸最遠 26.8 格（吊籃 28 內）、砲尾後面留 3 格走道
+LKEGS = [{'name': '桶-1', 'at': (4, 3.5, 1)}]
+LAT = (51, 29, 1)                                                        # 主砲塔座標 ⇒ 船的 x 320–327、y 62–68（兩桶時 y 26 起、59–70），照舊對著中線：離轉軸最遠 26.8 格內（吊籃 28 內）、砲尾後面留 3 格走道
 
 # ── 頂上的砲房（船的座標；照 apply_shields.py 的砲房，轉軸 ＝ 主砲塔的轉軸、前方 −x ＝ 主砲塔的前方）──
 ROT = 90                                                                 # 砲模型轉 90° ⇒ 砲口朝 −x
@@ -142,8 +142,10 @@ if DRY: sys.exit(0)
 
 ensure(TUR, '哨兵號 主砲塔（砲塔層：圓筒、頂、吊籃、彈藥箱、兩門 XI 吋、頂上一座砲房）', '%d,%d,%d' % SIZE, W)
 ensure(BASKET, '哨兵號 主砲塔的吊籃地板（半徑 8–28、中間留洞給艙口梯）', '65,65,1', W)
-ensure(LOCK, '哨兵號 主砲塔裡的備便彈藥箱（兩桶）', '%d,%d,%d' % (LX, LY, LZ), W)
+ensure(LOCK, '哨兵號 主砲塔裡的備便彈藥箱（一桶）', '%d,%d,%d' % (LX, LY, LZ), W)
 sync(LOCK, lock, '%d,%d,%d' % (LX, LY, LZ))
+for nm in set(names(LOCK, 'models.json', 'models')) - {k['name'] for k in LKEGS}:   # 減桶：多的那幾個拿掉
+    run(('op', 'work'), ('sub', 'unmodel'), ('persona', PER), ('work', LOCK), ('name', nm)); print('  拿掉模型 %s/%s' % (LOCK, nm))
 for k in LKEGS: model(LOCK, k['name'], 'basecamp-frigate-constitution-01m-powder-barrel', k['at'], (11, 11, 0), (0, 0, 0), (0.2, 0.2, 0.2), {'kind': 'powder', 'powder_lb': 100})
 ensure(TOP, '哨兵號 主砲塔頂上的砲房（小砲塔：平台＋前盾＋兩片側翼）＋三叉戟速射砲', '%d,%d,%d' % (thi[0] - tlo[0] + 1, thi[1] - tlo[1] + 1, thi[2] - tlo[2] + 1), W)
 run(('op', 'work'), ('sub', 'update'), ('persona', PER), ('work', TUR), ('size', '%d,%d,%d' % SIZE))
