@@ -458,7 +458,8 @@
 			"note": "機艙：拿破崙號 螺旋槳軸與軸承座（0.1 m）",
 			"meta": {
 				"kind": "shaft",
-				"material": "iron"
+				"material": "iron",
+				"render": "smooth"
 			}
 		},
 		{
@@ -489,7 +490,8 @@
 				"kn_max": 13.86,
 				"maker": "Indret",
 				"material": "iron",
-				"nhp": 960
+				"nhp": 960,
+				"render": "smooth"
 			}
 		},
 		{
@@ -514,7 +516,9 @@
 			"meta": {
 				"boilers": 4,
 				"funnel": "煙囪-後",
-				"kind": "boiler"
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
 			}
 		},
 		{
@@ -539,7 +543,9 @@
 			"meta": {
 				"boilers": 4,
 				"funnel": "煙囪-前",
-				"kind": "boiler"
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
 			}
 		},
 		{
