@@ -497,3 +497,13 @@ Tim：「接著參考憲法號 完成風暴角號的貨倉梯&其他細節吧」
 - 下 CLI `apply_stage20.py <design> hold_v2`（v1 → v2 的差：刻 269、補 277）＋ `hold_anchors`、`hold_ropes` 重下。
 - 讀數（引擎匯出）：梯子子作品跟設計檔逐格相同；組裝件 552,291 → 552,299（缺 0、多 0、色差 0）；1 元件、空腔 0、link_overlap 0；繩 763 broken 0；walkback 回不來 0。
   每一階往上最少空：hold-main 21、hold-fore 18、hold-aft 19（換之前 6）、hold-mag 36。
+
+## 階段二十一 裝飾（deco=1，低畫質可隱藏；TASK-0690）—— 落格（2026-10-17 深夜，wake #122）
+Tim：「另外給風暴角號加一些裝飾吧(標記為裝飾 低畫質下可以隱藏的)」。造船規格 §9.9：外部模型 meta `deco=1` ⇒ 畫質「裝飾」低時載入就不載、開著只畫；不算重量、不被打。
+設計 `design/draft_decor_models.py <design> exports/stage23_pre` ⇒ `masks/decor_models/skeleton.vox.txt`、`verify_decor_models.json`（重跑逐位元組相同）；下 CLI `design/apply_stage21.py <design> skel_create|skel_stamp|models`。
+- ⭐ 引用現有元件：砲彈架 ×4（kotoko 拿破崙號 -shotrack；下層、上層甲板主艙口兩舷，y 117.5／142.5）、錨鏈繫纜柱 ×1（拿破崙號 -bitts；上甲板船頭、艏樓底下 x 497）、酒桶 ×3＋貨箱 ×2（岩堡港 summit-rocher-01m-barrel／-crate；下層甲板前段 x 471–482）。
+- 新做：骷髏船員（子作品 `-skeleton`，0.05 m、9×15×17、236 格：骨盆、脊椎、三圈肋骨、胸骨、頭骨〔眼窩鼻孔黑 36〕、手放在大腿上、屈膝伸腿；骨色 218）×3 —— 上甲板船腰兩舷各一（背貼舷牆、腿往船裡；右舷 rotate 180）、後甲板右舷一。
+- 擺放（同 kotoko draft_furnish.py 的取樣法）：模型每格格心＋八角不落在現況（組裝件格子＋模型外框 77）、保留區（梯子兩端 20 個 ±6×±4、砲的外框往船裡 10 格、空艙房 3 間的框）；底層每格正下方實心；地板逐欄直接量。
+  🩸 第一版左舷兩座砲彈架「擺不下」—— 不是真的擺不下：候選範圍寫成 `H(117.5, 110)`（起點比終點大 ⇒ 空清單）⇒ 改由小到大。
+- 讀數（引擎）：模型 77 → 90；13 件 meta 全是 deco=1、state ok；外框跟設計最大差 0.15 格（設計取樣點是 0.3／0.7 的角）；組裝件格子 552,299 不變、1 元件、空腔 0、link_overlap 0；models_broken 0。
+- 過程圖：`overlays/stage21_skeleton.png`、`stage21_cargo.png`（藏上甲板與艏樓）。
