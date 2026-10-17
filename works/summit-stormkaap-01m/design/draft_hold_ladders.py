@@ -44,6 +44,7 @@ LADDERS = [
     {'id': 'hold-mag', 'zu': 27, 'cap': [0], 'cands': [(173, 1)], 'ys': None, 'note': '彈藥庫門（前艙壁 x 172、y 128–132、門檻 z 28）—— 門口踏板 x 173–174；梯子在後桅（x 175–181、y 128–132）旁邊'},
 ]
 HEADR, FLAT, STAND = 3, 3, 7
+HEAD_CLIMB = 18                                                        # 爬梯子時每一階頭上要空幾格（遊戲 FP_EYE 16 ＋ FP_EYE_GAP 2）
 
 
 class Hold(O.Orlop):
@@ -115,6 +116,23 @@ class Hold(O.Orlop):
                            'post_bot': got['post_bot'], 'post_h': got['post_h'], 'cells': len(got['cells']), 'landing': len(plank), 'ceiling': len(board), 'tried_before': len(why), 'note': L['note'],
                            'tread_cells': sorted([list(k) for k, (c, kd) in got['cells'].items() if kd == 'tread'])})
             print('✓', L['id'], json.dumps({k: s.rows[-1][k] for k in ('run', 'xe', 'xf', 'd', 'y', 'zcap', 'zl', 'R', 'cells', 'landing', 'ceiling', 'tried_before')}))
+
+    def try_one(s, L, band, cap_up):
+        # 頭頂淨空（不封頂）：Tim 2026-10-17 第一人稱實測「貨艙的梯子 一個ok 另一個會被上一層梯子卡到頭」
+        #   🩸 憲法號那支的頭頂檢查只量到甲板（min(…, zu)）⇒ 梯子上半段穿出艙口之後的頭頂不看 ⇒ hold-aft 第一版（x 215 往後下）爬到頂，頭上 0.7–1.2 m 就是 下↔上 aft 梯子的下段
+        #   ⇒ 每一階踏板往上 HEAD_CLIMB 格（遊戲 81_fps.js 眼高 FP_EYE 16 ＋ FP_EYE_GAP 2）不能有實心（自己這座的格不算）
+        got, w = O.Orlop.try_one(s, L, band, cap_up)
+        if not got:
+            return got, w
+        own = got['cells']
+        for (x, y, z), (c, kd) in own.items():
+            if kd != 'tread':
+                continue
+            for h in range(1, HEAD_CLIMB + 1):
+                k = (x, y, z + h)
+                if k not in own and not s.free(k):
+                    return None, '爬的人頭頂撞到（踏板 %s 往上 %d 格是 %s）' % ((x, y, z), h, k)
+        return got, w
 
     def stand(s, x, y, z):
         return s.full[x, y, z - 1] and not s.full[x, y, z:z + STAND].any()
