@@ -1,0 +1,750 @@
+[
+ {
+  "at": [
+   332.0,
+   64.5,
+   25.0
+  ],
+  "bbox": [
+   [
+    323.5,
+    60.5,
+    25.2
+   ],
+   [
+    353.5,
+    68.5,
+    38.2
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/w_siphon.txt",
+  "host": "assembly",
+  "meta": {
+   "ammo": "greekfire",
+   "gun": "siphon",
+   "kind": "gun",
+   "safe": 1,
+   "weapon": "siphon"
+  },
+  "mirror": "",
+  "name": "siphon",
+  "pivot": [
+   10.5,
+   18.5,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   -90
+  ],
+  "scale": 0.5,
+  "source_work": "erina-dromon-01m-siphon"
+ },
+ {
+  "at": [
+   333.5,
+   64.5,
+   41.0
+  ],
+  "bbox": [
+   [
+    327.1,
+    58.9,
+    41.2
+   ],
+   [
+    344.7,
+    70.1,
+    51.6
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/w_ballista.txt",
+  "host": "forecastle",
+  "meta": {
+   "ammo": "bolt",
+   "weapon": "toxoballistra"
+  },
+  "mirror": "",
+  "name": "ballista-bow",
+  "pivot": [
+   15.5,
+   18.5,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   -90
+  ],
+  "scale": 0.4,
+  "source_work": "erina-dromon-01m-ballista"
+ },
+ {
+  "at": [
+   226.5,
+   78.45,
+   39.0
+  ],
+  "bbox": [
+   [
+    222.3,
+    73.6,
+    39.2
+   ],
+   [
+    230.7,
+    86.9,
+    47.0
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/w_ballista.txt",
+  "host": "castles",
+  "meta": {
+   "ammo": "bolt",
+   "weapon": "toxoballistra"
+  },
+  "mirror": "",
+  "name": "ballista-castle-S",
+  "pivot": [
+   15.5,
+   18.5,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.3,
+  "source_work": "erina-dromon-01m-ballista"
+ },
+ {
+  "at": [
+   226.5,
+   50.55,
+   39.0
+  ],
+  "bbox": [
+   [
+    222.3,
+    42.2,
+    39.2
+   ],
+   [
+    230.7,
+    55.4,
+    47.0
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/w_ballista.txt",
+  "host": "castles",
+  "meta": {
+   "ammo": "bolt",
+   "weapon": "toxoballistra"
+  },
+  "mirror": "",
+  "name": "ballista-castle-P",
+  "pivot": [
+   15.5,
+   18.5,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   180
+  ],
+  "scale": 0.3,
+  "source_work": "erina-dromon-01m-ballista"
+ },
+ {
+  "at": [
+   255.5,
+   63.0,
+   22.0
+  ],
+  "bbox": [
+   [
+    248.3,
+    49.0,
+    22.2
+   ],
+   [
+    263.2,
+    75.2,
+    44.7
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/w_mangonel.txt",
+  "host": "assembly",
+  "meta": {
+   "ammo": "stone",
+   "mount": "pivot",
+   "ports": "0,180",
+   "weapon": "manganikon"
+  },
+  "mirror": "",
+  "name": "mangonel",
+  "pivot": [
+   20.5,
+   32.5,
+   0
+  ],
+  "ports_collide": {
+   "0": 0,
+   "180": 0
+  },
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.45,
+  "source_work": "erina-dromon-01m-mangonel"
+ },
+ {
+  "at": [
+   71.5,
+   83.5,
+   2.0
+  ],
+  "bbox": [
+   [
+    66.5,
+    69.5,
+    2.5
+   ],
+   [
+    72.5,
+    84.5,
+    42.5
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/rudder.txt",
+  "host": "assembly",
+  "meta": {
+   "axis_x": 0,
+   "axis_y": 0,
+   "axis_z": 1,
+   "hinge_x": 71.5,
+   "hinge_y": 83.5,
+   "hinge_z": 2.0,
+   "kind": "rudder",
+   "max_deg": 35,
+   "rudder": "quarter",
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_lag": 0.3,
+   "spin_max": 35,
+   "spin_min": -35,
+   "turn_axis": "hinge"
+  },
+  "mirror": "",
+  "name": "rudder-S",
+  "pivot": [
+   71.5,
+   83.5,
+   2.0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 1,
+  "source_work": "erina-dromon-01m-rudder"
+ },
+ {
+  "at": [
+   71.5,
+   45.5,
+   2.0
+  ],
+  "bbox": [
+   [
+    66.5,
+    44.5,
+    2.5
+   ],
+   [
+    72.5,
+    59.5,
+    42.5
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/rudder.txt",
+  "host": "assembly",
+  "meta": {
+   "axis_x": 0,
+   "axis_y": 0,
+   "axis_z": 1,
+   "hinge_x": 71.5,
+   "hinge_y": 45.5,
+   "hinge_z": 2.0,
+   "kind": "rudder",
+   "max_deg": 35,
+   "rudder": "quarter",
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_lag": 0.3,
+   "spin_max": 35,
+   "spin_min": -35,
+   "turn_axis": "hinge"
+  },
+  "mirror": "y",
+  "name": "rudder-P",
+  "pivot": [
+   71.5,
+   83.5,
+   2.0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 1,
+  "source_work": "erina-dromon-01m-rudder"
+ },
+ {
+  "at": [
+   299.5,
+   64.5,
+   112.5
+  ],
+  "bbox": [
+   [
+    217.0,
+    62.5,
+    60.5
+   ],
+   [
+    340.1,
+    66.5,
+    218.1
+   ]
+  ],
+  "check": false,
+  "collide_cells": null,
+  "file": "lists/yard_fore.txt",
+  "host": "mast-fore",
+  "meta": {
+   "diameter_in": 12.6,
+   "kind": "yard",
+   "length_ft": 65.9,
+   "mast": "fore",
+   "pivot_anchor": "pivot",
+   "rig": "lateen",
+   "rotate_z_deg": 0,
+   "sail": "fore",
+   "turn_axis": "z",
+   "yard": "gaff"
+  },
+  "mirror": "",
+  "name": "yard-fore",
+  "pivot": [
+   137.5,
+   5.5,
+   5.5
+  ],
+  "rotate": [
+   0,
+   52,
+   0
+  ],
+  "scale": 1,
+  "source_work": "erina-dromon-01m-yard-fore"
+ },
+ {
+  "at": [
+   203.5,
+   64.5,
+   82.5
+  ],
+  "bbox": [
+   [
+    137.3,
+    62.5,
+    44.2
+   ],
+   [
+    235.6,
+    66.5,
+    161.4
+   ]
+  ],
+  "check": false,
+  "collide_cells": null,
+  "file": "lists/yard_main.txt",
+  "host": "mast-main",
+  "meta": {
+   "diameter_in": 11.0,
+   "kind": "yard",
+   "length_ft": 50.5,
+   "mast": "main",
+   "pivot_anchor": "pivot",
+   "rig": "lateen",
+   "rotate_z_deg": 0,
+   "sail": "main",
+   "turn_axis": "z",
+   "yard": "gaff"
+  },
+  "mirror": "",
+  "name": "yard-main",
+  "pivot": [
+   106.5,
+   5.5,
+   5.5
+  ],
+  "rotate": [
+   0,
+   50,
+   0
+  ],
+  "scale": 1,
+  "source_work": "erina-dromon-01m-yard-main"
+ },
+ {
+  "at": [
+   133.5,
+   59.5,
+   5.0
+  ],
+  "bbox": [
+   [
+    131.4,
+    57.4,
+    5.1
+   ],
+   [
+    135.6,
+    61.6,
+    10.3
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_powder_barrel.txt",
+  "host": "magazine",
+  "meta": {
+   "kind": "powder",
+   "powder_lb": 100
+  },
+  "mirror": "",
+  "name": "桶-001",
+  "pivot": [
+   11,
+   11,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.2,
+  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+ },
+ {
+  "at": [
+   133.5,
+   69.5,
+   5.0
+  ],
+  "bbox": [
+   [
+    131.4,
+    67.4,
+    5.1
+   ],
+   [
+    135.6,
+    71.6,
+    10.3
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_powder_barrel.txt",
+  "host": "magazine",
+  "meta": {
+   "kind": "powder",
+   "powder_lb": 100
+  },
+  "mirror": "",
+  "name": "桶-002",
+  "pivot": [
+   11,
+   11,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.2,
+  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+ },
+ {
+  "at": [
+   138.5,
+   59.5,
+   5.0
+  ],
+  "bbox": [
+   [
+    136.4,
+    57.4,
+    5.1
+   ],
+   [
+    140.6,
+    61.6,
+    10.3
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_powder_barrel.txt",
+  "host": "magazine",
+  "meta": {
+   "kind": "powder",
+   "powder_lb": 100
+  },
+  "mirror": "",
+  "name": "桶-003",
+  "pivot": [
+   11,
+   11,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.2,
+  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+ },
+ {
+  "at": [
+   138.5,
+   69.5,
+   5.0
+  ],
+  "bbox": [
+   [
+    136.4,
+    67.4,
+    5.1
+   ],
+   [
+    140.6,
+    71.6,
+    10.3
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_powder_barrel.txt",
+  "host": "magazine",
+  "meta": {
+   "kind": "powder",
+   "powder_lb": 100
+  },
+  "mirror": "",
+  "name": "桶-004",
+  "pivot": [
+   11,
+   11,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.2,
+  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+ },
+ {
+  "at": [
+   143.5,
+   59.5,
+   5.0
+  ],
+  "bbox": [
+   [
+    141.4,
+    57.4,
+    5.1
+   ],
+   [
+    145.6,
+    61.6,
+    10.3
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_powder_barrel.txt",
+  "host": "magazine",
+  "meta": {
+   "kind": "powder",
+   "powder_lb": 100
+  },
+  "mirror": "",
+  "name": "桶-005",
+  "pivot": [
+   11,
+   11,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.2,
+  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+ },
+ {
+  "at": [
+   143.5,
+   69.5,
+   5.0
+  ],
+  "bbox": [
+   [
+    141.4,
+    67.4,
+    5.1
+   ],
+   [
+    145.6,
+    71.6,
+    10.3
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_powder_barrel.txt",
+  "host": "magazine",
+  "meta": {
+   "kind": "powder",
+   "powder_lb": 100
+  },
+  "mirror": "",
+  "name": "桶-006",
+  "pivot": [
+   11,
+   11,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.2,
+  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+ },
+ {
+  "at": [
+   329.5,
+   83.5,
+   28.7
+  ],
+  "bbox": [
+   [
+    325.3,
+    77.2,
+    12.4
+   ],
+   [
+    333.7,
+    89.8,
+    28.6
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_anchor.txt",
+  "host": "fittings",
+  "meta": {
+   "anchor": "bower",
+   "kind": "anchor"
+  },
+  "mirror": "",
+  "name": "anchor-S",
+  "pivot": [
+   23.5,
+   16.5,
+   57.0
+  ],
+  "rotate": [
+   0,
+   0,
+   90
+  ],
+  "scale": 0.3,
+  "source_work": "basecamp-frigate-constitution-01m-anchor"
+ },
+ {
+  "at": [
+   329.5,
+   45.5,
+   28.7
+  ],
+  "bbox": [
+   [
+    325.3,
+    39.2,
+    12.4
+   ],
+   [
+    333.7,
+    51.8,
+    28.6
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/ext_anchor.txt",
+  "host": "fittings",
+  "meta": {
+   "anchor": "bower",
+   "kind": "anchor"
+  },
+  "mirror": "y",
+  "name": "anchor-P",
+  "pivot": [
+   23.5,
+   16.5,
+   57.0
+  ],
+  "rotate": [
+   0,
+   0,
+   90
+  ],
+  "scale": 0.3,
+  "source_work": "basecamp-frigate-constitution-01m-anchor"
+ }
+]

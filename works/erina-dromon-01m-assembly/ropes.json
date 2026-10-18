@@ -1,0 +1,254 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "fore-sheet",
+			"from": "sail:fore/clew",
+			"to": "舵橫樑與吊架/bitt-240-S",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:05",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore"
+			}
+		},
+		{
+			"name": "fore-tack",
+			"from": "model:桅-fore/yard-fore/tack",
+			"to": "艏樓/tack-fore",
+			"color": "#a08458",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:05",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore"
+			}
+		},
+		{
+			"name": "fore-halyard",
+			"from": "model:桅-fore/yard-fore/sling",
+			"to": "桅-fore/sheave-aft",
+			"color": "#a08458",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:05"
+		},
+		{
+			"name": "fore-halyard-fall",
+			"from": "桅-fore/sheave-aft",
+			"to": "甲板-main/halyard-fore",
+			"color": "#a08458",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:05"
+		},
+		{
+			"name": "fore-shroud-S1",
+			"from": "桅-fore/head",
+			"to": "船殼/shroud-fore-S1",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:06",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-shroud-S2",
+			"from": "桅-fore/head",
+			"to": "船殼/shroud-fore-S2",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:06",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-shroud-P1",
+			"from": "桅-fore/head",
+			"to": "船殼/shroud-fore-P1",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:06",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-shroud-P2",
+			"from": "桅-fore/head",
+			"to": "船殼/shroud-fore-P2",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/fore",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:07",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-sheet",
+			"from": "sail:main/clew",
+			"to": "舵橫樑與吊架/bitt-150-S",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:07",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main"
+			}
+		},
+		{
+			"name": "main-tack",
+			"from": "model:桅-main/yard-main/tack",
+			"to": "甲板-main/tack-main",
+			"color": "#a08458",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:07",
+			"meta": {
+				"kind": "tack",
+				"sail": "main"
+			}
+		},
+		{
+			"name": "main-halyard",
+			"from": "model:桅-main/yard-main/sling",
+			"to": "桅-main/sheave-aft",
+			"color": "#a08458",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:08"
+		},
+		{
+			"name": "main-halyard-fall",
+			"from": "桅-main/sheave-aft",
+			"to": "甲板-main/halyard-main",
+			"color": "#a08458",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:08"
+		},
+		{
+			"name": "main-shroud-S1",
+			"from": "桅-main/head",
+			"to": "船殼/shroud-main-S1",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:08",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-shroud-S2",
+			"from": "桅-main/head",
+			"to": "船殼/shroud-main-S2",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:09",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-shroud-P1",
+			"from": "桅-main/head",
+			"to": "船殼/shroud-main-P1",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:09",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-shroud-P2",
+			"from": "桅-main/head",
+			"to": "船殼/shroud-main-P2",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/main",
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:09",
+			"meta": {
+				"kind": "shroud"
+			}
+		}
+	],
+	"groups": []
+}

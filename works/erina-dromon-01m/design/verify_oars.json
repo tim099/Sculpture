@@ -1,0 +1,3647 @@
+{
+ "components": {
+  "lower": {
+   "size": [
+    7,
+    78,
+    34
+   ],
+   "cells": 153,
+   "anchors": {
+    "pivot": [
+     3,
+     21,
+     24
+    ],
+    "blade": [
+     3,
+     77,
+     12
+    ],
+    "seat": [
+     2,
+     2,
+     3
+    ]
+   },
+   "length_m": 3.85,
+   "angle_deg": 12,
+   "file": "lists/oar_lower.txt",
+   "sha256": "5563f2d90410c69876b958c91747c3028213e295c58e587c82819584d250e925"
+  },
+  "upper": {
+   "size": [
+    7,
+    95,
+    59
+   ],
+   "cells": 191,
+   "anchors": {
+    "pivot": [
+     3,
+     26,
+     40
+    ],
+    "blade": [
+     3,
+     94,
+     4
+    ],
+    "seat": [
+     2,
+     4,
+     29
+    ]
+   },
+   "length_m": 4.7,
+   "angle_deg": 28,
+   "file": "lists/oar_upper.txt",
+   "sha256": "f1ad583c43ca5e04d5792b596eeaeccd5d23ac6006e0145d2dd9fd1b8cbffbf1"
+  }
+ },
+ "oars": 98,
+ "per_side": {
+  "S": 49,
+  "P": 49
+ },
+ "per_bank": {
+  "lower": 50,
+  "upper": 48
+ },
+ "collide_total": 0,
+ "seat_cell_bad": [
+  "oar-S-L25",
+  "oar-P-L25"
+ ],
+ "rowers_game": [
+  98,
+  98
+ ],
+ "rowers_where": {
+  "lower": [
+   5,
+   6
+  ],
+  "upper": [
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27
+  ]
+ },
+ "rower_missing": [],
+ "hang_bad": [],
+ "blade_mid_minus_water": {
+  "lower": [
+   0.0,
+   0.0
+  ],
+  "upper": [
+   -0.02,
+   0.03
+  ]
+ },
+ "tilt_deg": [
+  -2.8,
+  9.0
+ ],
+ "rowers": 98,
+ "nonzero": {},
+ "detail": [
+  {
+   "name": "oar-S-L01",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 78,
+   "port_z": 15,
+   "at": [
+    79.0,
+    75.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 34.5,
+   "seat_world": [
+    78,
+    65,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    78,
+    65,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L01",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 78,
+   "port_z": 15,
+   "at": [
+    79.0,
+    54.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 34.5,
+   "seat_world": [
+    78,
+    63,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    78,
+    63,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U01",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 83,
+   "port_z": 30,
+   "at": [
+    84.0,
+    80.0,
+    31.0
+   ],
+   "tilt_deg": 9.0,
+   "rotate": [
+    -9.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.0,
+   "blade_mid_y_off": 42.7,
+   "seat_world": [
+    83,
+    68,
+    27
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    83,
+    68,
+    27
+   ]
+  },
+  {
+   "name": "oar-P-U01",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 83,
+   "port_z": 30,
+   "at": [
+    84.0,
+    49.0,
+    31.0
+   ],
+   "tilt_deg": 9.0,
+   "rotate": [
+    9.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.0,
+   "blade_mid_y_off": 42.7,
+   "seat_world": [
+    83,
+    60,
+    27
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    83,
+    60,
+    27
+   ]
+  },
+  {
+   "name": "oar-S-L02",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 88,
+   "port_z": 15,
+   "at": [
+    89.0,
+    78.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 37.5,
+   "seat_world": [
+    88,
+    68,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    88,
+    68,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L02",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 88,
+   "port_z": 15,
+   "at": [
+    89.0,
+    51.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 37.5,
+   "seat_world": [
+    88,
+    60,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    88,
+    60,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U02",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 93,
+   "port_z": 29,
+   "at": [
+    94.0,
+    82.0,
+    30.0
+   ],
+   "tilt_deg": 6.9,
+   "rotate": [
+    -6.9,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.01,
+   "blade_mid_y_off": 45.4,
+   "seat_world": [
+    93,
+    70,
+    26
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    93,
+    70,
+    26
+   ]
+  },
+  {
+   "name": "oar-P-U02",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 93,
+   "port_z": 29,
+   "at": [
+    94.0,
+    47.0,
+    30.0
+   ],
+   "tilt_deg": 6.9,
+   "rotate": [
+    6.9,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.01,
+   "blade_mid_y_off": 45.4,
+   "seat_world": [
+    93,
+    58,
+    26
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    93,
+    58,
+    26
+   ]
+  },
+  {
+   "name": "oar-S-L03",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 98,
+   "port_z": 15,
+   "at": [
+    99.0,
+    80.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 39.5,
+   "seat_world": [
+    98,
+    70,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    98,
+    70,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L03",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 98,
+   "port_z": 15,
+   "at": [
+    99.0,
+    49.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 39.5,
+   "seat_world": [
+    98,
+    58,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    98,
+    58,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U03",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 103,
+   "port_z": 28,
+   "at": [
+    104.0,
+    83.0,
+    29.0
+   ],
+   "tilt_deg": 4.9,
+   "rotate": [
+    -4.9,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.01,
+   "blade_mid_y_off": 47.1,
+   "seat_world": [
+    103,
+    71,
+    25
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    103,
+    71,
+    25
+   ]
+  },
+  {
+   "name": "oar-P-U03",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 103,
+   "port_z": 28,
+   "at": [
+    104.0,
+    46.0,
+    29.0
+   ],
+   "tilt_deg": 4.9,
+   "rotate": [
+    4.9,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.01,
+   "blade_mid_y_off": 47.1,
+   "seat_world": [
+    103,
+    57,
+    25
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    103,
+    57,
+    25
+   ]
+  },
+  {
+   "name": "oar-S-L04",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 108,
+   "port_z": 15,
+   "at": [
+    109.0,
+    81.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 40.5,
+   "seat_world": [
+    108,
+    71,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    108,
+    71,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L04",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 108,
+   "port_z": 15,
+   "at": [
+    109.0,
+    48.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 40.5,
+   "seat_world": [
+    108,
+    57,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    108,
+    57,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U04",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 113,
+   "port_z": 27,
+   "at": [
+    114.0,
+    84.0,
+    28.0
+   ],
+   "tilt_deg": 2.9,
+   "rotate": [
+    -2.9,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 48.7,
+   "seat_world": [
+    113,
+    72,
+    24
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    113,
+    72,
+    24
+   ]
+  },
+  {
+   "name": "oar-P-U04",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 113,
+   "port_z": 27,
+   "at": [
+    114.0,
+    45.0,
+    28.0
+   ],
+   "tilt_deg": 2.9,
+   "rotate": [
+    2.9,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 48.7,
+   "seat_world": [
+    113,
+    56,
+    24
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    113,
+    56,
+    24
+   ]
+  },
+  {
+   "name": "oar-S-L05",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 118,
+   "port_z": 15,
+   "at": [
+    119.0,
+    82.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 41.5,
+   "seat_world": [
+    118,
+    72,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    118,
+    72,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L05",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 118,
+   "port_z": 15,
+   "at": [
+    119.0,
+    47.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 41.5,
+   "seat_world": [
+    118,
+    56,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    118,
+    56,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U05",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 123,
+   "port_z": 26,
+   "at": [
+    124.0,
+    85.0,
+    27.0
+   ],
+   "tilt_deg": 1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 50.2,
+   "seat_world": [
+    123,
+    73,
+    23
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    123,
+    73,
+    23
+   ]
+  },
+  {
+   "name": "oar-P-U05",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 123,
+   "port_z": 26,
+   "at": [
+    124.0,
+    44.0,
+    27.0
+   ],
+   "tilt_deg": 1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 50.2,
+   "seat_world": [
+    123,
+    55,
+    23
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    123,
+    55,
+    23
+   ]
+  },
+  {
+   "name": "oar-S-L06",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 128,
+   "port_z": 15,
+   "at": [
+    129.0,
+    83.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 42.5,
+   "seat_world": [
+    128,
+    73,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    128,
+    73,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L06",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 128,
+   "port_z": 15,
+   "at": [
+    129.0,
+    46.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 42.5,
+   "seat_world": [
+    128,
+    55,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    128,
+    55,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U06",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 133,
+   "port_z": 25,
+   "at": [
+    134.0,
+    85.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    133,
+    73,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    133,
+    74,
+    22
+   ]
+  },
+  {
+   "name": "oar-P-U06",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 133,
+   "port_z": 25,
+   "at": [
+    134.0,
+    44.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    133,
+    55,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    133,
+    54,
+    22
+   ]
+  },
+  {
+   "name": "oar-S-L07",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 138,
+   "port_z": 15,
+   "at": [
+    139.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    138,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    138,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L07",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 138,
+   "port_z": 15,
+   "at": [
+    139.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    138,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    138,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U07",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 143,
+   "port_z": 25,
+   "at": [
+    144.0,
+    85.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    143,
+    73,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    143,
+    74,
+    22
+   ]
+  },
+  {
+   "name": "oar-P-U07",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 143,
+   "port_z": 25,
+   "at": [
+    144.0,
+    44.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    143,
+    55,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    143,
+    54,
+    22
+   ]
+  },
+  {
+   "name": "oar-S-L08",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 148,
+   "port_z": 15,
+   "at": [
+    149.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    148,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    148,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L08",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 148,
+   "port_z": 15,
+   "at": [
+    149.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    148,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    148,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U08",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 153,
+   "port_z": 25,
+   "at": [
+    154.0,
+    86.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 51.8,
+   "seat_world": [
+    153,
+    74,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    153,
+    75,
+    22
+   ]
+  },
+  {
+   "name": "oar-P-U08",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 153,
+   "port_z": 25,
+   "at": [
+    154.0,
+    43.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 51.8,
+   "seat_world": [
+    153,
+    54,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    153,
+    53,
+    22
+   ]
+  },
+  {
+   "name": "oar-S-L09",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 158,
+   "port_z": 15,
+   "at": [
+    159.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    158,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    158,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L09",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 158,
+   "port_z": 15,
+   "at": [
+    159.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    158,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    158,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U09",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 163,
+   "port_z": 24,
+   "at": [
+    164.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    163,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    163,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U09",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 163,
+   "port_z": 24,
+   "at": [
+    164.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    163,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    163,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L10",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 168,
+   "port_z": 15,
+   "at": [
+    169.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    168,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    168,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L10",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 168,
+   "port_z": 15,
+   "at": [
+    169.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    168,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    168,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U10",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 173,
+   "port_z": 24,
+   "at": [
+    174.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    173,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    173,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U10",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 173,
+   "port_z": 24,
+   "at": [
+    174.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    173,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    173,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L11",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 178,
+   "port_z": 15,
+   "at": [
+    179.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    178,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    178,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L11",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 178,
+   "port_z": 15,
+   "at": [
+    179.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    178,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    178,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U11",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 183,
+   "port_z": 24,
+   "at": [
+    184.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    183,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    183,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U11",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 183,
+   "port_z": 24,
+   "at": [
+    184.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    183,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    183,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L12",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 188,
+   "port_z": 15,
+   "at": [
+    189.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    188,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    188,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L12",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 188,
+   "port_z": 15,
+   "at": [
+    189.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    188,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    188,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U12",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 193,
+   "port_z": 24,
+   "at": [
+    194.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    193,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    193,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U12",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 193,
+   "port_z": 24,
+   "at": [
+    194.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    193,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    193,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L13",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 198,
+   "port_z": 15,
+   "at": [
+    199.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    198,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    198,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L13",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 198,
+   "port_z": 15,
+   "at": [
+    199.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    198,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    198,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U13",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 203,
+   "port_z": 24,
+   "at": [
+    204.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    203,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    203,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U13",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 203,
+   "port_z": 24,
+   "at": [
+    204.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    203,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    203,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L14",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 208,
+   "port_z": 15,
+   "at": [
+    209.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    208,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    208,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L14",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 208,
+   "port_z": 15,
+   "at": [
+    209.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    208,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    208,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U14",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 213,
+   "port_z": 24,
+   "at": [
+    214.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    213,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    213,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U14",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 213,
+   "port_z": 24,
+   "at": [
+    214.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    213,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    213,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L15",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 218,
+   "port_z": 15,
+   "at": [
+    219.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    218,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    218,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L15",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 218,
+   "port_z": 15,
+   "at": [
+    219.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    218,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    218,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U15",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 223,
+   "port_z": 24,
+   "at": [
+    224.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    223,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    223,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U15",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 223,
+   "port_z": 24,
+   "at": [
+    224.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    223,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    223,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L16",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 228,
+   "port_z": 15,
+   "at": [
+    229.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    228,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    228,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L16",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 228,
+   "port_z": 15,
+   "at": [
+    229.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    228,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    228,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U16",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 233,
+   "port_z": 24,
+   "at": [
+    234.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    233,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    233,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U16",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 233,
+   "port_z": 24,
+   "at": [
+    234.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    233,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    233,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L17",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 238,
+   "port_z": 15,
+   "at": [
+    239.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    238,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    238,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L17",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 238,
+   "port_z": 15,
+   "at": [
+    239.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    238,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    238,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U17",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 243,
+   "port_z": 24,
+   "at": [
+    244.0,
+    86.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    2.8,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    243,
+    74,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    243,
+    75,
+    21
+   ]
+  },
+  {
+   "name": "oar-P-U17",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 243,
+   "port_z": 24,
+   "at": [
+    244.0,
+    43.0,
+    25.0
+   ],
+   "tilt_deg": -2.8,
+   "rotate": [
+    -2.8,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 52.2,
+   "seat_world": [
+    243,
+    54,
+    21
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    243,
+    53,
+    21
+   ]
+  },
+  {
+   "name": "oar-S-L18",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 248,
+   "port_z": 15,
+   "at": [
+    249.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    248,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    248,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L18",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 248,
+   "port_z": 15,
+   "at": [
+    249.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    248,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    248,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-L19",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 258,
+   "port_z": 15,
+   "at": [
+    259.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    258,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    258,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L19",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 258,
+   "port_z": 15,
+   "at": [
+    259.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    258,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    258,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U19",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 263,
+   "port_z": 25,
+   "at": [
+    264.0,
+    85.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    263,
+    73,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    266,
+    71,
+    22
+   ]
+  },
+  {
+   "name": "oar-P-U19",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 263,
+   "port_z": 25,
+   "at": [
+    264.0,
+    44.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    263,
+    55,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    266,
+    51,
+    22
+   ]
+  },
+  {
+   "name": "oar-S-L20",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 268,
+   "port_z": 15,
+   "at": [
+    269.0,
+    84.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    268,
+    74,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    268,
+    74,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L20",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 268,
+   "port_z": 15,
+   "at": [
+    269.0,
+    45.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 43.5,
+   "seat_world": [
+    268,
+    54,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    268,
+    54,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U20",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 273,
+   "port_z": 25,
+   "at": [
+    274.0,
+    85.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    273,
+    73,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    273,
+    74,
+    22
+   ]
+  },
+  {
+   "name": "oar-P-U20",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 273,
+   "port_z": 25,
+   "at": [
+    274.0,
+    44.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 50.8,
+   "seat_world": [
+    273,
+    55,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    273,
+    54,
+    22
+   ]
+  },
+  {
+   "name": "oar-S-L21",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 278,
+   "port_z": 15,
+   "at": [
+    279.0,
+    83.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 42.5,
+   "seat_world": [
+    278,
+    73,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    278,
+    73,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L21",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 278,
+   "port_z": 15,
+   "at": [
+    279.0,
+    46.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 42.5,
+   "seat_world": [
+    278,
+    55,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    278,
+    55,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U21",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 283,
+   "port_z": 25,
+   "at": [
+    284.0,
+    84.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 49.8,
+   "seat_world": [
+    283,
+    72,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    283,
+    73,
+    22
+   ]
+  },
+  {
+   "name": "oar-P-U21",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 283,
+   "port_z": 25,
+   "at": [
+    284.0,
+    45.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 49.8,
+   "seat_world": [
+    283,
+    56,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    283,
+    55,
+    22
+   ]
+  },
+  {
+   "name": "oar-S-L22",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 288,
+   "port_z": 15,
+   "at": [
+    289.0,
+    82.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 41.5,
+   "seat_world": [
+    288,
+    72,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    288,
+    72,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L22",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 288,
+   "port_z": 15,
+   "at": [
+    289.0,
+    47.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 41.5,
+   "seat_world": [
+    288,
+    56,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    288,
+    56,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U22",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 293,
+   "port_z": 25,
+   "at": [
+    294.0,
+    84.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 49.8,
+   "seat_world": [
+    293,
+    72,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    293,
+    73,
+    22
+   ]
+  },
+  {
+   "name": "oar-P-U22",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 293,
+   "port_z": 25,
+   "at": [
+    294.0,
+    45.0,
+    26.0
+   ],
+   "tilt_deg": -1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.03,
+   "blade_mid_y_off": 49.8,
+   "seat_world": [
+    293,
+    56,
+    22
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    293,
+    55,
+    22
+   ]
+  },
+  {
+   "name": "oar-S-L23",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 298,
+   "port_z": 15,
+   "at": [
+    299.0,
+    81.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 40.5,
+   "seat_world": [
+    298,
+    71,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    298,
+    71,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L23",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 298,
+   "port_z": 15,
+   "at": [
+    299.0,
+    48.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 40.5,
+   "seat_world": [
+    298,
+    57,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    298,
+    57,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U23",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 303,
+   "port_z": 26,
+   "at": [
+    304.0,
+    82.0,
+    27.0
+   ],
+   "tilt_deg": 1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 47.2,
+   "seat_world": [
+    303,
+    70,
+    23
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    303,
+    70,
+    23
+   ]
+  },
+  {
+   "name": "oar-P-U23",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 303,
+   "port_z": 26,
+   "at": [
+    304.0,
+    47.0,
+    27.0
+   ],
+   "tilt_deg": 1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 47.2,
+   "seat_world": [
+    303,
+    58,
+    23
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    303,
+    58,
+    23
+   ]
+  },
+  {
+   "name": "oar-S-L24",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 308,
+   "port_z": 15,
+   "at": [
+    309.0,
+    79.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 38.5,
+   "seat_world": [
+    308,
+    69,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    308,
+    69,
+    5
+   ]
+  },
+  {
+   "name": "oar-P-L24",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 308,
+   "port_z": 15,
+   "at": [
+    309.0,
+    50.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 38.5,
+   "seat_world": [
+    308,
+    59,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    308,
+    59,
+    5
+   ]
+  },
+  {
+   "name": "oar-S-U24",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 313,
+   "port_z": 26,
+   "at": [
+    314.0,
+    81.0,
+    27.0
+   ],
+   "tilt_deg": 1.0,
+   "rotate": [
+    -1.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 46.2,
+   "seat_world": [
+    313,
+    69,
+    23
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    313,
+    69,
+    23
+   ]
+  },
+  {
+   "name": "oar-P-U24",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 313,
+   "port_z": 26,
+   "at": [
+    314.0,
+    48.0,
+    27.0
+   ],
+   "tilt_deg": 1.0,
+   "rotate": [
+    1.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": -0.02,
+   "blade_mid_y_off": 46.2,
+   "seat_world": [
+    313,
+    59,
+    23
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    313,
+    59,
+    23
+   ]
+  },
+  {
+   "name": "oar-S-L25",
+   "bank": "lower",
+   "side": "S",
+   "port_x": 318,
+   "port_z": 15,
+   "at": [
+    319.0,
+    77.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    -0.0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 36.5,
+   "seat_world": [
+    318,
+    67,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [
+    5
+   ],
+   "hang_hull": true,
+   "rower": [
+    318,
+    67,
+    6
+   ]
+  },
+  {
+   "name": "oar-P-L25",
+   "bank": "lower",
+   "side": "P",
+   "port_x": 318,
+   "port_z": 15,
+   "at": [
+    319.0,
+    52.0,
+    16.0
+   ],
+   "tilt_deg": 0.0,
+   "rotate": [
+    0.0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 36.5,
+   "seat_world": [
+    318,
+    61,
+    5
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [
+    5
+   ],
+   "hang_hull": true,
+   "rower": [
+    318,
+    61,
+    6
+   ]
+  },
+  {
+   "name": "oar-S-U25",
+   "bank": "upper",
+   "side": "S",
+   "port_x": 323,
+   "port_z": 27,
+   "at": [
+    324.0,
+    78.0,
+    28.0
+   ],
+   "tilt_deg": 2.9,
+   "rotate": [
+    -2.9,
+    0,
+    0
+   ],
+   "mirror": "",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 42.7,
+   "seat_world": [
+    323,
+    66,
+    24
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    321,
+    64,
+    23
+   ]
+  },
+  {
+   "name": "oar-P-U25",
+   "bank": "upper",
+   "side": "P",
+   "port_x": 323,
+   "port_z": 27,
+   "at": [
+    324.0,
+    51.0,
+    28.0
+   ],
+   "tilt_deg": 2.9,
+   "rotate": [
+    2.9,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "collide": 0,
+   "collide_sample": [],
+   "blade_mid_minus_water": 0.0,
+   "blade_mid_y_off": 42.7,
+   "seat_world": [
+    323,
+    62,
+    24
+   ],
+   "seat_foot": true,
+   "seat_head_blocked": [],
+   "hang_hull": true,
+   "rower": [
+    321,
+    60,
+    23
+   ]
+  }
+ ]
+}

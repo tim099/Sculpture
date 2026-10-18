@@ -1,0 +1,124 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "fore",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:桅-fore/yard-fore/tack",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:桅-fore/yard-fore/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "247.5,64.5,52.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:03",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"rig": "lateen",
+				"sail": "gaff",
+				"set": 1
+			}
+		},
+		{
+			"name": "main",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:桅-main/yard-main/tack",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:桅-main/yard-main/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "152.5,64.5,34.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:03",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"rig": "lateen",
+				"sail": "gaff",
+				"set": 1
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "hoist-hi",
+					"at": "40.5,64.5,60.5",
+					"pin": true
+				},
+				{
+					"name": "hoist-lo",
+					"at": "40.5,64.5,54.5",
+					"pin": true
+				},
+				{
+					"name": "fly-lo",
+					"at": "30.5,64.5,54.5",
+					"pin": false
+				},
+				{
+					"name": "fly-hi",
+					"at": "30.5,64.5,60.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#5a1e6e",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T13:07:04",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
+		}
+	]
+}

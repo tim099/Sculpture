@@ -1,0 +1,262 @@
+{
+ "_doc": "持火號（拜占庭 dromon）設計來源。單位：格（0.1 m）；x 船頭朝 +x、y 中線格 64、z 0 ＝ 龍骨底。每個數字的出處在 provenance：ref ＝ 參考資料（references/dromon_research.md 的那一條）／design ＝ erina 設計決定。",
+ "frame": {
+  "size": [
+   416,
+   129,
+   256
+  ],
+  "yc": 64,
+  "mpv": 0.1
+ },
+ "waterline_z": 11,
+ "hull": {
+  "x_mid": 200,
+  "keel": {
+   "z_top": 2,
+   "half": 1.5,
+   "flat_aft": 95,
+   "flat_fwd": 300,
+   "rocker_pow": 2.0
+  },
+  "stem": {
+   "x_foot": 338,
+   "z_foot": 7,
+   "x_head": 352,
+   "z_head": 28,
+   "curve": 1.7
+  },
+  "stern": {
+   "x_foot": 64,
+   "z_foot": 8,
+   "x_head": 38,
+   "z_head": 50,
+   "curve": 1.5
+  },
+  "sheer": {
+   "x_low": 200,
+   "z_mid": 21,
+   "x_fwd": 352,
+   "rise_fwd": 4,
+   "pow_fwd": 2.2,
+   "x_aft": 40,
+   "rise_aft": 12,
+   "pow_aft": 2.4
+  },
+  "mid": {
+   "keel_half": 1.5,
+   "half_bilge": 17.5,
+   "bilge_h": 7,
+   "bilge_p": 2.2,
+   "half_side": 19.0,
+   "side_h": 14,
+   "half_top": 22.3,
+   "top_h": 19
+  },
+  "full": {
+   "a_fwd": 2.4,
+   "a_fwd_top": 4.2,
+   "b_fwd": 0.8,
+   "a_aft": 2.3,
+   "a_aft_top": 3.8,
+   "b_aft": 0.8
+  },
+  "shell_t": 2,
+  "bulwark": {
+   "h": 8
+  },
+  "frames": {
+   "dx": 10,
+   "x0": 60,
+   "x1": 340
+  },
+  "spur": {
+   "x0": 344,
+   "x1": 396,
+   "z0": 20,
+   "z1": 24,
+   "hw0": 1.6,
+   "hw1": 0.6,
+   "hh0": 2.2,
+   "hh1": 0.8,
+   "tip_from": 0.82
+  },
+  "posts": {
+   "half": 1.5,
+   "depth": 3
+  },
+  "siphon_port": {
+   "x0": 338,
+   "x1": 356,
+   "y0": 60,
+   "y1": 68,
+   "z0": 28,
+   "z1": 40
+  }
+ },
+ "deck_main": {
+  "hatches": [
+   {
+    "x0": 112,
+    "x1": 120,
+    "hw": 4
+   },
+   {
+    "x0": 296,
+    "x1": 304,
+    "hw": 4
+   }
+  ]
+ },
+ "deck_hold": {
+  "z": 4,
+  "x0": 70,
+  "x1": 330
+ },
+ "paint": {
+  "wales": [
+   [
+    13,
+    13
+   ],
+   [
+    18,
+    18
+   ]
+  ],
+  "stripe": [
+   5,
+   6
+  ]
+ },
+ "oars": {
+  "per_side": 25,
+  "x_first": 78,
+  "dx": 10,
+  "z_lower": 15,
+  "h": 3,
+  "w": 2,
+  "upper_offset": 5,
+  "upper_dz": 3,
+  "lower": {
+   "inboard_m": 1.045,
+   "outboard_m": 2.805,
+   "blade_m": 0.81,
+   "blade_w_m": 0.14,
+   "loom_d_m": [
+    0.09,
+    0.06
+   ],
+   "angle_deg": 12,
+   "seat_in_m": 1.0,
+   "rowers": 1,
+   "stroke_deg": 30,
+   "dip_deg": 12,
+   "z_pad": 8
+  },
+  "upper": {
+   "inboard_m": 1.3,
+   "outboard_m": 3.4,
+   "blade_m": 0.85,
+   "blade_w_m": 0.15,
+   "loom_d_m": [
+    0.1,
+    0.065
+   ],
+   "angle_deg": 28,
+   "seat_in_m": 1.2,
+   "rowers": 1,
+   "stroke_deg": 30,
+   "dip_deg": 12
+  },
+  "cfg_base": 7,
+  "upper_h": 3,
+  "pivot_dz": 1.0,
+  "skip": [
+   "U18"
+  ]
+ },
+ "rig": {
+  "masts": {
+   "fore": {
+    "x_step": 274,
+    "z_step": 4,
+    "z_top": 117,
+    "rake_deg": 13,
+    "r_deck": 2.4,
+    "r_top": 1.5,
+    "head_h": 6
+   },
+   "main": {
+    "x_step": 196,
+    "z_step": 4,
+    "z_top": 86,
+    "rake_deg": 3,
+    "r_deck": 2.0,
+    "r_top": 1.3,
+    "head_h": 5
+   }
+  },
+  "yards": {
+   "fore": {
+    "mast": "fore",
+    "length": 201,
+    "r_mid": 1.6,
+    "r_end": 0.6,
+    "sling_frac": 0.33,
+    "tilt_deg": 52
+   },
+   "main": {
+    "mast": "main",
+    "length": 154,
+    "r_mid": 1.4,
+    "r_end": 0.6,
+    "sling_frac": 0.33,
+    "tilt_deg": 50
+   }
+  }
+ },
+ "colors": {
+  "bottom": 36,
+  "topside": 68,
+  "wale": 100,
+  "stripe": 160,
+  "deck": 177,
+  "beam": 136,
+  "castle": 141,
+  "bronze": 172,
+  "gold": 212,
+  "iron": 73,
+  "keel": 64,
+  "oarport": 37,
+  "mast": 140,
+  "rope": 177
+ },
+ "provenance": {
+  "LOA 31.25 m（艉柱頭 x 38 → 艏柱頭 x 353 ＝ 31.5 m）": "ref §1 Pryor pp.244/291–292",
+  "划槳段 25.5 m、槳距 1.0 m、每舷 25 槳、上下層錯半個位": "ref §1、§3（Pryor p.291；Yenikapı 0.90–0.97 m）",
+  "寬：直舷 3.80 m（half_side 19）、外張 4.46 m（half_top 22.3）、外張從下層槳口以上開始": "ref §1 Pryor pp.292/299/312",
+  "甲板離水線 1.0 m（WL z 11、甲板面 z 21）": "ref §1 Pryor p.443",
+  "下層槳口下緣離水線 0.36 m ⇒ z 15（0.4 m）": "ref §1 Pryor pp.262/294",
+  "吃水 1.1 m（龍骨底到水線）": "design：照 ref §1 的推算（甲板高＋艙深 1.85–1.9 m）",
+  "水線寬約 3.6 m、圓舭、船中平底": "design：ref 只給 < 3.80 m；Yenikapı 船中 flat-floored",
+  "艏部 siphon 那層離水線 ≤ 1.5 m": "ref §1 Pryor p.621 —— 本船艏甲板約 z 24（1.3 m）；噴口高約 1.8 m（噴筒管在槽頂，設計，照實記）",
+  "spur：水線以上的木樑、吊在艏柱上、微微上翹，在水面與舷頂的一半高；長 4.4 m、寬 0.25–0.3 m": "ref §2（Pryor pp.140/203/209；寬照 Genoa 1267 的 0.25 m）；長度 design",
+  "前桅較大、前傾 13°、11.85 m、桅頂離水線 10.65 m（z 117）": "ref §4 Pryor pp.238/243–244",
+  "中桅 8.3 m（z 4→86）": "ref §4 Pryor p.244",
+  "桅位：前桅在甲板 x 274（離艏柱約 0.25 L）、中桅 x 196（約 0.5 L）": "design（ref §4 沒找到；照 agent 的低信心建議）",
+  "帆桁：前 20.17 m（201 格）、中 15.43 m（154 格）；前帆尖離水線約 21 m ⇒ 上翹 52°": "ref §4 Pryor p.248；上翹角 design（照帆尖高度反推）",
+  "吊點在帆桁離前端 1/3": "design（lateen 的一般擺法）",
+  "肋骨每 1 m 畫一片（實船 20–24 cm 一站，格子畫不出來 ⇒ 每 5 站畫 1 片）": "ref §2 Yenikapı YK16；畫法 design",
+  "顏色：水線下瀝青黑、水線上深褐、桅與帆桁赭色、紅色舷帶、金色圓飾": "ref §7（瀝青、Skylitzes 的黑船殼與赭色桅桁、金圓飾）；紅帶 design",
+  "舷弧：船中最低、艏 +0.4 m、艉 +1.2 m；艉柱往上翹到 z 50、艏柱頭 z 40（新月形）": "design：ref §2 只有 Angevin 的類比與 Skylitzes 的新月形",
+  "艏柱頭停在 z 28：上面是 siphon 的鍍金獅頭（兼船首像）、艏部舷牆開噴口 y 60–68、z 28 以上": "design（ref §6：siphon 在艏、Anna Komnene 的鍍金獅頭；Skylitzes 艏部噴管）",
+  "槳：下層長 3.85 m（裡 1.045、外 2.805）、槳葉 0.81 m、槳栓離水線 0.365 m、入水角約 11°（Pryor pp. 292–294）⇒ 槳口 z 15–16、元件角 12°（槳葉中心落在水線）": "ref",
+  "槳：上層入水角 ≥ 28°、比下層長、槳栓在下層外側 16–47 cm（Pryor pp. 298–300、443）⇒ 長 4.7 m（裡 1.3、外 3.4）、槳口開在舷牆（甲板面上 0.3–0.5 m）、每支照舷弧補傾角讓槳葉中心落在水線": "design",
+  "槳手：每支一人（雙層 100 槳 ＝ 100 人；上層槳手也是戰鬥員）；下層坐在甲板下 —— 遊戲站位要頭上 1.4 m ⇒ 站艙底走道（z 5），不加划手座（座高 0.4 m 會頂到甲板橫樑）": "ref+design",
+  "划槳全速 cfg.base 7 節（⚠ 估的：雙層 dromon 衝刺一般估 7–10 節、沒查證；皇家號 6）": "design",
+  "槳口 0.2 × 0.3 m（槳柄斜著穿過兩層殼要多一格高）；槳靠在槳口下緣上一格（pivot ＝ 槳口底＋0.1 m）": "design",
+  "上層第 18 位（x 253）不放槳：投石機的底座佔了那一段甲板（槳柄內端撞到、槳手站不下）⇒ 上層每舷 24 支": "design",
+  "藥庫隔艙壁挪到 x 130／147：讓開下層第 6、8 位的槳口與槳手（第 7 位的槳手坐在藥庫裡）": "design"
+ }
+}
