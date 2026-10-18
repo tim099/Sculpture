@@ -1,0 +1,109 @@
+{
+ "ladders": {
+  "engine-S": {
+   "points": {
+    "foot": [
+     507,
+     207,
+     13
+    ],
+    "lo": [
+     508,
+     207,
+     16
+    ],
+    "hi": [
+     532,
+     207,
+     88
+    ],
+    "head": [
+     537,
+     207,
+     90
+    ]
+   },
+   "steps": 25,
+   "floor_z": 12,
+   "top_z": 89,
+   "x": [
+    508,
+    533
+   ],
+   "dir": 1,
+   "top": "deck",
+   "dropped_overlap": 0,
+   "decks": "engine,lower"
+  },
+  "engine-P": {
+   "points": {
+    "foot": [
+     507,
+     193,
+     13
+    ],
+    "lo": [
+     508,
+     193,
+     16
+    ],
+    "hi": [
+     532,
+     193,
+     88
+    ],
+    "head": [
+     537,
+     193,
+     90
+    ]
+   },
+   "steps": 25,
+   "floor_z": 12,
+   "top_z": 89,
+   "x": [
+    508,
+    533
+   ],
+   "dir": 1,
+   "top": "deck",
+   "dropped_overlap": 0,
+   "decks": "engine,lower"
+  }
+ },
+ "cells": 1200,
+ "coaming_carve": 0,
+ "overlap_existing": 0,
+ "mirror_diff": 0,
+ "point_problems": [],
+ "reach": {
+  "engine_floor_stand_cells": 54531,
+  "back_to_deck": 45012,
+  "not_back": 9519,
+  "reachable_from_deck": 40917,
+  "reachable_but_not_back": 0,
+  "not_reached_box": {
+   "x": [
+    370,
+    642
+   ],
+   "y": [
+    157,
+    243
+   ],
+   "z": [
+    29,
+    59
+   ]
+  },
+  "before": {
+   "reachable_from_deck": 0,
+   "back_to_deck": 0
+  }
+ },
+ "sha256": {
+  "ladders": "fd90ef4d4c8ae26b3877bcfc15476e007f85a7bc2296d3431c8e467109127b4a",
+  "coaming_carve": "1b12a050e520d6c10204af2e0ae4f759cbf45b614270fa7161fa378588c14e7c"
+ },
+ "coaming_carve_note": "圍欄已經刻過（甲板-lower 標記「機艙梯子出口」）⇒ 沿用階段十三那一份清單"
+}

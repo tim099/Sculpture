@@ -44,6 +44,11 @@
 				"hinge_z": 1.0,
 				"kind": "rudder",
 				"max_deg": 35,
+				"spin": "rudder",
+				"spin_k": 35,
+				"spin_lag": 0.3,
+				"spin_max": 35,
+				"spin_min": -35,
 				"turn_axis": "hinge"
 			}
 		},
@@ -166,6 +171,48 @@
 				"blades": 6,
 				"diameter_m": 5.8,
 				"kind": "propeller"
+			}
+		},
+		{
+			"name": "曲柄",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kaguya-gloire-01m-engine-crank",
+			"axes": "sculpt",
+			"at": [
+				432.5,
+				200.5,
+				41.5
+			],
+			"pivot": [
+				432.5,
+				200.5,
+				41.5
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "機艙：曲柄（會轉的外部模型：遊戲照螺旋槳轉速繞 spin-a → spin-b 轉）",
+			"persona": "kaguya",
+			"created_at": "2026-10-18T13:00:12",
+			"meta": {
+				"gear": "crank",
+				"kind": "gear",
+				"spin": "rpm",
+				"spin_k": 6,
+				"spin_mode": "rate"
 			}
 		}
 	]

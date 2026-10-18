@@ -1,0 +1,370 @@
+{
+ "note": "draft_furnish.py（階段十一）—— 現況 ＝ 組裝件 links=all（2445908 格）＋ 模型外框 155",
+ "pieces": {
+  "bitts": {
+   "cells": 5610,
+   "pivot": [
+    7.5,
+    20.5,
+    0
+   ],
+   "size": [
+    15,
+    41,
+    24
+   ],
+   "source_work": "kotoko-napoleon-01m-bitts"
+  },
+  "fiferail": {
+   "cells": 1980,
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "size": [
+    39,
+    39,
+    19
+   ],
+   "source_work": "kotoko-napoleon-01m-fiferail"
+  },
+  "galley": {
+   "cells": 32610,
+   "chimney_to_z": 137,
+   "pivot": [
+    22.0,
+    16.0,
+    0
+   ],
+   "sha256": "2ed2a0f4c35bc2f1cafe1c02e1f8afda825d33fd6124c3bd1fac093d90431f2d",
+   "size": [
+    44,
+    32,
+    44
+   ],
+   "source_work": "kaguya-gloire-01m-galley"
+  },
+  "shotrack": {
+   "cells": 1543,
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "size": [
+    54,
+    4,
+    9
+   ],
+   "source_work": "kotoko-napoleon-01m-shotrack"
+  }
+ },
+ "ranges": {
+  "爐灶": [
+   800.0,
+   860.0
+  ],
+  "砲彈架-P": [
+   519.5,
+   519.5
+  ],
+  "砲彈架-S": [
+   519.5,
+   519.5
+  ],
+  "繫索栓圍欄-fore": [
+   720.0,
+   720.0
+  ],
+  "繫索栓圍欄-main": [
+   473.0,
+   473.0
+  ],
+  "繫纜柱": [
+   840.0,
+   880.0
+  ]
+ },
+ "rows": [
+  {
+   "at": [
+    815.0,
+    200.5,
+    115.0
+   ],
+   "box": [
+    804.15,
+    192.65,
+    115.15,
+    825.85,
+    208.35,
+    136.85
+   ],
+   "deck_work": "kaguya-gloire-01m-deck-spar",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "爐灶",
+   "path": "甲板-spar/爐灶",
+   "piece": "galley",
+   "pivot": [
+    22.0,
+    16.0,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kaguya-gloire-01m-galley",
+   "support": [
+    1408,
+    1408
+   ]
+  },
+  {
+   "at": [
+    865.0,
+    200.5,
+    93.0
+   ],
+   "box": [
+    861.4,
+    190.4,
+    93.15,
+    868.6,
+    210.6,
+    104.85
+   ],
+   "candidates": 73,
+   "deck_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫纜柱",
+   "path": "甲板-lower/繫纜柱",
+   "piece": "bitts",
+   "pivot": [
+    7.5,
+    20.5,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-bitts",
+   "support": [
+    162,
+    162
+   ]
+  },
+  {
+   "at": [
+    473.0,
+    200.5,
+    113.0
+   ],
+   "box": [
+    463.4,
+    190.9,
+    113.15,
+    482.6,
+    210.1,
+    122.35
+   ],
+   "candidates": 1,
+   "deck_work": "kaguya-gloire-01m-deck-spar",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫索栓圍欄-main",
+   "path": "甲板-spar/繫索栓圍欄-main",
+   "piece": "fiferail",
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-fiferail",
+   "support": [
+    72,
+    72
+   ]
+  },
+  {
+   "at": [
+    720.0,
+    200.5,
+    114.0
+   ],
+   "box": [
+    710.4,
+    190.9,
+    114.15,
+    729.6,
+    210.1,
+    123.35
+   ],
+   "candidates": 1,
+   "deck_work": "kaguya-gloire-01m-deck-spar",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫索栓圍欄-fore",
+   "path": "甲板-spar/繫索栓圍欄-fore",
+   "piece": "fiferail",
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-fiferail",
+   "support": [
+    72,
+    72
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    214.0,
+    90.0
+   ],
+   "box": [
+    506.15,
+    214.15,
+    90.15,
+    532.85,
+    215.85,
+    94.35
+   ],
+   "candidates": 14,
+   "deck_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "砲彈架-S",
+   "path": "甲板-lower/砲彈架-S",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-shotrack",
+   "support": [
+    216,
+    216
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    187.0,
+    90.0
+   ],
+   "box": [
+    506.15,
+    185.15,
+    90.15,
+    532.85,
+    186.85,
+    94.35
+   ],
+   "candidates": 14,
+   "deck_work": "kaguya-gloire-01m-deck-lower",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "y",
+   "model": "砲彈架-P",
+   "path": "甲板-lower/砲彈架-P",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-shotrack",
+   "support": [
+    216,
+    216
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    214.0,
+    113.0
+   ],
+   "box": [
+    506.15,
+    214.15,
+    113.15,
+    532.85,
+    215.85,
+    117.35
+   ],
+   "candidates": 14,
+   "deck_work": "kaguya-gloire-01m-deck-spar",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "砲彈架-S",
+   "path": "甲板-spar/砲彈架-S",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-shotrack",
+   "support": [
+    216,
+    216
+   ]
+  },
+  {
+   "at": [
+    519.5,
+    187.0,
+    113.0
+   ],
+   "box": [
+    506.15,
+    185.15,
+    113.15,
+    532.85,
+    186.85,
+    117.35
+   ],
+   "candidates": 14,
+   "deck_work": "kaguya-gloire-01m-deck-spar",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "y",
+   "model": "砲彈架-P",
+   "path": "甲板-spar/砲彈架-P",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-shotrack",
+   "support": [
+    216,
+    216
+   ]
+  }
+ ]
+}

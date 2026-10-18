@@ -1,6 +1,10 @@
 # 光榮號 TODO
 
-- [ ] 遊戲那側（ame）正式匯入：`admin.py import --work kaguya-gloire-01m-assembly --id gloire --name 光榮號`；ships[].geo 至少填 `spar: [113, 141]`（暫存副本試過 ⇒ shipcheck ✗ 0 ⚠ 0），其他高度見 notes.md「給遊戲那側填 geo 的高度」；cfg（航速 13.5 kn、2,500 ihp）、crew、names。
-- [ ] 全船預設材質照舊是橡木（鐵甲帶、煙囪、指揮塔另外標 iron）—— 不用改。
+- [x] 遊戲正式匯入（2026-10-18，Blockside 2fa8dcc 在 dev、已推測試站）：shipcheck ✗ 0 ⚠ 0；geo、cfg（base 12.3、pump 32、agile 1）、names 填了（notes「匯進遊戲」）。
+- [ ] 發版到 main／origin —— 等 Tim 在測試站看過。
+- [x] 機艙（階段十）：HRCR 主機、會轉的曲柄、軸、八座鍋爐、鐵地板 level −1、主艙口兩座梯子；金屬件 iron／boiler ＋ render=smooth。
+- [x] 陳設（階段十一）：爐灶（自己的）、繫纜柱、繫索栓圍欄 ×2、砲彈架 ×4（拿破崙號元件），deco=1；舵與舵輪 spin。
+- [ ] 全船預設材質照舊是橡木（鐵甲帶、煙囪、指揮塔、主機、軸另外標 iron；鍋爐 boiler）—— 不用改。
 - [ ] 可以再做的外觀：艉樓舷側的一排小方窗（1863 照片）、指揮塔的走道翼與兩座梯子（史料）、砲具與砲索、1860 年的輕帆裝版本（另一個組裝件 preset 或另一艘）。
+- [ ] 機艙還沒做：煤艙（675 t）、蒸汽管（kind=steampipe）、冷凝器與泵；主機的活塞桿與連桿不會動（spin 只會轉）。
 - [ ] 1866–68 年改裝的砲（240 mm／194 mm）若要做成另一個版本：砲甲板 6 門 240 mm ＋ 上甲板 2 門 194 mm（RES）。

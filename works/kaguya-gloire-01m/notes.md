@@ -54,6 +54,36 @@
 - 讀數：組裝件少 4,823 格（＝ 螺旋槳子作品）、1 元件、空腔 0、鏡像差 0；模型外框 (147,174,12)–(168,227,71) ＝ 原本格子的位置；parts 的 hub／shaft-fwd 對；models_broken 0。重匯 vxk checksum 98ba40ad（模型 153）；Blockside 暫存副本 reimport ⇒ ✗ 0、⚠ 0（照一般模型掛在正下方 deadwood，開局不掉）。
 - 遊戲那側的旋轉 ⇒ TASK-0628（Blockside，酒館 @ame seq 24981）；本小姐沒動 Blockside。
 
+## 階段十 機艙：主機、曲柄、軸、鍋爐、鐵地板、梯子（2026-10-18）
+Tim 2026-10-18（/scp-shipbuilding）：「參考拿破崙號 補上光榮號的細節與meta吧 然後匯入遊戲」「金屬部件參考拿破崙號 設定為光滑金屬質感(這部份幫我更新回造船文件)」。
+設計 plan.json `engine`（`tools/plan_engine.py` 寫入；每個數字有 src）；產生 `draft_engine.py`、`draft_engine_floor.py`、`draft_engine_access.py`（都抄拿破崙號、檔頭寫改了什麼）；落格 `tools/apply_engine.py`、`apply_engine_floor.py`、`apply_engine_access.py`；讀數 `tools/check_engine.py`、`tools/check_falls.py`（自己寫的）；圖 `sheet07_engine_v1.png`。
+- 史料（RES §5）：一具臥式回行連桿（HRCR）雙缸單脹、2,500 ihp（試航 2,699）、名義 900 ch；八座橢圓鍋爐；一根煙囪；單軸六葉 5.8 m；試航 13.5 kn、其他 13.1／12.3／11.75。機艙位置、尺寸都沒查到 ⇒ 設計決定。
+- **主機**（`-engine`，關聯 `機艙-主機` @404,140,10，59,617 格）：跟拿破崙號不一樣 —— HRCR：兩缸臥在左舷（缸軸沿 y、z 41、缸徑 2.0 m），每缸兩根活塞桿從軸的上下（z 41 ± 13）跨到右舷導軌上的十字頭，連桿「回」到軸上的曲柄 ⇒ **曲軸就是螺旋槳軸、沒有齒輪**（`engine=direct`）。meta `cylinders 2, ihp 2500, nhp 900, kn 12.3, kn_max 13.5, maker FCM, material iron, render smooth`；固定點 core、cyl-1／2、站位 tend-1／2（兩缸之間的地板上）。⚠ 主機本來就左右不對稱（鏡像差 43,748 格是設計）。
+- **曲柄**（`-engine-crank`，整船的框，組裝件外部模型 `曲柄` at ＝ pivot ＝ 432.5,200.5,41.5）：兩組曲臂＋曲柄銷，停在 +y（朝十字頭）；meta `kind=gear, gear=crank, spin=rpm, spin_mode=rate, spin_k 6`（跟螺旋槳同軸同轉速）；固定點 spin-a／spin-b 在軸線上。一開始就是獨立的一件（拿破崙號的齒輪是事後 split_gears 拆的）。連桿停在曲柄銷外一格 —— 曲柄會轉、連桿不轉，只是畫面。
+- **螺旋槳軸**（`-shaft`，`螺旋槳軸` @168,197,10，5,590 格）：軸心 z 41、半徑 0.2 m；aft ＝ x 168 ＝ 螺旋槳的 shaft-fwd（穿 deadwood 那一段是船殼，遊戲借格）、fwd ＝ x 462；從後彈藥庫地板（z 44）底下過；軸承座每 30 格。meta `kind=shaft, material=iron, render=smooth`。
+- **鍋爐**（`-boilers`，`機艙-鍋爐` @541,157,12，232,801 格）：一組八座、沿中線一條燒火通道（y 189–211，2.3 m）、兩舷各四座爐門朝中線；每座 2.4 × 3.2 × 3.8 m、頂收圓；頂上 smoke box 收成煙囪的圓（x 563、半徑 13）接到煙囪底 z 89。meta `kind=boiler, boilers=8, funnel=煙囪, material=boiler, render=smooth`（⛔ 不標 iron，照拿破崙號）；固定點 boiler-1…8、stoke-1…8、uptake。
+- **機艙鐵地板**（`-deck-engine`，`甲板-engine`，6,210 格）：板面 z 12、x 463–650（主機底座 404–462 頂面也是 z 12）、排水孔 59；meta `kind=deck, deck=engine, level=-1, name=機艙, floor=404:13,650:13, thick=1`。
+- **梯子**（`-ladders-engine`，`甲板-lower/梯子-機艙`，1,200 格）：主艙口兩座鐵梯（engine-S／P，25 階），`.decks ＝ engine,lower`；砲甲板主艙口前緣圍欄刻 36 格（標記「機艙梯子出口」）。
+
+讀數：
+- `draft_engine.py`：四件浮空 0、彼此重疊 0、跟現況重疊 0、新空腔 0（封 1 格）、軸線 x 168–462 沒有斷口。
+- `check_engine.py`：四件結果帳 缺 0、多 0、色差 0；組裝件（藏機艙）2,164,763 ＋ 三件 ＝ 2,462,771，0 差；parts 的 meta 與固定點跟 draft 差 0.0000、曲柄 state ok；1 元件、空腔 0、link_overlap 0；反向對照：拿掉 `機艙-主機` 的 kind ⇒ 報、加回 ⇒ 相同。
+- 第一人稱連通（`draft_engine_access.py`，x 370–680、z ≤ 92）：從甲板走得到的機艙站位 40,917，**走得到但回不去 0**；反向對照拿掉兩座梯子 ⇒ 走得回甲板 45,012 → 0。
+- 摔下去（`tools/check_falls.py`：砲甲板開口直直掉下去的 3,477 個落點）：只算走 ⇒ 250 格回不來（z 52 煙道頂 218、z 42–46 後艙口底下的軸頂 32）；**加上「跳下去」（81_fps.js 半空往下 16 m 內找地板）⇒ 0**。
+- 產生程式重跑：機艙四份、地板、梯子清單逐位元組相同。
+
+## 階段十一 內部陳設、舵與舵輪跟著轉（2026-10-18）
+- 舵 `spin=rudder, spin_k 35, ±35, lag 0.3`；舵輪 `spin=rudder, spin_k 540, lag 0.6`（造船規格 §9.8.1，照拿破崙號）。
+- 陳設（`draft_furnish.py`、`tools/apply_furnish.py`，全部外部模型、meta `deco=1`）：造船規格 §2.1 直接引用拿破崙號的元件 —— 繫纜柱（砲甲板 x 865，錨鏈孔後面）、繫索栓圍欄 ×2（上甲板主桅、前桅）、砲彈架 ×4（砲甲板、上甲板主艙口兩舷）；**爐灶自己做一件**（`-galley`，32,610 格）：拿破崙號那件連煙管高 2.3 m，光榮號每一層都會頂穿 ⇒ 形狀照抄、煙管量到頭上第一個實心（艏樓甲板底 z 137）；擺在上甲板艏樓底下 x 815（砲甲板前段是前艙口、往 orlop 的梯子與前桅，擺不下）。八個腳下全實心；重跑逐位元組相同。
+- ratlines：basecamp 2026-10-17 已換成 12 組橫繩組、lower 六組標了繩梯（TASK-0678）—— 不用再動。
+
+## 匯進遊戲（2026-10-18，Blockside 2fa8dcc，dev）
+- 自己的 worktree：`admin.py import --work kaguya-gloire-01m-assembly --id gloire --name 光榮號`；game.json 那一筆手寫（import 會把別人手排的幾行重排 ⇒ 還原、只加這一筆、再 build）：
+  `cfg {pump 32, base 12.3, agile 1}`、`geo {spar [113,141], marines [80,290], center 160, aim 100, aimZ [55,330], deckAim [90,120], rigAim [160,310]}`、names 光榮號。
+- shipcheck **✗ 0、⚠ 0**：砲 36、站不滿 0、船員 306、模型 168、繩 375、帆 15、甲板 6、梯子 8、艙房 20；火藥 36／36；額外動力 螺旋槳 100%（主機 1、軸 1、鍋爐 8 座）；軸 5,590 ＋ 借 1,144、開局 ≥ 7 條路；會轉：舵、曲柄、舵輪；裝飾 8；材質 橡木 1,335.3 t、boiler 209.5 t、iron 2,572.8 t。
+- app 瀏覽器開一場（光榮號 vs 拿破崙號）：開局 2,470,145 格（＝ 組裝件）、`lostModels` 兩艘都空、主控台沒有錯誤。
+- 快轉進 Blockside `dev`、推測試站（`git push dev heads/dev:dev`）；⛔ 沒發到 main／origin（等 Tim）。
+
 ## 已知、照實留著
 - faux-pont 的 floor meta 是一條折線，中間 x 400–650 是機艙沒有地板（同拿破崙號，遊戲照折線看不出來）。
 - 三條繩拉直時擦到 1–2 格（fore-futtock-S／P-5、fore-topmast-stay，都在綁點旁）。

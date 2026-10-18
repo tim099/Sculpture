@@ -1,0 +1,389 @@
+{
+ "boilers": {
+  "anchors": {
+   "boiler-1": [
+    11,
+    15,
+    19
+   ],
+   "boiler-2": [
+    37,
+    15,
+    19
+   ],
+   "boiler-3": [
+    63,
+    15,
+    19
+   ],
+   "boiler-4": [
+    89,
+    15,
+    19
+   ],
+   "boiler-5": [
+    11,
+    70,
+    19
+   ],
+   "boiler-6": [
+    37,
+    70,
+    19
+   ],
+   "boiler-7": [
+    63,
+    70,
+    19
+   ],
+   "boiler-8": [
+    89,
+    70,
+    19
+   ],
+   "stoke-1": [
+    11,
+    35,
+    1
+   ],
+   "stoke-2": [
+    37,
+    35,
+    1
+   ],
+   "stoke-3": [
+    63,
+    35,
+    1
+   ],
+   "stoke-4": [
+    89,
+    35,
+    1
+   ],
+   "stoke-5": [
+    11,
+    51,
+    1
+   ],
+   "stoke-6": [
+    37,
+    51,
+    1
+   ],
+   "stoke-7": [
+    63,
+    51,
+    1
+   ],
+   "stoke-8": [
+    89,
+    51,
+    1
+   ],
+   "uptake": [
+    51,
+    43,
+    39
+   ]
+  },
+  "anchors_world": {
+   "boiler-1": [
+    552,
+    172,
+    31
+   ],
+   "boiler-2": [
+    578,
+    172,
+    31
+   ],
+   "boiler-3": [
+    604,
+    172,
+    31
+   ],
+   "boiler-4": [
+    630,
+    172,
+    31
+   ],
+   "boiler-5": [
+    552,
+    227,
+    31
+   ],
+   "boiler-6": [
+    578,
+    227,
+    31
+   ],
+   "boiler-7": [
+    604,
+    227,
+    31
+   ],
+   "boiler-8": [
+    630,
+    227,
+    31
+   ],
+   "stoke-1": [
+    552,
+    192,
+    13
+   ],
+   "stoke-2": [
+    578,
+    192,
+    13
+   ],
+   "stoke-3": [
+    604,
+    192,
+    13
+   ],
+   "stoke-4": [
+    630,
+    192,
+    13
+   ],
+   "stoke-5": [
+    552,
+    208,
+    13
+   ],
+   "stoke-6": [
+    578,
+    208,
+    13
+   ],
+   "stoke-7": [
+    604,
+    208,
+    13
+   ],
+   "stoke-8": [
+    630,
+    208,
+    13
+   ],
+   "uptake": [
+    592,
+    200,
+    51
+   ]
+  },
+  "at": [
+   541,
+   157,
+   12
+  ],
+  "cells": 232801,
+  "link": "機艙-鍋爐",
+  "meta": {
+   "boilers": 8,
+   "funnel": "煙囪",
+   "kind": "boiler",
+   "material": "boiler",
+   "render": "smooth"
+  },
+  "sha256": "dd0458e9d1bd74a21d2b49d697c19533c6f788636330aabba2c260b6eb8fb27e",
+  "size": [
+   102,
+   87,
+   77
+  ],
+  "title": "光榮號 鍋爐 8 座與煙道（0.1 m）",
+  "work": "kaguya-gloire-01m-boilers"
+ },
+ "crank": {
+  "anchors": {
+   "spin-a": [
+    414,
+    200,
+    41
+   ],
+   "spin-b": [
+    450,
+    200,
+    41
+   ]
+  },
+  "anchors_world": {
+   "spin-a": [
+    414,
+    200,
+    41
+   ],
+   "spin-b": [
+    450,
+    200,
+    41
+   ]
+  },
+  "at": [
+   0,
+   0,
+   0
+  ],
+  "cells": 922,
+  "host": "機艙-主機",
+  "link": "曲柄",
+  "meta": {
+   "gear": "crank",
+   "kind": "gear",
+   "spin": "rpm",
+   "spin_k": 6,
+   "spin_mode": "rate"
+  },
+  "model": true,
+  "model_at": [
+   432.5,
+   200.5,
+   41.5
+  ],
+  "pivot": [
+   432.5,
+   200.5,
+   41.5
+  ],
+  "sha256": "4903244092cc65e4d9078482fd1acd91d71c98afa3fd814596a08f14a4e8a402",
+  "size": [
+   1200,
+   400,
+   800
+  ],
+  "title": "光榮號 主機的曲柄（會轉的外部模型；0.1 m、整船的框）",
+  "work": "kaguya-gloire-01m-engine-crank"
+ },
+ "engine": {
+  "anchors": {
+   "core": [
+    29,
+    60,
+    31
+   ],
+   "cyl-1": [
+    14,
+    20,
+    31
+   ],
+   "cyl-2": [
+    42,
+    20,
+    31
+   ],
+   "tend-1": [
+    28,
+    45,
+    3
+   ],
+   "tend-2": [
+    28,
+    75,
+    3
+   ]
+  },
+  "anchors_world": {
+   "core": [
+    433,
+    200,
+    41
+   ],
+   "cyl-1": [
+    418,
+    160,
+    41
+   ],
+   "cyl-2": [
+    446,
+    160,
+    41
+   ],
+   "tend-1": [
+    432,
+    185,
+    13
+   ],
+   "tend-2": [
+    432,
+    215,
+    13
+   ]
+  },
+  "at": [
+   404,
+   140,
+   10
+  ],
+  "cells": 59617,
+  "link": "機艙-主機",
+  "meta": {
+   "cylinders": 2,
+   "engine": "direct",
+   "ihp": 2500,
+   "kind": "engine",
+   "kn": 13,
+   "kn_max": 13.5,
+   "maker": "FCM",
+   "material": "iron",
+   "nhp": 900,
+   "render": "smooth"
+  },
+  "sha256": "71ff1bbd79bfcd5bd69dbe0562acb2b175b4cd85bedb01017a58a0884029732a",
+  "size": [
+   59,
+   104,
+   49
+  ],
+  "title": "光榮號 主機（HRCR 臥式雙缸、直接驅動、2,500 ihp；0.1 m）",
+  "work": "kaguya-gloire-01m-engine"
+ },
+ "shaft": {
+  "anchors": {
+   "aft": [
+    0,
+    3,
+    31
+   ],
+   "fwd": [
+    294,
+    3,
+    31
+   ]
+  },
+  "anchors_world": {
+   "aft": [
+    168,
+    200,
+    41
+   ],
+   "fwd": [
+    462,
+    200,
+    41
+   ]
+  },
+  "at": [
+   168,
+   197,
+   10
+  ],
+  "cells": 5590,
+  "link": "螺旋槳軸",
+  "meta": {
+   "kind": "shaft",
+   "material": "iron",
+   "render": "smooth"
+  },
+  "sha256": "657ca5336e2a17d3edeecd8220bd5b4d8d4f489cd1c7ee1eb05d7be72652b927",
+  "size": [
+   295,
+   7,
+   34
+  ],
+  "title": "光榮號 螺旋槳軸與軸承座（0.1 m）",
+  "work": "kaguya-gloire-01m-shaft"
+ }
+}
