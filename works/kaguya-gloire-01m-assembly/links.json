@@ -21,6 +21,7 @@
 			"persona": "kaguya",
 			"note": "階段一",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 78
 			}
@@ -45,6 +46,7 @@
 			"persona": "kaguya",
 			"note": "階段一：鍛鐵甲帶 120 mm",
 			"meta": {
+				"id": "part-1",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -71,6 +73,7 @@
 			"meta": {
 				"deck": "orlop",
 				"floor": "190:69,399:67,762:68,860:70",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "底艙（faux-pont）",
@@ -99,6 +102,7 @@
 			"meta": {
 				"deck": "gun",
 				"floor": "136:92,320:90,643:90,904:93",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "砲甲板（batterie）",
@@ -127,6 +131,7 @@
 			"meta": {
 				"deck": "spar",
 				"floor": "122:115,320:113,643:113,906:116",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "上甲板（pont）",
@@ -155,6 +160,7 @@
 			"meta": {
 				"deck": "poop",
 				"floor": "118:139,271:137",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "艉樓甲板（dunette）",
@@ -183,6 +189,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "765:138,907:139",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 4,
 				"name": "艏樓甲板（gaillard d'avant）",
@@ -207,7 +214,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:54:07",
 			"persona": "kaguya",
-			"note": "階段五（TASK-0610）"
+			"note": "階段五（TASK-0610）",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "船名板",
@@ -227,7 +237,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:54:34",
 			"persona": "kaguya",
-			"note": "階段五"
+			"note": "階段五",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "煙囪",
@@ -249,6 +262,7 @@
 			"persona": "kaguya",
 			"note": "階段五",
 			"meta": {
+				"id": "funnel-1",
 				"kind": "funnel",
 				"material": "iron",
 				"render": "smooth"
@@ -274,6 +288,7 @@
 			"persona": "kaguya",
 			"note": "階段五",
 			"meta": {
+				"id": "part-4",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -296,7 +311,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:56:39",
 			"persona": "kaguya",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "前桅",
@@ -316,7 +334,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:56:40",
 			"persona": "kaguya",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "後桅",
@@ -336,7 +357,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:56:42",
 			"persona": "kaguya",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -356,7 +380,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:56:43",
 			"persona": "kaguya",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "channels",
@@ -376,7 +403,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:57:40",
 			"persona": "kaguya",
-			"note": "階段七（TASK-0612）"
+			"note": "階段七（TASK-0612）",
+			"meta": {
+				"id": "part-9"
+			}
 		},
 		{
 			"name": "channels-鏡像",
@@ -396,7 +426,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T18:57:40",
 			"persona": "kaguya",
-			"note": "階段七（TASK-0612）"
+			"note": "階段七（TASK-0612）",
+			"meta": {
+				"id": "part-10"
+			}
 		},
 		{
 			"name": "彈藥庫-後",
@@ -418,6 +451,7 @@
 			"persona": "kaguya",
 			"note": "光榮號 後彈藥庫（46 桶 ＝ 4600 磅）（階段九 TASK-0614）",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 4600
@@ -443,6 +477,7 @@
 			"persona": "kaguya",
 			"note": "光榮號 前彈藥庫（46 桶 ＝ 4600 磅）（階段九 TASK-0614）",
 			"meta": {
+				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 4600
@@ -466,7 +501,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T19:29:53",
 			"persona": "kaguya",
-			"note": "階段五"
+			"note": "階段五",
+			"meta": {
+				"id": "part-11"
+			}
 		},
 		{
 			"name": "螺旋槳軸",
@@ -488,6 +526,7 @@
 			"persona": "kaguya",
 			"note": "機艙：光榮號 螺旋槳軸與軸承座（0.1 m）",
 			"meta": {
+				"id": "shaft-1",
 				"kind": "shaft",
 				"material": "iron",
 				"render": "smooth"
@@ -515,6 +554,7 @@
 			"meta": {
 				"cylinders": 2,
 				"engine": "direct",
+				"id": "engine-1",
 				"ihp": 2500,
 				"kind": "engine",
 				"kn": 13,
@@ -546,7 +586,8 @@
 			"note": "機艙：光榮號 鍋爐 8 座與煙道（0.1 m）",
 			"meta": {
 				"boilers": 8,
-				"funnel": "煙囪",
+				"funnel": "funnel-1",
+				"id": "boiler-1",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -574,6 +615,7 @@
 			"meta": {
 				"deck": "engine",
 				"floor": "404:13,650:13",
+				"id": "deck-6",
 				"kind": "deck",
 				"level": -1,
 				"name": "機艙",

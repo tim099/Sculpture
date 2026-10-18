@@ -21,6 +21,7 @@
 			"persona": "kotoko",
 			"note": "",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 79
 			}
@@ -47,6 +48,7 @@
 			"meta": {
 				"deck": "orlop",
 				"floor": "194:72,301:69,714:69,854:72",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "底艙（faux-pont）",
@@ -75,6 +77,7 @@
 			"meta": {
 				"deck": "lower",
 				"floor": "159:96,372:91,611:91,868:95",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "下砲甲板（batterie basse）",
@@ -103,6 +106,7 @@
 			"meta": {
 				"deck": "upper",
 				"floor": "142:120,211:117,372:114,611:114,881:118",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "上砲甲板（2e batterie）",
@@ -131,6 +135,7 @@
 			"meta": {
 				"deck": "spar",
 				"floor": "134:144,211:141,372:138,611:138,895:142",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "上甲板（gaillards）",
@@ -155,7 +160,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T15:49:29",
 			"persona": "kotoko",
-			"note": "階段五（TASK-0610）"
+			"note": "階段五（TASK-0610）",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "船首像",
@@ -175,7 +183,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T15:49:30",
 			"persona": "kotoko",
-			"note": "階段五（TASK-0610）"
+			"note": "階段五（TASK-0610）",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "船尾裝飾",
@@ -195,7 +206,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T15:49:32",
 			"persona": "kotoko",
-			"note": "階段五（TASK-0610）"
+			"note": "階段五（TASK-0610）",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "船名板",
@@ -215,7 +229,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T15:49:33",
 			"persona": "kotoko",
-			"note": "階段五（TASK-0610）"
+			"note": "階段五（TASK-0610）",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "主桅",
@@ -235,7 +252,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T16:10:40",
 			"persona": "kotoko",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "前桅",
@@ -255,7 +275,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T16:10:41",
 			"persona": "kotoko",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "後桅",
@@ -275,7 +298,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T16:10:42",
 			"persona": "kotoko",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -295,7 +321,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T16:10:43",
 			"persona": "kotoko",
-			"note": "階段六（TASK-0611）"
+			"note": "階段六（TASK-0611）",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "channels",
@@ -315,7 +344,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T16:19:14",
 			"persona": "kotoko",
-			"note": "階段七（TASK-0612）"
+			"note": "階段七（TASK-0612）",
+			"meta": {
+				"id": "part-9"
+			}
 		},
 		{
 			"name": "channels-鏡像",
@@ -335,7 +367,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T16:19:14",
 			"persona": "kotoko",
-			"note": "階段七（TASK-0612）"
+			"note": "階段七（TASK-0612）",
+			"meta": {
+				"id": "part-10"
+			}
 		},
 		{
 			"name": "彈藥庫-後",
@@ -357,6 +392,7 @@
 			"persona": "kotoko",
 			"note": "拿破崙號 後彈藥庫（115 桶 ＝ 11500 磅）（階段九 TASK-0614）",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 11500
@@ -382,6 +418,7 @@
 			"persona": "kotoko",
 			"note": "拿破崙號 前彈藥庫（115 桶 ＝ 11500 磅）（階段九 TASK-0614）",
 			"meta": {
+				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 11500
@@ -407,6 +444,7 @@
 			"persona": "kotoko",
 			"note": "階段九（TASK-0614）煙囪拆成兩件（遊戲一條 kind=funnel 關聯冒一股煙）",
 			"meta": {
+				"id": "funnel-1",
 				"kind": "funnel",
 				"material": "iron",
 				"render": "smooth"
@@ -432,6 +470,7 @@
 			"persona": "kotoko",
 			"note": "階段九（TASK-0614）煙囪拆成兩件（遊戲一條 kind=funnel 關聯冒一股煙）",
 			"meta": {
+				"id": "funnel-2",
 				"kind": "funnel",
 				"material": "iron",
 				"render": "smooth"
@@ -457,6 +496,7 @@
 			"persona": "kotoko",
 			"note": "機艙：拿破崙號 螺旋槳軸與軸承座（0.1 m）",
 			"meta": {
+				"id": "shaft-1",
 				"kind": "shaft",
 				"material": "iron",
 				"render": "smooth"
@@ -484,6 +524,7 @@
 			"meta": {
 				"cylinders": 2,
 				"engine": "geared",
+				"id": "engine-1",
 				"ihp": 574,
 				"kind": "engine",
 				"kn": 12.14,
@@ -515,7 +556,8 @@
 			"note": "機艙：拿破崙號 後鍋爐 4 座與煙道（0.1 m）",
 			"meta": {
 				"boilers": 4,
-				"funnel": "煙囪-後",
+				"funnel": "funnel-1",
+				"id": "boiler-1",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -542,7 +584,8 @@
 			"note": "機艙：拿破崙號 前鍋爐 4 座與煙道（0.1 m）",
 			"meta": {
 				"boilers": 4,
-				"funnel": "煙囪-前",
+				"funnel": "funnel-2",
+				"id": "boiler-2",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -570,6 +613,7 @@
 			"meta": {
 				"deck": "engine",
 				"floor": "348:13,650:13",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": -1,
 				"name": "機艙",

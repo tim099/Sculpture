@@ -22,6 +22,7 @@
 			"note": "船殼（龍骨、肋骨、外板、砲門、clamp）",
 			"meta": {
 				"crew": 31,
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 15
 			}
@@ -48,6 +49,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "64:28,99:24,138:23,139:30,199:31,269:40",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "主甲板",
@@ -76,6 +78,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "58:46,99:41,140:40,141:37,143:37",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "後甲板",
@@ -100,7 +103,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T12:12:49",
 			"persona": "summit",
-			"note": "knee 與隼形船首像"
+			"note": "knee 與隼形船首像",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "船尾裝飾",
@@ -120,7 +126,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T12:12:50",
 			"persona": "summit",
-			"note": "船尾窗框、窗台線、簷線、船尾燈"
+			"note": "船尾窗框、窗台線、簷線、船尾燈",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "船尾窗廊-鏡像",
@@ -140,7 +149,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T12:12:50",
 			"persona": "summit",
-			"note": "左舷窗廊（mirror=y、at.y＝161−96−20）"
+			"note": "左舷窗廊（mirror=y、at.y＝161−96−20）",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "船尾窗廊",
@@ -160,7 +172,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T12:13:06",
 			"persona": "summit",
-			"note": "右舷窗廊"
+			"note": "右舷窗廊",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "前桅",
@@ -180,7 +195,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T13:48:38",
 			"persona": "summit",
-			"note": "前桅（下桅、top、中桅、頂桅）"
+			"note": "前桅（下桅、top、中桅、頂桅）",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "主桅",
@@ -200,7 +218,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T13:48:39",
 			"persona": "summit",
-			"note": "主桅（下桅、top、中桅、頂桅）"
+			"note": "主桅（下桅、top、中桅、頂桅）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -220,7 +241,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T13:48:39",
 			"persona": "summit",
-			"note": "艏斜桅與 jib-boom"
+			"note": "艏斜桅與 jib-boom",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "channels",
@@ -240,7 +264,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T13:48:39",
 			"persona": "summit",
-			"note": "右舷 channels"
+			"note": "右舷 channels",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "channels-鏡像",
@@ -260,7 +287,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T13:48:39",
 			"persona": "summit",
-			"note": "左舷 channels（mirror=y、at.y＝161−100−28）"
+			"note": "左舷 channels（mirror=y、at.y＝161−100−28）",
+			"meta": {
+				"id": "part-9"
+			}
 		},
 		{
 			"name": "fife-rails",
@@ -280,7 +310,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T15:38:27",
 			"persona": "summit",
-			"note": "階段十 繫繩點"
+			"note": "階段十 繫繩點",
+			"meta": {
+				"id": "part-10"
+			}
 		},
 		{
 			"name": "繫繩欄",
@@ -300,7 +333,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T15:38:27",
 			"persona": "summit",
-			"note": "階段十 繫繩點"
+			"note": "階段十 繫繩點",
+			"meta": {
+				"id": "part-11"
+			}
 		},
 		{
 			"name": "繫繩欄-鏡像",
@@ -320,7 +356,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T15:38:34",
 			"persona": "summit",
-			"note": "階段十 繫繩點"
+			"note": "階段十 繫繩點",
+			"meta": {
+				"id": "part-12"
+			}
 		},
 		{
 			"name": "砲具",
@@ -340,7 +379,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T18:34:24",
 			"persona": "summit",
-			"note": "階段十四 砲具"
+			"note": "階段十四 砲具",
+			"meta": {
+				"id": "part-13"
+			}
 		},
 		{
 			"name": "砲具-鏡像",
@@ -360,7 +402,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T18:34:24",
 			"persona": "summit",
-			"note": "階段十四 砲具"
+			"note": "階段十四 砲具",
+			"meta": {
+				"id": "part-14"
+			}
 		},
 		{
 			"name": "彈藥庫",
@@ -382,6 +427,7 @@
 			"persona": "summit",
 			"note": "階段十八 彈藥庫",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 800
@@ -405,7 +451,10 @@
 			"enabled": true,
 			"created_at": "2026-10-16T09:11:29",
 			"persona": "summit",
-			"note": "吊錨架（錨掛在端下；右舷）"
+			"note": "吊錨架（錨掛在端下；右舷）",
+			"meta": {
+				"id": "part-15"
+			}
 		},
 		{
 			"name": "吊錨架-鏡像",
@@ -425,7 +474,10 @@
 			"enabled": true,
 			"created_at": "2026-10-16T09:11:30",
 			"persona": "summit",
-			"note": "吊錨架（錨掛在端下；左舷 mirror=y）"
+			"note": "吊錨架（錨掛在端下；左舷 mirror=y）",
+			"meta": {
+				"id": "part-16"
+			}
 		}
 	]
 }

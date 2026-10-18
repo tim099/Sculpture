@@ -22,6 +22,7 @@
 			"note": "",
 			"meta": {
 				"crew": 300,
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 52
 			}
@@ -48,6 +49,7 @@
 			"meta": {
 				"deck": "lower",
 				"floor": "124:66,586:66",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "下層砲甲板",
@@ -76,6 +78,7 @@
 			"meta": {
 				"deck": "upper",
 				"floor": "116:91,598:91",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "上層砲甲板",
@@ -104,6 +107,7 @@
 			"meta": {
 				"deck": "weather",
 				"floor": "109:116,609:116",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "露天甲板",
@@ -132,6 +136,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "104:139,240:139",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "後甲板",
@@ -160,6 +165,7 @@
 			"meta": {
 				"deck": "poop",
 				"floor": "104:165,180:165",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 5,
 				"name": "船尾樓甲板",
@@ -188,6 +194,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "550:139,616:139",
+				"id": "deck-6",
 				"kind": "deck",
 				"level": 4,
 				"name": "艏樓甲板",
@@ -214,6 +221,7 @@
 			"persona": "Sirius",
 			"note": "",
 			"meta": {
+				"id": "ladders-1",
 				"kind": "ladders"
 			}
 		},
@@ -235,7 +243,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T23:12:49",
 			"persona": "Sirius",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "main",
@@ -255,7 +266,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T23:12:55",
 			"persona": "Sirius",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "fore",
@@ -275,7 +289,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T23:12:59",
 			"persona": "Sirius",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "bowsprit",
@@ -295,7 +312,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T23:13:07",
 			"persona": "Sirius",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "艏砲支架",
@@ -315,7 +335,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T23:21:21",
 			"persona": "Sirius",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "彈藥庫-後",
@@ -337,6 +360,7 @@
 			"persona": "Sirius",
 			"note": "",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 2400
@@ -362,6 +386,7 @@
 			"persona": "Sirius",
 			"note": "",
 			"meta": {
+				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 2400
@@ -385,7 +410,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T23:30:42",
 			"persona": "Sirius",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "海蝕裝飾",
@@ -405,7 +433,10 @@
 			"enabled": true,
 			"created_at": "2026-10-13T23:35:54",
 			"persona": "Sirius",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-7"
+			}
 		}
 	]
 }

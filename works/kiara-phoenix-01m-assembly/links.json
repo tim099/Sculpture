@@ -22,6 +22,7 @@
 			"note": "",
 			"meta": {
 				"crew": 120,
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 38
 			}
@@ -48,6 +49,7 @@
 			"meta": {
 				"deck": "gun",
 				"floor": "101:49,109:49,110:51,449:51",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "主砲甲板",
@@ -76,6 +78,7 @@
 			"meta": {
 				"deck": "spar",
 				"floor": "86:83,194:74,215:74,216:66,218:65,345:65,346:66,374:66,375:67,380:67,449:71,450:71",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "露天甲板",
@@ -100,7 +103,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T09:27:21",
 			"persona": "kiara",
-			"note": "前桅桿子作品關聯"
+			"note": "前桅桿子作品關聯",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "主桅",
@@ -120,7 +126,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T09:27:21",
 			"persona": "kiara",
-			"note": "主桅桿子作品關聯"
+			"note": "主桅桿子作品關聯",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "後桅",
@@ -140,7 +149,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T09:27:21",
 			"persona": "kiara",
-			"note": "後桅桿子作品關聯"
+			"note": "後桅桿子作品關聯",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -160,7 +172,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T09:27:21",
 			"persona": "kiara",
-			"note": "艏斜桅子作品關聯"
+			"note": "艏斜桅子作品關聯",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "彈藥庫-前",
@@ -182,6 +197,7 @@
 			"persona": "kiara",
 			"note": "炎羽號專屬前部彈藥庫（完全收納於水線下尖底艙底）",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 1600
@@ -207,6 +223,7 @@
 			"persona": "kiara",
 			"note": "炎羽號專屬後部主彈藥庫（完全收納於水線下尖底艙底）",
 			"meta": {
+				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 1600
@@ -232,6 +249,7 @@
 			"persona": "kiara",
 			"note": "炎羽號三座甲板通聯舷梯（含 12 個寻路導航固定點）",
 			"meta": {
+				"id": "ladders-1",
 				"kind": "ladders"
 			}
 		},
@@ -253,7 +271,10 @@
 			"enabled": true,
 			"created_at": "2026-10-17T15:04:14",
 			"persona": "kiara",
-			"note": "v3：channels（S 舷）"
+			"note": "v3：channels（S 舷）",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "channels-鏡像",
@@ -273,7 +294,10 @@
 			"enabled": true,
 			"created_at": "2026-10-17T15:04:15",
 			"persona": "kiara",
-			"note": "v3：channels（P 舷，mirror=y）"
+			"note": "v3：channels（P 舷，mirror=y）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "船首像",
@@ -293,7 +317,10 @@
 			"enabled": true,
 			"created_at": "2026-10-17T15:18:32",
 			"persona": "kiara",
-			"note": "v3：船首像《炎羽》（鳳凰；design/v3/gen_figurehead.py）"
+			"note": "v3：船首像《炎羽》（鳳凰；design/v3/gen_figurehead.py）",
+			"meta": {
+				"id": "part-7"
+			}
 		}
 	]
 }

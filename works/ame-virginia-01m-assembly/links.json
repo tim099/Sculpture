@@ -21,6 +21,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 65
 			}
@@ -45,6 +46,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "part-1",
 				"material": "copper_sheath"
 			}
 		},
@@ -70,6 +72,7 @@
 			"meta": {
 				"deck": "hold",
 				"floor": "190:23,720:23",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "艙底甲板",
@@ -98,6 +101,7 @@
 			"meta": {
 				"deck": "berth",
 				"floor": "110:47,800:47",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "住艙甲板",
@@ -126,6 +130,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "48:69,850:69",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "主甲板（砲甲板）",
@@ -150,7 +155,10 @@
 			"enabled": true,
 			"created_at": "2026-10-15T17:02:28",
 			"persona": "ame",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "砲廓-鐵甲",
@@ -172,6 +180,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "part-3",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -198,6 +207,7 @@
 			"meta": {
 				"deck": "hurricane",
 				"floor": "283:101,689:101",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "颶風甲板（砲廓頂）",
@@ -224,6 +234,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "part-4",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -248,6 +259,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "funnel-1",
 				"kind": "funnel",
 				"material": "iron",
 				"render": "smooth"
@@ -273,6 +285,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "part-5",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -297,6 +310,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "engine-1",
 				"kind": "engine",
 				"material": "iron"
 			}
@@ -321,6 +335,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "ladders-1",
 				"kind": "ladders"
 			}
 		},
@@ -344,6 +359,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 6000
@@ -369,6 +385,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 4000
@@ -395,7 +412,8 @@
 			"note": "",
 			"meta": {
 				"boilers": 4,
-				"funnel": "煙囪",
+				"funnel": "funnel-1",
+				"id": "boiler-1",
 				"kind": "boiler"
 			}
 		},
@@ -419,6 +437,7 @@
 			"persona": "ame",
 			"note": "",
 			"meta": {
+				"id": "shaft-1",
 				"kind": "shaft",
 				"material": "iron"
 			}

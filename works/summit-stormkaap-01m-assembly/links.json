@@ -21,6 +21,7 @@
 			"persona": "summit",
 			"note": "船殼（龍骨、肋骨、外板、wales、砲門、clamp）",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 50
 			}
@@ -47,6 +48,7 @@
 			"meta": {
 				"deck": "lower",
 				"floor": "116:73,168:66,229:61,352:60,450:67,537:79",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "下層砲甲板",
@@ -75,6 +77,7 @@
 			"meta": {
 				"deck": "upper",
 				"floor": "106:94,168:86,229:81,352:80,450:87,542:100",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "上層砲甲板",
@@ -103,6 +106,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "104:114,168:106,234:101",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "後甲板",
@@ -131,6 +135,7 @@
 			"meta": {
 				"deck": "poop",
 				"floor": "104:132,164:125",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 4,
 				"name": "船尾樓甲板",
@@ -159,6 +164,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "470:110,521:116",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 3,
 				"name": "艏樓甲板",
@@ -183,7 +189,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:22:03",
 			"persona": "summit",
-			"note": "艉板窗、陽台、拱頂、Adamastor、艉燈（階段五）"
+			"note": "艉板窗、陽台、拱頂、Adamastor、艉燈（階段五）",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "船尾裝飾-燈-右舷",
@@ -205,6 +214,7 @@
 			"persona": "summit",
 			"note": "拆件：從 `船尾裝飾`（summit-stormkaap-01m-stern-deco）拆出（TASK-0646）",
 			"meta": {
+				"id": "light-1",
 				"kind": "light",
 				"light_color": "#59ff8c"
 			}
@@ -229,6 +239,7 @@
 			"persona": "summit",
 			"note": "拆件：從 `船尾裝飾`（summit-stormkaap-01m-stern-deco）拆出（TASK-0646）",
 			"meta": {
+				"id": "light-2",
 				"kind": "light",
 				"light_color": "#59ff8c"
 			}
@@ -253,6 +264,7 @@
 			"persona": "summit",
 			"note": "拆件：從 `船尾裝飾`（summit-stormkaap-01m-stern-deco）拆出（TASK-0646）",
 			"meta": {
+				"id": "light-3",
 				"kind": "light",
 				"light_color": "#59ff8c"
 			}
@@ -275,7 +287,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:22:04",
 			"persona": "summit",
-			"note": "右舷側窗廊（階段五）"
+			"note": "右舷側窗廊（階段五）",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "側窗廊-鏡像",
@@ -295,7 +310,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:22:04",
 			"persona": "summit",
-			"note": "左舷側窗廊 ＝ 右舷那份 mirror=y（框同船殼 ⇒ y ↔ 260 − y）"
+			"note": "左舷側窗廊 ＝ 右舷那份 mirror=y（框同船殼 ⇒ y ↔ 260 − y）",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "船頭",
@@ -315,7 +333,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:30:26",
 			"persona": "summit",
-			"note": "galjoen：knee、格柵、上下顎、骷髏獅子、追擊砲門的大嘴（階段五 b）"
+			"note": "galjoen：knee、格柵、上下顎、骷髏獅子、追擊砲門的大嘴（階段五 b）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "後桅",
@@ -335,7 +356,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:55:33",
 			"persona": "summit",
-			"note": "風暴角號｜後桅（＋後上桅、平台）（階段六）"
+			"note": "風暴角號｜後桅（＋後上桅、平台）（階段六）",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "主桅",
@@ -355,7 +379,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:55:33",
 			"persona": "summit",
-			"note": "風暴角號｜主桅（＋主上桅、主上上桅、平台）（階段六）"
+			"note": "風暴角號｜主桅（＋主上桅、主上上桅、平台）（階段六）",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "前桅",
@@ -375,7 +402,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:55:34",
 			"persona": "summit",
-			"note": "風暴角號｜前桅（＋前上桅、前上上桅、平台）（階段六）"
+			"note": "風暴角號｜前桅（＋前上桅、前上上桅、平台）（階段六）",
+			"meta": {
+				"id": "part-9"
+			}
 		},
 		{
 			"name": "船首斜桅",
@@ -395,7 +425,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:55:34",
 			"persona": "summit",
-			"note": "風暴角號｜船首斜桅（＋斜桅頂桅）（階段六）"
+			"note": "風暴角號｜船首斜桅（＋斜桅頂桅）（階段六）",
+			"meta": {
+				"id": "part-10"
+			}
 		},
 		{
 			"name": "channels",
@@ -415,7 +448,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:55:34",
 			"persona": "summit",
-			"note": "風暴角號｜channels（右舷；左舷走鏡像關聯）（階段六）"
+			"note": "風暴角號｜channels（右舷；左舷走鏡像關聯）（階段六）",
+			"meta": {
+				"id": "part-11"
+			}
 		},
 		{
 			"name": "channels-鏡像",
@@ -435,7 +471,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T00:55:35",
 			"persona": "summit",
-			"note": "左舷 channels ＝ 右舷那份 mirror=y（框同船殼 ⇒ y ↔ 260 − y）"
+			"note": "左舷 channels ＝ 右舷那份 mirror=y（框同船殼 ⇒ y ↔ 260 − y）",
+			"meta": {
+				"id": "part-12"
+			}
 		},
 		{
 			"name": "fife-rails",
@@ -455,7 +494,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T10:18:09",
 			"persona": "summit",
-			"note": "三根桅腳的 fife rails（階段九）"
+			"note": "三根桅腳的 fife rails（階段九）",
+			"meta": {
+				"id": "part-13"
+			}
 		},
 		{
 			"name": "彈藥庫",
@@ -477,6 +519,7 @@
 			"persona": "summit",
 			"note": "階段十三 彈藥庫",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 1700
@@ -500,7 +543,10 @@
 			"enabled": true,
 			"created_at": "2026-10-14T19:41:09",
 			"persona": "summit",
-			"note": "階段十六 裝飾"
+			"note": "階段十六 裝飾",
+			"meta": {
+				"id": "part-14"
+			}
 		},
 		{
 			"name": "吊錨架",
@@ -520,7 +566,10 @@
 			"enabled": true,
 			"created_at": "2026-10-16T09:11:24",
 			"persona": "summit",
-			"note": "吊錨架（錨掛在端下；右舷）"
+			"note": "吊錨架（錨掛在端下；右舷）",
+			"meta": {
+				"id": "part-15"
+			}
 		},
 		{
 			"name": "吊錨架-鏡像",
@@ -540,7 +589,10 @@
 			"enabled": true,
 			"created_at": "2026-10-16T09:11:24",
 			"persona": "summit",
-			"note": "吊錨架（錨掛在端下；左舷 mirror=y）"
+			"note": "吊錨架（錨掛在端下；左舷 mirror=y）",
+			"meta": {
+				"id": "part-16"
+			}
 		},
 		{
 			"name": "管風琴",
@@ -563,6 +615,7 @@
 			"note": "TASK-0680 管風琴就是魔法動力源（kind=engine）",
 			"meta": {
 				"engine": "organ",
+				"id": "engine-1",
 				"kind": "engine"
 			}
 		}
