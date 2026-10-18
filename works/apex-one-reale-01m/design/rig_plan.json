@@ -1,0 +1,517 @@
+{
+ "anchors": [
+  {
+   "work": "mast-main",
+   "name": "hound-P",
+   "at": [
+    416,
+    159,
+    249
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-main-P1",
+   "at": [
+    376,
+    103,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-main-P2",
+   "at": [
+    389,
+    103,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-main-P3",
+   "at": [
+    401,
+    103,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "belay-main-sheet-P",
+   "at": [
+    300,
+    103,
+    33
+   ]
+  },
+  {
+   "work": "mast-main",
+   "name": "hound-S",
+   "at": [
+    416,
+    161,
+    249
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-main-S1",
+   "at": [
+    376,
+    217,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-main-S2",
+   "at": [
+    389,
+    217,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-main-S3",
+   "at": [
+    401,
+    217,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "belay-main-sheet-S",
+   "at": [
+    300,
+    217,
+    33
+   ]
+  },
+  {
+   "work": "mast-fore",
+   "name": "hound-P",
+   "at": [
+    576,
+    154,
+    194
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-fore-P1",
+   "at": [
+    540,
+    103,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-fore-P2",
+   "at": [
+    552,
+    103,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "belay-fore-sheet-P",
+   "at": [
+    515,
+    103,
+    33
+   ]
+  },
+  {
+   "work": "mast-fore",
+   "name": "hound-S",
+   "at": [
+    576,
+    156,
+    194
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-fore-S1",
+   "at": [
+    540,
+    217,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "shroud-fore-S2",
+   "at": [
+    552,
+    217,
+    33
+   ]
+  },
+  {
+   "work": "apostis",
+   "name": "belay-fore-sheet-S",
+   "at": [
+    515,
+    217,
+    33
+   ]
+  },
+  {
+   "work": "deck-main",
+   "name": "tack-main",
+   "at": [
+    548,
+    160,
+    35
+   ]
+  },
+  {
+   "work": "eperon",
+   "name": "tack-fore",
+   "at": [
+    690,
+    160,
+    41
+   ]
+  }
+ ],
+ "ropes": [
+  {
+   "name": "main-shroud-P1",
+   "from": "主桅/hound-P",
+   "to": "舷外槳架/shroud-main-P1",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-P2",
+   "from": "主桅/hound-P",
+   "to": "舷外槳架/shroud-main-P2",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-P3",
+   "from": "主桅/hound-P",
+   "to": "舷外槳架/shroud-main-P3",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-lateen.sheet-P",
+   "from": "sail:main-lateen/clew",
+   "to": "舷外槳架/belay-main-sheet-P",
+   "slack": 1.03,
+   "thickness": 0.5,
+   "color": "#a08458",
+   "group": "running/sheets",
+   "meta": {
+    "kind": "sheet",
+    "sail": "main-lateen"
+   }
+  },
+  {
+   "name": "main-shroud-S1",
+   "from": "主桅/hound-S",
+   "to": "舷外槳架/shroud-main-S1",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S2",
+   "from": "主桅/hound-S",
+   "to": "舷外槳架/shroud-main-S2",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S3",
+   "from": "主桅/hound-S",
+   "to": "舷外槳架/shroud-main-S3",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-lateen.sheet-S",
+   "from": "sail:main-lateen/clew",
+   "to": "舷外槳架/belay-main-sheet-S",
+   "slack": 1.03,
+   "thickness": 0.5,
+   "color": "#a08458",
+   "group": "running/sheets",
+   "meta": {
+    "kind": "sheet",
+    "sail": "main-lateen"
+   }
+  },
+  {
+   "name": "fore-shroud-P1",
+   "from": "前桅/hound-P",
+   "to": "舷外槳架/shroud-fore-P1",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "fore-shroud-P2",
+   "from": "前桅/hound-P",
+   "to": "舷外槳架/shroud-fore-P2",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "fore-lateen.sheet-P",
+   "from": "sail:fore-lateen/clew",
+   "to": "舷外槳架/belay-fore-sheet-P",
+   "slack": 1.03,
+   "thickness": 0.5,
+   "color": "#a08458",
+   "group": "running/sheets",
+   "meta": {
+    "kind": "sheet",
+    "sail": "fore-lateen"
+   }
+  },
+  {
+   "name": "fore-shroud-S1",
+   "from": "前桅/hound-S",
+   "to": "舷外槳架/shroud-fore-S1",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "fore-shroud-S2",
+   "from": "前桅/hound-S",
+   "to": "舷外槳架/shroud-fore-S2",
+   "slack": 1.0,
+   "thickness": 0.8,
+   "color": "#2b2620",
+   "group": "standing/shrouds",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "fore-lateen.sheet-S",
+   "from": "sail:fore-lateen/clew",
+   "to": "舷外槳架/belay-fore-sheet-S",
+   "slack": 1.03,
+   "thickness": 0.5,
+   "color": "#a08458",
+   "group": "running/sheets",
+   "meta": {
+    "kind": "sheet",
+    "sail": "fore-lateen"
+   }
+  },
+  {
+   "name": "main-lateen.tack",
+   "from": "sail:main-lateen/tack",
+   "to": "甲板-main/tack-main",
+   "slack": 1.0,
+   "thickness": 0.5,
+   "color": "#a08458",
+   "group": "running/tacks",
+   "meta": {
+    "kind": "tack",
+    "sail": "main-lateen"
+   }
+  },
+  {
+   "name": "fore-lateen.tack",
+   "from": "sail:fore-lateen/tack",
+   "to": "撞角/tack-fore",
+   "slack": 1.0,
+   "thickness": 0.5,
+   "color": "#a08458",
+   "group": "running/tacks",
+   "meta": {
+    "kind": "tack",
+    "sail": "fore-lateen"
+   }
+  }
+ ],
+ "sails": [
+  {
+   "name": "main-lateen",
+   "corners": [
+    "model:主桅/yard-main/fore",
+    "model:主桅/yard-main/peak",
+    "330.5,155.5,72.5"
+   ],
+   "corner_names": [
+    "tack",
+    "head",
+    "clew"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "main",
+    "sail": "gaff"
+   }
+  },
+  {
+   "name": "fore-lateen",
+   "corners": [
+    "model:前桅/yard-fore/fore",
+    "model:前桅/yard-fore/peak",
+    "530.5,150.5,72.5"
+   ],
+   "corner_names": [
+    "tack",
+    "head",
+    "clew"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "fore",
+    "sail": "gaff"
+   }
+  },
+  {
+   "name": "main-pennant",
+   "corners": [
+    "417.7,160.5,259",
+    "337.2,160.5,258",
+    "417.7,160.5,251"
+   ],
+   "corner_names": [
+    "head",
+    "fly",
+    "foot"
+   ],
+   "bind": [
+    2
+   ],
+   "free": [
+    1
+   ],
+   "meta": {
+    "kind": "flag",
+    "flag": "pennant",
+    "mast": "main"
+   },
+   "color": "#b60000",
+   "texture": "textures/pennant.png",
+   "fullness": 1.04
+  },
+  {
+   "name": "fore-pennant",
+   "corners": [
+    "578,155.5,204",
+    "497.5,155.5,203",
+    "578,155.5,196"
+   ],
+   "corner_names": [
+    "head",
+    "fly",
+    "foot"
+   ],
+   "bind": [
+    2
+   ],
+   "free": [
+    1
+   ],
+   "meta": {
+    "kind": "flag",
+    "flag": "pennant",
+    "mast": "fore"
+   },
+   "color": "#b60000",
+   "texture": "textures/pennant.png",
+   "fullness": 1.04
+  },
+  {
+   "name": "ensign",
+   "corners": [
+    "model:主桅/yard-main/peak",
+    "179.1,155.5,388.5",
+    "179.1,155.5,364.5",
+    "model:主桅/yard-main/3,3,214"
+   ],
+   "corner_names": [
+    "head",
+    "fly-top",
+    "fly-foot",
+    "foot"
+   ],
+   "bind": [
+    3
+   ],
+   "free": [
+    2,
+    1
+   ],
+   "meta": {
+    "kind": "flag",
+    "flag": "ensign"
+   },
+   "color": "#ffffff",
+   "texture": "textures/ensign.png",
+   "fullness": 1.04
+  }
+ ]
+}

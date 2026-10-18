@@ -67,3 +67,28 @@
 - 讀數：划手座每舷 32、平均間距 12.516 格（史料 1.252 m）；舷外槳架全寬 11.7 m；砲台底 z 43。
 - 過程圖：`design/sheet02_layout_v1.png`、`overlays/stage2_{bowq,sternq,side,top,stern_close,bow_close}.png`（bow_close 用 `models=0`：region 不裁模型，框會被船尾燈拉走）。
 - ⚠ 看得到的／還沒做：沒有桅（階段三）；砲台底下是空的（砲在階段四）；艙底沒有地板與梯子（彈藥庫在階段五）；舷側登船梯、船尾篷兩側的長椅沒做。
+
+## 階段三 桅、三角帆桁、三角帆、靜索、旗（2026-10-18，TASK-0701）
+設計 plan.json `rig`；產生 `design/draft_masts.py`（讀船殼與階段二清單 ＝ 作品）⇒ `masks/masts/{main,fore,deck_holes}.vox.txt`、`masks/yards/{main,fore}.vox.txt`、`yards.json`、`rig_plan.json`、`textures/{ensign,pennant}.png`、`verify_masts.json`、`sheet03_rig_v1.png`；落格 `design/tools/build_rig.py`。
+
+- **桅**（每根一件子作品，整船的框 720×321×460，關聯 `主桅`／`前桅`）：圓桿從船底往上（跟船殼重疊的格不放 ⇒ 坐在船殼上）、往前傾、頂上 9 格粗一格的 calcet（滑輪箱）、最頂兩格金。
+  - 主桅：甲板處 x 401.8、中線、傾 4°、頂 z 259（25.9 m；史料 28 goues ＝ 21.1 m × 1.22）、半徑 2.5 → 1.5（根部徑 0.50 m，MsA）。
+  - 前桅：甲板處 x 553.0、**偏左舷 5 格**、傾 8°、頂 z 204（20.4 m；22 goues × 1.22）、半徑 2 → 1.2。史料「靠 bitts、略偏中線」（Br）—— 讓開中線的 36 磅主砲；只偏 0.5 m 是因為遊戲找桅只數中線 ±4 格（`10_ship.js` findMasts），偏更多會找不到。
+  - **桅孔**：桅穿過甲板-main（甲板板、橫樑、中央走道、前端台階）的 301 格 ⇒ 從甲板刻掉（carvevox 帶顏色守門，標記 `桅孔`），由桅填滿。
+- **三角帆桁**（每根一件緊框的子作品，固定點 pivot／fore／peak；外部模型放在各自的桅子作品裡，rotate 0、scale 1、在桅的**左舷側**）：
+  | 帆桁 | 長 | 傾角 | 吊點（離前端） | 前端（世界） | 頂（世界） |
+  |---|---|---|---|---|---|
+  | 主（yard-main） | 41.0 m | 35° | 40% | (551, 155, 154) | (215, 155, 389) |
+  | 前（yard-fore） | 33.0 m | 35° | 45% | (697, 150, 108) | (427, 150, 297) |
+  - meta `kind=yard、mast、yard=gaff、rig=lateen、sail、length_m、pivot_anchor=pivot、turn_axis=z、rotate_z_deg=0`（收穫號的 lateen 標法，ame 2026-10-15 確認遊戲照 gaff 往下風擺）。中段粗（兩段綁成，徑 0.36 m）、綁的地方金箍。
+  - 🩸 主帆桁吊點先照前帆桁的 45% ⇒ 前端剛好撞進前桅（兩根都在左舷 dy −5）⇒ 改 40%，前端停在前桅後 20 格。
+- **帆**（`work sub=sail`，組裝件）：`main-lateen`、`fore-lateen` 三角帆（前緣 bind 在帆桁 fore → peak、帆腳角 clew 自由、兩舷帆腳索綁槳架縱樑、tack 綁中央走道前端／撞角尖）；帆形照 1691 grand trinquet 的比例、帆腳角拉到甲板上 3.5 m：主帆前緣 41.0／後緣 33.6／帆腳 23.5 m、前帆 33.0／24.7／17.0 m。
+  旗：`main-pennant`、`fore-pennant`（桅頂、8 m 紅底金百合，Deb）、`ensign`（主帆桁頂、3.6 × 2.4 m 白底金百合 ＝ 王旗，MnM img_0270；貼圖 `textures/`）。預設風 4.5,−1.5,0、3 秒（`sub=wind`）。
+- **靜索**：每舷主桅 3、前桅 2 條（sartie），從桅頂下的 hound 綁到槳架縱樑（避開槳座）。⚠ 沒有 ratlines —— 地中海三角帆船爬的是帆桁，不是繩梯；遊戲要不要桅頂水手的通道，交船檢查時看匯入檢查。
+- **meta**（§9.1）：帆 5／5（sail ×2 `sail=gaff`、flag ×3）、帆自己的繩 6（sheet ×4、tack ×2）、shroud ×10（kind=shroud）。
+- 讀數（`design/tools/check_rig.py`）：
+  - **結果帳**：兩根桅、兩根帆桁缺 0、多 0、色差 0；甲板-main ＝ 階段二清單 − 桅孔 301 ＝ 149,283，缺 0、多 0、色差 0。
+  - CLI：繩 16、ropes_broken 0；帆 5、sails_broken 0（預設風下最大鼓 42 格）；兩件桅子作品 models_broken 0。
+  - 帆桁掃過的格、帆面（三角形取樣）撞到別的實心：兩根都 0。**反向對照**：`draft_masts.py --probe=yard_z=main:-140`（主帆桁整根往下 14 m）⇒ 主帆桁 47 格、帆面 62 點；前帆桁照樣 0。
+  - **組起來**：353,709 格、1 元件、空腔 0；鏡像差：左舷有右舷空 1,628、顏色不同 41 對 —— **全是偏左舷的前桅**（前桅 1,713 格；顏色不同的是右舷那一側還留著的甲板與台階），照實報、不修。
+- 過程圖：`design/sheet03_rig_v1.png`、`overlays/stage3_{full,side,sternq,portq}.png`。

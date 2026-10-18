@@ -1,0 +1,193 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "main-lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:主桅/yard-main/fore",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "model:主桅/yard-main/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "330.5,155.5,72.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-18T13:11:09",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff"
+			}
+		},
+		{
+			"name": "fore-lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:前桅/yard-fore/fore",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "model:前桅/yard-fore/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "530.5,150.5,72.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-18T13:11:09",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "gaff"
+			}
+		},
+		{
+			"name": "main-pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "417.7,160.5,259",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "337.2,160.5,258",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "417.7,160.5,251",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#b60000",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-18T13:11:10",
+			"texture": "textures/main-pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main"
+			}
+		},
+		{
+			"name": "fore-pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "578,155.5,204",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "497.5,155.5,203",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "578,155.5,196",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#b60000",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-18T13:11:10",
+			"texture": "textures/fore-pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "fore"
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "head",
+					"at": "model:主桅/yard-main/peak",
+					"pin": true
+				},
+				{
+					"name": "fly-top",
+					"at": "179.1,155.5,388.5",
+					"pin": false
+				},
+				{
+					"name": "fly-foot",
+					"at": "179.1,155.5,364.5",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "model:主桅/yard-main/3,3,214",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#ffffff",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-18T13:11:10",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
+		}
+	]
+}

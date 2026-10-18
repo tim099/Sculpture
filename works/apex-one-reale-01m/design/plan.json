@@ -85,6 +85,22 @@
       "iron": {"v": 73, "src": "設計決定：燈桿 (72,72,85)"}
     }
   },
+  "rig": {
+    "masts": {"v": {
+      "main": {"heel_x": 400, "dy": 0, "length": 257, "rake_deg": 4, "r_foot": 2.5, "r_top": 1.5, "link": "主桅"},
+      "fore": {"heel_x": 549.5, "dy": -5, "length": 203, "rake_deg": 8, "r_foot": 2.0, "r_top": 1.2, "link": "前桅"}
+    }, "src": "主桅：28 goues ＝ 21.1 m（MsA）× 1.22 ≈ 25.7 m、根部徑 0.50 m；位置在撞角尖往後約 46%（Barras 1697 圖）與「幾乎在船中」（MsA）、2/5（Br）之間取 x 400。前桅：22 goues ＝ 16.6 m × 1.22 ≈ 20.3 m；靠船頭 bitts、略偏中線（Br）⇒ 甲板上 x 553、偏左舷 0.5 m（設計決定：再偏遊戲找不到桅 —— 10_ship.js findMasts 只數中線 ±4 格）。兩根往前傾 4°／8°（設計決定：TG 說主桅靠著一根斜的支撐木、角度沒找到）"},
+    "masthead_block": {"v": 9, "src": "設計決定：桅頂 calcet（滑輪箱）9 格高、比桅粗 1 格、頂金"},
+    "yards": {"v": {
+      "main": {"length": 410, "angle_deg": 35, "sling_frac": 0.40, "side": -1, "sail": "main-lateen", "clew": [330, 72]},
+      "fore": {"length": 330, "angle_deg": 35, "sling_frac": 0.45, "side": -1, "sail": "fore-lateen", "clew": [530, 72]}
+    }, "src": "主帆桁：兩段 68 pi ＋ 60½ pi、重疊 25 pi ⇒ 33.6 m（TG）× 1.22 ≈ 41 m、徑 0.36 m；前帆桁 TG／Encyclopédie 不同意 ⇒ 取主帆桁的 0.8 ≈ 33 m（設計決定，Barras 圖的比例）；傾 35°（Barras 圖）；吊點：前帆桁 45%（Barras 圖），主帆桁 40%（設計決定：45% 前端會撞前桅）；帆桁掛在桅的左舷側（預設風往 −y 吹，帆往左舷鼓、不穿過桅）"},
+    "sail_shape": {"src": "普通船 grand trinquet 前緣 44 goues、後緣 44、帆腳 30（1691）⇒ 帆腳角 clew 照這個比例往下拉到甲板上 3.5 m（設計決定：在划手頭上）"},
+    "shrouds": {"v": {"main": [376, 389, 401], "fore": [540, 552]}, "src": "設計決定：每舷主桅 3、前桅 2 條（sartie），下端綁在槳架縱樑上、避開槳座"},
+    "sheet_belay_x": {"v": {"main": 300, "fore": 515}, "src": "設計決定"},
+    "flags": {"v": {"ensign": [36, 24], "pennant": [80, 8]}, "src": "史料：王旗白底金百合（MnM 模型 img_0270）、Réale 的長旗是紅錦緞金百合（Deb）；掛法：王旗在主帆桁頂（Barras 圖帆桁頂有大旗）、長旗在兩根桅頂"},
+    "colors": {"mast": 141, "yard": 136, "block": 104, "gold": 244}
+  },
   "hull_build": {
     "wall": {"v": 3, "src": "設計決定：外板 1 ＋ 肋骨與內板 2"},
     "post_mould": {"v": 5, "src": "設計決定：艏柱、艉柱在舷頂以上那一段 5 格厚（沿船長方向）"},
