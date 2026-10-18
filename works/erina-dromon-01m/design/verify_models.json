@@ -67,6 +67,10 @@
   "host": "forecastle",
   "meta": {
    "ammo": "bolt",
+   "gun": "ballista",
+   "kind": "gun",
+   "mount": "pivot",
+   "ports": "0,35,-35",
    "weapon": "toxoballistra"
   },
   "mirror": "",
@@ -76,6 +80,11 @@
    18.5,
    0
   ],
+  "ports_collide": {
+   "-35": 0,
+   "0": 0,
+   "35": 0
+  },
   "rotate": [
    0,
    0,
@@ -108,6 +117,10 @@
   "host": "castles",
   "meta": {
    "ammo": "bolt",
+   "gun": "ballista",
+   "kind": "gun",
+   "mount": "pivot",
+   "ports": "0,45,-45",
    "weapon": "toxoballistra"
   },
   "mirror": "",
@@ -117,6 +130,11 @@
    18.5,
    0
   ],
+  "ports_collide": {
+   "-45": 0,
+   "0": 0,
+   "45": 0
+  },
   "rotate": [
    0,
    0,
@@ -149,6 +167,10 @@
   "host": "castles",
   "meta": {
    "ammo": "bolt",
+   "gun": "ballista",
+   "kind": "gun",
+   "mount": "pivot",
+   "ports": "0,45,-45",
    "weapon": "toxoballistra"
   },
   "mirror": "",
@@ -158,6 +180,11 @@
    18.5,
    0
   ],
+  "ports_collide": {
+   "-45": 0,
+   "0": 0,
+   "45": 0
+  },
   "rotate": [
    0,
    0,
@@ -427,29 +454,30 @@
   ],
   "bbox": [
    [
-    131.4,
-    57.4,
-    5.1
+    131.5,
+    58.0,
+    5.2
    ],
    [
-    135.6,
-    61.6,
-    10.3
+    135.5,
+    61.0,
+    11.2
    ]
   ],
   "collide_cells": 0,
   "collide_sample": [],
-  "file": "lists/ext_powder_barrel.txt",
+  "file": "lists/st_amphora.txt",
   "host": "magazine",
   "meta": {
    "kind": "powder",
-   "powder_lb": 100
+   "powder_lb": 100,
+   "store": "greekfire"
   },
   "mirror": "",
   "name": "桶-001",
   "pivot": [
-   11,
-   11,
+   4.5,
+   4.5,
    0
   ],
   "rotate": [
@@ -457,8 +485,8 @@
    0,
    0
   ],
-  "scale": 0.2,
-  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+  "scale": 0.5,
+  "source_work": "erina-dromon-01m-store-amphora"
  },
  {
   "at": [
@@ -468,29 +496,30 @@
   ],
   "bbox": [
    [
-    131.4,
-    67.4,
-    5.1
+    131.5,
+    68.0,
+    5.2
    ],
    [
-    135.6,
-    71.6,
-    10.3
+    135.5,
+    71.0,
+    11.2
    ]
   ],
   "collide_cells": 0,
   "collide_sample": [],
-  "file": "lists/ext_powder_barrel.txt",
+  "file": "lists/st_amphora.txt",
   "host": "magazine",
   "meta": {
    "kind": "powder",
-   "powder_lb": 100
+   "powder_lb": 100,
+   "store": "greekfire"
   },
   "mirror": "",
   "name": "桶-002",
   "pivot": [
-   11,
-   11,
+   4.5,
+   4.5,
    0
   ],
   "rotate": [
@@ -498,8 +527,8 @@
    0,
    0
   ],
-  "scale": 0.2,
-  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+  "scale": 0.5,
+  "source_work": "erina-dromon-01m-store-amphora"
  },
  {
   "at": [
@@ -509,29 +538,30 @@
   ],
   "bbox": [
    [
-    136.4,
-    57.4,
-    5.1
+    136.5,
+    58.0,
+    5.2
    ],
    [
-    140.6,
-    61.6,
-    10.3
+    140.5,
+    61.0,
+    11.2
    ]
   ],
   "collide_cells": 0,
   "collide_sample": [],
-  "file": "lists/ext_powder_barrel.txt",
+  "file": "lists/st_amphora.txt",
   "host": "magazine",
   "meta": {
    "kind": "powder",
-   "powder_lb": 100
+   "powder_lb": 100,
+   "store": "greekfire"
   },
   "mirror": "",
   "name": "桶-003",
   "pivot": [
-   11,
-   11,
+   4.5,
+   4.5,
    0
   ],
   "rotate": [
@@ -539,8 +569,8 @@
    0,
    0
   ],
-  "scale": 0.2,
-  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+  "scale": 0.5,
+  "source_work": "erina-dromon-01m-store-amphora"
  },
  {
   "at": [
@@ -550,29 +580,30 @@
   ],
   "bbox": [
    [
-    136.4,
-    67.4,
-    5.1
+    136.5,
+    68.0,
+    5.2
    ],
    [
-    140.6,
-    71.6,
-    10.3
+    140.5,
+    71.0,
+    11.2
    ]
   ],
   "collide_cells": 0,
   "collide_sample": [],
-  "file": "lists/ext_powder_barrel.txt",
+  "file": "lists/st_amphora.txt",
   "host": "magazine",
   "meta": {
    "kind": "powder",
-   "powder_lb": 100
+   "powder_lb": 100,
+   "store": "greekfire"
   },
   "mirror": "",
   "name": "桶-004",
   "pivot": [
-   11,
-   11,
+   4.5,
+   4.5,
    0
   ],
   "rotate": [
@@ -580,8 +611,8 @@
    0,
    0
   ],
-  "scale": 0.2,
-  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+  "scale": 0.5,
+  "source_work": "erina-dromon-01m-store-amphora"
  },
  {
   "at": [
@@ -591,29 +622,30 @@
   ],
   "bbox": [
    [
-    141.4,
-    57.4,
-    5.1
+    141.0,
+    58.0,
+    5.2
    ],
    [
-    145.6,
-    61.6,
-    10.3
+    146.0,
+    61.0,
+    8.2
    ]
   ],
   "collide_cells": 0,
   "collide_sample": [],
-  "file": "lists/ext_powder_barrel.txt",
+  "file": "lists/st_boltbox.txt",
   "host": "magazine",
   "meta": {
    "kind": "powder",
-   "powder_lb": 100
+   "powder_lb": 100,
+   "store": "bolt"
   },
   "mirror": "",
   "name": "桶-005",
   "pivot": [
-   11,
-   11,
+   5.5,
+   3.5,
    0
   ],
   "rotate": [
@@ -621,8 +653,8 @@
    0,
    0
   ],
-  "scale": 0.2,
-  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+  "scale": 0.5,
+  "source_work": "erina-dromon-01m-store-boltbox"
  },
  {
   "at": [
@@ -632,29 +664,30 @@
   ],
   "bbox": [
    [
-    141.4,
-    67.4,
-    5.1
+    141.0,
+    68.0,
+    5.2
    ],
    [
-    145.6,
-    71.6,
-    10.3
+    146.0,
+    71.0,
+    8.2
    ]
   ],
   "collide_cells": 0,
   "collide_sample": [],
-  "file": "lists/ext_powder_barrel.txt",
+  "file": "lists/st_boltbox.txt",
   "host": "magazine",
   "meta": {
    "kind": "powder",
-   "powder_lb": 100
+   "powder_lb": 100,
+   "store": "bolt"
   },
   "mirror": "",
   "name": "桶-006",
   "pivot": [
-   11,
-   11,
+   5.5,
+   3.5,
    0
   ],
   "rotate": [
@@ -662,8 +695,8 @@
    0,
    0
   ],
-  "scale": 0.2,
-  "source_work": "basecamp-frigate-constitution-01m-powder-barrel"
+  "scale": 0.5,
+  "source_work": "erina-dromon-01m-store-boltbox"
  },
  {
   "at": [

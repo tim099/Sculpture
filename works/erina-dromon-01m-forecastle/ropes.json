@@ -1,0 +1,44 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "ballista-bow-弦-a",
+			"from": "model:ballista-bow/string-a",
+			"to": "model:ballista-bow/nock",
+			"color": "#d8c8a0",
+			"thickness": 0.15,
+			"slack": 1,
+			"enabled": true,
+			"group": "",
+			"note": "弩弦（apply_bowstrings.py）",
+			"persona": "erina",
+			"created_at": "2026-10-18T22:37:27",
+			"meta": {
+				"anim": "gun",
+				"fire": "nock-fire",
+				"kind": "bowstring",
+				"rest": "nock"
+			}
+		},
+		{
+			"name": "ballista-bow-弦-b",
+			"from": "model:ballista-bow/nock",
+			"to": "model:ballista-bow/string-b",
+			"color": "#d8c8a0",
+			"thickness": 0.15,
+			"slack": 1,
+			"enabled": true,
+			"group": "",
+			"note": "弩弦（apply_bowstrings.py）",
+			"persona": "erina",
+			"created_at": "2026-10-18T22:37:28",
+			"meta": {
+				"anim": "gun",
+				"fire": "nock-fire",
+				"kind": "bowstring",
+				"rest": "nock"
+			}
+		}
+	],
+	"groups": []
+}

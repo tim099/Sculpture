@@ -48,21 +48,24 @@ for f in ['lists/hull.txt', 'lists/deck_main.txt', 'lists/deck_hold.txt'] + [VU[
 M = []     # 每個：name, host（掛在哪件作品）, source_work, file（來源清單，算碰撞與預覽）, at, pivot, rotate, scale, mirror, meta, check
 W = 'erina-dromon-01m-'
 
-# ── 武器 ──（Tim 2026-10-18：弩砲、投石機的機制還在想 ⇒ 先不給功能：沒有 kind（遊戲當一般模型），只留 weapon／ammo（＋投石機的迴旋角度）當之後的標記；siphon 照常 kind=gun）
+# ── 武器 ──（Tim 2026-10-18：投石機的機制還在想 ⇒ 先不給功能：沒有 kind，只留 weapon／ammo（＋迴旋角度）當標記；siphon 照常 kind=gun）
+#   弩砲（Tim 2026-10-18 晚：「弩炮目前我想直接做成換皮大炮(只是彈藥不同) 一樣走裝彈 發射流程」「弩炮可以給一定的轉動空間(參考維吉尼亞號的前後炮)」）⇒
+#   kind=gun gun=ballista（Blockside 砲種表 ballista、彈種弩箭）＋ mount=pivot ports（停在這幾個角度，量過零碰撞；+ ＝ 往格 +y 轉）。
 # （原註：kind=gun＋weapon／ammo：之後遊戲加彈種與武器種類時照這兩個鍵分；現在 gun= 用現有的砲種代碼頂著）
 sw = VW['siphon']; piv = [sw['anchors']['pivot'][0] + 0.5, sw['anchors']['pivot'][1] + 0.5, 0]
 M.append(dict(name='siphon', host='assembly', source_work=W + 'siphon', file=sw['file'], scale=0.5, rotate=[0, 0, -90], mirror='',
               pivot=piv, at=[332.0, YM, float(max(ZAIR[323:355]))],
               meta={'kind': 'gun', 'gun': 'siphon', 'weapon': 'siphon', 'ammo': 'greekfire', 'safe': 1}))
 bw = VW['ballista']; pb = [bw['anchors']['pivot'][0] + 0.5, bw['anchors']['pivot'][1] + 0.5, 0]
+BALLISTA_PORTS = {'bow': '0,35,-35', 'castle': '0,45,-45'}
 FX0, FX1, FZ = geo['forecastle']
 M.append(dict(name='ballista-bow', host='forecastle', source_work=W + 'ballista', file=bw['file'], scale=0.4, rotate=[0, 0, -90], mirror='',
-              pivot=pb, at=[333.5, YM, float(FZ + 1)], meta={'weapon': 'toxoballistra', 'ammo': 'bolt'}))
+              pivot=pb, at=[333.5, YM, float(FZ + 1)], meta={'kind': 'gun', 'gun': 'ballista', 'weapon': 'toxoballistra', 'ammo': 'bolt', 'mount': 'pivot', 'ports': BALLISTA_PORTS['bow']}))
 KX0, KX1, KO0, KO1, KZ = geo['castles']
 for s, rz in (('S', 0), ('P', 180)):
     # 木塔上的小弩砲（0.3 ⇒ 1.4 m）：內端退到離中線 9 格 ⇒ 5–7 格那條給送藥手（遊戲在砲口 x、離中線 ±9 格、半徑 4 找；砲的外框再外 1 格不能站）、外側 19 格那排給砲手
     M.append(dict(name='ballista-castle-' + s, host='castles', source_work=W + 'ballista', file=bw['file'], scale=0.3, rotate=[0, 0, rz], mirror='',
-                  pivot=pb, at=[226.5, YM + (13.95 if s == 'S' else -13.95), float(KZ + 1)], meta={'weapon': 'toxoballistra', 'ammo': 'bolt'}))
+                  pivot=pb, at=[226.5, YM + (13.95 if s == 'S' else -13.95), float(KZ + 1)], meta={'kind': 'gun', 'gun': 'ballista', 'weapon': 'toxoballistra', 'ammo': 'bolt', 'mount': 'pivot', 'ports': BALLISTA_PORTS['castle']}))
 mw = VW['mangonel']; pm = [mw['anchors']['pivot'][0] + 0.5, mw['anchors']['pivot'][1] + 0.5, 0]
 M.append(dict(name='mangonel', host='assembly', source_work=W + 'mangonel', file=mw['file'], scale=0.45, rotate=[0, 0, 0], mirror='',
               pivot=pm, at=[255.5, YM - 1.5, float(max(ZAIR[247:266]))],
@@ -85,15 +88,19 @@ for nm, y in VR['yards'].items():
     M.append(dict(name='yard-' + nm, host='mast-' + y['mast'], source_work=W + 'yard-' + nm, file=y['file'], scale=1, rotate=mdl['rotate'], mirror='',
                   pivot=mdl['pivot'], at=mdl['at'], meta=meta, check=False))
 
-# ── 火藥桶（希臘火的藥罐先用火藥桶頂著；掛在藥庫子作品裡）──
+# ── 藥庫的補給（掛在藥庫子作品裡）：希臘火陶罐 ×4、弩箭箱 ×2（draft_stores.py；遊戲當火藥桶 kind=powder，取用點輪流擺這兩種樣子 —— Tim 2026-10-18「彈藥箱可以有不同外觀(但實際上都能補彈)」）──
+#   （原本是憲法號的火藥桶 ×6 頂著）
 MX0, MX1 = geo['magazine']
 hz = dro.PLAN['deck_hold']['z']
+VST = json.load(open(os.path.join(D, 'verify_stores.json'), encoding='utf-8'))
 k = 0
 for bx in (133.5, 138.5, 143.5):                        # 跟著隔艙壁 x 130／147 挪一格
     for by in (YC - 4.5, YC + 5.5):
         k += 1
-        M.append(dict(name='桶-%03d' % k, host='magazine', source_work='basecamp-frigate-constitution-01m-powder-barrel', file='lists/ext_powder_barrel.txt',
-                      scale=0.2, rotate=[0, 0, 0], mirror='', pivot=[11, 11, 0], at=[bx, by, float(hz + 1)], meta={'kind': 'powder', 'powder_lb': 100}))
+        st = 'boltbox' if bx > 140 else 'amphora'
+        sp = VST[st]; pv = [sp['anchors']['pivot'][0] + 0.5, sp['anchors']['pivot'][1] + 0.5, 0]
+        M.append(dict(name='桶-%03d' % k, host='magazine', source_work=W + 'store-' + st, file=sp['file'],
+                      scale=0.5, rotate=[0, 0, 0], mirror='', pivot=pv, at=[bx, by, float(hz + 1)], meta={'kind': 'powder', 'powder_lb': 100, 'store': 'bolt' if st == 'boltbox' else 'greekfire'}))
 
 # ── 錨（共用元件 憲法號 bower，縮到 0.3 ⇒ 1.4 × 1.7 m；掛在艏部兩舷的吊錨架下，錨環頂貼著吊錨架底）──
 cx_, wc_, zc_ = geo['cathead']
