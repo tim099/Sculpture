@@ -97,7 +97,9 @@ if step in ('meta', 'all'):
         '艏樓': {'kind': 'deck', 'deck': 'forecastle', 'level': 2, 'name': '艏樓（pseudopation）', 'floor': '%d:%d,%d:%d' % (geo['forecastle'][0], geo['forecastle'][2] + 1, geo['forecastle'][1], geo['forecastle'][2] + 1), 'thick': 2},
         '木塔': {'kind': 'deck', 'deck': 'castle', 'level': 2, 'name': '木塔（xylokastra）', 'floor': '%d:%d,%d:%d' % (geo['castles'][0], geo['castles'][4] + 1, geo['castles'][1], geo['castles'][4] + 1), 'thick': 2},
         '梯子': {'kind': 'ladders'},
-        '藥庫': {'kind': 'magazine', 'powder_lb': 600, 'pos': 'aft'},
+        # hoist：艏樓、木塔的火藥從梯口吊上去（桶擺在梯腳的主甲板、送藥手在梯頭取；Blockside 23_powder.js hoistPick 每一層挑梯頭在那一層的那一座）——
+        #   以前兩層都照藥庫往船頭找空地 ⇒ 疊在木塔同一格、三個桶堵死木塔內側的走道（匯入檢查 ⚠ 2：木塔弩砲走路格不連通；艏樓弩砲的送藥手從木塔直線飛過去）
+        '藥庫': {'kind': 'magazine', 'powder_lb': 600, 'pos': 'aft', 'hoist': 'ladders-1#forecastle,ladders-1#castle'},
     }
     for ln, meta in LM.items():
         cli.run(['op=work', 'sub=meta', 'persona=erina', 'work=' + ASM, 'part=link', 'name=' + ln, 'meta=' + json.dumps(meta, ensure_ascii=False, sort_keys=True)], quiet=True)

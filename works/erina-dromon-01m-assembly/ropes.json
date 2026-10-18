@@ -248,6 +248,97 @@
 			"meta": {
 				"kind": "shroud"
 			}
+		},
+		{
+			"name": "mangonel-拉繩-1",
+			"from": "model:mangonel-arm/pull-1",
+			"to": "model:mangonel/grip-1",
+			"color": "#c9b48a",
+			"thickness": 0.12,
+			"slack": 1,
+			"enabled": true,
+			"group": "",
+			"note": "投石機的拉繩（apply_mangonel_ropes.py）",
+			"persona": "erina",
+			"created_at": "2026-10-18T23:29:57",
+			"meta": {
+				"anim": "gun",
+				"fire": "grip-1-fire",
+				"kind": "gunrope",
+				"rest": "grip-1"
+			}
+		},
+		{
+			"name": "mangonel-拉繩-2",
+			"from": "model:mangonel-arm/pull-2",
+			"to": "model:mangonel/grip-2",
+			"color": "#c9b48a",
+			"thickness": 0.12,
+			"slack": 1,
+			"enabled": true,
+			"group": "",
+			"note": "投石機的拉繩（apply_mangonel_ropes.py）",
+			"persona": "erina",
+			"created_at": "2026-10-18T23:29:58",
+			"meta": {
+				"anim": "gun",
+				"fire": "grip-2-fire",
+				"kind": "gunrope",
+				"rest": "grip-2"
+			}
+		},
+		{
+			"name": "mangonel-拉繩-3",
+			"from": "model:mangonel-arm/pull-3",
+			"to": "model:mangonel/grip-3",
+			"color": "#c9b48a",
+			"thickness": 0.12,
+			"slack": 1,
+			"enabled": true,
+			"group": "",
+			"note": "投石機的拉繩（apply_mangonel_ropes.py）",
+			"persona": "erina",
+			"created_at": "2026-10-18T23:29:59",
+			"meta": {
+				"anim": "gun",
+				"fire": "grip-3-fire",
+				"kind": "gunrope",
+				"rest": "grip-3"
+			}
+		},
+		{
+			"name": "mangonel-投袋繩-a",
+			"from": "model:mangonel-arm/sling",
+			"to": "model:mangonel-arm/pouch-a",
+			"color": "#b89c6a",
+			"thickness": 0.1,
+			"slack": 1,
+			"enabled": true,
+			"group": "",
+			"note": "投石機的投袋繩（apply_mangonel_ropes.py）",
+			"persona": "erina",
+			"created_at": "2026-10-18T23:30:00",
+			"meta": {
+				"anim": "gun",
+				"kind": "gunrope"
+			}
+		},
+		{
+			"name": "mangonel-投袋繩-b",
+			"from": "model:mangonel-arm/sling",
+			"to": "model:mangonel-arm/pouch-b",
+			"color": "#b89c6a",
+			"thickness": 0.1,
+			"slack": 1,
+			"enabled": true,
+			"group": "",
+			"note": "投石機的投袋繩（apply_mangonel_ropes.py）",
+			"persona": "erina",
+			"created_at": "2026-10-18T23:30:01",
+			"meta": {
+				"anim": "gun",
+				"kind": "gunrope"
+			}
 		}
 	],
 	"groups": []

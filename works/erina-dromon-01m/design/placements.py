@@ -48,7 +48,7 @@ for f in ['lists/hull.txt', 'lists/deck_main.txt', 'lists/deck_hold.txt'] + [VU[
 M = []     # 每個：name, host（掛在哪件作品）, source_work, file（來源清單，算碰撞與預覽）, at, pivot, rotate, scale, mirror, meta, check
 W = 'erina-dromon-01m-'
 
-# ── 武器 ──（Tim 2026-10-18：投石機的機制還在想 ⇒ 先不給功能：沒有 kind，只留 weapon／ammo（＋迴旋角度）當標記；siphon 照常 kind=gun）
+# ── 武器 ──（siphon、弩砲、投石機都是 kind=gun；弩砲 2026-10-18 晚改打火箭 ammo=firebolt：Tim「是否可以讓弩炮改發射火箭(有點燃效果)」）
 #   弩砲（Tim 2026-10-18 晚：「弩炮目前我想直接做成換皮大炮(只是彈藥不同) 一樣走裝彈 發射流程」「弩炮可以給一定的轉動空間(參考維吉尼亞號的前後炮)」）⇒
 #   kind=gun gun=ballista（Blockside 砲種表 ballista、彈種弩箭）＋ mount=pivot ports（停在這幾個角度，量過零碰撞；+ ＝ 往格 +y 轉）。
 # （原註：kind=gun＋weapon／ammo：之後遊戲加彈種與武器種類時照這兩個鍵分；現在 gun= 用現有的砲種代碼頂著）
@@ -60,16 +60,24 @@ bw = VW['ballista']; pb = [bw['anchors']['pivot'][0] + 0.5, bw['anchors']['pivot
 BALLISTA_PORTS = {'bow': '0,35,-35', 'castle': '0,45,-45'}
 FX0, FX1, FZ = geo['forecastle']
 M.append(dict(name='ballista-bow', host='forecastle', source_work=W + 'ballista', file=bw['file'], scale=0.4, rotate=[0, 0, -90], mirror='',
-              pivot=pb, at=[333.5, YM, float(FZ + 1)], meta={'kind': 'gun', 'gun': 'ballista', 'weapon': 'toxoballistra', 'ammo': 'bolt', 'mount': 'pivot', 'ports': BALLISTA_PORTS['bow']}))
+              pivot=pb, at=[333.5, YM, float(FZ + 1)], meta={'kind': 'gun', 'gun': 'ballista', 'weapon': 'toxoballistra', 'ammo': 'firebolt', 'mount': 'pivot', 'ports': BALLISTA_PORTS['bow']}))
 KX0, KX1, KO0, KO1, KZ = geo['castles']
 for s, rz in (('S', 0), ('P', 180)):
     # 木塔上的小弩砲（0.3 ⇒ 1.4 m）：內端退到離中線 9 格 ⇒ 5–7 格那條給送藥手（遊戲在砲口 x、離中線 ±9 格、半徑 4 找；砲的外框再外 1 格不能站）、外側 19 格那排給砲手
     M.append(dict(name='ballista-castle-' + s, host='castles', source_work=W + 'ballista', file=bw['file'], scale=0.3, rotate=[0, 0, rz], mirror='',
-                  pivot=pb, at=[226.5, YM + (13.95 if s == 'S' else -13.95), float(KZ + 1)], meta={'kind': 'gun', 'gun': 'ballista', 'weapon': 'toxoballistra', 'ammo': 'bolt', 'mount': 'pivot', 'ports': BALLISTA_PORTS['castle']}))
+                  pivot=pb, at=[226.5, YM + (13.95 if s == 'S' else -13.95), float(KZ + 1)], meta={'kind': 'gun', 'gun': 'ballista', 'weapon': 'toxoballistra', 'ammo': 'firebolt', 'mount': 'pivot', 'ports': BALLISTA_PORTS['castle']}))
 mw = VW['mangonel']; pm = [mw['anchors']['pivot'][0] + 0.5, mw['anchors']['pivot'][1] + 0.5, 0]
+# 投石機（Tim 2026-10-18 晚：「接著做投石機吧(同時把一些零件換成繩索)」「投石機是否可以給高拋物線彈道(可以砸到甲板)」）⇒ 換皮大砲：kind=gun gun=mangonel
+#   （Blockside 砲種表 mangonel：石彈、曲射 lob、最大仰角 75°）＋整圈轉 mount=turret arc −180,180（持火號多半船頭對敵 ⇒ 只有兩舷 ports 0,180 的時候 120 秒對得到 6.5 秒、一發都沒開；
+#   每 30° 量過零碰撞：12 個角度全 0）。投臂另一件 mangonel-arm 放在同一點（同框、同 pivot、同 at ⇒ 對齊），
+#   meta spin=gun：照那門投石機的開火進度繞鐵軸（固定點 spin-a → spin-b）轉到 spin_k −135°（長臂甩到正上方）、裝填時轉回來；投石機迴旋時跟著轉（Blockside 26_spin.js）。
+MG_AT = [255.5, YM - 1.5, float(max(ZAIR[247:266]))]
 M.append(dict(name='mangonel', host='assembly', source_work=W + 'mangonel', file=mw['file'], scale=0.45, rotate=[0, 0, 0], mirror='',
-              pivot=pm, at=[255.5, YM - 1.5, float(max(ZAIR[247:266]))],
-              meta={'weapon': 'manganikon', 'ammo': 'stone', 'mount': 'pivot', 'ports': '0,180'}))
+              pivot=pm, at=MG_AT,
+              meta={'kind': 'gun', 'gun': 'mangonel', 'weapon': 'manganikon', 'ammo': 'stone', 'mount': 'turret', 'arc': '-180,180', 'rate': 10}))
+aw = VW['mangonel-arm']
+M.append(dict(name='mangonel-arm', host='assembly', source_work=W + 'mangonel-arm', file=aw['file'], scale=0.45, rotate=[0, 0, 0], mirror='',
+              pivot=pm, at=MG_AT, meta={'spin': 'gun', 'spin_gun': 'mangonel', 'spin_k': -135, 'spin_lag': 0}))
 
 # ── 舷側舵（S 原樣、P 鏡像）──
 hS, hP = VS['hinge_S'], VS['hinge_P']

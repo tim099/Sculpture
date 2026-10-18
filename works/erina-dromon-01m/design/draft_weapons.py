@@ -3,7 +3,7 @@
 #   固定點：muzzle（砲口內膛／噴口那一格，空格）、breech（砲尾那一格）；另外 pivot（轉的中心，底座正中）。
 # 1. siphon   希臘火噴筒：青銅藥槽（下面是炭盆）＋壓力泵（槓桿把手）＋青銅長管＋鍍金獅頭噴口（Anna Komnene 描述的獅頭；設計）。
 # 2. ballista 弩砲（toxoballistra）：三腳架＋回轉座＋滑槽＋兩個扭力繩束＋弓臂＋絞盤。
-# 3. mangonel 投石機（manganikon，牽引式）：A 字雙架＋軸＋投臂（長臂在後、帶投袋；短臂在前、垂下拉繩環）。
+# 3. mangonel 投石機（manganikon，牽引式）：A 字雙架＋軸（mangonel）＋投臂與投袋（mangonel-arm，子模型、會甩）；拉繩、投袋繩是繩。
 # 用法：python -I -X utf8 -B draft_weapons.py ⇒ lists/w_<名>.txt、verify_weapons.json、sheetW_weapons.png
 import os, sys, json, math
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -153,36 +153,51 @@ def ballista():
 
 
 # ───────────── 3. 投石機 ─────────────
+# Tim 2026-10-18：「接著做投石機吧(同時把一些零件換成繩索)」「投石機是否可以給高拋物線彈道(可以砸到甲板)」⇒ 拆成兩件：
+#   mangonel      架子（底框、兩座 A 字架、鐵軸）＝ 遊戲裡的「砲」（kind=gun gun=mangonel；Blockside 砲種表 mangonel：石彈、曲射）
+#   mangonel-arm  投臂＋投袋（同一個框、同一個座標 ⇒ 放在同一點就對齊）＝ 子模型，meta spin=gun 照開火進度繞鐵軸甩出去、照裝填拉回來
+#   拉繩（短臂前端 → 拉繩手手上）、投袋繩（長臂尾端 → 投袋）不畫格子：改成繩（apply_mangonel_ropes.py）；握環拿掉（拉繩下端各自在拉繩手手上）；
+#   石彈不畫在投袋裡（開火之後會留在投袋裡；飛出去的那一顆遊戲自己畫）。
+MG_SIZE = (41, 72, 64)
+MG_CX, MG_YA, MG_ZT = 20.5, 32, 40            # 中線 x、鐵軸 y、鐵軸 z
+
+
 def mangonel():
-    p = Part('mangonel', (41, 72, 64))
-    cx = 20.5
+    p = Part('mangonel', MG_SIZE)
+    cx, ya, zt = MG_CX, MG_YA, MG_ZT
     # 底框（井字）
     p.box(4, 7, 14, 50, 0, 2, WOOD_D); p.box(33, 36, 14, 50, 0, 2, WOOD_D)
     for y0 in (14, 30, 47):
         p.box(4, 36, y0, y0 + 3, 3, 4, WOOD)
     # 兩座 A 字架（左右各一，頂到軸 z 40）
-    zt, ya = 40, 32
     for xs in (6.0, 35.0):
         p.line((xs, 16.0, 5), (xs, ya + 0.5, zt), 1.3, WOOD)
         p.line((xs, 49.0, 5), (xs, ya + 0.5, zt), 1.3, WOOD)
         p.line((xs, 24.0, 22), (xs, 41.0, 22), 1.0, WOOD_D)
     # 軸（鐵）
     p.box(4, 37, ya - 1, ya + 1, zt - 1, zt + 1, IRON)
-    # 投臂：短臂往前（+y）、長臂往後下（-y，裝填姿勢：投袋在後面的甲板上方）
+    # 砲軸：沿 y 的一條水平線（砲口 ＝ 框前方的空格）；拉繩下端：拉好（rest，拉繩手站著握住）／放出去之後（fire，往下拉到底）
+    p.anchors = {'muzzle': (20, 70, 40), 'breech': (20, 6, 40), 'pivot': (20, 32, 0), 'axle': (20, 32, 40)}
+    for i, x in enumerate((13, 20, 28)):
+        p.anchors['grip-%d' % (i + 1)] = (x, ya + 26, 6)
+        p.anchors['grip-%d-fire' % (i + 1)] = (x, ya + 20, 2)
+    return p
+
+
+def mangonel_arm():
+    p = Part('mangonel-arm', MG_SIZE)
+    cx, ya, zt = MG_CX, MG_YA, MG_ZT
+    # 投臂：短臂往前（+y）、長臂往後下（-y，裝填姿勢：投袋在後面的甲板上方）；放出去 ＝ 繞鐵軸（+x）轉 −135°：長臂從後下甩過頭頂到正上方、短臂被拉到正下方
     piv = (cx, ya + 0.5, zt + 0.5)
     front = (cx, ya + 14.5, zt + 9.0)
     back = (cx, 6.0, 9.0)
     p.line(front, piv, 1.6, WOOD); p.line(piv, back, 1.3, WOOD)
-    # 拉繩：短臂前端垂下的繩環（給拉繩手）
-    for dx in (-3, 0, 3):
-        p.line((cx + dx, ya + 14.5, zt + 8), (cx + dx * 2.5, ya + 26.0, 6.0), 0.62, ROPE)
-    p.box(int(cx) - 9, int(cx) + 9, ya + 25, ya + 27, 5, 6, ROPE)     # 握環
-    # 投袋（皮）＋石彈（灰）放在甲板上方
-    p.line(back, (cx, 2.0, 5.0), 0.62, ROPE)
+    p.box(19, 21, ya + 13, ya + 15, zt + 8, zt + 9, IRON)             # 短臂前端的鐵箍（拉繩綁在這裡）
+    # 投袋（皮）：掛在長臂尾端下面（繩是投袋繩）
     p.box(18, 22, 1, 4, 3, 5, 100)
-    p.box(19, 21, 2, 3, 6, 7, 146)                                     # 石彈（r4 g4 b2 灰）
-    # 砲軸：沿 y 的一條水平線（砲口 ＝ 框前方的空格）
-    p.anchors = {'muzzle': (20, 70, 40), 'breech': (20, 6, 40), 'pivot': (20, 32, 0), 'axle': (20, 32, 40)}
+    p.anchors = {'spin-a': (4, ya, zt), 'spin-b': (37, ya, zt),      # 轉軸 ＝ 鐵軸的中心線（+x）
+                 'pull-1': (19, ya + 14, zt + 9), 'pull-2': (20, ya + 14, zt + 9), 'pull-3': (21, ya + 14, zt + 9),   # 拉繩上端（短臂前端的鐵箍）
+                 'sling': (20, 6, 8), 'pouch-a': (18, 2, 5), 'pouch-b': (22, 2, 5)}                                 # 投袋繩：長臂尾端 → 投袋兩側
     return p
 
 
@@ -221,7 +236,7 @@ def render(parts):
 
 
 if __name__ == '__main__':
-    parts = [siphon(), ballista(), mangonel()]
+    parts = [siphon(), ballista(), mangonel(), mangonel_arm()]
     V = {}
     for pp in parts:
         for nm, a in pp.anchors.items():

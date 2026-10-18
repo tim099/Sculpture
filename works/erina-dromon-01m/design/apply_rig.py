@@ -98,8 +98,10 @@ if step in ('ropes', 'all'):
 
 if step in ('meta', 'all'):
     lines = []
+    # 帆段（Tim 2026-10-18：「目前 滿帆 戰鬥帆 收帆都是兩個帆 只有全收會一次收掉(沒有單帆狀態)」）：中桅（小、15 m 帆桁）set 1 ⇒ 收帆起就張；
+    #   前桅（大、20 m 帆桁）set 3 ⇒ 只有滿帆才張 ⇒ 收帆、戰鬥帆 ＝ 只張中桅那一面（槳帆船接戰前收帆、靠槳；兩面帆分不出第四段）。
     for n in ('fore', 'main'):
-        lines.append('sail\t%s\t%s' % (n, json.dumps({'kind': 'sail', 'mast': n, 'sail': 'gaff', 'set': 1, 'rig': 'lateen'}, ensure_ascii=False)))
+        lines.append('sail\t%s\t%s' % (n, json.dumps({'kind': 'sail', 'mast': n, 'sail': 'gaff', 'set': 3 if n == 'fore' else 1, 'rig': 'lateen'}, ensure_ascii=False)))
     lines.append('sail\tensign\t%s' % json.dumps({'kind': 'flag', 'flag': 'ensign'}))
     for name, a, b, sl, th, col, grp, meta in ROPES:
         if meta:

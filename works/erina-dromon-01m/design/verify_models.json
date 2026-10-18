@@ -66,7 +66,7 @@
   "file": "lists/w_ballista.txt",
   "host": "forecastle",
   "meta": {
-   "ammo": "bolt",
+   "ammo": "firebolt",
    "gun": "ballista",
    "kind": "gun",
    "mount": "pivot",
@@ -116,7 +116,7 @@
   "file": "lists/w_ballista.txt",
   "host": "castles",
   "meta": {
-   "ammo": "bolt",
+   "ammo": "firebolt",
    "gun": "ballista",
    "kind": "gun",
    "mount": "pivot",
@@ -166,7 +166,7 @@
   "file": "lists/w_ballista.txt",
   "host": "castles",
   "meta": {
-   "ammo": "bolt",
+   "ammo": "firebolt",
    "gun": "ballista",
    "kind": "gun",
    "mount": "pivot",
@@ -202,13 +202,13 @@
   "bbox": [
    [
     248.3,
-    49.0,
+    54.9,
     22.2
    ],
    [
     263.2,
-    75.2,
-    44.7
+    71.1,
+    40.7
    ]
   ],
   "collide_cells": 0,
@@ -217,8 +217,11 @@
   "host": "assembly",
   "meta": {
    "ammo": "stone",
-   "mount": "pivot",
-   "ports": "0,180",
+   "arc": "-180,180",
+   "gun": "mangonel",
+   "kind": "gun",
+   "mount": "turret",
+   "rate": 10,
    "weapon": "manganikon"
   },
   "mirror": "",
@@ -228,10 +231,6 @@
    32.5,
    0
   ],
-  "ports_collide": {
-   "0": 0,
-   "180": 0
-  },
   "rotate": [
    0,
    0,
@@ -239,6 +238,49 @@
   ],
   "scale": 0.45,
   "source_work": "erina-dromon-01m-mangonel"
+ },
+ {
+  "at": [
+   255.5,
+   63.0,
+   22.0
+  ],
+  "bbox": [
+   [
+    254.6,
+    49.0,
+    23.6
+   ],
+   [
+    256.4,
+    69.8,
+    44.7
+   ]
+  ],
+  "collide_cells": 0,
+  "collide_sample": [],
+  "file": "lists/w_mangonel-arm.txt",
+  "host": "assembly",
+  "meta": {
+   "spin": "gun",
+   "spin_gun": "mangonel",
+   "spin_k": -135,
+   "spin_lag": 0
+  },
+  "mirror": "",
+  "name": "mangonel-arm",
+  "pivot": [
+   20.5,
+   32.5,
+   0
+  ],
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "scale": 0.45,
+  "source_work": "erina-dromon-01m-mangonel-arm"
  },
  {
   "at": [

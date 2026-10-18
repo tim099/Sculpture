@@ -9,7 +9,8 @@ V = json.load(open(os.path.join(D, 'verify_weapons.json'), encoding='utf-8'))
 flt = re.compile(sys.argv[1] if len(sys.argv) > 1 else '.')
 TITLE = {'siphon': '持火號 希臘火噴筒（siphon：青銅藥槽＋壓力泵＋青銅管＋鍍金獅頭；0.05 m）',
          'ballista': '持火號 弩砲（toxoballistra；0.05 m）',
-         'mangonel': '持火號 投石機（manganikon，牽引式；0.05 m）'}
+         'mangonel': '持火號 投石機（manganikon，牽引式；0.05 m）',
+         'mangonel-arm': '持火號 投石機的投臂與投袋（子模型，繞鐵軸甩；0.05 m）'}
 for name, v in V.items():
     if not flt.search(name):
         continue

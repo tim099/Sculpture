@@ -80,9 +80,13 @@
 			"created_at": "2026-10-18T13:05:40",
 			"meta": {
 				"ammo": "stone",
+				"arc": "-180,180",
+				"gun": "mangonel",
 				"id": "model-1",
-				"mount": "pivot",
+				"kind": "gun",
+				"mount": "turret",
 				"ports": "0,180",
+				"rate": 10,
 				"weapon": "manganikon"
 			}
 		},
@@ -190,6 +194,48 @@
 				"spin_max": 35,
 				"spin_min": -35,
 				"turn_axis": "hinge"
+			}
+		},
+		{
+			"name": "mangonel-arm",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "erina-dromon-01m-mangonel-arm",
+			"axes": "sculpt",
+			"at": [
+				255.5,
+				63,
+				22
+			],
+			"pivot": [
+				20.5,
+				32.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.45,
+				0.45,
+				0.45
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "",
+			"persona": "erina",
+			"created_at": "2026-10-18T23:29:22",
+			"meta": {
+				"id": "model-5",
+				"spin": "gun",
+				"spin_gun": "mangonel",
+				"spin_k": -135,
+				"spin_lag": 0
 			}
 		}
 	]
