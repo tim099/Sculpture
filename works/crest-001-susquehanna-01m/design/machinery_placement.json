@@ -1,0 +1,253 @@
+{
+ "parts": {
+  "engine_S": {
+   "at": [
+    398,
+    214,
+    12
+   ],
+   "size": [
+    122,
+    25,
+    77
+   ],
+   "anchors_local": {
+    "core": [
+     27,
+     16,
+     20
+    ],
+    "tend-1": [
+     21,
+     2,
+     0
+    ]
+   },
+   "at_mirror": [
+    398,
+    162,
+    12
+   ]
+  },
+  "boilers_aft": {
+   "at": [
+    525,
+    153,
+    12
+   ],
+   "size": [
+    51,
+    95,
+    40
+   ],
+   "anchors_local": {
+    "boiler-1": [
+     26,
+     72,
+     18
+    ],
+    "boiler-2": [
+     26,
+     22,
+     18
+    ],
+    "uptake": [
+     42,
+     47,
+     39
+    ],
+    "stoke-1": [
+     0,
+     60,
+     0
+    ],
+    "stoke-2": [
+     0,
+     34,
+     0
+    ]
+   },
+   "at_mirror": [
+    525,
+    153,
+    12
+   ]
+  },
+  "boilers_fore": {
+   "at": [
+    567,
+    153,
+    12
+   ],
+   "size": [
+    60,
+    95,
+    40
+   ],
+   "anchors_local": {
+    "boiler-1": [
+     32,
+     72,
+     18
+    ],
+    "boiler-2": [
+     32,
+     22,
+     18
+    ],
+    "uptake": [
+     0,
+     47,
+     39
+    ],
+    "stoke-1": [
+     59,
+     60,
+     0
+    ],
+    "stoke-2": [
+     59,
+     34,
+     0
+    ]
+   },
+   "at_mirror": [
+    567,
+    153,
+    12
+   ]
+  },
+  "shaft_S": {
+   "at": [
+    505,
+    222,
+    84
+   ],
+   "size": [
+    7,
+    47,
+    7
+   ],
+   "anchors_local": {
+    "fwd": [
+     3,
+     0,
+     3
+    ],
+    "aft": [
+     3,
+     46,
+     3
+    ]
+   },
+   "at_mirror": [
+    505,
+    132,
+    84
+   ]
+  },
+  "floor": {
+   "at": [
+    398,
+    172,
+    11
+   ],
+   "size": [
+    243,
+    57,
+    1
+   ],
+   "anchors_local": {},
+   "at_mirror": [
+    398,
+    172,
+    11
+   ]
+  },
+  "ladder": {
+   "at": [
+    625,
+    196,
+    12
+   ],
+   "size": [
+    18,
+    9,
+    56
+   ],
+   "anchors_local": {
+    "engine-berth.foot": [
+     0,
+     4,
+     0
+    ],
+    "engine-berth.lo": [
+     2,
+     4,
+     4
+    ],
+    "engine-berth.hi": [
+     14,
+     4,
+     52
+    ],
+    "engine-berth.head": [
+     17,
+     4,
+     55
+    ]
+   },
+   "at_mirror": [
+    625,
+    196,
+    12
+   ]
+  },
+  "casing": {
+   "at": [
+    502,
+    138,
+    90
+   ],
+   "size": [
+    13,
+    125,
+    4
+   ],
+   "anchors_local": {},
+   "at_mirror": [
+    502,
+    138,
+    90
+   ]
+  }
+ },
+ "meta": {
+  "engine": {
+   "kind": "engine",
+   "engine": "inclined",
+   "cylinders": 1,
+   "kn": 10,
+   "maker": "Murray & Hazlehurst",
+   "material": "iron"
+  },
+  "boiler": {
+   "kind": "boiler",
+   "boilers": 2,
+   "funnel": "煙囪",
+   "material": "boiler",
+   "render": "smooth"
+  },
+  "shaft": {
+   "kind": "shaft",
+   "material": "iron"
+  },
+  "floor": {
+   "kind": "deck",
+   "deck": "engine",
+   "level": -1,
+   "name": "機艙"
+  },
+  "src": "造船規格 §9／§9.6；kn 10（DANFS）；鍋爐 material=boiler＋render=smooth（§9.6，不標 iron）"
+ }
+}

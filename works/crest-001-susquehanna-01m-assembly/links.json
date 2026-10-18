@@ -1,0 +1,674 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "crest-001-susquehanna-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T12:50:23",
+			"persona": "crest-001",
+			"note": "",
+			"meta": {
+				"kind": "ship",
+				"waterline_z": 56
+			}
+		},
+		{
+			"name": "甲板-orlop",
+			"work": "crest-001-susquehanna-01m-deck-orlop",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:18:31",
+			"persona": "crest-001",
+			"note": "階段四",
+			"meta": {
+				"deck": "orlop",
+				"floor": "175:51,336:47,653:47,860:55",
+				"kind": "deck",
+				"level": 0,
+				"name": "底艙（orlop）",
+				"thick": 4
+			}
+		},
+		{
+			"name": "甲板-berth",
+			"work": "crest-001-susquehanna-01m-deck-berth",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:18:31",
+			"persona": "crest-001",
+			"note": "階段四",
+			"meta": {
+				"deck": "berth",
+				"floor": "148:72,336:67,597:66,752:70,908:78",
+				"kind": "deck",
+				"level": 1,
+				"name": "住艙甲板（berth deck）",
+				"thick": 4
+			}
+		},
+		{
+			"name": "甲板-gun",
+			"work": "crest-001-susquehanna-01m-deck-gun",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:18:31",
+			"persona": "crest-001",
+			"note": "階段四",
+			"meta": {
+				"deck": "gun",
+				"floor": "136:96,336:91,597:90,777:95,913:103",
+				"kind": "deck",
+				"level": 2,
+				"name": "砲甲板（gun deck，露天）",
+				"thick": 4
+			}
+		},
+		{
+			"name": "明輪罩",
+			"work": "crest-001-susquehanna-01m-paddlebox",
+			"at": [
+				408,
+				264,
+				62
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				201,
+				41,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:25:34",
+			"persona": "crest-001",
+			"note": "階段五：右舷"
+		},
+		{
+			"name": "明輪罩-鏡像",
+			"work": "crest-001-susquehanna-01m-paddlebox",
+			"at": [
+				408,
+				96,
+				62
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				201,
+				41,
+				80
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:25:34",
+			"persona": "crest-001",
+			"note": "階段五：左舷（mirror=y，at.y ＝ 401 − 264 − 41）"
+		},
+		{
+			"name": "船頭",
+			"work": "crest-001-susquehanna-01m-head",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:30:27",
+			"persona": "crest-001",
+			"note": "階段五"
+		},
+		{
+			"name": "船首像",
+			"work": "crest-001-susquehanna-01m-figurehead",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:30:28",
+			"persona": "crest-001",
+			"note": "階段五"
+		},
+		{
+			"name": "head-rails",
+			"work": "crest-001-susquehanna-01m-head-rails",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:30:30",
+			"persona": "crest-001",
+			"note": "階段五"
+		},
+		{
+			"name": "船名板",
+			"work": "crest-001-susquehanna-01m-name-board",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:30:31",
+			"persona": "crest-001",
+			"note": "階段五"
+		},
+		{
+			"name": "煙囪",
+			"work": "crest-001-susquehanna-01m-funnel",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:30:32",
+			"persona": "crest-001",
+			"note": "階段五",
+			"meta": {
+				"kind": "funnel",
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "hammock",
+			"work": "crest-001-susquehanna-01m-hammock",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:30:34",
+			"persona": "crest-001",
+			"note": "階段五"
+		},
+		{
+			"name": "吊錨架",
+			"work": "crest-001-susquehanna-01m-catheads",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:30:35",
+			"persona": "crest-001",
+			"note": "階段五"
+		},
+		{
+			"name": "主桅",
+			"work": "crest-001-susquehanna-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:32:56",
+			"persona": "crest-001",
+			"note": "階段六（TASK-0697）"
+		},
+		{
+			"name": "前桅",
+			"work": "crest-001-susquehanna-01m-mast-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:32:57",
+			"persona": "crest-001",
+			"note": "階段六（TASK-0697）"
+		},
+		{
+			"name": "後桅",
+			"work": "crest-001-susquehanna-01m-mast-mizzen",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:32:59",
+			"persona": "crest-001",
+			"note": "階段六（TASK-0697）"
+		},
+		{
+			"name": "艏斜桅",
+			"work": "crest-001-susquehanna-01m-bowsprit",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1300,
+				400,
+				800
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:33:00",
+			"persona": "crest-001",
+			"note": "階段六（TASK-0697）"
+		},
+		{
+			"name": "channels",
+			"work": "crest-001-susquehanna-01m-channels",
+			"at": [
+				226,
+				263,
+				105
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				490,
+				15,
+				8
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:35:52",
+			"persona": "crest-001",
+			"note": "階段七（TASK-0697）"
+		},
+		{
+			"name": "channels-鏡像",
+			"work": "crest-001-susquehanna-01m-channels",
+			"at": [
+				226,
+				123,
+				105
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				490,
+				15,
+				8
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T13:35:53",
+			"persona": "crest-001",
+			"note": "階段七（TASK-0697）"
+		},
+		{
+			"name": "彈藥庫-後",
+			"work": "crest-001-susquehanna-01m-magazine-aft",
+			"at": [
+				296,
+				137,
+				15
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				39,
+				127,
+				32
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:00:32",
+			"persona": "crest-001",
+			"note": "蘇士奎哈納號 後彈藥庫（16 桶 ＝ 1600 磅）（階段九 TASK-0614）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "彈藥庫-前",
+			"work": "crest-001-susquehanna-01m-magazine-fore",
+			"at": [
+				668,
+				137,
+				15
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				25,
+				127,
+				32
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:00:39",
+			"persona": "crest-001",
+			"note": "蘇士奎哈納號 前彈藥庫（16 桶 ＝ 1600 磅）（階段九 TASK-0614）",
+			"meta": {
+				"kind": "magazine",
+				"pos": "fore",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "主機-S",
+			"work": "crest-001-susquehanna-01m-engine",
+			"at": [
+				398,
+				214,
+				12
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				122,
+				25,
+				77
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:03:38",
+			"persona": "crest-001",
+			"note": "階段九：機艙",
+			"meta": {
+				"cylinders": 1,
+				"engine": "inclined",
+				"kind": "engine",
+				"kn": 10,
+				"maker": "Murray & Hazlehurst",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "主機-P",
+			"work": "crest-001-susquehanna-01m-engine",
+			"at": [
+				398,
+				162,
+				12
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				122,
+				25,
+				77
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:03:38",
+			"persona": "crest-001",
+			"note": "階段九：機艙",
+			"meta": {
+				"cylinders": 1,
+				"engine": "inclined",
+				"kind": "engine",
+				"kn": 10,
+				"maker": "Murray & Hazlehurst",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "鍋爐-後",
+			"work": "crest-001-susquehanna-01m-boilers-aft",
+			"at": [
+				525,
+				153,
+				12
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				51,
+				95,
+				40
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:04:34",
+			"persona": "crest-001",
+			"note": "階段九：機艙",
+			"meta": {
+				"boilers": 2,
+				"funnel": "煙囪",
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "鍋爐-前",
+			"work": "crest-001-susquehanna-01m-boilers-fore",
+			"at": [
+				567,
+				153,
+				12
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				60,
+				95,
+				40
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:04:39",
+			"persona": "crest-001",
+			"note": "階段九：機艙",
+			"meta": {
+				"boilers": 2,
+				"funnel": "煙囪",
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "明輪軸-S",
+			"work": "crest-001-susquehanna-01m-paddle-shaft",
+			"at": [
+				505,
+				222,
+				84
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				7,
+				47,
+				7
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:04:42",
+			"persona": "crest-001",
+			"note": "階段九：機艙",
+			"meta": {
+				"kind": "shaft",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "明輪軸-P",
+			"work": "crest-001-susquehanna-01m-paddle-shaft",
+			"at": [
+				505,
+				132,
+				84
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				7,
+				47,
+				7
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:04:42",
+			"persona": "crest-001",
+			"note": "階段九：機艙",
+			"meta": {
+				"kind": "shaft",
+				"material": "iron"
+			}
+		},
+		{
+			"name": "甲板-engine",
+			"work": "crest-001-susquehanna-01m-deck-engine",
+			"at": [
+				398,
+				172,
+				11
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				243,
+				57,
+				1
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:04:44",
+			"persona": "crest-001",
+			"note": "階段九：機艙",
+			"meta": {
+				"deck": "engine",
+				"floor": "398:12,640:12",
+				"kind": "deck",
+				"level": -1,
+				"name": "機艙",
+				"thick": 1
+			}
+		},
+		{
+			"name": "軸罩",
+			"work": "crest-001-susquehanna-01m-shaft-casing",
+			"at": [
+				502,
+				138,
+				90
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				13,
+				125,
+				4
+			],
+			"enabled": true,
+			"created_at": "2026-10-18T14:04:49",
+			"persona": "crest-001",
+			"note": "階段九：機艙"
+		}
+	]
+}

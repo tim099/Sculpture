@@ -1,0 +1,184 @@
+{
+ "carve_cells": 2230,
+ "note": "draft_pivots.py（階段八之二）",
+ "rows": [
+  {
+   "at": [
+    806.5,
+    242.4,
+    97.0
+   ],
+   "carve_cells": 707,
+   "center": [
+    806.5,
+    232.5,
+    97.0
+   ],
+   "host_link": "甲板-gun",
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deck": "gun",
+    "gun": "11d",
+    "kind": "gun",
+    "mount": "pivot",
+    "pivot": 7.425,
+    "ports": "0,-45",
+    "rate": 12,
+    "side": "S"
+   },
+   "mirror": "none",
+   "model": "砲-10in-前S",
+   "muzzles": [
+    [
+     806.5,
+     256.43,
+     109.38
+    ],
+    [
+     823.42,
+     249.42,
+     109.38
+    ]
+   ],
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.55,
+   "src": "船頭右舷迴旋砲：正橫＋往船頭 45°（密西西比號：one on each bow, on pivots）",
+   "support_min": 0.75,
+   "type": "pivot10",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    806.5,
+    158.6,
+    97.0
+   ],
+   "carve_cells": 707,
+   "center": [
+    806.5,
+    168.5,
+    97.0
+   ],
+   "host_link": "甲板-gun",
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deck": "gun",
+    "gun": "11d",
+    "kind": "gun",
+    "mount": "pivot",
+    "pivot": 7.425,
+    "ports": "0,45",
+    "rate": 12,
+    "side": "P"
+   },
+   "mirror": "y",
+   "model": "砲-10in-前P",
+   "muzzles": [
+    [
+     806.5,
+     144.57,
+     109.38
+    ],
+    [
+     823.42,
+     151.58,
+     109.38
+    ]
+   ],
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.55,
+   "src": "船頭左舷（右舷的鏡像；轉角反號）",
+   "support_min": 0.75,
+   "type": "pivot10",
+   "work": "basecamp-ember-01m-gun-long32"
+  },
+  {
+   "at": [
+    138.6,
+    200.5,
+    96.0
+   ],
+   "carve_cells": 816,
+   "center": [
+    148.5,
+    200.5,
+    96.0
+   ],
+   "host_link": "甲板-gun",
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deck": "gun",
+    "gun": "11d",
+    "kind": "gun",
+    "mount": "pivot",
+    "pivot": 7.425,
+    "ports": "-20,0,20",
+    "rate": 12,
+    "side": "C"
+   },
+   "mirror": "none",
+   "model": "砲-10in-艉",
+   "muzzles": [
+    [
+     126.02,
+     208.68,
+     108.38
+    ],
+    [
+     124.57,
+     200.5,
+     108.38
+    ],
+    [
+     126.02,
+     192.32,
+     108.38
+    ]
+   ],
+   "pivot": [
+    15.5,
+    40.0,
+    0.0
+   ],
+   "rotate": [
+    0,
+    0,
+    90
+   ],
+   "scale": 0.55,
+   "src": "船尾中線迴旋砲：朝正後方 ±20°（PINEAU 的「3 other」之一；設計決定）",
+   "support_min": 1.0,
+   "type": "pivot10",
+   "work": "basecamp-ember-01m-gun-long32"
+  }
+ ],
+ "type": {
+  "code": "11d",
+  "k_pivot": 7.425,
+  "pivot": [
+   15.5,
+   40.0,
+   0.0
+  ],
+  "scale": 0.55,
+  "work": "basecamp-ember-01m-gun-long32"
+ }
+}

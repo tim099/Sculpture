@@ -1,0 +1,436 @@
+{
+ "masts": {
+  "main": {
+   "work": "crest-001-susquehanna-01m-mast-main",
+   "title": "蘇士奎哈納號 主桅",
+   "link": "主桅"
+  },
+  "fore": {
+   "work": "crest-001-susquehanna-01m-mast-fore",
+   "title": "蘇士奎哈納號 前桅",
+   "link": "前桅"
+  },
+  "mizzen": {
+   "work": "crest-001-susquehanna-01m-mast-mizzen",
+   "title": "蘇士奎哈納號 後桅",
+   "link": "後桅"
+  },
+  "bowsprit": {
+   "work": "crest-001-susquehanna-01m-bowsprit",
+   "title": "蘇士奎哈納號 艏斜桅",
+   "link": "艏斜桅"
+  }
+ },
+ "yards": [
+  {
+   "name": "fore-course",
+   "parent": "crest-001-susquehanna-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-course",
+   "src_L": 305,
+   "model": {
+    "name": "yard-fore-course",
+    "at": [
+     710.5,
+     200.5,
+     219.5
+    ],
+    "pivot": [
+     4.5,
+     152.5,
+     4.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": [
+     1,
+     0.8459,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "course",
+     "length_ft": 84.65,
+     "length_m": 25.8,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20,
+     "diameter_in": 24.0,
+     "sail": "fore-course"
+    }
+   }
+  },
+  {
+   "name": "fore-topsail",
+   "parent": "crest-001-susquehanna-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-topsail",
+   "src_L": 239,
+   "model": {
+    "name": "yard-fore-topsail",
+    "at": [
+     712.5,
+     200.5,
+     342.5
+    ],
+    "pivot": [
+     3.5,
+     119.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": [
+     1,
+     0.7741,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "topsail",
+     "length_ft": 60.7,
+     "length_m": 18.5,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "diameter_in": 18.8,
+     "sail": "fore-topsail"
+    }
+   }
+  },
+  {
+   "name": "fore-topgallant",
+   "parent": "crest-001-susquehanna-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-topgallant",
+   "src_L": 151,
+   "model": {
+    "name": "yard-fore-topgallant",
+    "at": [
+     713.5,
+     200.5,
+     410.5
+    ],
+    "pivot": [
+     2.5,
+     75.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": [
+     1,
+     0.8675,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "topgallant",
+     "length_ft": 42.98,
+     "length_m": 13.1,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "diameter_in": 11.9,
+     "sail": "fore-topgallant"
+    }
+   }
+  },
+  {
+   "name": "fore-royal",
+   "parent": "crest-001-susquehanna-01m-mast-fore",
+   "source_work": "gura-tridente-01m-yard-fore-royal",
+   "src_L": 99,
+   "model": {
+    "name": "yard-fore-royal",
+    "at": [
+     711.5,
+     200.5,
+     449.5
+    ],
+    "pivot": [
+     1.5,
+     49.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -26
+    ],
+    "scale": [
+     1,
+     0.8485,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "fore",
+     "yard": "royal",
+     "length_ft": 27.56,
+     "length_m": 8.4,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -26,
+     "diameter_in": 7.8,
+     "sail": "fore-royal"
+    }
+   }
+  },
+  {
+   "name": "main-course",
+   "parent": "crest-001-susquehanna-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-course",
+   "src_L": 347,
+   "model": {
+    "name": "yard-main-course",
+    "at": [
+     434.5,
+     200.5,
+     230.5
+    ],
+    "pivot": [
+     4.5,
+     173.5,
+     4.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -20
+    ],
+    "scale": [
+     1,
+     0.8242,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "course",
+     "length_ft": 93.83,
+     "length_m": 28.6,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -20,
+     "diameter_in": 27.3,
+     "sail": "main-course"
+    }
+   }
+  },
+  {
+   "name": "main-topsail",
+   "parent": "crest-001-susquehanna-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-topsail",
+   "src_L": 273,
+   "model": {
+    "name": "yard-main-topsail",
+    "at": [
+     434.5,
+     200.5,
+     362.5
+    ],
+    "pivot": [
+     3.5,
+     136.5,
+     3.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -22
+    ],
+    "scale": [
+     1,
+     0.7509,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "topsail",
+     "length_ft": 67.26,
+     "length_m": 20.5,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -22,
+     "diameter_in": 21.5,
+     "sail": "main-topsail"
+    }
+   }
+  },
+  {
+   "name": "main-topgallant",
+   "parent": "crest-001-susquehanna-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-topgallant",
+   "src_L": 171,
+   "model": {
+    "name": "yard-main-topgallant",
+    "at": [
+     434.5,
+     200.5,
+     434.5
+    ],
+    "pivot": [
+     2.5,
+     85.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -24
+    ],
+    "scale": [
+     1,
+     0.8538,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "topgallant",
+     "length_ft": 47.9,
+     "length_m": 14.6,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -24,
+     "diameter_in": 13.5,
+     "sail": "main-topgallant"
+    }
+   }
+  },
+  {
+   "name": "main-royal",
+   "parent": "crest-001-susquehanna-01m-mast-main",
+   "source_work": "gura-tridente-01m-yard-main-royal",
+   "src_L": 111,
+   "model": {
+    "name": "yard-main-royal",
+    "at": [
+     432.5,
+     200.5,
+     476.5
+    ],
+    "pivot": [
+     2.5,
+     55.5,
+     2.5
+    ],
+    "rotate": [
+     0,
+     0,
+     -26
+    ],
+    "scale": [
+     1,
+     0.8378,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "main",
+     "yard": "royal",
+     "length_ft": 30.51,
+     "length_m": 9.3,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": -26,
+     "diameter_in": 8.7,
+     "sail": "main-royal"
+    }
+   }
+  },
+  {
+   "name": "mizzen-gaff",
+   "parent": "crest-001-susquehanna-01m-mast-mizzen",
+   "source_work": "gura-tridente-01m-yard-mizzen-gaff",
+   "src_L": 150,
+   "model": {
+    "name": "yard-mizzen-gaff",
+    "at": [
+     257.5,
+     200.5,
+     196.5
+    ],
+    "pivot": [
+     127.5,
+     1.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     0.8,
+     0.8,
+     0.8
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "gaff",
+     "length_ft": 39.37,
+     "length_m": 12.0,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": 0,
+     "diameter_in": 10.7,
+     "sail": "spanker"
+    }
+   }
+  },
+  {
+   "name": "mizzen-boom",
+   "parent": "crest-001-susquehanna-01m-mast-mizzen",
+   "source_work": "gura-tridente-01m-yard-mizzen-boom",
+   "src_L": 135,
+   "model": {
+    "name": "yard-mizzen-boom",
+    "at": [
+     260.5,
+     200.5,
+     138.5
+    ],
+    "pivot": [
+     138.5,
+     1.5,
+     1.5
+    ],
+    "rotate": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     0.963,
+     1,
+     1
+    ],
+    "meta": {
+     "kind": "yard",
+     "mast": "mizzen",
+     "yard": "boom",
+     "length_ft": 42.65,
+     "length_m": 13.0,
+     "pivot_anchor": "pivot",
+     "turn_axis": "z",
+     "rotate_z_deg": 0,
+     "diameter_in": 15.7,
+     "sail": "spanker"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,618 @@
+{
+  "title": "蘇士奎哈納號（USS Susquehanna，1850）新圖紙 01：線形、側面、甲板高度、明輪、帆裝、砲位",
+  "task": "TASK-0697",
+  "author": "crest-001",
+  "date": "2026-10-18",
+  "meters_per_cell": 0.1,
+  "space": {"x": 1300, "y": 400, "z": 800, "yc": 200, "note": "中線 ＝ 第 200 格（鏡像 y ↔ 400 − y）"},
+  "refs": {
+    "RES": "references/susquehanna_research_2026-10-18.md（crest-001 派的研究 agent，2026-10-18；每個數字附網址與 opened／snippet／LOW）",
+    "STUART": "C. B. Stuart, The Naval and Mail Steamers of the United States（1853）pp. 83–85、附錄 Note G（Powhatan／Susquehanna 建造規範）—— archive.org navalmailsteamer00stuauoft（opened）",
+    "BARTOL": "B. H. Bartol, A Treatise on the Marine Boilers of the United States（1851）p. 2 —— archive.org 0160TREA（opened）",
+    "PLATE05": "Stuart 1853 書中的 Powhatan（姊妹艦，同一份規範）側面石版畫 —— references/05_*.jpg；主要拿來量位置（桅、明輪、煙囪）",
+    "JP1853": "1853-07-08 日本畫師的右舷圖（LoC 2006677644）—— references/01_*.jpg",
+    "PHOTO": "Gutekunst 1860 年代照片（唯一的照片，左舷）—— references/02_*.jpg",
+    "SIMONE": "de Simone 1857 那不勒斯油畫（NHHC NH 1310-KN）—— references/03_*.jpg",
+    "GLOIRE": "光榮號（kaguya-gloire-01m，TASK-0622）—— 管線整套抄過來（同樣約 78 m 的蒸汽巡防艦）",
+    "NAP": "拿破崙號（kotoko-napoleon-01m）—— 機艙（主機、鍋爐、軸）的做法"
+  },
+  "lines": {
+    "half_beam": {"v": 68.5, "src": "STUART／BARTOL：寬 45 ft（13.7 m）⇒ 半寬 68.5 ⇒ 137 格（格數只能奇數）"},
+    "keel_top": {"v": 5, "src": "STUART：龍骨深 1 ft 6 in（0.46 m）⇒ 5 格"},
+    "keel_half": {"v": 2, "src": "設計決定：龍骨寬 5 格"},
+    "max_breadth_z": {"v": 62, "src": "設計決定：最寬處在水線上一點（木殼巡防艦）"},
+    "tumblehome": {"v": 4, "src": "設計決定：PLATE05／PHOTO 舷側幾乎直、舷牆微微內收 ⇒ 每舷 0.4 m"},
+    "tumblehome_ref_z": {"v": 110, "src": "設計決定：舷牆頂"},
+    "tumblehome_pow": {"v": 1.6, "src": "設計決定（同光榮號）"},
+    "bilge_pow": {"v": 2.45, "src": "設計決定：調飽滿度讓水線 z 56 以下排水量對上約 3,550 t（讀數 3,5xx t，見 verify_lines）（STUART：17½ ft 3,277 t、19½ ft 3,824 t ⇒ 18½ ft 內插 3,550 t）"},
+    "s_aft": {"v": 0.25, "src": "設計決定（同上，調排水量）"},
+    "s_fwd": {"v": 0.67, "src": "設計決定（同上，調排水量）"},
+    "sternpost_x0": {"v": 150, "src": "倒推：水線 z 56 的長度 ＝ 762 格（STUART：吃水 18½ ft 時長 250 ft ＝ 76.2 m）"},
+    "sternpost_rake_deg": {"v": 4, "src": "設計決定：明輪船沒有螺旋槳框 ⇒ 艉柱照帆船微微往後倒"},
+    "wing_transom_z": {"v": 66, "src": "設計決定：counter 從住艙甲板那一層開始往後挑"},
+    "counter_aft": {"v": 12, "src": "設計決定：PHOTO 船尾是圓／橢圓的 counter，往後挑約 1.2 m"},
+    "counter_top_z": {"v": 88, "src": "設計決定：counter 頂 ＝ 砲甲板"},
+    "stern_rake_deg": {"v": 14, "src": "設計決定：PLATE05 船尾面往後倒"},
+    "transom_ratio": {"v": 0.2, "src": "設計決定：PHOTO 圓船尾 ⇒ 不留寬的 transom"},
+    "forefoot_x": {"v": 869.0, "src": "倒推：水線 z 56 的長度 762 格；艏柱頂落在甲板長 256.5 ft（BARTOL：on deck 256 ft 6 in）附近"},
+    "forefoot_r": {"v": 34, "src": "設計決定：圓 forefoot"},
+    "stem_rake_deg": {"v": 12, "src": "設計決定：PLATE05／PHOTO 艏柱往前傾（接 cutwater 與船首像）"},
+    "deadwood_aft_z": {"v": 40, "src": "設計決定：帆船式的船尾 deadwood（沒有螺旋槳框）"},
+    "deadwood_fwd_z": {"v": 18, "src": "設計決定"},
+    "bow_pow_low": {"v": 1.6, "src": "設計決定：入水線收細"},
+    "bow_pow_high": {"v": 1.8, "src": "設計決定：PLATE05 船頭在甲板那一層是尖的（2.3 渲出來太鈍，v2 改 1.8）"},
+    "aft_pow": {"v": 2.0, "src": "設計決定"},
+    "round_stern": {"r": 55, "z0": 60, "z1": 84, "src": "PHOTO：圓／橢圓船尾 ⇒ 水線以上俯視收成半徑 5.5 m 的圓弧（設計決定）"},
+    "top": [[128, 116], [300, 111], [500, 109], [700, 111], [930, 121]]
+  },
+  "top_src": "設計決定：舷牆頂 ＝ 砲甲板（露天甲板）＋ 20 格（2.0 m；STUART Note G 的 plank sheer 2 ft 再加上放得下砲門的舷牆與 hammock rail），照甲板舷弧兩頭抬",
+  "waterline": {"z": 56, "src": "BARTOL：平均吃水 18 ft 6 in（STUART service draft 18½ ft；DANFS 20 ft 6 in 應是滿載）⇒ 5.64 m ⇒ z 56（遊戲只吃一條水線 ⇒ 平龍骨）"},
+  "targets": {
+    "displacement_t": {"v": 3550, "src": "STUART p. 83：15½ ft 2,745 t、17½ ft 3,277 t、19½ ft 3,824 t ⇒ 18½ ft 內插約 3,550 t（2,450 t 是 burthen 噸位、不是排水量）"},
+    "length_wl_m": {"v": 76.2, "src": "STUART：吃水 18½ ft 時長 250 ft"},
+    "length_deck_m": {"v": 78.2, "src": "BARTOL：on deck 256 ft 6 in（STUART custom house 257 ft）"}
+  },
+  "readings_at": {"lower_deck_z": 56, "deck_len_target": 762, "note": "長度在水線量（STUART 給的是吃水 18½ ft 的長）"},
+  "hull_build": {
+    "wall": 4,
+    "frame_color": 141,
+    "inner_color": 177,
+    "side_color": 36,
+    "bottom_color": 168,
+    "bottom_top_z": 54,
+    "src": "設計決定：木殼牆 4 格（外板 1、肋骨 2、內板 1，同三叉戟號）；水線下包銅 168 到 z 54、以上黑 36（黑船：SIMONE 整片深色、JP1853 黑殼）"
+  },
+  "body_stations": [160, 200, 260, 350, 450, 550, 650, 750, 820, 860, 890],
+  "decks": {
+    "src": "STUART Note G：orlop、berth deck、gun deck（gun deck 就是露天甲板，舷牆直接蓋在上面）；berth deck 板頂到 gun deck 樑底 6 ft 9 in、berth deck 樑頂到 orlop 板 5 ft 2 in ⇒ 砲甲板 z 89（離水線 3.3 m：艙深 26 ft 6 in ＋ 龍骨 − 吃水）、住艙甲板 z 65、底艙 z 45",
+    "sheer": {"x_mid": 520, "x_aft": 150, "x_fwd": 900, "aft": 6, "fwd": 12, "src": "設計決定：PLATE05／SIMONE 舷弧平緩 ⇒ 船尾抬 0.6 m、船頭 1.2 m"},
+    "rows": [
+      {
+        "key": "orlop",
+        "name": "底艙（orlop）",
+        "z": 45,
+        "x_from": 175,
+        "x_to": 860,
+        "skip": [[398, 640]],
+        "skip_src": "設計決定：機艙（四座鍋爐、兩具斜置主機）不鋪 orlop（機艙另鋪鐵地板 level −1）"
+      },
+      {
+        "key": "berth",
+        "name": "住艙甲板（berth deck）",
+        "z": 65,
+        "skip": [[400, 520]],
+        "skip_src": "設計決定：斜置主機的汽缸、連桿往上接到明輪軸（z 87）⇒ 主機那一段不鋪"
+      },
+      {"key": "gun", "name": "砲甲板（gun deck，露天）", "z": 89}
+    ]
+  },
+  "ports": {
+    "src": "蘇士奎哈納號：1853 年的砲沒有一手出處（RES §6）—— PINEAU 表 6 門砲彈砲＋3 門其他；密西西比號（STUART，1853）是兩舷船頭各一門 10 吋 Paixhans 迴旋砲＋明輪後面 8 門 8 吋舷側砲 ⇒ 設計決定：明輪後面每舷 3 門 8 吋舷側砲（舷牆砲門）、船頭兩門＋船尾一門 10 吋迴旋砲（迴旋砲的砲門在砲階段照角度量了再開）",
+    "tiers": [
+      {
+        "deck": "gun",
+        "per_side": 3,
+        "w": 9,
+        "h": 9,
+        "sill": 8,
+        "x_from": 300,
+        "x_to": 412,
+        "gun": "8 吋 Paixhans 砲彈砲（舷側）",
+        "src": "設計決定：砲口（餘燼號 32 磅砲 × 0.5）在甲板面上 11.25 格 ⇒ 砲門 z 97–105（v1 的 94–101 砲口碰到上緣）"
+      },
+      {"deck": "berth", "per_side": 6, "w": 3, "h": 3, "sill": 12, "x_from": 200, "x_to": 430, "kind": "scuttle", "gun": "—（住艙甲板的通風舷窗）"},
+      {"deck": "berth", "per_side": 7, "w": 3, "h": 3, "sill": 12, "x_from": 585, "x_to": 845, "kind": "scuttle", "gun": "—（住艙甲板的通風舷窗）"}
+    ],
+    "scuttle_src": "STUART Note G：air-ports 開在砲甲板 clamp 底下第二、三列外板之間；JP1853 明輪前後各一排小方窗 ⇒ 設計決定：住艙甲板一排 0.3 m 方窗（明輪罩那一段不開）",
+    "chase": {"bow": 0, "stern": 0, "src": "迴旋砲的砲門在砲階段另外開（照每個角度的砲口方向量）"}
+  },
+  "funnels": {
+    "src": "蘇士奎哈納號：BARTOL／STUART：一根、截面 54 sq ft（圓 ⇒ 直徑 8.3 ft ＝ 2.5 m）、爐柵以上 65 ft；PLATE05／SIMONE／JP1853：緊貼在明輪罩前面 ⇒ x 567（離艏柱 0.445 L，量 PLATE05）、r 12；頂 z 約 210（甲板以上 12 m，設計估計）；黑（SIMONE、PLATE05）",
+    "rows": [
+      {"key": "main", "x": 567, "r": 12, "top_z": 210}
+    ],
+    "color": 36
+  },
+  "masts": {
+    "src": "蘇士奎哈納號：位置量 PLATE05（姊妹艦 Powhatan，同一份規範）＋SIMONE＋PHOTO —— 離艏柱 fore 0.27 L、main 0.62 L、mizzen 0.835 L ⇒ x 704／431／263；桅高量 PLATE05（11 px/m）：主桅頂離水線約 44 m、前桅 42 m、後桅 33 m ⇒ truck z 500／472／384；帆裝 barque（STUART：21,230 sq ft ＝ 1,972 m²）：前桅、主桅橫帆，後桅只有縱帆（PHOTO、SIMONE 後桅沒有帆桁）；桅與帆桁的尺寸沒查到 ⇒ 光榮號 × 0.9（設計決定）",
+    "rows": [
+      {
+        "key": "main",
+        "x": 431,
+        "rake_deg": 2.0,
+        "heel_z": 12,
+        "lower": {"len": 270, "head": 40, "src": "設計決定：配合 truck z 500（PLATE05 量）"},
+        "top": {"len": 160, "head": 22, "src": "設計決定"},
+        "tg": {"len": 120, "src": "設計決定"},
+        "yards": {"course": [286, "design：光榮號 318 × 0.9"], "topsail": [205, "design"], "topgallant": [146, "design"], "royal": [93, "design"]}
+      },
+      {
+        "key": "fore",
+        "x": 704,
+        "rake_deg": 1.0,
+        "heel_z": 14,
+        "lower": {"len": 255, "head": 38, "src": "設計決定：配合 truck z 472（PLATE05 量）"},
+        "top": {"len": 150, "head": 21, "src": "設計決定"},
+        "tg": {"len": 112, "src": "設計決定"},
+        "yards": {"course": [258, "design：光榮號 286 × 0.9"], "topsail": [185, "design"], "topgallant": [131, "design"], "royal": [84, "design"]}
+      },
+      {
+        "key": "mizzen",
+        "x": 263,
+        "rake_deg": 3.0,
+        "heel_z": 46,
+        "lower": {"len": 210, "head": 30, "src": "設計決定：桅腳立在 orlop 上；配合 truck z 384（PLATE05 量）"},
+        "top": {"len": 125, "head": 17, "src": "設計決定"},
+        "tg": {"len": 50, "src": "設計決定：barque 的後桅頂只是一根短 pole"},
+        "yards": {"gaff": [120, "design：光榮號 132 × 0.9"], "boom": [130, "design：往後伸到船尾 taffrail（x 127）上面"]},
+        "boom_z": 138
+      }
+    ],
+    "bowsprit": {
+      "heel_x": 900,
+      "heel_z": 106,
+      "angle_deg": 18,
+      "length": 180,
+      "jibboom": 130,
+      "src": "蘇士奎哈納號：PLATE05／PHOTO 有艏斜桅＋jib-boom、仰角約 15–20° ⇒ 18°；長度沒查到 ⇒ 設計決定（艏斜桅 18 m、jib-boom 13 m）；根部 z 106：船頭甲板 z 101 以上"
+    }
+  },
+  "paint": {
+    "base": 36,
+    "band": 255,
+    "bottom": 168,
+    "gold": 36,
+    "glass": 87,
+    "banded": [],
+    "band_overrun": 0,
+    "src": "SIMONE（1857，本船）整片深色、沒有帶；JP1853 黑殼；PLATE05（姊妹艦 Powhatan）有一條淺色細帶 ⇒ 設計決定：照本船的圖，不畫帶；舷牆頂的白是 hammock 帆布（之後的部件）"
+  },
+  "stern": {
+    "src": "蘇士奎哈納號：船尾窗沒查到（RES §1）；PHOTO 圓船尾 ⇒ 設計決定：住艙甲板一排 5 扇（寬 5、高 6），黑框、玻璃 87",
+    "x_max": 170,
+    "x_ref": 145,
+    "rows": [
+      {"deck": "berth", "sill": 5, "h": 6, "n": 5, "w": 5, "half": 30}
+    ]
+  },
+  "decks_build": {
+    "src": "蘇士奎哈納號：設計決定（遊戲用的甲板、艙口、梯子；結構與色號照光榮號／三叉戟號）",
+    "plank": {"gun": 177, "weather": 250},
+    "beam": {"color": 136, "every": 16, "w": 2, "depth": 3},
+    "coaming": {"color": 136, "h": 2},
+    "hatches": [
+      {"name": "後艙口", "x0": 350, "x1": 366, "half": 10},
+      {"name": "前艙口", "x0": 650, "x1": 666, "half": 10}
+    ],
+    "hatch_decks": ["orlop", "berth", "gun"],
+    "funnel_decks": ["berth", "gun"],
+    "funnel_src": "設計決定：四座鍋爐在住艙甲板底下（頂 z 約 51）⇒ 煙囪穿過住艙甲板、砲甲板兩層",
+    "mast_r": {"main": 4.5, "fore": 4.5, "mizzen": 3.0, "src": "設計決定：主桅、前桅直徑 0.9 m（沒查到；巡防艦級），barque 的後桅只掛縱帆 ⇒ 0.6 m"},
+    "ladders": {
+      "color": 136,
+      "tread_half": 3,
+      "rise": 3,
+      "run": 2,
+      "pairs": [
+        {
+          "lo": "orlop",
+          "up": "berth",
+          "at": [["after", 290], ["fore", 672]]
+        },
+        {
+          "lo": "berth",
+          "up": "gun",
+          "at": [["after", 380], ["fore", 610]]
+        }
+      ],
+      "src": "蘇士奎哈納號：每兩層之間前後各一座、層與層錯開；避開艙口、桅、煙囪、機艙（住艙甲板 x 430–520 不鋪）"
+    },
+    "shaft_gap": {"x0": 500, "x1": 516, "src": "蘇士奎哈納號加的：明輪軸（z 87，橫穿全船寬）從砲甲板板底下過 ⇒ 那一段不放橫樑"}
+  },
+  "deco": {
+    "src": "蘇士奎哈納號 階段六（裝飾）：NARA-FH（c. 1850 Susquehanna／Powhatan 船首像與 cutwater 雕刻設計圖）＝ cutwater 頂端一隻鷹、trailboard 沿著一串花、果實、橡實；PHOTO 看得到 head 與 trailboard；煙囪 BARTOL／STUART；船名板與船尾燈沒查到 ⇒ 設計決定",
+    "knee": {
+      "profile": [[38, 0], [56, 5], [72, 12], [86, 19], [96, 23], [102, 24], [106, 20], [109, 12], [111, 0]],
+      "half": 2,
+      "half_low": 1,
+      "color": 36,
+      "src": "設計決定：PLATE05／PHOTO 艏柱前面一塊往前伸的 knee of the head（最多 2.4 m），頂端放船首像、上面讓給艏斜桅（v2：頂端壓到 z 111，v1 到 z 120 跟艏斜桅撞 455 格）"
+    },
+    "trail": {
+      "z": [88, 102],
+      "color": 244,
+      "leaf": 248,
+      "acorn": 136,
+      "every": 5,
+      "src": "NARA-FH：trailboard 一串花、果實與橡實 ⇒ 設計決定：knee 兩側一條金色（244）波浪藤、每 5 格一朵亮金（248）花或一顆橡實（136）"
+    },
+    "eagle": {
+      "x_off": 18,
+      "z": [94, 108],
+      "body": 244,
+      "head": 255,
+      "beak": 248,
+      "eye": 36,
+      "wing": 244,
+      "wing_edge": 248,
+      "src": "NARA-FH：鷹（eagle-like bird）⇒ 設計決定：金身（244）、白頭（255，白頭海鵰）、黃喙；翅膀往後收、貼著 knee 兩側"
+    },
+    "rails": {"n": 2, "r": 0.8, "color": 36, "src": "設計決定：head rails 每舷兩條，從船頭舷牆接到鷹背後"},
+    "hammock": {
+      "h": 3,
+      "color": 255,
+      "x": [150, 875],
+      "skip": [[452, 564]],
+      "src": "JP1853／PLATE05：舷牆頂一條白（hammock 收在網裡、蓋白帆布）⇒ 設計決定：舷牆頂上 3 格白帆布，明輪罩那一段讓給罩子"
+    },
+    "name": {"text": "SUSQUEHANNA", "z": [96, 102], "half": 24, "fg": 248, "bg": 36, "src": "設計決定（船尾船名沒查到）：船尾舷牆面一塊船名板（3×5 字型、金字黑底、凸出一格、貼著曲面）"},
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [-20, 0, 20], "min_z": 100, "src": "沿用現有元件（三叉戟號船尾燈）；三盞站在船尾 taffrail 上（設計決定）"},
+    "funnel": {
+      "wall": 2,
+      "rim": 36,
+      "rim_h": 6,
+      "lip": 1,
+      "z_from": 52,
+      "src": "BARTOL：「The steam chimney is attached to the boilers」⇒ 從鍋爐頂（z 52，鍋爐 12¾ ft 高）一路接上來（造船規格 §9.6：直煙道歸煙囪）；黑（SIMONE、PLATE05）、頂上一圈 lip"
+    },
+    "catheads": {"x": 868, "z": 117, "half": 1, "out": 16, "color": 36, "src": "STUART Note G：cat-heads（sided 1 ft 3 in）⇒ 設計決定：兩舷各一根 3×3 黑橫木，從船頭舷牆頂伸出舷外 1.6 m"}
+  },
+  "masts_build": {
+    "src": "蘇士奎哈納號：桅照 plan.masts；截面、tops、caps、crosstrees、艏斜桅的作法與色號照光榮號／三叉戟號",
+    "r": {"main": [4.5, 2.7, 1.6], "fore": [4.5, 2.7, 1.6], "mizzen": [3.0, 1.9, 1.1], "src": "下桅照 decks_build.mast_r（甲板孔就是照它開的）；上桅 0.6、頂桅 0.36 × 下桅"},
+    "taper": {"lower_head": 0.8, "top_head": 0.75, "tg_head": 0.6},
+    "top": {"main": [60, 46], "fore": [58, 44], "mizzen": [40, 30], "fwd": 0.6, "src": "設計決定：光榮號 × 0.9"},
+    "crosstrees": {"main": 22, "fore": 21, "mizzen": 15},
+    "hoop_every": 12,
+    "colors": {"spar": 177, "black": 36, "top": 104, "truck": 255, "step": 136},
+    "bowsprit": {"r": [4.5, 3.2], "jib_r": [2.2, 1.3], "jib_start": 0.7, "step": [890, 902, 4], "src": "艏斜桅根部粗同主桅、往前收到 0.7；jib-boom 疊在上面、從 70% 起；根部底下一塊墊木到砲甲板（同光榮號）"},
+    "yards": {
+      "brace": {"course": -20, "crossjack": -20, "topsail": -22, "topgallant": -24, "royal": -26, "gaff": 0, "boom": 0},
+      "source_placement": "D:/Unity/Valhalla/Sculpture/works/gura-tridente-01m/design/masts_placement.json",
+      "source": {
+        "main-course": "main-course",
+        "main-topsail": "main-topsail",
+        "main-topgallant": "main-topgallant",
+        "main-royal": "main-royal",
+        "fore-course": "fore-course",
+        "fore-topsail": "fore-topsail",
+        "fore-topgallant": "fore-topgallant",
+        "fore-royal": "fore-royal",
+        "mizzen-gaff": "mizzen-gaff",
+        "mizzen-boom": "mizzen-boom"
+      },
+      "src": "造船規格 §2.1：帆桁沿用三叉戟號的同名帆桁元件、只沿長度縮放（同光榮號）；barque 的後桅只有 gaff、boom"
+    },
+    "spanker": {
+      "gaff": {"jaws_z": 196, "scale": "uniform", "src": "jaws ＝ layout 的 gaff 高度（後桅平台 226 下 30）"},
+      "boom": {"jaws_z": 138, "scale": "x", "src": "boom 只沿 x 縮；jaws z 138 ⇒ 過船尾時在 hammock（z 119）與船尾燈上面（設計決定）"}
+    }
+  },
+  "rigging": {
+    "src": "蘇士奎哈納號：設計決定（遊戲用 ⇒ 帆、帆自己的繩、旗照造船規格 §9.1 標 meta；靜索與 ratlines 是外觀）；數值與作法照光榮號／三叉戟號（造船規格 §6、§7）；索具尺寸沒查到",
+    "channels": {
+      "shrouds": {"main": 8, "fore": 8, "mizzen": 5},
+      "backstays": {"main": 2, "fore": 2, "mizzen": 1},
+      "fwd": 8,
+      "spacing": 7,
+      "above_deck": 17,
+      "width": 12,
+      "color": 36,
+      "deadeye": 136,
+      "src": "每根桅一塊 channel：砲甲板面 ＋ 17（z 約 106，舷牆頂 109 下面、砲門上面）、往外 12 格、2 格厚；外緣一排 deadeye；shrouds 主 8、前 8、後 5"
+    },
+    "topmast_shrouds": {"main": 5, "fore": 5, "mizzen": 3},
+    "belay": {"main-sheet": 331, "main-tack": 615, "fore-sheet": 640, "fore-tack": 800, "fts": 830, "jib": 845},
+    "bowsprit_shroud_hull": [890, 112],
+    "mizzenstay_foot_z": 150,
+    "bob_at": [0.97, 1.0],
+    "bobstay_knee_z": [64, 72],
+    "thick": {
+      "shroud": {"main": 1.2, "fore": 1.1, "mizzen": 0.9},
+      "topmast_shroud": 0.8,
+      "futtock": 0.6,
+      "tg_shroud": 0.5,
+      "backstay": 0.8,
+      "tg_backstay": 0.6,
+      "stay": 1.5,
+      "tm_stay": 1.0,
+      "tg_stay": 0.6,
+      "bobstay": 1.0,
+      "course_sheet": 0.5,
+      "sheet": 0.35
+    },
+    "colors": {"standing": "#2b2620", "running": "#a08458"},
+    "ratlines": {
+      "lower": {"step": 4, "start": 7, "stop": 16, "min_span": 5, "thickness": 0.3},
+      "topmast": {"step": 4, "start": 4, "stop": 10, "min_span": 5, "thickness": 0.25},
+      "src": "造船規格 §6（TASK-0678）：橫繩組 sub=ratlines，每根桅、每一層、每一舷一組；下桅那幾組標繩梯（climb=1；foot ＝ 舷牆內側甲板往內 2 格、head ＝ 桅頂平台靠這一舷）"
+    },
+    "sails": {
+      "fullness": 1.05,
+      "color": "#f2ead8",
+      "course_in": 0.7,
+      "course_clew_z": 146,
+      "clew_in": 0.04,
+      "course_sheet_slack": 0.85,
+      "course_tack_slack": 0.8,
+      "jib_head": 0.75,
+      "jib_clew": [0.3, 30, 25],
+      "jib_fullness": 1.06,
+      "src": "同光榮號；course 的 clew 在 z 146（明輪罩頂 141 以上 —— 主桅 course 的右舷 clew 轉 −20° 時在明輪罩上方）"
+    },
+    "flags": {
+      "ensign": [45, 30],
+      "ensign_color": "#ffffff",
+      "pennant": [60, 4],
+      "pennant_color": "#ffffff",
+      "src": "蘇士奎哈納號：1853 年的美國國旗（31 星、13 條紅白條，1851–1858）掛後桅 gaff 頂；長旗（commission pennant）掛主桅頂：旗桿那一段藍底白點、後面紅白兩條（設計決定）；遊戲：降旗降 ensign"
+    },
+    "mizzenstay_src": "蘇士奎哈納號：後桅 stay 綁在主桅上 z 150（舷牆、hammock 以上）",
+    "bobstay_src": "設計決定：bobstay 兩條，從 knee 前緣（z 64／72）拉到艏斜桅 97／100% 的底下",
+    "wind": [4.5, -1.5, 0],
+    "sail_seconds": 4,
+    "belay_src": "設計決定：照光榮號離桅的距離換到本船（main-sheet 主桅後 100）；main-tack、fore-sheet 往前移到明輪罩前面（x 615／640；光榮號的距離會落在明輪罩上）；三角帆的 sheet 在船頭舷頂",
+    "mainstay_foot_z": 200,
+    "mainstay_src": "蘇士奎哈納號：main stay 從主桅頭往前下到前桅，中間隔著煙囪（x 567、頂 z 210）⇒ 下端綁在前桅 z 200（綁在前桅腳會穿過煙囪 4 格；設計決定）"
+  },
+  "guns": {
+    "src": "蘇士奎哈納號：造船規格 §2.1 砲沿用現有元件（餘燼號 -gun-long32），不新做；1853 年的砲沒有一手出處（RES §6）⇒ 設計決定（照 PINEAU 6＋3、密西西比號的配置）：明輪後面每舷 3 門 8 吋 Paixhans 舷側砲＋船頭兩舷各一門、船尾一門 10 吋 Paixhans 迴旋砲（mount=pivot）",
+    "types": {
+      "long32": {"work": "basecamp-ember-01m-gun-long32", "code": "9d", "scale": 0.5, "title": "8 吋 Paixhans 砲彈砲（遊戲沒有 8 吋 ⇒ 代碼借 9 吋 Dahlgren 砲彈砲 9d，最接近的一型；元件同維吉尼亞號）"},
+      "pivot10": {
+        "work": "basecamp-ember-01m-gun-long32",
+        "code": "11d",
+        "scale": 0.55,
+        "title": "10 吋 Paixhans 迴旋砲（遊戲沒有 10 吋 ⇒ 代碼借 XI 吋 Dahlgren 11d；模型 × 0.55 比舷側砲大一號）"
+      }
+    },
+    "rows": {"gun": "long32"},
+    "rows_src": "舷側砲門只有砲甲板（露天）那一排；住艙甲板那兩排是通風舷窗（沒有砲）",
+    "search": {
+      "dl": [0, 0.5, -0.5, 1, -1, 1.5, -1.5],
+      "step": 0.5,
+      "max_back": 60,
+      "min_muzzle_out": 0.5,
+      "dz": [1, 0, 2],
+      "src": "照三叉戟號 plan.json guns.search",
+      "angles": [5, 10, 15, 20, 25, 30, 35, 40, 45],
+      "angles_src": "設計決定（本船加的）：正橫放砲口出不去的砲門（船頭、船尾收窄那幾個；輪子懸空不算，墊木補）⇒ 往近的那一頭照角度搜，取第一個砲口出得去的角；角度都不行 ⇒ 墊高 raise 格（砲座，墊木補到甲板）再搜 —— 下砲甲板第 1 個砲門在圓船尾開始收的地方，砲架碰到砲門底下往裡斜的牆",
+      "raise": [3, 4, 5, 6]
+    },
+    "pivots": [
+      {
+        "name": "砲-10in-前S",
+        "side": "S",
+        "x": [770, 840],
+        "dy": [26, 56],
+        "rot0": 0,
+        "ports": [0, -45],
+        "src": "船頭右舷迴旋砲：正橫＋往船頭 45°（密西西比號：one on each bow, on pivots）"
+      },
+      {"name": "砲-10in-前P", "side": "P", "x": [770, 840], "dy": [26, 56], "rot0": 0, "ports": [0, 45], "src": "船頭左舷（右舷的鏡像；轉角反號）"},
+      {"name": "砲-10in-艉", "side": "C", "x": [140, 200], "dy": [0, 0], "rot0": 90, "ports": [-20, 0, 20], "src": "船尾中線迴旋砲：朝正後方 ±20°（PINEAU 的「3 other」之一；設計決定）"}
+    ],
+    "pivot_port": {"r": 4.5, "z": [97, 105], "back": 16, "front": 3, "src": "設計決定：迴旋砲每個角度的砲門 ＝ 砲管那一段（砲口往後 16 格到往前 3 格）水平 4.5 格內、z 97–105 的船殼格"}
+  },
+  "rudder": {
+    "work": "crest-001-susquehanna-01m-rudder",
+    "model": "舵",
+    "z_bottom": 1,
+    "z_top": 70,
+    "head_z": 64,
+    "chord_bottom": 24,
+    "chord_wl": 22,
+    "chord_head": 9,
+    "half_front": 2,
+    "half_aft": 1,
+    "copper": 168,
+    "black": 36,
+    "band": 136,
+    "bands_z": [8, 22, 36, 50, 64, 78],
+    "band_back": 7,
+    "band_fwd": 6,
+    "band_dy": 8,
+    "max_deg": 35,
+    "src": "設計決定（舵的尺寸沒查到；STUART Note G：舵頭直徑 2 ft、4 個 pintle）：掛在艉柱後面（明輪船沒有螺旋槳框）、寬 底 2.4 → 水線 2.2 → 舵頭 0.9 m、厚 0.5／0.3 m；水線下銅、以上黑；頂端收進 counter 底下（counter 從 z 66 起）"
+  },
+  "magazines": {
+    "src": "蘇士奎哈納號：設計決定（彈藥庫位置沒查到）：照光榮號前後兩間、在 orlop 底下的貨艙（水線下）、避開機艙（x 398–640）與前桅腳；桶數照砲數換算：9 門重砲 ⇒ 兩間各 16 桶（⚠ 不是史料）",
+    "base_links": "船殼,甲板-orlop,甲板-berth,甲板-gun,船頭,船首像,head-rails,船名板,煙囪,hammock,吊錨架,主桅,前桅,後桅,艏斜桅,channels,channels-鏡像,明輪罩,明輪罩-鏡像",
+    "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+    "barrel": {
+      "work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "scale": 0.2,
+      "pivot": [11, 11, 0],
+      "mpv": 0.02,
+      "d_bilge": 22,
+      "h": 27,
+      "pitch": 4.6,
+      "tier": 7
+    },
+    "rooms": {
+      "aft": {
+        "title": "後彈藥庫",
+        "work": "crest-001-susquehanna-01m-magazine-aft",
+        "link": "彈藥庫-後",
+        "pos": "aft",
+        "x": [296, 334],
+        "floor": 16,
+        "ceil": 46,
+        "door": "fore",
+        "door_w": 5,
+        "door_head": 3,
+        "cap": 16,
+        "src": "orlop 後段底下、舷弧取整那一階（x 335）之前的平段 ⇒ 天花板 z 46 貼著 orlop 甲板板（z 47；v1 的 x 300–345、天花板 44 跟甲板板之間夾出 3,484 格空腔）"
+      },
+      "fore": {
+        "title": "前彈藥庫",
+        "work": "crest-001-susquehanna-01m-magazine-fore",
+        "link": "彈藥庫-前",
+        "pos": "fore",
+        "x": [668, 692],
+        "floor": 16,
+        "ceil": 46,
+        "door": "aft",
+        "door_w": 5,
+        "door_head": 3,
+        "cap": 16,
+        "src": "前艙口（x 650–666）之前、舷弧那一階（x 693）之前；天花板貼著 orlop 甲板板（z 47）"
+      }
+    }
+  },
+  "fittings": {
+    "src": "造船規格 §2.1：遊戲要認的甲板零件沿用現成的子作品當外部模型（同光榮號）；位置是設計決定",
+    "types": {
+      "wheel": {
+        "work": "basecamp-frigate-constitution-01m-wheel",
+        "pivot": [50, 52, 0],
+        "scale": 0.2,
+        "meta": {"kind": "wheel"}
+      },
+      "binnacle": {
+        "work": "basecamp-ember-01m-binnacle",
+        "pivot": [12, 24, 0],
+        "scale": 0.2,
+        "meta": {"kind": "binnacle"}
+      },
+      "capstan": {
+        "work": "basecamp-ember-01m-capstan",
+        "pivot": [40, 40, 0],
+        "scale": 0.2,
+        "meta": {"kind": "capstan"}
+      },
+      "boat": {
+        "work": "basecamp-ember-01m-boat",
+        "pivot": [90, 26, 0],
+        "scale": 0.5,
+        "meta": {"kind": "boat", "boat": "cutter", "length_m": 9}
+      }
+    },
+    "wheel": {"deck": "gun", "x_from": 200, "x_to": 245, "src": "設計決定：舵輪在露天甲板船尾中線、後桅（x 263）之前；v1 從 x 175 起 ⇒ 擋住船尾迴旋砲的砲班（匯入檢查 7／8）⇒ 往前挪到 x 200 起"},
+    "binnacle": {"gap": 6.5, "src": "舵輪正前方（同三叉戟號、餘燼號，隔 6.5 格）"},
+    "capstan": {"x_from": 305, "x_to": 345, "target": 325, "clear": 5, "src": "設計決定：砲甲板中線、後桅（x 263）與後艙口（x 350）之間，四周 0.5 m 淨空"},
+    "boats": {"x_from": 580, "x_to": 645, "target": 610, "dy": 34, "src": "設計決定：照片與油畫的小艇掛在船尾 quarter davits，遊戲的小艇模型掛著會被當成吊艇擺 ⇒ 先放在甲板上：煙囪（x 567）與前艙口（x 650）之間兩舷各一艘"}
+  },
+  "rooms": {
+    "src": "設計決定（造船規格 §9.2 空艙房）：orlop 兩舷各一排艙房、中線 |dy| ≤ 20 留走道；中間 x 398–640 是機艙 ⇒ 前後兩段",
+    "deck": "orlop",
+    "host_link": "甲板-orlop",
+    "host_work": "crest-001-susquehanna-01m-deck-orlop",
+    "work": "crest-001-susquehanna-01m-rooms-orlop",
+    "title": "蘇士奎哈納號 orlop 艙房（S 舷一件；另一舷鏡像）",
+    "link": "艙房",
+    "link_mirror": "艙房-鏡像",
+    "colors": {"plank": 177, "frame": 136},
+    "inner_dy": 21,
+    "door_w": 7,
+    "door_h": 18,
+    "segments": [[237, 281, 335, 366, 397], [654, 693, 725, 752, 777, 799, 820, 839]],
+    "segments_src": "橫艙壁落在 orlop 舷弧取整的那一階（x 238、282、336、655、694、726、753、778、800、821、840 起換高度）⇒ 每間地板平；336–397 那一段長 ⇒ 中間多隔一道（x 366）"
+  },
+  "anchors": {
+    "src": "造船規格 §9 anchor ＋ §2.1：沿用共用錨元件（憲法號 -anchor）縮 0.85；兩舷各一隻掛在吊錨架（x 868）底下；STUART Note G 有 cat-heads、cable bitts（錨本身沒查到）；hawse 在船頭、甲板下面（設計決定）",
+    "work": "basecamp-frigate-constitution-01m-anchor",
+    "name": "錨",
+    "scale": 0.85,
+    "pivot": [23.5, 16.5, 29],
+    "meta": {"kind": "anchor", "anchor": "bower"},
+    "x": [858, 878],
+    "x_pref": 868,
+    "ring_z": [100, 116],
+    "angles": [90, 80, 100, 70, 110, 60, 120],
+    "y_out": 290,
+    "hawse": {"x": 890, "z": 100},
+    "ring_reach": 5,
+    "ring_src": "Blockside 10_ship.js：錨（kind=anchor）的掛點 ＝ 錨環 ring 旁 8 格內最近的實心（第一版錨環離舷頂 > 8 格 ⇒ shipcheck 報開場就掉）⇒ 要求 ≤ 5 格"
+  },
+  "paddles": {
+    "src": "蘇士奎哈納號：明輪（STUART p. 84／BARTOL p. 2）直徑 31 ft 2 in（9.5 m）、寬 9 ft 6 in（2.9 m）、26 片固定式徑向槳板（不是 feathering）、槳板深 34 in（0.86 m）、下緣吃水 64 in（1.6 m）⇒ 軸心離水線 3.1 m（z 87）；前後位置沒有文字 ⇒ 量 PLATE05 ＝ 離艏柱 0.53 L ⇒ x 508（設計決定）",
+    "x": 508,
+    "z": 87,
+    "R": 47.5,
+    "y_in": 71,
+    "y_out": 99,
+    "n": 26,
+    "float_depth": 9,
+    "float_t": 2,
+    "hub_r": 5,
+    "axle_r": 3,
+    "rim_t": 2,
+    "spoke_t": 1,
+    "colors": {"frame": 36, "float": 136, "hub": 36},
+    "wheel_src": "設計決定：每一面一圈鐵輪緣（r 45.5–47.5）＋26 根輻條（每片槳板一根）、兩面之間 26 片木槳板（r 38.5–47.5，2 格厚）；軸心一段 r 3 的軸從船殼邊接到外輪緣；遊戲：外部模型 kind=propeller、axis 0,1,0（船往前時輪頂往前：繞 +y 右手定則）、平移放（規格 §9.6）",
+    "box": {
+      "r_in": 52,
+      "t": 2,
+      "z_bot": 62,
+      "y_wall": [102, 104],
+      "y_inner": 64,
+      "trim": 255,
+      "color": 36,
+      "roof": 36,
+      "fan": {"n": 13, "r": [16, 43], "deg": [12, 168], "w": 2, "src": "JP1853／PHOTO／PLATE05：箱面軸心以上一圈放射狀的槽（通風、扇形），以下橫的百葉 ⇒ 設計決定：13 道、寬 2 格"},
+      "louvres": {"z": [66, 70, 74, 78, 82], "h": 2, "x_half": 40, "src": "PHOTO：軸心以下橫百葉 ⇒ 5 道、2 格高"},
+      "boss_r": [6, 10],
+      "src": "設計決定：箱子內半徑 52（輪外緣 47.5 留 4.5 格）、2 格厚的弧頂從船殼舷牆頂一路蓋到外牆；外牆（|dy| 102–104）從 z 62 到弧頂；前後端在軸心以下是直牆；JP1853 的白邊 ⇒ 弧頂外緣、側台邊各一條白 255"
+    },
+    "sponson": {
+      "z_top": 89,
+      "t": 3,
+      "taper": 45,
+      "rail_h": 3,
+      "knee_every": 15,
+      "knee_z": 70,
+      "deck": 250,
+      "edge": 36,
+      "src": "STUART Note G：明輪罩（wheel-houses）架在 guard beams 上；寬過 guards 69 ft（|dy| ≤ 104.5）⇒ 設計決定：箱子前後各一段側台（甲板面同砲甲板 z 89、3 格厚），45 格內收回船殼；外緣矮欄 3 格、底下每 15 格一支斜撐"
+    }
+  },
+  "machinery": {
+    "src": "蘇士奎哈納號：STUART p. 83–84／BARTOL p. 2 —— 兩具 inclined direct-acting condensing 主機（Murray & Hazlehurst）、汽缸 70 in × 10 ft、佔船長 49 ft；四座銅鍋爐（each 15¾ × 15 × 12¾ ft，back to back）、煙囪接在鍋爐上；馬力沒有一手出處（ihp 不寫）。配置（鍋爐在明輪軸前、主機在後、主桅從兩具主機中間穿下去）照 K. Tanii 剖面（現代詮釋）＋設計決定",
+    "colors": {"iron": 36, "steel": 73, "brass": 248, "fire": 232, "copper": 168, "plate": 73, "wood": 136},
+    "floor": {"z": 11, "x": [398, 640], "drain_every": 20, "src": "造船規格 §9.3：機艙鋪一層鐵地板（level −1）、留排水孔；第一人稱掉得進來也走得出去（梯子上住艙甲板）"},
+    "engine": {
+      "dy": 30,
+      "cyl_c": [425, 32],
+      "cyl_len": 36,
+      "cyl_r": 8.5,
+      "bed_x": [398, 516],
+      "bed_half": 8,
+      "bed_h": 3,
+      "guide_len": 34,
+      "pin_off": [-10, -11],
+      "bearing_drop": 7,
+      "leg_spread": 10,
+      "condenser": {"x": [440, 470], "dy": [14, 22], "h": 16},
+      "tend_dy": 16,
+      "src": "STUART：汽缸 70 in（r 8.5）× 衝程 10 ft；設計決定：汽缸低放在後面、往前上方斜 33° 接到明輪軸上的曲柄（曲柄半徑 15 ＝ 衝程的一半）；兩具並排（右舷 dy 30、左舷鏡像），主桅從中間穿下去"
+    },
+    "boilers": {
+      "aft": {"x": [528, 575], "doors": "aft"},
+      "fore": {"x": [576, 623], "doors": "fore"},
+      "dy": [3, 47],
+      "h": 37,
+      "crown": 6,
+      "door_dy": [13, 25, 37],
+      "src": "STUART：每座 15¾ ft 長 × 15 ft 寬 × 12¾ ft 高 ⇒ 48 × 46 × 39 格（高做 37 留煙箱）；四座分兩組、背靠背（back to back）⇒ 後組爐門朝後、前組朝前；兩組的煙箱收成煙囪（x 567）"
+    },
+    "shaft": {
+      "x": 508,
+      "z": 87,
+      "r": 3,
+      "y_in": 22,
+      "y_out": 70,
+      "aft_dy": 68,
+      "src": "明輪軸心（paddles.z 87）；右舷段從主機曲柄（dy 22）到船殼內面，穿船殼那一段借船殼的格（造船規格 §9.6）、固定點 aft 在船殼牆裡（dy 68，明輪的 shaft-fwd 在 69）；7 格粗（傳得滿）"
+    },
+    "casing": {"half": 6, "y": 62, "h": 4, "color": 136, "edge": 36, "src": "設計決定：明輪軸從砲甲板板底下過（z 84–90）⇒ 板開一條縫、上面蓋一條木罩跨過兩舷舷牆之間（明輪罩之間的那一段）"},
+    "ladder": {"x": 626, "rise": 4, "run": 1, "half": 3, "src": "設計決定：前燒火間一座陡梯從機艙地板上住艙甲板"},
+    "meta": {
+      "engine": {"kind": "engine", "engine": "inclined", "cylinders": 1, "kn": 10, "maker": "Murray & Hazlehurst", "material": "iron"},
+      "boiler": {"kind": "boiler", "boilers": 2, "funnel": "煙囪", "material": "boiler", "render": "smooth"},
+      "shaft": {"kind": "shaft", "material": "iron"},
+      "floor": {"kind": "deck", "deck": "engine", "level": -1, "name": "機艙"},
+      "src": "造船規格 §9／§9.6；kn 10（DANFS）；鍋爐 material=boiler＋render=smooth（§9.6，不標 iron）"
+    }
+  }
+}

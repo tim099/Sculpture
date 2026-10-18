@@ -1,0 +1,190 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 62117,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 16785,
+    "177": 45332
+   },
+   "mirror_diff": 0
+  },
+  "berth": {
+   "cells": 92251,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 25013,
+    "177": 67238
+   },
+   "mirror_diff": 0
+  },
+  "gun": {
+   "cells": 118491,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 32134,
+    "250": 86357
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "berth": {
+   "cells": 424,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  },
+  "gun": {
+   "cells": 488,
+   "hull_overlap": 0,
+   "deck_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "problems": [],
+ "overlap_between_parts": 0,
+ "ladder_points": {
+  "after-berth": {
+   "up": "berth",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     289,
+     200,
+     48
+    ],
+    "lo": [
+     292,
+     200,
+     51
+    ],
+    "hi": [
+     302,
+     200,
+     66
+    ],
+    "head": [
+     308,
+     200,
+     68
+    ]
+   },
+   "steps": 6
+  },
+  "fore-berth": {
+   "up": "berth",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     671,
+     200,
+     48
+    ],
+    "lo": [
+     674,
+     200,
+     51
+    ],
+    "hi": [
+     684,
+     200,
+     66
+    ],
+    "head": [
+     690,
+     200,
+     68
+    ]
+   },
+   "steps": 6
+  },
+  "after-gun": {
+   "up": "gun",
+   "lo": "berth",
+   "points": {
+    "foot": [
+     379,
+     200,
+     67
+    ],
+    "lo": [
+     382,
+     200,
+     70
+    ],
+    "hi": [
+     394,
+     200,
+     88
+    ],
+    "head": [
+     398,
+     200,
+     91
+    ]
+   },
+   "steps": 7
+  },
+  "fore-gun": {
+   "up": "gun",
+   "lo": "berth",
+   "points": {
+    "foot": [
+     609,
+     200,
+     67
+    ],
+    "lo": [
+     612,
+     200,
+     70
+    ],
+    "hi": [
+     624,
+     200,
+     88
+    ],
+    "head": [
+     628,
+     200,
+     91
+    ]
+   },
+   "steps": 7
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 4,
+ "holes": {
+  "orlop": 840,
+  "berth": 1595,
+  "gun": 1603
+ },
+ "cavities_filled": [],
+ "lists": {
+  "deck-orlop": [
+   62117,
+   "184a473a1c2058016ab787ca1ce6664ee93572990361aeda6d83faee29e4e935"
+  ],
+  "deck-berth": [
+   92251,
+   "193c872e3b7a21290bc5c62c7748a11b79447f84abe5c76788980ea4507a5b11"
+  ],
+  "deck-gun": [
+   118491,
+   "1fbe6d9223ea5a2b51017acae910106ef5ec61eef47811c7b62d16b1dd91ffe8"
+  ],
+  "ladders-berth": [
+   424,
+   "4c5fc629afe4e9f76114f95657e1f5473adaf30b6c6b6af05e2e2102057edfbd"
+  ],
+  "ladders-gun": [
+   488,
+   "a3872967f0dc3603a884272daa6ba8b85b2367aa2ad83aca0a5107d1bed3d7cd"
+  ]
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "cells": {
+  "engine_S": 21426,
+  "boilers_aft": 156258,
+  "boilers_fore": 155740,
+  "shaft_S": 970,
+  "floor": 13773,
+  "ladder": 219,
+  "casing": 6418
+ },
+ "clash_skipped": {
+  "engine_S": 1231,
+  "boilers_aft": 5376,
+  "boilers_fore": 5376,
+  "shaft_S": 263,
+  "floor": 0,
+  "ladder": 0,
+  "casing": 0
+ },
+ "deck_gun_carve": 625,
+ "berth_hole": 81,
+ "engine_axis_deg": 33.53,
+ "cyl_top": [
+  440.0,
+  41.94
+ ],
+ "crank": [
+  508.0,
+  87.0
+ ],
+ "overlap_between": 0,
+ "mirror_note": "engine_S、shaft_S 的左舷用鏡像關聯（y ↔ 400 − y）；鍋爐、地板、梯子、軸罩自己兩舷對稱",
+ "asym": {
+  "boilers_aft": 0,
+  "boilers_fore": 0,
+  "floor": 0,
+  "casing": 0
+ },
+ "anchor_check": {
+  "engine_S/core": {
+   "near_cells": 3913
+  },
+  "engine_S/tend-1": {
+   "air": true,
+   "floor": true,
+   "head_clear": 0
+  },
+  "boilers_aft/boiler-1": {
+   "near_cells": 4913
+  },
+  "boilers_aft/boiler-2": {
+   "near_cells": 4913
+  },
+  "boilers_aft/stoke-1": {
+   "air": true,
+   "floor": true,
+   "head_clear": 0
+  },
+  "boilers_aft/stoke-2": {
+   "air": true,
+   "floor": true,
+   "head_clear": 0
+  },
+  "boilers_fore/boiler-1": {
+   "near_cells": 4913
+  },
+  "boilers_fore/boiler-2": {
+   "near_cells": 4913
+  },
+  "boilers_fore/stoke-1": {
+   "air": true,
+   "floor": true,
+   "head_clear": 0
+  },
+  "boilers_fore/stoke-2": {
+   "air": true,
+   "floor": true,
+   "head_clear": 0
+  },
+  "ladder/engine-berth.foot": {
+   "air": true,
+   "floor": true,
+   "head_clear": 0
+  },
+  "ladder/engine-berth.head": {
+   "air": true,
+   "floor": true,
+   "head_clear": 0
+  }
+ },
+ "cavity_cells": 0,
+ "lists": {
+  "engine_S": [
+   21426,
+   "e5c13fc22fa3db19d93524bb8d982d17879458869cc944ec4fd939ff8fd87802"
+  ],
+  "boilers_aft": [
+   156258,
+   "094b3a36a92375757d606c45788c3768c948dc256dabdb9efd62c34063b1d0f6"
+  ],
+  "boilers_fore": [
+   155740,
+   "a5f506762cb91e704c25c8c459425a3143959ec91acfd2fb5ffd8cfb3e765d88"
+  ],
+  "shaft_S": [
+   970,
+   "4b34c089fe60fc184b9e9a540b39c3b085a6afb97155aea2ff9509a7f87d2358"
+  ],
+  "floor": [
+   13773,
+   "79e47f96effa85de674eb4c7d024013f27f4089877da5e1c842e5e4c11e7e456"
+  ],
+  "ladder": [
+   219,
+   "93de8713c423ad11c7c990a74d20bc87285510cfa00eaaaeb7de2dfbc3e51eaa"
+  ],
+  "casing": [
+   6418,
+   "fb70de7821231d5c8d46c4e21b6663d117959d6c28912c150c3b5544e8d87ca3"
+  ]
+ }
+}
