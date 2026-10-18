@@ -151,3 +151,18 @@ Tim：「槳目前可用了 可以嘗試套用看看」「完成槳後就匯入�
   - `?demo=60&dump=1&seed=3&ship=reale,constitution`：跑得完、航速 6–7.8 節、開 39 砲。對拍（沒有皇家號的戰局）跟 dev 逐位元組相同。
   - 砲種表 36l／8l／pierrier 同一批合進 dev（TASK-0703 結單）。報告存 `references/shipcheck_reale_stage6.md`。
 - 過程圖：`overlays/stage6_{full,oars_close}.png`。
+
+## 階段七 艙底分間、中央走道當走路格、三角帆桁擺角（2026-10-18，TASK-0694 傘）
+Tim：「可以試著加一些艙室嗎(或是原本就沒有)」「送藥手&其他問題發現的話一起修復」「皇家號 發現浮空纜線」。
+設計 plan.json `cabins`（史料 Marteilhe 1757 附錄〈Description d'une galère armée〉）；產生 `design/draft_cabins.py`（讀遊戲匯入的 .vxk ＝ 作品）⇒ `masks/cabins/{cabins,ladders,deck_carve}.vox.txt`、`cabins_placement.json`、`verify_cabins.json`；落格 `design/tools/build_cabins.py`。
+
+- **史料**：艙底六間，船尾到船頭 gavon、escandolat、compagne（酒水、醃肉）、paillot（餅乾、豆）、taverne（船中：賣酒＋收帆與篷；火藥艙從這間進）、chambre de proue（纜繩、外科醫生的箱子；**病人躺這裡**）。艙深船中 7 pieds ≈ 2.27 m —— 作品船中內底 z 3 到甲板底 z 25（2.3 m），對得上，不用挖。艙口「墊高到中央走道的高度」⇒ 每間從中央走道開艙口放梯子。各間長度史料沒有 ⇒ 設計決定；gavon、escandolat 在船尾、艙底太淺 ⇒ 不做。
+- **子作品**：`-cabins`（關聯 `甲板-hold/艙房`，meta `kind=rooms`）：每間地板（z 8、|dy| ≤ 16，兩旁留縫通底艙 ⇒ 不封空腔）、五道隔艙壁（最前面那道開門通船頭的艙）；`-ladders-cabins`（關聯 `甲板-main/梯子-艙房`，meta `kind=ladders`）：四座梯子（每 3 格一階、靠中線一根扶手）。甲板-main 刻四個艙口（中央走道左半邊 dy −5～−1，右半邊 7 格照樣走）2,300 格。
+- **空艙房**（§9.2）：compagne 5.5 × 3.1、paillot 3.9 × 3.1、taverne 2.9 × 3.1（框碰到主桅腳就停）、proue 5.3 × 3.1，淨空都 1.4 m；門 ＝ 梯腳旁那一格。遊戲預設：proue ＝ 醫療艙、taverne ＝ 工坊；compagne、paillot 空著讓玩家配。
+- **甲板 meta**：`甲板-hold` floor 延伸到各間（132:15,182:15,232:9,477:9）；`甲板-main` 加 **`walk`**（遊戲新鍵：走路格照它、判層照 floor）＝ 中央走道頂＋1，兩頭連台階（23 點）。
+- **三角帆桁**：遊戲照 `yard=gaff` 往下風擺到 80° ⇒ 主帆桁前端甩出舷外 13 m、tack 從那裡斜拉到中央走道前端（Tim 看到的「浮空纜線」）。帆桁 meta 本來就有 `rig=lateen`、固定點 `fore` ⇒ 遊戲照它限擺角（前端只能左右移 2.5 m：主 10.7°、前 11.9°）。作品不用改。
+- 讀數：
+  - draft：四間框裡不是空氣的 0、地板洞 0、淨空 1.4 m；梯子 16 點那一格空、腳下實心、頭上 12 格空。**反向對照** `--probe=floor=3` ⇒ 四間淨空 1.1 m、head_ok false。
+  - 走路格（照遊戲 navZ／navStep 算）：只照 floor ⇒ 取用點（艙口梯頭）跟船頭砲台底下、中央走道、四座梯頭都不連通；加 walk ⇒ 全部連通。
+  - **組起來**：375,166 格、1 元件、空腔 0、關聯重疊 0；鏡像差多了艙口與梯子（只開在左半邊）。
+  - **匯入檢查**（Blockside worktree）：✗ 0　⚠ 15 → 7。火藥 0／19 → 5／19 門走得到（8 門走路格量不到）；剩下的 ⚠：舷外槳架的迴旋砲 6 門（145、539、563；槳架不是走道 ⇒ 照直線送）、36 磅砲班 4／5。船員配置 `top 0`（三角帆沒有桅頂平台）、`marines 7`（站得下的數）、`guns long36 5、long8 2`。

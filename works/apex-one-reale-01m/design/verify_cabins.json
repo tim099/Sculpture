@@ -1,0 +1,334 @@
+{
+ "rooms": {
+  "compagne": {
+   "box": [
+    [
+     245,
+     145,
+     9
+    ],
+    [
+     299,
+     175,
+     22
+    ]
+   ],
+   "size_m": [
+    5.5,
+    3.1,
+    1.4
+   ],
+   "not_air": 0,
+   "head_ok": true,
+   "floor_holes": 0,
+   "ceiling_cells": 196,
+   "type": null
+  },
+  "paillot": {
+   "box": [
+    [
+     315,
+     145,
+     9
+    ],
+    [
+     353,
+     175,
+     22
+    ]
+   ],
+   "size_m": [
+    3.9,
+    3.1,
+    1.4
+   ],
+   "not_air": 0,
+   "head_ok": true,
+   "floor_holes": 0,
+   "ceiling_cells": 140,
+   "type": null
+  },
+  "taverne": {
+   "box": [
+    [
+     369,
+     145,
+     9
+    ],
+    [
+     397,
+     175,
+     22
+    ]
+   ],
+   "size_m": [
+    2.9,
+    3.1,
+    1.4
+   ],
+   "not_air": 0,
+   "head_ok": true,
+   "floor_holes": 0,
+   "ceiling_cells": 98,
+   "type": "workshop"
+  },
+  "proue": {
+   "box": [
+    [
+     425,
+     145,
+     9
+    ],
+    [
+     477,
+     175,
+     22
+    ]
+   ],
+   "size_m": [
+    5.3,
+    3.1,
+    1.4
+   ],
+   "not_air": 0,
+   "head_ok": true,
+   "floor_holes": 0,
+   "ceiling_cells": 182,
+   "type": "medical"
+  }
+ },
+ "ladders": {
+  "compagne": {
+   "rungs": 8,
+   "hatch_x": [
+    233,
+    242
+   ],
+   "coursier_top": 36,
+   "points": {
+    "foot": {
+     "at": [
+      243,
+      157,
+      9
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "lo": {
+     "at": [
+      241,
+      157,
+      12
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "hi": {
+     "at": [
+      234,
+      157,
+      33
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "head": {
+     "at": [
+      231,
+      157,
+      37
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    }
+   }
+  },
+  "paillot": {
+   "rungs": 8,
+   "hatch_x": [
+    303,
+    312
+   ],
+   "coursier_top": 36,
+   "points": {
+    "foot": {
+     "at": [
+      313,
+      157,
+      9
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "lo": {
+     "at": [
+      311,
+      157,
+      12
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "hi": {
+     "at": [
+      304,
+      157,
+      33
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "head": {
+     "at": [
+      301,
+      157,
+      37
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    }
+   }
+  },
+  "taverne": {
+   "rungs": 8,
+   "hatch_x": [
+    357,
+    366
+   ],
+   "coursier_top": 36,
+   "points": {
+    "foot": {
+     "at": [
+      367,
+      157,
+      9
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "lo": {
+     "at": [
+      365,
+      157,
+      12
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "hi": {
+     "at": [
+      358,
+      157,
+      33
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "head": {
+     "at": [
+      355,
+      157,
+      37
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    }
+   }
+  },
+  "proue": {
+   "rungs": 8,
+   "hatch_x": [
+    413,
+    422
+   ],
+   "coursier_top": 36,
+   "points": {
+    "foot": {
+     "at": [
+      423,
+      157,
+      9
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "lo": {
+     "at": [
+      421,
+      157,
+      12
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "hi": {
+     "at": [
+      414,
+      157,
+      33
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    },
+    "head": {
+     "at": [
+      411,
+      157,
+      37
+     ],
+     "empty": true,
+     "solid_below": true,
+     "clear_up": 12
+    }
+   }
+  }
+ },
+ "nav_same_region_as_station": {
+  "floor": {
+   "砲台下 船頭 x 575": false,
+   "砲台下 x 590 S": false,
+   "中央走道 x 300": false,
+   "中央走道 x 500": false,
+   "梯頭 compagne": false,
+   "梯頭 paillot": false,
+   "梯頭 taverne": false,
+   "梯頭 proue": false
+  },
+  "walk": {
+   "砲台下 船頭 x 575": true,
+   "砲台下 x 590 S": true,
+   "中央走道 x 300": true,
+   "中央走道 x 500": true,
+   "梯頭 compagne": true,
+   "梯頭 paillot": true,
+   "梯頭 taverne": true,
+   "梯頭 proue": true
+  }
+ },
+ "meta": {
+  "hold_floor": "132:15,182:15,232:9,477:9",
+  "walk": "143:31,144:33,146:33,147:36,149:36,150:39,153:39,154:38,169:38,170:37,172:37,173:38,191:38,192:37,507:37,508:36,550:36,551:33,553:33,554:30,555:31,556:31,557:28",
+  "walk_points": 23
+ },
+ "cells": {
+  "cabins": 18801,
+  "ladders": 280,
+  "carve": 2300
+ }
+}
