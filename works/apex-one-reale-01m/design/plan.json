@@ -67,7 +67,7 @@
     "rambade_clear": {"v": 16, "src": "設計決定：砲台底比甲板高 1.6 m（Hob 平台約 1.5 m 高；砲在底下要 1.4 m 淨空）"},
     "rambade_dy": {"v": [8, 56, 26], "src": "設計決定：兩座平台在中央走道兩旁（Hob），從 |dy| 8 到外緣；外緣從船尾那端 56 收到船頭那端 26"},
     "parapet_h": {"v": 14, "src": "史料：胸牆柱比平台高 1.46 m（TG）"},
-    "eperon": {"v": {"x0": 626, "x1": 686, "z0": 33, "z1": 40, "h0": 7, "h1": 3, "w0": 2, "w1": 1}, "src": "換算：撞角伸出 5 goues ＝ 3.8 m × 1.22 ≈ 4.6 m（TG）；木料寬 14→6 po、厚 8 po（Hob）× 1.32；往上翹（Barras 1697 圖）"},
+    "eperon": {"v": {"x0": 626, "x1": 686, "z0": 28, "z1": 34, "h0": 7, "h1": 3, "w0": 2, "w1": 1}, "src": "階段四改低（z 33→28、40→34）：主砲從撞角上面打出去，砲軸 z 40；換算：撞角伸出 5 goues ＝ 3.8 m × 1.22 ≈ 4.6 m（TG）；木料寬 14→6 po、厚 8 po（Hob）× 1.32；往上翹（Barras 1697 圖）"},
     "canopy_x": {"v": [78, 138], "src": "設計決定：船尾篷 6 m（史料脊樑 22½ pi，有篷的船尾 4.72 m —— 兩個數字不一致，取中）"},
     "canopy_ridge": {"v": 21, "src": "設計決定：篷脊比甲板中線高 2.1 m"},
     "canopy_eave": {"v": 9, "src": "設計決定：篷邊比舷頂高 0.9 m（坐著的人）"},
@@ -101,9 +101,23 @@
     "flags": {"v": {"ensign": [36, 24], "pennant": [80, 8]}, "src": "史料：王旗白底金百合（MnM 模型 img_0270）、Réale 的長旗是紅錦緞金百合（Deb）；掛法：王旗在主帆桁頂（Barras 圖帆桁頂有大旗）、長旗在兩根桅頂"},
     "colors": {"mast": 141, "yard": 136, "block": 104, "gold": 244}
   },
+  "guns": {"v": {
+    "components": {
+      "long32": {"source": "basecamp-ember-01m-gun-long32", "note": "餘燼號 32 磅長砲（0.05 m）—— 36 磅照它放大 (36/32)^(1/3) ≈ 1.04"},
+      "long6": {"source": "summit-stormkaap-01m-gun-6l", "note": "風暴角號 6 磅長砲（0.05 m）—— 8 磅照它放大 (8/6)^(1/3) ≈ 1.10"},
+      "pierrier": {"source": "self", "work": "apex-one-reale-01m-gun-pierrier", "note": "新元件：沒有現成的迴旋砲（work sub=components 查過：只有 4l／3chase 這類固定砲）"}
+    },
+    "bow": [
+      {"name": "gun-36", "comp": "long32", "scale": 0.52, "dy": 0, "muzzle_x": 612, "gun": "36l", "host": "甲板-main"},
+      {"name": "gun-8", "comp": "long6", "scale": 0.55, "dy": 14, "muzzle_x": 610, "gun": "8l", "host": "甲板-main"},
+      {"name": "gun-6", "comp": "long6", "scale": 0.5, "dy": 29, "muzzle_x": 602, "gun": "6l", "host": "甲板-main"}
+    ],
+    "pierriers": {"scale": 0.5, "side_x": [145, 226, 326, 426, 514], "bow_dy": [12, 22], "arc": "-80,80", "rate": 45}
+  }, "src": "史料：La Réale 1×36、2×8、2×6 磅＋14 門迴旋砲（TD）；砲全部朝前、靠轉船瞄準（Br）；中線 36 磅在中央走道的線上（TG：coursier 砲沿 35 pi 的滑軌）、8 磅在砲台底下兩旁（MsA）、6 磅在船頭兩角（conilles）。迴旋砲 4 門在船頭砲台、其餘在兩舷（MsA：每舷 4、船頭 4、船尾登船梯旁 2）⇒ 每舷 5（含船尾 1）＋船頭 4 ＝ 14。位置、dy、砲口 x 是設計決定"},
   "hull_build": {
     "wall": {"v": 3, "src": "設計決定：外板 1 ＋ 肋骨與內板 2"},
     "post_mould": {"v": 5, "src": "設計決定：艏柱、艉柱在舷頂以上那一段 5 格厚（沿船長方向）"},
+    "stem_post_top_z": {"v": 34, "src": "設計決定（階段四）：艏柱露出舷頂的那一段只到 z 34 —— 中線 36 磅主砲的砲軸在 z 40，v1 的艏柱頂 z 45 擋在砲口前；Barras 1697 圖船頭沒有高起的艏柱。線形（圓弧）照 stem_head_z 45 算、不動"},
     "colors": {
       "bottom": {"v": 218, "src": "MnM：水線下白（獸脂）—— RGB332 218 ＝ (218,218,170)"},
       "topside": {"v": 37, "src": "MnM：船殼深藍近黑 —— 37 ＝ (36,36,85)"},

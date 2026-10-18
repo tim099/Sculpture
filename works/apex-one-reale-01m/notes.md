@@ -92,3 +92,24 @@
   - 帆桁掃過的格、帆面（三角形取樣）撞到別的實心：兩根都 0。**反向對照**：`draft_masts.py --probe=yard_z=main:-140`（主帆桁整根往下 14 m）⇒ 主帆桁 47 格、帆面 62 點；前帆桁照樣 0。
   - **組起來**：353,709 格、1 元件、空腔 0；鏡像差：左舷有右舷空 1,628、顏色不同 41 對 —— **全是偏左舷的前桅**（前桅 1,713 格；顏色不同的是右舷那一側還留著的甲板與台階），照實報、不修。
 - 過程圖：`design/sheet03_rig_v1.png`、`overlays/stage3_{full,side,sternq,portq}.png`。
+
+## 階段四 砲（2026-10-18，TASK-0702；砲種 TASK-0703）
+設計 plan.json `guns`；產生 `design/draft_guns.py`（讀船殼、階段二、階段三的清單 ＝ 作品；砲元件從 CLI 匯出）⇒ `masks/guns/pierrier.vox.txt`、`guns_placement.json`、`verify_guns.json`、`sheet04_guns_v1.png`；落格 `design/tools/build_guns.py`。
+
+- **先改兩處讓出主砲的射線**（設計決定，照實記）：中線 36 磅的砲軸在 z 40，v1 的艏柱頂 z 45、撞角 z 33–40 都擋在砲口前 —— 等於對自己的船頭開火。Barras 1697 圖的船頭沒有高起的艏柱、撞角從甲板高度往前上翹 ⇒
+  - 艏柱露出舷頂的那一段只到 z 34（plan `hull_build.stem_post_top_z`；線形的圓弧照 stem_head_z 45 算、不動）：船殼刻 275 格（標記 `艏柱降低`）。⚠ 兩柱間的讀數因此 57.0 → **56.6 m**（量的是艏柱頂那一層最前面；線形本身照 57.0 設計）。
+  - 撞角整根往下（z 33→28、40→34）：delta 刻 1,200／補 1,062／換色 124；前帆的 tack 固定點跟著搬到新的尖端（`撞角/tack-fore` 690,160,35，overwrite）。
+- **船頭 5 門**（外部模型、掛在 `-deck-main`，路徑 `甲板-main/gun-…`；全部朝前 rotate z −90，靠轉船瞄準）：
+  | 砲 | 元件（沿用） | scale | 位置（pivot 落點） | 砲口 | meta |
+  |---|---|---|---|---|---|
+  | gun-36（中線） | 餘燼號 32 磅長砲 `basecamp-ember-01m-gun-long32` | 0.52（＝ 0.5 × (36/32)^⅓） | (574.9, 160.5, 29) | (609.0, 160.5, 40.7) | `gun=36l` |
+  | gun-8-P／S（dy ±14） | 風暴角號 6 磅砲 `summit-stormkaap-01m-gun-6l` | 0.55（× (8/6)^⅓） | (580.6, 160.5 ± 14, 29) | x 610.0、z 36.4 | `gun=8l` |
+  | gun-6-P／S（dy ±29，角落平台上） | 同上 | 0.5 | (573.3, 160.5 ± 29, 29) | x 600.0、z 35.8 | `gun=6l` |
+  擺法：從砲口目標位置開始，先往上抬、不行再往船尾退，直到模型每一格的格心＋八個角都不落在船的實心格（36 磅退 3 格、6 磅退 2 格）。
+- **14 門迴旋砲 pierrier**（新元件 `apex-one-reale-01m-gun-pierrier`，0.05 m、11×38×13、662 格：叉架上的後膛砲，砲管鐵 73、叉架黑 36；固定點 muzzle（內膛空格）／breech／cascabel／pivot（插銷底）；沒有現成的迴旋砲可用 —— `sub=components` 只有固定砲）：
+  兩舷各 5 門站在槳架縱樑上（x 145、226、326、426、514 —— 兩張划手座正中間，避開槳座），朝舷外；船頭 4 門站在砲台前緣胸牆的金頂上（dy ±12、±22），朝前。scale 0.5；meta `kind=gun、gun=pierrier、mount=turret、arc=-80,80、rate=45`。
+- **砲種**：Tim「可以加炮種」⇒ Blockside 砲種表加 `36l`／`8l`／`pierrier`（TASK-0703，Blockside 那側）；之前遊戲裡沒有 36 磅與 8 磅。
+- 讀數（`draft_guns.py`，設計那側；模型的擺法 ＝ 作品裡那一份）：19 門 碰撞 0、射線（砲口往砲軸方向 40 格；迴旋砲 20 格）碰到自己船的實心 0；迴旋砲腳下實心 14／14。三件掛砲的子作品 models_broken 0。
+  **反向對照**：`--probe=push=gun-8-S:+10`（往船頭推 10 格）⇒ 只有那門報碰撞 16 格；`--probe=push=pierrier-326-S:2`（往下沉 2 格進欄杆）⇒ 只有那門報 36 格。
+- 過程圖：`design/sheet04_guns_v1.png`、`overlays/stage4_{bow,side_pierrier}.png`。
+- ⚠ 沒做：砲索、砲具（breeching、tackle —— 槳帆船的船頭砲沿滑軌後座，跟舷側砲的繩法不一樣）；36 磅的滑軌（中央走道裡的 35 pi 軌道）。

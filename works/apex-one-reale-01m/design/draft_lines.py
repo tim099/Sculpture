@@ -50,7 +50,7 @@ def hull_cells(L, plan):
     dyok = np.abs(np.arange(W) - L.YC) <= L.keel_hw
     for z in range(ZMAX + 1):
         zc = z + 0.5
-        if zc <= L.z_st:
+        if zc <= min(L.z_st, V(hb.get('stem_post_top_z', L.z_st))):
             xf = float(L.x_fwd(zc))
             for x in range(int(np.floor(xf - m + 0.5)), int(np.floor(xf)) + 1):
                 if x + 0.5 <= xf and X0 <= x <= X1:
@@ -87,7 +87,7 @@ def readings(L, plan, col):
     xs_any = np.where(solid.any(axis=(1, 2)))[0] + X0
     keel_z0 = np.where(solid[:, L.YC, 0])[0] + X0
     # 兩柱頂：艏柱最高那一格的最前、艉柱最高那一格的最後
-    zst = int(L.z_st) - 1
+    zst = int(min(L.z_st, V(plan['hull_build'].get('stem_post_top_z', L.z_st)))) - 1
     zsh = int(L.z_sh) - 1
     xf = np.where(solid[:, L.YC, zst])[0] + X0
     xa = np.where(solid[:, L.YC, zsh])[0] + X0
