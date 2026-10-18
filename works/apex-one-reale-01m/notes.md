@@ -42,3 +42,28 @@
 - **組裝件** `apex-one-reale-01m-assembly`「皇家號」：0.1 m、720×321×460（parent 船殼，沒標 sub ＝ 主作品）；關聯 `船殼` at 0,0,0、meta `kind=ship, waterline_z=19`。船殼標 `tags=sub`、名稱「皇家號 船殼」。
 - 過程圖：`overlays/stage1_hull_{bowq,sternq,side}.png`。
 - ⚠ 看得到的：船殼是一隻空殼（甲板、中央走道、划手座、槳架、船頭砲台、船尾在階段二）；兩柱頂是細細一根（撞角、船尾翹尾與雕飾在階段二）。
+
+## 階段二 甲板以上的構造（2026-10-18，TASK-0698）
+設計 plan.json `layout`；產生 `design/draft_upper.py`（讀船殼清單 ＝ 作品，階段一證過）⇒ `masks/upper/<件>.vox.txt`、`masks/paint/stern.vox.txt`、`ladder_points.json`、`lanterns.json`、`verify_upper.json`、`sheet02_layout_v1.png`；落格 `design/tools/build_upper.py`，之後的修正 `design/tools/delta_apply.py`（作品對清單：多的帶顏色守門刻、少的貼、顏色不同的換）。
+每件子作品用整船的框（720×321×140、0.1 m、parent 船殼、tags sub、at 0,0,0），兩舷照 |dy| 產 ⇒ 逐格對稱。重疊的處理：船殼 ＞ 甲板 ＞ 槳架 ＞ 砲台 ＞ 撞角 ＞ 船尾 ＞ 梯子（後面的扣掉前面已經有的格）。
+
+| 件（關聯名） | 內容 | 格數 |
+|---|---|---|
+| `-deck-main`（甲板-main） | 甲板（2 層板＋每 8 格一根橫樑、拱照當地半寬縮）；中央走道 coursier（x 150–550、13 寬、高 0.9 m，兩頭各兩級台階）；**每舷 32 張划手座**（間距 12.52 格 ＝ 1.252 m，第一張離艉柱頂 8.7 m；紅絨座墊、兩根柱、座後 6 格一根水平腳踏）；espale 中線往艙底的艙口（8×9）＋圍欄 | 149,584 |
+| `-apostis`（舷外槳架） | 縱樑（\|dy\| 56–58、深藍＋金頂）、舷外走道（\|dy\| 50–55）、兩頭橫樑 joug（躺在甲板上、外端立到縱樑）、每兩張座之間一個彎托架 bacalat、每張座一根槳座 tolet | 29,182 |
+| `-rambade`（甲板-rambade） | 船頭砲台：中央走道兩旁兩座平台（\|dy\| 8 到外緣，外緣 56 收到 26）、頂 z 44（甲板上淨空 14 格）、外緣與船頭那邊 1.4 m 胸牆（金頂）、柱；底下船殼外的角落平台 conilles（頂齊舷頂，放外側的砲） | 11,162 |
+| `-ladders-rambade`（甲板-rambade/梯子，meta kind=ladders） | 兩座梯子 ram-P／ram-S（甲板 → 砲台），固定點 foot／lo／hi／head | 188 |
+| `-eperon`（撞角） | x 626–686，往上翹（z 33 → 40）、7 → 3 高、5 → 3 寬；上緣與最後 6 格金；尖端金球；一根斜撐回艏柱 | 1,540 |
+| `-stern`（船尾） | 紅絨船尾篷（x 78–138，脊比甲板中線高 2.1 m、篷邊比舷頂高 0.9 m，金拱肋每 12 格、金百合點、金流蘇）＋篷柱；船尾金欄杆；三根燈桿＋**三盞船尾燈**（模型 `lantern-P／C／S`，沿用 `gura-tridente-01m-lantern`、scale 0.5、meta kind=light）；金色翹尾（中線的 Catmull-Rom 曲線、半徑 2.6 → 1.4） | 6,100 |
+| 船殼塗裝（標記 `船尾塗裝`） | x ≤ 150、水線上 2 格到舷頂下 1 格的外板：藍 42 底、金 244 菱格與花、上下金框（只換色） | 1,418 |
+
+- 🩸 v1 組起來 **65 個元件**：腳踏照甲板拱走，每一階只靠邊相接 ⇒ 每舷 32 根各斷出一段 4 格（64 小塊）。改成一根水平的桿（z ＝ 中線甲板 ＋ 3），用 delta 刻 1,648／補 1,580。
+- 🩸 v1 有一個 **441,314 格的封閉空腔**：甲板把整個艙底封死了 ⇒ espale 中線開艙口（之後彈藥庫的梯子從這裡下去）。
+- **甲板 meta**（§9.3）：⚠ 沒用 Blockside `decks.py` —— 它取「每一柱最高的實心 ＋ 1」，這層甲板上最高的是划手座與中央走道，會量成座的高度。改照設計算（`design/decks_meta.tsv`）：`甲板-main` kind=deck、deck=main、level 0、name 甲板（couverte）、floor ＝ 中線旁 10 格的甲板面 ＋ 1（x 73–620，船中 z 27）、thick 4；`甲板-rambade` level 1、floor 556:45,606:45、thick 2。
+- **結果帳**（`design/tools/check_upper.py`，每件從匯出讀）：船殼（＋塗裝）與 6 件子作品全部缺 0、多 0、色差 0；作品那側兩兩重疊 0。
+- **組起來**（引擎 `stats structure=1 mirror=y:160`，組裝件）：348,908 格、1 元件、空腔 0、鏡像差 0。
+- **梯子點**（組裝件 `export format=parts`，遊戲讀的那一份）：8 點跟設計差 0、那一格空、腳下實心。
+- **反向對照**：`draft_upper.py --probe=drop_bench=5` ⇒ 每舷 31 張（甲板 149,584 → 148,990 格）。
+- 讀數：划手座每舷 32、平均間距 12.516 格（史料 1.252 m）；舷外槳架全寬 11.7 m；砲台底 z 43。
+- 過程圖：`design/sheet02_layout_v1.png`、`overlays/stage2_{bowq,sternq,side,top,stern_close,bow_close}.png`（bow_close 用 `models=0`：region 不裁模型，框會被船尾燈拉走）。
+- ⚠ 看得到的／還沒做：沒有桅（階段三）；砲台底下是空的（砲在階段四）；艙底沒有地板與梯子（彈藥庫在階段五）；舷側登船梯、船尾篷兩側的長椅沒做。
