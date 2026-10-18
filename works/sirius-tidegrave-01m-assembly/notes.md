@@ -1,3 +1,9 @@
+## 2026-10-18 TASK-0692 甲板陳設完成
+
+新增22模型（19 deco、工作艇1、艉樓燈2），總數191；船體1033347格、502繩、10帆保留且無壞綁定。參考憲法號，來源Credit為basecamp/gura/kotoko/summit。設計、實測、獨立複驗及限制見 works/sirius-tidegrave-01m/design/fittings_20261018/README.md。艇未加船架/繫固；兩燈刻意放大到2.7m。VXK為 works/sirius-tidegrave-01m/exports/fittings_20261018.vxk，尚未匯入遊戲。原全帆Tim人工驗收仍保留。
+
+---
+
 # 2026-10-16 潮墓號：兩項匯入警告已清除
 
 隔離最新遊戲正式 shipcheck：0 errors / 0 warnings，陸戰隊12/12、353船員、54砲全滿編、
