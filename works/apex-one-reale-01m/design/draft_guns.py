@@ -184,6 +184,9 @@ def main():
     for x in P['side_x']:
         for side in (1, -1):
             spots.append(('pierrier-%d-%s' % (x, 'S' if side > 0 else 'P'), '舷外槳架', x, YC + side * (int(D['apostis_half']) - 1), rail_top(x), 0 if side > 0 else 180))
+    for x in P.get('fwd_x', []):                                       # 槳架前端朝前（階段五：船頭 4 門從砲台搬下來）
+        for side in (1, -1):
+            spots.append(('pierrier-fwd-%d-%s' % (x, 'S' if side > 0 else 'P'), '舷外槳架', x, YC + side * (int(D['apostis_half']) - 1), rail_top(x), -90))
     rx1 = D['rambade_x'][1]
     for dy in P['bow_dy']:
         for side in (1, -1):

@@ -1,0 +1,145 @@
+{
+ "rudder": {
+  "cells": 931,
+  "hits_ship": 0,
+  "hinge_bottom": [
+   94.5,
+   160.5,
+   0.0
+  ],
+  "hinge_top": [
+   63.9,
+   160.5,
+   45
+  ],
+  "stock_top": [
+   64,
+   160,
+   42
+  ],
+  "stock_top_to_hull": 6.32
+ },
+ "hold": {
+  "floor_top_z": 14,
+  "cells": 3830,
+  "headroom_min": 11,
+  "headroom_max": 13
+ },
+ "magazine": {
+  "cells": 1148,
+  "room_x": [
+   150,
+   178
+  ],
+  "half": 12,
+  "barrels": 25,
+  "barrels_skipped_collide": 0,
+  "powder_lb": 2500
+ },
+ "ladder": {
+  "cells": 93,
+  "rungs": 5,
+  "points": {
+   "foot": {
+    "at": [
+     142,
+     160,
+     15
+    ],
+    "empty": true,
+    "solid_below": true,
+    "blocked_above_within": 0
+   },
+   "lo": {
+    "at": [
+     140,
+     160,
+     18
+    ],
+    "empty": true,
+    "solid_below": true,
+    "blocked_above_within": 0
+   },
+   "hi": {
+    "at": [
+     136,
+     160,
+     30
+    ],
+    "empty": true,
+    "solid_below": true,
+    "blocked_above_within": 0
+   },
+   "head": {
+    "at": [
+     133,
+     160,
+     32
+    ],
+    "empty": true,
+    "solid_below": true,
+    "blocked_above_within": 0
+   }
+  }
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "at": [
+    604.5,
+    189.5,
+    45
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.4,
+   "rotate": 45,
+   "collide": 0,
+   "crown_z": 23.4,
+   "ring_to_solid": 2.06
+  },
+  {
+   "name": "錨-P",
+   "at": [
+    604.5,
+    131.5,
+    45
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.4,
+   "rotate": -45,
+   "collide": 0,
+   "crown_z": 23.4,
+   "ring_to_solid": 2.06
+  }
+ ],
+ "lists": [
+  {
+   "file": "masks/hold/rudder.vox.txt",
+   "cells": 931,
+   "sha256": "23d03527cfa8d12e77ec0ce586655b34ac1f20e10971347a5f938760eca7a060"
+  },
+  {
+   "file": "masks/hold/hold.vox.txt",
+   "cells": 3830,
+   "sha256": "91c1ce5f7f572c6f493c5bb0711933c6d8935f38a75e8a37ec513de1cb02cec3"
+  },
+  {
+   "file": "masks/hold/magazine.vox.txt",
+   "cells": 1148,
+   "sha256": "846b8416c2f58a867c9a001c3710e3063cba8dd61955f74e2130223831dccd30"
+  },
+  {
+   "file": "masks/hold/ladder.vox.txt",
+   "cells": 93,
+   "sha256": "e633e7ea563f48a71ab322c42863a556164bab147632017a05ae092832fc6f14"
+  }
+ ]
+}

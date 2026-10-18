@@ -112,8 +112,16 @@
       {"name": "gun-8", "comp": "long6", "scale": 0.55, "dy": 14, "muzzle_x": 610, "gun": "8l", "host": "甲板-main"},
       {"name": "gun-6", "comp": "long6", "scale": 0.5, "dy": 29, "muzzle_x": 602, "gun": "6l", "host": "甲板-main"}
     ],
-    "pierriers": {"scale": 0.5, "side_x": [145, 226, 326, 426, 514], "bow_dy": [12, 22], "arc": "-80,80", "rate": 45}
-  }, "src": "史料：La Réale 1×36、2×8、2×6 磅＋14 門迴旋砲（TD）；砲全部朝前、靠轉船瞄準（Br）；中線 36 磅在中央走道的線上（TG：coursier 砲沿 35 pi 的滑軌）、8 磅在砲台底下兩旁（MsA）、6 磅在船頭兩角（conilles）。迴旋砲 4 門在船頭砲台、其餘在兩舷（MsA：每舷 4、船頭 4、船尾登船梯旁 2）⇒ 每舷 5（含船尾 1）＋船頭 4 ＝ 14。位置、dy、砲口 x 是設計決定"},
+    "pierriers": {"scale": 0.5, "side_x": [145, 226, 326, 426, 514, 539], "fwd_x": [563], "bow_dy": [], "arc": "-80,80", "rate": 45}
+  }, "src": "史料：La Réale 1×36、2×8、2×6 磅＋14 門迴旋砲（TD）；砲全部朝前、靠轉船瞄準（Br）；中線 36 磅在中央走道的線上（TG：coursier 砲沿 35 pi 的滑軌）、8 磅在砲台底下兩旁（MsA）、6 磅在船頭兩角（conilles）。迴旋砲 MsA：每舷 4、船頭 4、船尾登船梯旁 2 ⇒ v1 船頭 4 門站在砲台胸牆上 —— 匯入檢查 ✗：砲台那一層中線是空的（36 磅的通道）、送藥手站不下 ⇒ 改成每舷 6 門朝舷外（含船尾 1）＋槳架前端每舷 1 門朝前 ＝ 14（階段五）。位置、dy、砲口 x 是設計決定"},
+  "hold": {"v": {
+    "rudder": {"tangent_z": 25, "gap": 1, "blade_top_z": 30, "head_z": 44, "w_heel": 13, "w_head": 5, "half_thick": 1, "tiller_x1": 69, "max_deg": 35},
+    "floor_x": [132, 182], "floor_top_z": 14, "ballast_color": 146,
+    "magazine": {"x": [150, 178], "half": 12, "door_half": 2, "copper": 168},
+    "barrels": {"source": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pitch": 5, "dy": [-8, -4, 0, 4, 8]},
+    "ladder": {"x_top": 136, "half": 3, "head_x": 133, "dm": 0},
+    "anchors": {"source": "basecamp-frigate-constitution-01m-anchor", "scale": 0.4, "x": 604, "dy": 29, "ring_z": 45, "rotate": 45, "hawse": [612, 26]}
+  }, "src": "舵：22½ pi ＝ 7.31 m 長、跟部 3 pi 寬收到頂部 1 pi（TG）× 1.32 ⇒ 13 → 5 格（寬）；舵柄＋兩條繩，沒有舵輪（Hob）—— 鉸鏈照彎的艉柱在 z 25 的切線往後 1 格（z 20 的切線 ⇒ 舵頭離船尾 9.2 格，遊戲只在 8 格內找掛點）（設計決定：鉸鏈一定是直線）。彈藥庫：槳帆船的火藥艙在船尾艙底（soute，Br 二手）—— 船尾那一段艙底太淺，放在 espale 艙口下、往前一點（x 150–178，設計決定）；艙底地板 z 14、地板下填壓艙碎石（槳帆船壓艙用砂石，Br；也免得封出空腔）；桶數與 powder_lb 沒找到 ⇒ 擺得下幾桶算幾桶（設計決定）。錨：沿用憲法號的錨 × 0.4、掛在砲台前緣外側兩角（槳帆船的四爪錨 fer 沒有現成元件；設計決定）"},
   "hull_build": {
     "wall": {"v": 3, "src": "設計決定：外板 1 ＋ 肋骨與內板 2"},
     "post_mould": {"v": 5, "src": "設計決定：艏柱、艉柱在舷頂以上那一段 5 格厚（沿船長方向）"},

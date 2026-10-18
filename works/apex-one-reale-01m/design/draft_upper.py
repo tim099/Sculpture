@@ -441,7 +441,37 @@ def main():
         a[taken] = 0
         pieces[name] = (a, clipped)
         taken |= a > 0
-    R = {'pieces': {}}
+    # 封閉空腔（造船規格 §8：≤ 50 格的填實）：組起來（船殼＋各件）掃一次，小空腔照它鄰居最多的那一件、那件的顏色填
+    from scipy import ndimage
+    union = taken.copy()
+    filled = ndimage.binary_fill_holes(union)
+    holes = filled & ~union
+    lab, n = ndimage.label(holes)
+    R_cav = []
+    for i in range(1, n + 1):
+        cells = np.argwhere(lab == i)
+        if len(cells) > 50:
+            R_cav.append({'cells': len(cells), 'at': cells[0].tolist(), 'filled': False})
+            continue
+        best, bc = None, 0
+        for name, (a, _) in pieces.items():
+            cnt = 0
+            for x, y, z in cells:
+                for dx, dy, dz in ((1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, -1)):
+                    if a[x + dx, y + dy, z + dz]:
+                        cnt += 1
+            if cnt > bc:
+                best, bc = name, cnt
+        if best is None:
+            best = 'eperon'
+        a = pieces[best][0]
+        nb = [a[x + dx, y + dy, z + dz] for x, y, z in cells for dx, dy, dz in ((1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, -1)) if a[x + dx, y + dy, z + dz]]
+        col = int(np.bincount(nb).argmax()) if nb else K.C['navy']
+        for x, y, z in cells:
+            a[x, y, z] = col
+        taken[tuple(cells.T)] = True
+        R_cav.append({'cells': len(cells), 'at': cells[0].tolist(), 'filled': best})
+    R = {'pieces': {}, 'cavities': R_cav}
     for name, (a, clipped) in pieces.items():
         R['pieces'][name] = {'cells': int((a > 0).sum()), 'clipped_by_earlier': clipped, 'mirror_diff': mirror_diff(a),
                              'colors': {str(c): int((a == c).sum()) for c in np.unique(a[a > 0])}}
