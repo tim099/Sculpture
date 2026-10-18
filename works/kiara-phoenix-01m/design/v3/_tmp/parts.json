@@ -1,0 +1,3339 @@
+{
+	"format": "sculpt-parts",
+	"version": 1,
+	"work": "kiara-phoenix-01m-assembly",
+	"title": "炎羽號",
+	"owner": "kiara",
+	"size": [
+		576,
+		181,
+		400
+	],
+	"meters_per_voxel": 0.1,
+	"points": {},
+	"links": [
+		{
+			"path": "船殼",
+			"work": "kiara-phoenix-01m",
+			"title": "炎羽號 船殼",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				400
+			],
+			"meta": {
+				"crew": 120,
+				"kind": "ship",
+				"waterline_z": 38
+			},
+			"points": {}
+		},
+		{
+			"path": "主砲甲板",
+			"work": "kiara-phoenix-01m-deck-gun",
+			"title": "炎羽號 主砲甲板（含艙房地板）",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				100
+			],
+			"meta": {
+				"deck": "gun",
+				"floor": "101:49,109:49,110:51,449:51",
+				"kind": "deck",
+				"level": 0,
+				"name": "主砲甲板",
+				"thick": 3
+			},
+			"points": {}
+		},
+		{
+			"path": "露天甲板",
+			"work": "kiara-phoenix-01m-deck-upper",
+			"title": "炎羽號 露天甲板（艏樓與後甲板）",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				100
+			],
+			"meta": {
+				"deck": "spar",
+				"floor": "86:83,194:74,215:74,216:66,218:65,345:65,346:66,374:66,375:67,380:67,449:71,450:71",
+				"kind": "deck",
+				"level": 1,
+				"name": "露天甲板",
+				"thick": 2
+			},
+			"points": {}
+		},
+		{
+			"path": "前桅",
+			"work": "kiara-phoenix-01m-mast-fore",
+			"title": "炎羽號 前桅",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				400
+			],
+			"meta": {},
+			"points": {}
+		},
+		{
+			"path": "主桅",
+			"work": "kiara-phoenix-01m-mast-main",
+			"title": "炎羽號 主桅",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				400
+			],
+			"meta": {},
+			"points": {}
+		},
+		{
+			"path": "後桅",
+			"work": "kiara-phoenix-01m-mast-mizzen",
+			"title": "炎羽號 後桅",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				400
+			],
+			"meta": {},
+			"points": {}
+		},
+		{
+			"path": "艏斜桅",
+			"work": "kiara-phoenix-01m-bowsprit",
+			"title": "炎羽號 艏斜桅",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				400
+			],
+			"meta": {},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前",
+			"work": "kiara-phoenix-01m-magazine-fore",
+			"title": "炎羽號 前部彈藥庫",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				350,
+				71,
+				18,
+				390,
+				111,
+				34
+			],
+			"meta": {
+				"kind": "magazine",
+				"pos": "fore",
+				"powder_lb": 1600
+			},
+			"points": {
+				"blast": [
+					370.5,
+					91.5,
+					23.5
+				],
+				"door": [
+					389.5,
+					91.5,
+					19.5
+				]
+			}
+		},
+		{
+			"path": "彈藥庫-後",
+			"work": "kiara-phoenix-01m-magazine-aft",
+			"title": "炎羽號 後部主彈藥庫",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				180,
+				71,
+				18,
+				220,
+				111,
+				34
+			],
+			"meta": {
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 1600
+			},
+			"points": {
+				"blast": [
+					200.5,
+					91.5,
+					23.5
+				],
+				"door": [
+					219.5,
+					91.5,
+					19.5
+				]
+			}
+		},
+		{
+			"path": "梯子",
+			"work": "kiara-phoenix-01m-ladders",
+			"title": "炎羽號 甲板舷梯（上下通行路網）",
+			"owner": "kiara",
+			"turn": 0,
+			"mirror": "",
+			"enabled": true,
+			"drawn": true,
+			"box": [
+				0,
+				0,
+				0,
+				576,
+				181,
+				100
+			],
+			"meta": {
+				"kind": "ladders"
+			},
+			"points": {
+				"aft.foot": [
+					187.5,
+					90.5,
+					51.5
+				],
+				"aft.head": [
+					200.5,
+					90.5,
+					74.5
+				],
+				"aft.hi": [
+					198.5,
+					90.5,
+					72.5
+				],
+				"aft.lo": [
+					188.5,
+					90.5,
+					52.5
+				],
+				"fore.foot": [
+					387.5,
+					90.5,
+					51.5
+				],
+				"fore.head": [
+					397.5,
+					90.5,
+					67.5
+				],
+				"fore.hi": [
+					395.5,
+					90.5,
+					66.5
+				],
+				"fore.lo": [
+					388.5,
+					90.5,
+					52.5
+				]
+			}
+		}
+	],
+	"models": [
+		{
+			"path": "船舵",
+			"frame": "",
+			"name": "船舵",
+			"source": "work",
+			"work": "kiara-phoenix-01m-rudder",
+			"state": "ok",
+			"box": [
+				85,
+				88,
+				2,
+				108,
+				93,
+				56
+			],
+			"meta": {
+				"axis_x": -0.2723,
+				"axis_y": 0.0,
+				"axis_z": 0.9622,
+				"hinge_x": 107.0,
+				"hinge_y": 90.5,
+				"hinge_z": 2.0,
+				"kind": "rudder",
+				"max_deg": 35,
+				"spin": "rudder",
+				"spin_k": 35,
+				"spin_lag": 0.3,
+				"spin_max": 35,
+				"spin_min": -35,
+				"turn_axis": "hinge"
+			},
+			"points": {
+				"stock-top": [
+					92.5,
+					90.5,
+					55.5
+				]
+			}
+		},
+		{
+			"path": "anchor-S",
+			"frame": "",
+			"name": "anchor-S",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-anchor",
+			"state": "ok",
+			"box": [
+				423.5,
+				106.5,
+				35,
+				466.5,
+				135.5,
+				90
+			],
+			"meta": {
+				"anchor": "bower",
+				"hawse": "453,104,68",
+				"kind": "anchor"
+			},
+			"points": {
+				"crown": [
+					445,
+					121,
+					35.5
+				],
+				"fluke-a": [
+					445,
+					107,
+					45.5
+				],
+				"fluke-b": [
+					445,
+					135,
+					45.5
+				],
+				"ring": [
+					445,
+					121,
+					89.5
+				]
+			}
+		},
+		{
+			"path": "anchor-P",
+			"frame": "",
+			"name": "anchor-P",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-anchor",
+			"state": "ok",
+			"box": [
+				423.5,
+				45.5,
+				35,
+				466.5,
+				74.5,
+				90
+			],
+			"meta": {
+				"anchor": "bower",
+				"hawse": "453,77,68",
+				"kind": "anchor"
+			},
+			"points": {
+				"crown": [
+					445,
+					60,
+					35.5
+				],
+				"fluke-a": [
+					445,
+					74,
+					45.5
+				],
+				"fluke-b": [
+					445,
+					46,
+					45.5
+				],
+				"ring": [
+					445,
+					60,
+					89.5
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S01",
+			"frame": "主砲甲板",
+			"name": "砲-S01",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				128.25,
+				98.5,
+				51,
+				141.75,
+				128.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					135,
+					101.25,
+					61.75
+				],
+				"cascabel": [
+					135,
+					98.75,
+					61.75
+				],
+				"eye-aft": [
+					130,
+					108.75,
+					58.25
+				],
+				"eye-fwd": [
+					140,
+					108.75,
+					58.25
+				],
+				"muzzle": [
+					135,
+					128.25,
+					61.75
+				],
+				"train": [
+					135,
+					101.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P01",
+			"frame": "主砲甲板",
+			"name": "砲-P01",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				128.25,
+				52.5,
+				51,
+				141.75,
+				82.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					135,
+					79.75,
+					61.75
+				],
+				"cascabel": [
+					135,
+					82.25,
+					61.75
+				],
+				"eye-aft": [
+					130,
+					72.25,
+					58.25
+				],
+				"eye-fwd": [
+					140,
+					72.25,
+					58.25
+				],
+				"muzzle": [
+					135,
+					52.75,
+					61.75
+				],
+				"train": [
+					135,
+					79.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S02",
+			"frame": "主砲甲板",
+			"name": "砲-S02",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				153.25,
+				103.5,
+				51,
+				166.75,
+				133.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					160,
+					106.25,
+					61.75
+				],
+				"cascabel": [
+					160,
+					103.75,
+					61.75
+				],
+				"eye-aft": [
+					155,
+					113.75,
+					58.25
+				],
+				"eye-fwd": [
+					165,
+					113.75,
+					58.25
+				],
+				"muzzle": [
+					160,
+					133.25,
+					61.75
+				],
+				"train": [
+					160,
+					106.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P02",
+			"frame": "主砲甲板",
+			"name": "砲-P02",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				153.25,
+				47.5,
+				51,
+				166.75,
+				77.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					160,
+					74.75,
+					61.75
+				],
+				"cascabel": [
+					160,
+					77.25,
+					61.75
+				],
+				"eye-aft": [
+					155,
+					67.25,
+					58.25
+				],
+				"eye-fwd": [
+					165,
+					67.25,
+					58.25
+				],
+				"muzzle": [
+					160,
+					47.75,
+					61.75
+				],
+				"train": [
+					160,
+					74.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S03",
+			"frame": "主砲甲板",
+			"name": "砲-S03",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				178.25,
+				107.5,
+				51,
+				191.75,
+				137.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					185,
+					110.25,
+					61.75
+				],
+				"cascabel": [
+					185,
+					107.75,
+					61.75
+				],
+				"eye-aft": [
+					180,
+					117.75,
+					58.25
+				],
+				"eye-fwd": [
+					190,
+					117.75,
+					58.25
+				],
+				"muzzle": [
+					185,
+					137.25,
+					61.75
+				],
+				"train": [
+					185,
+					110.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P03",
+			"frame": "主砲甲板",
+			"name": "砲-P03",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				178.25,
+				43.5,
+				51,
+				191.75,
+				73.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					185,
+					70.75,
+					61.75
+				],
+				"cascabel": [
+					185,
+					73.25,
+					61.75
+				],
+				"eye-aft": [
+					180,
+					63.25,
+					58.25
+				],
+				"eye-fwd": [
+					190,
+					63.25,
+					58.25
+				],
+				"muzzle": [
+					185,
+					43.75,
+					61.75
+				],
+				"train": [
+					185,
+					70.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S04",
+			"frame": "主砲甲板",
+			"name": "砲-S04",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				203.25,
+				110.5,
+				51,
+				216.75,
+				140.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					210,
+					113.25,
+					61.75
+				],
+				"cascabel": [
+					210,
+					110.75,
+					61.75
+				],
+				"eye-aft": [
+					205,
+					120.75,
+					58.25
+				],
+				"eye-fwd": [
+					215,
+					120.75,
+					58.25
+				],
+				"muzzle": [
+					210,
+					140.25,
+					61.75
+				],
+				"train": [
+					210,
+					113.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P04",
+			"frame": "主砲甲板",
+			"name": "砲-P04",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				203.25,
+				40.5,
+				51,
+				216.75,
+				70.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					210,
+					67.75,
+					61.75
+				],
+				"cascabel": [
+					210,
+					70.25,
+					61.75
+				],
+				"eye-aft": [
+					205,
+					60.25,
+					58.25
+				],
+				"eye-fwd": [
+					215,
+					60.25,
+					58.25
+				],
+				"muzzle": [
+					210,
+					40.75,
+					61.75
+				],
+				"train": [
+					210,
+					67.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S05",
+			"frame": "主砲甲板",
+			"name": "砲-S05",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				228.25,
+				111.5,
+				51,
+				241.75,
+				141.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					235,
+					114.25,
+					61.75
+				],
+				"cascabel": [
+					235,
+					111.75,
+					61.75
+				],
+				"eye-aft": [
+					230,
+					121.75,
+					58.25
+				],
+				"eye-fwd": [
+					240,
+					121.75,
+					58.25
+				],
+				"muzzle": [
+					235,
+					141.25,
+					61.75
+				],
+				"train": [
+					235,
+					114.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P05",
+			"frame": "主砲甲板",
+			"name": "砲-P05",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				228.25,
+				39.5,
+				51,
+				241.75,
+				69.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					235,
+					66.75,
+					61.75
+				],
+				"cascabel": [
+					235,
+					69.25,
+					61.75
+				],
+				"eye-aft": [
+					230,
+					59.25,
+					58.25
+				],
+				"eye-fwd": [
+					240,
+					59.25,
+					58.25
+				],
+				"muzzle": [
+					235,
+					39.75,
+					61.75
+				],
+				"train": [
+					235,
+					66.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S06",
+			"frame": "主砲甲板",
+			"name": "砲-S06",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				253.25,
+				112.5,
+				51,
+				266.75,
+				142.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					260,
+					115.25,
+					61.75
+				],
+				"cascabel": [
+					260,
+					112.75,
+					61.75
+				],
+				"eye-aft": [
+					255,
+					122.75,
+					58.25
+				],
+				"eye-fwd": [
+					265,
+					122.75,
+					58.25
+				],
+				"muzzle": [
+					260,
+					142.25,
+					61.75
+				],
+				"train": [
+					260,
+					115.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P06",
+			"frame": "主砲甲板",
+			"name": "砲-P06",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				253.25,
+				38.5,
+				51,
+				266.75,
+				68.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					260,
+					65.75,
+					61.75
+				],
+				"cascabel": [
+					260,
+					68.25,
+					61.75
+				],
+				"eye-aft": [
+					255,
+					58.25,
+					58.25
+				],
+				"eye-fwd": [
+					265,
+					58.25,
+					58.25
+				],
+				"muzzle": [
+					260,
+					38.75,
+					61.75
+				],
+				"train": [
+					260,
+					65.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S07",
+			"frame": "主砲甲板",
+			"name": "砲-S07",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				278.25,
+				112.5,
+				51,
+				291.75,
+				142.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					285,
+					115.25,
+					61.75
+				],
+				"cascabel": [
+					285,
+					112.75,
+					61.75
+				],
+				"eye-aft": [
+					280,
+					122.75,
+					58.25
+				],
+				"eye-fwd": [
+					290,
+					122.75,
+					58.25
+				],
+				"muzzle": [
+					285,
+					142.25,
+					61.75
+				],
+				"train": [
+					285,
+					115.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P07",
+			"frame": "主砲甲板",
+			"name": "砲-P07",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				278.25,
+				38.5,
+				51,
+				291.75,
+				68.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					285,
+					65.75,
+					61.75
+				],
+				"cascabel": [
+					285,
+					68.25,
+					61.75
+				],
+				"eye-aft": [
+					280,
+					58.25,
+					58.25
+				],
+				"eye-fwd": [
+					290,
+					58.25,
+					58.25
+				],
+				"muzzle": [
+					285,
+					38.75,
+					61.75
+				],
+				"train": [
+					285,
+					65.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S08",
+			"frame": "主砲甲板",
+			"name": "砲-S08",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				303.25,
+				112.5,
+				51,
+				316.75,
+				142.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					310,
+					115.25,
+					61.75
+				],
+				"cascabel": [
+					310,
+					112.75,
+					61.75
+				],
+				"eye-aft": [
+					305,
+					122.75,
+					58.25
+				],
+				"eye-fwd": [
+					315,
+					122.75,
+					58.25
+				],
+				"muzzle": [
+					310,
+					142.25,
+					61.75
+				],
+				"train": [
+					310,
+					115.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P08",
+			"frame": "主砲甲板",
+			"name": "砲-P08",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				303.25,
+				38.5,
+				51,
+				316.75,
+				68.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					310,
+					65.75,
+					61.75
+				],
+				"cascabel": [
+					310,
+					68.25,
+					61.75
+				],
+				"eye-aft": [
+					305,
+					58.25,
+					58.25
+				],
+				"eye-fwd": [
+					315,
+					58.25,
+					58.25
+				],
+				"muzzle": [
+					310,
+					38.75,
+					61.75
+				],
+				"train": [
+					310,
+					65.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S09",
+			"frame": "主砲甲板",
+			"name": "砲-S09",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				328.25,
+				110.5,
+				51,
+				341.75,
+				140.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					335,
+					113.25,
+					61.75
+				],
+				"cascabel": [
+					335,
+					110.75,
+					61.75
+				],
+				"eye-aft": [
+					330,
+					120.75,
+					58.25
+				],
+				"eye-fwd": [
+					340,
+					120.75,
+					58.25
+				],
+				"muzzle": [
+					335,
+					140.25,
+					61.75
+				],
+				"train": [
+					335,
+					113.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P09",
+			"frame": "主砲甲板",
+			"name": "砲-P09",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				328.25,
+				40.5,
+				51,
+				341.75,
+				70.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					335,
+					67.75,
+					61.75
+				],
+				"cascabel": [
+					335,
+					70.25,
+					61.75
+				],
+				"eye-aft": [
+					330,
+					60.25,
+					58.25
+				],
+				"eye-fwd": [
+					340,
+					60.25,
+					58.25
+				],
+				"muzzle": [
+					335,
+					40.75,
+					61.75
+				],
+				"train": [
+					335,
+					67.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S10",
+			"frame": "主砲甲板",
+			"name": "砲-S10",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				353.25,
+				107.5,
+				51,
+				366.75,
+				137.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					360,
+					110.25,
+					61.75
+				],
+				"cascabel": [
+					360,
+					107.75,
+					61.75
+				],
+				"eye-aft": [
+					355,
+					117.75,
+					58.25
+				],
+				"eye-fwd": [
+					365,
+					117.75,
+					58.25
+				],
+				"muzzle": [
+					360,
+					137.25,
+					61.75
+				],
+				"train": [
+					360,
+					110.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P10",
+			"frame": "主砲甲板",
+			"name": "砲-P10",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				353.25,
+				43.5,
+				51,
+				366.75,
+				73.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					360,
+					70.75,
+					61.75
+				],
+				"cascabel": [
+					360,
+					73.25,
+					61.75
+				],
+				"eye-aft": [
+					355,
+					63.25,
+					58.25
+				],
+				"eye-fwd": [
+					365,
+					63.25,
+					58.25
+				],
+				"muzzle": [
+					360,
+					43.75,
+					61.75
+				],
+				"train": [
+					360,
+					70.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S11",
+			"frame": "主砲甲板",
+			"name": "砲-S11",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				378.25,
+				103.5,
+				51,
+				391.75,
+				133.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					385,
+					106.25,
+					61.75
+				],
+				"cascabel": [
+					385,
+					103.75,
+					61.75
+				],
+				"eye-aft": [
+					380,
+					113.75,
+					58.25
+				],
+				"eye-fwd": [
+					390,
+					113.75,
+					58.25
+				],
+				"muzzle": [
+					385,
+					133.25,
+					61.75
+				],
+				"train": [
+					385,
+					106.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P11",
+			"frame": "主砲甲板",
+			"name": "砲-P11",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				378.25,
+				47.5,
+				51,
+				391.75,
+				77.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					385,
+					74.75,
+					61.75
+				],
+				"cascabel": [
+					385,
+					77.25,
+					61.75
+				],
+				"eye-aft": [
+					380,
+					67.25,
+					58.25
+				],
+				"eye-fwd": [
+					390,
+					67.25,
+					58.25
+				],
+				"muzzle": [
+					385,
+					47.75,
+					61.75
+				],
+				"train": [
+					385,
+					74.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-S12",
+			"frame": "主砲甲板",
+			"name": "砲-S12",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				403.25,
+				96.5,
+				51,
+				416.75,
+				126.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					410,
+					99.25,
+					61.75
+				],
+				"cascabel": [
+					410,
+					96.75,
+					61.75
+				],
+				"eye-aft": [
+					405,
+					106.75,
+					58.25
+				],
+				"eye-fwd": [
+					415,
+					106.75,
+					58.25
+				],
+				"muzzle": [
+					410,
+					126.25,
+					61.75
+				],
+				"train": [
+					410,
+					99.75,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/砲-P12",
+			"frame": "主砲甲板",
+			"name": "砲-P12",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				403.25,
+				54.5,
+				51,
+				416.75,
+				84.5,
+				64
+			],
+			"meta": {
+				"gun": "18l",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					410,
+					81.75,
+					61.75
+				],
+				"cascabel": [
+					410,
+					84.25,
+					61.75
+				],
+				"eye-aft": [
+					405,
+					74.25,
+					58.25
+				],
+				"eye-fwd": [
+					415,
+					74.25,
+					58.25
+				],
+				"muzzle": [
+					410,
+					54.75,
+					61.75
+				],
+				"train": [
+					410,
+					81.25,
+					55.25
+				]
+			}
+		},
+		{
+			"path": "主砲甲板/capstan",
+			"frame": "主砲甲板",
+			"name": "capstan",
+			"source": "work",
+			"work": "basecamp-ember-01m-capstan",
+			"state": "ok",
+			"box": [
+				229.132,
+				84.632,
+				51,
+				240.868,
+				96.368,
+				61.758
+			],
+			"meta": {
+				"kind": "capstan"
+			},
+			"points": {}
+		},
+		{
+			"path": "露天甲板/carronade-S01",
+			"frame": "露天甲板",
+			"name": "carronade-S01",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-carronade32",
+			"state": "ok",
+			"box": [
+				155.75,
+				104.5,
+				77,
+				163.25,
+				129.5,
+				89
+			],
+			"meta": {
+				"gun": "32c",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					159.5,
+					118.25,
+					86.75
+				],
+				"cascabel": [
+					159.5,
+					116.25,
+					86.75
+				],
+				"eye-aft": [
+					156,
+					123.75,
+					80.75
+				],
+				"eye-fwd": [
+					163,
+					123.75,
+					80.75
+				],
+				"muzzle": [
+					159.5,
+					129.25,
+					86.75
+				],
+				"pivot": [
+					159.5,
+					122.75,
+					79.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/carronade-P01",
+			"frame": "露天甲板",
+			"name": "carronade-P01",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-carronade32",
+			"state": "ok",
+			"box": [
+				155.75,
+				51.5,
+				77,
+				163.25,
+				76.5,
+				89
+			],
+			"meta": {
+				"gun": "32c",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					159.5,
+					62.75,
+					86.75
+				],
+				"cascabel": [
+					159.5,
+					64.75,
+					86.75
+				],
+				"eye-aft": [
+					156,
+					57.25,
+					80.75
+				],
+				"eye-fwd": [
+					163,
+					57.25,
+					80.75
+				],
+				"muzzle": [
+					159.5,
+					51.75,
+					86.75
+				],
+				"pivot": [
+					159.5,
+					58.25,
+					79.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/carronade-S02",
+			"frame": "露天甲板",
+			"name": "carronade-S02",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-carronade32",
+			"state": "ok",
+			"box": [
+				179.75,
+				106.5,
+				75,
+				187.25,
+				131.5,
+				87
+			],
+			"meta": {
+				"gun": "32c",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					183.5,
+					120.25,
+					84.75
+				],
+				"cascabel": [
+					183.5,
+					118.25,
+					84.75
+				],
+				"eye-aft": [
+					180,
+					125.75,
+					78.75
+				],
+				"eye-fwd": [
+					187,
+					125.75,
+					78.75
+				],
+				"muzzle": [
+					183.5,
+					131.25,
+					84.75
+				],
+				"pivot": [
+					183.5,
+					124.75,
+					77.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/carronade-P02",
+			"frame": "露天甲板",
+			"name": "carronade-P02",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-carronade32",
+			"state": "ok",
+			"box": [
+				179.75,
+				49.5,
+				75,
+				187.25,
+				74.5,
+				87
+			],
+			"meta": {
+				"gun": "32c",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					183.5,
+					60.75,
+					84.75
+				],
+				"cascabel": [
+					183.5,
+					62.75,
+					84.75
+				],
+				"eye-aft": [
+					180,
+					55.25,
+					78.75
+				],
+				"eye-fwd": [
+					187,
+					55.25,
+					78.75
+				],
+				"muzzle": [
+					183.5,
+					49.75,
+					84.75
+				],
+				"pivot": [
+					183.5,
+					56.25,
+					77.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/carronade-S03",
+			"frame": "露天甲板",
+			"name": "carronade-S03",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-carronade32",
+			"state": "ok",
+			"box": [
+				203.75,
+				108.5,
+				74,
+				211.25,
+				133.5,
+				86
+			],
+			"meta": {
+				"gun": "32c",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					207.5,
+					122.25,
+					83.75
+				],
+				"cascabel": [
+					207.5,
+					120.25,
+					83.75
+				],
+				"eye-aft": [
+					204,
+					127.75,
+					77.75
+				],
+				"eye-fwd": [
+					211,
+					127.75,
+					77.75
+				],
+				"muzzle": [
+					207.5,
+					133.25,
+					83.75
+				],
+				"pivot": [
+					207.5,
+					126.75,
+					76.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/carronade-P03",
+			"frame": "露天甲板",
+			"name": "carronade-P03",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-carronade32",
+			"state": "ok",
+			"box": [
+				203.75,
+				47.5,
+				74,
+				211.25,
+				72.5,
+				86
+			],
+			"meta": {
+				"gun": "32c",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					207.5,
+					58.75,
+					83.75
+				],
+				"cascabel": [
+					207.5,
+					60.75,
+					83.75
+				],
+				"eye-aft": [
+					204,
+					53.25,
+					77.75
+				],
+				"eye-fwd": [
+					211,
+					53.25,
+					77.75
+				],
+				"muzzle": [
+					207.5,
+					47.75,
+					83.75
+				],
+				"pivot": [
+					207.5,
+					54.25,
+					76.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/chase18-S",
+			"frame": "露天甲板",
+			"name": "chase18-S",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				409.0821,
+				94.4231,
+				69,
+				425.9586,
+				123.6399,
+				82
+			],
+			"meta": {
+				"gun": "18chase",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					414.6987,
+					97.4348,
+					79.75
+				],
+				"cascabel": [
+					413.8436,
+					95.0855,
+					79.75
+				],
+				"eye-aft": [
+					412.5654,
+					106.1926,
+					76.25
+				],
+				"eye-fwd": [
+					421.9623,
+					102.7724,
+					76.25
+				],
+				"muzzle": [
+					423.9332,
+					122.8065,
+					79.75
+				],
+				"train": [
+					414.8697,
+					97.9046,
+					73.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/chase18-P",
+			"frame": "露天甲板",
+			"name": "chase18-P",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-gun-long18",
+			"state": "ok",
+			"box": [
+				409.0821,
+				57.3601,
+				69,
+				425.9586,
+				86.5769,
+				82
+			],
+			"meta": {
+				"gun": "18chase",
+				"kind": "gun"
+			},
+			"points": {
+				"breech": [
+					414.6987,
+					83.5652,
+					79.75
+				],
+				"cascabel": [
+					413.8436,
+					85.9145,
+					79.75
+				],
+				"eye-aft": [
+					412.5654,
+					74.8074,
+					76.25
+				],
+				"eye-fwd": [
+					421.9623,
+					78.2276,
+					76.25
+				],
+				"muzzle": [
+					423.9332,
+					58.1935,
+					79.75
+				],
+				"train": [
+					414.8697,
+					83.0954,
+					73.25
+				]
+			}
+		},
+		{
+			"path": "露天甲板/wheel",
+			"frame": "露天甲板",
+			"name": "wheel",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-wheel",
+			"state": "ok",
+			"box": [
+				124.8,
+				80.7,
+				80,
+				143.2,
+				100.3,
+				99.8
+			],
+			"meta": {
+				"kind": "wheel",
+				"spin": "rudder",
+				"spin_k": 540,
+				"spin_lag": 0.6
+			},
+			"points": {
+				"drum-rope-a": [
+					131.3,
+					89.2,
+					88.9
+				],
+				"drum-rope-b": [
+					136.7,
+					91.8,
+					88.9
+				],
+				"hub-aft": [
+					125.3,
+					90.4,
+					90.1
+				],
+				"hub-fore": [
+					142.7,
+					90.4,
+					90.1
+				]
+			}
+		},
+		{
+			"path": "露天甲板/wheel座",
+			"frame": "露天甲板",
+			"name": "wheel座",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-wheel-stand",
+			"state": "ok",
+			"box": [
+				127,
+				88.9,
+				79,
+				141,
+				92.1,
+				92.4
+			],
+			"meta": {
+				"kind": "wheel_stand"
+			},
+			"points": {}
+		},
+		{
+			"path": "露天甲板/binnacle",
+			"frame": "露天甲板",
+			"name": "binnacle",
+			"source": "work",
+			"work": "summit-night-falcon-01m-binnacle",
+			"state": "ok",
+			"box": [
+				146.7,
+				87.9,
+				77,
+				150.3,
+				93.1,
+				86.6
+			],
+			"meta": {
+				"kind": "binnacle"
+			},
+			"points": {}
+		},
+		{
+			"path": "露天甲板/boat-cutter",
+			"frame": "露天甲板",
+			"name": "boat-cutter",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-whaleboat",
+			"state": "ok",
+			"box": [
+				282.25,
+				81.25,
+				66,
+				367.75,
+				99.75,
+				75.5
+			],
+			"meta": {
+				"boat": "cutter",
+				"kind": "boat",
+				"length_m": 8.5
+			},
+			"points": {
+				"ring-aft": [
+					285.5,
+					90.5,
+					74.25
+				],
+				"ring-fwd": [
+					364,
+					90.5,
+					74.25
+				]
+			}
+		},
+		{
+			"path": "前桅/yard-fore-course",
+			"frame": "前桅",
+			"name": "yard-fore-course",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-fore-course",
+			"state": "ok",
+			"box": [
+				384.1975,
+				13.4764,
+				184,
+				436.8025,
+				167.5236,
+				189
+			],
+			"meta": {
+				"diameter_in": 16.0,
+				"kind": "yard",
+				"length_ft": 52.8,
+				"mast": "fore",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -18,
+				"sail": "fore-course",
+				"turn_axis": "z",
+				"yard": "course"
+			},
+			"points": {
+				"arm-P": [
+					385.7786,
+					14.4155,
+					186.5
+				],
+				"arm-S": [
+					435.2214,
+					166.5845,
+					186.5
+				],
+				"earing-P": [
+					386.3967,
+					16.3176,
+					186.5
+				],
+				"earing-S": [
+					434.6033,
+					164.6824,
+					186.5
+				],
+				"pivot": [
+					410.5,
+					90.5,
+					186.5
+				]
+			}
+		},
+		{
+			"path": "前桅/yard-fore-topsail",
+			"frame": "前桅",
+			"name": "yard-fore-topsail",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-fore-topsail",
+			"state": "ok",
+			"box": [
+				386.3982,
+				33.1356,
+				275,
+				430.6018,
+				147.8644,
+				278
+			],
+			"meta": {
+				"diameter_in": 12.0,
+				"kind": "yard",
+				"length_ft": 39.7,
+				"mast": "fore",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -20,
+				"sail": "fore-topsail",
+				"turn_axis": "z",
+				"yard": "topsail"
+			},
+			"points": {
+				"arm-P": [
+					387.9788,
+					34.1184,
+					276.5
+				],
+				"arm-S": [
+					429.0212,
+					146.8816,
+					276.5
+				],
+				"earing-P": [
+					388.6628,
+					35.9978,
+					276.5
+				],
+				"earing-S": [
+					428.3372,
+					145.0022,
+					276.5
+				],
+				"pivot": [
+					408.5,
+					90.5,
+					276.5
+				]
+			}
+		},
+		{
+			"path": "前桅/yard-fore-topgallant",
+			"frame": "前桅",
+			"name": "yard-fore-topgallant",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-fore-topgallant",
+			"state": "ok",
+			"box": [
+				392.8648,
+				52.7618,
+				351,
+				424.1352,
+				128.2382,
+				354
+			],
+			"meta": {
+				"diameter_in": 9.0,
+				"kind": "yard",
+				"length_ft": 26.6,
+				"mast": "fore",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -22,
+				"sail": "fore-topgallant",
+				"turn_axis": "z",
+				"yard": "topgallant"
+			},
+			"points": {
+				"arm-P": [
+					393.5157,
+					53.4126,
+					352.5
+				],
+				"arm-S": [
+					423.4843,
+					127.5874,
+					352.5
+				],
+				"earing-P": [
+					394.2649,
+					55.267,
+					352.5
+				],
+				"earing-S": [
+					422.7351,
+					125.733,
+					352.5
+				],
+				"pivot": [
+					408.5,
+					90.5,
+					352.5
+				]
+			}
+		},
+		{
+			"path": "主桅/yard-main-course",
+			"frame": "主桅",
+			"name": "yard-main-course",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-main-course",
+			"state": "ok",
+			"box": [
+				252.1074,
+				3.9659,
+				199,
+				310.8926,
+				177.0341,
+				204
+			],
+			"meta": {
+				"diameter_in": 18.0,
+				"kind": "yard",
+				"length_ft": 59.4,
+				"mast": "main",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -18,
+				"sail": "main-course",
+				"turn_axis": "z",
+				"yard": "course"
+			},
+			"points": {
+				"arm-P": [
+					253.6885,
+					4.9049,
+					201.5
+				],
+				"arm-S": [
+					309.3115,
+					176.0951,
+					201.5
+				],
+				"earing-P": [
+					254.3065,
+					6.807,
+					201.5
+				],
+				"earing-S": [
+					308.6935,
+					174.193,
+					201.5
+				],
+				"pivot": [
+					281.5,
+					90.5,
+					201.5
+				]
+			}
+		},
+		{
+			"path": "主桅/yard-main-topsail",
+			"frame": "主桅",
+			"name": "yard-main-topsail",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-main-topsail",
+			"state": "ok",
+			"box": [
+				255.0041,
+				26.5577,
+				295,
+				303.9959,
+				154.4423,
+				298
+			],
+			"meta": {
+				"diameter_in": 14.0,
+				"kind": "yard",
+				"length_ft": 44.3,
+				"mast": "main",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -20,
+				"sail": "main-topsail",
+				"turn_axis": "z",
+				"yard": "topsail"
+			},
+			"points": {
+				"arm-P": [
+					256.5847,
+					27.5406,
+					296.5
+				],
+				"arm-S": [
+					302.4153,
+					153.4594,
+					296.5
+				],
+				"earing-P": [
+					257.2687,
+					29.42,
+					296.5
+				],
+				"earing-S": [
+					301.7313,
+					151.58,
+					296.5
+				],
+				"pivot": [
+					279.5,
+					90.5,
+					296.5
+				]
+			}
+		},
+		{
+			"path": "主桅/yard-main-topgallant",
+			"frame": "主桅",
+			"name": "yard-main-topgallant",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-main-topgallant",
+			"state": "ok",
+			"box": [
+				260.9918,
+				48.1258,
+				371,
+				296.0082,
+				132.8742,
+				374
+			],
+			"meta": {
+				"diameter_in": 10.0,
+				"kind": "yard",
+				"length_ft": 29.9,
+				"mast": "main",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -22,
+				"sail": "main-topgallant",
+				"turn_axis": "z",
+				"yard": "topgallant"
+			},
+			"points": {
+				"arm-P": [
+					261.6427,
+					48.7767,
+					372.5
+				],
+				"arm-S": [
+					295.3573,
+					132.2233,
+					372.5
+				],
+				"earing-P": [
+					262.3919,
+					50.6311,
+					372.5
+				],
+				"earing-S": [
+					294.6081,
+					130.3689,
+					372.5
+				],
+				"pivot": [
+					278.5,
+					90.5,
+					372.5
+				]
+			}
+		},
+		{
+			"path": "後桅/yard-mizzen-crossjack",
+			"frame": "後桅",
+			"name": "yard-mizzen-crossjack",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-mizzen-crossjack",
+			"state": "ok",
+			"box": [
+				139.3779,
+				32.4976,
+				160,
+				179.6221,
+				148.5024,
+				163
+			],
+			"meta": {
+				"diameter_in": 12.0,
+				"kind": "yard",
+				"length_ft": 39.7,
+				"mast": "mizzen",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -18,
+				"sail": "mizzen-crossjack",
+				"turn_axis": "z",
+				"yard": "crossjack"
+			},
+			"points": {
+				"arm-P": [
+					140.959,
+					33.4366,
+					161.5
+				],
+				"arm-S": [
+					178.041,
+					147.5634,
+					161.5
+				],
+				"earing-P": [
+					141.577,
+					35.3387,
+					161.5
+				],
+				"earing-S": [
+					177.423,
+					145.6613,
+					161.5
+				],
+				"pivot": [
+					159.5,
+					90.5,
+					161.5
+				]
+			}
+		},
+		{
+			"path": "後桅/yard-mizzen-topsail",
+			"frame": "後桅",
+			"name": "yard-mizzen-topsail",
+			"source": "work",
+			"work": "kiara-phoenix-01m-yard-mizzen-topsail",
+			"state": "ok",
+			"box": [
+				142.4682,
+				47.573,
+				289,
+				174.5318,
+				133.427,
+				292
+			],
+			"meta": {
+				"diameter_in": 10.0,
+				"kind": "yard",
+				"length_ft": 29.9,
+				"mast": "mizzen",
+				"pivot_anchor": "pivot",
+				"rotate_z_deg": -20,
+				"sail": "mizzen-topsail",
+				"turn_axis": "z",
+				"yard": "topsail"
+			},
+			"points": {
+				"arm-P": [
+					143.1091,
+					48.2138,
+					290.5
+				],
+				"arm-S": [
+					173.8909,
+					132.7862,
+					290.5
+				],
+				"earing-P": [
+					143.7931,
+					50.0932,
+					290.5
+				],
+				"earing-S": [
+					173.2069,
+					130.9068,
+					290.5
+				],
+				"pivot": [
+					158.5,
+					90.5,
+					290.5
+				]
+			}
+		},
+		{
+			"path": "彈藥庫-前/barrel-001",
+			"frame": "彈藥庫-前",
+			"name": "barrel-001",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				354.3,
+				75.3,
+				19,
+				358.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-002",
+			"frame": "彈藥庫-前",
+			"name": "barrel-002",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				354.3,
+				82.3,
+				19,
+				358.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-003",
+			"frame": "彈藥庫-前",
+			"name": "barrel-003",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				354.3,
+				89.3,
+				19,
+				358.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-004",
+			"frame": "彈藥庫-前",
+			"name": "barrel-004",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				354.3,
+				96.3,
+				19,
+				358.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-005",
+			"frame": "彈藥庫-前",
+			"name": "barrel-005",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				361.3,
+				75.3,
+				19,
+				365.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-006",
+			"frame": "彈藥庫-前",
+			"name": "barrel-006",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				361.3,
+				82.3,
+				19,
+				365.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-007",
+			"frame": "彈藥庫-前",
+			"name": "barrel-007",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				361.3,
+				89.3,
+				19,
+				365.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-008",
+			"frame": "彈藥庫-前",
+			"name": "barrel-008",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				361.3,
+				96.3,
+				19,
+				365.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-009",
+			"frame": "彈藥庫-前",
+			"name": "barrel-009",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				368.3,
+				75.3,
+				19,
+				372.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-010",
+			"frame": "彈藥庫-前",
+			"name": "barrel-010",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				368.3,
+				82.3,
+				19,
+				372.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-011",
+			"frame": "彈藥庫-前",
+			"name": "barrel-011",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				368.3,
+				89.3,
+				19,
+				372.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-012",
+			"frame": "彈藥庫-前",
+			"name": "barrel-012",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				368.3,
+				96.3,
+				19,
+				372.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-013",
+			"frame": "彈藥庫-前",
+			"name": "barrel-013",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				375.3,
+				75.3,
+				19,
+				379.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-014",
+			"frame": "彈藥庫-前",
+			"name": "barrel-014",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				375.3,
+				82.3,
+				19,
+				379.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-015",
+			"frame": "彈藥庫-前",
+			"name": "barrel-015",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				375.3,
+				89.3,
+				19,
+				379.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-前/barrel-016",
+			"frame": "彈藥庫-前",
+			"name": "barrel-016",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				375.3,
+				96.3,
+				19,
+				379.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-001",
+			"frame": "彈藥庫-後",
+			"name": "barrel-001",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				184.3,
+				75.3,
+				19,
+				188.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-002",
+			"frame": "彈藥庫-後",
+			"name": "barrel-002",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				184.3,
+				82.3,
+				19,
+				188.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-003",
+			"frame": "彈藥庫-後",
+			"name": "barrel-003",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				184.3,
+				89.3,
+				19,
+				188.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-004",
+			"frame": "彈藥庫-後",
+			"name": "barrel-004",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				184.3,
+				96.3,
+				19,
+				188.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-005",
+			"frame": "彈藥庫-後",
+			"name": "barrel-005",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				191.3,
+				75.3,
+				19,
+				195.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-006",
+			"frame": "彈藥庫-後",
+			"name": "barrel-006",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				191.3,
+				82.3,
+				19,
+				195.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-007",
+			"frame": "彈藥庫-後",
+			"name": "barrel-007",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				191.3,
+				89.3,
+				19,
+				195.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-008",
+			"frame": "彈藥庫-後",
+			"name": "barrel-008",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				191.3,
+				96.3,
+				19,
+				195.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-009",
+			"frame": "彈藥庫-後",
+			"name": "barrel-009",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				198.3,
+				75.3,
+				19,
+				202.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-010",
+			"frame": "彈藥庫-後",
+			"name": "barrel-010",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				198.3,
+				82.3,
+				19,
+				202.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-011",
+			"frame": "彈藥庫-後",
+			"name": "barrel-011",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				198.3,
+				89.3,
+				19,
+				202.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-012",
+			"frame": "彈藥庫-後",
+			"name": "barrel-012",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				198.3,
+				96.3,
+				19,
+				202.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-013",
+			"frame": "彈藥庫-後",
+			"name": "barrel-013",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				205.3,
+				75.3,
+				19,
+				209.7,
+				79.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-014",
+			"frame": "彈藥庫-後",
+			"name": "barrel-014",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				205.3,
+				82.3,
+				19,
+				209.7,
+				86.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-015",
+			"frame": "彈藥庫-後",
+			"name": "barrel-015",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				205.3,
+				89.3,
+				19,
+				209.7,
+				93.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		},
+		{
+			"path": "彈藥庫-後/barrel-016",
+			"frame": "彈藥庫-後",
+			"name": "barrel-016",
+			"source": "work",
+			"work": "basecamp-frigate-constitution-01m-powder-barrel",
+			"state": "ok",
+			"box": [
+				205.3,
+				96.3,
+				19,
+				209.7,
+				100.7,
+				24.4
+			],
+			"meta": {
+				"kind": "powder",
+				"powder_lb": 100
+			},
+			"points": {}
+		}
+	]
+}
