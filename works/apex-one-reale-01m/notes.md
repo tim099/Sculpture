@@ -136,3 +136,18 @@
     ① `geo` 沒填（遊戲那側）；② 船頭 36／8 磅砲班站不滿（3 門缺 4 人：船頭窄，砲擺得很擠）；③ 軍官 0／4、陸戰隊 0／12、桅頂水手 0／8 站不下（槳帆船沒有後甲板、沒有桅頂平台 —— 船員配置要遊戲那側調）；
     ④ **送藥手的走路格不連通**（10 門）：遊戲的走路格只看甲板地板上下 −2～+3 格，而槳帆船的甲板上排滿划手座、中央走道高 0.9 m ⇒ 甲板被切成三十幾塊；史料上人是走中央走道與舷外走道的 ⇒ 該讓中央走道成為走路格（甲板 meta 的 floor、梯子怎麼接層）—— 跟遊戲那側（ame，槳手也在她那張單）對過再做。
 - 過程圖：`overlays/stage5_{stern,hold}.png`。
+
+## 階段六 槳＋匯進遊戲（2026-10-18，TASK-0705；砲種 TASK-0703）
+Tim：「槳目前可用了 可以嘗試套用看看」「完成槳後就匯入遊戲吧 我實際測試看看」。照造船規格 §9.10（ame）標；做法寫進 §9.10.1（Senate 1d4c3ff）。
+設計 plan.json `oars`；產生 `design/draft_oars.py` ⇒ `masks/oars/oar.vox.txt`、`oars_placement.json`、`verify_oars.json`；落格 `design/tools/build_oars.py`。
+
+- **槳元件**（通用部件 `apex-one-reale-01m-oar`「槳（galère，13 m、7 人划；通用部件，0.05 m）」，7×263×61、1,238 格）：往裡 4.4 m、往外 8.6 m（普通船 12.18 m；Réale 每槳 7 人 ⇒ 往裡照 7 × 0.6 m 拉長，設計決定）、槳葉 1.6 × 0.18 m、槳柄徑 0.153 → 0.09 m（Deb）、槳座那一段深色。姿勢「掃到一半」：垂直於船身、往外往下 11°（槳葉中心落在水線）。固定點 pivot (3,88,38)、blade (3,260,5)、seat (5,68,33)。
+- **64 支**（`舷外槳架/oar-S01…S32`、`oar-P01…P32`）：每張划手座一支，pivot 落在槳座船尾那一側 x −2、縱樑頂上 0.8 格；右舷原樣、左舷 mirror=y；meta `kind=oar、rowers 7、side、stroke_deg 30、dip_deg 12`。
+  - 🩸 v1 x −1 ⇒ 槳柄跟槳座（tolet）重疊（64 支 378 格）⇒ x −2；🩸 第 2 張座的 seat 差一格：座高用了槳的 x 去量 ⇒ 改照座的中心。
+- 讀數：碰撞 0、seat 站得住 64／64、槳座旁 8 格有縱樑 64／64、左右 32／32、槳葉中心離水線 −0.2～+1.8 格。models_broken 0（舷外槳架 78 個模型 ＝ 64 槳＋14 迴旋砲）。
+  **反向對照**：`--probe=drop_oar=S05` ⇒ 右舷 31 支；`--probe=sink=S05:3` ⇒ 只有那一支報碰撞 42 格。
+- **匯進遊戲**（Blockside dev 5ba45d0，已推上測試版）：`admin.py import --id reale`；game.json 照 kaguya 的做法還原後只手寫 reale 一筆：`cfg.base 6`（划槳全速；巡航 4–5、衝刺 6–7 節，Musée）、`geo`（spar 30–46、marines +75／−115、center 60、aim 38、aimZ 20–380、deckAim 28–45、rigAim 120–330）。
+  - shipcheck：✗ 0　⚠ 15；槳 64（左 32／右 32）、槳手 448／448；船員 542。⚠：船頭三門砲班站不滿、陸戰隊 7／12、桅頂水手 0／8、送藥手走路格不連通 ×10（同階段五）。
+  - `?demo=60&dump=1&seed=3&ship=reale,constitution`：跑得完、航速 6–7.8 節、開 39 砲。對拍（沒有皇家號的戰局）跟 dev 逐位元組相同。
+  - 砲種表 36l／8l／pierrier 同一批合進 dev（TASK-0703 結單）。報告存 `references/shipcheck_reale_stage6.md`。
+- 過程圖：`overlays/stage6_{full,oars_close}.png`。
