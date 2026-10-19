@@ -1,0 +1,1708 @@
+{
+ "count": 22,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    11,
+    0,
+    0
+   ]
+  },
+  "cells": 288,
+  "design": "basecamp-nightlamp-01m",
+  "file": "basecamp-nightlamp-01m/design/masks/portlids/lid.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "basecamp-nightlamp-01m",
+  "pivot": [
+   6,
+   0,
+   0
+  ],
+  "sha256": "1631fb215a472165703fe791bf976f6177fb0685675a76f8a77817206dd40508",
+  "size": [
+   12,
+   12,
+   2
+  ],
+  "title": "夜燈號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m）",
+  "work": "basecamp-nightlamp-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 夜燈號：22 片（上甲板），蓋板 basecamp-nightlamp-01m-portlid [12, 12, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    115.5,
+    115,
+    124
+   ],
+   "face": {
+    "hinge_surf_s": 205,
+    "n": 75,
+    "resid": 0.61,
+    "rx": -12.27,
+    "rz_fit": 0.38
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     115.5,
+     107.5,
+     121.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 207.0
+   },
+   "gun_model": "砲-P01",
+   "gun_path": "上甲板/砲-P01",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    109,
+    121
+   ],
+   "lid_z": [
+    113,
+    124
+   ],
+   "meta": {
+    "close_deg": 75.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P01",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    111,
+    119
+   ],
+   "open_z": [
+    115,
+    123
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    115.5,
+    206,
+    124
+   ],
+   "face": {
+    "hinge_surf_s": 206,
+    "n": 75,
+    "resid": 0.61,
+    "rx": -12.27,
+    "rz_fit": 0.38
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     115.5,
+     213.5,
+     121.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 208
+   },
+   "gun_model": "砲-S01",
+   "gun_path": "上甲板/砲-S01",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    109,
+    121
+   ],
+   "lid_z": [
+    113,
+    124
+   ],
+   "meta": {
+    "close_deg": 75.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S01",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    111,
+    119
+   ],
+   "open_z": [
+    115,
+    123
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    159,
+    110,
+    121
+   ],
+   "face": {
+    "hinge_surf_s": 210,
+    "n": 54,
+    "resid": 0.52,
+    "rx": -13.85,
+    "rz_fit": 4.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     159.0,
+     102.5,
+     118.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 212.0
+   },
+   "gun_model": "砲-P02",
+   "gun_path": "上甲板/砲-P02",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    153,
+    164
+   ],
+   "lid_z": [
+    110,
+    121
+   ],
+   "meta": {
+    "close_deg": 74.2,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-4"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P02",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    154,
+    163
+   ],
+   "open_z": [
+    112,
+    120
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    175.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    159,
+    211,
+    121
+   ],
+   "face": {
+    "hinge_surf_s": 211,
+    "n": 54,
+    "resid": 0.52,
+    "rx": -13.85,
+    "rz_fit": 4.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     159.0,
+     218.5,
+     118.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 213
+   },
+   "gun_model": "砲-S02",
+   "gun_path": "上甲板/砲-S02",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    153,
+    164
+   ],
+   "lid_z": [
+    110,
+    121
+   ],
+   "meta": {
+    "close_deg": 74.2,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-3"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S02",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    154,
+    163
+   ],
+   "open_z": [
+    112,
+    120
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    4.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    206,
+    107,
+    119
+   ],
+   "face": {
+    "hinge_surf_s": 213,
+    "n": 44,
+    "resid": 0.6,
+    "rx": -14.38,
+    "rz_fit": 2.8
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     206.0,
+     99.5,
+     116.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 214.0
+   },
+   "gun_model": "砲-P03",
+   "gun_path": "上甲板/砲-P03",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    200,
+    211
+   ],
+   "lid_z": [
+    108,
+    119
+   ],
+   "meta": {
+    "close_deg": 73.6,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P03",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    201,
+    210
+   ],
+   "open_z": [
+    109,
+    118
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    177.2
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    206,
+    214,
+    119
+   ],
+   "face": {
+    "hinge_surf_s": 214,
+    "n": 44,
+    "resid": 0.6,
+    "rx": -14.38,
+    "rz_fit": 2.8
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     206.0,
+     221.5,
+     116.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 215
+   },
+   "gun_model": "砲-S03",
+   "gun_path": "上甲板/砲-S03",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    200,
+    211
+   ],
+   "lid_z": [
+    108,
+    119
+   ],
+   "meta": {
+    "close_deg": 73.6,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S03",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    201,
+    210
+   ],
+   "open_z": [
+    109,
+    118
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    2.8
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    253,
+    105,
+    117
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 44,
+    "resid": 0.46,
+    "rx": -10.74,
+    "rz_fit": 0.71
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     253.0,
+     97.5,
+     114.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 216.0
+   },
+   "gun_model": "砲-P04",
+   "gun_path": "上甲板/砲-P04",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    247,
+    258
+   ],
+   "lid_z": [
+    106,
+    117
+   ],
+   "meta": {
+    "close_deg": 77.3,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P04",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    248,
+    257
+   ],
+   "open_z": [
+    107,
+    116
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    253,
+    216,
+    117
+   ],
+   "face": {
+    "hinge_surf_s": 216,
+    "n": 44,
+    "resid": 0.46,
+    "rx": -10.74,
+    "rz_fit": 0.71
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     253.0,
+     223.5,
+     114.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 217
+   },
+   "gun_model": "砲-S04",
+   "gun_path": "上甲板/砲-S04",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    247,
+    258
+   ],
+   "lid_z": [
+    106,
+    117
+   ],
+   "meta": {
+    "close_deg": 77.3,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S04",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    248,
+    257
+   ],
+   "open_z": [
+    107,
+    116
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    300,
+    105,
+    116
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 54,
+    "resid": 0.57,
+    "rx": -15.26,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     300.0,
+     98.5,
+     113.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 216.0
+   },
+   "gun_model": "砲-P05",
+   "gun_path": "上甲板/砲-P05",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    294,
+    305
+   ],
+   "lid_z": [
+    105,
+    116
+   ],
+   "meta": {
+    "close_deg": 72.7,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P05",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    295,
+    304
+   ],
+   "open_z": [
+    106,
+    114
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 1,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    300,
+    216,
+    116
+   ],
+   "face": {
+    "hinge_surf_s": 216,
+    "n": 54,
+    "resid": 0.57,
+    "rx": -15.26,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     300.0,
+     222.5,
+     113.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 217
+   },
+   "gun_model": "砲-S05",
+   "gun_path": "上甲板/砲-S05",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    294,
+    305
+   ],
+   "lid_z": [
+    105,
+    116
+   ],
+   "meta": {
+    "close_deg": 72.7,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S05",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    295,
+    304
+   ],
+   "open_z": [
+    106,
+    114
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 1,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    343,
+    105,
+    115
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 44,
+    "resid": 0.58,
+    "rx": -15.11,
+    "rz_fit": -0.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     343.0,
+     96.5,
+     112.5
+    ],
+    "need_pull": 8.5,
+    "outer_s": 216.0
+   },
+   "gun_model": "砲-P06",
+   "gun_path": "上甲板/砲-P06",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    337,
+    348
+   ],
+   "lid_z": [
+    104,
+    115
+   ],
+   "meta": {
+    "close_deg": 72.9,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P06",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    338,
+    347
+   ],
+   "open_z": [
+    105,
+    114
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    343,
+    216,
+    115
+   ],
+   "face": {
+    "hinge_surf_s": 216,
+    "n": 44,
+    "resid": 0.58,
+    "rx": -15.11,
+    "rz_fit": -0.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     343.0,
+     224.5,
+     112.5
+    ],
+    "need_pull": 8.5,
+    "outer_s": 217
+   },
+   "gun_model": "砲-S06",
+   "gun_path": "上甲板/砲-S06",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    337,
+    348
+   ],
+   "lid_z": [
+    104,
+    115
+   ],
+   "meta": {
+    "close_deg": 72.9,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-11"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S06",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    338,
+    347
+   ],
+   "open_z": [
+    105,
+    114
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    384,
+    105,
+    114
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 54,
+    "resid": 0.58,
+    "rx": -15.89,
+    "rz_fit": -0.65
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     384.0,
+     97.5,
+     111.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 217.0
+   },
+   "gun_model": "砲-P07",
+   "gun_path": "上甲板/砲-P07",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    378,
+    389
+   ],
+   "lid_z": [
+    103,
+    114
+   ],
+   "meta": {
+    "close_deg": 72.1,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-14"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P07",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    379,
+    388
+   ],
+   "open_z": [
+    105,
+    113
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    384,
+    216,
+    114
+   ],
+   "face": {
+    "hinge_surf_s": 216,
+    "n": 54,
+    "resid": 0.58,
+    "rx": -15.89,
+    "rz_fit": -0.65
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     384.0,
+     223.5,
+     111.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 218
+   },
+   "gun_model": "砲-S07",
+   "gun_path": "上甲板/砲-S07",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    378,
+    389
+   ],
+   "lid_z": [
+    103,
+    114
+   ],
+   "meta": {
+    "close_deg": 72.1,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-13"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S07",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    379,
+    388
+   ],
+   "open_z": [
+    105,
+    113
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    425,
+    105,
+    114
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 54,
+    "resid": 0.69,
+    "rx": -15.64,
+    "rz_fit": -1.24
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     425.0,
+     97.5,
+     111.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 217.0
+   },
+   "gun_model": "砲-P08",
+   "gun_path": "上甲板/砲-P08",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    419,
+    430
+   ],
+   "lid_z": [
+    103,
+    114
+   ],
+   "meta": {
+    "close_deg": 72.4,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-16"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P08",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    420,
+    429
+   ],
+   "open_z": [
+    105,
+    113
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    425,
+    216,
+    114
+   ],
+   "face": {
+    "hinge_surf_s": 216,
+    "n": 54,
+    "resid": 0.69,
+    "rx": -15.64,
+    "rz_fit": -1.24
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     425.0,
+     223.5,
+     111.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 218
+   },
+   "gun_model": "砲-S08",
+   "gun_path": "上甲板/砲-S08",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    419,
+    430
+   ],
+   "lid_z": [
+    103,
+    114
+   ],
+   "meta": {
+    "close_deg": 72.4,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-15"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S08",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    420,
+    429
+   ],
+   "open_z": [
+    105,
+    113
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    466,
+    106,
+    115
+   ],
+   "face": {
+    "hinge_surf_s": 214,
+    "n": 44,
+    "resid": 0.62,
+    "rx": -14.75,
+    "rz_fit": -2.73
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     466.0,
+     98.5,
+     112.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 215.0
+   },
+   "gun_model": "砲-P09",
+   "gun_path": "上甲板/砲-P09",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    460,
+    471
+   ],
+   "lid_z": [
+    104,
+    115
+   ],
+   "meta": {
+    "close_deg": 73.3,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-18"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P09",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    461,
+    470
+   ],
+   "open_z": [
+    105,
+    114
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    182.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    466,
+    215,
+    115
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 44,
+    "resid": 0.62,
+    "rx": -14.75,
+    "rz_fit": -2.73
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     466.0,
+     222.5,
+     112.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 216
+   },
+   "gun_model": "砲-S09",
+   "gun_path": "上甲板/砲-S09",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    460,
+    471
+   ],
+   "lid_z": [
+    104,
+    115
+   ],
+   "meta": {
+    "close_deg": 73.3,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-17"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S09",
+   "open_size": [
+    10,
+    10
+   ],
+   "open_x": [
+    461,
+    470
+   ],
+   "open_z": [
+    105,
+    114
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -2.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    513,
+    108,
+    116
+   ],
+   "face": {
+    "hinge_surf_s": 212,
+    "n": 54,
+    "resid": 0.61,
+    "rx": -12.89,
+    "rz_fit": -3.94
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     513.0,
+     101.5,
+     113.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 213.0
+   },
+   "gun_model": "砲-P10",
+   "gun_path": "上甲板/砲-P10",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    507,
+    518
+   ],
+   "lid_z": [
+    105,
+    116
+   ],
+   "meta": {
+    "close_deg": 75.1,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-20"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P10",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    508,
+    517
+   ],
+   "open_z": [
+    107,
+    115
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    183.9
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    513,
+    213,
+    116
+   ],
+   "face": {
+    "hinge_surf_s": 213,
+    "n": 54,
+    "resid": 0.61,
+    "rx": -12.89,
+    "rz_fit": -3.94
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     513.0,
+     219.5,
+     113.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 214
+   },
+   "gun_model": "砲-S10",
+   "gun_path": "上甲板/砲-S10",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    507,
+    518
+   ],
+   "lid_z": [
+    105,
+    116
+   ],
+   "meta": {
+    "close_deg": 75.1,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-19"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S10",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    508,
+    517
+   ],
+   "open_z": [
+    107,
+    115
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -3.9
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    555,
+    112,
+    118
+   ],
+   "face": {
+    "hinge_surf_s": 208,
+    "n": 54,
+    "resid": 0.83,
+    "rx": 1.03,
+    "rz_fit": -15.28
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 3.0,
+    "muzzle": [
+     555.0,
+     110.5,
+     115.5
+    ],
+    "need_pull": 3.5,
+    "outer_s": 207.0
+   },
+   "gun_model": "砲-P11",
+   "gun_path": "上甲板/砲-P11",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    549,
+    560
+   ],
+   "lid_z": [
+    107,
+    118
+   ],
+   "meta": {
+    "close_deg": 89,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-22"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P11",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    550,
+    559
+   ],
+   "open_z": [
+    109,
+    117
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    195.3
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  },
+  {
+   "at": [
+    555,
+    209,
+    118
+   ],
+   "face": {
+    "hinge_surf_s": 209,
+    "n": 54,
+    "resid": 0.83,
+    "rx": 1.03,
+    "rz_fit": -15.28
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 3.0,
+    "muzzle": [
+     555.0,
+     210.5,
+     115.5
+    ],
+    "need_pull": 3.5,
+    "outer_s": 208
+   },
+   "gun_model": "砲-S11",
+   "gun_path": "上甲板/砲-S11",
+   "host": "上甲板",
+   "host_work": "basecamp-nightlamp-01m-deck-upper",
+   "lid_x": [
+    549,
+    560
+   ],
+   "lid_z": [
+    107,
+    118
+   ],
+   "meta": {
+    "close_deg": 89,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-21"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S11",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    550,
+    559
+   ],
+   "open_z": [
+    109,
+    117
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -15.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-nightlamp-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": [
+  {
+   "gun": "上甲板/追擊砲-P",
+   "id": "gun-23",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  },
+  {
+   "gun": "上甲板/追擊砲-S",
+   "id": "gun-24",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  }
+ ]
+}
