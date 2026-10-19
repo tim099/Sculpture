@@ -30,6 +30,9 @@ SHIPS = {
 COL = {'outer': 192, 'inner': 192, 'strap': 73}
 RZ_FLAT = 2.0
 HOUSE_MIN = 4
+# 遊戲匯入檢查量過、⌈至少 ＋ 0.5⌉ 還不夠的那幾片 ⇒ 照遊戲的建議（Blockside 62_ports.js portsIssues：⌈遊戲的至少⌉ ＋ 1）。
+#   ame 2026-10-19（酒館 26434，reimport 748a487）：✗ 4 —— 下層 15 號這裡至少 4.5、遊戲 5.25；上層 17 號這裡 5.5、遊戲 6.25（這裡格心＋角落、遊戲網格表面每 0.25 格）
+HOUSE_GAME = {('lower', '砲門蓋-S15'): 7, ('lower', '砲門蓋-P15'): 7, ('upper', '砲門蓋-S17'): 8, ('upper', '砲門蓋-P17'): 8}
 OUTLIER = 3                  # 蓋板範圍裡外表面離中位數超過 3 格的欄 ＝ 有東西貼著船殼凸出來（餘燼號上層 13 號砲門後緣的鐵件凸 12 格）⇒ 這一片不做
 CLOSE_BIAS = -2.0            # close_deg 少 2°：船殼是凸的，照平面擬合的角度關上會切進鼓出來那一塊（遊戲匯入檢查 v1：憲法號 7、9 號 6–7% 落進船殼）；少 2° 底緣只離開約 0.4 格
 SLAB = 16
@@ -219,6 +222,7 @@ def draft(cache):
             cl = turn(place(lid_samp[S['lid']], pose), place(ha_, pose)[0], place(hb_, pose)[0] - place(ha_, pose)[0], -close)
             min_pull = next(k2 * 0.5 for k2 in range(0, 61) if sum(cross_hits(cl, gw - ax[None] * (k2 * 0.5))) == 0)
             house = max(HOUSE_MIN, int(math.ceil(min_pull + 0.5)))          # 至少留半格：遊戲照網格表面取樣（62_ports.js portHits），跟這裡的格心＋角落不一樣（v1 剛好等於 ⇒ 匯入檢查 ✗ 1–16 點）
+            house = max(house, HOUSE_GAME.get((s, '砲門蓋-' + re.sub(r'^砲-?', '', gname)), 0))   # 半格還不夠的照遊戲量的（HOUSE_GAME）
             meta = {'kind': 'portlid', 'lid_of': g['meta']['id'], 'close_deg': close, 'house': house}
             rows.append({'model': '砲門蓋-' + re.sub(r'^砲-?', '', gname), 'gun_model': gname, 'gun_path': g['path'], 'host': host, 'host_work': L['work'],
                          'source_work': Lw['work'], 'side': 'S' if side > 0 else 'P', 'at': at, 'pivot': [r1(W / 2, 2), 0, 0], 'rotate': [0, 0, rot],
@@ -234,7 +238,7 @@ def draft(cache):
                            cells=W * H * 2, sha256=hashlib.sha256(open(os.path.join(WORKS, Lw['design'], 'design', 'masks', 'portlids', S['lid'] + '.txt'), 'rb').read()).hexdigest(),
                            anchors={'hinge-a': [0, 0, 0], 'hinge-b': [W - 1, 0, 0]}, pivot=[r1(W / 2, 2), 0, 0], meters_per_voxel=0.1),
                'rows': rows, 'count': len(rows), 'skipped': skipped,
-               'rules': {'rz_flat_deg': RZ_FLAT, 'house_min': HOUSE_MIN, 'house_margin': 0.5, 'slab': SLAB, 'outlier': OUTLIER, 'close_bias_deg': CLOSE_BIAS}}
+               'rules': {'rz_flat_deg': RZ_FLAT, 'house_min': HOUSE_MIN, 'house_margin': 0.5, 'house_game': {'%s/%s' % k: v for k, v in sorted(HOUSE_GAME.items())}, 'slab': SLAB, 'outlier': OUTLIER, 'close_bias_deg': CLOSE_BIAS}}
         with open(os.path.join(WORKS, S['design'], 'design', 'portlids_placement_%s.json' % s), 'w', encoding='utf-8', newline='\n') as f:
             json.dump(out, f, ensure_ascii=False, indent=1, sort_keys=True)
             f.write('\n')
@@ -494,6 +498,11 @@ def apply(cache, only=None, step='all'):
                 old = (have.get((r['host_work'], r['model'])) or {}).get('meta') or {}
                 if 'id' in old:
                     meta['id'] = old['id']                                     # 已經發過的物件 id 照留（Blockside admin.py ids 發的；§12.2 改名挪位置都不變）
+                m0 = have.get((r['host_work'], r['model']))
+                if m0 and m0['work'] == r['source_work'] and m0['at'] == r['at'] and m0['pivot'] == r['pivot'] and m0['rotate'] == r['rotate'] \
+                        and m0['scale'] == [1, 1, 1] and m0['mirror'] in ('', 'none') and (m0.get('meta') or {}) == meta:
+                    continue                                                   # 擺法、meta 都沒變 ⇒ 不重落（meta_log 不多記一筆）
+                print('  落', r['host_work'], r['model'], json.dumps(meta, ensure_ascii=False, sort_keys=True))
                 cli(['op=work', 'sub=model', 'persona=' + PERSONA, 'work=' + r['host_work'], 'name=' + r['model'], 'source_work=' + r['source_work'],
                      'at=' + xyz(r['at']), 'pivot=' + xyz(r['pivot']), 'rotate=' + xyz(r['rotate']), 'scale=1', 'mirror=none', 'overwrite=1',
                      'meta=' + json.dumps(meta, ensure_ascii=False, sort_keys=True),
