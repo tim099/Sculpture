@@ -45,7 +45,7 @@
 - 砲：舷側 6 門零碰撞、輪子全著地、砲口伸出；迴旋砲每個角度砲口都在船外、模型不碰東西（船頭那兩門輪子著地 75%）。
 - **匯入檢查**（Blockside 暫存 worktree、`admin.py import --id susquehanna`，⛔ 沒動共用工作區；副本補 geo、drive=steam、cfg.base 10）：**✗ 0、⚠ 0**。額外動力：明輪-S 50%、明輪-P 50%；主機 2、軸 2、鍋爐 4 座；火藥 9／9 門走得到取用點；材質 橡木 989 t、鍋爐 281 t、鐵 505 t。
   第一次 ⚠ 1：船尾迴旋砲砲班 7／8（舵輪貼在砲尾後面）⇒ 舵輪往前挪到 x 200 ⇒ 0。
-- vxk：`crest-001-susquehanna-01m-assembly/exports/susquehanna.vxk`（不進版控）1,789,772 格、checksum 07b53e42；繩 431、帆 13、模型 65（網格 36）；材質 boiler 311,998、iron 64,684 格。
+- vxk：`crest-001-susquehanna-01m-assembly/exports/susquehanna.vxk`（不進版控）1,789,772 格、checksum 07b53e42；繩 431、帆 13、模型 75（網格 42；2026-10-20 TASK-0752 多 4 片砲門蓋板＋6 件甲板陳設，格數不變）；材質 boiler 311,998、iron 64,684 格。
 
 ## 給遊戲那側填的（ships[]）
 - 暫存副本試過的整組（✗ 0 ⚠ 0）：`"drive": "steam", "cfg": {"pump": 15, "base": 10}, "geo": {"spar": [90, 104], "marines": [80, 200], "center": 150, "aim": 85, "aimZ": [30, 480], "deckAim": [90, 110], "rigAim": [200, 470]}`（pump 是猜的）。
