@@ -230,7 +230,7 @@ def main():
     assert r and r['support'][0] == r['support'][1], '爐灶接上煙管之後撞到 %s' % r
     commit(G, [22.0, 16.0, 0], at, False)
     pieces['galley'] = {'cells': len(G), 'size': size(G), 'pivot': [22.0, 16.0, 0], 'chimney_to_z': z, 'source_work': SRC['galley']}
-    row('galley', '爐灶', 'spar', at, False, [22.0, 16.0, 0], r)
+    row('galley', '爐灶', 'spar', at, False, [22.0, 16.0, 0], r); rows[-1]['meta'] = {'kind': 'galley'}   # 爐灶 ＝ 廚房（TASK-0720，造船規格 §9.13）：kind=galley、⛔ 不標 deco（apply_furnish 的 meta 是合併 ⇒ 這裡寫 deco=1 會把廚房改回裝飾）
     put('bitts', bitts(), '繫纜柱', 'lower', halves(840, 880), 865)
     FR = fiferail()
     for key in ('main', 'fore'):
