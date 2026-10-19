@@ -36,7 +36,8 @@ def hull_now(design):
     for x, y, z, c in _read(os.path.join(design, 'masks', 'ports', 'paint.vox.txt')).tolist():
         d[(x, y, z)] = c
     for pc in (os.path.join(design, 'masks', 'masts', 'hull_carve.vox.txt'),    # 蘇士奎哈納號加的：階段七艏斜桅刻掉的船殼格
-               os.path.join(design, 'masks', 'guns', 'pivot_carve.vox.txt')):   # 階段八迴旋砲的砲門
+               os.path.join(design, 'masks', 'guns', 'pivot_carve.vox.txt'),    # 階段八迴旋砲的砲門
+               os.path.join(design, 'masks', 'guns', 'pivot_sweep_carve.vox.txt')):   # 階段八之三：迴旋砲砲門之間的柱子（draft_pivot_sweep.py；2026-10-20）
         if os.path.exists(pc):
             for x, y, z, c in _read(pc).tolist():
                 d.pop((x, y, z), None)
