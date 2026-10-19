@@ -1,0 +1,197 @@
+{
+ "sails": [
+  {
+   "name": "mizzen-lateen",
+   "color": [
+    0.7176,
+    0.698,
+    0.5569
+   ],
+   "recipe": {
+    "res": 16,
+    "fullness": 1.03,
+    "corners": [
+     [
+      205.5,
+      120.5,
+      230.5
+     ],
+     [
+      155.5,
+      120.5,
+      315.5
+     ],
+     [
+      125.5,
+      120.5,
+      205.5
+     ]
+    ],
+    "names": [
+     "tack",
+     "head",
+     "clew"
+    ],
+    "refs": [
+     "model:mizzen/yard-mizzen-gaff/jaws",
+     "model:mizzen/yard-mizzen-gaff/top",
+     "model:mizzen/yard-mizzen-boom/end"
+    ],
+    "pin": [
+     true,
+     true,
+     true
+    ],
+    "bind": [
+     0,
+     2
+    ]
+   },
+   "meta": {
+    "kind": "sail",
+    "mast": "mizzen",
+    "sail": "gaff"
+   }
+  }
+ ],
+ "models": [
+  {
+   "name": "mizzen/yard-mizzen-gaff",
+   "mesh": 52,
+   "origin": [
+    154,
+    119,
+    229
+   ],
+   "bbox": [
+    154,
+    119,
+    229,
+    207,
+    122,
+    317
+   ],
+   "meta": {
+    "diameter_in": 14,
+    "id": "yard-3",
+    "kind": "yard",
+    "length_ft": 32.35,
+    "mast": "mizzen",
+    "pivot_anchor": "pivot",
+    "rotate_z_deg": 0,
+    "sail": "mizzen-lateen",
+    "turn_axis": "z",
+    "yard": "gaff"
+   },
+   "points": {
+    "end": [
+     155.5,
+     120.5,
+     315.5
+    ],
+    "jaws": [
+     205.5,
+     120.5,
+     230.5
+    ],
+    "pivot": [
+     205.5,
+     120.5,
+     230.5
+    ],
+    "top": [
+     155.5,
+     120.5,
+     315.5
+    ]
+   }
+  },
+  {
+   "name": "mizzen/yard-mizzen-boom",
+   "mesh": 53,
+   "origin": [
+    124,
+    119,
+    204
+   ],
+   "bbox": [
+    124,
+    119,
+    204,
+    207,
+    122,
+    207
+   ],
+   "meta": {
+    "diameter_in": 14,
+    "id": "yard-4",
+    "kind": "yard",
+    "length_ft": 26.25,
+    "mast": "mizzen",
+    "pivot_anchor": "pivot",
+    "rotate_z_deg": 0,
+    "sail": "mizzen-lateen",
+    "turn_axis": "z",
+    "yard": "boom"
+   },
+   "points": {
+    "end": [
+     125.5,
+     120.5,
+     205.5
+    ],
+    "jaws": [
+     205.5,
+     120.5,
+     205.5
+    ],
+    "pivot": [
+     205.5,
+     120.5,
+     205.5
+    ],
+    "top": [
+     125.5,
+     120.5,
+     205.5
+    ]
+   }
+  }
+ ],
+ "ropes": [
+  {
+   "name": "mizzen-lateen.sheet-P",
+   "color": [
+    0.6235,
+    0.5882,
+    0.451
+   ],
+   "radius": 0.2,
+   "pts": [
+    125.5,
+    120.5,
+    205.5,
+    145.5,
+    86.5,
+    190.5
+   ],
+   "meta": {
+    "kind": "sheet",
+    "sail": "mizzen-lateen"
+   },
+   "frame": "",
+   "ends": [
+    "sail:mizzen-lateen/clew",
+    "fairlead-mizzen-lateen-sheet-P"
+   ],
+   "bind": [
+    {
+     "k": "yard",
+     "s": 1,
+     "m": "yard-4"
+    },
+    0
+   ]
+  }
+ ]
+}

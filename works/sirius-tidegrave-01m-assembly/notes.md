@@ -1,3 +1,9 @@
+# 2026-10-19 TASK-0744 後桅三角帆下緣固定修正
+
+Tim截圖指出舊版船尾帆被拉歪。三角固定點正確，但bind=[0,2]把跨gaff/boom的下緣中段鎖在原位；改bind=[0]，三角pin與refs全保留。轉0.7rad隔離重現：15點鎖住、51.43格落差；修後0點、0.0000063格。證據與遊戲動態複驗見船殼作品 design/lateen_20261019/README.md。
+
+---
+
 ## 2026-10-18 TASK-0692 甲板陳設完成
 
 新增22模型（19 deco、工作艇1、艉樓燈2），總數191；船體1033347格、502繩、10帆保留且無壞綁定。參考憲法號，來源Credit為basecamp/gura/kotoko/summit。設計、實測、獨立複驗及限制見 works/sirius-tidegrave-01m/design/fittings_20261018/README.md。艇未加船架/繫固；兩燈刻意放大到2.7m。VXK為 works/sirius-tidegrave-01m/exports/fittings_20261018.vxk，尚未匯入遊戲。原全帆Tim人工驗收仍保留。
