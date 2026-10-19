@@ -1,3 +1,9 @@
+# 2026-10-19 TASK-0743 砲門蓋板
+
+參考光榮號與 §9.12，新增30片（lower22、upper8），共用19×17×2子作品；18處凸出構件按規格排除、艏三聯砲不做。開著碰船/砲0、關上碰收回砲0、開口全覆蓋，反向對照通過。鉸鏈曲面角端最多外移1格。實物、來源、讀數與限制見 design/portlids_20261019/README.md、design/verify_portlids.json。觀測圖 overlays/portlids_20261019.png。船體、502繩、10帆保留。
+
+---
+
 ## 2026-10-18 TASK-0692 甲板陳設完成
 
 新增22模型（19 deco、工作艇1、艉樓燈2），總數191；船體1033347格、502繩、10帆保留且無壞綁定。參考憲法號，來源Credit為basecamp/gura/kotoko/summit。設計、實測、獨立複驗及限制見 works/sirius-tidegrave-01m/design/fittings_20261018/README.md。艇未加船架/繫固；兩燈刻意放大到2.7m。VXK為 works/sirius-tidegrave-01m/exports/fittings_20261018.vxk，尚未匯入遊戲。原全帆Tim人工驗收仍保留。

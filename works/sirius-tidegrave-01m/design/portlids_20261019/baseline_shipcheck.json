@@ -1,0 +1,4379 @@
+{
+ "id": "tidegrave",
+ "t": 2,
+ "issues": [
+  {
+   "lv": "warn",
+   "what": "站不下",
+   "where": "送藥手",
+   "msg": "送藥手 站得到 24／25",
+   "fix": "遊戲那側調船員配置，或甲板上留出站位"
+  }
+ ],
+ "info": {
+  "name": "潮墓號",
+  "guns": 54,
+  "crew": 356,
+  "models": 192,
+  "ropes": 502,
+  "sails": 10,
+  "teamFlags": 3,
+  "masts": 3,
+  "mags": 2,
+  "decks": [
+   "d0 下層砲甲板",
+   "d1 上層砲甲板",
+   "d2 露天甲板",
+   "h3 後甲板",
+   "h4 艏樓甲板",
+   "h5 船尾樓甲板"
+  ],
+  "ladders": 7,
+  "rooms": 0,
+  "zw": 52,
+  "hits": 0,
+  "metaKinds": "ship、deck、ladders、magazine、rudder、fairlead、anchor、gun、capstan、boat、wheel、wheel_stand、binnacle、light、yard、powder、sail、flag、sheet、ratline",
+  "ids": "189 件有 id",
+  "deco": "19 個模型（畫質「裝飾」開：畫 19 個）；不算重量、不被打",
+  "galley": "",
+  "drvparts": "",
+  "props": "",
+  "anchors": "左模型＋ring＋hawse、右模型＋ring＋hawse",
+  "materials": "全船預設 橡木（oak）1,033,347 格、723.3 噸",
+  "smooth": "",
+  "smoothN": 0,
+  "gunShort": {
+   "guns": 0,
+   "people": 0
+  },
+  "ropeLadders": "6 座繩梯只給第一人稱爬（頂端不在甲板上 ⇒ 尋路不走）：fore-lower-P、fore-lower-S、main-lower-P、main-lower-S、mizzen-lower-P、mizzen-lower-S",
+  "ropesUnfixed": 0,
+  "funnels": 0,
+  "stations": 6,
+  "mounts": "",
+  "armor": "",
+  "turrets": "",
+  "doors": "",
+  "ports": "",
+  "spins": "舵（rudder × 30°、-30°～30°）；甲板-quarter/舵輪（rudder × 540°、無上限）",
+  "powder": "54／54 門走得到取用點；最遠 11.6 m（甲板-weather/chase-2，送一趟來回約 9.7 秒）"
+ },
+ "binds": [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  [
+   {
+    "k": "rope",
+    "s": 1,
+    "r": "jib-halyard"
+   },
+   0
+  ],
+  null,
+  null,
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-8"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-8"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-8"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-8"
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-8"
+   }
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-8"
+   }
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-9"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-9"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-9"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-9"
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-9"
+   }
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-9"
+   }
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-10"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-10"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-10"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-10"
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-5"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-5"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-5"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-5"
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-5"
+   }
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-5"
+   }
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-6"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-6"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-6"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-6"
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-6"
+   }
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-6"
+   }
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-7"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-7"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-7"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-7"
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "m": "yard-1"
+   }
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   {
+    "k": "yard",
+    "m": "yard-1"
+   }
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-2"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-2"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-2"
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-2"
+   },
+   0
+  ],
+  [
+   {
+    "k": "none",
+    "s": 1
+   },
+   0
+  ],
+  [
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-4"
+   },
+   0
+  ],
+  [
+   {
+    "k": "model",
+    "m": "wheel-1"
+   },
+   0
+  ],
+  null,
+  [
+   0,
+   {
+    "k": "model",
+    "m": "rudder-1"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "wheel-1"
+   },
+   0
+  ],
+  null,
+  [
+   0,
+   {
+    "k": "model",
+    "m": "rudder-1"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-1"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-1"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-2"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-2"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-3"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-3"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-4"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-4"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-5"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-5"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-6"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-6"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-7"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-7"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-8"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-8"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-9"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-9"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-10"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-10"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-11"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-11"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-12"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-12"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-13"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-13"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-14"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-14"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-15"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-15"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-16"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-16"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-17"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-17"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-18"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-18"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-19"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-19"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-20"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-20"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-21"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-21"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-22"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-22"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-23"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-23"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-24"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-24"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-25"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-25"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-26"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-26"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-27"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-27"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-28"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-28"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-29"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-29"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-30"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-30"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-31"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-31"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-32"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-32"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-33"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-33"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-34"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-34"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-35"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-35"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-36"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-36"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-37"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-37"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-38"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-38"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-39"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-39"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-40"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-40"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-41"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-41"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-42"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-42"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-43"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-43"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-44"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-44"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-45"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-45"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-46"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-46"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-47"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-47"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-fwd.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-48"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-aft.guide"
+   }
+  ],
+  [
+   {
+    "k": "model",
+    "m": "gun-48"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-fwd.guide"
+   }
+  ],
+  null,
+  [
+   {
+    "k": "yard",
+    "m": "yard-2"
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-2"
+   }
+  ],
+  [
+   {
+    "k": "yard",
+    "m": "yard-2"
+   },
+   {
+    "k": "yard",
+    "s": 1,
+    "m": "yard-2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S01.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P01.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S02.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P02.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S03.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P03.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S04.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P04.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S05.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P05.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S06.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P06.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S07.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P07.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S08.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P08.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S09.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P09.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S10.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P10.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S11.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P11.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-S12.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-lower-砲-P12.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S01.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P01.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S02.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P02.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S03.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P03.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S04.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P04.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S05.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P05.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S06.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P06.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S07.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P07.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S08.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P08.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S09.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P09.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S10.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P10.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S11.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P11.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-S12.breech-fwd.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-aft"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-aft.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-aft.guide"
+   },
+   0
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-fwd"
+   },
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-fwd.wall"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "甲板-upper-砲-P12.breech-fwd.guide"
+   },
+   0
+  ],
+  null,
+  null,
+  null,
+  null,
+  null,
+  [
+   0,
+   {
+    "k": "rope",
+    "s": 1,
+    "r": "fore-stay"
+   }
+  ],
+  null,
+  null,
+  null,
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-P2"
+   }
+  ],
+  null,
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "fore-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "fore-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "main-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "main-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-P2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ],
+  [
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S0"
+   },
+   {
+    "k": "rope",
+    "r": "mizzen-shroud-S2"
+   }
+  ]
+ ],
+ "card": {
+  "tons": 1729,
+  "len": 49.5,
+  "guns": 54,
+  "gunTypes": {
+   "chase": 6,
+   "long": 48
+  },
+  "volley": 572,
+  "drive": "sail",
+  "sails": 10,
+  "crew": 356
+ }
+}

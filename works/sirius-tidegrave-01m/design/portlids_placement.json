@@ -1,0 +1,2388 @@
+{
+ "count": 30,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    18,
+    0,
+    0
+   ]
+  },
+  "cells": 646,
+  "design": "sirius-tidegrave-01m",
+  "file": "sirius-tidegrave-01m/design/masks/portlids/lid.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "sirius-tidegrave-01m",
+  "pivot": [
+   9.5,
+   0,
+   0
+  ],
+  "sha256": "d300a4aa11b5d943b528b5744acaf5d5927fa068039b8fb032507adaa5f603af",
+  "size": [
+   19,
+   17,
+   2
+  ],
+  "title": "潮墓號 砲門蓋板（上緣鉸鏈，0.1 m）",
+  "work": "sirius-tidegrave-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 潮墓號：30 片（甲板-lower、甲板-upper），蓋板 sirius-tidegrave-01m-portlid [19, 17, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    175.5,
+    76,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 165,
+    "n": 68,
+    "resid": 0.72,
+    "rx": -3.86,
+    "rz_fit": 16.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 2.5,
+    "muzzle": [
+     175.5,
+     74.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 163.0
+   },
+   "gun_model": "砲-P01",
+   "gun_path": "甲板-lower/砲-P01",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    166,
+    184
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 84.1,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P01",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    167,
+    183
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    163.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    175.5,
+    165,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 165,
+    "n": 68,
+    "resid": 0.72,
+    "rx": -3.86,
+    "rz_fit": 16.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 2.5,
+    "muzzle": [
+     175.5,
+     167.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 163
+   },
+   "gun_model": "砲-S01",
+   "gun_path": "甲板-lower/砲-S01",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    166,
+    184
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 84.1,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S01",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    167,
+    183
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    16.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    239.5,
+    64,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 177,
+    "n": 68,
+    "resid": 0.47,
+    "rx": -9.8,
+    "rz_fit": 7.01
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     239.5,
+     60.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 177.0
+   },
+   "gun_model": "砲-P03",
+   "gun_path": "甲板-lower/砲-P03",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    230,
+    248
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 78.2,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P03",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    231,
+    247
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    173
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    239.5,
+    177,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 177,
+    "n": 68,
+    "resid": 0.47,
+    "rx": -9.8,
+    "rz_fit": 7.01
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     239.5,
+     181.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 177
+   },
+   "gun_model": "砲-S03",
+   "gun_path": "甲板-lower/砲-S03",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    230,
+    248
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 78.2,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S03",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    231,
+    247
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    271.5,
+    60,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 181,
+    "n": 68,
+    "resid": 0.5,
+    "rx": -10.73,
+    "rz_fit": 6.66
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     271.5,
+     56.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 181.0
+   },
+   "gun_model": "砲-P04",
+   "gun_path": "甲板-lower/砲-P04",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    262,
+    280
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 77.3,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P04",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    263,
+    279
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    173.3
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    271.5,
+    181,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 181,
+    "n": 68,
+    "resid": 0.5,
+    "rx": -10.73,
+    "rz_fit": 6.66
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     271.5,
+     185.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 181
+   },
+   "gun_model": "砲-S04",
+   "gun_path": "甲板-lower/砲-S04",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    262,
+    280
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 77.3,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S04",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    263,
+    279
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    6.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    303.5,
+    60,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 181,
+    "n": 68,
+    "resid": 0.66,
+    "rx": -12.86,
+    "rz_fit": 1.28
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     303.5,
+     54.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 183.0
+   },
+   "gun_model": "砲-P05",
+   "gun_path": "甲板-lower/砲-P05",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    294,
+    312
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 75.1,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P05",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    295,
+    311
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    303.5,
+    181,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 181,
+    "n": 68,
+    "resid": 0.66,
+    "rx": -12.86,
+    "rz_fit": 1.28
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     303.5,
+     187.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 183
+   },
+   "gun_model": "砲-S05",
+   "gun_path": "甲板-lower/砲-S05",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    294,
+    312
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 75.1,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S05",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    295,
+    311
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    335.5,
+    59,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 182,
+    "n": 68,
+    "resid": 0.62,
+    "rx": -11.03,
+    "rz_fit": 0.43
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     335.5,
+     54.0,
+     77.5
+    ],
+    "need_pull": 4.0,
+    "outer_s": 184.0
+   },
+   "gun_model": "砲-P06",
+   "gun_path": "甲板-lower/砲-P06",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    326,
+    344
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 77,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P06",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    327,
+    343
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    335.5,
+    182,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 182,
+    "n": 68,
+    "resid": 0.62,
+    "rx": -11.03,
+    "rz_fit": 0.43
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     335.5,
+     187.0,
+     77.5
+    ],
+    "need_pull": 4.0,
+    "outer_s": 184
+   },
+   "gun_model": "砲-S06",
+   "gun_path": "甲板-lower/砲-S06",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    326,
+    344
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 77,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-11"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S06",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    327,
+    343
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    367.5,
+    59,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 182,
+    "n": 68,
+    "resid": 0.5,
+    "rx": -11.69,
+    "rz_fit": -2.71
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     367.5,
+     54.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 183.0
+   },
+   "gun_model": "砲-P07",
+   "gun_path": "甲板-lower/砲-P07",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    358,
+    376
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 76.3,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-14"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P07",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    359,
+    375
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    182.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    367.5,
+    182,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 182,
+    "n": 68,
+    "resid": 0.5,
+    "rx": -11.69,
+    "rz_fit": -2.71
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     367.5,
+     187.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 183
+   },
+   "gun_model": "砲-S07",
+   "gun_path": "甲板-lower/砲-S07",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    358,
+    376
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 76.3,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-13"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S07",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    359,
+    375
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -2.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    399.5,
+    60,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 181,
+    "n": 68,
+    "resid": 0.54,
+    "rx": -11.3,
+    "rz_fit": -3.08
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     399.5,
+     55.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 182.0
+   },
+   "gun_model": "砲-P08",
+   "gun_path": "甲板-lower/砲-P08",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    390,
+    408
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 76.7,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-16"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P08",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    391,
+    407
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    183.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    399.5,
+    181,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 181,
+    "n": 68,
+    "resid": 0.54,
+    "rx": -11.3,
+    "rz_fit": -3.08
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     399.5,
+     186.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 182
+   },
+   "gun_model": "砲-S08",
+   "gun_path": "甲板-lower/砲-S08",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    390,
+    408
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 76.7,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-15"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S08",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    391,
+    407
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -3.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    431.5,
+    61.5,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 179,
+    "n": 68,
+    "resid": 0.66,
+    "rx": -10.12,
+    "rz_fit": -6.19
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     431.5,
+     57.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 180.0
+   },
+   "gun_model": "砲-P09",
+   "gun_path": "甲板-lower/砲-P09",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    422,
+    440
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 77.9,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-18"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P09",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    423,
+    439
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    186.2
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    431.5,
+    179.5,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 179,
+    "n": 68,
+    "resid": 0.66,
+    "rx": -10.12,
+    "rz_fit": -6.19
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     431.5,
+     184.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 180
+   },
+   "gun_model": "砲-S09",
+   "gun_path": "甲板-lower/砲-S09",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    422,
+    440
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 77.9,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-17"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S09",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    423,
+    439
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -6.2
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    463.5,
+    65,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 176,
+    "n": 68,
+    "resid": 0.53,
+    "rx": -7.95,
+    "rz_fit": -8.46
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     463.5,
+     61.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 176.0
+   },
+   "gun_model": "砲-P10",
+   "gun_path": "甲板-lower/砲-P10",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    454,
+    472
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 80,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-20"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P10",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    455,
+    471
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    188.5
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    463.5,
+    176,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 176,
+    "n": 68,
+    "resid": 0.53,
+    "rx": -7.95,
+    "rz_fit": -8.46
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 3.5,
+    "muzzle": [
+     463.5,
+     180.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 176
+   },
+   "gun_model": "砲-S10",
+   "gun_path": "甲板-lower/砲-S10",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    454,
+    472
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 80,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-19"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S10",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    455,
+    471
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -8.5
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    495.5,
+    70,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 68,
+    "resid": 0.86,
+    "rx": -5.12,
+    "rz_fit": -10.55
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     495.5,
+     66.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 171.0
+   },
+   "gun_model": "砲-P11",
+   "gun_path": "甲板-lower/砲-P11",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    486,
+    504
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 82.9,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-22"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P11",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    487,
+    503
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    190.6
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    495.5,
+    171,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 68,
+    "resid": 0.86,
+    "rx": -5.12,
+    "rz_fit": -10.55
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     495.5,
+     175.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 171
+   },
+   "gun_model": "砲-S11",
+   "gun_path": "甲板-lower/砲-S11",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    486,
+    504
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 82.9,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-21"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S11",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    487,
+    503
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -10.6
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    527.5,
+    77,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 164,
+    "n": 68,
+    "resid": 0.56,
+    "rx": -0.15,
+    "rz_fit": -18.36
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 1.5,
+    "muzzle": [
+     527.5,
+     76.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 161.0
+   },
+   "gun_model": "砲-P12",
+   "gun_path": "甲板-lower/砲-P12",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    518,
+    536
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 87.8,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-24"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P12",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    519,
+    535
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    198.4
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    527.5,
+    164,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 164,
+    "n": 68,
+    "resid": 0.56,
+    "rx": -0.15,
+    "rz_fit": -18.36
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 1.5,
+    "muzzle": [
+     527.5,
+     165.0,
+     77.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 161
+   },
+   "gun_model": "砲-S12",
+   "gun_path": "甲板-lower/砲-S12",
+   "host": "甲板-lower",
+   "host_work": "sirius-tidegrave-01m-deck-lower",
+   "lid_x": [
+    518,
+    536
+   ],
+   "lid_z": [
+    69,
+    85
+   ],
+   "meta": {
+    "close_deg": 87.8,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-23"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S12",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    519,
+    535
+   ],
+   "open_z": [
+    70,
+    84
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -18.4
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    175.5,
+    79,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 162,
+    "n": 68,
+    "resid": 2.21,
+    "rx": -7.35,
+    "rz_fit": 13.98
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 2.5,
+    "muzzle": [
+     175.5,
+     76.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 161.0
+   },
+   "gun_model": "砲-P01",
+   "gun_path": "甲板-upper/砲-P01",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    166,
+    184
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 80.6,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-26"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P01",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    167,
+    183
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    166
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    175.5,
+    162,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 162,
+    "n": 68,
+    "resid": 2.21,
+    "rx": -7.35,
+    "rz_fit": 13.98
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 2.5,
+    "muzzle": [
+     175.5,
+     165.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 161
+   },
+   "gun_model": "砲-S01",
+   "gun_path": "甲板-upper/砲-S01",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    166,
+    184
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 80.6,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-25"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S01",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    167,
+    183
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    14
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    271.5,
+    66,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 175,
+    "n": 68,
+    "resid": 1.66,
+    "rx": -13.02,
+    "rz_fit": 5.28
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     271.5,
+     61.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 176.0
+   },
+   "gun_model": "砲-P04",
+   "gun_path": "甲板-upper/砲-P04",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    262,
+    280
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 75,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-32"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P04",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    263,
+    279
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    174.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    271.5,
+    175,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 175,
+    "n": 68,
+    "resid": 1.66,
+    "rx": -13.02,
+    "rz_fit": 5.28
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     271.5,
+     180.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 176
+   },
+   "gun_model": "砲-S04",
+   "gun_path": "甲板-upper/砲-S04",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    262,
+    280
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 75,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-31"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S04",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    263,
+    279
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    5.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    399.5,
+    65.5,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 175,
+    "n": 68,
+    "resid": 1.4,
+    "rx": -13.08,
+    "rz_fit": -2.15
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     399.5,
+     60.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 177.0
+   },
+   "gun_model": "砲-P08",
+   "gun_path": "甲板-upper/砲-P08",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    390,
+    408
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 74.9,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-40"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P08",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    391,
+    407
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    182.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    399.5,
+    175.5,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 175,
+    "n": 68,
+    "resid": 1.4,
+    "rx": -13.08,
+    "rz_fit": -2.15
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     399.5,
+     181.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 177
+   },
+   "gun_model": "砲-S08",
+   "gun_path": "甲板-upper/砲-S08",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    390,
+    408
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 74.9,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-39"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S08",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    391,
+    407
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -2.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    495.5,
+    74,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 167,
+    "n": 68,
+    "resid": 1.88,
+    "rx": -9.84,
+    "rz_fit": -7.2
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     495.5,
+     69.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 168.0
+   },
+   "gun_model": "砲-P11",
+   "gun_path": "甲板-upper/砲-P11",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    486,
+    504
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 78.2,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-46"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P11",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    487,
+    503
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    187.2
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  },
+  {
+   "at": [
+    495.5,
+    167,
+    110
+   ],
+   "face": {
+    "hinge_surf_s": 167,
+    "n": 68,
+    "resid": 1.88,
+    "rx": -9.84,
+    "rz_fit": -7.2
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     495.5,
+     172.0,
+     102.5
+    ],
+    "need_pull": 5.0,
+    "outer_s": 168
+   },
+   "gun_model": "砲-S11",
+   "gun_path": "甲板-upper/砲-S11",
+   "host": "甲板-upper",
+   "host_work": "sirius-tidegrave-01m-deck-upper",
+   "lid_x": [
+    486,
+    504
+   ],
+   "lid_z": [
+    94,
+    110
+   ],
+   "meta": {
+    "close_deg": 78.2,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-45"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S11",
+   "open_size": [
+    17,
+    15
+   ],
+   "open_x": [
+    487,
+    503
+   ],
+   "open_z": [
+    95,
+    109
+   ],
+   "pivot": [
+    9.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -7.2
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "sirius-tidegrave-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": [
+  {
+   "gun": "甲板-lower/砲-S02",
+   "id": "gun-3",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [198, 199]；外表面中位數 173.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-lower/砲-P02",
+   "id": "gun-4",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [198, 199]；外表面中位數 173.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S02",
+   "id": "gun-27",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [208, 209, 210]；外表面中位數 169.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P02",
+   "id": "gun-28",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [208, 209, 210]；外表面中位數 169.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S03",
+   "id": "gun-29",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [246, 247, 248]；外表面中位數 173.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P03",
+   "id": "gun-30",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [246, 247, 248]；外表面中位數 173.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S05",
+   "id": "gun-33",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [303, 304, 305]；外表面中位數 177.5）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P05",
+   "id": "gun-34",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [303, 304, 305]；外表面中位數 177.5）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S06",
+   "id": "gun-35",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [341, 342, 343]；外表面中位數 178.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P06",
+   "id": "gun-36",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [341, 342, 343]；外表面中位數 178.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S07",
+   "id": "gun-37",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [360, 361, 362]；外表面中位數 178.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P07",
+   "id": "gun-38",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [360, 361, 362]；外表面中位數 178.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S09",
+   "id": "gun-41",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [436, 437, 438]；外表面中位數 175.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P09",
+   "id": "gun-42",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [436, 437, 438]；外表面中位數 175.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S10",
+   "id": "gun-43",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [455, 456, 457]；外表面中位數 172.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P10",
+   "id": "gun-44",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [455, 456, 457]；外表面中位數 172.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-S12",
+   "id": "gun-47",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [536]；外表面中位數 161.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P12",
+   "id": "gun-48",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [536]；外表面中位數 161.0）⇒ 開關都會撞"
+  }
+ ]
+}
