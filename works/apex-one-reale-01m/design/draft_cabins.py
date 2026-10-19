@@ -112,10 +112,11 @@ def main():
         for (x, z) in rungs:
             for y in ys:
                 lad[(x, y, z)] = C['dark']
-        for k_, (x, z) in enumerate(rungs):             # 扶手：靠中線那一邊
-            z_from = fz + 1 if k_ == 0 else rungs[k_ - 1][1]
-            for zz in range(z_from, z + 3):
-                lad[(x, YC + L['rail_dy'], zz)] = C['dark']
+        for side in (L['dyc'] - L['half'] - 1, L['dyc'] + L['half'] + 1):   # 兩邊扶手（Tim 2026-10-20：少一邊扶手）；甲板裡那一段被下面的 occ2 濾掉
+            for k_, (x, z) in enumerate(rungs):
+                z_from = fz + 1 if k_ == 0 else rungs[k_ - 1][1]
+                for zz in range(z_from, z + 3):
+                    lad[(x, YC + side, zz)] = C['dark']
         xlo = rungs[0][0]
         yc = YC + L['dyc']
         p4 = {'foot': [xlo + 2, yc, fz + 1], 'lo': [rungs[0][0], yc, rungs[0][1] + 1], 'hi': [rungs[-1][0], yc, rungs[-1][1] + 1],

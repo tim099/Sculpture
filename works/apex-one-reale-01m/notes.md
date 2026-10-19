@@ -157,7 +157,7 @@ Tim：「可以試著加一些艙室嗎(或是原本就沒有)」「送藥手&�
 設計 plan.json `cabins`（史料 Marteilhe 1757 附錄〈Description d'une galère armée〉）；產生 `design/draft_cabins.py`（讀遊戲匯入的 .vxk ＝ 作品）⇒ `masks/cabins/{cabins,ladders,deck_carve}.vox.txt`、`cabins_placement.json`、`verify_cabins.json`；落格 `design/tools/build_cabins.py`。
 
 - **史料**：艙底六間，船尾到船頭 gavon、escandolat、compagne（酒水、醃肉）、paillot（餅乾、豆）、taverne（船中：賣酒＋收帆與篷；火藥艙從這間進）、chambre de proue（纜繩、外科醫生的箱子；**病人躺這裡**）。艙深船中 7 pieds ≈ 2.27 m —— 作品船中內底 z 3 到甲板底 z 25（2.3 m），對得上，不用挖。艙口「墊高到中央走道的高度」⇒ 每間從中央走道開艙口放梯子。各間長度史料沒有 ⇒ 設計決定；gavon、escandolat 在船尾、艙底太淺 ⇒ 不做。
-- **子作品**：`-cabins`（關聯 `甲板-hold/艙房`，meta `kind=rooms`）：每間地板（z 8、|dy| ≤ 16，兩旁留縫通底艙 ⇒ 不封空腔）、五道隔艙壁（最前面那道開門通船頭的艙）；`-ladders-cabins`（關聯 `甲板-main/梯子-艙房`，meta `kind=ladders`）：四座梯子（每 3 格一階、靠中線一根扶手）。甲板-main 刻四個艙口（中央走道左半邊 dy −5～−1，右半邊 7 格照樣走）2,300 格。
+- **子作品**：`-cabins`（關聯 `甲板-hold/艙房`，meta `kind=rooms`）：每間地板（z 8、|dy| ≤ 16，兩旁留縫通底艙 ⇒ 不封空腔）、五道隔艙壁（最前面那道開門通船頭的艙）；`-ladders-cabins`（關聯 `甲板-main/梯子-艙房`，meta `kind=ladders`）：四座梯子（每 3 格一階、兩邊扶手 dy −6／0；v1 只做靠中線那一根，Tim 2026-10-20 在遊戲裡看到「少一邊扶手」⇒ 補另一邊 120 格：每座 32／32／28／28，跟原本那根逐座同數，甲板裡那一段由艙口邊代替）。甲板-main 刻四個艙口（中央走道左半邊 dy −5～−1，右半邊 7 格照樣走）2,300 格。
 - **空艙房**（§9.2）：compagne 5.5 × 3.1、paillot 3.9 × 3.1、taverne 2.9 × 3.1（框碰到主桅腳就停）、proue 5.3 × 3.1，淨空都 1.4 m；門 ＝ 梯腳旁那一格。遊戲預設：proue ＝ 醫療艙、taverne ＝ 工坊；compagne、paillot 空著讓玩家配。
 - **甲板 meta**：`甲板-hold` floor 延伸到各間（132:15,182:15,232:9,477:9）；`甲板-main` 加 **`walk`**（遊戲新鍵：走路格照它、判層照 floor）＝ 中央走道頂＋1，兩頭連台階（23 點）。
 - **三角帆桁**：遊戲照 `yard=gaff` 往下風擺到 80° ⇒ 主帆桁前端甩出舷外 13 m、tack 從那裡斜拉到中央走道前端（Tim 看到的「浮空纜線」）。帆桁 meta 本來就有 `rig=lateen`、固定點 `fore` ⇒ 遊戲照它限擺角（前端只能左右移 2.5 m：主 10.7°、前 11.9°）。作品不用改。
