@@ -1,0 +1,2618 @@
+{
+ "count": 34,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    11,
+    0,
+    0
+   ]
+  },
+  "cells": 240,
+  "design": "gura-tridente-01m",
+  "file": "gura-tridente-01m/design/masks/portlids/upper.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "gura-tridente-01m",
+  "pivot": [
+   6,
+   0,
+   0
+  ],
+  "sha256": "5cc2c41dee9d248f85768f474604e0883d3357b0a69dd24c642c1944c4058278",
+  "size": [
+   12,
+   10,
+   2
+  ],
+  "title": "三叉戟號 砲門蓋板・上層砲甲板（上緣鉸鏈，通用部件，0.1 m）",
+  "work": "gura-tridente-01m-portlid-upper"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 三叉戟號 上層砲甲板：34 片（甲板-upper），蓋板 gura-tridente-01m-portlid-upper [12, 10, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    137,
+    135,
+    152
+   ],
+   "face": {
+    "hinge_surf_s": 265,
+    "n": 40,
+    "resid": 0.54,
+    "rx": -13.47,
+    "rz_fit": 7.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     137.0,
+     126.75,
+     146.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 265.0
+   },
+   "gun_model": "砲-P01",
+   "gun_path": "甲板-upper/砲-P01",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    131,
+    142
+   ],
+   "lid_z": [
+    143,
+    152
+   ],
+   "meta": {
+    "close_deg": 74.5,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-70"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P01",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    132,
+    141
+   ],
+   "open_z": [
+    144,
+    151
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    173
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    137,
+    266,
+    152
+   ],
+   "face": {
+    "hinge_surf_s": 266,
+    "n": 40,
+    "resid": 0.54,
+    "rx": -13.47,
+    "rz_fit": 7.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     137.0,
+     274.25,
+     146.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 266
+   },
+   "gun_model": "砲-S01",
+   "gun_path": "甲板-upper/砲-S01",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    131,
+    142
+   ],
+   "lid_z": [
+    143,
+    152
+   ],
+   "meta": {
+    "close_deg": 74.5,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-69"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S01",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    132,
+    141
+   ],
+   "open_z": [
+    144,
+    151
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    169,
+    132,
+    152
+   ],
+   "face": {
+    "hinge_surf_s": 268,
+    "n": 40,
+    "resid": 0.48,
+    "rx": -14.56,
+    "rz_fit": 5.34
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     169.0,
+     122.75,
+     146.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 269.0
+   },
+   "gun_model": "砲-P02",
+   "gun_path": "甲板-upper/砲-P02",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    163,
+    174
+   ],
+   "lid_z": [
+    143,
+    152
+   ],
+   "meta": {
+    "close_deg": 73.4,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-72"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P02",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    164,
+    173
+   ],
+   "open_z": [
+    144,
+    151
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    174.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    169,
+    269,
+    152
+   ],
+   "face": {
+    "hinge_surf_s": 269,
+    "n": 40,
+    "resid": 0.48,
+    "rx": -14.56,
+    "rz_fit": 5.34
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     169.0,
+     278.25,
+     146.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 270
+   },
+   "gun_model": "砲-S02",
+   "gun_path": "甲板-upper/砲-S02",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    163,
+    174
+   ],
+   "lid_z": [
+    143,
+    152
+   ],
+   "meta": {
+    "close_deg": 73.4,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-71"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S02",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    164,
+    173
+   ],
+   "open_z": [
+    144,
+    151
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    5.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    202,
+    130,
+    151
+   ],
+   "face": {
+    "hinge_surf_s": 270,
+    "n": 40,
+    "resid": 0.71,
+    "rx": -13.51,
+    "rz_fit": 1.64
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     202.0,
+     120.75,
+     145.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 271.0
+   },
+   "gun_model": "砲-P03",
+   "gun_path": "甲板-upper/砲-P03",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    196,
+    207
+   ],
+   "lid_z": [
+    142,
+    151
+   ],
+   "meta": {
+    "close_deg": 74.5,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-74"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P03",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    197,
+    206
+   ],
+   "open_z": [
+    143,
+    150
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    202,
+    271,
+    151
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.71,
+    "rx": -13.51,
+    "rz_fit": 1.64
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     202.0,
+     280.25,
+     145.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 272
+   },
+   "gun_model": "砲-S03",
+   "gun_path": "甲板-upper/砲-S03",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    196,
+    207
+   ],
+   "lid_z": [
+    142,
+    151
+   ],
+   "meta": {
+    "close_deg": 74.5,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-73"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S03",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    197,
+    206
+   ],
+   "open_z": [
+    143,
+    150
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    234,
+    129,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.62,
+    "rx": -13.09,
+    "rz_fit": 0.41
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     234.0,
+     119.75,
+     144.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 272.0
+   },
+   "gun_model": "砲-P04",
+   "gun_path": "甲板-upper/砲-P04",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    228,
+    239
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 74.9,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-76"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P04",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    229,
+    238
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    234,
+    272,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.62,
+    "rx": -13.09,
+    "rz_fit": 0.41
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     234.0,
+     281.25,
+     144.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273
+   },
+   "gun_model": "砲-S04",
+   "gun_path": "甲板-upper/砲-S04",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    228,
+    239
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 74.9,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-75"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S04",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    229,
+    238
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    267,
+    129,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.56,
+    "rx": -17.89,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     267.0,
+     118.75,
+     144.25
+    ],
+    "need_pull": 10.25,
+    "outer_s": 272.0
+   },
+   "gun_model": "砲-P05",
+   "gun_path": "甲板-upper/砲-P05",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    261,
+    272
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 70.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-78"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P05",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    262,
+    271
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    267,
+    272,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.56,
+    "rx": -17.89,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     267.0,
+     282.25,
+     144.25
+    ],
+    "need_pull": 10.25,
+    "outer_s": 273
+   },
+   "gun_model": "砲-S05",
+   "gun_path": "甲板-upper/砲-S05",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    261,
+    272
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 70.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-77"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S05",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    262,
+    271
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    299,
+    129,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.56,
+    "rx": -17.89,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     299.0,
+     118.75,
+     144.25
+    ],
+    "need_pull": 10.25,
+    "outer_s": 272.0
+   },
+   "gun_model": "砲-P06",
+   "gun_path": "甲板-upper/砲-P06",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    293,
+    304
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 70.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-80"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P06",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    294,
+    303
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    299,
+    272,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.56,
+    "rx": -17.89,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     299.0,
+     282.25,
+     144.25
+    ],
+    "need_pull": 10.25,
+    "outer_s": 273
+   },
+   "gun_model": "砲-S06",
+   "gun_path": "甲板-upper/砲-S06",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    293,
+    304
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 70.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-79"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S06",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    294,
+    303
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    332,
+    129,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     332.0,
+     118.75,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273.0
+   },
+   "gun_model": "砲-P07",
+   "gun_path": "甲板-upper/砲-P07",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    326,
+    337
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-82"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P07",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    327,
+    336
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    332,
+    272,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     332.0,
+     282.25,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 274
+   },
+   "gun_model": "砲-S07",
+   "gun_path": "甲板-upper/砲-S07",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    326,
+    337
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-81"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S07",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    327,
+    336
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    364,
+    129,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     364.0,
+     118.75,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273.0
+   },
+   "gun_model": "砲-P08",
+   "gun_path": "甲板-upper/砲-P08",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    358,
+    369
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-84"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P08",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    359,
+    368
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    364,
+    272,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     364.0,
+     282.25,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 274
+   },
+   "gun_model": "砲-S08",
+   "gun_path": "甲板-upper/砲-S08",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    358,
+    369
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-83"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S08",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    359,
+    368
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    397,
+    129,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     397.0,
+     118.75,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273.0
+   },
+   "gun_model": "砲-P09",
+   "gun_path": "甲板-upper/砲-P09",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    391,
+    402
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-86"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P09",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    392,
+    401
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    397,
+    272,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     397.0,
+     282.25,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 274
+   },
+   "gun_model": "砲-S09",
+   "gun_path": "甲板-upper/砲-S09",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    391,
+    402
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-85"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S09",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    392,
+    401
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    429,
+    129,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     429.0,
+     118.75,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273.0
+   },
+   "gun_model": "砲-P10",
+   "gun_path": "甲板-upper/砲-P10",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    423,
+    434
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-88"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P10",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    424,
+    433
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    429,
+    272,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     429.0,
+     282.25,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 274
+   },
+   "gun_model": "砲-S10",
+   "gun_path": "甲板-upper/砲-S10",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    423,
+    434
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-87"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S10",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    424,
+    433
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    462,
+    129,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     462.0,
+     118.75,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273.0
+   },
+   "gun_model": "砲-P11",
+   "gun_path": "甲板-upper/砲-P11",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    456,
+    467
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-90"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P11",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    457,
+    466
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    462,
+    272,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     462.0,
+     282.25,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 274
+   },
+   "gun_model": "砲-S11",
+   "gun_path": "甲板-upper/砲-S11",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    456,
+    467
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-89"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S11",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    457,
+    466
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    494,
+    129,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     494.0,
+     118.75,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273.0
+   },
+   "gun_model": "砲-P12",
+   "gun_path": "甲板-upper/砲-P12",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    488,
+    499
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-92"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P12",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    489,
+    498
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    494,
+    272,
+    149
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.59,
+    "rx": -17.98,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     494.0,
+     282.25,
+     143.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 274
+   },
+   "gun_model": "砲-S12",
+   "gun_path": "甲板-upper/砲-S12",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    488,
+    499
+   ],
+   "lid_z": [
+    140,
+    149
+   ],
+   "meta": {
+    "close_deg": 70,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-91"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S12",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    489,
+    498
+   ],
+   "open_z": [
+    141,
+    148
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    527,
+    129,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.58,
+    "rx": -13.18,
+    "rz_fit": -0.41
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     527.0,
+     119.75,
+     144.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 272.0
+   },
+   "gun_model": "砲-P13",
+   "gun_path": "甲板-upper/砲-P13",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    521,
+    532
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 74.8,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-94"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P13",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    522,
+    531
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    527,
+    272,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 272,
+    "n": 40,
+    "resid": 0.58,
+    "rx": -13.18,
+    "rz_fit": -0.41
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     527.0,
+     281.25,
+     144.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 273
+   },
+   "gun_model": "砲-S13",
+   "gun_path": "甲板-upper/砲-S13",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    521,
+    532
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 74.8,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-93"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S13",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    522,
+    531
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    559,
+    130,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 270,
+    "n": 40,
+    "resid": 0.72,
+    "rx": -13.28,
+    "rz_fit": -2.05
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     559.0,
+     120.75,
+     144.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 271.0
+   },
+   "gun_model": "砲-P14",
+   "gun_path": "甲板-upper/砲-P14",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    553,
+    564
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 74.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-96"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P14",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    554,
+    563
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    182
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    559,
+    271,
+    150
+   ],
+   "face": {
+    "hinge_surf_s": 271,
+    "n": 40,
+    "resid": 0.72,
+    "rx": -13.28,
+    "rz_fit": -2.05
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     559.0,
+     280.25,
+     144.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 272
+   },
+   "gun_model": "砲-S14",
+   "gun_path": "甲板-upper/砲-S14",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    553,
+    564
+   ],
+   "lid_z": [
+    141,
+    150
+   ],
+   "meta": {
+    "close_deg": 74.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-95"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S14",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    554,
+    563
+   ],
+   "open_z": [
+    142,
+    149
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -2
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    592,
+    132,
+    151
+   ],
+   "face": {
+    "hinge_surf_s": 268,
+    "n": 40,
+    "resid": 0.53,
+    "rx": -14.56,
+    "rz_fit": -5.71
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     592.0,
+     123.75,
+     145.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 268.0
+   },
+   "gun_model": "砲-P15",
+   "gun_path": "甲板-upper/砲-P15",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    586,
+    597
+   ],
+   "lid_z": [
+    142,
+    151
+   ],
+   "meta": {
+    "close_deg": 73.4,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-98"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P15",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    587,
+    596
+   ],
+   "open_z": [
+    143,
+    150
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    185.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    592,
+    269,
+    151
+   ],
+   "face": {
+    "hinge_surf_s": 269,
+    "n": 40,
+    "resid": 0.53,
+    "rx": -14.56,
+    "rz_fit": -5.71
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     592.0,
+     277.25,
+     145.25
+    ],
+    "need_pull": 9.25,
+    "outer_s": 269
+   },
+   "gun_model": "砲-S15",
+   "gun_path": "甲板-upper/砲-S15",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    586,
+    597
+   ],
+   "lid_z": [
+    142,
+    151
+   ],
+   "meta": {
+    "close_deg": 73.4,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-97"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S15",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    587,
+    596
+   ],
+   "open_z": [
+    143,
+    150
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -5.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    624,
+    137,
+    152
+   ],
+   "face": {
+    "hinge_surf_s": 263,
+    "n": 40,
+    "resid": 0.55,
+    "rx": -13.85,
+    "rz_fit": -9.04
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     624.0,
+     128.75,
+     146.25
+    ],
+    "need_pull": 8.25,
+    "outer_s": 264.0
+   },
+   "gun_model": "砲-P16",
+   "gun_path": "甲板-upper/砲-P16",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    618,
+    629
+   ],
+   "lid_z": [
+    143,
+    152
+   ],
+   "meta": {
+    "close_deg": 74.2,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-100"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P16",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    619,
+    628
+   ],
+   "open_z": [
+    144,
+    151
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    189
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    624,
+    264,
+    152
+   ],
+   "face": {
+    "hinge_surf_s": 264,
+    "n": 40,
+    "resid": 0.55,
+    "rx": -13.85,
+    "rz_fit": -9.04
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     624.0,
+     272.25,
+     146.25
+    ],
+    "need_pull": 8.25,
+    "outer_s": 265
+   },
+   "gun_model": "砲-S16",
+   "gun_path": "甲板-upper/砲-S16",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    618,
+    629
+   ],
+   "lid_z": [
+    143,
+    152
+   ],
+   "meta": {
+    "close_deg": 74.2,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-99"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S16",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    619,
+    628
+   ],
+   "open_z": [
+    144,
+    151
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -9
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    657,
+    143,
+    153
+   ],
+   "face": {
+    "hinge_surf_s": 257,
+    "n": 40,
+    "resid": 0.51,
+    "rx": -11.41,
+    "rz_fit": -15.53
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 5.5,
+    "muzzle": [
+     657.0,
+     136.75,
+     147.25
+    ],
+    "need_pull": 8.25,
+    "outer_s": 256.0
+   },
+   "gun_model": "砲-P17",
+   "gun_path": "甲板-upper/砲-P17",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    651,
+    662
+   ],
+   "lid_z": [
+    144,
+    153
+   ],
+   "meta": {
+    "close_deg": 76.6,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-102"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P17",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    652,
+    661
+   ],
+   "open_z": [
+    145,
+    152
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    195.5
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  },
+  {
+   "at": [
+    657,
+    258,
+    153
+   ],
+   "face": {
+    "hinge_surf_s": 258,
+    "n": 40,
+    "resid": 0.51,
+    "rx": -11.41,
+    "rz_fit": -15.53
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 5.5,
+    "muzzle": [
+     657.0,
+     264.25,
+     147.25
+    ],
+    "need_pull": 8.25,
+    "outer_s": 257
+   },
+   "gun_model": "砲-S17",
+   "gun_path": "甲板-upper/砲-S17",
+   "host": "甲板-upper",
+   "host_work": "gura-tridente-01m-deck-upper",
+   "lid_x": [
+    651,
+    662
+   ],
+   "lid_z": [
+    144,
+    153
+   ],
+   "meta": {
+    "close_deg": 76.6,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-101"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S17",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    652,
+    661
+   ],
+   "open_z": [
+    145,
+    152
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -15.5
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-tridente-01m-portlid-upper"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": [
+  {
+   "gun": "甲板-upper/砲-S18",
+   "id": "gun-103",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [683, 694]；外表面中位數 244.5）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/砲-P18",
+   "id": "gun-104",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [683, 694]；外表面中位數 243.5）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-upper/三叉戟砲-船尾-P",
+   "id": "gun-105",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  },
+  {
+   "gun": "甲板-upper/三叉戟砲-船尾-S",
+   "id": "gun-106",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  }
+ ]
+}
