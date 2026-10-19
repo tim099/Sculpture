@@ -145,3 +145,6 @@ TASK-0546仍有model-aware新發現未結：main/fore course lift直拉桅head�
 ## 接續入口
 
 先讀本檔、CHECKPOINT及獨立REPORT。正式Blockside匯入與舊nav_deck_candidate覆核仍待遊戲端接入；舊候選不得直接套到搬家後持續變動的源碼。完整階段安全再生及各子單尚未簽清，不要盲跑build_structure.main/build_rig.main。repair_20261015_*是分階段有基線守門的修正工具，不是通用建船器；standing初始修法之後還有main_feet與backstay_heads修正，不能跳過後兩者。
+
+
+TASK-0747（2026-10-19）：舷砲砲門已由30補齊48片。兩側船錨前移0.3m；lower02 house6，其餘既有30片與ID保留。船殼、海蝕飾條、10帆不變。新接續入口：主船 design/portlids_complete_20261019/README.md與complete.py；不要單跑舊tools/portlids.py draft/apply，會恢復排除18片。遊戲shipcheck錯誤0，砲門警告0，僅既有送藥手24/25警告。

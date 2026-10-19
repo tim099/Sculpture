@@ -82,3 +82,6 @@ TASK-0546仍有model-aware新發現未結：main/fore course lift直拉桅head�
 十桁與非同步雙角域連續掃掠通過；最終48支索梯繩及2後支索含半徑的完整角域通過。全302繩、10帆23場景、fine布對body/model/其他帆/索具的讀數與限制見design/DYNAMIC_20261015.md與dynamic_20261015/independent_final。完整掛帆在遊戲物理中仍有全自由、不透明三角穿桅/桁/繩的確證，已另開TASK-0603；自有繫砲/舵輪硬體接觸原值亦保留，未泛豁免。
 
 球在Sirius（船的附件接觸逐件簽收、完整再生與主單後續），TASK-0603目前尚無參與者，需遊戲物理修正後再對同一輸入回歸。不能因船檔已修或測試已跑完就結本單。
+
+
+TASK-0747（2026-10-19）：舷砲砲門已由30補齊48片。兩側船錨前移0.3m；lower02 house6，其餘既有30片與ID保留。船殼、海蝕飾條、10帆不變。新接續入口：主船 design/portlids_complete_20261019/README.md與complete.py；不要單跑舊tools/portlids.py draft/apply，會恢復排除18片。遊戲shipcheck錯誤0，砲門警告0，僅既有送藥手24/25警告。
