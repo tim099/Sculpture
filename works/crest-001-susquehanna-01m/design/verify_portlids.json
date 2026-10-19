@@ -1,0 +1,229 @@
+{
+ "applied": {
+  "anchors_ok": true,
+  "cells": 242,
+  "color_diff": 0,
+  "extra": 0,
+  "missing": 0,
+  "models_bad": [],
+  "parts_hinge_max_diff": 0.0
+ },
+ "note": "portlids.py check —— 蘇士奎哈納號：現況 ＝ 組裝件 export list（1789772 格）＋ 其他模型 56 個（gun、portlid 以外；實際的格，32 個退回外框：繞 x／y 轉或不在 at 0 的關聯裡）；蓋板每格 9 個取樣點",
+ "rows": [
+  {
+   "close_deg": 82.1,
+   "closed": {
+    "center_below_hinge": 4.88,
+    "center_out_of_hinge": 1.18,
+    "hits_gun_housed": 0,
+    "hits_ship": 22,
+    "hole_covered": "81/81",
+    "ship_pct": 1.01
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 7.75
+   },
+   "hinge_a": [
+    309.5,
+    135.5,
+    108.5
+   ],
+   "hinge_b": [
+    299.5,
+    135.5,
+    108.5
+   ],
+   "house": 9,
+   "lid_of": "gun-2",
+   "model": "砲門蓋-P01",
+   "open": {
+    "box": [
+     299.0,
+     125.0,
+     108.0,
+     310.0,
+     136.0,
+     110.0
+    ],
+    "clear_above_gun": 2.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 2016,
+    "mirror_y_center_below_hinge": -5.02
+   },
+   "side": "P"
+  },
+  {
+   "close_deg": 82.1,
+   "closed": {
+    "center_below_hinge": 4.88,
+    "center_out_of_hinge": 1.18,
+    "hits_gun_housed": 0,
+    "hits_ship": 22,
+    "hole_covered": "81/81",
+    "ship_pct": 1.01
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 7.75
+   },
+   "hinge_a": [
+    299.5,
+    265.5,
+    108.5
+   ],
+   "hinge_b": [
+    309.5,
+    265.5,
+    108.5
+   ],
+   "house": 9,
+   "lid_of": "gun-1",
+   "model": "砲門蓋-S01",
+   "open": {
+    "box": [
+     299.0,
+     265.0,
+     108.0,
+     310.0,
+     276.0,
+     110.0
+    ],
+    "clear_above_gun": 2.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 2016
+   },
+   "side": "S"
+  },
+  {
+   "close_deg": 78,
+   "closed": {
+    "center_below_hinge": 4.79,
+    "center_out_of_hinge": 1.53,
+    "hits_gun_housed": 0,
+    "hits_ship": 18,
+    "hole_covered": "81/81",
+    "ship_pct": 0.83
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.75
+   },
+   "hinge_a": [
+    361.5,
+    135.5,
+    107.5
+   ],
+   "hinge_b": [
+    351.5,
+    135.5,
+    107.5
+   ],
+   "house": 8,
+   "lid_of": "gun-4",
+   "model": "砲門蓋-P02",
+   "open": {
+    "box": [
+     351.0,
+     125.0,
+     107.0,
+     362.0,
+     136.0,
+     109.0
+    ],
+    "clear_above_gun": 2.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 1873,
+    "mirror_y_center_below_hinge": -4.99
+   },
+   "side": "P"
+  },
+  {
+   "close_deg": 78,
+   "closed": {
+    "center_below_hinge": 4.79,
+    "center_out_of_hinge": 1.53,
+    "hits_gun_housed": 0,
+    "hits_ship": 18,
+    "hole_covered": "81/81",
+    "ship_pct": 0.83
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.75
+   },
+   "hinge_a": [
+    351.5,
+    265.5,
+    107.5
+   ],
+   "hinge_b": [
+    361.5,
+    265.5,
+    107.5
+   ],
+   "house": 8,
+   "lid_of": "gun-3",
+   "model": "砲門蓋-S02",
+   "open": {
+    "box": [
+     351.0,
+     265.0,
+     107.0,
+     362.0,
+     276.0,
+     109.0
+    ],
+    "clear_above_gun": 2.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 1873
+   },
+   "side": "S"
+  }
+ ],
+ "summary": {
+  "P": 2,
+  "center_below_hinge": [
+   4.79,
+   4.88
+  ],
+  "center_out_of_hinge": [
+   1.18,
+   1.53
+  ],
+  "closed_hits_gun_housed": 0,
+  "closed_ship_pct_max": 1.01,
+  "closed_ship_pct_over5": [],
+  "gun_housed_hits_ship": 0,
+  "hole_not_covered": [],
+  "house": [
+   8,
+   9
+  ],
+  "house_slack": [
+   1.0,
+   1.0
+  ],
+  "lids": 4,
+  "open_hits_gun": 0,
+  "open_hits_ship": 0,
+  "reverse_house0_lids_hit": 4,
+  "reverse_mirror_y_up": 2
+ }
+}

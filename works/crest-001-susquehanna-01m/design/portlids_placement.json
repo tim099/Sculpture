@@ -1,0 +1,358 @@
+{
+ "count": 4,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    10,
+    0,
+    0
+   ]
+  },
+  "cells": 242,
+  "design": "crest-001-susquehanna-01m",
+  "file": "crest-001-susquehanna-01m/design/masks/portlids/lid.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "crest-001-susquehanna-01m",
+  "pivot": [
+   5.5,
+   0,
+   0
+  ],
+  "sha256": "a38a245d3f3f31cab969df92f9fd7957fcd5bfc8f3b067cf4e26bdac1a51d99a",
+  "size": [
+   11,
+   11,
+   2
+  ],
+  "title": "蘇士奎哈納號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m）",
+  "work": "crest-001-susquehanna-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 蘇士奎哈納號：4 片（甲板-gun），蓋板 crest-001-susquehanna-01m-portlid [11, 11, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    304.5,
+    136,
+    108
+   ],
+   "face": {
+    "hinge_surf_s": 264,
+    "n": 40,
+    "resid": 0.58,
+    "rx": -5.88,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     304.5,
+     128.25,
+     103.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 265.0
+   },
+   "gun_model": "砲-P01",
+   "gun_path": "甲板-gun/砲-P01",
+   "host": "甲板-gun",
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "lid_x": [
+    299,
+    309
+   ],
+   "lid_z": [
+    98,
+    108
+   ],
+   "meta": {
+    "close_deg": 82.1,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P01",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    300,
+    308
+   ],
+   "open_z": [
+    99,
+    107
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "crest-001-susquehanna-01m-portlid"
+  },
+  {
+   "at": [
+    304.5,
+    265,
+    108
+   ],
+   "face": {
+    "hinge_surf_s": 265,
+    "n": 40,
+    "resid": 0.58,
+    "rx": -5.88,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     304.5,
+     272.75,
+     103.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 266
+   },
+   "gun_model": "砲-S01",
+   "gun_path": "甲板-gun/砲-S01",
+   "host": "甲板-gun",
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "lid_x": [
+    299,
+    309
+   ],
+   "lid_z": [
+    98,
+    108
+   ],
+   "meta": {
+    "close_deg": 82.1,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S01",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    300,
+    308
+   ],
+   "open_z": [
+    99,
+    107
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "crest-001-susquehanna-01m-portlid"
+  },
+  {
+   "at": [
+    356.5,
+    136,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 264,
+    "n": 40,
+    "resid": 0.65,
+    "rx": -9.99,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     356.5,
+     128.25,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 265.0
+   },
+   "gun_model": "砲-P02",
+   "gun_path": "甲板-gun/砲-P02",
+   "host": "甲板-gun",
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "lid_x": [
+    351,
+    361
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 78,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-4"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P02",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    352,
+    360
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "crest-001-susquehanna-01m-portlid"
+  },
+  {
+   "at": [
+    356.5,
+    265,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 265,
+    "n": 40,
+    "resid": 0.65,
+    "rx": -9.99,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     356.5,
+     272.75,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 266
+   },
+   "gun_model": "砲-S02",
+   "gun_path": "甲板-gun/砲-S02",
+   "host": "甲板-gun",
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "lid_x": [
+    351,
+    361
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 78,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-3"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S02",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    352,
+    360
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "crest-001-susquehanna-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": [
+  {
+   "gun": "甲板-gun/砲-S03",
+   "id": "gun-5",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412]；外表面中位數 267.0）⇒ 開關都會撞"
+  },
+  {
+   "gun": "甲板-gun/砲-P03",
+   "id": "gun-6",
+   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412]；外表面中位數 266.0）⇒ 開關都會撞"
+  }
+ ]
+}
