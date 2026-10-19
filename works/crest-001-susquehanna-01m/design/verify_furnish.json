@@ -1,0 +1,255 @@
+{
+ "note": "draft_furnish.py —— 現況 ＝ 組裝件 links=all（1779220 格）＋ 模型外框 69；前迴旋砲轉動範圍留空 [{'gun': '甲板-gun/砲-10in-前S', 'x': [784, 829], 'y': [217, 262]}, {'gun': '甲板-gun/砲-10in-前P', 'x': [784, 829], 'y': [139, 184]}]",
+ "ranges": {
+  "砲彈架-P": [
+   358.5,
+   358.5
+  ],
+  "砲彈架-S": [
+   358.5,
+   358.5
+  ],
+  "繫索栓圍欄-fore": [
+   704.0,
+   704.0
+  ],
+  "繫索栓圍欄-main": [
+   431.0,
+   431.0
+  ],
+  "繫索栓圍欄-mizzen": [
+   263.0,
+   263.0
+  ],
+  "繫纜柱": [
+   790.0,
+   858.0
+  ]
+ },
+ "rows": [
+  {
+   "at": [
+    263.0,
+    200.5,
+    93.0
+   ],
+   "box": [
+    253.4,
+    190.9,
+    93.15,
+    272.6,
+    210.1,
+    102.35
+   ],
+   "candidates": 1,
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫索栓圍欄-mizzen",
+   "path": "甲板-gun/繫索栓圍欄-mizzen",
+   "piece": "fiferail",
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-fiferail",
+   "support": [
+    72,
+    72
+   ]
+  },
+  {
+   "at": [
+    431.0,
+    200.5,
+    90.0
+   ],
+   "box": [
+    421.4,
+    190.9,
+    90.15,
+    440.6,
+    210.1,
+    99.35
+   ],
+   "candidates": 1,
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫索栓圍欄-main",
+   "path": "甲板-gun/繫索栓圍欄-main",
+   "piece": "fiferail",
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-fiferail",
+   "support": [
+    72,
+    72
+   ]
+  },
+  {
+   "at": [
+    704.0,
+    200.5,
+    93.0
+   ],
+   "box": [
+    694.4,
+    190.9,
+    93.15,
+    713.6,
+    210.1,
+    102.35
+   ],
+   "candidates": 1,
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫索栓圍欄-fore",
+   "path": "甲板-gun/繫索栓圍欄-fore",
+   "piece": "fiferail",
+   "pivot": [
+    19.5,
+    19.5,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-fiferail",
+   "support": [
+    72,
+    72
+   ]
+  },
+  {
+   "at": [
+    845.0,
+    200.5,
+    99.0
+   ],
+   "box": [
+    841.4,
+    190.4,
+    99.15,
+    848.6,
+    210.6,
+    110.85
+   ],
+   "candidates": 113,
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "繫纜柱",
+   "path": "甲板-gun/繫纜柱",
+   "piece": "bitts",
+   "pivot": [
+    7.5,
+    20.5,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-bitts",
+   "support": [
+    162,
+    162
+   ]
+  },
+  {
+   "at": [
+    358.5,
+    212.0,
+    91.0
+   ],
+   "box": [
+    345.15,
+    212.15,
+    91.15,
+    371.85,
+    213.85,
+    95.35
+   ],
+   "candidates": 14,
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "none",
+   "model": "砲彈架-S",
+   "path": "甲板-gun/砲彈架-S",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-shotrack",
+   "support": [
+    216,
+    216
+   ]
+  },
+  {
+   "at": [
+    358.5,
+    189.0,
+    91.0
+   ],
+   "box": [
+    345.15,
+    187.15,
+    91.15,
+    371.85,
+    188.85,
+    95.35
+   ],
+   "candidates": 14,
+   "host_work": "crest-001-susquehanna-01m-deck-gun",
+   "meta": {
+    "deco": 1
+   },
+   "mirror": "y",
+   "model": "砲彈架-P",
+   "path": "甲板-gun/砲彈架-P",
+   "piece": "shotrack",
+   "pivot": [
+    27.0,
+    0.0,
+    0
+   ],
+   "scale": 0.5,
+   "source_work": "kotoko-napoleon-01m-shotrack",
+   "support": [
+    216,
+    216
+   ]
+  }
+ ],
+ "sources": {
+  "bitts": {
+   "cells": 5610,
+   "work": "kotoko-napoleon-01m-bitts"
+  },
+  "fiferail": {
+   "cells": 1980,
+   "work": "kotoko-napoleon-01m-fiferail"
+  },
+  "shotrack": {
+   "cells": 1543,
+   "work": "kotoko-napoleon-01m-shotrack"
+  }
+ }
+}
