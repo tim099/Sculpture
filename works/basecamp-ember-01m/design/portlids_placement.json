@@ -1,5 +1,5 @@
 {
- "count": 48,
+ "count": 64,
  "lid": {
   "anchors": {
    "hinge-a": [
@@ -32,7 +32,7 @@
   "title": "憲法號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m；餘燼號也用）",
   "work": "basecamp-frigate-constitution-01m-portlid"
  },
- "note": "portlids.py draft（造船規格 §9.12）—— 餘燼號：48 片（甲板-lower、甲板-upper），蓋板 basecamp-frigate-constitution-01m-portlid [13, 11, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "note": "portlids.py draft（造船規格 §9.12）—— 餘燼號：64 片（甲板-lower、甲板-upper），蓋板 basecamp-frigate-constitution-01m-portlid [13, 11, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
  "rows": [
   {
    "at": [
@@ -929,6 +929,156 @@
     0,
     0,
     4
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    390.5,
+    100,
+    97
+   ],
+   "face": {
+    "hinge_surf_s": 220,
+    "n": 55,
+    "resid": 0.66,
+    "rx": -23.2,
+    "rz_fit": 2.3
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     390.5,
+     91.5,
+     93.25
+    ],
+    "need_pull": 5.5,
+    "outer_s": 224.0
+   },
+   "gun_model": "砲L-P07",
+   "gun_path": "甲板-lower/砲L-P07",
+   "host": "甲板-lower",
+   "host_work": "basecamp-ember-01m-deck-lower",
+   "lid_x": [
+    384,
+    396
+   ],
+   "lid_z": [
+    87,
+    97
+   ],
+   "meta": {
+    "close_deg": 64.8,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-13"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P07",
+   "open_size": [
+    11,
+    8
+   ],
+   "open_x": [
+    385,
+    395
+   ],
+   "open_z": [
+    89,
+    96
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    177.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    390.5,
+    221,
+    97
+   ],
+   "face": {
+    "hinge_surf_s": 221,
+    "n": 55,
+    "resid": 0.66,
+    "rx": -23.2,
+    "rz_fit": 2.3
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     390.5,
+     229.5,
+     93.25
+    ],
+    "need_pull": 5.5,
+    "outer_s": 225
+   },
+   "gun_model": "砲L-S07",
+   "gun_path": "甲板-lower/砲L-S07",
+   "host": "甲板-lower",
+   "host_work": "basecamp-ember-01m-deck-lower",
+   "lid_x": [
+    384,
+    396
+   ],
+   "lid_z": [
+    87,
+    97
+   ],
+   "meta": {
+    "close_deg": 64.8,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S07",
+   "open_size": [
+    11,
+    8
+   ],
+   "open_x": [
+    385,
+    395
+   ],
+   "open_z": [
+    89,
+    96
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    2.3
    ],
    "scale": 1,
    "side": "S",
@@ -1986,6 +2136,156 @@
   },
   {
    "at": [
+    652.5,
+    106,
+    101
+   ],
+   "face": {
+    "hinge_surf_s": 214,
+    "n": 62,
+    "resid": 0.51,
+    "rx": -7.99,
+    "rz_fit": -8.75
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     652.5,
+     102.5,
+     97.25
+    ],
+    "need_pull": 5.5,
+    "outer_s": 213.0
+   },
+   "gun_model": "砲L-P15",
+   "gun_path": "甲板-lower/砲L-P15",
+   "host": "甲板-lower",
+   "host_work": "basecamp-ember-01m-deck-lower",
+   "lid_x": [
+    646,
+    658
+   ],
+   "lid_z": [
+    91,
+    101
+   ],
+   "meta": {
+    "close_deg": 80,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-29"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P15",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    648,
+    656
+   ],
+   "open_z": [
+    92,
+    100
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    188.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    652.5,
+    215,
+    101
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 62,
+    "resid": 0.51,
+    "rx": -7.99,
+    "rz_fit": -8.75
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     652.5,
+     218.5,
+     97.25
+    ],
+    "need_pull": 5.5,
+    "outer_s": 214
+   },
+   "gun_model": "砲L-S15",
+   "gun_path": "甲板-lower/砲L-S15",
+   "host": "甲板-lower",
+   "host_work": "basecamp-ember-01m-deck-lower",
+   "lid_x": [
+    646,
+    658
+   ],
+   "lid_z": [
+    91,
+    101
+   ],
+   "meta": {
+    "close_deg": 80,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-28"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S15",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    648,
+    656
+   ],
+   "open_z": [
+    92,
+    100
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -8.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
     686.5,
     112,
     102
@@ -2129,6 +2429,156 @@
     0,
     0,
     -14.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    190.5,
+    113,
+    123
+   ],
+   "face": {
+    "hinge_surf_s": 207,
+    "n": 44,
+    "resid": 0.59,
+    "rx": -0.0,
+    "rz_fit": 4.74
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     190.5,
+     106.5,
+     117.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 207.0
+   },
+   "gun_model": "砲U-P01",
+   "gun_path": "甲板-upper/砲U-P01",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    184,
+    196
+   ],
+   "lid_z": [
+    113,
+    123
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-38"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P01",
+   "open_size": [
+    11,
+    9
+   ],
+   "open_x": [
+    185,
+    195
+   ],
+   "open_z": [
+    114,
+    122
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    175.3
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    190.5,
+    208,
+    123
+   ],
+   "face": {
+    "hinge_surf_s": 208,
+    "n": 44,
+    "resid": 0.59,
+    "rx": -0.0,
+    "rz_fit": 4.74
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     190.5,
+     214.5,
+     117.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 208
+   },
+   "gun_model": "砲U-S01",
+   "gun_path": "甲板-upper/砲U-S01",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    184,
+    196
+   ],
+   "lid_z": [
+    113,
+    123
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-37"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S01",
+   "open_size": [
+    11,
+    9
+   ],
+   "open_x": [
+    185,
+    195
+   ],
+   "open_z": [
+    114,
+    122
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    4.7
    ],
    "scale": 1,
    "side": "S",
@@ -2429,6 +2879,306 @@
     0,
     0,
     5.4
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    289,
+    107,
+    122
+   ],
+   "face": {
+    "hinge_surf_s": 213,
+    "n": 64,
+    "resid": 0.62,
+    "rx": 0.0,
+    "rz_fit": 4.81
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     289.0,
+     100.5,
+     116.5
+    ],
+    "need_pull": 8.5,
+    "outer_s": 212.0
+   },
+   "gun_model": "砲U-P04",
+   "gun_path": "甲板-upper/砲U-P04",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    282,
+    295
+   ],
+   "lid_z": [
+    112,
+    122
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-44"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P04",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    284,
+    293
+   ],
+   "open_z": [
+    113,
+    121
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    175.2
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    289,
+    214,
+    122
+   ],
+   "face": {
+    "hinge_surf_s": 214,
+    "n": 64,
+    "resid": 0.62,
+    "rx": 0.0,
+    "rz_fit": 4.81
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     289.0,
+     220.5,
+     116.5
+    ],
+    "need_pull": 8.5,
+    "outer_s": 213
+   },
+   "gun_model": "砲U-S04",
+   "gun_path": "甲板-upper/砲U-S04",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    282,
+    295
+   ],
+   "lid_z": [
+    112,
+    122
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-43"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S04",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    284,
+    293
+   ],
+   "open_z": [
+    113,
+    121
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    4.8
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    322.5,
+    106,
+    121
+   ],
+   "face": {
+    "hinge_surf_s": 214,
+    "n": 44,
+    "resid": 0.52,
+    "rx": -0.0,
+    "rz_fit": 5.31
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     322.5,
+     99.5,
+     116.5
+    ],
+    "need_pull": 8.5,
+    "outer_s": 213.0
+   },
+   "gun_model": "砲U-P05",
+   "gun_path": "甲板-upper/砲U-P05",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    316,
+    328
+   ],
+   "lid_z": [
+    111,
+    121
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-46"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P05",
+   "open_size": [
+    11,
+    9
+   ],
+   "open_x": [
+    317,
+    327
+   ],
+   "open_z": [
+    112,
+    120
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    174.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    322.5,
+    215,
+    121
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 44,
+    "resid": 0.52,
+    "rx": 0.0,
+    "rz_fit": 5.31
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     322.5,
+     221.5,
+     116.5
+    ],
+    "need_pull": 8.5,
+    "outer_s": 214
+   },
+   "gun_model": "砲U-S05",
+   "gun_path": "甲板-upper/砲U-S05",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    316,
+    328
+   ],
+   "lid_z": [
+    111,
+    121
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-45"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S05",
+   "open_size": [
+    11,
+    9
+   ],
+   "open_x": [
+    317,
+    327
+   ],
+   "open_z": [
+    112,
+    120
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    5.3
    ],
    "scale": 1,
    "side": "S",
@@ -3486,6 +4236,456 @@
   },
   {
    "at": [
+    586.5,
+    103,
+    121
+   ],
+   "face": {
+    "hinge_surf_s": 217,
+    "n": 55,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     586.5,
+     96.5,
+     116.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 217.0
+   },
+   "gun_model": "砲U-P13",
+   "gun_path": "甲板-upper/砲U-P13",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    580,
+    592
+   ],
+   "lid_z": [
+    111,
+    121
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-62"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P13",
+   "open_size": [
+    11,
+    8
+   ],
+   "open_x": [
+    581,
+    591
+   ],
+   "open_z": [
+    113,
+    120
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    586.5,
+    218,
+    121
+   ],
+   "face": {
+    "hinge_surf_s": 218,
+    "n": 55,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     586.5,
+     224.5,
+     116.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 218
+   },
+   "gun_model": "砲U-S13",
+   "gun_path": "甲板-upper/砲U-S13",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    580,
+    592
+   ],
+   "lid_z": [
+    111,
+    121
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-61"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S13",
+   "open_size": [
+    11,
+    8
+   ],
+   "open_x": [
+    581,
+    591
+   ],
+   "open_z": [
+    113,
+    120
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    620,
+    104,
+    122
+   ],
+   "face": {
+    "hinge_surf_s": 216,
+    "n": 74,
+    "resid": 0.68,
+    "rx": 0.63,
+    "rz_fit": -4.1
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     620.0,
+     98.5,
+     116.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 215.0
+   },
+   "gun_model": "砲U-P14",
+   "gun_path": "甲板-upper/砲U-P14",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    613,
+    626
+   ],
+   "lid_z": [
+    112,
+    122
+   ],
+   "meta": {
+    "close_deg": 88.6,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-64"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P14",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    615,
+    624
+   ],
+   "open_z": [
+    114,
+    121
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    184.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    620,
+    217,
+    122
+   ],
+   "face": {
+    "hinge_surf_s": 217,
+    "n": 74,
+    "resid": 0.68,
+    "rx": 0.63,
+    "rz_fit": -4.1
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     620.0,
+     222.5,
+     116.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 216
+   },
+   "gun_model": "砲U-S14",
+   "gun_path": "甲板-upper/砲U-S14",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    613,
+    626
+   ],
+   "lid_z": [
+    112,
+    122
+   ],
+   "meta": {
+    "close_deg": 88.6,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-63"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S14",
+   "open_size": [
+    10,
+    8
+   ],
+   "open_x": [
+    615,
+    624
+   ],
+   "open_z": [
+    114,
+    121
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -4.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    652.5,
+    108,
+    124
+   ],
+   "face": {
+    "hinge_surf_s": 212,
+    "n": 62,
+    "resid": 0.55,
+    "rx": 0.0,
+    "rz_fit": -5.43
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     652.5,
+     102.5,
+     119.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 212.0
+   },
+   "gun_model": "砲U-P15",
+   "gun_path": "甲板-upper/砲U-P15",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    646,
+    658
+   ],
+   "lid_z": [
+    114,
+    124
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-66"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P15",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    648,
+    656
+   ],
+   "open_z": [
+    115,
+    123
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    185.4
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    652.5,
+    213,
+    124
+   ],
+   "face": {
+    "hinge_surf_s": 213,
+    "n": 62,
+    "resid": 0.55,
+    "rx": -0.0,
+    "rz_fit": -5.43
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     652.5,
+     218.5,
+     119.5
+    ],
+    "need_pull": 6.5,
+    "outer_s": 213
+   },
+   "gun_model": "砲U-S15",
+   "gun_path": "甲板-upper/砲U-S15",
+   "host": "甲板-upper",
+   "host_work": "basecamp-ember-01m-deck-upper",
+   "lid_x": [
+    646,
+    658
+   ],
+   "lid_z": [
+    114,
+    124
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-65"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S15",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    648,
+    656
+   ],
+   "open_z": [
+    115,
+    123
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -5.4
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
     686.5,
     112,
     125
@@ -3645,26 +4845,6 @@
  },
  "skipped": [
   {
-   "gun": "甲板-lower/砲L-S07",
-   "id": "gun-12",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396]；外表面中位數 225.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-lower/砲L-P07",
-   "id": "gun-13",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396]；外表面中位數 224.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-lower/砲L-S15",
-   "id": "gun-28",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [657, 658]；外表面中位數 215.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-lower/砲L-P15",
-   "id": "gun-29",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [657, 658]；外表面中位數 214.0）⇒ 開關都會撞"
-  },
-  {
    "gun": "甲板-lower/L-chase-bow-S",
    "id": "gun-32",
    "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
@@ -3683,66 +4863,6 @@
    "gun": "甲板-lower/L-chase-stern-P",
    "id": "gun-35",
    "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
-  },
-  {
-   "gun": "甲板-upper/砲U-S01",
-   "id": "gun-37",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [185]；外表面中位數 208.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-P01",
-   "id": "gun-38",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [185]；外表面中位數 207.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-S04",
-   "id": "gun-43",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [283]；外表面中位數 214.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-P04",
-   "id": "gun-44",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [283]；外表面中位數 213.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-S05",
-   "id": "gun-45",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [318]；外表面中位數 214.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-P05",
-   "id": "gun-46",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [318]；外表面中位數 213.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-S13",
-   "id": "gun-61",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [581]；外表面中位數 218.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-P13",
-   "id": "gun-62",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [581]；外表面中位數 217.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-S14",
-   "id": "gun-63",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [614]；外表面中位數 216.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-P14",
-   "id": "gun-64",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [614]；外表面中位數 215.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-S15",
-   "id": "gun-65",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [657]；外表面中位數 213.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-upper/砲U-P15",
-   "id": "gun-66",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [657]；外表面中位數 212.0）⇒ 開關都會撞"
   },
   {
    "gun": "甲板-upper/U-chase-bow-S",

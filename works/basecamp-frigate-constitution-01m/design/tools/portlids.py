@@ -12,7 +12,7 @@
 #     rz ＝ 蓋板範圍裡、開口以外那一圈外表面沿 x 的斜度（平面擬合；|rz| ≤ 2° 取 0）；close_deg ＝ 90 ＋ 沿 z 的斜度。
 #     close_deg 再少 2°（CLOSE_BIAS：船殼是凸的）；house ＝ 收砲時沿砲軸往裡拉幾格 ＝ max(⌈關上的蓋板不碰砲最少要縮幾格 ＋ 0.5⌉, 4)（光榮號的下限；遊戲取樣不同 ⇒ 留半格）。
 #     鉸鏈貼開口上緣上面那一排；開著的蓋板壓到推出去的砲 ⇒ 整片往上抬一格再量（最多 3 格）。
-#   不做的：蓋板範圍裡外表面離中位數 > 3 格（舷梯踏階、chain plate、chesstree 橫過砲門的上下緣 ⇒ 開關都撞；跳過的原因寫進 placement 的 skipped）。
+#   不做的：蓋板範圍裡外表面離擬合平面 > 3 格（⛔ 離中位數會把 tumblehome 收得多的那一段當成凸出物）（舷梯踏階、chain plate、chesstree 橫過砲門的上下緣 ⇒ 開關都撞；跳過的原因寫進 placement 的 skipped）。
 #     meta：kind=portlid、lid_of ＝ 砲的物件 id（照模型 meta，⛔ 不照位置猜）、close_deg、house。
 #   用法（在 Sculpture/works 底下任何地方都可以）：
 #     python -I -X utf8 portlids.py draft  <cache 資料夾>     ⇒ 匯出（沒有才匯）組裝件 list／parts、砲子作品 list 到 cache；寫各艘 design/portlids_placement.json、蓋板 masks/portlids/lid.txt
@@ -39,13 +39,15 @@ SHIPS = {
 COL = {'outer': 36, 'inner': 177, 'strap': 73}
 RZ_FLAT = 2.0
 HOUSE_MIN = 4
-OUTLIER = 3                  # 蓋板範圍裡外表面離中位數超過 3 格的欄 ＝ 有東西貼著船殼凸出來（餘燼號上層 13 號砲門後緣的鐵件凸 12 格）⇒ 這一片不做
+OUTLIER = 3                  # 蓋板範圍裡外表面離擬合平面超過 3 格的欄 ＝ 有東西貼著船殼凸出來（餘燼號上層 13 號砲門後緣的鐵件凸 12 格）⇒ 這一片不做
 CLOSE_BIAS = -2.0            # close_deg 少 2°：船殼是凸的，照平面擬合的角度關上會切進鼓出來那一塊（遊戲匯入檢查 v1：憲法號 7、9 號 6–7% 落進船殼）；少 2° 底緣只離開約 0.4 格
 SLAB = 16
 OFFS = np.array([[0.5, 0.5, 0.5]] + [[0.3 + 0.4 * (k & 1), 0.3 + 0.4 * ((k >> 1) & 1), 0.3 + 0.4 * ((k >> 2) & 1)] for k in range(8)])
 
 
 def sculpt(args):
+    if not any(a.startswith('persona=') for a in args):
+        args = args + ['persona=basecamp']   # ⛔ 不帶 ⇒ 多 lock 時宿主照別人的 lock 補（2026-10-20 apply 的 meta_log 署名寫成 ame）
     return subprocess.run(['senate', 'cmd', 'sculpture'] + [a for kv in args for a in ('--arg', kv)], capture_output=True, text=True, encoding='utf-8', errors='replace')
 
 
@@ -190,15 +192,16 @@ def draft(cache):
                         if v is not None:
                             fc[(x, z)] = v if side > 0 else 2 * yc - (v + 1)    # 外表面的角落座標，換成 S 舷的寫法（往外 ＝ ＋y）：S ＝ 第一格空氣的格號、P ＝ 它 ＋1，再對中線翻過來
                 med = float(np.median(list(fc.values())))
-                odd = sorted({x for (x, z), v in fc.items() if abs(v - med) > OUTLIER})
-                if odd:
-                    break
-                top = [fc[(x, ztop)] for x in range(lx0, lx1 + 1) if (x, ztop) in fc]
-                assert len(top) >= W - 2, (s, gname, '蓋板上緣那一排外表面量不到', len(top))
                 pts = np.array([[x, z, y] for (x, z), y in sorted(fc.items())], float)
                 xcm, zcm = pts[:, 0].mean(), pts[:, 1].mean()
                 Am = np.c_[np.ones(len(pts)), pts[:, 0] - xcm, pts[:, 1] - zcm]
                 coef, *_ = np.linalg.lstsq(Am, pts[:, 2], rcond=None)
+                # 凸出物照「離擬合平面的殘差」判（⛔ 以前照離中位數：憲法號、餘燼號下層 07 號那一段 tumblehome 收得比較多，蓋板上緣那一排離中位數 4 格 ⇒ 被當成凸出物跳過，殘差其實 0.66 格；Tim 2026-10-20 截圖「有一門砲沒有炮門」）
+                odd = sorted({int(p[0]) for p, e in zip(pts, Am @ coef - pts[:, 2]) if abs(e) > OUTLIER})
+                if odd:
+                    break
+                top = [fc[(x, ztop)] for x in range(lx0, lx1 + 1) if (x, ztop) in fc]
+                assert len(top) >= W - 2, (s, gname, '蓋板上緣那一排外表面量不到', len(top))
                 rz_fit, rx = math.degrees(math.atan(coef[1])), math.degrees(math.atan(coef[2]))
                 rz = 0 if abs(rz_fit) <= RZ_FLAT else r1(rz_fit)
                 close = r1(90 + rx + CLOSE_BIAS)
@@ -212,7 +215,7 @@ def draft(cache):
             else:
                 raise SystemExit('✗ %s %s：鉸鏈抬 3 格開著的蓋板還是壓到砲' % (s, gname))
             if odd:
-                skipped.append({'gun': g['path'], 'id': g['meta']['id'], 'why': '蓋板範圍裡有東西貼著船殼凸出 > %d 格（x %s；外表面中位數 %.1f）⇒ 開關都會撞' % (OUTLIER, odd, med)})
+                skipped.append({'gun': g['path'], 'id': g['meta']['id'], 'why': '蓋板範圍裡有東西貼著船殼凸出：離擬合平面 > %d 格（x %s；外表面中位數 %.1f）⇒ 開關都會撞' % (OUTLIER, odd, med)})
                 continue
             # 收砲：砲口退到外表面往裡 1 格
             mz, br = np.array(g['points']['muzzle'], float), np.array(g['points']['breech'], float)

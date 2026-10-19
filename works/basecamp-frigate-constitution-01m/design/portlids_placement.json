@@ -1,5 +1,5 @@
 {
- "count": 24,
+ "count": 28,
  "lid": {
   "anchors": {
    "hinge-a": [
@@ -32,7 +32,7 @@
   "title": "憲法號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m；餘燼號也用）",
   "work": "basecamp-frigate-constitution-01m-portlid"
  },
- "note": "portlids.py draft（造船規格 §9.12）—— 憲法號：24 片（甲板-gun），蓋板 basecamp-frigate-constitution-01m-portlid [13, 11, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "note": "portlids.py draft（造船規格 §9.12）—— 憲法號：28 片（甲板-gun），蓋板 basecamp-frigate-constitution-01m-portlid [13, 11, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
  "rows": [
   {
    "at": [
@@ -936,6 +936,156 @@
   },
   {
    "at": [
+    390.5,
+    100,
+    97
+   ],
+   "face": {
+    "hinge_surf_s": 220,
+    "n": 55,
+    "resid": 0.66,
+    "rx": -23.2,
+    "rz_fit": 2.3
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     390.5,
+     89.5,
+     93.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 224.0
+   },
+   "gun_model": "砲-P07",
+   "gun_path": "甲板-gun/砲-P07",
+   "host": "甲板-gun",
+   "host_work": "basecamp-frigate-constitution-01m-deck-gun",
+   "lid_x": [
+    384,
+    396
+   ],
+   "lid_z": [
+    87,
+    97
+   ],
+   "meta": {
+    "close_deg": 64.8,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-15"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P07",
+   "open_size": [
+    11,
+    8
+   ],
+   "open_x": [
+    385,
+    395
+   ],
+   "open_z": [
+    89,
+    96
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    177.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    390.5,
+    221,
+    97
+   ],
+   "face": {
+    "hinge_surf_s": 221,
+    "n": 55,
+    "resid": 0.66,
+    "rx": -23.2,
+    "rz_fit": 2.3
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     390.5,
+     231.5,
+     93.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 225
+   },
+   "gun_model": "砲-S07",
+   "gun_path": "甲板-gun/砲-S07",
+   "host": "甲板-gun",
+   "host_work": "basecamp-frigate-constitution-01m-deck-gun",
+   "lid_x": [
+    384,
+    396
+   ],
+   "lid_z": [
+    87,
+    97
+   ],
+   "meta": {
+    "close_deg": 64.8,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-14"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S07",
+   "open_size": [
+    11,
+    8
+   ],
+   "open_x": [
+    385,
+    395
+   ],
+   "open_z": [
+    89,
+    96
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    2.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
     422.5,
     99,
     97
@@ -1686,6 +1836,156 @@
   },
   {
    "at": [
+    586.5,
+    106,
+    101
+   ],
+   "face": {
+    "hinge_surf_s": 214,
+    "n": 62,
+    "resid": 0.51,
+    "rx": -7.99,
+    "rz_fit": -8.75
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     586.5,
+     100.5,
+     97.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 213.0
+   },
+   "gun_model": "砲-P13",
+   "gun_path": "甲板-gun/砲-P13",
+   "host": "甲板-gun",
+   "host_work": "basecamp-frigate-constitution-01m-deck-gun",
+   "lid_x": [
+    580,
+    592
+   ],
+   "lid_z": [
+    91,
+    101
+   ],
+   "meta": {
+    "close_deg": 80,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-27"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P13",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    582,
+    590
+   ],
+   "open_z": [
+    92,
+    100
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    188.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
+    586.5,
+    215,
+    101
+   ],
+   "face": {
+    "hinge_surf_s": 215,
+    "n": 62,
+    "resid": 0.51,
+    "rx": -7.99,
+    "rz_fit": -8.75
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     586.5,
+     220.5,
+     97.5
+    ],
+    "need_pull": 7.5,
+    "outer_s": 214
+   },
+   "gun_model": "砲-S13",
+   "gun_path": "甲板-gun/砲-S13",
+   "host": "甲板-gun",
+   "host_work": "basecamp-frigate-constitution-01m-deck-gun",
+   "lid_x": [
+    580,
+    592
+   ],
+   "lid_z": [
+    91,
+    101
+   ],
+   "meta": {
+    "close_deg": 80,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-26"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S13",
+   "open_size": [
+    9,
+    9
+   ],
+   "open_x": [
+    582,
+    590
+   ],
+   "open_z": [
+    92,
+    100
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -8.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "basecamp-frigate-constitution-01m-portlid"
+  },
+  {
+   "at": [
     620.5,
     112,
     102
@@ -1848,26 +2148,6 @@
    "gun": "甲板-gun/chase18",
    "id": "gun-1",
    "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
-  },
-  {
-   "gun": "甲板-gun/砲-S07",
-   "id": "gun-14",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396]；外表面中位數 225.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-gun/砲-P07",
-   "id": "gun-15",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396]；外表面中位數 224.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-gun/砲-S13",
-   "id": "gun-26",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [591, 592]；外表面中位數 215.0）⇒ 開關都會撞"
-  },
-  {
-   "gun": "甲板-gun/砲-P13",
-   "id": "gun-27",
-   "why": "蓋板範圍裡有東西貼著船殼凸出 > 3 格（x [591, 592]；外表面中位數 214.0）⇒ 開關都會撞"
   },
   {
    "gun": "甲板-gun/chase18-P",

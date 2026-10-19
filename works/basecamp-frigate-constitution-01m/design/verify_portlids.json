@@ -8,7 +8,7 @@
   "models_bad": [],
   "parts_hinge_max_diff": 0.0005
  },
- "note": "portlids.py check —— 憲法號：現況 ＝ 組裝件 export list（1394527 格）＋ 其他模型 163 個（gun、portlid 以外；實際的格，138 個退回外框：繞 x／y 轉或不在 at 0 的關聯裡）；蓋板每格 9 個取樣點",
+ "note": "portlids.py check —— 憲法號：現況 ＝ 組裝件 export list（1394863 格）＋ 其他模型 163 個（gun、portlid 以外；實際的格，138 個退回外框：繞 x／y 轉或不在 at 0 的關聯裡）；蓋板每格 9 個取樣點",
  "rows": [
   {
    "close_deg": 76.6,
@@ -569,6 +569,99 @@
    "side": "S"
   },
   {
+   "close_deg": 64.8,
+   "closed": {
+    "center_below_hinge": 4.31,
+    "center_out_of_hinge": 2.58,
+    "hits_gun_housed": 0,
+    "hits_ship": 25,
+    "hole_covered": "88/88",
+    "ship_pct": 0.97
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 10.0,
+    "need_pull": 7.5
+   },
+   "hinge_a": [
+    396.475,
+    99.26,
+    97.5
+   ],
+   "hinge_b": [
+    384.485,
+    99.741,
+    97.5
+   ],
+   "house": 11,
+   "lid_of": "gun-15",
+   "model": "砲門蓋-P07",
+   "open": {
+    "box": [
+     383.564,
+     88.748,
+     97.0,
+     396.995,
+     100.261,
+     99.0
+    ],
+    "clear_above_gun": 1.6,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 420,
+    "mirror_y_center_below_hinge": -4.74
+   },
+   "side": "P"
+  },
+  {
+   "close_deg": 64.8,
+   "closed": {
+    "center_below_hinge": 4.31,
+    "center_out_of_hinge": 2.58,
+    "hits_gun_housed": 0,
+    "hits_ship": 25,
+    "hole_covered": "88/88",
+    "ship_pct": 0.97
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 10.0,
+    "need_pull": 7.5
+   },
+   "hinge_a": [
+    384.485,
+    221.259,
+    97.5
+   ],
+   "hinge_b": [
+    396.475,
+    221.74,
+    97.5
+   ],
+   "house": 11,
+   "lid_of": "gun-14",
+   "model": "砲門蓋-S07",
+   "open": {
+    "box": [
+     383.564,
+     220.739,
+     97.0,
+     396.995,
+     232.252,
+     99.0
+    ],
+    "clear_above_gun": 1.6,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 420
+   },
+   "side": "S"
+  },
+  {
    "close_deg": 65.8,
    "closed": {
     "center_below_hinge": 4.36,
@@ -1034,6 +1127,99 @@
    "side": "S"
   },
   {
+   "close_deg": 80,
+   "closed": {
+    "center_below_hinge": 4.84,
+    "center_out_of_hinge": 1.34,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "hole_covered": "81/81",
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.0,
+    "need_pull": 7.5
+   },
+   "hinge_a": [
+    592.507,
+    106.413,
+    101.5
+   ],
+   "hinge_b": [
+    580.645,
+    104.598,
+    101.5
+   ],
+   "house": 7,
+   "lid_of": "gun-27",
+   "model": "砲門蓋-P13",
+   "open": {
+    "box": [
+     580.075,
+     94.143,
+     101.0,
+     594.589,
+     106.983,
+     103.0
+    ],
+    "clear_above_gun": 1.6,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 363,
+    "mirror_y_center_below_hinge": -5.01
+   },
+   "side": "P"
+  },
+  {
+   "close_deg": 80,
+   "closed": {
+    "center_below_hinge": 4.84,
+    "center_out_of_hinge": 1.34,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "hole_covered": "81/81",
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.0,
+    "need_pull": 7.5
+   },
+   "hinge_a": [
+    580.645,
+    216.402,
+    101.5
+   ],
+   "hinge_b": [
+    592.507,
+    214.587,
+    101.5
+   ],
+   "house": 7,
+   "lid_of": "gun-26",
+   "model": "砲門蓋-S13",
+   "open": {
+    "box": [
+     580.075,
+     214.017,
+     101.0,
+     594.589,
+     226.857,
+     103.0
+    ],
+    "clear_above_gun": 1.6,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 363
+   },
+   "side": "S"
+  },
+  {
    "close_deg": 84.9,
    "closed": {
     "center_below_hinge": 4.94,
@@ -1128,17 +1314,17 @@
   }
  ],
  "summary": {
-  "P": 12,
+  "P": 14,
   "center_below_hinge": [
-   4.36,
+   4.31,
    4.94
   ],
   "center_out_of_hinge": [
    0.91,
-   2.51
+   2.58
   ],
   "closed_hits_gun_housed": 0,
-  "closed_ship_pct_max": 0.35,
+  "closed_ship_pct_max": 0.97,
   "closed_ship_pct_over5": [],
   "gun_housed_hits_ship": 1152,
   "hole_not_covered": [],
@@ -1154,10 +1340,10 @@
    1.0,
    1.0
   ],
-  "lids": 24,
+  "lids": 28,
   "open_hits_gun": 0,
   "open_hits_ship": 0,
-  "reverse_house0_lids_hit": 24,
-  "reverse_mirror_y_up": 12
+  "reverse_house0_lids_hit": 28,
+  "reverse_mirror_y_up": 14
  }
 }
