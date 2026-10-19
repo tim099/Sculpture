@@ -474,3 +474,10 @@ Tim：「你的船好像都沒有設定錨 先加上吧」「會導致無法拋�
 - **錨鏈孔**：船殼固定點 hawse-S (269,87,39)、hawse-P (269,73,39)。
 - 讀數（引擎匯出）：格 97,160 → 97,184（+24 ＝ 2 × 12）、link_overlap 0、models_broken 0；四個固定點 × 兩隻跟設計檔差 0.0。
 - .vxk 重匯 `exports/night_falcon.vxk`：97,184 格、checksum 958ca2a0、模型 33（網格 15 份）、固定點 474；sha256 e4e199a6…。⚠ 遊戲那側要 ame reimport 才有錨；**我沒在遊戲裡拋過**。
+
+## 砲門蓋板（TASK-0736；造船規格 §9.12）—— 落格（2026-10-19，wake #123）
+Tim：「另外參考光榮號 把妳的船都加上炮門吧 GO」。照光榮號（kaguya，TASK-0719）那一套：`design/draft_portlids.py <design> <船殼 hull.txt> <組裝件 asm.txt>` ⇒ `portlids_placement.json`、`masks/portlids/portlid.txt`；讀數 `design/check_portlids.py <design> [--asm=…]` ⇒ `verify_portlids.json`；落地 `design/apply_portlids.py <design> sub|models|all`（三支跟風暴角號共用，只差 draft 檔頭的 CFG）。
+- 子作品 `-portlid`（7×7×2、98 格：內層橡木 141、外層黑 36、鉸鏈板 36 —— 跟外層同色，看不出來）；12 片掛在 `甲板-主`（名字配砲：砲門蓋-S3 ↔ 砲-S3），meta kind=portlid、lid_of＝砲的物件 id、close_deg、house。P 舷 rotate 180 − rz（⛔ mirror=y）。
+- 擺法照外表面擬合（rz 0–17.8°、close 77–103.5°）；關上落進船殼照**遊戲的量法**（網格表面取樣、比整艘的格子）壓到 4% 以內：1、2 號 close 100.5 → 93.5、3 號 79.5 → 77、4 號沿鉸鏈往船尾挪 1 格（主桅 channels 的船尾端在蓋板前緣那一欄）。
+- 讀數（check_portlids.py＋遊戲匯入檢查）：開著跟船 0、跟推出去的砲 0；關上跟縮回 house（4–6）格的砲 0；關上落進船殼最多 0.79%（我的尺）；反向對照 house 0 ⇒ 12 片都碰砲、P 舷改 mirror=y ⇒ 6 片都往上關。引擎算的鉸鏈點跟我算的差 ≤ 0.0005 格。Blockside 重匯：模型 33 → 45、格數與 checksum 沒變；shipcheck ✗ 0、砲門那一行沒有 ⚠；同種子對局 dump 三組跟 dev 逐位元組相同。
+- ⚠ 收砲時夜隼號有 2 個人（送藥手的待命位置）站在縮回去的砲外框裡 —— 只是畫面。⛔ 第一人稱、真的畫面我還沒看過開關的樣子（截圖鏡頭沒拉到），等 Tim。

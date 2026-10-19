@@ -1,0 +1,1088 @@
+{
+ "asm_export_sha256": "f5c96f4059ef0fb68147708796d731755148288410e418d7d3bbb34abd0ec98f",
+ "count": 12,
+ "hull_export_sha256": "7ebe0b17c28b396535bee2d07ac7c471df4ba60ad1d7af10584bfd52b724fa8f",
+ "lids": {
+  "summit-night-falcon-01m-portlid": {
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     6,
+     0,
+     0
+    ]
+   },
+   "cells": 98,
+   "colors": {
+    "141": 49,
+    "36": 49
+   },
+   "file": "masks/portlids/portlid.txt",
+   "meters_per_voxel": 0.1,
+   "parent_work": "summit-night-falcon-01m",
+   "ports": [
+    "砲-S1",
+    "砲-P1",
+    "砲-S2",
+    "砲-P2",
+    "砲-S3",
+    "砲-P3",
+    "砲-S4",
+    "砲-P4",
+    "砲-S5",
+    "砲-P5",
+    "砲-S6",
+    "砲-P6"
+   ],
+   "sha256": "8c66af2bca441a1154b3d1533ee384c23926abf999c4c5dab47b25afe32fbf16",
+   "size": [
+    7,
+    7,
+    2
+   ],
+   "strap_y": [
+    0,
+    4
+   ],
+   "straps_x": [
+    1,
+    5
+   ],
+   "tags": "sub",
+   "title": "砲門蓋板（上緣鉸鏈，7×7 格、厚 2，通用部件，0.1 m）",
+   "work": "summit-night-falcon-01m-portlid"
+  }
+ },
+ "meshes": [
+  {
+   "n": 1,
+   "rz": 171.8,
+   "side": "P",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 176.5,
+   "side": "P",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 180,
+   "side": "P",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 182.4,
+   "side": "P",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 190.5,
+   "side": "P",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 197.8,
+   "side": "P",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": -17.8,
+   "side": "S",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": -10.5,
+   "side": "S",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": -2.4,
+   "side": "S",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 0,
+   "side": "S",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 3.5,
+   "side": "S",
+   "work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "n": 1,
+   "rz": 8.2,
+   "side": "S",
+   "work": "summit-night-falcon-01m-portlid"
+  }
+ ],
+ "note": "draft_portlids.py（TASK-0736）—— 夜隼號 砲門蓋板：1 件子作品掛 12 次；外表面照船殼匯出（sha256 7ebe0b17c28b…）；砲照各層甲板 models.json。碰撞讀數在 verify_portlids.json（check_portlids.py）",
+ "rows": [
+  {
+   "at": [
+    96.5,
+    52,
+    34
+   ],
+   "face": {
+    "close_fit": 100.5,
+    "closed_solid_pct": 3.9,
+    "face_s": [
+     -53,
+     -51
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 51,
+    "hinge_s": -51,
+    "hinge_shift": 0,
+    "resid": 0.84,
+    "rx": 10.5,
+    "rz": 3.5,
+    "rz_used": 3.5,
+    "top_ends": [
+     -51,
+     -51
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "house": 4,
+    "house_over_max": false,
+    "id": "gun-2",
+    "muzzle": [
+     95.5,
+     52.25,
+     31.25
+    ],
+    "need_pull": 0.75,
+    "outer_face_s": -52
+   },
+   "gun_model": "砲-P1",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 93.5,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P1",
+   "open_lat": [
+    94,
+    98
+   ],
+   "open_z": [
+    29,
+    33
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    176.5
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    96.5,
+    109,
+    34
+   ],
+   "face": {
+    "close_fit": 100.5,
+    "closed_solid_pct": 3.9,
+    "face_s": [
+     107,
+     109
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 109,
+    "hinge_s": 109,
+    "hinge_shift": 0,
+    "resid": 0.84,
+    "rx": 10.5,
+    "rz": 3.5,
+    "rz_used": 3.5,
+    "top_ends": [
+     109,
+     109
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "house": 4,
+    "house_over_max": false,
+    "id": "gun-1",
+    "muzzle": [
+     95.5,
+     108.75,
+     31.25
+    ],
+    "need_pull": 0.75,
+    "outer_face_s": 109
+   },
+   "gun_model": "砲-S1",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 93.5,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S1",
+   "open_lat": [
+    94,
+    98
+   ],
+   "open_z": [
+    29,
+    33
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    3.5
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    116.5,
+    50,
+    32
+   ],
+   "face": {
+    "close_fit": 103.5,
+    "closed_solid_pct": 2.46,
+    "face_s": [
+     -51,
+     -49
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 49,
+    "hinge_s": -49,
+    "hinge_shift": 0,
+    "resid": 0.67,
+    "rx": 13.5,
+    "rz": 8.2,
+    "rz_used": 8.2,
+    "top_ends": [
+     -50,
+     -49
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "house": 4,
+    "house_over_max": false,
+    "id": "gun-4",
+    "muzzle": [
+     117.5,
+     49.25,
+     29.25
+    ],
+    "need_pull": 1.75,
+    "outer_face_s": -50
+   },
+   "gun_model": "砲-P2",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 103.5,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-4"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P2",
+   "open_lat": [
+    114,
+    118
+   ],
+   "open_z": [
+    27,
+    31
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    171.8
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    116.5,
+    111,
+    32
+   ],
+   "face": {
+    "close_fit": 103.5,
+    "closed_solid_pct": 2.46,
+    "face_s": [
+     109,
+     111
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 111,
+    "hinge_s": 111,
+    "hinge_shift": 0,
+    "resid": 0.67,
+    "rx": 13.5,
+    "rz": 8.2,
+    "rz_used": 8.2,
+    "top_ends": [
+     110,
+     111
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "house": 4,
+    "house_over_max": false,
+    "id": "gun-3",
+    "muzzle": [
+     117.5,
+     111.75,
+     29.25
+    ],
+    "need_pull": 1.75,
+    "outer_face_s": 111
+   },
+   "gun_model": "砲-S2",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 103.5,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-3"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S2",
+   "open_lat": [
+    114,
+    118
+   ],
+   "open_z": [
+    27,
+    31
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    8.2
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    171.5,
+    50,
+    39
+   ],
+   "face": {
+    "close_fit": 79.5,
+    "closed_solid_pct": 3.82,
+    "face_s": [
+     -49,
+     -48
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 49,
+    "hinge_s": -49,
+    "hinge_shift": 0,
+    "resid": 0.46,
+    "rx": -10.5,
+    "rz": 0.0,
+    "rz_used": 0,
+    "top_ends": [
+     -49,
+     -49
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "house": 6,
+    "house_over_max": false,
+    "id": "gun-6",
+    "muzzle": [
+     171.5,
+     44.75,
+     36.25
+    ],
+    "need_pull": 5.25,
+    "outer_face_s": -49
+   },
+   "gun_model": "砲-P3",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 77,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P3",
+   "open_lat": [
+    169,
+    173
+   ],
+   "open_z": [
+    34,
+    38
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    171.5,
+    111,
+    39
+   ],
+   "face": {
+    "close_fit": 79.5,
+    "closed_solid_pct": 3.82,
+    "face_s": [
+     111,
+     112
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 111,
+    "hinge_s": 111,
+    "hinge_shift": 0,
+    "resid": 0.46,
+    "rx": -10.5,
+    "rz": -0.0,
+    "rz_used": 0,
+    "top_ends": [
+     111,
+     111
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "house": 6,
+    "house_over_max": false,
+    "id": "gun-5",
+    "muzzle": [
+     171.5,
+     116.25,
+     36.25
+    ],
+    "need_pull": 5.25,
+    "outer_face_s": 112
+   },
+   "gun_model": "砲-S3",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 77,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S3",
+   "open_lat": [
+    169,
+    173
+   ],
+   "open_z": [
+    34,
+    38
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    185.5,
+    50,
+    40
+   ],
+   "face": {
+    "close_fit": 80.7,
+    "closed_solid_pct": 3.57,
+    "face_s": [
+     -49,
+     -48
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 49,
+    "hinge_s": -49,
+    "hinge_shift": -1,
+    "resid": 0.58,
+    "rx": -9.3,
+    "rz": -2.4,
+    "rz_used": -2.4,
+    "top_ends": [
+     -49,
+     -49
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "house": 6,
+    "house_over_max": false,
+    "id": "gun-8",
+    "muzzle": [
+     186.5,
+     45.75,
+     37.25
+    ],
+    "need_pull": 5.25,
+    "outer_face_s": -50
+   },
+   "gun_model": "砲-P4",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 80.7,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P4",
+   "open_lat": [
+    184,
+    188
+   ],
+   "open_z": [
+    35,
+    39
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    182.4
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    185.5,
+    111,
+    40
+   ],
+   "face": {
+    "close_fit": 80.7,
+    "closed_solid_pct": 3.57,
+    "face_s": [
+     111,
+     112
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 111,
+    "hinge_s": 111,
+    "hinge_shift": -1,
+    "resid": 0.58,
+    "rx": -9.3,
+    "rz": -2.4,
+    "rz_used": -2.4,
+    "top_ends": [
+     111,
+     111
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "house": 6,
+    "house_over_max": false,
+    "id": "gun-7",
+    "muzzle": [
+     186.5,
+     115.25,
+     37.25
+    ],
+    "need_pull": 5.25,
+    "outer_face_s": 111
+   },
+   "gun_model": "砲-S4",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 80.7,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S4",
+   "open_lat": [
+    184,
+    188
+   ],
+   "open_z": [
+    35,
+    39
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    -2.4
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    226.5,
+    54,
+    43
+   ],
+   "face": {
+    "close_fit": 81.8,
+    "closed_solid_pct": 0.0,
+    "face_s": [
+     -55,
+     -52
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 53,
+    "hinge_s": -53,
+    "hinge_shift": 0,
+    "resid": 0.51,
+    "rx": -8.2,
+    "rz": -10.5,
+    "rz_used": -10.5,
+    "top_ends": [
+     -53,
+     -55
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "house": 6,
+    "house_over_max": false,
+    "id": "gun-12",
+    "muzzle": [
+     225.5,
+     49.75,
+     40.25
+    ],
+    "need_pull": 5.25,
+    "outer_face_s": -54
+   },
+   "gun_model": "砲-P5",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 81.8,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P5",
+   "open_lat": [
+    224,
+    228
+   ],
+   "open_z": [
+    38,
+    42
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    190.5
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    226.5,
+    107,
+    43
+   ],
+   "face": {
+    "close_fit": 81.8,
+    "closed_solid_pct": 0.0,
+    "face_s": [
+     105,
+     108
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 107,
+    "hinge_s": 107,
+    "hinge_shift": 0,
+    "resid": 0.51,
+    "rx": -8.2,
+    "rz": -10.5,
+    "rz_used": -10.5,
+    "top_ends": [
+     107,
+     105
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "house": 6,
+    "house_over_max": false,
+    "id": "gun-9",
+    "muzzle": [
+     225.5,
+     111.25,
+     40.25
+    ],
+    "need_pull": 5.25,
+    "outer_face_s": 107
+   },
+   "gun_model": "砲-S5",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 81.8,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S5",
+   "open_lat": [
+    224,
+    228
+   ],
+   "open_z": [
+    38,
+    42
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    -10.5
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    241.5,
+    58,
+    45
+   ],
+   "face": {
+    "close_fit": 79.5,
+    "closed_solid_pct": 0.0,
+    "face_s": [
+     -59,
+     -56
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 57,
+    "hinge_s": -57,
+    "hinge_shift": 0,
+    "resid": 0.47,
+    "rx": -10.5,
+    "rz": -17.8,
+    "rz_used": -17.8,
+    "top_ends": [
+     -57,
+     -59
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "house": 5,
+    "house_over_max": false,
+    "id": "gun-11",
+    "muzzle": [
+     240.5,
+     54.75,
+     42.25
+    ],
+    "need_pull": 4.25,
+    "outer_face_s": -58
+   },
+   "gun_model": "砲-P6",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 79.5,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-11"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P6",
+   "open_lat": [
+    239,
+    243
+   ],
+   "open_z": [
+    40,
+    44
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    197.8
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    241.5,
+    103,
+    45
+   ],
+   "face": {
+    "close_fit": 79.5,
+    "closed_solid_pct": 0.0,
+    "face_s": [
+     101,
+     104
+    ],
+    "hinge_bump": 0,
+    "hinge_cell": 103,
+    "hinge_s": 103,
+    "hinge_shift": 0,
+    "resid": 0.47,
+    "rx": -10.5,
+    "rz": -17.8,
+    "rz_used": -17.8,
+    "top_ends": [
+     103,
+     101
+    ]
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "house": 5,
+    "house_over_max": false,
+    "id": "gun-10",
+    "muzzle": [
+     240.5,
+     106.25,
+     42.25
+    ],
+    "need_pull": 4.25,
+    "outer_face_s": 103
+   },
+   "gun_model": "砲-S6",
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "hull_in_opening_cols": 0,
+   "lat_axis": "x",
+   "meta": {
+    "close_deg": 79.5,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S6",
+   "open_lat": [
+    239,
+    243
+   ],
+   "open_z": [
+    40,
+    44
+   ],
+   "pivot": [
+    3.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    -17.8
+   ],
+   "row": "main",
+   "scale": 1,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  }
+ ],
+ "rules": {
+  "A": "rotate 0,0,90 ＋ rz；at.x ＝ 鉸鏈 x ＋ 1",
+  "P": "rotate 0,0,180 − rz；at.y ＝ 鉸鏈 y ＋ 1（⛔ mirror=y）",
+  "S": "rotate 0,0,rz；at ＝ (開口中間, 鉸鏈 y, z1 + 1)",
+  "house_max": 6,
+  "house_min": 4,
+  "rows": {
+   "main": {
+    "suffix": "portlid",
+    "thick": 2,
+    "top": 1
+   }
+  },
+  "rz_flat_deg": 2.0
+ }
+}

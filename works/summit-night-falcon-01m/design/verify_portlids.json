@@ -1,0 +1,789 @@
+{
+ "applied": {
+  "models": {
+   "bad": [],
+   "count": 12,
+   "parts_box_max_diff": 0.0005,
+   "parts_hinge_max_diff": 0.0005
+  },
+  "summit-night-falcon-01m-portlid": {
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     6,
+     0,
+     0
+    ]
+   },
+   "anchors_ok": true,
+   "card": {
+    "meters_per_voxel": 0.1,
+    "parent_work": "summit-night-falcon-01m",
+    "size": [
+     7,
+     7,
+     2
+    ],
+    "tags": [
+     "sub"
+    ]
+   },
+   "cells": 98,
+   "color_diff": 0,
+   "extra": 0,
+   "missing": 0
+  }
+ },
+ "gun_samples": {
+  "summit-night-falcon-01m-gun-4l": 13068
+ },
+ "note": "check_portlids.py（TASK-0736）—— 現況 ＝ summit-night-falcon-01m-assembly links=all（97184 格，z < 320）＋ 模型外框 21（不含 kind=gun／portlid）；蓋板 {'summit-night-falcon-01m-portlid': 'masks/portlids/portlid.txt'}",
+ "rows": [
+  {
+   "at": [
+    96.5,
+    52,
+    34
+   ],
+   "close_deg": 93.5,
+   "closed": {
+    "center_below_hinge": 3.02,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.32,
+    "hits_gun_housed": 0,
+    "hits_ship": 7,
+    "ship_pct": 0.79
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 1.0,
+    "need_pull": 0.75
+   },
+   "gun_model": "砲-P1",
+   "hinge_a": [
+    99.464,
+    51.318,
+    34.5
+   ],
+   "hinge_b": [
+    93.475,
+    51.684,
+    34.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 4,
+   "lid_of": "gun-2",
+   "model": "砲門蓋-P1",
+   "open": {
+    "box": [
+     92.579,
+     44.799,
+     34.0,
+     99.993,
+     52.214,
+     36.0
+    ],
+    "clear_above_gun": null,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 111,
+    "mirror_y": {
+     "center_below_hinge": -2.96,
+     "hits_ship": 353,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 176.5,
+   "samples": 882,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    96.5,
+    109,
+    34
+   ],
+   "close_deg": 93.5,
+   "closed": {
+    "center_below_hinge": 3.02,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.32,
+    "hits_gun_housed": 0,
+    "hits_ship": 7,
+    "ship_pct": 0.79
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 1.0,
+    "need_pull": 0.75
+   },
+   "gun_model": "砲-S1",
+   "hinge_a": [
+    93.475,
+    109.316,
+    34.5
+   ],
+   "hinge_b": [
+    99.464,
+    109.682,
+    34.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 4,
+   "lid_of": "gun-1",
+   "model": "砲門蓋-S1",
+   "open": {
+    "box": [
+     92.579,
+     108.786,
+     34.0,
+     99.993,
+     116.201,
+     36.0
+    ],
+    "clear_above_gun": null,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 111
+   },
+   "rotate": 3.5,
+   "samples": 882,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    116.5,
+    50,
+    32
+   ],
+   "close_deg": 103.5,
+   "closed": {
+    "center_below_hinge": 3.03,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.21,
+    "hits_gun_housed": 0,
+    "hits_ship": 4,
+    "ship_pct": 0.45
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 2.0,
+    "need_pull": 1.75
+   },
+   "gun_model": "砲-P2",
+   "hinge_a": [
+    119.398,
+    49.077,
+    32.5
+   ],
+   "hinge_b": [
+    113.459,
+    49.933,
+    32.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 4,
+   "lid_of": "gun-4",
+   "model": "砲門蓋-P2",
+   "open": {
+    "box": [
+     112.037,
+     42.572,
+     32.0,
+     119.964,
+     50.499,
+     34.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 522,
+    "mirror_y": {
+     "center_below_hinge": -2.8,
+     "hits_ship": 362,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 171.8,
+   "samples": 882,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    116.5,
+    111,
+    32
+   ],
+   "close_deg": 103.5,
+   "closed": {
+    "center_below_hinge": 3.03,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.21,
+    "hits_gun_housed": 0,
+    "hits_ship": 4,
+    "ship_pct": 0.45
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 2.0,
+    "need_pull": 1.75
+   },
+   "gun_model": "砲-S2",
+   "hinge_a": [
+    113.459,
+    111.067,
+    32.5
+   ],
+   "hinge_b": [
+    119.398,
+    111.923,
+    32.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 4,
+   "lid_of": "gun-3",
+   "model": "砲門蓋-S2",
+   "open": {
+    "box": [
+     112.037,
+     110.501,
+     32.0,
+     119.964,
+     118.428,
+     34.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 522
+   },
+   "rotate": 8.2,
+   "samples": 882,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    171.5,
+    50,
+    39
+   ],
+   "close_deg": 77,
+   "closed": {
+    "center_below_hinge": 2.81,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.16,
+    "hits_gun_housed": 0,
+    "hits_ship": 4,
+    "ship_pct": 0.45
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 5.5,
+    "need_pull": 5.25
+   },
+   "gun_model": "砲-P3",
+   "hinge_a": [
+    174.5,
+    49.5,
+    39.5
+   ],
+   "hinge_b": [
+    168.5,
+    49.5,
+    39.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 6,
+   "lid_of": "gun-6",
+   "model": "砲門蓋-P3",
+   "open": {
+    "box": [
+     168.0,
+     43.0,
+     39.0,
+     175.0,
+     50.0,
+     41.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 717,
+    "mirror_y": {
+     "center_below_hinge": -3.04,
+     "hits_ship": 126,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 180,
+   "samples": 882,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    171.5,
+    111,
+    39
+   ],
+   "close_deg": 77,
+   "closed": {
+    "center_below_hinge": 2.81,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.16,
+    "hits_gun_housed": 0,
+    "hits_ship": 4,
+    "ship_pct": 0.45
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 5.5,
+    "need_pull": 5.25
+   },
+   "gun_model": "砲-S3",
+   "hinge_a": [
+    168.5,
+    111.5,
+    39.5
+   ],
+   "hinge_b": [
+    174.5,
+    111.5,
+    39.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 6,
+   "lid_of": "gun-5",
+   "model": "砲門蓋-S3",
+   "open": {
+    "box": [
+     168.0,
+     111.0,
+     39.0,
+     175.0,
+     118.0,
+     41.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 717
+   },
+   "rotate": 0,
+   "samples": 882,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    185.5,
+    50,
+    40
+   ],
+   "close_deg": 80.7,
+   "closed": {
+    "center_below_hinge": 2.88,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.98,
+    "hits_gun_housed": 0,
+    "hits_ship": 1,
+    "ship_pct": 0.11
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.5,
+    "need_pull": 5.25
+   },
+   "gun_model": "砲-P4",
+   "hinge_a": [
+    188.518,
+    49.626,
+    40.5
+   ],
+   "hinge_b": [
+    182.524,
+    49.375,
+    40.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 6,
+   "lid_of": "gun-8",
+   "model": "砲門蓋-P4",
+   "open": {
+    "box": [
+     182.003,
+     42.86,
+     40.0,
+     189.29,
+     50.147,
+     42.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 620,
+    "mirror_y": {
+     "center_below_hinge": -3.04,
+     "hits_ship": 124,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 182.4,
+   "samples": 882,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    185.5,
+    111,
+    40
+   ],
+   "close_deg": 80.7,
+   "closed": {
+    "center_below_hinge": 2.88,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.98,
+    "hits_gun_housed": 0,
+    "hits_ship": 1,
+    "ship_pct": 0.11
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.5,
+    "need_pull": 5.25
+   },
+   "gun_model": "砲-S4",
+   "hinge_a": [
+    182.524,
+    111.625,
+    40.5
+   ],
+   "hinge_b": [
+    188.518,
+    111.374,
+    40.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 6,
+   "lid_of": "gun-7",
+   "model": "砲門蓋-S4",
+   "open": {
+    "box": [
+     182.003,
+     110.853,
+     40.0,
+     189.29,
+     118.14,
+     42.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 620
+   },
+   "rotate": -2.4,
+   "samples": 882,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    226.5,
+    54,
+    43
+   ],
+   "close_deg": 81.8,
+   "closed": {
+    "center_below_hinge": 2.9,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.91,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.5,
+    "need_pull": 5.25
+   },
+   "gun_model": "砲-P5",
+   "hinge_a": [
+    229.541,
+    54.055,
+    43.5
+   ],
+   "hinge_b": [
+    223.641,
+    52.962,
+    43.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 6,
+   "lid_of": "gun-12",
+   "model": "砲門蓋-P5",
+   "open": {
+    "box": [
+     223.059,
+     46.479,
+     43.0,
+     231.217,
+     54.638,
+     45.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 576,
+    "mirror_y": {
+     "center_below_hinge": -3.04,
+     "hits_ship": 8,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 190.5,
+   "samples": 882,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    226.5,
+    107,
+    43
+   ],
+   "close_deg": 81.8,
+   "closed": {
+    "center_below_hinge": 2.9,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.91,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.5,
+    "need_pull": 5.25
+   },
+   "gun_model": "砲-S5",
+   "hinge_a": [
+    223.641,
+    108.038,
+    43.5
+   ],
+   "hinge_b": [
+    229.541,
+    106.945,
+    43.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 6,
+   "lid_of": "gun-9",
+   "model": "砲門蓋-S5",
+   "open": {
+    "box": [
+     223.059,
+     106.362,
+     43.0,
+     231.217,
+     114.521,
+     45.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 576
+   },
+   "rotate": -10.5,
+   "samples": 882,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    241.5,
+    58,
+    45
+   ],
+   "close_deg": 79.5,
+   "closed": {
+    "center_below_hinge": 2.86,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.99,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 3.5,
+    "need_pull": 4.25
+   },
+   "gun_model": "砲-P6",
+   "hinge_a": [
+    244.509,
+    58.441,
+    45.5
+   ],
+   "hinge_b": [
+    238.796,
+    56.607,
+    45.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 5,
+   "lid_of": "gun-11",
+   "model": "砲門蓋-P6",
+   "open": {
+    "box": [
+     238.168,
+     50.265,
+     45.0,
+     246.972,
+     59.07,
+     47.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 598,
+    "mirror_y": {
+     "center_below_hinge": -3.04,
+     "hits_ship": 5,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 197.8,
+   "samples": 882,
+   "side": "P",
+   "source_work": "summit-night-falcon-01m-portlid"
+  },
+  {
+   "at": [
+    241.5,
+    103,
+    45
+   ],
+   "close_deg": 79.5,
+   "closed": {
+    "center_below_hinge": 2.86,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.99,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 3.5,
+    "need_pull": 4.25
+   },
+   "gun_model": "砲-S6",
+   "hinge_a": [
+    238.796,
+    104.393,
+    45.5
+   ],
+   "hinge_b": [
+    244.509,
+    102.559,
+    45.5
+   ],
+   "host_work": "summit-night-falcon-01m-deck-main",
+   "house": 5,
+   "lid_of": "gun-10",
+   "model": "砲門蓋-S6",
+   "open": {
+    "box": [
+     238.168,
+     101.93,
+     45.0,
+     246.972,
+     110.735,
+     47.0
+    ],
+    "clear_above_gun": 1.95,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 598
+   },
+   "rotate": -17.8,
+   "samples": 882,
+   "side": "S",
+   "source_work": "summit-night-falcon-01m-portlid"
+  }
+ ],
+ "summary": {
+  "P": 6,
+  "center_below_hinge": [
+   2.81,
+   3.03
+  ],
+  "center_out_of_hinge": [
+   -0.21,
+   1.16
+  ],
+  "close_deg": [
+   77,
+   103.5
+  ],
+  "closed_center_in_ship": 0,
+  "closed_hits_gun_housed": 0,
+  "closed_hits_ship": 32,
+  "closed_ship_pct_max": 0.79,
+  "gun_housed_hits_ship": 0,
+  "house": [
+   4,
+   5,
+   6
+  ],
+  "house_slack": [
+   0.5,
+   3.0
+  ],
+  "lids": 12,
+  "min_pull_none": 0,
+  "open_clear_above_gun": [
+   1.95,
+   1.95
+  ],
+  "open_hits_gun": 0,
+  "open_hits_ship": 0,
+  "reverse_house0_lids_hit": 12,
+  "reverse_mirror_y_same_open": 6,
+  "reverse_mirror_y_up": 6
+ }
+}

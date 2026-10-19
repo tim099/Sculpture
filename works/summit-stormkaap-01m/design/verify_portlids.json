@@ -1,0 +1,2486 @@
+{
+ "applied": {
+  "models": {
+   "bad": [],
+   "count": 40,
+   "parts_box_max_diff": 0.0005,
+   "parts_hinge_max_diff": 0.0005
+  },
+  "summit-stormkaap-01m-portlid-lower": {
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     8,
+     0,
+     0
+    ]
+   },
+   "anchors_ok": true,
+   "card": {
+    "meters_per_voxel": 0.1,
+    "parent_work": "summit-stormkaap-01m",
+    "size": [
+     9,
+     8,
+     1
+    ],
+    "tags": [
+     "sub"
+    ]
+   },
+   "cells": 72,
+   "color_diff": 0,
+   "extra": 0,
+   "missing": 0
+  },
+  "summit-stormkaap-01m-portlid-stern": {
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     8,
+     0,
+     0
+    ]
+   },
+   "anchors_ok": true,
+   "card": {
+    "meters_per_voxel": 0.1,
+    "parent_work": "summit-stormkaap-01m",
+    "size": [
+     9,
+     9,
+     2
+    ],
+    "tags": [
+     "sub"
+    ]
+   },
+   "cells": 162,
+   "color_diff": 0,
+   "extra": 0,
+   "missing": 0
+  },
+  "summit-stormkaap-01m-portlid-upper": {
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     8,
+     0,
+     0
+    ]
+   },
+   "anchors_ok": true,
+   "card": {
+    "meters_per_voxel": 0.1,
+    "parent_work": "summit-stormkaap-01m",
+    "size": [
+     9,
+     7,
+     1
+    ],
+    "tags": [
+     "sub"
+    ]
+   },
+   "cells": 63,
+   "color_diff": 0,
+   "extra": 0,
+   "missing": 0
+  }
+ },
+ "gun_samples": {
+  "summit-stormkaap-01m-gun-12l": 29106,
+  "summit-stormkaap-01m-gun-6l": 19485
+ },
+ "note": "check_portlids.py（TASK-0736）—— 現況 ＝ summit-stormkaap-01m-assembly links=all（552299 格，z < 576）＋ 模型外框 48（不含 kind=gun／portlid）；蓋板 {'summit-stormkaap-01m-portlid-lower': 'masks/portlids/portlid-lower.txt', 'summit-stormkaap-01m-portlid-stern': 'masks/portlids/portlid-stern.txt', 'summit-stormkaap-01m-portlid-upper': 'masks/portlids/portlid-upper.txt'}",
+ "rows": [
+  {
+   "at": [
+    136.5,
+    107,
+    80
+   ],
+   "close_deg": 100.9,
+   "closed": {
+    "center_below_hinge": 3.44,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.6,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 3.0,
+    "need_pull": 6.25
+   },
+   "gun_model": "砲-P1",
+   "hinge_a": [
+    139.895,
+    104.827,
+    80.5
+   ],
+   "hinge_b": [
+    132.674,
+    108.271,
+    80.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 7,
+   "lid_of": "gun-2",
+   "model": "砲門蓋-P1",
+   "open": {
+    "box": [
+     128.994,
+     97.842,
+     80.0,
+     140.562,
+     108.937,
+     81.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 509,
+    "mirror_y": {
+     "center_below_hinge": -3.44,
+     "hits_ship": 287,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 154.5,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    136.5,
+    154,
+    80
+   ],
+   "close_deg": 100.9,
+   "closed": {
+    "center_below_hinge": 3.44,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.6,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 3.0,
+    "need_pull": 3.25
+   },
+   "gun_model": "砲-S1",
+   "hinge_a": [
+    132.674,
+    152.729,
+    80.5
+   ],
+   "hinge_b": [
+    139.895,
+    156.173,
+    80.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 4,
+   "lid_of": "gun-1",
+   "model": "砲門蓋-S1",
+   "open": {
+    "box": [
+     128.994,
+     152.063,
+     80.0,
+     140.562,
+     163.158,
+     81.0
+    ],
+    "clear_above_gun": 2.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 466
+   },
+   "rotate": 25.5,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    163.5,
+    97,
+    77
+   ],
+   "close_deg": 95.6,
+   "closed": {
+    "center_below_hinge": 3.48,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.33,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.5,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-P2",
+   "hinge_a": [
+    167.188,
+    95.372,
+    77.5
+   ],
+   "hinge_b": [
+    159.525,
+    97.671,
+    77.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 8,
+   "lid_of": "gun-4",
+   "model": "砲門蓋-P2",
+   "open": {
+    "box": [
+     156.891,
+     88.044,
+     77.0,
+     167.81,
+     98.293,
+     78.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 427,
+    "mirror_y": {
+     "center_below_hinge": -3.48,
+     "hits_ship": 78,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 163.3,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    163.5,
+    164,
+    77
+   ],
+   "close_deg": 95.6,
+   "closed": {
+    "center_below_hinge": 3.48,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.33,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.5,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-S2",
+   "hinge_a": [
+    159.525,
+    163.329,
+    77.5
+   ],
+   "hinge_b": [
+    167.188,
+    165.628,
+    77.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 8,
+   "lid_of": "gun-3",
+   "model": "砲門蓋-S2",
+   "open": {
+    "box": [
+     156.891,
+     162.707,
+     77.0,
+     167.81,
+     172.956,
+     78.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 427
+   },
+   "rotate": 16.7,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    210.5,
+    88,
+    73
+   ],
+   "close_deg": 85.7,
+   "closed": {
+    "center_below_hinge": 3.49,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.26,
+    "hits_gun_housed": 0,
+    "hits_ship": 9,
+    "ship_pct": 1.39
+   },
+   "gun": {
+    "housed_hits_ship": 36,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P3",
+   "hinge_a": [
+    214.338,
+    86.766,
+    73.5
+   ],
+   "hinge_b": [
+    206.477,
+    88.251,
+    73.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-6",
+   "model": "砲門蓋-P3",
+   "open": {
+    "box": [
+     204.593,
+     79.304,
+     73.0,
+     214.922,
+     88.835,
+     74.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 661,
+    "mirror_y": {
+     "center_below_hinge": -3.49,
+     "hits_ship": 81,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 169.3,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    210.5,
+    173,
+    73
+   ],
+   "close_deg": 85.7,
+   "closed": {
+    "center_below_hinge": 3.49,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.26,
+    "hits_gun_housed": 0,
+    "hits_ship": 7,
+    "ship_pct": 1.08
+   },
+   "gun": {
+    "housed_hits_ship": 36,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S3",
+   "hinge_a": [
+    206.477,
+    172.749,
+    73.5
+   ],
+   "hinge_b": [
+    214.338,
+    174.234,
+    73.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-5",
+   "model": "砲門蓋-S3",
+   "open": {
+    "box": [
+     204.593,
+     172.165,
+     73.0,
+     214.922,
+     181.696,
+     74.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 661
+   },
+   "rotate": 10.7,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    237.5,
+    84,
+    71
+   ],
+   "close_deg": 81.4,
+   "closed": {
+    "center_below_hinge": 3.46,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.52,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P4",
+   "hinge_a": [
+    241.44,
+    83.146,
+    71.5
+   ],
+   "hinge_b": [
+    233.471,
+    83.858,
+    71.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-8",
+   "model": "砲門蓋-P4",
+   "open": {
+    "box": [
+     232.307,
+     75.632,
+     71.0,
+     241.982,
+     84.4,
+     72.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 955,
+    "mirror_y": {
+     "center_below_hinge": -3.46,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 174.9,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    237.5,
+    177,
+    71
+   ],
+   "close_deg": 81.4,
+   "closed": {
+    "center_below_hinge": 3.46,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.52,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S4",
+   "hinge_a": [
+    233.471,
+    177.142,
+    71.5
+   ],
+   "hinge_b": [
+    241.44,
+    177.854,
+    71.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-7",
+   "model": "砲門蓋-S4",
+   "open": {
+    "box": [
+     232.307,
+     176.6,
+     71.0,
+     241.982,
+     185.368,
+     72.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 955
+   },
+   "rotate": 5.1,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    264.5,
+    82,
+    70
+   ],
+   "close_deg": 77.9,
+   "closed": {
+    "center_below_hinge": 3.42,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.73,
+    "hits_gun_housed": 0,
+    "hits_ship": 4,
+    "ship_pct": 0.62
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P5",
+   "hinge_a": [
+    268.458,
+    81.236,
+    70.5
+   ],
+   "hinge_b": [
+    260.476,
+    81.766,
+    70.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-10",
+   "model": "砲門蓋-P5",
+   "open": {
+    "box": [
+     259.48,
+     73.719,
+     70.0,
+     268.99,
+     82.298,
+     71.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 801,
+    "mirror_y": {
+     "center_below_hinge": -3.42,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 176.2,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    264.5,
+    179,
+    70
+   ],
+   "close_deg": 77.9,
+   "closed": {
+    "center_below_hinge": 3.42,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.73,
+    "hits_gun_housed": 0,
+    "hits_ship": 11,
+    "ship_pct": 1.7
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S5",
+   "hinge_a": [
+    260.476,
+    179.234,
+    70.5
+   ],
+   "hinge_b": [
+    268.458,
+    179.764,
+    70.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-9",
+   "model": "砲門蓋-S5",
+   "open": {
+    "box": [
+     259.48,
+     178.702,
+     70.0,
+     268.99,
+     187.281,
+     71.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 801
+   },
+   "rotate": 3.8,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    345.5,
+    82,
+    70
+   ],
+   "close_deg": 78.8,
+   "closed": {
+    "center_below_hinge": 3.43,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.68,
+    "hits_gun_housed": 0,
+    "hits_ship": 10,
+    "ship_pct": 1.54
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P6",
+   "hinge_a": [
+    349.5,
+    81.5,
+    70.5
+   ],
+   "hinge_b": [
+    341.5,
+    81.5,
+    70.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-12",
+   "model": "砲門蓋-P6",
+   "open": {
+    "box": [
+     341.0,
+     74.0,
+     70.0,
+     350.0,
+     82.0,
+     71.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 801,
+    "mirror_y": {
+     "center_below_hinge": -3.43,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 180,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    345.5,
+    179,
+    70
+   ],
+   "close_deg": 78.8,
+   "closed": {
+    "center_below_hinge": 3.43,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.68,
+    "hits_gun_housed": 0,
+    "hits_ship": 10,
+    "ship_pct": 1.54
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S6",
+   "hinge_a": [
+    341.5,
+    179.5,
+    70.5
+   ],
+   "hinge_b": [
+    349.5,
+    179.5,
+    70.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-11",
+   "model": "砲門蓋-S6",
+   "open": {
+    "box": [
+     341.0,
+     179.0,
+     70.0,
+     350.0,
+     187.0,
+     71.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 801
+   },
+   "rotate": 0,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    372.5,
+    83,
+    71
+   ],
+   "close_deg": 78.3,
+   "closed": {
+    "center_below_hinge": 3.43,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.71,
+    "hits_gun_housed": 0,
+    "hits_ship": 9,
+    "ship_pct": 1.39
+   },
+   "gun": {
+    "housed_hits_ship": 36,
+    "min_pull_clear_lid": 8.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P7",
+   "hinge_a": [
+    376.52,
+    82.696,
+    71.5
+   ],
+   "hinge_b": [
+    368.529,
+    82.305,
+    71.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-14",
+   "model": "砲門蓋-P7",
+   "open": {
+    "box": [
+     368.005,
+     74.79,
+     71.0,
+     377.385,
+     83.22,
+     72.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 749,
+    "mirror_y": {
+     "center_below_hinge": -3.43,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 182.8,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    372.5,
+    178,
+    71
+   ],
+   "close_deg": 79.8,
+   "closed": {
+    "center_below_hinge": 3.44,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.62,
+    "hits_gun_housed": 0,
+    "hits_ship": 12,
+    "ship_pct": 1.85
+   },
+   "gun": {
+    "housed_hits_ship": 36,
+    "min_pull_clear_lid": 8.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S7",
+   "hinge_a": [
+    368.529,
+    178.695,
+    71.5
+   ],
+   "hinge_b": [
+    376.52,
+    178.304,
+    71.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-13",
+   "model": "砲門蓋-S7",
+   "open": {
+    "box": [
+     368.005,
+     177.78,
+     71.0,
+     377.385,
+     186.21,
+     72.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 801
+   },
+   "rotate": -2.8,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    399.5,
+    85,
+    73
+   ],
+   "close_deg": 78.6,
+   "closed": {
+    "center_below_hinge": 3.43,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.69,
+    "hits_gun_housed": 0,
+    "hits_ship": 11,
+    "ship_pct": 1.7
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-P8",
+   "hinge_a": [
+    403.522,
+    84.731,
+    73.5
+   ],
+   "hinge_b": [
+    395.535,
+    84.271,
+    73.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 8,
+   "lid_of": "gun-16",
+   "model": "砲門蓋-P8",
+   "open": {
+    "box": [
+     395.007,
+     76.754,
+     73.0,
+     404.453,
+     85.259,
+     74.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 857,
+    "mirror_y": {
+     "center_below_hinge": -3.43,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 183.3,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    399.5,
+    176,
+    73
+   ],
+   "close_deg": 77.1,
+   "closed": {
+    "center_below_hinge": 3.41,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.78,
+    "hits_gun_housed": 0,
+    "hits_ship": 10,
+    "ship_pct": 1.54
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-S8",
+   "hinge_a": [
+    395.535,
+    176.729,
+    73.5
+   ],
+   "hinge_b": [
+    403.522,
+    176.269,
+    73.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 8,
+   "lid_of": "gun-15",
+   "model": "砲門蓋-S8",
+   "open": {
+    "box": [
+     395.007,
+     175.741,
+     73.0,
+     404.453,
+     184.246,
+     74.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 801
+   },
+   "rotate": -3.3,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    426.5,
+    87,
+    75
+   ],
+   "close_deg": 81.7,
+   "closed": {
+    "center_below_hinge": 3.46,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.5,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.5,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-P9",
+   "hinge_a": [
+    430.53,
+    86.907,
+    75.5
+   ],
+   "hinge_b": [
+    422.571,
+    86.098,
+    75.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 8,
+   "lid_of": "gun-18",
+   "model": "砲門蓋-P9",
+   "open": {
+    "box": [
+     422.023,
+     78.586,
+     75.0,
+     431.785,
+     87.455,
+     76.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 953,
+    "mirror_y": {
+     "center_below_hinge": -3.46,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 185.8,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    426.5,
+    174,
+    75
+   ],
+   "close_deg": 81.7,
+   "closed": {
+    "center_below_hinge": 3.46,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.5,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.5,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-S9",
+   "hinge_a": [
+    422.571,
+    174.902,
+    75.5
+   ],
+   "hinge_b": [
+    430.53,
+    174.093,
+    75.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 8,
+   "lid_of": "gun-17",
+   "model": "砲門蓋-S9",
+   "open": {
+    "box": [
+     422.023,
+     173.545,
+     75.0,
+     431.785,
+     182.414,
+     76.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 953
+   },
+   "rotate": -5.8,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    453.5,
+    91,
+    78
+   ],
+   "close_deg": 84.5,
+   "closed": {
+    "center_below_hinge": 3.48,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.33,
+    "hits_gun_housed": 0,
+    "hits_ship": 3,
+    "ship_pct": 0.46
+   },
+   "gun": {
+    "housed_hits_ship": 45,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P10",
+   "hinge_a": [
+    457.528,
+    91.146,
+    78.5
+   ],
+   "hinge_b": [
+    449.631,
+    89.867,
+    78.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-20",
+   "model": "砲門蓋-P10",
+   "open": {
+    "box": [
+     449.058,
+     82.383,
+     78.0,
+     459.221,
+     91.719,
+     79.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 559,
+    "mirror_y": {
+     "center_below_hinge": -3.48,
+     "hits_ship": 15,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 189.2,
+   "samples": 648,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    453.5,
+    170,
+    78
+   ],
+   "close_deg": 84.5,
+   "closed": {
+    "center_below_hinge": 3.48,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.33,
+    "hits_gun_housed": 0,
+    "hits_ship": 3,
+    "ship_pct": 0.46
+   },
+   "gun": {
+    "housed_hits_ship": 45,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S10",
+   "hinge_a": [
+    449.631,
+    171.133,
+    78.5
+   ],
+   "hinge_b": [
+    457.528,
+    169.854,
+    78.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-lower",
+   "house": 9,
+   "lid_of": "gun-19",
+   "model": "砲門蓋-S10",
+   "open": {
+    "box": [
+     449.058,
+     169.281,
+     78.0,
+     459.221,
+     178.617,
+     79.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 559
+   },
+   "rotate": -9.2,
+   "samples": 648,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-lower"
+  },
+  {
+   "at": [
+    103,
+    118.5,
+    106
+   ],
+   "close_deg": 96,
+   "closed": {
+    "center_below_hinge": 4.03,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.08,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 1.0,
+    "need_pull": 2.25
+   },
+   "gun_model": "砲-AP",
+   "hinge_a": [
+    102.5,
+    114.5,
+    106.5
+   ],
+   "hinge_b": [
+    102.5,
+    122.5,
+    106.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 4,
+   "lid_of": "gun-39",
+   "model": "砲門蓋-AP",
+   "open": {
+    "box": [
+     94.0,
+     114.0,
+     106.0,
+     103.0,
+     123.0,
+     108.0
+    ],
+    "clear_above_gun": null,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 345
+   },
+   "rotate": 90,
+   "samples": 1458,
+   "side": "A",
+   "source_work": "summit-stormkaap-01m-portlid-stern"
+  },
+  {
+   "at": [
+    103,
+    142.5,
+    106
+   ],
+   "close_deg": 96,
+   "closed": {
+    "center_below_hinge": 4.03,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.08,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 1.0,
+    "need_pull": 2.25
+   },
+   "gun_model": "砲-AS",
+   "hinge_a": [
+    102.5,
+    138.5,
+    106.5
+   ],
+   "hinge_b": [
+    102.5,
+    146.5,
+    106.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 4,
+   "lid_of": "gun-40",
+   "model": "砲門蓋-AS",
+   "open": {
+    "box": [
+     94.0,
+     138.0,
+     106.0,
+     103.0,
+     147.0,
+     108.0
+    ],
+    "clear_above_gun": null,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 345
+   },
+   "rotate": 90,
+   "samples": 1458,
+   "side": "A",
+   "source_work": "summit-stormkaap-01m-portlid-stern"
+  },
+  {
+   "at": [
+    150.5,
+    99,
+    97
+   ],
+   "close_deg": 102.4,
+   "closed": {
+    "center_below_hinge": 2.93,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.63,
+    "hits_gun_housed": 0,
+    "hits_ship": 6,
+    "ship_pct": 1.06
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.0,
+    "need_pull": 6.25
+   },
+   "gun_model": "砲-P1",
+   "hinge_a": [
+    154.327,
+    97.733,
+    97.5
+   ],
+   "hinge_b": [
+    146.479,
+    99.286,
+    97.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 7,
+   "lid_of": "gun-22",
+   "model": "砲門蓋-P1",
+   "open": {
+    "box": [
+     144.726,
+     91.259,
+     97.0,
+     154.914,
+     99.874,
+     98.0
+    ],
+    "clear_above_gun": 0.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 341,
+    "mirror_y": {
+     "center_below_hinge": -2.93,
+     "hits_ship": 246,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 168.8,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    150.5,
+    162,
+    97
+   ],
+   "close_deg": 102.4,
+   "closed": {
+    "center_below_hinge": 2.93,
+    "center_in_ship": false,
+    "center_out_of_hinge": -0.63,
+    "hits_gun_housed": 0,
+    "hits_ship": 10,
+    "ship_pct": 1.76
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.0,
+    "need_pull": 6.25
+   },
+   "gun_model": "砲-S1",
+   "hinge_a": [
+    146.479,
+    161.714,
+    97.5
+   ],
+   "hinge_b": [
+    154.327,
+    163.267,
+    97.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 7,
+   "lid_of": "gun-21",
+   "model": "砲門蓋-S1",
+   "open": {
+    "box": [
+     144.726,
+     161.126,
+     97.0,
+     154.914,
+     169.741,
+     98.0
+    ],
+    "clear_above_gun": 0.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 341
+   },
+   "rotate": 11.2,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    222.5,
+    90,
+    91
+   ],
+   "close_deg": 77.8,
+   "closed": {
+    "center_below_hinge": 2.93,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.63,
+    "hits_gun_housed": 0,
+    "hits_ship": 14,
+    "ship_pct": 2.47
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P2",
+   "hinge_a": [
+    226.453,
+    89.208,
+    91.5
+   ],
+   "hinge_b": [
+    218.474,
+    89.794,
+    91.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-24",
+   "model": "砲門蓋-P2",
+   "open": {
+    "box": [
+     217.499,
+     82.689,
+     91.0,
+     226.988,
+     90.33,
+     92.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 727,
+    "mirror_y": {
+     "center_below_hinge": -2.93,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 175.8,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    222.5,
+    171,
+    91
+   ],
+   "close_deg": 78.3,
+   "closed": {
+    "center_below_hinge": 2.94,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.61,
+    "hits_gun_housed": 0,
+    "hits_ship": 13,
+    "ship_pct": 2.29
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S2",
+   "hinge_a": [
+    218.474,
+    171.206,
+    91.5
+   ],
+   "hinge_b": [
+    226.453,
+    171.792,
+    91.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-23",
+   "model": "砲門蓋-S2",
+   "open": {
+    "box": [
+     217.499,
+     170.67,
+     91.0,
+     226.988,
+     178.311,
+     92.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 727
+   },
+   "rotate": 4.2,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    250.5,
+    88,
+    89
+   ],
+   "close_deg": 67.8,
+   "closed": {
+    "center_below_hinge": 2.78,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.13,
+    "hits_gun_housed": 0,
+    "hits_ship": 8,
+    "ship_pct": 1.41
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P3",
+   "hinge_a": [
+    254.471,
+    87.305,
+    89.5
+   ],
+   "hinge_b": [
+    246.48,
+    87.696,
+    89.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-26",
+   "model": "砲門蓋-P3",
+   "open": {
+    "box": [
+     245.663,
+     80.789,
+     89.0,
+     254.995,
+     88.22,
+     90.0
+    ],
+    "clear_above_gun": 0.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 787,
+    "mirror_y": {
+     "center_below_hinge": -2.78,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 177.2,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    250.5,
+    173,
+    89
+   ],
+   "close_deg": 68.8,
+   "closed": {
+    "center_below_hinge": 2.8,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.08,
+    "hits_gun_housed": 0,
+    "hits_ship": 9,
+    "ship_pct": 1.59
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S3",
+   "hinge_a": [
+    246.48,
+    173.304,
+    89.5
+   ],
+   "hinge_b": [
+    254.471,
+    173.695,
+    89.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-25",
+   "model": "砲門蓋-S3",
+   "open": {
+    "box": [
+     245.663,
+     172.78,
+     89.0,
+     254.995,
+     180.211,
+     90.0
+    ],
+    "clear_above_gun": 0.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 787
+   },
+   "rotate": 2.8,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    277.5,
+    87,
+    89
+   ],
+   "close_deg": 68.7,
+   "closed": {
+    "center_below_hinge": 2.8,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.09,
+    "hits_gun_housed": 0,
+    "hits_ship": 10,
+    "ship_pct": 1.76
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P4",
+   "hinge_a": [
+    281.476,
+    86.333,
+    89.5
+   ],
+   "hinge_b": [
+    273.483,
+    86.668,
+    89.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-28",
+   "model": "砲門蓋-P4",
+   "open": {
+    "box": [
+     272.711,
+     79.818,
+     89.0,
+     281.996,
+     87.188,
+     90.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 805,
+    "mirror_y": {
+     "center_below_hinge": -2.8,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 177.6,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    277.5,
+    174,
+    89
+   ],
+   "close_deg": 68.7,
+   "closed": {
+    "center_below_hinge": 2.8,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.09,
+    "hits_gun_housed": 0,
+    "hits_ship": 8,
+    "ship_pct": 1.41
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S4",
+   "hinge_a": [
+    273.483,
+    174.332,
+    89.5
+   ],
+   "hinge_b": [
+    281.476,
+    174.667,
+    89.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-27",
+   "model": "砲門蓋-S4",
+   "open": {
+    "box": [
+     272.711,
+     173.812,
+     89.0,
+     281.996,
+     181.182,
+     90.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 805
+   },
+   "rotate": 2.4,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    360.5,
+    88,
+    90
+   ],
+   "close_deg": 67.7,
+   "closed": {
+    "center_below_hinge": 2.78,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.14,
+    "hits_gun_housed": 0,
+    "hits_ship": 10,
+    "ship_pct": 1.76
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P5",
+   "hinge_a": [
+    364.5,
+    87.5,
+    90.5
+   ],
+   "hinge_b": [
+    356.5,
+    87.5,
+    90.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-30",
+   "model": "砲門蓋-P5",
+   "open": {
+    "box": [
+     356.0,
+     81.0,
+     90.0,
+     365.0,
+     88.0,
+     91.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 843,
+    "mirror_y": {
+     "center_below_hinge": -2.78,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 180,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    360.5,
+    173,
+    90
+   ],
+   "close_deg": 67.7,
+   "closed": {
+    "center_below_hinge": 2.78,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.14,
+    "hits_gun_housed": 0,
+    "hits_ship": 10,
+    "ship_pct": 1.76
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S5",
+   "hinge_a": [
+    356.5,
+    173.5,
+    90.5
+   ],
+   "hinge_b": [
+    364.5,
+    173.5,
+    90.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-29",
+   "model": "砲門蓋-S5",
+   "open": {
+    "box": [
+     356.0,
+     173.0,
+     90.0,
+     365.0,
+     180.0,
+     91.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 843
+   },
+   "rotate": 0,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    386.5,
+    89,
+    91
+   ],
+   "close_deg": 67.8,
+   "closed": {
+    "center_below_hinge": 2.78,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.13,
+    "hits_gun_housed": 0,
+    "hits_ship": 8,
+    "ship_pct": 1.41
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-P6",
+   "hinge_a": [
+    390.5,
+    88.5,
+    91.5
+   ],
+   "hinge_b": [
+    382.5,
+    88.5,
+    91.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-32",
+   "model": "砲門蓋-P6",
+   "open": {
+    "box": [
+     382.0,
+     82.0,
+     91.0,
+     391.0,
+     89.0,
+     92.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 843,
+    "mirror_y": {
+     "center_below_hinge": -2.78,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 180,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    386.5,
+    172,
+    91
+   ],
+   "close_deg": 70.3,
+   "closed": {
+    "center_below_hinge": 2.82,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.01,
+    "hits_gun_housed": 0,
+    "hits_ship": 15,
+    "ship_pct": 2.65
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 8.0,
+    "need_pull": 8.25
+   },
+   "gun_model": "砲-S6",
+   "hinge_a": [
+    382.5,
+    172.5,
+    91.5
+   ],
+   "hinge_b": [
+    390.5,
+    172.5,
+    91.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 9,
+   "lid_of": "gun-31",
+   "model": "砲門蓋-S6",
+   "open": {
+    "box": [
+     382.0,
+     172.0,
+     91.0,
+     391.0,
+     179.0,
+     92.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 663
+   },
+   "rotate": 0,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    412.5,
+    91,
+    93
+   ],
+   "close_deg": 71,
+   "closed": {
+    "center_below_hinge": 2.84,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.97,
+    "hits_gun_housed": 0,
+    "hits_ship": 20,
+    "ship_pct": 3.53
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-P7",
+   "hinge_a": [
+    416.53,
+    90.886,
+    93.5
+   ],
+   "hinge_b": [
+    408.566,
+    90.119,
+    93.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 8,
+   "lid_of": "gun-34",
+   "model": "砲門蓋-P7",
+   "open": {
+    "box": [
+     408.021,
+     83.601,
+     93.0,
+     417.65,
+     91.431,
+     94.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 663,
+    "mirror_y": {
+     "center_below_hinge": -2.84,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 185.5,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    412.5,
+    170,
+    93
+   ],
+   "close_deg": 70.5,
+   "closed": {
+    "center_below_hinge": 2.83,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.0,
+    "hits_gun_housed": 0,
+    "hits_ship": 18,
+    "ship_pct": 3.17
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-S7",
+   "hinge_a": [
+    408.566,
+    170.881,
+    93.5
+   ],
+   "hinge_b": [
+    416.53,
+    170.114,
+    93.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 8,
+   "lid_of": "gun-33",
+   "model": "砲門蓋-S7",
+   "open": {
+    "box": [
+     408.021,
+     169.569,
+     93.0,
+     417.65,
+     177.399,
+     94.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 663
+   },
+   "rotate": -5.5,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    439.5,
+    94,
+    95
+   ],
+   "close_deg": 70,
+   "closed": {
+    "center_below_hinge": 2.82,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.02,
+    "hits_gun_housed": 0,
+    "hits_ship": 20,
+    "ship_pct": 3.53
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-P8",
+   "hinge_a": [
+    443.531,
+    93.984,
+    95.5
+   ],
+   "hinge_b": [
+    435.589,
+    93.023,
+    95.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 8,
+   "lid_of": "gun-36",
+   "model": "砲門蓋-P8",
+   "open": {
+    "box": [
+     435.033,
+     86.51,
+     95.0,
+     444.808,
+     94.541,
+     96.0
+    ],
+    "clear_above_gun": 0.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 683,
+    "mirror_y": {
+     "center_below_hinge": -2.82,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 186.9,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    439.5,
+    167,
+    95
+   ],
+   "close_deg": 69,
+   "closed": {
+    "center_below_hinge": 2.8,
+    "center_in_ship": false,
+    "center_out_of_hinge": 1.07,
+    "hits_gun_housed": 0,
+    "hits_ship": 16,
+    "ship_pct": 2.82
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-S8",
+   "hinge_a": [
+    435.589,
+    167.977,
+    95.5
+   ],
+   "hinge_b": [
+    443.531,
+    167.016,
+    95.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 8,
+   "lid_of": "gun-35",
+   "model": "砲門蓋-S8",
+   "open": {
+    "box": [
+     435.033,
+     166.459,
+     95.0,
+     444.808,
+     174.49,
+     96.0
+    ],
+    "clear_above_gun": 0.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 759
+   },
+   "rotate": -6.9,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    466.5,
+    98,
+    98
+   ],
+   "close_deg": 74,
+   "closed": {
+    "center_below_hinge": 2.88,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.82,
+    "hits_gun_housed": 0,
+    "hits_ship": 14,
+    "ship_pct": 2.47
+   },
+   "gun": {
+    "housed_hits_ship": 16,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-P9",
+   "hinge_a": [
+    470.528,
+    98.167,
+    98.5
+   ],
+   "hinge_b": [
+    462.637,
+    96.847,
+    98.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 8,
+   "lid_of": "gun-38",
+   "model": "砲門蓋-P9",
+   "open": {
+    "box": [
+     462.062,
+     90.353,
+     98.0,
+     472.094,
+     98.743,
+     99.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 614,
+    "mirror_y": {
+     "center_below_hinge": -2.88,
+     "hits_ship": 0,
+     "open_same_cells": true
+    }
+   },
+   "rotate": 189.5,
+   "samples": 567,
+   "side": "P",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  },
+  {
+   "at": [
+    466.5,
+    163,
+    98
+   ],
+   "close_deg": 75,
+   "closed": {
+    "center_below_hinge": 2.9,
+    "center_in_ship": false,
+    "center_out_of_hinge": 0.77,
+    "hits_gun_housed": 0,
+    "hits_ship": 16,
+    "ship_pct": 2.82
+   },
+   "gun": {
+    "housed_hits_ship": 16,
+    "min_pull_clear_lid": 7.0,
+    "need_pull": 7.25
+   },
+   "gun_model": "砲-S9",
+   "hinge_a": [
+    462.637,
+    164.153,
+    98.5
+   ],
+   "hinge_b": [
+    470.528,
+    162.833,
+    98.5
+   ],
+   "host_work": "summit-stormkaap-01m-deck-upper",
+   "house": 8,
+   "lid_of": "gun-37",
+   "model": "砲門蓋-S9",
+   "open": {
+    "box": [
+     462.062,
+     162.257,
+     98.0,
+     472.094,
+     170.647,
+     99.0
+    ],
+    "clear_above_gun": 1.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 634
+   },
+   "rotate": -9.5,
+   "samples": 567,
+   "side": "S",
+   "source_work": "summit-stormkaap-01m-portlid-upper"
+  }
+ ],
+ "summary": {
+  "P": 19,
+  "center_below_hinge": [
+   2.78,
+   4.03
+  ],
+  "center_out_of_hinge": [
+   -0.63,
+   1.14
+  ],
+  "close_deg": [
+   67.7,
+   102.4
+  ],
+  "closed_center_in_ship": 0,
+  "closed_hits_gun_housed": 0,
+  "closed_hits_ship": 324,
+  "closed_ship_pct_max": 3.53,
+  "gun_housed_hits_ship": 266,
+  "house": [
+   4,
+   7,
+   8,
+   9
+  ],
+  "house_slack": [
+   0.5,
+   4.0
+  ],
+  "lids": 40,
+  "min_pull_none": 0,
+  "open_clear_above_gun": [
+   0.45,
+   2.45
+  ],
+  "open_hits_gun": 0,
+  "open_hits_ship": 0,
+  "reverse_house0_lids_hit": 40,
+  "reverse_mirror_y_same_open": 19,
+  "reverse_mirror_y_up": 19
+ }
+}
