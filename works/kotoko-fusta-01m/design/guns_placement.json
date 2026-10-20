@@ -1,0 +1,180 @@
+{
+ "note": "draft_guns.py（造船規格 §2.2、§4）—— 模型都掛在 甲板-bow（kotoko-fusta-01m-bow）",
+ "host_work": "kotoko-fusta-01m-bow",
+ "components": {
+  "bombardella": {
+   "work": "kotoko-fusta-01m-gun-bombardella",
+   "size": [
+    13,
+    46,
+    14
+   ],
+   "cells": 2623,
+   "anchors": {
+    "muzzle": [
+     6,
+     43,
+     8
+    ],
+    "breech": [
+     6,
+     16,
+     8
+    ],
+    "cascabel": [
+     6,
+     8,
+     8
+    ]
+   },
+   "sha256": "49004c60cb360e1d0dfba3f5dd75e5519be811afbdc34cdb73c2e73d381b2433",
+   "meters_per_voxel": 0.05
+  }
+ },
+ "rows": [
+  {
+   "name": "bow-gun",
+   "comp": "bombardella",
+   "at": [
+    296.0,
+    80.5,
+    22
+   ],
+   "pivot": [
+    6.5,
+    0,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "scale": 0.5,
+   "mirror": "",
+   "meta": {
+    "kind": "gun",
+    "gun": "bombardella"
+   },
+   "source_work": "kotoko-fusta-01m-gun-bombardella"
+  },
+  {
+   "name": "pierrier-S",
+   "comp": "pierrier",
+   "at": [
+    305.5,
+    90.5,
+    27
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "mirror": "",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "mount": "turret",
+    "arc": "-80,80",
+    "rate": 45
+   },
+   "source_work": "apex-one-reale-01m-gun-pierrier"
+  },
+  {
+   "name": "pierrier-P",
+   "comp": "pierrier",
+   "at": [
+    305.5,
+    70.5,
+    27
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 0.5,
+   "mirror": "",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "mount": "turret",
+    "arc": "-80,80",
+    "rate": 45
+   },
+   "source_work": "apex-one-reale-01m-gun-pierrier"
+  },
+  {
+   "name": "bow-S",
+   "comp": "bow",
+   "at": [
+    299.5,
+    85.5,
+    22
+   ],
+   "pivot": [
+    5.5,
+    20.5,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "mirror": "",
+   "meta": {
+    "kind": "gun",
+    "gun": "bow",
+    "weapon": "bow",
+    "ammo": "bolt",
+    "mount": "pivot",
+    "ports": "0,45,-45"
+   },
+   "source_work": "apex-one-punt-01m-gun-bow"
+  },
+  {
+   "name": "bow-P",
+   "comp": "bow",
+   "at": [
+    299.5,
+    75.5,
+    22
+   ],
+   "pivot": [
+    5.5,
+    20.5,
+    0
+   ],
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 0.5,
+   "mirror": "",
+   "meta": {
+    "kind": "gun",
+    "gun": "bow",
+    "weapon": "bow",
+    "ammo": "bolt",
+    "mount": "pivot",
+    "ports": "0,45,-45"
+   },
+   "source_work": "apex-one-punt-01m-gun-bow"
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "rudder": {
+  "at": [
+   51.282,
+   80.5,
+   0.0
+  ],
+  "pivot": [
+   51.282,
+   80.5,
+   0.0
+  ],
+  "meta": {
+   "kind": "rudder",
+   "hinge_x": 51.282,
+   "hinge_y": 80.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.50524,
+   "axis_y": 0,
+   "axis_z": 0.86298,
+   "max_deg": 35,
+   "turn_axis": "hinge",
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  },
+  "stock_top": [
+   33,
+   80,
+   30
+  ]
+ },
+ "stores": [
+  {
+   "name": "barrel-1",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    103.5,
+    77.5,
+    6
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "barrel-2",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    103.5,
+    83.5,
+    6
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "arrows-1",
+   "work": "erina-dromon-01m-store-boltbox",
+   "at": [
+    110.5,
+    77.5,
+    6
+   ],
+   "pivot": [
+    5.5,
+    3.5,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100,
+    "store": "bolt"
+   }
+  },
+  {
+   "name": "arrows-2",
+   "work": "erina-dromon-01m-store-boltbox",
+   "at": [
+    110.5,
+    83.5,
+    6
+   ],
+   "pivot": [
+    5.5,
+    3.5,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100,
+    "store": "bolt"
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "name": "anchor-S",
+   "work": "kotoko-fusta-01m-anchor-grapnel",
+   "at": [
+    314.5,
+    91.5,
+    27
+   ],
+   "pivot": [
+    9.5,
+    9.5,
+    24.0
+   ],
+   "rotate": [
+    0,
+    0,
+    45
+   ],
+   "scale": 0.5,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower",
+    "hawse": "314,85,18"
+   },
+   "crown_z": 15.25,
+   "out": 6
+  },
+  {
+   "name": "anchor-P",
+   "work": "kotoko-fusta-01m-anchor-grapnel",
+   "at": [
+    314.5,
+    69.5,
+    27
+   ],
+   "pivot": [
+    9.5,
+    9.5,
+    24.0
+   ],
+   "rotate": [
+    0,
+    0,
+    -45
+   ],
+   "scale": 0.5,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower",
+    "hawse": "314,75,18"
+   },
+   "crown_z": 15.25,
+   "out": 6
+  }
+ ],
+ "anchor_component": {
+  "work": "kotoko-fusta-01m-anchor-grapnel",
+  "size": [
+   20,
+   20,
+   24
+  ],
+  "anchors": {
+   "ring": [
+    9,
+    9,
+    23
+   ],
+   "crown": [
+    9,
+    9,
+    0
+   ],
+   "fluke-a": [
+    18,
+    9,
+    9
+   ],
+   "fluke-b": [
+    1,
+    9,
+    9
+   ]
+  },
+  "cells": 304
+ },
+ "ladders": [
+  {
+   "name": "hold",
+   "points": {
+    "foot": [
+     88,
+     80,
+     6
+    ],
+    "lo": [
+     86,
+     80,
+     9
+    ],
+    "hi": [
+     84,
+     80,
+     15
+    ],
+    "head": [
+     80,
+     80,
+     18
+    ]
+   }
+  },
+  {
+   "name": "bow",
+   "points": {
+    "foot": [
+     290,
+     80,
+     20
+    ],
+    "lo": [
+     293,
+     80,
+     21
+    ],
+    "hi": [
+     293,
+     80,
+     21
+    ],
+    "head": [
+     295,
+     80,
+     22
+    ]
+   }
+  }
+ ],
+ "magazine_meta": {
+  "kind": "magazine",
+  "pos": "aft",
+  "powder_lb": 400,
+  "hoist": "甲板-main/梯子/hold"
+ },
+ "decks": [
+  [
+   "link",
+   "甲板-hold",
+   {
+    "kind": "deck",
+    "deck": "hold",
+    "level": 0,
+    "name": "艙底（藥庫）",
+    "floor": "86:6,130:6",
+    "thick": 2
+   }
+  ],
+  [
+   "link",
+   "甲板-main",
+   {
+    "kind": "deck",
+    "deck": "main",
+    "level": 1,
+    "name": "甲板（中央走道與划手座）",
+    "floor": "44:23,56:21,68:19,80:18,92:17,104:16,116:16,128:16,140:16,152:16,164:16,176:16,188:16,200:16,212:16,224:16,236:16,248:16,260:16,272:16,284:17,296:17,308:19",
+    "walk": "60:21,75:18,87:17,88:18,89:19,90:20,102:19,114:19,126:19,138:19,150:19,162:19,174:19,186:19,198:19,210:19,222:19,234:19,246:19,258:19,270:19,282:19,292:20,294:22,315:22",
+    "thick": 2
+   }
+  ],
+  [
+   "link",
+   "甲板-bow",
+   {
+    "kind": "deck",
+    "deck": "bow",
+    "level": 2,
+    "name": "船首平台",
+    "floor": "294:22,316:22",
+    "thick": 1
+   }
+  ]
+ ]
+}

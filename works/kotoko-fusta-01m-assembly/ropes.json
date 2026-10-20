@@ -1,0 +1,121 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "shroud-P1",
+			"from": "主桅/hound-P",
+			"to": "舷外槳架/shroud-P1",
+			"color": "#2b2620",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:51",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-P2",
+			"from": "主桅/hound-P",
+			"to": "舷外槳架/shroud-P2",
+			"color": "#2b2620",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:51",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "lateen.sheet-P",
+			"from": "sail:lateen/clew",
+			"to": "舷外槳架/belay-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.45,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:52",
+			"meta": {
+				"kind": "sheet",
+				"sail": "lateen"
+			}
+		},
+		{
+			"name": "shroud-S1",
+			"from": "主桅/hound-S",
+			"to": "舷外槳架/shroud-S1",
+			"color": "#2b2620",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:52",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-S2",
+			"from": "主桅/hound-S",
+			"to": "舷外槳架/shroud-S2",
+			"color": "#2b2620",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:52",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "lateen.sheet-S",
+			"from": "sail:lateen/clew",
+			"to": "舷外槳架/belay-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.45,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:53",
+			"meta": {
+				"kind": "sheet",
+				"sail": "lateen"
+			}
+		},
+		{
+			"name": "lateen.tack",
+			"from": "model:主桅/yard/fore",
+			"to": "甲板-bow/tack",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:53",
+			"meta": {
+				"kind": "tack",
+				"sail": "lateen"
+			}
+		}
+	],
+	"groups": []
+}

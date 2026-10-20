@@ -1,0 +1,123 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:主桅/yard/fore",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "model:主桅/yard/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "179.8,76.5,41.1",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:50",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff",
+				"set": "1"
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "222.5,80.5,135.0",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "152.5,80.5,134.0",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "222.5,80.5,128.0",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#b60000",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:50",
+			"texture": "textures/pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main"
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "head",
+					"at": "model:主桅/yard/peak",
+					"pin": true
+				},
+				{
+					"name": "fly-top",
+					"at": "88.0,76.5,197.3",
+					"pin": false
+				},
+				{
+					"name": "fly-foot",
+					"at": "88.0,76.5,173.3",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "model:主桅/yard/13,1,105",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#b60000",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "階段三",
+			"persona": "kotoko",
+			"created_at": "2026-10-20T14:33:51",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
+		}
+	]
+}
