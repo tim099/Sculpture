@@ -11,11 +11,13 @@ from scipy import ndimage
 import civic
 import harbour
 import townpub
+import english
+import shipyard
 from civic import *
 
 ROOT = 'ame-carib-civic-01m'
 SUMMIT_ROOT = 'summit-carib-01m'
-MODULES = [civic, harbour, townpub]
+MODULES = [civic, harbour, townpub, english, shipyard]
 
 
 def wid(*a):

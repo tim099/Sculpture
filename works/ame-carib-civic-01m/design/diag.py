@@ -4,11 +4,11 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 from scipy import ndimage
-import civic, harbour, townpub
+import civic, harbour, townpub, english, shipyard
 from civic import composite
 
 key = sys.argv[1]
-fn = {f.__name__.replace('_', '-'): f for m in (civic, harbour, townpub) for f in m.ALL}[key]
+fn = {f.__name__.replace('_', '-'): f for m in (civic, harbour, townpub, english, shipyard) for f in m.ALL}[key]
 oob = []
 _put = civic.Model.put
 
