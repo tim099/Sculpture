@@ -17,3 +17,6 @@ works/*/draft.trash-*/
 __pycache__/
 # 作品當模型（TASK-0507）的本機快取：來源作品匯出的 obj，鍵對不上就重生 ⇒ 不入版控
 model_cache/
+# 遮罩的組合檔（2026-10-20，Tim 拍板）：design 的產生程式把部件遮罩組起來的產物（法式建築套件 16 個共 121 MB），可以重生 ⇒ 不入版控
+# （已經追蹤的不受影響：kaguya-roman-1453 那一個照舊追蹤）
+works/*/design/masks/*.composite.txt
