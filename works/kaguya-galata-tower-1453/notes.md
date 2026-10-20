@@ -62,6 +62,17 @@ python -I -X utf8 -B apply.py . create|stamp|anchors|links|check
 - **遊戲裡**：加拉塔塔擺了 1 個，接在三級石牆上，h 49.68 m、石基。
   - 以前手擺地塊一疊到東西就沒有高度；Blocksail 這次修了。
 
+## 改成特殊建築＋布旗（2026-10-20 下午）
+Tim：「其實我是想說把加拉塔變成一種建築(特殊建築) 直接用城建系統蓋上去」「然後旗幟可以改成布?(參考船隻)」
+- **用途**：塔身那條關聯的 meta `use` tower → `galata-tower`（Blocksail 的特殊建築就是這一種、遊戲照用途挑）；上一版的 `model` 刪掉。
+  - 用 `work sub=meta part=link`（null 刪鍵）改；⚠ `apply.py links` 重下同名關聯會被擋（rc=2，要 overwrite=1），只改 meta 不走那條。
+- **旗**：`tower.py` 不雕格子旗了，屋頂 104,309 → 104,232 格（刻掉 77 格）；多兩個固定點 `flag-top` 81,79,222、`flag-bottom` 81,79,215（旗杆東側、綁邊）。
+  - 成品掛一面帆：`work sub=sail name=genoa-flag corners="flag-top|flag-bottom|92,79,215|92,79,222" bind=0 free=2,3 color=255`，再 `sub=meta part=sail` 加 `kind=flag`、`flag=ensign`、`pattern=genoa`（同造船規格的旗）。7 × 7 布點、72 三角形。
+  - `manifest.json` 有記 `sails`，但 `apply.py` 還沒有 sails 那一步（這次手下 CLI）。
+  - Blockside 匯入只記四個角，遊戲自己拉 10 × 6 的布、照風飄，圖案 genoa ＝ 白底紅十字。
+- **讀數**：`apply.py check` 3 件每件缺 0、多 0、色差 0，`link_overlap` 0；總格數 716,269。
+- **遊戲裡**：照用途擺了 1 個；塔頂布旗從側面看展開、幾秒內來回擺，沒有發散。
+
 ## TODO
 - 樓梯廊道（牆裡 1～4 層的磚拱樓梯）沒雕。
 - 外堡跟遊戲的城牆模組（三級石牆）在交接處是疊在一起的，沒有做接頭。

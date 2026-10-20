@@ -75,7 +75,7 @@ def section(G, x):
 def main():
     D = os.path.abspath(sys.argv[1])
     os.makedirs(os.path.join(D, 'masks'), exist_ok=True); os.makedirs(os.path.join(D, 'sheets'), exist_ok=True)
-    G, LAY, anchors = tower.build()
+    G, LAY, anchors, sail = tower.build()
     Zn, Yn, Xn = G.shape
     body, roof = cells_of(G, LAY == 1), cells_of(G, LAY == 2)
     man = {'root': ROOT, 'mpv': tower.MPV, 'works': {}}
@@ -88,9 +88,11 @@ def main():
         ver[w] = {'cells': len(cells), 'md5': md5}
     allc = dict(body); allc.update(roof)
     dump(os.path.join(D, 'masks', ROOT + '.composite.txt'), allc)
-    meta_body = {'kind': 'building', 'use': 'tower', 'style': 'genoa', 'lot': '32,32', 'base': 0, 'variant': 'a', 'model': 'galata-tower'}
+    meta_body = {'kind': 'building', 'use': 'galata-tower', 'style': 'genoa', 'lot': '32,32', 'base': 0, 'variant': 'a', 'model': None}   # 特殊建築（Blocksail world/town.js SPECIAL）⇒ use ＝ 那一種；model 是上一版的鍵 ⇒ null 刪掉
     man['works'][ROOT] = {'order': 90, 'title': tower.P['title'], 'size': [Xn, Yn, Zn], 'tags': 'building,genoa', 'mask': None, 'expect': ROOT + '.composite.txt',
                           'anchors': {k: list(v) for k, v in anchors.items()},
+                          'sails': [{'name': sail['name'], 'corners': '%s|%s|%s|%s' % (sail['hoist'][0], sail['hoist'][1], '%d,%d,%d' % sail['fly'][0], '%d,%d,%d' % sail['fly'][1]),
+                                     'bind': '0', 'free': '2,3', 'color': 255, 'meta': {'kind': 'flag', 'flag': 'ensign', 'pattern': 'genoa'}}],
                           'links': [{'name': '塔身', 'source': ROOT + '-body', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': meta_body},
                                     {'name': '屋頂', 'source': ROOT + '-roof', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': {'part': 'roof'}}]}
     # 讀數：框外、元件、空腔、浮空；幾個關鍵尺寸從格子量回來（跟 plan.json 比）

@@ -207,13 +207,9 @@ def build():
     G[cz0:cz0 + ch, py:py + 2, px:px + 2] = C['gold']; LAY[cz0:cz0 + ch, py:py + 2, px:px + 2] = 2
     arm = cz0 + int(ch * 0.6)
     G[arm:arm + 2, py:py + 2, px - 3:px + 5] = C['gold']; LAY[arm:arm + 2, py:py + 2, px - 3:px + 5] = 2
+    # 熱那亞旗：不雕格子 ⇒ 布（同船的旗：work sub=sail、meta kind=flag；Tim 2026-10-20「旗幟可以改成布?(參考船隻)」）。這裡只給旗杆上的兩個固定點（旗的綁邊）
     fw, fh = zc(FI['flag'][0]), zc(FI['flag'][1])
     fz0 = pole_top - fh - 1
-    for z in range(fz0, fz0 + fh):
-        for i in range(fw):
-            x = px + 2 + i
-            cross = abs(z - (fz0 + fh / 2 - 0.5)) < 1.5 or abs(i - fw / 2 + 0.5) < 1.5
-            G[z, py, x] = C['flag_cross'] if cross else C['flag']; LAY[z, py, x] = 2
     # ── 1452 年的半圓外堡（faussebraye）：塔前（城外）一道弧牆，兩端接城牆 ──
     a0, a1 = B['a0'], B['a1']
     Aw = np.where(A > 0, A - 360, A)                           # (−360, 0]
@@ -228,10 +224,12 @@ def build():
         if zm + MPV >= B['h'] or (zm + MPV >= B['h'] - B['crenel_h'] and zm < B['h'] - B['crenel_h']):
             G[z][m] = 182
     anchors = {'lot-0': (0, 0, 0), 'door': (int(CX), int(CY + (r_o0 + T['talus_dr'] + 0.4) / MPV), 0),
-               'flag': (px, py, pole_top - 1)}
-    return G, LAY, anchors
+               'flag': (px, py, pole_top - 1),
+               'flag-top': (px + 2, py, fz0 + fh), 'flag-bottom': (px + 2, py, fz0)}      # 旗的綁邊：旗杆東邊那一格（空氣），上、下
+    sail = {'name': 'genoa-flag', 'hoist': ('flag-top', 'flag-bottom'), 'fly': [(px + 2 + fw, py, fz0), (px + 2 + fw, py, fz0 + fh)]}
+    return G, LAY, anchors, sail
 
 
 if __name__ == '__main__':
-    G, L, a = build()
+    G, L, a, _ = build()
     print('格數', int((G > 0).sum()), 'body', int((L == 1).sum()), 'roof', int((L == 2).sum()), a)

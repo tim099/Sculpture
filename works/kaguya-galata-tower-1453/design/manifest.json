@@ -14,6 +14,16 @@
      79,
      222
     ],
+    "flag-bottom": [
+     81,
+     79,
+     215
+    ],
+    "flag-top": [
+     81,
+     79,
+     222
+    ],
     "lot-0": [
      0,
      0,
@@ -32,9 +42,9 @@
       "base": 0,
       "kind": "building",
       "lot": "32,32",
-      "model": "galata-tower",
+      "model": null,
       "style": "genoa",
-      "use": "tower",
+      "use": "galata-tower",
       "variant": "a"
      },
      "mirror": "",
@@ -61,6 +71,20 @@
    ],
    "mask": null,
    "order": 90,
+   "sails": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|92,79,215|92,79,222",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "genoa"
+     },
+     "name": "genoa-flag"
+    }
+   ],
    "size": [
     160,
     160,
