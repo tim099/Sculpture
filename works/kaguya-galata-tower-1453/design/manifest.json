@@ -1,0 +1,99 @@
+{
+ "mpv": 0.2,
+ "root": "kaguya-galata-tower-1453",
+ "works": {
+  "kaguya-galata-tower-1453": {
+   "anchors": {
+    "door": [
+     80,
+     126,
+     0
+    ],
+    "flag": [
+     79,
+     79,
+     222
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-galata-tower-1453.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "32,32",
+      "model": "galata-tower",
+      "style": "genoa",
+      "use": "tower",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "塔身",
+     "recolor": {},
+     "source": "kaguya-galata-tower-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-galata-tower-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "order": 90,
+   "size": [
+    160,
+    160,
+    250
+   ],
+   "tags": "building,genoa",
+   "title": "加拉塔塔 1453（基督塔 Christea Turris，熱那亞，1348）"
+  },
+  "kaguya-galata-tower-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-galata-tower-1453-body.vox.txt",
+   "order": 10,
+   "size": [
+    160,
+    160,
+    250
+   ],
+   "tags": "sub",
+   "title": "加拉塔塔 1453｜塔身（石砌、磚層、射口、盲拱、托石、雉堞、樓板、門、1452 年外堡）"
+  },
+  "kaguya-galata-tower-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-galata-tower-1453-roof.vox.txt",
+   "order": 20,
+   "size": [
+    160,
+    160,
+    250
+   ],
+   "tags": "sub",
+   "title": "加拉塔塔 1453｜屋頂（鉛皮圓錐）與頂飾（旗杆、熱那亞旗、帶十字的金球）"
+  }
+ }
+}
