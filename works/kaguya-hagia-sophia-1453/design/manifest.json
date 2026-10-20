@@ -1,0 +1,131 @@
+{
+ "mpv": 0.4,
+ "root": "kaguya-hagia-sophia-1453",
+ "works": {
+  "kaguya-hagia-sophia-1453": {
+   "anchors": {
+    "bell": [
+     143,
+     110,
+     56
+    ],
+    "dome-top": [
+     147,
+     250,
+     149
+    ],
+    "door": [
+     145,
+     0,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-hagia-sophia-1453.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "122,145",
+      "style": "roman",
+      "use": "hagia-sophia",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-hagia-sophia-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-hagia-sophia-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "annex"
+     },
+     "mirror": "",
+     "name": "附屬",
+     "recolor": {},
+     "source": "kaguya-hagia-sophia-1453-annex",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "order": 90,
+   "size": [
+    305,
+    363,
+    152
+   ],
+   "tags": "building,roman",
+   "title": "聖索菲亞大教堂 1453（Hagia Sophia，圍城之前）"
+  },
+  "kaguya-hagia-sophia-1453-annex": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-hagia-sophia-1453-annex.vox.txt",
+   "order": 30,
+   "size": [
+    305,
+    363,
+    152
+   ],
+   "tags": "sub",
+   "title": "聖索菲亞 1453｜附屬（中庭三面迴廊與噴泉、宗主教府、聖器室、洗禮堂）"
+  },
+  "kaguya-hagia-sophia-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-hagia-sophia-1453-body.vox.txt",
+   "order": 10,
+   "size": [
+    305,
+    363,
+    152
+   ],
+   "tags": "sub",
+   "title": "聖索菲亞 1453｜主體（磚牆、扶壁墩、前廊、鐘樓、飛扶壁、穹頂基座、後殿；窗與門）"
+  },
+  "kaguya-hagia-sophia-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-hagia-sophia-1453-roof.vox.txt",
+   "order": 20,
+   "size": [
+    305,
+    363,
+    152
+   ],
+   "tags": "sub",
+   "title": "聖索菲亞 1453｜屋頂（中央穹頂與 40 個窗間墩、半穹頂、壁龕、筒拱、後殿半穹頂、鉛皮屋面、鐘樓尖頂、十字）"
+  }
+ }
+}
