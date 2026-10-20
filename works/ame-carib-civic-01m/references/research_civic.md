@@ -40,7 +40,7 @@ Port Royal（第 9 節）用到的來源另列在 §9.0。
 | 代號 | 圖 | 位置 | 狀態 |
 |---|---|---|---|
 | P4 | Exquemelin 1678 荷文版的 Fort de la Roche 平面（summit 已列） | Wikimedia Commons `FortRoche-381-259.jpg` | 沒看 |
-| P8 | Labat 第 1 冊「Plan de l'Arcenal et Logement du General au Fort Royal de la Martinique」 | LB1 pp.198–199 之間（OCR 只看到圖題） | 沒看；**總督府最直接的平面圖，值得請使用者決定要不要看** |
+| P8 | Labat 第 1 冊「Plan de l'Arcenal et Logement du General au Fort Royal de la Martinique」＋「Plan des Souterrains de l'Arcenal du Fort Royal」 | LB1 pp.198–199 之間兩張夾頁（archive.org `nouveauvoyageaux01laba_1` 掃描頁 n260、n261） | 〔看過〕2026-10-21 Tim 同意下載；存在 `references/plates/`；讀到的見 §8.1 第 2 列 |
 | P9 | Labat 第 4 冊 Grenada 港與 1706 年新堡圖 | LB4 約 p.420 | 沒看 |
 
 ---
@@ -419,7 +419,7 @@ summit §6 已有：Poincy 城堡（四層、7–8 toises 寬、36 pieds 高、�
 | # | 內容 | 位置 | 授權 | 標記 |
 |---|---|---|---|---|
 | 1 | **Fort-Royal（Martinique）1694**：工程師在堡內蓋「一座大 corps de logis，面海」；**地下一層放糧倉、烤爐等；地面層是總督（Général）的住處；樓上當武器廳（salles d'armes）與總督的軍官、僕人住處** | LB1 pp.198–199 | PD | 〔讀過〕 |
-| 2 | 同頁有插圖「Plan de l'Arcenal et Logement du General au Fort Royal de la Martinique」 | LB1 pp.198–199 之間 | PD | 圖沒看（P8） |
+| 2 | 同頁兩張夾頁（P8）：〈Plan de l'Arcenal et Logement du General〉（地面層，圖例：1 廳 Salle、2 臥房 Chambre、3 小書房 Cabinet、4 更衣間 Garderobe、5 另一套房、6 往下到地下層的樓梯、7 下到圍著房子的壕溝的樓梯）；〈Plan des Souterrains〉（地下層，圖例：1 火藥庫、2 廚房與烤爐、3 辦公與倉庫；附 10 toises 比例尺）。一長棟、只有一間深，房間一字排開；正面一排規律的扶壁、窗開在扶壁之間；外圍一圈壕溝 | LB1 pp.198–199 之間 | PD | 〔看過〕（ame 2026-10-21；量法：地下層那張比例尺 10 toises ＝ 943 px（3000 px 寬的掃描）⇒ 整棟約 27 toises ≈ 53 m 長、牆到牆約 5 toises ≈ 10 m 深（含扶壁約 6.3 toises）、火藥庫內長約 11 toises ≈ 22 m；扶壁間距約 2.8 toises ≈ 5.5 m（地面層那張沒有比例尺，借同一個比例 —— 推算）） |
 | 3 | Fort-Royal 的地形：一塊像半島的高地，軟岩（tuf）好挖，高出海面約 15–18 toises；四面環海，只有一條 18–20 toises 寬的地峽連本島；1674 年 Ruyter 來攻時，只有地峽底一道雙排木柵、高處一道木柵、兩座 barbette 砲台（一座在岬尖守港口「le Carénage」，一座朝錨地）；今天的城址當時是蘆葦沼澤 | LB1 p.200 | PD | 〔讀過〕 |
 | 4 | 1694 年 Labat 到堡裡見 Blénac 伯爵（Général），在堡裡見到正在施工的工程師 Cailus；Blondel 1675 年畫的設計被一名叫 Payen 的人改壞 | LB1 pp.197–200 | PD | 〔讀過〕 |
 | 5 | 1692 年 Blénac 把治所從 Saint-Pierre 移到 Fort-Royal；一份 1694 年的信說他在 Fort-Royal 住「一棟舊木屋」 | 搜尋摘要 | — | 〔摘要〕（原信沒讀到） |
@@ -453,7 +453,7 @@ summit §6 已有：Poincy 城堡（四層、7–8 toises 寬、36 pieds 高、�
 
 - d'Ogeron 在 Tortuga 的房子在 Basse-Terre 還是 Cayonne，以及材料、尺寸：〔沒查到〕
 - de Pouancey、Cussy 住屋的材料與尺寸：〔沒查到〕
-- Fort-Royal 1694 corps de logis 的尺寸：文字沒給；插圖 P8 沒看。
+- Fort-Royal 1694 corps de logis 的尺寸：文字沒給；插圖 P8 2026-10-21 看了 ⇒ 約 53 × 10 m（上面第 2 列）。
 - 1694 年 Blénac「舊木屋」那封信的原文：〔摘要〕
 
 ### 8.4 建模建議（推測，不是史料）
@@ -739,7 +739,7 @@ summit §6 已有：Poincy 城堡（四層、7–8 toises 寬、36 pieds 高、�
 3. **1700 年前法屬與英屬的修船設施本身**（岸上絞盤、修船碼頭構造、工具棚、焦油鍋）：只有 Aubin 1702 的 ponton 與「靠碼頭修」的事實，設施形制全是推測。
 4. **Port Royal 造船場的位置**：只知道 sloop 多在本島造。
 5. **沒看的圖**（看圖前要先問使用者）：
-   - P8：Labat 第 1 冊 pp.198–199 間「Plan de l'Arcenal et Logement du General au Fort Royal」——總督府最直接的證據。
+   - ~~P8~~：2026-10-21 看了（§8.1 第 2 列；圖存在 `references/plates/`）。
    - P4、P5：Fort de la Roche 的荷文版平面、西班牙 1654 圖（summit 已列）。
    - P9：Labat 第 4 冊 Grenada 港圖。
    - Port Royal 1680s 手稿圖（BM MS 15494.22）、1785 Gentleman's Magazine 圖：可能直接標出市場、碼頭、海關。

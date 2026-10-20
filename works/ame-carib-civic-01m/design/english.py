@@ -1,4 +1,4 @@
-# 英國那一套（風格 en；TASK-0772 第二段，皇家港 1660–1692）：海關、市場 —— 史料 references/research_civic.md §10（Port Royal）。
+# 英國那一套（風格 en；TASK-0772 第二段，皇家港 1660–1692）：海關、市場、醫院（推測）—— 史料 references/research_civic.md §10（Port Royal）。
 # 皇家港跟法屬邊疆鎮最大的差別：磚造、兩到四層、很多房子有陽台、街道規整（LAWS83 To the Reader；HEATH「goodly Brick Houses … as fine as those in Cheapside」）。
 # 座標同 civic.py（x 臨路寬、y 進深 y 0 臨路、z 往上；0.1 m／格）。
 from civic import *
@@ -159,4 +159,66 @@ def en_market():
             'use': 'market', 'lot': (20, 16), 'M': M, 'style': 'en', 'layers': {'body': '鋪地、磚墩與攤', 'roof': '屋頂與鐘樓'}}
 
 
-ALL = [en_customs, en_market]
+# ─────────────────────────────── 醫院 20 × 16 m（推測）───────────────────────────────
+def en_hospital():
+    """醫院（§10.5）：⛔ 1692 年以前查不到 Port Royal 有醫院（CSP 1681–92 搜 hospital／surgeon／sick 都沒有；1692 年 8 月才有 Kingston「蓋一間醫院」的罰款用途）。
+    Tim 2026-10-21 選「補一棟」⇒ 照研究的建模建議：一棟**徵用的磚造兩層商人屋**當病房（照考古 Building 1 的磚造兩層），整棟都是推測：
+    樓下臨街一扇雙扇門、兩扇窗，樓上木陽台；裡面上下兩層各兩排床；後院磚牆圍起來，一間磚砌的廚房（煙囪）、一口井、一條晾床單的繩。"""
+    X, Y, Z = 200, 160, 140
+    M = Model((X, Y, Z))
+    R = (10, 12, 190, 100)                                              # 18 × 8.8 m
+    brick_walls(M, R, 0, 33, 4, salt=161)
+    M.box('body', R[0] + 4, R[1] + 4, 0, R[2] - 4, R[3] - 4, 1, PAVE)
+    M.box('body', R[0] + 2, R[1] + 2, 32, R[2] - 2, R[3] - 2, 34, FLOOR)
+    brick_walls(M, R, 33, 62, 4, salt=162)
+    put_part(M, 'door-double', '前-門', 'front', R, 100, 1, 4)
+    for i, cx in enumerate((40, 160)):
+        put_part(M, 'window', '前-窗%d' % (i + 1), 'front', R, cx, 10, 4)
+    for i, cx in enumerate((40, 100, 160)):
+        put_part(M, 'window', '前-樓上窗%d' % (i + 1), 'front', R, cx, 40, 4)
+        put_part(M, 'window', '後-樓上窗%d' % (i + 1), 'back', R, cx, 40, 4)
+    for i, cx in enumerate((40, 160)):
+        put_part(M, 'window', '後-窗%d' % (i + 1), 'back', R, cx, 10, 4)
+    put_part(M, 'door-plank', '後-門', 'back', R, 100, 1, 4)
+    for face in ('left', 'right'):
+        put_part(M, 'window', '%s-窗' % face, face, R, 56, 10, 4)
+        put_part(M, 'window', '%s-樓上窗' % face, face, R, 56, 40, 4)
+    for x0 in list(range(18, 84, 12)) + list(range(118, 182, 12)):   # 床：上下兩層、各兩排（靠前牆、後牆，中間留走道）
+        for (y0, y1) in ((17, 35), (77, 95)):
+            for zf in (1, 34):
+                M.box('body', x0, y0, zf, x0 + 8, y1, zf + 3, FRAME)
+                M.box('body', x0, y0, zf + 3, x0 + 8, y1, zf + 4, LIME)
+    for k in range(11):                                                 # 上樓的木梯（門廳右邊，從後往前爬）
+        M.box('body', 112, 90 - k * 3, 1, 118, 93 - k * 3, 4 + k * 3, FRAME)
+    M.anchor('door', 100, R[1] - 1, 1)
+    M.box('body', 10, 4, 0, 190, 12, 1, PAVE)                           # 門前磚鋪人行道
+    balcony(M, 16, 184, 4, 12, 34)
+    top = tile_roof(M, [{'x0': R[0], 'y0': R[1], 'x1': R[2], 'y1': R[3], 'ze': 62, 'p': 0.6, 'over': (3, 3, 4, 3)}], salt=163)
+    free_part(M, 'chimney', '煙囪', (150, 56, top[(154, 59)] - 10))
+    # 後院：磚牆、廚房（磚、單坡瓦頂、灶、煙囪）、井、晾床單的繩
+    for (x0, y0, x1, y1) in ((10, 100, 14, 156), (186, 100, 190, 156), (10, 152, 190, 156)):
+        brick_walls(M, (x0, y0, x1, y1), 0, 20, 4, salt=164 + x0)
+    kr = (20, 120, 70, 152)
+    brick_walls(M, kr, 0, 26, 3, salt=167)
+    put_part(M, 'door-plank', '廚房-門', 'right', kr, 136, 0, 3)
+    hearth(M, 26, 140, 42, 149, hanger=False)
+    ktop = tile_roof(M, [{'x0': kr[0], 'y0': kr[1], 'x1': kr[2], 'y1': kr[3], 'ze': 26, 'p': 0.7, 'over': (2, 2, 2, 2)}], salt=168)
+    free_part(M, 'chimney', '廚房-煙囪', (28, 140, ktop[(32, 143)] - 10))
+    M.box('body', 120, 116, 0, 136, 132, 8, BRICK_A)                    # 井（磚圈、暗的井口、木架）
+    M.box('body', 123, 119, 1, 133, 129, 8, DARK, force=True)
+    for x in (120, 134):
+        M.box('body', x, 123, 8, x + 2, 125, 22, FRAME)
+    M.box('body', 120, 123, 22, 136, 125, 23, FRAME)
+    for x in (150, 182):                                                # 晾床單：兩根柱、一條繩、三塊白布
+        M.box('body', x, 136, 0, x + 2, 138, 20, FRAME)
+    M.box('body', 150, 136, 19, 184, 138, 20, THATCH_A)
+    for x in (154, 164, 174):
+        M.box('body', x, 136, 10, x + 7, 137, 19, LIME)
+    M.models += [{'name': '水桶-井', 'source': 'summit-rocher-01m-barrel', 'at': [140, 118, 0], 'pivot': [6, 6, 0], 'meta': {}},
+                 {'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [76.5, R[1], 26.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'en-hospital', 'title': '醫院（推測：徵用的磚造兩層商人屋當病房 —— 1692 年以前查不到 Port Royal 有醫院；上下兩層各兩排床、樓上木陽台、紅瓦四坡頂；後院磚牆、廚房、井、晾床單的繩）',
+            'use': 'hospital', 'lot': (20, 16), 'M': M, 'style': 'en', 'layers': {'body': '磚牆與後院', 'gallery': '陽台', 'roof': '屋頂'}}
+
+
+ALL = [en_customs, en_market, en_hospital]

@@ -285,7 +285,11 @@ def governor():
     """總督府（§8）：1660–90 年代法屬的總督住處多在堡裡或 maison-forte；Fort-Royal 1694 的 corps de logis「下倉、中住、上武器廳」（LB1 pp.198–199）、
     Guadeloupe 修院的「石底層＋木上層」、Tortuga 灘邊 maison-forte 的「下層槍眼、樓上操砲」合起來（合成是推測）：
     主屋 22.8 × 9.2 m（借 1717 年 70 × 28 法尺，MSM2 p.463）、下層毛石、上層木構釘板、紅瓦四坡頂；**窗裝玻璃、有煙囪**（只有總督家有，DT2 pp.451–452）；
-    前院：低石牆與門、衛兵所、兩座站崗小亭各一門小砲（Du Parquet 宅院，DT2 p.27）、旗杆（推測）；後院分開的廚房（DT2 p.451）。"""
+    前院：低石牆與門、衛兵所、兩座站崗小亭各一門小砲（Du Parquet 宅院，DT2 p.27）、旗杆（推測）；後院分開的廚房（DT2 p.451）。
+    2026-10-21 看了 LB1 p.198 的夾頁〈Plan de l'Arcenal et Logement du Général au Fort Royal de la Martinique〉與〈Plan des Souterrains〉（Tim 同意下載；
+    references/plates/）：一長棟、只有一間深（約 10 m）、房間一字排開（廳、臥房、小書房、更衣間、另一套房，中間樓梯往下到地下層的火藥庫、廚房與烤爐）、
+    正面一排規律的扶壁、窗開在扶壁之間 ⇒ 下層正面與背面照這個節奏加扶壁（每 4.2～4.8 m 一道、凸出 0.5 m），窗只開在扶壁之間。
+    圖上那一棟約 53 m 長、地塊只有 28 m ⇒ 照節奏截一段（不是照比例縮）。"""
     X, Y, Z = 280, 220, 120
     M = Model((X, Y, Z))
     R = (26, 64, 254, 156)
@@ -298,12 +302,16 @@ def governor():
     for x in (R[0] + 4, R[2] - 6):                                     # 側牆下層的槍眼（maison-forte）
         for y in (88, 132):
             M.clear(x - 4, y, 14, x + 6, y + 2, 22)
+    for x0 in (26, 68, 112, 164, 206, 250):                             # 下層的扶壁（LB1 p.198 夾頁：正面一排規律的扶壁）：毛石、凸出 0.5 m、頂上一皮壓頂
+        for (y0, y1) in ((R[1] - 5, R[1]), (R[3], R[3] + 5)):
+            rubble_walls(M, (x0, y0, x0 + 4, y1), 0, 30, 4, salt=139 + x0)
+            M.box('body', x0, y0, 30, x0 + 4, y1, 32, MORTAR)
     put_part(M, 'door-double', '前-大門', 'front', R, 140, FL, 4)
     steps(M, 126, 154, R[1], 3, 2, 3, back=False, layer='body', color=RUBBLE)
-    for i, cx in enumerate((50, 80, 110, 170, 200, 230)):
+    for i, cx in enumerate((49, 92, 187, 230)):                        # 窗只開在扶壁之間
         put_part(M, 'window', '前-窗%d' % (i + 1), 'front', R, cx, FL + 8, 4)
         put_part(M, 'window', '後-窗%d' % (i + 1), 'back', R, cx, FL + 8, 4)
-    for i, cx in enumerate((50, 80, 110, 140, 170, 200, 230)):
+    for i, cx in enumerate((49, 92, 140, 187, 230)):
         put_part(M, 'window', '前-樓上窗%d' % (i + 1), 'front', R, cx, 38, 2)
         put_part(M, 'window', '後-樓上窗%d' % (i + 1), 'back', R, cx, 38, 2)
     for face in ('left', 'right'):
