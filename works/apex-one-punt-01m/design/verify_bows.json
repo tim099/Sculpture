@@ -1,0 +1,67 @@
+{
+ "bows": [
+  {
+   "name": "bow-fwd-S",
+   "collide_+0": 0,
+   "collide_+45": 0,
+   "collide_-45": 0,
+   "archer_cell": [
+    206,
+    96,
+    32
+   ],
+   "archer_ok": true
+  },
+  {
+   "name": "bow-fwd-P",
+   "collide_+0": 0,
+   "collide_+45": 0,
+   "collide_-45": 0,
+   "archer_cell": [
+    213,
+    104,
+    32
+   ],
+   "archer_ok": true
+  },
+  {
+   "name": "bow-aft-S",
+   "collide_+0": 0,
+   "collide_+30": 0,
+   "collide_-30": 0,
+   "archer_cell": [
+    64,
+    94,
+    32
+   ],
+   "archer_ok": true
+  },
+  {
+   "name": "bow-aft-P",
+   "collide_+0": 0,
+   "collide_+30": 0,
+   "collide_-30": 0,
+   "archer_cell": [
+    71,
+    106,
+    32
+   ],
+   "archer_ok": true
+  }
+ ],
+ "bow_vs_bow": {
+  "bow-fwd-S×bow-fwd-P": 0,
+  "bow-fwd-S×bow-aft-S": 0,
+  "bow-fwd-S×bow-aft-P": 0,
+  "bow-fwd-P×bow-aft-S": 0,
+  "bow-fwd-P×bow-aft-P": 0,
+  "bow-aft-S×bow-aft-P": 0
+ },
+ "bow_vs_model": {},
+ "magazine": {
+  "shelf": 132,
+  "boxes": 4,
+  "box_collide": 0,
+  "door_air": true
+ }
+}

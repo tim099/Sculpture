@@ -1,0 +1,88 @@
+{
+ "anchors": {
+  "stock-top": [
+   83,
+   112,
+   51
+  ],
+  "hinge": [
+   79,
+   114,
+   45
+  ],
+  "blade-tip": [
+   49,
+   124,
+   1
+  ],
+  "tiller-end": [
+   85,
+   107,
+   43
+  ]
+ },
+ "models": [
+  {
+   "name": "rudder-S",
+   "at": [
+    79.0,
+    114.0,
+    45.5
+   ],
+   "pivot": [
+    79.0,
+    114.0,
+    45.5
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "rudder",
+    "rudder": "quarter",
+    "hinge_x": 79.0,
+    "hinge_y": 114.0,
+    "hinge_z": 45.5,
+    "axis_x": -0.5549,
+    "axis_y": 0.1887,
+    "axis_z": -0.8102,
+    "max_deg": 35,
+    "turn_axis": "hinge",
+    "spin": "rudder",
+    "spin_k": 35,
+    "spin_min": -35,
+    "spin_max": 35,
+    "spin_lag": 0.3
+   }
+  },
+  {
+   "name": "rudder-P",
+   "at": [
+    79.0,
+    87.0,
+    45.5
+   ],
+   "pivot": [
+    79.0,
+    114.0,
+    45.5
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "rudder",
+    "rudder": "quarter",
+    "hinge_x": 79.0,
+    "hinge_y": 87.0,
+    "hinge_z": 45.5,
+    "axis_x": -0.5549,
+    "axis_y": -0.1887,
+    "axis_z": -0.8102,
+    "max_deg": 35,
+    "turn_axis": "hinge",
+    "spin": "rudder",
+    "spin_k": 35,
+    "spin_min": -35,
+    "spin_max": 35,
+    "spin_lag": 0.3
+   }
+  }
+ ]
+}

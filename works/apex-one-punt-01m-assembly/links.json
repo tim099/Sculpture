@@ -1,0 +1,219 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "apex-one-punt-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				180
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T08:09:11",
+			"persona": "apex-one",
+			"note": "組裝件一開始就關聯船殼",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 12
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "apex-one-punt-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				140
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T08:28:00",
+			"persona": "apex-one",
+			"note": "階段二",
+			"meta": {
+				"deck": "main",
+				"floor": "64:20,217:20",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 1,
+				"name": "甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-hold",
+			"work": "apex-one-punt-01m-deck-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				140
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T08:28:01",
+			"persona": "apex-one",
+			"note": "階段二",
+			"meta": {
+				"deck": "hold",
+				"floor": "100:3,186:3",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 0,
+				"name": "貨艙",
+				"thick": 3
+			}
+		},
+		{
+			"name": "平台-aft",
+			"work": "apex-one-punt-01m-platform-aft",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				140
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T08:28:01",
+			"persona": "apex-one",
+			"note": "階段二",
+			"meta": {
+				"deck": "poop",
+				"floor": "58:32,85:32",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 2,
+				"name": "艉台",
+				"thick": 1
+			}
+		},
+		{
+			"name": "平台-fwd",
+			"work": "apex-one-punt-01m-platform-fwd",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				140
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T08:28:01",
+			"persona": "apex-one",
+			"note": "階段二",
+			"meta": {
+				"deck": "forecastle",
+				"floor": "203:32,222:32",
+				"id": "deck-4",
+				"kind": "deck",
+				"level": 3,
+				"name": "艏台",
+				"thick": 1
+			}
+		},
+		{
+			"name": "truss叉柱",
+			"work": "apex-one-punt-01m-truss",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				140
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T08:28:02",
+			"persona": "apex-one",
+			"note": "階段二",
+			"meta": {
+				"id": "part-1"
+			}
+		},
+		{
+			"name": "桅",
+			"work": "apex-one-punt-01m-mast",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				140
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T08:32:22",
+			"persona": "apex-one",
+			"note": "階段三",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "箭庫",
+			"work": "apex-one-punt-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				280,
+				201,
+				140
+			],
+			"enabled": true,
+			"created_at": "2026-10-20T09:04:24",
+			"persona": "apex-one",
+			"note": "階段五",
+			"meta": {
+				"hoist": "ladders-1#hold,ladders-1#aft,ladders-1#fwd",
+				"id": "magazine-1",
+				"kind": "magazine",
+				"pos": "mid",
+				"powder_lb": 400
+			}
+		}
+	]
+}

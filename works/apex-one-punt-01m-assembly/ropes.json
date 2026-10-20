@@ -1,0 +1,471 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "lift-upper-P1",
+			"from": "桅/fair-P5",
+			"to": "model:桅/yard-upper/lift-P1",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:33",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-P1",
+			"from": "桅/fair-P1",
+			"to": "model:桅/yard-lower/lift-P1",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:34",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-upper-P2",
+			"from": "桅/fair-P6",
+			"to": "model:桅/yard-upper/lift-P2",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:34",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-P2",
+			"from": "桅/fair-P2",
+			"to": "model:桅/yard-lower/lift-P2",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:35",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-upper-P3",
+			"from": "桅/fair-P7",
+			"to": "model:桅/yard-upper/lift-P3",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:35",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-P3",
+			"from": "桅/fair-P3",
+			"to": "model:桅/yard-lower/lift-P3",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:36",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-upper-P4",
+			"from": "桅/fair-P8",
+			"to": "model:桅/yard-upper/lift-P4",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:37",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-P4",
+			"from": "桅/fair-P4",
+			"to": "model:桅/yard-lower/lift-P4",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:37",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "brace-upper-P",
+			"from": "model:桅/yard-upper/arm-P",
+			"to": "平台-aft/brace-P",
+			"color": "#b59a6a",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/braces",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:38",
+			"meta": {
+				"kind": "brace"
+			}
+		},
+		{
+			"name": "brace-lower-P",
+			"from": "model:桅/yard-lower/arm-P",
+			"to": "平台-aft/brace-lo-P",
+			"color": "#b59a6a",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/braces",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:38",
+			"meta": {
+				"kind": "brace"
+			}
+		},
+		{
+			"name": "halyard-P",
+			"from": "model:桅/yard-upper/sling-P",
+			"to": "桅/halyard-P",
+			"color": "#b59a6a",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/halyards",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:39",
+			"meta": {
+				"kind": "halyard"
+			}
+		},
+		{
+			"name": "lift-upper-S1",
+			"from": "桅/fair-S5",
+			"to": "model:桅/yard-upper/lift-S1",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:39",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-S1",
+			"from": "桅/fair-S1",
+			"to": "model:桅/yard-lower/lift-S1",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:40",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-upper-S2",
+			"from": "桅/fair-S6",
+			"to": "model:桅/yard-upper/lift-S2",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:40",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-S2",
+			"from": "桅/fair-S2",
+			"to": "model:桅/yard-lower/lift-S2",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:41",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-upper-S3",
+			"from": "桅/fair-S7",
+			"to": "model:桅/yard-upper/lift-S3",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:41",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-S3",
+			"from": "桅/fair-S3",
+			"to": "model:桅/yard-lower/lift-S3",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:42",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-upper-S4",
+			"from": "桅/fair-S8",
+			"to": "model:桅/yard-upper/lift-S4",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:42",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-lower-S4",
+			"from": "桅/fair-S4",
+			"to": "model:桅/yard-lower/lift-S4",
+			"color": "#b59a6a",
+			"thickness": 0.3,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/lifts",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:43",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "brace-upper-S",
+			"from": "model:桅/yard-upper/arm-S",
+			"to": "平台-aft/brace-S",
+			"color": "#b59a6a",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/braces",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:43",
+			"meta": {
+				"kind": "brace"
+			}
+		},
+		{
+			"name": "brace-lower-S",
+			"from": "model:桅/yard-lower/arm-S",
+			"to": "平台-aft/brace-lo-S",
+			"color": "#b59a6a",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/braces",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:44",
+			"meta": {
+				"kind": "brace"
+			}
+		},
+		{
+			"name": "halyard-S",
+			"from": "model:桅/yard-upper/sling-S",
+			"to": "桅/halyard-S",
+			"color": "#b59a6a",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/halyards",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:45",
+			"meta": {
+				"kind": "halyard"
+			}
+		},
+		{
+			"name": "backstay",
+			"from": "桅/cap",
+			"to": "平台-aft/backstay",
+			"color": "#8a7048",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:45",
+			"meta": {
+				"kind": "backstay"
+			}
+		},
+		{
+			"name": "forestay-inner",
+			"from": "桅/cap",
+			"to": "平台-fwd/forestay-in",
+			"color": "#8a7048",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:46",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "forestay-outer",
+			"from": "桅/cap",
+			"to": "船殼/forestay-out",
+			"color": "#8a7048",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:46",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "truss-1",
+			"from": "平台-aft/truss-aft",
+			"to": "truss叉柱/fork-1",
+			"color": "#8a7048",
+			"thickness": 1.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "hull/truss",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:47"
+		},
+		{
+			"name": "truss-2",
+			"from": "truss叉柱/fork-1",
+			"to": "truss叉柱/fork-2",
+			"color": "#8a7048",
+			"thickness": 1.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "hull/truss",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:47"
+		},
+		{
+			"name": "truss-3",
+			"from": "truss叉柱/fork-2",
+			"to": "truss叉柱/fork-3",
+			"color": "#8a7048",
+			"thickness": 1.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "hull/truss",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:48"
+		},
+		{
+			"name": "truss-4",
+			"from": "truss叉柱/fork-3",
+			"to": "truss叉柱/fork-4",
+			"color": "#8a7048",
+			"thickness": 1.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "hull/truss",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:48"
+		},
+		{
+			"name": "truss-5",
+			"from": "truss叉柱/fork-4",
+			"to": "平台-fwd/truss-fwd",
+			"color": "#8a7048",
+			"thickness": 1.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "hull/truss",
+			"note": "階段三",
+			"persona": "apex-one",
+			"created_at": "2026-10-20T08:32:49"
+		}
+	],
+	"groups": []
+}
