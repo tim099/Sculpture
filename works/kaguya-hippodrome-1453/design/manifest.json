@@ -1,0 +1,141 @@
+{
+ "mpv": 0.4,
+ "root": "kaguya-hippodrome-1453",
+ "works": {
+  "kaguya-hippodrome-1453": {
+   "anchors": {
+    "colonnade-mid": [
+     162,
+     1118,
+     30
+    ],
+    "gate": [
+     162,
+     0,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "obelisk-theodosius-top": [
+     162,
+     462,
+     64
+    ],
+    "obelisk-walled-top": [
+     162,
+     648,
+     80
+    ],
+    "serpent-top": [
+     162,
+     558,
+     17
+    ]
+   },
+   "expect": "kaguya-hippodrome-1453.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "130,450",
+      "style": "roman",
+      "use": "hippodrome",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "看台",
+     "recolor": {},
+     "source": "kaguya-hippodrome-1453-stands",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "sphendone"
+     },
+     "mirror": "",
+     "name": "半圓端柱廊",
+     "recolor": {},
+     "source": "kaguya-hippodrome-1453-sphendone",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "spina"
+     },
+     "mirror": "",
+     "name": "中線與碑柱",
+     "recolor": {},
+     "source": "kaguya-hippodrome-1453-spina",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "order": 90,
+   "size": [
+    325,
+    1125,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "大競技場 1453（Hippodrome，圍城之前）"
+  },
+  "kaguya-hippodrome-1453-sphendone": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-hippodrome-1453-sphendone.vox.txt",
+   "order": 20,
+   "size": [
+    325,
+    1125,
+    90
+   ],
+   "tags": "sub",
+   "title": "大競技場 1453｜半圓端柱廊（37 個柱位留 30 根、柱頂迴廊與女兒牆）"
+  },
+  "kaguya-hippodrome-1453-spina": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-hippodrome-1453-spina.vox.txt",
+   "order": 30,
+   "size": [
+    325,
+    1125,
+    90
+   ],
+   "tags": "sub",
+   "title": "大競技場 1453｜中線（矮牆、狄奧多西方尖碑、蛇柱、砌石方尖碑、兩根散柱）"
+  },
+  "kaguya-hippodrome-1453-stands": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-hippodrome-1453-stands.vox.txt",
+   "order": 10,
+   "size": [
+    325,
+    1125,
+    90
+   ],
+   "tags": "sub",
+   "title": "大競技場 1453｜看台（兩條長邊的看台與外牆拱、北端起跑門、皇帝包廂殘塊）"
+  }
+ }
+}

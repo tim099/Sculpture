@@ -1,0 +1,56 @@
+{
+ "title": "大競技場 1453（Hippodrome，圍城之前）",
+ "mpv": 0.4,
+ "frame": {"nx": 325, "ny": 1125, "nz": 90},
+ "frame_note": "格座標：x 0 ＝ 東南側（大皇宮、皇帝包廂那一側）→ 325 ＝ 西北側；y 0 ＝ 北端起跑門（正面，朝方位 38°）→ 1125 ＝ 半圓端外緣；z 0 ＝ 跑道面（地塊的 h；Blocksail 地塊 rot 308 ＝ 方位 38°）。框的中心 ＝ 地塊中心（at 28.97511, 41.00564）。",
+ "outer": {"half_w": 162.5, "straight_to": 962.5, "r": 162.5},
+ "track": {"half_w": 99},
+ "stands": {
+  "podium_h": 5, "tier_w": 2, "tier_h": 1, "tiers": 30,
+  "wall_t": 4, "wall_h": 40, "parapet_h": 3,
+  "arch": {"w": 8, "h": 12, "pitch": 12, "depth": 3, "z0": 0},
+  "band_every": 6,
+  "y0": 0, "y1": 962,
+  "ruin": {"seg": 50, "seed": 1453, "full": 0.55, "top_cut": 0.30, "low": 0.15, "top_keep": [0.6, 0.8], "low_keep": 0.3}
+ },
+ "carceres": {"y0": 0, "t": 8, "h": 25, "gates": 12, "gate_w": 8, "gate_h": 15, "ruin_seed": 1204, "ruin_keep": [0.55, 1.0]},
+ "kathisma": {"x0": 18, "x1": 64, "y0": 438, "y1": 492, "h": 45, "loggia": {"w": 30, "h": 10, "z0": 30}, "ruin_top": 6},
+ "sphendone": {"cols": 37, "standing": 30, "seed": 1403, "r": 156, "col_d": 3, "col_h": 21, "base": {"w": 4, "h": 4}, "capital": {"w": 5, "h": 2}, "beam": {"t": 5, "h": 3}, "parapet": {"t": 1, "h": 3}},
+ "spina": {"x": 162.5, "w": 6, "h": 4, "y0": 275, "y1": 850},
+ "monuments": {
+  "theodosius": {"y": 462, "steps": [9, 2], "base1": [8, 3], "base2": [7, 6], "blocks": [2, 1], "shaft": [5, 3, 49], "pyramid": 3},
+  "serpent": {"y": 558, "base": [4, 1], "h": 16, "coil_r": 1.2, "turns": 4.5, "heads": 3, "head_len": 3},
+  "walled": {"y": 648, "steps": [[10, 1], [9, 1], [8, 1]], "base": [8, 5], "shaft": [7, 3, 69], "pyramid": 3},
+  "columns": [{"y": 330, "d": 3, "h": 25, "base": 5}, {"y": 760, "d": 3, "h": 22, "base": 5}]
+ },
+ "colors": {"seat": 214, "seat_dark": 182, "brick": 168, "band": 214, "mortar": 205, "dark": 36, "marble": 218, "granite": 206, "stone": 182, "stone_dark": 145, "bronze": 109, "gold": 248},
+ "provenance": {
+  "參考資料": {
+   "外框 450 × 130 m、長軸方位約 38°": "Wikipedia Hippodrome of Constantinople；專案 OSM 擬合（tools/town_constantinople_data.cjs 的 hippodrome 地塊）",
+   "半圓端外半徑 65 m": "OSM way 321386212 擬合 64.9 m（現存外牆）",
+   "跑道寬 79 m": "Akyürek 2021（經 Labalkans），中低可信度",
+   "半圓端拱基頂與跑道同高、從坡下 50 呎（14.8 m）": "Gilles, The Antiquities of Constantinople（1540 年代實測）；遊戲裡由地塊的石基撐（base: true）",
+   "半圓端柱廊：柱高 28 呎（8.3 m）、柱徑約 1 m、柱距 11 呎（3.3 m）、柱座加台基約 1.5 m": "Gilles",
+   "柱數 37（1403）→ 約 30（15 世紀初）→ 17（1544）": "Clavijo 1403；俄國朝聖者（二手，Majeska 1984）；Gilles",
+   "柱頂相連、可以走、有齊胸女兒牆": "Clavijo 1403",
+   "看台階梯高得可觀、底下拱室給騎士披甲": "Clavijo 1403；Tafur 1437（柱廊、門、下有拱）",
+   "看台 30–40 階": "Robert de Clari（1204）",
+   "狄奧多西方尖碑：碑身約 19.6 m、總高 25.6 m；台階 0.9 m、下座 1.33 m、上座 2.31 m、銅塊 0.44 m、下座 3.55 m 見方": "Wikipedia；Gilles",
+   "砌石方尖碑：總高 32 m、底座 3.18 m 見方高 2.13 m、三級台階 1.26 m": "Wikipedia；Gilles",
+   "蛇柱 1453 年三個蛇頭都在、約 6.5 m（頂上的鍋 479 BC 之後就沒了）": "Wikipedia Serpent Column；Clavijo；Tafur",
+   "三座碑的間距 38.6 m、35.8 m": "專案 OSM 座標（obelisk-theodosius、serpent-column、walled-obelisk 三塊地）",
+   "皇帝包廂在東側（通大皇宮）": "Wikipedia；Byzantine Legacy",
+   "1453 年已荒廢、作比武與騎射場": "Clavijo 1403；La Broquière 1432；Tafur 1437"
+  },
+  "設計決定": {
+   "看台剖面：跑道邊基座 2 m、30 階（每階 0.8 m 寬 0.4 m 高）、外牆 16 m 含女兒牆": "階數取 Clari 的下限；高度沒有可靠數字（研究表 #16 低可信度）",
+   "外牆外面一排拱（寬 3.2 m、高 4.8 m、間距 4.8 m）、每 6 層一道石帶": "照 Clavijo／Tafur 的「下有拱」與拜占庭磚石夾層的通例；尺寸是設計",
+   "1453 年的殘破：長邊每 20 m 一段，55% 完整、30% 上層塌到 60–80%、15% 只剩三成；種子 1453": "研究只說「斷續的殘段」；比例是設計",
+   "半圓端不做座位、只做跑道面高度上的柱廊（37 個柱位留 30 根，種子 1403）": "Gilles 與 Panvinio 都把柱廊畫在跟跑道同高的拱基頂上（研究 §3.4 ⚠ 待查證）",
+   "起跑門：北端直牆 10 m、12 個門洞、上緣殘破": "門數只有 Malalas 一條（低可信度）；形狀照 Panvinio 版畫的造型",
+   "皇帝包廂：18 m 高的磚塊、頂上一排敞廊、上緣殘破": "位置、尺寸都是設計（研究 §6 待查證）",
+   "中線矮牆 230 m、高 1.6 m、寬 2.4 m；另外兩根散柱": "長度 Akyürek（中低）；高與寬取殘高；散柱位置照 Gilles／Panvinio 的「4–6 根散柱」挑兩根",
+   "跑道面不雕格子": "遊戲的地塊整平面或石基頂就是跑道面"
+  }
+ }
+}
