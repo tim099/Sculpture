@@ -1,0 +1,293 @@
+# 住宅三型（TASK-0741；地塊 8 × 12 m ＝ 80 × 120 格）：
+#   A 二層樓、二樓托架木陽台、四坡頂、後院＋廚房小屋（土黃牆、綠百葉）
+#   B 平房「有廊的屋子」（case à galerie）：前廊細柱、陡的四坡頂接緩坡廊頂、兩扇老虎窗、後院木柵＋小棚（藍牆）
+#   C 二層樓、上下兩層外廊（一樓石柱、二樓木柱）、四坡頂接緩坡、後院＋廚房小屋＋水井（米白牆、紅百葉）
+# 屋身都在地塊前半、後半圍成院子；屋簷不出地塊（兩側鄰居的地塊只隔 2 cm）。
+from kit import *
+import parts as PT
+
+PARTS = PT.all_parts()
+
+
+def put_part(M, pid, name, face, rect, center, z, t):
+    """部件的開口中心對準 center（front／back 量 x、left／right 量 y），底在 z。"""
+    P = PARTS[pid]
+    W = P['dims'][0]
+    X0, Y0, X1, Y1 = rect
+    if face == 'front':
+        u = center - X0 - W // 2
+    elif face == 'back':
+        u = X1 - W - center + W // 2
+    elif face == 'right':
+        u = center - W // 2 - Y0
+    else:
+        u = Y1 - W - center + W // 2
+    return place(M, P, name, face, rect, u, z, t)
+
+
+def free_part(M, pid, name, at, turn=0, mirror='', carve=('roof',)):
+    P = PARTS[pid]
+    place_free(M, P, name, at, turn, mirror)
+    return carve_cells(M, M.links[-1]['cells'], carve)
+
+
+def simple_door(M, face, rect, center, w, h, t, z0=0, color=None):
+    """沒有框的木板門（廚房、棚子）：挖穿牆厚、在牆中間那一層放一片門板。"""
+    X0, Y0, X1, Y1 = rect
+    color = M.shutter if color is None else color
+    a = center - w // 2
+    for u in range(a, a + w):
+        for z in range(z0, z0 + h):
+            for k in range(t):
+                if face == 'front':
+                    p = (u, Y0 + k, z)
+                elif face == 'back':
+                    p = (u, Y1 - 1 - k, z)
+                elif face == 'right':
+                    p = (X1 - 1 - k, u, z)
+                else:
+                    p = (X0 + k, u, z)
+                M.cells.pop(p, None)
+                if k == t // 2:
+                    c = WOOD_D if (u - a) % 3 == 2 or z == z0 + h // 2 else color
+                    M.put('body', p[0], p[1], p[2], c)
+
+
+def yard(M, x0, y0, x1, y1, t, h, color, gate=None, coping=TILE_R):
+    """院牆：左、右、後三面（前面是屋子的後牆）；gate ＝ (中心 x, 寬, 高) 開在後牆、放一扇關著的門。"""
+    for (a, b, c, d) in ((x0, y0, x0 + t, y1), (x1 - t, y0, x1, y1), (x0, y1 - t, x1, y1)):
+        M.box('body', a, b, 0, c, d, h, color)
+        M.box('body', a, b, h, c, d, h + 2, coping)
+    if gate:
+        gx, gw, gh = gate
+        simple_door(M, 'back', (x0, y0, x1, y1), gx, gw, gh, t)
+
+
+def kitchen(M, rect, color, door_face, door_c, vent_face=None, vent_c=None, low='front', chim=None, salt=0):
+    """廚房小屋：一層、牆厚 3、單坡頂（low 那一邊低）、木板門、一扇氣窗、煙囪。"""
+    X0, Y0, X1, Y1 = rect
+    t, h = 3, 26
+    stucco_walls(M, rect, 0, h + 4, t, color)
+    simple_door(M, door_face, rect, door_c, 9, 19, t)
+    if vent_face:
+        put_part(M, 'vent', '廚房-氣窗', vent_face, rect, vent_c, 10, t)
+    # 單坡：高的那邊牆頂 h+4、低的那邊 h；坡面多出簷 3 格
+    ov = 3
+    span = (Y1 - Y0) if low in ('front', 'back') else (X1 - X0)
+    p = 4.0 / span
+    zhi = h + 4 + int(round(p * ov)) + 1
+    xs0, ys0, xs1, ys1 = X0 - ov, Y0 - ov, X1 + ov, Y1 + ov
+    # 牆頂照坡面切（高的那邊高、低的那邊低）
+    for (x, y, z) in [k for k in M.cells if X0 <= k[0] < X1 and Y0 <= k[1] < Y1 and h <= k[2] < h + 4]:
+        d = {'front': y + 0.5 - Y0, 'back': Y1 - (y + 0.5), 'left': x + 0.5 - X0, 'right': X1 - (x + 0.5)}[low]
+        if z >= h + int(p * d):
+            M.cells.pop((x, y, z), None)
+    F = {}
+    for x in range(xs0, xs1):
+        for y in range(ys0, ys1):
+            if not M.inb(x, y, 0):
+                continue
+            d = {'front': y + 0.5 - Y0, 'back': Y1 - (y + 0.5), 'left': x + 0.5 - X0, 'right': X1 - (x + 0.5)}[low]
+            F[(x, y)] = (h + p * d + 1, 'front' if low in ('front', 'back') else 'left', False, 0)
+    build_roof(M, F, 2, 'roof', salt=salt)
+    if chim:
+        free_part(M, 'chimney', '廚房-煙囪', chim, carve=('roof', 'body'))
+
+
+def house_a():
+    M = Model((80, 120, 100))
+    X0, Y0, X1, Y1 = 3, 12, 77, 72
+    R, t, pl = (X0, Y0, X1, Y1), 3, 3
+    M.box('body', X0, Y0, 0, X1, Y1, pl, STONE)                       # 石基（實心，也是一樓地面）
+    stucco_walls(M, R, pl, 35, t, OCHRE)
+    floor_slab(M, R, 35, 37)
+    stucco_walls(M, R, 37, 67, t, OCHRE)
+    quoins(M, R, pl, 67)
+    band(M, R, 35, 37, TRIM, out=0)                                   # 樓層線
+    band(M, R, 65, 67, TRIM, out=1)                                   # 簷口線腳
+    # 開口
+    put_part(M, 'door', '前-門', 'front', R, 40, pl, t)
+    for i, cx in enumerate((17, 63)):
+        put_part(M, 'window', '前-窗%d' % (i + 1), 'front', R, cx, pl + 9, t)
+    for i, cx in enumerate((17, 40, 63)):
+        put_part(M, 'frenchdoor', '前-落地窗%d' % (i + 1), 'front', R, cx, 37, t)
+    put_part(M, 'door', '後-門', 'back', R, 40, pl, t)
+    for i, cx in enumerate((20, 60)):
+        put_part(M, 'window', '後-窗%d' % (i + 1), 'back', R, cx, 37 + 8, t)
+    # 門前三級石階
+    for k in range(3):
+        M.box('body', 33, Y0 - 1 - k, 0, 48, Y0 - k, pl - k, STONE_L)
+    M.anchor('door', 40, Y0 - 1, pl)
+    # 二樓陽台（托架挑出 0.9 m）
+    M.box('gallery', 5, 3, 35, 75, Y0, 37, WOOD)
+    M.box('gallery', 5, 3, 35, 75, 4, 37, WOOD_D)
+    for bx in (5, 27, 51, 73):                                        # 托架（實心三角）
+        for y in range(4, Y0):
+            for z in range(34 - (y - 4) - 1, 35):
+                M.box('gallery', bx, y, z, bx + 2, y + 1, z + 1, WOOD_D)
+    for x in range(5, 75):                                            # 鍛鐵欄杆＋木扶手
+        M.put('gallery', x, 3, 37, IRON)
+        M.put('gallery', x, 3, 46, WOOD_D)
+        if x % 2 == 0:
+            for z in range(38, 46):
+                M.put('gallery', x, 3, z, IRON)
+    for xs in (5, 74):
+        for y in range(3, Y0):
+            M.put('gallery', xs, y, 37, IRON)
+            M.put('gallery', xs, y, 46, WOOD_D)
+            if y % 2 == 1:
+                for z in range(38, 46):
+                    M.put('gallery', xs, y, z, IRON)
+    # 屋頂：四坡，前簷深（蓋過陽台）
+    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 67, 'p': 0.85, 'over': (3, 3, 10, 6)}])
+    build_roof(M, F, salt=1)
+    free_part(M, 'chimney', '煙囪', (62, 58, 60))
+    # 後院：院牆、後門、廚房（左後角）
+    yard(M, X0, Y1, X1, 120, 3, 22, OCHRE, gate=(56, 13, 19))
+    kitchen(M, (X0 + 3, 92, 34, 117), OCHRE, 'right', 104, vent_face='front', vent_c=18, low='right', chim=(6, 108, 2), salt=2)
+    M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 24.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
+                 {'name': '酒桶-院1', 'source': 'summit-rocher-01m-barrel', 'at': [66, 100, 0], 'pivot': [6, 6, 0], 'meta': {}},
+                 {'name': '酒桶-院2', 'source': 'summit-rocher-01m-barrel', 'at': [66, 107, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'house-a', 'title': '住宅 A（二層樓、二樓托架木陽台、四坡頂、後院＋廚房；土黃牆綠百葉）', 'use': 'house', 'lot': (8, 12), 'M': M,
+            'layers': {'body': '牆身', 'gallery': '陽台', 'roof': '屋頂'}}
+
+
+def house_b():
+    M = Model((80, 120, 82))
+    X0, Y0, X1, Y1 = 6, 30, 74, 84
+    R, t, pl = (X0, Y0, X1, Y1), 3, 6
+    M.box('body', X0, Y0, 0, X1, Y1, pl, STONE)
+    stucco_walls(M, R, pl, 40, t, BLUE)
+    quoins(M, R, pl, 40, color=TRIM, long=2, short=2, step=200)       # 轉角護板（白）
+    band(M, R, 38, 40, TRIM, out=0)
+    put_part(M, 'door', '前-門', 'front', R, 40, pl, t)
+    for i, cx in enumerate((16, 64)):
+        put_part(M, 'frenchdoor', '前-落地窗%d' % (i + 1), 'front', R, cx, pl, t)
+    for i, cx in enumerate((22, 58)):
+        put_part(M, 'window', '後-窗%d' % (i + 1), 'back', R, cx, pl + 9, t)
+    put_part(M, 'window', '左-窗', 'left', R, 57, pl + 9, t)
+    put_part(M, 'window', '右-窗', 'right', R, 57, pl + 9, t)
+    simple_door(M, 'back', R, 40, 10, 22, t, z0=pl)
+    # 前廊：石基＋木地板、細柱、欄杆、中間三級石階
+    M.box('gallery', 4, 10, 0, 76, Y0, pl - 1, STONE)
+    M.box('gallery', 4, 10, pl - 1, 76, Y0, pl, WOOD)
+    for k, zh in enumerate((4, 2)):                                   # 兩級石階（每級 0.2 m），上到廊的地板 0.6 m
+        M.box('gallery', 34, 10 - 3 * (k + 1), 0, 46, 10 - 3 * k, zh, STONE_L)
+    # 屋頂：陡的四坡（1.0）＋前廊緩坡（0.45）
+    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 40, 'p': 1.0, 'over': (6, 6, 24, 6), 'kick': {'front': 0.45}}])
+    top = build_roof(M, F, salt=3)
+    posts = (4, 22, 39, 56, 74)
+    for px in posts:
+        zt = min(top[(x, y)] - 1 for x in range(px, px + 2) for y in range(10, 12))
+        M.box('gallery', px, 10, pl, px + 2, 12, zt, TRIM)
+    zb = min(top[(x, 11)] - 1 for x in range(4, 76))
+    M.box('gallery', 4, 10, zb - 2, 76, 12, zb, TRIM)                 # 柱頂的橫梁
+    for x in range(4, 76):                                            # 欄杆（中間留給石階）
+        if 34 <= x < 46:
+            continue
+        M.put('gallery', x, 10, pl + 9, TRIM)
+        M.put('gallery', x, 10, pl + 1, TRIM)
+        if x % 3 == 0:
+            for z in range(pl + 2, pl + 9):
+                M.put('gallery', x, 10, z, TRIM)
+    for xs in (4, 75):
+        for y in range(10, Y0):
+            M.put('gallery', xs, y, pl + 9, TRIM)
+            if y % 3 == 0:
+                for z in range(pl, pl + 9):
+                    M.put('gallery', xs, y, z, TRIM)
+    M.anchor('door', 40, Y0 - 1, pl)
+    for i, cx in enumerate((24, 56)):                                 # 兩扇老虎窗：前牆底埋進屋面一格
+        y0 = 33
+        zf = top[(cx, y0 + 1)] - 1
+        free_part(M, 'dormer', '老虎窗%d' % (i + 1), (cx - 7, y0, zf))
+    free_part(M, 'chimney', '煙囪', (62, 54, 38))
+    # 後院：木柵圍籬＋小棚
+    picket_fence(M, [(X0, Y1), (1, Y1), (1, 118), (36, 118)])
+    picket_fence(M, [(46, 118), (78, 118), (78, Y1), (X1 - 1, Y1)])
+    sx0, sy0, sx1, sy1 = 50, 98, 74, 116
+    for x in range(sx0, sx1):                                         # 木板牆：牆頂跟著單坡走
+        for y in range(sy0, sy1):
+            if x in (sx0, sx1 - 1) or y in (sy0, sy1 - 1):
+                for z in range(0, int(22 + 0.25 * (y + 0.5 - sy0))):
+                    M.put('body', x, y, z, WOOD_D if z % 4 == 3 else WOOD_G)
+    simple_door(M, 'front', (sx0, sy0, sx1, sy1), 60, 8, 17, 1, color=WOOD_G)
+    F2 = {}
+    for x in range(sx0 - 2, sx1 + 2):
+        for y in range(sy0 - 3, sy1 + 2):
+            if M.inb(x, y, 0):
+                F2[(x, y)] = (22 + 0.25 * (y + 0.5 - sy0), 'front', False, 0)
+    build_roof(M, F2, 2, 'roof', color_fn=lambda x, y, f, r, e: WOOD_D if e else WOOD_G)
+    M.models += [{'name': '燈籠-廊', 'source': 'summit-rocher-01m-lantern', 'at': [29, Y0, 26.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
+                 {'name': '貨箱-棚', 'source': 'summit-rocher-01m-crate', 'at': [44, 108, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'house-b', 'title': '住宅 B（平房 case à galerie：前廊細柱、陡四坡頂接緩坡、老虎窗、後院木柵＋小棚；藍牆）', 'use': 'house', 'lot': (8, 12), 'M': M,
+            'layers': {'body': '牆身', 'gallery': '前廊', 'roof': '屋頂'}}
+
+
+def house_c():
+    M = Model((80, 120, 98))
+    M.shutter = SH_RED
+    X0, Y0, X1, Y1 = 4, 24, 76, 78
+    R, t, pl = (X0, Y0, X1, Y1), 3, 4
+    M.box('body', X0, Y0, 0, X1, Y1, pl, STONE)
+    stucco_walls(M, R, pl, 36, t, CREAM)
+    floor_slab(M, R, 36, 38)
+    stucco_walls(M, R, 38, 68, t, CREAM)
+    quoins(M, R, pl, 68)
+    band(M, R, 36, 38, TRIM, out=0)
+    put_part(M, 'door', '前-門', 'front', R, 40, pl, t)
+    for i, cx in enumerate((15, 65)):
+        put_part(M, 'window', '前-窗%d' % (i + 1), 'front', R, cx, pl + 9, t)
+    for i, cx in enumerate((15, 40, 65)):
+        put_part(M, 'frenchdoor', '前-落地窗%d' % (i + 1), 'front', R, cx, 38, t)
+    put_part(M, 'door', '後-門', 'back', R, 40, pl, t)
+    for i, cx in enumerate((20, 60)):
+        put_part(M, 'window', '後-窗%d' % (i + 1), 'back', R, cx, 38 + 8, t)
+    M.anchor('door', 40, Y0 - 1, pl)
+    # 兩層外廊
+    M.box('gallery', 2, 6, 0, 78, Y0, pl, STONE_L)                   # 一樓廊的石板地
+    M.box('gallery', 2, 6, 36, 78, Y0, 38, WOOD)
+    M.box('gallery', 2, 6, 36, 78, 7, 38, WOOD_D)
+    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 68, 'p': 0.8, 'over': (4, 4, 20, 6), 'kick': {'front': 0.35}}])
+    top = build_roof(M, F, salt=5)
+    for px in (2, 26, 51, 75):
+        M.box('gallery', px, 6, pl, px + 3, 9, 36, TRIM)                # 一樓石柱（抹白）
+        zt = min(top[(x, y)] - 1 for x in range(px, px + 2) for y in range(6, 8))
+        M.box('gallery', px, 6, 38, px + 2, 8, zt, TRIM)                # 二樓木柱
+    zb = min(top[(x, 7)] - 1 for x in range(2, 78))
+    M.box('gallery', 2, 6, zb - 2, 78, 8, zb, TRIM)
+    for x in range(2, 78):                                            # 二樓欄杆
+        M.put('gallery', x, 6, 48, TRIM)
+        M.put('gallery', x, 6, 39, TRIM)
+        if x % 3 == 0:
+            for z in range(40, 48):
+                M.put('gallery', x, 6, z, TRIM)
+    for xs in (2, 77):
+        for y in range(6, Y0):
+            M.put('gallery', xs, y, 48, TRIM)
+            if y % 3 == 0:
+                for z in range(38, 48):
+                    M.put('gallery', xs, y, z, TRIM)
+    free_part(M, 'chimney', '煙囪', (7, 60, 46))
+    # 後院：院牆、廚房（右後角）、水井
+    yard(M, X0, Y1, X1, 120, 3, 22, CREAM, gate=(22, 13, 19))
+    kitchen(M, (46, 92, X1 - 3, 117), CREAM, 'left', 104, vent_face='front', vent_c=60, low='left', chim=(64, 108, 2), salt=6)
+    for x in range(20, 32):                                           # 水井：石圈＋木架
+        for y in range(94, 106):
+            r = math.hypot(x + 0.5 - 26, y + 0.5 - 100)
+            if 3.2 < r < 6.0:
+                for z in range(0, 9):
+                    M.put('body', x, y, z, STONE_L if z == 8 else STONE)
+    M.box('body', 20, 99, 9, 22, 101, 30, WOOD_D)
+    M.box('body', 30, 99, 9, 32, 101, 30, WOOD_D)
+    M.box('body', 20, 99, 30, 32, 101, 32, WOOD_D)
+    M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 25.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
+                 {'name': '酒桶-院', 'source': 'summit-rocher-01m-barrel', 'at': [12, 104, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'house-c', 'title': '住宅 C（二層樓、上下兩層外廊、四坡頂接緩坡、後院＋廚房＋水井；米白牆紅百葉）', 'use': 'house', 'lot': (8, 12), 'M': M,
+            'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}, 'shutter': SH_RED}
+
+
+ALL = [house_a, house_b, house_c]

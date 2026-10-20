@@ -1,0 +1,5 @@
+- [ ] Tim 預覽一次（overlays/stage2_*.png、觀測頁選 summit-bourg-fr-01m）；照他的意見改產生程式 → build.py → apply.py stamp/links → check
+- [ ] 碉堡（fort 30×30）、砲台（battery 12×12）、長官的屋子（commandant 10×12）：借岩堡港的胸牆與風暴角號 12 磅砲
+- [ ] 城牆四級（稜堡 bastion）、三級方塔
+- [ ] 遊戲側（TASK-0740）：照 BUILDING_SPEC §1 的公式擺、§6 沿曲線拉牆；低模、貼圖匯入時算
+- [ ] 參考資料補：ANOM DFC 平面圖、Moreau 描寫 Le Cap 房子的原文、Bailey 2018
