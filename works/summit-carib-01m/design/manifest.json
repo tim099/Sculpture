@@ -1,0 +1,2564 @@
+{
+ "root": "summit-carib-01m",
+ "works": {
+  "summit-carib-01m": {
+   "anchors": {},
+   "expect": "summit-carib-01m.composite.txt",
+   "links": [
+    {
+     "at": [
+      40,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-a",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      120,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-b",
+     "recolor": {},
+     "source": "summit-carib-01m-house-b",
+     "turn": 0
+    },
+    {
+     "at": [
+      200,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-c",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c",
+     "turn": 0
+    },
+    {
+     "at": [
+      280,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-a2",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a2",
+     "turn": 0
+    },
+    {
+     "at": [
+      360,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-b2",
+     "recolor": {},
+     "source": "summit-carib-01m-house-b2",
+     "turn": 0
+    },
+    {
+     "at": [
+      440,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-c2",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c2",
+     "turn": 0
+    },
+    {
+     "at": [
+      520,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "tavern",
+     "recolor": {},
+     "source": "summit-carib-01m-tavern",
+     "turn": 0
+    },
+    {
+     "at": [
+      620,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "warehouse",
+     "recolor": {},
+     "source": "summit-carib-01m-warehouse",
+     "turn": 0
+    },
+    {
+     "at": [
+      740,
+      360,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "commandant",
+     "recolor": {},
+     "source": "summit-carib-01m-commandant",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      20,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "church",
+     "recolor": {},
+     "source": "summit-carib-01m-church",
+     "turn": 180
+    },
+    {
+     "at": [
+      220,
+      180,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "battery",
+     "recolor": {},
+     "source": "summit-carib-01m-battery",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 4,
+   "root": true,
+   "size": [
+    880,
+    560,
+    130
+   ],
+   "tags": "town",
+   "title": "加勒比海風格城鎮建築套件（風格 carib；0.1 m）—— 樣板街：住宅三型＋配色變化、酒館、倉庫｜小教堂、長官的屋子、砲台"
+  },
+  "summit-carib-01m-battery": {
+   "anchors": {
+    "door": [
+     9,
+     1,
+     0
+    ],
+    "flag": [
+     20,
+     96,
+     81
+    ],
+    "flag-bottom": [
+     22,
+     96,
+     60
+    ],
+    "flag-top": [
+     22,
+     96,
+     78
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-battery.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|50,96,60|50,96,78",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "style": "carib",
+      "use": "battery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "胸牆與砲床",
+     "recolor": {},
+     "source": "summit-carib-01m-battery-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-battery-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      81,
+      83,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "火藥庫-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      38,
+      39,
+      4
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲1",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      66,
+      39,
+      4
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲2",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      94,
+      39,
+      4
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲3",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      60,
+      104,
+      0
+     ],
+     "meta": {},
+     "name": "火藥桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      62,
+      96,
+      0
+     ],
+     "meta": {},
+     "name": "火藥桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "building,carib",
+   "title": "砲台（兩排木樁夾土的胸牆、三個砲眼與 gabion 頰、木砲床、三門 6 磅砲、毛石小火藥庫、旗杆與白旗）"
+  },
+  "summit-carib-01m-battery-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-battery-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "砲台｜胸牆與砲床"
+  },
+  "summit-carib-01m-battery-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-battery-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "砲台｜屋頂"
+  },
+  "summit-carib-01m-church": {
+   "anchors": {
+    "bell": [
+     80,
+     69,
+     92
+    ],
+    "door": [
+     80,
+     49,
+     4
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-church.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "16,28",
+      "style": "carib",
+      "use": "church",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-church-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂與鐘架",
+     "recolor": {},
+     "source": "summit-carib-01m-church-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      49,
+      4
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-大門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      44,
+      49,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      96,
+      49,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      49,
+      48
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-山牆窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      34,
+      212,
+      17
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-聖所窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      123,
+      212,
+      17
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-聖所窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      96,
+      240,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "聖器室-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 2,
+   "size": [
+    160,
+    280,
+    130
+   ],
+   "tags": "building,carib",
+   "title": "小教堂（毛石牆到 1.1 m、上面木構架開敞、正面與聖所釘板、欄杆窗、兩坡木瓦頂、屋脊木鐘架；長凳、祭壇；聖器室披屋；沒圍牆的墓地）"
+  },
+  "summit-carib-01m-church-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-church-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    280,
+    130
+   ],
+   "tags": "sub",
+   "title": "小教堂｜牆身"
+  },
+  "summit-carib-01m-church-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-church-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    280,
+    130
+   ],
+   "tags": "sub",
+   "title": "小教堂｜屋頂與鐘架"
+  },
+  "summit-carib-01m-commandant": {
+   "anchors": {
+    "door": [
+     50,
+     39,
+     5
+    ],
+    "flag": [
+     80,
+     16,
+     87
+    ],
+    "flag-bottom": [
+     82,
+     16,
+     66
+    ],
+    "flag-top": [
+     82,
+     16,
+     84
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-commandant.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|54,16,66|54,16,84",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,12",
+      "style": "carib",
+      "use": "commandant",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-commandant-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-commandant-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      39,
+      5
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      18,
+      39,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      18,
+      94,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      62,
+      39,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      62,
+      94,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      13,
+      44,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      13,
+      72,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      84,
+      44,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      84,
+      72,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      37.5,
+      40,
+      20.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      14,
+      108,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    100,
+    120,
+    90
+   ],
+   "tags": "building,carib",
+   "title": "長官的屋子（毛石台基、釘板木屋一層四間、木瓦四坡頂；外圍一圈木樁柵欄與門；旗杆與白旗；後院廚房披屋）"
+  },
+  "summit-carib-01m-commandant-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-commandant-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    100,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "長官的屋子｜牆身"
+  },
+  "summit-carib-01m-commandant-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-commandant-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    100,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "長官的屋子｜前廊"
+  },
+  "summit-carib-01m-commandant-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-commandant-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    100,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "長官的屋子｜屋頂"
+  },
+  "summit-carib-01m-house-a": {
+   "anchors": {
+    "door": [
+     40,
+     27,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-a.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "門廊",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      27,
+      6
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      27,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      27,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      76,
+      6
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      5,
+      43,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      72,
+      43,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      28,
+      20.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-廊",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      12,
+      88,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-水",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      24,
+      106,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    76
+   ],
+   "tags": "building,carib",
+   "title": "住宅 A（釘板的木屋：毛石台基、三級切石台階、橫板牆、木瓦四坡頂、披屋式門廊；後院木柵＋廚房披屋）"
+  },
+  "summit-carib-01m-house-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-a-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    76
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜牆身"
+  },
+  "summit-carib-01m-house-a-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-a-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    76
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜門廊"
+  },
+  "summit-carib-01m-house-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-a-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    76
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜屋頂"
+  },
+  "summit-carib-01m-house-a2": {
+   "anchors": {
+    "door": [
+     40,
+     27,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-a2.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "a2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "109": 255
+     },
+     "source": "summit-carib-01m-house-a",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    120,
+    76
+   ],
+   "tags": "building,carib",
+   "title": "住宅 A2（A 的配色變化：板牆刷石灰白 —— Saba「刷得很白」；替換色，不另存格子）"
+  },
+  "summit-carib-01m-house-b": {
+   "anchors": {
+    "door": [
+     30,
+     19,
+     2
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-b.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "b"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-house-b-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-house-b-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      23,
+      19,
+      2
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      42,
+      19,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      24,
+      102,
+      0
+     ],
+     "meta": {},
+     "name": "燻肉架",
+     "pivot": [
+      16,
+      10,
+      0
+     ],
+     "source": "summit-rocher-01m-boucan"
+    },
+    {
+     "at": [
+      64,
+      106,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-棚",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    66
+   ],
+   "tags": "building,carib",
+   "title": "住宅 B（編條糊泥的小屋：叉柱入土、石灰白牆、兩坡棕櫚葉頂垂到近地、門與窗在朝街的山牆；後院木柵＋燻肉架 boucan＋披屋）"
+  },
+  "summit-carib-01m-house-b-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-b-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    66
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜牆身"
+  },
+  "summit-carib-01m-house-b-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-b-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    66
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜屋頂"
+  },
+  "summit-carib-01m-house-b2": {
+   "anchors": {
+    "door": [
+     30,
+     19,
+     2
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-b2.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "b2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "255": 140
+     },
+     "source": "summit-carib-01m-house-b",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    120,
+    66
+   ],
+   "tags": "building,carib",
+   "title": "住宅 B2（B 的配色變化：沒刷石灰的泥牆（肥土＋牛糞的本色）；替換色，不另存格子）"
+  },
+  "summit-carib-01m-house-c": {
+   "anchors": {
+    "door": [
+     41,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-c.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "c"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "外廊",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      28,
+      27,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      11,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      57,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      34,
+      27,
+      32
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "二樓-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-前窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-前窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      72,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-後窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      48,
+      72,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-後窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      33,
+      72,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      45,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "右-氣窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 90
+    },
+    {
+     "at": [
+      72,
+      42,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-二樓窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      47,
+      93,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      24.5,
+      28,
+      22.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-貨門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      58,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-門口1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      66,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-門口",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    96
+   ],
+   "tags": "building,carib",
+   "title": "住宅 C（兩層的商家：一樓毛石店面＋貨門、二樓木板牆＋前廊、側面外樓梯、木瓦四坡頂；後院石牆＋木板廚房）"
+  },
+  "summit-carib-01m-house-c-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-c-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    96
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜牆身"
+  },
+  "summit-carib-01m-house-c-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-c-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    96
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜外廊"
+  },
+  "summit-carib-01m-house-c-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-c-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    96
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜屋頂"
+  },
+  "summit-carib-01m-house-c2": {
+   "anchors": {
+    "door": [
+     41,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-c2.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "c2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "146": 255,
+      "182": 255,
+      "218": 255
+     },
+     "source": "summit-carib-01m-house-c",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    120,
+    96
+   ],
+   "tags": "building,carib",
+   "title": "住宅 C2（C 的配色變化：一樓石牆刷白 —— St Thomas「照荷蘭方式刷白」；替換色，不另存格子）"
+  },
+  "summit-carib-01m-part-door-double": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-part-door-double.vox.txt",
+   "models": [],
+   "order": 0,
+   "size": [
+    20,
+    3,
+    27
+   ],
+   "tags": "sub,part",
+   "title": "雙扇木板門（各一條斜撐、門楣橫木；通用部件，0.1 m）"
+  },
+  "summit-carib-01m-part-door-plank": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-part-door-plank.vox.txt",
+   "models": [],
+   "order": 0,
+   "size": [
+    14,
+    3,
+    23
+   ],
+   "tags": "sub,part",
+   "title": "木板門（單扇、直板＋橫檔＋斜撐、深色木框；通用部件，0.1 m）"
+  },
+  "summit-carib-01m-part-window-baluster": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-part-window-baluster.vox.txt",
+   "models": [],
+   "order": 0,
+   "size": [
+    20,
+    3,
+    16
+   ],
+   "tags": "sub,part",
+   "title": "欄杆窗（開口＋車製木欄杆代替玻璃、深色木框；教堂用，17 世紀法屬安地列斯，通用部件，0.1 m）"
+  },
+  "summit-carib-01m-part-window-board": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-part-window-board.vox.txt",
+   "models": [],
+   "order": 0,
+   "size": [
+    20,
+    3,
+    14
+   ],
+   "tags": "sub,part",
+   "title": "窗（開口＋兩扇開著的實心木板百葉、深色木框，沒有玻璃；17 世紀加勒比海，通用部件，0.1 m）"
+  },
+  "summit-carib-01m-tavern": {
+   "anchors": {
+    "door": [
+     50,
+     35,
+     4
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "sign": [
+     88,
+     10,
+     30
+    ]
+   },
+   "expect": "summit-carib-01m-tavern.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,14",
+      "style": "carib",
+      "use": "tavern",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-tavern-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "前廊",
+     "recolor": {},
+     "source": "summit-carib-01m-tavern-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-tavern-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      35,
+      4
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      35,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      68,
+      35,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      46,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      5,
+      72,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      92,
+      46,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      92,
+      72,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      23,
+      98,
+      4
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      60,
+      98,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36.5,
+      36,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      14,
+      22,
+      4
+     ],
+     "meta": {},
+     "name": "酒桶-廊1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      82,
+      22,
+      4
+     ],
+     "meta": {},
+     "name": "酒桶-廊2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      55,
+      118,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-棚1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      80,
+      118,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-棚2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      66,
+      124,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-棚",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    }
+   ],
+   "order": 2,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "building,carib",
+   "title": "酒館（cabaret／punch house：橫板牆、寬前廊與長凳、雙扇門、吊招牌、木瓦四坡頂；後院茅草涼棚）"
+  },
+  "summit-carib-01m-tavern-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-tavern-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "酒館｜牆身"
+  },
+  "summit-carib-01m-tavern-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-tavern-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "酒館｜前廊"
+  },
+  "summit-carib-01m-tavern-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-tavern-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "酒館｜屋頂"
+  },
+  "summit-carib-01m-warehouse": {
+   "anchors": {
+    "door": [
+     60,
+     13,
+     0
+    ],
+    "hoist": [
+     59,
+     5,
+     57
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-warehouse.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "carib",
+      "use": "warehouse",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-warehouse-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-warehouse-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      47,
+      13,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      13,
+      14
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      89,
+      13,
+      14
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      13,
+      37
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-閣樓門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      7,
+      17,
+      16
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      7,
+      69,
+      16
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      7,
+      121,
+      16
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      110,
+      17,
+      16
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      110,
+      69,
+      16
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      110,
+      121,
+      16
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      53,
+      142,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      30,
+      6,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-門口1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      38,
+      6,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-門口2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      34,
+      6,
+      6
+     ],
+     "meta": {},
+     "name": "貨箱-門口3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      82,
+      6,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-門口1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      90,
+      6,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-門口2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    160,
+    80
+   ],
+   "tags": "building,carib",
+   "title": "倉庫（magasin：木板牆、毛石地檻、兩坡木瓦頂、貨門、閣樓門與吊貨梁）"
+  },
+  "summit-carib-01m-warehouse-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-warehouse-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    160,
+    80
+   ],
+   "tags": "sub",
+   "title": "倉庫｜牆身"
+  },
+  "summit-carib-01m-warehouse-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-warehouse-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    160,
+    80
+   ],
+   "tags": "sub",
+   "title": "倉庫｜屋頂"
+  }
+ }
+}
