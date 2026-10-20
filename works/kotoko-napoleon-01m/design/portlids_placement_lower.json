@@ -1,0 +1,2501 @@
+{
+ "count": 32,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    11,
+    0,
+    0
+   ]
+  },
+  "cells": 264,
+  "design": "kotoko-napoleon-01m",
+  "file": "kotoko-napoleon-01m/design/masks/portlids/napoleon.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "kotoko-napoleon-01m",
+  "pivot": [
+   6,
+   0,
+   0
+  ],
+  "sha256": "2dcd0aa2b59ce83ce713d25a2d434f0724d778996a565bef43a5cd296a081de0",
+  "size": [
+   12,
+   11,
+   2
+  ],
+  "title": "拿破崙號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m；下、上砲甲板共用）",
+  "work": "kotoko-napoleon-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 拿破崙號 下砲甲板：32 片（甲板-lower），蓋板 kotoko-napoleon-01m-portlid [12, 11, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    291,
+    117,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 282,
+    "n": 42,
+    "resid": 0.77,
+    "rx": 28.87,
+    "rz_fit": 3.89
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 0.0,
+    "muzzle": [
+     291.0,
+     120.25,
+     104.25
+    ],
+    "need_pull": 0.75,
+    "outer_s": 280.0
+   },
+   "gun_model": "砲-P03",
+   "gun_path": "甲板-lower/砲-P03",
+   "hinge_out": 1,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    285,
+    296
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 116.9,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P03",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    286,
+    295
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    176.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    291,
+    284,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 283,
+    "n": 42,
+    "resid": 0.77,
+    "rx": 28.87,
+    "rz_fit": 3.89
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 0.0,
+    "muzzle": [
+     291.0,
+     280.75,
+     104.25
+    ],
+    "need_pull": 0.75,
+    "outer_s": 281
+   },
+   "gun_model": "砲-S03",
+   "gun_path": "甲板-lower/砲-S03",
+   "hinge_out": 1,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    285,
+    296
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 116.9,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S03",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    286,
+    295
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    3.9
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    327,
+    116,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 283,
+    "n": 42,
+    "resid": 0.55,
+    "rx": 14.48,
+    "rz_fit": 3.86
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 3.0,
+    "muzzle": [
+     327.0,
+     114.25,
+     103.25
+    ],
+    "need_pull": 4.75,
+    "outer_s": 282.0
+   },
+   "gun_model": "砲-P04",
+   "gun_path": "甲板-lower/砲-P04",
+   "hinge_out": 1,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    321,
+    332
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 102.5,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P04",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    322,
+    331
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    176.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    327,
+    285,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.55,
+    "rx": 14.48,
+    "rz_fit": 3.86
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 3.0,
+    "muzzle": [
+     327.0,
+     286.75,
+     103.25
+    ],
+    "need_pull": 4.75,
+    "outer_s": 283
+   },
+   "gun_model": "砲-S04",
+   "gun_path": "甲板-lower/砲-S04",
+   "hinge_out": 1,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    321,
+    332
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 102.5,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S04",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    322,
+    331
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    3.9
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    362,
+    117,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 283,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     362.0,
+     110.75,
+     103.25
+    ],
+    "need_pull": 7.25,
+    "outer_s": 283.0
+   },
+   "gun_model": "砲-P05",
+   "gun_path": "甲板-lower/砲-P05",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    356,
+    367
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P05",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    357,
+    366
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    362,
+    284,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     362.0,
+     290.25,
+     103.25
+    ],
+    "need_pull": 7.25,
+    "outer_s": 284
+   },
+   "gun_model": "砲-S05",
+   "gun_path": "甲板-lower/砲-S05",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    356,
+    367
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S05",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    357,
+    366
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    398,
+    116,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     398.0,
+     109.25,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P06",
+   "gun_path": "甲板-lower/砲-P06",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    392,
+    403
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P06",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    393,
+    402
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    398,
+    285,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 285,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     398.0,
+     291.75,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S06",
+   "gun_path": "甲板-lower/砲-S06",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    392,
+    403
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-11"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S06",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    393,
+    402
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    434,
+    116,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     434.0,
+     109.25,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P07",
+   "gun_path": "甲板-lower/砲-P07",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    428,
+    439
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-14"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P07",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    429,
+    438
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    434,
+    285,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 285,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     434.0,
+     291.75,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S07",
+   "gun_path": "甲板-lower/砲-S07",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    428,
+    439
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-13"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S07",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    429,
+    438
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    469,
+    116,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     469.0,
+     109.25,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P08",
+   "gun_path": "甲板-lower/砲-P08",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    463,
+    474
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-16"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P08",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    464,
+    473
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    469,
+    285,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 285,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     469.0,
+     291.75,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S08",
+   "gun_path": "甲板-lower/砲-S08",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    463,
+    474
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-15"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S08",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    464,
+    473
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    505,
+    116,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     505.0,
+     109.25,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P09",
+   "gun_path": "甲板-lower/砲-P09",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    499,
+    510
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-18"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P09",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    500,
+    509
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    505,
+    285,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 285,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     505.0,
+     291.75,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S09",
+   "gun_path": "甲板-lower/砲-S09",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    499,
+    510
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-17"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S09",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    500,
+    509
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    540,
+    116,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     540.0,
+     109.25,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P10",
+   "gun_path": "甲板-lower/砲-P10",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    534,
+    545
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-20"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P10",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    535,
+    544
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    540,
+    285,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 285,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     540.0,
+     291.75,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S10",
+   "gun_path": "甲板-lower/砲-S10",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    534,
+    545
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-19"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S10",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    535,
+    544
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    576,
+    116,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     576.0,
+     109.25,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P11",
+   "gun_path": "甲板-lower/砲-P11",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    570,
+    581
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-22"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P11",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    571,
+    580
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    576,
+    285,
+    105
+   ],
+   "face": {
+    "hinge_surf_s": 285,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     576.0,
+     291.75,
+     102.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S11",
+   "gun_path": "甲板-lower/砲-S11",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    570,
+    581
+   ],
+   "lid_z": [
+    95,
+    105
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-21"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S11",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    571,
+    580
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    611,
+    116,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.92,
+    "rx": -0.37,
+    "rz_fit": -0.38
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     611.0,
+     109.25,
+     103.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P12",
+   "gun_path": "甲板-lower/砲-P12",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    605,
+    616
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 87.6,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-24"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P12",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    606,
+    615
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 1,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    611,
+    285,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 285,
+    "n": 42,
+    "resid": 0.92,
+    "rx": -0.37,
+    "rz_fit": -0.38
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     611.0,
+     291.75,
+     103.25
+    ],
+    "need_pull": 7.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S12",
+   "gun_path": "甲板-lower/砲-S12",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    605,
+    616
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 87.6,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-23"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S12",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    606,
+    615
+   ],
+   "open_z": [
+    96,
+    104
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 1,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    647,
+    117,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 283,
+    "n": 42,
+    "resid": 0.5,
+    "rx": -6.18,
+    "rz_fit": -1.14
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     647.0,
+     110.25,
+     103.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 284.0
+   },
+   "gun_model": "砲-P13",
+   "gun_path": "甲板-lower/砲-P13",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    641,
+    652
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 81.8,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-26"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P13",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    642,
+    651
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    647,
+    284,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.5,
+    "rx": -6.18,
+    "rz_fit": -1.14
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     647.0,
+     290.75,
+     103.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 285
+   },
+   "gun_model": "砲-S13",
+   "gun_path": "甲板-lower/砲-S13",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    641,
+    652
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 81.8,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-25"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S13",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    642,
+    651
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    683,
+    117,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 283,
+    "n": 42,
+    "resid": 0.59,
+    "rx": -2.15,
+    "rz_fit": -1.86
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     683.0,
+     110.75,
+     103.25
+    ],
+    "need_pull": 7.25,
+    "outer_s": 283.0
+   },
+   "gun_model": "砲-P14",
+   "gun_path": "甲板-lower/砲-P14",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    677,
+    688
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 85.9,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-28"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P14",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    678,
+    687
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    683,
+    284,
+    106
+   ],
+   "face": {
+    "hinge_surf_s": 284,
+    "n": 42,
+    "resid": 0.59,
+    "rx": -2.15,
+    "rz_fit": -1.86
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     683.0,
+     290.25,
+     103.25
+    ],
+    "need_pull": 7.25,
+    "outer_s": 284
+   },
+   "gun_model": "砲-S14",
+   "gun_path": "甲板-lower/砲-S14",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    677,
+    688
+   ],
+   "lid_z": [
+    96,
+    106
+   ],
+   "meta": {
+    "close_deg": 85.9,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-27"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S14",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    678,
+    687
+   ],
+   "open_z": [
+    97,
+    105
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    718,
+    119,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 281,
+    "n": 42,
+    "resid": 0.87,
+    "rx": -0.4,
+    "rz_fit": -0.76
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     718.0,
+     112.75,
+     104.25
+    ],
+    "need_pull": 7.25,
+    "outer_s": 281.0
+   },
+   "gun_model": "砲-P15",
+   "gun_path": "甲板-lower/砲-P15",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    712,
+    723
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 87.6,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-30"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P15",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    713,
+    722
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    718,
+    282,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 282,
+    "n": 42,
+    "resid": 0.87,
+    "rx": -0.4,
+    "rz_fit": -0.76
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     718.0,
+     288.25,
+     104.25
+    ],
+    "need_pull": 7.25,
+    "outer_s": 282
+   },
+   "gun_model": "砲-S15",
+   "gun_path": "甲板-lower/砲-S15",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    712,
+    723
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 87.6,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-29"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S15",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    713,
+    722
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    754,
+    121,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 279,
+    "n": 42,
+    "resid": 0.72,
+    "rx": 2.54,
+    "rz_fit": -5.78
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 5.0,
+    "muzzle": [
+     754.0,
+     116.25,
+     104.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 278.0
+   },
+   "gun_model": "砲-P16",
+   "gun_path": "甲板-lower/砲-P16",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    748,
+    759
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 90.5,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-32"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P16",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    749,
+    758
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    185.8
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    754,
+    280,
+    107
+   ],
+   "face": {
+    "hinge_surf_s": 280,
+    "n": 42,
+    "resid": 0.72,
+    "rx": 2.54,
+    "rz_fit": -5.78
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 5.0,
+    "muzzle": [
+     754.0,
+     284.75,
+     104.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 279
+   },
+   "gun_model": "砲-S16",
+   "gun_path": "甲板-lower/砲-S16",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    748,
+    759
+   ],
+   "lid_z": [
+    97,
+    107
+   ],
+   "meta": {
+    "close_deg": 90.5,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-31"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S16",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    749,
+    758
+   ],
+   "open_z": [
+    98,
+    106
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -5.8
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    789,
+    126,
+    108
+   ],
+   "face": {
+    "hinge_surf_s": 274,
+    "n": 42,
+    "resid": 0.6,
+    "rx": 2.78,
+    "rz_fit": -10.14
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 5.5,
+    "muzzle": [
+     789.0,
+     121.75,
+     105.25
+    ],
+    "need_pull": 6.25,
+    "outer_s": 273.0
+   },
+   "gun_model": "砲-P17",
+   "gun_path": "甲板-lower/砲-P17",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    783,
+    794
+   ],
+   "lid_z": [
+    98,
+    108
+   ],
+   "meta": {
+    "close_deg": 90.8,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-34"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P17",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    784,
+    793
+   ],
+   "open_z": [
+    99,
+    107
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    190.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    789,
+    275,
+    108
+   ],
+   "face": {
+    "hinge_surf_s": 275,
+    "n": 42,
+    "resid": 0.6,
+    "rx": 2.78,
+    "rz_fit": -10.14
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 5.5,
+    "muzzle": [
+     789.0,
+     279.25,
+     105.25
+    ],
+    "need_pull": 6.25,
+    "outer_s": 274
+   },
+   "gun_model": "砲-S17",
+   "gun_path": "甲板-lower/砲-S17",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    783,
+    794
+   ],
+   "lid_z": [
+    98,
+    108
+   ],
+   "meta": {
+    "close_deg": 90.8,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-33"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S17",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    784,
+    793
+   ],
+   "open_z": [
+    99,
+    107
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -10.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    825,
+    133,
+    108
+   ],
+   "face": {
+    "hinge_surf_s": 267,
+    "n": 42,
+    "resid": 0.62,
+    "rx": 8.38,
+    "rz_fit": -18.13
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 1.0,
+    "muzzle": [
+     825.0,
+     133.25,
+     105.25
+    ],
+    "need_pull": 2.75,
+    "outer_s": 265.0
+   },
+   "gun_model": "砲-P18",
+   "gun_path": "甲板-lower/砲-P18",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    819,
+    830
+   ],
+   "lid_z": [
+    98,
+    108
+   ],
+   "meta": {
+    "close_deg": 96.4,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-36"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P18",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    820,
+    829
+   ],
+   "open_z": [
+    99,
+    107
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    198.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  },
+  {
+   "at": [
+    825,
+    268,
+    108
+   ],
+   "face": {
+    "hinge_surf_s": 268,
+    "n": 42,
+    "resid": 0.62,
+    "rx": 8.38,
+    "rz_fit": -18.13
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 1.0,
+    "muzzle": [
+     825.0,
+     267.75,
+     105.25
+    ],
+    "need_pull": 2.75,
+    "outer_s": 266
+   },
+   "gun_model": "砲-S18",
+   "gun_path": "甲板-lower/砲-S18",
+   "hinge_out": 0,
+   "host": "甲板-lower",
+   "host_work": "kotoko-napoleon-01m-deck-lower",
+   "lid_x": [
+    819,
+    830
+   ],
+   "lid_z": [
+    98,
+    108
+   ],
+   "meta": {
+    "close_deg": 96.4,
+    "house": 4,
+    "kind": "portlid",
+    "lid_of": "gun-35"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S18",
+   "open_size": [
+    10,
+    9
+   ],
+   "open_x": [
+    820,
+    829
+   ],
+   "open_z": [
+    99,
+    107
+   ],
+   "pivot": [
+    6,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -18.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "kotoko-napoleon-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_game": {},
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": [
+  {
+   "gun": "甲板-lower/砲-S01",
+   "id": "gun-1",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  },
+  {
+   "gun": "甲板-lower/砲-P01",
+   "id": "gun-2",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  },
+  {
+   "gun": "甲板-lower/砲-S02",
+   "id": "gun-3",
+   "why": "外表面沿 z 斜 45.3°：開口沿斜面 12.8 格 > 蓋板 11 格 ⇒ 關上蓋不滿（開著也插進鉸鏈上面外張的船殼）"
+  },
+  {
+   "gun": "甲板-lower/砲-P02",
+   "id": "gun-4",
+   "why": "外表面沿 z 斜 45.3°：開口沿斜面 12.8 格 > 蓋板 11 格 ⇒ 關上蓋不滿（開著也插進鉸鏈上面外張的船殼）"
+  }
+ ]
+}
