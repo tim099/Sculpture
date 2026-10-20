@@ -1,15 +1,14 @@
 # 越嶺號 TODO
 
-## 現況（2026-10-20 下午，午休前）
-- 六個階段都落地、讀數全綠（notes.md）；Sculpture **還沒提交**（等 Tim 預覽）。
-- 單子：TASK-0756 傘＋0758～0763 都 in_progress，驗收格還沒勾。
-- Blockside：分支 `kotoko/bombardella`（acbfdc1 砲種＋7137851 越嶺號上船），worktree 在 `C:/Users/Tim/AppData/Local/Temp/claude/D--Unity-Senate/0dd92658-7f7d-49a5-86b0-6cec99bd89eb/scratchpad/bs_bomb`（從 Blocksail 的 external/Blockside 開、基準 remote dev d31a70c）——**還沒合進 dev、沒推**。合之前：核 dev 動過沒（動了照合併後的來源重建）、coding op=start 進場、worktree 的 `VoxelKit/_cache/fusta.vxk` 要複製進共用的 _cache（vxk_lock 改了）。
+## 現況（2026-10-20 下午，午休後 Tim「繼續完成 越嶺號 吧」）
+- Sculpture 已提交 6684dfa（Refs 0756、0758～0763，不結單）。驗收格除了 0756 #7「Tim 預覽過完工的樣子」都勾了。
+- Blockside：已合進 dev 並推上測試站 —— 834709d（合 kotoko/bombardella）＋2b6488f（再合 dev 4729797），對拍 5／5 跟 dev 逐位元組相同；fusta.vxk 已放進共用 _cache；分支與 worktree 都收了。Blocksail 子模組指標 f47d1e5（沒推）。
 
 ## 下一步
-1. 給 Tim 看預覽圖（overlays/ 要補一張完工的全景）→ 他說了再提交 Sculpture、勾單。
-2. 問 Tim 要不要合進遊戲（dev 測試站）。
+1. 等 Tim 在測試站玩過 ⇒ 勾 0756 #7；結單等他說。
+2. （已完成）
 3. 艙底 ⚠ 2：艙深 1.4 m 人站不直 —— 史實尺寸，照實留著；要改就是遊戲那側的規則，不是船。
-4. 火藥 2／5 門走得到取用點 —— 查過了（notes「火藥 2／5 門」）：另外 3 門跟取用點跨層、檢查判不了，送藥手照直線送得到；hoist 加梯子/bow 反而更糟。要 5／5 就在船首平台加備便火藥箱（第二間彈藥庫），等 Tim 要再做。
+4. ✅ 火藥 5／5（Blockside a5c72c7：匯入檢查跨層照梯子判；notes「火藥 2／5 門」）。送藥手照樣直線走，船首砲一趟來回 17.4 秒 —— 要更快得改遊戲的取用點規則（平台擺不下 9×9），沒人要求不動。
 
 ## 之後可以做（沒人要求前不做）
 - 翻山拖船的展示（托架、滾輪、人與牛、船上空划的槳手與鼓手；研究報告 §6.2 有尺寸）。
