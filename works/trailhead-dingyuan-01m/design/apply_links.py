@@ -98,7 +98,7 @@ DECKS = {
 E = P['engine']
 ENG = {'kind': 'engine', 'engine': 'direct', 'cylinders': 3, 'ihp': 3000, 'kn': 14.5, 'kn_max': 15.4, 'material': 'iron', 'render': 'smooth'}
 LINKS = [
-    ('船殼', W, {'kind': 'ship', 'waterline_z': M['plan']['z_waterline'], 'material': 'iron', 'render': 'smooth'}, ''),
+    ('船殼', W, {'kind': 'ship', 'waterline_z': M['plan']['z_waterline'], 'material': 'iron_hull', 'render': 'smooth'}, ''),   # iron_hull：鐵外板＋肋骨內襯的混合層（全鐵 ⇒ 9,215 t）
     ('裝甲帶', W + '-belt', IRON, ''),
     ('露砲台', W + '-barbettes', IRON, ''),
     ('露砲台平台', W + '-barbette-platforms', dict(DECKS['barbette'], material='iron', render='voxel'), ''),   # 露砲台頂 ＝ 一層甲板：兩座主砲歸這一層（⛔ 歸主甲板 ⇒ 主甲板的站位高度照砲算成 z 97–110，木工台、帆布櫃被擺到露砲台中間的小平台上掉下去）

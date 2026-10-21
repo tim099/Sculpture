@@ -199,6 +199,7 @@ def build():
     beltm = env & ~inner4 & (Xs >= CIT[0]) & (Xs <= CIT[1]) & (Zs >= z0b) & (Zs <= z1b)
     claimw('belt', np.pad(beltm, ((0, 0), (0, 0), (0, NZ - ZTOP - 1))), np.pad(np.where(outer, band, C['iron']).astype(np.uint8), ((0, 0), (0, 0), (0, NZ - ZTOP - 1))))
     # ── 船殼外板 ──
+    # 外板 2 格（材質照關聯「船殼」的 meta：iron_hull ＝ 鐵外板＋肋骨內襯的混合層，比重、硬度取鐵與橡木的中間 —— 全鐵 ⇒ 遊戲照材質算 9,215 t，Tim 2026-10-21）
     claimw('hull', np.pad(shell, ((0, 0), (0, 0), (0, NZ - ZTOP - 1))), np.pad(shell_col, ((0, 0), (0, 0), (0, NZ - ZTOP - 1))))
     # deadwood（船尾中線的鰭，撐舵柱）＋舵柱＋舵底的龍骨靴＋軸架（A 字）
     sk0, sk1 = P['skeg']
