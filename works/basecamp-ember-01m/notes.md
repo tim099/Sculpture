@@ -385,3 +385,13 @@
 - 組裝件：拿掉 328 條 `<桅>-[tm]ratline-<舷><NN>`，換成 12 組 `<桅>-<lower|topmast>-<P|S>`（參數同憲法號：step 4、lower start 7／stop 16、topmast start 4／stop 10、min_span 5；rope_a／rope_b 照舊的 from／to）。
 - 讀數：`sub=ropes` 1095 條、ok 1095、broken 0、橫繩組 328 道（道數逐組同舊的）；其他 767 條逐筆不變；座標差 214 道 0、68 道 0.01、46 道 0.02 格（只在 z，同憲法號：舊腳本拿整排最高的 deadeye 當起點）。
 - 繩梯（lower 6 組，foot ＝ 舷牆內側第一段連續 3 欄一樣高的甲板往內 2 格、head ＝ 桅頂平台邊 ＝ topmast ratlines 起點那一格；照遊戲 standZ 量）：fore P (633, 116, 128)→(648, 132, 287)；fore S (633, 204, 128)→(648, 188, 287)；main P (329, 114, 128)→(341, 130, 310)；main S (329, 206, 128)→(341, 190, 310)；mizzen P (192, 120, 149)→(193, 138, 265)；mizzen S (192, 200, 149)→(193, 182, 265)。topmast 不標（crosstrees 站不住）。
+
+## 收尾盤點：新圖紙與反向對照（2026-10-21，TASK-0519 第 1、6 格；Tim「519 收尾吧」⇒ 兩格照現況改字）
+- **新圖紙**：側面 `sheet01_profile_v1.png`、剖面 `sheet02_sections_v1.png`、甲板 `sheet06_decks_v1.png`、砲位表 `sheet11_guns_v1.png`（今天補；`design/sheet11_guns.py` 只讀 guns_placement.json，不重新擺砲；程式斷言 90 門 ＝ 45 對、P 舷 ＝ S 舷鏡像：at.y 和 321、只有 φ 差正負號）。
+  階段十的標題一直寫「新圖紙 11」，圖其實沒畫 —— 今天才補上。
+- **plan.json 的出處**：逐段標（每一段的 provenance／decisions／why／rule／note，decks 每層的 from、guns 每列的 ports_from、stern_deco 五個子段各自的 provenance）；程式掃過 33 段，沒有一段缺。
+  ⚠ 不是逐個數字標：873 個數字大半是讀數（world_voxels、assembly_voxels…）與座標，Tim 選照現況改字。
+- **反向對照**（照實；用關鍵字掃本檔各段：「反向對照」「反向」「改之前」「逐位元組」，⚠ 這把尺只認這幾個詞，換個說法寫的會漏）：
+  - 做過的：階段一（不補 entry port 缺口 ⇒ 差正好那 9 欄）、階段四a（改之前先量）、階段九（重產逐位元組相同）、階段二十一 中央彈藥庫、TASK-0574 修 ladder_points.py（舊版 20／24 證明比對尺會叫）。
+  - 沒做（只有讀數＋過程圖，或只有讀數）：階段二、三、船身拉長、四b、五、補漆、六、七、八a、八b、八c、十、水線抬高、quarter gallery 開窗、十二～二十、berth → orlop 梯子、往下通貨艙的梯子、橫繩組。
+  - 成品的最終狀態另外驗過（2026-10-19 盤點，TASK-0519 留言 #7）：組裝件 1 元件、空腔 0、link_overlap 0；遊戲用的 ember.vxk 跟作品匯出的那份 vxk_compare 逐格、繩、帆、模型、關聯都相同。⇒ 沒做反向對照的那幾段，風險在「當時那把尺會不會叫」，不在成品。
