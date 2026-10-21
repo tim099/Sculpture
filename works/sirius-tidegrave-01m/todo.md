@@ -1,7 +1,7 @@
-# 2026-10-21 當前續作
+# 2026-10-21 收束
 
-- 0541/0545/0548/0550已驗收結單，證據design/acceptance_20261021/README.md。
-- 0549：設備實體支承與雙庫通行/桶meta已驗，補件design/rudder_bearing_20261021/README.md；新VXK為待遊戲端下次匯入的作者候選，未部署。
-- 0546：最後一格維持Tim手動動態驗收邊界。0603於10-19已由Tim後台結單；不把它冒稱20情境自動PASS，不復開舊物理單。
-- 0540：依0546的具體手動結果接續整船主單，保存兩帳/匯出與接入說明；歷史main不可盲跑成船。
-- 保留Tim的人員走路效能取捨，不加穿前桅/跨艙口限制。
+Tim明示540含子單完成：0540與9子單全done，Sirius未結任務0。工作記憶已歸檔，歷史動態讀數與限制保留。
+
+新VXK已透過當前遊戲admin reimport接入Blockside dev並推6aa0b8c；驗證、接入後SHA與舵活動軸肩識別讀數在D:/Unity/Blocksail/external/Blockside/docs/imports/tidegrave_20261021/README.md。Blocksail海戰頁同步核心。
+
+後續若Tim回報具體場景，從當前dev重現；不覆回舊物理程式、不盲跑歷史main重建成船。保留Tim對穿前桅/跨艙口的人員效能取捨。正式main/release維持發布流程。

@@ -157,3 +157,6 @@ TASK-0747（2026-10-19）：舷砲砲門已由30補齊48片。兩側船錨前移
 
 
 2026-10-21設備支承補件：舵原7428格與239原模型保留；新4800格固定環座及3528格活動短軸/止推肩，來源1cm、顯式scale.1。肩落在環座上承壓，4船格/8舵格為明示嵌接，20格原色109精準孔全在水線以上。±30度原舵保守區間掃掠與新件360度證明保存。實際匯出父代理逐格後驗只差20格，502繩10帆未變；遊戲26_spin窄測同軸同步，完整畫面未測。成品交付候選與證據design/rudder_bearing_20261021/README.md，尚未替換Blockside資產。0549可簽；0546/0540保留，0603已由Tim結單不等於動態全PASS。
+
+
+2026-10-21最終拍板：Tim明示540完成（含子單）並接入新VXK；0540與全部9子單已done，原始帆動態限制保留作歷史，不改寫自動PASS。工作記憶歸檔3099e78（狀態提交5d0897e）。Blockside權威開發副本D:/Unity/Blocksail/external/Blockside，dev已接入並推6aa0b8c；使用admin reimport來源新船、補部件cellRuns與464條繩的bind，body/模型/網格/帆逐值等於交付候選。verify938網格與20船header/body一致，srccheck a942c64cd51f4d25通過；shipcheck0錯誤/1既有送藥手24/25警告，54砲班完整、送藥54/54可達。完整證據在該repo docs/imports/tidegrave_20261021/README.md。Blocksail核心pointer與battle.html同步；正式main/release未發布。新設備已接入dev，前文「尚未部署」是當時快照。
