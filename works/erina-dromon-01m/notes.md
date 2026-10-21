@@ -88,3 +88,9 @@
 - 遊戲（Blockside 26_gunanim.js）：放箭那一刻扣弦點彈到 nock-fire、過頭再回來，裝填時照進度拉回 nock；弩砲迴旋時弦跟著轉。量過（木塔右舷）：扣弦點 y 79.05 → 0.13 秒 83.13（過頭）→ 3.2 秒 78.95。
 - 引擎 view：繩 22、ropes_broken 0、models_broken 0（overlays/ballista_string.png）。
 
+
+## 關聯重疊（2026-10-21，TASK-0794）
+- Blockside 21 艘量 `link_overlap`：持火號 156 —— 桅穿過甲板的地方（甲板-hold × 桅-fore 57、× 桅-main 49；甲板-main × 桅-fore 24、× 桅-main 21；船殼 × 桅-fore 5）。
+- **誰讓**：桅讓。每一格看組起來的顏色 ⇒ 156 格全是甲板、船殼贏，桅在那幾層本來就看不到 ⇒ 從 `-mast-fore` 刻 86 格、`-mast-main` 刻 70 格（carvevox 帶顏色守門）。甲板不挖桅孔：挖了外觀就變（甲板那幾格會換成桅的顏色）。
+- 讀數：組起來的格子清單前後逐格逐色相同（67,812 格）；`link_overlap` 156 → 0。桅子作品自己變成上下兩段（前桅 1,734 格、主桅 983 格，各 2 元件）。Blockside 重匯：格子、繩、帆、模型、繩端綁定相同，header 只差 `source`。
+- 反向對照：草稿在前桅貼回一格（268,63,4）⇒ 組裝件 `stats draft=1` 報 1；丟掉草稿 ⇒ 0。

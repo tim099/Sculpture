@@ -319,3 +319,8 @@ Tim：「繼續 GO」—— todo 上剩的第一件。設計 plan.json `gunfitti
 - 設計那一側：新格落在實心上 0、鏡像差 0、浮空 0；組起來（hide_links=船名板）655,451 格（＋220）、1 元件、空腔 0、鏡像差 0；產生程式重跑 4 個輸出檔逐位元組相同。
 - Blockside 暫存副本 `reimport`：.vxk 655,738 格、checksum 2914371776、繩 588（＋220）、模型 173、帆 9；shipcheck ✗ 0（沒有開場浮空的繩）、砲班 0 門缺人、⚠ 3 照舊（geo —— 暫存那份沒有 ame 填的 geo、送藥手 21／22、陸戰隊 6／12）。真的 Blockside 要請 ame reimport（繩多了 220 條）。
 - 過程圖：`overlays/stage12_guntackle.png`（主甲板、從船裡看砲架尾的 train tackle 與甲板環）、`overlays/stage12_breeching.png`（從船裡往右舷牆看：兩門砲之間的兩個環、breeching 與 side tackle）。
+
+## 關聯重疊（2026-10-21，TASK-0794；erina 代 calli 修，Tim：「幫calli收掉吧(維持外觀) 然後重匯」）
+- Blockside 21 艘量 `link_overlap`：收穫號 8 —— 支索板 × 主桅 6 格（x 294、y 157／163、z 98–100）、支索板 × 甲板-alcazar 2 格（x 257、y 157／163、z 100）。第七階段加支索板時就在（當時量的「跟船重疊 0」沒含桅與船樓甲板）。
+- **誰讓**：支索板讓。8 格組起來都是主桅、甲板的顏色贏 ⇒ 從 `-channels` 刻掉（carvevox 帶顏色守門 36；雕刻只准作者 ⇒ persona=calli 下刀，事件 note 寫明 erina 代刻）。
+- 讀數：組起來的格子清單前後逐格逐色相同（655,738 格）；`link_overlap` 8 → 0；（hide_links=船名板）655,451 格、1 元件、封閉空腔 0、鏡像差 0／0／0。Blockside 重匯：格子、繩、帆、模型、繩端綁定相同，header 只差 `source` 的支索板那一行；shipcheck ✗ 0 ⚠ 0。
