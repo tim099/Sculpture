@@ -47,6 +47,9 @@ PARTS = [
     ('floor', W + '-floor', '松島號 機艙與鍋爐艙的地板', 'part_floor.txt', HULL, 0.1),
     ('bulkheads', W + '-bulkheads', '松島號 艙底的水密艙壁', 'part_bulkheads.txt', HULL, 0.1),
     ('ladders', W + '-ladders', '松島號 梯子', 'part_ladders.txt', HULL, 0.1),
+    ('rooms-lower', W + '-rooms-lower', '松島號 防護甲板上的艙房（右舷；左舷鏡像）', 'part_rooms-lower.txt', HULL, 0.1),   # gen_rooms.py
+    ('rooms-middle', W + '-rooms-middle', '松島號 中甲板的艙房（右舷；左舷鏡像）', 'part_rooms-middle.txt', HULL, 0.1),
+    ('rooms-upper', W + '-rooms-upper', '松島號 船首樓底下的艙房（右舷；左舷鏡像）', 'part_rooms-upper.txt', HULL, 0.1),
     ('rudder', W + '-rudder', '松島號 舵（外部模型的來源，整船的框）', 'part_rudder.txt', HULL, 0.1),
     ('screw-s', W + '-screw-s', '松島號 右舷螺旋槳（四葉 3.2 m、內旋 ⇒ 左旋；外部模型的來源，整船的框）', 'part_screw-s.txt', HULL, 0.1),
     ('screw-p', W + '-screw-p', '松島號 左舷螺旋槳（四葉 3.2 m、內旋 ⇒ 右旋；外部模型的來源，整船的框）', 'part_screw-p.txt', HULL, 0.1),

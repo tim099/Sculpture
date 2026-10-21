@@ -239,6 +239,12 @@ for nm, a_, b_, grp in ROPES:
     a = [('op', 'work'), ('sub', 'rope'), ('work', ASM), ('persona', PER), ('name', nm), ('from', a_), ('to', b_), ('slack', '1.0'), ('thickness', '0.9'), ('color', '#2b2620'), ('group', grp)]
     if nm in have: a.append(('overwrite', '1'))
     run(*a); print('✓ 繩', nm, flush=True)
+# ── 繩梯（照憲法號 ratlines/lower：兩條側支索之間每 4 格一道、climb ⇒ 遊戲裡爬得上下桅樓；兩條在桅上收成一點 ⇒ 短於 0.5 m 就停）──
+for s_, sg in (('S', 1), ('P', -1)):
+    run(('op', 'work'), ('sub', 'ratlines'), ('work', ASM), ('persona', PER), ('name', 'main-lower-' + s_), ('rope_a', 'shroud-a-' + s_), ('rope_b', 'shroud-b-' + s_),
+        ('step', '4'), ('start', '4'), ('min_span', '5'), ('climb', '1'), ('foot', '%d,%d,%d' % (mx + 1, YC + sg * 62, P['z_fc_deck'] + 1)),
+        ('head', '%d,%d,%d' % (mx, YC + sg * 16, MS['top1'] + 1)), ('color', '#2b2620'), ('thickness', '0.3'), ('group', 'ratlines/lower'))
+    print('✓ 繩梯 main-lower-' + s_, flush=True)
 # ── 旭日旗（後桅斜桁頂；2:3，2.4 × 3.6 m）──
 gx, gz = int(math.floor(gp[0])) + 1, int(math.floor(gp[2])) - 1
 corners = '桅/gaff-peak|%g,%g,%g|%g,%g,%g|%g,%g,%g' % (gx - 36, YC + 0.5, gz + 0.5, gx - 36, YC + 0.5, gz - 23.5, gx + 0.5, YC + 0.5, gz - 23.5)

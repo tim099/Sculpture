@@ -1,5 +1,5 @@
 {
-	"schema": 2,
+	"schema": 4,
 	"ropes": [
 		{
 			"name": "shroud-a-S",
@@ -67,5 +67,45 @@
 			"created_at": "2026-10-21T17:01:51"
 		}
 	],
-	"groups": []
+	"groups": [],
+	"ratlines": [
+		{
+			"name": "main-lower-S",
+			"a": "shroud-a-S",
+			"b": "shroud-b-S",
+			"step": 4,
+			"start": 4,
+			"stop": 0,
+			"min_span": 5,
+			"color": "#2b2620",
+			"thickness": 0.3,
+			"enabled": true,
+			"group": "ratlines/lower",
+			"climb": true,
+			"foot": "440,152,137",
+			"head": "439,106,310",
+			"note": "",
+			"persona": "ridge-001",
+			"created_at": "2026-10-21T23:45:51"
+		},
+		{
+			"name": "main-lower-P",
+			"a": "shroud-a-P",
+			"b": "shroud-b-P",
+			"step": 4,
+			"start": 4,
+			"stop": 0,
+			"min_span": 5,
+			"color": "#2b2620",
+			"thickness": 0.3,
+			"enabled": true,
+			"group": "ratlines/lower",
+			"climb": true,
+			"foot": "440,28,137",
+			"head": "439,74,310",
+			"note": "",
+			"persona": "ridge-001",
+			"created_at": "2026-10-21T23:45:52"
+		}
+	]
 }
