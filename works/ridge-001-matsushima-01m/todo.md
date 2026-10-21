@@ -19,6 +19,6 @@
 - [x] 艙房（§9.2，`kind=rooms`；Tim「接著參考憲法號 根據圖紙加上內部艙室吧」）：gen_rooms.py ＋ apply_rooms.py；每舷 防護甲板上 12、中甲板 8、船首樓底下 4 ⇒ 48 間，rooms.py check 全過。
 - [x] 繩梯（Tim「參考憲法號 加上上桅杆的繩梯」）：兩舷 shroud-a ↔ shroud-b 每 4 格一道、climb（船首樓甲板 ⇒ 下桅樓），各 35 道。
 - [ ] 火藥送不到桅樓那 4 門 47 mm 照舊（送藥手的路不走繩梯）。
-- [ ] 對拍：加了艙房之後 dingyuan,constitution 那一局變了（2d1ad37293 → acb0ef4a68；拿掉繩梯照樣變 ⇒ 是艙房）—— 那局沒有松島號，原因沒查到（Tim 2026-10-22「合併吧」先合）。
+- [x] ~~對拍：加了艙房之後 dingyuan,constitution 變了~~ —— 不是艙房：合 dev c56c52d、照共用 _cache 補齊重匯之後四組都跟 dev 逐位元組相同（2d1ad37293）；那時 worktree 抄來的 _cache 裡定遠號比 dev 的成品新。
 - [ ] 廚房（§9.13）
 - [ ] 桅頂的將旗（伊東祐亨中將旗）

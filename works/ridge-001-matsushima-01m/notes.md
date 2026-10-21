@@ -96,7 +96,7 @@ python -I -X utf8 -B mass.py <gen 輸出> [<Blockside game.json>] [部件=材質
   - 每舷：防護甲板上 12 間（後段糧食庫、機艙與鍋爐艙兩舷煤艙、前段備品庫）、中甲板 8 間（後段司令官／艦長／軍官、露砲台到砲列之間准士官與下士官）、船首樓底下 4 間（病室、藥品庫）；12 cm 砲列那一段不隔（砲班）。用途是設計決定（史料沒有艙內配置圖）。
   - rooms.py check 48 間全 ✓；組裝件 1 塊、空腔 0、overlap 0（1,769,074 ＋ 2×38,955 ＝ 1,846,984）；遊戲 開戰 4,331 t。
 - 繩梯（照憲法號 ratlines/lower）：兩舷 shroud-a ↔ shroud-b、每 4 格一道、從甲板往上 4 格起、短於 5 格就停（兩條側支索在桅上收成一點）、climb=1、foot 船首樓甲板 (440, 90±62, 137)、head 下桅樓 (439, 90±16, 310)；各 35 道；ropecheck 75 條 150 端全綁。apply_links.py 跟著寫。
-- 🩸 對拍：別艘三組不變，dingyuan,constitution 那局在加了艙房之後變了（重跑兩次都一樣；拿掉繩梯、只留艙房照樣變）—— 那一局沒有松島號、艙房程式寫明不抽 rnd()；原因沒查到。
+- 🩸 對拍：第一次比的時候 dingyuan,constitution 變了（2d1ad37293 → acb0ef4a68，拿掉繩梯照樣變），本小姐一度以為是艙房 —— 錯。合 dev c56c52d、worktree 的 _cache 照共用工作區補齊之後重匯，四組都跟 dev 逐位元組相同（Blockside 599d1f3）。原因：那時 worktree 從共用工作區抄的 _cache 裡，定遠號是 trailhead 剛重匯、還沒進 dev 的那一份。⇒ 對拍之前先確認 worktree 的 _cache 跟它那一版的成品一致（不只看 build 有沒有擋）。
 
 ## 設計決定（史料查不到的）
 
