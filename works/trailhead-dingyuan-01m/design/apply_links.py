@@ -115,12 +115,6 @@ LINKS = [
     ('海圖室', W + '-chart-house', None, ''),
     ('煙囪-後', W + '-funnel-aft', dict(IRON, kind='funnel'), ''),
     ('煙囪-前', W + '-funnel-fwd', dict(IRON, kind='funnel'), ''),
-    ('鍋爐-後', W + '-boilers-aft', {'kind': 'boiler', 'boilers': 2, 'funnel': '煙囪-後', 'material': 'boiler', 'render': 'smooth'}, ''),
-    ('鍋爐-後-鏡像', W + '-boilers-aft', {'kind': 'boiler', 'boilers': 2, 'funnel': '煙囪-後', 'material': 'boiler', 'render': 'smooth'}, 'y'),
-    ('鍋爐-前', W + '-boilers-fwd', {'kind': 'boiler', 'boilers': 2, 'funnel': '煙囪-前', 'material': 'boiler', 'render': 'smooth'}, ''),
-    ('鍋爐-前-鏡像', W + '-boilers-fwd', {'kind': 'boiler', 'boilers': 2, 'funnel': '煙囪-前', 'material': 'boiler', 'render': 'smooth'}, 'y'),
-    ('主機', W + '-engine', dict(ENG, propeller='螺旋槳-S'), ''),
-    ('主機-鏡像', W + '-engine', dict(ENG, propeller='螺旋槳-P'), 'y'),
     ('軸', W + '-shaft', dict(IRON, kind='shaft'), ''),
     ('軸-鏡像', W + '-shaft', dict(IRON, kind='shaft'), 'y'),
     ('主桅', W + '-mast-main', None, ''),
@@ -138,6 +132,17 @@ for old in ('甲板-engine',):                                               # �
         run(('op', 'work'), ('sub', 'unlink'), ('work', ASM), ('persona', PER), ('name', old)); print('✓ 拿掉關聯', old)
 for nm, src, meta, mir in LINKS:
     link(ASM, nm, src, meta, mirror=mir)
+# 鍋爐、主機：自帶格子的外部模型（TASK-0793，ame 2026-10-21：關聯換成模型 ⇒ 可換零件的掛點）—— 跟 ame 那一次同一個擺法：整船的框、at＝pivot；鏡像那一份繞 y 110.5 翻
+DRV = [('鍋爐-後', W + '-boilers-aft', {'kind': 'boiler', 'boilers': 2, 'funnel': '煙囪-後', 'material': 'boiler', 'render': 'smooth'}),
+       ('鍋爐-前', W + '-boilers-fwd', {'kind': 'boiler', 'boilers': 2, 'funnel': '煙囪-前', 'material': 'boiler', 'render': 'smooth'}),
+       ('主機', W + '-engine', dict(ENG, propeller='螺旋槳-S'))]
+for nm, src, meta in DRV:
+    for suf, mir in (('', ''), ('-鏡像', 'y')):
+        if nm + suf in listed(ASM, 'links.json', 'links'):
+            run(('op', 'work'), ('sub', 'unlink'), ('work', ASM), ('persona', PER), ('name', nm + suf)); print('✓ 拿掉關聯（換成模型）', nm + suf)
+        m_ = dict(meta, propeller='螺旋槳-P') if nm == '主機' and mir else meta
+        p_ = [0, YC + 0.5, 0] if mir else [0, 0, 0]
+        model(ASM, nm + suf, src, p_, p_, [0, 0, 0], 1, m_, mirror=mir)
 
 # ── 固定點 ──
 for L in A['ladders']:
@@ -164,22 +169,37 @@ def side_cell(x, z, sgn):
 
 ax_ = P['anchors']; hz = P['anchors']['hawse_z']
 anchor(W, 'hawse-S', side_cell(ax_['hawse_x'], hz, 1)); anchor(W, 'hawse-P', side_cell(ax_['hawse_x'], hz, -1))
-ROPE_FOOT = {'chain-main-S': side_cell(214, zu + 1, 1), 'chain-main-P': side_cell(214, zu + 1, -1),
-             'backstay-S': side_cell(150, zu + 1, 1), 'backstay-P': side_cell(150, zu + 1, -1),
-             'chain-fore-S': side_cell(712, zu + 1, 1), 'chain-fore-P': side_cell(712, zu + 1, -1)}
+# 側支索（2026-10-21：每根桅每舷三根，上端在桅樓邊下面、下端在舷牆頂；前後兩根之間是繩梯）：S1 最前
+CHAIN = {'main': 214, 'fore': 712}; SHR_DX = (10, 0, -10); RIM_DX = (6, 0, -6)
+ROPE_FOOT = {'backstay-S': side_cell(150, zu + 1, 1), 'backstay-P': side_cell(150, zu + 1, -1)}
+for mn, cx_ in CHAIN.items():
+    for s, sg in (('S', 1), ('P', -1)):
+        for k, dx in enumerate(SHR_DX): ROPE_FOOT['chain-%s-%s%d' % (mn, s, k + 1)] = side_cell(cx_ + dx, zu + 1, sg)
 zs = zu + 1; xs_ = np.nonzero(hull[:, YC, zs])[0]
 ROPE_FOOT['stem-head'] = [int(xs_.max()), YC, zs]
+OLD_ROPES = ('main-shroud-S', 'main-shroud-P', 'fore-shroud-S', 'fore-shroud-P')   # 一舷一根的舊側支索（2026-10-21 換成三根＋繩梯）
+for nm in OLD_ROPES:
+    if nm in listed(ASM, 'ropes.json', 'ropes'): run(('op', 'work'), ('sub', 'unrope'), ('work', ASM), ('persona', PER), ('name', nm)); print('✓ 拿掉繩', nm)
+for wid, nm in [(W, 'chain-%s-%s' % (m_, s)) for m_ in CHAIN for s in 'SP'] + [(W + '-mast-' + m_, 'shroud-' + s) for m_ in CHAIN for s in 'SP']:
+    if nm in listed(wid, 'anchors.json', 'anchors'): run(('op', 'work'), ('sub', 'unanchor'), ('work', wid), ('persona', PER), ('name', nm)); print('✓ 拿掉固定點', wid, nm)
 for k, v in ROPE_FOOT.items(): anchor(W, k, v)
 MS = M['masts']
 for mn, wid in (('main', W + '-mast-main'), ('fore', W + '-mast-fore')):
-    mx = MS[mn]['x']; tz = MS[mn]['top']
-    anchor(wid, 'shroud-S', [mx, YC + 5, tz - 8]); anchor(wid, 'shroud-P', [mx, YC - 5, tz - 8])
+    mx = MS[mn]['x']; tz = MS[mn]['top']; rr_ = MS[mn]['r']
+    for s, sg in (('S', 1), ('P', -1)):
+        for k, dx in enumerate(RIM_DX): anchor(wid, 'shroud-%s%d' % (s, k + 1), [mx + dx, YC + sg * (rr_ + 1), tz - 1])   # 桅樓圓台邊的正下方外一格
     anchor(wid, 'pole-head', [mx, YC, MS[mn]['pole_top'] - 4])
+# 信號桁（帆桁模型、meta kind=yard）：遊戲照帆桁的 mast 認桅（10_ship.js findMasts）⇒ 桅頂掛陣營旗（77_colours.js）、桅身可以被打斷；yard=signal ⇒ 不追風（30_rig_physics.js）
+for mn, wid in (('main', W + '-mast-main'), ('fore', W + '-mast-fore')):
+    YG = PM['yard-' + mn]; pv_ = YG['anchors']['pivot']; L_m = YG['frame'][1] * 0.1
+    model(wid, 'yard-signal', W + '-yard-' + mn, [MS[mn]['x'] + 0.5, YC + 0.5, MS[mn]['yard_z'] + 0.5], [pv_[0] + 0.5, pv_[1] + 0.5, pv_[2] + 0.5], [0, 0, 0], 1,
+          {'kind': 'yard', 'mast': mn, 'yard': 'signal', 'length_ft': round(L_m / 0.3048, 1), 'diameter_in': 4, 'pivot_anchor': 'pivot', 'turn_axis': 'z', 'rotate_z_deg': 0})
 gp = MS['gaff_peak']
 anchor(W + '-mast-main', 'gaff-peak', [int(math.floor(gp[0])) + 1, YC, int(math.floor(gp[2])) - 1])
 
 # 通用部件的固定點（砲：muzzle 內膛那一格、breech、trunnion；37 mm：pivot ＝ 立柱中心）
-for key, wid in (('gun305', W + '-gun-krupp305'), ('gun150', W + '-gun-krupp150'), ('gun37', W + '-gun-hotchkiss37')):
+for key, wid in (('gun305', W + '-gun-krupp305'), ('gun150', W + '-gun-krupp150'), ('gun37', W + '-gun-hotchkiss37'),
+                 ('yard-main', W + '-yard-main'), ('yard-fore', W + '-yard-fore'), ('helm', W + '-helm')):
     for k, v in PM[key]['anchors'].items(): anchor(wid, k, v)
 # ── 砲塔層 ──
 TMG = PM['turret-main-shell']['geom']; CXM = TMG['CX']
@@ -187,7 +207,8 @@ G305 = PM['gun305']['anchors']; piv305 = [G305['trunnion'][0] + 0.5, G305['trunn
 TM = P['turret_main']
 for b in P['barbettes']:
     side = b['name']; wid = W + '-turret-' + side.lower(); sg = 1 if b['dy'] > 0 else -1
-    link(wid, '殼', W + '-turret-main-shell', {'material': 'iron', 'render': 'voxel'}, turn=0 if sg > 0 else 180)
+    link(wid, '殼', W + '-turret-main-shell', {'material': 'iron', 'render': 'smooth'}, turn=0 if sg > 0 else 180)      # 牆 2 格厚 ⇒ 平滑＋金屬反光（Tim 2026-10-21）
+    link(wid, '頂', W + '-turret-main-top', {'material': 'iron', 'render': 'voxel'}, turn=0 if sg > 0 else 180)         # 轉盤、頂 1 格厚 ⇒ 方塊（平滑會被平均掉）
     for gn, lat in (('砲-a', -TM['gun_dx']), ('砲-b', TM['gun_dx'])):
         at = [CXM + 0.5 + sg * lat, CXM + 0.5 + sg * TM['gun_fwd'], 1]
         model(wid, gn, W + '-gun-krupp305', at, piv305, [0, 0, 0 if sg > 0 else 180], 0.5, {'kind': 'gun', 'gun': '305k', 'safe': 1})
@@ -199,7 +220,8 @@ T15 = P['turret_15']; T15G = PM['turret15-shell']['geom']; CX15 = T15G['CX']
 G150 = PM['gun150']['anchors']; piv150 = [G150['trunnion'][0] + 0.5, G150['trunnion'][1] + 0.5, 0]
 for t in P['turrets_15']:
     wid = W + '-turret15-' + t['name']; f = t['front']
-    link(wid, '殼', W + '-turret15-shell', {'material': 'iron', 'render': 'voxel'}, turn=270 if f > 0 else 90)
+    link(wid, '殼', W + '-turret15-shell', {'material': 'iron', 'render': 'smooth'}, turn=270 if f > 0 else 90)
+    link(wid, '頂', W + '-turret15-roof', {'material': 'iron', 'render': 'voxel'}, turn=270 if f > 0 else 90)
     model(wid, '砲', W + '-gun-krupp150', [CX15 + 0.5 + f * T15['gun_fwd'], CX15 + 0.5, 0], piv150, [0, 0, -90 if f > 0 else 90], 0.5, {'kind': 'gun', 'gun': '150k', 'safe': 1})
     anchor(wid, 'pivot', [CX15, CX15, 0]); anchor(wid, 'front', [CX15 + f * CX15, CX15, 0])
     ar = ARC['turret15-' + t['name']]
@@ -216,7 +238,11 @@ for s, sg in (('S', 1), ('P', -1)):
     hub = [SC['x'] + 0.5, YC + sg * SC['dy'] + 0.5, SC['z'] + 0.5]
     model(ASM, '螺旋槳-' + s, W + '-screw-' + s.lower(), hub, hub, [0, 0, 0], 1, {'kind': 'propeller', 'axis_x': sg, 'axis_y': 0, 'axis_z': 0, 'blades': SC['blades'], 'diameter_m': 3.0})
 ch = M['chart']
-model(W + '-chart-house', '舵輪', 'basecamp-frigate-constitution-01m-wheel', [ch['x0'] + 10.5, YC + 0.5, ch['z']], [50, 52, 0], [0, 0, 0], 0.2,
+# 舵輪：自己的單輪（2026-10-21 換掉憲法號的雙輪 —— 那件的兩個輪子沒接到中間的支架，6 連通 3 塊，Tim：「中間是浮空的」）。
+#   軸前端插進鐵立柱的齒輪箱後面（立柱 x helm_x..+2、齒輪箱 helm_x−1..+3、z WH1+10..+13 ⇒ 軸心 z WH1+12）；模型的軸長 13.5×0.2 ＝ 2.7 格
+HG = PM['helm']['anchors']; hpv = [HG['spin-a'][0] + 0.5, HG['spin-a'][1] + 0.5, HG['spin-a'][2] + 0.5]
+hx_ = ch['helm_x'] - 1 + 0.6 - (PM['helm']['frame'][0] - hpv[0]) * 0.2
+model(W + '-chart-house', '舵輪', W + '-helm', [hx_, YC + 0.5, ch['z'] + 12], hpv, [0, 0, 0], 0.2,
       {'kind': 'wheel', 'spin': 'rudder', 'spin_k': 540, 'spin_lag': 0.6})
 model(W + '-chart-house', '羅經櫃', 'basecamp-ember-01m-binnacle', [ch['x0'] + 22.5, YC + 0.5, ch['z']], [12, 23, 0], [0, 0, 0], 0.2, {'kind': 'binnacle'})
 # 錨：吊在船頭兩舷錨鏈孔下（錨幹直、橫桿沿船長、靠船殼那一隻爪貼著外板）
@@ -268,17 +294,44 @@ for nm, n in tot.items():
 print('桶', tot)
 
 # ── 鋼索（靜索：上焦油的鋼索色）──
-ROPES = [
-    ('main-shroud-S', '主桅/shroud-S', '船殼/chain-main-S', 'standing/shrouds'), ('main-shroud-P', '主桅/shroud-P', '船殼/chain-main-P', 'standing/shrouds'),
-    ('main-backstay-S', '主桅/pole-head', '船殼/backstay-S', 'standing/stays'), ('main-backstay-P', '主桅/pole-head', '船殼/backstay-P', 'standing/stays'),
-    ('fore-shroud-S', '前桅/shroud-S', '船殼/chain-fore-S', 'standing/shrouds'), ('fore-shroud-P', '前桅/shroud-P', '船殼/chain-fore-P', 'standing/shrouds'),
-    ('forestay', '前桅/pole-head', '船殼/stem-head', 'standing/stays'), ('triatic', '主桅/pole-head', '前桅/pole-head', 'standing/stays'),
+MLINK = {'main': '主桅', 'fore': '前桅'}
+ROPES = [('%s-shroud-%s%d' % (mn, s, k), '%s/shroud-%s%d' % (MLINK[mn], s, k), '船殼/chain-%s-%s%d' % (mn, s, k), 'standing/shrouds', '0.8')
+         for mn in CHAIN for s in 'SP' for k in (1, 2, 3)]
+ROPES += [
+    ('main-backstay-S', '主桅/pole-head', '船殼/backstay-S', 'standing/stays', '0.9'), ('main-backstay-P', '主桅/pole-head', '船殼/backstay-P', 'standing/stays', '0.9'),
+    ('forestay', '前桅/pole-head', '船殼/stem-head', 'standing/stays', '0.9'), ('triatic', '主桅/pole-head', '前桅/pole-head', 'standing/stays', '0.9'),
 ]
 have = listed(ASM, 'ropes.json', 'ropes')
-for nm, a_, b_, grp in ROPES:
-    a = [('op', 'work'), ('sub', 'rope'), ('work', ASM), ('persona', PER), ('name', nm), ('from', a_), ('to', b_), ('slack', '1.0'), ('thickness', '0.9'), ('color', '#2b2620'), ('group', grp)]
+for nm, a_, b_, grp, th in ROPES:
+    a = [('op', 'work'), ('sub', 'rope'), ('work', ASM), ('persona', PER), ('name', nm), ('from', a_), ('to', b_), ('slack', '1.0'), ('thickness', th), ('color', '#2b2620'), ('group', grp)]
     if nm in have: a.append(('overwrite', '1'))
     run(*a); print('✓ 繩', nm)
+# ── 繩梯（橫繩組 climb=1，造船規格 §6）：側支索最前、最後兩根之間每 4 格一道；foot ＝ 舷牆內第一格站得住的甲板再往內 2 格、head ＝ 桅樓圓台上這一舷的開口內 ──
+allc = own > 0
+
+
+def stand(x, y, z): return bool(allc[x, y, z - 1]) and not allc[x, y, z:z + 7].any()
+
+
+ROPES_F = os.path.join(WORKS, ASM, 'ropes.json')
+have_rl = set()
+if os.path.exists(ROPES_F):
+    for k_, v_ in json.load(open(ROPES_F, encoding='utf-8')).items():
+        if isinstance(v_, list) and 'ratline' in k_: have_rl |= {x.get('name') for x in v_ if isinstance(x, dict)}
+for mn in CHAIN:
+    mx = MS[mn]['x']; tz = MS[mn]['top']; rr_ = MS[mn]['r']
+    for s, sg in (('S', 1), ('P', -1)):
+        x_ = CHAIN[mn]; y_ = ROPE_FOOT['chain-%s-%s2' % (mn, s)][1]
+        while not stand(x_, y_, zu + 1): y_ -= sg
+        foot = [x_, y_ - 2 * sg, zu + 1]
+        head = [mx, YC + sg * (rr_ - 2), tz + 1]
+        assert stand(*foot) and stand(*head), (mn, s, foot, head)
+        nm = '%s-lower-%s' % (mn, s)
+        a = [('op', 'work'), ('sub', 'ratlines'), ('work', ASM), ('persona', PER), ('name', nm), ('rope_a', '%s-shroud-%s1' % (mn, s)), ('rope_b', '%s-shroud-%s3' % (mn, s)),
+             ('step', '4'), ('start', '7'), ('stop', '6'), ('min_span', '5'), ('thickness', '0.3'), ('color', '#2b2620'), ('group', 'ratlines/lower'),
+             ('climb', '1'), ('foot', '%d,%d,%d' % tuple(foot)), ('head', '%d,%d,%d' % tuple(head))]
+        if nm in have_rl: a.append(('overwrite', '1'))
+        run(*a); print('✓ 繩梯', nm, foot, head)
 # ── 黃龍旗（主桅斜桁頂；1889 年起的長方形，3 × 4.5 m）──
 gx, gz = int(math.floor(gp[0])) + 1, int(math.floor(gp[2])) - 1
 corners = '主桅/gaff-peak|%g,%g,%g|%g,%g,%g|%g,%g,%g' % (gx - 45, YC + 0.5, gz + 0.5, gx - 45, YC + 0.5, gz - 29.5, gx + 0.5, YC + 0.5, gz - 29.5)

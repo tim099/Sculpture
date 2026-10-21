@@ -1,4 +1,4 @@
-# 定遠號的零件產生程式 —— 砲（通用部件）、砲塔殼、魚雷艇、黃龍旗貼圖。每件一個清單（x,y,z,color）＋固定點 JSON。
+# 定遠號的零件產生程式 —— 砲（通用部件）、砲塔殼（牆／轉盤與頂兩件）、信號桁、舵輪、魚雷艇、黃龍旗貼圖。每件一個清單（x,y,z,color）＋固定點 JSON。
 # 用法：python -I -X utf8 -B gen_parts.py <輸出資料夾>
 # 砲照造船規格 §4.1：x 橫向（砲軸在 x 中線）、y ＝ 砲口方向、z 0 ＝ 站的那一面；比例 0.05 m（模型 scale 0.5）、37 mm 砲 0.02 m（scale 0.2）。
 # 數字的出處在 plan.json 的 parts_provenance。
@@ -109,11 +109,12 @@ def hotchkiss(spec):
 
 
 def turret_main(T):
-    """主砲塔殼（0.1 m、框 N×N×NZ、轉軸在 (CX, CX)）：轉盤（中間留洞）＋砲罩（圓筒、平頂、前面兩個砲門）。"""
+    """主砲塔殼（0.1 m、框 N×N×NZ、轉軸在 (CX, CX)）：轉盤（中間留洞）＋砲罩（圓筒、平頂、前面兩個砲門）。
+    回兩件（同一個框）：牆（2 格厚 ⇒ 平滑＋金屬反光）、轉盤與頂（1 格厚 ⇒ 方塊；平滑會把薄板兩面平均掉，造船規格 §9.5）。"""
     N = 2 * T['r_table'] + 1; CX = T['r_table']; NZ = T['hood_top'] - T['z_table'] + 1 + T['dome']
     X, Y, Z = grid(N, N, NZ)
     r = np.hypot(X - CX, Y - CX)
-    p = Part((N, N, NZ))
+    p = Part((N, N, NZ)); q = Part((N, N, NZ))
     table = (r > T['r_hole'] + 0.5) & (r <= T['r_table'] + 0.5) & (Z == 0)
     ri, ro = T['r_hood']
     zt = T['hood_top'] - T['z_table']
@@ -128,19 +129,19 @@ def turret_main(T):
     for k in range(1, T['dome']):
         crown |= (r <= ro - 4 * k + 0.5) & (Z == zt + 1 + k)
     hatch = (np.abs(X - CX) <= 3) & (np.abs(Y - (CX - 22)) <= 4)                                         # 頂上一個艙口蓋（後半）
-    p.put(table, C['iron'])
+    q.put(table, C['iron'])
     p.put(wall & ~ports, C['white'])
-    p.put((roof | crown) & ~(hatch & (Z > zt + 1)), C['grey'])
-    p.put(hatch & (Z == zt + 2), C['iron'])
-    return p, {'pivot': [CX, CX, 0], 'front': [CX, N - 1, 0]}, dict(N=N, CX=CX, NZ=NZ)
+    q.put((roof | crown) & ~(hatch & (Z > zt + 1)), C['grey'])
+    q.put(hatch & (Z == zt + 2), C['iron'])
+    return p, q, {'pivot': [CX, CX, 0], 'front': [CX, N - 1, 0]}, dict(N=N, CX=CX, NZ=NZ)
 
 
 def turret_15(T):
-    """15 cm 砲塔殼（0.1 m）：圓筒＋平頂、前面一個砲門；罩在甲板上（沒有地板）。"""
+    """15 cm 砲塔殼（0.1 m）：圓筒＋平頂、前面一個砲門；罩在甲板上（沒有地板）。回兩件：牆（3 格厚，平滑）、頂（方塊）。"""
     ri, ro = T['r']; N = 2 * ro + 1; CX = ro; NZ = T['h'] + T['dome'] + 1
     X, Y, Z = grid(N, N, NZ)
     r = np.hypot(X - CX, Y - CX)
-    p = Part((N, N, NZ))
+    p = Part((N, N, NZ)); q = Part((N, N, NZ))
     wall = (r > ri - 0.5) & (r <= ro + 0.5) & (Z <= T['h'] - 1)
     gz = T['gun_axis'] - T['z0']
     pw, ph = T['port']
@@ -150,8 +151,41 @@ def turret_15(T):
     for k in range(1, T['dome'] + 1):
         crown |= (r <= ro - 5 * k + 0.5) & (Z == T['h'] + k)
     p.put(wall & ~port, C['white'])
-    p.put(roof | crown, C['grey'])
-    return p, {'pivot': [CX, CX, 0], 'front': [CX, N - 1, 0]}, dict(N=N, CX=CX, NZ=NZ)
+    q.put(roof | crown, C['grey'])
+    return p, q, {'pivot': [CX, CX, 0], 'front': [CX, N - 1, 0]}, dict(N=N, CX=CX, NZ=NZ)
+
+
+def signal_yard(half):
+    """信號桁（0.1 m、沿 y、沒轉）：一格粗的桿＋中間 3×7×3 的吊箍（sling）。轉軸 ＝ 中心那一格（造船規格 §5）。"""
+    nx, ny, nz = 3, 2 * half + 1, 3
+    X, Y, Z = grid(nx, ny, nz)
+    p = Part((nx, ny, nz))
+    bar = (X == 1) & (Z == 1)
+    sling = np.abs(Y - half) <= 3
+    p.put(bar | sling, C['buff'])
+    return p, {'pivot': [1, half, 1], 'arm-P': [1, 0, 1], 'arm-S': [1, ny - 1, 1], 'sling': [1, half, 2]}
+
+
+def helm_wheel():
+    """海圖室的舵輪（0.02 m，模型 scale 0.2）：單輪、8 根輪輻伸出輪緣當把手、黃銅輪轂、往前一截輪軸插進鐵立柱（立柱是海圖室的格）。
+    軸沿 +x（往船頭）：spin-a 輪轂中心 → spin-b 軸前端（26_spin.js：正轉 ＝ 輪頂往左舷）。蒸汽船的舵輪（立柱裡是齒輪、接蒸汽操舵機），不用憲法號的雙輪。"""
+    nx, ny, nz = 16, 91, 91; yc = zc = 45
+    X, Y, Z = grid(nx, ny, nz)
+    p = Part((nx, ny, nz))
+    r = np.hypot(Y - yc, Z - zc)
+    rim = (r > 32) & (r <= 35.5) & (X >= 1) & (X <= 4)
+    spoke = np.zeros((nx, ny, nz), bool); handle = np.zeros((nx, ny, nz), bool)
+    for k in range(8):
+        t = k * math.pi / 4
+        d = np.abs(-(Y - yc) * math.sin(t) + (Z - zc) * math.cos(t))       # 到這根輪輻中線的距離
+        along = (Y - yc) * math.cos(t) + (Z - zc) * math.sin(t)
+        spoke |= (d <= 1.2) & (along >= 4) & (along <= 35.5) & (X >= 2) & (X <= 3)
+        handle |= (d <= 1.6) & (along > 35.5) & (along <= 43) & (X >= 2) & (X <= 3)
+    hub = (r <= 6) & (X <= 6)
+    axle = (r <= 2.5) & (X > 6)
+    p.put(hub | axle, BRASS)
+    p.put(rim | spoke | handle, C['teak'])
+    return p, {'spin-a': [2, yc, zc], 'spin-b': [nx - 1, yc, zc]}
 
 
 def torpedo_boat(B):
@@ -225,8 +259,14 @@ def main():
     for key, fnc in (('gun305', krupp), ('gun150', krupp)):
         p, a = fnc(PP[key]); meta[key] = {'count': p.write(os.path.join(out, key + '.txt'), key), 'anchors': a, 'frame': list(p.col.shape)}
     p, a = hotchkiss(PP['gun37']); meta['gun37'] = {'count': p.write(os.path.join(out, 'gun37.txt'), 'gun37'), 'anchors': a, 'frame': list(p.col.shape)}
-    p, a, d = turret_main(PLAN['params']['turret_main']); meta['turret-main-shell'] = {'count': p.write(os.path.join(out, 'turret-main-shell.txt'), 'turret-main-shell'), 'anchors': a, 'frame': list(p.col.shape), 'geom': d}
-    p, a, d = turret_15(PLAN['params']['turret_15']); meta['turret15-shell'] = {'count': p.write(os.path.join(out, 'turret15-shell.txt'), 'turret15-shell'), 'anchors': a, 'frame': list(p.col.shape), 'geom': d}
+    for fnc, T, kw, kt in ((turret_main, PLAN['params']['turret_main'], 'turret-main-shell', 'turret-main-top'), (turret_15, PLAN['params']['turret_15'], 'turret15-shell', 'turret15-roof')):
+        p, q, a, d = fnc(T)
+        meta[kw] = {'count': p.write(os.path.join(out, kw + '.txt'), kw), 'anchors': a, 'frame': list(p.col.shape), 'geom': d}
+        meta[kt] = {'count': q.write(os.path.join(out, kt + '.txt'), kt), 'anchors': {}, 'frame': list(q.col.shape), 'geom': d}
+    for m in PLAN['params']['masts']:
+        k = 'yard-' + m['name']; p, a = signal_yard(m['yard_half'])
+        meta[k] = {'count': p.write(os.path.join(out, k + '.txt'), k), 'anchors': a, 'frame': list(p.col.shape)}
+    p, a = helm_wheel(); meta['helm'] = {'count': p.write(os.path.join(out, 'helm.txt'), 'helm'), 'anchors': a, 'frame': list(p.col.shape)}
     p, a = torpedo_boat(PP['torpedo_boat']); meta['torpedo-boat'] = {'count': p.write(os.path.join(out, 'torpedo-boat.txt'), 'torpedo-boat'), 'anchors': a, 'frame': list(p.col.shape)}
     dragon_flag(os.path.join(out, 'flag_dragon.png'))
     json.dump(meta, open(os.path.join(out, 'parts_meta.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

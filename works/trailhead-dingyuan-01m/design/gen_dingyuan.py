@@ -382,11 +382,11 @@ def build():
         pl =(rr <= m['top_r'] + 0.5) & (Zg == top)
         wallm = (rr > m['top_r'] - 1.0) & (rr <= m['top_r'] + 0.5) & (Zg > top) & (Zg <= top + 10)
         wallm &= ~((np.abs(Yg - YC) <= 3) & (Xg < mx) & (Zg > top) & (Zg <= top + 9))                    # 後面一個開口（登頂的口）
+        wallm &= ~((np.abs(Xg - mx) <= 3) & (Zg > top) & (Zg <= top + 9))                                 # 兩舷各一個開口（繩梯上來的口；2026-10-21）
         pole = (rr <= m['pole_r'] + 0.5) & (Zg > top) & (Zg <= m['pole_top'])
         truck = (rr <= m['pole_r'] + 1.5) & (Zg >= m['pole_top'] - 1) & (Zg <= m['pole_top'])
-        yard = (np.abs(Xg - mx) <= 0.5) & (np.abs(Zg - m['yard_z']) <= 0.5) & (np.abs(Yg - YC) <= m['yard_half']) & (np.abs(Yg - YC) > 0)
-        yard |= (np.abs(Xg - mx) <= 1) & (np.abs(Zg - m['yard_z']) <= 1) & (np.abs(Yg - YC) <= 3)
-        parts_ = tube | pl | pole | yard
+        parts_ = tube | pl | pole                                                                          # 信號桁是帆桁模型（gen_parts signal_yard；遊戲照帆桁 meta 認桅）
+
         if m.get('platform2'):
             z2 = m['platform2']
             parts_ |= (rr <= 12.5) & (Zg == z2)
@@ -488,7 +488,11 @@ def build():
     roofc = (Zg >= WH1 + chz) & (Zg <= WH1 + chz + 1) & (np.abs(Yg - YC) <= ch_ + (Zg - WH1 - chz)) & (Xg >= cx0 - (Zg - WH1 - chz)) & (Xg <= cx1 + (Zg - WH1 - chz))
     claim('chart-house', (cx0, YC - ch_, WH1), roofc, C['grey'])
     claim('chart-house', (cx0, YC - ch_, WH1), shellc & ~win & ~door, C['white'])
-    info['chart'] = dict(x0=cx0, x1=cx1, half=ch_, z=WH1)
+    hx = cx0 + 13                                                         # 舵輪的鐵立柱（裡面是齒輪、接蒸汽操舵機）：3×3 柱高 1.3 m、頂上 5×5 齒輪箱；舵輪模型（gen_parts helm_wheel）的軸從後面插進來
+    Xg, Yg, Zg = g(hx - 1, hx + 4, YC - 2, YC + 3, WH1, WH1 + 14)
+    ped = ((Xg >= hx) & (Xg <= hx + 2) & (np.abs(Yg - YC) <= 1)) | ((Zg >= WH1 + 10) & (np.abs(Yg - YC) <= 2) & (Xg >= hx - 1) & (Xg <= hx + 3))
+    claim('chart-house', (hx - 1, YC - 2, WH1), ped, C['iron'])
+    info['chart'] = dict(x0=cx0, x1=cx1, half=ch_, z=WH1, helm_x=hx)
     # 艇架（魚雷艇：主甲板上的柱＋橫樑；艉樓小艇：艉樓甲板上的柱＋橫樑）
     tb = P['torpedo_boats']; sb = P['stern_boats']
     for nm_, xs_, zt_, zfl, half_ in (('skids', (tb['x'] + 30, tb['x'] + 95, tb['x'] + 160), tb['z'] - 1, WM1, 42), ('skids', (sb['x'] + 30, sb['x'] + 80), sb['z'] - 1, WU1, 40)):
