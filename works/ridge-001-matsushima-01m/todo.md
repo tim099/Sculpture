@@ -1,7 +1,7 @@
 # 松島號 TODO
 
 ## 交船前（遊戲那側）
-- [ ] 砲種表加四種 —— 改好在 Blockside worktree（分支 `ridge-001/matsushima-guns`，疊在 `trailhead/dingyuan-guns` 211d32f 上），**還沒提交**：`canet320`（`320c`：V 290、裝填 4.0、big、hole 2.2、砲班 8／5、66 t、450 kg、hpK 1）、`armstrong120`（`120a`：V 275、裝填 0.5、hole 1.0、6／3、2.1 t、20.4 kg）、`hotch57`（`h57`：V 235、0.35、0.55、3／2、0.37 t、2.72 kg）、`hotch47`（`h47`：V 230、0.3、0.45、2／1、0.24 t、1.5 kg）；每發傷害 dmg320c 920（上限 1200）、dmg120a 160、dmgh57 40、dmgh47 30（照「傷害 ∝ 彈重^0.57」）。初速照 trailhead 的換算（約 0.42 × m/s）、裝填與砲班是設計決定。對拍三組逐位元組相同。⇒ 提交、合進 dev 等 Tim 說（trailhead 那一筆要先合，或一起帶上）。
+- [ ] 砲種表加四種 —— 改好在 Blockside worktree（分支 `ridge-001/matsushima-guns`，疊在 `trailhead/dingyuan-guns` 211d32f 上），**已提交 `f838c8a`**（Refs TASK-0780；沒合 dev、沒推）：`canet320`（`320c`：V 290、裝填 4.0、big、hole 2.2、砲班 8／5、66 t、450 kg、hpK 1）、`armstrong120`（`120a`：V 275、裝填 0.5、hole 1.0、6／3、2.1 t、20.4 kg）、`hotch57`（`h57`：V 235、0.35、0.55、3／2、0.37 t、2.72 kg）、`hotch47`（`h47`：V 230、0.3、0.45、2／1、0.24 t、1.5 kg）；每發傷害 dmg320c 920（上限 1200）、dmg120a 160、dmgh57 40、dmgh47 30（照「傷害 ∝ 彈重^0.57」）。初速照 trailhead 的換算（約 0.42 × m/s）、裝填與砲班是設計決定。對拍三組逐位元組相同。⇒ 合進 dev、推上去等 Tim 說（trailhead 那一筆要先合，或一起帶上）。
 - [ ] 正式匯入遊戲（`admin.py import --id matsushima --name 松島號`）、`admin.py ids`；暫存匯入的 shipcheck 已經 ✗ 0（notes.md）；`cfg.base` 15、全船材質（鋼）、geo（高度在 notes.md）。
 - [ ] 匯入檢查「火藥」那一行：前彈藥庫 hoist 四座梯子（中甲板、上甲板、船首樓、艦橋）、後彈藥庫兩座（露砲台、後甲板）—— 每門都走得到？
 

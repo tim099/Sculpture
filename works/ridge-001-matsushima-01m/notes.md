@@ -61,7 +61,7 @@ python -I -X utf8 -B apply_links.py <gen 輸出> <parts 輸出>             # �
 | 船員 | 355（1893 年 11 月定員，《海軍制度沿革》） |
 | 全船材質 | 鋼殼 —— 船殼關聯沒寫 material（2 格厚的外板寫 iron 會重好幾千噸）⇒ 全船預設材質請遊戲那側決定；露砲台、砲罩、司令塔、煙囪、主機、軸寫了 iron＋smooth，鍋爐 boiler＋smooth，防護甲板 iron＋voxel |
 
-- 砲種代碼：主砲 `320c`、12 cm `120a`、57 mm `h57`、47 mm `h47`、37 mm `h37`（定遠號那邊加的）。前四種加在 Blockside 分支 `ridge-001/matsushima-guns`（疊在 trailhead 的 `trailhead/dingyuan-guns` 211d32f 上；**還沒提交**），數值見 todo；三組對拍改前改後逐位元組相同（ce24e896d1、cf5f8df569、4281c14db8）。
+- 砲種代碼：主砲 `320c`、12 cm `120a`、57 mm `h57`、47 mm `h47`、37 mm `h37`（定遠號那邊加的）。前四種加在 Blockside 分支 `ridge-001/matsushima-guns`（疊在 trailhead 的 `trailhead/dingyuan-guns` 211d32f 上；已提交 `f838c8a`，沒合 dev、沒推），數值見 todo；三組對拍改前改後逐位元組相同（ce24e896d1、cf5f8df569、4281c14db8）。
 - 主砲轉速 `rate` 4°／秒是設計決定（液壓，史料只說一發約 5 分鐘）。
 
 ## 設計決定（史料查不到的）
