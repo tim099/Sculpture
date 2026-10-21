@@ -62,12 +62,13 @@ def anchor(work, nm, at):
     run(('op', 'work'), ('sub', 'anchor'), ('work', work), ('persona', PER), ('name', nm), ('at', '%d,%d,%d' % tuple(int(round(v)) for v in at)))
 
 
-def model(work, nm, src, at, pivot, rot, sc, meta, mirror=''):
+def model(work, nm, src, at, pivot, rot, sc, meta, mirror='', note=''):
     meta = kept(work, 'models.json', 'models', nm, meta)
     a = [('op', 'work'), ('sub', 'model'), ('work', work), ('persona', PER), ('name', nm), ('source_work', src),
          ('at', '%.2f,%.2f,%.2f' % tuple(at)), ('pivot', '%.2f,%.2f,%.2f' % tuple(pivot)), ('rotate', '%g,%g,%g' % tuple(rot)),
          ('scale', '%g,%g,%g' % ((sc,) * 3 if np.isscalar(sc) else tuple(sc))), ('meta', json.dumps(meta, ensure_ascii=False))]
     if mirror: a.append(('mirror', mirror))
+    if note: a.append(('note', note))
     if nm in listed(work, 'models.json', 'models'): a.append(('overwrite', '1'))
     run(*a); print('✓ 模型 %s/%s' % (work, nm))
 
@@ -142,7 +143,7 @@ for nm, src, meta in DRV:
             run(('op', 'work'), ('sub', 'unlink'), ('work', ASM), ('persona', PER), ('name', nm + suf)); print('✓ 拿掉關聯（換成模型）', nm + suf)
         m_ = dict(meta, propeller='螺旋槳-P') if nm == '主機' and mir else meta
         p_ = [0, YC + 0.5, 0] if mir else [0, 0, 0]
-        model(ASM, nm + suf, src, p_, p_, [0, 0, 0], 1, m_, mirror=mir)
+        model(ASM, nm + suf, src, p_, p_, [0, 0, 0], 1, m_, mirror=mir, note='TASK-0793：關聯換成自帶格子的模型（ame 2026-10-21）')
 
 # ── 固定點 ──
 for L in A['ladders']:
@@ -208,7 +209,8 @@ TM = P['turret_main']
 for b in P['barbettes']:
     side = b['name']; wid = W + '-turret-' + side.lower(); sg = 1 if b['dy'] > 0 else -1
     link(wid, '殼', W + '-turret-main-shell', {'material': 'iron', 'render': 'smooth'}, turn=0 if sg > 0 else 180)      # 牆 2 格厚 ⇒ 平滑＋金屬反光（Tim 2026-10-21）
-    link(wid, '頂', W + '-turret-main-top', {'material': 'iron', 'render': 'voxel'}, turn=0 if sg > 0 else 180)         # 轉盤、頂 1 格厚 ⇒ 方塊（平滑會被平均掉）
+    link(wid, '頂', W + '-turret-main-top', {'material': 'iron_plate', 'render': 'smooth'}, turn=0 if sg > 0 else 180)  # 頂 2 格厚 ⇒ 平滑（Tim 2026-10-21「砲塔蓋 是金屬的嗎」）；iron_plate：遊戲照 matMap 換成 iron*0.125（2 格裡一吋鋼板，實心鐵會多 360 t）
+    link(wid, '轉盤', W + '-turret-main-table', {'material': 'iron', 'render': 'voxel'}, turn=0 if sg > 0 else 180)    # 轉盤 1 格厚 ⇒ 方塊（平滑會被平均掉）
     for gn, lat in (('砲-a', -TM['gun_dx']), ('砲-b', TM['gun_dx'])):
         at = [CXM + 0.5 + sg * lat, CXM + 0.5 + sg * TM['gun_fwd'], 1]
         model(wid, gn, W + '-gun-krupp305', at, piv305, [0, 0, 0 if sg > 0 else 180], 0.5, {'kind': 'gun', 'gun': '305k', 'safe': 1})
@@ -221,12 +223,21 @@ G150 = PM['gun150']['anchors']; piv150 = [G150['trunnion'][0] + 0.5, G150['trunn
 for t in P['turrets_15']:
     wid = W + '-turret15-' + t['name']; f = t['front']
     link(wid, '殼', W + '-turret15-shell', {'material': 'iron', 'render': 'smooth'}, turn=270 if f > 0 else 90)
-    link(wid, '頂', W + '-turret15-roof', {'material': 'iron', 'render': 'voxel'}, turn=270 if f > 0 else 90)
+    link(wid, '頂', W + '-turret15-roof', {'material': 'iron_plate', 'render': 'smooth'}, turn=270 if f > 0 else 90)
     model(wid, '砲', W + '-gun-krupp150', [CX15 + 0.5 + f * T15['gun_fwd'], CX15 + 0.5, 0], piv150, [0, 0, -90 if f > 0 else 90], 0.5, {'kind': 'gun', 'gun': '150k', 'safe': 1})
     anchor(wid, 'pivot', [CX15, CX15, 0]); anchor(wid, 'front', [CX15 + f * CX15, CX15, 0])
     ar = ARC['turret15-' + t['name']]
     link(ASM, '砲塔-' + ('艉' if f < 0 else '艏'), wid, {'kind': 'turret', 'arc': '%d,%d' % tuple(ar['arc']), 'fire': '%d,%d' % tuple(ar['fire']), 'rate': 15},
          at=(t['x'] - CX15, YC - CX15, T15['z0']))
+
+# ── 中甲板艙房（gen_rooms.py；造船規格 §9.2）：關聯在 下甲板 那件作品裡 ⇒ 艙房屬於下甲板那一層；右舷一排照原樣＋mirror=y、中線一件 ──
+RM = json.load(open(os.path.join(out, 'rooms_meta.json'), encoding='utf-8'))['rooms']
+for which, wid in (('side', W + '-rooms-lower-side'), ('mid', W + '-rooms-lower-mid')):
+    for r in RM[which]:
+        anchor(wid, r['name'] + '.min', r['min']); anchor(wid, r['name'] + '.max', r['max'])
+link(W + '-deck-lower', '艙房', W + '-rooms-lower-side', {'kind': 'rooms'})
+link(W + '-deck-lower', '艙房-鏡像', W + '-rooms-lower-side', {'kind': 'rooms'}, mirror='y')
+link(W + '-deck-lower', '艙房-中', W + '-rooms-lower-mid', {'kind': 'rooms'})
 
 # ── 外部模型 ──
 R = P['rudder']; hinge = [R['x'][1], YC + 0.5, R['z'][0]]
@@ -346,6 +357,6 @@ print('✓ 旗')
 def preset(nm, note, **kw):
     run(*([('op', 'work'), ('sub', 'preset'), ('work', ASM), ('persona', PER), ('name', nm), ('note', note)] + list(kw.items())))
 preset('藏船殼看裡面', '拿掉外板與裝甲帶：看甲板、機艙、鍋爐、彈藥庫、梯子', hide_links='船殼,裝甲帶')
-preset('只看動力', '鍋爐、煙囪、主機、軸', links='鍋爐-後,鍋爐-後-鏡像,鍋爐-前,鍋爐-前-鏡像,煙囪-後,煙囪-前,主機,主機-鏡像,軸,軸-鏡像', hide_links='self')
+preset('只看動力', '煙囪、軸（鍋爐、主機是模型 ⇒ 照常畫；TASK-0793）', links='煙囪-後,煙囪-前,軸,軸-鏡像', hide_links='self')
 preset('只看主砲', '兩座露砲台、砲塔、飛橋甲板', links='露砲台,露砲台平台,砲塔-S,砲塔-P,甲板-main', hide_links='self')
 print('done')

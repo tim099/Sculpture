@@ -110,11 +110,12 @@ def hotchkiss(spec):
 
 def turret_main(T):
     """主砲塔殼（0.1 m、框 N×N×NZ、轉軸在 (CX, CX)）：轉盤（中間留洞）＋砲罩（圓筒、平頂、前面兩個砲門）。
-    回兩件（同一個框）：牆（2 格厚 ⇒ 平滑＋金屬反光）、轉盤與頂（1 格厚 ⇒ 方塊；平滑會把薄板兩面平均掉，造船規格 §9.5）。"""
-    N = 2 * T['r_table'] + 1; CX = T['r_table']; NZ = T['hood_top'] - T['z_table'] + 1 + T['dome']
+    回三件（同一個框）：牆（2 格厚 ⇒ 平滑＋金屬反光）、頂（2 格厚＋圓頂一階一階 ⇒ 平滑，2026-10-21 Tim「砲塔蓋 是金屬的嗎」）、
+    轉盤（1 格厚 ⇒ 方塊；平滑會把薄板兩面平均掉，造船規格 §9.5）。"""
+    N = 2 * T['r_table'] + 1; CX = T['r_table']; NZ = T['hood_top'] - T['z_table'] + 2 + T['dome']
     X, Y, Z = grid(N, N, NZ)
     r = np.hypot(X - CX, Y - CX)
-    p = Part((N, N, NZ)); q = Part((N, N, NZ))
+    p = Part((N, N, NZ)); q = Part((N, N, NZ)); tb = Part((N, N, NZ))
     table = (r > T['r_hole'] + 0.5) & (r <= T['r_table'] + 0.5) & (Z == 0)
     ri, ro = T['r_hood']
     zt = T['hood_top'] - T['z_table']
@@ -124,21 +125,21 @@ def turret_main(T):
     ports = np.zeros(wall.shape, bool)
     for sx in (-1, 1):
         ports |= (Y > CX) & (np.abs(X - (CX + sx * T['gun_dx'])) <= pw) & (np.abs(Z - gz) <= ph)
-    roof = (r <= ro + 0.5) & (Z == zt + 1)
+    roof = (r <= ro + 0.5) & ((Z == zt + 1) | (Z == zt + 2))                                          # 頂 2 格厚（平滑面至少 2 格）
     crown = np.zeros(wall.shape, bool)
     for k in range(1, T['dome']):
-        crown |= (r <= ro - 4 * k + 0.5) & (Z == zt + 1 + k)
+        crown |= (r <= ro - 4 * k + 0.5) & (Z == zt + 2 + k)
     hatch = (np.abs(X - CX) <= 3) & (np.abs(Y - (CX - 22)) <= 4)                                         # 頂上一個艙口蓋（後半）
-    q.put(table, C['iron'])
+    tb.put(table, C['iron'])
     p.put(wall & ~ports, C['white'])
-    q.put((roof | crown) & ~(hatch & (Z > zt + 1)), C['grey'])
-    q.put(hatch & (Z == zt + 2), C['iron'])
-    return p, q, {'pivot': [CX, CX, 0], 'front': [CX, N - 1, 0]}, dict(N=N, CX=CX, NZ=NZ)
+    q.put((roof | crown) & ~(hatch & (Z > zt + 2)), C['grey'])
+    q.put(hatch & (Z == zt + 3), C['iron'])
+    return p, q, tb, {'pivot': [CX, CX, 0], 'front': [CX, N - 1, 0]}, dict(N=N, CX=CX, NZ=NZ)
 
 
 def turret_15(T):
-    """15 cm 砲塔殼（0.1 m）：圓筒＋平頂、前面一個砲門；罩在甲板上（沒有地板）。回兩件：牆（3 格厚，平滑）、頂（方塊）。"""
-    ri, ro = T['r']; N = 2 * ro + 1; CX = ro; NZ = T['h'] + T['dome'] + 1
+    """15 cm 砲塔殼（0.1 m）：圓筒＋平頂、前面一個砲門；罩在甲板上（沒有地板）。回兩件：牆（3 格厚，平滑）、頂（2 格厚，平滑）。"""
+    ri, ro = T['r']; N = 2 * ro + 1; CX = ro; NZ = T['h'] + T['dome'] + 2
     X, Y, Z = grid(N, N, NZ)
     r = np.hypot(X - CX, Y - CX)
     p = Part((N, N, NZ)); q = Part((N, N, NZ))
@@ -146,10 +147,10 @@ def turret_15(T):
     gz = T['gun_axis'] - T['z0']
     pw, ph = T['port']
     port = (Y > CX) & (np.abs(X - CX) <= pw) & (np.abs(Z - gz) <= ph)
-    roof = (r <= ro + 0.5) & (Z == T['h'])
+    roof = (r <= ro + 0.5) & ((Z == T['h']) | (Z == T['h'] + 1))
     crown = np.zeros(wall.shape, bool)
     for k in range(1, T['dome'] + 1):
-        crown |= (r <= ro - 5 * k + 0.5) & (Z == T['h'] + k)
+        crown |= (r <= ro - 5 * k + 0.5) & (Z == T['h'] + 1 + k)
     p.put(wall & ~port, C['white'])
     q.put(roof | crown, C['grey'])
     return p, q, {'pivot': [CX, CX, 0], 'front': [CX, N - 1, 0]}, dict(N=N, CX=CX, NZ=NZ)
@@ -260,7 +261,9 @@ def main():
         p, a = fnc(PP[key]); meta[key] = {'count': p.write(os.path.join(out, key + '.txt'), key), 'anchors': a, 'frame': list(p.col.shape)}
     p, a = hotchkiss(PP['gun37']); meta['gun37'] = {'count': p.write(os.path.join(out, 'gun37.txt'), 'gun37'), 'anchors': a, 'frame': list(p.col.shape)}
     for fnc, T, kw, kt in ((turret_main, PLAN['params']['turret_main'], 'turret-main-shell', 'turret-main-top'), (turret_15, PLAN['params']['turret_15'], 'turret15-shell', 'turret15-roof')):
-        p, q, a, d = fnc(T)
+        r_ = fnc(T); p, q, a, d = r_[0], r_[1], r_[-2], r_[-1]
+        if len(r_) == 5:
+            meta['turret-main-table'] = {'count': r_[2].write(os.path.join(out, 'turret-main-table.txt'), 'turret-main-table'), 'anchors': {}, 'frame': list(r_[2].col.shape), 'geom': d}
         meta[kw] = {'count': p.write(os.path.join(out, kw + '.txt'), kw), 'anchors': a, 'frame': list(p.col.shape), 'geom': d}
         meta[kt] = {'count': q.write(os.path.join(out, kt + '.txt'), kt), 'anchors': {}, 'frame': list(q.col.shape), 'geom': d}
     for m in PLAN['params']['masts']:
