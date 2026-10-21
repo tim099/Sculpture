@@ -1,0 +1,94 @@
+{
+ "turret-P": {
+  "arc": [
+   -112,
+   179
+  ],
+  "fire": [
+   -80,
+   92
+  ],
+  "turn_blocked": 26,
+  "fire_blocked": 141,
+  "why": {
+   "ship:deck-hurricane": 45,
+   "ship:ladders": 1,
+   "ship:funnel-fwd": 14,
+   "ship:vents": 13,
+   "ship:funnel-aft": 11,
+   "ship:skids": 4,
+   "ship:rails": 9,
+   "ship:mast-main": 1,
+   "turret15-aft": 2,
+   "fwd-boats": 8,
+   "ship:conning": 8,
+   "ship:mast-fore": 6,
+   "turret-S": 45
+  },
+  "hood_cells": 0
+ },
+ "turret-S": {
+  "arc": [
+   -180,
+   180
+  ],
+  "fire": [
+   -93,
+   82
+  ],
+  "turn_blocked": 0,
+  "fire_blocked": 135,
+  "why": {
+   "ship:deck-hurricane": 18,
+   "ship:mast-fore": 7,
+   "ship:conning": 15,
+   "fwd-boats": 27,
+   "turret15-fwd": 2,
+   "ship:rails": 3,
+   "ship:vents": 5,
+   "ship:ladders": 2,
+   "turret15-aft": 2,
+   "ship:skids": 3,
+   "ship:mast-main": 1,
+   "ship:funnel-aft": 2,
+   "ship:funnel-fwd": 6,
+   "turret-P": 42
+  },
+  "hood_cells": 0
+ },
+ "turret15-aft": {
+  "arc": [
+   -180,
+   180
+  ],
+  "fire": [
+   -135,
+   135
+  ],
+  "turn_blocked": 0,
+  "fire_blocked": 30,
+  "why": {
+   "ship:skids": 19,
+   "turret-S": 2,
+   "ship:vents": 6,
+   "turret-P": 3
+  },
+  "hood_cells": 0
+ },
+ "turret15-fwd": {
+  "arc": [
+   -180,
+   180
+  ],
+  "fire": [
+   -152,
+   153
+  ],
+  "turn_blocked": 0,
+  "fire_blocked": 54,
+  "why": {
+   "fwd-boats": 54
+  },
+  "hood_cells": 0
+ }
+}

@@ -1,0 +1,104 @@
+diff --git a/src/config/game.json b/src/config/game.json
+index 0e59107..57ecbda 100644
+--- a/src/config/game.json
++++ b/src/config/game.json
+@@ -375,7 +375,8 @@
+       "hole": 2.1,
+       "crew": 8,
+       "min": 5,
+-      "mass": 37.5, "shot": 333,
++      "mass": 37.5,
++      "shot": 333,
+       "hpK": 1
+     },
+     "krupp150": {
+@@ -388,7 +389,8 @@
+       "hole": 1.2,
+       "crew": 6,
+       "min": 4,
+-      "mass": 4.8, "shot": 51
++      "mass": 4.8,
++      "shot": 51
+     },
+     "hotch37": {
+       "code": "h37",
+@@ -400,8 +402,10 @@
+       "hole": 0.3,
+       "crew": 2,
+       "min": 1,
+-      "mass": 0.21, "shot": 0.5,
+-      "burst": 5, "burstGap": 0.6
++      "mass": 0.21,
++      "shot": 0.5,
++      "burst": 5,
++      "burstGap": 0.6
+     },
+     "brooke64": {
+       "code": "64b",
+@@ -1100,7 +1104,8 @@
+       "crew": {"top": 0, "marines": 6},
+       "names": ["越嶺號"],
+       "idNext": {"anchor": 3, "deck": 4, "gun": 7, "ladders": 2, "magazine": 2, "oar": 73, "part": 5, "powder": 5, "rudder": 2, "ship": 2, "yard": 2}
+-    }
++    },
++    {"id": "dingyuan", "el": "ship-dingyuan", "name": "定遠號", "vxk": "dingyuan.vxk", "work": "trailhead-dingyuan-01m-assembly", "author": "trailhead"}
+   ],
+   "furniture": {
+     "bed": {
+@@ -1141,7 +1146,18 @@
+       "cap": 36,
+       "autoDeck": 0
+     },
+-    "spump": {"name": "蒸汽抽水機", "type": "deck", "size": [10, 6, 9], "hp": 160, "role": "pump", "power": "steam", "tpm": 15, "place": "center", "cap": 60, "autoDeck": 0},
++    "spump": {
++      "name": "蒸汽抽水機",
++      "type": "deck",
++      "size": [10, 6, 9],
++      "hp": 160,
++      "role": "pump",
++      "power": "steam",
++      "tpm": 15,
++      "place": "center",
++      "cap": 60,
++      "autoDeck": 0
++    },
+     "bench": {
+       "name": "木工台",
+       "type": "deck",
+diff --git a/src/config/ship_cards.json b/src/config/ship_cards.json
+index bc5d707..63ee849 100644
+--- a/src/config/ship_cards.json
++++ b/src/config/ship_cards.json
+@@ -19,6 +19,7 @@
+     "susquehanna": {"tons": 3528, "len": 76.7, "guns": 9, "gunTypes": {"dahl11": 3, "dahl9": 6}, "volley": 471, "drive": "steam", "sails": 13, "crew": 151},
+     "dromon": {"tons": 60, "len": 28.2, "guns": 5, "gunTypes": {"siphon": 1, "ballista": 3, "mangonel": 1}, "volley": 16, "drive": "oar", "sails": 3, "crew": 178},
+     "punt": {"tons": 40, "len": 14.1, "guns": 4, "gunTypes": {"bow": 4}, "volley": 0, "drive": "oar", "sails": 1, "crew": 62},
+-    "fusta": {"tons": 41, "len": 26.6, "guns": 5, "gunTypes": {"bombardella": 1, "pierrier": 2, "bow": 2}, "volley": 3, "drive": "oar", "sails": 3, "crew": 135}
++    "fusta": {"tons": 41, "len": 26.6, "guns": 5, "gunTypes": {"bombardella": 1, "pierrier": 2, "bow": 2}, "volley": 3, "drive": "oar", "sails": 3, "crew": 135},
++    "dingyuan": {"tons": 7288, "len": 91.2, "guns": 14, "gunTypes": {"krupp150": 2, "hotch37": 8, "krupp305": 4}, "volley": 1438, "drive": "sail", "sails": 1, "crew": 116}
+   }
+ }
+diff --git a/src/config/vxk_lock.json b/src/config/vxk_lock.json
+index 5f1556e..38b6d25 100644
+--- a/src/config/vxk_lock.json
++++ b/src/config/vxk_lock.json
+@@ -1,6 +1,7 @@
+ {
+  "constitution.vxk": "c:302f8451020d092337aa0f759ab20cb8748b87ac",
+  "cosecha.vxk": "c:e5539b81b0893ebfd0204ab846217a10249043f6",
++ "dingyuan.vxk": "c:96e10b70e8113fbc2e244ccaff6e90df88f6ba7f",
+  "dromon.vxk": "c:60047ceb0fec1f69414dd10e29f44ecb0ca90444",
+  "ember.vxk": "c:4b0c120abfecc403a1109aced44d44cbabb40201",
+  "falcon.vxk": "c:5133f58d4b0efcaab8027ec4fab7a4f59ab34ae8",
+diff --git a/src/template.html b/src/template.html
+index 364bd05..cdede1d 100644
+--- a/src/template.html
++++ b/src/template.html
+@@ -803,6 +803,7 @@
+ <script type="application/x-vxk" id="ship-dromon" src="../VoxelKit/_cache/dromon.vxk"></script>
+ <script type="application/x-vxk" id="ship-punt" src="../VoxelKit/_cache/punt.vxk"></script>
+ <script type="application/x-vxk" id="ship-fusta" src="../VoxelKit/_cache/fusta.vxk"></script>
++<script type="application/x-vxk" id="ship-dingyuan" src="../VoxelKit/_cache/dingyuan.vxk"></script>
+ <!-- ships 結束 -->
+ <!-- 設定檔（TASK-0542）：各項設定的初始值與船隻清單；js/00_config.js 讀成 CFG。設定後台：python -I admin.py serve -->
+ <script type="application/x-asset" id="game-config" src="config/game.json"></script>
