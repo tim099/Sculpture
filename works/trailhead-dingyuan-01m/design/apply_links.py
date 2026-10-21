@@ -34,7 +34,20 @@ def listed(wid, fn, key):
     return [x['name'] for x in json.load(open(f, encoding='utf-8')).get(key, [])]
 
 
+KEEP = ('id', 'funnel', 'hoist', 'propeller')                             # Blockside `admin.py ids` 發的 id 與換成 id 寫法的指名鍵：重跑照留（meta= 是整份覆寫）
+
+
+def kept(work, fn, key, nm, meta):
+    f = os.path.join(WORKS, work, fn)
+    if not os.path.exists(f): return meta
+    old = [x for x in json.load(open(f, encoding='utf-8')).get(key, []) if x['name'] == nm]
+    om = (old[0].get('meta') or {}) if old else {}
+    keep = {k: om[k] for k in KEEP if k in om and (k == 'id' or '-' in str(om[k]).split('#')[0] and '/' not in str(om[k]))}
+    return dict(meta or {}, **keep) if keep else meta
+
+
 def link(work, nm, src, meta=None, at=(0, 0, 0), mirror='', turn=0):
+    meta = kept(work, 'links.json', 'links', nm, meta)
     a = [('op', 'work'), ('sub', 'link'), ('work', work), ('persona', PER), ('name', nm), ('source_work', src), ('at', '%d,%d,%d' % tuple(at))]
     if turn: a.append(('turn', str(turn)))
     if mirror: a.append(('mirror', mirror))
@@ -50,6 +63,7 @@ def anchor(work, nm, at):
 
 
 def model(work, nm, src, at, pivot, rot, sc, meta, mirror=''):
+    meta = kept(work, 'models.json', 'models', nm, meta)
     a = [('op', 'work'), ('sub', 'model'), ('work', work), ('persona', PER), ('name', nm), ('source_work', src),
          ('at', '%.2f,%.2f,%.2f' % tuple(at)), ('pivot', '%.2f,%.2f,%.2f' % tuple(pivot)), ('rotate', '%g,%g,%g' % tuple(rot)),
          ('scale', '%g,%g,%g' % ((sc,) * 3 if np.isscalar(sc) else tuple(sc))), ('meta', json.dumps(meta, ensure_ascii=False))]

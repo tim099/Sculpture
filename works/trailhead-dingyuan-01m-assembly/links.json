@@ -21,6 +21,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"material": "iron",
 				"render": "smooth",
@@ -47,6 +48,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "part-1",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -71,6 +73,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "part-2",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -97,6 +100,7 @@
 			"meta": {
 				"deck": "barbette",
 				"floor": "510:104,684:104",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 2,
 				"material": "iron",
@@ -125,6 +129,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "part-3",
 				"material": "iron",
 				"render": "voxel"
 			}
@@ -151,6 +156,7 @@
 			"meta": {
 				"deck": "lower",
 				"floor": "13:61,921:61",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 0,
 				"name": "下甲板（城堡上是裝甲甲板）",
@@ -179,6 +185,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "10:85,921:85",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 1,
 				"name": "主甲板（舯部露天、兩座露砲台）",
@@ -207,6 +214,7 @@
 			"meta": {
 				"deck": "poop",
 				"floor": "9:112,240:112",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "艉樓甲板",
@@ -235,6 +243,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "690:112,921:112",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 4,
 				"name": "艏樓甲板",
@@ -263,6 +272,7 @@
 			"meta": {
 				"deck": "hurricane",
 				"floor": "493:141,700:141",
+				"id": "deck-6",
 				"kind": "deck",
 				"level": 5,
 				"name": "飛橋甲板",
@@ -287,7 +297,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:20",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "欄杆",
@@ -307,7 +320,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:20",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "司令塔",
@@ -329,6 +345,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "part-6",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -351,7 +368,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:21",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "煙囪-後",
@@ -373,6 +393,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "funnel-1",
 				"kind": "funnel",
 				"material": "iron",
 				"render": "smooth"
@@ -398,6 +419,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "funnel-2",
 				"kind": "funnel",
 				"material": "iron",
 				"render": "smooth"
@@ -424,7 +446,8 @@
 			"note": "",
 			"meta": {
 				"boilers": 2,
-				"funnel": "煙囪-後",
+				"funnel": "funnel-1",
+				"id": "boiler-1",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -451,7 +474,8 @@
 			"note": "",
 			"meta": {
 				"boilers": 2,
-				"funnel": "煙囪-後",
+				"funnel": "funnel-1",
+				"id": "boiler-2",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -478,7 +502,8 @@
 			"note": "",
 			"meta": {
 				"boilers": 2,
-				"funnel": "煙囪-前",
+				"funnel": "funnel-2",
+				"id": "boiler-3",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -505,7 +530,8 @@
 			"note": "",
 			"meta": {
 				"boilers": 2,
-				"funnel": "煙囪-前",
+				"funnel": "funnel-2",
+				"id": "boiler-4",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -533,12 +559,13 @@
 			"meta": {
 				"cylinders": 3,
 				"engine": "direct",
+				"id": "engine-1",
 				"ihp": 3000,
 				"kind": "engine",
 				"kn": 14.5,
 				"kn_max": 15.4,
 				"material": "iron",
-				"propeller": "螺旋槳-S",
+				"propeller": "propeller-1",
 				"render": "smooth"
 			}
 		},
@@ -564,12 +591,13 @@
 			"meta": {
 				"cylinders": 3,
 				"engine": "direct",
+				"id": "engine-2",
 				"ihp": 3000,
 				"kind": "engine",
 				"kn": 14.5,
 				"kn_max": 15.4,
 				"material": "iron",
-				"propeller": "螺旋槳-P",
+				"propeller": "propeller-2",
 				"render": "smooth"
 			}
 		},
@@ -593,6 +621,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "shaft-1",
 				"kind": "shaft",
 				"material": "iron",
 				"render": "smooth"
@@ -618,6 +647,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
+				"id": "shaft-2",
 				"kind": "shaft",
 				"material": "iron",
 				"render": "smooth"
@@ -641,7 +671,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:24",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "前桅",
@@ -661,7 +694,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:24",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-9"
+			}
 		},
 		{
 			"name": "通風筒",
@@ -681,7 +717,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:25",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-10"
+			}
 		},
 		{
 			"name": "艇架",
@@ -701,7 +740,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:25",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-11"
+			}
 		},
 		{
 			"name": "彈藥庫-前左",
@@ -723,7 +765,8 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
-				"hoist": "梯子/barbette-P",
+				"hoist": "ladders-1#barbette-P",
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 1600
@@ -749,7 +792,8 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
-				"hoist": "梯子/barbette-S,梯子/turret15-fwd",
+				"hoist": "ladders-1#barbette-S,ladders-1#turret15-fwd",
+				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 1600
@@ -775,7 +819,8 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
-				"hoist": "梯子/turret15-aft",
+				"hoist": "ladders-1#turret15-aft",
+				"id": "magazine-3",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 900
@@ -799,7 +844,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T15:55:27",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-12"
+			}
 		},
 		{
 			"name": "梯子",
@@ -823,6 +871,7 @@
 			"meta": {
 				"fc-break-a.decks": "main,forecastle",
 				"fc-break-b.decks": "main,forecastle",
+				"id": "ladders-1",
 				"kind": "ladders",
 				"poop-break-P.decks": "main,poop",
 				"poop-break-S.decks": "main,poop"
@@ -850,6 +899,7 @@
 			"meta": {
 				"arc": "-112,179",
 				"fire": "-80,92",
+				"id": "turret-1",
 				"kind": "turret",
 				"rate": 10
 			}
@@ -876,6 +926,7 @@
 			"meta": {
 				"arc": "-180,180",
 				"fire": "-93,82",
+				"id": "turret-2",
 				"kind": "turret",
 				"rate": 10
 			}
@@ -902,6 +953,7 @@
 			"meta": {
 				"arc": "-180,180",
 				"fire": "-135,135",
+				"id": "turret-3",
 				"kind": "turret",
 				"rate": 15
 			}
@@ -928,6 +980,7 @@
 			"meta": {
 				"arc": "-180,180",
 				"fire": "-152,153",
+				"id": "turret-4",
 				"kind": "turret",
 				"rate": 15
 			}
@@ -950,7 +1003,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T16:21:42",
 			"persona": "trailhead",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-17"
+			}
 		}
 	]
 }
