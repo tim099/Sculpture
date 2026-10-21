@@ -392,11 +392,7 @@ def build():
     rim2 = (rr > M['r2'] - 0.5) & (rr <= M['r2'] + 1.5) & ((Zg == t2 + bd1) | (Zg == t2 - 1))
     pole = (rr <= M['pole_r'] + 0.5) & (Zg > t2) & (Zg <= M['pole_top'])
     truck = (rr <= M['pole_r'] + 1.5) & (Zg >= M['pole_top'] - 1) & (Zg <= M['pole_top'])
-    yard = np.zeros(np.broadcast(Xg, Yg, Zg).shape, bool)
-    for yz, yh in M['yards']:
-        yard |= (np.abs(Xg - mx) <= 0.5) & (np.abs(Zg - yz) <= 0.5) & (np.abs(Yg - YC) <= yh)
-        yard |= (np.abs(Xg - mx) <= 1) & (np.abs(Zg - yz) <= 1) & (np.abs(Yg - YC) <= 3)
-    sub = tube | pl | pole | yard
+    sub = tube | pl | pole                                               # 信號桁不落格子：改成帆桁模型（apply_links.py，meta kind=yard、mast=main ⇒ 遊戲才認得這根桅）
     o_m = (mx - 100, YC - 45, M['z0'])
     claim('mast', o_m, (truck | rim1 | rim2) & ~lad_mask[o_m[0]:o_m[0] + 210, o_m[1]:o_m[1] + 91, o_m[2]:M['pole_top'] + 2], C['white'])
     claim('mast', o_m, (sub | wallm) & ~lad_mask[o_m[0]:o_m[0] + 210, o_m[1]:o_m[1] + 91, o_m[2]:M['pole_top'] + 2], C['white'])

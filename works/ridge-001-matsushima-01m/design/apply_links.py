@@ -64,12 +64,13 @@ def anchor(work, nm, at):
     run(('op', 'work'), ('sub', 'anchor'), ('work', work), ('persona', PER), ('name', nm), ('at', '%d,%d,%d' % tuple(int(round(v)) for v in at)))
 
 
-def model(work, nm, src, at, pivot, rot, sc, meta, mirror=''):
+def model(work, nm, src, at, pivot, rot, sc, meta, mirror='', recolor=''):
     meta = kept(work, 'models.json', 'models', nm, meta)
     a = [('op', 'work'), ('sub', 'model'), ('work', work), ('persona', PER), ('name', nm), ('source_work', src),
          ('at', '%.2f,%.2f,%.2f' % tuple(at)), ('pivot', '%.2f,%.2f,%.2f' % tuple(pivot)), ('rotate', '%g,%g,%g' % tuple(rot)),
          ('scale', '%g,%g,%g' % ((sc,) * 3 if np.isscalar(sc) else tuple(sc))), ('meta', json.dumps(meta, ensure_ascii=False))]
     if mirror: a.append(('mirror', mirror))
+    if recolor: a.append(('recolor', recolor))
     if nm in listed(work, 'models.json', 'models'): a.append(('overwrite', '1'))
     run(*a); print('✓ 模型 %s/%s' % (work, nm), flush=True)
 
@@ -105,8 +106,8 @@ LINKS = [
     ('甲板-upper', W + '-deck-upper', DECKS['upper'], ''),
     ('甲板-fc', W + '-deck-fc', DECKS['fc'], ''),
     ('艦橋', W + '-bridge', DECKS['bridge'], ''),
-    ('上層建築', W + '-superstructure', None, ''),
-    ('欄杆', W + '-rails', None, ''),
+    ('上層建築', W + '-superstructure', {'material': 'iron*0.1'}, ''),   # 鋼：2 格牆（0.2 m）≈ 外板＋骨架 2 cm
+    ('欄杆', W + '-rails', {'material': 'iron*0.2', 'render': 'voxel'}, ''),   # 鋼；1 格細桿平滑會糊 ⇒ 方塊
     ('司令塔', W + '-conning', IRON, ''),
     ('海圖室', W + '-chart-house', None, ''),
     ('煙囪', W + '-funnel', dict(IRON, kind='funnel'), ''),
@@ -117,14 +118,14 @@ LINKS = [
     ('軸', W + '-shaft', dict(IRON, kind='shaft'), ''),
     ('軸-鏡像', W + '-shaft', dict(IRON, kind='shaft'), 'y'),
     ('露砲台', W + '-barbette', IRON, ''),
-    ('露砲台撐柱', W + '-barbette-posts', None, ''),
-    ('桅', W + '-mast', None, ''),
-    ('通風筒', W + '-vents', None, ''),
+    ('露砲台撐柱', W + '-barbette-posts', {'material': 'iron*0.2'}, ''),
+    ('桅', W + '-mast', {'material': 'iron*0.1'}, ''),   # 軍艦桅（鋼管＋桅樓）：實心 1.2 m 管 ≈ 空心管 ⇒ 鐵 10%
+    ('通風筒', W + '-vents', {'material': 'iron*0.05'}, ''),   # 實心管（空心會封成空腔）⇒ 鐵 5%
     ('艇架', W + '-skids', None, ''),
     ('彈藥庫-前', W + '-mag-fore', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/lm-fwd,梯子/mu-fwd,梯子/uf-fwd,梯子/bridge-S'}, ''),
     ('彈藥庫-後', W + '-mag-aft', {'kind': 'magazine', 'pos': 'aft', 'hoist': '梯子/barbette,梯子/mu-aft'}, ''),
-    ('艙壁', W + '-bulkheads', None, ''),
-    ('梯子', W + '-ladders', {'kind': 'ladders'}, ''),
+    ('艙壁', W + '-bulkheads', {'material': 'iron*0.1', 'render': 'voxel'}, ''),   # 水密艙壁 1 格 ⇒ 方塊
+    ('梯子', W + '-ladders', {'kind': 'ladders', 'material': 'iron*0.2', 'render': 'voxel'}, ''),
 ]
 for nm, src, meta, mir in LINKS:
     link(ASM, nm, src, meta, mirror=mir)
@@ -188,6 +189,10 @@ for s, sg in (('S', 1), ('P', -1)):
 SRC = {'gun120': (W + '-gun-armstrong120', 0.5, '120a'), 'gun57': (W + '-gun-hotchkiss57', 0.2, 'h57'), 'gun47': (W + '-gun-hotchkiss47', 0.2, 'h47'),
        'h37': ('trailhead-dingyuan-01m-gun-hotchkiss37', 0.2, 'h37')}
 DECKW = {'甲板-middle': W + '-deck-middle', '甲板-upper': W + '-deck-upper', '甲板-fc': W + '-deck-fc', '桅': W + '-bridge', '艦橋': W + '-bridge'}   # 桅樓的砲掛在艦橋底下：遊戲照關聯路徑分砲甲板（桅不是甲板 ⇒ 退到最下面那層、機艙），站人的高度照那一層最前面那門（艦橋兩翼的 37 mm）；⛔ 掛在船首樓底下 ⇒ 桅樓的砲比船首樓後端的 57 mm 靠前、整層照桅樓的高度找取用點
+for lo, nm in ((0, '信號桁-下'), (1, '信號桁-上')):   # 信號桁 ＝ 帆桁模型（引用定遠號的 yard-main，縮放）：遊戲照帆桁 meta mast 找桅（10_ship.js findMasts）
+    yz, yh = sorted(P['mast']['yards'])[lo]
+    model(W + '-mast', nm, 'trailhead-dingyuan-01m-yard-main', [mx + 5.5, YC + 0.5, yz + 0.5], [1.5, 40.5, 1.5], [0, 0, 0], (0.67, round((2 * yh + 1) / 81, 4), 0.67),
+          {'kind': 'yard', 'mast': 'main', 'yard': 'signal', 'pivot_anchor': 'pivot', 'turn_axis': 'z', 'rotate_z_deg': 0, 'length_ft': round((2 * yh + 1) * 0.328, 1), 'diameter_in': 8}, recolor='213:255')
 for nm in [n for n in listed(W + '-mast', 'models.json', 'models') if n.startswith('機關砲-')]:   # 舊版掛在桅上的（重跑時已經沒有）
     run(('op', 'work'), ('sub', 'unmodel'), ('work', W + '-mast'), ('persona', PER), ('name', nm))
 for nm, g in GUNS.items():

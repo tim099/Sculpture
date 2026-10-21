@@ -23,7 +23,7 @@ MAT = Dens(MAT)
 own = np.load(os.path.join(out, 'own.npy'))
 names = json.load(open(os.path.join(out, 'own_names.json'), encoding='utf-8'))['names']
 default = G['materials']['default']
-PART_MAT = {'hull': 'iron*0.15', 'deck-lower': 'iron*0.28', 'conning': 'iron', 'funnel': 'iron', 'boilers': 'boiler', 'engine': 'iron', 'shaft': 'iron', 'barbette': 'iron'}
+PART_MAT = {'hull': 'iron*0.15', 'deck-lower': 'iron*0.28', 'mast': 'iron*0.1', 'superstructure': 'iron*0.1', 'vents': 'iron*0.05', 'barbette-posts': 'iron*0.2', 'bulkheads': 'iron*0.1', 'rails': 'iron*0.2', 'ladders': 'iron*0.2', 'conning': 'iron', 'funnel': 'iron', 'boilers': 'boiler', 'engine': 'iron', 'shaft': 'iron', 'barbette': 'iron'}
 MIRR = ('boilers', 'engine', 'shaft')
 for k in sys.argv[2:]:
     if '=' in k: a, b = k.split('='); PART_MAT[a] = b

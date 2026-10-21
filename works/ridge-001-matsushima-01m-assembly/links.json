@@ -223,7 +223,8 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"id": "part-1"
+				"id": "part-1",
+				"material": "iron*0.1"
 			}
 		},
 		{
@@ -246,7 +247,9 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"id": "part-2"
+				"id": "part-2",
+				"material": "iron*0.2",
+				"render": "voxel"
 			}
 		},
 		{
@@ -320,126 +323,6 @@
 				"id": "funnel-1",
 				"kind": "funnel",
 				"material": "iron",
-				"render": "smooth"
-			}
-		},
-		{
-			"name": "鍋爐",
-			"work": "ridge-001-matsushima-01m-boilers",
-			"at": [
-				0,
-				0,
-				0
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				1004,
-				181,
-				490
-			],
-			"enabled": true,
-			"created_at": "2026-10-21T17:00:37",
-			"persona": "ridge-001",
-			"note": "",
-			"meta": {
-				"boilers": 3,
-				"funnel": "funnel-1",
-				"id": "boiler-1",
-				"kind": "boiler",
-				"material": "boiler",
-				"render": "smooth"
-			}
-		},
-		{
-			"name": "鍋爐-鏡像",
-			"work": "ridge-001-matsushima-01m-boilers",
-			"at": [
-				0,
-				0,
-				0
-			],
-			"turn": 0,
-			"mirror": "y",
-			"pivot": [
-				1004,
-				181,
-				490
-			],
-			"enabled": true,
-			"created_at": "2026-10-21T17:00:37",
-			"persona": "ridge-001",
-			"note": "",
-			"meta": {
-				"boilers": 3,
-				"funnel": "funnel-1",
-				"id": "boiler-2",
-				"kind": "boiler",
-				"material": "boiler",
-				"render": "smooth"
-			}
-		},
-		{
-			"name": "主機",
-			"work": "ridge-001-matsushima-01m-engine",
-			"at": [
-				0,
-				0,
-				0
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				1004,
-				181,
-				490
-			],
-			"enabled": true,
-			"created_at": "2026-10-21T17:00:38",
-			"persona": "ridge-001",
-			"note": "",
-			"meta": {
-				"cylinders": 3,
-				"engine": "direct",
-				"id": "engine-1",
-				"ihp": 2700,
-				"kind": "engine",
-				"kn": 15,
-				"kn_max": 16.5,
-				"material": "iron",
-				"propeller": "propeller-1",
-				"render": "smooth"
-			}
-		},
-		{
-			"name": "主機-鏡像",
-			"work": "ridge-001-matsushima-01m-engine",
-			"at": [
-				0,
-				0,
-				0
-			],
-			"turn": 0,
-			"mirror": "y",
-			"pivot": [
-				1004,
-				181,
-				490
-			],
-			"enabled": true,
-			"created_at": "2026-10-21T17:00:38",
-			"persona": "ridge-001",
-			"note": "",
-			"meta": {
-				"cylinders": 3,
-				"engine": "direct",
-				"id": "engine-2",
-				"ihp": 2700,
-				"kind": "engine",
-				"kn": 15,
-				"kn_max": 16.5,
-				"material": "iron",
-				"propeller": "propeller-2",
 				"render": "smooth"
 			}
 		},
@@ -540,7 +423,8 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"id": "part-6"
+				"id": "part-6",
+				"material": "iron*0.2"
 			}
 		},
 		{
@@ -563,7 +447,8 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"id": "part-7"
+				"id": "part-7",
+				"material": "iron*0.1"
 			}
 		},
 		{
@@ -586,7 +471,8 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"id": "part-8"
+				"id": "part-8",
+				"material": "iron*0.05"
 			}
 		},
 		{
@@ -686,7 +572,9 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"id": "part-10"
+				"id": "part-10",
+				"material": "iron*0.1",
+				"render": "voxel"
 			}
 		},
 		{
@@ -710,7 +598,9 @@
 			"note": "",
 			"meta": {
 				"id": "ladders-1",
-				"kind": "ladders"
+				"kind": "ladders",
+				"material": "iron*0.2",
+				"render": "voxel"
 			}
 		},
 		{
