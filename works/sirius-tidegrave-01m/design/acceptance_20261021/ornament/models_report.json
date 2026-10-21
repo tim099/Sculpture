@@ -1,0 +1,3620 @@
+{
+  "method": "Actual per-source voxel event replay; unit cubes transformed with at + Rz Ry Rx (scale * mirror (p-pivot)); linked work translation; exact OBB/unit-AABB separating axis test, touching excluded 1e-8. No author modules imported. Current neutral static model transforms only.",
+  "models": 239,
+  "source_meshes": 31,
+  "source_checks": {
+    "sirius-tidegrave-01m-rudder": {
+      "events_cells": 7428,
+      "cache_cells": 7428,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-gun-fairleads": {
+      "events_cells": 738,
+      "cache_cells": 738,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-wheel-fairlead-1": {
+      "events_cells": 90,
+      "cache_cells": 90,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-wheel-fairlead-2": {
+      "events_cells": 185,
+      "cache_cells": 185,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "basecamp-frigate-constitution-01m-anchor": {
+      "events_cells": 1140,
+      "cache_cells": 1140,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "basecamp-frigate-constitution-01m-gun-24": {
+      "events_cells": 1125,
+      "cache_cells": 1125,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-portlid": {
+      "events_cells": 646,
+      "cache_cells": 646,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-chase-tube-low": {
+      "events_cells": 2928,
+      "cache_cells": 2928,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-chase-tube-high": {
+      "events_cells": 3248,
+      "cache_cells": 3248,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "basecamp-ember-01m-capstan": {
+      "events_cells": 134892,
+      "cache_cells": 134892,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "basecamp-frigate-constitution-01m-whaleboat": {
+      "events_cells": 17460,
+      "cache_cells": 17460,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "kotoko-napoleon-01m-galley": {
+      "events_cells": 32684,
+      "cache_cells": 32684,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "kotoko-napoleon-01m-shotrack": {
+      "events_cells": 1543,
+      "cache_cells": 1543,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "summit-rocher-01m-barrel": {
+      "events_cells": 1824,
+      "cache_cells": 1824,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "summit-rocher-01m-crate": {
+      "events_cells": 1728,
+      "cache_cells": 1728,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "basecamp-frigate-constitution-01m-wheel": {
+      "events_cells": 32840,
+      "cache_cells": 32840,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "basecamp-frigate-constitution-01m-wheel-stand": {
+      "events_cells": 11616,
+      "cache_cells": 11616,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "summit-night-falcon-01m-binnacle": {
+      "events_cells": 15892,
+      "cache_cells": 15892,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "gura-tridente-01m-lantern": {
+      "events_cells": 4128,
+      "cache_cells": 4128,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "kotoko-napoleon-01m-bitts": {
+      "events_cells": 5610,
+      "cache_cells": 5610,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-mizzen-crossjack": {
+      "events_cells": 557,
+      "cache_cells": 557,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-mizzen-topsail": {
+      "events_cells": 457,
+      "cache_cells": 457,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-mizzen-gaff": {
+      "events_cells": 972,
+      "cache_cells": 972,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-mizzen-boom": {
+      "events_cells": 747,
+      "cache_cells": 747,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-main-course": {
+      "events_cells": 1909,
+      "cache_cells": 1909,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-main-topsail": {
+      "events_cells": 877,
+      "cache_cells": 877,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-main-topgallant": {
+      "events_cells": 607,
+      "cache_cells": 607,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-fore-course": {
+      "events_cells": 1639,
+      "cache_cells": 1639,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-fore-topsail": {
+      "events_cells": 757,
+      "cache_cells": 757,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "sirius-tidegrave-01m-yard-fore-topgallant": {
+      "events_cells": 507,
+      "cache_cells": 507,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    },
+    "basecamp-frigate-constitution-01m-powder-barrel": {
+      "events_cells": 9384,
+      "cache_cells": 9384,
+      "missing": 0,
+      "extra": 0,
+      "nested_links": 0,
+      "nested_models": 0
+    }
+  },
+  "tested_pairs": 0,
+  "unverified": [],
+  "collision_models": 0,
+  "collision_pairs": 0,
+  "negative_exact_cube_overlap": true,
+  "negative_touch_only": false,
+  "reports": [
+    {
+      "name": "舵",
+      "source_work": "sirius-tidegrave-01m-rudder",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 7428,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-01",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-02",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-03",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-04",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-05",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-06",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-07",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-08",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-09",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-10",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-11",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-12",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-13",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-14",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-15",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-16",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-17",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-18",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-19",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-20",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-21",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-22",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-23",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-24",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-25",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-26",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-27",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-28",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-29",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-30",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-31",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-32",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-33",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-34",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-35",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-36",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-37",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-38",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-39",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-40",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-41",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-42",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-43",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-44",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-45",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-46",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-47",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "gun-fairlead-48",
+      "source_work": "sirius-tidegrave-01m-gun-fairleads",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 738,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "wheel-fairlead-1",
+      "source_work": "sirius-tidegrave-01m-wheel-fairlead-1",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 90,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "wheel-fairlead-2",
+      "source_work": "sirius-tidegrave-01m-wheel-fairlead-2",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 185,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "anchor-P",
+      "source_work": "basecamp-frigate-constitution-01m-anchor",
+      "rotate": [
+        -20,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1140,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "anchor-S",
+      "source_work": "basecamp-frigate-constitution-01m-anchor",
+      "rotate": [
+        20,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1140,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S01",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P01",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S02",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P02",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S03",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P03",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S04",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P04",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S05",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P05",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S06",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P06",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S07",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P07",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S08",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P08",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S09",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P09",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S10",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P10",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S11",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P11",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-S12",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲-P12",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P01",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        163.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S01",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        16.3
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P03",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        173
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S03",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P04",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        173.3
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S04",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        6.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P05",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S05",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P06",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S06",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P07",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        182.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S07",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -2.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P08",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        183.1
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S08",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -3.1
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P09",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        186.2
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S09",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -6.2
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P10",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        188.5
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S10",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -8.5
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P11",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        190.6
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S11",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -10.6
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P12",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        198.4
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S12",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -18.4
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-P02",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        165.3
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-lower/砲門蓋-S02",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        14.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S01",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P01",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S02",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P02",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S03",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P03",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S04",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P04",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S05",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P05",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S06",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P06",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S07",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P07",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S08",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P08",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S09",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P09",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S10",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P10",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S11",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P11",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-S12",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲-P12",
+      "source_work": "basecamp-frigate-constitution-01m-gun-24",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 1125,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P01",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        166
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S01",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        14
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P04",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        174.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S04",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        5.3
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P08",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        182.1
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S08",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -2.1
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P11",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        187.2
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S11",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -7.2
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P02",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        169
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S02",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        11
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P03",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        173
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S03",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P05",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S05",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P06",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        180
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S06",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P07",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        182.6
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S07",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -2.6
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P09",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        183.3
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S09",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -3.3
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P10",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        187.8
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S10",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -7.8
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-P12",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        195.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-upper/砲門蓋-S12",
+      "source_work": "sirius-tidegrave-01m-portlid",
+      "rotate": [
+        0,
+        0,
+        -15.7
+      ],
+      "status": "pass",
+      "source_cells": 646,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/chase-1",
+      "source_work": "sirius-tidegrave-01m-chase-tube-low",
+      "rotate": [
+        0,
+        0,
+        -90
+      ],
+      "status": "pass",
+      "source_cells": 2928,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/chase-2",
+      "source_work": "sirius-tidegrave-01m-chase-tube-high",
+      "rotate": [
+        0,
+        0,
+        -90
+      ],
+      "status": "pass",
+      "source_cells": 3248,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/chase-3",
+      "source_work": "sirius-tidegrave-01m-chase-tube-high",
+      "rotate": [
+        0,
+        0,
+        -90
+      ],
+      "status": "pass",
+      "source_cells": 3248,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/chase-4",
+      "source_work": "sirius-tidegrave-01m-chase-tube-low",
+      "rotate": [
+        0,
+        0,
+        -90
+      ],
+      "status": "pass",
+      "source_cells": 2928,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/chase-5",
+      "source_work": "sirius-tidegrave-01m-chase-tube-high",
+      "rotate": [
+        0,
+        0,
+        -90
+      ],
+      "status": "pass",
+      "source_cells": 3248,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/chase-6",
+      "source_work": "sirius-tidegrave-01m-chase-tube-high",
+      "rotate": [
+        0,
+        0,
+        -90
+      ],
+      "status": "pass",
+      "source_cells": 3248,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/絞盤",
+      "source_work": "basecamp-ember-01m-capstan",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 134892,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/工作艇",
+      "source_work": "basecamp-frigate-constitution-01m-whaleboat",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 17460,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/爐灶",
+      "source_work": "kotoko-napoleon-01m-galley",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 32684,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/砲彈架-P1",
+      "source_work": "kotoko-napoleon-01m-shotrack",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1543,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/砲彈架-P2",
+      "source_work": "kotoko-napoleon-01m-shotrack",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1543,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/砲彈架-P3",
+      "source_work": "kotoko-napoleon-01m-shotrack",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1543,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/砲彈架-S1",
+      "source_work": "kotoko-napoleon-01m-shotrack",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1543,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/砲彈架-S2",
+      "source_work": "kotoko-napoleon-01m-shotrack",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1543,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/砲彈架-S3",
+      "source_work": "kotoko-napoleon-01m-shotrack",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1543,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/備用水桶-P1",
+      "source_work": "summit-rocher-01m-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1824,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/備用水桶-P2",
+      "source_work": "summit-rocher-01m-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1824,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/備用水桶-P3",
+      "source_work": "summit-rocher-01m-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1824,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/備用水桶-S1",
+      "source_work": "summit-rocher-01m-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1824,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/備用水桶-S2",
+      "source_work": "summit-rocher-01m-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1824,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/備用水桶-S3",
+      "source_work": "summit-rocher-01m-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1824,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/工具箱-1",
+      "source_work": "summit-rocher-01m-crate",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1728,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/工具箱-2",
+      "source_work": "summit-rocher-01m-crate",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1728,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/工具箱-3",
+      "source_work": "summit-rocher-01m-crate",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1728,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-weather/工具箱-4",
+      "source_work": "summit-rocher-01m-crate",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 1728,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-quarter/舵輪",
+      "source_work": "basecamp-frigate-constitution-01m-wheel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 32840,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-quarter/舵輪座",
+      "source_work": "basecamp-frigate-constitution-01m-wheel-stand",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 11616,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-quarter/羅經櫃",
+      "source_work": "summit-night-falcon-01m-binnacle",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 15892,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-poop/艉樓燈-P",
+      "source_work": "gura-tridente-01m-lantern",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 4128,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-poop/艉樓燈-S",
+      "source_work": "gura-tridente-01m-lantern",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 4128,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-forecastle/繫纜柱-P",
+      "source_work": "kotoko-napoleon-01m-bitts",
+      "rotate": [
+        0,
+        0,
+        90
+      ],
+      "status": "pass",
+      "source_cells": 5610,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "甲板-forecastle/繫纜柱-S",
+      "source_work": "kotoko-napoleon-01m-bitts",
+      "rotate": [
+        0,
+        0,
+        90
+      ],
+      "status": "pass",
+      "source_cells": 5610,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "mizzen/yard-mizzen-crossjack",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-crossjack",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 557,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "mizzen/yard-mizzen-topsail",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-topsail",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 457,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "mizzen/yard-mizzen-gaff",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-gaff",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 972,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "mizzen/yard-mizzen-boom",
+      "source_work": "sirius-tidegrave-01m-yard-mizzen-boom",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 747,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "main/yard-main-course",
+      "source_work": "sirius-tidegrave-01m-yard-main-course",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 1909,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "main/yard-main-topsail",
+      "source_work": "sirius-tidegrave-01m-yard-main-topsail",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 877,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "main/yard-main-topgallant",
+      "source_work": "sirius-tidegrave-01m-yard-main-topgallant",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 607,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "fore/yard-fore-course",
+      "source_work": "sirius-tidegrave-01m-yard-fore-course",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 1639,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "fore/yard-fore-topsail",
+      "source_work": "sirius-tidegrave-01m-yard-fore-topsail",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 757,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "fore/yard-fore-topgallant",
+      "source_work": "sirius-tidegrave-01m-yard-fore-topgallant",
+      "rotate": [
+        0,
+        0,
+        -18
+      ],
+      "status": "pass",
+      "source_cells": 507,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-01",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-02",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-03",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-04",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-05",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-06",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-07",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-08",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-09",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-10",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-11",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-12",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-13",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-14",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-15",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-16",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-17",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-18",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-19",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-20",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-21",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-22",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-23",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-後/powder-24",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-01",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-02",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-03",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-04",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-05",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-06",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-07",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-08",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-09",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-10",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-11",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-12",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-13",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-14",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-15",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-16",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-17",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-18",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-19",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-20",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-21",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-22",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-23",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    },
+    {
+      "name": "彈藥庫-前/powder-24",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "source_cells": 9384,
+      "candidate_pairs": 0,
+      "collision_pairs": 0,
+      "examples": []
+    }
+  ],
+  "actual_whole_model_translation_negative": {
+    "model": "舵",
+    "source_cells_translated": 7428,
+    "translate": [
+      -8.0,
+      -48.0,
+      168.0
+    ],
+    "collision_pairs": 38,
+    "baseline_model_not_mutated": true
+  }
+}

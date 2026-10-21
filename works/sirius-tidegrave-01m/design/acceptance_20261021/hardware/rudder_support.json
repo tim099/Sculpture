@@ -1,0 +1,202 @@
+{
+  "stock_top": [
+    111.5,
+    120.5,
+    74.5
+  ],
+  "nearest_cube_distance": 2.5,
+  "nearest_cubes": [
+    {
+      "voxel": [
+        111,
+        120,
+        77
+      ],
+      "distance": 2.5
+    },
+    {
+      "voxel": [
+        111,
+        119,
+        77
+      ],
+      "distance": 2.5495097567963922
+    },
+    {
+      "voxel": [
+        112,
+        120,
+        77
+      ],
+      "distance": 2.5495097567963922
+    },
+    {
+      "voxel": [
+        111,
+        121,
+        77
+      ],
+      "distance": 2.5495097567963922
+    },
+    {
+      "voxel": [
+        110,
+        120,
+        77
+      ],
+      "distance": 2.5495097567963922
+    },
+    {
+      "voxel": [
+        112,
+        119,
+        77
+      ],
+      "distance": 2.598076211353316
+    },
+    {
+      "voxel": [
+        110,
+        119,
+        77
+      ],
+      "distance": 2.598076211353316
+    },
+    {
+      "voxel": [
+        110,
+        121,
+        77
+      ],
+      "distance": 2.598076211353316
+    }
+  ],
+  "axis_sections": [
+    {
+      "z": 6,
+      "axis_point": [
+        133.12488213724464,
+        120.5,
+        6.0
+      ],
+      "nearest_static_cube": [
+        133,
+        120,
+        4
+      ],
+      "distance": 1.0
+    },
+    {
+      "z": 20,
+      "axis_point": [
+        128.74960712414878,
+        120.5,
+        20.0
+      ],
+      "nearest_static_cube": [
+        131,
+        120,
+        21
+      ],
+      "distance": 2.462573470108439
+    },
+    {
+      "z": 30,
+      "axis_point": [
+        125.62441068622316,
+        120.5,
+        30.0
+      ],
+      "nearest_static_cube": [
+        128,
+        120,
+        30
+      ],
+      "distance": 2.3755893137768425
+    },
+    {
+      "z": 40,
+      "axis_point": [
+        122.49921424829753,
+        120.5,
+        40.0
+      ],
+      "nearest_static_cube": [
+        125,
+        120,
+        40
+      ],
+      "distance": 2.500785751702466
+    },
+    {
+      "z": 52,
+      "axis_point": [
+        118.7489785227868,
+        120.5,
+        52.0
+      ],
+      "nearest_static_cube": [
+        121,
+        120,
+        53
+      ],
+      "distance": 2.4631479230600624
+    },
+    {
+      "z": 60,
+      "axis_point": [
+        116.24882137244632,
+        120.5,
+        60.0
+      ],
+      "nearest_static_cube": [
+        118,
+        120,
+        62
+      ],
+      "distance": 2.6583127328440512
+    },
+    {
+      "z": 70,
+      "axis_point": [
+        113.12362493452069,
+        120.5,
+        70.0
+      ],
+      "nearest_static_cube": [
+        116,
+        120,
+        70
+      ],
+      "distance": 2.8763750654793085
+    },
+    {
+      "z": 74.5,
+      "axis_point": [
+        111.71728653745416,
+        120.5,
+        74.5
+      ],
+      "nearest_static_cube": [
+        111,
+        120,
+        77
+      ],
+      "distance": 2.5
+    }
+  ],
+  "global_rudder_static_min_cube_gap": {
+    "distance": 1.0,
+    "rudder_voxel": [
+      111,
+      122,
+      68
+    ],
+    "static_voxel": [
+      109,
+      122,
+      68
+    ],
+    "method": "k8 nearest-center broad phase on unit axis-aligned grid; global min of resulting exact cube distances"
+  }
+}

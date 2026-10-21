@@ -1,0 +1,69 @@
+{
+  "scope": "TASK-0541 only; drawing and dimension provenance, not whole ship acceptance",
+  "base_plan_sha256": "736c7ac3117bad06bc6309abc914ff5aee445400bae47b1a0e4a0e4887ab2ced",
+  "generator_sha256": "0eb37ca75437b42ef4d53b0f21a76d017e89dff5798ca350ddfca3cf9e712d7d",
+  "revision": 10,
+  "generated_png_sha256": [
+    "f130a9aa6770bf7ca385bd251995d9a26406297d40b5d88b66c91cba8ea36e69",
+    "f130a9aa6770bf7ca385bd251995d9a26406297d40b5d88b66c91cba8ea36e69"
+  ],
+  "byte_stable": true,
+  "sections": 5,
+  "original_plan_changes": [
+    {
+      "field": "equipment.anchors.P.at",
+      "before": [
+        560.5,
+        88.5,
+        155.5
+      ],
+      "after": [
+        563.5,
+        88.5,
+        155.5
+      ]
+    },
+    {
+      "field": "equipment.anchors.S.at",
+      "before": [
+        560.5,
+        152.5,
+        155.5
+      ],
+      "after": [
+        563.5,
+        152.5,
+        155.5
+      ]
+    }
+  ],
+  "main_mast_events": [
+    {
+      "file": "231252_930_ca8bd2.json",
+      "sha256": "6fb607eb26f193e15b8fca30199dfbdd6e56bf8ae117e287a9d23f9f39d60b86"
+    }
+  ],
+  "main_mast_voxels": 17430,
+  "probe_from_pixel": [
+    1031,
+    248
+  ],
+  "quantized_probe": [
+    355.5,
+    120.5,
+    510.5
+  ],
+  "asset_z_shift": -3,
+  "nearest_before_after": [
+    0.0,
+    3.0
+  ],
+  "independent_design_beam_m": 13.4,
+  "hull_span_m": 52.0,
+  "limitations": [
+    "Mast-top pixel is quantized to the voxel centre; unquantized pixel rounding is not claimed exact.",
+    "Renderer source copied only to check deterministic design regeneration; independent checks do not trust its verify JSON.",
+    "Supplement plan does not change original plan.json or existing sculpture.",
+    "Full clean-stage ship rebuild and all-wind cloth contact are outside TASK-0541."
+  ]
+}

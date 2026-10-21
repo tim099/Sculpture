@@ -1,0 +1,822 @@
+{
+  "id": "sirius-tidegrave-01m",
+  "name": "潮墓號 / TIDEGRAVE",
+  "revision": 10,
+  "meters_per_voxel": 0.1,
+  "size": [
+    800,
+    241,
+    640
+  ],
+  "center_y": 120,
+  "hull": {
+    "stern_x": 100,
+    "bow_x": 620,
+    "beam_half": 67,
+    "waterline_z": 52,
+    "shell_thickness": 4,
+    "stern_rake": 40,
+    "bow_rake": 60,
+    "rake_height": 128,
+    "stations": [
+      [
+        0,
+        24
+      ],
+      [
+        0.1,
+        42
+      ],
+      [
+        0.2,
+        57
+      ],
+      [
+        0.35,
+        66
+      ],
+      [
+        0.5,
+        67
+      ],
+      [
+        0.65,
+        64
+      ],
+      [
+        0.8,
+        53
+      ],
+      [
+        0.9,
+        36
+      ],
+      [
+        0.97,
+        18
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "floor_base": 4,
+    "floor_end_rise": 18,
+    "bilge_height": 18,
+    "tumblehome_start": 55,
+    "tumblehome_per_z": 0.0035
+  },
+  "decks": [
+    {
+      "id": "lower",
+      "z": 65,
+      "x": [
+        100,
+        618
+      ]
+    },
+    {
+      "id": "upper",
+      "z": 90,
+      "x": [
+        100,
+        618
+      ]
+    },
+    {
+      "id": "weather",
+      "z": 115,
+      "x": [
+        100,
+        618
+      ]
+    },
+    {
+      "id": "quarter",
+      "z": 138,
+      "x": [
+        100,
+        240
+      ]
+    },
+    {
+      "id": "poop",
+      "z": 164,
+      "x": [
+        100,
+        180
+      ]
+    },
+    {
+      "id": "forecastle",
+      "z": 138,
+      "x": [
+        550,
+        618
+      ]
+    }
+  ],
+  "bulwark": {
+    "main_z": 128,
+    "stern_z": 186,
+    "bow_z": 150
+  },
+  "masts": [
+    {
+      "id": "mizzen",
+      "x": 205,
+      "deck_z": 138,
+      "top_z": 405,
+      "platform_z": 265
+    },
+    {
+      "id": "main",
+      "x": 355,
+      "deck_z": 115,
+      "top_z": 510,
+      "platform_z": 300
+    },
+    {
+      "id": "fore",
+      "x": 510,
+      "deck_z": 115,
+      "top_z": 465,
+      "platform_z": 280
+    }
+  ],
+  "bowsprit": {
+    "root": [
+      580,
+      120,
+      120
+    ],
+    "tip": [
+      748,
+      120,
+      195
+    ]
+  },
+  "rig_layout": {
+    "square_yards": [
+      [
+        "fore",
+        "course",
+        235,
+        180,
+        90
+      ],
+      [
+        "fore",
+        "topsail",
+        340,
+        150,
+        75
+      ],
+      [
+        "fore",
+        "topgallant",
+        420,
+        100,
+        65
+      ],
+      [
+        "main",
+        "course",
+        250,
+        210,
+        100
+      ],
+      [
+        "main",
+        "topsail",
+        375,
+        175,
+        90
+      ],
+      [
+        "main",
+        "topgallant",
+        460,
+        120,
+        65
+      ],
+      [
+        "mizzen",
+        "crossjack",
+        224,
+        110,
+        0
+      ],
+      [
+        "mizzen",
+        "topsail",
+        340,
+        90,
+        65
+      ]
+    ],
+    "rest_yaw_deg": -18,
+    "gaff": {
+      "pivot": [
+        205.5,
+        120.5,
+        230.5
+      ],
+      "top": [
+        155.5,
+        120.5,
+        315.5
+      ]
+    },
+    "boom": {
+      "pivot": [
+        205.5,
+        120.5,
+        205.5
+      ],
+      "end": [
+        125.5,
+        120.5,
+        205.5
+      ]
+    },
+    "crossjack_repair": "2026-10-14 lowered pivot31 cells to224.5: wood Z223..226, gaff229..317, boom204..207; continuous rotations about Z preserve separation. Extra2 cells also prevent game yardNear misbinding the gaff jaws to crossjack. Sheets and cloth require revalidation."
+  },
+  "rig_repair_20261015": {
+    "standing_feet": {
+      "mizzen": [
+        [
+          290,
+          86,
+          115
+        ],
+        [
+          310,
+          86,
+          115
+        ],
+        [
+          330,
+          86,
+          115
+        ]
+      ],
+      "main": [
+        [
+          245,
+          73,
+          128
+        ],
+        [
+          265,
+          71,
+          128
+        ],
+        [
+          285,
+          70,
+          128
+        ]
+      ],
+      "fore": [
+        [
+          390,
+          70,
+          128
+        ],
+        [
+          410,
+          71,
+          128
+        ],
+        [
+          430,
+          71,
+          128
+        ]
+      ]
+    },
+    "standing_feet_note": "P-side intended roots; S mirrors about cell y120. Fore final coordinates must match continued_20261015/standing_plan.json; source timber checked before writes.",
+    "lifts": {
+      "course": "own hounds-P/S",
+      "main_topsail": [
+        355,
+        118,
+        420
+      ],
+      "fore_topsail": [
+        510,
+        118,
+        380
+      ],
+      "topsail_note": "P-side, S mirror y240; existing mast timber"
+    },
+    "braces": {
+      "main-topsail": "mizzen/truck",
+      "main-topgallant": "mizzen/truck",
+      "fore-topsail": "main/head",
+      "fore-topgallant": "main/truck",
+      "mizzen-topsail": "main/hounds-P/S"
+    },
+    "backstay_heads": {
+      "mizzen": [
+        204,
+        120,
+        405
+      ],
+      "main": [
+        354,
+        120,
+        510
+      ],
+      "fore": [
+        509,
+        120,
+        465
+      ]
+    },
+    "backstay_feet": {
+      "mizzen": [
+        84,
+        70,
+        226
+      ]
+    },
+    "ratline_first_ratio": 0.065,
+    "mizzen_robbands": {
+      "source_x": 8,
+      "source_y": [
+        77,
+        163
+      ],
+      "source_z": 4,
+      "length_m": 0.4,
+      "free_clews_preserved": true
+    },
+    "dynamic_audit_repair": {
+      "mizzen_feet": "Real inboard weather-deck ties separate mizzen and main shrouds; rejected aft feet crossed gaff/boom, rejected rail feet crossed main shrouds.",
+      "mizzen_first_ratline_ratio": 0.065,
+      "jib": {
+        "tack": [
+          748.5,
+          120.5,
+          215.5
+        ],
+        "head_ring_cell": [
+          567,
+          120,
+          269
+        ],
+        "head_on_fore_stay_arc_ratio": 0.3,
+        "clew": [
+          600.5,
+          145.5,
+          190.5
+        ],
+        "free_clew_preserved": true
+      },
+      "lateen_sheet_fairlead": [
+        145,
+        86,
+        190
+      ],
+      "brackets": {
+        "x": 145,
+        "beam_z": [
+          185,
+          186
+        ],
+        "upright_z": [
+          187,
+          190
+        ],
+        "mirrored_y": [
+          86,
+          154
+        ],
+        "added_voxels": 56
+      },
+      "audit_status": "Ship geometry repairs checked; intact cloth physics still FAILS body/model/rope penetration. Do not sign full dynamic acceptance."
+    },
+    "method": "Original design decision: supported existing timber feet, adjacent-mast braces, retained parent ratlines, two short sail-head robbands. All mutations through CLI. Scripts are guarded repairs, not a full clean-stage constructor."
+  },
+  "guns": {
+    "broadside_per_deck_per_side": 12,
+    "x": [
+      175,
+      207,
+      239,
+      271,
+      303,
+      335,
+      367,
+      399,
+      431,
+      463,
+      495,
+      527
+    ],
+    "decks": [
+      65,
+      90
+    ],
+    "codes": [
+      "24l",
+      "24l"
+    ],
+    "ports_z_offset": [
+      5,
+      19
+    ],
+    "port_width": 16,
+    "bow_chase_count": 6,
+    "bow_chase_code": "18chase",
+    "rotating_triple_battery": false,
+    "chase_layout": {
+      "base_positions": [
+        [
+          585.5,
+          103.5,
+          119
+        ],
+        [
+          585.5,
+          92.5,
+          127
+        ],
+        [
+          585.5,
+          114.5,
+          127
+        ],
+        [
+          585.5,
+          137.5,
+          119
+        ],
+        [
+          585.5,
+          126.5,
+          127
+        ],
+        [
+          585.5,
+          148.5,
+          127
+        ]
+      ],
+      "yaw_deg": [
+        -90,
+        -90,
+        -90,
+        -90,
+        -90,
+        -90
+      ],
+      "source_pivots": {
+        "low": [
+          12.5,
+          0,
+          4
+        ],
+        "high": [
+          12.5,
+          0,
+          20
+        ]
+      },
+      "model_scale": 0.5,
+      "operator_platform": [
+        582,
+        602,
+        82,
+        158,
+        116
+      ],
+      "notes": "Final repair_chase_crew.py geometry: lower one/upper two per cluster, raised tube sources with wooden supports and wider crew spacing. Current-game fixture 2026-10-14 confirms all six satisfy crewMin; collision and muzzle rays are separate evidence."
+    }
+  },
+  "magazines": [
+    {
+      "id": "aft",
+      "x": [
+        240,
+        284
+      ],
+      "y": [
+        100,
+        140
+      ],
+      "z": [
+        30,
+        53
+      ],
+      "powder_lb": 2400,
+      "barrels": 24,
+      "door_clear_height_cells": 21
+    },
+    {
+      "id": "fore",
+      "x": [
+        440,
+        484
+      ],
+      "y": [
+        100,
+        140
+      ],
+      "z": [
+        30,
+        53
+      ],
+      "powder_lb": 2400,
+      "barrels": 24,
+      "door_clear_height_cells": 21
+    }
+  ],
+  "equipment": {
+    "anchors": {
+      "source": "basecamp-frigate-constitution-01m-anchor",
+      "scale": 1,
+      "pivot": [
+        23.5,
+        16.5,
+        56.5
+      ],
+      "P": {
+        "at": [
+          563.5,
+          88.5,
+          155.5
+        ],
+        "rotate": [
+          -20,
+          0,
+          0
+        ],
+        "hawse_cell": [
+          560,
+          94,
+          150
+        ]
+      },
+      "S": {
+        "at": [
+          563.5,
+          152.5,
+          155.5
+        ],
+        "rotate": [
+          20,
+          0,
+          0
+        ],
+        "hawse_cell": [
+          560,
+          146,
+          150
+        ]
+      },
+      "cable_diameter_cells": 0.7,
+      "note": "Original placement x580.5; historical import moved aft20 cells to560.5; final48-portlid fit moved forward3 cells to563.5. Both current poses are recorded above; hawse stays at560.5. Supported by local bow timber; no claimed new anchor mechanics."
+    },
+    "wheel": {
+      "at": [
+        198.5,
+        143.5,
+        139
+      ],
+      "pivot": [
+        50,
+        52,
+        0
+      ],
+      "scale": 0.2,
+      "kind": "wheel"
+    },
+    "binnacle": {
+      "at": [
+        215.5,
+        151.5,
+        139
+      ],
+      "pivot": [
+        9,
+        13,
+        0
+      ],
+      "scale": 0.2,
+      "kind": "binnacle"
+    },
+    "fairlead_posts": {
+      "symmetric_y_datum": 120,
+      "positions": [
+        [
+          490,
+          162,
+          128,
+          132
+        ],
+        [
+          335,
+          170,
+          128,
+          136
+        ],
+        [
+          510,
+          160,
+          128,
+          156
+        ],
+        [
+          185,
+          86,
+          150,
+          182
+        ]
+      ],
+      "notes": "One-cell rooted timber fairleads on both sides; routes checked separately from the post geometry."
+    },
+    "steering_route": {
+      "at": [
+        225.5,
+        106.5,
+        151.5
+      ],
+      "base_cell": [
+        225,
+        106,
+        138
+      ],
+      "mirror_base_cell": [
+        225,
+        134,
+        138
+      ],
+      "symmetric_fairlead_holes_cells": {
+        "quarter": 48,
+        "upper": 6,
+        "weather": 6
+      }
+    },
+    "flag_staff": {
+      "base_cell": [
+        105,
+        120,
+        208
+      ],
+      "top_cell": [
+        105,
+        120,
+        231
+      ],
+      "flag_corners": [
+        [
+          105.5,
+          120.5,
+          231.5
+        ],
+        [
+          75.5,
+          120.5,
+          231.5
+        ],
+        [
+          75.5,
+          120.5,
+          215.5
+        ],
+        [
+          105.5,
+          120.5,
+          215.5
+        ]
+      ]
+    },
+    "rudder_clearance": {
+      "guarded_removed_cells": 1318,
+      "angle_degrees": [
+        -30,
+        30
+      ],
+      "sample_step_degrees": 0.25,
+      "motion_envelope_cells": 0.095819,
+      "notes": "Independent hypothetical water-flood check unchanged; final replay and sweep audit required."
+    }
+  },
+  "appearance": {
+    "hull": "green-grey weathered wood",
+    "trim": "bone ivory",
+    "canvas": "aged ochre with transparent tears",
+    "stern": "three tier galleries, gothic arch, branching coral crown",
+    "bow": "open beakhead, paired horn teeth, two fixed triple clusters",
+    "personal": "a broken astrolabe carved into the stern arch, a tide mark through its empty centre"
+  },
+  "provenance": {
+    "historical_type": {
+      "kind": "reference",
+      "value": "17th-century northern European armed ship / fluyt-galleon visual family",
+      "sources": [
+        "https://d23.com/pirates-of-the-caribbean-flying-dutchman-models/",
+        "https://www.vasamuseet.se/en/visit/exhibitions/vasa-model",
+        "https://www.batavialand.nl/en/zien-en-doen/het-schip-batavia/vraag-en-antwoord/"
+      ]
+    },
+    "hull_dimensions": {
+      "kind": "design_decision",
+      "value": "52.0 m hull span; maximum nominal beam 13.4 m; design waterline 5.2 m above keel datum. Broader than Batavia ratios to support two gun decks and the game silhouette; no real stability certification."
+    },
+    "hull_lines": {
+      "kind": "design_decision",
+      "value": "Original smooth longitudinal width interpolation, rounded rising floor and tumblehome; not traced museum lines. Every station below is a new design coordinate."
+    },
+    "deck_heights": {
+      "kind": "design_decision",
+      "value": "2.5 m between full gun decks for game crew and cannon clearance; deliberately exceeds Vasa's cramped historical deck headroom."
+    },
+    "rig": {
+      "kind": "reference_and_design",
+      "value": "Three masts and ten historic sails are source context; final new rig will use fore/main square sails and a mizzen lateen-like visual adapted to supported gaff meta. Mast heights and stations are original."
+    },
+    "guns": {
+      "kind": "design_decision",
+      "value": "48 broadside guns and six fixed forward guns. 24l / 18chase are current supported game codes, not a claim about movie or Vasa calibres. Triple appearance has no new rotation mechanic."
+    },
+    "ornament": {
+      "kind": "visual_observation_and_design",
+      "value": "D23 miniature personally inspected: tall projecting stern, concentric galleries, gothic ribs, branching coral crest; bow close-up shows paired triangular three-barrel clusters and pointed rail fins. Astrolabe motif is Sirius's invention."
+    },
+    "waterline": {
+      "kind": "design_decision",
+      "value": "52 cells; pass explicitly as ship meta; tune ballast only after game hydrostatics measurement."
+    }
+  },
+  "service_access_20261016": {
+    "portals": {
+      "x": [
+        574,
+        581
+      ],
+      "y": [
+        [
+          94,
+          103
+        ],
+        [
+          137,
+          146
+        ]
+      ],
+      "z": [
+        117,
+        134
+      ]
+    },
+    "floor_z": [
+      115,
+      116
+    ],
+    "removed": 1152,
+    "added": 176,
+    "evidence": "service_access_20261016/geometry_report.json",
+    "actor_walking": "Original game shortcuts retained per Tim; foremast and hatch crossing out of scope."
+  },
+  "acceptance_20261021": {
+    "base_plan_sha256": "736c7ac3117bad06bc6309abc914ff5aee445400bae47b1a0e4a0e4887ab2ced",
+    "scope": "Stage-zero arrangement; not full dynamic or clean ship reconstruction acceptance.",
+    "changes": [
+      {
+        "field": "equipment.anchors.P.at",
+        "before": [
+          560.5,
+          88.5,
+          155.5
+        ],
+        "after": [
+          563.5,
+          88.5,
+          155.5
+        ]
+      },
+      {
+        "field": "equipment.anchors.S.at",
+        "before": [
+          560.5,
+          152.5,
+          155.5
+        ],
+        "after": [
+          563.5,
+          152.5,
+          155.5
+        ]
+      }
+    ],
+    "supplements": [
+      "../portlids_complete_20261019/README.md",
+      "../fittings_20261018/README.md"
+    ],
+    "source_boundary": "Original hull and rig dimensions; final anchor positions from CLI-confirmed assembly models; detailed equipment and portlids in their separate drawings."
+  }
+}

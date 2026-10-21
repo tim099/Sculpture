@@ -1,0 +1,78 @@
+{
+  "stage": "general",
+  "source": "original plan.json; coordinates are design decisions",
+  "stations": [
+    {
+      "t": 0,
+      "x": 100,
+      "half_width_at_dwl": 0.0,
+      "half_width_at_weather": 0.0
+    },
+    {
+      "t": 0.1,
+      "x": 152.0,
+      "half_width_at_dwl": 33.562,
+      "half_width_at_weather": 33.2653
+    },
+    {
+      "t": 0.2,
+      "x": 204.0,
+      "half_width_at_dwl": 52.1987,
+      "half_width_at_weather": 45.8687
+    },
+    {
+      "t": 0.35,
+      "x": 282.0,
+      "half_width_at_dwl": 65.1646,
+      "half_width_at_weather": 53.6379
+    },
+    {
+      "t": 0.5,
+      "x": 360.0,
+      "half_width_at_dwl": 66.3629,
+      "half_width_at_weather": 54.4691
+    },
+    {
+      "t": 0.65,
+      "x": 438.0,
+      "half_width_at_dwl": 61.1729,
+      "half_width_at_weather": 51.7624
+    },
+    {
+      "t": 0.8,
+      "x": 516.0,
+      "half_width_at_dwl": 43.2954,
+      "half_width_at_weather": 41.9996
+    },
+    {
+      "t": 0.9,
+      "x": 568.0,
+      "half_width_at_dwl": 18.409,
+      "half_width_at_weather": 27.18
+    },
+    {
+      "t": 0.97,
+      "x": 604.4,
+      "half_width_at_dwl": 0.0,
+      "half_width_at_weather": 9.394
+    },
+    {
+      "t": 1,
+      "x": 620,
+      "half_width_at_dwl": 0.0,
+      "half_width_at_weather": 0.0
+    }
+  ],
+  "dimensions_m": {
+    "hull_length": 52,
+    "nominal_beam": 13.4,
+    "dwl": 5.2,
+    "mast_top": 51
+  },
+  "pixel_control": {
+    "expected_z_cells": 510,
+    "pixel_read_z_cells": 510.1887,
+    "negative_control": "withdrawn: changing datum does not test asset perturbation; actual three-cell asset shift is checked in verify_skeleton.json"
+  },
+  "sha256_png": "1f6b0a0d66c17e1503e467612266ba4a66f69980511e350076e68b4eb30945a4"
+}
