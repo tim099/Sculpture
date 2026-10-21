@@ -43,6 +43,7 @@ def kept(work, fn, key, nm, meta):
     old = [x for x in json.load(open(f, encoding='utf-8')).get(key, []) if x['name'] == nm]
     om = (old[0].get('meta') or {}) if old else {}
     keep = {k: om[k] for k in KEEP if k in om and (k == 'id' or '-' in str(om[k]).split('#')[0] and '/' not in str(om[k]))}
+    if 'render' in om and 'render' not in (meta or {}): keep['render'] = om['render']      # 別人加的渲染方式照留（ame 2026-10-21：火藥桶 render=lathe）
     return dict(meta or {}, **keep) if keep else meta
 
 
