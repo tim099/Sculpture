@@ -219,6 +219,97 @@
 				"spin_k": 6,
 				"spin_mode": "rate"
 			}
+		},
+		{
+			"name": "機艙-主機",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kaguya-gloire-01m-engine",
+			"axes": "sculpt",
+			"at": [
+				404,
+				140,
+				10
+			],
+			"pivot": [
+				0,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "機艙：光榮號 主機（HRCR 臥式雙缸、直接驅動、2,500 ihp；0.1 m）（TASK-0793：關聯換成自帶格子的模型，ame 2026-10-21）",
+			"persona": "ame",
+			"created_at": "2026-10-21T19:34:37",
+			"meta": {
+				"cylinders": 2,
+				"engine": "direct",
+				"id": "engine-1",
+				"ihp": 2500,
+				"kind": "engine",
+				"kn": 13,
+				"kn_max": 13.5,
+				"maker": "FCM",
+				"material": "iron",
+				"nhp": 900,
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "機艙-鍋爐",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kaguya-gloire-01m-boilers",
+			"axes": "sculpt",
+			"at": [
+				541,
+				157,
+				12
+			],
+			"pivot": [
+				0,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "機艙：光榮號 鍋爐 8 座與煙道（0.1 m）（TASK-0793：關聯換成自帶格子的模型，ame 2026-10-21）",
+			"persona": "ame",
+			"created_at": "2026-10-21T19:34:39",
+			"meta": {
+				"boilers": 8,
+				"funnel": "funnel-1",
+				"id": "boiler-1",
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
+			}
 		}
 	]
 }

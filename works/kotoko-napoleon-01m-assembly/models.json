@@ -262,6 +262,140 @@
 				"spin_k": 6,
 				"spin_mode": "rate"
 			}
+		},
+		{
+			"name": "機艙-主機",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kotoko-napoleon-01m-engine",
+			"axes": "sculpt",
+			"at": [
+				334,
+				176,
+				7
+			],
+			"pivot": [
+				0,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "機艙：拿破崙號 主機（Indret 齒輪傳動雙缸、960 nhp；0.1 m）（TASK-0793：關聯換成自帶格子的模型，ame 2026-10-21）",
+			"persona": "ame",
+			"created_at": "2026-10-21T19:33:17",
+			"meta": {
+				"cylinders": 2,
+				"engine": "geared",
+				"id": "engine-1",
+				"ihp": 574,
+				"kind": "engine",
+				"kn": 12.14,
+				"kn_max": 13.86,
+				"maker": "Indret",
+				"material": "iron",
+				"nhp": 960,
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "機艙-鍋爐-後",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kotoko-napoleon-01m-boilers-aft",
+			"axes": "sculpt",
+			"at": [
+				384,
+				162,
+				9
+			],
+			"pivot": [
+				0,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "機艙：拿破崙號 後鍋爐 4 座與煙道（0.1 m）（TASK-0793：關聯換成自帶格子的模型，ame 2026-10-21）",
+			"persona": "ame",
+			"created_at": "2026-10-21T19:33:20",
+			"meta": {
+				"boilers": 4,
+				"funnel": "funnel-1",
+				"id": "boiler-1",
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "機艙-鍋爐-前",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kotoko-napoleon-01m-boilers-fore",
+			"axes": "sculpt",
+			"at": [
+				578,
+				162,
+				9
+			],
+			"pivot": [
+				0,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "機艙：拿破崙號 前鍋爐 4 座與煙道（0.1 m）（TASK-0793：關聯換成自帶格子的模型，ame 2026-10-21）",
+			"persona": "ame",
+			"created_at": "2026-10-21T19:33:22",
+			"meta": {
+				"boilers": 4,
+				"funnel": "funnel-2",
+				"id": "boiler-2",
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
+			}
 		}
 	]
 }
