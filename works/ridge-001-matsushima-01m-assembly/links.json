@@ -21,6 +21,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 61
 			}
@@ -47,6 +48,7 @@
 			"meta": {
 				"deck": "engine",
 				"floor": "462:5,712:5",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": -1,
 				"name": "機艙與鍋爐艙",
@@ -75,9 +77,10 @@
 			"meta": {
 				"deck": "lower",
 				"floor": "100:59,990:59",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 0,
-				"material": "iron",
+				"material": "iron_hull",
 				"name": "防護甲板",
 				"render": "voxel",
 				"thick": 5
@@ -105,6 +108,7 @@
 			"meta": {
 				"deck": "middle",
 				"floor": "26:85,983:85",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 1,
 				"name": "中甲板（12 cm 砲列）",
@@ -133,6 +137,7 @@
 			"meta": {
 				"deck": "upper",
 				"floor": "9:109,983:109",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 2,
 				"name": "上甲板（後甲板露天）",
@@ -161,6 +166,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "385:137,983:137",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 3,
 				"name": "船首樓甲板",
@@ -189,6 +195,7 @@
 			"meta": {
 				"deck": "bridge",
 				"floor": "662:167,690:167",
+				"id": "deck-6",
 				"kind": "deck",
 				"level": 4,
 				"name": "艦橋",
@@ -213,7 +220,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:36",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "欄杆",
@@ -233,7 +243,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:36",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "司令塔",
@@ -255,6 +268,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
+				"id": "part-3",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -277,7 +291,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:36",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "煙囪",
@@ -299,6 +316,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
+				"id": "funnel-1",
 				"kind": "funnel",
 				"material": "iron",
 				"render": "smooth"
@@ -325,7 +343,8 @@
 			"note": "",
 			"meta": {
 				"boilers": 3,
-				"funnel": "煙囪",
+				"funnel": "funnel-1",
+				"id": "boiler-1",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -352,7 +371,8 @@
 			"note": "",
 			"meta": {
 				"boilers": 3,
-				"funnel": "煙囪",
+				"funnel": "funnel-1",
+				"id": "boiler-2",
 				"kind": "boiler",
 				"material": "boiler",
 				"render": "smooth"
@@ -380,12 +400,13 @@
 			"meta": {
 				"cylinders": 3,
 				"engine": "direct",
+				"id": "engine-1",
 				"ihp": 2700,
 				"kind": "engine",
 				"kn": 15,
 				"kn_max": 16.5,
 				"material": "iron",
-				"propeller": "螺旋槳-S",
+				"propeller": "propeller-1",
 				"render": "smooth"
 			}
 		},
@@ -411,12 +432,13 @@
 			"meta": {
 				"cylinders": 3,
 				"engine": "direct",
+				"id": "engine-2",
 				"ihp": 2700,
 				"kind": "engine",
 				"kn": 15,
 				"kn_max": 16.5,
 				"material": "iron",
-				"propeller": "螺旋槳-P",
+				"propeller": "propeller-2",
 				"render": "smooth"
 			}
 		},
@@ -440,6 +462,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
+				"id": "shaft-1",
 				"kind": "shaft",
 				"material": "iron",
 				"render": "smooth"
@@ -465,6 +488,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
+				"id": "shaft-2",
 				"kind": "shaft",
 				"material": "iron",
 				"render": "smooth"
@@ -490,6 +514,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
+				"id": "part-5",
 				"material": "iron",
 				"render": "smooth"
 			}
@@ -512,7 +537,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:39",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "桅",
@@ -532,7 +560,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:40",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "通風筒",
@@ -552,7 +583,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:40",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "艇架",
@@ -572,7 +606,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:41",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-9"
+			}
 		},
 		{
 			"name": "彈藥庫-前",
@@ -594,7 +631,8 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"hoist": "梯子/lm-fwd,梯子/mu-fwd,梯子/uf-fwd,梯子/bridge-S",
+				"hoist": "ladders-1#lm-fwd,ladders-1#mu-fwd,ladders-1#uf-fwd,ladders-1#bridge-S",
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "fore",
 				"powder_lb": 1600
@@ -620,7 +658,8 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"hoist": "梯子/barbette,梯子/mu-aft",
+				"hoist": "ladders-1#barbette,ladders-1#mu-aft",
+				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 1600
@@ -644,7 +683,10 @@
 			"enabled": true,
 			"created_at": "2026-10-21T17:00:42",
 			"persona": "ridge-001",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-10"
+			}
 		},
 		{
 			"name": "梯子",
@@ -666,6 +708,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
+				"id": "ladders-1",
 				"kind": "ladders"
 			}
 		},
@@ -691,6 +734,7 @@
 			"meta": {
 				"arc": "-140,140",
 				"fire": "-139,139",
+				"id": "turret-1",
 				"kind": "turret",
 				"rate": 4
 			}

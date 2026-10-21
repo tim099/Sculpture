@@ -36,7 +36,20 @@ def listed(wid, fn, key):
     return [x['name'] for x in json.load(open(f, encoding='utf-8')).get(key, [])]
 
 
+KEEP = ('id', 'funnel', 'hoist', 'propeller')                             # Blockside `admin.py ids` 發的 id 與換成 id 寫法的指名鍵：重跑照留（meta= 是整份覆寫）；照 trailhead 定遠號的寫法
+
+
+def kept(work, fn, key, nm, meta):
+    f = os.path.join(WORKS, work, fn)
+    if not os.path.exists(f): return meta
+    old = [x for x in json.load(open(f, encoding='utf-8')).get(key, []) if x['name'] == nm]
+    om = (old[0].get('meta') or {}) if old else {}
+    keep = {k: om[k] for k in KEEP if k in om and (k == 'id' or '-' in str(om[k]).split('#')[0] and '/' not in str(om[k]))}
+    return dict(meta or {}, **keep) if keep else meta
+
+
 def link(work, nm, src, meta=None, at=(0, 0, 0), mirror='', turn=0):
+    meta = kept(work, 'links.json', 'links', nm, meta)
     a = [('op', 'work'), ('sub', 'link'), ('work', work), ('persona', PER), ('name', nm), ('source_work', src), ('at', '%d,%d,%d' % tuple(at))]
     if turn: a.append(('turn', str(turn)))
     if mirror: a.append(('mirror', mirror))
@@ -52,6 +65,7 @@ def anchor(work, nm, at):
 
 
 def model(work, nm, src, at, pivot, rot, sc, meta, mirror=''):
+    meta = kept(work, 'models.json', 'models', nm, meta)
     a = [('op', 'work'), ('sub', 'model'), ('work', work), ('persona', PER), ('name', nm), ('source_work', src),
          ('at', '%.2f,%.2f,%.2f' % tuple(at)), ('pivot', '%.2f,%.2f,%.2f' % tuple(pivot)), ('rotate', '%g,%g,%g' % tuple(rot)),
          ('scale', '%g,%g,%g' % ((sc,) * 3 if np.isscalar(sc) else tuple(sc))), ('meta', json.dumps(meta, ensure_ascii=False))]
@@ -75,7 +89,7 @@ IRON = {'material': 'iron', 'render': 'smooth'}
 zl, zm, zu, zf, zb = P['z_lower_deck'], P['z_middle_deck'], P['z_upper_deck'], P['z_fc_deck'], P['z_bridge']
 DECKS = {
     'engine': {'kind': 'deck', 'deck': 'engine', 'level': -1, 'name': '機艙與鍋爐艙', 'floor': '%d:5,%d:5' % (P['engine_room'][0], P['boiler_room'][1]), 'thick': 2},
-    'lower': {'kind': 'deck', 'deck': 'lower', 'level': 0, 'name': '防護甲板', 'floor': deck_floor(['deck-lower'], zl), 'thick': 5, 'material': 'iron', 'render': 'voxel'},
+    'lower': {'kind': 'deck', 'deck': 'lower', 'level': 0, 'name': '防護甲板', 'floor': deck_floor(['deck-lower'], zl), 'thick': 5, 'material': 'iron_hull', 'render': 'voxel'},   # iron_hull：格子厚約實船 4 倍（0.18 m 對 2 in），整片 iron 會重 1,703 t、全船超重 514 t
     'middle': {'kind': 'deck', 'deck': 'middle', 'level': 1, 'name': '中甲板（12 cm 砲列）', 'floor': deck_floor(['deck-middle'], zm), 'thick': 5},
     'upper': {'kind': 'deck', 'deck': 'upper', 'level': 2, 'name': '上甲板（後甲板露天）', 'floor': deck_floor(['deck-upper'], zu), 'thick': 5},
     'fc': {'kind': 'deck', 'deck': 'forecastle', 'level': 3, 'name': '船首樓甲板', 'floor': deck_floor(['deck-fc'], zf), 'thick': 5},
@@ -187,9 +201,9 @@ for nm, g in GUNS.items():
         meta.update({'mount': 'turret', 'arc': '-110,110' if g['deck'] == '桅' else '-120,120', 'rate': 40, 'safe': 1})
     model(DECKW[g['deck']], nm, src, g['at'], pv, [0, 0, g['rz']], sc, meta)
 BR = M['bridge']
-model(W + '-bridge', '舵輪', 'basecamp-frigate-constitution-01m-wheel', [BR['x0'] + 8.5, YC + 0.5, BR['z']], [50, 52, 0], [0, 0, 0], 0.2,
+model(W + '-bridge', '舵輪', 'basecamp-frigate-constitution-01m-wheel', [BR['x0'] + 13.5, YC + 0.5, BR['z']], [50, 52, 0], [0, 0, 0], 0.2,
       {'kind': 'wheel', 'spin': 'rudder', 'spin_k': 540, 'spin_lag': 0.6})
-model(W + '-bridge', '羅經櫃', 'basecamp-ember-01m-binnacle', [BR['x0'] + 18.5, YC + 0.5, BR['z']], [12, 23, 0], [0, 0, 0], 0.2, {'kind': 'binnacle'})
+model(W + '-bridge', '羅經櫃', 'basecamp-ember-01m-binnacle', [BR['x0'] + 23.5, YC + 0.5, BR['z']], [12, 23, 0], [0, 0, 0], 0.2, {'kind': 'binnacle'})
 BOATM = {'basecamp-ember-01m-boat': {'kind': 'boat', 'boat': 'cutter', 'length_m': 9}, 'basecamp-frigate-constitution-01m-whaleboat': {'kind': 'boat', 'boat': 'whaleboat', 'length_m': 8.5}}
 for nm, g in GUNS.items():
     if g['src'] in BOATM:

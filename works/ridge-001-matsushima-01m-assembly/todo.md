@@ -1,9 +1,11 @@
 # 松島號 TODO
 
 ## 交船前（遊戲那側）
-- [ ] 砲種表加四種 —— 改好在 Blockside worktree（分支 `ridge-001/matsushima-guns`，疊在 `trailhead/dingyuan-guns` 211d32f 上），**已提交 `f838c8a`**（Refs TASK-0780；沒合 dev、沒推）：`canet320`（`320c`：V 290、裝填 4.0、big、hole 2.2、砲班 8／5、66 t、450 kg、hpK 1）、`armstrong120`（`120a`：V 275、裝填 0.5、hole 1.0、6／3、2.1 t、20.4 kg）、`hotch57`（`h57`：V 235、0.35、0.55、3／2、0.37 t、2.72 kg）、`hotch47`（`h47`：V 230、0.3、0.45、2／1、0.24 t、1.5 kg）；每發傷害 dmg320c 920（上限 1200）、dmg120a 160、dmgh57 40、dmgh47 30（照「傷害 ∝ 彈重^0.57」）。初速照 trailhead 的換算（約 0.42 × m/s）、裝填與砲班是設計決定。對拍三組逐位元組相同。⇒ 合進 dev、推上去等 Tim 說（trailhead 那一筆要先合，或一起帶上）。
-- [ ] 正式匯入遊戲（`admin.py import --id matsushima --name 松島號`）、`admin.py ids`；暫存匯入的 shipcheck 已經 ✗ 0（notes.md）；`cfg.base` 15、全船材質（鋼）、geo（高度在 notes.md）。
-- [ ] 匯入檢查「火藥」那一行：前彈藥庫 hoist 四座梯子（中甲板、上甲板、船首樓、艦橋）、後彈藥庫兩座（露砲台、後甲板）—— 每門都走得到？
+- [ ] **合進 Blockside dev、推上去（等 Tim 說）**：分支 `ridge-001/matsushima-guns` 上有砲種表（f838c8a）、合 dev 74086d9、上船（ships[] matsushima、船檔、零件表）；trailhead 的 211d32f 已經在 dev 裡。合完再刪 worktree，`_cache/matsushima.vxk` 先複製進共用的 `_cache`。
+- [x] 砲種表加四種 —— 分支 `ridge-001/matsushima-guns`，**已提交 `f838c8a`**（Refs TASK-0780）：`canet320`（`320c`：V 290、裝填 4.0、big、hole 2.2、砲班 8／5、66 t、450 kg、hpK 1）、`armstrong120`（`120a`：V 275、裝填 0.5、hole 1.0、6／3、2.1 t、20.4 kg）、`hotch57`（`h57`：V 235、0.35、0.55、3／2、0.37 t、2.72 kg）、`hotch47`（`h47`：V 230、0.3、0.45、2／1、0.24 t、1.5 kg）；每發傷害 dmg320c 920（上限 1200）、dmg120a 160、dmgh57 40、dmgh47 30（照「傷害 ∝ 彈重^0.57」）。初速照 trailhead 的換算（約 0.42 × m/s）、裝填與砲班是設計決定。對拍三組逐位元組相同。
+- [x] 正式匯入遊戲（2026-10-21 晚上，在分支上）：`admin.py import`、`ids`、`parts`；cfg base 15、geo、防護甲板改 iron_hull ⇒ 浮在設計水線；匯入檢查 ✗ 0 ⚠ 3（notes.md「上船」）。
+- [x] 匯入檢查「火藥」那一行：23／27 門走得到取用點；沒走到的 4 門是兩層桅樓的 47 mm（走路格量不到、照直線送）。
+- [ ] ⚠ 剩 3 條：送藥手 12／13 站得下；露砲台的梯子上端落在轉盤（尋路不收 ⇒ 預備水手、傷員不走，第一人稱照樣爬）；旗沒有帆桁（「找不到桅」）。
 
 ## 之後可以細修
 - [ ] 12 cm 砲列的砲門蓋板（§9.12；共用 portlid 元件大小不合 ⇒ 做一件窄高的）
