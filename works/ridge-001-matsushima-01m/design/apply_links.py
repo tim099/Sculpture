@@ -89,7 +89,7 @@ IRON = {'material': 'iron', 'render': 'smooth'}
 zl, zm, zu, zf, zb = P['z_lower_deck'], P['z_middle_deck'], P['z_upper_deck'], P['z_fc_deck'], P['z_bridge']
 DECKS = {
     'engine': {'kind': 'deck', 'deck': 'engine', 'level': -1, 'name': '機艙與鍋爐艙', 'floor': '%d:5,%d:5' % (P['engine_room'][0], P['boiler_room'][1]), 'thick': 2},
-    'lower': {'kind': 'deck', 'deck': 'lower', 'level': 0, 'name': '防護甲板', 'floor': deck_floor(['deck-lower'], zl), 'thick': 5, 'material': 'iron_hull', 'render': 'voxel'},   # iron_hull：格子厚約實船 4 倍（0.18 m 對 2 in），整片 iron 會重 1,703 t、全船超重 514 t
+    'lower': {'kind': 'deck', 'deck': 'lower', 'level': 0, 'name': '防護甲板', 'floor': deck_floor(['deck-lower'], zl), 'thick': 5, 'material': 'iron*0.28', 'render': 'voxel'},   # 混合材質（厚度乘數）：格子厚約實船 4 倍（0.18 m 對 2 in）⇒ 鐵 28%；整片 iron 會重 1,703 t、全船超重 514 t
     'middle': {'kind': 'deck', 'deck': 'middle', 'level': 1, 'name': '中甲板（12 cm 砲列）', 'floor': deck_floor(['deck-middle'], zm), 'thick': 5},
     'upper': {'kind': 'deck', 'deck': 'upper', 'level': 2, 'name': '上甲板（後甲板露天）', 'floor': deck_floor(['deck-upper'], zu), 'thick': 5},
     'fc': {'kind': 'deck', 'deck': 'forecastle', 'level': 3, 'name': '船首樓甲板', 'floor': deck_floor(['deck-fc'], zf), 'thick': 5},
@@ -98,7 +98,7 @@ DECKS = {
 ENG = {'kind': 'engine', 'engine': 'direct', 'cylinders': 3, 'ihp': 2700, 'kn': 15, 'kn_max': 16.5, 'material': 'iron', 'render': 'smooth'}
 BOIL = {'kind': 'boiler', 'boilers': 3, 'funnel': '煙囪', 'material': 'boiler', 'render': 'smooth'}
 LINKS = [
-    ('船殼', W, {'kind': 'ship', 'waterline_z': M['plan']['z_waterline']}, ''),
+    ('船殼', W, {'kind': 'ship', 'waterline_z': M['plan']['z_waterline'], 'material': 'iron*0.15'}, ''),   # 鋼殼：2 格外板＝0.2 m，實船外板＋肋骨約 3 cm 鐵 ⇒ 鐵 15%（外觀照鐵：金屬、平滑）
     ('甲板-engine', W + '-floor', DECKS['engine'], ''),
     ('甲板-lower', W + '-deck-lower', DECKS['lower'], ''),
     ('甲板-middle', W + '-deck-middle', DECKS['middle'], ''),

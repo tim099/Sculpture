@@ -48,7 +48,7 @@ python -I -X utf8 -B mass.py <gen 輸出> [<Blockside game.json>] [部件=材質
 - ⚠ 剩下的：geo、`cfg.base`（遊戲那側填）；物件 id 與舊路徑寫法（正式匯入後跑 `admin.py ids` 就換）；露砲台的梯子上端落在轉盤（不是甲板）⇒ 尋路不收；有旗沒有帆桁 ⇒「找不到桅」；送藥手 12／13 站得下。
 - 🩸 桅樓的 47 mm 掛在 `桅` 底下 ⇒ 遊戲照關聯路徑分砲甲板，桅不是甲板 ⇒ 退到最下面那層（機艙）⇒ ✗「機艙找不到取用點」。改掛船首樓甲板 ⇒ 遊戲照那一層**最前面那門**砲的高度找站位，桅樓的砲比船首樓後端的 57 mm 靠前 ⇒ 整層照 30 m 高去找 ⇒ ✗ 換到船首樓。最後掛在 `艦橋` 底下（那一層最前面是兩翼的 37 mm）⇒ ✗ 0。
 
-## 上船（2026-10-21 晚上，Blockside 分支 `ridge-001/matsushima-guns`；沒合 dev、沒推）
+## 上船（2026-10-21 晚上；Blockside dev df97a68，已推測試站）
 
 - Tim「接著匯入松島號吧」⇒ 分支先合 dev 74086d9（只撞 index.html，照合併後的來源重建；船檔跟 dev 逐位元組相同）⇒ `admin.py import --work ridge-001-matsushima-01m-assembly --id matsushima --name 松島號`。
 - ships[] matsushima：drive steam；cfg pump 32、base 15、agile 0.7（同時代、同長度的雙軸蒸汽艦，照定遠號）；geo spar 136–175（陸戰隊找範圍裡最低那層 ⇒ 船首樓 137；軍官、舵手找最高那層 ⇒ 艦橋 167）、marines 394／117（船首樓 x 400–880）、center 120、aim 92（12 cm 砲列那一帶，海戰裡被打得最慘的地方）、aimZ 45–350、deckAim 85–140、rigAim 170–350；crew top 0（沒有帆）、marines 8（1894 年日本軍艦上沒有陸戰隊，當成甲板上拿槍的水兵）；names 只放松島號（嚴島、橋立的主砲在艏，不是這個模型）。
@@ -56,6 +56,11 @@ python -I -X utf8 -B mass.py <gen 輸出> [<Blockside game.json>] [部件=材質
 - 零件表 `admin.py parts`：砲多 armstrong120、canet320、hotch47、hotch57；舵 1 件、螺旋槳 2 件。
 - 匯入檢查 **✗ 0　⚠ 17 → 3**：送藥手 12／13 站得下；露砲台的梯子上端落在轉盤（尋路不收）；旗沒有帆桁（「找不到桅」）。
 - 🩸 重量（`design/mass.py`，照遊戲的材質表）：防護甲板整片 iron ⇒ 1,703 t，全船 4,844 t，比設計水線排水 4,330 t 重 514 t ⇒ 吃水深約 0.6 m。格子厚約實船 4 倍（0.18 m 對 2 in）⇒ 改 iron_hull（trailhead 加的混合層：比重 4.25、硬度 16.5）⇒ 928 t。格子 3,974 t ＋ 砲 95 t，遊戲自己補壓艙物 250 t ⇒ 開戰重量 4,321 t，浮在設計水線（浮高 0.014 m）。
+- 🩸 混合材質（同一晚，trailhead 的 matMix 進 dev 8e09310：`<材質>*<比例>` ＝ 厚度乘數、`+` 線性混合，外觀照第一個成分）：材質表拿掉了 iron_hull ⇒ dev 裡松島號的防護甲板**默默退回全船預設橡木**（量到：格子 3,199 t、壓艙物 1,025 t）。Tim 問「船殼以及其他金屬材質部分 是否可以用金屬外觀」⇒
+  - 船殼 `iron*0.15`（2 格外板 0.2 m ≈ 外板＋肋骨 3 cm 的鐵）：外觀照鐵 ⇒ 金屬、平滑渲染（556,373 格）；651 t（原本橡木 389 t）；硬度 4.8、pen 34.5（原本橡木 1）。
+  - 防護甲板 `iron*0.28`（2 in 對 0.18 m 的格子）：477 t、硬度 9、pen 64；照舊 render=voxel（船裡面，剖面才看得到）。
+  - 格子 3,784 t ＋ 砲 95 t，遊戲補壓艙物 450 t ⇒ 開戰 4,332 t、浮高 0.023 m。
+  - ⚠ 雕刻預覽（Senate SCP_SculptSmooth）照 ID 查 materials.json、不認混合寫法 ⇒ 雕刻那邊看不到船殼的金屬；遊戲照常。
 - 🩸 舵輪：遊戲讓舵手站在舵輪後面 3 格；舵輪原本在艦橋後緣往前 8.5 格 ⇒ 舵手踩出艦橋、掉進海圖室（z 137，比舵輪低 3 m）。而且舵輪本來就壓到艦橋後緣的欄杆（格心＋八角 11,376 點，擺砲那時沒量舵輪）。往前挪 5 格（舵輪 x 675.5、羅經櫃 685.5）⇒ 碰撞 0，舵手站在艦橋 z 167；反向對照：羅經櫃往下沉 1 格 ⇒ 42,912 點。
 - 站位（無頭 seed 3）：軍官 3 個在船首樓、1 個在艦橋；舵手 2 個在艦橋；陸戰隊 8 個沿右舷（7 個在船首樓、1 個在 57 mm 突出砲台）；船員 184。
 - 反向對照（別艘戰局不變；無頭 Chrome `#dump` sha1，跟 dev 74086d9 的成品比）：`?demo=120&seed=3` 24698c4543、`&ship=falcon,stormkaap` d4219da496、`&ship=monitor,virginia` 4281c14db8、`&ship=dingyuan,constitution` a5129e9391 —— 逐位元組相同。
@@ -73,7 +78,7 @@ python -I -X utf8 -B mass.py <gen 輸出> [<Blockside game.json>] [部件=材質
 | 船殼前後 | x 6（船尾端）… 997（衝角尖）；水線 x 66 … 989 |
 | 機器 | 5,400 ihp、設計 16.5 kn、實際約 15 kn（EN Wikipedia／Conway's；1894 年姊妹艦嚴島 12.8 kn、橋立 11 kn）⇒ `cfg.base` 建議 15；雙軸 105 rpm（`rpm_max` 105）、內旋 |
 | 船員 | 355（1893 年 11 月定員，《海軍制度沿革》） |
-| 全船材質 | 鋼殼 —— 船殼關聯沒寫 material（2 格厚的外板寫 iron 會重好幾千噸，寫 iron_hull 也重 1,975 t）⇒ 照全船預設；露砲台、砲罩、司令塔、煙囪、主機、軸寫了 iron＋smooth，鍋爐 boiler＋smooth，防護甲板 iron_hull＋voxel（上船時從 iron 改，見「上船」） |
+| 全船材質 | 鋼殼 —— 船殼 `iron*0.15`（混合材質的厚度乘數；整片 iron 會重好幾千噸）；露砲台、砲罩、司令塔、煙囪、主機、軸寫了 iron＋smooth，鍋爐 boiler＋smooth，防護甲板 `iron*0.28`＋voxel（見「上船」）；其他（甲板、上層建築、桅…）照全船預設 |
 
 - 砲種代碼：主砲 `320c`、12 cm `120a`、57 mm `h57`、47 mm `h47`、37 mm `h37`（定遠號那邊加的）。前四種加在 Blockside 分支 `ridge-001/matsushima-guns`（疊在 trailhead 的 `trailhead/dingyuan-guns` 211d32f 上；已提交 `f838c8a`，沒合 dev、沒推），數值見 todo；三組對拍改前改後逐位元組相同（ce24e896d1、cf5f8df569、4281c14db8）。
 - 主砲轉速 `rate` 4°／秒是設計決定（液壓，史料只說一發約 5 分鐘）。
