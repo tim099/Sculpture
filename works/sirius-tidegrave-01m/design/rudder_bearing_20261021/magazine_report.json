@@ -1,0 +1,910 @@
+{
+  "scope": "TASK-0549 first criterion: independent room enclosure, door height/frame, barrel inner-room containment and metadata. No whole-hull water or game test.",
+  "input_sha256": {
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230009_511_d5360c.json": "9dff5b0bdacd840bf0a29287dface11bb9b606f7987562c1c4a02c6b2d217ba5",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230011_231_5c90a8.json": "0890fc193c43fe7a5e49ccab129c497745ced1403bee1e6f2b3d98956334b6e7",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230133_765_4d916b.json": "e57c7feaa73722f2ceabc9dc4c2688bdfb685ec5a298f4135dd801dff7fb266c",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230136_710_bc4cb9.json": "77ab65980dc4ddb3583994492733bde47fdd046a886a2a7f60741b04fc75f644",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\230252_302_eb02ec.json": "5f3658598796880386d6b1cd4604225e66bf27b5629a28cd66145103510d65b0",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\231407_639_50eb5b.json": "0d2fbb803de0ed96249f76c3e0652084b43cb9c2a39b49ec84e64db4e494603e",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\232106_686_3a60a2.json": "c896775ecfda206a19a2d8f461f00bc656c6bf1ff9c508ce63ba92902295a6e3",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\232425_095_e7d450.json": "146ba50f8df15f9b739c6d0a91edb6f225cd6172ab9d07f1b8611be34aca3d80",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\233050_061_6e0cf8.json": "f23936e9f2647e5903c21e17bfadb35b13f6efa1f6df8649af501423f003fb52",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\233539_558_46c1b3.json": "9449ca7cabd8ed0673a6e2ac7689a95f9b92bdd029a400407ea317d91aaa2b45",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\234318_288_e593c9.json": "e8398fabe8fc21c5041dfe10a5864052ed432ed1473d67ff969a1d107878304f",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-13\\235111_741_1007d0.json": "a348d6abf5ad0c23ec2942910b0f91f322932aaf87d8ad2d5e10a54c50030989",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-14\\085620_206_47fc4a.json": "4283cb161021c2f3a07f261ce8b6ba33f583fc5fb58d0f4125360872a2c79157",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-14\\085935_966_ea42e4.json": "86442cd46860b050431b39df0477fdb5857bf14d7596946c483103e87e668f80",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-14\\162917_928_223286.json": "05d15f7582a82154f86786290ac6b5bf5d85109f8ccd557c8433e25e96b7a566",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-15\\084039_832_d88e68.json": "b97487385cfd71728cead1636ed70192ae5b2b5a8d86dac57e3d95cf60b0433c",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\events\\2026-10-16\\003513_759_fa5b96.json": "aa9dc3e81af60bfc4f7bed00610a9e02aa1720a140b0f8af25c4332a3c84e4a1",
+    "D:\\Unity\\Valhalla\\scratchpad\\sirius-tidegrave\\acceptance_20261021\\shared\\parts.json": "df61f69b49e636a4b866835b9194392567e2879e95051cb39d284ba11e929a93",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m\\design\\plan.json": "736c7ac3117bad06bc6309abc914ff5aee445400bae47b1a0e4a0e4887ab2ced",
+    "D:\\Unity\\Valhalla\\scratchpad\\sirius-tidegrave\\acceptance_20261021\\shared\\current.vxk": "ec4b54974425029f6b9bd78ef0fea55f80f5b5207b59c1c17e1353a9f751e2a3",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-aft\\events\\2026-10-13\\233015_164_c892ee.json": "d66d703fa477b46506e22660ffdcbcebce0d5d41e8a48bea32dcb152be0860ce",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-aft\\events\\2026-10-13\\235114_331_5b8ca6.json": "4c1a3b6e7409f382f59257b3f43ebab694e358afd8c18a22b9773b67ed3d3656",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-aft\\anchors.json": "beb02215859b0643b67e6d95a4e5c53e4068e483ceaa832873397e6dbfb21a7d",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-aft\\models.json": "afcf89ead1ee12bd09a37b40c970904908d3133df63b28691630f808ae4a6499",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-fore\\events\\2026-10-13\\233028_243_3a691d.json": "2f89c924fc719484b996f803f1a85e71c6fd9864e14cbed8bec0ccb9c25400f0",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-fore\\events\\2026-10-13\\235115_488_238f50.json": "09f8d47b5d3d1f3b13a1eeaf406632c003d76f846c9cd3a3123cc096d045ae60",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-fore\\anchors.json": "a8b0addcfc0a63ccb26734fdf18a76c66269ba4e880b9b3294a0e71ec9320ebe",
+    "D:\\Unity\\Valhalla\\Sculpture\\works\\sirius-tidegrave-01m-magazine-fore\\models.json": "b5a6dad3e57de69e9874ee86717ab531c8cbb4eceec34c85bcda61c7d50da510"
+  },
+  "magazines": [
+    {
+      "pos": "aft",
+      "work": "sirius-tidegrave-01m-magazine-aft",
+      "result_ledger": {
+        "expected": 12129,
+        "actual": 12129,
+        "missing": 0,
+        "extra": 0,
+        "color": 0
+      },
+      "room_outer_box_continuous": [
+        240,
+        100,
+        30,
+        285,
+        141,
+        54
+      ],
+      "tested_room_volume_voxels": 44280,
+      "room_volume_outside_or_intersecting_shell": 0,
+      "minimum_side_shell_bound_clearance_cells": 32,
+      "assembly_missing": 0,
+      "assembly_color_diff": 0,
+      "door": {
+        "width": 7,
+        "height": 21,
+        "wall_thickness": 2,
+        "world_x": [
+          283,
+          284
+        ],
+        "world_y": [
+          117,
+          123
+        ],
+        "world_z": [
+          32,
+          52
+        ],
+        "tested_opening_voxels": 294,
+        "source_blockers": 0,
+        "assembly_blockers": 0,
+        "frame_voxels": 112,
+        "frame_missing": 0,
+        "interior_probe_reachable_from_door": true,
+        "void_reachable_cells": 32151
+      },
+      "parts_meta": {
+        "id": "magazine-1",
+        "kind": "magazine",
+        "pos": "aft",
+        "powder_lb": 2400
+      },
+      "parts_points": {
+        "blast": [
+          262.5,
+          120.5,
+          40.5
+        ],
+        "door": [
+          284.5,
+          120.5,
+          32.5
+        ]
+      },
+      "source_anchors": [
+        {
+          "name": "blast",
+          "at": [
+            22,
+            20,
+            10
+          ],
+          "note": "",
+          "persona": "Sirius",
+          "created_at": "2026-10-13T23:30:16"
+        },
+        {
+          "name": "door",
+          "at": [
+            44,
+            20,
+            2
+          ],
+          "note": "",
+          "persona": "Sirius",
+          "created_at": "2026-10-13T23:30:16"
+        }
+      ],
+      "barrels": [
+        {
+          "name": "powder-01",
+          "box": [
+            244.3,
+            106.3,
+            32,
+            248.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-02",
+          "box": [
+            244.3,
+            112.3,
+            32,
+            248.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-03",
+          "box": [
+            244.3,
+            124.3,
+            32,
+            248.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-04",
+          "box": [
+            244.3,
+            130.3,
+            32,
+            248.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-05",
+          "box": [
+            250.3,
+            106.3,
+            32,
+            254.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-06",
+          "box": [
+            250.3,
+            112.3,
+            32,
+            254.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-07",
+          "box": [
+            250.3,
+            124.3,
+            32,
+            254.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-08",
+          "box": [
+            250.3,
+            130.3,
+            32,
+            254.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-09",
+          "box": [
+            256.3,
+            106.3,
+            32,
+            260.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-10",
+          "box": [
+            256.3,
+            112.3,
+            32,
+            260.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-11",
+          "box": [
+            256.3,
+            124.3,
+            32,
+            260.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-12",
+          "box": [
+            256.3,
+            130.3,
+            32,
+            260.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-13",
+          "box": [
+            262.3,
+            106.3,
+            32,
+            266.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-14",
+          "box": [
+            262.3,
+            112.3,
+            32,
+            266.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-15",
+          "box": [
+            262.3,
+            124.3,
+            32,
+            266.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-16",
+          "box": [
+            262.3,
+            130.3,
+            32,
+            266.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-17",
+          "box": [
+            268.3,
+            106.3,
+            32,
+            272.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-18",
+          "box": [
+            268.3,
+            112.3,
+            32,
+            272.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-19",
+          "box": [
+            268.3,
+            124.3,
+            32,
+            272.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-20",
+          "box": [
+            268.3,
+            130.3,
+            32,
+            272.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-21",
+          "box": [
+            274.3,
+            106.3,
+            32,
+            278.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-22",
+          "box": [
+            274.3,
+            112.3,
+            32,
+            278.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-23",
+          "box": [
+            274.3,
+            124.3,
+            32,
+            278.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-24",
+          "box": [
+            274.3,
+            130.3,
+            32,
+            278.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        }
+      ],
+      "powder_total_lb": 2400,
+      "negative_control": {
+        "memory_only_fill_one_top_door_voxel": [
+          44,
+          20,
+          22
+        ],
+        "same_opening_test_blockers": 1
+      }
+    },
+    {
+      "pos": "fore",
+      "work": "sirius-tidegrave-01m-magazine-fore",
+      "result_ledger": {
+        "expected": 12129,
+        "actual": 12129,
+        "missing": 0,
+        "extra": 0,
+        "color": 0
+      },
+      "room_outer_box_continuous": [
+        440,
+        100,
+        30,
+        485,
+        141,
+        54
+      ],
+      "tested_room_volume_voxels": 44280,
+      "room_volume_outside_or_intersecting_shell": 0,
+      "minimum_side_shell_bound_clearance_cells": 26,
+      "assembly_missing": 0,
+      "assembly_color_diff": 0,
+      "door": {
+        "width": 7,
+        "height": 21,
+        "wall_thickness": 2,
+        "world_x": [
+          483,
+          484
+        ],
+        "world_y": [
+          117,
+          123
+        ],
+        "world_z": [
+          32,
+          52
+        ],
+        "tested_opening_voxels": 294,
+        "source_blockers": 0,
+        "assembly_blockers": 0,
+        "frame_voxels": 112,
+        "frame_missing": 0,
+        "interior_probe_reachable_from_door": true,
+        "void_reachable_cells": 32151
+      },
+      "parts_meta": {
+        "id": "magazine-2",
+        "kind": "magazine",
+        "pos": "fore",
+        "powder_lb": 2400
+      },
+      "parts_points": {
+        "blast": [
+          462.5,
+          120.5,
+          40.5
+        ],
+        "door": [
+          484.5,
+          120.5,
+          32.5
+        ]
+      },
+      "source_anchors": [
+        {
+          "name": "blast",
+          "at": [
+            22,
+            20,
+            10
+          ],
+          "note": "",
+          "persona": "Sirius",
+          "created_at": "2026-10-13T23:30:29"
+        },
+        {
+          "name": "door",
+          "at": [
+            44,
+            20,
+            2
+          ],
+          "note": "",
+          "persona": "Sirius",
+          "created_at": "2026-10-13T23:30:29"
+        }
+      ],
+      "barrels": [
+        {
+          "name": "powder-01",
+          "box": [
+            444.3,
+            106.3,
+            32,
+            448.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-02",
+          "box": [
+            444.3,
+            112.3,
+            32,
+            448.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-03",
+          "box": [
+            444.3,
+            124.3,
+            32,
+            448.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-04",
+          "box": [
+            444.3,
+            130.3,
+            32,
+            448.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-05",
+          "box": [
+            450.3,
+            106.3,
+            32,
+            454.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-06",
+          "box": [
+            450.3,
+            112.3,
+            32,
+            454.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-07",
+          "box": [
+            450.3,
+            124.3,
+            32,
+            454.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-08",
+          "box": [
+            450.3,
+            130.3,
+            32,
+            454.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-09",
+          "box": [
+            456.3,
+            106.3,
+            32,
+            460.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-10",
+          "box": [
+            456.3,
+            112.3,
+            32,
+            460.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-11",
+          "box": [
+            456.3,
+            124.3,
+            32,
+            460.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-12",
+          "box": [
+            456.3,
+            130.3,
+            32,
+            460.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-13",
+          "box": [
+            462.3,
+            106.3,
+            32,
+            466.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-14",
+          "box": [
+            462.3,
+            112.3,
+            32,
+            466.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-15",
+          "box": [
+            462.3,
+            124.3,
+            32,
+            466.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-16",
+          "box": [
+            462.3,
+            130.3,
+            32,
+            466.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-17",
+          "box": [
+            468.3,
+            106.3,
+            32,
+            472.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-18",
+          "box": [
+            468.3,
+            112.3,
+            32,
+            472.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-19",
+          "box": [
+            468.3,
+            124.3,
+            32,
+            472.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-20",
+          "box": [
+            468.3,
+            130.3,
+            32,
+            472.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-21",
+          "box": [
+            474.3,
+            106.3,
+            32,
+            478.7,
+            110.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-22",
+          "box": [
+            474.3,
+            112.3,
+            32,
+            478.7,
+            116.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-23",
+          "box": [
+            474.3,
+            124.3,
+            32,
+            478.7,
+            128.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        },
+        {
+          "name": "powder-24",
+          "box": [
+            474.3,
+            130.3,
+            32,
+            478.7,
+            134.7,
+            37.4
+          ],
+          "powder_lb": 100,
+          "inside_room_inner_volume": true,
+          "state": "ok"
+        }
+      ],
+      "powder_total_lb": 2400,
+      "negative_control": {
+        "memory_only_fill_one_top_door_voxel": [
+          44,
+          20,
+          22
+        ],
+        "same_opening_test_blockers": 1
+      }
+    }
+  ],
+  "assets_modified": false
+}

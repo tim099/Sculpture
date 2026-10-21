@@ -1,0 +1,258 @@
+{
+  "proposal_sha256": "2f5b4c0b36f45dd957291d13d20fd61a6d63d64d2b9b7d9b273a11780b509f74",
+  "status": "proposal verified only; no actual work mutated",
+  "fixed_source_count": 4800,
+  "moving_source_count": 3528,
+  "source_components": [
+    1,
+    1
+  ],
+  "fixed_grid_contract_symmetric_diff": 0,
+  "moving_grid_contract_symmetric_diff": 0,
+  "transformed_axis_error": 1.2412670766236366e-16,
+  "axis_center_perpendicular_error": 1.5888218580782548e-14,
+  "s_at_source_z40": 80.4,
+  "fixed_s_range_actual": [
+    80.39999999999998,
+    82.0
+  ],
+  "moving_s_range_actual": [
+    76.39999999999999,
+    83.0
+  ],
+  "fixed_static_embed_voxels": [
+    [
+      110,
+      119,
+      77
+    ],
+    [
+      110,
+      121,
+      77
+    ],
+    [
+      111,
+      119,
+      77
+    ],
+    [
+      111,
+      121,
+      77
+    ]
+  ],
+  "fixed_embed_voxel_count": 4,
+  "moving_static_neutral_collision_pairs": 0,
+  "moving_original_rudder_overlap_pairs": 1482,
+  "moving_root_original_rudder_cells": [
+    [
+      110,
+      120,
+      75
+    ],
+    [
+      111,
+      120,
+      72
+    ],
+    [
+      111,
+      120,
+      73
+    ],
+    [
+      111,
+      120,
+      74
+    ],
+    [
+      111,
+      120,
+      75
+    ],
+    [
+      112,
+      120,
+      72
+    ],
+    [
+      112,
+      120,
+      73
+    ],
+    [
+      112,
+      120,
+      74
+    ]
+  ],
+  "original_rudder_count": 7428,
+  "original_rudder_max_axial_s": 80.29566657248138,
+  "original_fixed_full360_axial_gap": 0.10433342751859698,
+  "shaft_full360_radius": 0.4242640687119285,
+  "shaft_hole_full360_clearance": 0.07573593128807149,
+  "shoulder_bottom_s": 82.0,
+  "fixed_upper_surface_s": 82.0,
+  "contact_normal_vertical_component": 0.9544746399457206,
+  "guaranteed_contact_area_voxel2_full360": 0.9738937226128357,
+  "guaranteed_contact_area_m2_full360": 0.009738937226128357,
+  "retained_body_vs_full360_shaft_cylinder_candidates": 0,
+  "retained_body_vs_full360_collar_cylinder_candidates": 0,
+  "carve_count": 20,
+  "carve_guard_bad": [
+    [
+      108,
+      120,
+      78
+    ],
+    [
+      109,
+      119,
+      77
+    ],
+    [
+      109,
+      119,
+      78
+    ],
+    [
+      109,
+      120,
+      77
+    ],
+    [
+      109,
+      120,
+      78
+    ],
+    [
+      109,
+      120,
+      79
+    ],
+    [
+      109,
+      121,
+      77
+    ],
+    [
+      109,
+      121,
+      78
+    ],
+    [
+      110,
+      119,
+      78
+    ],
+    [
+      110,
+      120,
+      77
+    ],
+    [
+      110,
+      120,
+      78
+    ],
+    [
+      110,
+      120,
+      79
+    ],
+    [
+      110,
+      121,
+      78
+    ],
+    [
+      111,
+      119,
+      78
+    ],
+    [
+      111,
+      119,
+      79
+    ],
+    [
+      111,
+      120,
+      77
+    ],
+    [
+      111,
+      120,
+      78
+    ],
+    [
+      111,
+      120,
+      79
+    ],
+    [
+      111,
+      121,
+      78
+    ],
+    [
+      111,
+      121,
+      79
+    ]
+  ],
+  "carve_min_z": 77,
+  "new_parts_min_world_z": 72.83237486950757,
+  "underwater_changed_cells": 0,
+  "original_rudder_continuous_sweep": {
+    "poses": 246,
+    "domain_degrees": [
+      -30,
+      30
+    ],
+    "interval_step_degrees": 0.25,
+    "max_corner_radius": 43.69439433968459,
+    "corner_motion_half_interval_bound": 0.09532636183153735,
+    "expanded_SAT_possible_collisions": [],
+    "method": "240 interval midpoints plus adaptive bisection, exact endpoint SAT; expansion bounded by maximum source-corner displacement to nearest interval midpoint",
+    "interval_calls": 244,
+    "refinements": [
+      {
+        "left": -30.0,
+        "right": -29.75,
+        "depth": 0,
+        "candidates": 1
+      },
+      {
+        "left": 29.75,
+        "right": 30.0,
+        "depth": 0,
+        "candidates": 1
+      }
+    ],
+    "exact_collisions": [],
+    "unresolved_intervals": [],
+    "conservative_swept_bbox": [
+      [
+        90.78274006809929,
+        97.35224081291538,
+        5.462274775006837
+      ],
+      [
+        157.12033791105765,
+        143.64775918708463,
+        76.55185211407859
+      ]
+    ],
+    "static_region_filter_proven_sufficient": true
+  },
+  "negative_restored_cut_shaft_cylinder_candidates": 7,
+  "limits": "Contact is analytic ideal rigid geometry and axial gravity load path, not finite element strength/material stress. Fixed embeds are declared joints. Full360 certificate for NEW moving shaft/shoulder; existing rudder status depends on exact_collisions and unresolved_intervals; proof uses conservative interval enlargement. No runtime animation behavior certified.",
+  "other_model_parts_bbox_candidates": [],
+  "negative_remove_shoulders": {
+    "mutant_source_cells": 2376,
+    "support_contact_area": 0,
+    "reason": "remaining 0.6x0.6 shaft is fully inside 1x1 fixed hole, no shoulder rests on top face"
+  }
+}

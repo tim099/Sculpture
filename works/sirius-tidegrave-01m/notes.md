@@ -154,3 +154,6 @@ TASK-0546仍有model-aware新發現未結：main/fore course lift直拉桅head�
 
 
 TASK-0747（2026-10-19）：舷砲砲門已由30補齊48片。兩側船錨前移0.3m；lower02 house6，其餘既有30片與ID保留。船殼、海蝕飾條、10帆不變。新接續入口：主船 design/portlids_complete_20261019/README.md與complete.py；不要單跑舊tools/portlids.py draft/apply，會恢復排除18片。遊戲shipcheck錯誤0，砲門警告0，僅既有送藥手24/25警告。
+
+
+2026-10-21設備支承補件：舵原7428格與239原模型保留；新4800格固定環座及3528格活動短軸/止推肩，來源1cm、顯式scale.1。肩落在環座上承壓，4船格/8舵格為明示嵌接，20格原色109精準孔全在水線以上。±30度原舵保守區間掃掠與新件360度證明保存。實際匯出父代理逐格後驗只差20格，502繩10帆未變；遊戲26_spin窄測同軸同步，完整畫面未測。成品交付候選與證據design/rudder_bearing_20261021/README.md，尚未替換Blockside資產。0549可簽；0546/0540保留，0603已由Tim結單不等於動態全PASS。
