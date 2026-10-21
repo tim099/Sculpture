@@ -1,0 +1,52 @@
+{
+	"schema": 3,
+	"wind": [
+		-4,
+		1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "head",
+					"at": "桅/gaff-peak",
+					"pin": true
+				},
+				{
+					"name": "fly-top",
+					"at": "314,90.5,314.5",
+					"pin": false
+				},
+				{
+					"name": "fly-foot",
+					"at": "314,90.5,290.5",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "350.5,90.5,290.5",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#f8f8f6",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "",
+			"persona": "ridge-001",
+			"created_at": "2026-10-21T17:01:51",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"mast": "main"
+			}
+		}
+	]
+}

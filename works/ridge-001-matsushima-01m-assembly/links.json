@@ -1,0 +1,699 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "ridge-001-matsushima-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:33",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"kind": "ship",
+				"waterline_z": 61
+			}
+		},
+		{
+			"name": "甲板-engine",
+			"work": "ridge-001-matsushima-01m-floor",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:34",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "engine",
+				"floor": "462:5,712:5",
+				"kind": "deck",
+				"level": -1,
+				"name": "機艙與鍋爐艙",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-lower",
+			"work": "ridge-001-matsushima-01m-deck-lower",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:34",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "lower",
+				"floor": "100:59,990:59",
+				"kind": "deck",
+				"level": 0,
+				"material": "iron",
+				"name": "防護甲板",
+				"render": "voxel",
+				"thick": 5
+			}
+		},
+		{
+			"name": "甲板-middle",
+			"work": "ridge-001-matsushima-01m-deck-middle",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:34",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "middle",
+				"floor": "26:85,983:85",
+				"kind": "deck",
+				"level": 1,
+				"name": "中甲板（12 cm 砲列）",
+				"thick": 5
+			}
+		},
+		{
+			"name": "甲板-upper",
+			"work": "ridge-001-matsushima-01m-deck-upper",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:35",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "upper",
+				"floor": "9:109,983:109",
+				"kind": "deck",
+				"level": 2,
+				"name": "上甲板（後甲板露天）",
+				"thick": 5
+			}
+		},
+		{
+			"name": "甲板-fc",
+			"work": "ridge-001-matsushima-01m-deck-fc",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:35",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "forecastle",
+				"floor": "385:137,983:137",
+				"kind": "deck",
+				"level": 3,
+				"name": "船首樓甲板",
+				"thick": 5
+			}
+		},
+		{
+			"name": "艦橋",
+			"work": "ridge-001-matsushima-01m-bridge",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:35",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "bridge",
+				"floor": "662:167,690:167",
+				"kind": "deck",
+				"level": 4,
+				"name": "艦橋",
+				"thick": 2
+			}
+		},
+		{
+			"name": "上層建築",
+			"work": "ridge-001-matsushima-01m-superstructure",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:36",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "欄杆",
+			"work": "ridge-001-matsushima-01m-rails",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:36",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "司令塔",
+			"work": "ridge-001-matsushima-01m-conning",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:36",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "海圖室",
+			"work": "ridge-001-matsushima-01m-chart-house",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:36",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "煙囪",
+			"work": "ridge-001-matsushima-01m-funnel",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:37",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"kind": "funnel",
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "鍋爐",
+			"work": "ridge-001-matsushima-01m-boilers",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:37",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"boilers": 3,
+				"funnel": "煙囪",
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "鍋爐-鏡像",
+			"work": "ridge-001-matsushima-01m-boilers",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:37",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"boilers": 3,
+				"funnel": "煙囪",
+				"kind": "boiler",
+				"material": "boiler",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "主機",
+			"work": "ridge-001-matsushima-01m-engine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:38",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"cylinders": 3,
+				"engine": "direct",
+				"ihp": 2700,
+				"kind": "engine",
+				"kn": 15,
+				"kn_max": 16.5,
+				"material": "iron",
+				"propeller": "螺旋槳-S",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "主機-鏡像",
+			"work": "ridge-001-matsushima-01m-engine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:38",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"cylinders": 3,
+				"engine": "direct",
+				"ihp": 2700,
+				"kind": "engine",
+				"kn": 15,
+				"kn_max": 16.5,
+				"material": "iron",
+				"propeller": "螺旋槳-P",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "軸",
+			"work": "ridge-001-matsushima-01m-shaft",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:38",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"kind": "shaft",
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "軸-鏡像",
+			"work": "ridge-001-matsushima-01m-shaft",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:39",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"kind": "shaft",
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "露砲台",
+			"work": "ridge-001-matsushima-01m-barbette",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:39",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "露砲台撐柱",
+			"work": "ridge-001-matsushima-01m-barbette-posts",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:39",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "桅",
+			"work": "ridge-001-matsushima-01m-mast",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:40",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "通風筒",
+			"work": "ridge-001-matsushima-01m-vents",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:40",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "艇架",
+			"work": "ridge-001-matsushima-01m-skids",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:41",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "彈藥庫-前",
+			"work": "ridge-001-matsushima-01m-mag-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:41",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"hoist": "梯子/lm-fwd,梯子/mu-fwd,梯子/uf-fwd,梯子/bridge-S",
+				"kind": "magazine",
+				"pos": "fore",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "彈藥庫-後",
+			"work": "ridge-001-matsushima-01m-mag-aft",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:41",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"hoist": "梯子/barbette,梯子/mu-aft",
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "艙壁",
+			"work": "ridge-001-matsushima-01m-bulkheads",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:42",
+			"persona": "ridge-001",
+			"note": ""
+		},
+		{
+			"name": "梯子",
+			"work": "ridge-001-matsushima-01m-ladders",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:00:42",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "主砲塔",
+			"work": "ridge-001-matsushima-01m-turret-main",
+			"at": [
+				265,
+				50,
+				124
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				81,
+				81,
+				32
+			],
+			"enabled": true,
+			"created_at": "2026-10-21T17:01:19",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"arc": "-140,140",
+				"fire": "-139,139",
+				"kind": "turret",
+				"rate": 4
+			}
+		}
+	]
+}
