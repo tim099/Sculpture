@@ -482,9 +482,9 @@ def build():
     # 海圖室（飛橋甲板後端：白牆、窗、後門、灰頂）
     chh = P['chart_house']; cx0, cx1 = chh['x']; ch_ = chh['half']; chz = chh['h']
     Xg, Yg, Zg = g(cx0, cx1 + 1, YC - ch_, YC + ch_ + 1, WH1, WH1 + chz + 2)
-    shellc = ((Xg == cx0) | (Xg == cx1) | (np.abs(Yg - YC) == ch_)) & (Zg < WH1 + chz)
-    win = (Zg >= WH1 + 11) & (Zg <= WH1 + 16) & (((Xg.astype(int) - cx0) % 6 >= 2) & ((Xg.astype(int) - cx0) % 6 <= 4) | ((np.abs(Yg - YC).astype(int) % 6 >= 2) & (np.abs(Yg - YC).astype(int) % 6 <= 4) & (Xg == cx1)))
-    door = (Xg == cx0) & (np.abs(Yg - YC) <= 3) & (Zg < WH1 + 19)
+    shellc = ((Xg <= cx0 + 1) | (Xg >= cx1 - 1) | (np.abs(Yg - YC) >= ch_ - 1)) & (Zg < WH1 + chz)          # 牆 2 格厚（鐵、平滑面至少 2 格；Tim 2026-10-21「海圖室改成鐵的吧」）
+    win = (Zg >= WH1 + 11) & (Zg <= WH1 + 16) & (((Xg.astype(int) - cx0) % 6 >= 2) & ((Xg.astype(int) - cx0) % 6 <= 4) | ((np.abs(Yg - YC).astype(int) % 6 >= 2) & (np.abs(Yg - YC).astype(int) % 6 <= 4) & (Xg >= cx1 - 1)))
+    door = (Xg <= cx0 + 1) & (np.abs(Yg - YC) <= 3) & (Zg < WH1 + 19)
     roofc = (Zg >= WH1 + chz) & (Zg <= WH1 + chz + 1) & (np.abs(Yg - YC) <= ch_ + (Zg - WH1 - chz)) & (Xg >= cx0 - (Zg - WH1 - chz)) & (Xg <= cx1 + (Zg - WH1 - chz))
     claim('chart-house', (cx0, YC - ch_, WH1), roofc, C['grey'])
     claim('chart-house', (cx0, YC - ch_, WH1), shellc & ~win & ~door, C['white'])

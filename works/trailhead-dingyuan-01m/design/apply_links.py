@@ -113,7 +113,7 @@ LINKS = [
     ('上層建築', W + '-superstructure', None, ''),
     ('欄杆', W + '-rails', None, ''),
     ('司令塔', W + '-conning', IRON, ''),
-    ('海圖室', W + '-chart-house', None, ''),
+    ('海圖室', W + '-chart-house', {'material': 'iron_plate', 'render': 'smooth'}, ''),   # 鐵（薄鋼板，遊戲 matMap iron*0.125）＋平滑（Tim 2026-10-21「海圖室改成鐵的吧」）；牆 2 格厚
     ('煙囪-後', W + '-funnel-aft', dict(IRON, kind='funnel'), ''),
     ('煙囪-前', W + '-funnel-fwd', dict(IRON, kind='funnel'), ''),
     ('軸', W + '-shaft', dict(IRON, kind='shaft'), ''),
