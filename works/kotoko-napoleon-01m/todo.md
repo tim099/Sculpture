@@ -4,6 +4,7 @@
 - Tim 2026-10-21「605 全包 GO」⇒ 傘 TASK-0605（10／10 格）與子單 0606～0614、0625 全部 done；0615 早就 done。
 - 遊戲現況回讀（Blockside dev add56a9 的 git archive 副本，`admin.py shipcheck --id napoleon`）：✗ 0、⚠ 4（鍋爐頂四座梯子，照現狀）；2,066,478 格（橡木 1,741,296＋boiler 266,195＋iron 58,987）、砲 90／90 拿得到火藥、裝飾 8 個模型。
 - ✓ 砲門蓋板進遊戲了：Tim「妳自己匯進 dev GO」⇒ Blockside dev **e991baa**（kotoko 自己重匯＋ids 發 portlid-1～62，已推 dev 測試站；Sculpture fdf77e5 是寫回的 id）。shipcheck ✗ 0、⚠ 4（鍋爐頂梯子）、蓋板 62 片（P 31、S 31）。還沒發版到 main。
+- ✓ 船尾窗改成玻璃（階段十七，Tim「參考憲法號改成玻璃」）：Sculpture 07414dc；遊戲 Blockside dev c0fdfdd（已推 dev 測試站），shipcheck ✗ 0、glass 721 格；ids 發 part-11。⚠ 遊戲裡透明與反光**還沒親眼看過**（內建瀏覽器的鏡頭沒擺到船尾窗前）—— Tim 在測試站看一眼。
 
 ## 等遊戲那側（舊紀錄，2026-10-16～17；都已過去）
 - 十個階段都做完：船殼、砲門與塗裝、甲板梯子、船頭船尾與煙囪螺旋槳、桅與帆桁、索具與帆、砲 90 門、彈藥庫／舵／甲板零件／艙房／錨、匯出 vxk。
