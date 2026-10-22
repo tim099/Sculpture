@@ -10,7 +10,7 @@ TITLE = '聖伊琳娜教堂 1453（Hagia Irene，532 後重建、740 後再修�
 TITLE_SHORT = '聖伊琳娜教堂 1453'
 MPV = 0.4
 W, D, H = 48.0, 103.0, 37.0
-META = {'kind': 'building', 'use': 'hagia-irene', 'style': 'roman', 'lot': '48,103', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'hagia-irene', 'style': 'roman', 'lot': '48,103', 'base': 0, 'variant': 'a', 'lamps': 10}
 PARTS = (('body', 1, '主體（中殿、側廊、前廊、後殿）'), ('roof', 2, '屋頂（主穹頂、西跨穹窿、坡頂）'), ('atrium', 3, '中庭（單圈柱廊）'))
 PROV = {
     '本體約 57 × 32 m（不含中庭）；連中庭約 103 m': '參考資料：TBL；OSM relation 4742554',

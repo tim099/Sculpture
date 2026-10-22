@@ -9,7 +9,7 @@ TITLE = '柯拉修道院 1453（救主堂 Chora，Metochites 1315–21 的前廊
 TITLE_SHORT = '柯拉修道院 1453'
 MPV = 0.2
 W, D, H = 32.0, 37.0, 27.0
-META = {'kind': 'building', 'use': 'chora', 'style': 'roman', 'lot': '32,37', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'chora', 'style': 'roman', 'lot': '32,37', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（牆、前廊、側堂、鐘樓、後殿）'), ('roof', 2, '屋頂（六個穹頂、瓦、鐘樓頂）'))
 PROV = {
     '外前廊 23 × 4 m、內前廊 18 × 4 m': '參考資料：Wikipedia',

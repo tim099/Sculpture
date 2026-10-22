@@ -11,7 +11,7 @@ TITLE = '波菲羅根尼圖斯宮 1453（Palace of the Porphyrogenitus，Tekfur 
 TITLE_SHORT = '波菲羅根尼圖斯宮 1453'
 MPV = 0.2
 W, D, H = 32.0, 71.0, 28.0
-META = {'kind': 'building', 'use': 'tekfur-saray', 'style': 'roman', 'lot': '32,71', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'tekfur-saray', 'style': 'roman', 'lot': '32,71', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主樓（三層、陽台、托架小禮拜堂）'), ('roof', 2, '屋頂'), ('court', 3, '庭院（圍牆、門、西北的宅邸）'))
 PROV = {
     '主樓 24.5 × 11.8 m、三層、總高 > 25 m': '參考資料：OSM way 530509576（描線）；van Millingen 1899 ch.VII；Tafferner 1688；TBL',

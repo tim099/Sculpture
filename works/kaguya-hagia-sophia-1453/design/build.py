@@ -12,7 +12,8 @@ import sophia
 ROOT = 'kaguya-hagia-sophia-1453'
 PARTS = (('body', 1, 10, '主體（磚牆、扶壁墩、前廊、鐘樓、飛扶壁、穹頂基座、後殿；窗與門）'),
          ('roof', 2, 20, '屋頂（中央穹頂與 40 個窗間墩、半穹頂、壁龕、筒拱、後殿半穹頂、鉛皮屋面、鐘樓尖頂、十字）'),
-         ('annex', 3, 30, '附屬（中庭三面迴廊與噴泉、宗主教府、聖器室、洗禮堂）'))
+         ('annex', 3, 30, '附屬（中庭三面迴廊與噴泉、宗主教府、聖器室、洗禮堂）'),
+         ('glass', 4, 40, '窗玻璃（窗洞裡那一格；關聯 meta part=window、material=glass ⇒ Blocksail 近處畫成半透明、夜裡亮窗）'))
 
 
 def rgbc(c):
@@ -64,12 +65,13 @@ def main():
         man['works'][w] = {'order': order, 'title': '聖索菲亞 1453｜' + title, 'size': [Xn, Yn, Zn], 'tags': 'sub', 'mask': w + '.vox.txt', 'anchors': {}, 'links': []}
         ver[w] = {'cells': len(cells), 'md5': md5}
     dump(os.path.join(D, 'masks', ROOT + '.composite.txt'), allc)
-    meta_body = {'kind': 'building', 'use': 'hagia-sophia', 'style': 'roman', 'lot': '122,145', 'base': 0, 'variant': 'a'}   # 特殊建築（Blocksail world/town.js SPECIAL）
+    meta_body = {'kind': 'building', 'use': 'hagia-sophia', 'style': 'roman', 'lot': '122,145', 'base': 0, 'variant': 'a', 'lamps': 10}   # 特殊建築（Blocksail world/town.js SPECIAL）
     man['works'][ROOT] = {'order': 90, 'title': sophia.P['title'], 'size': [Xn, Yn, Zn], 'tags': 'building,roman', 'mask': None, 'expect': ROOT + '.composite.txt',
                           'anchors': {k: list(v) for k, v in anchors.items()},
                           'links': [{'name': '主體', 'source': ROOT + '-body', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': meta_body},
                                     {'name': '屋頂', 'source': ROOT + '-roof', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': {'part': 'roof'}},
-                                    {'name': '附屬', 'source': ROOT + '-annex', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': {'part': 'annex'}}]}
+                                    {'name': '附屬', 'source': ROOT + '-annex', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': {'part': 'annex'}},
+                                    {'name': '窗玻璃', 'source': ROOT + '-glass', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': {'part': 'window', 'material': 'glass'}}]}
     a = G > 0
     lab, n = ndimage.label(a)
     sizes = ndimage.sum(a, lab, range(1, n + 1))

@@ -11,6 +11,7 @@ from scipy import ndimage
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = 'kaguya-cpl-landmarks-1453'
+GLASS_PART = ('glass', 200, '窗玻璃', {'part': 'window', 'material': 'glass'})   # byz.GLASS_LAY；關聯 meta 照造船規格 §9.5 的玻璃＋窗部件 ⇒ Blocksail 匯入：近處畫成半透明、夜裡亮窗（BUILDING_SPEC §5.1）
 ORDER = ['column_constantine', 'column_arcadius', 'column_justinian', 'hagia_irene', 'chora', 'pammakaristos', 'pantokrator', 'little_hagia_sophia',
          'lips', 'myrelaion', 'kalenderhane', 'tekfur', 'cistern_aetius', 'cistern_aspar', 'cistern_mocius', 'holy_apostles', 'stoudios']
 
@@ -87,7 +88,7 @@ def main():
             del man['works'][w]
         allc = {}
         links = []
-        for i, pt in enumerate(lm.PARTS):
+        for i, pt in enumerate(tuple(lm.PARTS) + (GLASS_PART,)):        # 窗玻璃一律排最後（byz.finish 放進件號 GLASS_LAY；沒有窗 ⇒ 空的、不建）
             part, code, title = pt[:3]
             cells = cells_of(G, L == code); allc.update(cells)
             if not cells: continue                                   # 空的子作品不建（例：這一座的園子剛好沒有橄欖）

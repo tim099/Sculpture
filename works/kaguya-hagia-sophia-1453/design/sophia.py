@@ -13,7 +13,7 @@ NX = int(round((FY[1] - FY[0]) / MPV))          # 模型 x ＝ 北 → 南
 NY = int(round((FX[1] - FX[0]) / MPV + 0.49))   # 模型 y ＝ 西 → 東（145 / 0.4 ＝ 362.5 ⇒ 363）
 NZ = int(round(FZ / MPV))
 C = P['colors']
-BRICK, MARBLE, LEAD, GOLD, DARK, DOOR, TYMP = 1, 2, 3, 4, 5, 6, 7
+BRICK, MARBLE, LEAD, GOLD, DARK, DOOR, TYMP, GLASS = 1, 2, 3, 4, 5, 6, 7, 8
 BODY, ROOF, ANNEX = 1, 2, 3
 
 RX = (FX[0] + (np.arange(NY) + 0.5) * MPV)[None, :, None]
@@ -223,11 +223,12 @@ def build():
     sh = int(round(P['shell_m'] / MPV))
     keep = S & ((dist <= sh) | (full(RZ) < MPV))
     # 窗與門：最外一格挖掉、第二格上色
-    for lst, col in ((WIN, DARK), (DOORS, DOOR)):
+    for lst, col in ((WIN, GLASS), (DOORS, DOOR)):
         for wm in lst:
             wm = full(wm)
             keep[wm & (dist == 1)] = False
             MAT[wm & (dist == 2) & keep] = col
+            if col == GLASS: LAY[wm & (dist == 2) & keep] = 4     # 窗玻璃另成一件（build.py PARTS 的 glass：關聯 meta part=window、material=glass）
     keep &= MAT > 0
     G = np.zeros(SHAPE, np.uint8)
     # 上色：磚（灰縫一層一層、深淺雜一點）、大理石、鉛皮（穹頂照 40 根肋的經線接縫、其他照進深每 2.4 m 一道）
@@ -248,7 +249,7 @@ def build():
     a2 = np.degrees(np.arctan2(Yr, Xr / xs)); seam_d = (np.abs(np.angle(np.exp(1j * np.radians(a2) * Dm['n_win']))) < 0.25)
     seam = np.where(on_dome, seam_d, yy % 6 == 0)
     col[lb] = np.where(seam[lb], C['lead_seam'], C['lead'])
-    col[m == GOLD] = C['gold']; col[m == DARK] = C['dark']; col[m == DOOR] = C['door']
+    col[m == GOLD] = C['gold']; col[m == DARK] = C['dark']; col[m == GLASS] = C['glass']; col[m == DOOR] = C['door']
     G[zz, yy, xx] = col
     L = np.zeros(SHAPE, np.uint8); L[keep] = LAY[keep]
     anchors = {'lot-0': (0, 0, 0),

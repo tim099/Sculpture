@@ -10,7 +10,7 @@ TITLE = '利普斯修道院 1453（Lips，北堂 907 與南堂 1286–1304）'
 TITLE_SHORT = '利普斯修道院 1453'
 MPV = 0.2
 W, D, H = 30.0, 26.0, 20.0
-META = {'kind': 'building', 'use': 'lips', 'style': 'roman', 'lot': '30,26', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'lips', 'style': 'roman', 'lot': '30,26', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（兩座教堂、前廊、外迴廊、後殿）'), ('roof', 2, '屋頂（七個穹頂、瓦）'))
 PROV = {
     '北堂中殿 13 × 9.5 m、四柱十字、前廊 3 開間、屋頂 4 座小禮拜堂（西兩角、東 prothesis／diakonikon 上）': '參考資料：Wikipedia；TBL；van Millingen 1912',

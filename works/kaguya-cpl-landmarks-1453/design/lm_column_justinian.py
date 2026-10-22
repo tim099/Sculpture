@@ -9,7 +9,7 @@ TITLE = '查士丁尼騎像柱 1453（Column of Justinian，Augustaion，543；�
 TITLE_SHORT = '查士丁尼騎像柱 1453'
 MPV = 0.2
 W, D, H = 13.0, 13.0, 50.0
-META = {'kind': 'building', 'use': 'column-justinian', 'style': 'roman', 'lot': '13,13', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'column-justinian', 'style': 'roman', 'lot': '13,13', 'base': 0, 'variant': 'a', 'lamps': 4}
 PARTS = (('body', 1, '柱（七級台階、大理石基座、包銅柱身、柱頭）'), ('top', 2, '騎像（青銅）'))
 PROV = {
     '七級台階、大理石基座': '參考資料：Wikipedia（7 級台階、大理石基座）；寬、高是設計決定（底級 12 m、共 3 m；基座 5 × 4 m）',

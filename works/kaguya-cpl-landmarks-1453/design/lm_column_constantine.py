@@ -8,7 +8,7 @@ TITLE = '君士坦丁紀念柱 1453（Column of Constantine，330；Manuel I 的
 TITLE_SHORT = '君士坦丁紀念柱 1453'
 MPV = 0.2
 W, D, H = 12.0, 12.0, 41.0
-META = {'kind': 'building', 'use': 'column-constantine', 'style': 'roman', 'lot': '12,12', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'column-constantine', 'style': 'roman', 'lot': '12,12', 'base': 0, 'variant': 'a', 'lamps': 4}
 PARTS = (('body', 1, '柱（台階、白大理石基座、斑岩柱身、砌頂）'), ('top', 2, '十字架'))
 PROV = {
     '台階 5 級共 2 m、底級 11.25 m 見方、頂平台 8.35 m': '參考資料：TBL（5 級約 2 m、底級 11.25 m）；Vett 1929–30 量平台 8.35 m（Columbia MCID）',

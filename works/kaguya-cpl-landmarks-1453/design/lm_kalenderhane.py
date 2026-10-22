@@ -10,7 +10,7 @@ TITLE = '主座聖母教堂 1453（Theotokos Kyriotissa，Kalenderhane；12 世�
 TITLE_SHORT = '主座聖母教堂 1453'
 MPV = 0.2
 W, D, H = 20.0, 32.0, 25.0
-META = {'kind': 'building', 'use': 'kalenderhane', 'style': 'roman', 'lot': '20,32', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'kalenderhane', 'style': 'roman', 'lot': '20,32', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（十字臂、側廊與樓座、前廊、後殿）'), ('roof', 2, '屋頂（16 邊穹頂、筒拱屋面）'))
 PROV = {
     '十字形平面、四臂覆深筒形拱頂': '參考資料：Wikipedia',

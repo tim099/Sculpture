@@ -36,6 +36,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "32,37",
       "style": "roman",
       "use": "chora",
@@ -60,6 +61,22 @@
      "name": "屋頂",
      "recolor": {},
      "source": "kaguya-cpl-chora-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-chora-1453-glass",
      "turn": 0
     }
    ],
@@ -91,6 +108,22 @@
    ],
    "tags": "sub",
    "title": "柯拉修道院 1453｜主體（牆、前廊、側堂、鐘樓、後殿）"
+  },
+  "kaguya-cpl-chora-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-chora-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-chora-1453",
+   "product": "kaguya-cpl-chora-1453",
+   "size": [
+    160,
+    185,
+    135
+   ],
+   "tags": "sub",
+   "title": "柯拉修道院 1453｜窗玻璃"
   },
   "kaguya-cpl-chora-1453-roof": {
    "anchors": {},
@@ -133,6 +166,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 12,
       "lot": "85,244",
       "sink": 10.0,
       "style": "roman",
@@ -297,6 +331,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 12,
       "lot": "152,152",
       "sink": 8.0,
       "style": "roman",
@@ -357,6 +392,22 @@
      "recolor": {},
      "source": "kaguya-cpl-cistern-aspar-1453-trees-olive",
      "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-cistern-aspar-1453-glass",
+     "turn": 0
     }
    ],
    "mask": null,
@@ -403,6 +454,22 @@
    ],
    "tags": "sub",
    "title": "阿斯帕露天蓄水池 1453｜池底（畦田、果園的地、看守小屋）"
+  },
+  "kaguya-cpl-cistern-aspar-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-cistern-aspar-1453-glass.vox.txt",
+   "mpv": 0.4,
+   "order": 50,
+   "parent": "kaguya-cpl-cistern-aspar-1453",
+   "product": "kaguya-cpl-cistern-aspar-1453",
+   "size": [
+    380,
+    380,
+    33
+   ],
+   "tags": "sub",
+   "title": "阿斯帕露天蓄水池 1453｜窗玻璃"
   },
   "kaguya-cpl-cistern-aspar-1453-trees-fruit": {
    "anchors": {},
@@ -461,6 +528,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 12,
       "lot": "147,170",
       "sink": 9.0,
       "style": "roman",
@@ -630,6 +698,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 4,
       "lot": "10,10",
       "style": "roman",
       "use": "column-arcadius",
@@ -654,6 +723,22 @@
      "name": "空的雕像座與錐頂",
      "recolor": {},
      "source": "kaguya-cpl-column-arcadius-1453-top",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-column-arcadius-1453-glass",
      "turn": 0
     }
    ],
@@ -685,6 +770,22 @@
    ],
    "tags": "sub",
    "title": "阿卡狄烏斯紀念柱 1453｜柱（台階、浮雕基座、螺旋浮雕柱身、柱頭）"
+  },
+  "kaguya-cpl-column-arcadius-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-column-arcadius-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-column-arcadius-1453",
+   "product": "kaguya-cpl-column-arcadius-1453",
+   "size": [
+    50,
+    50,
+    250
+   ],
+   "tags": "sub",
+   "title": "阿卡狄烏斯紀念柱 1453｜窗玻璃"
   },
   "kaguya-cpl-column-arcadius-1453-top": {
    "anchors": {},
@@ -727,6 +828,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 4,
       "lot": "12,12",
       "style": "roman",
       "use": "column-constantine",
@@ -824,6 +926,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 4,
       "lot": "13,13",
       "style": "roman",
       "use": "column-justinian",
@@ -926,6 +1029,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 10,
       "lot": "48,103",
       "style": "roman",
       "use": "hagia-irene",
@@ -965,6 +1069,22 @@
      "name": "中庭",
      "recolor": {},
      "source": "kaguya-cpl-hagia-irene-1453-atrium",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-hagia-irene-1453-glass",
      "turn": 0
     }
    ],
@@ -1012,6 +1132,22 @@
    ],
    "tags": "sub",
    "title": "聖伊琳娜教堂 1453｜主體（中殿、側廊、前廊、後殿）"
+  },
+  "kaguya-cpl-hagia-irene-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hagia-irene-1453-glass.vox.txt",
+   "mpv": 0.4,
+   "order": 40,
+   "parent": "kaguya-cpl-hagia-irene-1453",
+   "product": "kaguya-cpl-hagia-irene-1453",
+   "size": [
+    120,
+    258,
+    93
+   ],
+   "tags": "sub",
+   "title": "聖伊琳娜教堂 1453｜窗玻璃"
   },
   "kaguya-cpl-hagia-irene-1453-roof": {
    "anchors": {},
@@ -1064,6 +1200,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 10,
       "lot": "56,112",
       "style": "roman",
       "use": "holy-apostles",
@@ -1103,6 +1240,22 @@
      "name": "中庭",
      "recolor": {},
      "source": "kaguya-cpl-holy-apostles-1453-atrium",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-holy-apostles-1453-glass",
      "turn": 0
     }
    ],
@@ -1151,6 +1304,22 @@
    "tags": "sub",
    "title": "聖使徒教堂 1453｜主體（四臂三廊、前廊、後殿、兩座陵）"
   },
+  "kaguya-cpl-holy-apostles-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-holy-apostles-1453-glass.vox.txt",
+   "mpv": 0.4,
+   "order": 40,
+   "parent": "kaguya-cpl-holy-apostles-1453",
+   "product": "kaguya-cpl-holy-apostles-1453",
+   "size": [
+    140,
+    280,
+    85
+   ],
+   "tags": "sub",
+   "title": "聖使徒教堂 1453｜窗玻璃"
+  },
   "kaguya-cpl-holy-apostles-1453-roof": {
    "anchors": {},
    "links": [],
@@ -1197,6 +1366,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "20,32",
       "style": "roman",
       "use": "kalenderhane",
@@ -1221,6 +1391,22 @@
      "name": "屋頂",
      "recolor": {},
      "source": "kaguya-cpl-kalenderhane-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-kalenderhane-1453-glass",
      "turn": 0
     }
    ],
@@ -1252,6 +1438,22 @@
    ],
    "tags": "sub",
    "title": "主座聖母教堂 1453｜主體（十字臂、側廊與樓座、前廊、後殿）"
+  },
+  "kaguya-cpl-kalenderhane-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-kalenderhane-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-kalenderhane-1453",
+   "product": "kaguya-cpl-kalenderhane-1453",
+   "size": [
+    100,
+    160,
+    125
+   ],
+   "tags": "sub",
+   "title": "主座聖母教堂 1453｜窗玻璃"
   },
   "kaguya-cpl-kalenderhane-1453-roof": {
    "anchors": {},
@@ -1299,6 +1501,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "30,26",
       "style": "roman",
       "use": "lips",
@@ -1323,6 +1526,22 @@
      "name": "屋頂",
      "recolor": {},
      "source": "kaguya-cpl-lips-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-lips-1453-glass",
      "turn": 0
     }
    ],
@@ -1354,6 +1573,22 @@
    ],
    "tags": "sub",
    "title": "利普斯修道院 1453｜主體（兩座教堂、前廊、外迴廊、後殿）"
+  },
+  "kaguya-cpl-lips-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-lips-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-lips-1453",
+   "product": "kaguya-cpl-lips-1453",
+   "size": [
+    150,
+    130,
+    100
+   ],
+   "tags": "sub",
+   "title": "利普斯修道院 1453｜窗玻璃"
   },
   "kaguya-cpl-lips-1453-roof": {
    "anchors": {},
@@ -1401,6 +1636,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "24,52",
       "style": "roman",
       "use": "little-hagia-sophia",
@@ -1440,6 +1676,22 @@
      "name": "中庭",
      "recolor": {},
      "source": "kaguya-cpl-little-hagia-sophia-1453-atrium",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-little-hagia-sophia-1453-glass",
      "turn": 0
     }
    ],
@@ -1488,6 +1740,22 @@
    "tags": "sub",
    "title": "小聖索菲亞 1453｜主體（方殿、前廊、後殿）"
   },
+  "kaguya-cpl-little-hagia-sophia-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-little-hagia-sophia-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-little-hagia-sophia-1453",
+   "product": "kaguya-cpl-little-hagia-sophia-1453",
+   "size": [
+    120,
+    260,
+    120
+   ],
+   "tags": "sub",
+   "title": "小聖索菲亞 1453｜窗玻璃"
+  },
   "kaguya-cpl-little-hagia-sophia-1453-roof": {
    "anchors": {},
    "links": [],
@@ -1534,6 +1802,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "12,18",
       "style": "roman",
       "use": "myrelaion",
@@ -1558,6 +1827,22 @@
      "name": "屋頂",
      "recolor": {},
      "source": "kaguya-cpl-myrelaion-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-myrelaion-1453-glass",
      "turn": 0
     }
    ],
@@ -1589,6 +1874,22 @@
    ],
    "tags": "sub",
    "title": "米雷萊昂教堂 1453｜主體（下層、上層教堂、前廊、扶壁、後殿）"
+  },
+  "kaguya-cpl-myrelaion-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-myrelaion-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-myrelaion-1453",
+   "product": "kaguya-cpl-myrelaion-1453",
+   "size": [
+    60,
+    90,
+    100
+   ],
+   "tags": "sub",
+   "title": "米雷萊昂教堂 1453｜窗玻璃"
   },
   "kaguya-cpl-myrelaion-1453-roof": {
    "anchors": {},
@@ -1636,6 +1937,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "26,34",
       "style": "roman",
       "use": "pammakaristos",
@@ -1660,6 +1962,22 @@
      "name": "屋頂",
      "recolor": {},
      "source": "kaguya-cpl-pammakaristos-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-pammakaristos-1453-glass",
      "turn": 0
     }
    ],
@@ -1691,6 +2009,22 @@
    ],
    "tags": "sub",
    "title": "至福聖母修道院 1453｜主體（主堂、迴廊、前廊、側堂、後殿）"
+  },
+  "kaguya-cpl-pammakaristos-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pammakaristos-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-pammakaristos-1453",
+   "product": "kaguya-cpl-pammakaristos-1453",
+   "size": [
+    130,
+    170,
+    120
+   ],
+   "tags": "sub",
+   "title": "至福聖母修道院 1453｜窗玻璃"
   },
   "kaguya-cpl-pammakaristos-1453-roof": {
    "anchors": {},
@@ -1738,6 +2072,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "59,31",
       "style": "roman",
       "use": "pantokrator",
@@ -1762,6 +2097,22 @@
      "name": "屋頂",
      "recolor": {},
      "source": "kaguya-cpl-pantokrator-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-pantokrator-1453-glass",
      "turn": 0
     }
    ],
@@ -1793,6 +2144,22 @@
    ],
    "tags": "sub",
    "title": "全能者修道院 1453｜主體（三座教堂、前廊、後殿）"
+  },
+  "kaguya-cpl-pantokrator-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pantokrator-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-pantokrator-1453",
+   "product": "kaguya-cpl-pantokrator-1453",
+   "size": [
+    295,
+    155,
+    140
+   ],
+   "tags": "sub",
+   "title": "全能者修道院 1453｜窗玻璃"
   },
   "kaguya-cpl-pantokrator-1453-roof": {
    "anchors": {},
@@ -1840,6 +2207,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "26,60",
       "style": "roman",
       "use": "stoudios",
@@ -1914,6 +2282,22 @@
      "recolor": {},
      "source": "kaguya-cpl-stoudios-1453-trees-plane",
      "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-stoudios-1453-glass",
+     "turn": 0
     }
    ],
    "mask": null,
@@ -1960,6 +2344,22 @@
    ],
    "tags": "sub",
    "title": "斯圖狄奧斯修道院 1453｜主體（巴西利卡、前廊、後殿）"
+  },
+  "kaguya-cpl-stoudios-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-stoudios-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 60,
+   "parent": "kaguya-cpl-stoudios-1453",
+   "product": "kaguya-cpl-stoudios-1453",
+   "size": [
+    130,
+    300,
+    100
+   ],
+   "tags": "sub",
+   "title": "斯圖狄奧斯修道院 1453｜窗玻璃"
   },
   "kaguya-cpl-stoudios-1453-roof": {
    "anchors": {},
@@ -2039,6 +2439,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 8,
       "lot": "32,71",
       "style": "roman",
       "use": "tekfur-saray",
@@ -2078,6 +2479,22 @@
      "name": "庭院",
      "recolor": {},
      "source": "kaguya-cpl-tekfur-1453-court",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-tekfur-1453-glass",
      "turn": 0
     }
    ],
@@ -2125,6 +2542,22 @@
    ],
    "tags": "sub",
    "title": "波菲羅根尼圖斯宮 1453｜庭院（圍牆、門、西北的宅邸）"
+  },
+  "kaguya-cpl-tekfur-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-tekfur-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-tekfur-1453",
+   "product": "kaguya-cpl-tekfur-1453",
+   "size": [
+    160,
+    355,
+    140
+   ],
+   "tags": "sub",
+   "title": "波菲羅根尼圖斯宮 1453｜窗玻璃"
   },
   "kaguya-cpl-tekfur-1453-roof": {
    "anchors": {},

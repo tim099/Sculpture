@@ -12,7 +12,7 @@ TITLE = '聖使徒教堂 1453（Holy Apostles，查士丁尼 536–550；五穹�
 TITLE_SHORT = '聖使徒教堂 1453'
 MPV = 0.4
 W, D, H = 56.0, 112.0, 34.0
-META = {'kind': 'building', 'use': 'holy-apostles', 'style': 'roman', 'lot': '56,112', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'holy-apostles', 'style': 'roman', 'lot': '56,112', 'base': 0, 'variant': 'a', 'lamps': 10}
 PARTS = (('body', 1, '主體（四臂三廊、前廊、後殿、兩座陵）'), ('roof', 2, '屋頂（五個穹頂、陵的穹頂、坡頂）'), ('atrium', 3, '中庭（柱廊）'))
 PROV = {
     '希臘十字、五穹頂、西臂較長、每臂三廊；正廳五門': '參考資料：Procopius、Mesarites、Constantine of Rhodes（經 Wikipedia、de.Wikipedia）',

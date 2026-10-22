@@ -9,7 +9,7 @@ TITLE = '至福聖母修道院 1453（Pammakaristos，主堂與 Glabas 側堂 13
 TITLE_SHORT = '至福聖母修道院 1453'
 MPV = 0.2
 W, D, H = 26.0, 34.0, 24.0
-META = {'kind': 'building', 'use': 'pammakaristos', 'style': 'roman', 'lot': '26,34', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'pammakaristos', 'style': 'roman', 'lot': '26,34', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（主堂、迴廊、前廊、側堂、後殿）'), ('roof', 2, '屋頂（穹頂、瓦）'))
 PROV = {
     '主堂穹頂高鼓座、24 瓣隔瓣開窗（12 窗）': '參考資料：van Millingen 1912；直徑約 6.4 m 是設計決定',

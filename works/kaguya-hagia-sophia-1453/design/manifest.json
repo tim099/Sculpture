@@ -36,6 +36,7 @@
      "meta": {
       "base": 0,
       "kind": "building",
+      "lamps": 10,
       "lot": "122,145",
       "style": "roman",
       "use": "hagia-sophia",
@@ -76,6 +77,22 @@
      "recolor": {},
      "source": "kaguya-hagia-sophia-1453-annex",
      "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-hagia-sophia-1453-glass",
+     "turn": 0
     }
    ],
    "mask": null,
@@ -113,6 +130,19 @@
    ],
    "tags": "sub",
    "title": "聖索菲亞 1453｜主體（磚牆、扶壁墩、前廊、鐘樓、飛扶壁、穹頂基座、後殿；窗與門）"
+  },
+  "kaguya-hagia-sophia-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-hagia-sophia-1453-glass.vox.txt",
+   "order": 40,
+   "size": [
+    305,
+    363,
+    152
+   ],
+   "tags": "sub",
+   "title": "聖索菲亞 1453｜窗玻璃（窗洞裡那一格；關聯 meta part=window、material=glass ⇒ Blocksail 近處畫成半透明、夜裡亮窗）"
   },
   "kaguya-hagia-sophia-1453-roof": {
    "anchors": {},

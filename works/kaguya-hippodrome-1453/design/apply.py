@@ -119,6 +119,10 @@ for w, W in sel:
             same_rest = c and (c.get('recolor') or '') == rc_s and (c.get('meta') or {}) == L['meta']
             if same_geo and same_rest:
                 continue
+            if same_geo and (c.get('recolor') or '') == rc_s:      # 只有 meta 不同 ⇒ sub=meta（重下同名關聯會被擋：要 overwrite=1）；合併進現有的、多的鍵給 null 刪
+                mm = dict(L['meta'], **{k: None for k in (c.get('meta') or {}) if k not in L['meta']})
+                cli(['op=work', 'sub=meta', 'persona=' + P, 'work=' + w, 'part=link', 'name=' + L['name'], 'meta=' + json.dumps(mm, ensure_ascii=False, sort_keys=True)])
+                continue
             args = ['op=work', 'sub=link', 'persona=' + P, 'work=' + w, 'name=' + L['name'], 'source_work=' + L['source'], 'at=' + fmt(L['at']), 'turn=%d' % L['turn']]
             if L['mirror']:
                 args.append('mirror=' + L['mirror'])

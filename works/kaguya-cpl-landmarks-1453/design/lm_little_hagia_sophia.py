@@ -11,7 +11,7 @@ TITLE = '小聖索菲亞 1453（聖塞爾吉烏斯與巴克斯教堂，527–536
 TITLE_SHORT = '小聖索菲亞 1453'
 MPV = 0.2
 W, D, H = 24.0, 52.0, 24.0
-META = {'kind': 'building', 'use': 'little-hagia-sophia', 'style': 'roman', 'lot': '24,52', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'little-hagia-sophia', 'style': 'roman', 'lot': '24,52', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（方殿、前廊、後殿）'), ('roof', 2, '屋頂（16 瓣穹頂、鉛皮）'), ('atrium', 3, '中庭（圍牆與柱廊）'))
 PROV = {
     '外框東西 30.8 × 南北 23.6 m（含前廊、不計牆龕）；內八角 16.3 × 15.4 m；墩高 10.2 m；樓座 6.1 m': '參考資料：van Millingen 1912（英尺實測）',

@@ -1,17 +1,18 @@
 # 君士坦丁堡地標 1453 的共用格子工具（TASK-0748）：照聖索菲亞 kaguya-hagia-sophia-1453/design/sophia.py 的做法抽出來 ——
 #   量體先當實心（公尺、模型框：x ＝ 從正面看左 → 右、y ＝ 進深 y 0 ＝ 正面、z 往上）⇒ 只留離「外面的空氣」shell 公尺內的格
-#   ⇒ 窗、門 ＝ 最外一格挖掉、第二格塗暗色（門是木色）。每一座地標一支 lm_<名>.py，用這裡的形狀拼。
+#   ⇒ 窗、門 ＝ 最外一格挖掉、第二格是窗玻璃（另成一件，件號 GLASS_LAY）／門板（木色）。每一座地標一支 lm_<名>.py，用這裡的形狀拼。
 # 決定論：numpy、沒有亂數（要殘破的照 random.Random(種子)）；同一份參數 ⇒ 逐格相同。
 import math
 import numpy as np
 from scipy import ndimage
 
 # 材質（MAT）：上色在 finish() 照材質 ＋ 位置雜湊做
-BRICK, STONE, BANDED, MARBLE, LEAD, TILE, DARK, DOOR, GOLD, PORPHYRY, GRANITE, GREEN, SOIL, PLASTER, TREE, WOOD, BRONZE = range(1, 18)
+BRICK, STONE, BANDED, MARBLE, LEAD, TILE, DARK, DOOR, GOLD, PORPHYRY, GRANITE, GREEN, SOIL, PLASTER, TREE, WOOD, BRONZE, GLASS = range(1, 19)
+GLASS_LAY = 200                       # 窗玻璃的件號：finish() 把窗的那一格放進這一件 ⇒ build.py 拆成子作品「窗玻璃」（關聯 meta part=window、material=glass；Blocksail BUILDING_SPEC §5.1）
 # 色號（8 位元 RRRGGGBB；磚、灰縫、大理石、鉛、暗、門、金跟聖索菲亞同一組）
 COL = {'brick': 168, 'brick_dark': 136, 'mortar': 205, 'stone': 182, 'stone_dark': 145, 'marble': 218, 'marble_2': 214,
        'lead': 146, 'lead_seam': 110, 'tile': 204, 'tile_dark': 172, 'dark': 36, 'door': 68, 'gold': 248,
-       'porphyry': 133, 'porphyry_2': 101, 'granite': 206, 'green': 76, 'green_2': 108, 'soil': 100, 'plaster': 250, 'tree': 44, 'wood': 104, 'bronze': 141}
+       'porphyry': 133, 'porphyry_2': 101, 'granite': 206, 'green': 76, 'green_2': 108, 'soil': 100, 'plaster': 250, 'tree': 44, 'wood': 104, 'bronze': 141, 'glass': 46}
 
 
 class Model:
@@ -159,11 +160,12 @@ class Model:
         dist = ndimage.distance_transform_cdt(~ext, metric='taxicab')[:-1, 1:-1, 1:-1]
         sh = max(2, int(round(shell_m / self.mpv)))
         keep = S & ((dist <= sh) | self.full(self.Z < self.mpv))
-        for lst, col in ((self.WIN, DARK), (self.DOORS, DOOR)):
+        for lst, col in ((self.WIN, GLASS), (self.DOORS, DOOR)):
             for wm in lst:
                 wm = self.full(wm)
                 keep[wm & (dist == 1)] = False
                 MAT[wm & (dist == 2) & keep] = col
+                if col == GLASS: self.LAY[wm & (dist == 2) & keep] = GLASS_LAY
         keep &= MAT > 0
         zz, yy, xx = np.nonzero(keep)
         h = (((xx.astype(np.int64) * 73856093) ^ (yy.astype(np.int64) * 19349663) ^ (zz.astype(np.int64) * 83492791) ^ (seed * 2654435761)) & 0xffff) / 65536.0
@@ -193,7 +195,7 @@ class Model:
         tb = m == TILE; col[tb] = np.where((zz[tb] % 2 == 0) & (h[tb] < 0.5), COL['tile_dark'], COL['tile'])
         pb = m == PORPHYRY; col[pb] = np.where(h[pb] < 0.3, COL['porphyry_2'], COL['porphyry'])
         gb = m == GREEN; col[gb] = np.where(h[gb] < 0.3, COL['green_2'], COL['green'])
-        for mat, name in ((DARK, 'dark'), (DOOR, 'door'), (GOLD, 'gold'), (GRANITE, 'granite'), (SOIL, 'soil'), (PLASTER, 'plaster'), (TREE, 'tree'), (WOOD, 'wood'), (BRONZE, 'bronze')):
+        for mat, name in ((DARK, 'dark'), (DOOR, 'door'), (GOLD, 'gold'), (GRANITE, 'granite'), (SOIL, 'soil'), (PLASTER, 'plaster'), (TREE, 'tree'), (WOOD, 'wood'), (BRONZE, 'bronze'), (GLASS, 'glass')):
             col[m == mat] = COL[name]
         G = np.zeros(self.shape, np.uint8)
         G[zz, yy, xx] = col

@@ -11,7 +11,7 @@ TITLE = '斯圖狄奧斯修道院 1453（St John of Stoudios，463；1290 年代
 TITLE_SHORT = '斯圖狄奧斯修道院 1453'
 MPV = 0.2
 W, D, H = 26.0, 60.0, 20.0
-META = {'kind': 'building', 'use': 'stoudios', 'style': 'roman', 'lot': '26,60', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'stoudios', 'style': 'roman', 'lot': '26,60', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（巴西利卡、前廊、後殿）'), ('roof', 2, '屋頂'), ('atrium', 3, '前庭（柱廊）'),
          ('trees-cypress', 4, '前庭的柏樹（遊戲換成生成式的柏樹）', {'kind': 'tree', 'tree': 'cypress'}), ('trees-plane', 5, '前庭中間的懸鈴木（遊戲換成生成式的懸鈴木）', {'kind': 'tree', 'tree': 'plane'}))
 PROV = {

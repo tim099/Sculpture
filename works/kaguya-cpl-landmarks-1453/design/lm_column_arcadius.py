@@ -9,7 +9,7 @@ TITLE = '阿卡狄烏斯紀念柱 1453（Column of Arcadius，Xerolophos；雕�
 TITLE_SHORT = '阿卡狄烏斯紀念柱 1453'
 MPV = 0.2
 W, D, H = 10.0, 10.0, 50.0
-META = {'kind': 'building', 'use': 'column-arcadius', 'style': 'roman', 'lot': '10,10', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'column-arcadius', 'style': 'roman', 'lot': '10,10', 'base': 0, 'variant': 'a', 'lamps': 4}
 PARTS = (('body', 1, '柱（台階、浮雕基座、螺旋浮雕柱身、柱頭）'), ('top', 2, '空的雕像座與錐頂'))
 PROV = {
     '台階 3 級共 2 m、基座 8 m 高、柱身連柱礎 31.92 m、雕像座 4 m': '參考資料：Wikipedia 引 Konrad 2001 p.370、Bauer 1996 p.208（照殘存部分重建）',

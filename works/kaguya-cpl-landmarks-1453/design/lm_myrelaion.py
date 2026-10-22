@@ -10,7 +10,7 @@ TITLE = '米雷萊昂教堂 1453（Myrelaion，Romanos I Lekapenos 的修道院�
 TITLE_SHORT = '米雷萊昂教堂 1453'
 MPV = 0.2
 W, D, H = 12.0, 18.0, 20.0
-META = {'kind': 'building', 'use': 'myrelaion', 'style': 'roman', 'lot': '12,18', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'myrelaion', 'style': 'roman', 'lot': '12,18', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（下層、上層教堂、前廊、扶壁、後殿）'), ('roof', 2, '屋頂（南瓜頂、瓦）'))
 PROV = {
     '方邊約 9 m、連前廊約 10 × 17 m': '參考資料：Wikipedia 引 Krautheimer 1986 p.403；TBL',

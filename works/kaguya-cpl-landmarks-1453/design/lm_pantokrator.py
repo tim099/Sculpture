@@ -10,7 +10,7 @@ TITLE = '全能者修道院 1453（Pantokrator，三座教堂與皇陵禮拜堂�
 TITLE_SHORT = '全能者修道院 1453'
 MPV = 0.2
 W, D, H = 59.0, 31.0, 28.0
-META = {'kind': 'building', 'use': 'pantokrator', 'style': 'roman', 'lot': '59,31', 'base': 0, 'variant': 'a'}
+META = {'kind': 'building', 'use': 'pantokrator', 'style': 'roman', 'lot': '59,31', 'base': 0, 'variant': 'a', 'lamps': 8}
 PARTS = (('body', 1, '主體（三座教堂、前廊、後殿）'), ('roof', 2, '屋頂（五個穹頂、瓦）'))
 PROV = {
     '南堂主穹頂 16 瓣 16 窗、約 7 m；前廊中央鼓座穹頂外 12 邊 12 窗；內外前廊各 5 開間': '參考資料：van Millingen 1912；直徑 serhatengul.com（弱）',

@@ -64,7 +64,7 @@ def main():
         man['works'][w] = {'order': order, 'title': '大競技場 1453｜' + title, 'size': [Xn, Yn, Zn], 'tags': 'sub', 'mask': w + '.vox.txt', 'anchors': {}, 'links': []}
         ver[w] = {'cells': len(cells), 'md5': md5}
     dump(os.path.join(D, 'masks', ROOT + '.composite.txt'), allc)
-    meta_body = {'kind': 'building', 'use': 'hippodrome', 'style': 'roman', 'lot': '130,450', 'base': 0, 'variant': 'a'}   # 特殊建築（Blocksail world/town.js SPECIAL）
+    meta_body = {'kind': 'building', 'use': 'hippodrome', 'style': 'roman', 'lot': '130,450', 'base': 0, 'variant': 'a', 'lamps': 20}   # 特殊建築（Blocksail world/town.js SPECIAL）
     man['works'][ROOT] = {'order': 90, 'title': hippo.P['title'], 'size': [Xn, Yn, Zn], 'tags': 'building,roman', 'mask': None, 'expect': ROOT + '.composite.txt',
                           'anchors': {k: list(v) for k, v in anchors.items()},
                           'links': [{'name': '看台', 'source': ROOT + '-stands', 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': meta_body},
