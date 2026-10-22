@@ -1,6 +1,145 @@
 {
  "root": "kaguya-cpl-landmarks-1453",
  "works": {
+  "kaguya-cpl-aqueduct-valens-1453": {
+   "anchors": {
+    "deck": [
+     21,
+     16,
+     145
+    ],
+    "wall-a": [
+     0,
+     16,
+     0
+    ],
+    "wall-b": [
+     41,
+     16,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-aqueduct-valens-1453.composite.txt",
+   "key": "aqueduct-valens",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": 29.2,
+      "kind": "wall",
+      "len": 8.4,
+      "part": "section",
+      "set": "aqueduct-valens",
+      "style": "roman",
+      "variant": "section"
+     },
+     "mirror": "",
+     "name": "斷面",
+     "recolor": {},
+     "source": "kaguya-cpl-aqueduct-valens-1453-body",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-aqueduct-valens-1453",
+   "size": [
+    42,
+    32,
+    146
+   ],
+   "tags": "building,roman",
+   "title": "瓦倫斯引水渠 1453｜斷面（Valens Aqueduct；一跨 8.4 m、上下兩層拱）"
+  },
+  "kaguya-cpl-aqueduct-valens-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-aqueduct-valens-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-aqueduct-valens-1453",
+   "product": "kaguya-cpl-aqueduct-valens-1453",
+   "size": [
+    42,
+    32,
+    146
+   ],
+   "tags": "sub",
+   "title": "瓦倫斯引水渠 1453｜斷面｜斷面（下層拱、上層拱、渠道）"
+  },
+  "kaguya-cpl-aqueduct-valens-end-1453": {
+   "anchors": {
+    "deck": [
+     10,
+     16,
+     145
+    ],
+    "wall-a": [
+     0,
+     16,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-aqueduct-valens-end-1453.composite.txt",
+   "key": "aqueduct-valens-end",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": 29.2,
+      "kind": "wall",
+      "len": 4.0,
+      "part": "end",
+      "set": "aqueduct-valens",
+      "style": "roman",
+      "variant": "end"
+     },
+     "mirror": "",
+     "name": "橋台",
+     "recolor": {},
+     "source": "kaguya-cpl-aqueduct-valens-end-1453-body",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-aqueduct-valens-end-1453",
+   "size": [
+    20,
+    32,
+    146
+   ],
+   "tags": "building,roman",
+   "title": "瓦倫斯引水渠 1453｜收尾（兩頭的橋台）"
+  },
+  "kaguya-cpl-aqueduct-valens-end-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-aqueduct-valens-end-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-aqueduct-valens-end-1453",
+   "product": "kaguya-cpl-aqueduct-valens-end-1453",
+   "size": [
+    20,
+    32,
+    146
+   ],
+   "tags": "sub",
+   "title": "瓦倫斯引水渠 1453｜收尾｜橋台（實心牆身、渠道）"
+  },
   "kaguya-cpl-chora-1453": {
    "anchors": {
     "bell": [

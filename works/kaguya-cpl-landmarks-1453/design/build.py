@@ -14,7 +14,8 @@ ROOT = 'kaguya-cpl-landmarks-1453'
 GLASS_PART = ('glass', 200, '窗玻璃', {'part': 'window', 'material': 'glass'})   # byz.GLASS_LAY；關聯 meta 照造船規格 §9.5 的玻璃＋窗部件 ⇒ Blocksail 匯入：近處畫成半透明、夜裡亮窗（BUILDING_SPEC §5.1）
 ORDER = ['column_constantine', 'column_arcadius', 'column_justinian', 'hagia_irene', 'chora', 'pammakaristos', 'pantokrator', 'little_hagia_sophia',
          'lips', 'myrelaion', 'kalenderhane', 'tekfur', 'cistern_aetius', 'cistern_aspar', 'cistern_mocius', 'holy_apostles', 'stoudios',
-         'column_marcian', 'column_goths', 'pantepoptes', 'vefa', 'mouchliotissa', 'gul', 'san_domenico', 'palazzo_comune']
+         'column_marcian', 'column_goths', 'pantepoptes', 'vefa', 'mouchliotissa', 'gul', 'san_domenico', 'palazzo_comune',
+         'aqueduct', 'aqueduct_end']
 
 
 def rgbc(c):
