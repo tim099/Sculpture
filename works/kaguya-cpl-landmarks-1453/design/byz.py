@@ -91,6 +91,13 @@ class Model:
             m = self.ngon(cx, y0, r, n, z0, z1, rot=-90 - 180.0 / n * (facets % 2 == 0)) & (self.Y < y0)
         return m
 
+    def apse_x(self, x0, cy, r, facets, z0, z1, toward='+x'):
+        """往 ±x 凸出的後殿（四葉形教堂的南北兩臂）：同 apse，圓心 (x0, cy)。"""
+        n = facets * 2
+        if toward == '+x':
+            return self.ngon(x0, cy, r, n, z0, z1, rot=0 - 180.0 / n * (facets % 2 == 0)) & (self.X >= x0)
+        return self.ngon(x0, cy, r, n, z0, z1, rot=180 - 180.0 / n * (facets % 2 == 0)) & (self.X < x0)
+
     def gable(self, x0, x1, y0, y1, z, rise, axis='y'):
         """雙坡屋頂：屋脊沿 axis；z ＝ 簷口高、rise ＝ 屋脊比簷口高幾公尺。"""
         if axis == 'y':
