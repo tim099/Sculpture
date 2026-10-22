@@ -1,0 +1,1882 @@
+{
+ "root": "kaguya-cpl-landmarks-1453",
+ "works": {
+  "kaguya-cpl-chora-1453": {
+   "anchors": {
+    "bell": [
+     150,
+     10,
+     70
+    ],
+    "dome-top": [
+     70,
+     82,
+     115
+    ],
+    "door": [
+     80,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-chora-1453.composite.txt",
+   "key": "chora",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "32,37",
+      "style": "roman",
+      "use": "chora",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-chora-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-chora-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-chora-1453",
+   "size": [
+    160,
+    185,
+    135
+   ],
+   "tags": "building,roman",
+   "title": "柯拉修道院 1453（救主堂 Chora，Metochites 1315–21 的前廊與側堂）"
+  },
+  "kaguya-cpl-chora-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-chora-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-chora-1453",
+   "product": "kaguya-cpl-chora-1453",
+   "size": [
+    160,
+    185,
+    135
+   ],
+   "tags": "sub",
+   "title": "柯拉修道院 1453｜主體（牆、前廊、側堂、鐘樓、後殿）"
+  },
+  "kaguya-cpl-chora-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-chora-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-chora-1453",
+   "product": "kaguya-cpl-chora-1453",
+   "size": [
+    160,
+    185,
+    135
+   ],
+   "tags": "sub",
+   "title": "柯拉修道院 1453｜屋頂（六個穹頂、瓦、鐘樓頂）"
+  },
+  "kaguya-cpl-cistern-aetius-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "rim": [
+     106,
+     1,
+     25
+    ]
+   },
+   "expect": "kaguya-cpl-cistern-aetius-1453.composite.txt",
+   "key": "cistern-aetius",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "85,244",
+      "sink": 10.0,
+      "style": "roman",
+      "use": "cistern-aetius",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "池牆",
+     "recolor": {},
+     "source": "kaguya-cpl-cistern-aetius-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "garden"
+     },
+     "mirror": "",
+     "name": "池底",
+     "recolor": {},
+     "source": "kaguya-cpl-cistern-aetius-1453-garden",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-cistern-aetius-1453",
+   "size": [
+    212,
+    610,
+    30
+   ],
+   "tags": "building,roman",
+   "title": "艾提烏斯露天蓄水池 1453（Cistern of Aetius，約 421；池底是菜園與果園）"
+  },
+  "kaguya-cpl-cistern-aetius-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-cistern-aetius-1453-body.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-cistern-aetius-1453",
+   "product": "kaguya-cpl-cistern-aetius-1453",
+   "size": [
+    212,
+    610,
+    30
+   ],
+   "tags": "sub",
+   "title": "艾提烏斯露天蓄水池 1453｜池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）"
+  },
+  "kaguya-cpl-cistern-aetius-1453-garden": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-cistern-aetius-1453-garden.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-cistern-aetius-1453",
+   "product": "kaguya-cpl-cistern-aetius-1453",
+   "size": [
+    212,
+    610,
+    30
+   ],
+   "tags": "sub",
+   "title": "艾提烏斯露天蓄水池 1453｜池底（畦田、果園、看守小屋）"
+  },
+  "kaguya-cpl-cistern-aspar-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "rim": [
+     190,
+     1,
+     20
+    ]
+   },
+   "expect": "kaguya-cpl-cistern-aspar-1453.composite.txt",
+   "key": "cistern-aspar",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "152,152",
+      "sink": 8.0,
+      "style": "roman",
+      "use": "cistern-aspar",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "池牆",
+     "recolor": {},
+     "source": "kaguya-cpl-cistern-aspar-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "garden"
+     },
+     "mirror": "",
+     "name": "池底",
+     "recolor": {},
+     "source": "kaguya-cpl-cistern-aspar-1453-garden",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-cistern-aspar-1453",
+   "size": [
+    380,
+    380,
+    33
+   ],
+   "tags": "building,roman",
+   "title": "阿斯帕露天蓄水池 1453（Cistern of Aspar，459 起；池底是菜園與果園）"
+  },
+  "kaguya-cpl-cistern-aspar-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-cistern-aspar-1453-body.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-cistern-aspar-1453",
+   "product": "kaguya-cpl-cistern-aspar-1453",
+   "size": [
+    380,
+    380,
+    33
+   ],
+   "tags": "sub",
+   "title": "阿斯帕露天蓄水池 1453｜池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）"
+  },
+  "kaguya-cpl-cistern-aspar-1453-garden": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-cistern-aspar-1453-garden.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-cistern-aspar-1453",
+   "product": "kaguya-cpl-cistern-aspar-1453",
+   "size": [
+    380,
+    380,
+    33
+   ],
+   "tags": "sub",
+   "title": "阿斯帕露天蓄水池 1453｜池底（畦田、果園、看守小屋）"
+  },
+  "kaguya-cpl-cistern-mocius-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "rim": [
+     183,
+     1,
+     22
+    ]
+   },
+   "expect": "kaguya-cpl-cistern-mocius-1453.composite.txt",
+   "key": "cistern-mocius",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "147,170",
+      "sink": 9.0,
+      "style": "roman",
+      "use": "cistern-mocius",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "池牆",
+     "recolor": {},
+     "source": "kaguya-cpl-cistern-mocius-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "garden"
+     },
+     "mirror": "",
+     "name": "池底",
+     "recolor": {},
+     "source": "kaguya-cpl-cistern-mocius-1453-garden",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-cistern-mocius-1453",
+   "size": [
+    368,
+    425,
+    28
+   ],
+   "tags": "building,roman",
+   "title": "莫齊烏斯露天蓄水池 1453（Cistern of Mocius，491–518；池底是菜園與果園）"
+  },
+  "kaguya-cpl-cistern-mocius-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-cistern-mocius-1453-body.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-cistern-mocius-1453",
+   "product": "kaguya-cpl-cistern-mocius-1453",
+   "size": [
+    368,
+    425,
+    28
+   ],
+   "tags": "sub",
+   "title": "莫齊烏斯露天蓄水池 1453｜池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）"
+  },
+  "kaguya-cpl-cistern-mocius-1453-garden": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-cistern-mocius-1453-garden.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-cistern-mocius-1453",
+   "product": "kaguya-cpl-cistern-mocius-1453",
+   "size": [
+    368,
+    425,
+    28
+   ],
+   "tags": "sub",
+   "title": "莫齊烏斯露天蓄水池 1453｜池底（畦田、果園、看守小屋）"
+  },
+  "kaguya-cpl-column-arcadius-1453": {
+   "anchors": {
+    "door": [
+     25,
+     1,
+     10
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     25,
+     25,
+     244
+    ]
+   },
+   "expect": "kaguya-cpl-column-arcadius-1453.composite.txt",
+   "key": "column-arcadius",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "10,10",
+      "style": "roman",
+      "use": "column-arcadius",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "柱",
+     "recolor": {},
+     "source": "kaguya-cpl-column-arcadius-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "top"
+     },
+     "mirror": "",
+     "name": "空的雕像座與錐頂",
+     "recolor": {},
+     "source": "kaguya-cpl-column-arcadius-1453-top",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-column-arcadius-1453",
+   "size": [
+    50,
+    50,
+    250
+   ],
+   "tags": "building,roman",
+   "title": "阿卡狄烏斯紀念柱 1453（Column of Arcadius，Xerolophos；雕像 740 年已倒）"
+  },
+  "kaguya-cpl-column-arcadius-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-column-arcadius-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-column-arcadius-1453",
+   "product": "kaguya-cpl-column-arcadius-1453",
+   "size": [
+    50,
+    50,
+    250
+   ],
+   "tags": "sub",
+   "title": "阿卡狄烏斯紀念柱 1453｜柱（台階、浮雕基座、螺旋浮雕柱身、柱頭）"
+  },
+  "kaguya-cpl-column-arcadius-1453-top": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-column-arcadius-1453-top.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-column-arcadius-1453",
+   "product": "kaguya-cpl-column-arcadius-1453",
+   "size": [
+    50,
+    50,
+    250
+   ],
+   "tags": "sub",
+   "title": "阿卡狄烏斯紀念柱 1453｜空的雕像座與錐頂"
+  },
+  "kaguya-cpl-column-constantine-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     30,
+     30,
+     199
+    ]
+   },
+   "expect": "kaguya-cpl-column-constantine-1453.composite.txt",
+   "key": "column-constantine",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "12,12",
+      "style": "roman",
+      "use": "column-constantine",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "柱",
+     "recolor": {},
+     "source": "kaguya-cpl-column-constantine-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "top"
+     },
+     "mirror": "",
+     "name": "十字架",
+     "recolor": {},
+     "source": "kaguya-cpl-column-constantine-1453-top",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-column-constantine-1453",
+   "size": [
+    60,
+    60,
+    205
+   ],
+   "tags": "building,roman",
+   "title": "君士坦丁紀念柱 1453（Column of Constantine，330；Manuel I 的砌頂與十字架）"
+  },
+  "kaguya-cpl-column-constantine-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-column-constantine-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-column-constantine-1453",
+   "product": "kaguya-cpl-column-constantine-1453",
+   "size": [
+    60,
+    60,
+    205
+   ],
+   "tags": "sub",
+   "title": "君士坦丁紀念柱 1453｜柱（台階、白大理石基座、斑岩柱身、砌頂）"
+  },
+  "kaguya-cpl-column-constantine-1453-top": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-column-constantine-1453-top.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-column-constantine-1453",
+   "product": "kaguya-cpl-column-constantine-1453",
+   "size": [
+    60,
+    60,
+    205
+   ],
+   "tags": "sub",
+   "title": "君士坦丁紀念柱 1453｜十字架"
+  },
+  "kaguya-cpl-column-justinian-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     32,
+     32,
+     247
+    ]
+   },
+   "expect": "kaguya-cpl-column-justinian-1453.composite.txt",
+   "key": "column-justinian",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "13,13",
+      "style": "roman",
+      "use": "column-justinian",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "柱",
+     "recolor": {},
+     "source": "kaguya-cpl-column-justinian-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "top"
+     },
+     "mirror": "",
+     "name": "騎像",
+     "recolor": {},
+     "source": "kaguya-cpl-column-justinian-1453-top",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-column-justinian-1453",
+   "size": [
+    65,
+    65,
+    250
+   ],
+   "tags": "building,roman",
+   "title": "查士丁尼騎像柱 1453（Column of Justinian，Augustaion，543；球十字已失）"
+  },
+  "kaguya-cpl-column-justinian-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-column-justinian-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-column-justinian-1453",
+   "product": "kaguya-cpl-column-justinian-1453",
+   "size": [
+    65,
+    65,
+    250
+   ],
+   "tags": "sub",
+   "title": "查士丁尼騎像柱 1453｜柱（七級台階、大理石基座、包銅柱身、柱頭）"
+  },
+  "kaguya-cpl-column-justinian-1453-top": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-column-justinian-1453-top.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-column-justinian-1453",
+   "product": "kaguya-cpl-column-justinian-1453",
+   "size": [
+    65,
+    65,
+    250
+   ],
+   "tags": "sub",
+   "title": "查士丁尼騎像柱 1453｜騎像（青銅）"
+  },
+  "kaguya-cpl-hagia-irene-1453": {
+   "anchors": {
+    "dome-top": [
+     60,
+     175,
+     86
+    ],
+    "door": [
+     60,
+     0,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-hagia-irene-1453.composite.txt",
+   "key": "hagia-irene",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "48,103",
+      "style": "roman",
+      "use": "hagia-irene",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-hagia-irene-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-hagia-irene-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "atrium"
+     },
+     "mirror": "",
+     "name": "中庭",
+     "recolor": {},
+     "source": "kaguya-cpl-hagia-irene-1453-atrium",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-hagia-irene-1453",
+   "size": [
+    120,
+    258,
+    93
+   ],
+   "tags": "building,roman",
+   "title": "聖伊琳娜教堂 1453（Hagia Irene，532 後重建、740 後再修）"
+  },
+  "kaguya-cpl-hagia-irene-1453-atrium": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hagia-irene-1453-atrium.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-hagia-irene-1453",
+   "product": "kaguya-cpl-hagia-irene-1453",
+   "size": [
+    120,
+    258,
+    93
+   ],
+   "tags": "sub",
+   "title": "聖伊琳娜教堂 1453｜中庭（單圈柱廊）"
+  },
+  "kaguya-cpl-hagia-irene-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hagia-irene-1453-body.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-hagia-irene-1453",
+   "product": "kaguya-cpl-hagia-irene-1453",
+   "size": [
+    120,
+    258,
+    93
+   ],
+   "tags": "sub",
+   "title": "聖伊琳娜教堂 1453｜主體（中殿、側廊、前廊、後殿）"
+  },
+  "kaguya-cpl-hagia-irene-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hagia-irene-1453-roof.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-hagia-irene-1453",
+   "product": "kaguya-cpl-hagia-irene-1453",
+   "size": [
+    120,
+    258,
+    93
+   ],
+   "tags": "sub",
+   "title": "聖伊琳娜教堂 1453｜屋頂（主穹頂、西跨穹窿、坡頂）"
+  },
+  "kaguya-cpl-holy-apostles-1453": {
+   "anchors": {
+    "crossing": [
+     82,
+     152,
+     0
+    ],
+    "dome-top": [
+     82,
+     152,
+     73
+    ],
+    "door": [
+     82,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-holy-apostles-1453.composite.txt",
+   "key": "holy-apostles",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "56,112",
+      "style": "roman",
+      "use": "holy-apostles",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-holy-apostles-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-holy-apostles-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "atrium"
+     },
+     "mirror": "",
+     "name": "中庭",
+     "recolor": {},
+     "source": "kaguya-cpl-holy-apostles-1453-atrium",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-holy-apostles-1453",
+   "size": [
+    140,
+    280,
+    85
+   ],
+   "tags": "building,roman",
+   "title": "聖使徒教堂 1453（Holy Apostles，查士丁尼 536–550；五穹頂、君士坦丁陵）"
+  },
+  "kaguya-cpl-holy-apostles-1453-atrium": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-holy-apostles-1453-atrium.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-holy-apostles-1453",
+   "product": "kaguya-cpl-holy-apostles-1453",
+   "size": [
+    140,
+    280,
+    85
+   ],
+   "tags": "sub",
+   "title": "聖使徒教堂 1453｜中庭（柱廊）"
+  },
+  "kaguya-cpl-holy-apostles-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-holy-apostles-1453-body.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-holy-apostles-1453",
+   "product": "kaguya-cpl-holy-apostles-1453",
+   "size": [
+    140,
+    280,
+    85
+   ],
+   "tags": "sub",
+   "title": "聖使徒教堂 1453｜主體（四臂三廊、前廊、後殿、兩座陵）"
+  },
+  "kaguya-cpl-holy-apostles-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-holy-apostles-1453-roof.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-holy-apostles-1453",
+   "product": "kaguya-cpl-holy-apostles-1453",
+   "size": [
+    140,
+    280,
+    85
+   ],
+   "tags": "sub",
+   "title": "聖使徒教堂 1453｜屋頂（五個穹頂、陵的穹頂、坡頂）"
+  },
+  "kaguya-cpl-kalenderhane-1453": {
+   "anchors": {
+    "dome-top": [
+     50,
+     90,
+     114
+    ],
+    "door": [
+     50,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-kalenderhane-1453.composite.txt",
+   "key": "kalenderhane",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "20,32",
+      "style": "roman",
+      "use": "kalenderhane",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-kalenderhane-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-kalenderhane-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-kalenderhane-1453",
+   "size": [
+    100,
+    160,
+    125
+   ],
+   "tags": "building,roman",
+   "title": "主座聖母教堂 1453（Theotokos Kyriotissa，Kalenderhane；12 世紀末）"
+  },
+  "kaguya-cpl-kalenderhane-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-kalenderhane-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-kalenderhane-1453",
+   "product": "kaguya-cpl-kalenderhane-1453",
+   "size": [
+    100,
+    160,
+    125
+   ],
+   "tags": "sub",
+   "title": "主座聖母教堂 1453｜主體（十字臂、側廊與樓座、前廊、後殿）"
+  },
+  "kaguya-cpl-kalenderhane-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-kalenderhane-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-kalenderhane-1453",
+   "product": "kaguya-cpl-kalenderhane-1453",
+   "size": [
+    100,
+    160,
+    125
+   ],
+   "tags": "sub",
+   "title": "主座聖母教堂 1453｜屋頂（16 邊穹頂、筒拱屋面）"
+  },
+  "kaguya-cpl-lips-1453": {
+   "anchors": {
+    "dome-top": [
+     85,
+     65,
+     88
+    ],
+    "door": [
+     85,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-lips-1453.composite.txt",
+   "key": "lips",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "30,26",
+      "style": "roman",
+      "use": "lips",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-lips-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-lips-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-lips-1453",
+   "size": [
+    150,
+    130,
+    100
+   ],
+   "tags": "building,roman",
+   "title": "利普斯修道院 1453（Lips，北堂 907 與南堂 1286–1304）"
+  },
+  "kaguya-cpl-lips-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-lips-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-lips-1453",
+   "product": "kaguya-cpl-lips-1453",
+   "size": [
+    150,
+    130,
+    100
+   ],
+   "tags": "sub",
+   "title": "利普斯修道院 1453｜主體（兩座教堂、前廊、外迴廊、後殿）"
+  },
+  "kaguya-cpl-lips-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-lips-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-lips-1453",
+   "product": "kaguya-cpl-lips-1453",
+   "size": [
+    150,
+    130,
+    100
+   ],
+   "tags": "sub",
+   "title": "利普斯修道院 1453｜屋頂（七個穹頂、瓦）"
+  },
+  "kaguya-cpl-little-hagia-sophia-1453": {
+   "anchors": {
+    "dome-top": [
+     59,
+     180,
+     104
+    ],
+    "door": [
+     59,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-little-hagia-sophia-1453.composite.txt",
+   "key": "little-hagia-sophia",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "24,52",
+      "style": "roman",
+      "use": "little-hagia-sophia",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-little-hagia-sophia-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-little-hagia-sophia-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "atrium"
+     },
+     "mirror": "",
+     "name": "中庭",
+     "recolor": {},
+     "source": "kaguya-cpl-little-hagia-sophia-1453-atrium",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-little-hagia-sophia-1453",
+   "size": [
+    120,
+    260,
+    120
+   ],
+   "tags": "building,roman",
+   "title": "小聖索菲亞 1453（聖塞爾吉烏斯與巴克斯教堂，527–536）"
+  },
+  "kaguya-cpl-little-hagia-sophia-1453-atrium": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-little-hagia-sophia-1453-atrium.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-little-hagia-sophia-1453",
+   "product": "kaguya-cpl-little-hagia-sophia-1453",
+   "size": [
+    120,
+    260,
+    120
+   ],
+   "tags": "sub",
+   "title": "小聖索菲亞 1453｜中庭（圍牆與柱廊）"
+  },
+  "kaguya-cpl-little-hagia-sophia-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-little-hagia-sophia-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-little-hagia-sophia-1453",
+   "product": "kaguya-cpl-little-hagia-sophia-1453",
+   "size": [
+    120,
+    260,
+    120
+   ],
+   "tags": "sub",
+   "title": "小聖索菲亞 1453｜主體（方殿、前廊、後殿）"
+  },
+  "kaguya-cpl-little-hagia-sophia-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-little-hagia-sophia-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-little-hagia-sophia-1453",
+   "product": "kaguya-cpl-little-hagia-sophia-1453",
+   "size": [
+    120,
+    260,
+    120
+   ],
+   "tags": "sub",
+   "title": "小聖索菲亞 1453｜屋頂（16 瓣穹頂、鉛皮）"
+  },
+  "kaguya-cpl-myrelaion-1453": {
+   "anchors": {
+    "dome-top": [
+     30,
+     55,
+     91
+    ],
+    "door": [
+     30,
+     1,
+     25
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-myrelaion-1453.composite.txt",
+   "key": "myrelaion",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "12,18",
+      "style": "roman",
+      "use": "myrelaion",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-myrelaion-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-myrelaion-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-myrelaion-1453",
+   "size": [
+    60,
+    90,
+    100
+   ],
+   "tags": "building,roman",
+   "title": "米雷萊昂教堂 1453（Myrelaion，Romanos I Lekapenos 的修道院教堂，約 920）"
+  },
+  "kaguya-cpl-myrelaion-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-myrelaion-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-myrelaion-1453",
+   "product": "kaguya-cpl-myrelaion-1453",
+   "size": [
+    60,
+    90,
+    100
+   ],
+   "tags": "sub",
+   "title": "米雷萊昂教堂 1453｜主體（下層、上層教堂、前廊、扶壁、後殿）"
+  },
+  "kaguya-cpl-myrelaion-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-myrelaion-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-myrelaion-1453",
+   "product": "kaguya-cpl-myrelaion-1453",
+   "size": [
+    60,
+    90,
+    100
+   ],
+   "tags": "sub",
+   "title": "米雷萊昂教堂 1453｜屋頂（南瓜頂、瓦）"
+  },
+  "kaguya-cpl-pammakaristos-1453": {
+   "anchors": {
+    "dome-top": [
+     55,
+     85,
+     96
+    ],
+    "door": [
+     60,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-pammakaristos-1453.composite.txt",
+   "key": "pammakaristos",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "26,34",
+      "style": "roman",
+      "use": "pammakaristos",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-pammakaristos-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-pammakaristos-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-pammakaristos-1453",
+   "size": [
+    130,
+    170,
+    120
+   ],
+   "tags": "building,roman",
+   "title": "至福聖母修道院 1453（Pammakaristos，主堂與 Glabas 側堂 1310）"
+  },
+  "kaguya-cpl-pammakaristos-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pammakaristos-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-pammakaristos-1453",
+   "product": "kaguya-cpl-pammakaristos-1453",
+   "size": [
+    130,
+    170,
+    120
+   ],
+   "tags": "sub",
+   "title": "至福聖母修道院 1453｜主體（主堂、迴廊、前廊、側堂、後殿）"
+  },
+  "kaguya-cpl-pammakaristos-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pammakaristos-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-pammakaristos-1453",
+   "product": "kaguya-cpl-pammakaristos-1453",
+   "size": [
+    130,
+    170,
+    120
+   ],
+   "tags": "sub",
+   "title": "至福聖母修道院 1453｜屋頂（穹頂、瓦）"
+  },
+  "kaguya-cpl-pantokrator-1453": {
+   "anchors": {
+    "dome-top": [
+     230,
+     90,
+     117
+    ],
+    "door": [
+     230,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-pantokrator-1453.composite.txt",
+   "key": "pantokrator",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "59,31",
+      "style": "roman",
+      "use": "pantokrator",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-pantokrator-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-pantokrator-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-pantokrator-1453",
+   "size": [
+    295,
+    155,
+    140
+   ],
+   "tags": "building,roman",
+   "title": "全能者修道院 1453（Pantokrator，三座教堂與皇陵禮拜堂，1118–36）"
+  },
+  "kaguya-cpl-pantokrator-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pantokrator-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-pantokrator-1453",
+   "product": "kaguya-cpl-pantokrator-1453",
+   "size": [
+    295,
+    155,
+    140
+   ],
+   "tags": "sub",
+   "title": "全能者修道院 1453｜主體（三座教堂、前廊、後殿）"
+  },
+  "kaguya-cpl-pantokrator-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pantokrator-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-pantokrator-1453",
+   "product": "kaguya-cpl-pantokrator-1453",
+   "size": [
+    295,
+    155,
+    140
+   ],
+   "tags": "sub",
+   "title": "全能者修道院 1453｜屋頂（五個穹頂、瓦）"
+  },
+  "kaguya-cpl-stoudios-1453": {
+   "anchors": {
+    "door": [
+     65,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     65,
+     215,
+     86
+    ]
+   },
+   "expect": "kaguya-cpl-stoudios-1453.composite.txt",
+   "key": "stoudios",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "26,60",
+      "style": "roman",
+      "use": "stoudios",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-stoudios-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-stoudios-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "atrium"
+     },
+     "mirror": "",
+     "name": "前庭",
+     "recolor": {},
+     "source": "kaguya-cpl-stoudios-1453-atrium",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-stoudios-1453",
+   "size": [
+    130,
+    300,
+    100
+   ],
+   "tags": "building,roman",
+   "title": "斯圖狄奧斯修道院 1453（St John of Stoudios，463；1290 年代重修）"
+  },
+  "kaguya-cpl-stoudios-1453-atrium": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-stoudios-1453-atrium.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-stoudios-1453",
+   "product": "kaguya-cpl-stoudios-1453",
+   "size": [
+    130,
+    300,
+    100
+   ],
+   "tags": "sub",
+   "title": "斯圖狄奧斯修道院 1453｜前庭（柱廊）"
+  },
+  "kaguya-cpl-stoudios-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-stoudios-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-stoudios-1453",
+   "product": "kaguya-cpl-stoudios-1453",
+   "size": [
+    130,
+    300,
+    100
+   ],
+   "tags": "sub",
+   "title": "斯圖狄奧斯修道院 1453｜主體（巴西利卡、前廊、後殿）"
+  },
+  "kaguya-cpl-stoudios-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-stoudios-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-stoudios-1453",
+   "product": "kaguya-cpl-stoudios-1453",
+   "size": [
+    130,
+    300,
+    100
+   ],
+   "tags": "sub",
+   "title": "斯圖狄奧斯修道院 1453｜屋頂"
+  },
+  "kaguya-cpl-tekfur-1453": {
+   "anchors": {
+    "door": [
+     130,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     80,
+     322,
+     126
+    ]
+   },
+   "expect": "kaguya-cpl-tekfur-1453.composite.txt",
+   "key": "tekfur",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lot": "32,71",
+      "style": "roman",
+      "use": "tekfur-saray",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主樓",
+     "recolor": {},
+     "source": "kaguya-cpl-tekfur-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-tekfur-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "court"
+     },
+     "mirror": "",
+     "name": "庭院",
+     "recolor": {},
+     "source": "kaguya-cpl-tekfur-1453-court",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-tekfur-1453",
+   "size": [
+    160,
+    355,
+    140
+   ],
+   "tags": "building,roman",
+   "title": "波菲羅根尼圖斯宮 1453（Palace of the Porphyrogenitus，Tekfur Sarayı，1261–91）"
+  },
+  "kaguya-cpl-tekfur-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-tekfur-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-tekfur-1453",
+   "product": "kaguya-cpl-tekfur-1453",
+   "size": [
+    160,
+    355,
+    140
+   ],
+   "tags": "sub",
+   "title": "波菲羅根尼圖斯宮 1453｜主樓（三層、陽台、托架小禮拜堂）"
+  },
+  "kaguya-cpl-tekfur-1453-court": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-tekfur-1453-court.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-tekfur-1453",
+   "product": "kaguya-cpl-tekfur-1453",
+   "size": [
+    160,
+    355,
+    140
+   ],
+   "tags": "sub",
+   "title": "波菲羅根尼圖斯宮 1453｜庭院（圍牆、門、西北的宅邸）"
+  },
+  "kaguya-cpl-tekfur-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-tekfur-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-tekfur-1453",
+   "product": "kaguya-cpl-tekfur-1453",
+   "size": [
+    160,
+    355,
+    140
+   ],
+   "tags": "sub",
+   "title": "波菲羅根尼圖斯宮 1453｜屋頂"
+  }
+ }
+}
