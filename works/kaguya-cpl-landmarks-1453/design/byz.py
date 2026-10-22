@@ -154,7 +154,7 @@ class Model:
         return m & (r >= r_lo) & (r <= r_hi) & (self.Z >= z0) & (self.Z < z1)
 
     # ── 收尾 ──
-    def finish(self, shell_m, seed=0):
+    def finish(self, shell_m, seed=0, mix=False):
         """挖空（只留離外面的空氣 shell_m 內的格；最底一層留著）、開窗開門、上色 ⇒ (G 色號, L 件號)。"""
         S, MAT = self.S, self.MAT
         for a in self.AIR:
@@ -176,6 +176,10 @@ class Model:
         keep &= MAT > 0
         zz, yy, xx = np.nonzero(keep)
         h = (((xx.astype(np.int64) * 73856093) ^ (yy.astype(np.int64) * 19349663) ^ (zz.astype(np.int64) * 83492791) ^ (seed * 2654435761)) & 0xffff) / 65536.0
+        if mix:                                  # 上面那個雜湊固定 y、z 時沿 x 每 22 格繞一圈（大牆面看得到直紋）⇒ 再攪一次；預設不攪（舊的地標逐格不變）
+            q = (xx.astype(np.uint64) * np.uint64(0x9E3779B1) + yy.astype(np.uint64) * np.uint64(0x85EBCA77) + zz.astype(np.uint64) * np.uint64(0xC2B2AE3D) + np.uint64(seed)) & np.uint64(0xffffffff)
+            q ^= q >> np.uint64(15); q = (q * np.uint64(0x2C1B3C6D)) & np.uint64(0xffffffff); q ^= q >> np.uint64(12); q = (q * np.uint64(0x297A2D39)) & np.uint64(0xffffffff); q ^= q >> np.uint64(15)
+            h = (q & np.uint64(0xffff)).astype(np.float64) / 65536.0
         m = MAT[zz, yy, xx]
         Zm = (zz + 0.5) * self.mpv
         col = np.zeros(len(zz), np.uint8)

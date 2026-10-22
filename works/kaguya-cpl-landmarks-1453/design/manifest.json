@@ -140,6 +140,400 @@
    "tags": "sub",
    "title": "瓦倫斯引水渠 1453｜收尾｜橋台（實心牆身、渠道）"
   },
+  "kaguya-cpl-blachernae-1453": {
+   "anchors": {
+    "gate": [
+     130,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     280,
+     196,
+     75
+    ]
+   },
+   "expect": "kaguya-cpl-blachernae-1453.composite.txt",
+   "key": "blachernae",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 10,
+      "lot": "130,96",
+      "style": "roman",
+      "use": "blachernae",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "宮殿",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "enclosure"
+     },
+     "mirror": "",
+     "name": "圍牆與門樓",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-1453-enclosure",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "court"
+     },
+     "mirror": "",
+     "name": "庭院",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-1453-court",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-cypress",
+      "tree": "cypress"
+     },
+     "mirror": "",
+     "name": "柏樹",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-1453-trees-cypress",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-plane",
+      "tree": "plane"
+     },
+     "mirror": "",
+     "name": "懸鈴木",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-1453-trees-plane",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "building,roman",
+   "title": "布雷契耐宮 1453（Blachernae，帕列奧略皇居；台地、圍牆、主樓、大廳廢墟、禮拜堂）"
+  },
+  "kaguya-cpl-blachernae-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-1453-body.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-blachernae-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "sub",
+   "title": "布雷契耐宮 1453｜宮殿（主樓、樓閣、大廳廢墟、側翼、禮拜堂、馬廄）"
+  },
+  "kaguya-cpl-blachernae-1453-court": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-1453-court.vox.txt",
+   "mpv": 0.4,
+   "order": 40,
+   "parent": "kaguya-cpl-blachernae-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "sub",
+   "title": "布雷契耐宮 1453｜庭院（鋪面、花園、噴泉）"
+  },
+  "kaguya-cpl-blachernae-1453-enclosure": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-1453-enclosure.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-blachernae-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "sub",
+   "title": "布雷契耐宮 1453｜圍牆與門樓"
+  },
+  "kaguya-cpl-blachernae-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-1453-glass.vox.txt",
+   "mpv": 0.4,
+   "order": 70,
+   "parent": "kaguya-cpl-blachernae-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "sub",
+   "title": "布雷契耐宮 1453｜窗玻璃"
+  },
+  "kaguya-cpl-blachernae-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-1453-roof.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-blachernae-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "sub",
+   "title": "布雷契耐宮 1453｜屋頂"
+  },
+  "kaguya-cpl-blachernae-1453-trees-cypress": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-1453-trees-cypress.vox.txt",
+   "mpv": 0.4,
+   "order": 50,
+   "parent": "kaguya-cpl-blachernae-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "sub",
+   "title": "布雷契耐宮 1453｜柏樹（遊戲換成生成式的柏樹）"
+  },
+  "kaguya-cpl-blachernae-1453-trees-plane": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-1453-trees-plane.vox.txt",
+   "mpv": 0.4,
+   "order": 60,
+   "parent": "kaguya-cpl-blachernae-1453",
+   "product": "kaguya-cpl-blachernae-1453",
+   "size": [
+    325,
+    240,
+    80
+   ],
+   "tags": "sub",
+   "title": "布雷契耐宮 1453｜懸鈴木（遊戲換成生成式的懸鈴木）"
+  },
+  "kaguya-cpl-boukoleon-1453": {
+   "anchors": {
+    "loggia": [
+     137,
+     1,
+     50
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-boukoleon-1453.composite.txt",
+   "key": "boukoleon",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "60,38",
+      "style": "roman",
+      "use": "boukoleon",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "面海的宮殿",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ruins"
+     },
+     "mirror": "",
+     "name": "台地上的廢墟",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-1453-ruins",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-fig",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-1453-trees-fig",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-boukoleon-1453",
+   "size": [
+    300,
+    190,
+    110
+   ],
+   "tags": "building,roman",
+   "title": "布科勒昂宮 1453（Boukoleon，大皇宮的海濱宮；已成廢墟）"
+  },
+  "kaguya-cpl-boukoleon-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-boukoleon-1453",
+   "product": "kaguya-cpl-boukoleon-1453",
+   "size": [
+    300,
+    190,
+    110
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮 1453｜面海的宮殿（廢墟：三個大理石框開口、陽台、獅像）"
+  },
+  "kaguya-cpl-boukoleon-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-1453-ruins.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-boukoleon-1453",
+   "product": "kaguya-cpl-boukoleon-1453",
+   "size": [
+    300,
+    190,
+    110
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮 1453｜台地上的廢墟（拱頂下部結構、斷牆、倒柱、碎石）"
+  },
+  "kaguya-cpl-boukoleon-1453-trees-fig": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-1453-trees-fig.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-boukoleon-1453",
+   "product": "kaguya-cpl-boukoleon-1453",
+   "size": [
+    300,
+    190,
+    110
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮 1453｜野樹（遊戲換成生成式的闊葉樹）"
+  },
   "kaguya-cpl-chora-1453": {
    "anchors": {
     "bell": [
@@ -1334,6 +1728,329 @@
    "tags": "sub",
    "title": "馬爾西安紀念柱 1453｜頂墩與四角的鷹"
   },
+  "kaguya-cpl-forum-constantine-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     175,
+     175,
+     99
+    ]
+   },
+   "expect": "kaguya-cpl-forum-constantine-1453.composite.txt",
+   "key": "forum-constantine",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "140,140",
+      "style": "roman",
+      "use": "forum-constantine",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "石板圓場",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-constantine-1453-paving",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "column"
+     },
+     "mirror": "",
+     "name": "君士坦丁紀念柱",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-constantine-1453-column",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "cross"
+     },
+     "mirror": "",
+     "name": "十字架",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-constantine-1453-cross",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ruins"
+     },
+     "mirror": "",
+     "name": "拱門殘墩、柱廊殘段、碎石",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-constantine-1453-ruins",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-forum-constantine-1453",
+   "size": [
+    350,
+    350,
+    105
+   ],
+   "tags": "building,roman",
+   "title": "君士坦丁廣場 1453（Forum of Constantine：石板圓場、紀念柱、拱門殘墩、柱廊殘段）"
+  },
+  "kaguya-cpl-forum-constantine-1453-column": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-constantine-1453-column.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-forum-constantine-1453",
+   "product": "kaguya-cpl-forum-constantine-1453",
+   "size": [
+    350,
+    350,
+    105
+   ],
+   "tags": "sub",
+   "title": "君士坦丁廣場 1453｜君士坦丁紀念柱（台階、基座、斑岩柱身、砌頂）"
+  },
+  "kaguya-cpl-forum-constantine-1453-cross": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-constantine-1453-cross.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-forum-constantine-1453",
+   "product": "kaguya-cpl-forum-constantine-1453",
+   "size": [
+    350,
+    350,
+    105
+   ],
+   "tags": "sub",
+   "title": "君士坦丁廣場 1453｜十字架"
+  },
+  "kaguya-cpl-forum-constantine-1453-paving": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-constantine-1453-paving.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-forum-constantine-1453",
+   "product": "kaguya-cpl-forum-constantine-1453",
+   "size": [
+    350,
+    350,
+    105
+   ],
+   "tags": "sub",
+   "title": "君士坦丁廣場 1453｜石板圓場（Prokonnesos 大理石）"
+  },
+  "kaguya-cpl-forum-constantine-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-constantine-1453-ruins.vox.txt",
+   "mpv": 0.4,
+   "order": 40,
+   "parent": "kaguya-cpl-forum-constantine-1453",
+   "product": "kaguya-cpl-forum-constantine-1453",
+   "size": [
+    350,
+    350,
+    105
+   ],
+   "tags": "sub",
+   "title": "君士坦丁廣場 1453｜拱門殘墩、柱廊殘段、碎石"
+  },
+  "kaguya-cpl-forum-tauri-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     71,
+     220,
+     226
+    ]
+   },
+   "expect": "kaguya-cpl-forum-tauri-1453.composite.txt",
+   "key": "forum-tauri",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "64,50",
+      "style": "roman",
+      "use": "forum-tauri",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "狄奧多西紀念柱",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-tauri-1453-column",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ruins"
+     },
+     "mirror": "",
+     "name": "凱旋門殘墩、倒下的柱段、碎石、荒地",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-tauri-1453-ruins",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-wild",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-tauri-1453-trees-wild",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-forum-tauri-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-forum-tauri-1453",
+   "size": [
+    320,
+    250,
+    235
+   ],
+   "tags": "building,roman",
+   "title": "狄奧多西廣場 1453（Forum Tauri：狄奧多西紀念柱、凱旋門殘骸、野樹）"
+  },
+  "kaguya-cpl-forum-tauri-1453-column": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-tauri-1453-column.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-forum-tauri-1453",
+   "product": "kaguya-cpl-forum-tauri-1453",
+   "size": [
+    320,
+    250,
+    235
+   ],
+   "tags": "sub",
+   "title": "狄奧多西廣場 1453｜狄奧多西紀念柱（台階、基座、螺旋浮雕柱身、空的柱頂）"
+  },
+  "kaguya-cpl-forum-tauri-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-tauri-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-forum-tauri-1453",
+   "product": "kaguya-cpl-forum-tauri-1453",
+   "size": [
+    320,
+    250,
+    235
+   ],
+   "tags": "sub",
+   "title": "狄奧多西廣場 1453｜窗玻璃"
+  },
+  "kaguya-cpl-forum-tauri-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-tauri-1453-ruins.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-forum-tauri-1453",
+   "product": "kaguya-cpl-forum-tauri-1453",
+   "size": [
+    320,
+    250,
+    235
+   ],
+   "tags": "sub",
+   "title": "狄奧多西廣場 1453｜凱旋門殘墩、倒下的柱段、碎石、荒地"
+  },
+  "kaguya-cpl-forum-tauri-1453-trees-wild": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-forum-tauri-1453-trees-wild.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-forum-tauri-1453",
+   "product": "kaguya-cpl-forum-tauri-1453",
+   "size": [
+    320,
+    250,
+    235
+   ],
+   "tags": "sub",
+   "title": "狄奧多西廣場 1453｜野樹（遊戲換成生成式的闊葉樹）"
+  },
   "kaguya-cpl-gul-1453": {
    "anchors": {
     "dome-top": [
@@ -2242,6 +2959,336 @@
    "tags": "sub",
    "title": "小聖索菲亞 1453｜屋頂（16 瓣穹頂、鉛皮）"
   },
+  "kaguya-cpl-mangana-1453": {
+   "anchors": {
+    "door": [
+     115,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     115,
+     290,
+     125
+    ]
+   },
+   "expect": "kaguya-cpl-mangana-1453.composite.txt",
+   "key": "mangana",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 8,
+      "lot": "46,82",
+      "style": "roman",
+      "use": "mangana",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主堂",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "court"
+     },
+     "mirror": "",
+     "name": "院牆、門、房舍、洗禮池的華蓋",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-1453-court",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-fruit",
+      "tree": "fruit"
+     },
+     "mirror": "",
+     "name": "果樹",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-1453-trees-fruit",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-cypress",
+      "tree": "cypress"
+     },
+     "mirror": "",
+     "name": "柏樹",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-1453-trees-cypress",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-mangana-1453",
+   "size": [
+    230,
+    410,
+    140
+   ],
+   "tags": "building,roman",
+   "title": "曼加納聖喬治修道院 1453（St George of the Mangana，1047；前院、房舍、果園、八柱洗禮池）"
+  },
+  "kaguya-cpl-mangana-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-mangana-1453",
+   "product": "kaguya-cpl-mangana-1453",
+   "size": [
+    230,
+    410,
+    140
+   ],
+   "tags": "sub",
+   "title": "曼加納聖喬治修道院 1453｜主堂（十字形平面、穹頂、前廊、三後殿）"
+  },
+  "kaguya-cpl-mangana-1453-court": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-1453-court.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-mangana-1453",
+   "product": "kaguya-cpl-mangana-1453",
+   "size": [
+    230,
+    410,
+    140
+   ],
+   "tags": "sub",
+   "title": "曼加納聖喬治修道院 1453｜院牆、門、房舍、洗禮池的華蓋"
+  },
+  "kaguya-cpl-mangana-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 60,
+   "parent": "kaguya-cpl-mangana-1453",
+   "product": "kaguya-cpl-mangana-1453",
+   "size": [
+    230,
+    410,
+    140
+   ],
+   "tags": "sub",
+   "title": "曼加納聖喬治修道院 1453｜窗玻璃"
+  },
+  "kaguya-cpl-mangana-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-mangana-1453",
+   "product": "kaguya-cpl-mangana-1453",
+   "size": [
+    230,
+    410,
+    140
+   ],
+   "tags": "sub",
+   "title": "曼加納聖喬治修道院 1453｜屋頂"
+  },
+  "kaguya-cpl-mangana-1453-trees-cypress": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-1453-trees-cypress.vox.txt",
+   "mpv": 0.2,
+   "order": 50,
+   "parent": "kaguya-cpl-mangana-1453",
+   "product": "kaguya-cpl-mangana-1453",
+   "size": [
+    230,
+    410,
+    140
+   ],
+   "tags": "sub",
+   "title": "曼加納聖喬治修道院 1453｜柏樹（遊戲換成生成式的柏樹）"
+  },
+  "kaguya-cpl-mangana-1453-trees-fruit": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-1453-trees-fruit.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-mangana-1453",
+   "product": "kaguya-cpl-mangana-1453",
+   "size": [
+    230,
+    410,
+    140
+   ],
+   "tags": "sub",
+   "title": "曼加納聖喬治修道院 1453｜果樹（遊戲換成生成式的果樹）"
+  },
+  "kaguya-cpl-milion-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     37,
+     37,
+     90
+    ]
+   },
+   "expect": "kaguya-cpl-milion-1453.composite.txt",
+   "key": "milion",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 4,
+      "lot": "15,15",
+      "style": "roman",
+      "use": "milion",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "四面拱門",
+     "recolor": {},
+     "source": "kaguya-cpl-milion-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "穹頂",
+     "recolor": {},
+     "source": "kaguya-cpl-milion-1453-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-milion-1453",
+   "size": [
+    75,
+    75,
+    95
+   ],
+   "tags": "building,roman",
+   "title": "米利翁里程碑 1453（Milion：四面拱門、穹頂）"
+  },
+  "kaguya-cpl-milion-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-milion-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-milion-1453",
+   "product": "kaguya-cpl-milion-1453",
+   "size": [
+    75,
+    75,
+    95
+   ],
+   "tags": "sub",
+   "title": "米利翁 1453｜四面拱門（墩、拱、簷）"
+  },
+  "kaguya-cpl-milion-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-milion-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-milion-1453",
+   "product": "kaguya-cpl-milion-1453",
+   "size": [
+    75,
+    75,
+    95
+   ],
+   "tags": "sub",
+   "title": "米利翁 1453｜穹頂"
+  },
   "kaguya-cpl-mouchliotissa-1453": {
    "anchors": {
     "dome-top": [
@@ -2511,6 +3558,172 @@
    ],
    "tags": "sub",
    "title": "米雷萊昂教堂 1453｜屋頂（南瓜頂、瓦）"
+  },
+  "kaguya-cpl-nea-1453": {
+   "anchors": {
+    "door": [
+     80,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     80,
+     180,
+     129
+    ]
+   },
+   "expect": "kaguya-cpl-nea-1453.composite.txt",
+   "key": "nea",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 8,
+      "lot": "32,56",
+      "style": "roman",
+      "use": "nea",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "教堂",
+     "recolor": {},
+     "source": "kaguya-cpl-nea-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂與五座穹頂",
+     "recolor": {},
+     "source": "kaguya-cpl-nea-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "atrium"
+     },
+     "mirror": "",
+     "name": "中庭",
+     "recolor": {},
+     "source": "kaguya-cpl-nea-1453-atrium",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-nea-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-nea-1453",
+   "size": [
+    160,
+    280,
+    140
+   ],
+   "tags": "building,roman",
+   "title": "新教堂 1453（Nea Ekklesia，Basil I 880；大皇宮東南角、五穹頂）"
+  },
+  "kaguya-cpl-nea-1453-atrium": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-nea-1453-atrium.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-nea-1453",
+   "product": "kaguya-cpl-nea-1453",
+   "size": [
+    160,
+    280,
+    140
+   ],
+   "tags": "sub",
+   "title": "新教堂（Nea）1453｜中庭（柱廊、兩座噴泉）"
+  },
+  "kaguya-cpl-nea-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-nea-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-nea-1453",
+   "product": "kaguya-cpl-nea-1453",
+   "size": [
+    160,
+    280,
+    140
+   ],
+   "tags": "sub",
+   "title": "新教堂（Nea）1453｜教堂（十字形平面、前廊、三後殿）"
+  },
+  "kaguya-cpl-nea-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-nea-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-nea-1453",
+   "product": "kaguya-cpl-nea-1453",
+   "size": [
+    160,
+    280,
+    140
+   ],
+   "tags": "sub",
+   "title": "新教堂（Nea）1453｜窗玻璃"
+  },
+  "kaguya-cpl-nea-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-nea-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-nea-1453",
+   "product": "kaguya-cpl-nea-1453",
+   "size": [
+    160,
+    280,
+    140
+   ],
+   "tags": "sub",
+   "title": "新教堂（Nea）1453｜屋頂與五座穹頂（銅瓦）"
   },
   "kaguya-cpl-palazzo-comune-1453": {
    "anchors": {
