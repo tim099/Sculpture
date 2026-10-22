@@ -3,6 +3,8 @@
 #   B 平房「有廊的屋子」（case à galerie）：前廊細柱、陡的四坡頂接緩坡廊頂、兩扇老虎窗、後院木柵＋小棚（藍牆）
 #   C 二層樓、上下兩層外廊（一樓石柱、二樓木柱）、四坡頂接緩坡、後院＋廚房小屋＋水井（米白牆、紅百葉）
 # 屋身都在地塊前半、後半圍成院子；屋簷不出地塊（兩側鄰居的地塊只隔 2 cm）。
+# 淺版 8 × 10 m（house-a-s／b-s／c-s；TASK-0742，Tim 2026-10-22「轉角放淺一點的房子」）：屋子一模一樣、院牆／木柵收到後緣 —— 廚房小屋、小棚放不下就不擺，
+#   C 的水井往前挪（Manor Lords 的 burgage plot：地塊夠深才有後院擴建）。D ＝ 地塊進深（格；120 ＝ 原本那一份，逐位元組不變）。
 from kit import *
 import parts as PT
 
@@ -94,8 +96,8 @@ def kitchen(M, rect, color, door_face, door_c, vent_face=None, vent_c=None, low=
         free_part(M, 'chimney', '廚房-煙囪', chim, carve=('roof', 'body'))
 
 
-def house_a():
-    M = Model((80, 120, 100))
+def house_a(D=120):
+    M = Model((80, D, 100))
     X0, Y0, X1, Y1 = 3, 12, 77, 72
     R, t, pl = (X0, Y0, X1, Y1), 3, 3
     M.box('body', X0, Y0, 0, X1, Y1, pl, STONE)                       # 石基（實心，也是一樓地面）
@@ -143,7 +145,12 @@ def house_a():
     build_roof(M, F, salt=1)
     free_part(M, 'chimney', '煙囪', (62, 58, 60))
     # 後院：院牆、後門、廚房（左後角）
-    yard(M, X0, Y1, X1, 120, 3, 22, OCHRE, gate=(56, 13, 19))
+    yard(M, X0, Y1, X1, D, 3, 22, OCHRE, gate=(56, 13, 19))
+    if D < 120:                                                        # 淺版：院子 2.5 m（屋身到 y 72、院牆 y 97..100）⇒ 廚房、酒桶放不下
+        M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 24.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-a-s', 'title': '住宅 A 淺版（地塊 8 × %d：同 A 的屋子；院子只剩院牆，沒有廚房）' % (D // 10), 'use': 'house', 'lot': (8, D // 10), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '陽台', 'roof': '屋頂'}}
     kitchen(M, (X0 + 3, 92, 34, 117), OCHRE, 'right', 104, vent_face='front', vent_c=18, low='right', chim=(6, 108, 2), salt=2)
     M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 24.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
                  {'name': '酒桶-院1', 'source': 'summit-rocher-01m-barrel', 'at': [66, 100, 0], 'pivot': [6, 6, 0], 'meta': {}},
@@ -153,8 +160,8 @@ def house_a():
             'layers': {'body': '牆身', 'gallery': '陽台', 'roof': '屋頂'}}
 
 
-def house_b():
-    M = Model((80, 120, 82))
+def house_b(D=120):
+    M = Model((80, D, 82))
     X0, Y0, X1, Y1 = 6, 30, 74, 84
     R, t, pl = (X0, Y0, X1, Y1), 3, 6
     M.box('body', X0, Y0, 0, X1, Y1, pl, STONE)
@@ -204,8 +211,14 @@ def house_b():
         free_part(M, 'dormer', '老虎窗%d' % (i + 1), (cx - 7, y0, zf))
     free_part(M, 'chimney', '煙囪', (62, 54, 38))
     # 後院：木柵圍籬＋小棚
-    picket_fence(M, [(X0, Y1), (1, Y1), (1, 118), (36, 118)])
-    picket_fence(M, [(46, 118), (78, 118), (78, Y1), (X1 - 1, Y1)])
+    yb = D - 2
+    picket_fence(M, [(X0, Y1), (1, Y1), (1, yb), (36, yb)])
+    picket_fence(M, [(46, yb), (78, yb), (78, Y1), (X1 - 1, Y1)])
+    if D < 120:                                                        # 淺版：院子 1.4 m（屋身到 y 84、木柵 y 98）⇒ 小棚、貨箱放不下
+        M.models += [{'name': '燈籠-廊', 'source': 'summit-rocher-01m-lantern', 'at': [29, Y0, 26.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-b-s', 'title': '住宅 B 淺版（地塊 8 × %d：同 B 的有廊屋子；院子只剩木柵，沒有小棚）' % (D // 10), 'use': 'house', 'lot': (8, D // 10), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '前廊', 'roof': '屋頂'}}
     sx0, sy0, sx1, sy1 = 50, 98, 74, 116
     for x in range(sx0, sx1):                                         # 木板牆：牆頂跟著單坡走
         for y in range(sy0, sy1):
@@ -226,8 +239,8 @@ def house_b():
             'layers': {'body': '牆身', 'gallery': '前廊', 'roof': '屋頂'}}
 
 
-def house_c():
-    M = Model((80, 120, 98))
+def house_c(D=120):
+    M = Model((80, D, 98))
     M.shutter = SH_RED
     X0, Y0, X1, Y1 = 4, 24, 76, 78
     R, t, pl = (X0, Y0, X1, Y1), 3, 4
@@ -272,17 +285,24 @@ def house_c():
                     M.put('gallery', xs, y, z, TRIM)
     free_part(M, 'chimney', '煙囪', (7, 60, 46))
     # 後院：院牆、廚房（右後角）、水井
-    yard(M, X0, Y1, X1, 120, 3, 22, CREAM, gate=(22, 13, 19))
-    kitchen(M, (46, 92, X1 - 3, 117), CREAM, 'left', 104, vent_face='front', vent_c=60, low='left', chim=(64, 108, 2), salt=6)
-    for x in range(20, 32):                                           # 水井：石圈＋木架
-        for y in range(94, 106):
-            r = math.hypot(x + 0.5 - 26, y + 0.5 - 100)
+    yard(M, X0, Y1, X1, D, 3, 22, CREAM, gate=(22, 13, 19))
+    if D >= 120:
+        kitchen(M, (46, 92, X1 - 3, 117), CREAM, 'left', 104, vent_face='front', vent_c=60, low='left', chim=(64, 108, 2), salt=6)
+    wx, wy = (26, 100) if D >= 120 else (56, 89)                      # 淺版：院子 1.9 m（屋身到 y 78、院牆 y 97..100）⇒ 廚房放不下，水井挪到右邊廚房原本那一角、往前
+    for x in range(wx - 6, wx + 6):                                   # 水井：石圈＋木架
+        for y in range(wy - 6, wy + 6):
+            r = math.hypot(x + 0.5 - wx, y + 0.5 - wy)
             if 3.2 < r < 6.0:
                 for z in range(0, 9):
                     M.put('body', x, y, z, STONE_L if z == 8 else STONE)
-    M.box('body', 20, 99, 9, 22, 101, 30, WOOD_D)
-    M.box('body', 30, 99, 9, 32, 101, 30, WOOD_D)
-    M.box('body', 20, 99, 30, 32, 101, 32, WOOD_D)
+    M.box('body', wx - 6, wy - 1, 9, wx - 4, wy + 1, 30, WOOD_D)
+    M.box('body', wx + 4, wy - 1, 9, wx + 6, wy + 1, 30, WOOD_D)
+    M.box('body', wx - 6, wy - 1, 30, wx + 6, wy + 1, 32, WOOD_D)
+    if D < 120:
+        M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 25.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-c-s', 'title': '住宅 C 淺版（地塊 8 × %d：同 C 的屋子；院子只剩院牆與水井，沒有廚房）' % (D // 10), 'use': 'house', 'lot': (8, D // 10), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}, 'shutter': SH_RED}
     M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 25.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
                  {'name': '酒桶-院', 'source': 'summit-rocher-01m-barrel', 'at': [12, 104, 0], 'pivot': [6, 6, 0], 'meta': {}}]
     M.anchor('lot-0', 0, 0, 0)
@@ -290,4 +310,16 @@ def house_c():
             'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}, 'shutter': SH_RED}
 
 
-ALL = [house_a, house_b, house_c]
+def house_a_s():
+    return house_a(100)
+
+
+def house_b_s():
+    return house_b(100)
+
+
+def house_c_s():
+    return house_c(100)
+
+
+ALL = [house_a, house_b, house_c, house_a_s, house_b_s, house_c_s]

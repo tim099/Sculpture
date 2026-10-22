@@ -189,7 +189,10 @@ def main():
 # 配色變化（有史料的只有刷石灰白與沒刷的泥牆 —— 17 世紀的遮板、門的漆色查不到，⛔ 不編；references/README.md §8）
 VARIANTS = [('house-a2', 'house-a', {BOARD: LIME}, '住宅 A2（A 的配色變化：板牆刷石灰白 —— Saba「刷得很白」；替換色，不另存格子）'),
             ('house-b2', 'house-b', {LIME: EARTH_W}, '住宅 B2（B 的配色變化：沒刷石灰的泥牆（肥土＋牛糞的本色）；替換色，不另存格子）'),
-            ('house-c2', 'house-c', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '住宅 C2（C 的配色變化：一樓石牆刷白 —— St Thomas「照荷蘭方式刷白」；替換色，不另存格子）')]
+            ('house-c2', 'house-c', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '住宅 C2（C 的配色變化：一樓石牆刷白 —— St Thomas「照荷蘭方式刷白」；替換色，不另存格子）'),
+            ('house-a2-s', 'house-a-s', {BOARD: LIME}, '住宅 A2 淺版（A 淺版的配色變化：板牆刷石灰白；替換色，不另存格子）'),   # 淺版（8 × 10，TASK-0742 轉角）照同一套替換色
+            ('house-b2-s', 'house-b-s', {LIME: EARTH_W}, '住宅 B2 淺版（B 淺版的配色變化：沒刷石灰的泥牆；替換色，不另存格子）'),
+            ('house-c2-s', 'house-c-s', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '住宅 C2 淺版（C 淺版的配色變化：一樓石牆刷白；替換色，不另存格子）')]
 NORTH = ['house-a', 'house-b', 'house-c', 'house-a2', 'house-b2', 'house-c2', 'tavern', 'warehouse', 'commandant']
 SOUTH = ['church', 'battery']
 STREET_Y0, STREET_Y1 = 300, 360
