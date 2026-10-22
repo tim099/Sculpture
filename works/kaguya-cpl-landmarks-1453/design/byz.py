@@ -201,6 +201,12 @@ class Model:
         L[keep] = self.LAY[keep]
         return G, L
 
+    def tree(self, x, y, h, w, lay, z0=0.0):
+        """標一棵樹（Blocksail 匯入時照關聯的 meta kind=tree 換成遊戲自己生成的樹，BUILDING_SPEC §5.2）：樹幹＋橢球樹冠 —— 只拿來給位置、高（h）、寬（w）。"""
+        r = w / 2.0
+        self.add(self.cyl(x, y, max(0.3, self.mpv * 0.8), z0, z0 + h * 0.6), WOOD, lay)
+        self.add(((self.X - x) ** 2 + (self.Y - y) ** 2) / (r * r) + ((self.Z - (z0 + h - r * 0.9)) / max(r * 0.9, h * 0.35)) ** 2 <= 1, TREE, lay)
+
     def cell(self, x, y, z):
         """公尺 ⇒ 格（固定點）。"""
         return [min(self.NX - 1, int(x / self.mpv)), min(self.NY - 1, int(y / self.mpv)), min(self.NZ - 1, int(z / self.mpv))]

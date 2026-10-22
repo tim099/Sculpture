@@ -87,14 +87,16 @@ def main():
             del man['works'][w]
         allc = {}
         links = []
-        for i, (part, code, title) in enumerate(lm.PARTS):
+        for i, pt in enumerate(lm.PARTS):
+            part, code, title = pt[:3]
             cells = cells_of(G, L == code); allc.update(cells)
+            if not cells: continue                                   # 空的子作品不建（例：這一座的園子剛好沒有橄欖）
             w = prod + '-' + part
             md5 = dump(os.path.join(D, 'masks', w + '.vox.txt'), cells)
             man['works'][w] = {'order': 10 * (i + 1), 'title': lm.TITLE_SHORT + '｜' + title, 'size': [Xn, Yn, Zn], 'tags': 'sub', 'mask': w + '.vox.txt',
                                'anchors': {}, 'links': [], 'parent': prod, 'product': prod, 'mpv': lm.MPV}
             ver[w] = {'cells': len(cells), 'md5': md5}
-            meta = dict(lm.META) if i == 0 else {'part': part}
+            meta = dict(lm.META) if i == 0 else dict({'part': part}, **(pt[3] if len(pt) > 3 else {}))   # 第四格 ＝ 關聯多帶的 meta（樹：kind=tree、tree=樹種）
             links.append({'name': title.split('（')[0], 'source': w, 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {}, 'meta': meta})
         dump(os.path.join(D, 'masks', prod + '.composite.txt'), allc)
         man['works'][prod] = {'order': 5, 'title': lm.TITLE, 'size': [Xn, Yn, Zn], 'tags': 'building,roman', 'mask': None, 'expect': prod + '.composite.txt',
@@ -108,7 +110,7 @@ def main():
         meas = {'最高（m）': round((zs.max() + 1) * lm.MPV, 2)}
         meas.update(info)
         ver[prod] = {'cells': len(allc), 'components': int(n), 'floating': floating[:10], 'measured': meas, 'anchors': {k: list(v) for k, v in anchors.items()}}
-        print('%s：格數 %d（%s）元件 %d 浮空 %s' % (prod, len(allc), '、'.join('%s %d' % (p, ver[prod + '-' + p]['cells']) for p, _, _ in lm.PARTS), n, floating[:10]))
+        print('%s：格數 %d（%s）元件 %d 浮空 %s' % (prod, len(allc), '、'.join('%s %d' % (pt[0], ver[prod + '-' + pt[0]]['cells']) for pt in lm.PARTS if prod + '-' + pt[0] in man['works']), n, floating[:10]))
         print('  量回來', json.dumps(meas, ensure_ascii=False))
         px = max(1, int(round(500 / max(Xn, Yn, Zn))))
         sheet(os.path.join(D, 'sheets', lm.KEY + '_views.png'), G, lm.TITLE_SHORT, px)

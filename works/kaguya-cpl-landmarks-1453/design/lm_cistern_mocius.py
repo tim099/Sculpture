@@ -10,7 +10,8 @@ TITLE_SHORT = '莫齊烏斯露天蓄水池 1453'
 MPV = 0.4
 W, D, H = 147.0, 170.0, 11.0
 META = {'kind': 'building', 'use': 'cistern-mocius', 'style': 'roman', 'lot': '147,170', 'base': 0, 'variant': 'a', 'sink': 9.0}
-PARTS = (('body', 1, '池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）'), ('garden', 2, '池底（畦田、果園、看守小屋）'))
+PARTS = (('body', 1, '池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）'), ('garden', 2, '池底（畦田、果園的地、看守小屋）'),
+         ('trees-fruit', 3, '果樹（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}), ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖樹）', {'kind': 'tree', 'tree': 'olive'}))
 PROV = {
     '外框 147 × 170 m、牆厚 6.0 m': '參考資料：Wikipedia；TBL',
     '深 10.5–15 m（TBL 取 12 m）（1453 年照淤積取 9.0 m）': '參考資料：Wikipedia；TBL；取深度的七、八成是設計決定',

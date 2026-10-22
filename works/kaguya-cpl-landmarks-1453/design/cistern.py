@@ -1,10 +1,14 @@
 # 露天蓄水池（艾提烏斯、阿斯帕、莫齊烏斯）1453：掘進地下的長方大池，opus listatum（磚帶＋石帶）；1453 年早就沒水、池底是菜園與果園（Clavijo 1403「城中有許多圍地種穀物與果園」）。
 #   z 0 ＝ 池底（菜園面）：Blocksail 的特殊建築表寫 sink（地塊整平到地面下 sink 公尺，遊戲只挖地塊裡面）⇒ 牆從池底砌到街面上 parapet 公尺。
 #   參數：L、W（外框）、depth（街面到池底）、wall_t（牆厚）、parapet、band（磚帶高, 石帶高）、seed；池內：畦田、果樹、看守小屋、沿牆一條坡道。
+#   果樹另外兩件（件號 TREE_LAY：果樹、橄欖）：Blocksail 匯入時照關聯的 meta kind=tree 把格子拿掉、換成遊戲自己生成的樹（BUILDING_SPEC §5.2）⇒ 這裡的方塊樹只是標位置、高度、樹冠寬。
 import math, random
 import numpy as np
 import byz
 from byz import BANDED, STONE, GREEN, SOIL, TREE, WOOD, TILE, BRICK
+
+
+TREE_LAY = {'fruit': 3, 'olive': 4}
 
 
 def cistern(M, P, wall=1, garden=2):
@@ -34,13 +38,14 @@ def cistern(M, P, wall=1, garden=2):
         for j in range(ny):
             a0, a1, b0, b1 = x0 + i * sx + 0.6, x0 + (i + 1) * sx - 0.6, y0 + j * sy + 0.6, y0 + (j + 1) * sy - 0.6
             u = rnd.random()
-            if u < 0.25:                                     # 果園：一排一排的樹
+            if u < 0.25:                                     # 果園：一排一排的樹（六成果樹、四成橄欖，一塊一種）
+                tl = TREE_LAY['fruit'] if rnd.random() < 0.6 else TREE_LAY['olive']
                 for xx in np.arange(a0 + 2.5, a1 - 1.5, 5.0):
                     for yy in np.arange(b0 + 2.5, b1 - 1.5, 5.0):
                         r = rnd.uniform(1.6, 2.3); h = rnd.uniform(3.0, 4.5)
-                        M.add(M.cyl(xx, yy, 0.3, 0, h - 0.5 * r), WOOD, garden)
-                        M.add(((M.X - xx) ** 2 + (M.Y - yy) ** 2) / (r * r) + ((M.Z - h) / (r * 0.85)) ** 2 <= 1, TREE, garden)
-                M.add(M.box(a0, a1, b0, b1, 0, M.mpv), GREEN, garden)
+                        M.add(M.cyl(xx, yy, 0.3, 0, h - 0.5 * r), WOOD, tl)
+                        M.add(((M.X - xx) ** 2 + (M.Y - yy) ** 2) / (r * r) + ((M.Z - h) / (r * 0.85)) ** 2 <= 1, TREE, tl)
+                M.add(M.box(a0, a1, b0, b1, 0, M.mpv), GREEN, garden, over=False)
             elif u < 0.85:                                   # 菜畦：一條一條的壟
                 rows = (np.floor((M.Y - b0) / 1.2) % 2 == 0) if (i + j) % 2 else (np.floor((M.X - a0) / 1.2) % 2 == 0)
                 M.add(M.box(a0, a1, b0, b1, 0, M.mpv), SOIL, garden)
