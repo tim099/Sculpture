@@ -140,6 +140,166 @@
    "tags": "sub",
    "title": "瓦倫斯引水渠 1453｜收尾｜橋台（實心牆身、渠道）"
   },
+  "kaguya-cpl-augustaion-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "top": [
+     125,
+     205,
+     247
+    ]
+   },
+   "expect": "kaguya-cpl-augustaion-1453.composite.txt",
+   "key": "augustaion",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "85,62",
+      "style": "roman",
+      "use": "augustaion",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "地面",
+     "recolor": {},
+     "source": "kaguya-cpl-augustaion-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "column"
+     },
+     "mirror": "",
+     "name": "查士丁尼騎像柱",
+     "recolor": {},
+     "source": "kaguya-cpl-augustaion-1453-column",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "rider"
+     },
+     "mirror": "",
+     "name": "騎像",
+     "recolor": {},
+     "source": "kaguya-cpl-augustaion-1453-rider",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ruins"
+     },
+     "mirror": "",
+     "name": "九根白柱、柱廊的柱礎與斷柱",
+     "recolor": {},
+     "source": "kaguya-cpl-augustaion-1453-ruins",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-augustaion-1453",
+   "size": [
+    425,
+    310,
+    255
+   ],
+   "tags": "building,roman",
+   "title": "奧古斯都廣場 1453（Augustaion：查士丁尼騎像柱、九根白柱、殘破的柱廊與鋪面）"
+  },
+  "kaguya-cpl-augustaion-1453-column": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-augustaion-1453-column.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-augustaion-1453",
+   "product": "kaguya-cpl-augustaion-1453",
+   "size": [
+    425,
+    310,
+    255
+   ],
+   "tags": "sub",
+   "title": "奧古斯都廣場 1453｜查士丁尼騎像柱（台階、基座、包銅柱身、柱頭）"
+  },
+  "kaguya-cpl-augustaion-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-augustaion-1453-ground.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-augustaion-1453",
+   "product": "kaguya-cpl-augustaion-1453",
+   "size": [
+    425,
+    310,
+    255
+   ],
+   "tags": "sub",
+   "title": "奧古斯都廣場 1453｜地面（殘破的大理石鋪面、碎石、菜園、草）"
+  },
+  "kaguya-cpl-augustaion-1453-rider": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-augustaion-1453-rider.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-augustaion-1453",
+   "product": "kaguya-cpl-augustaion-1453",
+   "size": [
+    425,
+    310,
+    255
+   ],
+   "tags": "sub",
+   "title": "奧古斯都廣場 1453｜騎像（青銅）"
+  },
+  "kaguya-cpl-augustaion-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-augustaion-1453-ruins.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-augustaion-1453",
+   "product": "kaguya-cpl-augustaion-1453",
+   "size": [
+    425,
+    310,
+    255
+   ],
+   "tags": "sub",
+   "title": "奧古斯都廣場 1453｜九根白柱、柱廊的柱礎與斷柱"
+  },
   "kaguya-cpl-blachernae-1453": {
    "anchors": {
     "gate": [
