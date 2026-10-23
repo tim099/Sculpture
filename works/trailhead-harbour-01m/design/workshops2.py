@@ -111,7 +111,7 @@ def distillery():
     for cy in (22, 34):
         tub(M, 62, cy, 1, 9, 5.5, WASH)
     # 後院：茅草棚下兩個冷卻桶（裡面盤著銅管：水面上露一圈）、出口的短管
-    lean_roof_posts(M, 6, 72, 74, 100, 40, 0.25, 'back', thatch_color, [(8, 74), (70, 74), (8, 96), (70, 96)], salt=8723)
+    lean_roof_posts(M, 6, 72, 74, 100, 26, 0.2, 'back', thatch_color, [(8, 74), (70, 74), (8, 96), (70, 96)], salt=8723)   # 高的一邊壓在主屋屋簷（2.8 m）下 ⇒ 煙囪靠著主屋頂
     for cx in stills:
         tub(M, cx + 0.5, 84.5, 0, 17, 7, TUB_WATER)
         ring = [(x, y) for x in range(cx - 6, cx + 7) for y in range(78, 91) if 3.2 <= math.hypot(x + 0.5 - cx - 0.5, y + 0.5 - 84.5) <= 4.3]
