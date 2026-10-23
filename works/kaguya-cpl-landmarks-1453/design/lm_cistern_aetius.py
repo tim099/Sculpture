@@ -11,7 +11,8 @@ MPV = 0.4
 W, D, H = 85.0, 244.0, 12.0
 META = {'kind': 'building', 'use': 'cistern-aetius', 'style': 'roman', 'lot': '85,244', 'base': 0, 'variant': 'a', 'sink': 10.0, 'ground': 'hide', 'lamps': 12}
 PARTS = (('body', 1, '池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）'), ('garden', 2, '池底（畦田、果園的地、看守小屋）'),
-         ('trees-fruit', 3, '果樹（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}), ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖樹）', {'kind': 'tree', 'tree': 'olive'}))
+         ('trees-fruit', 3, '果樹（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}), ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖樹）', {'kind': 'tree', 'tree': 'olive'}),
+         ('field', 5, '菜畦（遊戲換成生成式的作物）', {'kind': 'field'}))
 PROV = {
     '外框 85 × 244 m、牆厚 5.2 m': '參考資料：Wikipedia；TBL',
     '深 13–15 m（1453 年照淤積取 10.0 m）': '參考資料：Wikipedia；TBL；取深度的七、八成是設計決定',
@@ -25,7 +26,7 @@ def build():
     M = byz.Model(W, D, H, MPV)
     M.band = (0.35, 1.8)
     P = {'depth': 10.0, 'wall_t': 5.2, 'parapet': 1.0, 'niche': 0, 'seed': 421, 'mat': BANDED}
-    zt = cistern.cistern(M, P, 1, 2)
+    zt = cistern.cistern(M, P, 1, 2, 5)
     G, L = M.finish(shell_m=1.2, seed=421)
     anchors = {'lot-0': [0, 0, 0], 'rim': M.cell(W / 2, 0.5, 10.0)}
     return G, L, anchors, {'池深（m）': 10.0, '牆頂（m）': zt}

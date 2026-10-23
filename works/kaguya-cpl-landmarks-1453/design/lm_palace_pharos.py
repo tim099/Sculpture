@@ -17,7 +17,8 @@ META = {'kind': 'building', 'use': 'palace-pharos', 'style': 'roman', 'lot': '16
 PARTS = (('ground', 1, '台地（草、菜畦、小徑、女兒牆）'), ('ruins', 2, '廢墟（金色大殿、Pharos 小堂、燈塔塔基、斷柱、碎石）'),
          ('trees-olive', 3, '橄欖（遊戲換成生成式的橄欖）', {'kind': 'tree', 'tree': 'olive'}),
          ('trees-fruit', 4, '無花果（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}),
-         ('trees-cypress', 5, '柏樹（遊戲換成生成式的柏樹）', {'kind': 'tree', 'tree': 'cypress'}))
+         ('trees-cypress', 5, '柏樹（遊戲換成生成式的柏樹）', {'kind': 'tree', 'tree': 'cypress'}),
+         ('field', 6, '菜畦（遊戲換成生成式的作物）', {'kind': 'field'}))
 PROV = {
     '金色大殿是八角形的覲見廳、八個壁龕': '參考資料：Wikipedia（Chrysotriklinos）',
     'Pharos 聖母小堂在金色大殿的南、東南，名字來自旁邊的燈塔；小、三個後殿、前廊、前庭；沒撐過拉丁占領': '參考資料：Wikipedia（Church of the Virgin of the Pharos、Chrysotriklinos）',
@@ -37,7 +38,7 @@ def build():
     M.add(M.box(0, W, 0, D, 0, MPV), byz.GREEN, G1)
     M.add(M.box(84.0, 87.6, 40.0, D, 0, 2 * MPV) & ((M.Y // 4.0) % 5 != 3), STONE, G1)
     M.add(M.box(84.0, 120.0, 40.0, 43.6, 0, 2 * MPV) & ((M.X // 4.0) % 6 != 2), STONE, G1)
-    ruins.plots(M, rnd, 118.0, 156.0, 52.0, 100.0, G1)
+    ruins.plots(M, rnd, 118.0, 156.0, 52.0, 100.0, G1, field=6)
     # ── 下坡那一邊（y 0）的女兒牆 ──
     ruins.wall(M, 0, W, 0, 1.2, 1.4, rnd, G1, bite=0.9, step=3.0)
     # ── 金色大殿：八角殘殼（外 r 15、牆厚 2）＋八個半圓壁龕（只剩下半截）；穹頂塌了、地坪還在 ──

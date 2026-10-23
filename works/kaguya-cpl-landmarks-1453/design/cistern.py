@@ -11,7 +11,8 @@ from byz import BANDED, STONE, GREEN, SOIL, TREE, WOOD, TILE, BRICK
 TREE_LAY = {'fruit': 3, 'olive': 4}
 
 
-def cistern(M, P, wall=1, garden=2):
+def cistern(M, P, wall=1, garden=2, field=None):
+    fl = garden if field is None else field                  # 菜畦的件號（Blocksail 匯入時照關聯的 meta kind=field 把壟拿掉、土留著，遊戲在上面種生成式的作物 —— PRODUCTION §5、§7）
     L, Wd, dep, t, par = M.w, M.d, P['depth'], P['wall_t'], P['parapet']
     zt = dep + par
     inner = M.box(t, L - t, t, Wd - t, -1, 999)
@@ -48,8 +49,8 @@ def cistern(M, P, wall=1, garden=2):
                 M.add(M.box(a0, a1, b0, b1, 0, M.mpv), GREEN, garden, over=False)
             elif u < 0.85:                                   # 菜畦：一條一條的壟
                 rows = (np.floor((M.Y - b0) / 1.2) % 2 == 0) if (i + j) % 2 else (np.floor((M.X - a0) / 1.2) % 2 == 0)
-                M.add(M.box(a0, a1, b0, b1, 0, M.mpv), SOIL, garden)
-                M.add(M.box(a0, a1, b0, b1, M.mpv, 2 * M.mpv) & rows, GREEN, garden)
+                M.add(M.box(a0, a1, b0, b1, 0, M.mpv), SOIL, fl)
+                M.add(M.box(a0, a1, b0, b1, M.mpv, 2 * M.mpv) & rows, GREEN, fl)
             else:                                            # 休耕
                 M.add(M.box(a0, a1, b0, b1, 0, M.mpv), SOIL, garden)
     # 池底其他地方（田埂、牆腳那一圈）鋪一層草：成品 meta ground=hide ⇒ 遊戲不畫地塊框裡的地形（遠處那一層地形不會挖坑 ⇒ 池底要模型自己給；2026-10-23）

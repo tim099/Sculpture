@@ -19,7 +19,8 @@ META = {'kind': 'building', 'use': 'palace-mosaic', 'style': 'roman', 'lot': '16
 PARTS = (('ground', 1, '台地（草、菜畦、女兒牆）'), ('vaults', 2, '拱頂下部結構（上層台地擋土牆前的一排拱）'),
          ('ruins', 3, '柱廊院與大廳的殘跡、碎石'),
          ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖）', {'kind': 'tree', 'tree': 'olive'}),
-         ('trees-cypress', 5, '柏樹（遊戲換成生成式的柏樹）', {'kind': 'tree', 'tree': 'cypress'}))
+         ('trees-cypress', 5, '柏樹（遊戲換成生成式的柏樹）', {'kind': 'tree', 'tree': 'cypress'}),
+         ('field', 6, '菜畦（遊戲換成生成式的作物）', {'kind': 'field'}))
 PROV = {
     '柱廊院（今馬賽克博物館）的位置': '參考資料：OSM way 1153966162',
     '馬賽克原面積約 1,872～1,900 m²、地坪帶寬約 6 m': '參考資料：Wikipedia／Turkish Archaeological News（Great Palace Mosaic Museum）',
@@ -37,7 +38,7 @@ def build():
     G1, V, R = 1, 2, 3
     M.add(M.box(0, W, 0, D, 0, MPV), byz.GREEN, G1)
     ruins.wall(M, 0, W, 0, 1.2, 1.4, rnd, G1, bite=0.9, step=3.0)
-    ruins.plots(M, rnd, 122.0, 156.0, 6.0, 46.0, G1)
+    ruins.plots(M, rnd, 122.0, 156.0, 6.0, 46.0, G1, field=6)
     # ── 上坡那一邊（y D）：上層台地擋土牆前的一排拱頂下部結構 ──
     y0, y1 = D - 4.0, D
     M.add(M.box(0, W, y0, y1, 0, ARC_H), BANDED, V)

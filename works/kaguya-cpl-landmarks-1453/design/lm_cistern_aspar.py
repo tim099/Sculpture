@@ -11,7 +11,8 @@ MPV = 0.4
 W, D, H = 152.0, 152.0, 13.0
 META = {'kind': 'building', 'use': 'cistern-aspar', 'style': 'roman', 'lot': '152,152', 'base': 0, 'variant': 'a', 'sink': 8.0, 'ground': 'hide', 'lamps': 12}
 PARTS = (('body', 1, '池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）'), ('garden', 2, '池底（畦田、果園的地、看守小屋）'),
-         ('trees-fruit', 3, '果樹（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}), ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖樹）', {'kind': 'tree', 'tree': 'olive'}))
+         ('trees-fruit', 3, '果樹（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}), ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖樹）', {'kind': 'tree', 'tree': 'olive'}),
+         ('field', 5, '菜畦（遊戲換成生成式的作物）', {'kind': 'field'}))
 PROV = {
     '外框 152 × 152 m、牆厚 5.2 m': '參考資料：Wikipedia；TBL',
     '深 10–11 m（1453 年照淤積取 8.0 m）': '參考資料：Wikipedia；TBL；取深度的七、八成是設計決定',
@@ -25,7 +26,7 @@ def build():
     M = byz.Model(W, D, H, MPV)
     M.band = (0.5, 1.2)
     P = {'depth': 8.0, 'wall_t': 5.2, 'parapet': 1.0, 'niche': 8.0, 'seed': 459, 'mat': BANDED}
-    zt = cistern.cistern(M, P, 1, 2)
+    zt = cistern.cistern(M, P, 1, 2, 5)
     # 北角（模型 x、y 都大的那一角）的圓柱形壓力塔＋半穹頂
     cx, cy = W - 5.2, D - 5.2
     M.add(M.cyl(cx, cy, 3.4, 0, 8.0 + 4.0), BANDED, 1)

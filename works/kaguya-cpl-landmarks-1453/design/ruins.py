@@ -52,14 +52,17 @@ def rubble(M, rnd, x0, x1, y0, y1, n, lay, rmin=0.5, rmax=1.6):
         M.add(M.dome(cx, cy, 0.0, r, r * 0.45), STONE if k % 3 else BRICK, lay)
 
 
-def plots(M, rnd, x0, x1, y0, y1, lay, pw=8.0, pd=12.0, fallow=0.3):
-    """菜畦（照種子：種菜的一條一條壟、休耕的整塊土）。"""
+def plots(M, rnd, x0, x1, y0, y1, lay, pw=8.0, pd=12.0, fallow=0.3, field=None):
+    """菜畦（照種子：種菜的一條一條壟、休耕的整塊土）。
+    field ＝ 種菜那幾塊的件號（Blocksail 匯入時照關聯的 meta kind=field 把壟拿掉、土留著，遊戲在上面種生成式的作物 —— PRODUCTION §5、§7）；沒給 ⇒ 跟 lay 同一件。"""
     nx, ny = max(1, int((x1 - x0) // pw)), max(1, int((y1 - y0) // pd))
     sx, sy = (x1 - x0) / nx, (y1 - y0) / ny
     for i in range(nx):
         for j in range(ny):
             a0, a1, b0, b1 = x0 + i * sx + 0.6, x0 + (i + 1) * sx - 0.6, y0 + j * sy + 0.6, y0 + (j + 1) * sy - 0.6
-            M.add(M.box(a0, a1, b0, b1, 0, 2 * M.mpv), byz.SOIL, lay)
-            if rnd.random() >= fallow:
+            grow = rnd.random() >= fallow
+            fl = field if grow and field is not None else lay
+            M.add(M.box(a0, a1, b0, b1, 0, 2 * M.mpv), byz.SOIL, fl)
+            if grow:
                 rows = ((M.Y - b0) // 1.2) % 2 == 0 if (i + j) % 2 else ((M.X - a0) // 1.2) % 2 == 0
-                M.add(M.box(a0, a1, b0, b1, 2 * M.mpv, 3 * M.mpv) & rows, byz.GREEN, lay)
+                M.add(M.box(a0, a1, b0, b1, 2 * M.mpv, 3 * M.mpv) & rows, byz.GREEN, fl)

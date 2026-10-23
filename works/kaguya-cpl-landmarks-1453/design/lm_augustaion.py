@@ -17,7 +17,8 @@ MPV = 0.2
 W, D, H = 85.0, 62.0, 51.0
 META = {'kind': 'building', 'use': 'augustaion', 'style': 'roman', 'lot': '85,62', 'base': 0, 'variant': 'a', 'lamps': 0}
 PARTS = (('ground', 1, '地面（殘破的大理石鋪面、碎石、菜園、草）'), ('column', 2, '查士丁尼騎像柱（台階、基座、包銅柱身、柱頭）'), ('rider', 3, '騎像（青銅）'),
-         ('ruins', 4, '九根白柱、柱廊的柱礎與斷柱'))
+         ('ruins', 4, '九根白柱、柱廊的柱礎與斷柱'),
+         ('field', 5, '菜園（遊戲換成生成式的作物）', {'kind': 'field'}))
 PROV = {
     '廣場約 85 × 60–65 m、四面柱廊、入口在西與南': '參考資料：Wikipedia（Augustaeum，引 Katsaveli 2007、Procopius Aed. I.10.5）',
     '15 世紀初已成廢墟': '參考資料：Buondelmonti（經 Wikipedia 引 Katsaveli）',
@@ -35,7 +36,8 @@ def build():
     keep = np.random.RandomState(543).rand(int(D / 2.4) + 1, int(W / 2.4) + 1) < 0.68             # 每塊板照種子抽：約三成缺了
     slab = keep[(M.Y // 2.4).astype(int), (M.X // 2.4).astype(int)]
     M.add(M.box(4, W - 4, 6, D - 2, 0, 0.2) & slab, MARBLE, 1)
-    M.add(M.box(60, W - 1, 1, 18, 0, 0.3) & ((M.Y % 1.6) < 0.8), SOIL, 1)                        # 畦田
+    M.add(M.box(60, W - 1, 1, 18, 0, 0.2), SOIL, 5)                                              # 菜園：土底＋一條一條的壟（件號 5 ＝ PARTS 的 field：Blocksail 匯入時把壟拿掉、土留著，遊戲種生成式的作物）
+    M.add(M.box(60, W - 1, 1, 18, 0.2, 0.4) & ((M.Y % 1.6) < 0.8), byz.GREEN, 5)
     # ── 查士丁尼騎像柱（同 lm_column_justinian.py；模型 +x 沿聖索菲亞南緣往東南 ⇒ 東 ＝ 從 +x 往 +y 33°）──
     cx, cy = 25.0, 41.0
     steps = [[12.0 - k * 0.7, 3.0 / 7] for k in range(7)]

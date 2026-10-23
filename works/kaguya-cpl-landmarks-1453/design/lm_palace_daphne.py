@@ -17,7 +17,8 @@ META = {'kind': 'building', 'use': 'palace-daphne', 'style': 'roman', 'lot': '16
 PARTS = (('ground', 1, '台地（草、菜畦、小徑、女兒牆、圍牆）'), ('ruins', 2, '廢墟（Daphne 的廳、小堂、八角亭、斷柱、碎石）'),
          ('trees-fruit', 3, '果樹（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}),
          ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖）', {'kind': 'tree', 'tree': 'olive'}),
-         ('trees-cypress', 5, '柏樹（遊戲換成生成式的柏樹）', {'kind': 'tree', 'tree': 'cypress'}))
+         ('trees-cypress', 5, '柏樹（遊戲換成生成式的柏樹）', {'kind': 'tree', 'tree': 'cypress'}),
+         ('field', 6, '菜畦（遊戲換成生成式的作物）', {'kind': 'field'}))
 PROV = {
     '大皇宮約 16 ha、六層台地、從大競技場到海岸落差約 33 m': '參考資料：Wikipedia（Great Palace of Constantinople）',
     '帕列奧略時代棄用、只當監獄；1453 年 Mehmed II 入宮見其荒廢': '參考資料：Necipoğlu 1991 p.3（經 Wikipedia）',
@@ -38,7 +39,7 @@ def build():
     M.add(M.box(0, W, 0, D, 0, MPV), byz.GREEN, G1)
     path = M.box(66.0, 69.6, 0, D, 0, 2 * MPV) & ((M.Y // 4.0) % 5 != 2)
     M.add(path, STONE, G1)
-    ruins.plots(M, rnd, 112.0, 156.0, 36.0, 84.0, G1)
+    ruins.plots(M, rnd, 112.0, 156.0, 36.0, 84.0, G1, field=6)
     # ── 台地的邊：下坡那一邊（y 0）的女兒牆、靠大競技場那一邊（y D）的矮圍牆 ──
     ruins.wall(M, 0, W, 0, 1.2, 1.4, rnd, G1, bite=0.9, step=3.0)
     ruins.wall(M, 0, W, D - 1.2, D, 2.6, rnd, G1, bite=0.8, step=3.0)
