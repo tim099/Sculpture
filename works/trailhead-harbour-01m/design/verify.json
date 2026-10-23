@@ -64,6 +64,201 @@
   "style": "common",
   "use": "boat-shed"
  },
+ "trailhead-harbour-01m-chapel": {
+  "bbox": [
+   12,
+   6,
+   0,
+   76,
+   112,
+   57
+  ],
+  "composite_cavity": 0,
+  "composite_components": 2,
+  "composite_floating": [],
+  "composite_voxels": 35874,
+  "door": [
+   40,
+   21,
+   0
+  ],
+  "door_ok": true,
+  "layers": {
+   "trailhead-harbour-01m-chapel-body": {
+    "bbox": [
+     17,
+     6,
+     0,
+     76,
+     106,
+     44
+    ],
+    "cavity": 0,
+    "components": 3,
+    "md5": "ea0955b68907307e11340b0925af4570",
+    "voxels": 19720
+   },
+   "trailhead-harbour-01m-chapel-roof": {
+    "bbox": [
+     12,
+     16,
+     19,
+     68,
+     112,
+     57
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "32d98cbac564da7e8cabfd7a257d9f28",
+    "voxels": 16154
+   }
+  },
+  "links": 2,
+  "lot": [
+   8,
+   12
+  ],
+  "models": 1,
+  "oob": 0,
+  "part_clash": 0,
+  "size": [
+   80,
+   120,
+   70
+  ],
+  "style": "carib",
+  "use": "chapel"
+ },
+ "trailhead-harbour-01m-fish-market": {
+  "bbox": [
+   0,
+   1,
+   0,
+   120,
+   84,
+   53
+  ],
+  "composite_cavity": 0,
+  "composite_components": 3,
+  "composite_floating": [],
+  "composite_voxels": 38100,
+  "door": [
+   60,
+   2,
+   0
+  ],
+  "door_ok": true,
+  "layers": {
+   "trailhead-harbour-01m-fish-market-body": {
+    "bbox": [
+     4,
+     6,
+     0,
+     116,
+     84,
+     32
+    ],
+    "cavity": 0,
+    "components": 3,
+    "md5": "fddf183a4bd802691c9e48d4d17ce955",
+    "voxels": 12900
+   },
+   "trailhead-harbour-01m-fish-market-roof": {
+    "bbox": [
+     0,
+     1,
+     26,
+     120,
+     71,
+     53
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "30438665683da8404a09c27cd05fb885",
+    "voxels": 25200
+   }
+  },
+  "links": 2,
+  "lot": [
+   12,
+   10
+  ],
+  "models": 4,
+  "oob": 0,
+  "part_clash": 0,
+  "size": [
+   120,
+   100,
+   70
+  ],
+  "style": "common",
+  "use": "fish-market"
+ },
+ "trailhead-harbour-01m-jail": {
+  "bbox": [
+   3,
+   6,
+   0,
+   117,
+   136,
+   53
+  ],
+  "composite_cavity": 0,
+  "composite_components": 2,
+  "composite_floating": [],
+  "composite_voxels": 136540,
+  "door": [
+   40,
+   13,
+   0
+  ],
+  "door_ok": true,
+  "layers": {
+   "trailhead-harbour-01m-jail-body": {
+    "bbox": [
+     6,
+     6,
+     0,
+     114,
+     136,
+     51
+    ],
+    "cavity": 0,
+    "components": 2,
+    "md5": "000c3b42e1ee861235e6b08e97a8b6ff",
+    "voxels": 121048
+   },
+   "trailhead-harbour-01m-jail-roof": {
+    "bbox": [
+     3,
+     10,
+     30,
+     117,
+     68,
+     53
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "5ce8b70effa72692e16b55e22c43f881",
+    "voxels": 13224
+   }
+  },
+  "links": 8,
+  "lot": [
+   12,
+   14
+  ],
+  "models": 1,
+  "oob": 0,
+  "part_clash": 0,
+  "size": [
+   120,
+   140,
+   75
+  ],
+  "style": "carib",
+  "use": "jail"
+ },
  "trailhead-harbour-01m-sheers": {
   "bbox": [
    19,
@@ -114,5 +309,70 @@
   ],
   "style": "common",
   "use": "sheers"
+ },
+ "trailhead-harbour-01m-watchtower": {
+  "bbox": [
+   2,
+   3,
+   0,
+   58,
+   58,
+   149
+  ],
+  "composite_cavity": 0,
+  "composite_components": 1,
+  "composite_floating": [],
+  "composite_voxels": 36056,
+  "door": [
+   30,
+   1,
+   0
+  ],
+  "door_ok": true,
+  "layers": {
+   "trailhead-harbour-01m-watchtower-body": {
+    "bbox": [
+     4,
+     3,
+     0,
+     56,
+     56,
+     139
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "06359ef5fe8aa4536094612b60b21fde",
+    "voxels": 30688
+   },
+   "trailhead-harbour-01m-watchtower-roof": {
+    "bbox": [
+     2,
+     26,
+     137,
+     58,
+     58,
+     149
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "f4a1d2f36ff3195e0a7168763b3da51f",
+    "voxels": 5368
+   }
+  },
+  "links": 2,
+  "lot": [
+   6,
+   6
+  ],
+  "models": 1,
+  "oob": 0,
+  "part_clash": 0,
+  "size": [
+   60,
+   60,
+   160
+  ],
+  "style": "common",
+  "use": "watchtower"
  }
 }

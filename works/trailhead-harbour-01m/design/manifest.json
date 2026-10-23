@@ -128,6 +128,473 @@
    "tags": "sub",
    "title": "船棚｜屋頂"
   },
+  "trailhead-harbour-01m-chapel": {
+   "anchors": {
+    "bell": [
+     70,
+     31,
+     26
+    ],
+    "door": [
+     40,
+     21,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-chapel.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "carib",
+      "use": "chapel",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-chapel-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-chapel-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      22,
+      21
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門左",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "building,carib",
+   "title": "小教堂（叉柱入土、蘆葦牆、棕櫚葉兩坡頂的最小型小禮拜堂；祭壇與小櫃、長凳；門前木十字、木架掛鐘）"
+  },
+  "trailhead-harbour-01m-chapel-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-chapel-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "小教堂｜牆與擺設"
+  },
+  "trailhead-harbour-01m-chapel-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-chapel-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "小教堂｜屋頂"
+  },
+  "trailhead-harbour-01m-fish-market": {
+   "anchors": {
+    "door": [
+     60,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-fish-market.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,10",
+      "style": "common",
+      "use": "fish-market",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "棚架、攤桌與曬魚架",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fish-market-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fish-market-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      14,
+      36,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      14,
+      50,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      60,
+      50,
+      1
+     ],
+     "meta": {},
+     "name": "貨箱-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      59.5,
+      6,
+      27
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-中柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    100,
+    70
+   ],
+   "tags": "building,common",
+   "title": "魚市（共用：開敞的茅草棚、石板地、三張攤桌、翻過來的海龜、市場官的公秤；棚後兩座曬魚架）"
+  },
+  "trailhead-harbour-01m-fish-market-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fish-market-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    100,
+    70
+   ],
+   "tags": "sub",
+   "title": "魚市｜棚架、攤桌與曬魚架"
+  },
+  "trailhead-harbour-01m-fish-market-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fish-market-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    100,
+    70
+   ],
+   "tags": "sub",
+   "title": "魚市｜屋頂"
+  },
+  "trailhead-harbour-01m-jail": {
+   "anchors": {
+    "door": [
+     40,
+     13,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-jail.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,14",
+      "style": "carib",
+      "use": "jail",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "看守屋、院牆與牢房",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-jail-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-jail-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      57,
+      32,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "隔牆-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      33,
+      13,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      62,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      55.5,
+      14,
+      26.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    140,
+    75
+   ],
+   "tags": "building,carib",
+   "title": "監獄（毛石刷白的看守屋、兩坡木瓦頂、鐵條窗；毛石高牆圍的放風院、院底三間平頂牢房；門口一副枷）"
+  },
+  "trailhead-harbour-01m-jail-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-jail-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    140,
+    75
+   ],
+   "tags": "sub",
+   "title": "監獄｜看守屋、院牆與牢房"
+  },
+  "trailhead-harbour-01m-jail-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-jail-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    140,
+    75
+   ],
+   "tags": "sub",
+   "title": "監獄｜屋頂"
+  },
   "trailhead-harbour-01m-sheers": {
    "anchors": {
     "door": [
@@ -272,6 +739,120 @@
    ],
    "tags": "sub",
    "title": "起重架｜起重架與絞盤"
+  },
+  "trailhead-harbour-01m-watchtower": {
+   "anchors": {
+    "door": [
+     30,
+     1,
+     0
+    ],
+    "lookout": [
+     30,
+     40,
+     121
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-watchtower.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "6,6",
+      "style": "common",
+      "use": "watchtower",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "台基、塔身與平台",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-watchtower-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "遮陽頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-watchtower-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      12,
+      10,
+      114
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-平台",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    60,
+    60,
+    160
+   ],
+   "tags": "building,common",
+   "title": "瞭望塔（共用：毛石台基、四柱兩層斜撐的木塔、11.8 m 的平台與欄杆、半邊茅草遮陽頂、烽火籃、木梯）"
+  },
+  "trailhead-harbour-01m-watchtower-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-watchtower-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    60,
+    60,
+    160
+   ],
+   "tags": "sub",
+   "title": "瞭望塔｜台基、塔身與平台"
+  },
+  "trailhead-harbour-01m-watchtower-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-watchtower-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    60,
+    60,
+    160
+   ],
+   "tags": "sub",
+   "title": "瞭望塔｜遮陽頂"
   }
  }
 }
