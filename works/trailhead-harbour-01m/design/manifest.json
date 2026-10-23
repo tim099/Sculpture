@@ -1292,6 +1292,273 @@
    "tags": "sub",
    "title": "桶匠｜屋頂"
   },
+  "trailhead-harbour-01m-distillery": {
+   "anchors": {
+    "door": [
+     40,
+     9,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     40,
+     65,
+     39
+    ]
+   },
+   "expect": "trailhead-harbour-01m-distillery.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "distillery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "蒸餾房與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-distillery-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-distillery-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      9,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      9,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-左",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      9,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-右",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      20,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      19,
+      95,
+      0
+     ],
+     "meta": {},
+     "name": "接酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      49,
+      95,
+      0
+     ],
+     "meta": {},
+     "name": "接酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      44,
+      104,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      56,
+      104,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      68,
+      104,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      50,
+      16,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-4",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      52,
+      10,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "building,common",
+   "title": "蒸餾坊（共用：毛石的蒸餾房、木瓦兩坡頂；爐台上兩座銅蒸餾器、毛石煙囪、渣沫槽、發酵木槽；後院茅草棚下的冷卻桶與接酒桶、柴堆）"
+  },
+  "trailhead-harbour-01m-distillery-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-distillery-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "蒸餾坊｜蒸餾房與擺設"
+  },
+  "trailhead-harbour-01m-distillery-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-distillery-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "蒸餾坊｜屋頂"
+  },
   "trailhead-harbour-01m-fish-market": {
    "anchors": {
     "door": [
@@ -3258,6 +3525,133 @@
    "tags": "sub",
    "title": "加拉塔堡｜高塔（塔頂 ＝ 甲板）、巨鏈的鐵環"
   },
+  "trailhead-harbour-01m-sawmill": {
+   "anchors": {
+    "door": [
+     40,
+     8,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-sawmill.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "sawmill",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "棚、鋸台與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-sawmill-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-sawmill-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      58,
+      6,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      8,
+      15,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "building,common",
+   "title": "鋸木坊（共用：開敞的長棚、木瓦兩坡頂；架高的鋸台與長鋸（代鋸木坑）、鋸了一半的原木、木屑堆、梯子；晾板材堆、等著鋸的原木；後院原木堆）"
+  },
+  "trailhead-harbour-01m-sawmill-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-sawmill-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "鋸木坊｜棚、鋸台與擺設"
+  },
+  "trailhead-harbour-01m-sawmill-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-sawmill-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "鋸木坊｜屋頂"
+  },
   "trailhead-harbour-01m-sheers": {
    "anchors": {
     "door": [
@@ -3550,6 +3944,163 @@
    "tags": "sub",
    "title": "鐵匠鋪｜屋頂"
   },
+  "trailhead-harbour-01m-tannery": {
+   "anchors": {
+    "door": [
+     22,
+     7,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-tannery.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "tannery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "刮皮房、池與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-tannery-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-tannery-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      7,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "刮皮房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      38,
+      16,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "刮皮房-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      44,
+      42,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      40,
+      48,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "building,common",
+   "title": "製革坊（共用：木板的刮皮房與刮皮木、兩口石灰池；開敞的棚下六口鞣池；後院晾皮的橫桿、樹皮堆）"
+  },
+  "trailhead-harbour-01m-tannery-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-tannery-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "製革坊｜刮皮房、池與擺設"
+  },
+  "trailhead-harbour-01m-tannery-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-tannery-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "製革坊｜屋頂"
+  },
   "trailhead-harbour-01m-watchtower": {
    "anchors": {
     "door": [
@@ -3663,6 +4214,238 @@
    ],
    "tags": "sub",
    "title": "瞭望塔｜遮陽頂"
+  },
+  "trailhead-harbour-01m-weaver": {
+   "anchors": {
+    "door": [
+     20,
+     11,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-weaver.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "weaver",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "屋與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-weaver-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-weaver-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      11,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      11,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      22,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      5,
+      22,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      72,
+      46,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      5,
+      46,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      51,
+      74,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往曬布場）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      30,
+      12,
+      21
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "building,common",
+   "title": "織布坊（共用：四面開窗的木板屋、木瓦兩坡頂；兩台腳踏織機、紡車、整經架、帆布捲與棉花包；後院曬布的草地）"
+  },
+  "trailhead-harbour-01m-weaver-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-weaver-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "織布坊｜屋與擺設"
+  },
+  "trailhead-harbour-01m-weaver-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-weaver-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "織布坊｜屋頂"
   },
   "trailhead-harbour-01m-weighhouse": {
    "anchors": {
