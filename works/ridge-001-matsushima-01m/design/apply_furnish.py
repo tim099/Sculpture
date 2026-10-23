@@ -7,6 +7,7 @@ import json, os, re, subprocess, sys, time
 sys.stdout.reconfigure(encoding='utf-8')
 D = os.path.abspath(sys.argv[1])
 HULL = 'ridge-001-matsushima-01m'; PER = 'ridge-001'
+WORKS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # Sculpture/works
 TITLE = {'crest': '松島號 菊花紋章（艏柱頂、十六八重表菊、直徑 1.2 m；0.05 m，外部模型的來源，裝飾 deco）',
          'bollard': '雙柱繫纜樁（鋼船時代的 double bollard，柱徑 0.36 m；通用部件，0.05 m，裝飾 deco）',
          'rack': '12 cm 速射砲備便彈架（定裝彈八發直立；通用部件，0.05 m，裝飾 deco）'}
@@ -55,10 +56,23 @@ for k, P in sorted(PL['pieces'].items()):
     elif have != P['cells']:
         raise SystemExit('✗ %s 已有 %d 格 ≠ %d' % (W, have, P['cells']))
     print('✓ 子作品', W, P['cells'], '格', P['size'])
+def old_id(work, name):
+    """那件作品裡同名模型已經發過的物件 id（admin.py ids；§12.2 改名挪位置都不變）⇒ 重落時帶上，⛔ meta= 是整份覆寫，不帶下一次 ids 就重發、換號。"""
+    try:
+        M = json.load(open(os.path.join(WORKS, work, 'models.json'), encoding='utf-8'))['models']
+    except FileNotFoundError:
+        return None
+    return next(((m.get('meta') or {}).get('id') for m in M if m['name'] == name), None)
+
+
 for r in PL['rows']:
+    meta = dict(r['meta'])
+    oid = old_id(r['work'], r['model'])
+    if oid is not None:
+        meta['id'] = oid
     a = ['op=work', 'sub=model', 'persona=' + PER, 'work=' + r['work'], 'name=' + r['model'], 'source_work=' + r['source_work'],
          'at=' + xyz(r['at']), 'pivot=' + xyz(r['pivot']), 'rotate=0,0,0', 'scale=%g' % r['scale'], 'mirror=' + r['mirror'], 'overwrite=1',
-         'meta=' + json.dumps(r['meta'], sort_keys=True), 'note=松島號 裝飾 %s（draft_furnish.py；deco=1：遊戲畫質「裝飾」關著就不載入、不算重量）' % r['piece']]
+         'meta=' + json.dumps(meta, sort_keys=True), 'note=松島號 裝飾 %s（draft_furnish.py；deco=1：遊戲畫質「裝飾」關著就不載入、不算重量）' % r['piece']]
     if r.get('recolor'): a.append('recolor=' + r['recolor'])
     cli(a)
     print('✓ 模型', r['path'], r['at'], r['mirror'])

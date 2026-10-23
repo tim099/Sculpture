@@ -26,6 +26,7 @@ BITTS_SRC = 'kotoko-napoleon-01m-bitts'
 OFFS = np.array([[0.5, 0.5, 0.5]] + [[0.3 + 0.4 * (k & 1), 0.3 + 0.4 * ((k >> 1) & 1), 0.3 + 0.4 * ((k >> 2) & 1)] for k in range(8)])
 SC = 0.5                                                                  # 子作品 0.05 m ⇒ 船上 0.1 m
 DECO = {'deco': 1}
+MAT = {'crest': 'brass'}   # 哪幾件畫成金屬反光（模型 meta material，TASK-0859；Tim 2026-10-23「船頭標誌可以改金屬嗎」）：菊花紋章是鍍金的銅
 
 
 def cli(*a):
@@ -189,7 +190,7 @@ def main():
         commit(Cc, piv, at, mirror)
         if piece not in pieces: pieces[piece] = {'cells': len(Cc), 'size': size(Cc), 'pivot': piv, 'source': source or (W + '-' + piece)}
         row = {'model': name, 'piece': piece, 'work': work, 'path': path, 'source_work': pieces[piece]['source'], 'at': [round(v, 3) for v in at],
-               'mirror': 'y' if mirror else 'none', 'pivot': piv, 'scale': SC, 'meta': DECO, 'candidates': len(cands), **r}
+               'mirror': 'y' if mirror else 'none', 'pivot': piv, 'scale': SC, 'meta': dict(DECO, material=MAT[piece]) if piece in MAT else DECO, 'candidates': len(cands), **r}
         if recolor: row['recolor'] = recolor
         rows.append(row)
         log[path] = len(cands)
