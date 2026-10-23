@@ -1,15 +1,15 @@
 {
 	"schema": 1,
-	"note": "雕刻預覽的材質表（TASK-0645；Tim 2026-10-16「雕刻自己一份」）：關聯 meta material=<ID> ⇒ 平滑面（render=smooth）的金屬度 metal、粗糙度 rough（0..1）。數值 2026-10-16 照 Blockside src/config/game.json 的 materials 抄；兩邊各管各的，要對齊時手動抄。表裡沒有的 ID ⇒ 照不反光畫。",
+	"note": "雕刻預覽的材質表（TASK-0645；Tim 2026-10-16「雕刻自己一份」）：關聯 meta material=<ID> ⇒ 平滑面（render=smooth）的金屬度 metal、粗糙度 rough（0..1）。數值 2026-10-16 照 Blockside src/config/game.json 的 materials 抄；兩邊各管各的，要對齊時手動抄。表裡沒有的 ID ⇒ 照不反光畫。smooth: true（TASK-0860，照遊戲的材質表）⇒ 關聯只寫 material、沒寫 render 也畫成平滑面；混合寫法 iron*0.15 外觀照第一個成分。",
 	"list": {
 		"oak": { "name": "橡木", "metal": 0, "rough": 0.5 },
 		"pine": { "name": "松木", "metal": 0, "rough": 0.5 },
 		"teak": { "name": "柚木", "metal": 0, "rough": 0.5 },
-		"iron": { "name": "鐵甲", "metal": 1, "rough": 0.35 },
+		"iron": { "name": "鐵甲", "metal": 1, "rough": 0.35, "smooth": true },
 		"iron_hull": { "name": "鐵殼（鐵外板＋肋骨內襯的混合層；比重、硬度取鐵與橡木的中間 —— 定遠號 TASK-0779）", "metal": 1, "rough": 0.35 },
 		"iron_plate": { "name": "薄鐵板（遊戲那側照 ships[].matMap 換成混合材質，例定遠號砲塔頂 iron*0.125 —— TASK-0779）", "metal": 1, "rough": 0.35 },
 		"copper_sheath": { "name": "銅皮（包在木殼外）", "metal": 0.7, "rough": 0.55 },
-		"boiler": { "name": "鍋爐（鐵殼＋滿水；實心格只有外觀是鐵）", "metal": 0.85, "rough": 0.45 },
+		"boiler": { "name": "鍋爐（鐵殼＋滿水；實心格只有外觀是鐵）", "metal": 0.85, "rough": 0.45, "smooth": true },
 		"glass": { "name": "玻璃（窗；遊戲裡半透明，預覽照不透明畫 —— TASK-0753）", "metal": 0, "rough": 0.06 }
 	}
 }
