@@ -19,6 +19,8 @@
 - [ ] 樓梯自檢的 ⚠ 4：取用點的火藥桶擋在 lm-fwd／mu-fwd／uf-fwd／bridge-S 梯腳正前方 —— 遊戲那側擺桶（23_powder.js），雕刻不用改。
 - [x] 裝飾（Tim 2026-10-23「然後加上裝飾吧(參考 拿破崙號)」）：菊花紋章、錨鏈繫纜柱（引用拿破崙號）、雙柱繫纜樁 ×6、12 cm 備便彈架 ×8，全部 deco=1（draft_furnish.py／apply_furnish.py）。
 
+- [x] 舵輪浮空（共用雙舵輪的座拆走了）：自己一件鑄鐵舵輪座（draft_wheel_stand.py），艦橋 `舵輪座` material=iron。
+
 ## 之後可以細修
 - [x] 12 cm 砲列的砲門蓋板（§9.12）：自己一件窄高的 `-portlid` 9 × 14 × 2，中甲板 10 片（design/tools/portlids.py；匯入檢查 ✗ 0）。
 - [x] 突出砲台 57 mm 的 4 個射口：不做蓋板（Tim「由妳判斷」；理由見 notes「12 cm 砲門蓋板」），照實留成進水口。
