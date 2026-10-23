@@ -455,7 +455,86 @@ def lo_gate_golden():
     return B
 
 
+# ═════════════ 曼加納大塔＋Değirmen Kapı（2026-10-23 加，TASK-0748）═════════════
+# Niketas Choniates：曼努埃爾一世在「緊鄰曼加納修道院」的海邊蓋了一座塔，對岸 Damalis（今少女塔）一座，打算在中間拉鐵鏈封住博斯普魯斯南口（鐵鏈大概從沒架過）；
+# 1340 年代「堅固到能抵擋全城圍攻」，Apokaukos 據守過（van Millingen 1899）。en.wikipedia（Walls of Constantinople）：從海角往南，Değirmen Kapı 北邊緊鄰就是這座大塔。
+# 門的位置照 Wikidata Q135429332（Kültür Envanteri）；塔的大小、高、窗、頂上的望樓 ⇒ 設計決定（只知道「很大、很堅固」）。
+# 一件 ＝ 一段牆 14 m＋小方塔＋門洞＋大塔 20 m＋一節牆：門洞在模型正中間 ⇒ 城門那一筆的 at 不必挪（遊戲把模型中心擺在門上）。
+# 遊戲裡模型 +x 朝哪：−y 朝牆外（海、東）⇒ +x 朝北 ⇒ 大塔放在 +x 那一頭（Blockside 63_towns.js townWall 的 put：+x ＝ 沿路線前進方向 a、−y ＝ (−sin a, cos a)）。
+# 砌法：12 世紀科穆寧王朝的石磚交替帶（比海牆修補的那幾段整齊）⇒ 自己一套 Masonry。
+MK = Masonry(period=10, salt='mangana')
+
+
+def s_gate_mangana():
+    M, B = W('sea', 'gate', 'Değirmen Kapı＋曼加納大塔（曼努埃爾一世；20 × 19 m、高 26 m＋望樓；門北邊緊鄰）', (240, 100, 160), variant='mangana')
+    yc = 50
+    sea_profile(M, 0, 70, yc)                                # 南邊那一段牆（14 m）
+    sea_tower(M, 70, 105, yc, h=72)                          # 門南邊的小方塔
+    sea_profile(M, 105, 135, yc)                             # 門洞（照 s_gate：3.6 m 拱、紅磚白石交替、門上大理石帶）
+    for x in range(105, 135):
+        for z in (34, 35):
+            M.put(x, yc - SEA_T - 3, z, MARBLE)
+    arch_cut(M, 120, 9, 18, yc - SEA_T - 2, yc + SEA_T, ring=3, alt=(MARBLE, BRICK))
+    leaf(M, 111, yc + 1, yc + SEA_T, 18)
+    leaf(M, 128, yc + 1, yc + SEA_T, 18)
+    sea_profile(M, 235, 240, yc)                             # 北邊接回牆身
+    # 大塔：x 135..235（20 m）、y 2..98（19.2 m：牆外凸 8 m、牆裡伸進城 8.8 m）、塔頂 26 m
+    x0, x1, yo, yi, th = 135, 235, 2, 98, 130
+    inside = lambda x, y: x0 <= x < x1 and yo <= y < yi
+    for x in range(x0, x1):
+        for y in range(yo, yi):
+            u = (x - x0) + (y - yo)                           # 沿周長量（兩面的磚帶、方石錯開）
+            for z in range(th):
+                M.put(x, y, z, MK.color(u, z))
+    block(M, x0 - 2, yo - 2, x1 + 2, yo + 4, 0, 10, MS)      # 臨海那一面的斜腳（牆腳斜出 0.4 m、高 2 m）
+    block(M, x0 - 1, yo - 1, x1 + 1, yi, 0, 16, MK)
+    for x in range(x0 - 1, x1 + 1):                          # 牆腳橫嵌的大理石柱（照海牆：每 3 m 一根、柱頭朝外）
+        for z in range(2, 14):
+            if math.hypot(((x - x0) % 15) + 0.5 - 7.5, z + 0.5 - 8) < 2.6:
+                M.cells[(x, yo - 2 if z < 10 else yo - 1, z)] = MARBLE
+    for x in range(x0 + 3, x1 - 3):
+        for y in range(yo + 3, yi - 3):
+            M.cells[(x, y, th - 1)] = PAVE
+    for z in (66, 67):                                       # 一道大理石簷帶（牆頂走道那一層）
+        for x in range(x0, x1):
+            M.put(x, yo - 1, z, MARBLE)
+    ring_parapet(M, inside, x0, yo, x1, yi, th, 10, 5, MK)
+    # 臨海面（y ＝ yo）：下層射口、中層兩扇窄窗、上層三扇拱窗；城裡那一面（y ＝ yi − 1）：地面一道門、上層兩扇窗；兩側面各兩扇
+    for xs in (x0 + 18, x0 + 49, x0 + 80):
+        opening(M, 'y', yo, +1, xs, xs + 2, 24, 34, 4, arch=False, brick=False)
+    for xs in (x0 + 28, x0 + 66):
+        opening(M, 'y', yo, +1, xs, xs + 6, 74, 88, 4)
+    for xs in (x0 + 14, x0 + 45, x0 + 76):
+        opening(M, 'y', yo, +1, xs, xs + 10, 98, 118, 4)
+    opening(M, 'y', yi - 1, -1, x0 + 44, x0 + 56, 0, 20, 8)  # 城裡那一面的門（2.4 m 寬、頂 4 m）
+    for xs in (x0 + 24, x0 + 66):
+        opening(M, 'y', yi - 1, -1, xs, xs + 10, 98, 118, 4)
+    for plane, inward in ((x0, +1), (x1 - 1, -1)):
+        for ys in (yo + 24, yo + 62):
+            opening(M, 'x', plane, inward, ys, ys + 8, 96, 114, 4)
+            opening(M, 'x', plane, inward, ys + 3, ys + 5, 40, 50, 4, arch=False, brick=False)
+    tunnel(M, x0, x1, yc, 4, SEA_TOP, SEA_TOP + 5)            # 牆頂走道穿過塔
+    # 頂上的望樓（8 × 8 m、高 3.6 m＋雉堞）
+    tx0, tx1, ty0, ty1, tz = 165, 205, 30, 70, th + 18
+    for x in range(tx0, tx1):
+        for y in range(ty0, ty1):
+            for z in range(th, tz):
+                M.put(x, y, z, MK.color(x + y, z))
+    for x in range(tx0 + 3, tx1 - 3):
+        for y in range(ty0 + 3, ty1 - 3):
+            M.cells[(x, y, tz - 1)] = PAVE
+    ring_parapet(M, lambda x, y: tx0 <= x < tx1 and ty0 <= y < ty1, tx0, ty0, tx1, ty1, tz, 10, 5, MK)
+    for xs in (tx0 + 8, tx0 + 26):
+        opening(M, 'y', ty0, +1, xs, xs + 6, th + 2, th + 14, 3)
+    opening(M, 'y', ty1 - 1, -1, tx0 + 16, tx0 + 24, th, th + 13, 4)   # 望樓的門（朝城裡）
+    M.anchor('wall-a', 0, yc, 0)
+    M.anchor('wall-b', 239, yc, 0)
+    M.anchor('road-out', 120, 0, 0)
+    M.anchor('road-in', 120, 99, 0)
+    return B
+
+
 ALL = [li_section, li_tower, li_gate, li_end,
        lo_section, lambda: lo_tower(False), lambda: lo_tower(True), lo_gate, lo_end,
        s_section, s_tower, s_gate, s_end,
-       li_gate_golden, lo_gate_golden]
+       li_gate_golden, lo_gate_golden, s_gate_mangana]

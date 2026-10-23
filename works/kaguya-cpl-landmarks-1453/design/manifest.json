@@ -1225,6 +1225,196 @@
    "tags": "sub",
    "title": "布科勒昂宮 1453｜野樹（遊戲換成生成式的闊葉樹）"
   },
+  "kaguya-cpl-boukoleon-east-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-boukoleon-east-1453.composite.txt",
+   "key": "boukoleon-east",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "78,40",
+      "style": "roman",
+      "use": "boukoleon-east",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "臨海的翼樓與東端的方樓",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-east-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ruins"
+     },
+     "mirror": "",
+     "name": "庭院的廢墟",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-east-1453-ruins",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ground"
+     },
+     "mirror": "",
+     "name": "地面",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-east-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-fig",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-east-1453-trees-fig",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-cypress",
+      "tree": "cypress"
+     },
+     "mirror": "",
+     "name": "柏樹",
+     "recolor": {},
+     "source": "kaguya-cpl-boukoleon-east-1453-trees-cypress",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-boukoleon-east-1453",
+   "size": [
+    390,
+    200,
+    100
+   ],
+   "tags": "building,roman",
+   "title": "布科勒昂宮的東翼 1453（臨海翼樓與庭院的廢墟）"
+  },
+  "kaguya-cpl-boukoleon-east-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-east-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-boukoleon-east-1453",
+   "product": "kaguya-cpl-boukoleon-east-1453",
+   "size": [
+    390,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮東翼 1453｜臨海的翼樓與東端的方樓（廢墟）"
+  },
+  "kaguya-cpl-boukoleon-east-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-east-1453-ground.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-boukoleon-east-1453",
+   "product": "kaguya-cpl-boukoleon-east-1453",
+   "size": [
+    390,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮東翼 1453｜地面（草）"
+  },
+  "kaguya-cpl-boukoleon-east-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-east-1453-ruins.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-boukoleon-east-1453",
+   "product": "kaguya-cpl-boukoleon-east-1453",
+   "size": [
+    390,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮東翼 1453｜庭院的廢墟（殘柱、倒柱、噴泉池、斷牆、碎石）"
+  },
+  "kaguya-cpl-boukoleon-east-1453-trees-cypress": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-east-1453-trees-cypress.vox.txt",
+   "mpv": 0.2,
+   "order": 50,
+   "parent": "kaguya-cpl-boukoleon-east-1453",
+   "product": "kaguya-cpl-boukoleon-east-1453",
+   "size": [
+    390,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮東翼 1453｜柏樹（遊戲換成生成式的柏樹）"
+  },
+  "kaguya-cpl-boukoleon-east-1453-trees-fig": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-boukoleon-east-1453-trees-fig.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-boukoleon-east-1453",
+   "product": "kaguya-cpl-boukoleon-east-1453",
+   "size": [
+    390,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "布科勒昂宮東翼 1453｜野樹（遊戲換成生成式的闊葉樹）"
+  },
   "kaguya-cpl-chalke-1453": {
    "anchors": {
     "chapel": [
