@@ -52,6 +52,8 @@ def cistern(M, P, wall=1, garden=2):
                 M.add(M.box(a0, a1, b0, b1, M.mpv, 2 * M.mpv) & rows, GREEN, garden)
             else:                                            # 休耕
                 M.add(M.box(a0, a1, b0, b1, 0, M.mpv), SOIL, garden)
+    # 池底其他地方（田埂、牆腳那一圈）鋪一層草：成品 meta ground=hide ⇒ 遊戲不畫地塊框裡的地形（遠處那一層地形不會挖坑 ⇒ 池底要模型自己給；2026-10-23）
+    M.add(M.box(t, L - t, t, Wd - t, 0, M.mpv), GREEN, garden, over=False)
     # 看守小屋（池底一角）
     hx, hy = t + 1.0, t + 1.0
     M.add(M.box(hx, hx + 4.0, hy, hy + 3.0, 0, 2.6), BRICK, garden)

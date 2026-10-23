@@ -9,7 +9,7 @@ TITLE = '莫齊烏斯露天蓄水池 1453（Cistern of Mocius，491–518；池�
 TITLE_SHORT = '莫齊烏斯露天蓄水池 1453'
 MPV = 0.4
 W, D, H = 147.0, 170.0, 11.0
-META = {'kind': 'building', 'use': 'cistern-mocius', 'style': 'roman', 'lot': '147,170', 'base': 0, 'variant': 'a', 'sink': 9.0, 'lamps': 12}
+META = {'kind': 'building', 'use': 'cistern-mocius', 'style': 'roman', 'lot': '147,170', 'base': 0, 'variant': 'a', 'sink': 9.0, 'ground': 'hide', 'lamps': 12}
 PARTS = (('body', 1, '池牆（磚帶＋石帶、牆頂步道與女兒牆、坡道）'), ('garden', 2, '池底（畦田、果園的地、看守小屋）'),
          ('trees-fruit', 3, '果樹（遊戲換成生成式的果樹）', {'kind': 'tree', 'tree': 'fruit'}), ('trees-olive', 4, '橄欖（遊戲換成生成式的橄欖樹）', {'kind': 'tree', 'tree': 'olive'}))
 PROV = {
