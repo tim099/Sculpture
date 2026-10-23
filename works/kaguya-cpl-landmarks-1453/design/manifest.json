@@ -1,6 +1,141 @@
 {
  "root": "kaguya-cpl-landmarks-1453",
  "works": {
+  "kaguya-cpl-andreas-krisei-1453": {
+   "anchors": {
+    "dome-top": [
+     42,
+     80,
+     80
+    ],
+    "door": [
+     42,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-andreas-krisei-1453.composite.txt",
+   "key": "andreas-krisei",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 8,
+      "lot": "17,25",
+      "style": "roman",
+      "use": "andreas-krisei",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-andreas-krisei-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-andreas-krisei-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-andreas-krisei-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-andreas-krisei-1453",
+   "size": [
+    85,
+    125,
+    100
+   ],
+   "tags": "building,roman",
+   "title": "聖安德烈教堂 1453（Hagios Andreas en Krisei；迴廊式、肋拱穹頂）"
+  },
+  "kaguya-cpl-andreas-krisei-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-andreas-krisei-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-andreas-krisei-1453",
+   "product": "kaguya-cpl-andreas-krisei-1453",
+   "size": [
+    85,
+    125,
+    100
+   ],
+   "tags": "sub",
+   "title": "聖安德烈教堂 1453｜主體（迴廊、內外前廊、後殿）"
+  },
+  "kaguya-cpl-andreas-krisei-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-andreas-krisei-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-andreas-krisei-1453",
+   "product": "kaguya-cpl-andreas-krisei-1453",
+   "size": [
+    85,
+    125,
+    100
+   ],
+   "tags": "sub",
+   "title": "聖安德烈教堂 1453｜窗玻璃"
+  },
+  "kaguya-cpl-andreas-krisei-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-andreas-krisei-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-andreas-krisei-1453",
+   "product": "kaguya-cpl-andreas-krisei-1453",
+   "size": [
+    85,
+    125,
+    100
+   ],
+   "tags": "sub",
+   "title": "聖安德烈教堂 1453｜屋頂（肋拱穹頂、瓦）"
+  },
   "kaguya-cpl-aqueduct-valens-1453": {
    "anchors": {
     "deck": [
@@ -139,6 +274,141 @@
    ],
    "tags": "sub",
    "title": "瓦倫斯引水渠 1453｜收尾｜橋台（實心牆身、渠道）"
+  },
+  "kaguya-cpl-atik-mustafa-1453": {
+   "anchors": {
+    "dome-top": [
+     40,
+     49,
+     60
+    ],
+    "door": [
+     40,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-atik-mustafa-1453.composite.txt",
+   "key": "atik-mustafa",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 6,
+      "lot": "16,19",
+      "style": "roman",
+      "use": "atik-mustafa",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-atik-mustafa-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-atik-mustafa-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-atik-mustafa-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-atik-mustafa-1453",
+   "size": [
+    80,
+    95,
+    80
+   ],
+   "tags": "building,roman",
+   "title": "Blachernae 的十字穹頂教堂 1453（Atik Mustafa Paşa；三個後殿）"
+  },
+  "kaguya-cpl-atik-mustafa-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-atik-mustafa-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-atik-mustafa-1453",
+   "product": "kaguya-cpl-atik-mustafa-1453",
+   "size": [
+    80,
+    95,
+    80
+   ],
+   "tags": "sub",
+   "title": "Atik Mustafa Paşa 教堂 1453｜主體（十字臂、角落小室、前廊、後殿）"
+  },
+  "kaguya-cpl-atik-mustafa-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-atik-mustafa-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-atik-mustafa-1453",
+   "product": "kaguya-cpl-atik-mustafa-1453",
+   "size": [
+    80,
+    95,
+    80
+   ],
+   "tags": "sub",
+   "title": "Atik Mustafa Paşa 教堂 1453｜窗玻璃"
+  },
+  "kaguya-cpl-atik-mustafa-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-atik-mustafa-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-atik-mustafa-1453",
+   "product": "kaguya-cpl-atik-mustafa-1453",
+   "size": [
+    80,
+    95,
+    80
+   ],
+   "tags": "sub",
+   "title": "Atik Mustafa Paşa 教堂 1453｜屋頂（穹頂、瓦）"
   },
   "kaguya-cpl-augustaion-1453": {
    "anchors": {
@@ -5314,6 +5584,364 @@
    "tags": "sub",
    "title": "全能者修道院 1453｜屋頂（五個穹頂、瓦）"
   },
+  "kaguya-cpl-peribleptos-1453": {
+   "anchors": {
+    "dome-top": [
+     85,
+     125,
+     99
+    ],
+    "door": [
+     85,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-peribleptos-1453.composite.txt",
+   "key": "peribleptos",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 10,
+      "lot": "34,46",
+      "style": "roman",
+      "use": "peribleptos",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-peribleptos-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-peribleptos-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ground"
+     },
+     "mirror": "",
+     "name": "院子",
+     "recolor": {},
+     "source": "kaguya-cpl-peribleptos-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-cypress",
+      "tree": "cypress"
+     },
+     "mirror": "",
+     "name": "柏樹",
+     "recolor": {},
+     "source": "kaguya-cpl-peribleptos-1453-trees-cypress",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-fruit",
+      "tree": "fruit"
+     },
+     "mirror": "",
+     "name": "果樹",
+     "recolor": {},
+     "source": "kaguya-cpl-peribleptos-1453-trees-fruit",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-peribleptos-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-peribleptos-1453",
+   "size": [
+    170,
+    230,
+    110
+   ],
+   "tags": "building,roman",
+   "title": "Peribleptos 聖母修道院 1453（主堂、院牆、房舍；位置與大小是設計）"
+  },
+  "kaguya-cpl-peribleptos-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-peribleptos-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-peribleptos-1453",
+   "product": "kaguya-cpl-peribleptos-1453",
+   "size": [
+    170,
+    230,
+    110
+   ],
+   "tags": "sub",
+   "title": "Peribleptos 修道院 1453｜主體（主堂、房舍、院牆、門樓）"
+  },
+  "kaguya-cpl-peribleptos-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-peribleptos-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 60,
+   "parent": "kaguya-cpl-peribleptos-1453",
+   "product": "kaguya-cpl-peribleptos-1453",
+   "size": [
+    170,
+    230,
+    110
+   ],
+   "tags": "sub",
+   "title": "Peribleptos 修道院 1453｜窗玻璃"
+  },
+  "kaguya-cpl-peribleptos-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-peribleptos-1453-ground.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-peribleptos-1453",
+   "product": "kaguya-cpl-peribleptos-1453",
+   "size": [
+    170,
+    230,
+    110
+   ],
+   "tags": "sub",
+   "title": "Peribleptos 修道院 1453｜院子（石板、草）"
+  },
+  "kaguya-cpl-peribleptos-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-peribleptos-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-peribleptos-1453",
+   "product": "kaguya-cpl-peribleptos-1453",
+   "size": [
+    170,
+    230,
+    110
+   ],
+   "tags": "sub",
+   "title": "Peribleptos 修道院 1453｜屋頂（穹頂、瓦）"
+  },
+  "kaguya-cpl-peribleptos-1453-trees-cypress": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-peribleptos-1453-trees-cypress.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-peribleptos-1453",
+   "product": "kaguya-cpl-peribleptos-1453",
+   "size": [
+    170,
+    230,
+    110
+   ],
+   "tags": "sub",
+   "title": "Peribleptos 修道院 1453｜柏樹（遊戲換成生成式的柏樹）"
+  },
+  "kaguya-cpl-peribleptos-1453-trees-fruit": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-peribleptos-1453-trees-fruit.vox.txt",
+   "mpv": 0.2,
+   "order": 50,
+   "parent": "kaguya-cpl-peribleptos-1453",
+   "product": "kaguya-cpl-peribleptos-1453",
+   "size": [
+    170,
+    230,
+    110
+   ],
+   "tags": "sub",
+   "title": "Peribleptos 修道院 1453｜果樹（遊戲換成生成式的果樹）"
+  },
+  "kaguya-cpl-polyeuktos-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-polyeuktos-1453.composite.txt",
+   "key": "polyeuktos",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "52,78",
+      "style": "roman",
+      "use": "polyeuktos",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "中庭",
+     "recolor": {},
+     "source": "kaguya-cpl-polyeuktos-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ruins"
+     },
+     "mirror": "",
+     "name": "台地、基礎牆、exedra、拱室、階梯、碎石",
+     "recolor": {},
+     "source": "kaguya-cpl-polyeuktos-1453-ruins",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-polyeuktos-1453-trees",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-polyeuktos-1453",
+   "size": [
+    130,
+    195,
+    33
+   ],
+   "tags": "building,roman",
+   "title": "聖波利尤克托斯教堂的廢墟台地 1453（取石坑、基礎牆、中庭的石棺墓）"
+  },
+  "kaguya-cpl-polyeuktos-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-polyeuktos-1453-ground.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-polyeuktos-1453",
+   "product": "kaguya-cpl-polyeuktos-1453",
+   "size": [
+    130,
+    195,
+    33
+   ],
+   "tags": "sub",
+   "title": "聖波利尤克托斯廢墟 1453｜中庭（草、鋪面殘段、石棺墓）"
+  },
+  "kaguya-cpl-polyeuktos-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-polyeuktos-1453-ruins.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-polyeuktos-1453",
+   "product": "kaguya-cpl-polyeuktos-1453",
+   "size": [
+    130,
+    195,
+    33
+   ],
+   "tags": "sub",
+   "title": "聖波利尤克托斯廢墟 1453｜台地、基礎牆、exedra、拱室、階梯、碎石"
+  },
+  "kaguya-cpl-polyeuktos-1453-trees": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-polyeuktos-1453-trees.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-polyeuktos-1453",
+   "product": "kaguya-cpl-polyeuktos-1453",
+   "size": [
+    130,
+    195,
+    33
+   ],
+   "tags": "sub",
+   "title": "聖波利尤克托斯廢墟 1453｜野樹（遊戲換成生成式的樹）"
+  },
   "kaguya-cpl-san-domenico-1453": {
    "anchors": {
     "bell": [
@@ -6158,6 +6786,141 @@
    ],
    "tags": "sub",
    "title": "波菲羅根尼圖斯宮 1453｜屋頂"
+  },
+  "kaguya-cpl-troullo-1453": {
+   "anchors": {
+    "dome-top": [
+     25,
+     41,
+     52
+    ],
+    "door": [
+     25,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-troullo-1453.composite.txt",
+   "key": "troullo",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 6,
+      "lot": "10,16",
+      "style": "roman",
+      "use": "troullo",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-troullo-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-troullo-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-troullo-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-troullo-1453",
+   "size": [
+    50,
+    80,
+    70
+   ],
+   "tags": "building,roman",
+   "title": "特魯洛的施洗約翰堂 1453（St John in Troullo；四柱、八角鼓座、半圓後殿）"
+  },
+  "kaguya-cpl-troullo-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-troullo-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-troullo-1453",
+   "product": "kaguya-cpl-troullo-1453",
+   "size": [
+    50,
+    80,
+    70
+   ],
+   "tags": "sub",
+   "title": "特魯洛施洗約翰堂 1453｜主體（前廊、十字臂、後殿）"
+  },
+  "kaguya-cpl-troullo-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-troullo-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-troullo-1453",
+   "product": "kaguya-cpl-troullo-1453",
+   "size": [
+    50,
+    80,
+    70
+   ],
+   "tags": "sub",
+   "title": "特魯洛施洗約翰堂 1453｜窗玻璃"
+  },
+  "kaguya-cpl-troullo-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-troullo-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-troullo-1453",
+   "product": "kaguya-cpl-troullo-1453",
+   "size": [
+    50,
+    80,
+    70
+   ],
+   "tags": "sub",
+   "title": "特魯洛施洗約翰堂 1453｜屋頂（穹頂、瓦）"
   },
   "kaguya-cpl-tzykanisterion-1453": {
    "anchors": {
