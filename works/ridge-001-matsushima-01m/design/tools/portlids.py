@@ -25,7 +25,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 WORKS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 M = 'ridge-001-matsushima-01m'
 LIDS = {
-    'matsushima': {'work': M + '-portlid', 'parent': M, 'design': M, 'title': '松島號 12 cm 砲門蓋板（上緣鉸鏈，通用部件，0.1 m）'},
+    'matsushima': {'work': M + '-portlid', 'parent': M, 'design': M, 'title': '松島號 12 cm 砲門蓋板（上緣鉸鏈，通用部件，0.1 m）', 'material': 'iron'},   # material：鋼板 ⇒ 遊戲照材質表的 metal／rough 反光（TASK-0859；Tim 2026-10-23「炮門可以設定為金屬材質嗎」）
 }
 SHIPS = {
     'matsushima': {'asm': M + '-assembly', 'design': M, 'decks': ['甲板-middle'], 'lid': 'matsushima', 'name': '松島號'},
@@ -224,6 +224,8 @@ def draft(cache):
             min_pull = next(k2 * 0.5 for k2 in range(0, 61) if sum(cross_hits(cl, gw - ax[None] * (k2 * 0.5))) == 0)
             house = max(HOUSE_MIN, int(math.ceil(min_pull + HOUSE_MARGIN)))   # 至少留 HOUSE_MARGIN：遊戲照網格表面取樣（62_ports.js portHits），跟這裡的格心＋角落不一樣（v1 剛好等於 ⇒ 匯入檢查 ✗ 1–16 點）
             meta = {'kind': 'portlid', 'lid_of': g['meta']['id'], 'close_deg': close, 'house': house}
+            if Lw.get('material'):
+                meta['material'] = Lw['material']
             rows.append({'model': '砲門蓋-' + re.sub(r'^砲-?', '', gname), 'gun_model': gname, 'gun_path': g['path'], 'host': host, 'host_work': L['work'],
                          'source_work': Lw['work'], 'side': 'S' if side > 0 else 'P', 'at': at, 'pivot': [r1(W / 2, 2), 0, 0], 'rotate': [0, 0, rot],
                          'scale': 1, 'mirror': 'none', 'meta': meta,
