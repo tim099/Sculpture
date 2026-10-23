@@ -1,6 +1,239 @@
 {
  "root": "trailhead-harbour-01m",
  "works": {
+  "trailhead-harbour-01m-battery-en": {
+   "anchors": {
+    "door": [
+     9,
+     1,
+     0
+    ],
+    "flag": [
+     22,
+     96,
+     81
+    ],
+    "flag-bottom": [
+     24,
+     96,
+     60
+    ],
+    "flag-top": [
+     24,
+     96,
+     78
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-battery-en.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|52,96,60|52,96,78",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "style": "en",
+      "use": "battery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "胸牆與砲床",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-battery-en-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-battery-en-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      80,
+      83,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "火藥庫-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      30,
+      35,
+      4
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲1",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      60,
+      35,
+      4
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲2",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      90,
+      35,
+      4
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲3",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      58,
+      104,
+      0
+     ],
+     "meta": {},
+     "name": "火藥桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      78.5,
+      84,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-火藥庫",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "building,en",
+   "title": "砲台（英國：磚砌胸牆與翼牆、三個外張砲眼、木砲床、三門 6 磅砲、磚砌小火藥庫、旗杆）"
+  },
+  "trailhead-harbour-01m-battery-en-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-battery-en-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "砲台｜胸牆與砲床"
+  },
+  "trailhead-harbour-01m-battery-en-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-battery-en-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "砲台｜屋頂"
+  },
   "trailhead-harbour-01m-boat-shed": {
    "anchors": {
     "door": [
@@ -395,6 +628,886 @@
    ],
    "tags": "sub",
    "title": "魚市｜屋頂"
+  },
+  "trailhead-harbour-01m-fort": {
+   "anchors": {
+    "door": [
+     150,
+     59,
+     0
+    ],
+    "flag": [
+     140,
+     140,
+     111
+    ],
+    "flag-bottom": [
+     142,
+     140,
+     90
+    ],
+    "flag-top": [
+     142,
+     140,
+     108
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-fort.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|172,140,90|172,140,108",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "30,30",
+      "style": "carib",
+      "use": "fort",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "堡牆、土台與操場",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      140,
+      59,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      152,
+      171,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "營房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      118,
+      171,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "營房-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      180,
+      171,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "營房-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      169,
+      108,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "火藥庫-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      134.5,
+      60,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      125,
+      81,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲1",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      175,
+      81,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲2",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      81,
+      150,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲3",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      90
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      219,
+      150,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲4",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      270
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      150,
+      219,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲5",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      0
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      46,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲6",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      135
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      46,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲7",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      225
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      254,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲8",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      315
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      254,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲9",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      45
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      162,
+      100,
+      0
+     ],
+     "meta": {},
+     "name": "火藥桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      162,
+      114,
+      0
+     ],
+     "meta": {},
+     "name": "火藥桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "building,carib",
+   "title": "碉堡（四角稜堡，毛石牆：土台與胸牆、九個砲眼與 6 磅砲、門洞、坡道、營房、火藥庫、井、旗杆）"
+  },
+  "trailhead-harbour-01m-fort-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜堡牆、土台與操場"
+  },
+  "trailhead-harbour-01m-fort-en": {
+   "anchors": {
+    "door": [
+     150,
+     59,
+     0
+    ],
+    "flag": [
+     140,
+     140,
+     111
+    ],
+    "flag-bottom": [
+     142,
+     140,
+     90
+    ],
+    "flag-top": [
+     142,
+     140,
+     108
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-fort-en.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|172,140,90|172,140,108",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "30,30",
+      "style": "en",
+      "use": "fort",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "堡牆、土台與操場",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-en-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-en-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      140,
+      59,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      152,
+      171,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "營房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      118,
+      171,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "營房-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      180,
+      171,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "營房-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      169,
+      108,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "火藥庫-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      134.5,
+      60,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      125,
+      81,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲1",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      175,
+      81,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲2",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      81,
+      150,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲3",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      90
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      219,
+      150,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲4",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      270
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      150,
+      219,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲5",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      0
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      46,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲6",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      135
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      46,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲7",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      225
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      254,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲8",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      315
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      254,
+      36
+     ],
+     "meta": {
+      "kind": "deco"
+     },
+     "name": "砲9",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      45
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      162,
+      100,
+      0
+     ],
+     "meta": {},
+     "name": "火藥桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      162,
+      114,
+      0
+     ],
+     "meta": {},
+     "name": "火藥桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "building,en",
+   "title": "碉堡（四角稜堡，磚牆：土台與胸牆、九個砲眼與 6 磅砲、門洞、坡道、營房、火藥庫、井、旗杆）"
+  },
+  "trailhead-harbour-01m-fort-en-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-en-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜堡牆、土台與操場"
+  },
+  "trailhead-harbour-01m-fort-en-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-en-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜屋頂"
+  },
+  "trailhead-harbour-01m-fort-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜屋頂"
   },
   "trailhead-harbour-01m-jail": {
    "anchors": {
