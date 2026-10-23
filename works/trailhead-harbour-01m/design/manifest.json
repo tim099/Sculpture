@@ -1,0 +1,277 @@
+{
+ "root": "trailhead-harbour-01m",
+ "works": {
+  "trailhead-harbour-01m-boat-shed": {
+   "anchors": {
+    "door": [
+     40,
+     0,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-boat-shed.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,14",
+      "style": "common",
+      "use": "boat-shed",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "棚架、滑道與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-boat-shed-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-boat-shed-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      40,
+      62,
+      6
+     ],
+     "meta": {},
+     "name": "小艇",
+     "pivot": [
+      90,
+      26,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      90
+     ],
+     "source": "basecamp-ember-01m-boat"
+    },
+    {
+     "at": [
+      12,
+      118,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    140,
+    70
+   ],
+   "tags": "building,common",
+   "title": "船棚（共用：兩坡木瓦頂的開敞長棚、背面木板牆、兩條圓木滑道、一艘 9 m 小艇、拉船的絞盤、槳架）"
+  },
+  "trailhead-harbour-01m-boat-shed-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-boat-shed-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    140,
+    70
+   ],
+   "tags": "sub",
+   "title": "船棚｜棚架、滑道與擺設"
+  },
+  "trailhead-harbour-01m-boat-shed-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-boat-shed-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    140,
+    70
+   ],
+   "tags": "sub",
+   "title": "船棚｜屋頂"
+  },
+  "trailhead-harbour-01m-sheers": {
+   "anchors": {
+    "door": [
+     30,
+     0,
+     0
+    ],
+    "hoist": [
+     50,
+     17,
+     103
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-sheers.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,10",
+      "style": "common",
+      "use": "sheers",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "起重架與絞盤",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-sheers-body",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      16,
+      22,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      16,
+      36,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      84,
+      22,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      84,
+      36,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      50.5,
+      94,
+      13
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-穩索樁",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    100,
+    100,
+    130
+   ],
+   "tags": "building,common",
+   "title": "起重架（共用：兩根圓材叉成 A 字、頭綁在一起、前後穩索、滑車與吊鉤、導向滑車接絞盤；碼頭邊卸貨）"
+  },
+  "trailhead-harbour-01m-sheers-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-sheers-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    100,
+    100,
+    130
+   ],
+   "tags": "sub",
+   "title": "起重架｜起重架與絞盤"
+  }
+ }
+}
