@@ -1,6 +1,198 @@
 {
  "root": "trailhead-harbour-01m",
  "works": {
+  "trailhead-harbour-01m-bakery": {
+   "anchors": {
+    "door": [
+     22,
+     11,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     34,
+     82,
+     27
+    ]
+   },
+   "expect": "trailhead-harbour-01m-bakery.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "bakery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "店面、麵包爐與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-bakery-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-bakery-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      44,
+      11,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-賣窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      27,
+      60,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往爐）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      27,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      64,
+      104,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      34.5,
+      12,
+      21
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "building,common",
+   "title": "麵包坊（共用：木板店面、木瓦兩坡頂、賣窗與櫃檯、麵包架、揉麵槽與麵粉袋；後院毛石台基上的圓頂麵包爐、茅草披棚、柴堆）"
+  },
+  "trailhead-harbour-01m-bakery-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-bakery-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "麵包坊｜店面、麵包爐與擺設"
+  },
+  "trailhead-harbour-01m-bakery-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-bakery-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "麵包坊｜屋頂"
+  },
   "trailhead-harbour-01m-battery-en": {
    "anchors": {
     "door": [
@@ -480,6 +672,148 @@
    "tags": "sub",
    "title": "船棚｜屋頂"
   },
+  "trailhead-harbour-01m-carpenter": {
+   "anchors": {
+    "door": [
+     40,
+     40,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-carpenter.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "carpenter",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "工坊與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-carpenter-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-carpenter-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      96,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      5,
+      61,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      40,
+      44,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-楣",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "building,common",
+   "title": "木工坊（共用：前院鋸木架與晾板堆；木板工坊正面大開口、長工作檯與刨子、工具架、磨刀石；後院原木堆）"
+  },
+  "trailhead-harbour-01m-carpenter-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-carpenter-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "木工坊｜工坊與擺設"
+  },
+  "trailhead-harbour-01m-carpenter-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-carpenter-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "木工坊｜屋頂"
+  },
   "trailhead-harbour-01m-chapel": {
    "anchors": {
     "bell": [
@@ -785,6 +1119,178 @@
    ],
    "tags": "sub",
    "title": "修院｜屋頂"
+  },
+  "trailhead-harbour-01m-cooper": {
+   "anchors": {
+    "door": [
+     26,
+     8,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-cooper.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "cooper",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "工棚與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-cooper-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-cooper-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      12,
+      24,
+      1
+     ],
+     "meta": {},
+     "name": "桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      24,
+      24,
+      1
+     ],
+     "meta": {},
+     "name": "桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      60,
+      24,
+      1
+     ],
+     "meta": {},
+     "name": "桶-3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      12,
+      76,
+      1
+     ],
+     "meta": {},
+     "name": "桶-4",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      39,
+      16,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "building,common",
+   "title": "桶匠（共用：開敞的木瓦頂工棚、背牆掛鐵箍；三個做到一半的桶（立板、烤彎、上箍）、削板凳、桶板堆、做好的桶；後院橡木料）"
+  },
+  "trailhead-harbour-01m-cooper-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-cooper-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "桶匠｜工棚與擺設"
+  },
+  "trailhead-harbour-01m-cooper-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-cooper-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "桶匠｜屋頂"
   },
   "trailhead-harbour-01m-fish-market": {
    "anchors": {
@@ -2897,6 +3403,153 @@
    "tags": "sub",
    "title": "起重架｜起重架與絞盤"
   },
+  "trailhead-harbour-01m-smithy": {
+   "anchors": {
+    "door": [
+     40,
+     12,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     37,
+     77,
+     41
+    ]
+   },
+   "expect": "trailhead-harbour-01m-smithy.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "smithy",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、火爐與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-smithy-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-smithy-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      48,
+      52,
+      1
+     ],
+     "meta": {},
+     "name": "淬火桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      10,
+      112,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      8,
+      20,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-石墩",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "building,common",
+   "title": "鐵匠鋪（共用：毛石三面牆、正面全開的鍛造間、架高的火爐與石罩、毛石大煙囪、雙板風箱、樹墩上的鐵砧、工具架；後院木炭、廢鐵、釘馬掌的架）"
+  },
+  "trailhead-harbour-01m-smithy-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-smithy-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "鐵匠鋪｜牆、火爐與擺設"
+  },
+  "trailhead-harbour-01m-smithy-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-smithy-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "鐵匠鋪｜屋頂"
+  },
   "trailhead-harbour-01m-watchtower": {
    "anchors": {
     "door": [
@@ -3010,6 +3663,238 @@
    ],
    "tags": "sub",
    "title": "瞭望塔｜遮陽頂"
+  },
+  "trailhead-harbour-01m-weighhouse": {
+   "anchors": {
+    "door": [
+     50,
+     4,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-weighhouse.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,8",
+      "style": "common",
+      "use": "weighhouse",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "棚、天平與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-weighhouse-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-weighhouse-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      63,
+      61,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "書記-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      70,
+      76,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "書記-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      26,
+      32,
+      7
+     ],
+     "meta": {},
+     "name": "糖桶-盤上",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      60,
+      46,
+      2
+     ],
+     "meta": {},
+     "name": "糖桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      84,
+      18,
+      2
+     ],
+     "meta": {},
+     "name": "糖桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      84,
+      46,
+      2
+     ],
+     "meta": {},
+     "name": "糖桶-3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      40,
+      66,
+      0
+     ],
+     "meta": {},
+     "name": "糖桶-台外-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      52,
+      66,
+      0
+     ],
+     "meta": {},
+     "name": "糖桶-台外-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      50,
+      8,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    100,
+    80,
+    60
+   ],
+   "tags": "building,common",
+   "title": "過磅所（共用：碼頭邊開敞的秤棚、木瓦兩坡頂、木板地台；梁下的大天平與兩只吊盤、砝碼架；書記的小屋；等著過秤的糖桶與袋）"
+  },
+  "trailhead-harbour-01m-weighhouse-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-weighhouse-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    80,
+    60
+   ],
+   "tags": "sub",
+   "title": "過磅所｜棚、天平與擺設"
+  },
+  "trailhead-harbour-01m-weighhouse-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-weighhouse-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    80,
+    60
+   ],
+   "tags": "sub",
+   "title": "過磅所｜屋頂"
   }
  }
 }
