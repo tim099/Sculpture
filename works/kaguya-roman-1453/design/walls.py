@@ -366,6 +366,96 @@ def s_end():
     return B
 
 
+# ═════════════ 金門（Golden Gate；2026-10-23 加，TASK-0748）═════════════
+# 狄奧多西一世的凱旋門（約 390 年代），併進內牆：三個拱門（中間大）、兩座大理石方塔（內牆第 9、10 座）；連塔寬約 66 m（OSM 兩座塔各約 21 × 23 m、中心距 47.7 m）；
+# 1453：中間那道封死、整座門「封起來、改小」（帕列奧略後期）⇒ 兩側小門還開著（Wikipedia Golden Gate (Constantinople)；The Byzantine Legacy）。
+# 外牆那一道（propylaeum）：一個門洞、兩旁兩層再利用的大理石浮雕（赫拉克勒斯的功業…；17 世紀後散失）。
+# 塔寬、拱的大小高度、浮雕板的大小 ⇒ 設計決定（只知道「連塔 66 m、大理石、中間大」）。遊戲照城門那一筆的 model（'golden'）挑這一件（Blockside 63_towns.js）。
+class MarbleMason:
+    """大理石方石（Proconnesian）：一塊沿牆 6 格 × 高 4 格，縫用暖米、塊面白與灰白交錯。"""
+
+    def __init__(s, salt=''):
+        s.salt = salt
+
+    def color(s, x, z, u_salt=0):
+        row = z // 4
+        off = (row % 2) * 3
+        if z % 4 == 3 or (x + off) % 6 == 5:
+            return LIME_W
+        return MARBLE if h01('mb', s.salt, row, (x + off) // 6) < 0.7 else LIME
+
+
+MG = MarbleMason('golden')
+
+
+def li_gate_golden():
+    M, B = W('land-inner', 'gate', '金門（三拱的凱旋門、兩座大理石方塔；中間那道封死、兩側小門開著）', (352, 100, 124), variant='golden')
+    yc = 50
+    inner_profile(M, 0, 4, yc)
+    inner_profile(M, 348, 352, yc)
+    th = 112                                                 # 塔高 22.4 m
+    for (x0, x1) in ((4, 109), (243, 348)):                  # 兩座大理石方塔（21 m 寬、中心距 47.8 m ＝ OSM way 23272338、23272340 量的；往外凸 7.4 m、牆腳再凸一格到框邊）
+        yo, yi = yc - IN_T - 37, yc + IN_T + 2
+        block(M, x0, yo, x1, yi, 0, th, MG)
+        block(M, x0 - 1, yo - 1, x1 + 1, yi, 0, 6, MI)        # 牆腳
+        for x in range(x0 + 3, x1 - 3):
+            for y in range(yo + 3, yi - 3):
+                M.cells[(x, y, th - 1)] = PAVE
+        ring_parapet(M, lambda x, y, x0=x0, x1=x1, yo=yo, yi=yi: x0 <= x < x1 and yo <= y < yi, x0, yo, x1, yi, th, 10, 5, MI)
+        for u in (20, 60):                                   # 外面上層兩扇窗、下層射口
+            opening(M, 'y', yo, +1, x0 + u, x0 + u + 10, th - 34, th - 12, 3, brick=False)
+            opening(M, 'y', yo, +1, x0 + u + 4, x0 + u + 6, 34, 46, 3, arch=False, brick=False)
+        tunnel(M, x0, x1, yc, 5, IN_TOP, IN_TOP + 6)
+    # 凱旋門本體（兩塔之間 26.8 m、往外凸 1.2 m、高 17 m）：三拱、上面一道簷、帕列奧略加的雉堞
+    ya = yc - IN_T - 6
+    block(M, 109, ya, 243, yc + IN_T, 0, 85, MG)
+    for x in range(109, 243):
+        for z in (72, 73):
+            M.put(x, ya - 1, z, MARBLE)                       # 簷
+        for y in range(ya + 3, yc + IN_T - 2):
+            M.cells[(x, y, 84)] = PAVE
+    merlons(M, 109, 243, ya, ya + 3, 85, 10, 5, cap=LIME_G, mason=MI)
+    arch_cut(M, 176, 18, 46, ya, yc + IN_T, ring=4, alt=(MARBLE, LIME_W))     # 中間的大拱（7.2 m 寬、頂 12.8 m）
+    block(M, 158, ya + 6, 194, yc + IN_T, 0, 70, MI)                          # 封死：往裡 1.2 m 砌石灰岩夾磚帶
+    for xc in (137, 215):                                                     # 兩側的小拱（3.6 m 寬、頂 7.6 m）：還開著、門扇開著
+        arch_cut(M, xc, 9, 29, ya, yc + IN_T, ring=3, alt=(MARBLE, LIME_W))
+        leaf(M, xc - 9, yc + 4, yc + IN_T, 26)                                # 門扇貼著門洞的邊（不然自己一塊）
+        leaf(M, xc + 8, yc + 4, yc + IN_T, 26)
+    M.anchor('wall-a', 0, yc, 0)
+    M.anchor('wall-b', 351, yc, 0)
+    M.anchor('road-out', 137, 0, 0)
+    M.anchor('road-in', 137, 99, 0)
+    return B
+
+
+def lo_gate_golden():
+    M, B = W('land-outer', 'gate', '金門的外門（一個門洞、兩旁兩層大理石浮雕板、雉堞）', (120, 64, 72), variant='golden')
+    yc = 32
+    outer_profile(M, 0, 5, yc)
+    outer_profile(M, 115, 120, yc)
+    yo, yi = yc - OUT_T - 12, yc + OUT_T + 8
+    block(M, 5, yo, 115, yi, 0, 58, MG)
+    for x in range(8, 112):
+        for y in range(yo + 3, yi - 3):
+            M.cells[(x, y, 57)] = PAVE
+    ring_parapet(M, lambda x, y: 5 <= x < 115 and yo <= y < yi, 5, yo, 115, yi, 58, 10, 5, MI)
+    arch_cut(M, 60, 10, 20, yo, yi, ring=3, alt=(MARBLE, LIME_W))
+    for (a0, a1) in ((10, 44), (76, 110)):                   # 兩旁兩層浮雕板（凸出一格、板框暖米、板面照雜湊刻出人物的影子）
+        for (z0, z1) in ((8, 24), (28, 44)):
+            for x in range(a0, a1):
+                for z in range(z0, z1):
+                    edge = x in (a0, a1 - 1) or z in (z0, z1 - 1)
+                    fig = h01('rel', x // 3, z // 4, a0, z0) < 0.45
+                    M.put(x, yo - 1, z, LIME_W if edge else (LIME_G if fig else MARBLE))
+    tunnel(M, 5, 115, yc, 3, OUT_TOP, OUT_TOP + 4)
+    M.anchor('wall-a', 0, yc, 0)
+    M.anchor('wall-b', 119, yc, 0)
+    M.anchor('road-out', 60, 0, 0)
+    M.anchor('road-in', 60, 63, 0)
+    return B
+
+
 ALL = [li_section, li_tower, li_gate, li_end,
        lo_section, lambda: lo_tower(False), lambda: lo_tower(True), lo_gate, lo_end,
-       s_section, s_tower, s_gate, s_end]
+       s_section, s_tower, s_gate, s_end,
+       li_gate_golden, lo_gate_golden]

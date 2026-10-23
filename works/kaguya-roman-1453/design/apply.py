@@ -87,11 +87,14 @@ for w, W in sel:
         for nm, cells, args in (('carve', carve, ['op=carvevox']), ('stamp', add, ['op=stampvox', 'overwrite=1'])):
             if not cells:
                 continue
-            p = os.path.join(TMP, '%s.%s.vox.txt' % (w, nm))
-            dump(p, cells)
-            rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(cells), 'draft=0', 'share=0'])
-            m = re.search(r'placed\s*=\s*(\d+)', out)
-            print(w, nm, len(cells), 'rc', rc, 'placed', m.group(1) if m else '?')
+            keys = sorted(cells)                           # 單刀上限 1,000,000 格 ⇒ 照排序切成 ≤ 900,000 格一份（金門 1,679,769 格，2026-10-23）
+            for i0 in range(0, len(keys), 900000):
+                part = {k: cells[k] for k in keys[i0:i0 + 900000]}
+                p = os.path.join(TMP, '%s.%s.%d.vox.txt' % (w, nm, i0 // 900000))
+                dump(p, part)
+                rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(part), 'draft=0', 'share=0'])
+                m = re.search(r'placed\s*=\s*(\d+)', out)
+                print(w, nm, len(part), 'rc', rc, 'placed', m.group(1) if m else '?')
         print(w, '現況 %d → 清單 %d｜刻 %d、補／換色 %d' % (len(cur), len(want), len(carve), len(add)))
     elif step == 'anchors':
         have = {}
