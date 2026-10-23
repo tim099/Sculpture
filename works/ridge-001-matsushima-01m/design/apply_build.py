@@ -38,6 +38,7 @@ PARTS = [
     ('engine', W + '-engine', '松島號 臥式三段膨脹主機（右舷；左舷鏡像）', 'part_engine.txt', HULL, 0.1),
     ('shaft', W + '-shaft', '松島號 螺旋槳軸（右舷；左舷鏡像）', 'part_shaft.txt', HULL, 0.1),
     ('barbette', W + '-barbette', '松島號 主砲露砲台（300 mm）', 'part_barbette.txt', HULL, 0.1),
+    ('hoist', W + '-hoist', '松島號 主砲的揚弾筒（轉軸上、防護甲板 → 轉盤中間；裝甲 0.3 m；kind=hoist）', 'part_hoist.txt', HULL, 0.1),
     ('barbette-posts', W + '-barbette-posts', '松島號 露砲台裡的撐柱', 'part_barbette-posts.txt', HULL, 0.1),
     ('mast', W + '-mast', '松島號 軍用桅（兩層桅樓、信號桁、斜桁、吊艇桿）', 'part_mast.txt', HULL, 0.1),
     ('vents', W + '-vents', '松島號 通風筒', 'part_vents.txt', HULL, 0.1),

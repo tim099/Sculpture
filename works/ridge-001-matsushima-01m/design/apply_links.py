@@ -123,7 +123,8 @@ LINKS = [
     ('通風筒', W + '-vents', {'material': 'iron*0.05'}, ''),   # 實心管（空心會封成空腔）⇒ 鐵 5%
     ('艇架', W + '-skids', None, ''),
     ('彈藥庫-前', W + '-mag-fore', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/lm-fwd,梯子/mu-fwd,梯子/uf-fwd,梯子/bridge-S'}, ''),
-    ('彈藥庫-後', W + '-mag-aft', {'kind': 'magazine', 'pos': 'aft', 'hoist': '梯子/barbette,梯子/mu-aft'}, ''),
+    ('彈藥庫-後', W + '-mag-aft', {'kind': 'magazine', 'pos': 'aft', 'hoist': '梯子/mu-aft'}, ''),   # 主砲改由揚弾筒吊（TASK-0841）⇒ 不再寫 梯子/barbette
+    ('揚弾筒', W + '-hoist', dict(IRON, kind='hoist', guns='gun-27'), ''),   # 主砲（主砲塔/砲 的物件 id）；trip／rounds 照遊戲預設
     ('艙壁', W + '-bulkheads', {'material': 'iron*0.1', 'render': 'voxel'}, ''),   # 水密艙壁 1 格 ⇒ 方塊
     ('梯子', W + '-ladders', {'kind': 'ladders', 'material': 'iron*0.2', 'render': 'voxel'}, ''),
 ]
@@ -133,6 +134,7 @@ for nm, src, meta, mir in LINKS:
 # ── 固定點 ──
 for L in A['ladders']:
     for k in ('foot', 'lo', 'hi', 'head'): anchor(W + '-ladders', L['name'] + '.' + k, L[k])
+for k in ('bottom', 'top'): anchor(W + '-hoist', k, A['hoist'][k])   # 艙底接收處／砲尾接收點（轉軸上）
 MAGW = {'mag-fore': W + '-mag-fore', 'mag-aft': W + '-mag-aft'}
 for nm, mm in A['mags'].items():
     for k in ('blast', 'door'): anchor(MAGW[nm], k, mm[k])

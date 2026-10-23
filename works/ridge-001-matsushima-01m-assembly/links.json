@@ -545,7 +545,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"hoist": "ladders-1#barbette,ladders-1#mu-aft",
+				"hoist": "ladders-1#mu-aft",
 				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "aft",
@@ -628,6 +628,33 @@
 				"id": "turret-1",
 				"kind": "turret",
 				"rate": 4
+			}
+		},
+		{
+			"name": "揚弾筒",
+			"work": "ridge-001-matsushima-01m-hoist",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T13:10:05",
+			"persona": "ridge-001",
+			"note": "主砲的揚弾筒（TASK-0841；艙底接收處 → 轉盤中間吊上砲）",
+			"meta": {
+				"guns": "gun-27",
+				"id": "hoist-1",
+				"kind": "hoist",
+				"material": "iron",
+				"render": "smooth"
 			}
 		}
 	]

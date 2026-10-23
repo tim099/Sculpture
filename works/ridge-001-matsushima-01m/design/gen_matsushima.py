@@ -258,14 +258,22 @@ def build():
             steps.append((x_, zz_))
             lad_mask[min(x_, x_ + dirx):max(x_, x_ + dirx) + 1, y - width:y + width + 1, zz_] = True
         xprev = None
+        rails = []
         for zz_ in range(z_lo, z_hi - 1):                                  # 兩根側板（x 換格的那一層兩格都放 ⇒ 六連通不斷）
             x_ = int(round(xb + dirx * run * (zz_ - z_lo) / H))
             for xq in {x_, xprev if xprev is not None else x_}:
                 lad_mask[xq, y - width - 1, zz_] = True; lad_mask[xq, y + width + 1, zz_] = True
+                rails.append((xq, zz_))
             xprev = x_
-        for zd in hatch_decks:                                             # 甲板上的艙口：梯子穿過那一層的位置 ± 幾格
-            xm = xb + dirx * run * (zd - z_lo) / H
-            hat[int(math.floor(xm - 5)):int(math.ceil(xm + 5)) + 1, y - width - 1:y + width + 2, zd - 5:zd + 1] = True
+        for zd in hatch_decks:                                             # 甲板上的艙口（造船規格 §9.3 開梯口的做法；TASK-0838）
+            # 梯頂那一頭：開到側板在這層甲板裡蓋到的最後一欄為止（不多開 ⇒ head 不踩在洞上）；
+            # 梯腳那一頭：開到人站在那一階、頭上 1.4 m 碰不到甲板底為止。
+            # 舊寫法是「梯子穿過那一層的位置 ± 5」⇒ 梯頂那一頭多開 6 排、head 踩在洞上（ladcheck 2026-10-23：13 座 ✗）。
+            xe = max((xq * dirx for xq, zq in rails if zd - 5 <= zq <= zd), default=None)
+            if xe is None: continue
+            xe *= dirx
+            xs = int(math.floor(xb + dirx * run * (zd - 5 - 14 - z_lo) / H)) if dirx > 0 else int(math.ceil(xb + dirx * run * (zd - 5 - 14 - z_lo) / H))
+            hat[min(xs, xe):max(xs, xe) + 1, y - width - 1:y + width + 2, zd - 5:zd + 1] = True
         lo, hi = steps[0], steps[-1]
         d = {'name': nm, 'foot': [lo[0] - dirx * 3, y, z_lo], 'lo': [lo[0], y, lo[1] + 1], 'hi': [hi[0], y, hi[1] + 1], 'head': [hi[0] + dirx * 4, y, z_hi]}
         ladders.append(d)
@@ -366,9 +374,16 @@ def build():
     post = np.zeros(ring.shape, bool)
     for a in (45, 135, 225, 315):
         post |= np.hypot(Xg - (bx_ + 28 * math.cos(math.radians(a))), Yg - (YC + 28 * math.sin(math.radians(a)))) <= 2
+    # 防護甲板那一層、船尾那一側開一扇門（0.7 × 2.0 m）：圈裡的接收處接上防護甲板（揚弾手倒了，預備水手從 lm-aft 走得進來；TASK-0841）
+    door = (Xg < bx_) & (np.abs(Yg - YC) <= 3) & (Zg <= bz0 + 19)
     o = (bx_ - r1 - 1, YC - r1 - 1, bz0)
-    claim('barbette', o, ring & ~lad_mask[o[0]:o[0] + ring.shape[0], o[1]:o[1] + ring.shape[1], bz0:bz1 + 1], C['white'])
+    claim('barbette', o, ring & ~door & ~lad_mask[o[0]:o[0] + ring.shape[0], o[1]:o[1] + ring.shape[1], bz0:bz1 + 1], C['white'])
     claim('barbette-posts', o, post & ~lad_mask[o[0]:o[0] + ring.shape[0], o[1]:o[1] + ring.shape[1], bz0:bz1 + 1], C['iron'])
+    # 揚弾筒（主砲；Tim 2026-10-23「彈藥從艙底經過轉盤中間吊上砲」，TASK-0841 kind=hoist）：轉軸上、防護甲板 → 轉盤中間的洞底下，
+    #   外徑 1.1 m、內徑 0.5 m（壁 0.3 m ＝ 史料揚弾筒裝甲 250–300 mm，ja Wikipedia 松島型）；筒底朝右舷開口（0.5 × 2.0 m）＝ 艙底接收處。
+    tube = (rr > 2.5) & (rr <= 5.5) & ~((Yg > YC) & (np.abs(Xg - bx_) <= 2) & (Zg <= bz0 + 19))
+    claim('hoist', o, tube & ~lad_mask[o[0]:o[0] + ring.shape[0], o[1]:o[1] + ring.shape[1], bz0:bz1 + 1], C['iron'])
+    anc['hoist'] = {'bottom': [bx_, YC + 7, bz0], 'top': [bx_, YC, tm['z_table'] + 16]}
     holes[bx_ - r0:bx_ + r0 + 1, YC - r0:YC + r0 + 1, ZLD + 1:bz1 + 1] |= (np.hypot(np.arange(bx_ - r0, bx_ + r0 + 1)[:, None] - bx_, np.arange(YC - r0, YC + r0 + 1)[None, :] - YC) <= r1 + 0.5)[:, :, None]
     anc['barbette'] = {'pivot': [bx_, YC, tm['z_table']]}
     # ── 桅（軍用桅：實心鋼管、兩層圓的裝甲桅樓、頂桿、兩根信號桁、斜桁、桅腳往前的吊艇桿）──

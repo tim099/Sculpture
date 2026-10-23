@@ -1,0 +1,79 @@
+{
+	"schema": 4,
+	"ropes": [
+		{
+			"name": "繩梯-a",
+			"from": "84.5,38.5,0.5",
+			"to": "84.5,38.5,-14.8",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "ladders/door",
+			"note": "砲罩後門的繩梯：直繩（垂到上甲板；綁在砲塔上、跟著轉）",
+			"persona": "ridge-001",
+			"created_at": "2026-10-23T11:48:02"
+		},
+		{
+			"name": "繩梯-b",
+			"from": "84.5,42.5,0.5",
+			"to": "84.5,42.5,-14.8",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "ladders/door",
+			"note": "砲罩後門的繩梯：直繩（垂到上甲板；綁在砲塔上、跟著轉）",
+			"persona": "ridge-001",
+			"created_at": "2026-10-23T11:48:03"
+		},
+		{
+			"name": "繩梯-勾a",
+			"from": "80.5,38.5,0.5",
+			"to": "84.5,38.5,0.5",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "ladders/door",
+			"note": "砲罩後門的繩梯：勾在轉盤邊緣、跨過露砲台頂",
+			"persona": "ridge-001",
+			"created_at": "2026-10-23T11:48:03"
+		},
+		{
+			"name": "繩梯-勾b",
+			"from": "80.5,42.5,0.5",
+			"to": "84.5,42.5,0.5",
+			"color": "#2b2620",
+			"thickness": 0.8,
+			"slack": 1,
+			"enabled": true,
+			"group": "ladders/door",
+			"note": "砲罩後門的繩梯：勾在轉盤邊緣、跨過露砲台頂",
+			"persona": "ridge-001",
+			"created_at": "2026-10-23T11:48:04"
+		}
+	],
+	"groups": [],
+	"ratlines": [
+		{
+			"name": "繩梯-後門",
+			"a": "繩梯-a",
+			"b": "繩梯-b",
+			"step": 3,
+			"start": 2,
+			"stop": 1,
+			"min_span": 0,
+			"color": "#8b6a3e",
+			"thickness": 0.5,
+			"enabled": true,
+			"group": "ladders/door",
+			"climb": true,
+			"foot": "86,40,-15",
+			"head": "77,40,1",
+			"note": "砲罩後門的繩梯：上甲板 ⇄ 轉盤（砲塔轉 ±140° 都繞著露砲台走，量過不撞；Tim 2026-10-23「其實可以用繩梯(可以跟著轉)」）",
+			"persona": "ridge-001",
+			"created_at": "2026-10-23T11:48:04"
+		}
+	]
+}
