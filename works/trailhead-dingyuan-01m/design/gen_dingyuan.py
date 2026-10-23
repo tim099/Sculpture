@@ -234,10 +234,13 @@ def build():
             for xq in {x_, xprev if xprev is not None else x_}:
                 lad_mask[xq, y - width - 1, zz_] = True; lad_mask[xq, y + width + 1, zz_] = True
             xprev = x_
-        for zd in hatch_decks:                                             # 甲板上的艙口：梯子穿過那一層的位置 ± 幾格
-            xm = xb + dirx * run * (zd - z_lo) / H
-            hat[int(math.floor(xm - 5)):int(math.ceil(xm + 5)) + 1, y - width - 1:y + width + 2, zd - 5:zd + 1] = True
         lo, hi = steps[0], steps[-1]
+        for zd in hatch_decks:                                             # 甲板上的艙口
+            if zd == z_hi - 1:                                             # 梯頂那一層：從最後一階蓋到的地方往回開 12 格、梯頂那一頭不多開（造船規格 §9.3；樓梯自檢 2026-10-23 報 head 踩在洞上）
+                xe = hi[0] + dirx; xs = xe - dirx * min(11, abs(xe - lo[0])); x0_, x1_ = sorted((xe, xs))   # 短梯子（15 cm 砲塔裡）不開過最下面那一階
+            else:                                                          # 梯子中段穿過的那一層：穿過的位置 ± 幾格
+                xm = xb + dirx * run * (zd - z_lo) / H; x0_, x1_ = int(math.floor(xm - 5)), int(math.ceil(xm + 5))
+            hat[x0_:x1_ + 1, y - width - 1:y + width + 2, zd - 5:zd + 1] = True
         d = {'name': nm, 'foot': [lo[0] - dirx * 3, y, z_lo], 'lo': [lo[0], y, lo[1] + 1], 'hi': [hi[0], y, hi[1] + 1], 'head': [hi[0] + dirx * 4, y, z_hi]}
         ladders.append(d)
         return d
@@ -256,10 +259,10 @@ def build():
         ('waist-b', 630, YC - 2, WL1, WM1, 1, (ZMD,)),
         ('poop-lower', 160, YC, WL1, WM1, -1, (ZMD,)),
         ('fc-lower', 790, YC, WL1, WM1, 1, (ZMD,)),
-        ('poop-break-P', 244, YC - 60, WM1, WU1, -1, ()),
-        ('poop-break-S', 244, YC + 60, WM1, WU1, -1, ()),
-        ('fc-break-a', 686, YC - 40, WM1, WU1, 1, ()),
-        ('fc-break-b', 686, YC - 15, WM1, WU1, 1, ()),
+        ('poop-break-P', 240, YC - 60, WM1, WU1, -1, ()),                  # 最後一階貼著艉樓甲板邊（x 240）、head 踩在甲板上（2026-10-23：以前差 4 格、head 懸空）
+        ('poop-break-S', 240, YC + 60, WM1, WU1, -1, ()),
+        ('fc-break-a', 690, YC - 40, WM1, WU1, 1, ()),                     # 同上：艏樓甲板從 x 690 起
+        ('fc-break-b', 690, YC - 15, WM1, WU1, 1, ()),
         ('hurricane', 506, YC + 38, WM1, WH1, 1, (ZHD,)),
         ('engine', 352, YC, 5, WL1, 1, (ZLD,)),
         ('stokehold', 398, YC, 5, WL1, 1, (ZLD,)),
