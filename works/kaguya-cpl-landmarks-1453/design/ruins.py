@@ -20,10 +20,10 @@ def wall(M, x0, x1, y0, y1, h, rnd, lay, mat=BANDED, bite=0.6, step=2.4):
         k += w
 
 
-def shell(M, x0, x1, y0, y1, h, t, rnd, lay, mat=BANDED, bite=0.6, floor=MARBLE):
-    """沒有屋頂的廳：四面斷牆（厚 t）＋地坪。"""
+def shell(M, x0, x1, y0, y1, h, t, rnd, lay, mat=BANDED, bite=0.6, floor=MARBLE, step=2.4):
+    """沒有屋頂的廳：四面斷牆（厚 t）＋地坪；step ＝ 斷牆一段多長（短 ⇒ 咬得整齊、像雉堞）。"""
     for a in ((x0, x1, y0, y0 + t), (x0, x1, y1 - t, y1), (x0, x0 + t, y0, y1), (x1 - t, x1, y0, y1)):
-        wall(M, a[0], a[1], a[2], a[3], h, rnd, lay, mat, bite)
+        wall(M, a[0], a[1], a[2], a[3], h, rnd, lay, mat, bite, step)
     if floor:
         M.add(M.box(x0 + t, x1 - t, y0 + t, y1 - t, 0, M.mpv), floor, lay)
 

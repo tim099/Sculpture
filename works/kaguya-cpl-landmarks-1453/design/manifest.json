@@ -4587,6 +4587,198 @@
    "tags": "sub",
    "title": "大皇宮中層台地 1453｜拱頂下部結構（上層台地擋土牆前的一排拱）"
   },
+  "kaguya-cpl-palace-pharos-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-palace-pharos-1453.composite.txt",
+   "key": "palace-pharos",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "160,110",
+      "style": "roman",
+      "use": "palace-pharos",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "台地",
+     "recolor": {},
+     "source": "kaguya-cpl-palace-pharos-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ruins"
+     },
+     "mirror": "",
+     "name": "廢墟",
+     "recolor": {},
+     "source": "kaguya-cpl-palace-pharos-1453-ruins",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-olive",
+      "tree": "olive"
+     },
+     "mirror": "",
+     "name": "橄欖",
+     "recolor": {},
+     "source": "kaguya-cpl-palace-pharos-1453-trees-olive",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-fruit",
+      "tree": "fruit"
+     },
+     "mirror": "",
+     "name": "無花果",
+     "recolor": {},
+     "source": "kaguya-cpl-palace-pharos-1453-trees-fruit",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-cypress",
+      "tree": "cypress"
+     },
+     "mirror": "",
+     "name": "柏樹",
+     "recolor": {},
+     "source": "kaguya-cpl-palace-pharos-1453-trees-cypress",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-palace-pharos-1453",
+   "size": [
+    400,
+    275,
+    45
+   ],
+   "tags": "building,roman",
+   "title": "大皇宮下層台地 1453（金色大殿殘殼、Pharos 小堂、燈塔塔基）"
+  },
+  "kaguya-cpl-palace-pharos-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-palace-pharos-1453-ground.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-palace-pharos-1453",
+   "product": "kaguya-cpl-palace-pharos-1453",
+   "size": [
+    400,
+    275,
+    45
+   ],
+   "tags": "sub",
+   "title": "大皇宮下層台地 1453｜台地（草、菜畦、小徑、女兒牆）"
+  },
+  "kaguya-cpl-palace-pharos-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-palace-pharos-1453-ruins.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-palace-pharos-1453",
+   "product": "kaguya-cpl-palace-pharos-1453",
+   "size": [
+    400,
+    275,
+    45
+   ],
+   "tags": "sub",
+   "title": "大皇宮下層台地 1453｜廢墟（金色大殿、Pharos 小堂、燈塔塔基、斷柱、碎石）"
+  },
+  "kaguya-cpl-palace-pharos-1453-trees-cypress": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-palace-pharos-1453-trees-cypress.vox.txt",
+   "mpv": 0.4,
+   "order": 50,
+   "parent": "kaguya-cpl-palace-pharos-1453",
+   "product": "kaguya-cpl-palace-pharos-1453",
+   "size": [
+    400,
+    275,
+    45
+   ],
+   "tags": "sub",
+   "title": "大皇宮下層台地 1453｜柏樹（遊戲換成生成式的柏樹）"
+  },
+  "kaguya-cpl-palace-pharos-1453-trees-fruit": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-palace-pharos-1453-trees-fruit.vox.txt",
+   "mpv": 0.4,
+   "order": 40,
+   "parent": "kaguya-cpl-palace-pharos-1453",
+   "product": "kaguya-cpl-palace-pharos-1453",
+   "size": [
+    400,
+    275,
+    45
+   ],
+   "tags": "sub",
+   "title": "大皇宮下層台地 1453｜無花果（遊戲換成生成式的果樹）"
+  },
+  "kaguya-cpl-palace-pharos-1453-trees-olive": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-palace-pharos-1453-trees-olive.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-palace-pharos-1453",
+   "product": "kaguya-cpl-palace-pharos-1453",
+   "size": [
+    400,
+    275,
+    45
+   ],
+   "tags": "sub",
+   "title": "大皇宮下層台地 1453｜橄欖（遊戲換成生成式的橄欖）"
+  },
   "kaguya-cpl-palazzo-comune-1453": {
    "anchors": {
     "door": [
@@ -5412,6 +5604,163 @@
    "tags": "sub",
    "title": "元老院 1453｜門廊（柱、柱礎、倒下的柱段、台階）"
   },
+  "kaguya-cpl-senate-forum-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-senate-forum-1453.composite.txt",
+   "key": "senate-forum",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "40,30",
+      "style": "roman",
+      "use": "senate-forum",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "大廳與後殿的殘牆",
+     "recolor": {},
+     "source": "kaguya-cpl-senate-forum-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "portico"
+     },
+     "mirror": "",
+     "name": "門廊",
+     "recolor": {},
+     "source": "kaguya-cpl-senate-forum-1453-portico",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ground"
+     },
+     "mirror": "",
+     "name": "地面",
+     "recolor": {},
+     "source": "kaguya-cpl-senate-forum-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-senate-forum-1453-trees",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-senate-forum-1453",
+   "size": [
+    200,
+    150,
+    80
+   ],
+   "tags": "building,roman",
+   "title": "元老院 1453（君士坦丁廣場北側；斑岩柱門廊、廢墟）"
+  },
+  "kaguya-cpl-senate-forum-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-senate-forum-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-senate-forum-1453",
+   "product": "kaguya-cpl-senate-forum-1453",
+   "size": [
+    200,
+    150,
+    80
+   ],
+   "tags": "sub",
+   "title": "廣場的元老院 1453｜大廳與後殿的殘牆"
+  },
+  "kaguya-cpl-senate-forum-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-senate-forum-1453-ground.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-senate-forum-1453",
+   "product": "kaguya-cpl-senate-forum-1453",
+   "size": [
+    200,
+    150,
+    80
+   ],
+   "tags": "sub",
+   "title": "廣場的元老院 1453｜地面（草、碎石）"
+  },
+  "kaguya-cpl-senate-forum-1453-portico": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-senate-forum-1453-portico.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-senate-forum-1453",
+   "product": "kaguya-cpl-senate-forum-1453",
+   "size": [
+    200,
+    150,
+    80
+   ],
+   "tags": "sub",
+   "title": "廣場的元老院 1453｜門廊（斑岩柱、柱礎、倒下的柱段、台階）"
+  },
+  "kaguya-cpl-senate-forum-1453-trees": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-senate-forum-1453-trees.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-senate-forum-1453",
+   "product": "kaguya-cpl-senate-forum-1453",
+   "size": [
+    200,
+    150,
+    80
+   ],
+   "tags": "sub",
+   "title": "廣場的元老院 1453｜野樹（遊戲換成生成式的樹）"
+  },
   "kaguya-cpl-stoudios-1453": {
    "anchors": {
     "door": [
@@ -5809,6 +6158,132 @@
    ],
    "tags": "sub",
    "title": "波菲羅根尼圖斯宮 1453｜屋頂"
+  },
+  "kaguya-cpl-tzykanisterion-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-tzykanisterion-1453.composite.txt",
+   "key": "tzykanisterion",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "150,56",
+      "style": "roman",
+      "use": "tzykanisterion",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "場地",
+     "recolor": {},
+     "source": "kaguya-cpl-tzykanisterion-1453-field",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "walls"
+     },
+     "mirror": "",
+     "name": "圍牆、看台、門墩、廊的殘柱、碎石",
+     "recolor": {},
+     "source": "kaguya-cpl-tzykanisterion-1453-walls",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-tzykanisterion-1453-trees",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-tzykanisterion-1453",
+   "size": [
+    375,
+    140,
+    23
+   ],
+   "tags": "building,roman",
+   "title": "Tzykanisterion 馬球場 1453（圍牆、看台殘段、皇帝看台）"
+  },
+  "kaguya-cpl-tzykanisterion-1453-field": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-tzykanisterion-1453-field.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-tzykanisterion-1453",
+   "product": "kaguya-cpl-tzykanisterion-1453",
+   "size": [
+    375,
+    140,
+    23
+   ],
+   "tags": "sub",
+   "title": "Tzykanisterion 1453｜場地（土、草）"
+  },
+  "kaguya-cpl-tzykanisterion-1453-trees": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-tzykanisterion-1453-trees.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-tzykanisterion-1453",
+   "product": "kaguya-cpl-tzykanisterion-1453",
+   "size": [
+    375,
+    140,
+    23
+   ],
+   "tags": "sub",
+   "title": "Tzykanisterion 1453｜野樹（遊戲換成生成式的樹）"
+  },
+  "kaguya-cpl-tzykanisterion-1453-walls": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-tzykanisterion-1453-walls.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-tzykanisterion-1453",
+   "product": "kaguya-cpl-tzykanisterion-1453",
+   "size": [
+    375,
+    140,
+    23
+   ],
+   "tags": "sub",
+   "title": "Tzykanisterion 1453｜圍牆、看台、門墩、廊的殘柱、碎石"
   },
   "kaguya-cpl-vefa-1453": {
    "anchors": {
