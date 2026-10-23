@@ -1380,6 +1380,234 @@
    "tags": "sub",
    "title": "住宅 A 淺版｜屋頂"
   },
+  "summit-carib-01m-house-a-xs": {
+   "anchors": {
+    "door": [
+     40,
+     23,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-a-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "carib",
+      "use": "house",
+      "variant": "a-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "門廊",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a-xs-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-house-a-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      23,
+      6
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      23,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      23,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      68,
+      6
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      5,
+      37,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      72,
+      37,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      24,
+      20.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-廊",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    76
+   ],
+   "tags": "building,carib",
+   "title": "住宅 A 小版（地塊 8 × 8：A 的釘板木屋，屋身 4.6 m、門廊 1.4 m；沒有院子）"
+  },
+  "summit-carib-01m-house-a-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-a-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    76
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜牆身"
+  },
+  "summit-carib-01m-house-a-xs-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-a-xs-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    76
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜門廊"
+  },
+  "summit-carib-01m-house-a-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-a-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    76
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜屋頂"
+  },
   "summit-carib-01m-house-a2": {
    "anchors": {
     "door": [
@@ -1479,6 +1707,56 @@
    ],
    "tags": "building,carib",
    "title": "住宅 A2 淺版（A 淺版的配色變化：板牆刷石灰白；替換色，不另存格子）"
+  },
+  "summit-carib-01m-house-a2-xs": {
+   "anchors": {
+    "door": [
+     40,
+     23,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-a2-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "carib",
+      "use": "house",
+      "variant": "a2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "109": 255
+     },
+     "source": "summit-carib-01m-house-a-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    76
+   ],
+   "tags": "building,carib",
+   "title": "住宅 A2 小版（A 小版的配色變化：板牆刷石灰白；替換色，不另存格子）"
   },
   "summit-carib-01m-house-b": {
    "anchors": {
@@ -1753,6 +2031,127 @@
    "tags": "sub",
    "title": "住宅 B 淺版｜屋頂"
   },
+  "summit-carib-01m-house-b-xs": {
+   "anchors": {
+    "door": [
+     30,
+     13,
+     2
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-b-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "carib",
+      "use": "house",
+      "variant": "b-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-house-b-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-house-b-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      23,
+      13,
+      2
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      42,
+      13,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    66
+   ],
+   "tags": "building,carib",
+   "title": "住宅 B 小版（地塊 8 × 8：B 的編條糊泥小屋，5.0 × 6.0 m；沒有院子）"
+  },
+  "summit-carib-01m-house-b-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-b-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    66
+   ],
+   "tags": "sub",
+   "title": "住宅 B 小版｜牆身"
+  },
+  "summit-carib-01m-house-b-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-b-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    66
+   ],
+   "tags": "sub",
+   "title": "住宅 B 小版｜屋頂"
+  },
   "summit-carib-01m-house-b2": {
    "anchors": {
     "door": [
@@ -1852,6 +2251,56 @@
    ],
    "tags": "building,carib",
    "title": "住宅 B2 淺版（B 淺版的配色變化：沒刷石灰的泥牆；替換色，不另存格子）"
+  },
+  "summit-carib-01m-house-b2-xs": {
+   "anchors": {
+    "door": [
+     30,
+     13,
+     2
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-b2-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "carib",
+      "use": "house",
+      "variant": "b2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "255": 140
+     },
+     "source": "summit-carib-01m-house-b-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    66
+   ],
+   "tags": "building,carib",
+   "title": "住宅 B2 小版（B 小版的配色變化：沒刷石灰的泥牆；替換色，不另存格子）"
   },
   "summit-carib-01m-house-c": {
    "anchors": {
@@ -2550,6 +2999,347 @@
    "tags": "sub",
    "title": "住宅 C 淺版｜屋頂"
   },
+  "summit-carib-01m-house-c-xs": {
+   "anchors": {
+    "door": [
+     41,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-c-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "carib",
+      "use": "house",
+      "variant": "c-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "外廊",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c-xs-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      28,
+      27,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      11,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      57,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      34,
+      27,
+      32
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "二樓-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-前窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-前窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      72,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-後窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      48,
+      72,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "二樓-後窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      33,
+      72,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      45,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "右-氣窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 90
+    },
+    {
+     "at": [
+      72,
+      42,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-二樓窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      24.5,
+      28,
+      22.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-貨門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      58,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-門口1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      66,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-門口",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    96
+   ],
+   "tags": "building,carib",
+   "title": "住宅 C 小版（地塊 8 × 8：同 C 的商家；沒有院子）"
+  },
+  "summit-carib-01m-house-c-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-c-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    96
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜牆身"
+  },
+  "summit-carib-01m-house-c-xs-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-c-xs-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    96
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜外廊"
+  },
+  "summit-carib-01m-house-c-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-carib-01m-house-c-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    96
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜屋頂"
+  },
   "summit-carib-01m-house-c2": {
    "anchors": {
     "door": [
@@ -2653,6 +3443,58 @@
    ],
    "tags": "building,carib",
    "title": "住宅 C2 淺版（C 淺版的配色變化：一樓石牆刷白；替換色，不另存格子）"
+  },
+  "summit-carib-01m-house-c2-xs": {
+   "anchors": {
+    "door": [
+     41,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-carib-01m-house-c2-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "carib",
+      "use": "house",
+      "variant": "c2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "146": 255,
+      "182": 255,
+      "218": 255
+     },
+     "source": "summit-carib-01m-house-c-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    96
+   ],
+   "tags": "building,carib",
+   "title": "住宅 C2 小版（C 小版的配色變化：一樓石牆刷白；替換色，不另存格子）"
   },
   "summit-carib-01m-part-door-double": {
    "anchors": {},

@@ -5,6 +5,9 @@
 # 屋身都在地塊前半、後半圍成院子；屋簷不出地塊（兩側鄰居的地塊只隔 2 cm）。
 # 淺版 8 × 10 m（house-a-s／b-s／c-s；TASK-0742，Tim 2026-10-22「轉角放淺一點的房子」）：屋子一模一樣、院牆／木柵收到後緣 —— 廚房小屋、小棚放不下就不擺，
 #   C 的水井往前挪（Manor Lords 的 burgage plot：地塊夠深才有後院擴建）。D ＝ 地塊進深（格；120 ＝ 原本那一份，逐位元組不變）。
+# 小版 8 × 8 m（house-a-xs／b-xs／c-xs；TASK-0840，Tim 2026-10-23「加8x8模型吧」）：城鎮的綁路格 4 m 一格之後，轉角只剩 2 格深（8 m）⇒ 這一版。
+#   沒有院子（後門直接開到後巷）；A 的屋子原樣放得下（陽台 y 3～屋簷 y 78）；B、C 的屋身淺 0.4 m（5.4 ⇒ 5.0 m）、B 的前廊淺 0.6 m（2.0 ⇒ 1.4 m）——
+#   屋身的進深、簷口、煙囪、老虎窗、側窗都照 Y0／Y1 算（D 100、120 的位置算出來跟原本一樣 ⇒ 逐位元組不變）。
 from kit import *
 import parts as PT
 
@@ -144,6 +147,11 @@ def house_a(D=120):
     F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 67, 'p': 0.85, 'over': (3, 3, 10, 6)}])
     build_roof(M, F, salt=1)
     free_part(M, 'chimney', '煙囪', (62, 58, 60))
+    if D <= 80:                                                        # 小版 8 × 8：屋身到 y 72、屋簷到 y 78 ⇒ 沒有院子，後門開到後巷
+        M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 24.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-a-xs', 'title': '住宅 A 小版（地塊 8 × 8：同 A 的屋子；沒有院子）', 'use': 'house', 'lot': (8, 8), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '陽台', 'roof': '屋頂'}}
     # 後院：院牆、後門、廚房（左後角）
     yard(M, X0, Y1, X1, D, 3, 22, OCHRE, gate=(56, 13, 19))
     if D < 120:                                                        # 淺版：院子 2.5 m（屋身到 y 72、院牆 y 97..100）⇒ 廚房、酒桶放不下
@@ -162,7 +170,7 @@ def house_a(D=120):
 
 def house_b(D=120):
     M = Model((80, D, 82))
-    X0, Y0, X1, Y1 = 6, 30, 74, 84
+    X0, Y0, X1, Y1 = (6, 24, 74, 74) if D <= 80 else (6, 30, 74, 84)  # 小版：前廊 y 10..24（1.4 m）、屋身 5.0 m、後簷到 y 80
     R, t, pl = (X0, Y0, X1, Y1), 3, 6
     M.box('body', X0, Y0, 0, X1, Y1, pl, STONE)
     stucco_walls(M, R, pl, 40, t, BLUE)
@@ -173,8 +181,8 @@ def house_b(D=120):
         put_part(M, 'frenchdoor', '前-落地窗%d' % (i + 1), 'front', R, cx, pl, t)
     for i, cx in enumerate((22, 58)):
         put_part(M, 'window', '後-窗%d' % (i + 1), 'back', R, cx, pl + 9, t)
-    put_part(M, 'window', '左-窗', 'left', R, 57, pl + 9, t)
-    put_part(M, 'window', '右-窗', 'right', R, 57, pl + 9, t)
+    put_part(M, 'window', '左-窗', 'left', R, (Y0 + Y1) // 2, pl + 9, t)   # 側窗在屋身中間（原本 57）
+    put_part(M, 'window', '右-窗', 'right', R, (Y0 + Y1) // 2, pl + 9, t)
     simple_door(M, 'back', R, 40, 10, 22, t, z0=pl)
     # 前廊：石基＋木地板、細柱、欄杆、中間三級石階
     M.box('gallery', 4, 10, 0, 76, Y0, pl - 1, STONE)
@@ -182,7 +190,7 @@ def house_b(D=120):
     for k, zh in enumerate((4, 2)):                                   # 兩級石階（每級 0.2 m），上到廊的地板 0.6 m
         M.box('gallery', 34, 10 - 3 * (k + 1), 0, 46, 10 - 3 * k, zh, STONE_L)
     # 屋頂：陡的四坡（1.0）＋前廊緩坡（0.45）
-    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 40, 'p': 1.0, 'over': (6, 6, 24, 6), 'kick': {'front': 0.45}}])
+    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 40, 'p': 1.0, 'over': (6, 6, Y0 - 6, 6), 'kick': {'front': 0.45}}])   # 前簷蓋到 y 6（原本 24）
     top = build_roof(M, F, salt=3)
     posts = (4, 22, 39, 56, 74)
     for px in posts:
@@ -206,10 +214,15 @@ def house_b(D=120):
                     M.put('gallery', xs, y, z, TRIM)
     M.anchor('door', 40, Y0 - 1, pl)
     for i, cx in enumerate((24, 56)):                                 # 兩扇老虎窗：前牆底埋進屋面一格
-        y0 = 33
+        y0 = Y0 + 3                                                    # 原本 33
         zf = top[(cx, y0 + 1)] - 1
         free_part(M, 'dormer', '老虎窗%d' % (i + 1), (cx - 7, y0, zf))
-    free_part(M, 'chimney', '煙囪', (62, 54, 38))
+    free_part(M, 'chimney', '煙囪', (62, Y1 - 30, 38))                 # 原本 y 54
+    if D <= 80:                                                        # 小版 8 × 8：後簷到 y 80 ⇒ 沒有院子、木柵
+        M.models += [{'name': '燈籠-廊', 'source': 'summit-rocher-01m-lantern', 'at': [29, Y0, 26.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-b-xs', 'title': '住宅 B 小版（地塊 8 × 8：B 的有廊屋子，屋身淺 0.4 m、前廊 1.4 m；沒有院子）', 'use': 'house', 'lot': (8, 8), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '前廊', 'roof': '屋頂'}}
     # 後院：木柵圍籬＋小棚
     yb = D - 2
     picket_fence(M, [(X0, Y1), (1, Y1), (1, yb), (36, yb)])
@@ -242,7 +255,7 @@ def house_b(D=120):
 def house_c(D=120):
     M = Model((80, D, 98))
     M.shutter = SH_RED
-    X0, Y0, X1, Y1 = 4, 24, 76, 78
+    X0, Y0, X1, Y1 = (4, 22, 76, 72) if D <= 80 else (4, 24, 76, 78)  # 小版：外廊 y 6..22、屋身 5.0 m、後簷到 y 78
     R, t, pl = (X0, Y0, X1, Y1), 3, 4
     M.box('body', X0, Y0, 0, X1, Y1, pl, STONE)
     stucco_walls(M, R, pl, 36, t, CREAM)
@@ -263,7 +276,7 @@ def house_c(D=120):
     M.box('gallery', 2, 6, 0, 78, Y0, pl, STONE_L)                   # 一樓廊的石板地
     M.box('gallery', 2, 6, 36, 78, Y0, 38, WOOD)
     M.box('gallery', 2, 6, 36, 78, 7, 38, WOOD_D)
-    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 68, 'p': 0.8, 'over': (4, 4, 20, 6), 'kick': {'front': 0.35}}])
+    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 68, 'p': 0.8, 'over': (4, 4, Y0 - 4, 6), 'kick': {'front': 0.35}}])   # 前簷蓋到 y 4（原本 20）
     top = build_roof(M, F, salt=5)
     for px in (2, 26, 51, 75):
         M.box('gallery', px, 6, pl, px + 3, 9, 36, TRIM)                # 一樓石柱（抹白）
@@ -283,7 +296,12 @@ def house_c(D=120):
             if y % 3 == 0:
                 for z in range(38, 48):
                     M.put('gallery', xs, y, z, TRIM)
-    free_part(M, 'chimney', '煙囪', (7, 60, 46))
+    free_part(M, 'chimney', '煙囪', (7, Y1 - 18, 46))                 # 原本 y 60
+    if D <= 80:                                                        # 小版 8 × 8：後簷到 y 78 ⇒ 沒有院子、廚房、水井
+        M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 25.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-c-xs', 'title': '住宅 C 小版（地塊 8 × 8：C 的兩層外廊屋子，屋身淺 0.4 m；沒有院子）', 'use': 'house', 'lot': (8, 8), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}, 'shutter': SH_RED}
     # 後院：院牆、廚房（右後角）、水井
     yard(M, X0, Y1, X1, D, 3, 22, CREAM, gate=(22, 13, 19))
     if D >= 120:
@@ -322,4 +340,16 @@ def house_c_s():
     return house_c(100)
 
 
-ALL = [house_a, house_b, house_c, house_a_s, house_b_s, house_c_s]
+def house_a_xs():
+    return house_a(80)
+
+
+def house_b_xs():
+    return house_b(80)
+
+
+def house_c_xs():
+    return house_c(80)
+
+
+ALL = [house_a, house_b, house_c, house_a_s, house_b_s, house_c_s, house_a_xs, house_b_xs, house_c_xs]

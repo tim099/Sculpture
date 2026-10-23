@@ -261,7 +261,10 @@ VARIANTS = [('house-a2', 'house-a', {OCHRE: CREAM, SH_GREEN: SH_BLUE}, '住宅 A
             ('house-c2', 'house-c', {CREAM: BLUE, SH_RED: SH_GREEN}, '住宅 C2（C 的配色變化：藍牆、綠百葉；替換色，不另存格子）'),
             ('house-a2-s', 'house-a-s', {OCHRE: CREAM, SH_GREEN: SH_BLUE}, '住宅 A2 淺版（A 淺版的配色變化：米白牆、藍百葉；替換色，不另存格子）'),   # 淺版（8 × 10，TASK-0742 轉角）照同一套替換色
             ('house-b2-s', 'house-b-s', {BLUE: OCHRE, SH_GREEN: SH_RED}, '住宅 B2 淺版（B 淺版的配色變化：土黃牆、紅百葉；替換色，不另存格子）'),
-            ('house-c2-s', 'house-c-s', {CREAM: BLUE, SH_RED: SH_GREEN}, '住宅 C2 淺版（C 淺版的配色變化：藍牆、綠百葉；替換色，不另存格子）')]
+            ('house-c2-s', 'house-c-s', {CREAM: BLUE, SH_RED: SH_GREEN}, '住宅 C2 淺版（C 淺版的配色變化：藍牆、綠百葉；替換色，不另存格子）'),
+            ('house-a2-xs', 'house-a-xs', {OCHRE: CREAM, SH_GREEN: SH_BLUE}, '住宅 A2 小版（A 小版的配色變化：米白牆、藍百葉；替換色，不另存格子）'),   # 小版（8 × 8，TASK-0840 轉角）照同一套替換色
+            ('house-b2-xs', 'house-b-xs', {BLUE: OCHRE, SH_GREEN: SH_RED}, '住宅 B2 小版（B 小版的配色變化：土黃牆、紅百葉；替換色，不另存格子）'),
+            ('house-c2-xs', 'house-c-xs', {CREAM: BLUE, SH_RED: SH_GREEN}, '住宅 C2 小版（C 小版的配色變化：藍牆、綠百葉；替換色，不另存格子）')]
 STREET_Y0, STREET_Y1, WALL_Y = 320, 380, 580          # 街的南緣、北緣（6 m 寬）、城牆那一排
 
 

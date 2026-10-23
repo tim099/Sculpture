@@ -2151,6 +2151,293 @@
    "tags": "sub",
    "title": "住宅 A 淺版｜屋頂"
   },
+  "summit-bourg-fr-01m-house-a-xs": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-bourg-fr-01m-house-a-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "fr",
+      "use": "house",
+      "variant": "a-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-a-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "陽台",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-a-xs-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-a-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      3
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      7,
+      11,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      7,
+      11,
+      37
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      11,
+      37
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      37
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗3",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      10,
+      70,
+      45
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      50,
+      70,
+      45
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      62,
+      58,
+      60
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "building,fr",
+   "title": "住宅 A 小版（地塊 8 × 8：同 A 的屋子；沒有院子）"
+  },
+  "summit-bourg-fr-01m-house-a-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-a-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜牆身"
+  },
+  "summit-bourg-fr-01m-house-a-xs-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-a-xs-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜陽台"
+  },
+  "summit-bourg-fr-01m-house-a-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-a-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜屋頂"
+  },
   "summit-bourg-fr-01m-house-a2": {
    "anchors": {
     "door": [
@@ -2250,6 +2537,56 @@
    ],
    "tags": "building,fr",
    "title": "住宅 A2 淺版（A 淺版的配色變化：米白牆、藍百葉；替換色，不另存格子）"
+  },
+  "summit-bourg-fr-01m-house-a2-xs": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-bourg-fr-01m-house-a2-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "fr",
+      "use": "house",
+      "variant": "a2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "213": 218,
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-house-a-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "building,fr",
+   "title": "住宅 A2 小版（A 小版的配色變化：米白牆、藍百葉；替換色，不另存格子）"
   },
   "summit-bourg-fr-01m-house-b": {
    "anchors": {
@@ -2840,6 +3177,293 @@
    "tags": "sub",
    "title": "住宅 B 淺版｜屋頂"
   },
+  "summit-bourg-fr-01m-house-b-xs": {
+   "anchors": {
+    "door": [
+     40,
+     23,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-bourg-fr-01m-house-b-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "fr",
+      "use": "house",
+      "variant": "b-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-b-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "前廊",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-b-xs-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-b-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      23,
+      6
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      23,
+      6
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      23,
+      6
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      72,
+      15
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      48,
+      72,
+      15
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      5,
+      39,
+      15
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      72,
+      39,
+      15
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 90
+    },
+    {
+     "at": [
+      17,
+      27,
+      43
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      49,
+      27,
+      43
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      62,
+      44,
+      38
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      29,
+      24,
+      26.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-廊",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    82
+   ],
+   "tags": "building,fr",
+   "title": "住宅 B 小版（地塊 8 × 8：B 的有廊屋子，屋身淺 0.4 m、前廊 1.4 m；沒有院子）"
+  },
+  "summit-bourg-fr-01m-house-b-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-b-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    82
+   ],
+   "tags": "sub",
+   "title": "住宅 B 小版｜牆身"
+  },
+  "summit-bourg-fr-01m-house-b-xs-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-b-xs-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    82
+   ],
+   "tags": "sub",
+   "title": "住宅 B 小版｜前廊"
+  },
+  "summit-bourg-fr-01m-house-b-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-b-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    82
+   ],
+   "tags": "sub",
+   "title": "住宅 B 小版｜屋頂"
+  },
   "summit-bourg-fr-01m-house-b2": {
    "anchors": {
     "door": [
@@ -2939,6 +3563,56 @@
    ],
    "tags": "building,fr",
    "title": "住宅 B2 淺版（B 淺版的配色變化：土黃牆、紅百葉；替換色，不另存格子）"
+  },
+  "summit-bourg-fr-01m-house-b2-xs": {
+   "anchors": {
+    "door": [
+     40,
+     23,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-bourg-fr-01m-house-b2-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "fr",
+      "use": "house",
+      "variant": "b2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "187": 213,
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-house-b-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    82
+   ],
+   "tags": "building,fr",
+   "title": "住宅 B2 小版（B 小版的配色變化：土黃牆、紅百葉；替換色，不另存格子）"
   },
   "summit-bourg-fr-01m-house-c": {
    "anchors": {
@@ -3603,6 +4277,313 @@
    "tags": "sub",
    "title": "住宅 C 淺版｜屋頂"
   },
+  "summit-bourg-fr-01m-house-c-xs": {
+   "anchors": {
+    "door": [
+     40,
+     21,
+     4
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-bourg-fr-01m-house-c-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "fr",
+      "use": "house",
+      "variant": "c-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-c-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "外廊",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-c-xs-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-c-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      21,
+      4
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      21,
+      13
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      55,
+      21,
+      13
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      21,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗1",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      21,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗2",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      55,
+      21,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "前-落地窗3",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      4
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      10,
+      70,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      50,
+      70,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      7,
+      54,
+      46
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪",
+     "recolor": {
+      "49": 160
+     },
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      22,
+      25.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    98
+   ],
+   "tags": "building,fr",
+   "title": "住宅 C 小版（地塊 8 × 8：C 的兩層外廊屋子，屋身淺 0.4 m；沒有院子）"
+  },
+  "summit-bourg-fr-01m-house-c-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-c-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    98
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜牆身"
+  },
+  "summit-bourg-fr-01m-house-c-xs-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-c-xs-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    98
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜外廊"
+  },
+  "summit-bourg-fr-01m-house-c-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-bourg-fr-01m-house-c-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    98
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜屋頂"
+  },
   "summit-bourg-fr-01m-house-c2": {
    "anchors": {
     "door": [
@@ -3702,6 +4683,56 @@
    ],
    "tags": "building,fr",
    "title": "住宅 C2 淺版（C 淺版的配色變化：藍牆、綠百葉；替換色，不另存格子）"
+  },
+  "summit-bourg-fr-01m-house-c2-xs": {
+   "anchors": {
+    "door": [
+     40,
+     21,
+     4
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-bourg-fr-01m-house-c2-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "fr",
+      "use": "house",
+      "variant": "c2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "160": 49,
+      "218": 187
+     },
+     "source": "summit-bourg-fr-01m-house-c-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    98
+   ],
+   "tags": "building,fr",
+   "title": "住宅 C2 小版（C 小版的配色變化：藍牆、綠百葉；替換色，不另存格子）"
   },
   "summit-bourg-fr-01m-market": {
    "anchors": {

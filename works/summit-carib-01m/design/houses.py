@@ -8,6 +8,9 @@
 # 屋子都在地塊前半、後半是院子；屋簷不出地塊（兩側鄰居只隔 2 cm）。
 # 淺版 8 × 10 m（house-a-s／b-s／c-s；TASK-0742，Tim 2026-10-22「轉角放淺一點的房子」）：屋子一模一樣、院子縮到後緣 —— 廚房、披屋、燻肉架放不下就不擺
 #   （Manor Lords 的 burgage plot：地塊夠深才有後院擴建）。D ＝ 地塊進深（格；120 ＝ 原本那一份，逐位元組不變）。
+# 小版 8 × 8 m（house-a-xs／b-xs／c-xs；TASK-0840，Tim 2026-10-23「加8x8模型吧」）：城鎮的綁路格 4 m 一格之後，轉角只剩 2 格深（8 m）⇒ 這一版。
+#   沒有院子；C 的商家原樣放得下（屋簷到 y 78）；A 的屋身 5.0 ⇒ 4.6 m、門廊 1.6 ⇒ 1.4 m（後門的三級台階要到 y 79）；B 的小屋 6.8 ⇒ 6.0 m（還是山牆朝街）——
+#   簷口、側窗照 Y0／Y1、門廊算（D 100、120 的位置算出來跟原本一樣 ⇒ 逐位元組不變）。
 from carib import *
 import parts as PT
 
@@ -76,9 +79,9 @@ def hearth(M, x0, y0, x1, y1, h=6, hanger=True):
 
 def house_a(D=120):
     M = Model((80, D, 76))
-    X0, Y0, X1, Y1 = 6, 28, 74, 78
+    X0, Y0, X1, Y1 = (6, 24, 74, 70) if D <= 80 else (6, 28, 74, 78)  # 小版：屋身 4.6 m、後門台階 y 70..79
     R, t, fl = (X0, Y0, X1, Y1), 2, 6                                   # 牆厚 0.2 m、地板頂 0.6 m（三級台階）
-    GY0 = 12                                                           # 門廊 y 12..28（1.6 m 深）
+    GY0 = 10 if D <= 80 else 12                                        # 門廊 y 12..28（1.6 m 深）；小版 y 10..24（1.4 m）
     rubble_walls(M, (X0, GY0, X1, Y1), 0, fl - 1, 4, salt=1)           # 毛石台基（含門廊底下）
     M.box('body', X0 + 4, GY0 + 4, 0, X1 - 4, Y1 - 4, fl - 1, EARTH_W)  # 台基裡填土
     M.box('body', X0, Y0, fl - 1, X1, Y1, fl, FLOOR)
@@ -88,13 +91,18 @@ def house_a(D=120):
     for i, cx in enumerate((18, 62)):
         put_part(M, 'window-board', '前-窗%d' % (i + 1), 'front', R, cx, fl + 7, t)
     put_part(M, 'door-plank', '後-門', 'back', R, 40, fl, t)          # 兩扇相對的門（Labat：前院與花園中軸）
-    put_part(M, 'window-board', '左-窗', 'left', R, 53, fl + 7, t)
-    put_part(M, 'window-board', '右-窗', 'right', R, 53, fl + 7, t)
+    put_part(M, 'window-board', '左-窗', 'left', R, (Y0 + Y1) // 2, fl + 7, t)   # 側窗在屋身中間（原本 53）
+    put_part(M, 'window-board', '右-窗', 'right', R, (Y0 + Y1) // 2, fl + 7, t)
     steps(M, 33, 47, GY0, 3, 2, 3, back=False, layer='body', color=RUBBLE)   # 三級切石台階
     steps(M, 34, 46, Y1, 3, 2, 3, back=True, layer='body', color=RUBBLE)
     M.anchor('door', 40, Y0 - 1, fl)
-    top = shingle_roof(M, [{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 31, 'p': 1.0, 'over': (4, 4, 19, 4), 'kick': {'front': 0.45}}], salt=1)
+    top = shingle_roof(M, [{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 31, 'p': 1.0, 'over': (4, 4, Y0 - GY0 + 3, 4), 'kick': {'front': 0.45}}], salt=1)   # 前簷蓋過門廊 3 格（原本 19）
     gallery_posts(M, (X0, 24, 54, X1 - 2), GY0, fl, top)
+    if D <= 80:                                                        # 小版 8 × 8：後門台階到 y 79 ⇒ 沒有院子
+        M.models += [{'name': '燈籠-廊', 'source': 'summit-rocher-01m-lantern', 'at': [28.5, Y0, 20.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-a-xs', 'title': '住宅 A 小版（地塊 8 × 8：A 的釘板木屋，屋身 4.6 m、門廊 1.4 m；沒有院子）', 'use': 'house', 'lot': (8, 8), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '門廊', 'roof': '屋頂'}}
     # 後院：木柵（後面留院門）、下風處的廚房披屋（開敞、灶＋吊鍋）
     yb = D - 2
     palisade(M, [(X0, Y1), (1, Y1), (1, yb), (78, yb), (78, Y1), (X1 - 1, Y1)], gap={(x, yb) for x in range(36, 46)})
@@ -116,7 +124,7 @@ def house_a(D=120):
 def house_b(D=120):
     """Labat 的標準小屋（30 × 15 法尺 ⇒ 縮成 5.0 × 6.8 m 放進 8 × 12 的地塊）：山牆朝街、門與唯一一扇窗開在山牆。"""
     M = Model((80, D, 66))
-    X0, Y0, X1, Y1 = 15, 20, 65, 88
+    X0, Y0, X1, Y1 = (15, 14, 65, 74) if D <= 80 else (15, 20, 65, 88)  # 小版：6.0 m 深（門前石階 y 11..14、後簷到 y 79）
     R, t, sl, ze, p = (X0, Y0, X1, Y1), 3, 2, 22, 1.25                   # 牆頂 2.2 m；坡 1.25（簷口垂到離地約 0.6 m）
     rubble_walls(M, R, 0, sl, t + 1)
     M.box('body', X0, Y0, 0, X1, Y1, 1, EARTH_W)                         # 泥地
@@ -128,6 +136,10 @@ def house_b(D=120):
     M.box('body', 23, Y0 - 3, 0, 37, Y0, sl, RUBBLE)                    # 門前一塊石階
     M.anchor('door', 30, Y0 - 1, sl)
     thatch_roof(M, [{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': ze, 'p': p, 'over': (13, 13, 5, 5), 'gable': 'y'}], salt=3)
+    if D <= 80:                                                        # 小版 8 × 8：後簷到 y 79 ⇒ 沒有院子
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-b-xs', 'title': '住宅 B 小版（地塊 8 × 8：B 的編條糊泥小屋，5.0 × 6.0 m；沒有院子）', 'use': 'house', 'lot': (8, 8), 'M': M,
+                'layers': {'body': '牆身', 'roof': '屋頂'}}
     # 後院：木柵、燻肉架、養豬養雞的披屋（茅草）
     yb = D - 3
     palisade(M, [(X0, Y1), (3, Y1), (3, yb), (77, yb), (77, Y1), (X1 - 1, Y1)], h=14, gap={(x, yb) for x in range(8, 18)})
@@ -182,6 +194,13 @@ def house_c(D=120):
     for k in range(0, 15, 3):
         ya = 73 - 3 * (k + 1)
         M.box('gallery', sx0, ya, 0, sx0 + 1, ya + 1, 2 * (k + 1) - 2, FRAME)
+    if D <= 80:                                                         # 小版 8 × 8：屋簷到 y 78 ⇒ 沒有院子（後門開到後巷）
+        M.models += [{'name': '燈籠-貨門', 'source': 'summit-rocher-01m-lantern', 'at': [24.5, Y0, 22.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
+                     {'name': '貨箱-門口1', 'source': 'summit-rocher-01m-crate', 'at': [58, 20, 0], 'pivot': [6, 6, 0], 'meta': {}},
+                     {'name': '酒桶-門口', 'source': 'summit-rocher-01m-barrel', 'at': [66, 20, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+        M.anchor('lot-0', 0, 0, 0)
+        return {'key': 'house-c-xs', 'title': '住宅 C 小版（地塊 8 × 8：同 C 的商家；沒有院子）', 'use': 'house', 'lot': (8, 8), 'M': M,
+                'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}}
     # 後院：毛石院牆（後面一扇門）、木板廚房（單坡木瓦頂）
     ye = D - 1                                                          # 院牆後緣（原本 119）
     for (a, b, c, d) in ((X0, Y1, X0 + 3, ye), (X1 - 3, Y1, X1, ye), (X0, ye - 3, X1, ye)):
@@ -223,4 +242,16 @@ def house_c_s():
     return house_c(100)
 
 
-ALL = [house_a, house_b, house_c, house_a_s, house_b_s, house_c_s]
+def house_a_xs():
+    return house_a(80)
+
+
+def house_b_xs():
+    return house_b(80)
+
+
+def house_c_xs():
+    return house_c(80)
+
+
+ALL = [house_a, house_b, house_c, house_a_s, house_b_s, house_c_s, house_a_xs, house_b_xs, house_c_xs]

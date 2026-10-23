@@ -192,7 +192,10 @@ VARIANTS = [('house-a2', 'house-a', {BOARD: LIME}, '住宅 A2（A 的配色變�
             ('house-c2', 'house-c', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '住宅 C2（C 的配色變化：一樓石牆刷白 —— St Thomas「照荷蘭方式刷白」；替換色，不另存格子）'),
             ('house-a2-s', 'house-a-s', {BOARD: LIME}, '住宅 A2 淺版（A 淺版的配色變化：板牆刷石灰白；替換色，不另存格子）'),   # 淺版（8 × 10，TASK-0742 轉角）照同一套替換色
             ('house-b2-s', 'house-b-s', {LIME: EARTH_W}, '住宅 B2 淺版（B 淺版的配色變化：沒刷石灰的泥牆；替換色，不另存格子）'),
-            ('house-c2-s', 'house-c-s', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '住宅 C2 淺版（C 淺版的配色變化：一樓石牆刷白；替換色，不另存格子）')]
+            ('house-c2-s', 'house-c-s', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '住宅 C2 淺版（C 淺版的配色變化：一樓石牆刷白；替換色，不另存格子）'),
+            ('house-a2-xs', 'house-a-xs', {BOARD: LIME}, '住宅 A2 小版（A 小版的配色變化：板牆刷石灰白；替換色，不另存格子）'),   # 小版（8 × 8，TASK-0840 轉角）照同一套替換色
+            ('house-b2-xs', 'house-b-xs', {LIME: EARTH_W}, '住宅 B2 小版（B 小版的配色變化：沒刷石灰的泥牆；替換色，不另存格子）'),
+            ('house-c2-xs', 'house-c-xs', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '住宅 C2 小版（C 小版的配色變化：一樓石牆刷白；替換色，不另存格子）')]
 NORTH = ['house-a', 'house-b', 'house-c', 'house-a2', 'house-b2', 'house-c2', 'tavern', 'warehouse', 'commandant']
 SOUTH = ['church', 'battery']
 STREET_Y0, STREET_Y1 = 300, 360
