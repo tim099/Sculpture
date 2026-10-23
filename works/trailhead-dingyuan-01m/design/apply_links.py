@@ -123,8 +123,10 @@ LINKS = [
     ('前桅', W + '-mast-fore', None, ''),
     ('通風筒', W + '-vents', None, ''),
     ('艇架', W + '-skids', None, ''),
-    ('彈藥庫-前左', W + '-mag-fore-p', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/barbette-P'}, ''),
-    ('彈藥庫-前右', W + '-mag-fore-s', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/barbette-S'}, ''),   # 艏 15 cm 改由揚弾機吊（2026-10-23）⇒ 不再從 turret15-fwd 艙口吊
+    ('彈藥庫-前左', W + '-mag-fore-p', {'kind': 'magazine', 'pos': 'fore'}, ''),   # 主砲、艏 15 cm 都改由揚弾機吊（2026-10-23）⇒ 不再從 barbette／turret15 艙口吊
+    ('彈藥庫-前右', W + '-mag-fore-s', {'kind': 'magazine', 'pos': 'fore'}, ''),
+    ('揚弾筒-主左', W + '-hoist-main-p', {'kind': 'hoist', 'guns': 'gun-9,gun-10', 'material': 'iron', 'render': 'smooth'}, ''),   # 砲塔-P 的兩門 30.5 cm
+    ('揚弾筒-主右', W + '-hoist-main-s', {'kind': 'hoist', 'guns': 'gun-11,gun-12', 'material': 'iron', 'render': 'smooth'}, ''),   # 砲塔-S 的兩門 30.5 cm
     ('彈藥庫-後', W + '-mag-aft', {'kind': 'magazine', 'pos': 'aft'}, ''),   # 艉 15 cm 改由揚弾機吊（2026-10-23）⇒ 不再從 turret15-aft 艙口吊；艉樓的 37 mm 照一般的取用點
     ('揚弾筒-艉', W + '-hoist-aft', {'kind': 'hoist', 'guns': 'gun-13', 'material': 'iron', 'render': 'smooth'}, ''),   # 造船規格 §9.15；gun-13 ＝ 砲塔-艉/砲
     ('揚弾筒-艏', W + '-hoist-fwd', {'kind': 'hoist', 'guns': 'gun-14', 'material': 'iron', 'render': 'smooth'}, ''),   # gun-14 ＝ 砲塔-艏/砲

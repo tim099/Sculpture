@@ -54,6 +54,8 @@ PARTS = [
     ('ladders', W + '-ladders', '定遠號 梯子', 'part_ladders.txt', HULL, 0.1),
     ('hoist-aft', W + '-hoist-aft', '定遠號 艉 15 cm 砲塔的揚弾筒（主甲板 → 砲塔，沿轉軸）', 'part_hoist-aft.txt', HULL, 0.1),
     ('hoist-fwd', W + '-hoist-fwd', '定遠號 艏 15 cm 砲塔的揚弾筒（主甲板 → 砲塔，沿轉軸）', 'part_hoist-fwd.txt', HULL, 0.1),
+    ('hoist-main-P', W + '-hoist-main-p', '定遠號 左舷主砲塔的揚弾筒（露砲台井裡沿轉軸，下甲板 → 固定平台底）', 'part_hoist-main-P.txt', HULL, 0.1),
+    ('hoist-main-S', W + '-hoist-main-s', '定遠號 右舷主砲塔的揚弾筒（露砲台井裡沿轉軸，下甲板 → 固定平台底）', 'part_hoist-main-S.txt', HULL, 0.1),
     ('rooms-lower-side', W + '-rooms-lower-side', '定遠號 中甲板艙房・右舷一排（軍官艙、艏艙；左舷鏡像）', 'part_rooms-lower-side.txt', HULL, 0.1),
     ('rooms-lower-mid', W + '-rooms-lower-mid', '定遠號 中甲板艙房・中線（艦長套房、餐廳、配膳室、病房、藥房）', 'part_rooms-lower-mid.txt', HULL, 0.1),
     ('rudder', W + '-rudder', '定遠號 舵（外部模型的來源，整船的框）', 'part_rudder.txt', HULL, 0.1),

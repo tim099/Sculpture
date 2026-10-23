@@ -271,15 +271,22 @@ def build():
         ladder(nm, xt, y, zl, zh, dx, hatch_decks=hd)
     # 揚弾機（造船規格 §9.15；Tim 2026-10-23）：15 cm 砲塔的彈藥從主甲板（艉樓／艏樓底下）沿轉軸吊進砲塔 ——
     #   空心的筒（外 5 格、中間 3 格空）穿過艉樓／艏樓甲板；bottom ＝ 筒旁主甲板上的接收處（梯子在 YC+10 那一側 ⇒ 擺另一側），top ＝ 轉軸、砲軸高
+    #   主砲（2026-10-23，Tim「主砲 30.5 cm 也改成揚弾機吧（露砲台中間那口井）」）：露砲台井裡沿轉軸，下甲板 z 61 → 固定平台底 z 102（平台不開洞：梯頭站在上面）、穿過主甲板；
+    #   梯子在轉軸 −x 那半邊（x ≤ cx−3）、平台的撐柱在 +x 3 格起 ⇒ 筒子（轉軸 ±2）兩邊都不碰；bottom ＝ 露砲台裡的下甲板（梯腳那一層）
     hoists, hoist_mask = [], np.zeros((NX, NY, NZ), bool)
-    for t in P['turrets_15']:
-        hx = t['x']
+
+    def hoist(name, hx, hy, z0, z1, deck_z, top_z, door=False):
         for ddx in range(-2, 3):
             for ddy in range(-2, 3):
                 r_ = math.hypot(ddx, ddy)
-                if r_ <= 2.3: holes[hx + ddx, YC + ddy, ZUD - 5:ZUD + 1] = True       # 甲板上開筒子的洞
-                if 1 < r_ <= 2.3: hoist_mask[hx + ddx, YC + ddy, WM1:ZUD + 1] = True
-        hoists.append({'name': t['name'], 'bottom': [hx, YC - 5, WM1], 'top': [hx, YC, P['turret_15']['gun_axis']]})
+                if r_ <= 2.3: holes[hx + ddx, hy + ddy, deck_z - 5:deck_z + 1] = True   # 甲板上開筒子的洞
+                if 1 < r_ <= 2.3: hoist_mask[hx + ddx, hy + ddy, z0:z1 + 1] = True
+        if door: hoist_mask[hx - 1:hx + 2, hy - 2, z0:z0 + 10] = False      # 裝彈口（接收處那一側、底部 1 m）：頂上被平台蓋住 ⇒ 不開的話中空封成空腔
+        hoists.append({'name': name, 'bottom': [hx, hy - 5, z0], 'top': [hx, hy, top_z]})
+    for t in P['turrets_15']:
+        hoist(t['name'], t['x'], YC, WM1, ZUD, ZUD, P['turret_15']['gun_axis'])
+    for bb in P['barbettes']:
+        hoist('main-' + bb['name'], bb['x'], YC + bb['dy'], WL1, tm['z_table'] - 2, ZMD, tm['gun_axis'], door=True)
     # 煙囪（中線、橢圓；甲板以下的直煙道也在煙囪部件裡，下到煙箱頂）
     fa, fb = P['funnel_half']
     ftop = P['funnel_top']
