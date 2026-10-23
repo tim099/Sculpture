@@ -18,7 +18,8 @@ ORDER = ['column_constantine', 'column_arcadius', 'column_justinian', 'hagia_ire
          'aqueduct', 'aqueduct_end', 'blachernae', 'boukoleon', 'forum_constantine', 'forum_tauri', 'milion', 'nea', 'mangana', 'augustaion',
          'palace_daphne', 'palace_mosaic', 'magnaura', 'senate', 'chalke',
          'palace_pharos', 'tzykanisterion', 'senate_forum',
-         'andreas_krisei', 'peribleptos', 'atik_mustafa', 'troullo', 'polyeuktos']
+         'andreas_krisei', 'peribleptos', 'atik_mustafa', 'troullo', 'polyeuktos',
+         'blachernae_church', 'blachernae_spring', 'pege', 'hodegon', 'mangana_palace']
 
 
 def rgbc(c):

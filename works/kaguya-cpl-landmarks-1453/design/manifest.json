@@ -833,6 +833,267 @@
    "tags": "sub",
    "title": "布雷契耐宮 1453｜懸鈴木（遊戲換成生成式的懸鈴木）"
   },
+  "kaguya-cpl-blachernae-church-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-blachernae-church-1453.composite.txt",
+   "key": "blachernae-church",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "36,96",
+      "style": "roman",
+      "use": "blachernae-church",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "殘牆、後殿、前廊",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-church-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ground"
+     },
+     "mirror": "",
+     "name": "地面",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-church-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-church-1453-trees",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-blachernae-church-1453",
+   "size": [
+    90,
+    240,
+    50
+   ],
+   "tags": "building,roman",
+   "title": "Blachernae 聖母大教堂 1453（1434 年燒毀：沒有屋頂的殘殼）"
+  },
+  "kaguya-cpl-blachernae-church-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-church-1453-body.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-blachernae-church-1453",
+   "product": "kaguya-cpl-blachernae-church-1453",
+   "size": [
+    90,
+    240,
+    50
+   ],
+   "tags": "sub",
+   "title": "Blachernae 聖母大教堂 1453｜殘牆、後殿、前廊"
+  },
+  "kaguya-cpl-blachernae-church-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-church-1453-ground.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-blachernae-church-1453",
+   "product": "kaguya-cpl-blachernae-church-1453",
+   "size": [
+    90,
+    240,
+    50
+   ],
+   "tags": "sub",
+   "title": "Blachernae 聖母大教堂 1453｜地面（草、燒剩的樑、碎石、斷柱）"
+  },
+  "kaguya-cpl-blachernae-church-1453-trees": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-church-1453-trees.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-blachernae-church-1453",
+   "product": "kaguya-cpl-blachernae-church-1453",
+   "size": [
+    90,
+    240,
+    50
+   ],
+   "tags": "sub",
+   "title": "Blachernae 聖母大教堂 1453｜野樹（遊戲換成生成式的樹）"
+  },
+  "kaguya-cpl-blachernae-spring-1453": {
+   "anchors": {
+    "dome-top": [
+     30,
+     36,
+     45
+    ],
+    "door": [
+     30,
+     4,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-blachernae-spring-1453.composite.txt",
+   "key": "blachernae-spring",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 4,
+      "lot": "12,14",
+      "style": "roman",
+      "use": "blachernae-spring",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-spring-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-spring-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-blachernae-spring-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-blachernae-spring-1453",
+   "size": [
+    60,
+    70,
+    55
+   ],
+   "tags": "building,roman",
+   "title": "Blachernae 的聖泉浴堂 1453（Hagion Louma；小穹頂堂＋泉池）"
+  },
+  "kaguya-cpl-blachernae-spring-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-spring-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-blachernae-spring-1453",
+   "product": "kaguya-cpl-blachernae-spring-1453",
+   "size": [
+    60,
+    70,
+    55
+   ],
+   "tags": "sub",
+   "title": "Blachernae 聖泉 1453｜主體（方室、前廊、後殿、井欄）"
+  },
+  "kaguya-cpl-blachernae-spring-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-spring-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-blachernae-spring-1453",
+   "product": "kaguya-cpl-blachernae-spring-1453",
+   "size": [
+    60,
+    70,
+    55
+   ],
+   "tags": "sub",
+   "title": "Blachernae 聖泉 1453｜窗玻璃"
+  },
+  "kaguya-cpl-blachernae-spring-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-blachernae-spring-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-blachernae-spring-1453",
+   "product": "kaguya-cpl-blachernae-spring-1453",
+   "size": [
+    60,
+    70,
+    55
+   ],
+   "tags": "sub",
+   "title": "Blachernae 聖泉 1453｜屋頂（穹頂、瓦）"
+  },
   "kaguya-cpl-boukoleon-1453": {
    "anchors": {
     "loggia": [
@@ -3009,6 +3270,205 @@
    "tags": "sub",
    "title": "聖伊琳娜教堂 1453｜屋頂（主穹頂、西跨穹窿、坡頂）"
   },
+  "kaguya-cpl-hodegon-1453": {
+   "anchors": {
+    "dome-top": [
+     85,
+     127,
+     75
+    ],
+    "door": [
+     85,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-hodegon-1453.composite.txt",
+   "key": "hodegon",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 10,
+      "lot": "34,40",
+      "style": "roman",
+      "use": "hodegon",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-hodegon-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-hodegon-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ground"
+     },
+     "mirror": "",
+     "name": "院子",
+     "recolor": {},
+     "source": "kaguya-cpl-hodegon-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-cypress",
+      "tree": "cypress"
+     },
+     "mirror": "",
+     "name": "柏樹",
+     "recolor": {},
+     "source": "kaguya-cpl-hodegon-1453-trees-cypress",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-hodegon-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-hodegon-1453",
+   "size": [
+    170,
+    200,
+    100
+   ],
+   "tags": "building,roman",
+   "title": "Hodegon 修道院 1453（Hodegetria 聖像；主堂、院子、房舍；平面是設計）"
+  },
+  "kaguya-cpl-hodegon-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hodegon-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-hodegon-1453",
+   "product": "kaguya-cpl-hodegon-1453",
+   "size": [
+    170,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "Hodegon 修道院 1453｜主體（主堂、房舍、院牆、門樓、井欄）"
+  },
+  "kaguya-cpl-hodegon-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hodegon-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 50,
+   "parent": "kaguya-cpl-hodegon-1453",
+   "product": "kaguya-cpl-hodegon-1453",
+   "size": [
+    170,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "Hodegon 修道院 1453｜窗玻璃"
+  },
+  "kaguya-cpl-hodegon-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hodegon-1453-ground.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-hodegon-1453",
+   "product": "kaguya-cpl-hodegon-1453",
+   "size": [
+    170,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "Hodegon 修道院 1453｜院子（石板、草）"
+  },
+  "kaguya-cpl-hodegon-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hodegon-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-hodegon-1453",
+   "product": "kaguya-cpl-hodegon-1453",
+   "size": [
+    170,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "Hodegon 修道院 1453｜屋頂（穹頂、瓦）"
+  },
+  "kaguya-cpl-hodegon-1453-trees-cypress": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-hodegon-1453-trees-cypress.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-hodegon-1453",
+   "product": "kaguya-cpl-hodegon-1453",
+   "size": [
+    170,
+    200,
+    100
+   ],
+   "tags": "sub",
+   "title": "Hodegon 修道院 1453｜柏樹（遊戲換成生成式的柏樹）"
+  },
   "kaguya-cpl-holy-apostles-1453": {
    "anchors": {
     "crossing": [
@@ -3940,6 +4400,132 @@
    ],
    "tags": "sub",
    "title": "曼加納聖喬治修道院 1453｜果樹（遊戲換成生成式的果樹）"
+  },
+  "kaguya-cpl-mangana-palace-1453": {
+   "anchors": {
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-mangana-palace-1453.composite.txt",
+   "key": "mangana-palace",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 0,
+      "lot": "98,16",
+      "style": "roman",
+      "use": "mangana-palace",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "基座、拱口、斷牆、柱段",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-palace-1453-ruins",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ground"
+     },
+     "mirror": "",
+     "name": "地面",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-palace-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees",
+      "tree": "broadleaf"
+     },
+     "mirror": "",
+     "name": "野樹",
+     "recolor": {},
+     "source": "kaguya-cpl-mangana-palace-1453-trees",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.4,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-mangana-palace-1453",
+   "size": [
+    245,
+    40,
+    28
+   ],
+   "tags": "building,roman",
+   "title": "曼加納宮的廢墟 1453（98 × 16 m 的基座與斷牆）"
+  },
+  "kaguya-cpl-mangana-palace-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-palace-1453-ground.vox.txt",
+   "mpv": 0.4,
+   "order": 20,
+   "parent": "kaguya-cpl-mangana-palace-1453",
+   "product": "kaguya-cpl-mangana-palace-1453",
+   "size": [
+    245,
+    40,
+    28
+   ],
+   "tags": "sub",
+   "title": "曼加納宮廢墟 1453｜地面（草、碎石）"
+  },
+  "kaguya-cpl-mangana-palace-1453-ruins": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-palace-1453-ruins.vox.txt",
+   "mpv": 0.4,
+   "order": 10,
+   "parent": "kaguya-cpl-mangana-palace-1453",
+   "product": "kaguya-cpl-mangana-palace-1453",
+   "size": [
+    245,
+    40,
+    28
+   ],
+   "tags": "sub",
+   "title": "曼加納宮廢墟 1453｜基座、拱口、斷牆、柱段"
+  },
+  "kaguya-cpl-mangana-palace-1453-trees": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-mangana-palace-1453-trees.vox.txt",
+   "mpv": 0.4,
+   "order": 30,
+   "parent": "kaguya-cpl-mangana-palace-1453",
+   "product": "kaguya-cpl-mangana-palace-1453",
+   "size": [
+    245,
+    40,
+    28
+   ],
+   "tags": "sub",
+   "title": "曼加納宮廢墟 1453｜野樹（遊戲換成生成式的樹）"
   },
   "kaguya-cpl-milion-1453": {
    "anchors": {
@@ -5583,6 +6169,233 @@
    ],
    "tags": "sub",
    "title": "全能者修道院 1453｜屋頂（五個穹頂、瓦）"
+  },
+  "kaguya-cpl-pege-1453": {
+   "anchors": {
+    "door": [
+     85,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-pege-1453.composite.txt",
+   "key": "pege",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "kind": "building",
+      "lamps": 4,
+      "lot": "34,44",
+      "style": "roman",
+      "use": "pege",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "主體",
+     "recolor": {},
+     "source": "kaguya-cpl-pege-1453-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-pege-1453-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "ground"
+     },
+     "mirror": "",
+     "name": "院子",
+     "recolor": {},
+     "source": "kaguya-cpl-pege-1453-ground",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-cypress",
+      "tree": "cypress"
+     },
+     "mirror": "",
+     "name": "柏樹",
+     "recolor": {},
+     "source": "kaguya-cpl-pege-1453-trees-cypress",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "tree",
+      "part": "trees-plane",
+      "tree": "plane"
+     },
+     "mirror": "",
+     "name": "梧桐",
+     "recolor": {},
+     "source": "kaguya-cpl-pege-1453-trees-plane",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "material": "glass",
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "窗玻璃",
+     "recolor": {},
+     "source": "kaguya-cpl-pege-1453-glass",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "mpv": 0.2,
+   "order": 5,
+   "parent": "kaguya-cpl-landmarks-1453",
+   "product": "kaguya-cpl-pege-1453",
+   "size": [
+    170,
+    220,
+    110
+   ],
+   "tags": "building,roman",
+   "title": "生命之泉修道院 1453（Zoodochos Pege；半毀的主堂、聖泉亭、院牆）"
+  },
+  "kaguya-cpl-pege-1453-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pege-1453-body.vox.txt",
+   "mpv": 0.2,
+   "order": 10,
+   "parent": "kaguya-cpl-pege-1453",
+   "product": "kaguya-cpl-pege-1453",
+   "size": [
+    170,
+    220,
+    110
+   ],
+   "tags": "sub",
+   "title": "生命之泉修道院 1453｜主體（主堂殘體、前廊、聖泉亭、院牆）"
+  },
+  "kaguya-cpl-pege-1453-glass": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pege-1453-glass.vox.txt",
+   "mpv": 0.2,
+   "order": 60,
+   "parent": "kaguya-cpl-pege-1453",
+   "product": "kaguya-cpl-pege-1453",
+   "size": [
+    170,
+    220,
+    110
+   ],
+   "tags": "sub",
+   "title": "生命之泉修道院 1453｜窗玻璃"
+  },
+  "kaguya-cpl-pege-1453-ground": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pege-1453-ground.vox.txt",
+   "mpv": 0.2,
+   "order": 30,
+   "parent": "kaguya-cpl-pege-1453",
+   "product": "kaguya-cpl-pege-1453",
+   "size": [
+    170,
+    220,
+    110
+   ],
+   "tags": "sub",
+   "title": "生命之泉修道院 1453｜院子（草、碎石）"
+  },
+  "kaguya-cpl-pege-1453-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pege-1453-roof.vox.txt",
+   "mpv": 0.2,
+   "order": 20,
+   "parent": "kaguya-cpl-pege-1453",
+   "product": "kaguya-cpl-pege-1453",
+   "size": [
+    170,
+    220,
+    110
+   ],
+   "tags": "sub",
+   "title": "生命之泉修道院 1453｜屋頂（殘存的穹頂、瓦）"
+  },
+  "kaguya-cpl-pege-1453-trees-cypress": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pege-1453-trees-cypress.vox.txt",
+   "mpv": 0.2,
+   "order": 40,
+   "parent": "kaguya-cpl-pege-1453",
+   "product": "kaguya-cpl-pege-1453",
+   "size": [
+    170,
+    220,
+    110
+   ],
+   "tags": "sub",
+   "title": "生命之泉修道院 1453｜柏樹（遊戲換成生成式的柏樹）"
+  },
+  "kaguya-cpl-pege-1453-trees-plane": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-pege-1453-trees-plane.vox.txt",
+   "mpv": 0.2,
+   "order": 50,
+   "parent": "kaguya-cpl-pege-1453",
+   "product": "kaguya-cpl-pege-1453",
+   "size": [
+    170,
+    220,
+    110
+   ],
+   "tags": "sub",
+   "title": "生命之泉修道院 1453｜梧桐（遊戲換成生成式的梧桐）"
   },
   "kaguya-cpl-peribleptos-1453": {
    "anchors": {

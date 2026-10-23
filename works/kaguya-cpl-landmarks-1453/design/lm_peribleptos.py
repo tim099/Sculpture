@@ -77,6 +77,7 @@ def build():
         M.tree(x, y, 11.0, 2.4, 4)
     for x in (11.0, 24.0, 28.0):
         M.tree(x + rnd.uniform(-0.4, 0.4), 41.0 + rnd.uniform(-0.4, 0.4), rnd.uniform(4.0, 5.0), 3.0, 5)
+    M.DOORS = [d & M.full(M.Z >= MPV) for d in M.DOORS]                 # 門洞外那一格 finish 會整個挖掉 ⇒ 地面那一層（草）不算進門
     G, L = M.finish(shell_m=0.8, seed=1032, mix=True)
     anchors = {'lot-0': [0, 0, 0], 'door': M.cell(17.0, 0.4, 0.0), 'dome-top': M.cell(17.0, 25.0, up + 11.6 + 2.6 + 3.2)}
     return G, L, anchors, {'穹頂頂（m）': round(up + 11.6 + 2.6 + 3.2, 2)}
