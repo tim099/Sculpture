@@ -1,0 +1,797 @@
+{
+ "count": 10,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    8,
+    0,
+    0
+   ]
+  },
+  "cells": 252,
+  "design": "ridge-001-matsushima-01m",
+  "file": "ridge-001-matsushima-01m/design/masks/portlids/lid.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "ridge-001-matsushima-01m",
+  "pivot": [
+   4.5,
+   0,
+   0
+  ],
+  "sha256": "bb17c2054cc1358aee8b65695f4ab23282dbb28d21a5faeb9451b4d8c08a447c",
+  "size": [
+   9,
+   14,
+   2
+  ],
+  "title": "松島號 12 cm 砲門蓋板（上緣鉸鏈，通用部件，0.1 m）",
+  "work": "ridge-001-matsushima-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 松島號：10 片（甲板-middle），蓋板 ridge-001-matsushima-01m-portlid [9, 14, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    605.5,
+    15,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 166,
+    "n": 42,
+    "resid": 0.53,
+    "rx": -5.02,
+    "rz_fit": -0.45
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 18.5,
+    "muzzle": [
+     605.5,
+     -4.0,
+     96.75
+    ],
+    "need_pull": 20.0,
+    "outer_s": 166.0
+   },
+   "gun_model": "砲-P5",
+   "gun_path": "甲板-middle/砲-P5",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    601,
+    609
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 83,
+    "house": 20,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P5",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    602,
+    608
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    605.5,
+    166,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 166,
+    "n": 42,
+    "resid": 0.53,
+    "rx": -5.02,
+    "rz_fit": -0.45
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 18.5,
+    "muzzle": [
+     605.5,
+     185.0,
+     96.75
+    ],
+    "need_pull": 20.0,
+    "outer_s": 166
+   },
+   "gun_model": "砲-S5",
+   "gun_path": "甲板-middle/砲-S5",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    601,
+    609
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 83,
+    "house": 20,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S5",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    602,
+    608
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    670.5,
+    18,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 163,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 19.0,
+    "muzzle": [
+     670.5,
+     -0.5,
+     96.75
+    ],
+    "need_pull": 19.5,
+    "outer_s": 163.0
+   },
+   "gun_model": "砲-P4",
+   "gun_path": "甲板-middle/砲-P4",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    666,
+    674
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 21,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P4",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    667,
+    673
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    670.5,
+    163,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 163,
+    "n": 42,
+    "resid": 0.0,
+    "rx": 0.0,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 19.0,
+    "muzzle": [
+     670.5,
+     181.5,
+     96.75
+    ],
+    "need_pull": 19.5,
+    "outer_s": 163
+   },
+   "gun_model": "砲-S4",
+   "gun_path": "甲板-middle/砲-S4",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    666,
+    674
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 88,
+    "house": 21,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S4",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    667,
+    673
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    735.5,
+    24,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 157,
+    "n": 42,
+    "resid": 0.6,
+    "rx": 3.14,
+    "rz_fit": -7.68
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 18.5,
+    "muzzle": [
+     735.5,
+     7.0,
+     96.75
+    ],
+    "need_pull": 19.0,
+    "outer_s": 156.0
+   },
+   "gun_model": "砲-P3",
+   "gun_path": "甲板-middle/砲-P3",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    731,
+    739
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 91.1,
+    "house": 20,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P3",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    732,
+    738
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    187.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    735.5,
+    157,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 157,
+    "n": 42,
+    "resid": 0.6,
+    "rx": 3.14,
+    "rz_fit": -7.68
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 18.5,
+    "muzzle": [
+     735.5,
+     174.0,
+     96.75
+    ],
+    "need_pull": 19.0,
+    "outer_s": 156
+   },
+   "gun_model": "砲-S3",
+   "gun_path": "甲板-middle/砲-S3",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    731,
+    739
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 91.1,
+    "house": 20,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S3",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    732,
+    738
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -7.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    800.5,
+    33,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 148,
+    "n": 42,
+    "resid": 0.45,
+    "rx": 8.34,
+    "rz_fit": -10.34
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 17.0,
+    "muzzle": [
+     800.5,
+     17.5,
+     96.75
+    ],
+    "need_pull": 17.5,
+    "outer_s": 147.0
+   },
+   "gun_model": "砲-P2",
+   "gun_path": "甲板-middle/砲-P2",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    796,
+    804
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 96.3,
+    "house": 19,
+    "kind": "portlid",
+    "lid_of": "gun-4"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P2",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    797,
+    803
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    190.3
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    800.5,
+    148,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 148,
+    "n": 42,
+    "resid": 0.45,
+    "rx": 8.34,
+    "rz_fit": -10.34
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 17.0,
+    "muzzle": [
+     800.5,
+     163.5,
+     96.75
+    ],
+    "need_pull": 17.5,
+    "outer_s": 147
+   },
+   "gun_model": "砲-S2",
+   "gun_path": "甲板-middle/砲-S2",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    796,
+    804
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 96.3,
+    "house": 19,
+    "kind": "portlid",
+    "lid_of": "gun-3"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S2",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    797,
+    803
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -10.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    865.5,
+    46,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 135,
+    "n": 42,
+    "resid": 0.46,
+    "rx": 11.16,
+    "rz_fit": -12.75
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 17.0,
+    "muzzle": [
+     865.5,
+     31.5,
+     96.75
+    ],
+    "need_pull": 17.5,
+    "outer_s": 133.0
+   },
+   "gun_model": "砲-P1",
+   "gun_path": "甲板-middle/砲-P1",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    861,
+    869
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 99.2,
+    "house": 19,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-P1",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    862,
+    868
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    192.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  },
+  {
+   "at": [
+    865.5,
+    135,
+    103
+   ],
+   "face": {
+    "hinge_surf_s": 135,
+    "n": 42,
+    "resid": 0.46,
+    "rx": 11.16,
+    "rz_fit": -12.75
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 17.0,
+    "muzzle": [
+     865.5,
+     149.5,
+     96.75
+    ],
+    "need_pull": 17.5,
+    "outer_s": 133
+   },
+   "gun_model": "砲-S1",
+   "gun_path": "甲板-middle/砲-S1",
+   "host": "甲板-middle",
+   "host_work": "ridge-001-matsushima-01m-deck-middle",
+   "lid_x": [
+    861,
+    869
+   ],
+   "lid_z": [
+    90,
+    103
+   ],
+   "meta": {
+    "close_deg": 99.2,
+    "house": 19,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-S1",
+   "open_size": [
+    7,
+    12
+   ],
+   "open_x": [
+    862,
+    868
+   ],
+   "open_z": [
+    91,
+    102
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -12.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-001-matsushima-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 1.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": []
+}
