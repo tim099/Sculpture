@@ -124,8 +124,10 @@ LINKS = [
     ('通風筒', W + '-vents', None, ''),
     ('艇架', W + '-skids', None, ''),
     ('彈藥庫-前左', W + '-mag-fore-p', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/barbette-P'}, ''),
-    ('彈藥庫-前右', W + '-mag-fore-s', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/barbette-S,梯子/turret15-fwd'}, ''),
-    ('彈藥庫-後', W + '-mag-aft', {'kind': 'magazine', 'pos': 'aft', 'hoist': '梯子/turret15-aft'}, ''),
+    ('彈藥庫-前右', W + '-mag-fore-s', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/barbette-S'}, ''),   # 艏 15 cm 改由揚弾機吊（2026-10-23）⇒ 不再從 turret15-fwd 艙口吊
+    ('彈藥庫-後', W + '-mag-aft', {'kind': 'magazine', 'pos': 'aft'}, ''),   # 艉 15 cm 改由揚弾機吊（2026-10-23）⇒ 不再從 turret15-aft 艙口吊；艉樓的 37 mm 照一般的取用點
+    ('揚弾筒-艉', W + '-hoist-aft', {'kind': 'hoist', 'guns': 'gun-13', 'material': 'iron', 'render': 'smooth'}, ''),   # 造船規格 §9.15；gun-13 ＝ 砲塔-艉/砲
+    ('揚弾筒-艏', W + '-hoist-fwd', {'kind': 'hoist', 'guns': 'gun-14', 'material': 'iron', 'render': 'smooth'}, ''),   # gun-14 ＝ 砲塔-艏/砲
     ('艙壁', W + '-bulkheads', None, ''),
     ('梯子', W + '-ladders', {'kind': 'ladders', 'poop-break-P.decks': 'main,poop', 'poop-break-S.decks': 'main,poop', 'fc-break-a.decks': 'main,forecastle', 'fc-break-b.decks': 'main,forecastle'}, ''),
 ]
@@ -149,6 +151,8 @@ for nm, src, meta in DRV:
 # ── 固定點 ──
 for L in A['ladders']:
     for k in ('foot', 'lo', 'hi', 'head'): anchor(W + '-ladders', L['name'] + '.' + k, L[k])
+for H in A['hoists']:
+    for k in ('bottom', 'top'): anchor(W + '-hoist-' + H['name'], k, H[k])
 MAGW = {'mag-fore-P': W + '-mag-fore-p', 'mag-fore-S': W + '-mag-fore-s', 'mag-aft': W + '-mag-aft'}
 for nm, mm in A['mags'].items():
     for k in ('blast', 'door'): anchor(MAGW[nm], k, mm[k])

@@ -618,7 +618,7 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
-				"hoist": "ladders-1#barbette-S,ladders-1#turret15-fwd",
+				"hoist": "ladders-1#barbette-S",
 				"id": "magazine-2",
 				"kind": "magazine",
 				"pos": "fore",
@@ -645,7 +645,6 @@
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
-				"hoist": "ladders-1#turret15-aft",
 				"id": "magazine-3",
 				"kind": "magazine",
 				"pos": "aft",
@@ -832,6 +831,60 @@
 			"note": "",
 			"meta": {
 				"id": "part-17"
+			}
+		},
+		{
+			"name": "揚弾筒-艉",
+			"work": "trailhead-dingyuan-01m-hoist-aft",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				960,
+				221,
+				390
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:01:21",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"guns": "gun-13",
+				"id": "hoist-1",
+				"kind": "hoist",
+				"material": "iron",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "揚弾筒-艏",
+			"work": "trailhead-dingyuan-01m-hoist-fwd",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				960,
+				221,
+				390
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:01:22",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"guns": "gun-14",
+				"id": "hoist-2",
+				"kind": "hoist",
+				"material": "iron",
+				"render": "smooth"
 			}
 		}
 	]

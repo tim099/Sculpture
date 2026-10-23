@@ -269,6 +269,17 @@ def build():
     ]
     for nm, xt, y, zl, zh, dx, hd in LAD:
         ladder(nm, xt, y, zl, zh, dx, hatch_decks=hd)
+    # 揚弾機（造船規格 §9.15；Tim 2026-10-23）：15 cm 砲塔的彈藥從主甲板（艉樓／艏樓底下）沿轉軸吊進砲塔 ——
+    #   空心的筒（外 5 格、中間 3 格空）穿過艉樓／艏樓甲板；bottom ＝ 筒旁主甲板上的接收處（梯子在 YC+10 那一側 ⇒ 擺另一側），top ＝ 轉軸、砲軸高
+    hoists, hoist_mask = [], np.zeros((NX, NY, NZ), bool)
+    for t in P['turrets_15']:
+        hx = t['x']
+        for ddx in range(-2, 3):
+            for ddy in range(-2, 3):
+                r_ = math.hypot(ddx, ddy)
+                if r_ <= 2.3: holes[hx + ddx, YC + ddy, ZUD - 5:ZUD + 1] = True       # 甲板上開筒子的洞
+                if 1 < r_ <= 2.3: hoist_mask[hx + ddx, YC + ddy, WM1:ZUD + 1] = True
+        hoists.append({'name': t['name'], 'bottom': [hx, YC - 5, WM1], 'top': [hx, YC, P['turret_15']['gun_axis']]})
     # 煙囪（中線、橢圓；甲板以下的直煙道也在煙囪部件裡，下到煙箱頂）
     fa, fb = P['funnel_half']
     ftop = P['funnel_top']
@@ -542,8 +553,12 @@ def build():
     claimw('bulkheads', bulk & ~lad_mask, C['iron'])
     # 梯子（最後落：踏板與側板；穿過的艙口已經空出來）
     claimw('ladders', lad_mask, C['iron'])
+    for h in hoists:                                                       # 揚弾筒（甲板的洞已經空出來）：一座一件（關聯 meta 的 guns 各吊各的砲）
+        m_ = hoist_mask.copy(); m_[:max(h['top'][0] - 3, 0)] = False; m_[h['top'][0] + 4:] = False
+        claimw('hoist-' + h['name'], m_, C['iron'])
     info['lad_total'] = int(lad_mask.sum())
     anc['ladders'] = ladders
+    anc['hoists'] = hoists
     anc['mags'] = mags
     info['spots'] = spots
     return own, col, names, anc, info, stat
