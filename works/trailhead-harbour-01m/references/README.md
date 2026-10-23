@@ -94,3 +94,16 @@ Tim：「那繼續加建築吧 GO」。補手擺城裡還沒有模型的堡壘�
 | 皇家港是磚城 | CIV（HEATH「goodly Brick Houses」）〔讀過†〕 | en 砲台用磚 |
 | 稜堡比例、牆高 3.6 m、胸牆 1.2 m、土台 3 m、坡道、營房、火藥庫、井 | — | 設計（17 世紀加勒比海的小堡多是土與木；這裡給磚石的那一種） |
 | Fort James、Fort Carlisle、Fort Rupert 的形制 | — | ⛔ 沒查到 ⇒ 同 summit 砲台的擺法，換成磚 |
+
+## 第五批（TASK-0861，2026-10-23）：加拉塔堡 Kastellion（1453）、和平港的嘉布遣會修院
+
+| 項目 | 照什麼 | 設計 |
+|---|---|---|
+| 地下部分約 50 × 40 m 的長方形、牆厚約 2.25 m（東北面不到 2 m）；原有 63 根墩、看得到 42 根 | The Byzantine Legacy〈Kastellion〉https://www.thebyzantinelegacy.com/kastellion 〔摘〕 | 50 × 40 的地塊（剛好）、側後牆 2.2 m |
+| 一座高塔、一個高牆圍起來的院子 | 同上〔摘〕（另一份摘要同說法） | 26 m 的塔在右後角、牆 10 m |
+| 巨鏈的北端繫在這裡，拉到對岸 Kentenarion 塔 | The Byzantine Legacy；Atlas Obscura〈Golden Horn Chain〉〔摘〕；TOWN_BUILD §5.2（kaguya：Barbaro 1453、Pears 1903） | 塔右面一個大鐵環＋一截鏈（固定點 chain） |
+| 舊平面圖細節不準 | Galata Symposium 摘要（Ruhr-Universität Bochum 2025）〔摘〕 | ⛔ 不照舊平面 |
+| 熱那亞 1453 年稱聖十字堡 | TOWN_BUILD §5.2（kaguya 的研究） | 門上大理石牌的紅十字、熱那亞旗 |
+| 帶狀磚石 | kaguya 地標的砌法（byz.py：磚帶 1.0 m、方石 1.2 m） | 同一套色 |
+| bombardella | kotoko 的元件（1453 鄂圖曼 fusta 船首的那一種）；遊戲砲種 bombardella | 四門在正面牆頂 |
+| 嘉布遣會修院（和平港，北部傳教區的總部） | Blocksail town-port-de-paix 那一筆（crest-001，MSM p.699） | ⛔ 形制沒查到 ⇒ 長屋、鐘牆、祭壇都是設計 |

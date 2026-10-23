@@ -11,7 +11,7 @@
   "composite_cavity": 0,
   "composite_components": 4,
   "composite_floating": [],
-  "composite_voxels": 72226,
+  "composite_voxels": 72746,
   "door": [
    9,
    1,
@@ -21,17 +21,45 @@
   "layers": {
    "trailhead-harbour-01m-battery-en-body": {
     "bbox": [
-     4,
-     4,
+     22,
+     42,
      0,
-     116,
-     112,
+     110,
+     98,
      82
     ],
     "cavity": 0,
     "components": 4,
-    "md5": "6c9196d8bc9e97871ad137ef1b7af60c",
-    "voxels": 69128
+    "md5": "26677657a80aa3666f6651fc4a768249",
+    "voxels": 464
+   },
+   "trailhead-harbour-01m-battery-en-magazine": {
+    "bbox": [
+     70,
+     84,
+     0,
+     104,
+     112,
+     26
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "4ca8c94d95cbb0ae96c6aab8fc4a5cb9",
+    "voxels": 10576
+   },
+   "trailhead-harbour-01m-battery-en-rampart": {
+    "bbox": [
+     4,
+     4,
+     0,
+     116,
+     70,
+     24
+    ],
+    "cavity": 0,
+    "components": 2,
+    "md5": "6a56d2f449fcdd86008b8ab2faf9fd99",
+    "voxels": 58608
    },
    "trailhead-harbour-01m-battery-en-roof": {
     "bbox": [
@@ -48,12 +76,12 @@
     "voxels": 2720
    }
   },
-  "links": 3,
+  "links": 5,
   "lot": [
    12,
    12
   ],
-  "models": 5,
+  "models": 1,
   "oob": 0,
   "part_clash": 0,
   "size": [
@@ -194,6 +222,71 @@
   "style": "carib",
   "use": "chapel"
  },
+ "trailhead-harbour-01m-convent": {
+  "bbox": [
+   0,
+   0,
+   0,
+   140,
+   40,
+   72
+  ],
+  "composite_cavity": 0,
+  "composite_components": 1,
+  "composite_floating": [],
+  "composite_voxels": 44858,
+  "door": [
+   70,
+   1,
+   0
+  ],
+  "door_ok": true,
+  "layers": {
+   "trailhead-harbour-01m-convent-body": {
+    "bbox": [
+     0,
+     2,
+     0,
+     138,
+     38,
+     72
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "d3188b560352c5ee3aa65879e0a32f8c",
+    "voxels": 32996
+   },
+   "trailhead-harbour-01m-convent-roof": {
+    "bbox": [
+     0,
+     0,
+     25,
+     140,
+     40,
+     42
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "fca4604e74827842bc6c5199da0262aa",
+    "voxels": 10716
+   }
+  },
+  "links": 7,
+  "lot": [
+   14,
+   4
+  ],
+  "models": 1,
+  "oob": 0,
+  "part_clash": 0,
+  "size": [
+   140,
+   40,
+   80
+  ],
+  "style": "carib",
+  "use": "monastery"
+ },
  "trailhead-harbour-01m-fish-market": {
   "bbox": [
    0,
@@ -271,7 +364,7 @@
   "composite_cavity": 0,
   "composite_components": 5,
   "composite_floating": [],
-  "composite_voxels": 759007,
+  "composite_voxels": 759699,
   "door": [
    150,
    59,
@@ -281,17 +374,45 @@
   "layers": {
    "trailhead-harbour-01m-fort-body": {
     "bbox": [
+     112,
+     104,
+     0,
+     206,
+     206,
+     112
+    ],
+    "cavity": 0,
+    "components": 3,
+    "md5": "99f8b8a0c6d85b74e968d670f080b4df",
+    "voxels": 16436
+   },
+   "trailhead-harbour-01m-fort-magazine": {
+    "bbox": [
+     170,
+     98,
+     0,
+     204,
+     132,
+     26
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "5c2051e0fe8b32ba6b16f2458c4dca14",
+    "voxels": 11968
+   },
+   "trailhead-harbour-01m-fort-rampart": {
+    "bbox": [
      4,
      4,
      0,
      296,
      296,
-     112
+     48
     ],
     "cavity": 0,
-    "components": 5,
-    "md5": "4b13a60d03a3b4d6fa4856b6d8a547f2",
-    "voxels": 746971
+    "components": 2,
+    "md5": "096b9a449c52fb24598e262462b9d543",
+    "voxels": 719259
    },
    "trailhead-harbour-01m-fort-roof": {
     "bbox": [
@@ -308,12 +429,12 @@
     "voxels": 10288
    }
   },
-  "links": 7,
+  "links": 9,
   "lot": [
    30,
    30
   ],
-  "models": 12,
+  "models": 1,
   "oob": 0,
   "part_clash": 0,
   "size": [
@@ -336,7 +457,7 @@
   "composite_cavity": 0,
   "composite_components": 5,
   "composite_floating": [],
-  "composite_voxels": 764143,
+  "composite_voxels": 764835,
   "door": [
    150,
    59,
@@ -346,17 +467,45 @@
   "layers": {
    "trailhead-harbour-01m-fort-en-body": {
     "bbox": [
+     112,
+     104,
+     0,
+     206,
+     206,
+     112
+    ],
+    "cavity": 0,
+    "components": 3,
+    "md5": "a61be88fbcefa4d9846d0f49419cb985",
+    "voxels": 21572
+   },
+   "trailhead-harbour-01m-fort-en-magazine": {
+    "bbox": [
+     170,
+     98,
+     0,
+     204,
+     132,
+     26
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "de82b68c3a4b52c06d8047f2cf8c3516",
+    "voxels": 11968
+   },
+   "trailhead-harbour-01m-fort-en-rampart": {
+    "bbox": [
      4,
      4,
      0,
      296,
      296,
-     112
+     48
     ],
     "cavity": 0,
-    "components": 5,
-    "md5": "dbeb2ab9f2c32b1e716a614df01ca2ab",
-    "voxels": 752107
+    "components": 2,
+    "md5": "06adf7ddbbd8563975d6b06620a0ecbf",
+    "voxels": 719259
    },
    "trailhead-harbour-01m-fort-en-roof": {
     "bbox": [
@@ -373,12 +522,12 @@
     "voxels": 10288
    }
   },
-  "links": 7,
+  "links": 9,
   "lot": [
    30,
    30
   ],
-  "models": 12,
+  "models": 1,
   "oob": 0,
   "part_clash": 0,
   "size": [
@@ -453,6 +602,113 @@
   ],
   "style": "carib",
   "use": "jail"
+ },
+ "trailhead-harbour-01m-kastellion": {
+  "bbox": [
+   1,
+   0,
+   0,
+   250,
+   199,
+   177
+  ],
+  "composite_cavity": 210,
+  "composite_components": 3,
+  "composite_floating": [],
+  "composite_voxels": 461619,
+  "door": [
+   125,
+   0,
+   0
+  ],
+  "door_ok": true,
+  "layers": {
+   "trailhead-harbour-01m-kastellion-body": {
+    "bbox": [
+     60,
+     90,
+     0,
+     170,
+     188,
+     25
+    ],
+    "cavity": 0,
+    "components": 2,
+    "md5": "aab14f86ee8d53f17a495c4b5a8d5591",
+    "voxels": 20758
+   },
+   "trailhead-harbour-01m-kastellion-magazine": {
+    "bbox": [
+     20,
+     26,
+     0,
+     44,
+     48,
+     16
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "62464aac009b4f7a92bafa7da95d4b75",
+    "voxels": 3776
+   },
+   "trailhead-harbour-01m-kastellion-rampart": {
+    "bbox": [
+     1,
+     0,
+     0,
+     249,
+     199,
+     58
+    ],
+    "cavity": 0,
+    "components": 5,
+    "md5": "d5fe8fc012de47dc0de7e22d1d982312",
+    "voxels": 254169
+   },
+   "trailhead-harbour-01m-kastellion-roof": {
+    "bbox": [
+     19,
+     25,
+     14,
+     170,
+     188,
+     44
+    ],
+    "cavity": 0,
+    "components": 2,
+    "md5": "74b0b5995aa7609c647feaf73e878d77",
+    "voxels": 9568
+   },
+   "trailhead-harbour-01m-kastellion-tower": {
+    "bbox": [
+     188,
+     138,
+     0,
+     250,
+     199,
+     177
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "12fcbbb8d49ea27c20192859cbaf6e05",
+    "voxels": 173348
+   }
+  },
+  "links": 5,
+  "lot": [
+   50,
+   40
+  ],
+  "models": 1,
+  "oob": 0,
+  "part_clash": 0,
+  "size": [
+   250,
+   200,
+   180
+  ],
+  "style": "genoa",
+  "use": "fort"
  },
  "trailhead-harbour-01m-sheers": {
   "bbox": [

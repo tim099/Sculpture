@@ -2,34 +2,6 @@
 	"schema": 3,
 	"links": [
 		{
-			"name": "胸牆與砲床",
-			"work": "trailhead-harbour-01m-battery-en-body",
-			"at": [
-				0,
-				0,
-				0
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				120,
-				120,
-				90
-			],
-			"enabled": true,
-			"created_at": "2026-10-23T17:46:59",
-			"persona": "trailhead",
-			"note": "",
-			"meta": {
-				"base": 4,
-				"kind": "building",
-				"lot": "12,12",
-				"style": "en",
-				"use": "battery",
-				"variant": "a"
-			}
-		},
-		{
 			"name": "屋頂",
 			"work": "trailhead-harbour-01m-battery-en-roof",
 			"at": [
@@ -73,6 +45,89 @@
 			"note": "",
 			"meta": {
 				"part": "door-plank"
+			}
+		},
+		{
+			"name": "砲彈堆與旗杆",
+			"work": "trailhead-harbour-01m-battery-en-body",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				120,
+				120,
+				90
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:17:18",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"base": 4,
+				"kind": "building",
+				"lot": "12,12",
+				"style": "en",
+				"use": "battery",
+				"variant": "a"
+			}
+		},
+		{
+			"name": "胸牆與砲床（甲板）",
+			"work": "trailhead-harbour-01m-battery-en-rampart",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				120,
+				120,
+				90
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:17:18",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"deck": "battery",
+				"floor": "0:4,120:4",
+				"kind": "deck",
+				"level": 0,
+				"material": "brick",
+				"name": "砲床",
+				"thick": 4
+			}
+		},
+		{
+			"name": "火藥庫",
+			"work": "trailhead-harbour-01m-battery-en-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				120,
+				120,
+				90
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:17:18",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"kind": "magazine",
+				"material": "brick",
+				"pos": "mid",
+				"powder_lb": 200
 			}
 		}
 	]

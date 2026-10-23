@@ -76,7 +76,7 @@ for w, W in sel:
             card = jload(w, 'work.json')
             if card and [card.get('size_x'), card.get('size_y'), card.get('size_z')] != W['size']:
                 cli(['op=work', 'sub=update', 'persona=' + P, 'work=' + w, 'size=' + fmt(W['size'])])
-        cli(['op=work', 'sub=update', 'persona=' + P, 'work=' + w, 'meters_per_voxel=0.1', 'tags=' + W['tags'], 'title=' + W['title']])
+        cli(['op=work', 'sub=update', 'persona=' + P, 'work=' + w, 'meters_per_voxel=%g' % W.get('mpv', 0.1), 'tags=' + W['tags'], 'title=' + W['title']])
         print('create', w)
     elif step == 'stamp':
         if not W['mask']:

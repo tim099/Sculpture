@@ -8,12 +8,12 @@ import sys, os, json, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 from scipy import ndimage
-import quay, town3, forts
+import quay, town3, forts, castle
 from quay import *
 
 ROOT = 'trailhead-harbour-01m'
 SUMMIT_ROOT = 'summit-carib-01m'
-MODULES = [quay, town3, forts]
+MODULES = [quay, town3, forts, castle]
 
 
 def wid(*a):
@@ -81,10 +81,11 @@ def main():
             md5 = dump(os.path.join(D, 'masks', w + '.vox.txt'), cells)
             n, cav = structure(cells, (M.X, M.Y, M.Z))
             man['works'][w] = {'title': '%s｜%s' % (B['title'].split('（')[0], lname), 'size': [M.X, M.Y, M.Z], 'tags': 'sub', 'mask': w + '.vox.txt',
-                               'anchors': {}, 'links': [], 'models': [], 'order': 1}
+                               'anchors': {k: list(v) for k, v in B.get('layer_anchors', {}).get(ln, {}).items()},
+                               'links': [], 'models': B.get('layer_models', {}).get(ln, []), 'order': 1, 'mpv': B.get('mpv', 0.1)}
             layer_ver[w] = {'voxels': len(cells), 'components': n, 'cavity': cav, 'bbox': bbox(cells), 'md5': md5}
             links.append({'name': lname, 'source': w, 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {},
-                          'meta': meta_b if ln == 'body' else {'part': ln}})
+                          'meta': meta_b if ln == 'body' else B.get('layer_meta', {}).get(ln, {'part': ln})})   # 每一層可以帶自己的 meta（堡壘的甲板、彈藥庫，TASK-0853／0861）
         for L in M.links:
             src = part_src(L['part'])
             links.append({'name': L['name'], 'source': src, 'at': L['at'], 'turn': L['turn'], 'mirror': L['mirror'],
@@ -93,7 +94,7 @@ def main():
         dump(os.path.join(D, 'masks', pw + '.composite.txt'), comp)
         man['works'][pw] = {'title': B['title'], 'size': [M.X, M.Y, M.Z], 'tags': 'building,' + style, 'mask': None, 'expect': pw + '.composite.txt',
                             'anchors': {k: list(v) for k, v in M.anchors.items()}, 'links': links, 'models': M.models, 'order': 2,
-                            'flags': B.get('flags', [])}
+                            'flags': B.get('flags', []), 'mpv': B.get('mpv', 0.1)}
         dx, dy, dz = M.anchors['door']
         door_ok = (dx, dy, dz) not in comp and (dz == 0 or (dx, dy, dz - 1) in comp) and (dx, dy, dz + 1) not in comp
         n, cav, fl = structure(comp, (M.X, M.Y, M.Z), floating=True)

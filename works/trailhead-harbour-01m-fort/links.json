@@ -2,34 +2,6 @@
 	"schema": 3,
 	"links": [
 		{
-			"name": "堡牆、土台與操場",
-			"work": "trailhead-harbour-01m-fort-body",
-			"at": [
-				0,
-				0,
-				0
-			],
-			"turn": 0,
-			"mirror": "",
-			"pivot": [
-				300,
-				300,
-				120
-			],
-			"enabled": true,
-			"created_at": "2026-10-23T17:47:00",
-			"persona": "trailhead",
-			"note": "",
-			"meta": {
-				"base": 4,
-				"kind": "building",
-				"lot": "30,30",
-				"style": "carib",
-				"use": "fort",
-				"variant": "a"
-			}
-		},
-		{
 			"name": "屋頂",
 			"work": "trailhead-harbour-01m-fort-roof",
 			"at": [
@@ -165,6 +137,89 @@
 			"note": "",
 			"meta": {
 				"part": "door-plank"
+			}
+		},
+		{
+			"name": "操場（營房、井、旗杆）",
+			"work": "trailhead-harbour-01m-fort-body",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				300,
+				300,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:17:19",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"base": 4,
+				"kind": "building",
+				"lot": "30,30",
+				"style": "carib",
+				"use": "fort",
+				"variant": "a"
+			}
+		},
+		{
+			"name": "堡牆與土台（甲板）",
+			"work": "trailhead-harbour-01m-fort-rampart",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				300,
+				300,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:17:19",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"deck": "rampart",
+				"floor": "0:36,300:36",
+				"kind": "deck",
+				"level": 1,
+				"material": "stone",
+				"name": "土台",
+				"thick": 6
+			}
+		},
+		{
+			"name": "火藥庫",
+			"work": "trailhead-harbour-01m-fort-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				300,
+				300,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-10-23T18:17:20",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"kind": "magazine",
+				"material": "stone",
+				"pos": "mid",
+				"powder_lb": 400
 			}
 		}
 	]

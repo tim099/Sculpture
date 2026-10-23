@@ -60,10 +60,19 @@ def cut_embrasure(S, inside, gx, gy, dx, dy, z0, z1, half=5):
         t += 0.5
 
 
-def gun_at(M, name, x, y, z, dx, dy):
-    """6 磅砲（外部模型）：砲口朝 (dx, dy)（模型的砲口朝 +y；轉角 ＝ atan2(−dx, dy)）。"""
+def gun_model(name, x, y, z, dx, dy, code, src=None, pivot=None):
+    """海戰用的砲（跟船互通）：船上同一件砲元件、meta kind=gun gun=<砲種代碼>（造船規格 §4.2、§9；遊戲的砲種表 Blockside config/game.json guns 的 code）。
+    砲口朝 (dx, dy)（元件的砲口朝 +y；轉角 ＝ atan2(−dx, dy)）。"""
     rz = round(math.degrees(math.atan2(-dx, dy))) % 360
-    M.models.append({'name': name, 'source': GUN, 'at': [x, y, z], 'pivot': GUN_PIVOT, 'rotate': [0, 0, rz], 'meta': {'kind': 'deco'}})
+    return {'name': name, 'source': src or GUN, 'at': [x, y, z], 'pivot': pivot or GUN_PIVOT, 'rotate': [0, 0, rz], 'meta': {'kind': 'gun', 'gun': code}}
+
+
+POWDER = 'basecamp-frigate-constitution-01m-powder-barrel'             # 憲法號的火藥桶（0.02 m；作品預設 meta 已有 render=lathe）
+
+
+def powder_keg(name, x, y, z):
+    """火藥桶（造船規格 §8：scale 0.2、pivot 11,11,0、meta kind=powder powder_lb=100；掛在彈藥庫那一層，遊戲照它擺取用點）。"""
+    return {'name': name, 'source': POWDER, 'at': [x, y, z], 'pivot': [11, 11, 0], 'scale': [0.2, 0.2, 0.2], 'meta': {'kind': 'powder', 'powder_lb': 100}}
 
 
 # ─────────────────────────────── 碉堡（四角稜堡）30 × 30 m ───────────────────────────────
@@ -119,9 +128,9 @@ def bastion_fort(style):
         if HT - 4 <= z < HT - 2 and d[x, y] <= 1.5:                     # 牆頂下一道腰線（cordon）
             return MORTAR if style != 'en' else BRICK_B
         return wc(x, y, z)
-    put_mask(M, S, color)
-    M.box('body', GX0, a, 0, GX1, a + BAND + 2, 1, RUBBLE if style != 'en' else BRICK_A, force=True)       # 門洞的鋪地（從牆外面那一線起：門口那一格要是空氣）
-    M.box('body', GX0 - 2, a, GH, GX1 + 2, a + 2, GH + 2, FRAME, force=True)                              # 門楣（木）
+    put_mask(M, S, color, layer='rampart')
+    M.box('rampart', GX0, a, 0, GX1, a + BAND + 2, 1, RUBBLE if style != 'en' else BRICK_A, force=True)    # 門洞的鋪地（從牆外面那一線起：門口那一格要是空氣）
+    M.box('rampart', GX0 - 2, a, GH, GX1 + 2, a + 2, GH + 2, FRAME, force=True)                           # 門楣（木）
     put_part(M, 'door-double', '門', 'front', (a + s, a, B - s, a + BAND), 150, 0, 2)
     lantern(M, '燈籠-門', (134.5, a, 26))
     M.anchor('door', 150, a - 1, 0)
@@ -137,11 +146,13 @@ def bastion_fort(style):
         put_part(M, 'window-board', '營房-窗%d' % (1 if cx < 150 else 2), 'front', R, cx, 10, 3)
     roof_fn = tile_roof if style == 'en' else shingle_roof
     roof_fn(M, [{'x0': R[0], 'y0': R[1], 'x1': R[2], 'y1': R[3], 'ze': 30, 'p': 0.7, 'over': (3, 3, 3, 0), 'gable': 'x'}], salt=8533)
-    MR = (170, 98, 204, 132)                                            # 火藥庫：厚牆、窄門、沒有窗
+    MR = (170, 98, 204, 132)                                            # 火藥庫：厚牆、窄門、沒有窗（自己一層 ⇒ 遊戲照 kind=magazine 認）
     if style == 'en':
-        brick_walls(M, MR, 0, 26, 4, salt=8534)
+        brick_walls(M, MR, 0, 26, 4, layer='magazine', salt=8534)
     else:
-        rubble_walls(M, MR, 0, 26, 4, salt=8534)
+        rubble_walls(M, MR, 0, 26, 4, layer='magazine', salt=8534)
+    M.box('magazine', MR[0] + 4, MR[1] + 4, 0, MR[2] - 4, MR[3] - 4, 1, FLOOR)   # 木地板
+    M.clear(MR[0], 109, 0, MR[0] + 4, 121, 22, 'magazine')              # 門洞（put_part 只挖 body 那幾層）
     put_part(M, 'door-plank', '火藥庫-門', 'left', MR, 115, 0, 4)
     roof_fn(M, [{'x0': MR[0], 'y0': MR[1], 'x1': MR[2], 'y1': MR[3], 'ze': 26, 'p': 0.8, 'over': (2, 2, 2, 2)}], salt=8535)
     M.box('body', 120, 104, 0, 132, 116, 8, RUBBLE)                     # 井
@@ -151,19 +162,24 @@ def bastion_fort(style):
     M.anchor('flag-top', *ft)
     M.anchor('flag-bottom', *fb)
     flags = [flag_sail('flag', ft, fb, 30, toward=1)]
-    for i, (gx, gy, dx, dy) in enumerate(guns):
-        gun_at(M, '砲%d' % (i + 1), gx, gy, gp, dx, dy)
-    M.models += [{'name': '火藥桶-1', 'source': 'summit-rocher-01m-barrel', 'at': [162, 100, 0], 'pivot': [6, 6, 0], 'meta': {}},
-                 {'name': '火藥桶-2', 'source': 'summit-rocher-01m-barrel', 'at': [162, 114, 0], 'pivot': [6, 6, 0], 'meta': {}}]
-    for L in M.links:                                                   # 門框的腳落在鋪地那一層 ⇒ 讓給門框
+    # 海戰用的 meta（Tim 2026-10-23「堡壘之後打算做入海戰 … 跟船套用同架構」「堡壘用的炮可以跟船互通(且meta標記要對應船的規格)」）：
+    #   砲 ＝ 船上同一件 6 磅砲元件、meta kind=gun gun=6l，掛在它站的那一層（土台 ＝ 甲板）；火藥桶 ＝ 憲法號的火藥桶元件、kind=powder，掛在火藥庫那一層（造船規格 §4.2、§8、§9）
+    guns_m = [gun_model('砲%d' % (i + 1), gx, gy, gp, dx, dy, '6l') for i, (gx, gy, dx, dy) in enumerate(guns)]
+    kegs = [powder_keg('火藥桶-%d' % (i + 1), x, y, 1) for i, (x, y) in enumerate(((180, 106), (180, 120), (192, 106), (192, 120)))]
+    for L in M.links:                                                   # 部件（門、窗）的格蓋過牆與鋪地 ⇒ 讓給部件
         for k in L['cells']:
-            if k[2] == 0 and k in M.cells:
-                del M.cells[k]
+            M.cells.pop(k, None)
     M.anchor('lot-0', 0, 0, 0)
     nm = {'carib': '毛石', 'en': '磚'}[style]
+    mat = 'stone' if style != 'en' else 'brick'
     return {'key': 'fort' if style == 'carib' else 'fort-en', 'variant': 'a',
             'title': '碉堡（四角稜堡，%s牆：土台與胸牆、九個砲眼與 6 磅砲、門洞、坡道、營房、火藥庫、井、旗杆）' % nm,
-            'use': 'fort', 'lot': (30, 30), 'M': M, 'style': style, 'layers': {'body': '堡牆、土台與操場', 'roof': '屋頂'}, 'flags': flags}
+            'use': 'fort', 'lot': (30, 30), 'M': M, 'style': style, 'flags': flags,
+            'layers': {'body': '操場（營房、井、旗杆）', 'rampart': '堡牆與土台（甲板）', 'magazine': '火藥庫', 'roof': '屋頂'},
+            'layer_meta': {'rampart': {'kind': 'deck', 'deck': 'rampart', 'level': 1, 'name': '土台', 'floor': '0:%d,%d:%d' % (HT, W, HT), 'thick': 6, 'material': mat},
+                           'magazine': {'kind': 'magazine', 'pos': 'mid', 'powder_lb': 100 * len(kegs), 'material': mat}},
+            'layer_anchors': {'magazine': {'blast': (187, 115, 10), 'door': (MR[0] - 1, 115, 0)}},
+            'layer_models': {'rampart': guns_m, 'magazine': kegs}}
 
 
 def fort():
@@ -178,14 +194,15 @@ def fort_en():
 def battery_en():
     """英國的小砲台（皇家港 Fort James、Fort Carlisle、Fort Rupert 那一類）：正面一道磚砌胸牆（厚 1.6 m、高 2.4 m）、三個外張的砲眼、木砲床、三門 6 磅砲；
     左前角留進出口、兩側短翼牆、背面開敞；後面一間磚砌小火藥庫；旗杆。
-    - 照什麼：皇家港是磚城（ame 的研究：HEATH「goodly Brick Houses」〔讀過†〕）、Fort Charles 磚造〔摘〕；三座小堡的形制〔沒查到〕⇒ 設計（同 summit 的砲台那一套擺法）。"""
+    - 照什麼：皇家港是磚城（ame 的研究：HEATH「goodly Brick Houses」〔讀過†〕）、Fort Charles 磚造〔摘〕；三座小堡的形制〔沒查到〕⇒ 設計（同 summit 的砲台那一套擺法）。
+    - 海戰用的 meta 同碉堡：胸牆與砲床一層 kind=deck、火藥庫一層 kind=magazine、砲 kind=gun gun=6l、桶 kind=powder。"""
     M = Model((120, 120, 90))
     PY0, PY1, H, SILL, PLAT = 4, 20, 24, 12, 4
     guns = (30, 60, 90)
-    brick_walls(M, (16, PY0, 116, PY1), 0, H, 16, salt=8536)          # 左前角留 1.2 m 的進出口（同 summit 的砲台）
-    brick_walls(M, (4, PY1 + 14, 14, 70), 0, H - 4, 10, salt=8537)
-    brick_walls(M, (106, PY1, 116, 70), 0, H - 4, 10, salt=8538)
-    M.box('body', 16, PY0, H - 1, 116, PY1, H, BRICK_M, force=True)    # 壓頂
+    brick_walls(M, (16, PY0, 116, PY1), 0, H, 16, layer='rampart', salt=8536)    # 左前角留 1.2 m 的進出口（同 summit 的砲台）
+    brick_walls(M, (4, PY1 + 14, 14, 70), 0, H - 4, 10, layer='rampart', salt=8537)
+    brick_walls(M, (106, PY1, 116, 70), 0, H - 4, 10, layer='rampart', salt=8538)
+    M.box('rampart', 16, PY0, H - 1, 116, PY1, H, BRICK_M, force=True)          # 壓頂
     for cx in guns:                                                     # 外張的砲眼：裡面 0.8 m、外面 1.6 m
         for y in range(PY0, PY1):
             half = 4 + (PY1 - 1 - y) * 4 // (PY1 - PY0)
@@ -193,17 +210,19 @@ def battery_en():
                 for z in range(SILL, H + 1):
                     M.cells.pop((x, y, z), None)
     for cx in guns:                                                     # 木砲床
-        M.box('body', cx - 12, PY1, 0, cx + 12, PY1 + 34, PLAT - 1, FRAME)
+        M.box('rampart', cx - 12, PY1, 0, cx + 12, PY1 + 34, PLAT - 1, FRAME)
         for x in range(cx - 12, cx + 12):
             if (x - cx) % 6:
-                M.box('body', x, PY1, PLAT - 1, x + 1, PY1 + 34, PLAT, FLOOR)
+                M.box('rampart', x, PY1, PLAT - 1, x + 1, PY1 + 34, PLAT, FLOOR)
         bx, by = cx + 14, PY1 + 22                                      # 砲彈堆
         for z, n in ((0, 3), (1, 2), (2, 1)):
             for i in range(n):
                 for j in range(n):
                     M.box('body', bx + i * 2 + z, by + j * 2 + z, z, bx + i * 2 + z + 2, by + j * 2 + z + 2, z + 1, IRON)
     mr = (70, 84, 104, 112)
-    brick_walls(M, mr, 0, 26, 4, salt=8539)
+    brick_walls(M, mr, 0, 26, 4, layer='magazine', salt=8539)
+    M.box('magazine', mr[0] + 4, mr[1] + 4, 0, mr[2] - 4, mr[3] - 4, 1, FLOOR)
+    M.clear(81, mr[1], 0, 93, mr[1] + 4, 22, 'magazine')                 # 門洞（put_part 只挖 body 那幾層）
     put_part(M, 'door-plank', '火藥庫-門', 'front', mr, 87, 0, 4)
     tile_roof(M, [{'x0': mr[0], 'y0': mr[1], 'x1': mr[2], 'y1': mr[3], 'ze': 26, 'p': 0.7, 'over': (3, 3, 3, 3)}], salt=8540)
     ft, fb = flagpole_on(M, 22, 96, 0, 80)
@@ -211,18 +230,21 @@ def battery_en():
     M.anchor('flag-top', *ft)
     M.anchor('flag-bottom', *fb)
     flags = [flag_sail('flag', ft, fb, 28, toward=1)]
-    for i, cx in enumerate(guns):
-        gun_at(M, '砲%d' % (i + 1), cx, PY1 + 15, PLAT, 0, -1)
-    M.models += [{'name': '火藥桶-1', 'source': 'summit-rocher-01m-barrel', 'at': [58, 104, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+    guns_m = [gun_model('砲%d' % (i + 1), cx, PY1 + 15, PLAT, 0, -1, '6l') for i, cx in enumerate(guns)]
+    kegs = [powder_keg('火藥桶-%d' % (i + 1), x, 100, 1) for i, x in enumerate((80, 94))]
     lantern(M, '燈籠-火藥庫', (78.5, 84, 20))
     for L in M.links:
         for k in L['cells']:
-            if k[2] == 0 and k in M.cells:
-                del M.cells[k]
+            M.cells.pop(k, None)
     M.anchor('door', 9, 1, 0)                                           # 左前角的進出口（同 summit 的砲台：正面朝港口、路從正面接進來）
     M.anchor('lot-0', 0, 0, 0)
     return {'key': 'battery-en', 'title': '砲台（英國：磚砌胸牆與翼牆、三個外張砲眼、木砲床、三門 6 磅砲、磚砌小火藥庫、旗杆）',
-            'use': 'battery', 'lot': (12, 12), 'M': M, 'style': 'en', 'layers': {'body': '胸牆與砲床', 'roof': '屋頂'}, 'flags': flags}
+            'use': 'battery', 'lot': (12, 12), 'M': M, 'style': 'en', 'flags': flags,
+            'layers': {'body': '砲彈堆與旗杆', 'rampart': '胸牆與砲床（甲板）', 'magazine': '火藥庫', 'roof': '屋頂'},
+            'layer_meta': {'rampart': {'kind': 'deck', 'deck': 'battery', 'level': 0, 'name': '砲床', 'floor': '0:%d,120:%d' % (PLAT, PLAT), 'thick': PLAT, 'material': 'brick'},
+                           'magazine': {'kind': 'magazine', 'pos': 'mid', 'powder_lb': 100 * len(kegs), 'material': 'brick'}},
+            'layer_anchors': {'magazine': {'blast': (87, 98, 10), 'door': (87, mr[1] - 1, 0)}},
+            'layer_models': {'rampart': guns_m, 'magazine': kegs}}
 
 
 ALL = [fort, fort_en, battery_en]

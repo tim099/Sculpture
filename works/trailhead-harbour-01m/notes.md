@@ -43,3 +43,16 @@ Tim「那繼續加建築吧 GO」⇒ 盤點六座城還沒有模型的地塊 ⇒
 ### 坑（第四批）
 - 門洞的鋪地從牆外 2 格起鋪 ⇒ door 那一格被鋪地佔掉、door_ok false ⇒ 鋪地從牆外那一線起。
 - 土台實心 ⇒ 一座 1.4 M 格 ⇒ `civic.hollow` 只留外面 6 格的殼（約 75 萬格）。
+
+## 海戰 meta（2026-10-23，Tim「堡壘之後打算做入海戰」「堡壘用的炮可以跟船互通」）
+- 堡壘一律拆層：站人放砲那一層 kind=deck、火藥庫 kind=magazine（固定點 blast、door；裡面憲法號的火藥桶 kind=powder）、砲用船上同一件元件 kind=gun gun=<代碼> 掛在甲板那一層；牆身那一條照舊 kind=building。Blocksail BUILDING_SPEC §5.3。
+- build.py 多了 layer_meta、layer_anchors、layer_models、mpv（apply.py 照 mpv 設 meters_per_voxel）。第四批的碉堡、砲台照這一套重做了一次。
+
+## 第五批（TASK-0861，2026-10-23）
+- 加拉塔堡 kastellion（genoa，0.2 m）461,619 格；修院 convent（carib）44,858 格。產生程式 design/castle.py。
+- 生命之泉修道院不做（kaguya 在做 kaguya-cpl-pege-1453）。
+
+### 坑（第五批）
+- 城門鐵柵的底那一道橫條照拱頂一格一格跟著降 ⇒ 拱邊的兩格斷開浮空 ⇒ 只留直條（頂端插在拱裡）。
+- 小堂山牆上的十字照固定高度放 ⇒ 屋脊比它低、浮空 56 格 ⇒ 照屋頂高度場放。
+- put_part 只挖 body／gallery ⇒ 火藥庫拆成自己一層後門洞要自己挖。

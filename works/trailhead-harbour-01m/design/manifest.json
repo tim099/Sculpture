@@ -60,9 +60,48 @@
       "variant": "a"
      },
      "mirror": "",
-     "name": "胸牆與砲床",
+     "name": "砲彈堆與旗杆",
      "recolor": {},
      "source": "trailhead-harbour-01m-battery-en-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "battery",
+      "floor": "0:4,120:4",
+      "kind": "deck",
+      "level": 0,
+      "material": "brick",
+      "name": "砲床",
+      "thick": 4
+     },
+     "mirror": "",
+     "name": "胸牆與砲床（甲板）",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-battery-en-rampart",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "magazine",
+      "material": "brick",
+      "pos": "mid",
+      "powder_lb": 200
+     },
+     "mirror": "",
+     "name": "火藥庫",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-battery-en-magazine",
      "turn": 0
     },
     {
@@ -100,12 +139,134 @@
    "models": [
     {
      "at": [
+      78.5,
+      84,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-火藥庫",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "building,en",
+   "title": "砲台（英國：磚砌胸牆與翼牆、三個外張砲眼、木砲床、三門 6 磅砲、磚砌小火藥庫、旗杆）"
+  },
+  "trailhead-harbour-01m-battery-en-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-battery-en-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "砲台｜砲彈堆與旗杆"
+  },
+  "trailhead-harbour-01m-battery-en-magazine": {
+   "anchors": {
+    "blast": [
+     87,
+     98,
+     10
+    ],
+    "door": [
+     87,
+     83,
+     0
+    ]
+   },
+   "links": [],
+   "mask": "trailhead-harbour-01m-battery-en-magazine.vox.txt",
+   "models": [
+    {
+     "at": [
+      80,
+      100,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      94,
+      100,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "砲台｜火藥庫"
+  },
+  "trailhead-harbour-01m-battery-en-rampart": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-battery-en-rampart.vox.txt",
+   "models": [
+    {
+     "at": [
       30,
       35,
       4
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲1",
      "pivot": [
@@ -127,7 +288,8 @@
       4
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲2",
      "pivot": [
@@ -149,7 +311,8 @@
       4
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲3",
      "pivot": [
@@ -163,54 +326,9 @@
       180
      ],
      "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      58,
-      104,
-      0
-     ],
-     "meta": {},
-     "name": "火藥桶-1",
-     "pivot": [
-      6,
-      6,
-      0
-     ],
-     "source": "summit-rocher-01m-barrel"
-    },
-    {
-     "at": [
-      78.5,
-      84,
-      20
-     ],
-     "meta": {
-      "kind": "light"
-     },
-     "name": "燈籠-火藥庫",
-     "pivot": [
-      4.5,
-      13,
-      15.5
-     ],
-     "source": "summit-rocher-01m-lantern"
     }
    ],
-   "order": 2,
-   "size": [
-    120,
-    120,
-    90
-   ],
-   "tags": "building,en",
-   "title": "砲台（英國：磚砌胸牆與翼牆、三個外張砲眼、木砲床、三門 6 磅砲、磚砌小火藥庫、旗杆）"
-  },
-  "trailhead-harbour-01m-battery-en-body": {
-   "anchors": {},
-   "links": [],
-   "mask": "trailhead-harbour-01m-battery-en-body.vox.txt",
-   "models": [],
+   "mpv": 0.1,
    "order": 1,
    "size": [
     120,
@@ -218,13 +336,14 @@
     90
    ],
    "tags": "sub",
-   "title": "砲台｜胸牆與砲床"
+   "title": "砲台｜胸牆與砲床（甲板）"
   },
   "trailhead-harbour-01m-battery-en-roof": {
    "anchors": {},
    "links": [],
    "mask": "trailhead-harbour-01m-battery-en-roof.vox.txt",
    "models": [],
+   "mpv": 0.1,
    "order": 1,
    "size": [
     120,
@@ -475,6 +594,198 @@
    "tags": "sub",
    "title": "小教堂｜屋頂"
   },
+  "trailhead-harbour-01m-convent": {
+   "anchors": {
+    "bell": [
+     2,
+     20,
+     50
+    ],
+    "door": [
+     70,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-convent.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "14,4",
+      "style": "carib",
+      "use": "monastery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、鐘牆與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-convent-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-convent-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      63,
+      1,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      22,
+      1,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      22,
+      36,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      98,
+      1,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      98,
+      36,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      60.5,
+      2,
+      21
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    140,
+    40,
+    80
+   ],
+   "tags": "building,carib",
+   "title": "修院（嘉布遣會：刷白的編條糊泥長屋、木瓦兩坡頂、山牆上掛鐘的鐘牆與十字、小祭壇）"
+  },
+  "trailhead-harbour-01m-convent-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-convent-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    140,
+    40,
+    80
+   ],
+   "tags": "sub",
+   "title": "修院｜牆、鐘牆與擺設"
+  },
+  "trailhead-harbour-01m-convent-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-convent-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    140,
+    40,
+    80
+   ],
+   "tags": "sub",
+   "title": "修院｜屋頂"
+  },
   "trailhead-harbour-01m-fish-market": {
    "anchors": {
     "door": [
@@ -688,9 +999,48 @@
       "variant": "a"
      },
      "mirror": "",
-     "name": "堡牆、土台與操場",
+     "name": "操場（營房、井、旗杆）",
      "recolor": {},
      "source": "trailhead-harbour-01m-fort-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "rampart",
+      "floor": "0:36,300:36",
+      "kind": "deck",
+      "level": 1,
+      "material": "stone",
+      "name": "土台",
+      "thick": 6
+     },
+     "mirror": "",
+     "name": "堡牆與土台（甲板）",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-rampart",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "magazine",
+      "material": "stone",
+      "pos": "mid",
+      "powder_lb": 400
+     },
+     "mirror": "",
+     "name": "火藥庫",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-magazine",
      "turn": 0
     },
     {
@@ -802,236 +1152,9 @@
       15.5
      ],
      "source": "summit-rocher-01m-lantern"
-    },
-    {
-     "at": [
-      125,
-      81,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲1",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      180
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      175,
-      81,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲2",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      180
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      81,
-      150,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲3",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      90
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      219,
-      150,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲4",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      270
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      150,
-      219,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲5",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      0
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      46,
-      46,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲6",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      135
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      254,
-      46,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲7",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      225
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      254,
-      254,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲8",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      315
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      46,
-      254,
-      36
-     ],
-     "meta": {
-      "kind": "deco"
-     },
-     "name": "砲9",
-     "pivot": [
-      8.5,
-      27.5,
-      0
-     ],
-     "rotate": [
-      0,
-      0,
-      45
-     ],
-     "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      162,
-      100,
-      0
-     ],
-     "meta": {},
-     "name": "火藥桶-1",
-     "pivot": [
-      6,
-      6,
-      0
-     ],
-     "source": "summit-rocher-01m-barrel"
-    },
-    {
-     "at": [
-      162,
-      114,
-      0
-     ],
-     "meta": {},
-     "name": "火藥桶-2",
-     "pivot": [
-      6,
-      6,
-      0
-     ],
-     "source": "summit-rocher-01m-barrel"
     }
    ],
+   "mpv": 0.1,
    "order": 2,
    "size": [
     300,
@@ -1046,6 +1169,7 @@
    "links": [],
    "mask": "trailhead-harbour-01m-fort-body.vox.txt",
    "models": [],
+   "mpv": 0.1,
    "order": 1,
    "size": [
     300,
@@ -1053,7 +1177,7 @@
     120
    ],
    "tags": "sub",
-   "title": "碉堡｜堡牆、土台與操場"
+   "title": "碉堡｜操場（營房、井、旗杆）"
   },
   "trailhead-harbour-01m-fort-en": {
    "anchors": {
@@ -1114,9 +1238,48 @@
       "variant": "a"
      },
      "mirror": "",
-     "name": "堡牆、土台與操場",
+     "name": "操場（營房、井、旗杆）",
      "recolor": {},
      "source": "trailhead-harbour-01m-fort-en-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "rampart",
+      "floor": "0:36,300:36",
+      "kind": "deck",
+      "level": 1,
+      "material": "brick",
+      "name": "土台",
+      "thick": 6
+     },
+     "mirror": "",
+     "name": "堡牆與土台（甲板）",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-en-rampart",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "magazine",
+      "material": "brick",
+      "pos": "mid",
+      "powder_lb": 400
+     },
+     "mirror": "",
+     "name": "火藥庫",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-fort-en-magazine",
      "turn": 0
     },
     {
@@ -1228,7 +1391,157 @@
       15.5
      ],
      "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "building,en",
+   "title": "碉堡（四角稜堡，磚牆：土台與胸牆、九個砲眼與 6 磅砲、門洞、坡道、營房、火藥庫、井、旗杆）"
+  },
+  "trailhead-harbour-01m-fort-en-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-en-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜操場（營房、井、旗杆）"
+  },
+  "trailhead-harbour-01m-fort-en-magazine": {
+   "anchors": {
+    "blast": [
+     187,
+     115,
+     10
+    ],
+    "door": [
+     169,
+     115,
+     0
+    ]
+   },
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-en-magazine.vox.txt",
+   "models": [
+    {
+     "at": [
+      180,
+      106,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
     },
+    {
+     "at": [
+      180,
+      120,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      192,
+      106,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-3",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      192,
+      120,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-4",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜火藥庫"
+  },
+  "trailhead-harbour-01m-fort-en-rampart": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-en-rampart.vox.txt",
+   "models": [
     {
      "at": [
       125,
@@ -1236,7 +1549,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲1",
      "pivot": [
@@ -1258,7 +1572,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲2",
      "pivot": [
@@ -1280,7 +1595,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲3",
      "pivot": [
@@ -1302,7 +1618,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲4",
      "pivot": [
@@ -1324,7 +1641,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲5",
      "pivot": [
@@ -1346,7 +1664,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲6",
      "pivot": [
@@ -1368,7 +1687,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲7",
      "pivot": [
@@ -1390,7 +1710,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲8",
      "pivot": [
@@ -1412,7 +1733,8 @@
       36
      ],
      "meta": {
-      "kind": "deco"
+      "gun": "6l",
+      "kind": "gun"
      },
      "name": "砲9",
      "pivot": [
@@ -1426,52 +1748,9 @@
       45
      ],
      "source": "summit-stormkaap-01m-gun-6l"
-    },
-    {
-     "at": [
-      162,
-      100,
-      0
-     ],
-     "meta": {},
-     "name": "火藥桶-1",
-     "pivot": [
-      6,
-      6,
-      0
-     ],
-     "source": "summit-rocher-01m-barrel"
-    },
-    {
-     "at": [
-      162,
-      114,
-      0
-     ],
-     "meta": {},
-     "name": "火藥桶-2",
-     "pivot": [
-      6,
-      6,
-      0
-     ],
-     "source": "summit-rocher-01m-barrel"
     }
    ],
-   "order": 2,
-   "size": [
-    300,
-    300,
-    120
-   ],
-   "tags": "building,en",
-   "title": "碉堡（四角稜堡，磚牆：土台與胸牆、九個砲眼與 6 磅砲、門洞、坡道、營房、火藥庫、井、旗杆）"
-  },
-  "trailhead-harbour-01m-fort-en-body": {
-   "anchors": {},
-   "links": [],
-   "mask": "trailhead-harbour-01m-fort-en-body.vox.txt",
-   "models": [],
+   "mpv": 0.1,
    "order": 1,
    "size": [
     300,
@@ -1479,13 +1758,14 @@
     120
    ],
    "tags": "sub",
-   "title": "碉堡｜堡牆、土台與操場"
+   "title": "碉堡｜堡牆與土台（甲板）"
   },
   "trailhead-harbour-01m-fort-en-roof": {
    "anchors": {},
    "links": [],
    "mask": "trailhead-harbour-01m-fort-en-roof.vox.txt",
    "models": [],
+   "mpv": 0.1,
    "order": 1,
    "size": [
     300,
@@ -1495,11 +1775,354 @@
    "tags": "sub",
    "title": "碉堡｜屋頂"
   },
+  "trailhead-harbour-01m-fort-magazine": {
+   "anchors": {
+    "blast": [
+     187,
+     115,
+     10
+    ],
+    "door": [
+     169,
+     115,
+     0
+    ]
+   },
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-magazine.vox.txt",
+   "models": [
+    {
+     "at": [
+      180,
+      106,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      180,
+      120,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      192,
+      106,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-3",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      192,
+      120,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-4",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜火藥庫"
+  },
+  "trailhead-harbour-01m-fort-rampart": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-fort-rampart.vox.txt",
+   "models": [
+    {
+     "at": [
+      125,
+      81,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲1",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      175,
+      81,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲2",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      81,
+      150,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲3",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      90
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      219,
+      150,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲4",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      270
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      150,
+      219,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲5",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      0
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      46,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲6",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      135
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      46,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲7",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      225
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      254,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲8",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      315
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      254,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲9",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      45
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    120
+   ],
+   "tags": "sub",
+   "title": "碉堡｜堡牆與土台（甲板）"
+  },
   "trailhead-harbour-01m-fort-roof": {
    "anchors": {},
    "links": [],
    "mask": "trailhead-harbour-01m-fort-roof.vox.txt",
    "models": [],
+   "mpv": 0.1,
    "order": 1,
    "size": [
     300,
@@ -1707,6 +2330,427 @@
    ],
    "tags": "sub",
    "title": "監獄｜屋頂"
+  },
+  "trailhead-harbour-01m-kastellion": {
+   "anchors": {
+    "chain": [
+     249,
+     168,
+     12
+    ],
+    "door": [
+     125,
+     0,
+     0
+    ],
+    "flag": [
+     217,
+     167,
+     176
+    ],
+    "flag-bottom": [
+     219,
+     167,
+     155
+    ],
+    "flag-top": [
+     219,
+     167,
+     173
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "trailhead-harbour-01m-kastellion.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|237,167,155|237,167,173",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "genoa"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "50,40",
+      "style": "genoa",
+      "use": "fort",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "院子（小堂、倉房、井）",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-kastellion-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "wall",
+      "floor": "0:50,250:50",
+      "kind": "deck",
+      "level": 1,
+      "material": "stone",
+      "name": "牆頂",
+      "thick": 6
+     },
+     "mirror": "",
+     "name": "城牆、城垛、城門與石階（牆頂 ＝ 甲板）",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-kastellion-rampart",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "tower",
+      "floor": "188:130,249:130",
+      "kind": "deck",
+      "level": 2,
+      "material": "stone",
+      "name": "塔頂",
+      "thick": 6
+     },
+     "mirror": "",
+     "name": "高塔（塔頂 ＝ 甲板）、巨鏈的鐵環",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-kastellion-tower",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "magazine",
+      "material": "stone",
+      "pos": "mid",
+      "powder_lb": 200
+     },
+     "mirror": "",
+     "name": "火藥間",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-kastellion-magazine",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-kastellion-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      110.5,
+      0,
+      16
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.2,
+   "order": 2,
+   "size": [
+    250,
+    200,
+    180
+   ],
+   "tags": "building,genoa",
+   "title": "加拉塔堡（Kastellion／聖十字堡 1453：帶狀磚石的高牆與城垛、26 m 的高塔、巨鏈的鐵環、城門與熱那亞紅十字牌、院子裡的小堂、倉房、火藥間、四門 bombardella）"
+  },
+  "trailhead-harbour-01m-kastellion-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-kastellion-body.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    250,
+    200,
+    180
+   ],
+   "tags": "sub",
+   "title": "加拉塔堡｜院子（小堂、倉房、井）"
+  },
+  "trailhead-harbour-01m-kastellion-magazine": {
+   "anchors": {
+    "blast": [
+     32,
+     37,
+     6
+    ],
+    "door": [
+     44,
+     37,
+     0
+    ]
+   },
+   "links": [],
+   "mask": "trailhead-harbour-01m-kastellion-magazine.vox.txt",
+   "models": [
+    {
+     "at": [
+      26,
+      36,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.1,
+      0.1,
+      0.1
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      32,
+      36,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.1,
+      0.1,
+      0.1
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    }
+   ],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    250,
+    200,
+    180
+   ],
+   "tags": "sub",
+   "title": "加拉塔堡｜火藥間"
+  },
+  "trailhead-harbour-01m-kastellion-rampart": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-kastellion-rampart.vox.txt",
+   "models": [
+    {
+     "at": [
+      40,
+      15,
+      50
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "kind": "gun"
+     },
+     "name": "砲1",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "scale": [
+      0.25,
+      0.25,
+      0.25
+     ],
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    },
+    {
+     "at": [
+      85,
+      15,
+      50
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "kind": "gun"
+     },
+     "name": "砲2",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "scale": [
+      0.25,
+      0.25,
+      0.25
+     ],
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    },
+    {
+     "at": [
+      165,
+      15,
+      50
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "kind": "gun"
+     },
+     "name": "砲3",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "scale": [
+      0.25,
+      0.25,
+      0.25
+     ],
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    },
+    {
+     "at": [
+      205,
+      15,
+      50
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "kind": "gun"
+     },
+     "name": "砲4",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "scale": [
+      0.25,
+      0.25,
+      0.25
+     ],
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    }
+   ],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    250,
+    200,
+    180
+   ],
+   "tags": "sub",
+   "title": "加拉塔堡｜城牆、城垛、城門與石階（牆頂 ＝ 甲板）"
+  },
+  "trailhead-harbour-01m-kastellion-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-kastellion-roof.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    250,
+    200,
+    180
+   ],
+   "tags": "sub",
+   "title": "加拉塔堡｜屋頂"
+  },
+  "trailhead-harbour-01m-kastellion-tower": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-kastellion-tower.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    250,
+    200,
+    180
+   ],
+   "tags": "sub",
+   "title": "加拉塔堡｜高塔（塔頂 ＝ 甲板）、巨鏈的鐵環"
   },
   "trailhead-harbour-01m-sheers": {
    "anchors": {
