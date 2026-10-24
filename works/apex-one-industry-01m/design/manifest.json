@@ -1,0 +1,767 @@
+{
+ "root": "apex-one-industry-01m",
+ "works": {
+  "apex-one-industry-01m-brickworks": {
+   "anchors": {
+    "door": [
+     52,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     60,
+     88,
+     30
+    ]
+   },
+   "expect": "apex-one-industry-01m-brickworks.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "style": "common",
+      "use": "brickworks",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "窯、晾坯棚與擺設",
+     "recolor": {},
+     "source": "apex-one-industry-01m-brickworks-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "apex-one-industry-01m-brickworks-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      6,
+      19,
+      16
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-棚",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    70
+   ],
+   "tags": "building,common",
+   "title": "磚窯（共用：後半一座方的磚砌升焰窯、正面兩個拱的火口、柴堆；前半茅草晾坯棚與三排生磚坯；做坯桌、黏土堆、燒好的紅磚垛）"
+  },
+  "apex-one-industry-01m-brickworks-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-brickworks-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "磚窯｜窯、晾坯棚與擺設"
+  },
+  "apex-one-industry-01m-brickworks-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-brickworks-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "磚窯｜屋頂"
+  },
+  "apex-one-industry-01m-builder": {
+   "anchors": {
+    "door": [
+     20,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "apex-one-industry-01m-builder.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "common",
+      "use": "builder",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "屋、料場、構架與擺設",
+     "recolor": {},
+     "source": "apex-one-industry-01m-builder-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "apex-one-industry-01m-builder-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      7,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      34,
+      7,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      60,
+      20,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      16,
+      7,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-屋",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "building,common",
+   "title": "營造廠（共用：木板的工頭屋；木板堆、磚垛、灰漿槽、石灰池；鋸木架、人字起重架；後半蓋到一半的兩層木構架、鷹架與梯子）"
+  },
+  "apex-one-industry-01m-builder-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-builder-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "營造廠｜屋、料場、構架與擺設"
+  },
+  "apex-one-industry-01m-builder-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-builder-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "營造廠｜屋頂"
+  },
+  "apex-one-industry-01m-clay-pit": {
+   "anchors": {
+    "door": [
+     59,
+     6,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "apex-one-industry-01m-clay-pit.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "style": "common",
+      "use": "clay-pit",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "土圍、坑與擺設",
+     "recolor": {},
+     "source": "apex-one-industry-01m-clay-pit-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "apex-one-industry-01m-clay-pit-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      24,
+      110,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      3,
+      104,
+      16
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-棚",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "building,common",
+   "title": "黏土坑（共用：挖出來的土圍成一圈、內壁一層一層的黏土、坑底泡水的黏土與一灘水；缺口的踏板、和泥的圓槽、手推車、黏土堆、茅草小棚）"
+  },
+  "apex-one-industry-01m-clay-pit-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-clay-pit-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "sub",
+   "title": "黏土坑｜土圍、坑與擺設"
+  },
+  "apex-one-industry-01m-clay-pit-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-clay-pit-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "sub",
+   "title": "黏土坑｜屋頂"
+  },
+  "apex-one-industry-01m-ironworks": {
+   "anchors": {
+    "door": [
+     60,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     60,
+     104,
+     72
+    ]
+   },
+   "expect": "apex-one-industry-01m-ironworks.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "common",
+      "use": "ironworks",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "高爐、精煉爐與擺設",
+     "recolor": {},
+     "source": "apex-one-industry-01m-ironworks-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "apex-one-industry-01m-ironworks-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      34,
+      29,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-棚",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "building,common",
+   "title": "煉鐵場（共用：石砌高爐、上料橋、風箱房、出鐵棚與砂床上的生鐵；精煉爐與落錘；礦石、木炭、爐渣堆）"
+  },
+  "apex-one-industry-01m-ironworks-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-ironworks-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "煉鐵場｜高爐、精煉爐與擺設"
+  },
+  "apex-one-industry-01m-ironworks-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-ironworks-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "煉鐵場｜屋頂"
+  },
+  "apex-one-industry-01m-lumber-camp": {
+   "anchors": {
+    "door": [
+     40,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     60,
+     98,
+     13
+    ]
+   },
+   "expect": "apex-one-industry-01m-lumber-camp.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "lumber-camp",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "空地、柴棚、炭窯與擺設",
+     "recolor": {},
+     "source": "apex-one-industry-01m-lumber-camp-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "apex-one-industry-01m-lumber-camp-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      6,
+      43,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "building,common",
+   "title": "伐木場（共用：劈柴的空地、樹墩與斧、X 字鋸木架、開敞的單坡柴棚；後院原木堆、悶燒的炭窯）"
+  },
+  "apex-one-industry-01m-lumber-camp-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-lumber-camp-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "伐木場｜空地、柴棚、炭窯與擺設"
+  },
+  "apex-one-industry-01m-lumber-camp-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-lumber-camp-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "伐木場｜屋頂"
+  },
+  "apex-one-industry-01m-mine": {
+   "anchors": {
+    "door": [
+     60,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "apex-one-industry-01m-mine.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "common",
+      "use": "mine",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "岩丘、坑道與擺設",
+     "recolor": {},
+     "source": "apex-one-industry-01m-mine-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "apex-one-industry-01m-mine-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36,
+      60,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      49,
+      71,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-坑口",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "building,common",
+   "title": "礦坑（共用：岩丘正面木框的坑道口、木軌與礦車、丘頂的絞車與豎井；礦石堆、廢石堆、揀礦桌、工具棚）"
+  },
+  "apex-one-industry-01m-mine-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-mine-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜岩丘、坑道與擺設"
+  },
+  "apex-one-industry-01m-mine-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "apex-one-industry-01m-mine-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜屋頂"
+  }
+ }
+}
