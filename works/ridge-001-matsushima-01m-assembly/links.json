@@ -248,8 +248,8 @@
 			"note": "",
 			"meta": {
 				"id": "part-2",
-				"material": "iron*0.2",
-				"render": "voxel"
+				"material": "iron*0.05",
+				"render": "smooth"
 			}
 		},
 		{
@@ -518,7 +518,7 @@
 			"persona": "ridge-001",
 			"note": "",
 			"meta": {
-				"hoist": "ladders-1#lm-fwd,ladders-1#mu-fwd,ladders-1#uf-fwd,ladders-1#bridge-S",
+				"hoist": "ladders-1#lm-fwd,ladders-1#mu-fwd,ladders-1#uf-fwd,ladders-1#bridge-S,main-lower-S,ladders-1#mast-top",
 				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "fore",
@@ -655,6 +655,91 @@
 				"kind": "hoist",
 				"material": "iron",
 				"render": "smooth"
+			}
+		},
+		{
+			"name": "艦橋撐柱",
+			"work": "ridge-001-matsushima-01m-bridge-posts",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-24T03:01:28",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"id": "part-12",
+				"material": "iron*0.1",
+				"render": "smooth"
+			}
+		},
+		{
+			"name": "桅樓-下",
+			"work": "ridge-001-matsushima-01m-top-lower",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-24T03:01:29",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "top-lower",
+				"floor": "419:310,459:310",
+				"id": "deck-7",
+				"kind": "deck",
+				"level": 5,
+				"material": "iron*0.1",
+				"name": "下桅樓",
+				"thick": 1
+			}
+		},
+		{
+			"name": "桅樓-上",
+			"work": "ridge-001-matsushima-01m-top-upper",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				1004,
+				181,
+				490
+			],
+			"enabled": true,
+			"created_at": "2026-10-24T03:01:29",
+			"persona": "ridge-001",
+			"note": "",
+			"meta": {
+				"deck": "top-upper",
+				"floor": "423:346,455:346",
+				"id": "deck-8",
+				"kind": "deck",
+				"level": 6,
+				"material": "iron*0.1",
+				"name": "上桅樓",
+				"thick": 1
 			}
 		}
 	]

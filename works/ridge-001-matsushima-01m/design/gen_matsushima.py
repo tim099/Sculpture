@@ -300,6 +300,10 @@ def build():
     ]
     for nm, xt, y, zl, zh, dx, hd in LAD:
         ladder(nm, xt, y, zl, zh, dx, hatch_decks=hd)
+    # 下桅樓 → 上桅樓：桅後面一座幾乎直立的鐵梯（Tim 2026-10-24「繩梯好像無法連通桅杆上的部份」「桅杆上的送藥手取彈藥會浮空」）——
+    #   兩層桅樓各自是一層甲板（kind=deck）⇒ 繩梯（船首樓 → 下桅樓）與這座梯子（下 → 上）兩頭都在甲板上，尋路才走；彈藥庫 hoist 寫這兩座 ⇒ 桅樓的砲有自己的取用點
+    M_ = P['mast']
+    ladder('mast-top', M_['x'] - 12, YC, M_['top1'] + 1, M_['top2'] + 1, 1, run_k=0.08, hatch_decks=(M_['top2'],))
     # ── 煙囪（中線、圓；甲板以下的直煙道也在煙囪部件裡，下到煙箱頂）──
     F = P['funnel']; fx, fr, ftop = F['x'], F['r'], F['top']
     z_smoke = 48
@@ -407,10 +411,17 @@ def build():
     rim2 = (rr > M['r2'] - 0.5) & (rr <= M['r2'] + 1.5) & ((Zg == t2 + bd1) | (Zg == t2 - 1))
     pole = (rr <= M['pole_r'] + 0.5) & (Zg > t2) & (Zg <= M['pole_top'])
     truck = (rr <= M['pole_r'] + 1.5) & (Zg >= M['pole_top'] - 1) & (Zg <= M['pole_top'])
-    sub = tube | pl | pole                                               # 信號桁不落格子：改成帆桁模型（apply_links.py，meta kind=yard、mast=main ⇒ 遊戲才認得這根桅）
+    sub = tube | pole                                                    # 信號桁不落格子：改成帆桁模型（apply_links.py，meta kind=yard、mast=main ⇒ 遊戲才認得這根桅）
+    # ⛔ 下桅樓不開人孔：砲班的站位跟著 47 mm 繞砲軸轉，桅兩側那一圈就是他們站的地方 ⇒ 開了洞，砲班與送藥手踩空掉到船首樓（2026-10-24 匯入檢查量到）
+    lubber = np.zeros_like(Zg, dtype=bool)
     o_m = (mx - 100, YC - 45, M['z0'])
-    claim('mast', o_m, (truck | rim1 | rim2) & ~lad_mask[o_m[0]:o_m[0] + 210, o_m[1]:o_m[1] + 91, o_m[2]:M['pole_top'] + 2], C['white'])
-    claim('mast', o_m, (sub | wallm) & ~lad_mask[o_m[0]:o_m[0] + 210, o_m[1]:o_m[1] + 91, o_m[2]:M['pole_top'] + 2], C['white'])
+    blk = (lad_mask | hat)[o_m[0]:o_m[0] + 210, o_m[1]:o_m[1] + 91, o_m[2]:M['pole_top'] + 2]
+    claim('mast', o_m, (truck | rim1 | rim2) & ~blk, C['white'])
+    claim('mast', o_m, (sub | wallm) & ~blk, C['white'])
+    # 桅樓的地板各成一件（kind=deck，apply_links.py）：桅樓是甲板 ⇒ 遊戲照它分砲甲板、送藥手照它的高度站、繩梯與梯子接得上
+    claim('top-lower', o_m, (rr <= M['r1'] + 0.5) & (Zg == t1) & ~(rr <= M['r'] + 0.5) & ~lubber & ~blk, C['white'])
+    claim('top-upper', o_m, (rr <= M['r2'] + 0.5) & (Zg == t2) & ~(rr <= M['r_mid'] + 0.5) & ~blk, C['white'])
+    claim('mast', o_m, pl & ~lubber & ~blk, C['white'])                 # 桅管穿過地板的那一圈照舊歸桅
     gz, gdeg, glen = M['gaff']
     ca, sa = math.cos(math.radians(gdeg)), math.sin(math.radians(gdeg))
     g0 = mx - M['r_mid'] + 0.5
@@ -444,15 +455,23 @@ def build():
     br = P['bridge']; bx0, bx1 = br['x']; bh_ = br['half']
     Xg, Yg, Zg = g(bx0, bx1 + 1, YC - bh_, YC + bh_ + 1, ZBR - 1, ZBR + 10)
     plate = (Zg == ZBR) | ((Zg == ZBR - 1) & ((Xg.astype(int) % 8) < 2))
-    rimb = (Xg <= bx0) | (Xg >= bx1) | (np.abs(Yg - YC) >= bh_)
-    railb = (Zg > ZBR) & (Zg <= ZBR + 9) & rimb & (((Xg.astype(int) + Yg.astype(int)) % 8 == 0) | (Zg == ZBR + 9))
-    railb &= ~((np.abs(np.abs(Yg - YC) - 30) <= 4) & (Xg <= bx0 + 1))                # 梯頭那一段不放欄杆
+    # 欄杆 2 格粗（Tim 2026-10-24「欄杆 支架是否也能改成金屬材質」：方塊面不反光，平滑面至少 2 格厚 ⇒ 粗一格才畫得出金屬）；歸 rails 那一件（鐵）
+    rimx = (Xg <= bx0 + 1) | (Xg >= bx1 - 1); rimy = np.abs(Yg - YC) >= bh_ - 1
+    postb = (rimy & ((Xg.astype(int) - bx0) % 8 < 2)) | (rimx & (np.abs(Yg - YC).astype(int) % 8 < 2)) | (rimx & rimy)
+    railb = (Zg > ZBR) & (Zg <= ZBR + 9) & (rimx | rimy) & (postb | (Zg >= ZBR + 8))
+    railb &= ~((np.abs(np.abs(Yg - YC) - 30) <= 4) & (Xg <= bx0 + 2))                # 梯頭那一段不放欄杆
     hb = (lad_mask | hat)[bx0:bx1 + 1, YC - bh_:YC + bh_ + 1, ZBR - 1:ZBR + 10]
     claim('bridge', (bx0, YC - bh_, ZBR - 1), plate & ~hb, np.where(Zg == ZBR, C['teak'], C['beam']))
-    claim('bridge', (bx0, YC - bh_, ZBR - 1), railb & ~hb, C['white'])
-    cols = [(bx0 + 2, YC - bh_ + 2), (bx0 + 2, YC + bh_ - 2), (bx1 - 2, YC - bh_ + 2), (bx1 - 2, YC + bh_ - 2), (bx0 + 2, YC - 45), (bx0 + 2, YC + 45), (bx1 - 2, YC)]
+    claim('rails', (bx0, YC - bh_, ZBR - 1), railb & ~hb, C['white'])
+    # 撐柱：兩翼外端那四根原本在中線 ±74，船首樓那一層船殼半寬只有 68～69 ⇒ 懸在船外、底下沒接（Tim 2026-10-24 截圖）⇒ 收到 ±62，立在船首樓甲板、欄杆裡面；
+    #   翼端照實懸出去（1.4 m），撐柱頂往外斜一根撐臂接到翼端底下。撐柱另成一件（鐵、平滑）。
+    cols = [(bx0 + 2, YC - bh_ + 14), (bx0 + 2, YC + bh_ - 14), (bx1 - 2, YC - bh_ + 14), (bx1 - 2, YC + bh_ - 14), (bx0 + 2, YC - 45), (bx0 + 2, YC + 45), (bx1 - 2, YC)]
     for cxx, cyy in cols:
-        claim('bridge', (cxx - 1, cyy - 1, WF1), np.ones((3, 3, ZBR - 1 - WF1), bool) & ~lad_mask[cxx - 1:cxx + 2, cyy - 1:cyy + 2, WF1:ZBR - 1], C['white'])
+        claim('bridge-posts', (cxx - 1, cyy - 1, WF1), np.ones((3, 3, ZBR - 1 - WF1), bool) & ~lad_mask[cxx - 1:cxx + 2, cyy - 1:cyy + 2, WF1:ZBR - 1], C['white'])
+        if abs(cyy - YC) == bh_ - 14:
+            sg = 1 if cyy > YC else -1
+            o, m_ = seg((cxx + 0.5, cyy + 0.5, ZBR - 12.5), (cxx + 0.5, YC + sg * (bh_ - 2) + 0.5, ZBR - 1.5), 1.3)
+            claim('bridge-posts', o, m_, C['white'])
     info['bridge'] = dict(x0=bx0, x1=bx1, half=bh_, z=WB1)
     # ── 煙囪罩（船首樓甲板上；兩舷各一扇門、頂上讓煙囪穿過）──
     cs = P['casing']; csx0, csx1 = cs['x']; csh = cs['half']; csz = cs['h']
@@ -500,7 +519,7 @@ def build():
     deck_layers('deck-middle', ZMD, 0, NX - 1, C['teak'], C['beam'])
     deck_layers('deck-upper', ZUD, 0, NX - 1, C['teak'], C['beam'])
     deck_layers('deck-fc', ZFC, XB, NX - 1, C['teak'], C['beam'])
-    # ── 欄杆（船首樓甲板邊、後甲板邊；舷頂那一圈外板裡面一格）：柱每 12 格、頂上一條 ──
+    # ── 欄杆（船首樓甲板邊、後甲板邊；舷頂那一圈外板裡面兩格）：柱每 12 格、頂上一條；柱與頂條都 2 格粗（平滑金屬，見艦橋那一段）──
     rail = np.zeros((NX, NY, NZ), bool)
     rh_ = P['rails']['h']; rp = P['rails']['pitch']
     xm = np.arange(NX)[:, None]; ym = np.arange(NY)[None, :]
@@ -511,12 +530,13 @@ def build():
         gap |= (np.abs(xm - fx_) <= 8) & (np.abs(ym - fy_) <= 6)
     for (sx_, cy, sg) in sp_cent: gap |= np.hypot(xm - sx_, ym - cy) <= spr + 3
     for zt_, x0_, x1_ in ((ZTF, XB, NX - 1), (ZTA, 0, XB - 1)):
-        e2 = inner[:, :, zt_] & ~ndimage.binary_erosion(inner[:, :, zt_], structure=np.ones((3, 3), bool))
+        e2 = inner[:, :, zt_] & ~ndimage.binary_erosion(inner[:, :, zt_], structure=np.ones((3, 3), bool), iterations=2)
         e2 &= (xm >= x0_) & (xm <= x1_) & ~gap
-        if zt_ == ZTF: e2 |= (xm >= XB) & (xm <= XB + 1) & inner[:, :, zt_] & ~gap   # 船首樓後緣（往後甲板那一邊）
-        postm = e2 & ((xm % rp) == 0)
-        for zz_ in range(zt_, zt_ + rh_ - 1): rail[:, :, zz_] |= postm      # 柱從走路格起（立在甲板上）
-        rail[:, :, zt_ + rh_ - 1] |= e2
+        cross = np.zeros((NX, NY), bool)
+        if zt_ == ZTF: cross = (xm >= XB) & (xm <= XB + 1) & inner[:, :, zt_] & ~gap; e2 |= cross   # 船首樓後緣（往後甲板那一邊）
+        postm = e2 & (((xm % rp) < 2) | (cross & ((np.abs(ym - YC) % rp) < 2)))
+        for zz_ in range(zt_, zt_ + rh_ - 2): rail[:, :, zz_] |= postm      # 柱從走路格起（立在甲板上）
+        rail[:, :, zt_ + rh_ - 2] |= e2; rail[:, :, zt_ + rh_ - 1] |= e2
     rail &= ~lad_mask
     rl, rn = ndimage.label(rail)
     has_post = np.zeros(rn + 1, bool)

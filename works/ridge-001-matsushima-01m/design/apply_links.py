@@ -95,6 +95,9 @@ DECKS = {
     'upper': {'kind': 'deck', 'deck': 'upper', 'level': 2, 'name': '上甲板（後甲板露天）', 'floor': deck_floor(['deck-upper'], zu), 'thick': 5},
     'fc': {'kind': 'deck', 'deck': 'forecastle', 'level': 3, 'name': '船首樓甲板', 'floor': deck_floor(['deck-fc'], zf), 'thick': 5},
     'bridge': {'kind': 'deck', 'deck': 'bridge', 'level': 4, 'name': '艦橋', 'floor': deck_floor(['bridge'], zb), 'thick': 2},
+    # 兩層桅樓（2026-10-24）：各自一層甲板 ⇒ 桅樓的砲自成砲甲板（送藥手照桅樓的高度站）、繩梯與桅後的梯子兩頭都在甲板上（尋路才走）
+    'top-lower': {'kind': 'deck', 'deck': 'top-lower', 'level': 5, 'name': '下桅樓', 'floor': deck_floor(['top-lower'], P['mast']['top1']), 'thick': 1, 'material': 'iron*0.1'},
+    'top-upper': {'kind': 'deck', 'deck': 'top-upper', 'level': 6, 'name': '上桅樓', 'floor': deck_floor(['top-upper'], P['mast']['top2']), 'thick': 1, 'material': 'iron*0.1'},
 }
 ENG = {'kind': 'engine', 'engine': 'direct', 'cylinders': 3, 'ihp': 2700, 'kn': 15, 'kn_max': 16.5, 'material': 'iron', 'render': 'smooth'}
 BOIL = {'kind': 'boiler', 'boilers': 3, 'funnel': '煙囪', 'material': 'boiler', 'render': 'smooth'}
@@ -107,7 +110,7 @@ LINKS = [
     ('甲板-fc', W + '-deck-fc', DECKS['fc'], ''),
     ('艦橋', W + '-bridge', DECKS['bridge'], ''),
     ('上層建築', W + '-superstructure', {'material': 'iron*0.1'}, ''),   # 鋼：2 格牆（0.2 m）≈ 外板＋骨架 2 cm
-    ('欄杆', W + '-rails', {'material': 'iron*0.2', 'render': 'voxel'}, ''),   # 鋼；1 格細桿平滑會糊 ⇒ 方塊
+    ('欄杆', W + '-rails', {'material': 'iron*0.05', 'render': 'smooth'}, ''),   # 鋼管欄杆：2 格粗才平滑得起來（方塊面不反光，Tim 2026-10-24 要金屬）；實船 5 cm 管 ⇒ 鐵 5%
     ('司令塔', W + '-conning', IRON, ''),
     ('海圖室', W + '-chart-house', None, ''),
     ('煙囪', W + '-funnel', dict(IRON, kind='funnel'), ''),
@@ -122,10 +125,13 @@ LINKS = [
     ('桅', W + '-mast', {'material': 'iron*0.1'}, ''),   # 軍艦桅（鋼管＋桅樓）：實心 1.2 m 管 ≈ 空心管 ⇒ 鐵 10%
     ('通風筒', W + '-vents', {'material': 'iron*0.05'}, ''),   # 實心管（空心會封成空腔）⇒ 鐵 5%
     ('艇架', W + '-skids', None, ''),
-    ('彈藥庫-前', W + '-mag-fore', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/lm-fwd,梯子/mu-fwd,梯子/uf-fwd,梯子/bridge-S'}, ''),
+    ('彈藥庫-前', W + '-mag-fore', {'kind': 'magazine', 'pos': 'fore', 'hoist': '梯子/lm-fwd,梯子/mu-fwd,梯子/uf-fwd,梯子/bridge-S,main-lower-S,梯子/mast-top'}, ''),   # main-lower-S ＝ 繩梯（遊戲照 ratlines 組名認）⇒ 下桅樓；mast-top ⇒ 上桅樓
     ('彈藥庫-後', W + '-mag-aft', {'kind': 'magazine', 'pos': 'aft', 'hoist': '梯子/mu-aft'}, ''),   # 主砲改由揚弾筒吊（TASK-0841）⇒ 不再寫 梯子/barbette
     ('揚弾筒', W + '-hoist', dict(IRON, kind='hoist', guns='gun-27'), ''),   # 主砲（主砲塔/砲 的物件 id）；trip／rounds 照遊戲預設
     ('艙壁', W + '-bulkheads', {'material': 'iron*0.1', 'render': 'voxel'}, ''),   # 水密艙壁 1 格 ⇒ 方塊
+    ('艦橋撐柱', W + '-bridge-posts', {'material': 'iron*0.1', 'render': 'smooth'}, ''),   # 鋼管撐柱 0.3 m 實心 ≈ 空心管 ⇒ 鐵 10%（2026-10-24 從艦橋拆出來、收進船首樓甲板）
+    ('桅樓-下', W + '-top-lower', DECKS['top-lower'], ''),
+    ('桅樓-上', W + '-top-upper', DECKS['top-upper'], ''),
     ('梯子', W + '-ladders', {'kind': 'ladders', 'material': 'iron*0.2', 'render': 'voxel'}, ''),
 ]
 for nm, src, meta, mir in LINKS:
@@ -190,7 +196,7 @@ for s, sg in (('S', 1), ('P', -1)):
           {'kind': 'propeller', 'axis_x': -sg, 'axis_y': 0, 'axis_z': 0, 'blades': SCw['blades'], 'diameter_m': 3.2, 'rpm_max': 105})   # 內旋（泉 下 p.48）
 SRC = {'gun120': (W + '-gun-armstrong120', 0.5, '120a'), 'gun57': (W + '-gun-hotchkiss57', 0.2, 'h57'), 'gun47': (W + '-gun-hotchkiss47', 0.2, 'h47'),
        'h37': ('trailhead-dingyuan-01m-gun-hotchkiss37', 0.2, 'h37')}
-DECKW = {'甲板-middle': W + '-deck-middle', '甲板-upper': W + '-deck-upper', '甲板-fc': W + '-deck-fc', '桅': W + '-bridge', '艦橋': W + '-bridge'}   # 桅樓的砲掛在艦橋底下：遊戲照關聯路徑分砲甲板（桅不是甲板 ⇒ 退到最下面那層、機艙），站人的高度照那一層最前面那門（艦橋兩翼的 37 mm）；⛔ 掛在船首樓底下 ⇒ 桅樓的砲比船首樓後端的 57 mm 靠前、整層照桅樓的高度找取用點
+DECKW = {'甲板-middle': W + '-deck-middle', '甲板-upper': W + '-deck-upper', '甲板-fc': W + '-deck-fc', '艦橋': W + '-bridge'}   # 桅樓的砲見下面 dw：以前掛在艦橋底下（桅不是甲板 ⇒ 退到機艙；掛船首樓 ⇒ 整層照桅樓高度找取用點），跟艦橋的 37 mm 共用一個高度帶 ⇒ 送藥手在兩個高度之間直線飛（Tim 2026-10-24「送藥手取彈藥會浮空」）
 for lo, nm in ((0, '信號桁-下'), (1, '信號桁-上')):   # 信號桁 ＝ 帆桁模型（引用定遠號的 yard-main，縮放）：遊戲照帆桁 meta mast 找桅（10_ship.js findMasts）
     yz, yh = sorted(P['mast']['yards'])[lo]
     model(W + '-mast', nm, 'trailhead-dingyuan-01m-yard-main', [mx + 5.5, YC + 0.5, yz + 0.5], [1.5, 40.5, 1.5], [0, 0, 0], (0.67, round((2 * yh + 1) / 81, 4), 0.67),
@@ -206,7 +212,8 @@ for nm, g in GUNS.items():
     meta = {'kind': 'gun', 'gun': code}
     if g['deck'] in ('甲板-fc', '桅', '艦橋') or nm.startswith('機關砲-艉'):
         meta.update({'mount': 'turret', 'arc': '-110,110' if g['deck'] == '桅' else '-120,120', 'rate': 40, 'safe': 1})
-    model(DECKW[g['deck']], nm, src, g['at'], pv, [0, 0, g['rz']], sc, meta)
+    dw = DECKW[g['deck']] if g['deck'] != '桅' else W + ('-top-lower' if g['at'][2] < P['mast']['top2'] else '-top-upper')   # 2026-10-24 起桅樓的砲掛在自己那層桅樓（甲板）底下；砲座（…座，ame 拆的）不在這支裡，搬家要連座一起
+    model(dw, nm, src, g['at'], pv, [0, 0, g['rz']], sc, meta)
 BR = M['bridge']
 model(W + '-bridge', '舵輪', 'basecamp-frigate-constitution-01m-wheel', [BR['x0'] + 13.5, YC + 0.5, BR['z']], [50, 52, 0], [0, 0, 0], 0.2,
       {'kind': 'wheel', 'spin': 'rudder', 'spin_k': 540, 'spin_lag': 0.6})
