@@ -1,0 +1,3254 @@
+{
+ "root": "crest-housing-density-01m",
+ "works": {
+  "crest-housing-density-01m": {
+   "anchors": {},
+   "expect": "crest-housing-density-01m.composite.txt",
+   "links": [
+    {
+     "at": [
+      40,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "fr-低密度",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-house-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      160,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "fr-house-m-a",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-m-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      320,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "fr-house-m-a2",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-m-a2",
+     "turn": 0
+    },
+    {
+     "at": [
+      480,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "fr-house-h-a",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-h-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      680,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "fr-house-h-a2",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-h-a2",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      260,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "carib-低密度",
+     "recolor": {},
+     "source": "summit-carib-01m-house-c",
+     "turn": 0
+    },
+    {
+     "at": [
+      160,
+      260,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "carib-house-m-a",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-m-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      320,
+      260,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "carib-house-m-a2",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-m-a2",
+     "turn": 0
+    },
+    {
+     "at": [
+      480,
+      260,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "carib-house-h-a",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-h-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      680,
+      260,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "carib-house-h-a2",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-h-a2",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 4,
+   "root": true,
+   "size": [
+    880,
+    480,
+    172
+   ],
+   "tags": "town",
+   "title": "住宅三級密度（TASK-0893；0.1 m）—— 樣板街：每一排 低密度（現有）｜中密度＋配色｜高密度＋配色；上排 fr、下排 carib"
+  },
+  "crest-housing-density-01m-carib-house-h-a": {
+   "anchors": {
+    "door": [
+     80,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-carib-house-h-a.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 3,
+      "live": 24,
+      "lot": "16,16",
+      "style": "carib",
+      "use": "house",
+      "variant": "h-a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-h-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "外廊",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-h-a-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-h-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      22,
+      27,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-車馬門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      27,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      102,
+      27,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-店面",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      134,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      27,
+      32
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "2樓-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-前窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-前窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      100,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-前窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-前窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      27,
+      60
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "3樓-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      27,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-前窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      27,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-前窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      100,
+      27,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-前窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      27,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-前窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      27,
+      88
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "4樓-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      27,
+      97
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "4樓-前窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      27,
+      97
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "4樓-前窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      100,
+      27,
+      97
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "4樓-前窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      27,
+      97
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "4樓-前窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      22,
+      84,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "後-車馬門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 180
+    },
+    {
+     "at": [
+      73,
+      84,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      84,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      84,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      75,
+      84,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-2樓窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      84,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      84,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      75,
+      84,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-3樓窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      84,
+      97
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-4樓窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      84,
+      97
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-4樓窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      75,
+      84,
+      97
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-4樓窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      103,
+      93,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "側翼-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      103,
+      123,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "側翼-氣窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 270
+    },
+    {
+     "at": [
+      103,
+      111,
+      32
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "側翼-2樓門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      103,
+      88,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "側翼-2樓窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      103,
+      130,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "側翼-2樓窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      103,
+      111,
+      60
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "側翼-3樓門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      103,
+      88,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "側翼-3樓窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      103,
+      130,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "側翼-3樓窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      38,
+      133,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      68.5,
+      28,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      18,
+      28,
+      31
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-車馬門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      126,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-店面1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      134,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-店面",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      80,
+      140,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-內院1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      80,
+      147,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-內院2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    160,
+    160,
+    150
+   ],
+   "tags": "building,carib",
+   "title": "高密度住宅 H-A（院落屋：臨街一棟四層、一樓毛石車馬門與店面、前面三層通長外廊；右側三層側翼、朝內院上下兩層廊；內院蓄水井＋木板廚房）"
+  },
+  "crest-housing-density-01m-carib-house-h-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-carib-house-h-a-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    150
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜牆身"
+  },
+  "crest-housing-density-01m-carib-house-h-a-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-carib-house-h-a-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    150
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜外廊"
+  },
+  "crest-housing-density-01m-carib-house-h-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-carib-house-h-a-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    150
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜屋頂"
+  },
+  "crest-housing-density-01m-carib-house-h-a2": {
+   "anchors": {
+    "door": [
+     80,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-carib-house-h-a2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 3,
+      "live": 24,
+      "lot": "16,16",
+      "style": "carib",
+      "use": "house",
+      "variant": "h-a2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "146": 255,
+      "182": 255,
+      "218": 255
+     },
+     "source": "crest-housing-density-01m-carib-house-h-a",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    160,
+    160,
+    150
+   ],
+   "tags": "building,carib",
+   "title": "高密度住宅 H-A2（H-A 的配色變化：一樓石牆刷白；替換色，不另存格子）"
+  },
+  "crest-housing-density-01m-carib-house-m-a": {
+   "anchors": {
+    "door": [
+     60,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-carib-house-m-a.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 2,
+      "live": 12,
+      "lot": "12,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "m-a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-m-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "外廊",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-m-a-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-housing-density-01m-carib-house-m-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      47,
+      27,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      18,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      88,
+      27,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "前-氣窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      27,
+      32
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "2樓-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-前窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      85,
+      27,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-前窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      20,
+      80,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-後窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      80,
+      80,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-後窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      110,
+      45,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-右窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      7,
+      52,
+      41
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "2樓-左窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      53,
+      27,
+      60
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "3樓-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      27,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-前窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      85,
+      27,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-前窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      20,
+      80,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-後窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      80,
+      80,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-後窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      110,
+      45,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-右窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      7,
+      52,
+      69
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "3樓-左窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      53,
+      80,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      110,
+      48,
+      12
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "右-氣窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 90
+    },
+    {
+     "at": [
+      69,
+      95,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      43.5,
+      28,
+      22.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-貨門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      78,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-門口1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      90,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-門口2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      98,
+      20,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-門口",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    120,
+    120
+   ],
+   "tags": "building,carib",
+   "title": "中密度住宅 M-A（三層的商家：一樓毛石店面、二三樓木板牆、前面上下兩層通長外廊、左側外樓梯、木瓦四坡頂；後院石牆＋木板廚房）"
+  },
+  "crest-housing-density-01m-carib-house-m-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-carib-house-m-a-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    120
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜牆身"
+  },
+  "crest-housing-density-01m-carib-house-m-a-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-carib-house-m-a-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    120
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜外廊"
+  },
+  "crest-housing-density-01m-carib-house-m-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-carib-house-m-a-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    120
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜屋頂"
+  },
+  "crest-housing-density-01m-carib-house-m-a2": {
+   "anchors": {
+    "door": [
+     60,
+     27,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-carib-house-m-a2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 2,
+      "live": 12,
+      "lot": "12,12",
+      "style": "carib",
+      "use": "house",
+      "variant": "m-a2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "109": 255
+     },
+     "source": "crest-housing-density-01m-carib-house-m-a",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    120,
+    120,
+    120
+   ],
+   "tags": "building,carib",
+   "title": "中密度住宅 M-A2（M-A 的配色變化：板牆刷石灰白；替換色，不另存格子）"
+  },
+  "crest-housing-density-01m-fr-house-h-a": {
+   "anchors": {
+    "door": [
+     85,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-fr-house-h-a.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 3,
+      "live": 24,
+      "lot": "16,16",
+      "style": "fr",
+      "use": "house",
+      "variant": "h-a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-h-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "陽台",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-h-a-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-h-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      19,
+      11,
+      3
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-車馬門",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-一樓窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      77,
+      11,
+      3
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      98,
+      11,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-一樓窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      123,
+      11,
+      3
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-店面",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "3樓-窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      11,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "4樓-窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "3樓-窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      11,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "4樓-窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "3樓-窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      11,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "4樓-窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      100,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗4",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      100,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "3樓-窗4",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      100,
+      11,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "4樓-窗4",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗5",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "3樓-窗5",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      11,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "4樓-窗5",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      19,
+      78,
+      3
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "後-車馬門",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      78,
+      3
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      10,
+      78,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      78,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      75,
+      78,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-2樓窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      10,
+      78,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      78,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      75,
+      78,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-3樓窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      10,
+      78,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-4樓窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      78,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-4樓窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      75,
+      78,
+      110
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-4樓窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      104,
+      92,
+      3
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "側翼-門",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      112,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-一樓窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      132,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-一樓窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      88,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-2樓窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      112,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-2樓窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      135,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-2樓窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      88,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-3樓窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      112,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-3樓窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      104,
+      135,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "側翼-3樓窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      23,
+      15,
+      134
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      55,
+      15,
+      134
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      91,
+      15,
+      134
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      123,
+      15,
+      134
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗4",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      58,
+      125
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪1",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    },
+    {
+     "at": [
+      144,
+      58,
+      125
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪2",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    },
+    {
+     "at": [
+      144,
+      138,
+      93
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪3",
+     "recolor": {
+      "49": 42
+     },
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      73.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      16,
+      12,
+      31
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-車馬門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      90,
+      140,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-內院1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      90,
+      147,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-內院2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      20,
+      140,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-內院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    }
+   ],
+   "order": 2,
+   "size": [
+    160,
+    160,
+    172
+   ],
+   "tags": "building,fr",
+   "title": "高密度住宅 H-A（四層的出租公寓：臨街一棟四層＋右側三層側翼圍出內院；一樓車馬門穿到內院、店面；二樓落地窗＋通長鐵陽台；老虎窗；米白牆藍百葉）"
+  },
+  "crest-housing-density-01m-fr-house-h-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-fr-house-h-a-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    172
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜牆身"
+  },
+  "crest-housing-density-01m-fr-house-h-a-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-fr-house-h-a-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    172
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜陽台"
+  },
+  "crest-housing-density-01m-fr-house-h-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-fr-house-h-a-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    172
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜屋頂"
+  },
+  "crest-housing-density-01m-fr-house-h-a2": {
+   "anchors": {
+    "door": [
+     85,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-fr-house-h-a2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 3,
+      "live": 24,
+      "lot": "16,16",
+      "style": "fr",
+      "use": "house",
+      "variant": "h-a2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "218": 187,
+      "42": 49
+     },
+     "source": "crest-housing-density-01m-fr-house-h-a",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    160,
+    160,
+    172
+   ],
+   "tags": "building,fr",
+   "title": "高密度住宅 H-A2（H-A 的配色變化：藍牆、綠百葉；替換色，不另存格子）"
+  },
+  "crest-housing-density-01m-fr-house-m-a": {
+   "anchors": {
+    "door": [
+     60,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-fr-house-m-a.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 2,
+      "live": 12,
+      "lot": "12,12",
+      "style": "fr",
+      "use": "house",
+      "variant": "m-a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-m-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "陽台",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-m-a-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-housing-density-01m-fr-house-m-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      3
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-店面1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      3
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      85,
+      11,
+      3
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-店面2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "三樓-窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      36,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      36,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "三樓-窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      64,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗3",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      64,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "三樓-窗3",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      11,
+      38
+     ],
+     "meta": {
+      "part": "frenchdoor"
+     },
+     "mirror": "",
+     "name": "二樓-落地窗4",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-frenchdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      11,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "三樓-窗4",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      74,
+      3
+     ],
+     "meta": {
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      15,
+      74,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-一樓窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      85,
+      74,
+      12
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-一樓窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      15,
+      74,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      50,
+      74,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      85,
+      74,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-2樓窗3",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      15,
+      74,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      50,
+      74,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      85,
+      74,
+      78
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-3樓窗3",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      25,
+      15,
+      102
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      15,
+      102
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      81,
+      15,
+      102
+     ],
+     "meta": {
+      "part": "dormer"
+     },
+     "mirror": "",
+     "name": "老虎窗3",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-dormer",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      54,
+      93
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪1",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    },
+    {
+     "at": [
+      104,
+      54,
+      93
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪2",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      91,
+      10
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "廚房-氣窗",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      108,
+      2
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "廚房-煙囪",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      48.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      104,
+      96,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-院1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      104,
+      103,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-院2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "building,fr",
+   "title": "中密度住宅 M-A（三層的城中屋：一樓切石兩間店面夾正門、二樓落地窗＋通長鐵陽台、三樓、閣樓老虎窗；後院院牆＋廚房＋水井；鮭粉牆綠百葉）"
+  },
+  "crest-housing-density-01m-fr-house-m-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-fr-house-m-a-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜牆身"
+  },
+  "crest-housing-density-01m-fr-house-m-a-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-fr-house-m-a-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜陽台"
+  },
+  "crest-housing-density-01m-fr-house-m-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-housing-density-01m-fr-house-m-a-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜屋頂"
+  },
+  "crest-housing-density-01m-fr-house-m-a2": {
+   "anchors": {
+    "door": [
+     60,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "crest-housing-density-01m-fr-house-m-a2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 2,
+      "live": 12,
+      "lot": "12,12",
+      "style": "fr",
+      "use": "house",
+      "variant": "m-a2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "246": 213,
+      "49": 42
+     },
+     "source": "crest-housing-density-01m-fr-house-m-a",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "building,fr",
+   "title": "中密度住宅 M-A2（M-A 的配色變化：土黃牆、藍百葉；替換色，不另存格子）"
+  }
+ }
+}
