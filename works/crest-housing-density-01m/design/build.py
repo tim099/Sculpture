@@ -13,6 +13,15 @@ import fr_dense
 import carib_dense
 
 ROOT = 'crest-housing-density-01m'
+# 施工階段（TASK-0895；Tim 2026-10-24「之後希望支援建築建造演出 … 建造10%時 哪些部分是完工的 25%時 50%時 城鎮中可以即時voxel演出建造過程」）：
+#   每一條關聯的 meta 帶 build0／build1（工程進度 0～1：這一件從幾成開始出現、幾成時完整）＋ sweep（'z' ＝ 照高度由下往上長；沒寫 ＝ 到 build0 一次出現）
+#   ⇒ 一格在進度 p 時看得到 ⟺ p ≥ build0 ＋ (build1 − build0) ×（那一格的 z − 那一件最低的 z）÷（那一件的高 − 1）。外部模型（燈籠、酒桶）同一組 meta。
+#   數字〔設計〕：牆身（石基、樓板、院牆、廚房）先、廊與陽台、屋頂（從簷口往屋脊）、門窗部件、煙囪老虎窗、最後擺小件。
+STAGE = {'body': (0.0, 0.6), 'gallery': (0.45, 0.8), 'roof': (0.6, 0.9)}
+PART_STAGE = {'chimney': 0.9, 'dormer': 0.9}                 # 其他部件（門、窗、貨門、氣窗）0.85
+PART_STAGE0 = 0.85
+MODEL_STAGE = 1.0
+STAGE_SHOTS = (0.1, 0.25, 0.5, 0.75, 1.0)
 STYLES = [('fr', fr_dense, FR_ROOT), ('carib', carib_dense, CARIB_ROOT)]
 
 
@@ -61,6 +70,71 @@ def rd_comp(path):
     return out
 
 
+def stage_t(M):
+    """每一格在工程進度幾成時出現（照 STAGE／PART_STAGE 的規則；同 composite 的先後：分層的格先、部件後）。"""
+    T = {}
+    for ln, (b0, b1) in STAGE.items():
+        cells = M.layer(ln)
+        if not cells:
+            continue
+        zs = [k[2] for k in cells]
+        z0, h = min(zs), max(1, max(zs) - min(zs))
+        for k in cells:
+            T[k] = b0 + (b1 - b0) * (k[2] - z0) / h
+    for L in M.links:
+        pn = L['part'].rsplit('-part-', 1)[-1]
+        v = PART_STAGE.get(pn, PART_STAGE0)
+        for k in L['cells']:
+            T.setdefault(k, v)
+    return T
+
+
+def stage_sheet(M, B, path, style):
+    """施工分格圖：同一個鏡頭（正立面＋俯視）照 STAGE_SHOTS 一格一格排；外部模型不畫（它們在 100% 才擺）。"""
+    from PIL import Image, ImageDraw, ImageFont
+    comp, _ = composite(M)
+    T = stage_t(M)
+    X, Y, Z = M.X, M.Y, M.Z
+    px = 2
+    try:
+        font = ImageFont.truetype('C:/Windows/Fonts/msjh.ttc', 16)
+    except Exception:
+        font = None
+    panels = []
+    for p in STAGE_SHOTS:
+        im = Image.new('RGB', (X, Z + 8 + Y), (232, 228, 214))
+        pf, pt = im.load(), {}
+        fr, tp = {}, {}
+        for k, c in comp.items():
+            if T.get(k, 1.0) > p + 1e-9:
+                continue
+            x, y, z = k
+            if (x, z) not in fr or y < fr[(x, z)][0]:
+                fr[(x, z)] = (y, c)
+            if (x, y) not in tp or z > tp[(x, y)][0]:
+                tp[(x, y)] = (z, c)
+        for (x, z), (y, c) in fr.items():
+            f = 1.0 - 0.45 * y / max(1, Y)
+            r, g, b = rgb(c)
+            pf[x, Z - 1 - z] = (int(r * f), int(g * f), int(b * f))
+        for (x, y), (z, c) in tp.items():
+            f = 0.55 + 0.45 * z / max(1, Z)
+            r, g, b = rgb(c)
+            pf[x, Z + 8 + y] = (int(r * f), int(g * f), int(b * f))
+        panels.append((p, im))
+    W = len(panels) * (X * px + 30) + 30
+    H = (Z + 8 + Y) * px + 80
+    out = Image.new('RGB', (W, H), (250, 248, 240))
+    d = ImageDraw.Draw(out)
+    d.text((20, 10), '%s｜%s｜施工階段（上：正立面、下：俯視；meta build0／build1／sweep）' % (style, B['title'].split('（')[0]), fill=(30, 30, 30), font=font)
+    xo = 30
+    for p, im in panels:
+        out.paste(im.resize((X * px, (Z + 8 + Y) * px), Image.NEAREST), (xo, 60))
+        d.text((xo, 38), '%d%%' % round(p * 100), fill=(60, 60, 60), font=font)
+        xo += X * px + 30
+    out.save(path)
+
+
 def main():
     D = os.path.abspath(sys.argv[1])
     want = set(sys.argv[2:])
@@ -93,12 +167,18 @@ def main():
                 man['works'][w] = {'title': '%s｜%s' % (B['title'].split('（')[0], lname), 'size': [M.X, M.Y, M.Z], 'tags': 'sub', 'mask': w + '.vox.txt',
                                    'anchors': {}, 'links': [], 'models': [], 'order': 1}
                 layer_ver[w] = {'voxels': len(cells), 'components': n, 'cavity': cav, 'bbox': bbox(cells), 'md5': md5}
+                b0, b1 = STAGE[ln]
+                stg = {'build0': b0, 'build1': b1, 'sweep': 'z'}
                 links.append({'name': lname, 'source': w, 'at': [0, 0, 0], 'turn': 0, 'mirror': '', 'recolor': {},
-                              'meta': meta_b if ln == 'body' else {'part': ln}})
+                              'meta': dict(meta_b, **stg) if ln == 'body' else dict({'part': ln}, **stg)})
             for L in M.links:
                 src = part_src(L['part'])
+                pn = src.rsplit('-part-', 1)[1]
+                v = PART_STAGE.get(pn, PART_STAGE0)
                 links.append({'name': L['name'], 'source': src, 'at': L['at'], 'turn': L['turn'], 'mirror': L['mirror'],
-                              'recolor': {str(a): b for a, b in L.get('recolor', {}).items()}, 'meta': {'part': src.rsplit('-part-', 1)[1]}})
+                              'recolor': {str(a): b for a, b in L.get('recolor', {}).items()}, 'meta': {'part': pn, 'build0': v, 'build1': v}})
+            for m in M.models:
+                m['meta'] = dict(m['meta'], build0=MODEL_STAGE, build1=MODEL_STAGE)
             comp, clash = composite(M)
             dump(os.path.join(D, 'masks', pw + '.composite.txt'), comp)
             man['works'][pw] = {'title': B['title'], 'size': [M.X, M.Y, M.Z], 'tags': 'building,' + style, 'mask': None, 'expect': pw + '.composite.txt',
@@ -113,6 +193,7 @@ def main():
             sheet(comp, (M.X, M.Y, M.Z), os.path.join(D, 'sheets', style + '-' + key + '.png'),
                   '%s｜%s｜地塊 %d × %d m｜住 %d 人｜%d 格（組好）｜框 %s' % (style, B['title'], B['lot'][0], B['lot'][1], B['live'], len(comp),
                                                                'x'.join(str(v) for v in (M.X, M.Y, M.Z))), px=3)
+            stage_sheet(M, B, os.path.join(D, 'sheets', style + '-' + key + '-build.png'), style)
             print(pw, json.dumps({k: v for k, v in ver[pw].items() if k != 'layers'}, ensure_ascii=False))
             for w, lv in layer_ver.items():
                 print('   ', w, lv)
@@ -152,7 +233,7 @@ def main():
             low = sroot + ('-house-a' if style == 'fr' else '-house-c')
             S = put(low, sman['works'][low]['size'], rd_comp(os.path.join(WORKS, sroot, 'design', 'masks', low + '.composite.txt')), (x, y, 0), style + '-低密度')
             x += S[0] + 40
-            for key in ('house-m-a', 'house-m-a2', 'house-h-a', 'house-h-a2'):
+            for key in ('house-m-b', 'house-m-a', 'house-h-b', 'house-h-a'):          # 升級的路：低 2×3 ⇒ 中 2×3（原地）⇒ 中 3×3 ⇒ 高 3×3（原地）⇒ 高 4×4
                 w = wid(style, key)
                 S = put(w, man['works'][w]['size'], rd_comp(os.path.join(D, 'masks', w + '.composite.txt')), (x, y, 0), style + '-' + key)
                 x += S[0] + 40
@@ -161,11 +242,11 @@ def main():
         Yb = y
         Zb = max(max(k[2] for k in comp) + 1, max(man['works'][l['source']]['size'][2] if l['source'] in man['works'] else 0 for l in links))
         dump(os.path.join(D, 'masks', ROOT + '.composite.txt'), comp)
-        man['works'][ROOT] = {'title': '住宅三級密度（TASK-0893；0.1 m）—— 樣板街：每一排 低密度（現有）｜中密度＋配色｜高密度＋配色；上排 fr、下排 carib',
+        man['works'][ROOT] = {'title': '住宅三級密度（TASK-0893／0895；0.1 m）—— 樣板街：每一排照升級的路 低 2×3（現有）｜中 2×3（原地升級）｜中 3×3｜高 3×3（原地升級）｜高 4×4；上排 fr、下排 carib',
                               'size': [X, Yb, Zb], 'tags': 'town', 'mask': None, 'expect': ROOT + '.composite.txt', 'anchors': {}, 'links': links,
                               'models': [], 'order': 4, 'root': True}
         ver[ROOT] = {'size': [X, Yb, Zb], 'composite_voxels': len(comp), 'links': len(links)}
-        sheet(comp, (X, Yb, Zb), os.path.join(D, 'sheets', 'street.png'), '樣板街：低密度（現有）｜中密度＋配色｜高密度＋配色（上 fr、下 carib）｜%d 格' % len(comp), px=1)
+        sheet(comp, (X, Yb, Zb), os.path.join(D, 'sheets', 'street.png'), '樣板街：低 2×3（現有）｜中 2×3（原地）｜中 3×3｜高 3×3（原地）｜高 4×4（上 fr、下 carib）｜%d 格' % len(comp), px=1)
         print(ROOT, json.dumps(ver[ROOT], ensure_ascii=False))
 
     json.dump(man, open(man_p, 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1, sort_keys=True)

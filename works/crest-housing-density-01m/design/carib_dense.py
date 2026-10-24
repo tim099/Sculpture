@@ -191,7 +191,79 @@ def house_h_a():
             'use': 'house', 'lot': (16, 16), 'M': M, 'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}}
 
 
-ALL = [house_m_a, house_h_a]
+def house_m_b():
+    """中密度 M-B（原地升級用，TASK-0895）：低密度同一塊 8 × 12 地塊上蓋三層 —— 住宅 C「兩層的商家」加一層：一樓毛石貨門、二三樓木板牆、前面上下兩層外廊、左側外樓梯；後院石牆＋木板廚房。"""
+    M = Model((80, 120, 120))
+    X0, Y0, X1, Y1 = 8, 28, 74, 74
+    R = (X0, Y0, X1, Y1)
+    GY0 = 13
+    zt = storeys(M, R, 3, salt=91)
+    cput(M, 'cartdoor', '前-貨門', 'front', R, 41, 0, 4)
+    for i, cx in enumerate((18, 64)):
+        cput(M, 'vent', '前-氣窗%d' % (i + 1), 'front', R, cx, 12, 4)
+    for f in (1, 2):
+        z0 = FLOORS[f][0]
+        cput(M, 'door-plank', '%d樓-門' % (f + 1), 'front', R, 41, z0, 2)
+        for i, cx in enumerate((20, 62)):
+            cput(M, 'window-board', '%d樓-前窗%d' % (f + 1, i + 1), 'front', R, cx, z0 + 9, 2)
+        for i, cx in enumerate((24, 58)):
+            cput(M, 'window-board', '%d樓-後窗%d' % (f + 1, i + 1), 'back', R, cx, z0 + 9, 2)
+        cput(M, 'window-board', '%d樓-右窗' % (f + 1), 'right', R, 52, z0 + 9, 2)
+    cput(M, 'door-plank', '後-門', 'back', R, 40, 0, 4)
+    cput(M, 'vent', '右-氣窗', 'right', R, 52, 12, 4)
+    M.anchor('door', 41, Y0 - 1, 0)
+    top = shingle_roof(M, [{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': zt, 'p': 0.85, 'over': (6, 6, 17, 4), 'kick': {'front': 0.4}}], salt=91)
+    front_gallery(M, 2, 78, GY0, Y0, (FLOORS[1][0], FLOORS[2][0]), (2, 27, 52, 76), top, stair=(20, Y0))
+    side_stair(M, 2, 73, FLOORS[1][0])
+    ye = 119
+    yard_rubble(M, ((X0, Y1, X0 + 3, ye), (X1 - 3, Y1, X1, ye), (X0, ye - 3, X1, ye)), salt=92)
+    plank_gate(M, 30, 42, ye - 2)
+    lean_kitchen(M, (48, 88, X1 - 3, 113), 'left', 100, 38, 'left', salt=93)
+    M.models += [model(LANTERN, '燈籠-貨門', (24.5, Y0, 22.5)), model(CRATE, '貨箱-門口', (58, 20, 0)), model(BARREL, '酒桶-門口', (66, 20, 0))]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'house-m-b', 'variant': 'm-b', 'level': 2, 'live': 8,
+            'title': '中密度住宅 M-B（原地升級：低密度同一塊 8 × 12 蓋三層 —— 住宅 C 的商家加一層：一樓毛石貨門、二三樓木板牆、上下兩層外廊、外樓梯；後院石牆＋木板廚房）',
+            'use': 'house', 'lot': (8, 12), 'M': M, 'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}}
+
+
+def house_h_b():
+    """高密度 H-B（原地升級用，TASK-0895）：中密度同一塊 12 × 12 地塊上蓋四層 —— M-A 加一層：前面三層通長外廊、外樓梯上二樓；後院石牆＋木板廚房。"""
+    M = Model((120, 120, 150))
+    X0, Y0, X1, Y1 = 8, 28, 112, 82
+    R = (X0, Y0, X1, Y1)
+    GY0 = 13
+    zt = storeys(M, R, 4, salt=101)
+    cput(M, 'cartdoor', '前-貨門', 'front', R, 60, 0, 4)
+    for i, cx in enumerate((25, 95)):
+        cput(M, 'vent', '前-氣窗%d' % (i + 1), 'front', R, cx, 12, 4)
+    for f in (1, 2, 3):
+        z0 = FLOORS[f][0]
+        cput(M, 'door-plank', '%d樓-門' % (f + 1), 'front', R, 60, z0, 2)
+        for i, cx in enumerate((25, 95)):
+            cput(M, 'window-board', '%d樓-前窗%d' % (f + 1, i + 1), 'front', R, cx, z0 + 9, 2)
+        for i, cx in enumerate((30, 90)):
+            cput(M, 'window-board', '%d樓-後窗%d' % (f + 1, i + 1), 'back', R, cx, z0 + 9, 2)
+        cput(M, 'window-board', '%d樓-右窗' % (f + 1), 'right', R, 55, z0 + 9, 2)
+        cput(M, 'window-board', '%d樓-左窗' % (f + 1), 'left', R, 62, z0 + 9, 2)
+    cput(M, 'door-plank', '後-門', 'back', R, 60, 0, 4)
+    M.anchor('door', 60, Y0 - 1, 0)
+    top = shingle_roof(M, [{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': zt, 'p': 0.85, 'over': (6, 6, 17, 4), 'kick': {'front': 0.4}}], salt=101)
+    front_gallery(M, 2, 118, GY0, Y0, (FLOORS[1][0], FLOORS[2][0], FLOORS[3][0]), (2, 40, 78, 116), top, stair=(20, Y0))
+    side_stair(M, 2, 73, FLOORS[1][0])
+    ye = 119
+    yard_rubble(M, ((X0, Y1, X0 + 3, ye), (X1 - 3, Y1, X1, ye), (X0, ye - 3, X1, ye)), salt=102)
+    plank_gate(M, 30, 42, ye - 2)
+    lean_kitchen(M, (70, 92, X1 - 3, 113), 'left', 102, 38, 'left', salt=103)
+    M.models += [model(LANTERN, '燈籠-貨門', (43.5, Y0, 22.5)), model(CRATE, '貨箱-門口', (78, 20, 0)), model(BARREL, '酒桶-門口', (90, 20, 0))]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'house-h-b', 'variant': 'h-b', 'level': 3, 'live': 13,
+            'title': '高密度住宅 H-B（原地升級：中密度同一塊 12 × 12 蓋四層 —— 一樓毛石店面、二三四樓木板牆、前面三層通長外廊、外樓梯；後院石牆＋木板廚房）',
+            'use': 'house', 'lot': (12, 12), 'M': M, 'layers': {'body': '牆身', 'gallery': '外廊', 'roof': '屋頂'}}
+
+
+ALL = [house_m_a, house_h_a, house_m_b, house_h_b]
 # 配色變化（設計決定，照 summit-carib-01m 那一套的史料）：M-A2 板牆刷石灰白（Saba「刷得很白」）、H-A2 一樓石牆刷白（St Thomas「照荷蘭方式刷白」）
 VARIANTS = [('house-m-a2', 'house-m-a', {BOARD: LIME}, '中密度住宅 M-A2（M-A 的配色變化：板牆刷石灰白；替換色，不另存格子）'),
-            ('house-h-a2', 'house-h-a', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '高密度住宅 H-A2（H-A 的配色變化：一樓石牆刷白；替換色，不另存格子）')]
+            ('house-h-a2', 'house-h-a', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '高密度住宅 H-A2（H-A 的配色變化：一樓石牆刷白；替換色，不另存格子）'),
+            ('house-m-b2', 'house-m-b', {RUBBLE: LIME, RUBBLE_D: LIME, MORTAR: LIME}, '中密度住宅 M-B2（M-B 的配色變化：一樓石牆刷白；替換色，不另存格子）'),
+            ('house-h-b2', 'house-h-b', {BOARD: LIME}, '高密度住宅 H-B2（H-B 的配色變化：板牆刷石灰白；替換色，不另存格子）')]

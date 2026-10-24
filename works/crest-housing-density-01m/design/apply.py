@@ -125,7 +125,7 @@ for w, W in sel:
                 args.append('recolor=' + rc_s)
             if L['meta']:
                 args.append('meta=' + json.dumps(L['meta'], ensure_ascii=False, sort_keys=True))
-            if c and not same_geo:
+            if c:                                                      # 同名的已經在：只改 meta（施工階段）、替換色也要 overwrite=1（引擎 ⛔ 不默默蓋掉）
                 args.append('overwrite=1')
             cli(args)
         print(w, 'links', len(W['links']))
@@ -140,7 +140,7 @@ for w, W in sel:
                     'at=' + fmt(m['at']), 'pivot=' + fmt(m['pivot']), 'rotate=' + fmt(rot)]
             if m['meta']:
                 args.append('meta=' + json.dumps(m['meta'], ensure_ascii=False, sort_keys=True))
-            if c and c.get('work') != m['source']:
+            if c:
                 args.append('overwrite=1')
             cli(args)
         print(w, 'models', len(W['models']))

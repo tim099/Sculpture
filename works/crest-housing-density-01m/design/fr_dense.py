@@ -139,7 +139,82 @@ def house_h_a():
             'use': 'house', 'lot': (16, 16), 'M': M, 'layers': {'body': '牆身', 'gallery': '陽台', 'roof': '屋頂'}}
 
 
-ALL = [house_m_a, house_h_a]
+def house_m_b():
+    """中密度 M-B（原地升級用，TASK-0895）：低密度同一塊 8 × 12 地塊上蓋三層 —— 窄的城中屋（一間店面＋正門、二樓兩扇落地窗＋鐵陽台、三樓兩扇窗、一扇老虎窗）；後院同住宅 A。"""
+    M = Model((80, 120, 140))
+    X0, Y0, X1, Y1 = 3, 12, 77, 72
+    R = (X0, Y0, X1, Y1)
+    zt = storeys(M, R, 3, OCHRE, salt=71)
+    P = FR_PARTS
+    put_part(M, P, 'cartdoor', '前-店面', 'front', R, 22, PL, T)
+    put_part(M, P, 'door', '前-門', 'front', R, 58, PL, T)
+    front_steps(M, 58, Y0)
+    M.anchor('door', 58, Y0 - 1, PL)
+    for i, cx in enumerate((22, 58)):
+        put_part(M, P, 'frenchdoor', '二樓-落地窗%d' % (i + 1), 'front', R, cx, FLOORS[1][0], T)
+        put_part(M, P, 'window', '三樓-窗%d' % (i + 1), 'front', R, cx, FLOORS[2][0] + 8, T)
+    iron_balcony(M, 5, 75, 3, Y0, FLOORS[1][0], brackets=(5, 41, 73))
+    put_part(M, P, 'door', '後-門', 'back', R, 40, PL, T)
+    for i, cx in enumerate((18, 62)):
+        put_part(M, P, 'window', '後-一樓窗%d' % (i + 1), 'back', R, cx, PL + 9, T)
+    for f in (1, 2):
+        for i, cx in enumerate((22, 58)):
+            put_part(M, P, 'window', '後-%d樓窗%d' % (f + 1, i + 1), 'back', R, cx, FLOORS[f][0] + 8, T)
+    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': zt, 'p': 0.85, 'over': (3, 3, 8, 6)}])
+    top = build_roof(M, F, salt=71)
+    free_part(M, P, 'dormer', '老虎窗', (33, Y0 + 3, top[(40, Y0 + 4)] - 1))
+    free_part(M, P, 'chimney', '煙囪', (62, Y1 - 18, zt - 7))
+    FRH.yard(M, X0, Y1, X1, 120, 3, 22, OCHRE, gate=(56, 13, 19))
+    FRH.kitchen(M, (X0 + 3, 92, 34, 117), OCHRE, 'right', 104, vent_face='front', vent_c=18, low='right', chim=(6, 108, 2), salt=72)
+    M.models += [model(LANTERN, '燈籠-門', (46.5, Y0, 24.5)), model(BARREL, '酒桶-院', (66, 103, 0))]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'house-m-b', 'variant': 'm-b', 'level': 2, 'live': 8,
+            'title': '中密度住宅 M-B（原地升級：低密度同一塊 8 × 12 蓋三層 —— 窄的城中屋，一樓店面＋正門、二樓落地窗＋鐵陽台、三樓、老虎窗；後院院牆＋廚房；土黃牆綠百葉）',
+            'use': 'house', 'lot': (8, 12), 'M': M, 'layers': {'body': '牆身', 'gallery': '陽台', 'roof': '屋頂'}}
+
+
+def house_h_b():
+    """高密度 H-B（原地升級用，TASK-0895）：中密度同一塊 12 × 12 地塊上蓋四層 —— M-A 的臨街屋加一層、屋身深 0.6 m；後院縮成 4 m。"""
+    M = Model((120, 120, 172))
+    M.shutter = SH_GREY
+    X0, Y0, X1, Y1 = 3, 12, 117, 78
+    R = (X0, Y0, X1, Y1)
+    zt = storeys(M, R, 4, CREAM, salt=81)
+    P = FR_PARTS
+    put_part(M, P, 'cartdoor', '前-車馬門', 'front', R, 22, PL, T)
+    put_part(M, P, 'door', '前-門', 'front', R, 60, PL, T)
+    put_part(M, P, 'cartdoor', '前-店面', 'front', R, 98, PL, T)
+    front_steps(M, 60, Y0)
+    M.anchor('door', 60, Y0 - 1, PL)
+    for i, cx in enumerate((18, 46, 74, 102)):
+        put_part(M, P, 'frenchdoor', '二樓-落地窗%d' % (i + 1), 'front', R, cx, FLOORS[1][0], T)
+        for f in (2, 3):
+            put_part(M, P, 'window', '%d樓-窗%d' % (f + 1, i + 1), 'front', R, cx, FLOORS[f][0] + 8, T)
+    iron_balcony(M, 5, 115, 3, Y0, FLOORS[1][0], brackets=(5, 42, 75, 113))
+    put_part(M, P, 'cartdoor', '後-車馬門', 'back', R, 22, PL, T)
+    put_part(M, P, 'door', '後-門', 'back', R, 60, PL, T)
+    put_part(M, P, 'window', '後-一樓窗', 'back', R, 95, PL + 9, T)
+    for f in (1, 2, 3):
+        for i, cx in enumerate((25, 60, 95)):
+            put_part(M, P, 'window', '後-%d樓窗%d' % (f + 1, i + 1), 'back', R, cx, FLOORS[f][0] + 8, T)
+    F = roof_field([{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': zt, 'p': 0.85, 'over': (3, 3, 8, 5)}])
+    top = build_roof(M, F, salt=81)
+    for i, cx in enumerate((32, 60, 88)):
+        free_part(M, P, 'dormer', '老虎窗%d' % (i + 1), (cx - 7, Y0 + 3, top[(cx, Y0 + 4)] - 1))
+    free_part(M, P, 'chimney', '煙囪1', (8, Y1 - 22, zt - 7))
+    free_part(M, P, 'chimney', '煙囪2', (104, Y1 - 22, zt - 7))
+    FRH.yard(M, X0, Y1, X1, 120, 3, 22, CREAM, gate=(96, 13, 19))   # 後院 4 m：院牆＋後門、水井（廚房放不下）
+    well(M, 60, 104)
+    M.models += [model(LANTERN, '燈籠-門', (48.5, Y0, 24.5)), model(BARREL, '酒桶-院1', (84, 100, 0)), model(BARREL, '酒桶-院2', (84, 107, 0))]
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'house-h-b', 'variant': 'h-b', 'level': 3, 'live': 13,
+            'title': '高密度住宅 H-B（原地升級：中密度同一塊 12 × 12 蓋四層 —— 一樓車馬門、正門、店面；二樓落地窗＋通長鐵陽台；三四樓；老虎窗；後院院牆＋水井；米白牆灰百葉）',
+            'use': 'house', 'lot': (12, 12), 'M': M, 'layers': {'body': '牆身', 'gallery': '陽台', 'roof': '屋頂'}}
+
+
+ALL = [house_m_a, house_h_a, house_m_b, house_h_b]
 # 配色變化（設計決定）：M-A 換土黃牆藍百葉、H-A 換藍牆綠百葉（H-A 的藍百葉是部件關聯換的 49:42 ⇒ 外層看到的是 42）
 VARIANTS = [('house-m-a2', 'house-m-a', {SALMON: OCHRE, SH_GREEN: SH_BLUE}, '中密度住宅 M-A2（M-A 的配色變化：土黃牆、藍百葉；替換色，不另存格子）'),
-            ('house-h-a2', 'house-h-a', {CREAM: BLUE, SH_BLUE: SH_GREEN}, '高密度住宅 H-A2（H-A 的配色變化：藍牆、綠百葉；替換色，不另存格子）')]
+            ('house-h-a2', 'house-h-a', {CREAM: BLUE, SH_BLUE: SH_GREEN}, '高密度住宅 H-A2（H-A 的配色變化：藍牆、綠百葉；替換色，不另存格子）'),
+            ('house-m-b2', 'house-m-b', {OCHRE: SALMON, SH_GREEN: SH_RED}, '中密度住宅 M-B2（M-B 的配色變化：鮭粉牆、紅百葉；替換色，不另存格子）'),
+            ('house-h-b2', 'house-h-b', {CREAM: OCHRE, SH_GREY: SH_GREEN}, '高密度住宅 H-B2（H-B 的配色變化：土黃牆、綠百葉；替換色，不另存格子）')]
