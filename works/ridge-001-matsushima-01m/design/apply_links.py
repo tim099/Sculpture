@@ -216,7 +216,7 @@ for nm, g in GUNS.items():
     model(dw, nm, src, g['at'], pv, [0, 0, g['rz']], sc, meta)
 BR = M['bridge']
 model(W + '-bridge', '舵輪', 'basecamp-frigate-constitution-01m-wheel', [BR['x0'] + 13.5, YC + 0.5, BR['z']], [50, 52, 0], [0, 0, 0], 0.2,
-      {'kind': 'wheel', 'spin': 'rudder', 'spin_k': 540, 'spin_lag': 0.6})
+      {'kind': 'wheel', 'spin': 'rudder', 'spin_k': 540, 'spin_lag': 0.6, 'rests_on': 'wheel_stand-1'})   # 坐在舵輪座（wheel_stand-1，draft_wheel_stand.py 掛的）上 ⇒ 座被打飛，輪一起飛（Blockside 10_ship.js restOn，2026-10-24）
 model(W + '-bridge', '羅經櫃', 'basecamp-ember-01m-binnacle', [BR['x0'] + 23.5, YC + 0.5, BR['z']], [12, 23, 0], [0, 0, 0], 0.2, {'kind': 'binnacle'})
 BOATM = {'basecamp-ember-01m-boat': {'kind': 'boat', 'boat': 'cutter', 'length_m': 9}, 'basecamp-frigate-constitution-01m-whaleboat': {'kind': 'boat', 'boat': 'whaleboat', 'length_m': 8.5}}
 for nm, g in GUNS.items():
