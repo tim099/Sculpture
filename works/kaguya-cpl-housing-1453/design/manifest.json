@@ -13,6 +13,123 @@
      ],
      "meta": {},
      "mirror": "",
+     "name": "house-a",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      160,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-a2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a2",
+     "turn": 0
+    },
+    {
+     "at": [
+      280,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-b",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b",
+     "turn": 0
+    },
+    {
+     "at": [
+      400,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-b2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b2",
+     "turn": 0
+    },
+    {
+     "at": [
+      520,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-c",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c",
+     "turn": 0
+    },
+    {
+     "at": [
+      640,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-c2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c2",
+     "turn": 0
+    },
+    {
+     "at": [
+      760,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-a-xs",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a-xs",
+     "turn": 0
+    },
+    {
+     "at": [
+      880,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-b-xs",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b-xs",
+     "turn": 0
+    },
+    {
+     "at": [
+      1000,
+      40,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
+     "name": "house-c-xs",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-xs",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      260,
+      0
+     ],
+     "meta": {},
+     "mirror": "",
      "name": "house-m-b",
      "recolor": {},
      "source": "kaguya-cpl-housing-1453-roman-house-m-b",
@@ -21,7 +138,7 @@
     {
      "at": [
       160,
-      40,
+      260,
       0
      ],
      "meta": {},
@@ -34,7 +151,7 @@
     {
      "at": [
       320,
-      40,
+      260,
       0
      ],
      "meta": {},
@@ -47,7 +164,7 @@
     {
      "at": [
       480,
-      40,
+      260,
       0
      ],
      "meta": {},
@@ -60,7 +177,7 @@
     {
      "at": [
       40,
-      260,
+      480,
       0
      ],
      "meta": {},
@@ -73,7 +190,7 @@
     {
      "at": [
       160,
-      260,
+      480,
       0
      ],
      "meta": {},
@@ -86,7 +203,7 @@
     {
      "at": [
       320,
-      260,
+      480,
       0
      ],
      "meta": {},
@@ -99,7 +216,7 @@
     {
      "at": [
       480,
-      260,
+      480,
       0
      ],
      "meta": {},
@@ -115,12 +232,12 @@
    "order": 4,
    "root": true,
    "size": [
-    680,
-    480,
+    1120,
+    700,
     150
    ],
    "tags": "town",
-   "title": "君士坦丁堡 1453 的中、高密度住宅（TASK-0893；0.1 m）—— 樣板街：上排照升級的路 中 2×3（原地升級）｜中 3×3｜高 3×3（原地升級）｜高 4×4；下排是配色變化"
+   "title": "君士坦丁堡 1453 的中、高密度住宅（TASK-0893；0.1 m）—— 樣板街：第一排低密度三型＋配色、小版；第二排照升級的路 中 2×3（原地升級）｜中 3×3｜高 3×3（原地升級）｜高 4×4；第三排是配色變化"
   },
   "kaguya-cpl-housing-1453-part-door": {
    "anchors": {},
@@ -177,6 +294,2922 @@
    ],
    "tags": "sub,part",
    "title": "雙拱窗（bifora：兩個半圓拱、中間大理石小柱與墊石、磚石拱券；下半截木窗板，部件，0.1 m）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-a.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,12",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      59,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      6,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "二樓-窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      6,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "二樓-窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      14,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      54,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 A（地塊 8 × 12：一樓方石夾磚、二樓木構夾灰泥挑出街面、緩坡四坡頂、後院井欄、陶甕；白灰泥、牛血紅門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-a-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-a-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-s": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-a-s.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,10",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "a-s"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a-s-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a-s-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      59,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      6,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "二樓-窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      6,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "二樓-窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      14,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      54,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 A 淺版（地塊 8 × 10：一樓方石夾磚、二樓木構夾灰泥挑出街面、緩坡四坡頂、院子只剩院牆與一只陶甕；白灰泥、牛血紅門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-s-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-a-s-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 A 淺版｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-s-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-a-s-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 A 淺版｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-xs": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-a-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,8",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "a-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-a-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      59,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      6,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "二樓-窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      6,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "二樓-窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      14,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      54,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 A 小版（地塊 8 × 8：一樓方石夾磚、二樓木構夾灰泥挑出街面、緩坡四坡頂；沒有院子；白灰泥、牛血紅門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-a-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-a-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 A 小版｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a2": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-a2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,12",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "a2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "100": 42,
+      "255": 213
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-a",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 A2（A 的配色變化：土黃灰泥、藍門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a2-s": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-a2-s.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,10",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "a2-s"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "100": 42,
+      "255": 213
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-a-s",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 A2 淺版（A 淺版 的配色變化：土黃灰泥、藍門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-a2-xs": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-a2-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,8",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "a2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "100": 42,
+      "255": 213
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-a-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 A2 小版（A 小版 的配色變化：土黃灰泥、藍門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b": {
+   "anchors": {
+    "door": [
+     58,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-b.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,12",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "b"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      46.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 B（地塊 8 × 12：店屋：一樓拱券店面＋門、二樓木構夾灰泥、山牆朝街的兩坡頂、後院葡萄架、陶甕；土黃灰泥、綠門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-b-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-b-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-s": {
+   "anchors": {
+    "door": [
+     58,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-b-s.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,10",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "b-s"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b-s-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b-s-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      46.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 B 淺版（地塊 8 × 10：店屋：一樓拱券店面＋門、二樓木構夾灰泥、山牆朝街的兩坡頂、院子只剩院牆與陶甕；土黃灰泥、綠門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-s-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-b-s-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 B 淺版｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-s-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-b-s-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 B 淺版｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-xs": {
+   "anchors": {
+    "door": [
+     58,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-b-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,8",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "b-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-b-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {
+      "100": 49
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      46.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 B 小版（地塊 8 × 8：店屋：一樓拱券店面＋門、二樓木構夾灰泥、山牆朝街的兩坡頂；沒有院子；土黃灰泥、綠門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-b-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 B 小版｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-b-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 B 小版｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b2": {
+   "anchors": {
+    "door": [
+     58,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-b2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,12",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "b2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "213": 255,
+      "49": 100
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-b",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 B2（B 的配色變化：白灰泥、牛血紅門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b2-s": {
+   "anchors": {
+    "door": [
+     58,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-b2-s.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,10",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "b2-s"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "213": 255,
+      "49": 100
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-b-s",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 B2 淺版（B 淺版 的配色變化：白灰泥、牛血紅門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-b2-xs": {
+   "anchors": {
+    "door": [
+     58,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-b2-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,8",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "b2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "213": 255,
+      "49": 100
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-b-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 B2 小版（B 小版 的配色變化：白灰泥、牛血紅門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-c.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,12",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "c"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.45,
+      "build1": 0.8,
+      "part": "gallery",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "陽台",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      59,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      38
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "二樓-陽台門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 C（地塊 8 × 12：一樓方石夾磚、二樓抹灰的磚石牆、通長木陽台＋雙拱窗、四坡頂、後院灶間、井欄；鮭粉灰泥、藍門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜陽台"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-s": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-c-s.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,10",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "c-s"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-s-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.45,
+      "build1": 0.8,
+      "part": "gallery",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "陽台",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-s-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-s-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      59,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      38
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "二樓-陽台門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 C 淺版（地塊 8 × 10：一樓方石夾磚、二樓抹灰的磚石牆、通長木陽台＋雙拱窗、四坡頂、院子只剩院牆與井欄；鮭粉灰泥、藍門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-s-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-s-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C 淺版｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-s-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-s-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C 淺版｜陽台"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-s-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-s-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C 淺版｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-xs": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-c-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,8",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "c-xs"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.45,
+      "build1": 0.8,
+      "part": "gallery",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "陽台",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-xs-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kaguya-cpl-housing-1453-roman-house-c-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      59,
+      11,
+      12
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      38
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "二樓-陽台門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      44
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window2"
+     },
+     "mirror": "",
+     "name": "二樓-雙拱窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window2",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      70,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗1",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      70,
+      46
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-二樓窗2",
+     "recolor": {
+      "100": 42
+     },
+     "source": "kaguya-cpl-housing-1453-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 C 小版（地塊 8 × 8：一樓方石夾磚、二樓抹灰的磚石牆、通長木陽台＋雙拱窗、四坡頂；沒有院子；鮭粉灰泥、藍門板）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-xs-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜牆身"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-xs-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-xs-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜陽台"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-cpl-housing-1453-roman-house-c-xs-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "sub",
+   "title": "住宅 C 小版｜屋頂"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c2": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-c2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,12",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "c2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "246": 255,
+      "42": 49
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-c",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    120,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 C2（C 的配色變化：白灰泥、綠門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c2-s": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-c2-s.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,10",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "c2-s"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "246": 255,
+      "42": 49
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-c-s",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    100,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 C2 淺版（C 淺版 的配色變化：白灰泥、綠門板；替換色，不另存格子）"
+  },
+  "kaguya-cpl-housing-1453-roman-house-c2-xs": {
+   "anchors": {
+    "door": [
+     40,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kaguya-cpl-housing-1453-roman-house-c2-xs.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 1,
+      "live": 6,
+      "lot": "8,8",
+      "style": "roman",
+      "sweep": "z",
+      "use": "house",
+      "variant": "c2-xs"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "246": 255,
+      "42": 49
+     },
+     "source": "kaguya-cpl-housing-1453-roman-house-c-xs",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    90
+   ],
+   "tags": "building,roman",
+   "title": "住宅 C2 小版（C 小版 的配色變化：白灰泥、綠門板；替換色，不另存格子）"
   },
   "kaguya-cpl-housing-1453-roman-house-h-a": {
    "anchors": {

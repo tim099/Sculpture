@@ -11,6 +11,7 @@ from scipy import ndimage
 from common import *
 import bzparts
 import roman_dense
+import roman_low
 
 ROOT = roman_dense.ROOT
 STYLE = 'roman'
@@ -144,7 +145,7 @@ def main():
         sheet(P['cells'], P['dims'], os.path.join(D, 'sheets', 'part-' + pid + '.png'), P['title'], px=8)
 
     # ── 房子 ──
-    for fn in roman_dense.ALL:
+    for fn in roman_low.ALL + roman_dense.ALL:
         B = fn()
         key = B['key']
         if want and key not in want:
@@ -193,7 +194,7 @@ def main():
             print('   ', w, lv)
 
     # ── 配色變化：一件組裝件、一條關聯指到原型＋替換色 ⇒ 不另存格子 ──
-    for key, base, rc, title in roman_dense.VARIANTS:
+    for key, base, rc, title in roman_low.VARIANTS + roman_dense.VARIANTS:
         if want and key not in want and 'variants' not in want:
             continue
         bw, pw = wid(STYLE, base), wid(STYLE, key)
@@ -212,7 +213,7 @@ def main():
         sheet(comp, tuple(B0['size']), os.path.join(D, 'sheets', STYLE + '-' + key + '.png'), STYLE + '｜' + title, px=3)
         print(pw, json.dumps(ver[pw], ensure_ascii=False))
 
-    # ── 任務作品（樣板街）：上排照升級的路 中 2×3｜中 3×3｜高 3×3｜高 4×4，下排同一順序的配色變化 ──
+    # ── 任務作品（樣板街）：第一排低密度、第二排照升級的路 中 2×3｜中 3×3｜高 3×3｜高 4×4，第三排配色變化 ──
     if not want or 'street' in want:
         links, comp = [], {}
 
@@ -222,7 +223,8 @@ def main():
                 comp.setdefault((k[0] + at[0], k[1] + at[1], k[2] + at[2]), c)
             return size
         y = 40
-        for row in (('house-m-b', 'house-m-a', 'house-h-b', 'house-h-a'), ('house-m-b2', 'house-m-a2', 'house-h-b2', 'house-h-a2')):
+        for row in (('house-a', 'house-a2', 'house-b', 'house-b2', 'house-c', 'house-c2', 'house-a-xs', 'house-b-xs', 'house-c-xs'),
+                    ('house-m-b', 'house-m-a', 'house-h-b', 'house-h-a'), ('house-m-b2', 'house-m-a2', 'house-h-b2', 'house-h-a2')):
             x = 40
             for key in row:
                 w = wid(STYLE, key)
@@ -233,11 +235,11 @@ def main():
         Yb = y
         Zb = max(max(k[2] for k in comp) + 1, max(man['works'][l['source']]['size'][2] for l in links))   # 關聯要整件放得進框（引擎擋）
         dump(os.path.join(D, 'masks', ROOT + '.composite.txt'), comp)
-        man['works'][ROOT] = {'title': '君士坦丁堡 1453 的中、高密度住宅（TASK-0893；0.1 m）—— 樣板街：上排照升級的路 中 2×3（原地升級）｜中 3×3｜高 3×3（原地升級）｜高 4×4；下排是配色變化',
+        man['works'][ROOT] = {'title': '君士坦丁堡 1453 的中、高密度住宅（TASK-0893；0.1 m）—— 樣板街：第一排低密度三型＋配色、小版；第二排照升級的路 中 2×3（原地升級）｜中 3×3｜高 3×3（原地升級）｜高 4×4；第三排是配色變化',
                               'size': [X, Yb, Zb], 'tags': 'town', 'mask': None, 'expect': ROOT + '.composite.txt', 'anchors': {}, 'links': links,
                               'models': [], 'order': 4, 'root': True}
         ver[ROOT] = {'size': [X, Yb, Zb], 'composite_voxels': len(comp), 'links': len(links)}
-        sheet(comp, (X, Yb, Zb), os.path.join(D, 'sheets', 'street.png'), '樣板街（roman）：中 2×3｜中 3×3｜高 3×3｜高 4×4；下排配色變化｜%d 格' % len(comp), px=1)
+        sheet(comp, (X, Yb, Zb), os.path.join(D, 'sheets', 'street.png'), '樣板街（roman）：低密度三型＋配色、小版｜中 2×3｜中 3×3｜高 3×3｜高 4×4｜配色變化｜%d 格' % len(comp), px=1)
         print(ROOT, json.dumps(ver[ROOT], ensure_ascii=False))
 
     json.dump(man, open(man_p, 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1, sort_keys=True)

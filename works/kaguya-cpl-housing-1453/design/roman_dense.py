@@ -29,7 +29,13 @@ def put(M, pid, name, face, rect, center, z):
     else:
         u = Y1 - W - center + W // 2
     place(M, P, name, face, rect, u, z, T)
-    M.links[-1]['part'] = P['work']
+    L = M.links[-1]
+    L['part'] = P['work']
+    sh = getattr(M, 'shut', SHUT)                                       # 這一棟的門板色（低密度三型各一色；中高密度沒設 ⇒ 照部件原色）
+    if sh != SHUT:
+        L['recolor'] = dict(L.get('recolor') or {})
+        L['recolor'][SHUT] = sh
+        L['cells'] = {k: (sh if c == SHUT else c) for k, c in L['cells'].items()}
 
 
 def slab(M, R, z0, z1, t=T):
@@ -75,7 +81,7 @@ def back_yard(M, X0, X1, y0, y1, gate=None, salt=0):
     if gate:
         cx, w = gate
         M.clear(cx - w // 2, y1 - T, 0, cx + w - w // 2, y1, 23)
-        M.box('body', cx - w // 2, y1 - 2, 0, cx + w - w // 2, y1 - 1, 19, SHUT)
+        M.box('body', cx - w // 2, y1 - 2, 0, cx + w - w // 2, y1 - 1, 19, getattr(M, 'shut', SHUT))
         for x in (cx - w // 2, cx + w - w // 2 - 1):
             M.box('body', x, y1 - 2, 0, x + 1, y1 - 1, 19, TIMBER)
 
