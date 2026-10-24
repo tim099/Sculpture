@@ -33,6 +33,19 @@ def crate(M, name, x, y, z=0):
     M.models.append({'name': name, 'source': 'summit-rocher-01m-crate', 'at': [x, y, z], 'pivot': [6, 6, 0], 'meta': {}})
 
 
+def goods(M, tag, items):
+    """碼頭擺設（Tim 2026-10-25「碼頭擺設目前想法是做到碼頭相關建築內 而不是直接擺上去」）：[(種類, x, y, z)]，種類 'c' 貨箱、'b' 木桶。"""
+    for i, (k, x, y, z) in enumerate(items):
+        (crate if k == 'c' else barrel)(M, '%s-%s-%d' % (tag, '貨箱' if k == 'c' else '桶', i + 1), x, y, z)
+
+
+def sacks(M, x0, y0, n=3, layer='body'):
+    """一堆貨袋（每袋 0.7 × 0.6 × 0.6 m；第三袋疊在前兩袋上）。"""
+    for i in range(n):
+        x, y, z = (x0 + 8 * (i % 2), y0, 0) if i < 2 else (x0 + 4, y0, 6)
+        M.box(layer, x, y, z, x + 7, y + 6, z + 6, SACK)
+
+
 def anchor_prop(M, x0, y0, layer='body'):
     """靠牆躺的鐵錨（長 2.4 m）：錨桿沿 y 躺在地上、錨冠兩爪往上翹、頂上一根木橫桿（stock）。"""
     M.box(layer, x0, y0, 0, x0 + 2, y0 + 24, 2, IRON)                  # 錨桿
@@ -77,10 +90,11 @@ def banded_walls(M, rect, z0, z1, t, fn, layer='body'):
 def chandlery():
     """船具行兼帆布閣樓（chandlery）：一樓毛石的店面（雙扇門、兩扇窗），二樓木板牆、兩側一排窗 —— 縫帆的閣樓要光；
     山牆朝碼頭、山尖下伸出一根吊貨梁（滑車、繩垂到門口的貨箱）；右邊一條窄院子堆桶、靠牆躺一支錨、立著一捆槳；後院一堆圓材、兩盤繩。
+    - 前院（2026-10-25 碼頭擺設做進建築裡）：店面往後退到 y 2.2 m ⇒ 臨碼頭空出一條院子：左邊疊貨箱、門旁一盤繩、右邊兩個桶。
     - 照什麼：海商王的港口都有賣船具的、Anno 的倉儲；17 世紀加勒比海的船具行樣子〔沒查到〕⇒ 設計。吊貨梁照阿姆斯特丹倉庫山尖的 hijsbalk（作法通用）。"""
     X, Y, Z = 100, 140, 96
     M = Model((X, Y, Z))
-    R = (4, 8, 80, 124)
+    R = (4, 22, 80, 124)
     rubble(M, R, 0, 34, 4, base=RUBBLE, mortar=MORTAR, dark=RUBBLE_D, salt=8881)
     M.box('body', R[0], R[1], 34, R[2], R[3], 36, FLOOR)                # 二樓地板
     board_walls(M, R, 36, 62, 2)
@@ -107,7 +121,8 @@ def chandlery():
     rope_line(M, (42.5, 1.5, 72), (42.5, 1.5, 74))                       # 滑車吊在梁頭
     tackle_block(M, 42, 1, 66)
     rope_line(M, (42.5, 1.5, 66), (42.5, 1.5, 44))                       # 繩垂到樓上貨門那一層
-    crate(M, '貨箱', 14, 6, 0)
+    goods(M, '前院', [('c', 12, 7, 0), ('c', 19, 7, 0), ('c', 12, 14, 0), ('c', 15, 10, 6), ('b', 68, 12, 0), ('b', 78, 12, 0)])
+    rope_coil(M, 27, 13, r=4)
     # 右邊的窄院子：桶、錨、一捆槳
     for i, (x, y, z) in enumerate(((90, 14, 0), (90, 28, 0), (90, 42, 0), (90, 14, 12))):
         barrel(M, '桶-%d' % (i + 1), x, y, z)
@@ -123,7 +138,7 @@ def chandlery():
     lantern(M, '燈籠-門', (29, R[1], 24))
     M.anchor('door', 42, 3, 0)
     M.anchor('lot-0', 0, 0, 0)
-    return {'key': 'chandlery', 'title': '船具行（共用：一樓毛石店面、二樓木板牆的帆布閣樓、兩側一排窗；山尖的吊貨梁與滑車；桶、錨、一捆槳、圓材堆與繩盤）',
+    return {'key': 'chandlery', 'title': '船具行（共用：一樓毛石店面、二樓木板牆的帆布閣樓、兩側一排窗；山尖的吊貨梁與滑車；臨碼頭的前院堆貨箱、桶、繩盤；錨、一捆槳、圓材堆）',
             'use': 'chandlery', 'lot': (10, 14), 'M': M, 'style': 'common', 'layers': {'body': '牆、梁與擺設', 'roof': '屋頂'}}
 
 
@@ -131,10 +146,11 @@ def chandlery():
 def harbour_office():
     """港務所（harbour-office）：毛石小屋（一門兩窗、木瓦四坡頂），右邊一根 11 m 的旗桿（有橫桁，掛港旗、打信號）；門口告示板、長凳、燈籠；
     屋後一個水桶。
+    - 前院（2026-10-25 碼頭擺設做進建築裡）：小屋往後退 1 m ⇒ 門口右邊兩個貨箱、旗桿前一個桶；水桶挪到旗桿後面。
     - 照什麼：Anno 1800 的 Harbourmaster's Office（港口的管理處）；17 世紀加勒比海港口有沒有港務官的屋子〔沒查到〕⇒ 設計；旗桿＝港口打信號（設計）。"""
     X, Y, Z = 80, 80, 116
     M = Model((X, Y, Z))
-    R = (6, 12, 58, 64)
+    R = (6, 22, 58, 70)
     rubble(M, R, 0, 30, 4, base=RUBBLE, mortar=MORTAR, dark=RUBBLE_D, salt=8883)
     shingle_roof(M, [{'x0': R[0], 'y0': R[1], 'x1': R[2], 'y1': R[3], 'ze': 30, 'p': 0.55, 'over': (3, 3, 3, 3)}], salt=8884)
     put_part(M, 'door-plank', '門', 'front', R, 24, 0, 4)
@@ -155,7 +171,8 @@ def harbour_office():
     for x in range(34, 41, 2):                                          # 板上釘的告示
         M.box('body', x, 3, 14 + (x % 3), x + 1, 4, 18 + (x % 3), CLOTH)
     bench(M, 8, 20, 4, 8)
-    barrel(M, '水桶', 40, 72, 0)
+    barrel(M, '水桶', 74, 56, 0)
+    goods(M, '前院', [('c', 49, 10, 0), ('c', 56, 10, 0), ('b', 66, 13, 0)])
     lantern(M, '燈籠-門', (16, R[1], 22))
     M.anchor('door', 24, 4, 0)
     M.anchor('lot-0', 0, 0, 0)
@@ -167,11 +184,12 @@ def harbour_office():
 def naval_store():
     """海軍倉庫（naval-store，英國那一套）：兩層磚造的長倉庫、紅陶瓦四坡頂；正面一扇大貨門、樓上的吊貨門與伸出的吊貨梁；兩側一排鐵條氣窗；
     門前兩堆砲彈、一支錨；後院一堆桅杆圓材。
+    - 前院（2026-10-25 碼頭擺設做進建築裡）：倉庫往後退 1.4 m ⇒ 門前的院子：砲彈、絞盤之外，貨箱、桶、一盤纜繩、貨袋。
     - 照什麼：皇家海軍 1675 年起派駐 Port Royal、在前灘租了一間倉庫（Wikipedia Port Royal）〔讀過〕；皇家港的房子磚造、兩到四層（ame english.py 的史料）；
       倉庫本身的樣子〔沒查到〕⇒ 照英國本土的海軍倉庫（磚、規整的窗）設計。"""
     X, Y, Z = 140, 220, 104
     M = Model((X, Y, Z))
-    R = (6, 12, 134, 198)
+    R = (6, 26, 134, 198)
     english.brick_walls(M, R, 0, 64, 4, salt=8885)
     M.box('body', R[0] + 4, R[1] + 4, 32, R[2] - 4, R[3] - 4, 34, FLOOR)   # 二樓樓板
     english.tile_roof(M, [{'x0': R[0], 'y0': R[1], 'x1': R[2], 'y1': R[3], 'ze': 64, 'p': 0.5, 'over': (3, 3, 3, 3)}], salt=8886)
@@ -192,11 +210,14 @@ def naval_store():
     shot_pile(M, 20, 2, 4)
     shot_pile(M, 104, 2, 4)
     capstan(M, 40, 6, bars=False)
+    goods(M, '前院', [('c', 92, 8, 0), ('c', 99, 8, 0), ('c', 95, 15, 0), ('c', 95, 9, 6), ('b', 118, 12, 0), ('b', 128, 12, 0), ('b', 123, 21, 0)])
+    rope_coil(M, 50, 19, r=5)
+    sacks(M, 8, 15)
     log_pile(M, 10, 130, 200, rows=3, d=4)                              # 後院的桅杆圓材
     lantern(M, '燈籠-門', (90, R[1], 26))
     M.anchor('door', 70, 4, 0)
     M.anchor('lot-0', 0, 0, 0)
-    return {'key': 'naval-store', 'title': '海軍倉庫（英國：兩層磚造、紅陶瓦四坡頂；大貨門、樓上吊貨門與吊貨梁、兩側鐵條氣窗；砲彈堆、錨、桅杆圓材）',
+    return {'key': 'naval-store', 'title': '海軍倉庫（英國：兩層磚造、紅陶瓦四坡頂；大貨門、樓上吊貨門與吊貨梁、兩側鐵條氣窗；門前院子的砲彈堆、絞盤、貨箱、桶、纜繩、貨袋；桅杆圓材）',
             'use': 'naval-store', 'lot': (14, 22), 'M': M, 'style': 'en', 'layers': {'body': '牆、門窗與擺設', 'roof': '屋頂'}}
 
 
@@ -254,6 +275,7 @@ def turtle_crawl():
 def loggia():
     """熱那亞商人廊廳（loggia）：石台上一座三面開敞的拱廊（正面五個拱、兩側各兩個），後牆實的；柱與牆照熱那亞的作法黑白石帶相間；
     紅陶瓦四坡頂；廊裡一張長桌（帳本）、兩條長凳、一座大橫桿秤、幾袋貨；後牆正中一面聖喬治紅十字的盾（熱那亞的紋章）。
+    - 碼頭擺設（2026-10-25 做進建築裡）：開敞的廊就是貨物過秤、登帳的地方 ⇒ 拱廊裡靠正面一排貨箱、桶（從拱門看得到）。
     - 照什麼：Galata 1316 年碑文寫 podestà 重建了 loggia（商人廊廳）、過磅所（thebyzantinelegacy.com Galata slabs）〔讀過摘要〕；
       黑白石帶照 Genoa 的 San Lorenzo、Palazzo San Giorgio；loggia 在加拉塔港邊的位置、樣子〔沒查到〕⇒ 開敞拱廊是義大利商人 loggia 的通常樣子（設計）。"""
     X, Y, Z = 160, 100, 70
@@ -281,6 +303,7 @@ def loggia():
     for i, (x, y) in enumerate(((120, 24), (128, 24), (124, 32))):
         for z in range(3, 9):
             M.box('body', x, y, z, x + 7, y + 6, z + 1, SACK)
+    goods(M, '廊裡', [('c', 100, 17, 3), ('c', 107, 17, 3), ('c', 103, 17, 9), ('b', 138, 17, 3), ('b', 147, 17, 3)])
     lantern(M, '燈籠-中拱', (76, R[1], 30))
     M.anchor('door', 80, 2, 2)
     M.anchor('lot-0', 0, 0, 0)
@@ -292,11 +315,12 @@ def loggia():
 def emporion():
     """港邊倉庫列（emporion，羅馬／拜占庭）：一長排兩層的倉庫 —— 牆是石灰岩方石夾紅磚帶（opus mixtum，同城牆那一套的作法）；
     一樓七個拱門的貨間（深色的木門關著、中間那間開著看得到貨）、二樓每間一扇小拱窗；紅陶瓦緩坡的兩坡頂；門前一排陶罐、貨袋與桶。
+    - 前院（2026-10-25 碼頭擺設做進建築裡）：整排往後退 1.2 m ⇒ 陶罐那一排後面幾間門口堆貨箱、桶、貨袋、一盤繩（開著那一間的門口留空）。
     - 照什麼：巴列奧略王朝的港區四周「許多倉庫」、Prosphorion 在 Sirkeci 挖到倉庫遺址（Wikipedia Neorion／Prosphorion Harbour）〔讀過摘要〕；
       一排貨間的形制照羅馬港口的 horrea（設計）；石磚相間照 kaguya-roman-1453 的牆。"""
     X, Y, Z = 300, 120, 84
     M = Model((X, Y, Z))
-    R = (4, 8, 296, 112)
+    R = (4, 20, 296, 112)
 
     def mixtum(x, y, z):
         k = z % 14
@@ -327,7 +351,7 @@ def emporion():
         for z in range(0, 6):
             M.box('body', cx3 - 7 + i * 5, R[1] + 8, z, cx3 - 3 + i * 5, R[1] + 13, z + 1, SACK)
     for i in range(18):                                                 # 門前一排陶罐（直徑 0.6 m、高 0.9 m、細頸）
-        cx, cy = 12 + i * 16, 3
+        cx, cy = 12 + i * 16, 5
         if R[0] + 21 + 3 * 41 - 12 < cx < R[0] + 21 + 3 * 41 + 12:
             continue
         for x in range(cx - 3, cx + 3):
@@ -335,10 +359,15 @@ def emporion():
                 if (x + 0.5 - cx) ** 2 + (y + 0.5 - cy) ** 2 <= 9:
                     M.box('body', x, y, 0, x + 1, y + 1, 7, AMPH)
         M.box('body', cx - 1, cy - 1, 7, cx + 1, cy + 1, 9, AMPH)
+    goods(M, '前院', [('b', 20, 15, 0), ('b', 30, 15, 0), ('c', 62, 15, 0), ('c', 69, 15, 0), ('c', 65, 15, 6),
+                      ('c', 185, 15, 0), ('c', 192, 15, 0), ('b', 226, 15, 0), ('b', 236, 15, 0), ('c', 266, 15, 0)])
+    sacks(M, 124, 12)
+    sacks(M, 162, 12)
+    rope_coil(M, 280, 15, r=4)
     lantern(M, '燈籠-中', (cx3 + 12, R[1], 22))
     M.anchor('door', cx3, 4, 0)
     M.anchor('lot-0', 0, 0, 0)
-    return {'key': 'emporion', 'title': '港邊倉庫列（羅馬：一長排兩層、石灰岩方石夾紅磚帶；一樓七個拱門的貨間、二樓小拱窗、紅陶瓦緩坡頂；門前一排陶罐、貨袋）',
+    return {'key': 'emporion', 'title': '港邊倉庫列（羅馬：一長排兩層、石灰岩方石夾紅磚帶；一樓七個拱門的貨間、二樓小拱窗、紅陶瓦緩坡頂；門前一排陶罐，幾間門口堆貨箱、桶、貨袋、繩盤）',
             'use': 'emporion', 'lot': (30, 12), 'M': M, 'style': 'roman', 'layers': {'body': '牆、門與擺設', 'roof': '屋頂'}}
 
 
