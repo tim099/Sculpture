@@ -167,7 +167,7 @@ xs_ = np.nonzero(hull[:, YC, zs])[0]
 ROPE_FOOT['stem-head'] = [int(xs_.max()), YC, zs]
 for k, v in ROPE_FOOT.items(): anchor(W, k, v)
 MS = M['mast']; mx = MS['x']
-anchor(W + '-mast', 'shroud-S', [mx, YC + 6, MS['top1'] - 8]); anchor(W + '-mast', 'shroud-P', [mx, YC - 6, MS['top1'] - 8])
+anchor(W + '-mast', 'shroud-S', [mx, YC + 6, MS['top1'] - 8]); anchor(W + '-mast', 'shroud-P', [mx, YC - 6, MS['top1'] - 8])   # 2026-10-24 起 apply_rigging.py 改到下桅樓外緣（門口）、繩梯也在那邊重拉 ⇒ 跑完這支要接著跑 apply_rigging.py
 anchor(W + '-mast', 'pole-head', [mx, YC, MS['pole_top'] - 4])
 gp = MS['gaff_peak']
 anchor(W + '-mast', 'gaff-peak', [int(math.floor(gp[0])) + 1, YC, int(math.floor(gp[2])) - 1])

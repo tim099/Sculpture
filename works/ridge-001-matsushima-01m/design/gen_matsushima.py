@@ -303,7 +303,7 @@ def build():
     # 下桅樓 → 上桅樓：桅後面一座幾乎直立的鐵梯（Tim 2026-10-24「繩梯好像無法連通桅杆上的部份」「桅杆上的送藥手取彈藥會浮空」）——
     #   兩層桅樓各自是一層甲板（kind=deck）⇒ 繩梯（船首樓 → 下桅樓）與這座梯子（下 → 上）兩頭都在甲板上，尋路才走；彈藥庫 hoist 寫這兩座 ⇒ 桅樓的砲有自己的取用點
     M_ = P['mast']
-    ladder('mast-top', M_['x'] - 12, YC, M_['top1'] + 1, M_['top2'] + 1, 1, run_k=0.08, hatch_decks=(M_['top2'],))
+    ladder('mast-top', M_['x'] - 10, YC, M_['top1'] + 1, M_['top2'] + 1, 1, run_k=0.08, hatch_decks=(M_['top2'],))   # 梯腳離下桅樓的矮牆 2 格以上（後門封掉之後，樓梯自檢：梯腳正前方擋住）
     # ── 煙囪（中線、圓；甲板以下的直煙道也在煙囪部件裡，下到煙箱頂）──
     F = P['funnel']; fx, fr, ftop = F['x'], F['r'], F['top']
     z_smoke = 48
@@ -398,8 +398,12 @@ def build():
     tube = (rr <= M['r'] + 0.5) & (Zg <= t1)
     tube |= (rr <= M['r_mid'] + 0.5) & (Zg > t1) & (Zg <= t2)
     pl = ((rr <= M['r1'] + 0.5) & (Zg == t1)) | ((rr <= M['r2'] + 0.5) & (Zg == t2))
-    door1 = (np.abs(Yg - YC) <= 3) & (Xg < mx) & (Zg > t1) & (Zg <= t1 + 12)
-    door2 = (np.abs(Yg - YC) <= 3) & (Xg < mx) & (Zg > t2) & (Zg <= t2 + 12)
+    # 下桅樓的門：兩舷各一扇，開在繩梯收上來的地方（側支索的頂端在桅樓外緣底下、方位 115°（偏後、避開 135° 那根撐柱與兩舷的 47 mm），apply_rigging.py TOP_DOOR_DEG）；
+    #   上桅樓不開門（從下桅樓那座鐵梯 mast-top 穿梯口上去）。Tim 2026-10-24「桅杆入口看起來開在這裡 不過沒有繩梯接到這裡」⇒ 以前那扇開在正後方、外面只有斜桁。
+    dd = math.radians(P['mast'].get('door_deg', 115))
+    door1 = ((np.hypot(Xg - (mx + M['r1'] * math.cos(dd)), Yg - (YC + M['r1'] * math.sin(dd))) <= 3.5) |
+             (np.hypot(Xg - (mx + M['r1'] * math.cos(dd)), Yg - (YC - M['r1'] * math.sin(dd))) <= 3.5)) & (Zg > t1) & (Zg <= t1 + 12)
+    door2 = np.zeros_like(door1)
     wallm = (rr > M['r1'] - 1.5) & (rr <= M['r1'] + 0.5) & (Zg > t1) & (Zg <= t1 + wh) & ~door1
     wallm |= (rr > M['r2'] - 1.5) & (rr <= M['r2'] + 0.5) & (Zg > t2) & (Zg <= t2 + wh) & ~door2
     bd0, bd1 = M['band']                                                  # 桅樓上半圈的裝甲帶（中間留一圈射擊縫：47 mm 從縫裡開）＋四根撐柱
