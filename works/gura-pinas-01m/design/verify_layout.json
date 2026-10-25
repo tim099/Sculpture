@@ -1,0 +1,170 @@
+{
+ "ports": {
+  "main": {
+   "n_per_side": 8,
+   "gap_min": 19,
+   "gap_max": 29,
+   "gaps": [
+    21,
+    19,
+    21,
+    23,
+    25,
+    29,
+    27
+   ],
+   "clear_above_min": 3.0,
+   "half_breadth_at_port_min": 33.5,
+   "x0s": [
+    199,
+    227,
+    253,
+    281,
+    311,
+    343,
+    379,
+    413
+   ]
+  },
+  "puente": {
+   "n_per_side": 3,
+   "gap_min": 20,
+   "gap_max": 34,
+   "gaps": [
+    34,
+    20
+   ],
+   "clear_above_min": 20.6,
+   "half_breadth_at_port_min": 28.1,
+   "x0s": [
+    447,
+    487,
+    513
+   ]
+  }
+ },
+ "ports_total": 24,
+ "decks": {
+  "orlop": {
+   "z": 24,
+   "span": [
+    215,
+    300
+   ]
+  },
+  "main": {
+   "z": 42,
+   "span": [
+    164,
+    531
+   ]
+  },
+  "puente": {
+   "z": 60,
+   "span": [
+    161,
+    536
+   ]
+  },
+  "alcazar": {
+   "z": 84,
+   "span": [
+    157,
+    300
+   ]
+  },
+  "toldilla": {
+   "z": 101,
+   "span": [
+    154,
+    207
+   ]
+  },
+  "castillo": {
+   "z": 82,
+   "span": [
+    436,
+    538
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "fore",
+   "x": 492,
+   "heel": 10.5,
+   "platform": 190.3,
+   "truck": 345.8,
+   "above_wl_m": 31.28,
+   "yards": {
+    "course": {
+     "z": 178.3,
+     "len_m": 17.14
+    },
+    "topsail": {
+     "z": 285.5,
+     "len_m": 9.06
+    },
+    "topgallant": {
+     "z": 335.6,
+     "len_m": 4.53
+    }
+   }
+  },
+  {
+   "key": "main",
+   "x": 333,
+   "heel": 9.0,
+   "platform": 215.7,
+   "truck": 408.0,
+   "above_wl_m": 37.5,
+   "yards": {
+    "course": {
+     "z": 203.7,
+     "len_m": 19.53
+    },
+    "topsail": {
+     "z": 334.1,
+     "len_m": 10.19
+    },
+    "topgallant": {
+     "z": 395.5,
+     "len_m": 6.23
+    }
+   }
+  },
+  {
+   "key": "mizzen",
+   "x": 235,
+   "heel": 45.0,
+   "platform": 202.2,
+   "truck": 247.5,
+   "above_wl_m": 21.45,
+   "yards": {
+    "lateen": {
+     "z": 189.4,
+     "len_m": 17.55
+    },
+    "topsail": {
+     "z": 239.3,
+     "len_m": 5.38
+    }
+   }
+  }
+ ],
+ "bowsprit": {
+  "x0": 500,
+  "z0": 63.0,
+  "x1": 647.1,
+  "z1": 147.9,
+  "angle": 30,
+  "len": 169.9,
+  "spritsail_len": 127.4
+ },
+ "guns_by_type": {
+  "8l": 8,
+  "12l": 10,
+  "4l": 4,
+  "6l": 2
+ }
+}
