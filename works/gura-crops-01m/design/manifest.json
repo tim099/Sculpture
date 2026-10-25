@@ -1,0 +1,422 @@
+{
+ "root": "gura-crops-01m",
+ "works": {
+  "gura-crops-01m-farm-hemp": {
+   "anchors": {
+    "door": [
+     26,
+     8,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     12,
+     28,
+     43
+    ]
+   },
+   "expect": "gura-crops-01m-farm-hemp.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "recipes": "hemp",
+      "style": "common",
+      "use": "farm",
+      "variant": "f"
+     },
+     "mirror": "",
+     "name": "農舍、穀倉與院子",
+     "recolor": {},
+     "source": "meadow-farm-01m-farm-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "meadow-farm-01m-farm-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "work"
+     },
+     "mirror": "",
+     "name": "作業區",
+     "recolor": {},
+     "source": "gura-crops-01m-farm-hemp-work",
+     "turn": 0
+    },
+    {
+     "at": [
+      19,
+      9,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "農舍-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      36,
+      9,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "農舍-前窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      18,
+      44,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "農舍-後窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      7,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "穀倉-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      112,
+      25,
+      16
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "穀倉-氣窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      12,
+      9,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-農舍",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    70
+   ],
+   "tags": "building,common",
+   "title": "麻莊（農莊：浸麻池、立著曬的麻束、打麻的木砧、梳好的麻纖維）"
+  },
+  "gura-crops-01m-farm-hemp-work": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-crops-01m-farm-hemp-work.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "麻莊｜作業區"
+  },
+  "gura-crops-01m-plantation-sisal": {
+   "anchors": {
+    "door": [
+     42,
+     2,
+     2
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "gura-crops-01m-plantation-sisal.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "16,12",
+      "recipes": "sisal",
+      "style": "common",
+      "use": "plantation",
+      "variant": "g"
+     },
+     "mirror": "",
+     "name": "主屋、存貨棚與院子",
+     "recolor": {},
+     "source": "meadow-farm-01m-plantation-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "meadow-farm-01m-plantation-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "木廊",
+     "recolor": {},
+     "source": "meadow-farm-01m-plantation-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "work"
+     },
+     "mirror": "",
+     "name": "作業區",
+     "recolor": {},
+     "source": "gura-crops-01m-plantation-sisal-work",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      17,
+      5
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "主屋-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      17,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "主屋-前窗-18",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      56,
+      17,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "主屋-前窗-66",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      56,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "主屋-後窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      105,
+      13,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "存貨棚-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      150,
+      24,
+      10
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "存貨棚-側窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      26,
+      6,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-主屋",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    160,
+    120,
+    70
+   ],
+   "tags": "building,common",
+   "title": "龍舌蘭園（種植園：刮纖維的棚與長台、晾纖維的繩架、紮好的纖維捆、裝葉子的牛車）"
+  },
+  "gura-crops-01m-plantation-sisal-work": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-crops-01m-plantation-sisal-work.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "龍舌蘭園｜作業區"
+  }
+ }
+}
