@@ -2,12 +2,13 @@
 # 地塊照 Blocksail world/buildings.js：養雞場 henhouse 8 × 8 m、豬圈 pigsty 8 × 10 m、牧場 ranch 16 × 12 m；
 #   配方是穀飼（egg-barley、pork-barley、cattle-barley 吃大麥，基本的吃玉米；PRODUCTION §12.9 ⑥）⇒ 院子看得出飼料：穀袋、裝穀的槽、料箱。
 #   牧場的牧草地（annex pasture）之後才做 ⇒ 這一版只做主建築與圍欄院子，後緣的圍欄留一道門接牧草地。
-# 拆法：牆身 body（地、牆、圍欄、槽、牲畜、擺設）＋屋頂 roof；每一種一件成品、沒有配方變體（一款配兩條配方）。
+# 拆法：牆身 body（地、牆、圍欄、槽、擺設）＋屋頂 roof；每一種一件成品、沒有配方變體（一款配兩條配方）。
 # 工具同 meadow-farm-01m（⇐ apex-one-industry-01m ⇐ trailhead-harbour-01m ⇐ ame-carib-civic-01m ⇐ summit-carib-01m 的調色盤、Model、牆、屋頂、部件）。
 #   座標同 kit.py：x 臨路寬、y 進深（y 0 臨路）、z 往上；0.1 m／格；作品框 ＝ 地塊、⛔ 什麼都不伸出框。
 # 風格 common（毛石、木板、木瓦、茅草、木柵）。史料：這一批沒有上網查 —— 雞舍架高的棲木與產卵箱、半露天的豬圈（矮石牆圍的泥地＋後面的石砌豬舍）、
 #   牛欄的乾草架與料槽是歐洲鄉間的通法（設計），寫在作品 notes。
-# 牲畜是擺設（雕在牆身）：遊戲沒有動物 —— 先讓人看得出這塊地在養什麼。
+# 牲畜不雕（TASK-0933）：遊戲照固定點 pen-<物種>-<組><號> 放 2D 點陣圖的動物（Blocksail BUILDING_SPEC §5、tools/fauna.py）；
+#   一組 ＝ 一塊動物走得到的空地：兩點 ＝ 長方形的對角、三點以上 ＝ 照號碼連成的凸多邊形（點 ＝ 動物的中心能到的地方 ⇒ 離牆、槽要留半個身長）。
 import math
 from workshops2 import *                                               # noqa: F401,F403
 from industry import heap                                              # noqa: E402
@@ -17,9 +18,6 @@ from farm import ground, trough, rick, sack_row, well, cart, _Shift, HAY, HAY_D,
 BARLEY = 177                     # 大麥（淺黃褐；同乾草那一色）
 MUD = 108                        # 豬圈的泥（深褐）
 MANURE = 100                     # 糞堆（褐）
-HEN_W, HEN_B, COMB = 255, 140, 224   # 白雞、褐雞、雞冠（紅橙；⛔ 不用 160：那是百葉與門的換色角色）
-PIG, SNOUT = 242, 206            # 豬（粉）、鼻與耳（深一點的粉）
-COW, COW_W, HOOF, HORN = 140, 255, 100, 218   # 牛（黃褐）、白斑、蹄與尾、角
 
 
 # ─────────────────────────────── 共用的小件 ───────────────────────────────
@@ -55,92 +53,6 @@ def rail_fence(M, pts, h=13, step=12, gap=None):
                 M.box('body', x, y, 1, x + 2, y + 2, h + 1, FRAME)
             for z in (6, h - 1):
                 M.put('body', x, y, z, LOG)
-
-
-def hen(M, x, y, face, color):
-    """一隻雞（2 × 3、高 0.4 m）：face ＝ 頭朝哪（'x+'、'x-'、'y+'、'y-'）；雞冠一格紅橙、尾巴翹一格。"""
-    ax = face[0]
-    s = 1 if face[1] == '+' else -1
-    def p(u, v, z, c):                 # u ＝ 沿頭的方向（0 尾 … 2 頭）、v ＝ 橫（0、1）
-        if ax == 'x':
-            M.put('body', x + (u if s > 0 else 2 - u), y + v, z, c)
-        else:
-            M.put('body', x + v, y + (u if s > 0 else 2 - u), z, c)
-    for u in range(3):
-        for v in range(2):
-            p(u, v, 1, color)
-            p(u, v, 2, color)
-    p(2, 0, 3, color)                  # 頭
-    p(2, 0, 4, COMB)
-    p(0, 1, 3, color)                  # 尾巴
-
-
-def pig(M, x0, y0, face, color=PIG):
-    """一頭豬（寬 5、長 13、高 0.8 m）：face ＝ 'y+'／'y-'／'x+'／'x-'（鼻子朝哪）。"""
-    ax = face[0]
-    s = 1 if face[1] == '+' else -1
-    L = 13
-    def p(u, v, z, c):                 # u ＝ 沿身體（0 屁股 … 12 鼻）、v ＝ 橫（0..4）
-        uu = u if s > 0 else L - 1 - u
-        if ax == 'y':
-            M.put('body', x0 + v, y0 + uu, z, c)
-        else:
-            M.put('body', x0 + uu, y0 + v, z, c)
-    for (u, v) in ((1, 1), (1, 3), (8, 1), (8, 3)):          # 腿（⛔ v 0、4：身體那一側在 z 3 修圓了 ⇒ 腿接不上）
-        for z in (1, 2):
-            p(u, v, z, SNOUT)
-    for u in range(0, 10):                                   # 身體
-        for v in range(5):
-            for z in range(3, 8):
-                if (v in (0, 4) and z in (3, 7)) or (u == 0 and z == 7):
-                    continue                                 # 圓一點
-                p(u, v, z, color)
-    for u in range(10, 12):                                  # 頭
-        for v in range(1, 4):
-            for z in range(3, 7):
-                p(u, v, z, color)
-    for v in (1, 3):
-        p(11, v, 7, SNOUT)                                   # 耳
-    for v in range(1, 4):
-        for z in (4, 5):
-            p(12, v, z, SNOUT)                               # 鼻
-    p(0, 2, 7, SNOUT)                                        # 捲尾巴（屁股頂那一格修圓空著）
-
-
-def cow(M, x0, y0, face, patch=True):
-    """一頭牛（寬 7、長 23、高 1.6 m）：face ＝ 'y+'／'y-'／'x+'／'x-'（頭朝哪）；黃褐、背上一塊白斑、兩支角。"""
-    ax = face[0]
-    s = 1 if face[1] == '+' else -1
-    L = 23
-    def p(u, v, z, c):
-        uu = u if s > 0 else L - 1 - u
-        if ax == 'y':
-            M.put('body', x0 + v, y0 + uu, z, c)
-        else:
-            M.put('body', x0 + uu, y0 + v, z, c)
-    for (u, v) in ((2, 0), (2, 5), (15, 0), (15, 5)):       # 腿（2 × 2 的方柱、蹄深色）
-        for du in (0, 1):
-            for dv in (0, 1):
-                for z in range(1, 8):
-                    p(u + du, v + dv, z, HOOF if z == 1 else COW)
-    for u in range(1, 18):                                   # 身體
-        for v in range(7):
-            for z in range(8, 15):
-                if (v in (0, 6) and z in (8, 14)) or (u in (1, 17) and z in (8, 14)):
-                    continue
-                c = COW_W if patch and 6 <= u <= 11 and z >= 12 and 1 <= v <= 5 else COW
-                p(u, v, z, c)
-    for u in range(18, 22):                                  # 脖子與頭（低一點，在吃草的樣子）
-        for v in range(2, 5):
-            for z in range(9 - (u - 18), 15 - (u - 18)):
-                p(u, v, z, COW if u < 21 else COW_W)
-    p(22, 3, 7, HOOF)                                        # 鼻
-    p(22, 3, 8, HOOF)
-    for v in (1, 5):                                         # 角
-        p(19, v, 13, HORN)
-        p(19, v, 12, COW)
-    for z in range(9, 14):                                   # 尾巴
-        p(0, 3, z, HOOF)
 
 
 def grain_trough(M, x0, y0, n, w=4, z1=4, legs=False):
@@ -197,7 +109,7 @@ def post_lantern(M, name, x, y, h=20):
 # ─────────────────────────────── 養雞場 8 × 8 m ───────────────────────────────
 def henhouse():
     """養雞場：左後木板雞舍（3.4 × 3.2 m、木瓦單坡頂、木板門、側窗；右牆開雞洞接一道有橫條的斜板、後牆外一排產卵箱），
-    右邊木柵圍的雞場（料槽、水盤、棲木、十隻雞）；前院料箱、三袋穀、四處啄食的雞；正面木柵、中間是門。"""
+    右邊木柵圍的雞場（料槽、水盤、棲木）；前院料箱、三袋穀；正面木柵、中間是門。"""
     M = Model((80, 80, 45))
     ground(M, 1, 1, 79, 79, 9261, 'body')
     picket_fence(M, [(1, 1), (34, 1)])
@@ -227,7 +139,6 @@ def henhouse():
     for i, x in enumerate(range(R[0] + 4, R[0] + 28, 8)):                       # 產卵箱（後牆外，三格；斜蓋）
         M.box('body', x, R[3], 6, x + 7, R[3] + 4, 12, BOARD)
         M.box('body', x + 1, R[3], 7, x + 6, R[3] + 3, 11, HAY, True)
-        M.put('body', x + 3, R[3] + 1, 8, HEN_W if i % 2 == 0 else HEN_B, True)   # 蹲在窩裡的雞
         M.box('body', x, R[3] + 3, 12, x + 7, R[3] + 4, 13, BOARD_D)
     for x in (R[0] + 4, R[0] + 26):                                            # 產卵箱的腳
         M.box('body', x, R[3] + 2, 1, x + 1, R[3] + 3, 6, FRAME)
@@ -242,17 +153,11 @@ def henhouse():
     for x in (58, 72):                                                         # 棲木
         M.box('body', x, 62, 1, x + 2, 64, 11, FRAME)
     M.box('body', 58, 62, 10, 74, 64, 11, LOG)
-    for (x, y, f, c) in ((52, 24, 'y+', HEN_W), (57, 25, 'y+', HEN_B), (63, 24, 'y+', HEN_W), (68, 25, 'y+', HEN_W),
-                         (55, 34, 'y-', HEN_B), (61, 34, 'y-', HEN_W), (70, 50, 'x-', HEN_B), (48, 46, 'x+', HEN_W),
-                         (54, 70, 'y-', HEN_W), (66, 56, 'x+', HEN_B)):
-        hen(M, x, y, f, c)
     for (x, y) in ((53, 23), (60, 23), (66, 23), (58, 35)):                    # 撒在槽邊的穀
         M.put('body', x, y, 1, CORN)
-    # 前院：料箱、穀袋、兩隻在外面晃的雞
+    # 前院：料箱、穀袋
     feed_bin(M, 26, 28)
     sack_row(M, 8, 26, 3, layer='body')
-    hen(M, 12, 14, 'x+', HEN_B)
-    hen(M, 30, 18, 'y-', HEN_W)
     M.anchor('door', 16, 38, 1)
     M.anchor('lot-0', 0, 0, 0)
     M.anchor('work-a1', 60, 26, 1)                                             # 雞場：撒穀、加水、撿蛋
@@ -261,6 +166,9 @@ def henhouse():
     M.anchor('work-a2-to', 67, 47, 2)
     M.anchor('work-b1', 31, 36, 1)                                             # 前院：從料箱舀穀
     M.anchor('work-b1-to', 31, 31, 6)
+    for g, (x0, y0, x1, y1) in zip('abcde', ((44, 17, 75, 25), (44, 35, 75, 41), (52, 44, 61, 59), (44, 66, 75, 75), (5, 5, 24, 20))):
+        M.anchor('pen-chicken-%s1' % g, x0, y0, 1)                            # 雞走得到的地方：雞場槽前、槽與水盤之間、水盤旁、棲木後，前院
+        M.anchor('pen-chicken-%s2' % g, x1, y1, 1)
     return {'key': 'henhouse', 'title': '養雞場（共用：木板雞舍與產卵箱、木柵雞場、料槽與料箱）', 'use': 'henhouse', 'lot': (8, 8), 'M': M, 'style': 'common',
             'layers': {'body': '雞舍、雞場與擺設', 'roof': '屋頂'}}
 
@@ -268,7 +176,7 @@ def henhouse():
 # ─────────────────────────────── 豬圈 8 × 10 m ───────────────────────────────
 def pigsty():
     """豬圈：後面毛石的豬舍（7.2 × 3.0 m、茅草單坡頂、中間隔開，兩個低矮的入口通到前面的圈）；
-    前面兩個矮毛石牆圍的泥地圈（各兩頭豬、靠前牆的石槽裝著拌穀的豬食）、木板圈門；臨路的走道上穀袋、餿水桶、木柵與門。"""
+    前面兩個矮毛石牆圍的泥地圈（靠前牆的石槽裝著拌穀的豬食）、木板圈門；臨路的走道上穀袋、餿水桶、木柵與門。"""
     M = Model((80, 100, 40))
     ground(M, 1, 1, 79, 99, 9271, 'body')
     picket_fence(M, [(1, 1), (34, 1)])
@@ -303,10 +211,6 @@ def pigsty():
         for x in range(x0 + 1, x0 + 13):
             for y in range(30, 33):
                 M.put('body', x, y, 4, CORN if h01('sl', x, y) < 0.35 else BARLEY, True)
-    pig(M, 12, 40, 'y-')
-    pig(M, 24, 46, 'x-')
-    pig(M, 58, 38, 'y-')
-    pig(M, 48, 50, 'x+', SNOUT)
     # 走道：穀袋、餿水桶、木柱燈籠
     sack_row(M, 52, 8, 3, layer='body')
     tub(M, 14, 14, 1, 8, 4, BARLEY)
@@ -321,13 +225,16 @@ def pigsty():
     M.anchor('work-a2-to', 63, 31, 5)
     M.anchor('work-a3', 56, 18, 1)                                             # 穀袋那邊
     M.anchor('work-a3-to', 59, 10, 4)
+    for g, (x0, x1) in zip('ab', ((14, 30), (49, 65))):                     # 兩個圈：離石槽、牆半個豬身（0.65 m）
+        M.anchor('pen-pig-%s1' % g, x0, 40, 1)
+        M.anchor('pen-pig-%s2' % g, x1, 57, 1)
     return {'key': 'pigsty', 'title': '豬圈（共用：毛石豬舍與茅草頂、矮石牆的泥地圈、石槽）', 'use': 'pigsty', 'lot': (8, 10), 'M': M, 'style': 'common',
             'layers': {'body': '豬舍、圈與擺設', 'roof': '屋頂'}}
 
 
 # ─────────────────────────────── 牧場 16 × 12 m ───────────────────────────────
 def ranch():
-    """牧場：左後木板牛棚（7.0 × 5.2 m、木瓦兩坡頂、大貨門、窗；裡面靠後牆的乾草）；右邊柱與橫桿的牛欄（乾草架、架高的料槽、水槽、四頭牛），
+    """牧場：左後木板牛棚（7.0 × 5.2 m、木瓦兩坡頂、大貨門、窗；裡面靠後牆的乾草）；右邊柱與橫桿的牛欄（乾草架、架高的料槽、水槽），
     牛欄後面一道門接牧草地；前院穀袋、裝穀袋的牛車、水井、糞堆；正面木柵、中間是門。"""
     M = Model((160, 120, 65))
     ground(M, 1, 1, 159, 119, 9281, 'body')
@@ -351,7 +258,6 @@ def ranch():
     for x in range(51, 69):
         for y in range(71, 75):
             M.put('body', x, y, 4, CORN if h01('rk', x, y) < 0.5 else BARLEY, True)
-    cow(M, 54, 77, 'y-', patch=False)                                          # 棚裡一頭
     lantern(M, '燈籠-牛棚', (50, R[1] - 1, 22))
     # 牛欄
     pts = [(84, 1), (84, 118), (158, 118), (158, 16), (84, 16)]
@@ -359,10 +265,6 @@ def ranch():
     hay_rack(M, 92, 22, 22)
     grain_trough(M, 122, 36, 28, w=5, legs=True)
     trough(M, 132, 92, 18)
-    cow(M, 96, 30, 'y-')                                                       # 吃乾草
-    cow(M, 126, 42, 'y-')                                                      # 吃穀
-    cow(M, 136, 60, 'x-', patch=False)
-    cow(M, 100, 80, 'x+')
     # 前院
     sack_row(M, 50, 20, 4, layer='body')
     cart(M, 60, 30, load=lambda m, x, y, z: [m.box('body', x + 1 + 5 * (i % 2), y + 1 + 5 * (i // 2), z, x + 5 + 5 * (i % 2), y + 5 + 5 * (i // 2), z + 5, SACKC) for i in range(6)], layer='body')
@@ -378,6 +280,9 @@ def ranch():
     M.anchor('work-a3-to', 141, 94, 3)
     M.anchor('work-b1', 40, 66, 1)                                             # 牛棚裡
     M.anchor('work-b1-to', 40, 100, 8)
+    for g, (x0, y0, x1, y1) in zip('abc', ((98, 54, 146, 80), (97, 40, 110, 48), (20, 74, 38, 84))):
+        M.anchor('pen-cow-%s1' % g, x0, y0, 1)                                # 牛欄中間、乾草架前、棚裡（離圍欄、槽半個牛身 1.15 m）
+        M.anchor('pen-cow-%s2' % g, x1, y1, 1)
     return {'key': 'ranch', 'title': '牧場（共用：木板牛棚、柱與橫桿的牛欄、乾草架與料槽；後面一道門接牧草地）', 'use': 'ranch', 'lot': (16, 12), 'M': M, 'style': 'common',
             'layers': {'body': '牛棚、牛欄與擺設', 'roof': '屋頂'}}
 
