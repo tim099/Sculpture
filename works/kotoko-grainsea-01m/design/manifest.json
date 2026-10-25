@@ -1,0 +1,591 @@
+{
+ "root": "kotoko-grainsea-01m",
+ "works": {
+  "kotoko-grainsea-01m-fishery": {
+   "anchors": {
+    "door": [
+     40,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kotoko-grainsea-01m-fishery.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "fishery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "魚棚、晾網架、小船與擺設",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-fishery-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-fishery-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      40.5,
+      4,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-中柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "building,common",
+   "title": "漁場（共用：開敞的茅草魚棚、剖魚的長桌、魚簍與醃魚桶；兩道晾網架；後院墊木上的小划船、槳、魚簍、小錨、曬魚架）"
+  },
+  "kotoko-grainsea-01m-fishery-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-fishery-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "漁場｜魚棚、晾網架、小船與擺設"
+  },
+  "kotoko-grainsea-01m-fishery-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-fishery-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "漁場｜屋頂"
+  },
+  "kotoko-grainsea-01m-mill": {
+   "anchors": {
+    "door": [
+     40,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kotoko-grainsea-01m-mill.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "common",
+      "use": "mill",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "麵粉間、磨台與擺設",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-mill-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-mill-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      8,
+      5,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-左",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      5,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-右",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      36,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往磨台）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      48.5,
+      6,
+      21
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "building,common",
+   "title": "磨坊（共用：臨路的木板麵粉間、麻袋與秤；後面圓錐茅草頂的畜力磨 —— 毛石磨台、兩片磨石、木斗、立軸與拉桿、一頭牛與環道）"
+  },
+  "kotoko-grainsea-01m-mill-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-mill-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "磨坊｜麵粉間、磨台與擺設"
+  },
+  "kotoko-grainsea-01m-mill-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-mill-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    60
+   ],
+   "tags": "sub",
+   "title": "磨坊｜屋頂"
+  },
+  "kotoko-grainsea-01m-mill-wind": {
+   "anchors": {
+    "door": [
+     40,
+     33,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kotoko-grainsea-01m-mill-wind.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "roman",
+      "use": "mill",
+      "variant": "b"
+     },
+     "mirror": "",
+     "name": "塔與擺設",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-mill-wind-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.97,
+      "part": "vanes",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "風軸、輻與帆",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-mill-wind-vanes",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-mill-wind-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      32.5,
+      38,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    105
+   ],
+   "tags": "building,roman",
+   "title": "風車磨坊（君士坦丁堡：方石夾磚帶的圓塔、紅陶瓦圓錐頂、八根輻與三角帆布、樓上的磨石；後院矮石牆、石砌小倉）"
+  },
+  "kotoko-grainsea-01m-mill-wind-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-mill-wind-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    105
+   ],
+   "tags": "sub",
+   "title": "風車磨坊｜塔與擺設"
+  },
+  "kotoko-grainsea-01m-mill-wind-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-mill-wind-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    105
+   ],
+   "tags": "sub",
+   "title": "風車磨坊｜屋頂"
+  },
+  "kotoko-grainsea-01m-mill-wind-vanes": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-mill-wind-vanes.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    105
+   ],
+   "tags": "sub",
+   "title": "風車磨坊｜風軸、輻與帆"
+  },
+  "kotoko-grainsea-01m-saltpan": {
+   "anchors": {
+    "door": [
+     34,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kotoko-grainsea-01m-saltpan.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "style": "common",
+      "use": "saltpan",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "鹽池、鹽倉與擺設",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-saltpan-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-saltpan-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      24,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      58,
+      12,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      112,
+      10,
+      0
+     ],
+     "meta": {},
+     "name": "鹽桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      48.5,
+      6,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "building,common",
+   "title": "鹽田（共用：三排淺池 —— 海水、粉紅的鹵水、結晶的鹽耙成小堆；後緣引水溝與木閘門；臨路的木板鹽倉、兩座鹽堆、長柄耙、手推車）"
+  },
+  "kotoko-grainsea-01m-saltpan-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-saltpan-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "sub",
+   "title": "鹽田｜鹽池、鹽倉與擺設"
+  },
+  "kotoko-grainsea-01m-saltpan-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-saltpan-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "sub",
+   "title": "鹽田｜屋頂"
+  }
+ }
+}
