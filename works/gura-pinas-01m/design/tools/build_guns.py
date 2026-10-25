@@ -8,7 +8,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
 GB = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))['guns_build']
 PL = json.load(open(os.path.join(design, 'guns_placement.json'), encoding='utf-8'))['rows']
-NAMES = {'18l': '18 磅長砲（憲法號 -gun-long18）', '18chase': '18 磅追擊砲（憲法號 -gun-long18）', '12l': '12 磅長砲（風暴角號 -gun-12l）', '6l': '6 磅砲（風暴角號 -gun-6l）'}
+NAMES = {'12l': '12 磅砲（風暴角號 -gun-12l）', '8l': '8 磅砲（風暴角號 -gun-12l 縮 0.45）', '6l': '6 磅 drake（風暴角號 -gun-6l 縮 0.4）', '4l': '4 磅砲（風暴角號 -gun-6l 縮 0.42）'}
 
 
 def num(v):
@@ -25,7 +25,7 @@ for r in PL:
     s = float(t['scale'])
     meta = dict(t['meta'])
     meta.update({'deck': r['deck'], 'side': r['side'], 'port': r['port'] if isinstance(r['port'], int) else 'stern'})
-    note = '%s（階段八 TASK-0597；%s 舷%s；draft_guns.py back %s、砲口伸出 %s）' % (
+    note = '%s（步驟 9 TASK-0967；%s 舷%s；draft_guns.py back %s、砲口伸出 %s）' % (
         NAMES[r['type']], r['side'], ('、%s 第 %d 個砲門' % (r['deck'], r['port'])) if isinstance(r['port'], int) else '、船尾', num(float(r['back'])), num(float(r['muzzle_beyond'])))
     args = ['op=work', 'sub=model', 'persona=gura', 'work=' + GB['deck_works'][r['deck']], 'name=' + r['name'], 'source_work=' + t['work'],
             'at=' + xyz(r['at']), 'pivot=' + xyz(t['pivot']), 'rotate=0,0,' + num(float(r['phi'])), 'scale=' + xyz([s, s, s]), 'overwrite=1',

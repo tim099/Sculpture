@@ -149,6 +149,65 @@
     "lateen": [{"mast": "mizzen", "len_m": 17.55, "angle_deg": 40, "hoist_frac": 0.4, "sail": "mizzen-lateen"}],
     "lateen_src": "W：後桅三角帆桁 62 呎（比後桅長 ⇒ lateen）；角度、吊點照收穫號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5；ame 2026-10-15 收穫號那次確認過遊戲照 gaff 畫）"
   },
+  "rudder_anchor_build": {
+    "rudder": {"work": "gura-pinas-01m-rudder", "title": "藍鯊號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 66,
+               "width": [[0, 14], [15, 14], [35, 10], [42, 5], [66, 5]], "below": 68, "above": 136, "iron": 73, "strap_every": 12, "waterline_z": 33,
+               "max_deg": 35, "bevel": 1,
+               "src": "設計決定（照收穫號的做法）：舵沿艉柱後緣（lines.x_post，斜 9.2°）從龍骨底到 z 66（艉橫樑 z 70 底下，舵頭從鏡板下面進船）；3 格厚、舵葉 1.4 m 往上收到水線上 0.5 m 的舵頭；水線下焦油深褐、上橡木褐（同船殼）、每 12 格一道鐵箍；前緣兩側削 1 格（收穫號：沒削 ⇒ 轉 ±35° 掃進艉柱）"},
+    "spin": {"rudder": {"spin": "rudder", "spin_k": 35, "spin_min": -35, "spin_max": 35, "spin_lag": 0.3}, "wheel": {"spin": "rudder", "spin_k": 540, "spin_lag": 0.6},
+             "src": "Ship_Helm §9.8.1 照抄：舵 ±max_deg、舵輪 540°（滿舵一舷一圈半，⚠ 是挑的）"},
+    "helm": [
+      {"name": "舵輪", "host": "gura-pinas-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel", "at": [266, 160.5, 85], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel"}},
+      {"name": "舵輪座", "host": "gura-pinas-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel-stand", "at": [266, 160.5, 85], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel_stand"}}],
+    "helm_src": "沿用憲法號雙舵輪＋木頭雙柱座（Ship_Helm §9.8.1：掛輪要同時掛座、擺法照抄）；後甲板中線、後桅（x 235）前面、羅經櫃（x 282）後面。⚠ 1660 年代的荷蘭船用 whipstaff（舵桿），舵輪要到 18 世紀 —— 遊戲的舵手要 kind=wheel，照遊戲（同收穫號）",
+    "anchor": {"gear_work": "gura-pinas-01m-anchor-gear", "gear_title": "藍鯊號 錨架（兩舷 billboard）", "gear_link": "錨架",
+               "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.85, "pivot": [23.5, 16.5, 56.5],
+               "x_try": [498, 500, 502, 504, 506], "z_try": [102, 103, 104, 105, 106, 107, 108], "z_ref": 88, "d_step": 0.5, "d_max": 24,
+               "ledge_half": 13, "ledge_out": 3, "ledge_t": 3, "color": 136,
+               "gun_decks": ["gura-pinas-01m-deck-puente"],
+               "src": "沿用共用錨元件（scale 0.85 同夜燈號、收穫號 ⇒ 遊戲裡同一份網格）、meta anchor=bower；兩舷各一，吊在船頭舷外：前桅支索板（x 450–492）前面、船艏樓第 2、3 個砲門之間（x 498–506 試）；錨臂順著船殼切線（z_ref 88 那一層量）、橫桿越過船艏樓舷頂（93）。錨冠底下一塊 billboard 托板（遊戲判斷掉不掉是外框中心往下找實心）。⚠ 沒有吊錨桿（cathead）"},
+    "hawse": {"x": 528, "z": 76, "src": "設計決定：錨鏈孔在船頭、上甲板那一層的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
+  },
+  "gear_build": {
+    "assembly": "gura-pinas-01m-assembly",
+    "magazine": {"work": "gura-pinas-01m-magazine", "link": "彈藥庫", "title": "藍鯊號 彈藥庫（kruitkamer）",
+                 "x0": 222, "x1": 262, "floor": 25, "ztop": 39, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft",
+                 "cap": 32, "cap_src": "W p.282 的軍需清單：火藥 3,000 pond ≈ 1,480 kg ≈ 3,260 英磅 ⇒ 100 磅一桶 ≈ 32 桶（收穫號是照砲數換算的；這裡照 W 原文）",
+                 "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+                 "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 3},
+                 "src": "設計決定：火藥艙平台（orlop，只鋪 x 215–300 就是留給它的）上、後艙口那一段（後艙口穿過地板，彈藥庫自己鋪地板蓋掉 —— 收穫號同樣）；門開在船頭那道艙壁、對著底艙梯子（foot x 293）；頂 ＝ 下甲板的樑底下（下甲板 44–45、樑 3 格 ⇒ 39）。做法照收穫號（夜燈號 draft_magazine.py）：銅皮、橡木框、松木地板、門洞 5 格"},
+    "skids": {"work": "gura-pinas-01m-boat-skids", "link": "小艇架", "title": "藍鯊號 小艇架（船腰三座 cradle）", "deck": "puente",
+              "xs": [345, 385, 407], "y_half": 15, "post_dy": 13, "beam_z": 71, "color": 136,
+              "src": "步驟 14 改：x 405 → 407 —— Blockside 樓梯自檢：往上甲板前梯的梯頂（403,160,61）正前方 1–2 格被橫樑（z 71）擋住頭頂。設計決定（照收穫號）：船腰沒有連續 90 格的空甲板（主桅 x 330–337、主艙口 350–368、往上甲板的梯子井 387–401、前艙口 410–420）⇒ 小艇擱在三座橫架上；中間那座在小艇外框中心正下方（遊戲的「腳」是外框中心往下第一格實心）；橫樑底在甲板上 1.1 m"},
+    "models": [
+      {"name": "主絞盤", "host": "gura-pinas-01m-deck-puente", "work": "basecamp-ember-01m-capstan", "at": [316, 160.5, null], "pivot": [40, 40, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "capstan"},
+       "src": "沿用餘燼號主絞盤（12 艘在用）；上甲板中線、後甲板 break（x 300）與主桅（x 333）之間"},
+      {"name": "羅經櫃", "host": "gura-pinas-01m-deck-alcazar", "work": "summit-night-falcon-01m-binnacle", "at": [282, 160.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"},
+       "src": "沿用夜隼號羅經櫃（5 艘在用）；後甲板中線、舵輪（步驟 11）前面"},
+      {"name": "小艇", "host": "gura-pinas-01m-deck-puente", "work": "basecamp-ember-01m-boat", "at": [385, 160.5, null], "pivot": [90, 26, 0], "scale": 0.5, "rotate": 0, "meta": {"kind": "boat", "boat": "cutter", "length_m": 9},
+       "src": "沿用餘燼號 cutter 9 m（10 艘在用）；擱在小艇架上（W 的 sloep ⚠ 長度照元件，沒查證）"}
+    ],
+    "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（甲板舷弧、小艇架頂）",
+    "foot_reach": 12,
+    "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js）"
+  },
+  "guns_build": {
+    "assembly": "gura-pinas-01m-assembly", "hull": "gura-pinas-01m",
+    "deck_works": {"main": "gura-pinas-01m-deck-main", "puente": "gura-pinas-01m-deck-puente"},
+    "prefix": {"main": "M", "puente": "U"},
+    "types": {
+      "12l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.5, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "12l"}, "src": "沿用風暴角號 12 磅長砲（0.05 m、scale 0.5；收穫號也在用）；W p.282：青銅 12 磅 ×6、鐵 12 磅 ×4（鐵的每門 3,400 pond ≈ 1.7 t）"},
+      "8l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.45, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "8l"}, "src": "Ship_Guns §2.2：只差口徑的照現有的縮放 —— W p.282 鐵 8 磅 ×8、每門 3,000 pond（12 磅的 0.88 倍重）⇒ 12 磅那件縮成 0.45（長度 0.9 倍）"},
+      "6l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.4, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "6l"}, "src": "W p.282：青銅 6 磅 drake（draecken）×2、每門 670 pond —— 短而輕的砲 ⇒ 風暴角號 6 磅那件縮成 0.4（比 4 磅鐵砲還短，照實）"},
+      "4l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.42, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "4l"}, "src": "W p.282：鐵 4 磅 ×4、每門 1,500 pond ⇒ 風暴角號 6 磅那件縮成 0.42"}
+    },
+    "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-2, -1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2,
+               "src": "Ship_Guns §4.2（同收穫號）：從舷牆外面往裡退（每步 0.5 格），退到模型每一格的格心＋八個角（往裡縮 0.2）都不在組裝件的實心格裡；先挑 ok（砲口伸出、砲口空、腳下有甲板）、再挑低的、再退得少"},
+    "chase": {"deck": "puente", "type": "6l", "phis": [90, 85, 95, 80, 100, 75, 105], "dl": 3,
+              "src": "上甲板船尾鏡板兩個砲門（plan.stern.rows port；W p.73 鏡板上有砲門），放 W 的兩門青銅 6 磅 drake；砲口朝 −x ＝ φ 90，照角度搜"},
+    "support_min": 0.5,
+    "support_src": "同收穫號：砲最底下那層格子正下方有實心的比例 ≥ 0.5（遊戲判斷掉不掉是從外框中心往下 12 格內找甲板）"
+  },
   "rigging": {
     "src": "設計決定；數值照造船規格 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照收穫號 draft_rigging（改：中桅、上桅、斜桅頂桅的支索與帆；ratlines 用橫繩組 sub=ratlines、下桅那組標繩梯 climb=1 —— TASK-0678 之後的規格）",
     "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
@@ -186,8 +245,8 @@
     "src": "設計決定：船尾鏡板（spiegel，艉橫樑 z 70 以上）上甲板兩個砲門（W p.73 鏡板上有砲門）＋ kajuit 三扇小窗、hut 五扇窗；鏡板的紋章（藍鯊）、hackebort、走廊在步驟 6",
     "face_x_max": 185, "z_ref_x": 172,
     "rows": [
-      {"deck": "puente", "kind": "port", "n": 2, "w": 7, "h": 7, "sill": 6, "half": 26},
-      {"deck": "puente", "kind": "window", "n": 3, "w": 5, "h": 5, "sill": 7, "half": 12, "src": "W p.~80：kajuit 窗 1'3\" × 1'（3.5 × 2.8 格）⇒ 遊戲尺度放大到 5 × 5（設計決定）"},
+      {"deck": "puente", "kind": "port", "n": 2, "w": 7, "h": 7, "sill": 6, "half": 20, "src": "步驟 9：half 26 → 20 —— 砲門中心在 ±22.5 時貼著船尾兩舷的牆（鏡板半寬 27.5、牆 4 格），6 磅 drake 的砲架擺不進去（draft_guns：退 35.5 格、砲口在牆裡 27 格）"},
+      {"deck": "puente", "kind": "window", "n": 3, "w": 5, "h": 5, "sill": 7, "half": 10, "src": "W p.~80：kajuit 窗 1'3\" × 1'（3.5 × 2.8 格）⇒ 遊戲尺度放大到 5 × 5（設計決定）"},
       {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 22, "src": "W p.~80：hut 後面開方形玻璃窗或圓孔"}
     ]
   },

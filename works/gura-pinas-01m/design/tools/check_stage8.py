@@ -99,12 +99,15 @@ for n, m in sorted(models.items()):
     # 砲門是洞 ⇒ 砲口那條線上量不到牆（v1 只量砲口往外那條線：往裡拉 8 格照樣報 0）；改量砲門兩側：砲口左右各偏 6 格的線上，沿砲身方向最外面那格船殼在哪
     perp = np.array([-d[1], d[0]])
     face = -1e9
-    for s in (-6.0, 6.0):
+    for s in (-8.0, -7.0, -6.0, 6.0, 7.0, 8.0):        # 藍鯊號：鏡板上砲門與窗挨得近，只量 ±6 會兩條都落在開口裡（左舷鏡過來差半格）⇒ 多掃幾條
         ts = np.arange(-20.0, 20.5, 0.5)
         P = np.array([[tip[0] + perp[0] * s + d[0] * t, tip[1] + perp[1] * s + d[1] * t, tip[2]] for t in ts])
         hit = H.hit(P)
         if hit.any():
             face = max(face, float(ts[hit].max()) + 0.5)
+    if face == -1e9:                                   # 一條線都沒碰到船殼 ＝ 量不到（v1 當成伸出 10 億、算過關 ⇒ 瞎的尺）
+        mz.append((n, bool(G.hit(tip[None])[0]), '量不到'))
+        continue
     beyond = -face
     mz_beyond[n] = round(beyond, 2)
     if G.hit(tip[None])[0] or beyond <= 0:

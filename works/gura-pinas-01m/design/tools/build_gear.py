@@ -1,5 +1,5 @@
 # 出處：calli-cosecha-01m/design/tools/build_gear.py（收穫號，照抄後改成藍鯊號 —— TASK-0967）
-# 階段九落格：彈藥庫子作品（貼＋固定點 blast／door、組裝件關聯 彈藥庫 meta kind=magazine）、小艇架子作品（貼＋關聯 小艇架）、
+# 步驟 10 落格：彈藥庫子作品（貼＋固定點 blast／door、組裝件關聯 彈藥庫 meta kind=magazine）、小艇架子作品（貼＋關聯 小艇架）、
 #   模型（火藥桶掛在彈藥庫子作品裡；舵輪／羅經櫃掛 deck-alcazar、絞盤／小艇掛 deck-puente）
 #   用法：python -I -X utf8 tools/build_gear.py <design>
 #   · 子作品已存在 ⇒ 不重建、不重貼（之後改格子走 delta_apply）；關聯同名 ⇒ 交給 CLI（ok 2）；模型 overwrite=1
@@ -44,8 +44,8 @@ def subwork(spec, path, anchors=None, meta=None):
             raise SystemExit('✗ placed ≠ %d（%s）' % (n, w))
         print('✓ 建立 %s（%d 格）' % (w, n))
     for an, at in sorted((anchors or {}).items()):
-        cli('op=work', 'sub=anchor', 'persona=gura', 'work=' + w, 'name=' + an, 'at=' + xyz(at), 'overwrite=1', 'note=draft_gear.py（階段九）')
-    args = ['op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + spec['link'], 'source_work=' + w, 'at=0,0,0', 'note=階段九（TASK-0598）']
+        cli('op=work', 'sub=anchor', 'persona=gura', 'work=' + w, 'name=' + an, 'at=' + xyz(at), 'overwrite=1', 'note=draft_gear.py（步驟 10）')
+    args = ['op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + spec['link'], 'source_work=' + w, 'at=0,0,0', 'note=步驟 10（TASK-0967）']
     if meta:
         args.append('meta=' + json.dumps(meta, ensure_ascii=False, separators=(',', ':')))
     cli(*args, ok=(0, 2))

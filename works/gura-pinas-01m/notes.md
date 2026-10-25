@@ -94,3 +94,64 @@
 - 帆 12：前／主 course、topsail、topgallant（上桅帆 bramzeil）、後中桅帆 kruiszeil（sheet 綁後桅桅樓邊）、後桅三角帆 bezaan（clew 在船尾樓上方、sheet 綁船尾樓兩舷舷頂、tack 綁後甲板）、斜桅帆 blinde、斜桅頂帆 boven blinde（sheet 綁斜桅帆桁的 earing）、船尾旗（紅白藍、白帶 GWC —— 荷蘭西印度公司；掛在三角帆桁後端）、主桅頂橘色長旗。meta：帆 12、帆自己的繩 25；斜桅帆、斜桅頂帆 set 3、三角帆 set 2。
 - 讀數：channels 結果帳 0 差；CLI 繩 327（含展開的橫繩）、ropes_broken 0、帆 12、sails_broken 0；meta 帆 12／12、帆自己的繩 25／25、sail 標錯 0；帆桁 meta 的 sail 都是某一面帆的名字；橫繩組 12 組全 ok、繩梯 6 組都有 🪜。**反向對照**：`draft_rigging.py --probe=nometa=main-topgallant.sheet-S`、`check_stage7.py --drop=fore-topgallant.sheet-P` ⇒ 都只報那一條。
 - 過程圖：`overlays/step8_{full,sternq}.png`。
+
+## 步驟 9 砲（2026-10-26）
+設計 plan.json `guns_build`；產生 `design/draft_guns.py`（照抄收穫號，沒改程式）⇒ `guns_placement.json`、`verify_guns.json`；落格 `design/tools/build_guns.py`。
+- **24 門 ＝ W p.282**（全部外部模型、沿用現有的砲、掛在所在甲板的子作品上；P 舷 mirror=y；meta kind=gun、gun、deck、side、port）：
+  - 下甲板每舷 8 門：從船尾往前 8 磅、8 磅、12 磅 ×5、8 磅（W「最重的砲放在船身中段」）。
+  - 上甲板船艏樓底下每舷 3 門：從船尾往前 8 磅、4 磅、4 磅。
+  - 上甲板船尾鏡板 2 門：青銅 6 磅 drake。
+  - 12 磅 ＝ 風暴角號 `-gun-12l` scale 0.5；8 磅 ＝ 同一件縮 0.45；4 磅 ＝ 風暴角號 `-gun-6l` 縮 0.42；6 磅 drake ＝ 同一件縮 0.40（Ship_Guns §2.2：只差口徑的照現有的縮放；長短照 W 的砲重比）。砲種代碼 12l／8l／6l／4l 都在遊戲砲種表。
+- 🩸 鏡板那兩門第一版擺不進去（退 35.5 格、砲口在牆裡 27 格）：鏡板砲門中心在 ±22.5，貼著船尾兩舷的牆（鏡板半寬 27.5、牆 4）⇒ 砲門半寬 26 → 20、kajuit 的窗 12 → 10。船殼走差量（拿舊清單組帳 0 差 ⇒ 刻 416、補 626、換色 84，標記 `鏡板砲門內移`）、玻璃刻 20、補 20。
+- 讀數（`tools/check_stage8.py`，從作品讀）：模型 24 ＝ 設計、CLI ok 24；參數 ≠ 設計 0；外框（gunsim vs CLI）最大差 0.05；碰撞 0 門；砲口不在船殼外 0 門（伸出 0.5–6.0）；meta 不合 0；兩舷不對稱 0、砲撞砲 0。
+  - 🩸 砲口那把尺（收穫號的）在左舷鏡板砲上**量不到東西**：兩條側線（±6）一條穿過砲門開口、一條穿過窗（連續座標的鏡面在 160.5，左舷鏡過來差半格），一格船殼都沒碰到 ⇒ 舊版印「伸出 10 億」還算過關。改成每邊掃 ±6／7／8 三條、全部沒碰到就報「量不到」。
+  - **反向對照**：`--push=U-chase-stern-P:-6`（往裡拉）⇒ 只報那一門、伸出 −3.0；`--push=砲M-S04:3`（往外推）⇒ 碰撞只報那一門 1,971 樣本。
+- ⚠ 沒做砲具與砲索（環、breeching、tackle；收穫號階段十二那一套）—— 記在 todo。
+
+## 步驟 10 彈藥庫與甲板物件（2026-10-26）
+設計 plan.json `gear_build`；產生 `design/draft_gear.py`（照抄收穫號；改：小艇架的空腔檢查框收穫號寫死 z 80 起 ⇒ 照橫樑高度往下 20）；落格 `design/tools/build_gear.py`。
+- **彈藥庫**（`-magazine`，關聯 `彈藥庫`，meta `kind=magazine、pos=aft、powder_lb=3200`）5,818 格：火藥艙平台 x 222–262、門開在船頭那道艙壁、對著底艙梯子（foot x 293）；銅皮 168、橡木框 136、松木地板 177。固定點 `blast` (242,160,33)、`door` (262,160,26)。後艙口穿過地板，彈藥庫自己鋪地板蓋掉（收穫號同樣）。
+  火藥桶 **32 桶**（憲法號 `-powder-barrel` scale 0.2）：**W p.282 的軍需清單火藥 3,000 pond ≈ 3,260 英磅 ⇒ 100 磅一桶 ≈ 32**（收穫號是照砲數換算的）；全在底層（底層放得下 46）。
+- **小艇架**（`-boat-skids`，關聯 `小艇架`）612 格：船腰三座橫架 x 345、385、407（閃開主艙口、往上甲板的梯子井、前艙口；405 那座擋到船艏樓梯子頭 ⇒ 407）、橫樑 z 71–72。
+- 模型（沿用現有元件）：主絞盤（餘燼號）上甲板 x 316、羅經櫃（夜隼號）後甲板 x 282、小艇（餘燼號 cutter 9 m）擱在小艇架上 x 385、z 73。舵輪在步驟 11。
+- 讀數（`tools/check_stage9.py`，從作品讀）：彈藥庫、小艇架結果帳缺 0／多 0／色差 0；模型 35 ＝ 設計、CLI ok 35；powder_lb 3,200 ＝ 32 × 100；blast 是空氣、door 是空氣而且腳下實心；參數 ≠ 設計 0、撞實心 0、腳下 12 格內沒有實心 0、模型彼此重疊 0；新格落在實心上 0、封閉空腔 0、浮空 0、鏡像差 0。**反向對照**：`draft_gear.py --probe=nokind=小艇` ⇒ 只報小艇。
+- 沒做：門與艙蓋（kind=door；Ship_Fittings §9.7 —— 低乾舷船才要擋水，本船艙口都在上甲板以上）、廚房（kind=galley）—— 照實留著，記 todo。
+- 順手：抄來的工具把關聯備註寫成收穫號的「階段四／九」⇒ 改成本船的步驟（只改備註）。
+
+## 步驟 11 舵、舵輪、錨（2026-10-26）
+設計 plan.json `rudder_anchor_build`；產生 `design/draft_rudder_anchor.py`（照抄收穫號；改：錨避開的砲改讀上甲板（本船船頭的砲在船艏樓底下）、量船殼切線的高度收穫號寫死 z 100 ⇒ plan z_ref 88、加舵輪與座、舵與舵輪的 spin）；落格 `design/tools/build_rudder_anchor.py`（加舵輪與座）。
+- **舵**（`-rudder` 1,768 格，組裝件的外部模型 `舵`）：沿艉柱後緣（斜 9.2°）從龍骨底到 z 66（艉橫樑 z 70 底下）；3 格厚、前緣兩側削 1 格；水線下焦油深褐、上橡木褐、每 12 格一道鐵箍。meta `kind=rudder`、鉸鏈 (170, 160.5, 0)、軸 (−0.1595, 0, 0.9872)、max_deg 35、turn_axis=hinge、**spin**（rudder、±35、lag 0.3）。固定點 `stock-top` (156,160,66) 離船殼 3 格。
+- **舵輪＋座**（Ship_Helm §9.8.1）：沿用憲法號雙舵輪 `-wheel`（meta kind=wheel、spin rudder 540、元件預設 render=wheel）＋木頭雙柱座 `-wheel-stand`（kind=wheel_stand，擺法照抄輪那一條），後甲板中線 x 266（後桅前、羅經櫃後）。⚠ 1660 年代荷蘭船用 whipstaff，遊戲要舵輪（同收穫號）。
+- **錨**：共用錨元件 ×2（scale 0.85、kind=anchor、anchor=bower）吊在船頭舷外 x 501.8、ring z 104、錨臂順著船殼切線（rz ±76）、離船殼 5.5 格（試了 x 498–506 × z 102–108）；錨架 `-anchor-gear`（billboard 托板，關聯 `錨架`）1,002 格；錨鏈孔固定點 hawse-S／P (528, ±21, 76)（只登記、沒有開孔）。
+- 讀數（`tools/check_stage95.py`，從作品讀）：舵、錨架結果帳 0 差；舵模型 CLI ok、stock-top 8 格內有船殼、舵跟組裝件重疊 0、轉 ±35° 掃進實心 0；錨 2 隻 CLI ok、撞實心 0、腳是錨架、來源有 ring；hawse 在船殼上、在那一舷；問題 0。舵輪與座：撞實心 0、腳下有甲板。遊戲讀的那一份（組裝件 `export format=parts`）：舵、舵輪都有 spin。**反向對照**：`--drop=錨-P` ⇒ 只報 P 舷沒有錨；`draft_rudder_anchor.py --probe=shift=錨-S:-3` ⇒ 只有錨-S 報 1,152 樣本。
+
+## 步驟 12 砲門蓋板（2026-10-26）
+工具 `design/tools/portlids.py`（照抄 basecamp 憲法號的通用砲門蓋板工具；改開頭的表成藍鯊號一艘、兩層、一件蓋板、persona gura；`CLOSE_ADJ` 給 砲M-P03／S03 關角 −2°）⇒ `portlids_placement.json`、`verify_portlids.json`、蓋板子作品 `-portlid`（9×9×2：外面船殼褐 136、裡面紅 224、鉸鏈板 73）。
+- 封閉砲甲板（main、puente）每個砲門一片 ＝ **22 片**（P 舷 11、rotate 180 − rz，⛔ 不用 mirror=y）；meta kind=portlid、lid_of ＝ 砲的物件 id（照模型 meta 對，22／22 都對上）。
+- ⚠ **lid_of 要砲的物件 id ⇒ 要先做步驟 14 的匯入＋`admin.py ids`**，回頭做蓋板，再 reimport（已補進 Ship_Steps 步驟 12 那一行）。
+- 鏡板那 2 個船尾砲門沒蓋（工具只處理舷側砲門）—— 記 todo。
+- 讀數（`portlids.py check`）：開著撞船 0、撞砲 0；關著撞船最多 2.19%（> 5% 的 0 片）、收砲後撞砲 0；砲門 22／22 蓋滿；鉸鏈中心在鉸鏈下 3.77–3.99；掛上去 cells 162 結果帳 0 差、models_bad 0、鉸鏈最大差 0.0005。**反向對照**：house 0（砲不收）⇒ 22 片全撞砲；mirror=y ⇒ 11 片往上開。
+
+## 步驟 14 給遊戲的 meta 與匯入（2026-10-26）
+組裝件 `-assembly` kind=ship、waterline_z 33；匯出 vxk ⇒ Blockside 自己的 worktree（分支 gura/0967-pinas）`admin.py import`（el `ship-pinas`、名字 藍鯊號）⇒ `admin.py ids`（100 個，加蓋板後再 22 個）⇒ reimport。
+- 給遊戲那側填 geo 的高度（z 從龍骨底，格 ＝ 0.1 m）：水線 33；甲板 orlop 24、overloop 42、verdek 60、bak 82、halfdek 84、hut 101 ⇒ game.json `geo`：`spar [61,103]`、`marines [55,130]`、`center 75`、`aim 55`、`aimZ [25,400]`、`deckAim [46,76]`、`rigAim [130,380]`；`crew {marines 6, top 1}`。
+- 讀數：reimport checksum **162350042**、模型 97、繩 327（猜綁 0）；shipcheck ✗ 0 ⚠ 2（搬火藥 11／12；一個梯子腳被遊戲擺的「帆布櫃」家具擋到）；ladcheck ✗ 0 ⚠ 1；ropecheck 654 端 ok；關聯重疊 0。
+- 船卡：599 t、37.1 m、24 門、帆 12、船員 150。選船彈窗（`?pick=@host`）：14.7 節（fun 模式）、吃水 3.29 m、全長 49.8 m、貨艙 225 t。
+- 對打（report.py，pinas vs cosecha、seed 1／2、120 秒）：藍鯊號開火 145、命中 62%；砲可開 84%／裝填 14%；砲被打掉平均 2／24；航速時間線 seed 1 最高 5.7 節、seed 2 最高 12.9 節 ⇒ 開得動、砲打得出去。
+- **泊位反向對照**（`scratchpad/pinas/berth_fit.cjs`，照 Blocksail 地球儀 docksFit：泊位 loa ≥ 全長、泊位與航道水深 ≥ 吃水 ＋ 1.5）：windward 6 城 61 個泊位 ⇒ large 23／23、titan 6／6 停得進；**small 0／20**（全部太短 36 < 49.8）、boat 0。對照組 30 m 的船 ⇒ small 20／20。
+
+## 步驟 15 交船（2026-10-26）
+照 Ship_Game §10 換一艘船時的檢查表逐條看過（遊戲那一份：`admin.py shipcheck --id pinas` ✗ 0 ⚠ 2）：
+- ✓ ropecheck 654 端 ok、沒有 bind／snap；組裝件名 ＝ 藍鯊號、船殼帶 sub；mpv 0.1 每件都記、模型明寫 scale；開工前查過現有元件（上面「沿用的現有元件」）。
+- ✓ 砲 24、帆桁、舵輪、火藥桶 32、絞盤、羅經櫃、小艇都是外部模型帶 kind；舵 kind=rudder＋stock-top、`__game.lostModels(0)` 是空的；spin：舵 ±35°、舵輪 540°；操舵鏈「舵令 ⇒ 甲板-alcazar/舵輪 ⇒ 舵 100%」。
+- ✓ kind=ship waterline_z 33（高度在步驟 14 那一段）；甲板 6 層 kind=deck、梯子 9 座 kind=ladders 四個固定點；ladcheck ✗ 0 ⚠ 1；ratlines 橫繩組、下桅 6 組繩梯；三角帆桁 rig=lateen＋fore；彈藥庫有桶、24／24 門送藥走得到；窗的玻璃獨立關聯 material=glass（225 格）。
+- ✓ 繩與帆的端點綁 model:、ropes_broken／sails_broken／models_broken 0；帆 meta 齊、帆桁 sail ＝ 帆名；組裝件 1 元件、空腔 0、link_overlap 0；vxk checksum 跟遊戲那側對過（162350042）。
+- ✓ 舷側砲門蓋板 22 片（gun-23／24 是鏡板的兩門，沒蓋，見下）。
+- 不適用：槳、撞角、蒸汽、鐵甲與金屬部件、迴旋砲／砲塔、空艙房（沒隔艙，艙房 0）。
+- ⚠ 兩條照實留著：送藥手站得到 11／12；船首那座往上甲板的梯腳前面 1–2 格有下甲板的帆布櫃（繞得過去）。
+
+### todo（沒做的，照實留著）
+- 砲具與砲索（環、breeching、tackle）。
+- 門與艙蓋（kind=door）、廚房（kind=galley）。
+- 鏡板兩門船尾砲（gun-23／24）的砲門蓋板 —— portlids.py 只處理舷側砲門。
+- 錨鏈孔只登記固定點、沒開孔。

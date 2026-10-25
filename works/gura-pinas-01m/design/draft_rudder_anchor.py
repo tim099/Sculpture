@@ -57,7 +57,10 @@ def main():
 
     # ── 錨：共用錨元件，錨臂順著船殼切線、往外推到零碰撞 ──
     cas = []
-    for m in json.load(open(os.path.join(WORKS, 'gura-pinas-01m-deck-castillo', 'models.json'), encoding='utf-8'))['models']:
+    gun_models = []                                                    # 船頭附近的砲（收穫號讀船首樓甲板；藍鯊號的船頭砲在上甲板、船艏樓底下 ⇒ plan anchor.gun_decks）
+    for w_ in AN['gun_decks']:
+        gun_models += json.load(open(os.path.join(WORKS, w_, 'models.json'), encoding='utf-8'))['models']
+    for m in gun_models:
         g = Gun(m['name'], {'work': m['work'], 'scale': m['scale'][0], 'pivot': m['pivot'], 'meta': {}}, export_list(m['work'], None), {}, 0.2)
         cas.append(np.floor(g.world(g.samples, m['at'], m['rotate'][2], m['mirror'] == 'y')).astype(int))
     G = Grid(np.concatenate([A[:, :3]] + cas + [np.array(sorted(rudder), np.int32)]), outside=False)     # 舷外的錨與托板：框外當空（框外當實心 ⇒ 托板「往外走會碰到實心」全判成船裡）
@@ -70,8 +73,9 @@ def main():
         return max(ys) if ys else None
 
     tried, best = [], None
+    zr = AN['z_ref']                                                   # 量船殼切線的那一層（收穫號寫死 z 100）
     for xc in AN['x_try']:
-        y1, y2 = ymax(xc - 4, 100), ymax(xc + 4, 100)
+        y1, y2 = ymax(xc - 4, zr), ymax(xc + 4, zr)
         t = np.array([8.0, float(y2 - y1)])
         t /= np.linalg.norm(t)
         n = np.array([t[1], -t[0]]) if t[1] < 0 else np.array([-t[1], t[0]])
@@ -81,7 +85,7 @@ def main():
         if rz <= -90:
             rz += 180
         rz = round(rz * 2) / 2
-        surf = np.array([xc + 0.5, ymax(xc, 100) + 1.0])
+        surf = np.array([xc + 0.5, ymax(xc, zr) + 1.0])
         for zt in AN['z_try']:
             hit = None
             for k in range(int(AN['d_max'] / AN['d_step']) + 1):
@@ -143,6 +147,13 @@ def main():
     if probe:
         print(json.dumps({'probe': probe[0], 'anchor_hits': rep}, ensure_ascii=False))
         return
+    helm = []                                                          # 舵輪與座（藍鯊號；Ship_Helm §9.8.1）：撞實心的樣本、腳下 12 格內有沒有實心
+    for h in RB['helm']:
+        gh = Gun(h['name'], {'work': h['work'], 'scale': h['scale'], 'pivot': h['pivot'], 'meta': {}}, export_list(h['work'], None), {}, 0.2)
+        l_, h_ = gh.bbox(h['at'], h['rotate'], False)
+        cx, cy, fz = int(math.floor((l_[0] + h_[0]) / 2)), int(math.floor((l_[1] + h_[1]) / 2)), int(math.floor(l_[2])) - 1
+        helm.append({'name': h['name'], 'hits': int(Gs.hit(gh.world(gh.samples, h['at'], h['rotate'], False)).sum()),
+                     'foot_gap': next((d for d in range(0, 13) if Gs.solid(cx, cy, fz - d)), None), 'bbox': [l_.round(2).tolist(), h_.round(2).tolist()]})
     yh = ymax(HW['x'], HW['z'])
     hawse = {'hawse-S': [HW['x'], yh, HW['z']], 'hawse-P': [HW['x'], 2 * YC - yh, HW['z']]}
     v = {'read': {'assembly_voxels_minus_own': int(len(A))},
@@ -151,7 +162,7 @@ def main():
                     'hinge': hinge, 'axis': axis, 'mirror_diff': sum(1 for (x, y, z), c in rudder.items() if rudder.get((x, 2 * YC - y, z)) != c)},
          'anchor': {'tried': tried, 'chosen': S, 'P': P, 'mirror_diff_cells': anchor_mirror_diff, 'rows': rows},
          'gear': {'cells': len(gear), 'on_solid': gear_on_solid, 'mirror_diff': sum(1 for (x, y, z), c in gear.items() if gear.get((x, 2 * YC - y, z)) != c), 'ztop': ztop},
-         'hawse': hawse}
+         'hawse': hawse, 'helm': helm}
     out = os.path.join(design, 'masks', 'rudder')
     os.makedirs(out, exist_ok=True)
     lists = {}
@@ -166,14 +177,15 @@ def main():
     place = {'note': 'draft_rudder_anchor.py 的結果（世界座標）',
              'rudder': {'work': RU['work'], 'model': RU['model'], 'host': 'gura-pinas-01m-assembly', 'at': hinge, 'pivot': hinge,
                         'anchors': {'stock-top': stock_top},
-                        'meta': {'kind': 'rudder', 'hinge_x': hinge[0], 'hinge_y': hinge[1], 'hinge_z': hinge[2], 'axis_x': axis[0], 'axis_y': axis[1], 'axis_z': axis[2],
-                                 'max_deg': RU['max_deg'], 'turn_axis': 'hinge'}},
+                        'meta': dict({'kind': 'rudder', 'hinge_x': hinge[0], 'hinge_y': hinge[1], 'hinge_z': hinge[2], 'axis_x': axis[0], 'axis_y': axis[1], 'axis_z': axis[2],
+                                      'max_deg': RU['max_deg'], 'turn_axis': 'hinge'}, **RB['spin']['rudder'])},
+             'helm': [dict(h, meta=dict(h['meta'], **(RB['spin']['wheel'] if h['meta']['kind'] == 'wheel' else {}))) for h in RB['helm']],
              'anchors': [{'name': r['name'], 'host': AN['gear_work'], 'work': AN['work'], 'at': r['at'], 'pivot': AN['pivot'], 'scale': AN['scale'], 'rotate': r['rz'],
                           'meta': {'kind': 'anchor', 'anchor': 'bower'}} for r in rows],
              'hawse': hawse}
     json.dump(place, open(os.path.join(design, 'rudder_anchor_placement.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
     json.dump(v, open(os.path.join(design, 'verify_rudder_anchor.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
-    print(json.dumps({k: v[k] for k in ('rudder', 'gear', 'hawse', 'lists')}, ensure_ascii=False))
+    print(json.dumps({k: v[k] for k in ('rudder', 'gear', 'hawse', 'helm', 'lists')}, ensure_ascii=False))
     print(json.dumps({k: v['anchor'][k] for k in ('chosen', 'P', 'mirror_diff_cells', 'rows')}, ensure_ascii=False))
     print(json.dumps(v['anchor']['tried'], ensure_ascii=False))
 

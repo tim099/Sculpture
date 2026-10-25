@@ -66,9 +66,9 @@ for k in ups:
         print('  固定點 %d' % sum(4 for v in pts.values() if v['up'] == k))
 for k in ups:
     cli('op=work', 'sub=link', 'persona=gura', 'work=%s-deck-%s' % (HULL, k), 'name=梯子', 'source_work=%s-ladders-%s' % (HULL, k), 'at=0,0,0',
-        'meta={"kind":"ladders"}', 'note=階段四：從下一層上來的梯子', ok=(0, 2))
+        'meta={"kind":"ladders"}', 'note=步驟 5：從下一層上來的梯子', ok=(0, 2))
 for r in ROWS:
     k = r['key']
     cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=甲板-' + k, 'source_work=%s-deck-%s' % (HULL, k), 'at=0,0,0',
-        'note=階段四', ok=(0, 2))
+        'note=步驟 5（TASK-0967）', ok=(0, 2))
 print('\n'.join(cli('op=work', 'sub=links', 'work=' + ASM).splitlines()[-30:]))

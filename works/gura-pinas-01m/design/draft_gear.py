@@ -169,7 +169,7 @@ def main():
     on_solid = [k for k in new if occ[k[0] - X_LO, k[1], k[2] - Z_LO]]
     # 封閉空腔（≤ 50 格填實）＋ 新格都要接到原本的實心（彈藥庫、小艇架各量一次）
     sealed, floating = [], []
-    for nm, part, (xa, xb, za, zb) in (('magazine', mag, (X0 - 2, X1 + 2, F - 2, ZTOP + 3)), ('skids', skids, (min(SK['xs']) - 2, max(SK['xs']) + 3, 80, SK['beam_z'] + 4))):
+    for nm, part, (xa, xb, za, zb) in (('magazine', mag, (X0 - 2, X1 + 2, F - 2, ZTOP + 3)), ('skids', skids, (min(SK['xs']) - 2, max(SK['xs']) + 3, SK['beam_z'] - 20, SK['beam_z'] + 4))):   # 收穫號寫死 z 80 起（它的甲板在 85）
         sub = occ[xa - X_LO:xb + 1 - X_LO, :, za - Z_LO:zb + 1 - Z_LO].copy()
         nw = np.zeros_like(sub)
         for (x, y, z) in part:

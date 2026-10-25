@@ -1,0 +1,1708 @@
+{
+ "count": 22,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    8,
+    0,
+    0
+   ]
+  },
+  "cells": 162,
+  "design": "gura-pinas-01m",
+  "file": "gura-pinas-01m/design/masks/portlids/lid.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "gura-pinas-01m",
+  "pivot": [
+   4.5,
+   0,
+   0
+  ],
+  "sha256": "ed78ed2c94ee1a4e446964a1ca55a2ee641d02776dea320af7eef8ac57ad0777",
+  "size": [
+   9,
+   9,
+   2
+  ],
+  "title": "藍鯊號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m；外面船殼褐、裡面紅）",
+  "work": "gura-pinas-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 藍鯊號：22 片（甲板-main、甲板-puente），蓋板 gura-pinas-01m-portlid [9, 9, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    202.5,
+    125,
+    59
+   ],
+   "face": {
+    "hinge_surf_s": 195,
+    "n": 32,
+    "resid": 0.63,
+    "rx": 17.13,
+    "rz_fit": 20.12
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     202.5,
+     124.38,
+     53.52
+    ],
+    "need_pull": 3.62,
+    "outer_s": 193.0
+   },
+   "gun_model": "砲M-P01",
+   "gun_path": "甲板-main/砲M-P01",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    198,
+    206
+   ],
+   "lid_z": [
+    51,
+    59
+   ],
+   "meta": {
+    "close_deg": 105.1,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P01",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    199,
+    205
+   ],
+   "open_z": [
+    52,
+    58
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    159.9
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    202.5,
+    196,
+    59
+   ],
+   "face": {
+    "hinge_surf_s": 196,
+    "n": 32,
+    "resid": 0.63,
+    "rx": 17.13,
+    "rz_fit": 20.12
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     202.5,
+     196.62,
+     53.52
+    ],
+    "need_pull": 3.62,
+    "outer_s": 194
+   },
+   "gun_model": "砲M-S01",
+   "gun_path": "甲板-main/砲M-S01",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    198,
+    206
+   ],
+   "lid_z": [
+    51,
+    59
+   ],
+   "meta": {
+    "close_deg": 105.1,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S01",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    199,
+    205
+   ],
+   "open_z": [
+    52,
+    58
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    20.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    230.5,
+    121,
+    58
+   ],
+   "face": {
+    "hinge_surf_s": 199,
+    "n": 32,
+    "resid": 0.49,
+    "rx": -4.65,
+    "rz_fit": 5.97
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     231.0,
+     114.88,
+     52.52
+    ],
+    "need_pull": 7.12,
+    "outer_s": 199.0
+   },
+   "gun_model": "砲M-P02",
+   "gun_path": "甲板-main/砲M-P02",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    226,
+    234
+   ],
+   "lid_z": [
+    50,
+    58
+   ],
+   "meta": {
+    "close_deg": 83.3,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P02",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    227,
+    233
+   ],
+   "open_z": [
+    51,
+    57
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    174
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    230.5,
+    200,
+    58
+   ],
+   "face": {
+    "hinge_surf_s": 200,
+    "n": 32,
+    "resid": 0.49,
+    "rx": -4.65,
+    "rz_fit": 5.97
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     231.0,
+     206.12,
+     52.52
+    ],
+    "need_pull": 7.12,
+    "outer_s": 200
+   },
+   "gun_model": "砲M-S02",
+   "gun_path": "甲板-main/砲M-S02",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    226,
+    234
+   ],
+   "lid_z": [
+    50,
+    58
+   ],
+   "meta": {
+    "close_deg": 83.3,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S02",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    227,
+    233
+   ],
+   "open_z": [
+    51,
+    57
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    6
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    256.5,
+    121,
+    57
+   ],
+   "face": {
+    "hinge_surf_s": 199,
+    "n": 32,
+    "resid": 0.67,
+    "rx": -9.57,
+    "rz_fit": 1.67
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     256.5,
+     114.25,
+     52.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 200.0
+   },
+   "gun_model": "砲M-P03",
+   "gun_path": "甲板-main/砲M-P03",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    252,
+    260
+   ],
+   "lid_z": [
+    49,
+    57
+   ],
+   "meta": {
+    "close_deg": 76.4,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-3"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P03",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    253,
+    259
+   ],
+   "open_z": [
+    50,
+    56
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    256.5,
+    200,
+    57
+   ],
+   "face": {
+    "hinge_surf_s": 200,
+    "n": 32,
+    "resid": 0.67,
+    "rx": -9.57,
+    "rz_fit": 1.67
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     256.5,
+     206.75,
+     52.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 201
+   },
+   "gun_model": "砲M-S03",
+   "gun_path": "甲板-main/砲M-S03",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    252,
+    260
+   ],
+   "lid_z": [
+    49,
+    57
+   ],
+   "meta": {
+    "close_deg": 76.4,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-11"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S03",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    253,
+    259
+   ],
+   "open_z": [
+    50,
+    56
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    284.5,
+    121,
+    57
+   ],
+   "face": {
+    "hinge_surf_s": 199,
+    "n": 32,
+    "resid": 0.63,
+    "rx": -11.82,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     284.5,
+     114.25,
+     52.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 200.0
+   },
+   "gun_model": "砲M-P04",
+   "gun_path": "甲板-main/砲M-P04",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    280,
+    288
+   ],
+   "lid_z": [
+    49,
+    57
+   ],
+   "meta": {
+    "close_deg": 76.2,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-4"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P04",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    281,
+    287
+   ],
+   "open_z": [
+    50,
+    56
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    284.5,
+    200,
+    57
+   ],
+   "face": {
+    "hinge_surf_s": 200,
+    "n": 32,
+    "resid": 0.63,
+    "rx": -11.82,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     284.5,
+     206.75,
+     52.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 201
+   },
+   "gun_model": "砲M-S04",
+   "gun_path": "甲板-main/砲M-S04",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    280,
+    288
+   ],
+   "lid_z": [
+    49,
+    57
+   ],
+   "meta": {
+    "close_deg": 76.2,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S04",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    281,
+    287
+   ],
+   "open_z": [
+    50,
+    56
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    314.5,
+    120,
+    56
+   ],
+   "face": {
+    "hinge_surf_s": 200,
+    "n": 32,
+    "resid": 0.59,
+    "rx": -6.96,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     314.5,
+     114.25,
+     51.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 200.0
+   },
+   "gun_model": "砲M-P05",
+   "gun_path": "甲板-main/砲M-P05",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    310,
+    318
+   ],
+   "lid_z": [
+    48,
+    56
+   ],
+   "meta": {
+    "close_deg": 81,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P05",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    311,
+    317
+   ],
+   "open_z": [
+    49,
+    55
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    314.5,
+    201,
+    56
+   ],
+   "face": {
+    "hinge_surf_s": 201,
+    "n": 32,
+    "resid": 0.59,
+    "rx": -6.96,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     314.5,
+     206.75,
+     51.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 201
+   },
+   "gun_model": "砲M-S05",
+   "gun_path": "甲板-main/砲M-S05",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    310,
+    318
+   ],
+   "lid_z": [
+    48,
+    56
+   ],
+   "meta": {
+    "close_deg": 81,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-13"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S05",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    311,
+    317
+   ],
+   "open_z": [
+    49,
+    55
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    346.5,
+    120,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 200,
+    "n": 32,
+    "resid": 0.54,
+    "rx": -7.62,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     346.5,
+     114.25,
+     50.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 200.0
+   },
+   "gun_model": "砲M-P06",
+   "gun_path": "甲板-main/砲M-P06",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    342,
+    350
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P06",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    343,
+    349
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    346.5,
+    201,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 201,
+    "n": 32,
+    "resid": 0.54,
+    "rx": -7.62,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     346.5,
+     206.75,
+     50.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 201
+   },
+   "gun_model": "砲M-S06",
+   "gun_path": "甲板-main/砲M-S06",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    342,
+    350
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-14"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S06",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    343,
+    349
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    382.5,
+    120,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 200,
+    "n": 32,
+    "resid": 0.54,
+    "rx": -7.62,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     382.5,
+     114.25,
+     50.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 200.0
+   },
+   "gun_model": "砲M-P07",
+   "gun_path": "甲板-main/砲M-P07",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    378,
+    386
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P07",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    379,
+    385
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    382.5,
+    201,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 201,
+    "n": 32,
+    "resid": 0.54,
+    "rx": -7.62,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.0,
+    "muzzle": [
+     382.5,
+     206.75,
+     50.25
+    ],
+    "need_pull": 6.75,
+    "outer_s": 201
+   },
+   "gun_model": "砲M-S07",
+   "gun_path": "甲板-main/砲M-S07",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    378,
+    386
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-15"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S07",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    379,
+    385
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    416.5,
+    120,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 200,
+    "n": 32,
+    "resid": 0.54,
+    "rx": -7.62,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 5.0,
+    "muzzle": [
+     416.5,
+     114.38,
+     49.52
+    ],
+    "need_pull": 6.62,
+    "outer_s": 200.0
+   },
+   "gun_model": "砲M-P08",
+   "gun_path": "甲板-main/砲M-P08",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    412,
+    420
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-P08",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    413,
+    419
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    416.5,
+    201,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 201,
+    "n": 32,
+    "resid": 0.54,
+    "rx": -7.62,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 5.0,
+    "muzzle": [
+     416.5,
+     206.62,
+     49.52
+    ],
+    "need_pull": 6.62,
+    "outer_s": 201
+   },
+   "gun_model": "砲M-S08",
+   "gun_path": "甲板-main/砲M-S08",
+   "host": "甲板-main",
+   "host_work": "gura-pinas-01m-deck-main",
+   "lid_x": [
+    412,
+    420
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-16"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-M-S08",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    413,
+    419
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    450,
+    123,
+    71
+   ],
+   "face": {
+    "hinge_surf_s": 197,
+    "n": 54,
+    "resid": 0.52,
+    "rx": -8.14,
+    "rz_fit": -0.72
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 5.5,
+    "muzzle": [
+     450.0,
+     117.39,
+     66.67
+    ],
+    "need_pull": 5.61,
+    "outer_s": 198.0
+   },
+   "gun_model": "砲U-P01",
+   "gun_path": "甲板-puente/砲U-P01",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    445,
+    454
+   ],
+   "lid_z": [
+    63,
+    71
+   ],
+   "meta": {
+    "close_deg": 79.9,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-17"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P01",
+   "open_size": [
+    6,
+    6
+   ],
+   "open_x": [
+    447,
+    452
+   ],
+   "open_z": [
+    65,
+    70
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    450,
+    198,
+    71
+   ],
+   "face": {
+    "hinge_surf_s": 198,
+    "n": 54,
+    "resid": 0.52,
+    "rx": -8.14,
+    "rz_fit": -0.72
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 5.5,
+    "muzzle": [
+     450.0,
+     203.61,
+     66.67
+    ],
+    "need_pull": 5.61,
+    "outer_s": 199
+   },
+   "gun_model": "砲U-S01",
+   "gun_path": "甲板-puente/砲U-S01",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    445,
+    454
+   ],
+   "lid_z": [
+    63,
+    71
+   ],
+   "meta": {
+    "close_deg": 79.9,
+    "house": 6,
+    "kind": "portlid",
+    "lid_of": "gun-20"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S01",
+   "open_size": [
+    6,
+    6
+   ],
+   "open_x": [
+    447,
+    452
+   ],
+   "open_z": [
+    65,
+    70
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    490,
+    126,
+    73
+   ],
+   "face": {
+    "hinge_surf_s": 194,
+    "n": 54,
+    "resid": 0.53,
+    "rx": -6.06,
+    "rz_fit": -9.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     490.0,
+     121.39,
+     68.67
+    ],
+    "need_pull": 5.61,
+    "outer_s": 194.0
+   },
+   "gun_model": "砲U-P02",
+   "gun_path": "甲板-puente/砲U-P02",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    485,
+    494
+   ],
+   "lid_z": [
+    65,
+    73
+   ],
+   "meta": {
+    "close_deg": 81.9,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-18"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P02",
+   "open_size": [
+    6,
+    6
+   ],
+   "open_x": [
+    487,
+    492
+   ],
+   "open_z": [
+    67,
+    72
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    189.4
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    490,
+    195,
+    73
+   ],
+   "face": {
+    "hinge_surf_s": 195,
+    "n": 54,
+    "resid": 0.53,
+    "rx": -6.06,
+    "rz_fit": -9.35
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.5,
+    "muzzle": [
+     490.0,
+     199.61,
+     68.67
+    ],
+    "need_pull": 5.61,
+    "outer_s": 195
+   },
+   "gun_model": "砲U-S02",
+   "gun_path": "甲板-puente/砲U-S02",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    485,
+    494
+   ],
+   "lid_z": [
+    65,
+    73
+   ],
+   "meta": {
+    "close_deg": 81.9,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-21"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S02",
+   "open_size": [
+    6,
+    6
+   ],
+   "open_x": [
+    487,
+    492
+   ],
+   "open_z": [
+    67,
+    72
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -9.4
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    516,
+    131,
+    74
+   ],
+   "face": {
+    "hinge_surf_s": 189,
+    "n": 54,
+    "resid": 0.51,
+    "rx": -0.76,
+    "rz_fit": -20.2
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     515.5,
+     127.38,
+     70.53
+    ],
+    "need_pull": 5.62,
+    "outer_s": 188.0
+   },
+   "gun_model": "砲U-P03",
+   "gun_path": "甲板-puente/砲U-P03",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    511,
+    520
+   ],
+   "lid_z": [
+    66,
+    74
+   ],
+   "meta": {
+    "close_deg": 87.2,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-19"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P03",
+   "open_size": [
+    6,
+    6
+   ],
+   "open_x": [
+    513,
+    518
+   ],
+   "open_z": [
+    68,
+    73
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    200.2
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    516,
+    190,
+    74
+   ],
+   "face": {
+    "hinge_surf_s": 190,
+    "n": 54,
+    "resid": 0.51,
+    "rx": -0.76,
+    "rz_fit": -20.2
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     515.5,
+     193.62,
+     70.53
+    ],
+    "need_pull": 5.62,
+    "outer_s": 189
+   },
+   "gun_model": "砲U-S03",
+   "gun_path": "甲板-puente/砲U-S03",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    511,
+    520
+   ],
+   "lid_z": [
+    66,
+    74
+   ],
+   "meta": {
+    "close_deg": 87.2,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-22"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S03",
+   "open_size": [
+    6,
+    6
+   ],
+   "open_x": [
+    513,
+    518
+   ],
+   "open_z": [
+    68,
+    73
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -20.2
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "gura-pinas-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": [
+  {
+   "gun": "甲板-puente/U-chase-stern-P",
+   "id": "gun-23",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  },
+  {
+   "gun": "甲板-puente/U-chase-stern-S",
+   "id": "gun-24",
+   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
+  }
+ ]
+}

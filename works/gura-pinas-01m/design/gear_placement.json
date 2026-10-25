@@ -1,0 +1,826 @@
+{
+ "note": "draft_gear.py 的結果；模型 at ＝ pivot 落點（世界座標；host 子作品都在 0,0,0）",
+ "magazine": {
+  "work": "gura-pinas-01m-magazine",
+  "anchors": {
+   "blast": [
+    242,
+    160,
+    33
+   ],
+   "door": [
+    262,
+    160,
+    26
+   ]
+  },
+  "meta": {
+   "kind": "magazine",
+   "pos": "aft",
+   "powder_lb": 3200
+  }
+ },
+ "models": [
+  {
+   "name": "主絞盤",
+   "host": "gura-pinas-01m-deck-puente",
+   "work": "basecamp-ember-01m-capstan",
+   "at": [
+    316.0,
+    160.5,
+    62.0
+   ],
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "capstan"
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "羅經櫃",
+   "host": "gura-pinas-01m-deck-alcazar",
+   "work": "summit-night-falcon-01m-binnacle",
+   "at": [
+    282.0,
+    160.5,
+    85.0
+   ],
+   "pivot": [
+    9,
+    13,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "binnacle"
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "小艇",
+   "host": "gura-pinas-01m-deck-puente",
+   "work": "basecamp-ember-01m-boat",
+   "at": [
+    385.0,
+    160.5,
+    73.0
+   ],
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "kind": "boat",
+    "boat": "cutter",
+    "length_m": 9
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-001",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    166.2,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-002",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    154.8,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-003",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    170.8,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-004",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    150.2,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-005",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    175.4,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-006",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    145.6,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-007",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    180.0,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-008",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    141.0,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-009",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    184.6,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-010",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    226.2,
+    136.4,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-011",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    166.2,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-012",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    154.8,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-013",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    170.8,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-014",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    150.2,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-015",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    175.4,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-016",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    145.6,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-017",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    180.0,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-018",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    141.0,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-019",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    184.6,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-020",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    136.4,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-021",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    189.2,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-022",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    230.8,
+    131.8,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-023",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    166.2,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-024",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    154.8,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-025",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    170.8,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-026",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    150.2,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-027",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    175.4,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-028",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    145.6,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-029",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    180.0,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-030",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    141.0,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-031",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    184.6,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-032",
+   "host": "gura-pinas-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    235.4,
+    136.4,
+    26
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  }
+ ]
+}
