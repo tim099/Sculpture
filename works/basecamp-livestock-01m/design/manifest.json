@@ -1,0 +1,520 @@
+{
+ "root": "basecamp-livestock-01m",
+ "works": {
+  "basecamp-livestock-01m-henhouse": {
+   "anchors": {
+    "door": [
+     16,
+     38,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     60,
+     26,
+     1
+    ],
+    "work-a1-to": [
+     60,
+     30,
+     3
+    ],
+    "work-a2": [
+     66,
+     40,
+     1
+    ],
+    "work-a2-to": [
+     67,
+     47,
+     2
+    ],
+    "work-b1": [
+     31,
+     36,
+     1
+    ],
+    "work-b1-to": [
+     31,
+     31,
+     6
+    ]
+   },
+   "expect": "basecamp-livestock-01m-henhouse.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "common",
+      "use": "henhouse",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "雞舍、雞場與擺設",
+     "recolor": {},
+     "source": "basecamp-livestock-01m-henhouse-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-livestock-01m-henhouse-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      39,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "雞舍-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      46,
+      8
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "雞舍-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      28,
+      39,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-雞舍",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    80,
+    45
+   ],
+   "tags": "building,common",
+   "title": "養雞場（共用：木板雞舍與產卵箱、木柵雞場、料槽與料箱）"
+  },
+  "basecamp-livestock-01m-henhouse-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-livestock-01m-henhouse-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    45
+   ],
+   "tags": "sub",
+   "title": "養雞場｜雞舍、雞場與擺設"
+  },
+  "basecamp-livestock-01m-henhouse-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-livestock-01m-henhouse-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    45
+   ],
+   "tags": "sub",
+   "title": "養雞場｜屋頂"
+  },
+  "basecamp-livestock-01m-pigsty": {
+   "anchors": {
+    "door": [
+     30,
+     25,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     15,
+     24,
+     1
+    ],
+    "work-a1-to": [
+     15,
+     31,
+     5
+    ],
+    "work-a2": [
+     63,
+     24,
+     1
+    ],
+    "work-a2-to": [
+     63,
+     31,
+     5
+    ],
+    "work-a3": [
+     56,
+     18,
+     1
+    ],
+    "work-a3-to": [
+     59,
+     10,
+     4
+    ]
+   },
+   "expect": "basecamp-livestock-01m-pigsty.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,10",
+      "style": "common",
+      "use": "pigsty",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "豬舍、圈與擺設",
+     "recolor": {},
+     "source": "basecamp-livestock-01m-pigsty-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-livestock-01m-pigsty-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      37,
+      19,
+      16
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-圈門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    100,
+    40
+   ],
+   "tags": "building,common",
+   "title": "豬圈（共用：毛石豬舍與茅草頂、矮石牆的泥地圈、石槽）"
+  },
+  "basecamp-livestock-01m-pigsty-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-livestock-01m-pigsty-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    40
+   ],
+   "tags": "sub",
+   "title": "豬圈｜豬舍、圈與擺設"
+  },
+  "basecamp-livestock-01m-pigsty-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-livestock-01m-pigsty-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    40
+   ],
+   "tags": "sub",
+   "title": "豬圈｜屋頂"
+  },
+  "basecamp-livestock-01m-ranch": {
+   "anchors": {
+    "door": [
+     30,
+     58,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     103,
+     20,
+     1
+    ],
+    "work-a1-to": [
+     103,
+     25,
+     10
+    ],
+    "work-a2": [
+     136,
+     33,
+     1
+    ],
+    "work-a2-to": [
+     136,
+     38,
+     7
+    ],
+    "work-a3": [
+     141,
+     89,
+     1
+    ],
+    "work-a3-to": [
+     141,
+     94,
+     3
+    ],
+    "work-b1": [
+     40,
+     66,
+     1
+    ],
+    "work-b1-to": [
+     40,
+     100,
+     8
+    ]
+   },
+   "expect": "basecamp-livestock-01m-ranch.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "16,12",
+      "style": "common",
+      "use": "ranch",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牛棚、牛欄與擺設",
+     "recolor": {},
+     "source": "basecamp-livestock-01m-ranch-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-livestock-01m-ranch-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      17,
+      59,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "牛棚-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      59,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "牛棚-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      74,
+      79,
+      16
+     ],
+     "meta": {
+      "part": "vent"
+     },
+     "mirror": "",
+     "name": "牛棚-氣窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-vent",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      50,
+      59,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-牛棚",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    160,
+    120,
+    65
+   ],
+   "tags": "building,common",
+   "title": "牧場（共用：木板牛棚、柱與橫桿的牛欄、乾草架與料槽；後面一道門接牧草地）"
+  },
+  "basecamp-livestock-01m-ranch-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-livestock-01m-ranch-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    120,
+    65
+   ],
+   "tags": "sub",
+   "title": "牧場｜牛棚、牛欄與擺設"
+  },
+  "basecamp-livestock-01m-ranch-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-livestock-01m-ranch-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    120,
+    65
+   ],
+   "tags": "sub",
+   "title": "牧場｜屋頂"
+  }
+ }
+}
