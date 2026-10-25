@@ -238,7 +238,10 @@ def mill_wind():
     M.anchor('lot-0', 0, 0, 0)
     return {'key': 'mill-wind', 'title': '風車磨坊（君士坦丁堡：方石夾磚帶的圓塔、紅陶瓦圓錐頂、八根輻與三角帆布、樓上的磨石；後院矮石牆、石砌小倉）',
             'use': 'mill', 'lot': (8, 12), 'M': M, 'style': 'roman', 'variant': 'b', 'layers': {'body': '塔與擺設', 'vanes': '風軸、輻與帆', 'roof': '屋頂'},
-            'layer_meta': {'vanes': {'part': 'vanes', 'build0': 0.85, 'build1': 0.97, 'sweep': 'z'}}}
+            'layer_meta': {'vanes': {'part': 'vanes', 'build0': 0.85, 'build1': 0.97, 'sweep': 'z',
+                                     # 照風轉（TASK-0939；標法同船的 spin，造船規格 §9.8）：每秒轉 spin_k × 風速（m/s）度；轉軸過輪轂中心、沿 y（正轉 ＝ 從正面看順時針，輻在前、帆拖在後）
+                                     'spin': 'wind', 'spin_mode': 'rate', 'spin_k': 9, 'spin_pivot_x': 40.5, 'spin_pivot_y': 24.5, 'spin_pivot_z': 66.5,
+                                     'spin_axis_x': 0, 'spin_axis_y': 1, 'spin_axis_z': 0}}}
 
 
 # ─────────────────────────────── 漁場 8 × 12 m ───────────────────────────────
