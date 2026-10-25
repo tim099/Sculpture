@@ -19,12 +19,22 @@ def xyz(v):
     return ','.join(num(float(c)) for c in v)
 
 
+WORKS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OLD = {}
+for w in set(GB['deck_works'].values()):
+    p = os.path.join(WORKS, w, 'models.json')
+    if os.path.exists(p):
+        for m in json.load(open(p, encoding='utf-8'))['models']:
+            OLD[(w, m['name'])] = m.get('meta') or {}
 ok = bad = 0
 for r in PL:
     t = GB['types'][r['type']]
     s = float(t['scale'])
     meta = dict(t['meta'])
     meta.update({'deck': r['deck'], 'side': r['side'], 'port': r['port'] if isinstance(r['port'], int) else 'stern'})
+    old = OLD.get((GB['deck_works'][r['deck']], r['name']), {})
+    if 'id' in old:
+        meta['id'] = old['id']                     # admin.py ids 發過的物件 id 照留（meta= 是整份覆寫；蓋板的 lid_of 指著它）
     note = '%s（階段八 TASK-0972；%s 舷%s；draft_guns.py back %s、砲口伸出 %s）' % (
         NAMES[r['type']], r['side'], ('、%s 第 %d 個砲門' % (r['deck'], r['port'])) if isinstance(r['port'], int) else '、船尾', num(float(r['back'])), num(float(r['muzzle_beyond'])))
     args = ['op=work', 'sub=model', 'persona=erina', 'work=' + GB['deck_works'][r['deck']], 'name=' + r['name'], 'source_work=' + t['work'],

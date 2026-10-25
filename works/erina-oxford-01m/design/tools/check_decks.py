@@ -13,7 +13,7 @@ from wio import export_list, key
 HULL = 'erina-oxford-01m'
 plan = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))
 pts = json.load(open(os.path.join(design, 'ladder_points.json'), encoding='utf-8'))
-parts = {'deck-' + k: os.path.join(design, 'masks', 'decks', k + '.vox.txt') for k in plan['decks_build']['spans']}
+parts = {'deck-' + k: os.path.join(design, 'masks', 'decks', k + ('.state.vox.txt' if os.path.exists(os.path.join(design, 'masks', 'decks', k + '.state.vox.txt')) else '.vox.txt')) for k in plan['decks_build']['spans']}   # .state ＝ 扣掉艏斜桅穿過的格（階段六開孔）
 for up in sorted({v['up'] for v in pts.values()}):
     parts['ladders-' + up] = os.path.join(design, 'masks', 'ladders', up + '.vox.txt')
 

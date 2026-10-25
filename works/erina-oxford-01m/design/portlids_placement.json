@@ -1,0 +1,1247 @@
+{
+ "count": 16,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    8,
+    0,
+    0
+   ]
+  },
+  "cells": 162,
+  "design": "erina-oxford-01m",
+  "file": "erina-oxford-01m/design/masks/portlids/lid.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "erina-oxford-01m",
+  "pivot": [
+   4.5,
+   0,
+   0
+  ],
+  "sha256": "16b78dc6a9c3965757955b4af1b44da13957f8af4baf5e7a0e5daede844fdf13",
+  "size": [
+   9,
+   9,
+   2
+  ],
+  "title": "牛津號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m）",
+  "work": "erina-oxford-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 牛津號：16 片（甲板-gun），蓋板 erina-oxford-01m-portlid [9, 9, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    72.5,
+    69,
+    60
+   ],
+   "face": {
+    "hinge_surf_s": 123,
+    "n": 32,
+    "resid": 0.51,
+    "rx": -8.6,
+    "rz_fit": 7.45
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     72.5,
+     60.73,
+     55.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 123.0
+   },
+   "gun_model": "砲G-P01",
+   "gun_path": "甲板-gun/砲G-P01",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    68,
+    76
+   ],
+   "lid_z": [
+    52,
+    60
+   ],
+   "meta": {
+    "close_deg": 79.4,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P01",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    69,
+    75
+   ],
+   "open_z": [
+    53,
+    59
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    172.5
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    72.5,
+    124,
+    60
+   ],
+   "face": {
+    "hinge_surf_s": 124,
+    "n": 32,
+    "resid": 0.51,
+    "rx": -8.6,
+    "rz_fit": 7.45
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     72.5,
+     132.28,
+     55.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 124
+   },
+   "gun_model": "砲G-S01",
+   "gun_path": "甲板-gun/砲G-S01",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    68,
+    76
+   ],
+   "lid_z": [
+    52,
+    60
+   ],
+   "meta": {
+    "close_deg": 79.4,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S01",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    69,
+    75
+   ],
+   "open_z": [
+    53,
+    59
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    7.5
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    98.5,
+    66,
+    57
+   ],
+   "face": {
+    "hinge_surf_s": 126,
+    "n": 32,
+    "resid": 0.57,
+    "rx": -7.13,
+    "rz_fit": 7.29
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     98.5,
+     57.73,
+     52.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 126.0
+   },
+   "gun_model": "砲G-P02",
+   "gun_path": "甲板-gun/砲G-P02",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    94,
+    102
+   ],
+   "lid_z": [
+    49,
+    57
+   ],
+   "meta": {
+    "close_deg": 80.9,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P02",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    95,
+    101
+   ],
+   "open_z": [
+    50,
+    56
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    172.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    98.5,
+    127,
+    57
+   ],
+   "face": {
+    "hinge_surf_s": 127,
+    "n": 32,
+    "resid": 0.57,
+    "rx": -7.13,
+    "rz_fit": 7.29
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     98.5,
+     135.28,
+     52.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 127
+   },
+   "gun_model": "砲G-S02",
+   "gun_path": "甲板-gun/砲G-S02",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    94,
+    102
+   ],
+   "lid_z": [
+    49,
+    57
+   ],
+   "meta": {
+    "close_deg": 80.9,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S02",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    95,
+    101
+   ],
+   "open_z": [
+    50,
+    56
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    7.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    124.5,
+    64,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 128,
+    "n": 32,
+    "resid": 0.58,
+    "rx": -2.33,
+    "rz_fit": 3.16
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     124.5,
+     55.73,
+     50.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 128.0
+   },
+   "gun_model": "砲G-P03",
+   "gun_path": "甲板-gun/砲G-P03",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    120,
+    128
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 85.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-3"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P03",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    121,
+    127
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    176.8
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    124.5,
+    129,
+    55
+   ],
+   "face": {
+    "hinge_surf_s": 129,
+    "n": 32,
+    "resid": 0.58,
+    "rx": -2.33,
+    "rz_fit": 3.16
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.0,
+    "muzzle": [
+     124.5,
+     137.28,
+     50.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 129
+   },
+   "gun_model": "砲G-S03",
+   "gun_path": "甲板-gun/砲G-S03",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    120,
+    128
+   ],
+   "lid_z": [
+    47,
+    55
+   ],
+   "meta": {
+    "close_deg": 85.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-11"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S03",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    121,
+    127
+   ],
+   "open_z": [
+    48,
+    54
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    3.2
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    150.5,
+    62,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 130,
+    "n": 32,
+    "resid": 0.62,
+    "rx": -7.62,
+    "rz_fit": 2.66
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     150.5,
+     52.73,
+     48.42
+    ],
+    "need_pull": 10.28,
+    "outer_s": 130.0
+   },
+   "gun_model": "砲G-P04",
+   "gun_path": "甲板-gun/砲G-P04",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    146,
+    154
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-4"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P04",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    147,
+    153
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    177.3
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    150.5,
+    131,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 131,
+    "n": 32,
+    "resid": 0.62,
+    "rx": -7.62,
+    "rz_fit": 2.66
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     150.5,
+     140.28,
+     48.42
+    ],
+    "need_pull": 10.28,
+    "outer_s": 131
+   },
+   "gun_model": "砲G-S04",
+   "gun_path": "甲板-gun/砲G-S04",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    146,
+    154
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S04",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    147,
+    153
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    2.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    176.5,
+    62,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 130,
+    "n": 32,
+    "resid": 0.47,
+    "rx": -7.94,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     176.5,
+     52.73,
+     48.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 131.0
+   },
+   "gun_model": "砲G-P05",
+   "gun_path": "甲板-gun/砲G-P05",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    172,
+    180
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P05",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    173,
+    179
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    176.5,
+    131,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 131,
+    "n": 32,
+    "resid": 0.47,
+    "rx": -7.94,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     176.5,
+     140.28,
+     48.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 132
+   },
+   "gun_model": "砲G-S05",
+   "gun_path": "甲板-gun/砲G-S05",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    172,
+    180
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-13"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S05",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    173,
+    179
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    200.5,
+    62,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 130,
+    "n": 32,
+    "resid": 0.47,
+    "rx": -7.94,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     200.5,
+     52.73,
+     48.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 131.0
+   },
+   "gun_model": "砲G-P06",
+   "gun_path": "甲板-gun/砲G-P06",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    196,
+    204
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P06",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    197,
+    203
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    200.5,
+    131,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 131,
+    "n": 32,
+    "resid": 0.47,
+    "rx": -7.94,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     200.5,
+     140.28,
+     48.42
+    ],
+    "need_pull": 9.28,
+    "outer_s": 132
+   },
+   "gun_model": "砲G-S06",
+   "gun_path": "甲板-gun/砲G-S06",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    196,
+    204
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-14"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S06",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    197,
+    203
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    224.5,
+    62,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 130,
+    "n": 32,
+    "resid": 0.47,
+    "rx": -7.94,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     224.5,
+     52.73,
+     48.42
+    ],
+    "need_pull": 10.28,
+    "outer_s": 130.0
+   },
+   "gun_model": "砲G-P07",
+   "gun_path": "甲板-gun/砲G-P07",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    220,
+    228
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P07",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    221,
+    227
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    224.5,
+    131,
+    53
+   ],
+   "face": {
+    "hinge_surf_s": 131,
+    "n": 32,
+    "resid": 0.47,
+    "rx": -7.94,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     224.5,
+     140.28,
+     48.42
+    ],
+    "need_pull": 10.28,
+    "outer_s": 131
+   },
+   "gun_model": "砲G-S07",
+   "gun_path": "甲板-gun/砲G-S07",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    220,
+    228
+   ],
+   "lid_z": [
+    45,
+    53
+   ],
+   "meta": {
+    "close_deg": 80.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-15"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S07",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    221,
+    227
+   ],
+   "open_z": [
+    46,
+    52
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    248.5,
+    63,
+    54
+   ],
+   "face": {
+    "hinge_surf_s": 129,
+    "n": 32,
+    "resid": 0.56,
+    "rx": -8.27,
+    "rz_fit": -3.83
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     248.5,
+     53.73,
+     50.42
+    ],
+    "need_pull": 10.28,
+    "outer_s": 129.0
+   },
+   "gun_model": "砲G-P08",
+   "gun_path": "甲板-gun/砲G-P08",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    244,
+    252
+   ],
+   "lid_z": [
+    46,
+    54
+   ],
+   "meta": {
+    "close_deg": 79.7,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-P08",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    245,
+    251
+   ],
+   "open_z": [
+    47,
+    53
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    183.8
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "erina-oxford-01m-portlid"
+  },
+  {
+   "at": [
+    248.5,
+    130,
+    54
+   ],
+   "face": {
+    "hinge_surf_s": 130,
+    "n": 32,
+    "resid": 0.56,
+    "rx": -8.27,
+    "rz_fit": -3.83
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     248.5,
+     139.28,
+     50.42
+    ],
+    "need_pull": 10.28,
+    "outer_s": 130
+   },
+   "gun_model": "砲G-S08",
+   "gun_path": "甲板-gun/砲G-S08",
+   "host": "甲板-gun",
+   "host_work": "erina-oxford-01m-deck-gun",
+   "lid_x": [
+    244,
+    252
+   ],
+   "lid_z": [
+    46,
+    54
+   ],
+   "meta": {
+    "close_deg": 79.7,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-16"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-G-S08",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    245,
+    251
+   ],
+   "open_z": [
+    47,
+    53
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -3.8
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "erina-oxford-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": []
+}

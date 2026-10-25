@@ -13,6 +13,11 @@ for r in carve.tolist():
     st.pop(tuple(r[:3]), None)
 for r in paint.tolist():
     st[tuple(r[:3])] = r[3]
+# 艏斜桅穿過船殼的孔（階段六刻掉、由艏斜桅填滿）⇒ 船殼應有的樣子不含那幾格
+bp = os.path.join(design, 'masks', 'masts', 'bowsprit.vox.txt')
+if os.path.exists(bp):
+    for r in np.loadtxt(bp, delimiter=',', comments='#', dtype=np.int32, ndmin=2).tolist():
+        st.pop(tuple(r[:3]), None)
 with open(os.path.join(design, 'masks', 'hull_state.vox.txt'), 'w', encoding='utf-8', newline='\n') as f:
     f.write('# 牛津號 船殼現在應該的樣子（hull − 炮門開口 ＋ 塗裝）\n')
     for k in sorted(st):

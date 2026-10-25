@@ -21,6 +21,7 @@
 			"persona": "erina",
 			"note": "",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 33
 			}
@@ -47,6 +48,7 @@
 			"meta": {
 				"deck": "orlop",
 				"floor": "100:22,250:22",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "底艙平台",
@@ -75,6 +77,7 @@
 			"meta": {
 				"deck": "gun",
 				"floor": "51:50,100:44,142:41,230:41,303:47",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "炮甲板",
@@ -103,6 +106,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "47:70,111:62,158:60",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "後甲板",
@@ -131,6 +135,7 @@
 			"meta": {
 				"deck": "poop",
 				"floor": "44:87,96:81",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 4,
 				"name": "艉樓",
@@ -159,6 +164,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "262:62,306:65",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 3,
 				"name": "艏樓",
@@ -183,7 +189,10 @@
 			"enabled": true,
 			"created_at": "2026-10-26T04:38:25",
 			"persona": "erina",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "前桅",
@@ -203,7 +212,10 @@
 			"enabled": true,
 			"created_at": "2026-10-26T04:38:25",
 			"persona": "erina",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "後桅",
@@ -223,7 +235,10 @@
 			"enabled": true,
 			"created_at": "2026-10-26T04:38:25",
 			"persona": "erina",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -243,7 +258,10 @@
 			"enabled": true,
 			"created_at": "2026-10-26T04:38:26",
 			"persona": "erina",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "支索板",
@@ -263,7 +281,60 @@
 			"enabled": true,
 			"created_at": "2026-10-26T04:43:07",
 			"persona": "erina",
-			"note": "階段七（TASK-0972）"
+			"note": "階段七（TASK-0972）",
+			"meta": {
+				"id": "part-5"
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "erina-oxford-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				448,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:56:47",
+			"persona": "erina",
+			"note": "步驟 10：火藥庫",
+			"meta": {
+				"hoist": "ladders-1#hold",
+				"id": "magazine-1",
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 800
+			}
+		},
+		{
+			"name": "錨架",
+			"work": "erina-oxford-01m-anchor-gear",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				448,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:58:06",
+			"persona": "erina",
+			"note": "步驟 11（TASK-0972）",
+			"meta": {
+				"id": "part-6"
+			}
 		}
 	]
 }

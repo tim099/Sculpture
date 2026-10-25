@@ -92,20 +92,22 @@ def main():
         xm = Y.masts[key]['x0']
         n = CH['shrouds'][key] + CH['backstays'].get(key, 0)
         xs = [xm - CH['first_aft'] - i * CH['spacing'] for i in range(n)]
-        zc = min(top_z(x) for x in range(min(xs) - 3, max(xs) + 4)) - CH['below_rail']   # 那一段最低的舷頂（前桅的 shrouds 落在艏樓後面的船腰）
+        # 那一段船殼實際最上面那一列的最低處（照格子量，⛔ 照設計的舷頂線 top_z：差一格那幾欄量不到船殼 ⇒ deadeye 落在中線、浮空 2 塊）
+        zc = min(max(z for (xx, z) in hout if xx == x) for x in range(min(xs) - 3, max(xs) + 4)) - CH['below_rail']
         for x in range(min(xs) - 3, max(xs) + 4):
-            o = max(hout.get((x, zc - 1), -1), hout.get((x, zc), -1))
+            o = max(hout.get((x, z_), -1) for z_ in range(zc - CH.get('layers', 2) + 1, zc + 1))
             if o < 0:
                 continue
             for dy in range(o + 1, o + CH['width'] + 1):
-                for z in (zc - 1, zc):
+                for z in range(zc - CH.get('layers', 2) + 1, zc + 1):
                     for y in (YC + dy, YC - dy):
                         if (x, y, z) in occ:
                             skipped += 1
                         else:
                             chan[(x, y, z)] = RG['colors']['channel']
         for i, x in enumerate(xs, 1):
-            o = max(hout.get((x, zc - 1), -1), hout.get((x, zc), -1))
+            o = max(hout.get((x, z_), -1) for z_ in range(zc - CH.get('layers', 2) + 1, zc + 1))
+            assert o >= 0, ('deadeye 那一欄量不到船殼', key, i, x, zc)
             dyo = o + CH['width']
             for ddx in (-1, 0, 1):
                 for z in range(zc + 1, zc + 4):

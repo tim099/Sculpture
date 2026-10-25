@@ -1,0 +1,286 @@
+{
+ "anchors": {
+  "blast": [
+   115,
+   96,
+   28
+  ],
+  "door": [
+   127,
+   96,
+   22
+  ]
+ },
+ "models": [
+  {
+   "name": "桶-01",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    105.5,
+    85.5,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-02",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    105.5,
+    91.0,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-03",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    105.5,
+    102.0,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-04",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    105.5,
+    107.5,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-05",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    111.5,
+    85.5,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-06",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    111.5,
+    91.0,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-07",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    111.5,
+    102.0,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-08",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    111.5,
+    107.5,
+    22
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "艙蓋-主",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "meadow-monitor-01m-hatch",
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1.4615,
+    1
+   ],
+   "at": [
+    189,
+    87,
+    43
+   ],
+   "meta": {
+    "kind": "door",
+    "open": "up"
+   },
+   "need_support": false,
+   "src": "主艙口 x 190–204、|dy| ≤ 8 ＋ 圍欄一圈 ⇒ 17 × 19；放在圍欄頂（甲板板 z 40、圍欄 41–42）"
+  },
+  {
+   "name": "艙蓋-前",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "meadow-monitor-01m-hatch",
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.8824,
+    1.3077,
+    1
+   ],
+   "at": [
+    231,
+    88,
+    44
+   ],
+   "meta": {
+    "kind": "door",
+    "open": "up"
+   },
+   "need_support": false,
+   "src": "前艙口 x 232–244、|dy| ≤ 7 ＋ 圍欄 ⇒ 15 × 17；甲板板 z 41、圍欄 42–43"
+  },
+  {
+   "name": "爐灶",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "kaguya-gloire-01m-galley",
+   "pivot": [
+    22,
+    16,
+    0
+   ],
+   "scale": 0.33,
+   "at": [
+    279.5,
+    84,
+    45
+   ],
+   "meta": {
+    "kind": "galley"
+   },
+   "src": "艏樓底下的炮甲板（淨高 15 格 ⇒ 光榮號的爐灶縮到 0.33）、左舷側（中線是艏斜桅的根）"
+  },
+  {
+   "name": "絞盤",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "basecamp-ember-01m-capstan",
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.16,
+   "at": [
+    116.5,
+    96.5,
+    43
+   ],
+   "meta": {
+    "kind": "capstan"
+   },
+   "src": "後甲板底下的炮甲板中線（餘燼號的主絞盤 ×0.16 ⇒ 直徑 1.3 m）"
+  }
+ ],
+ "magazine_meta": {
+  "kind": "magazine",
+  "pos": "aft",
+  "hoist": "甲板-gun/梯子/hold",
+  "powder_lb": 800
+ }
+}
