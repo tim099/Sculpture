@@ -113,6 +113,120 @@
    "tags": "sub",
    "title": "漁場｜屋頂"
   },
+  "kotoko-grainsea-01m-fishery-water": {
+   "anchors": {
+    "door": [
+     40,
+     1,
+     16
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kotoko-grainsea-01m-fishery-water.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "deckz": "1.5",
+      "kind": "building",
+      "lot": "8,20",
+      "style": "common",
+      "use": "fishery",
+      "variant": "b",
+      "water": "2"
+     },
+     "mirror": "",
+     "name": "平台、魚棚、棧橋、小船與擺設",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-fishery-water-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kotoko-grainsea-01m-fishery-water-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      40.5,
+      4,
+      38
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-中柱",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    200,
+    62
+   ],
+   "tags": "building,common",
+   "title": "漁場水上版（共用：木樁平台上開敞的茅草魚棚、剖魚的長桌、魚簍與醃魚桶、晾網架；一條窄棧橋伸到海上，尾端的繫船樁、下水梯、兩旁繫著的小划船）"
+  },
+  "kotoko-grainsea-01m-fishery-water-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-fishery-water-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    200,
+    62
+   ],
+   "tags": "sub",
+   "title": "漁場水上版｜平台、魚棚、棧橋、小船與擺設"
+  },
+  "kotoko-grainsea-01m-fishery-water-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kotoko-grainsea-01m-fishery-water-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    200,
+    62
+   ],
+   "tags": "sub",
+   "title": "漁場水上版｜屋頂"
+  },
   "kotoko-grainsea-01m-mill": {
    "anchors": {
     "door": [

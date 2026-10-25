@@ -338,6 +338,105 @@ def fishery():
             'use': 'fishery', 'lot': (8, 12), 'M': M, 'style': 'common', 'layers': {'body': '魚棚、晾網架、小船與擺設', 'roof': '屋頂'}}
 
 
+# ─────────────────────────────── 漁場水上版 8 × 20 m（TASK-0963）───────────────────────────────
+DECK_Z = 15                         # 平台面（遊戲畫的木板頂）在模型 z 1.5 m ⇒ 成品 meta deckz 1.5；模型自己的地板在 z 15（比遊戲的板高一格，不跟它的頂面打架）、上面的東西從 16 起
+
+
+def shift(M, Mp, dz):
+    """暫存的框 Mp（z 0 ＝ 地板上）⇒ M 的 z 往上 dz：格、外部模型（燈籠）都搬。"""
+    for (x, y, z), (ly, c) in sorted(Mp.cells.items()):
+        M.put(ly, x, y, z + dz, c)
+    for m in Mp.models:
+        m = dict(m)
+        m['at'] = [m['at'][0], m['at'][1], m['at'][2] + dz]
+        M.models.append(m)
+    M.oob += Mp.oob
+
+
+def boat_y(M, y0, y1, xc, zb=0, layer='body'):
+    """沿 y 的小划船（浮在水上：船底在 zb、沒有墊木）—— 照 rowboat 在暫存的框裡長（船底 z 0 ⇒ 墊木那一段是空的），再轉 90°、抬到 zb（船寬 x xc ± 9、長 y0～y1）。"""
+    T = Model((y1 - y0, 20, 14))
+    rowboat(T, 0, y1 - y0, 10, 0, layer)
+    for (x, y, z), (ly, c) in sorted(T.cells.items()):
+        M.put(ly, int(xc) - 10 + y, y0 + x, z + zb, c)
+
+
+def traps(M, tx, ty, layer='body'):
+    """三個編的魚簍（橫放、口朝 +x）：兩個並排、上面再疊一個（同陸上版）。"""
+    for i, (x0, y0) in enumerate(((tx, ty), (tx + 7, ty), (tx + 3, ty))):
+        z0 = 0 if i < 2 else 6
+        for x in range(x0, x0 + 6):
+            for y in range(y0, y0 + 6):
+                for z in range(z0, z0 + 6):
+                    r = math.hypot(y + 0.5 - y0 - 3, z + 0.5 - z0 - 3)
+                    if r <= 3 and (x == x0 or r > 2):
+                        M.put(layer, x, y, z, TRAP if (x + y + z) % 3 else THATCH_R)
+
+
+def fishery_water():
+    """漁場水上版（fishery，共用；TASK-0963）：海堤、棧橋臨水那一側的木樁平台 —— 前面 8 × 8 m 的平台上一座開敞的茅草魚棚（剖魚的長桌、魚簍、醃魚桶、鹽箱）、
+    兩道晾網架、一疊魚簍與一盤繩；後面一條 2 m 寬、12 m 長的窄棧橋伸到海上：尾端兩根繫船樁、一道下水的梯子，兩旁各繫一條小划船。
+    - 照什麼：Tim 2026-10-26 的參考圖（水上的方平台、上面一間棚、後面伸出一條窄棧橋）「魚場是否可以參考這個 要有棧橋到海上(本體可以蓋在棧橋上)」「可以蓋在海堤 棧橋上」。
+      17 世紀加勒比海漁家的棧橋〔沒查到〕⇒ 配置是設計。
+    - 平台與樁由遊戲畫（Blocksail world/town.js WATER.fishery：8 × 20 m、jetty 12 × 2 m）：模型的 z 15 ＝ 平台面（meta deckz 1.5）、y 0 ＝ 正面（朝碼頭）；
+      模型多鋪一層地板（比遊戲的板高 0.1 m、範圍一樣）、尾端的繫船樁與梯子往下伸到 z 0、小船的底在 z 3（水面在 z 1～5：碼頭面 1.0～1.4 m）。"""
+    X, Y, Z = 80, 200, 62
+    M = Model((X, Y, Z))
+    JX0, JX1, JY = 30, 50, 80                                          # 窄棧橋：x 30～50（2 m）、y 80 起（12 m）
+    for x in range(X):                                                 # 地板：平台的板沿 y、棧橋的板橫鋪
+        for y in range(JY):
+            M.put('body', x, y, DECK_Z, FLOOR if (x // 3) % 2 else BOARD)
+    for x in range(JX0, JX1):
+        for y in range(JY, Y):
+            M.put('body', x, y, DECK_Z, FLOOR if (y // 3) % 2 else BOARD)
+    for px in (JX0, JX1 - 2):                                          # 繫船樁（尾端，伸出板面 1.2 m）、半路兩根（伸出 0.2 m）
+        M.box('body', px, 195, 0, px + 2, 197, DECK_Z + 13, FRAME)
+        M.box('body', px, 138, 0, px + 2, 140, DECK_Z + 3, FRAME)
+    for x in (37, 42):                                                 # 下水梯：掛在尾端那一緣
+        M.box('body', x, Y - 1, 2, x + 1, Y, DECK_Z, FRAME)
+    for z in range(3, DECK_Z, 3):
+        M.box('body', 38, Y - 1, z, 42, Y, z + 1, BOARD)
+    boat_y(M, 136, 188, 18, 3)                                         # 兩旁各一條小划船（船底 z 0.3 m：碼頭面 1.0 m 吃水 0.2 m、木棧橋 1.4 m 浮高 0.2 m —— 水面 0 m 加浪），繩繫在尾端的樁上
+    boat_y(M, 126, 178, 62, 3)
+    rod(M, (18.5, 186.5, 12.5), (30.5, 195.5, DECK_Z + 10.5), 0.9, ROPE, ROPE)
+    rod(M, (62.5, 176.5, 12.5), (48.5, 195.5, DECK_Z + 10.5), 0.9, ROPE, ROPE)
+
+    P = Model((X, JY, 46))                                             # 平台上（z 0 ＝ 地板上）
+    R = (6, 4, 74, 38)                                                 # 魚棚 6.8 × 3.4 m（正面全開）
+    for px in (R[0], 39, R[2] - 2):
+        for py in (R[1], R[3] - 2):
+            P.box('body', px, py, 0, px + 2, py + 2, 26, FRAME)
+    board_walls(P, (R[0], R[3] - 2, R[2], R[3]), 0, 26, 2, posts=False)   # 後牆（擋風）
+    for py in (R[1], R[3] - 2):
+        P.box('body', R[0], py, 26, R[2], py + 2, 28, FRAME)
+    thatch_roof(P, [{'x0': R[0], 'y0': R[1], 'x1': R[2], 'y1': R[3], 'ze': 28, 'p': 0.7, 'over': (3, 3, 3, 3), 'gable': 'x'}], salt=9282)
+    trestle_table(P, 10, 36, 20, 30, 8)                                # 剖魚的長桌、桌上的魚、刀
+    for x in range(12, 34, 4):
+        P.box('body', x, 22, 9, x + 2, 29, 10, FISH if (x // 4) % 3 else FISH_B)
+    P.box('body', 28, 21, 9, 30, 23, 10, IRON, True)
+    for (tx, ty) in ((46, 12), (54, 12), (46, 21)):                     # 一簍一簍的魚
+        tub(P, tx, ty, 0, 6, 3.5, FISH)
+    for (bx, by) in ((62, 27), (68, 27)):                              # 醃魚的桶
+        tub(P, bx, by, 0, 9, 3.5, SALT_D)
+    P.box('body', 58, 8, 0, 72, 16, 6, BOARD)                          # 鹽箱
+    P.box('body', 59, 9, 5, 71, 15, 6, SALT, True)
+    net_rack(P, 2, 28, 50)                                             # 兩道晾網架（中間留路往棧橋）
+    net_rack(P, 52, 78, 50, h=22)
+    traps(P, 58, 66)
+    rope_coil(P, 20, 70, r=4, h=2)
+    lantern(P, '燈籠-中柱', (40.5, R[1], 22))
+    shift(M, P, DECK_Z + 1)
+    J = Model((X, Y, 12))                                              # 棧橋上：一簍魚、一盤繩
+    tub(J, 35, 170, 0, 5, 3, FISH)
+    rope_coil(J, 44, 184, r=3, h=2)
+    shift(M, J, DECK_Z + 1)
+    M.anchor('door', 40, 1, DECK_Z + 1)
+    M.anchor('lot-0', 0, 0, 0)
+    return {'key': 'fishery-water', 'title': '漁場水上版（共用：木樁平台上開敞的茅草魚棚、剖魚的長桌、魚簍與醃魚桶、晾網架；一條窄棧橋伸到海上，尾端的繫船樁、下水梯、兩旁繫著的小划船）',
+            'use': 'fishery', 'lot': (8, 20), 'M': M, 'style': 'common', 'variant': 'b', 'meta': {'water': '2', 'deckz': '1.5'},
+            'layers': {'body': '平台、魚棚、棧橋、小船與擺設', 'roof': '屋頂'}}
+
+
 # ─────────────────────────────── 鹽田 12 × 12 m ───────────────────────────────
 def salt_heap(M, cx, cy, r, h):
     heap(M, cx, cy, r, r, h, lambda x, y, z: SALT_D if (x + 0.5 - cx) > (y + 0.5 - cy) + 2 and h01('sh', x, y, z) < 0.6 else SALT)
@@ -397,4 +496,4 @@ def saltpan():
             'use': 'saltpan', 'lot': (12, 12), 'M': M, 'style': 'common', 'layers': {'body': '鹽池、鹽倉與擺設', 'roof': '屋頂'}}
 
 
-ALL = [mill, mill_wind, fishery, saltpan]
+ALL = [mill, mill_wind, fishery, fishery_water, saltpan]

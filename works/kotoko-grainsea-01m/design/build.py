@@ -78,6 +78,7 @@ def main():
         pw = wid(key)
         links, layer_ver = [], {}
         meta_b = {'kind': 'building', 'use': B['use'], 'style': style, 'lot': '%d,%d' % B['lot'], 'base': 4, 'variant': B.get('variant', 'a')}
+        meta_b.update(B.get('meta', {}))                               # 水上版（TASK-0963）：water ＝ 離正面幾公尺以外是平台、deckz ＝ 平台面在模型的 z（BUILDING_SPEC §5）
         for ln, lname in B['layers'].items():
             cells = M.layer(ln)
             if not cells:
