@@ -8,7 +8,7 @@ design = sys.argv[1]
 sys.path.insert(0, os.path.join(design, 'tools'))
 from wio import export_list, key
 HULL = 'gura-pinas-01m'
-for nm in ('espolon', 'figurehead', 'stern-deco', 'name-board'):
+for nm in ('galjoen', 'figurehead', 'stern-deco', 'hackebort'):
     W = export_list('%s-%s' % (HULL, nm), None)
     D = np.loadtxt(os.path.join(design, 'masks', 'deco', nm + '.vox.txt'), delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
     cw, cd = dict(zip(key(W).tolist(), W[:, 3].tolist())), dict(zip(key(D).tolist(), D[:, 3].tolist()))

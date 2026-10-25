@@ -11,10 +11,10 @@ ASM = HULL + '-assembly'
 WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
 plan = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))
 V = json.load(open(os.path.join(design, 'verify_deco.json'), encoding='utf-8'))
-PARTS = [('espolon', '船首喙', '藍鯊號 船首喙（espolón＋cutwater＋head rails）'),
-         ('figurehead', '船首像', '藍鯊號 船首像「拿鐮刀的死神見習生」'),
-         ('stern-deco', '船尾裝飾', '藍鯊號 船尾陽台與 quarter galleries（＋三盞船尾燈）'),
-         ('name-board', '船名板', '藍鯊號 船名板 LA COSECHA')]
+PARTS = [('galjoen', '船首喙', '藍鯊號 船首喙（galjoen＋cutwater＋head rail）'),
+         ('figurehead', '船首像', '藍鯊號 船首像「紅獅子」（W 1671：9 呎）'),
+         ('stern-deco', '船尾裝飾', '藍鯊號 船尾走廊與兩舷側廊（galdery）'),
+         ('hackebort', 'hackebort', '藍鯊號 hackebort（鏡板頂；藍鯊紋章與 BLAUWE HAAI 名帶＋船尾燈）')]
 
 
 def cli(*args, ok=(0,)):
@@ -42,11 +42,13 @@ for key, link, title in PARTS:
         print(out[-1500:])
         raise SystemExit('✗ placed %s ≠ %d（%s）' % (got, n, w))
     print('✓ %s：%d' % (w, n))
-    cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + link, 'source_work=' + w, 'at=0,0,0', 'note=階段五（TASK-0594）', ok=(0, 2))
+    cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + link, 'source_work=' + w, 'at=0,0,0', 'note=步驟 6（TASK-0967）', ok=(0, 2))
 LA = plan['stern_deco']['lanterns']
-for lt, side in zip(V['lanterns'], ('P', 'C', 'S')):
+for lt in V['lanterns']:
     x, y, z = lt['at']
-    cli('op=work', 'sub=model', 'persona=gura', 'work=%s-stern-deco' % HULL, 'name=lantern-' + side, 'source_work=' + LA['source'],
-        'at=%g,%g,%g' % (x, y, z), 'pivot=8.5,8.5,0', 'scale=%g' % LA['scale'], 'meta={"kind":"light"}', 'note=階段五 船尾燈（沿用三叉戟號船尾燈）', ok=(0, 2))
-print('✓ 船尾燈 3 盞')
+    if not (lt['on_solid'] and lt['air_above']):
+        raise SystemExit('✗ 船尾燈腳下不是實心或頭上不是空的：%s' % lt)
+    cli('op=work', 'sub=model', 'persona=gura', 'work=%s-hackebort' % HULL, 'name=lantern', 'source_work=' + LA['source'],
+        'at=%g,%g,%g' % (x, y, z), 'pivot=8.5,8.5,0', 'scale=%g' % LA['scale'], 'meta={"kind":"light"}', 'note=步驟 6 船尾燈（沿用三叉戟號船尾燈）', ok=(0, 2))
+print('✓ 船尾燈 %d 盞' % len(V['lanterns']))
 print('\n'.join(cli('op=work', 'sub=links', 'work=' + ASM).splitlines()[-24:]))

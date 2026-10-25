@@ -18,21 +18,20 @@ def ledger(work, path, label):
     print('%-22s 作品 %6d、設計 %6d、缺 %d、多 %d、色差 %d' % (label, len(cw), len(cd), len(set(cd) - set(cw)), len(set(cw) - set(cd)), sum(1 for k in set(cd) & set(cw) if cd[k] != cw[k])))
 
 
-for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'mast-bonaventure', 'bowsprit'):
+for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'bowsprit'):
     ledger('%s-%s' % (HULL, nm), os.path.join(design, 'masks', 'masts', nm + '.vox.txt'), nm)
-for k in ('mizzen', 'bonaventure'):
+for k in ('mizzen',):
     ledger('%s-yard-%s-lateen' % (HULL, k), os.path.join(design, 'masks', 'yards', 'lateen-%s.vox.txt' % k), 'yard-%s-lateen' % k)
-for k in ('puente', 'alcazar', 'toldilla', 'main'):
-    ledger('%s-deck-%s' % (HULL, k), os.path.join(design, 'masks', 'decks', k + '.vox.txt'), 'deck-' + k + '（桅孔搬位）')
-# 船殼 ＝ 砲門:end − 艏斜桅孔
-B = export_list(HULL, '砲門:end')
+# 船殼 ＝ 窗玻璃:end − 艏斜桅孔（藍鯊號的艏斜桅從船頭舷牆上面過去 ⇒ 孔 0 格、船殼不變）
+B = export_list(HULL, json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))['rig_build']['hull_mark'])
 N = export_list(HULL, None)
-H = np.loadtxt(os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
+rows = [l for l in open(os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), encoding='utf-8') if l.strip() and not l.startswith('#')]
+H = np.array([list(map(int, l.split(','))) for l in rows], np.int32).reshape(-1, 4)
 want = dict(zip(key(B).tolist(), B[:, 3].tolist()))
 for k in key(H).tolist():
     want.pop(k, None)
 got = dict(zip(key(N).tolist(), N[:, 3].tolist()))
-print('船殼（砲門:end − 艏斜桅孔 %d）：作品 %d、設計 %d、缺 %d、多 %d、色差 %d' % (len(H), len(got), len(want), len(set(want) - set(got)), len(set(got) - set(want)),
+print('船殼（窗玻璃:end − 艏斜桅孔 %d）：作品 %d、設計 %d、缺 %d、多 %d、色差 %d' % (len(H), len(got), len(want), len(set(want) - set(got)), len(set(got) - set(want)),
       sum(1 for k in set(want) & set(got) if want[k] != got[k])))
 # 帆桁模型：meta 齊全、來源作品有 pivot／earing（方帆）或 fore／peak（lateen）
 P = json.load(open(os.path.join(design, 'yards_placement.json'), encoding='utf-8'))

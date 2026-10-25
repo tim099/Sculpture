@@ -7,7 +7,7 @@ import json, os, re, subprocess, sys, tempfile
 
 sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
-steps = [a for a in sys.argv[2:] if not a.startswith('--')] or ['channels', 'anchors', 'ropes', 'sails', 'sailropes', 'wind', 'meta']
+steps = [a for a in sys.argv[2:] if not a.startswith('--')] or ['channels', 'anchors', 'ropes', 'ratlines', 'sails', 'sailropes', 'wind', 'meta']
 HULL = 'gura-pinas-01m'
 ASM = HULL + '-assembly'
 WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
@@ -40,20 +40,20 @@ if 'channels' in steps:
         if int(re.search(r'🔢 placed = (\d+)', out).group(1)) != n:
             raise SystemExit('✗ channels placed')
         print('✓ channels %d 格' % n)
-    cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=支索板', 'source_work=' + w, 'at=0,0,0', 'note=階段七（TASK-0596）', ok=(0, 2))
+    cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=支索板', 'source_work=' + w, 'at=0,0,0', 'note=步驟 8（TASK-0967）', ok=(0, 2))
 if 'anchors' in steps:
     k = 0
     for part, items in P['anchors'].items():
         work = P['anchor_works'][part]
         for nm, xyz in sorted(items.items()):
-            cli('op=work', 'sub=anchor', 'persona=gura', 'work=' + work, 'name=' + nm, 'at=%d,%d,%d' % tuple(xyz), 'overwrite=1', 'note=階段七（draft_rigging.py）')
+            cli('op=work', 'sub=anchor', 'persona=gura', 'work=' + work, 'name=' + nm, 'at=%d,%d,%d' % tuple(xyz), 'overwrite=1', 'note=步驟 8（draft_rigging.py）')
             k += 1
     print('✓ 固定點 %d' % k)
 
 
 def rope(r):
     cli('op=work', 'sub=rope', 'persona=gura', 'work=' + ASM, 'name=' + r['name'], 'from=' + r['from'], 'to=' + r['to'], 'slack=%g' % r['slack'],
-        'color=' + r['color'], 'thickness=%g' % r['thickness'], 'group=' + r['group'], 'overwrite=1', 'note=階段七（TASK-0596）')
+        'color=' + r['color'], 'thickness=%g' % r['thickness'], 'group=' + r['group'], 'overwrite=1', 'note=步驟 8（TASK-0967）')
 
 
 if 'ropes' in steps:
@@ -63,10 +63,15 @@ if 'ropes' in steps:
         if i % 50 == 0:
             print('  繩 %d/%d' % (i, len(rs)), flush=True)
     print('✓ 繩（不綁帆）%d' % len(rs))
+if 'ratlines' in steps:                 # 藍鯊號：ratlines 用橫繩組（Ship_Rigging §6，TASK-0678）—— 收穫號那時還是一條一條下子繩
+    for g in P.get('ratlines', []):
+        args = ['op=work', 'sub=ratlines', 'persona=gura', 'work=' + ASM] + ['%s=%s' % (k, v) for k, v in g.items()]
+        cli(*args)
+    print('✓ 橫繩組 %d（繩梯 %d）' % (len(P.get('ratlines', [])), sum(1 for g in P.get('ratlines', []) if g.get('climb'))))
 if 'sails' in steps:
     for s in P['sails']:
         args = ['op=work', 'sub=sail', 'persona=gura', 'work=' + ASM, 'name=' + s['name'], 'corners=' + '|'.join(s['corners']), 'bind=' + ','.join(map(str, s['bind'])),
-                'color=' + s['color'], 'fullness=%g' % s['fullness'], 'overwrite=1', 'note=階段七（TASK-0596）']
+                'color=' + s['color'], 'fullness=%g' % s['fullness'], 'overwrite=1', 'note=步驟 8（TASK-0967）']
         if s['corner_names']:
             args.append('corner_names=' + '|'.join(s['corner_names']))
         if s['free']:

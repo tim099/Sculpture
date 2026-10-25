@@ -9,9 +9,8 @@ design = sys.argv[1]
 HULL = 'gura-pinas-01m'
 ASM = HULL + '-assembly'
 WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
-MASTS = [('mast-fore', '前桅', '藍鯊號 前桅（trinquete）'), ('mast-main', '主桅', '藍鯊號 主桅（árbol mayor）'),
-         ('mast-mizzen', '後桅', '藍鯊號 後桅（mesana）'), ('mast-bonaventure', 'bonaventure', '藍鯊號 bonaventure 桅（contramesana）'),
-         ('bowsprit', '艏斜桅', '藍鯊號 艏斜桅（bauprés）')]
+MASTS = [('mast-fore', '前桅', '藍鯊號 前桅（fokkemast＋steng＋bramsteng）'), ('mast-main', '主桅', '藍鯊號 主桅（grote mast＋steng＋bramsteng）'),
+         ('mast-mizzen', '後桅', '藍鯊號 後桅（bezaansmast＋kruissteng）'), ('bowsprit', '艏斜桅', '藍鯊號 艏斜桅（boegspriet＋blinde steng）')]
 
 
 def cli(*args, ok=(0,)):
@@ -42,9 +41,11 @@ def stamp(work, path, extra=()):
 
 # ① 船頭牆開孔（船殼）
 marks = json.load(open(os.path.join(WORKS, HULL, 'marks.json'), encoding='utf-8'))
-if not any(m.get('name') == '艏斜桅孔' for m in (marks.get('marks') if isinstance(marks, dict) else marks)):
-    path = os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt')
-    n = sum(1 for l in open(path, encoding='utf-8') if l.strip() and not l.startswith('#'))
+path = os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt')
+n = sum(1 for l in open(path, encoding='utf-8') if l.strip() and not l.startswith('#'))
+if n == 0:
+    print('· 艏斜桅孔 0 格（艏斜桅從船頭舷牆上面過去）—— 船殼不動')
+elif not any(m.get('name') == '艏斜桅孔' for m in (marks.get('marks') if isinstance(marks, dict) else marks)):
     out = cli('op=carvevox', 'persona=gura', 'work=' + HULL, 'voxels=' + os.path.abspath(path).replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % n, 'share=0')
     m = re.search(r'placed\D{0,12}(\d[\d,]*)', out)
     if not m or int(m.group(1).replace(',', '')) != n:
@@ -59,7 +60,7 @@ for key, link, title in MASTS:
         cli('op=work', 'sub=update', 'persona=gura', 'work=' + w, 'meters_per_voxel=0.1')
         stamp(w, os.path.join(design, 'masks', 'masts', key + '.vox.txt'))
         print('✓ 建立', w)
-    cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + link, 'source_work=' + w, 'at=0,0,0', 'note=階段六（TASK-0595）', ok=(0, 2))
+    cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + link, 'source_work=' + w, 'at=0,0,0', 'note=步驟 7（TASK-0967）', ok=(0, 2))
 # ③ lateen 帆桁子作品
 LAT = json.load(open(os.path.join(design, 'yards_lateen.json'), encoding='utf-8'))
 for key, v in LAT.items():
@@ -79,6 +80,6 @@ for p in P:
     host = '%s-%s' % (HULL, 'bowsprit' if p['mast'] == 'bowsprit' else 'mast-' + p['mast'])
     cli('op=work', 'sub=model', 'persona=gura', 'work=' + host, 'name=' + p['name'], 'source_work=' + p['work'],
         'at=%g,%g,%g' % tuple(p['at']), 'pivot=%g,%g,%g' % tuple(p['pivot']), 'rotate=%g,%g,%g' % tuple(p['rotate']),
-        'scale=%g,%g,%g' % tuple(p['scale']), 'meta=' + json.dumps(p['meta'], ensure_ascii=False, separators=(',', ':')), 'note=階段六 帆桁', ok=(0, 2))
+        'scale=%g,%g,%g' % tuple(p['scale']), 'meta=' + json.dumps(p['meta'], ensure_ascii=False, separators=(',', ':')), 'note=步驟 7 帆桁', ok=(0, 2))
 print('✓ 帆桁模型 %d 根' % len(P))
 print('\n'.join(l for l in cli('op=work', 'sub=links', 'work=' + ASM).splitlines() if l.startswith('- `')))

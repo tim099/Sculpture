@@ -65,3 +65,32 @@
 - 艙房：沒隔（同收穫號）；之後要配功能艙再加。
 - 讀數：設計那一側：重疊 0、砲門往艙裡被擋 0、梯子點問題 0、封閉空腔 0、鏡像差 0（下甲板 634 ＝ 底艙梯子靠左舷的井，照實）；`tools/check_decks.py`（每件從匯出讀）：11 件 98,441 格，缺 0、多 0、色差 0、跟船殼／彼此重疊 0；梯子點（組裝件 parts，遊戲讀的那一份）36／36、跟設計差 0、空氣／腳下／頭頂 14 格問題 0；組裝件 1 元件、空腔 0。**反向對照**：`draft_decks.py --probe=drop_ladder=castillo-S` ⇒ 8 座、船艏樓只剩 castillo-P。
 - 預覽 preset：`藏船殼`。過程圖 `overlays/step5_decks.png`。
+
+## 步驟 6 裝飾、窗的玻璃（2026-10-26）
+- **窗的玻璃**（Ship_Materials「窗的玻璃」）：`draft_ports.py` 改成鏡板窗最外一格刻掉（凹進去）、第二格是玻璃（從船殼拿出來）、玻璃後面的牆刻穿（後面是艙裡的空氣）⇒ `masks/glass/stern_glass.vox.txt`。收穫號是把玻璃色漆在牆裡、後面還是實心。船殼走差量：先拿舊的砲門清單組帳 ⇒ 跟作品 0 差（帳組得對）、再拿新的 ⇒ `delta_apply` 刻 681（玻璃 225 ＋ 後面的牆 456），標記 `窗玻璃:begin／end`。子作品 `-stern-glass`（225 格）、組裝件關聯 `船尾窗玻璃` meta `material=glass`。
+- `draft_deco.py` 重寫成荷蘭船的部件（框架照收穫號）：
+  - `-galjoen`「船首喙」6,032：喙甲板頂 z 72、長 62（W uitlegger 22 呎）、head rail、cutwater 從首柱 z 20 掃到喙尖；艏斜桅那條線被擋 0。
+  - `-figurehead`「船首像」855：**紅獅子**（W p.85：長 9 呎 ＝ 25 格、厚 19 duim、前端翹起 2'7"），紅身金鬃金冠，後腳、前腳站在喙甲板上。
+  - `-stern-deco`「船尾裝飾」7,436：船尾走廊（hut 窗下、伸出 5）＋兩舷側廊（W：側廊常用銅皮蓋頂 ⇒ 銅頂 168；窗是畫上去的 87，後面是側廊的實心 —— ⚠ 只有鏡板的窗是真的玻璃）。
+  - `-hackebort`「hackebort」1,400：鏡板頂上那塊板（順著鏡板往後倒、頂上拱形）；奶油底、藍鯊紋章（頭朝左舷）、藍帶金字 BLAUWE HAAI（W p.83：鏡板上「照慣例裝紋章」；荷蘭船照船名畫那隻動物）⇒ **這一件的鏡像差 130 照實報**（鯊魚與字）；拱頂正中間一盞船尾燈（模型 `lantern`，沿用三叉戟號船尾燈 scale 0.5、kind=light，腳下實心、頭上空）。
+- 🩸 組起來 2 個元件：獅子尾巴往後挪一格的那一階只在斜角相接（收穫號船首像踩過的同一個坑）⇒ 那一階補一格、差量貼 1 格 ⇒ 1 元件。
+- 讀數：`tools/check_stage5.py` 四件結果帳缺 0／多 0／色差 0；跟船重疊 0、部件之間重疊 0、跳過 0；組裝件 1 元件、空腔 0；models_broken 0。**反向對照**：`draft_deco.py --probe=shift=figurehead:3` ⇒ 獅子鏡像差 0 → 854。產生程式重跑逐位元組相同。
+- 過程圖：`overlays/step6_{bow,stern}.png`。⚠ 鏡板中段（hut 窗上面到 hackebort 下面）還是素面褐色 —— 先放著。
+
+## 步驟 7 桅與帆桁（2026-10-26）
+設計 plan.json `rig_build`（長度與位置在 `masts`，照 W p.93）；產生 `design/draft_masts.py`（照抄收穫號，改：上桅 bramsteng 一段＋中桅頂的十字桅頂架、斜桅頂桅 blinde steng、帆桁吊點照掛在哪一段桅取半徑、船殼標記改吃 plan）；落格 `design/tools/build_masts.py`。
+- 桅（每根一件子作品，關聯 `前桅`／`主桅`／`後桅`／`艏斜桅`）：前桅 8,720、主桅 10,170（下桅＋桅樓＋中桅＋十字架＋上桅）、後桅 3,918（下桅＋桅樓＋後中桅）、艏斜桅 3,676（含斜桅頂桅）。桅樓半徑 前 13、主 14、後 11。
+- **艏斜桅的腳改到船艏樓甲板**（x 500、z 83，30°）：放上甲板會從船艏樓甲板穿過去；改了之後從船頭舷牆上面過去 ⇒ 船殼開孔 0 格（收穫號開了 180 格）。
+- 帆桁 10 根（外部模型，掛在各自的桅子作品）：方帆桁 9 根沿用憲法號的帆桁元件、只沿長度縮放到 W 的長度（主帆桁 19.5 m、前 17.1、主中桅 10.2、前中桅 9.1、主上桅 6.2、前上桅 4.5、後中桅 5.4、斜桅帆桁 12.7、斜桅頂帆桁 5.7）；三角帆桁 1 根新做 `-yard-mizzen-lateen`（17.55 m、40°、吊點前端往後 40%；meta yard=gaff、rig=lateen）。
+- 讀數：`tools/check_stage6.py` 桅 4 件＋三角帆桁結果帳缺 0／多 0／色差 0；船殼 ＝ 窗玻璃:end（孔 0）0 差；帆桁模型 10 根 meta 與來源固定點問題 0；帆桁穿船 10 根全 0；三角帆桁後端伸出船尾 0.11 m；models_broken 0；組裝件 1 元件、空腔 0。跳過的格：前桅腳插進船頭 deadwood 98（桅坐在船殼上，同收穫號）、艏斜桅腳壓到船艏樓甲板 14。**反向對照**：`--probe=pivot=yard-main-course:-150`（放到船殼的高度）⇒ 只有那一根報 36 格。產生程式重跑逐位元組相同。
+- 過程圖：`overlays/step7_masts.png`、`design/sheet06_masts_v1.png`。
+
+## 步驟 8 索具、帆、旗（2026-10-26）
+設計 plan.json `rigging`；產生 `design/draft_rigging.py`（框架照收穫號，改成荷蘭 pinas 的帆裝）⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/ensign.png`、`verify_rigging.json`；套用 `design/tools/rigging_apply.py`（加一步「橫繩組」）。
+- **channels**（`-channels`，關聯 `支索板`，兩舷一件）2,214 格：W 的支索台 putting 數 ⇒ 每舷 shrouds 主 7、前 6、後 4（＋中桅 backstay 前、主各 1）、間距 6。主桅那一排從桅前 12 格起往後排 —— 照收穫號從桅往後排的話後半段落在後甲板舷牆那一段（x < 300）、支索會穿過舷牆頂。
+- 固定點 143（桅上 hound／stay-head／futtock／tm-hound／tm-stay-head／桅樓邊 rim／top-aft；上桅：十字桅頂架兩端 ct、tg-hound、tg-stay-head；艏斜桅 forestay-foot／cap-top／side／bob、斜桅頂桅頂 sprit-top；喙的 bobstay 腳；船殼舷頂的 belay；後甲板的三角帆 tack）。
+- 繩 119：shrouds 34、中桅 shrouds 18、futtock 18、上桅 shrouds 8、backstays 4、stays 8（前上桅支索拉到斜桅頂桅頂、主上桅支索到前桅十字架後端、後中桅支索到主桅桅樓）、艏斜桅 4、帆自己的繩 25。
+- **ratlines 用橫繩組**（Ship_Rigging §6／TASK-0678，收穫號那時還是一條一條的子繩）：12 組（每根桅 lower／topmast × 兩舷），下桅 6 組 `climb=1` 繩梯：foot ＝ 舷牆內側往裡 3 格的甲板（前 船艏樓、主 上甲板、後 後甲板）、head ＝ 桅樓靠這一舷的邊（半徑 − 3）；產生程式先量站不站得住（腳下實心、頭上 7 格空）。🩸 主桅那兩組的 foot 第一版從中線往外找舷牆內面 ⇒ 先撞到主桅本身 ⇒ 從離中線 8 格起找。
+- 帆 12：前／主 course、topsail、topgallant（上桅帆 bramzeil）、後中桅帆 kruiszeil（sheet 綁後桅桅樓邊）、後桅三角帆 bezaan（clew 在船尾樓上方、sheet 綁船尾樓兩舷舷頂、tack 綁後甲板）、斜桅帆 blinde、斜桅頂帆 boven blinde（sheet 綁斜桅帆桁的 earing）、船尾旗（紅白藍、白帶 GWC —— 荷蘭西印度公司；掛在三角帆桁後端）、主桅頂橘色長旗。meta：帆 12、帆自己的繩 25；斜桅帆、斜桅頂帆 set 3、三角帆 set 2。
+- 讀數：channels 結果帳 0 差；CLI 繩 327（含展開的橫繩）、ropes_broken 0、帆 12、sails_broken 0；meta 帆 12／12、帆自己的繩 25／25、sail 標錯 0；帆桁 meta 的 sail 都是某一面帆的名字；橫繩組 12 組全 ok、繩梯 6 組都有 🪜。**反向對照**：`draft_rigging.py --probe=nometa=main-topgallant.sheet-S`、`check_stage7.py --drop=fore-topgallant.sheet-P` ⇒ 都只報那一條。
+- 過程圖：`overlays/step8_{full,sternq}.png`。

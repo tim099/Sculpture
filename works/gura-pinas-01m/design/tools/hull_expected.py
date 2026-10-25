@@ -27,6 +27,9 @@ steps = [('hull_fix', os.path.join(design, 'masks', 'hull_fix', 'carve_breaks.vo
          ('艏斜桅孔', os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), 'carve')]
 print('船殼 %d' % n0)
 for nm, p, kind in steps:
+    if not os.path.exists(p):          # 藍鯊號沒有 hull_fix；艏斜桅孔在步驟 7 才有
+        print('  · %s：沒有清單，跳過' % nm)
+        continue
     L = load(p)
     miss = [k for k in L if k not in H]
     if kind == 'carve':

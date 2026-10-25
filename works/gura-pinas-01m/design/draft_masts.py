@@ -31,11 +31,11 @@ def main():
     WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
     A = export_list('gura-pinas-01m-assembly', None, links=None)
     own = set()                                                  # 本階段自己的件（重產時扣掉，別把自己當成船）
-    for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'mast-bonaventure', 'bowsprit'):
+    for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'bowsprit'):
         if os.path.exists(os.path.join(WORKS, 'gura-pinas-01m-' + nm, 'work.json')):
             own |= set(map(tuple, export_list('gura-pinas-01m-' + nm, None)[:, :3].tolist()))
     occ = {tuple(r[:3]): r[3] for r in A.tolist() if tuple(r[:3]) not in own}
-    hull = {tuple(r[:3]): r[3] for r in export_list('gura-pinas-01m', '砲門:end').tolist()}   # 開艏斜桅孔之前的船殼（重產時孔的清單才不會變空）
+    hull = {tuple(r[:3]): r[3] for r in export_list('gura-pinas-01m', RB['hull_mark']).tolist()}   # 開艏斜桅孔之前的船殼（重產時孔的清單才不會變空；收穫號寫死 砲門:end）
     occ.update({k: c for k, c in hull.items() if k not in occ})   # 刻掉的那幾格在「船」裡照樣算（讓艏斜桅自己決定要不要佔）
     M = {m['key']: m for m in LY.masts(plan, L)}
     parts = {}
@@ -78,18 +78,33 @@ def main():
                         if c is not None:
                             put(part, x, YC + dy, z, c)
                             put(part, x, YC - dy, z, c)
-        if key in RB['topmast_r']:
-            t0, t1 = RB['topmast_r'][key]
-            zt2 = int(math.floor(m['truck']))
-            for z in range(zp + 1, zt2 + 1):
-                r = t0 + (t1 - t0) * (z - zp - 1) / max(1, zt2 - zp - 1)
+        def pole(za, zb_, ra, rb, truck):
+            for z in range(za, zb_ + 1):
+                r = ra + (rb - ra) * (z - za) / max(1, zb_ - za)
                 xa = float(LY.mast_axis_x(plan, key, z + 0.5, L))
                 for x in range(int(xa - r) - 1, int(xa + r) + 2):
                     for dy in range(0, int(r) + 1):
                         if (x - xa) ** 2 + dy ** 2 <= r * r:
-                            c = C['truck'] if z == zt2 else C['mast']
+                            c = C['truck'] if (truck and z == zb_) else C['mast']
                             put(part, x, YC + dy, z, c)
                             put(part, x, YC - dy, z, c)
+        if key in RB['topmast_r']:
+            t0, t1 = RB['topmast_r'][key]
+            zt2 = int(math.floor(m['tm_top']))
+            tg = 'tg_heel' in m
+            pole(zp + 1, zt2, t0, t1, not tg)
+            if tg:                                                    # 上桅（藍鯊號；W 的 bramsteng）：中桅頂一個十字桅頂架、上桅從那裡往上收細、頂一格金
+                zc_ = zt2 - 1
+                xa = float(LY.mast_axis_x(plan, key, zc_ + 0.5, L))
+                cr = RB['crosstree_r']
+                for x in range(int(xa) - cr, int(xa) + cr + 1):
+                    for dy in range(0, cr + 1):
+                        if abs(x + 0.5 - xa) <= 1.0 or dy <= 1:
+                            for z in (zc_ - 1, zc_):
+                                put(part, x, YC + dy, z, C['top'])
+                                put(part, x, YC - dy, z, C['top'])
+                g0, g1 = RB['tgallant_r'][key]
+                pole(int(math.floor(m['tg_heel'])) + 1, int(math.floor(m['truck'])), g0, g1, True)
     # ── 艏斜桅：圓桿（半徑 r0 → r1）；船頭牆在它半徑 ＋0.5 內的格要刻掉（開孔）；甲板板、梯子優先（不放） ──
     B = LY.bowsprit(plan)
     a = math.radians(B['angle'])
@@ -115,6 +130,20 @@ def main():
                         parts.setdefault('bowsprit', {})[k] = C['mast']   # 孔整個由艏斜桅填滿 —— v1 牆裡那段跳過 ⇒ 斷開；v2 孔比桿大半格 ⇒ 牆裡 10 個小空腔
                     elif d2 <= r * r and k not in hull:
                         put('bowsprit', x, yy, z, C['mast'])
+    ST = RB['sprit_top']                                              # 斜桅頂桅（W boven blind-steng）：立在艏斜桅前端往後 at_from_tip 格那一點的桿頂上
+    ts = B['len'] - ST['at_from_tip']
+    sx, sz0 = X0 + ts * u[0], Z0 + ts * u[2] + (br0 + (br1 - br0) * ts / B['len']) - 1.0
+    st_len = next(r for r in plan['masts']['rows'] if r['key'] == 'bowsprit')['sprit_top_m'] / CELL
+    st_top = sz0 + st_len
+    s0, s1 = ST['r']
+    for z in range(int(math.floor(sz0)), int(math.floor(st_top)) + 1):
+        r = s0 + (s1 - s0) * (z - sz0) / st_len
+        for x in range(int(sx - r) - 1, int(sx + r) + 2):
+            for dy in range(0, int(r) + 1):
+                if (x + 0.5 - sx) ** 2 + dy ** 2 <= max(r, 0.6) ** 2:
+                    c = C['truck'] if z == int(math.floor(st_top)) else C['mast']
+                    put('bowsprit', x, YC + dy, z, c)
+                    put('bowsprit', x, YC - dy, z, c)
     # ── lateen 帆桁子作品（局部座標）：斜桿，前端低（x 大）、後端高（x 0）；固定點 pivot／sling／fore／peak／jackstay-k ──
     lat = {}
     for ld in RB['lateen']:
@@ -160,14 +189,22 @@ def main():
     place = []
     for yd in RB['yards']:
         if yd['mast'] == 'bowsprit':
-            t = yd['at_t'] * B['len']
-            px, pz = B['x0'] + 0.5 + t * u[0], B['z0'] + 0.5 + t * u[2] - yd['drop']
-            tgt_len = plan['masts']['rows'][-1]['yards']['spritsail'] / CELL
+            tgt_len = plan['masts']['rows'][-1]['yards'][yd['yard']] / CELL
+            if yd['yard'] == 'sprit_topsail':                         # 掛在斜桅頂桅前面、頂往下 20%
+                px, pz = sx + ST['r'][1] + 2.5, st_top - 0.2 * st_len
+            else:
+                t = yd['at_t'] * B['len']
+                px, pz = B['x0'] + 0.5 + t * u[0], B['z0'] + 0.5 + t * u[2] - yd['drop']
         else:
             m = M[yd['mast']]
             z = m['yards'][yd['yard']]['z']
             key = yd['mast']
-            r_here = RB['mast_r'][key][1] if z <= m['lower_top'] else RB['topmast_r'][key][1]
+            if z <= m['lower_top']:
+                r_here = RB['mast_r'][key][1]
+            elif 'tg_heel' in m and z > m['tm_top']:
+                r_here = RB['tgallant_r'][key][1]                     # 上桅帆桁掛在上桅上
+            else:
+                r_here = RB['topmast_r'][key][1]
             px = float(LY.mast_axis_x(plan, key, z, L)) + r_here + 3.5
             pz = z
             tgt_len = m['yards'][yd['yard']]['len']

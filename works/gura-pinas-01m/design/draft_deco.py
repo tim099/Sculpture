@@ -1,9 +1,10 @@
-# 出處：calli-cosecha-01m/design/draft_deco.py（收穫號，照抄後改成藍鯊號 —— TASK-0967）
-# 藍鯊號 階段五（TASK-0594）：船首喙（espolón＋cutwater＋head rails）、船首像（死神見習生）、船尾陽台＋quarter galleries、船名板、三盞船尾燈
-#   輸入：plan.json（espolon、figurehead、stern_deco）＋ 組裝件現在的格子（CLI 匯出 ⇒ 船殼＋甲板＋梯子，佔用與貼面都照它算）
+# 出處：calli-cosecha-01m/design/draft_deco.py（收穫號）的框架 —— 部件換成荷蘭 pinas 的（TASK-0967 步驟 6）
+# 藍鯊號 步驟 6：船首喙（galjoen＋cutwater＋head rail）、船首像（紅獅子）、船尾走廊＋兩舷側廊、hackebort（藍鯊紋章＋名帶）、船尾燈
+#   輸入：plan.json（espolon、figurehead、stern_deco）＋ 組裝件現在的格子（CLI 匯出 ⇒ 船殼＋甲板＋梯子＋玻璃，佔用與貼面都照它算）
 #   輸出：masks/deco/<部件>.vox.txt（世界座標、at 0,0,0）、verify_deco.json、sheet05_deco_v1.png
 #   用法：python -I -X utf8 draft_deco.py <design> [--probe=shift=<部件>:<dy>]（反向對照：某一件整件往 y 推幾格，⛔ 不寫檔）
-#   · 部件都是兩舷一起產（照 |dy| 算 ⇒ 對稱）；只有船名板的字不對稱（照實報鏡像差）。
+#   · galjoen、獅子、船尾走廊、側廊兩舷一起產（照 |dy| 算 ⇒ 對稱）；hackebort 的鯊魚與字不對稱（照實報鏡像差）。
+#   · 側廊的窗是畫上去的（87，後面是側廊的實心）—— 只有鏡板的窗是真的玻璃（-stern-glass，material=glass）
 import sys, os, json, math, hashlib
 import numpy as np
 from PIL import Image, ImageDraw
@@ -15,12 +16,13 @@ import layout as LY
 from draft_lines import font, palette_rgb
 from wio import export_list
 
-BLACK, PINK, GOLD, GLASS, WOOD, TRIM, DECK, PALE, SHAFT, BLADE = 36, 242, 248, 87, 141, 136, 209, 254, 132, 219
+BLACK, GOLD, GLASS, WOOD, TRIM, DECK, BLUE = 36, 248, 87, 141, 136, 209, 6
+PARTS = ('galjoen', 'figurehead', 'stern-deco', 'hackebort')
 
 FONT = {  # 3×5，列由上往下
-    'L': ['X..', 'X..', 'X..', 'X..', 'XXX'], 'A': ['.X.', 'X.X', 'XXX', 'X.X', 'X.X'], 'C': ['.XX', 'X..', 'X..', 'X..', '.XX'],
-    'O': ['.X.', 'X.X', 'X.X', 'X.X', '.X.'], 'S': ['.XX', 'X..', '.X.', '..X', 'XX.'], 'E': ['XXX', 'X..', 'XX.', 'X..', 'XXX'],
-    'H': ['X.X', 'X.X', 'XXX', 'X.X', 'X.X'], ' ': ['.', '.', '.', '.', '.'],
+    'B': ['XX.', 'X.X', 'XX.', 'X.X', 'XX.'], 'L': ['X..', 'X..', 'X..', 'X..', 'XXX'], 'A': ['.X.', 'X.X', 'XXX', 'X.X', 'X.X'],
+    'U': ['X.X', 'X.X', 'X.X', 'X.X', 'XXX'], 'W': ['X.X', 'X.X', 'XXX', 'XXX', 'X.X'], 'E': ['XXX', 'X..', 'XX.', 'X..', 'XXX'],
+    'H': ['X.X', 'X.X', 'XXX', 'X.X', 'X.X'], 'I': ['XXX', '.X.', '.X.', '.X.', 'XXX'], ' ': ['.', '.', '.', '.', '.'],
 }
 
 
@@ -31,23 +33,21 @@ def main():
     plan = HL.load_plan(design)
     L = HL.Lines(plan)
     YC = L.YC
+    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
     A = export_list('gura-pinas-01m-assembly', None, links=None)
-    # 船 ＝ 組裝件扣掉本階段自己的四件（已經落過一次的話）—— v1 沒扣 ⇒ 重產時把舊裝飾當成船、新裝飾被大量跳過、galleries 往外長
+    # 船 ＝ 組裝件扣掉本步驟自己的件（已經落過一次的話；收穫號 v1 沒扣 ⇒ 重產時把舊裝飾當成船）
     own = set()
-    for nm in ('espolon', 'figurehead', 'stern-deco', 'name-board'):
-        if os.path.exists(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(design))), 'gura-pinas-01m-' + nm, 'work.json')):
-            W_ = export_list('gura-pinas-01m-' + nm, None)
-            own |= set(map(tuple, W_[:, :3].tolist()))
-    keep = np.array([tuple(r) not in own for r in A[:, :3].tolist()], bool) if own else np.ones(len(A), bool)
-    A = A[keep]
+    for nm in PARTS:
+        if os.path.exists(os.path.join(WORKS, 'gura-pinas-01m-' + nm, 'work.json')):
+            own |= set(map(tuple, export_list('gura-pinas-01m-' + nm, None)[:, :3].tolist()))
+    if own:
+        A = A[np.array([tuple(r) not in own for r in A[:, :3].tolist()], bool)]
     occ = set(map(tuple, A[:, :3].tolist()))
-    # 每個 (y, z) 船尾最後面那一格、每個 (x, z) 最外那一格的 |dy|、每個 (y, z) 船頭最前面那一格（只看 x ≥ 400）
     aft, outer, fwd = {}, {}, {}
     for x, y, z in A[:, :3].tolist():
-        if x < 200:
-            k = (y, z)
-            if x < aft.get(k, 10 ** 6):
-                aft[k] = x
+        if x < 210:
+            if x < aft.get((y, z), 10 ** 6):
+                aft[(y, z)] = x
         dy = abs(y - YC)
         if dy > outer.get((x, z), -1):
             outer[(x, z)] = dy
@@ -62,9 +62,10 @@ def main():
         put(part, x, YC + dy, z, c)
         put(part, x, YC - dy, z, c)
 
-    # ── 船首喙 ──
+    # ── galjoen（船首喙）：甲板＋head rail＋cutwater ──
     E = plan['espolon']
-    xs0 = int(math.floor(float(L.x_stem(80)) + 0.5)) - 1           # 艏柱前緣那一格（z 57.5 以上直立）＝ 500
+    F = plan['figurehead']
+    xs0 = int(math.floor(float(L.x_stem(80)) + 0.5)) - 1           # 艏柱前緣那一格（z 73.6 以上直立）
     tip = xs0 + E['len_beyond_stem']
     zt, th = E['deck_top_z'], E['thick']
     wpar = lambda x: E['half_at_tip'] + (E['half_at_stem'] - E['half_at_tip']) * (1 - (x - xs0) / float(E['len_beyond_stem'])) ** E['taper_pow']
@@ -72,60 +73,63 @@ def main():
         w = int(math.floor(wpar(x) + 0.5))
         for dy in range(0, w + 1):
             for z in range(zt - th + 1, zt + 1):
-                both('espolon', x, dy, z, DECK if z == zt else BLACK)
+                both('galjoen', x, dy, z, DECK if z == zt else TRIM)
         for z in range(zt + 1, zt + 1 + E['rail_h']):
             cap = z == zt + E['rail_h']
-            if x > plan['figurehead']['x'] - 6:
-                continue                                              # head rail 停在船首像前面（v1 跟船首像的斗篷重疊 12 格）
+            if x > F['x'] - 6:
+                continue                                              # head rail 停在獅子後面（收穫號 v1 跟船首像重疊）
             if cap or (x - xs0) % E['stanchion_every'] == 0:
-                both('espolon', x, w, z, GOLD if cap else WOOD)
-            if cap:                                                   # 寬度往前收的地方補台階 ⇒ 頂條面相接（v1 只在斜角相接，柱子之間一段段浮空）
+                both('galjoen', x, w, z, GOLD if cap else WOOD)
+            if cap:                                                   # 寬度往前收的地方補台階 ⇒ 頂條面相接（收穫號 v1 只在斜角相接）
                 w2 = int(math.floor(wpar(x + 1) + 0.5))
                 for dy in range(w2, w):
-                    both('espolon', x, dy, z, GOLD)
+                    both('galjoen', x, dy, z, GOLD)
     z_cw0 = E['cutwater_from_z']
     for z in range(z_cw0, zt - th + 1):
         u = (z - z_cw0) / float(zt - th + 1 - z_cw0)
         xa = fwd.get(z, xs0) + 1
         xf = int(math.floor(xa + (tip - xa) * u ** E['cutwater_pow'] + 0.5))
-        for x in range(max(xa, xf - E['cutwater_band']), max(xa, xf) + 1):    # 沿前緣的一條帶子（v1 從艏柱填到前緣 ⇒ 一大塊黑三角，太笨重）
+        for x in range(max(xa, xf - E['cutwater_band']), max(xa, xf) + 1):
             for dy in range(0, E['cutwater_half'] + 1):
-                both('espolon', x, dy, z, PINK if xf - x == 2 and dy == E['cutwater_half'] else BLACK)
-    # ── 船首像：死神見習生（兜帽斗篷、粉髮、立在中線的鐮刀）——站在喙尖的甲板上 ──
-    F = plan['figurehead']
-    fx, zb = F['x'], F['z_base']
-    for z in range(0, 17):
-        r = 4.2 - 1.2 * z / 16.0
-        cx = fx + 0.12 * z
-        for x in range(int(cx - r) - 1, int(cx + r) + 2):
-            for dy in range(0, int(r) + 1):
-                if ((x + 0.5 - cx) / (0.8 * r)) ** 2 + (dy / r) ** 2 <= 1.0:
-                    both('figurehead', x, dy, zb + z, PINK if z <= 1 else BLACK)
-    hcx, hcz, hr = fx + 2.4, zb + 19.5, 2.9
-    for z in range(int(hcz - hr), int(hcz + hr) + 1):
-        for x in range(int(hcx - hr) - 1, int(hcx + hr) + 2):
-            for dy in range(0, int(hr) + 1):
-                if (x + 0.5 - hcx) ** 2 + dy ** 2 + (z + 0.5 - hcz) ** 2 <= hr * hr:
-                    face = (x + 0.5 - hcx) >= 1.2 and dy <= 1 and hcz - 2 <= z + 0.5 <= hcz + 0.8
-                    both('figurehead', x, dy, z, PALE if face else BLACK)
-    for z in range(zb + 14, zb + 19):                                  # 粉髮從兜帽兩側垂下來
-        both('figurehead', int(hcx + 1), 3, z, PINK)
-    for x in range(fx + 3, fx + 6):                                   # 袖子：從斗篷前面伸出去、握在鐮刀柄上（一塊面相接；v1 斜一格一格 ⇒ 手浮空）
-        for dy in (0, 1):
-            for z in (zb + 11, zb + 12):
-                both('figurehead', x, dy, z, BLACK)
-    both('figurehead', fx + 5, 1, zb + 13, PALE)
-    sx = fx + 6
-    for z in range(zb, zb + 31):                                       # 柄從喙的甲板面起（v1 從 zb＋1 起 ⇒ 底下空一格）
-        put('figurehead', sx, YC, z, SHAFT)
-    prev = zb + 30
-    for k in range(0, 10):                                             # 刀刃：從柄頂往前、往下彎；每一段往上補到前一段 ⇒ 面相接
-        zz = zb + 30 - int(k * k / 7.0)
-        for z in range(zz - 1, max(zz, prev) + 1):
-            put('figurehead', sx + 1 + k, YC, z, BLADE)
-        prev = zz
-    put('figurehead', sx, YC, zb + 31, GOLD)
-    # ── 船尾陽台（puente 船長室那排窗下面） ──
+                both('galjoen', x, dy, z, GOLD if xf - x == 2 and dy == E['cutwater_half'] else TRIM)
+    # ── 船首像：紅獅子（W p.85：長 9 呎、厚 19 duim、前端翹起 2'7"）——趴在喙尖上、往前往上翹 ──
+    xr, ln, ht, rs = F['x'], F['len'], F['half_t'], F['raise']
+    xf_ = xr + ln
+    zc = lambda x: zt + 4 + rs * (x - xr) / float(ln)               # 身體中線的高度
+    body, mane, crown, eye = F['body'], F['mane'], F['crown'], F['eye']
+    for x in range(xr + 2, xf_ - 4):                                   # 身體（橢圓截面：半厚 ht、半高 3.2）
+        for z in range(int(zc(x) - 4), int(zc(x) + 5)):
+            for dy in range(0, int(ht) + 1):
+                if (dy / ht) ** 2 + ((z + 0.5 - zc(x)) / 3.2) ** 2 <= 1.0:
+                    both('figurehead', x, dy, z, body)
+    hx, hz = xf_ - 3, zc(xf_) + 3                                       # 頭
+    mx, mz = xf_ - 6, zc(xf_) + 2                                       # 鬃
+    for x in range(xf_ - 11, xf_ + 1):
+        for z in range(int(mz - 5), int(hz + 5)):
+            for dy in range(0, 4):
+                in_head = ((x + 0.5 - hx) / 3.2) ** 2 + (dy / ht) ** 2 + ((z + 0.5 - hz) / 3.2) ** 2 <= 1.0
+                in_mane = ((x + 0.5 - mx) / 3.6) ** 2 + (dy / 3.0) ** 2 + ((z + 0.5 - mz) / 4.6) ** 2 <= 1.0
+                if in_head:
+                    both('figurehead', x, dy, z, body)
+                elif in_mane:
+                    both('figurehead', x, dy, z, mane)
+    ztop = int(hz + 3.2)                                                # 金冠：頭頂一圈、上面一排尖
+    for x in range(int(hx) - 2, int(hx) + 3):
+        for dy in range(0, 3):
+            both('figurehead', x, dy, ztop, crown)
+            if (x + dy) % 2 == 0:
+                both('figurehead', x, dy, ztop + 1, crown)
+    both('figurehead', int(hx) + 2, 1, int(hz) + 1, eye)               # 眼睛
+    for x0_, x1_ in ((xr + 3, xr + 6), (xf_ - 9, xf_ - 6)):           # 後腳、前腳：從喙的甲板面往上接到身體
+        for x in range(x0_, x1_ + 1):
+            for dy in (1, 2):
+                for z in range(zt + 1, int(zc(x)) + 1):
+                    both('figurehead', x, dy, z, body)
+    for k, z in enumerate(range(int(zc(xr)), int(zc(xr)) + 7)):        # 尾巴：從屁股往後上翹，尾端一撮金
+        put('figurehead', xr + 2 - k // 3, YC, z, mane if k >= 5 else body)
+        if k and k % 3 == 0:                                            # 往後挪一格的那一階補一格 ⇒ 面相接（v1 只在斜角相接 ⇒ 尾端 1 格浮空）
+            put('figurehead', xr + 3 - k // 3, YC, z, mane if k >= 5 else body)
+    # ── 船尾走廊（hut 那排窗下面） ──
     S = plan['stern_deco']
     bal = S['balcony']
     zf, dep, hb = bal['floor_z'], bal['depth'], bal['half']
@@ -139,26 +143,27 @@ def main():
         for z in range(zf + 1, zf + bal['rail_h'] + 1):
             cap = z == zf + bal['rail_h']
             if cap or dy % 3 == 0 or dy == hb:
-                both('stern-deco', xo, dy, z, GOLD if cap else PINK)
+                both('stern-deco', xo, dy, z, GOLD if cap else BLUE)
         if dy == hb:
             for z in range(zf + 1, zf + bal['rail_h'] + 1):
-                fz = aft.get((YC + dy, z), fxa)                        # espejo 往後倒：每一層的船尾位置不同（v1 用地板那一層 ⇒ 上面幾層的欄杆跑進船殼）
+                fz = aft.get((YC + dy, z), fxa)                        # 鏡板往後倒：每一層的船尾位置不同
                 for x in range(xo, min(fxa, fz)):
                     if z == zf + bal['rail_h'] or (x - xo) % 2 == 0:
-                        both('stern-deco', x, dy, z, GOLD if z == zf + bal['rail_h'] else PINK)
-        if dy % 8 == 0:                                                # 托架：斜撐接回 espejo
+                        both('stern-deco', x, dy, z, GOLD if z == zf + bal['rail_h'] else BLUE)
+        if dy % 8 == 0:                                                # 托架：斜撐接回鏡板
             for j, z in enumerate(range(zf - 4, zf)):
                 fz = aft.get((YC + dy, z))
                 if fz is not None:
                     for x in range(fz - 1 - j, fz):
                         both('stern-deco', x, dy, z, WOOD)
-    # ── quarter galleries（兩舷，伸出 4 格；下面一節收成 0、上面一個圓頂） ──
+    # ── 兩舷側廊（伸出 out 格；下面一節收成 0、上面一個銅頂；窗畫在面上） ──
     Q = S['quarter_gallery']
+    wrows = Q['win_rows']
     for x in range(Q['x0'], Q['x1'] + 1):
         for z in range(Q['z0'], Q['z1'] + Q['roof_h'] + 1):
-            hz = min(z, Q['z1'])
-            o = outer.get((x, hz))
-            if o is None or (x, YC + o, hz) not in occ:
+            hz_ = min(z, Q['z1'])
+            o = outer.get((x, hz_))
+            if o is None or (x, YC + o, hz_) not in occ:
                 continue
             if z <= Q['z0'] + 4:
                 out = max(1, round(Q['out'] * (z - Q['z0'] + 1) / 5.0))
@@ -172,41 +177,68 @@ def main():
                 out = Q['out']
             for d in range(1, out + 1):
                 face = d == out
-                c = BLACK
+                c = BLUE
                 if z > Q['z1']:
-                    c = GOLD if z == Q['z1'] + 1 else PINK
+                    c = GOLD if z == Q['z1'] + 1 else Q['roof']
                 elif z in (Q['z0'] + 4, Q['z1']):
                     c = GOLD
-                elif 99 <= z <= 103:
-                    c = PINK if 100 <= z <= 102 else GOLD
-                elif face and ((92 <= z <= 97) or (106 <= z <= 111)) and (x - Q['x0']) % 8 in (3, 4, 5):
-                    c = GLASS
-                elif face and ((91 <= z <= 98) or (105 <= z <= 112)) and (x - Q['x0']) % 8 in (2, 3, 4, 5, 6):
-                    c = GOLD
+                else:
+                    for a, b in wrows:
+                        if face and a <= z <= b and (x - Q['x0']) % 8 in (3, 4, 5):
+                            c = GLASS
+                        elif face and a - 1 <= z <= b + 1 and (x - Q['x0']) % 8 in (2, 3, 4, 5, 6) and c != GLASS:
+                            c = GOLD
                 both('stern-deco', x, o + d, z, c)
-    # ── 船名板（espejo、alcázar 那排窗上面；比 espejo 往外一格） ──
-    NB = S['name_board']
-    text = NB['text']
-    wtxt = sum(len(FONT[ch][0]) for ch in text) + (len(text) - 1)
-    half = wtxt // 2 + 2
-    for dy in range(-half, half + 1):
-        for z in range(NB['z0'], NB['z1'] + 1):
-            fa = aft.get((YC + dy, z))
-            if fa is None:
+    # ── hackebort：鏡板頂上那塊板（順著鏡板往後倒、頂上拱形）；奶油底、藍帶金字、藍鯊紋章 ──
+    H = S['hackebort']
+    z0, z1, half, af, htop = H['z0'], H['z1'], H['half'], H['arch_from'], H['half_top']
+    rake = math.tan(math.radians(plan['lines']['sternpost_rake_deg']['v']))
+    zb = z0 - 1                                                         # 坐在船殼頂那一層上
+    halfz = lambda z: half if z < af else htop + (half - htop) * math.sqrt(max(0.0, 1 - ((z - af + 0.5) / float(z1 - af + 1)) ** 2))
+    base = {}
+    for dy in range(-half, half + 1):                                   # 每一欄的船尾位置照船殼頂那一層；船殼頂比板窄的那幾欄照最近的一欄
+        b = aft.get((YC + dy, zb))
+        if b is None:
+            for k in range(1, 6):
+                b = aft.get((YC + (dy - k if dy > 0 else dy + k), zb))
+                if b is not None:
+                    break
+        base[dy] = b
+    face = {}
+    for z in range(z0, z1 + 1):
+        hw = halfz(z)
+        for dy in range(-half, half + 1):
+            if abs(dy) > hw + 1e-9 or base[dy] is None:
                 continue
-            border = dy in (-half, half) or z in (NB['z0'], NB['z1'])
-            put('name-board', fa - 1, YC + dy, z, PINK if border else BLACK)
-    ycur = YC - wtxt // 2
-    for ch in text:                                                    # 從船尾看左手 ＝ −y ⇒ 第一個字在 y 最小那邊
+            xf0 = base[dy] - int((z - zb) * rake + 0.5)
+            edge = abs(dy) + 1 > hw or z in (z0, z1) or abs(dy) + 1 > halfz(z + 1)
+            for t in range(H['thick']):
+                put('hackebort', xf0 + t, YC + dy, z, H['border'] if edge else H['field'])
+            face[(dy, z)] = xf0
+    R_ = H['ribbon']
+    for (dy, z), xf0 in face.items():                                   # 名帶（只換最外那一層）
+        if R_['z0'] < z < R_['z1'] and abs(dy) < half - 1:
+            put('hackebort', xf0, YC + dy, z, R_['color'])
+    text = R_['text']
+    wtxt = sum(len(FONT[ch][0]) for ch in text) + (len(text) - 1)
+    ycur = -(wtxt // 2)
+    for ch in text:                                                     # 從船尾看左手 ＝ −y ⇒ 第一個字在 y 最小那邊
         g = FONT[ch]
         for c in range(len(g[0])):
             for r in range(5):
                 if g[r][c] == 'X':
-                    z = NB['z1'] - 1 - r
-                    fa = aft.get((ycur + c, z))
-                    put('name-board', fa - 1, ycur + c, z, GOLD)
+                    z = R_['z1'] - 1 - r
+                    put('hackebort', face[(ycur + c, z)], YC + ycur + c, z, R_['text_color'])
         ycur += len(g[0]) + 1
-    # 裝飾不蓋船的格（船殼、甲板、梯子優先）：落在佔用格上的照實數出來、不放（gallery 圓頂在船尾肩膀上用 z1 那一層的外緣，碰到更上面的船殼）
+    SH = H['shark']                                                     # 藍鯊：頭朝左（−y）
+    wsh = len(SH['rows'][0])
+    for r, row in enumerate(SH['rows']):
+        z = SH['z_top'] - r
+        for c, ch in enumerate(row):
+            if ch in SH:
+                dy = c - wsh // 2
+                put('hackebort', face[(dy, z)], YC + dy, z, SH[ch])
+    # 裝飾不蓋船的格：落在佔用格上的照實數出來、不放
     skipped = {}
     for nm in list(parts):
         bad = [k for k in parts[nm] if k in occ]
@@ -232,8 +264,7 @@ def main():
         R['parts'][nm] = {'cells': len(ks), 'overlap_ship': ov, 'overlap_other_parts': cross, 'cells_touching_ship': touch, 'mirror_diff': mir,
                           'bbox': [bb.min(axis=0).tolist(), bb.max(axis=0).tolist()],
                           'colors': {int(c): int(n) for c, n in zip(*np.unique(np.array(list(cells.values())), return_counts=True))}}
-    # 艏斜桅那一條線（半徑 2.5）有沒有被喙、像擋到
-    B = LY.bowsprit(plan)
+    B = LY.bowsprit(plan)                                               # 艏斜桅那一條線（半徑 3）有沒有被喙、獅子擋到
     a = math.radians(B['angle'])
     hit = 0
     for (x, y, z) in allk:
@@ -246,8 +277,9 @@ def main():
     LA = S['lanterns']
     R['lanterns'] = []
     for dy in LA['dy']:
-        z = int(L.top_z(LA['x'] + 0.5))
-        R['lanterns'].append({'dy': dy, 'at': [LA['x'] + 0.5, YC + dy + 0.5, z + 1], 'on_solid': (LA['x'], YC + dy, z) in occ, 'air_above': (LA['x'], YC + dy, z + 1) not in occ and (LA['x'], YC + dy, z + 1) not in allk})
+        xl = face[(dy, z1)]
+        R['lanterns'].append({'dy': dy, 'at': [xl + 1.0, YC + dy + 0.5, z1 + 1], 'on_solid': (xl, YC + dy, z1) in allk,
+                              'air_above': (xl, YC + dy, z1 + 1) not in occ and (xl, YC + dy, z1 + 1) not in allk})
     if probe:
         print(json.dumps({'probe': probe[0], 'parts': {k: {kk: v[kk] for kk in ('overlap_ship', 'mirror_diff', 'cells_touching_ship')} for k, v in R['parts'].items()}}, ensure_ascii=False))
         return
@@ -261,44 +293,36 @@ def main():
             for (x, y, z) in sorted(cells):
                 f.write('%d,%d,%d,%d\n' % (x, y, z, cells[(x, y, z)]))
         R['lists'][nm] = [len(cells), hashlib.sha256(open(p, 'rb').read()).hexdigest()]
-    # 圖：船頭側面、船尾正面、船尾側面
+    # 圖：船頭側面、船尾正面
     sc = 6
-    im = Image.new('RGB', (1500, 900), (250, 248, 240))
+    im = Image.new('RGB', (1560, 900), (250, 248, 240))
     d = ImageDraw.Draw(im)
-    d.text((20, 10), '藍鯊號 新圖紙 05：船首喙、船首像、船尾陽台、quarter galleries、船名板　v1', fill=(0, 0, 0), font=font(18))
-
-    def side_view(ox, oy, xr, zr, cells_iter, flip=False):
-        best = {}
-        for (x, y, z), c in cells_iter:
-            if y < YC:
-                continue
-            k = (x, z)
-            if y > best.get(k, (-1, 0))[0]:
-                best[k] = (y, c)
-        for (x, z), (y, c) in best.items():
-            if xr[0] <= x <= xr[1] and zr[0] <= z <= zr[1]:
-                X = ox + (x - xr[0]) * sc
-                Y = oy + (zr[1] - z) * sc
-                d.rectangle([X, Y, X + sc - 1, Y + sc - 1], fill=palette_rgb(int(c)))
-    hullcells = [((x, y, z), c) for x, y, z, c in A.tolist() if x >= 470 or x <= 150]
+    d.text((20, 10), '藍鯊號 新圖紙 05：galjoen、紅獅子、船尾走廊、側廊、hackebort（藍鯊紋章）　v1', fill=(0, 0, 0), font=font(18))
     deco = [(k, c) for nm, cells in parts.items() for k, c in cells.items()]
-    side_view(20, 50, (470, 590), (15, 110), hullcells + deco)
-    d.text((20, 50 + 96 * sc), '船頭（右舷側面）', fill=(0, 0, 0), font=font(14))
-    # 船尾正面：每個 (y, z) 最後面那一格
+    hullcells = [((x, y, z), c) for x, y, z, c in A.tolist() if x >= 480 or x <= 200]
     best = {}
     for (x, y, z), c in hullcells + deco:
-        if x > 150:
+        if x < 480 or y < YC:
             continue
-        k = (y, z)
-        if x < best.get(k, (10 ** 6, 0))[0]:
-            best[k] = (x, c)
-    ox, oy, s2 = 800, 50, 5
+        if y > best.get((x, z), (-1, 0))[0]:
+            best[(x, z)] = (y, c)
+    for (x, z), (y, c) in best.items():
+        if 480 <= x <= 610 and 15 <= z <= 110:
+            X, Y = 20 + (x - 480) * sc, 50 + (110 - z) * sc
+            d.rectangle([X, Y, X + sc - 1, Y + sc - 1], fill=palette_rgb(int(c)))
+    d.text((20, 50 + 96 * sc), '船頭（右舷側面）', fill=(0, 0, 0), font=font(14))
+    best = {}
+    for (x, y, z), c in hullcells + deco:
+        if x > 200:
+            continue
+        if x < best.get((y, z), (10 ** 6, 0))[0]:
+            best[(y, z)] = (x, c)
+    ox, oy, s2 = 840, 50, 6
     for (y, z), (x, c) in best.items():
-        if 60 <= z <= 140 and 110 <= y <= 210:
-            X = ox + (y - 110) * s2
-            Y = oy + (140 - z) * s2
+        if 60 <= z <= 132 and 110 <= y <= 210:
+            X, Y = ox + (y - 110) * s2, oy + (132 - z) * s2
             d.rectangle([X, Y, X + s2 - 1, Y + s2 - 1], fill=palette_rgb(int(c)))
-    d.text((ox, oy + 82 * s2), '船尾正面（從船尾看，左手 ＝ −y）', fill=(0, 0, 0), font=font(14))
+    d.text((ox, oy + 74 * s2), '船尾正面（從船尾看，左手 ＝ −y）', fill=(0, 0, 0), font=font(14))
     im.save(os.path.join(design, 'sheet05_deco_v1.png'))
     with open(os.path.join(design, 'verify_deco.json'), 'w', encoding='utf-8', newline='\n') as f:
         json.dump(R, f, ensure_ascii=False, indent=1)
