@@ -1,0 +1,410 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "ame-labelle-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:16:34",
+			"persona": "ame",
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 23
+			}
+		},
+		{
+			"name": "船殼-窗玻璃",
+			"work": "ame-labelle-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:48:04",
+			"persona": "ame",
+			"note": "拆件：從 `船殼`（ame-labelle-01m）拆出（TASK-0646）",
+			"meta": {
+				"id": "part-1",
+				"material": "glass"
+			}
+		},
+		{
+			"name": "甲板-hold",
+			"work": "ame-labelle-01m-deck-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:41:44",
+			"persona": "ame",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "hold",
+				"floor": "84:8,196:8",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 0,
+				"name": "貨艙地板（cale）",
+				"thick": 1
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "ame-labelle-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:41:44",
+			"persona": "ame",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "main",
+				"floor": "81:30,105:28,158:28,218:32",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 2,
+				"name": "主甲板（pont）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-cabin",
+			"work": "ame-labelle-01m-deck-cabin",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:41:44",
+			"persona": "ame",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "cabin",
+				"floor": "58:23,80:23",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 1,
+				"name": "船尾小艙（chambre）",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-quarter",
+			"work": "ame-labelle-01m-deck-quarter",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:41:45",
+			"persona": "ame",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "quarter",
+				"floor": "56:41,80:41",
+				"id": "deck-4",
+				"kind": "deck",
+				"level": 3,
+				"name": "後甲板（dunette）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-forecastle",
+			"work": "ame-labelle-01m-deck-forecastle",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:41:45",
+			"persona": "ame",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "forecastle",
+				"floor": "189:42,220:42",
+				"id": "deck-5",
+				"kind": "deck",
+				"level": 4,
+				"name": "船首樓（gaillard d'avant）",
+				"thick": 2
+			}
+		},
+		{
+			"name": "船首喙",
+			"work": "ame-labelle-01m-head",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:47:22",
+			"persona": "ame",
+			"note": "步驟 6：knee of head＋head rails",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "前桅",
+			"work": "ame-labelle-01m-mast-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:51:13",
+			"persona": "ame",
+			"note": "步驟 7（TASK-0965）",
+			"meta": {
+				"id": "part-3"
+			}
+		},
+		{
+			"name": "主桅",
+			"work": "ame-labelle-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:51:14",
+			"persona": "ame",
+			"note": "步驟 7（TASK-0965）",
+			"meta": {
+				"id": "part-4"
+			}
+		},
+		{
+			"name": "後桅",
+			"work": "ame-labelle-01m-mast-mizzen",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:51:15",
+			"persona": "ame",
+			"note": "步驟 7（TASK-0965）",
+			"meta": {
+				"id": "part-5"
+			}
+		},
+		{
+			"name": "艏斜桅",
+			"work": "ame-labelle-01m-bowsprit",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:51:17",
+			"persona": "ame",
+			"note": "步驟 7（TASK-0965）",
+			"meta": {
+				"id": "part-6"
+			}
+		},
+		{
+			"name": "支索板",
+			"work": "ame-labelle-01m-channels",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T04:56:14",
+			"persona": "ame",
+			"note": "步驟 8（TASK-0965）",
+			"meta": {
+				"id": "part-7"
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "ame-labelle-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T05:06:38",
+			"persona": "ame",
+			"note": "步驟 10（TASK-0965）",
+			"meta": {
+				"hoist": "ladders-2#quarter-S,ladders-3#forecastle-S",
+				"id": "magazine-1",
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 1600
+			}
+		},
+		{
+			"name": "小艇架",
+			"work": "ame-labelle-01m-boat-skids",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T05:06:40",
+			"persona": "ame",
+			"note": "步驟 10（TASK-0965）",
+			"meta": {
+				"id": "part-8"
+			}
+		},
+		{
+			"name": "錨架",
+			"work": "ame-labelle-01m-anchor-gear",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				352,
+				160,
+				256
+			],
+			"enabled": true,
+			"created_at": "2026-10-26T05:10:33",
+			"persona": "ame",
+			"note": "步驟 11（TASK-0965）",
+			"meta": {
+				"id": "part-9"
+			}
+		}
+	]
+}

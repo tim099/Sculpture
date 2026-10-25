@@ -1,0 +1,345 @@
+{
+ "decks": {
+  "hold": {
+   "cells": 1493,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 448,
+    "177": 1045
+   },
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 6142,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1508,
+    "141": 238,
+    "209": 4396
+   },
+   "mirror_diff": 0
+  },
+  "cabin": {
+   "cells": 208,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 22,
+    "177": 186
+   },
+   "mirror_diff": 0
+  },
+  "quarter": {
+   "cells": 1241,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 164,
+    "141": 599,
+    "209": 478
+   },
+   "mirror_diff": 0
+  },
+  "forecastle": {
+   "cells": 894,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 128,
+    "141": 75,
+    "209": 691
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "main": {
+   "cells": 216,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "quarter": {
+   "cells": 338,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "forecastle": {
+   "cells": 192,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "main",
+   "lo": "hold",
+   "points": {
+    "foot": [
+     144,
+     80,
+     8
+    ],
+    "lo": [
+     147,
+     80,
+     11
+    ],
+    "hi": [
+     157,
+     80,
+     26
+    ],
+    "head": [
+     163,
+     80,
+     29
+    ]
+   },
+   "steps": 6
+  },
+  "quarter-P": {
+   "up": "quarter",
+   "lo": "main",
+   "points": {
+    "foot": [
+     90,
+     68,
+     29
+    ],
+    "lo": [
+     87,
+     68,
+     32
+    ],
+    "hi": [
+     83,
+     68,
+     38
+    ],
+    "head": [
+     78,
+     68,
+     41
+    ]
+   },
+   "steps": 3
+  },
+  "quarter-S": {
+   "up": "quarter",
+   "lo": "main",
+   "points": {
+    "foot": [
+     90,
+     92,
+     29
+    ],
+    "lo": [
+     87,
+     92,
+     32
+    ],
+    "hi": [
+     83,
+     92,
+     38
+    ],
+    "head": [
+     78,
+     92,
+     41
+    ]
+   },
+   "steps": 3
+  },
+  "cabin": {
+   "up": "quarter",
+   "lo": "cabin",
+   "points": {
+    "foot": [
+     60,
+     80,
+     23
+    ],
+    "lo": [
+     63,
+     80,
+     26
+    ],
+    "hi": [
+     71,
+     80,
+     38
+    ],
+    "head": [
+     79,
+     80,
+     41
+    ]
+   },
+   "steps": 5
+  },
+  "forecastle-P": {
+   "up": "forecastle",
+   "lo": "main",
+   "points": {
+    "foot": [
+     180,
+     68,
+     30
+    ],
+    "lo": [
+     183,
+     68,
+     33
+    ],
+    "hi": [
+     187,
+     68,
+     39
+    ],
+    "head": [
+     195,
+     68,
+     42
+    ]
+   },
+   "steps": 3
+  },
+  "forecastle-S": {
+   "up": "forecastle",
+   "lo": "main",
+   "points": {
+    "foot": [
+     180,
+     92,
+     30
+    ],
+    "lo": [
+     183,
+     92,
+     33
+    ],
+    "hi": [
+     187,
+     92,
+     39
+    ],
+    "head": [
+     195,
+     92,
+     42
+    ]
+   },
+   "steps": 3
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 6,
+ "reach": {
+  "hold": [
+   "hold"
+  ],
+  "main": [
+   "forecastle-P",
+   "forecastle-S",
+   "hold",
+   "quarter-P",
+   "quarter-S"
+  ],
+  "cabin": [
+   "cabin"
+  ],
+  "quarter": [
+   "cabin",
+   "quarter-P",
+   "quarter-S"
+  ],
+  "forecastle": [
+   "forecastle-P",
+   "forecastle-S"
+  ]
+ },
+ "holes": {
+  "hold": 0,
+  "main": 340,
+  "cabin": 31,
+  "quarter": 203,
+  "forecastle": 38
+ },
+ "cavities_filled": [
+  {
+   "deck": "hold",
+   "cells": 19,
+   "x": [
+    99,
+    107
+   ],
+   "z": [
+    6,
+    6
+   ]
+  },
+  {
+   "deck": "hold",
+   "cells": 347,
+   "x": [
+    110,
+    179
+   ],
+   "z": [
+    5,
+    6
+   ]
+  },
+  {
+   "deck": "hold",
+   "cells": 20,
+   "x": [
+    182,
+    191
+   ],
+   "z": [
+    6,
+    6
+   ]
+  }
+ ],
+ "lists": {
+  "deck-hold": [
+   1493,
+   "73c8769634252236b3ab9f3da37d020f7b1232241405929fc7d6bec299a3fa2e"
+  ],
+  "deck-main": [
+   6142,
+   "242bee11eb1c3099c725c174eda3119136204ac069b2078983ab98b66de42c10"
+  ],
+  "deck-cabin": [
+   208,
+   "9a4023e13e134dd94e1786ff7f58bc9736f91f8f29a1e7cfc8d67702a9c0e478"
+  ],
+  "deck-quarter": [
+   1241,
+   "71789a281a5eec54187fb084095c4dc83056bc2084b91e4987e8722f56854d0f"
+  ],
+  "deck-forecastle": [
+   894,
+   "7504dde02c09e2e9a9e14d3a187fcafac1220e0a076e719e924f66ab2e9fd6d7"
+  ],
+  "ladders-main": [
+   216,
+   "167ec9125d30b0e2d1553b288049e090d97544fe658940baca8c3258ffb685f7"
+  ],
+  "ladders-quarter": [
+   338,
+   "2d769037314905eca800359e1f4ec3acb4f9308ff5a76e677276a1a8da450b2a"
+  ],
+  "ladders-forecastle": [
+   192,
+   "df9aaa7b6acd5b83bf0181922fbbd6d852c86e964d60101d6e5a54732704891a"
+  ]
+ }
+}
