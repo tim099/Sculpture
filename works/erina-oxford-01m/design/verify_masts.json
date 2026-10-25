@@ -1,0 +1,482 @@
+{
+ "masts": {
+  "main": {
+   "cells": 10798,
+   "skipped_occupied": 0,
+   "stages": [
+    [
+     "lower",
+     8,
+     203,
+     0.0
+    ],
+    [
+     "top",
+     181,
+     288,
+     6.0
+    ],
+    [
+     "tg",
+     276,
+     325,
+     9.8
+    ]
+   ],
+   "top_z": 181,
+   "truck_z": 325
+  },
+  "fore": {
+   "cells": 8619,
+   "skipped_occupied": 48,
+   "stages": [
+    [
+     "lower",
+     10,
+     184,
+     0.0
+    ],
+    [
+     "top",
+     164,
+     262,
+     5.7
+    ],
+    [
+     "tg",
+     251,
+     294,
+     9.3
+    ]
+   ],
+   "top_z": 164,
+   "truck_z": 294
+  },
+  "mizzen": {
+   "cells": 3467,
+   "skipped_occupied": 67,
+   "stages": [
+    [
+     "lower",
+     14,
+     160,
+     0.0
+    ],
+    [
+     "top",
+     146,
+     210,
+     4.1
+    ]
+   ],
+   "top_z": 146,
+   "truck_z": 210
+  }
+ },
+ "bowsprit": {
+  "cells": 3031,
+  "hole_cells": 73,
+  "p0": [
+   284,
+   49
+  ],
+  "p1": [
+   379.0,
+   115.5
+  ],
+  "hole_by_work": {
+   "erina-oxford-01m": 69,
+   "erina-oxford-01m-deck-fc": 4
+  },
+  "hole_unassigned": 0
+ },
+ "yards": [
+  {
+   "name": "yard-main-course",
+   "host": "main",
+   "source_work": "summit-stormkaap-01m-yard-main-course",
+   "scale": 0.6809,
+   "at": [
+    181.13,
+    96.5,
+    176.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "course",
+    "sail": "main-course",
+    "length_m": 16.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-main-topsail",
+   "host": "main",
+   "source_work": "summit-stormkaap-01m-yard-main-topsail",
+   "scale": 0.6504,
+   "at": [
+    182.63,
+    96.5,
+    262.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topsail",
+    "sail": "main-topsail",
+    "length_m": 8.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-main-topgallant",
+   "host": "main",
+   "source_work": "summit-stormkaap-01m-yard-main-topgallant",
+   "scale": 0.5195,
+   "at": [
+    183.54,
+    96.5,
+    316.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topgallant",
+    "sail": "main-topgallant",
+    "length_m": 4.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-fore-course",
+   "host": "fore",
+   "source_work": "summit-stormkaap-01m-yard-fore-course",
+   "scale": 0.6763,
+   "at": [
+    280.8,
+    96.5,
+    160.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "course",
+    "sail": "fore-course",
+    "length_m": 14.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-fore-topsail",
+   "host": "fore",
+   "source_work": "summit-stormkaap-01m-yard-fore-topsail",
+   "scale": 0.6306,
+   "at": [
+    285.1,
+    96.5,
+    246.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "topsail",
+    "sail": "fore-topsail",
+    "length_m": 7.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-fore-topgallant",
+   "host": "fore",
+   "source_work": "summit-stormkaap-01m-yard-fore-topgallant",
+   "scale": 0.614,
+   "at": [
+    287.7,
+    96.5,
+    290.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "topgallant",
+    "sail": "fore-topgallant",
+    "length_m": 3.5,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-crossjack",
+   "host": "mizzen",
+   "source_work": "summit-stormkaap-01m-yard-main-topsail",
+   "scale": 0.5691,
+   "at": [
+    88.85,
+    96.5,
+    142.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "crossjack",
+    "sail": "",
+    "length_m": 7.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-mizzen-topsail",
+   "host": "mizzen",
+   "source_work": "summit-stormkaap-01m-yard-mizzen-topsail",
+   "scale": 0.7463,
+   "at": [
+    87.69,
+    96.5,
+    200.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "topsail",
+    "sail": "mizzen-topsail",
+    "length_m": 5.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-spritsail",
+   "host": "bowsprit",
+   "source_work": "summit-stormkaap-01m-yard-spritsail",
+   "scale": 0.6194,
+   "at": [
+    365.27,
+    96.5,
+    98.05463662421315
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "bowsprit",
+    "yard": "spritsail",
+    "sail": "spritsail",
+    "length_m": 9.6,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-mizzen-lateen",
+   "host": "mizzen",
+   "source_work": "erina-oxford-01m-yard-mizzen-lateen",
+   "scale": 1,
+   "pivot": [
+    79.5,
+    2.5,
+    2.5
+   ],
+   "at": [
+    84.53,
+    90.7,
+    128.5
+   ],
+   "rotate": [
+    0,
+    40,
+    0
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "gaff",
+    "rig": "lateen",
+    "sail": "mizzen-lateen",
+    "length_m": 13.6,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_y_deg": 40,
+    "rotate_z_deg": 0
+   }
+  }
+ ],
+ "lateen": {
+  "cells": 1032,
+  "anchors": {
+   "pivot": [
+    79,
+    2,
+    2
+   ],
+   "sling": [
+    79,
+    2,
+    4
+   ],
+   "fore": [
+    134,
+    2,
+    2
+   ],
+   "peak": [
+    1,
+    2,
+    2
+   ],
+   "earing-F": [
+    132,
+    2,
+    2
+   ],
+   "earing-A": [
+    3,
+    2,
+    2
+   ],
+   "top-00": [
+    3,
+    2,
+    2
+   ],
+   "top-01": [
+    11,
+    2,
+    2
+   ],
+   "top-02": [
+    19,
+    2,
+    2
+   ],
+   "top-03": [
+    27,
+    2,
+    2
+   ],
+   "top-04": [
+    35,
+    2,
+    2
+   ],
+   "top-05": [
+    43,
+    2,
+    2
+   ],
+   "top-06": [
+    51,
+    2,
+    2
+   ],
+   "top-07": [
+    59,
+    2,
+    2
+   ],
+   "top-08": [
+    67,
+    2,
+    2
+   ],
+   "top-09": [
+    75,
+    2,
+    2
+   ],
+   "top-10": [
+    83,
+    2,
+    2
+   ],
+   "top-11": [
+    91,
+    2,
+    2
+   ],
+   "top-12": [
+    99,
+    2,
+    2
+   ],
+   "top-13": [
+    107,
+    2,
+    2
+   ],
+   "top-14": [
+    115,
+    2,
+    2
+   ],
+   "top-15": [
+    123,
+    2,
+    2
+   ],
+   "top-16": [
+    131,
+    2,
+    2
+   ]
+  }
+ }
+}

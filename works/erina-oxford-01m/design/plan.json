@@ -61,7 +61,7 @@
   "fore_tg":  {"len": 43, "head": 0, "r": [1.4, 1.0], "src": "14 ft"},
   "mizzen": {"x": 92, "rake_deg": -4, "heel_z": 14, "len": 146, "head": 14, "r": [2.8, 2.0], "src": "48 ft ＝ 0.75 × 主桅"},
   "mizzen_top": {"len": 64, "head": 0, "r": [1.6, 1.1], "src": "0.33 × 主桅 ＝ 21 ft"},
-  "bowsprit": {"heel": [284, 46], "len": 116, "steeve_deg": 35, "r": [3.5, 2.2], "src": "0.6 × 主桅 ＝ 38 ft；仰 35°（17 世紀艏斜桅陡）；桅腳在前桅前面的炮甲板上（v0 放 x 262 會穿過前桅）、從艏樓前緣穿出去（船頭牆開孔，收穫號的做法）"},
+  "bowsprit": {"heel": [284, 49], "len": 116, "steeve_deg": 35, "r": [3.5, 2.2], "src": "0.6 × 主桅 ＝ 38 ft；仰 35°（17 世紀艏斜桅陡）；桅腳在前桅前面的炮甲板上（v0 放 x 262 會穿過前桅）、從艏樓前緣穿出去（船頭牆開孔，收穫號的做法）"},
   "yards": {
    "main_course":  {"len": 160, "on": "main", "z": 176, "src": "16 m ＝ 2.2 × 寬（17 世紀主帆桁約 2.1–2.4 × 寬）"},
    "main_topsail": {"len": 80,  "on": "main_top", "z": 262, "src": "½ 主帆桁"},
@@ -101,6 +101,50 @@
    {"name": "fc-P", "lo": "gun", "up": "fc", "xs": 251, "dir": 1, "dy": -12, "head_x": 265},
    {"name": "fc-S", "lo": "gun", "up": "fc", "xs": 251, "dir": 1, "dy": 12, "head_x": 265}
   ], "src": "〔設計〕每 3 格一階、每階 2 格、踏板 7 寬；梯子放在兩門炮之間的空檔（炮門 x ± 3 以外）；底艙梯子在炮甲板開井（主艙口與前艙口之間）"}
+ },
+ "rig_build": {
+  "src": "〔設計〕桅樓（round top，17 世紀圓的平台＋矮欄）主 r 13、前 r 11、後 r 7；上桅在下桅頭前面（doubling）；方帆桁照造船規格 §2.1 引用風暴角號（summit，17 世紀荷蘭船）的帆桁元件等比縮放；後桅三角帆桁新做（要有 fore 固定點，§5）",
+  "colors": {"mast": 141, "top": 136, "rim": 36, "cap": 36, "yard": 136},
+  "tops": {"main": 13, "fore": 11, "mizzen": 7},
+  "yard_src": {
+   "main_course": ["summit-stormkaap-01m-yard-main-course", 235, "course"],
+   "main_topsail": ["summit-stormkaap-01m-yard-main-topsail", 123, "topsail"],
+   "main_tg": ["summit-stormkaap-01m-yard-main-topgallant", 77, "topgallant"],
+   "fore_course": ["summit-stormkaap-01m-yard-fore-course", 207, "course"],
+   "fore_topsail": ["summit-stormkaap-01m-yard-fore-topsail", 111, "topsail"],
+   "fore_tg": ["summit-stormkaap-01m-yard-fore-topgallant", 57, "topgallant"],
+   "crossjack": ["summit-stormkaap-01m-yard-main-topsail", 123, "crossjack"],
+   "mizzen_topsail": ["summit-stormkaap-01m-yard-mizzen-topsail", 67, "topsail"],
+   "spritsail": ["summit-stormkaap-01m-yard-spritsail", 155, "spritsail"]
+  },
+  "sail_of_yard": {"main_course": "main-course", "main_topsail": "main-topsail", "main_tg": "main-topgallant", "fore_course": "fore-course", "fore_topsail": "fore-topsail", "fore_tg": "fore-topgallant", "crossjack": "", "mizzen_topsail": "mizzen-topsail", "spritsail": "spritsail", "mizzen_lateen": "mizzen-lateen"}
+ },
+ "rigging": {
+  "src": "〔設計〕數值照造船規格 §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照收穫號 calli 的 draft_rigging；ratlines 改用橫繩組（§6，TASK-0678）",
+  "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+  "channels": {"shrouds": {"fore": 5, "main": 6, "mizzen": 3}, "backstays": {"fore": 1, "main": 1}, "spacing": 7, "first_aft": 3, "width": 4, "below_rail": 1,
+   "src": "〔設計〕channels 在舷外、舷頂下 1 格（船腰炮門頂 ＋13、舷頂 ＋15 ⇒ 不擋炮門）；每舷 shrouds 主 6、前 5、後 3（17 世紀五等艦的量級，沒查到確數）"},
+  "topmast_shrouds": 3,
+  "thick": {"shroud": 1.0, "topmast_shroud": 0.7, "futtock": 0.5, "backstay": 0.7, "stay": 1.2, "tm_stay": 0.8, "bobstay": 1.0, "sheet": 0.45, "course_sheet": 0.55, "tack": 0.55},
+  "ratlines": {"step": 4, "start": 7, "stop": 16, "min_span": 5, "th": 0.3, "tm_step": 4, "tm_start": 4, "tm_stop": 10, "tm_th": 0.25},
+  "sails": {"fullness": 1.05, "course_clew_above_rail": 8, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 36, "sheet_aft": 50, "tack_fwd": 40,
+   "lateen_clew_dx": 4, "lateen_clew_above_rail": 6, "lateen_tack_deck": "qd",
+   "src": "〔設計〕course 帆腳在舷頂上 0.8 m；上一層帆的 clew 綁在下一根帆桁的 earing 旁；spritsail 掛在艏斜桅帆桁下 3.6 m；後桅三角帆 clew 在帆桁後端下、sheet 綁船尾舷頂兩舷，tack 從帆桁前端綁到後甲板"},
+  "sail_set": {"spritsail": 3},
+  "flags": {"ensign": [36, 24], "pennant": [50, 4], "pennant_color": "#c8201e",
+   "src": "〔設計〕船尾：紅色 ensign（左上角白底紅聖喬治十字；1660 年代英國船）掛在後桅三角帆桁的後端（之後做船尾旗桿再挪）；主桅頂紅色長旗"},
+  "wind": [4.5, -1.5, 0], "sail_seconds": 3
+ },
+ "guns_build": {
+  "assembly": "erina-oxford-01m-assembly", "hull": "erina-oxford-01m",
+  "deck_works": {"gun": "erina-oxford-01m-deck-gun", "qd": "erina-oxford-01m-deck-qd"},
+  "prefix": {"gun": "G", "qd": "Q"},
+  "types": {
+   "8l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.55, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "8l"}, "src": "demi-culverin（約 9–10 磅）⇒ 遊戲 8l；沿用風暴角號 6 磅長砲元件放大 0.55（皇家號 8l 的做法、造船規格 §2.1 只差口徑一點的照縮放）"},
+   "6l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.5, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "6l"}, "src": "saker（約 5¼ 磅）⇒ 遊戲 6l；風暴角號 6 磅長砲元件原尺寸"}
+  },
+  "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2, "src": "照收穫號 draft_guns（造船規格 §4.2：從舷牆外面往裡退到零碰撞、砲口伸出、腳下有甲板）"},
+  "support_min": 0.5
  },
  "paint": {
   "_src": "〔設計〕1660 年代英國船：水線上外板上清漆的木色（bright sides）、wale 塗黑（瀝青）、炮門以上的上部構造藍底金邊的飾帶、炮門內框紅色、水線下白色防蟲塗料；色號看過 palette_rgb（RGB332）",

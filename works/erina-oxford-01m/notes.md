@@ -61,6 +61,37 @@
 - 甲板 meta：每層 `export format=vxk links=none` ⇒ Blockside `src/decks.py` ⇒ `design/decks_meta.tsv`（代號、名字照本船改）⇒ `work sub=meta`（5 筆）。
 - 過程圖 `overlays/stage4_decks_{bowq,nohull}.png`。
 
+## 2026-10-26 流程更新：造船步驟表
+- Tim 04:14 把造船規格拆成 `Ship_*` 十六份＋步驟表 `Ship_Steps`（gura TASK-0967）⇒ 步驟表已接到 TASK-0972 的驗收標準（刪步驟 13：木造帆船）；之後每一步只讀那一行的文件。
+- 已勾：步驟 1–5、7–9（下面的階段六～八）。下一步：6 裝飾、10 彈藥庫與甲板物件、11 舵與錨、12 砲門蓋板、14 匯入、15 交船。
+
+## 階段六 桅與帆桁（步驟 7；2026-10-26）
+- `draft_masts.py` ⇒ `masks/masts/<桅>.vox.txt`、`masks/yards/lateen.vox.txt`＋`yard_lateen_anchors.json`、`masks/bowsprit_hole/`、`yards_placement.json`、`verify_masts.json`；落格 `tools/build_masts.py`。
+- 桅（子作品 `-mast-main／fore／mizzen`，關聯 主桅／前桅／後桅）：下桅＋圓桅樓（主 r 13、前 11、後 7；2 格厚＋外緣矮欄黑頂）＋上桅（在下桅頭前面 doubling）＋上桅帆桅；每節頂一個黑 cap；上桅頭十字桁。桅頂離水線：主 29.2、前 26.1、後 17.7 m。
+- 艏斜桅（`-bowsprit`）：根部 (284, 49)、仰 35°、11.6 m；船頭牆與艏樓甲板開孔、孔由艏斜桅填滿。
+  - 🩸 根部 v0 (262, 50) 會穿過前桅 ⇒ 挪到前桅前面；(284, 46) 切到炮甲板 18 格 ⇒ z 49。
+  - 🩸 `draft_masts` 第一版算佔用是「匯出整艘、扣掉自己的清單」：第一次跑時桅還沒放、上一輪的清單卻在 ⇒ 扣掉的是船殼 ⇒ 開孔少算 73 格（ropecheck 報 link_overlap 73）⇒ 改成匯出時 `hide_links` 藏掉本階段的關聯（`tools/wio.py` 加 hide_links），補刻 69＋4（標記 `艏斜桅孔補刻`）⇒ link_overlap 0。
+  - 🩸 上桅十字桁的半徑是小數 ⇒ y 範圍兩舷不對稱、鏡像差 8 ⇒ 取整數（差分刻 16＋10）。
+- 方帆桁 9 根：照造船規格 §2.1 引用風暴角號（summit，17 世紀荷蘭船）的帆桁元件等比縮放（main course 0.681、topsail 0.650、topgallant 0.519、fore 0.676／0.631／0.614、crossjack ＝ 主上桅帆桁 0.569、mizzen topsail 0.746、spritsail 0.619）。帆桁掛在那一節桅的前面（半徑＋2.5）。
+  - 🩸 模型名 `yard-main-tg` ⇒ Blockside 匯入檢查拿 `yard-` 後面那段對帆名 ⇒ 改成 `yard-main-topgallant`、`yard-fore-topgallant`。
+- 後桅三角帆桁：新元件 `erina-oxford-01m-yard-mizzen-lateen`（136×5×5、中段粗兩頭細；固定點 pivot／sling／fore／peak／earing-F／A／top-NN）—— 風暴角號的沒有 `fore`、持火號的加了會改到持火號在遊戲裡的擺角 ⇒ 新做。擺在後桅左舷側、rotate y 40°（前端低）、meta `yard=gaff rig=lateen`。
+- 讀數：組裝件 1 元件、空腔 0、鏡像差 0；models_broken 0。
+
+## 階段七 索具、帆、旗（步驟 8；2026-10-26）
+- `draft_rigging.py` ⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/ensign.png`、`verify_rigging.json`；落地 `tools/rigging_apply.py`（channels → 固定點 → 繩 → 橫繩組 → 帆 → 帆的繩 → 風 → meta）。
+- 帆桁模型的點（earing、pivot、fore、peak）從組裝件 `export format=parts` 讀世界座標（不自己算旋轉）。
+- channels：兩舷一件、舷頂下 1 格（船腰炮門頂 ＋13、舷頂 ＋15 ⇒ 不擋炮門；照那一段最低的舷頂 —— 前桅 shrouds 落在艏樓後面的船腰）；shrouds 主 6、前 5、後 3／舷；上桅 backstay 主、前各 1。
+- 靜索 77、帆的繩 23（sheet 18、tack 5，全帶 meta）；ratlines 橫繩組 12（下桅 6 組 climb=1：foot 舷牆內側甲板、head 桅樓靠這一舷的邊；上桅 6 組）。
+- 帆 9＋旗 2：fore／main course、topsail、topgallant，mizzen topsail（帆腳綁 crossjack），spritsail（`sail=course set=3`），mizzen-lateen（`sail=gaff`）；英國紅 ensign（左上角白底紅聖喬治十字，暫掛三角帆桁後端）、主桅頂紅長旗。
+- 讀數：ropecheck 繩 250、兩端 500 全 ok、link_overlap 0；view ropes_broken 0、sails_broken 0、models_broken 0。
+
+## 階段八 砲（步驟 9；2026-10-26）
+- `gunsim.py`（照抄收穫號）＋ `draft_guns.py`（照抄改：本船炮門、沒有追擊砲）⇒ `guns_placement.json`、`verify_guns.json`；落地 `tools/build_guns.py`。
+- 炮甲板 16 門 demi-culverin ⇒ `8l`（風暴角號 `-gun-6l` ×0.55）；後甲板 6 門 saker ⇒ `6l`（同一件 ×0.5）。P 舷 mirror=y。
+- 🩸 碰撞格網外擴 4 格：砲口伸出舷外 ~7 格、出了網格框 ⇒ 框外當實心 ⇒ 船腰 8 門「砲口不空」假警報 ⇒ pad 16。
+- 🩸 甲板高度取樣點往舷內 26 格會碰到主艙口圍欄（P 舷多 1 格）⇒ 砲墊高、兩舷不對稱 ⇒ 只取到 20 格。
+- 讀數：22 門全 ok（砲口伸出 6.3–9.3 格、砲口空、腳下支撐 0.5–1.0）、砲與砲不撞、兩舷對稱；models_broken 0。
+
 ## 給遊戲那側填 geo 用的高度（到這一階段）
 - 水線 z 33；炮甲板（第一層空氣）船中 z 41、船尾 z 50、船頭 z 47；後甲板 z 60–70；艉樓 z 81–87；艏樓 z 62–65；底艙平台 z 22。
 - 船殼 x 39（船尾板）～ 309（艏柱）；艏斜桅（之後）尖到 x 377。
