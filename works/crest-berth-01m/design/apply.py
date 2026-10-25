@@ -19,6 +19,7 @@ TMP = os.path.join(os.path.dirname(D), 'exports', 'apply')
 os.makedirs(TMP, exist_ok=True)
 ok = bad = 0
 P = 'crest-001'
+CHUNK = 900000                                                         # 一刀最多幾格（CLI 上限 1,000,000）
 
 
 def cli(args, quiet_fail=False):
@@ -87,11 +88,14 @@ for w, W in sel:
         for nm, cells, args in (('carve', carve, ['op=carvevox']), ('stamp', add, ['op=stampvox', 'overwrite=1'])):
             if not cells:
                 continue
-            p = os.path.join(TMP, '%s.%s.vox.txt' % (w, nm))
-            dump(p, cells)
-            rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(cells), 'draft=0', 'share=0'])
-            m = re.search(r'placed\s*=\s*(\d+)', out)
-            print(w, nm, len(cells), 'rc', rc, 'placed', m.group(1) if m else '?')
+            ks = sorted(cells)
+            for i0 in range(0, len(ks), CHUNK):                       # 單刀上限 100 萬格 ⇒ 超巨艦泊位（133 萬格）分幾刀
+                part = {k: cells[k] for k in ks[i0:i0 + CHUNK]}
+                p = os.path.join(TMP, '%s.%s.%d.vox.txt' % (w, nm, i0 // CHUNK))
+                dump(p, part)
+                rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(part), 'draft=0', 'share=0'])
+                m = re.search(r'placed\s*=\s*(\d+)', out)
+                print(w, nm, len(part), 'rc', rc, 'placed', m.group(1) if m else '?')
         print(w, '現況 %d → 清單 %d｜刻 %d、補／換色 %d' % (len(cur), len(want), len(carve), len(add)))
     elif step == 'anchors':
         have = {}
