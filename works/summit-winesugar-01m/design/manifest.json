@@ -1,0 +1,648 @@
+{
+ "root": "summit-winesugar-01m",
+ "works": {
+  "summit-winesugar-01m-sugar-works": {
+   "anchors": {
+    "door": [
+     118,
+     23,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     145,
+     81,
+     48
+    ]
+   },
+   "expect": "summit-winesugar-01m-sugar-works.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "16,12",
+      "style": "common",
+      "use": "sugar-works",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "磨坊、煮糖房、養糖棚與擺設",
+     "recolor": {},
+     "source": "summit-winesugar-01m-sugar-works-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-winesugar-01m-sugar-works-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      108,
+      23,
+      1
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      88,
+      23,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-左",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      23,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-右",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      152,
+      36,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      86,
+      96,
+      1
+     ],
+     "meta": {},
+     "name": "糖蜜桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      86,
+      108,
+      1
+     ],
+     "meta": {},
+     "name": "糖蜜桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      98,
+      102,
+      1
+     ],
+     "meta": {},
+     "name": "糖蜜桶-3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      132,
+      24,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    160,
+    120,
+    80
+   ],
+   "tags": "building,common",
+   "title": "糖廠（共用：牛拉的三滾筒榨蔗磨坊與茅草頂、汁槽；毛石的煮糖房、爐台上五口銅鍋、後牆外的火口與煙囪；茅草養糖棚裡倒放的陶糖模與糖蜜槽；蔗渣堆、甘蔗堆）"
+  },
+  "summit-winesugar-01m-sugar-works-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-winesugar-01m-sugar-works-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "糖廠｜磨坊、煮糖房、養糖棚與擺設"
+  },
+  "summit-winesugar-01m-sugar-works-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-winesugar-01m-sugar-works-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "糖廠｜屋頂"
+  },
+  "summit-winesugar-01m-vineyard": {
+   "anchors": {
+    "door": [
+     23,
+     7,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-winesugar-01m-vineyard.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,10",
+      "style": "common",
+      "use": "vineyard",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "小屋、壓榨棚與擺設",
+     "recolor": {},
+     "source": "summit-winesugar-01m-vineyard-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-winesugar-01m-vineyard-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      16,
+      7,
+      1
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      38,
+      16,
+      11
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      10,
+      50,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      22,
+      50,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      48,
+      10,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-棚",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    100,
+    100,
+    60
+   ],
+   "tags": "building,common",
+   "title": "葡萄園（共用：毛石的看園小屋；開敞的壓榨棚、毛石踩葡萄槽、籃式壓榨機；一筐筐葡萄、手推車、葡萄渣堆；後緣通到葡萄田）"
+  },
+  "summit-winesugar-01m-vineyard-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-winesugar-01m-vineyard-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    100,
+    60
+   ],
+   "tags": "sub",
+   "title": "葡萄園｜小屋、壓榨棚與擺設"
+  },
+  "summit-winesugar-01m-vineyard-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-winesugar-01m-vineyard-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    100,
+    60
+   ],
+   "tags": "sub",
+   "title": "葡萄園｜屋頂"
+  },
+  "summit-winesugar-01m-winery": {
+   "anchors": {
+    "door": [
+     50,
+     5,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "summit-winesugar-01m-winery.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,12",
+      "style": "common",
+      "use": "winery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "酒坊、壓榨機與擺設",
+     "recolor": {},
+     "source": "summit-winesugar-01m-winery-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "summit-winesugar-01m-winery-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      37,
+      5,
+      1
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      5,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-左",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      5,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗-右",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      22,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      92,
+      22,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      10,
+      116,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      22,
+      116,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      64,
+      64,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      64,
+      76,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-4",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      68,
+      6,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    100,
+    120,
+    70
+   ],
+   "tags": "building,common",
+   "title": "釀酒坊（共用：毛石的酒坊、雙扇貨門、裡面三個躺著的大酒桶；後院棚下的橫梁壓榨機與石墜、兩個大發酵桶、斜蓋的酒窖口、一排酒桶）"
+  },
+  "summit-winesugar-01m-winery-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-winesugar-01m-winery-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "釀酒坊｜酒坊、壓榨機與擺設"
+  },
+  "summit-winesugar-01m-winery-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "summit-winesugar-01m-winery-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "釀酒坊｜屋頂"
+  }
+ }
+}
