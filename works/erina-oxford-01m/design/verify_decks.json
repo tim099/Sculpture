@@ -1,0 +1,318 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 11536,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 3412,
+    "177": 8124
+   },
+   "mirror_diff": 0
+  },
+  "gun": {
+   "cells": 20762,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 6391,
+    "141": 342,
+    "177": 14029
+   },
+   "mirror_diff": 0
+  },
+  "qd": {
+   "cells": 8802,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1686,
+    "141": 1324,
+    "209": 5792
+   },
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 3780,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 658,
+    "141": 858,
+    "209": 2264
+   },
+   "mirror_diff": 0
+  },
+  "fc": {
+   "cells": 3541,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 577,
+    "141": 1092,
+    "209": 1872
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "gun": {
+   "cells": 208,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "qd": {
+   "cells": 394,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 186,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "fc": {
+   "cells": 368,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "gun",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     206,
+     96,
+     22
+    ],
+    "lo": [
+     209,
+     96,
+     25
+    ],
+    "hi": [
+     219,
+     96,
+     40
+    ],
+    "head": [
+     225,
+     96,
+     41
+    ]
+   },
+   "steps": 6
+  },
+  "qd-P": {
+   "up": "qd",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     173,
+     84,
+     41
+    ],
+    "lo": [
+     170,
+     84,
+     44
+    ],
+    "hi": [
+     160,
+     84,
+     59
+    ],
+    "head": [
+     155,
+     84,
+     60
+    ]
+   },
+   "steps": 6
+  },
+  "qd-S": {
+   "up": "qd",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     173,
+     108,
+     41
+    ],
+    "lo": [
+     170,
+     108,
+     44
+    ],
+    "hi": [
+     160,
+     108,
+     59
+    ],
+    "head": [
+     155,
+     108,
+     60
+    ]
+   },
+   "steps": 6
+  },
+  "poop": {
+   "up": "poop",
+   "lo": "qd",
+   "points": {
+    "foot": [
+     111,
+     96,
+     62
+    ],
+    "lo": [
+     108,
+     96,
+     66
+    ],
+    "hi": [
+     100,
+     96,
+     78
+    ],
+    "head": [
+     93,
+     96,
+     81
+    ]
+   },
+   "steps": 5
+  },
+  "fc-P": {
+   "up": "fc",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     250,
+     84,
+     43
+    ],
+    "lo": [
+     253,
+     84,
+     46
+    ],
+    "hi": [
+     263,
+     84,
+     61
+    ],
+    "head": [
+     265,
+     84,
+     62
+    ]
+   },
+   "steps": 6
+  },
+  "fc-S": {
+   "up": "fc",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     250,
+     108,
+     43
+    ],
+    "lo": [
+     253,
+     108,
+     46
+    ],
+    "hi": [
+     263,
+     108,
+     61
+    ],
+    "head": [
+     265,
+     108,
+     62
+    ]
+   },
+   "steps": 6
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 6,
+ "reach": {
+  "orlop": [
+   "hold"
+  ],
+  "gun": [
+   "fc-P",
+   "fc-S",
+   "hold",
+   "qd-P",
+   "qd-S"
+  ],
+  "qd": [
+   "poop",
+   "qd-P",
+   "qd-S"
+  ],
+  "poop": [
+   "poop"
+  ],
+  "fc": [
+   "fc-P",
+   "fc-S"
+  ]
+ },
+ "holes": {
+  "orlop": 61,
+  "gun": 790,
+  "qd": 40,
+  "poop": 41,
+  "fc": 69
+ },
+ "cavities_filled": [],
+ "lists": {
+  "deck-orlop": [
+   11536,
+   "302f5da1e237c70cbd6aa2279d8d00d434756728a14eba9b935ceda6c05c9f29"
+  ],
+  "deck-gun": [
+   20762,
+   "8962095e82e3742456da9bd9a2254633da2db0161df0aad7353c925631dddafe"
+  ],
+  "deck-qd": [
+   8802,
+   "2a0315f442a33500cde4156b69db82490b4b97bd4278dad72af204b5f2e8039f"
+  ],
+  "deck-poop": [
+   3780,
+   "27e7875e34919567170f136e4f60e63ad0a83057a7acdcb6a81f8afdfa79b19e"
+  ],
+  "deck-fc": [
+   3541,
+   "2ea746add9114917f8f5e777b3453df74f9f30ded89bbb48d16de117e84dee6d"
+  ],
+  "ladders-gun": [
+   208,
+   "f90cf18d7ca5dfa0304cc32c2ccfd58eed7a64845ffb432b73809c550027dd40"
+  ],
+  "ladders-qd": [
+   394,
+   "b34c23692f3dd9bda96884f549e28a64b7c53d97dcc20e93c0f79478fbe2ff8b"
+  ],
+  "ladders-poop": [
+   186,
+   "7fe972d567ffd456a5fb16bf07bbe1a3a2a3da5cda207e5c5265e3f26fc2a16b"
+  ],
+  "ladders-fc": [
+   368,
+   "eaede61c9c392cbcb536482585d3a3b081b23d2ae47dde75b6ceb5a32978497a"
+  ]
+ }
+}

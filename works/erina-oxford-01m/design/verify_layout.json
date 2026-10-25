@@ -1,0 +1,279 @@
+{
+ "waterline_z": 33.0,
+ "port_gaps_gun": [
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19
+ ],
+ "port_gaps_qd": [
+  24,
+  24
+ ],
+ "ports": [
+  {
+   "deck": "gun",
+   "x": 72,
+   "sill_z": 53,
+   "sill_above_wl_m": 2.0,
+   "top_z": 60,
+   "ceiling_z": 63.0,
+   "margin": 3.0,
+   "half_beam_at_sill": 27.6
+  },
+  {
+   "deck": "gun",
+   "x": 98,
+   "sill_z": 50,
+   "sill_above_wl_m": 1.7,
+   "top_z": 57,
+   "ceiling_z": 60.2,
+   "margin": 3.2,
+   "half_beam_at_sill": 31.0
+  },
+  {
+   "deck": "gun",
+   "x": 124,
+   "sill_z": 48,
+   "sill_above_wl_m": 1.5,
+   "top_z": 55,
+   "ceiling_z": 58.0,
+   "margin": 3.0,
+   "half_beam_at_sill": 32.8
+  },
+  {
+   "deck": "gun",
+   "x": 150,
+   "sill_z": 46,
+   "sill_above_wl_m": 1.3,
+   "top_z": 53,
+   "ceiling_z": 56.7,
+   "margin": 3.7,
+   "half_beam_at_sill": 35.2
+  },
+  {
+   "deck": "gun",
+   "x": 176,
+   "sill_z": 46,
+   "sill_above_wl_m": 1.3,
+   "top_z": 53,
+   "ceiling_z": 55.0,
+   "margin": 2.0,
+   "half_beam_at_sill": 35.5
+  },
+  {
+   "deck": "gun",
+   "x": 202,
+   "sill_z": 46,
+   "sill_above_wl_m": 1.3,
+   "top_z": 53,
+   "ceiling_z": 55.5,
+   "margin": 2.5,
+   "half_beam_at_sill": 35.5
+  },
+  {
+   "deck": "gun",
+   "x": 228,
+   "sill_z": 46,
+   "sill_above_wl_m": 1.3,
+   "top_z": 53,
+   "ceiling_z": 56.3,
+   "margin": 3.3,
+   "half_beam_at_sill": 35.4
+  },
+  {
+   "deck": "gun",
+   "x": 254,
+   "sill_z": 48,
+   "sill_above_wl_m": 1.5,
+   "top_z": 55,
+   "ceiling_z": 57.7,
+   "margin": 2.7,
+   "half_beam_at_sill": 33.6
+  },
+  {
+   "deck": "qd",
+   "x": 74,
+   "sill_z": 70,
+   "sill_above_wl_m": 3.7,
+   "top_z": 76,
+   "ceiling_z": 79.8,
+   "margin": 3.8,
+   "half_beam_at_sill": 26.1
+  },
+  {
+   "deck": "qd",
+   "x": 104,
+   "sill_z": 67,
+   "sill_above_wl_m": 3.4,
+   "top_z": 73,
+   "ceiling_z": 75.6,
+   "margin": 2.6,
+   "half_beam_at_sill": 29.4
+  },
+  {
+   "deck": "qd",
+   "x": 134,
+   "sill_z": 65,
+   "sill_above_wl_m": 3.2,
+   "top_z": 71,
+   "ceiling_z": 73.6,
+   "margin": 2.6,
+   "half_beam_at_sill": 31.5
+  }
+ ],
+ "masts": {
+  "main": {
+   "heel_z": 8,
+   "top_z": 325,
+   "truck_above_wl_m": 29.2,
+   "x_at_gundeck": 178.9,
+   "stages": [
+    [
+     "lower",
+     8,
+     203
+    ],
+    [
+     "top",
+     181,
+     288
+    ],
+    [
+     "tg",
+     276,
+     325
+    ]
+   ]
+  },
+  "fore": {
+   "heel_z": 10,
+   "top_z": 294,
+   "truck_above_wl_m": 26.1,
+   "x_at_gundeck": 274.0,
+   "stages": [
+    [
+     "lower",
+     10,
+     184
+    ],
+    [
+     "top",
+     164,
+     262
+    ],
+    [
+     "tg",
+     251,
+     294
+    ]
+   ]
+  },
+  "mizzen": {
+   "heel_z": 14,
+   "top_z": 210,
+   "truck_above_wl_m": 17.7,
+   "x_at_gundeck": 89.9,
+   "stages": [
+    [
+     "lower",
+     14,
+     160
+    ],
+    [
+     "top",
+     146,
+     210
+    ]
+   ]
+  }
+ },
+ "bowsprit_tip": [
+  357.0,
+  116.5
+ ],
+ "bowsprit_z_over_stem_head": 83.6,
+ "stem_head": [
+  310.0,
+  78.0
+ ],
+ "yards": {
+  "main_course": {
+   "x": 174.1,
+   "z": 176.0,
+   "len": 160,
+   "on": "main",
+   "mast": "main"
+  },
+  "main_topsail": {
+   "x": 171.1,
+   "z": 262.0,
+   "len": 80,
+   "on": "main_top",
+   "mast": "main"
+  },
+  "main_tg": {
+   "x": 169.2,
+   "z": 316.0,
+   "len": 40,
+   "on": "main_tg",
+   "mast": "main"
+  },
+  "fore_course": {
+   "x": 274.0,
+   "z": 160.0,
+   "len": 140,
+   "on": "fore",
+   "mast": "fore"
+  },
+  "fore_topsail": {
+   "x": 274.0,
+   "z": 246.0,
+   "len": 70,
+   "on": "fore_top",
+   "mast": "fore"
+  },
+  "fore_tg": {
+   "x": 274.0,
+   "z": 290.0,
+   "len": 35,
+   "on": "fore_tg",
+   "mast": "fore"
+  },
+  "crossjack": {
+   "x": 83.0,
+   "z": 142.0,
+   "len": 70,
+   "on": "mizzen",
+   "mast": "mizzen"
+  },
+  "mizzen_topsail": {
+   "x": 79.0,
+   "z": 200.0,
+   "len": 50,
+   "on": "mizzen_top",
+   "mast": "mizzen"
+  },
+  "mizzen_lateen": {
+   "x": 84.0,
+   "z": 128.0,
+   "len": 136,
+   "on": "mizzen",
+   "mast": "mizzen"
+  },
+  "spritsail": {
+   "x": 342.8,
+   "z": 98.6,
+   "len": 96,
+   "on": "bowsprit",
+   "mast": "bowsprit"
+  }
+ },
+ "sail_area_m2": 584.1,
+ "main-course_foot_above_rail": 10.0,
+ "fore-course_foot_above_rail": 10.0,
+ "problems": []
+}
