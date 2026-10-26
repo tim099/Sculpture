@@ -1,0 +1,272 @@
+{
+  "title": "藍鯊號（De Blauwe Haai）新圖紙 01：線形、側面、甲板高度、砲位表、桅帆表 —— Witsen 1671 的 134 呎 pinas",
+  "task": "TASK-0967（母單 TASK-0964）",
+  "author": "gura",
+  "date": "2026-10-26",
+  "sources": {
+    "W": "Nicolaes Witsen, Aeloude en Hedendaegsche Scheeps-bouw en Bestier, Amsterdam 1671，第一部 134 呎 pinas 的 bestek（archive.org aeloudeenhedenda00wits，全文 OCR 逐段讀過；p.72、77–79、93、282 對過頁面圖）—— 研究筆記 references/research_pinas_2026-10-26.md（研究代理讀的，gura 讀過全文）",
+    "ft": "1 Amsterdam voet ＝ 11 duim ≈ 0.2831 m ＝ 2.831 格（換算本身是一般文獻的值；原書 p.81 舷弧肋材半寬 14'7\" ×2 ＝ 29'3\" 只有 11 吋制算得出來 —— 研究筆記 §1；⚠ Meertens 另有 12 吋 scheepsvoet 的說法，沒核）",
+    "ZL": "1665 年底 Zeeland 巡防艦表（Archief 2011 p.31，只看到搜尋摘要 ⚠）：Westcappel 24 門、水手 73＋士兵 29 —— 1666–67 Crijnssen 加勒比遠征的船，跟 Witsen 範例船同級（研究筆記 §7）"
+  },
+  "class": {"v": "Witsen 1671 的 134 呎 pinas（spiegelschip）：24 門砲、100 人、去 Curaçao 的航程", "src": "W p.~59（134 Amsterdamsche voeten）、p.282（火砲、船員）、p.~279（Curaçao）"},
+  "meters_per_cell": 0.1,
+  "space": {"x": 800, "y": 320, "z": 640, "yc": 160, "note": "中線 ＝ 第 160 格（鏡像 y ↔ 320 − y）"},
+  "witsen": {
+    "ft_cells": 2.831, "keel_ft": 104, "stem_rake_ft": 26, "post_rake_ft": 4, "stem_h_ft": 25, "post_h_ft": 24.75,
+    "beam_cells": 85, "kimmen_ft": 27, "kimmen_h_ft": 4.4167, "hekbalk_ft": 19.5, "hals_x": 412, "draught_ft": 10, "draught_from": "keel_top", "volume_m3": 596.2,
+    "src": "W p.71–74：lang over steven 134、kiel 104、voor-steven hoogh 25 valt 26、achter-steven hoog 24¾ valt 4、wijt 29（肋材外緣 29'3\"，＋外板兩舷各 4 duim ≈ 30'0\" ＝ 85 格）、kimmen wijt 27 hol geboeit 4'5\"、heek-balk 19'6\"；hals ＝ 離船艏 1/3 船長。W p.~359（OCR，⚠ 頁面圖沒核）：吃水 10 呎時水下 26 278 立方呎 ⇒ × 0.2831³ ＝ 596.2 m³（Witsen 自己替這艘船算的排水量 1 223 569 pond ≈ 605 t）—— 這一格是線形的第二證人"
+  },
+  "lines": {
+    "half_beam": {"v": 42.5, "src": "W p.74／p.81：肋材外緣 29'3\" ＋ 外板 4 duim × 2 ≈ 30'0\" ＝ 84.9 格 ⇒ 全寬 85（|dy| ≤ 42）"},
+    "keel_top": {"v": 5, "src": "W p.71：龍骨厚 16 duim（4.1 格）＋墊高 6 duim（1.5 格）≈ 5.6 ⇒ 5（設計決定，取整）"},
+    "keel_half": {"v": 2, "src": "W p.71：龍骨寬 2 呎（5.7 格）⇒ 5 格寬"},
+    "plan_half": {"v": 29, "src": "W p.74：vlack（船底平坦部）寬 OCR 讀成「2 i voet」—— 若是 21 呎 ＝ 59.5 格、半寬 29.7 ⇒ 29（⚠ OCR 不清，設計決定照 21 呎）"},
+    "astilla": {"v": 1.5, "src": "W p.74：船底橫向上升（rijst）6 duim ＝ 1.5 格"},
+    "max_breadth_z": {"v": 40, "src": "設計決定：最寬處在下甲板（overloop）稍下 —— W 的 wijt 量在 uitwatering（下甲板那一層的出水口）"},
+    "tumblehome": {"v": 3, "src": "設計決定：荷蘭船上甲板那一層明顯內收（Witsen 沒給數字）"},
+    "tumblehome_ref_z": {"v": 60, "src": "＝ 上甲板 verdek 的甲板面（decks.rows puente）"},
+    "tumblehome_pow": {"v": 1.0, "src": "設計決定"},
+    "tumblehome_above_per_cell": {"v": 0.15, "src": "設計決定：上甲板以上每 10 格每舷再收 1.5 格 ⇒ 船尾樓頂窄"},
+    "bilge_pow": {"v": 1.8, "src": "設計決定：調到 W 的 kimmen（舭部）寬 27 呎在 4'5\" 高（讀數 witsen_check.beam_kimmen）"},
+    "s_aft": {"v": 0.3, "src": "設計決定：調到 W 吃水 10 呎的水下體積（witsen_check.volume_m3_at_10ft；tools/tune_lines.py 掃過）"},
+    "s_fwd": {"v": 0.72, "src": "設計決定：同上；荷蘭船船頭飽滿"},
+    "sternpost_x0": {"v": 170, "src": "設計決定：艉柱腳的位置（整艘船在 X 上的擺放）"},
+    "sternpost_rake_deg": {"v": 9.18, "src": "W p.72：艉柱高 24¾ 呎、後傾 4 呎 ⇒ atan(4／24.75)"},
+    "wing_transom_z": {"v": 64, "src": "W p.72–73：艉橫樑（heek-balk）在艉柱頂 ＝ 24¾ 呎（70 格），以上是平的鏡板（spiegel）。lines.breadth_k 的鏡板從 z_wt − 6 開始張、z_wt ＋ 6 才全寬 ⇒ z_wt 取 64，鏡板在 70 剛好全寬（讀數 witsen_check.transom_hekbalk 量在 z 70）"},
+    "transom_ratio": {"v": 0.70, "src": "設計決定：調到 W 的 heek-balk 長 19'6\"（55.2 格）⇒ z 70 那一層全寬 55（掃 0.70／0.72／0.75／0.78 × z_wt 62／64／66）"},
+    "forefoot_x": {"v": 464.4, "src": "W p.71：龍骨下緣長 104 呎 ＝ 294.4 格 ⇒ 170 ＋ 294.4"},
+    "stem_radius": {"v": 73.6, "src": "W p.72：首柱高 25 呎（70.8 格）、前傾 26 呎（73.6 格）⇒ 半徑 73.6 的圓弧，到首柱頂幾乎是四分之一圓（荷蘭船圓圓的船頭）；z 73.6 以上直立"},
+    "deadwood_aft_z": {"v": 28, "src": "設計決定：船尾 deadwood 抬到水線（W 沒給）"},
+    "deadwood_fwd_z": {"v": 12, "src": "設計決定"},
+    "bow_pow_low": {"v": 1.8, "src": "設計決定"},
+    "bow_pow_high": {"v": 2.6, "src": "設計決定：上面鈍（荷蘭船飽滿的船頭）"},
+    "aft_pow": {"v": 3.0, "src": "設計決定：荷蘭船船尾水線下飽滿（同上，對 W 的體積）"},
+    "top": [[150, 111], [205, 111], [209, 96], [300, 96], [304, 76], [434, 76], [438, 93], [560, 94]],
+    "top_src": "舷頂折線：船尾樓（hut）頂 101 ＋ 10、後甲板（halfdek）84 ＋ 12、船腰上甲板（約 60–61）＋ 15、船艏樓（bak）82 ＋ 11 —— W 的上欄從主桅往船尾一路翹高（p.~80：raa-hout 以上 2'8½\" → 7'9\"），這裡用台階表現；船尾鏡板頂上的 hackebort（taffrail）是裝飾，在步驟 6"
+  },
+  "waterline": {"z": 33, "src": "W p.~359：Witsen 拿這艘船算排水量時用的吃水 10 呎 —— 從龍骨頂（rabbet）量：tools/tune_lines.py 掃了 32 組線形，到 W 的 596 m³ 都在龍骨頂往上 9.6–11.0 呎（從龍骨底量的話 10 呎只裝得下 415–540 m³，船中剖面撐不到）⇒ z 5 ＋ 28.3 ≈ 33"},
+  "readings_at": {"deck_z": 42, "rail_z": 76, "hold_beams_z": 42, "puente_z": 60},
+  "decks": {
+    "src": "W p.74–78：艙深（hol）13 呎量到下甲板 overloop；甲板間 6 呎（verdek 的樑前 5'9½\"、後 6'6\"）；bak 5½ 呎；hut 側高前 5、後 6½ 呎；舵手艙高 6、長 16 呎。程式沿用收穫號的甲板代號：main ＝ overloop、puente ＝ verdek、alcazar ＝ halfdek、toldilla ＝ hut、castillo ＝ bak",
+    "rows": [
+      {"key": "orlop", "name": "火藥艙平台（kruitkamer）", "z": 24, "x_from": 215, "x_to": 300, "src": "設計決定：下甲板下 18 格，只鋪船尾艙底一段放彈藥庫（W 有 konstapelskamer 在 overloop 船尾，火藥艙位置沒讀到）"},
+      {"key": "main", "name": "下甲板（overloop）", "z": 42, "src": "W p.74：艙深 13 呎 ＝ 36.8 格，從龍骨頂（z 5）量 ⇒ 42"},
+      {"key": "puente", "name": "上甲板（verdek）", "z": 60, "src": "W p.76–77：甲板間 6 呎（樑高前 5'9½\"、後 6'6\" ＝ 16.4–18.4 格）⇒ 設計取 18（6'4\"）：遊戲站人要頭頂 14 格空（甲板板 1 ＋ 樑 3），17 不夠"},
+      {"key": "alcazar", "name": "後甲板（halfdek）", "z": 84, "x_to": 300, "src": "設計決定：W 的 kajuit（halfdek 底下）樑高 6'2\"–7'（17.5–19.8 格）；上甲板船尾因舷弧抬到 66 ⇒ 84 讓船尾那端也有 18 格；前緣在主桅後面"},
+      {"key": "toldilla", "name": "船尾樓（hut）", "z": 101, "x_to": 207, "src": "W p.~80：hut 側高前 5、後 6½ 呎（14–18 格）、waterbortje 長 17 呎 ⇒ 設計 17 格、長到 x 207（48 格 ＝ 17 呎）"},
+      {"key": "castillo", "name": "船艏樓（bak）", "z": 82, "x_from": 436, "src": "W p.93：bak 5½ 呎（15.6 格）⇒ 設計 17（遊戲頭頂 14 格；上甲板船頭因舷弧在 64–65）；W 的 bak 裡有 3 個砲門（離首柱 6½、17、31 呎）⇒ 往後長到 x 436"}
+    ],
+    "sheer": {"aft": 6, "fwd": 4, "x_mid": 412, "x_aft": 160, "x_fwd": 538, "src": "設計決定：舷弧最低點在 hals（W：離船艏 1/3 船長 ＝ x 412）；往船尾抬 6 格、往船頭 4 格（W 的甲板舷弧數字在 p.81–82，OCR 沒逐站讀）"}
+  },
+  "decks_build": {
+    "src": "設計決定（遊戲用的大致構造，照造船規格 Ship_Decks §9.2–9.3；結構照收穫號 draft_decks）。W 的艙室（konstapelskamer 在下甲板船尾、kajuit 在後甲板底下、stierplecht、hut）只做甲板與 break，艙壁之後要配功能艙再加",
+    "plank": {"interior": 177, "weather": 209, "weather_decks": ["puente", "alcazar", "toldilla", "castillo"]},
+    "beam": {"every": 16, "w": 2, "depth": {"orlop": 3, "main": 3, "puente": 3, "alcazar": 2, "toldilla": 2, "castillo": 2}, "color": 136,
+             "src": "設計決定：每 16 格一根、寬 2；艙裡 3 格深、船樓 2 格深（遊戲頭頂 14 格：甲板間 18 ＝ 板 1 ＋ 樑 3 ＋ 14）"},
+    "trim": 141,
+    "hatches": [
+      {"name": "後艙口", "x0": 244, "x1": 254, "half": 7, "decks": ["orlop", "main", "puente"]},
+      {"name": "主艙口", "x0": 350, "x1": 368, "half": 10, "decks": ["main", "puente"]},
+      {"name": "前艙口", "x0": 410, "x1": 420, "half": 7, "decks": ["main", "puente"]}],
+    "coaming_h": 2,
+    "mast_r": {"fore": 4, "main": 4, "mizzen": 3},
+    "breaks": [
+      {"name": "後甲板（halfdek）前緣", "x": 300, "lo": "puente", "up": "alcazar", "doors_dy": [12], "rail_h": 7, "rail_side": "aft"},
+      {"name": "船尾樓（hut）前緣", "x": 207, "lo": "alcazar", "up": "toldilla", "doors_dy": [9], "rail_h": 7, "rail_side": "aft"},
+      {"name": "船艏樓（bak）後緣", "x": 436, "lo": "puente", "up": "castillo", "doors_dy": [10], "rail_h": 7, "rail_side": "fwd"}],
+    "break_src": "設計決定：後甲板、船尾樓、船艏樓的前（後）緣一道艙壁（兩扇門 寬 5 高 15）＋船樓甲板邊上一道 7 格高的胸牆（梯子頭留口）—— W 的 bak 上有防步槍的胸牆（mosquet schoot vrye schans）",
+    "ladders": {
+      "rise": 3, "run": 2, "tread_half": 3, "color": 136,
+      "list": [
+        {"name": "orlop", "lo": "orlop", "up": "main", "xs": 292, "dir": -1, "dy": -14, "well": true},
+        {"name": "main-aft", "lo": "main", "up": "puente", "xs": 287, "dir": -1, "dy": 0, "well": true},
+        {"name": "main-fwd", "lo": "main", "up": "puente", "xs": 385, "dir": 1, "dy": 0, "well": true},
+        {"name": "alcazar-P", "lo": "puente", "up": "alcazar", "xs": 318, "dir": -1, "dy": -24, "head_x": 297},
+        {"name": "alcazar-S", "lo": "puente", "up": "alcazar", "xs": 318, "dir": -1, "dy": 24, "head_x": 297},
+        {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 221, "dir": -1, "dy": -18, "head_x": 204},
+        {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 221, "dir": -1, "dy": 18, "head_x": 204},
+        {"name": "castillo-P", "lo": "puente", "up": "castillo", "xs": 420, "dir": 1, "dy": -24, "head_x": 439},
+        {"name": "castillo-S", "lo": "puente", "up": "castillo", "xs": 420, "dir": 1, "dy": 24, "head_x": 439}],
+      "src": "設計決定（照收穫號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井；船樓的梯子靠在 break 外面、頭踩上船樓甲板。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"}
+  },
+  "decks_preview": {"orlop": 24, "main": 42, "puente": 60, "alcazar": 84, "toldilla": 101, "castillo": 82},
+  "ports": {
+    "src": "W p.77–78（頁面圖核過）：「De poorten zijn uit den overloop 2 voet 2 duim, hoogh, en breet」—— 砲門 2'2\" 見方（6.1 格；斷句兩種讀法，⚠ 檻高沒寫）；從船尾往前：離 hek-stut 2½、13 呎，之後每個 10、9、10、10½、11½、12½、12 呎；bak 裡離首柱 6½、17、31 呎",
+    "tiers": [
+      {"deck": "main", "per_side": 8, "x0s": [199, 227, 253, 281, 311, 343, 379, 413], "w": 7, "h": 7, "sill": 6, "ref_pad": 4, "gun": "12l",
+       "src": "W：第 2–9 個砲門（離 hek-stut 13 呎 ＝ x 199，之後 10、9、10、10½、11½、12½、12 呎 ⇒ 28.3、25.5、28.3、29.7、32.6、35.4、34.0 格）；hek-stut 取艉柱在砲門高度的 x 162。⚠ 第 1 個（離 hek-stut 2½ 呎）在本船的線形裡落在艉橫樑下面往裡收的弧面上（半寬只剩 4 格）⇒ 不開，那兩門砲改放到船尾鏡板（stern.rows 的 port）。w 7、h 7（2'2\" 取 7）、sill 6（設計決定，W 沒寫）"},
+      {"deck": "puente", "per_side": 3, "x0s": [447, 487, 513], "w": 6, "h": 6, "sill": 5, "gun": "8l",
+       "src": "W：bak 裡離首柱 6½、17、31 呎（x 538 − 18.4／48.1／87.8 ⇒ 砲門中心 516、490、450）；上甲板（verdek）那一層、bak 底下"}
+    ],
+    "stern_chasers": {"deck": "puente", "n": 2, "w": 7, "h": 7, "sill": 6, "gun": "6l", "src": "W p.73：「klossen van de poorten in de spiegel」—— 鏡板上有砲門（數量沒寫）⇒ 上甲板船尾兩個（kajuit），放 W 的兩門青銅 6 磅 drake"}
+  },
+  "guns_alloc": {
+    "src": "W p.282（頁面圖核過）：24 門 —— 青銅 12 磅 ×6（2 門 kamerswijs）、青銅 6 磅 drake ×2、鐵 12 磅 ×4、鐵 8 磅 ×8、鐵 4 磅 ×4；「最重的砲放在船身中段」",
+    "main": ["8l", "8l", "12l", "12l", "12l", "12l", "12l", "8l"],
+    "puente": ["4l", "4l", "8l"],
+    "stern": "6l",
+    "note": "每舷：下甲板從船尾往前 8 門（12 磅 ×5 在中段、8 磅 ×3 在兩頭）、bak 3 門（從船尾往前 8 磅、4 磅、4 磅）⇒ 兩舷 12 磅 10、8 磅 8、4 磅 4；船尾鏡板 6 磅 2 ⇒ 合計 24 ＝ W"
+  },
+  "masts": {
+    "src": "W p.93–94（頁面圖核過 p.93）：桅桁長、桅頂（top）長、桅樓直徑；桅位 W p.75、79、94",
+    "rows": [
+      {"key": "fore", "x_step": 492, "rake_deg": 1, "lower_m": 19.82, "head_m": 1.84, "top_m": 11.61, "tgallant_m": 5.10, "tops_r": 13, "yards": {"course": 17.14, "topsail": 9.06, "topgallant": 4.53},
+       "src": "W：前桅 70 呎、top 6½、前中桅 41、前上桅 18；前桁 60½、前中桅桁 32、前上桅桁 16；前桅樓直徑 9 呎（12.7 格）；前桅前緣離首柱 1/9 船長（42 格 ⇒ x 496、桅心 492）；後傾：W「幾乎直立」⇒ 1°（設計決定）"},
+      {"key": "main", "x_step": 333, "rake_deg": 4, "lower_m": 22.65, "head_m": 1.98, "top_m": 14.44, "tgallant_m": 6.23, "tops_r": 14, "yards": {"course": 19.53, "topsail": 10.19, "topgallant": 6.23},
+       "src": "W：主桅 80 呎、top 7、主中桅 51、主上桅 22；主桁 69、主中桅桁 36、主上桅桁 22；主桅樓直徑 10 呎（14.2 格）；主桅腳在船中往後 5½ 呎（67 ＋ 5½ ＝ 72½ 呎離首柱 ⇒ 538 − 205 ＝ 333）；後傾 W 兩處說法（每 10 呎艙深 1'8\"、每呎 1 duim）都很大 ⇒ 設計取 4°"},
+      {"key": "mizzen", "x_step": 235, "rake_deg": 3, "lower_m": 16.99, "head_m": 1.27, "top_m": 4.53, "tops_r": 11, "yards": {"lateen": 17.55, "topsail": 5.38},
+       "src": "W：後桅 60 呎、top 4½、後中桅（kruys-steng）16；後桅三角帆桁 62（比桅長 ⇒ lateen）、後中桅桁 19；後桅腳在船長 1/5（從船尾 26.8 呎 ＝ 76 格 ⇒ x 235；⚠ 分數字小、可能讀錯）；桅樓：W 4½ 呎（6.4 格）⇒ 設計 11（遊戲的桅頂水手站在半徑 9／12 的一圈上，收穫號 TASK-0623）；腳在下甲板"},
+      {"key": "bowsprit", "x_step": 500, "deck": "castillo", "angle_deg": 30, "len_m": 16.99, "sprit_top_m": 5.66, "yards": {"spritsail": 12.74, "sprit_topsail": 5.66},
+       "src": "W：斜桅 60 呎、斜桅頂桅 20；斜桅帆桁 45（＝ 斜桅 × ¾）、斜桅頂帆桁 20；仰角 30° 設計決定。腳在船艏樓甲板、前桅前面（步驟 7 改：腳放上甲板會從船艏樓甲板穿過去；放船艏樓甲板 ⇒ 桿子從船頭舷牆上面過去、不用在船殼開孔）"}
+    ],
+    "check": "主桅頂（上桅頂）離水線 ≈（heel ＋ 80 ＋ 51 ＋ 22 呎 − 桅頂重疊）—— 讀數在 verify_layout"
+  },
+  "rig_build": {
+    "src": "設計決定（桅帆長度與位置在 plan.masts，照 W p.93）；造船規格 Ship_Masts §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡",
+    "hull_mark": "窗玻璃:end",
+    "colors": {"mast": 141, "top": 136, "rim_band": 6, "rim_cap": 248, "truck": 248},
+    "mast_r": {"fore": [3.5, 2.5], "main": [3.5, 2.5], "mizzen": [2.5, 1.8]},
+    "mast_r_src": "設計決定：W 的桅粗單位 palm 查不到換算（主桅 18 palm）；照 W 的規則「每 6 呎艙深 1 呎粗」⇒ 13 ÷ 6 ≈ 2.2 呎 ≈ 0.6 m（研究筆記 §1，⚠ 估）⇒ 主桅腳半徑 3.5、頂 2.5；比甲板桅孔（decks_build.mast_r 4／4／3）小",
+    "topmast_r": {"fore": [2.5, 1.5], "main": [2.5, 1.5], "mizzen": [1.5, 1.0]},
+    "tgallant_r": {"fore": [1.5, 1.0], "main": [1.5, 1.0]},
+    "tops": {"main": 14, "fore": 13, "mizzen": 11, "rim_h": 6,
+             "src": "W p.94：桅樓（mars）直徑 主 10 呎（半徑 14.2 格）、前 9 呎（12.7）、其他 4½ 呎（6.4）⇒ 後桅 11（遊戲的桅頂水手站在半徑 9／12 的一圈、一層要 6 點以上，收穫號 TASK-0623）；籃子 6 格高、藍腰帶、金頂"},
+    "crosstree_r": 6,
+    "bowsprit_r": [3.0, 2.0],
+    "sprit_top": {"at_from_tip": 6, "r": [1.5, 1.0], "src": "W：斜桅頂桅（boven blind-steng）20 呎、立在艏斜桅前端（17 世紀的 sprit topmast）"},
+    "yards": [
+      {"name": "yard-fore-course", "mast": "fore", "yard": "course", "sail": "fore-course", "src_work": "basecamp-frigate-constitution-01m-yard-spritsail", "src_len": 185, "brace": -15},
+      {"name": "yard-fore-topsail", "mast": "fore", "yard": "topsail", "sail": "fore-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-royal", "src_len": 93, "brace": -17},
+      {"name": "yard-fore-topgallant", "mast": "fore", "yard": "topgallant", "sail": "fore-topgallant", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -19},
+      {"name": "yard-main-course", "mast": "main", "yard": "course", "sail": "main-course", "src_work": "basecamp-frigate-constitution-01m-yard-fore-topsail", "src_len": 189, "brace": -15},
+      {"name": "yard-main-topsail", "mast": "main", "yard": "topsail", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-royal", "src_len": 93, "brace": -17},
+      {"name": "yard-main-topgallant", "mast": "main", "yard": "topgallant", "sail": "main-topgallant", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -19},
+      {"name": "yard-mizzen-topsail", "mast": "mizzen", "yard": "topsail", "sail": "mizzen-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -17},
+      {"name": "yard-spritsail", "mast": "bowsprit", "yard": "spritsail", "sail": "spritsail", "src_work": "basecamp-frigate-constitution-01m-yard-fore-topgallant", "src_len": 131, "brace": 0, "at_t": 0.8, "drop": 5},
+      {"name": "yard-sprit-topsail", "mast": "bowsprit", "yard": "sprit_topsail", "sail": "sprit-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": 0}
+    ],
+    "yards_src": "Ship_Setup §2.1：方帆桁沿用憲法號的帆桁元件，只沿長度（y）縮放到 W 的長度；挑長度最近、固定點齊全的那一根（src_len ＝ arm-S − arm-P ＋ 3，同收穫號）。縮過的在遊戲裡是另一份網格。帆名：W 有 bramzeil（上桅帆）、kruiszeil（後中桅帆）、blinde（斜桅帆）、boven blinde（斜桅頂帆）",
+    "lateen": [{"mast": "mizzen", "len_m": 17.55, "angle_deg": 40, "hoist_frac": 0.4, "sail": "mizzen-lateen"}],
+    "lateen_src": "W：後桅三角帆桁 62 呎（比後桅長 ⇒ lateen）；角度、吊點照收穫號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5；ame 2026-10-15 收穫號那次確認過遊戲照 gaff 畫）"
+  },
+  "rudder_anchor_build": {
+    "rudder": {"work": "gura-pinas-01m-rudder", "title": "藍鯊號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 66,
+               "width": [[0, 14], [15, 14], [35, 10], [42, 5], [66, 5]], "below": 68, "above": 136, "iron": 73, "strap_every": 12, "waterline_z": 33,
+               "max_deg": 35, "bevel": 1,
+               "src": "設計決定（照收穫號的做法）：舵沿艉柱後緣（lines.x_post，斜 9.2°）從龍骨底到 z 66（艉橫樑 z 70 底下，舵頭從鏡板下面進船）；3 格厚、舵葉 1.4 m 往上收到水線上 0.5 m 的舵頭；水線下焦油深褐、上橡木褐（同船殼）、每 12 格一道鐵箍；前緣兩側削 1 格（收穫號：沒削 ⇒ 轉 ±35° 掃進艉柱）"},
+    "spin": {"rudder": {"spin": "rudder", "spin_k": 35, "spin_min": -35, "spin_max": 35, "spin_lag": 0.3}, "wheel": {"spin": "rudder", "spin_k": 540, "spin_lag": 0.6},
+             "src": "Ship_Helm §9.8.1 照抄：舵 ±max_deg、舵輪 540°（滿舵一舷一圈半，⚠ 是挑的）"},
+    "helm": [
+      {"name": "舵輪", "host": "gura-pinas-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel", "at": [266, 160.5, 85], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel"}},
+      {"name": "舵輪座", "host": "gura-pinas-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel-stand", "at": [266, 160.5, 85], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel_stand"}}],
+    "helm_src": "沿用憲法號雙舵輪＋木頭雙柱座（Ship_Helm §9.8.1：掛輪要同時掛座、擺法照抄）；後甲板中線、後桅（x 235）前面、羅經櫃（x 282）後面。⚠ 1660 年代的荷蘭船用 whipstaff（舵桿），舵輪要到 18 世紀 —— 遊戲的舵手要 kind=wheel，照遊戲（同收穫號）",
+    "anchor": {"gear_work": "gura-pinas-01m-anchor-gear", "gear_title": "藍鯊號 錨架（兩舷 billboard）", "gear_link": "錨架",
+               "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.85, "pivot": [23.5, 16.5, 56.5],
+               "x_try": [498, 500, 502, 504, 506], "z_try": [102, 103, 104, 105, 106, 107, 108], "z_ref": 88, "d_step": 0.5, "d_max": 24,
+               "ledge_half": 13, "ledge_out": 3, "ledge_t": 3, "color": 136,
+               "gun_decks": ["gura-pinas-01m-deck-puente"],
+               "src": "沿用共用錨元件（scale 0.85 同夜燈號、收穫號 ⇒ 遊戲裡同一份網格）、meta anchor=bower；兩舷各一，吊在船頭舷外：前桅支索板（x 450–492）前面、船艏樓第 2、3 個砲門之間（x 498–506 試）；錨臂順著船殼切線（z_ref 88 那一層量）、橫桿越過船艏樓舷頂（93）。錨冠底下一塊 billboard 托板（遊戲判斷掉不掉是外框中心往下找實心）。⚠ 沒有吊錨桿（cathead）"},
+    "hawse": {"x": 528, "z": 76, "src": "設計決定：錨鏈孔在船頭、上甲板那一層的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
+  },
+  "gear_build": {
+    "assembly": "gura-pinas-01m-assembly",
+    "magazine": {"work": "gura-pinas-01m-magazine", "link": "彈藥庫", "title": "藍鯊號 彈藥庫（kruitkamer）",
+                 "x0": 222, "x1": 262, "floor": 25, "ztop": 39, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft",
+                 "cap": 32, "cap_src": "W p.282 的軍需清單：火藥 3,000 pond ≈ 1,480 kg ≈ 3,260 英磅 ⇒ 100 磅一桶 ≈ 32 桶（收穫號是照砲數換算的；這裡照 W 原文）",
+                 "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+                 "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 3},
+                 "src": "設計決定：火藥艙平台（orlop，只鋪 x 215–300 就是留給它的）上、後艙口那一段（後艙口穿過地板，彈藥庫自己鋪地板蓋掉 —— 收穫號同樣）；門開在船頭那道艙壁、對著底艙梯子（foot x 293）；頂 ＝ 下甲板的樑底下（下甲板 44–45、樑 3 格 ⇒ 39）。做法照收穫號（夜燈號 draft_magazine.py）：銅皮、橡木框、松木地板、門洞 5 格"},
+    "skids": {"work": "gura-pinas-01m-boat-skids", "link": "小艇架", "title": "藍鯊號 小艇架（船腰三座 cradle）", "deck": "puente",
+              "xs": [345, 385, 407], "y_half": 15, "post_dy": 13, "beam_z": 71, "color": 136,
+              "src": "步驟 14 改：x 405 → 407 —— Blockside 樓梯自檢：往上甲板前梯的梯頂（403,160,61）正前方 1–2 格被橫樑（z 71）擋住頭頂。設計決定（照收穫號）：船腰沒有連續 90 格的空甲板（主桅 x 330–337、主艙口 350–368、往上甲板的梯子井 387–401、前艙口 410–420）⇒ 小艇擱在三座橫架上；中間那座在小艇外框中心正下方（遊戲的「腳」是外框中心往下第一格實心）；橫樑底在甲板上 1.1 m"},
+    "models": [
+      {"name": "主絞盤", "host": "gura-pinas-01m-deck-puente", "work": "basecamp-ember-01m-capstan", "at": [316, 160.5, null], "pivot": [40, 40, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "capstan"},
+       "src": "沿用餘燼號主絞盤（12 艘在用）；上甲板中線、後甲板 break（x 300）與主桅（x 333）之間"},
+      {"name": "羅經櫃", "host": "gura-pinas-01m-deck-alcazar", "work": "summit-night-falcon-01m-binnacle", "at": [282, 160.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"},
+       "src": "沿用夜隼號羅經櫃（5 艘在用）；後甲板中線、舵輪（步驟 11）前面"},
+      {"name": "小艇", "host": "gura-pinas-01m-deck-puente", "work": "basecamp-ember-01m-boat", "at": [385, 160.5, null], "pivot": [90, 26, 0], "scale": 0.5, "rotate": 0, "meta": {"kind": "boat", "boat": "cutter", "length_m": 9},
+       "src": "沿用餘燼號 cutter 9 m（10 艘在用）；擱在小艇架上（W 的 sloep ⚠ 長度照元件，沒查證）"}
+    ],
+    "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（甲板舷弧、小艇架頂）",
+    "foot_reach": 12,
+    "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js）"
+  },
+  "guns_build": {
+    "assembly": "gura-pinas-01m-assembly", "hull": "gura-pinas-01m",
+    "deck_works": {"main": "gura-pinas-01m-deck-main", "puente": "gura-pinas-01m-deck-puente"},
+    "prefix": {"main": "M", "puente": "U"},
+    "types": {
+      "12l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.5, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "12l"}, "src": "沿用風暴角號 12 磅長砲（0.05 m、scale 0.5；收穫號也在用）；W p.282：青銅 12 磅 ×6、鐵 12 磅 ×4（鐵的每門 3,400 pond ≈ 1.7 t）"},
+      "8l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.45, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "8l"}, "src": "Ship_Guns §2.2：只差口徑的照現有的縮放 —— W p.282 鐵 8 磅 ×8、每門 3,000 pond（12 磅的 0.88 倍重）⇒ 12 磅那件縮成 0.45（長度 0.9 倍）"},
+      "6l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.4, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "6l"}, "src": "W p.282：青銅 6 磅 drake（draecken）×2、每門 670 pond —— 短而輕的砲 ⇒ 風暴角號 6 磅那件縮成 0.4（比 4 磅鐵砲還短，照實）"},
+      "4l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.42, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "4l"}, "src": "W p.282：鐵 4 磅 ×4、每門 1,500 pond ⇒ 風暴角號 6 磅那件縮成 0.42"}
+    },
+    "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-2, -1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2,
+               "src": "Ship_Guns §4.2（同收穫號）：從舷牆外面往裡退（每步 0.5 格），退到模型每一格的格心＋八個角（往裡縮 0.2）都不在組裝件的實心格裡；先挑 ok（砲口伸出、砲口空、腳下有甲板）、再挑低的、再退得少"},
+    "chase": {"deck": "puente", "type": "6l", "phis": [90, 85, 95, 80, 100, 75, 105], "dl": 3,
+              "src": "上甲板船尾鏡板兩個砲門（plan.stern.rows port；W p.73 鏡板上有砲門），放 W 的兩門青銅 6 磅 drake；砲口朝 −x ＝ φ 90，照角度搜"},
+    "support_min": 0.5,
+    "support_src": "同收穫號：砲最底下那層格子正下方有實心的比例 ≥ 0.5（遊戲判斷掉不掉是從外框中心往下 12 格內找甲板）"
+  },
+  "gunfittings_build": {"work": "gura-pinas-01m-gunfittings", "title": "藍鯊號 砲具（船牆與甲板的環）", "link": "砲具", "ring": {"offset": [8, 9, 10, 7, 11, 6, 12], "color": 73, "src": "造船規格 §4.4（憲法號階段二十一、二十二）：船牆的環在砲門中線往船尾／船頭 8 格（不行就換 9／10／11 …）；一格鐵釘進牆、外面一格當環；高度 ＝ 那一側 eye 的高度（本船三種砲大小不一，憲法號 24 磅是甲板面 ＋8）"}, "deck_ring": {"back": [9, 8, 10, 7, 11, 6, 12, 13, 14], "lat": [0, -3, 3, -5, 5, 8, -10, 10, -13, 12, -16], "color": 73, "src": "造船規格 §4.4：甲板的環在砲架尾（train）往船裡 9 格"}, "ropes": {"breeching": {"slack": 1.12, "thickness": 0.6, "color": "#b59a6a", "group": "guns/breeching"}, "tackle": {"slack": 1.03, "thickness": 0.35, "color": "#b59a6a", "group": "guns/tackle"}, "train": {"slack": 1.05, "thickness": 0.35, "color": "#b59a6a", "group": "guns/train"}, "src": "造船規格 §4.4 ／ §6 砲索那一列：breeching（cascabel → 兩側船牆的環）1.12、0.6；side tackle（eye → 同側的環）1.03、0.35；train tackle（train → 甲板的環）1.05、0.35；#b59a6a"}, "src": "TASK-0967（Tim 2026-10-26「繼續 go」）：照收穫號 TASK-0624 同一套 —— 船牆的環、甲板環、breeching／side tackle／train tackle。⚠ 沒做 shot garland 與 rammer／sponge"},
+  "rigging": {
+    "src": "設計決定；數值照造船規格 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照收穫號 draft_rigging（改：中桅、上桅、斜桅頂桅的支索與帆；ratlines 用橫繩組 sub=ratlines、下桅那組標繩梯 climb=1 —— TASK-0678 之後的規格）",
+    "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+    "channels": {"shrouds": {"fore": 6, "main": 7, "mizzen": 4}, "backstays": {"fore": 1, "main": 1}, "spacing": 6, "first_aft": {"fore": 3, "main": -12, "mizzen": 3}, "width": 4, "below_rail": 3,
+                 "src": "W p.~80：主桅支索台（groote rust）長 27½ 呎、7 根 putting；前桅 22'3\"、6 根；後桅 10 呎、4 根 ⇒ 每舷 shrouds 主 7、前 6、後 4（中桅 backstay 前、主各 1）；間距 6 格（設計決定）。主桅那一排從桅前 12 格起往後排（first_aft −12）：照收穫號從桅往後排 ⇒ 後半段落在後甲板舷牆（x < 300）那一段、支索穿過舷牆頂"},
+    "topmast_shrouds": 3, "tgallant_shrouds": 2,
+    "thick": {"shroud": 1.2, "topmast_shroud": 0.8, "tgallant_shroud": 0.5, "futtock": 0.6, "backstay": 0.8, "stay": 1.4, "tm_stay": 0.9, "tg_stay": 0.6, "bobstay": 1.2, "sheet": 0.5, "course_sheet": 0.6, "tack": 0.6},
+    "ratlines": {"step": 4, "lower": {"start": 7, "stop": 16}, "topmast": {"start": 4, "stop": 10}, "min_span": 5, "th": 0.3, "tm_th": 0.25, "color": "#2b2620",
+                 "src": "Ship_Rigging §6：橫繩組（sub=ratlines，只標最前、最後兩根 shroud ＋ 間距）、每 4 格一道、lower start 7 stop 16、topmast start 4 stop 10、短於 5 格不畫；下桅那組 climb=1（foot ＝ 舷牆內側的甲板、head ＝ 桅頂平台靠這一舷的邊）"},
+    "sails": {"fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 40, "sheet_aft": 50, "tack_fwd": 40,
+              "lateen_clew": {"mizzen": [172, 135]}, "lateen_tack": {"mizzen": ["alcazar", 290]}, "lateen_sheet_x": 162, "sprit_belay_x": 490,
+              "src": "設計決定（照收穫號）：course 帆腳在舷頂上 5 格；上桅帆、中桅帆的 sheet 綁下一根帆桁同舷的 earing；後中桅帆（kruiszeil）的 sheet 綁後桅桅樓邊；三角帆的 clew 在船尾樓上方、sheet 綁船尾樓兩舷舷頂、tack 綁後甲板；斜桅頂帆的 sheet 綁斜桅帆桁的 earing"},
+    "sail_set": {"spritsail": 3, "sprit_topsail": 3, "gaff": 2},
+    "flags": {"ensign": [36, 24], "pennant": [60, 5], "pennant_color": "#ff8c1a",
+              "src": "設計決定：船尾旗 ＝ 荷蘭三色（1660 年代海軍多用紅白藍）白帶上 GWC（Geoctroyeerde Westindische Compagnie，荷蘭西印度公司）字樣 —— WIC 的船；掛在後桅三角帆桁後端（同收穫號掛在最後那根三角帆桁）；主桅頂一條橘色長旗（親王旗的橘）⚠ 旗的樣式是一般認識、沒逐頁讀"},
+    "wind": [4.5, -1.5, 0], "sail_seconds": 3
+  },
+  "paint": {
+    "base": 136, "band": 36, "gold": 248, "reveal": 224, "glass": 87,
+    "src": "設計決定（W 只寫「pik en teer，裡外上下」—— p.~159 另一份合約；配色是研究筆記 §6 依 Van de Velde 畫作與博物館模型的一般認識 ⚠ 沒有原文）：船殼橡木焦油的褐 136、腰板（barghout）黑 36、上層舷牆藍 6 配金邊、砲門外一圈紅 224（荷蘭船砲門蓋的紅）、舷頂金、玻璃 87",
+    "wales": {"rows": [
+      {"deck": "main", "dz": -8, "h": 3, "edge": false, "src": "W p.~76：最下一道腰板在 uitwatering 下 1'8\"（4.7 格）、寬 13 duim（3.3 格）"},
+      {"deck": "main", "dz": 2, "h": 3, "edge": false, "src": "W：第二道再高 2'5\"（6.8 格）、寬 13 duim —— 落在下甲板砲門下緣底下"},
+      {"deck": "main", "dz": 15, "h": 2, "edge": false, "src": "W：raa-hout（砲門上面那一道）；高度設計決定"}],
+      "src": "每條：黑 h 列；荷蘭船的腰板不描金（edge false）"},
+    "lozenge": {"color": 6, "period": 10, "radius": -1, "rows": [
+      {"deck": "puente", "z0": 64, "z1": 73, "bg": 6},
+      {"deck": "alcazar", "z0": 87, "z1": 94, "bg": 6},
+      {"deck": "toldilla", "z0": 104, "z1": 109, "bg": 6},
+      {"deck": "castillo", "z0": 85, "z1": 91, "bg": 6}],
+      "src": "設計決定：上層舷牆一整片藍（radius −1 ＝ 不畫菱格、整片 bg 色）、上下金邊"},
+    "cap_gold": {"src": "設計決定：舷頂最上一格外板換金（整條舷頂）"}
+  },
+  "stern": {
+    "src": "設計決定：船尾鏡板（spiegel，艉橫樑 z 70 以上）上甲板兩個砲門（W p.73 鏡板上有砲門）＋ kajuit 三扇小窗、hut 五扇窗；鏡板的紋章（藍鯊）、hackebort、走廊在步驟 6",
+    "face_x_max": 185, "z_ref_x": 172,
+    "rows": [
+      {"deck": "puente", "kind": "port", "n": 2, "w": 7, "h": 7, "sill": 6, "half": 20, "src": "步驟 9：half 26 → 20 —— 砲門中心在 ±22.5 時貼著船尾兩舷的牆（鏡板半寬 27.5、牆 4 格），6 磅 drake 的砲架擺不進去（draft_guns：退 35.5 格、砲口在牆裡 27 格）"},
+      {"deck": "puente", "kind": "window", "n": 3, "w": 5, "h": 5, "sill": 7, "half": 10, "src": "W p.~80：kajuit 窗 1'3\" × 1'（3.5 × 2.8 格）⇒ 遊戲尺度放大到 5 × 5（設計決定）"},
+      {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 22, "src": "W p.~80：hut 後面開方形玻璃窗或圓孔"}
+    ]
+  },
+  "espolon": {"len_beyond_stem": 62, "src": "W p.85：galjoen 下延伸樑（uitlegger）長 22 呎 ＝ 62 格（步驟 6 做）",
+    "deck_top_z": 72, "thick": 3, "half_at_stem": 18, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 20, "cutwater_half": 2, "cutwater_pow": 1.5, "cutwater_band": 10,
+    "rail_h": 4, "stanchion_every": 6,
+    "design_src": "設計決定：galjoen 的甲板頂 z 72（上甲板在船頭 64–65 之上）—— 艏斜桅從上甲板（x 500, z 63）以 30° 往前上，在 x 537 中心 z 84、x 560 到 z 98 ⇒ 喙與 head rail（頂 z 76）不會被穿過；W 的三條 regelingen 簡化成一條 head rail（4 格高、每 6 格一根柱）；下面一片 cutwater 從首柱 z 20 掃到喙尖"},
+  "figurehead": {"x": 574, "len": 25, "half_t": 2.5, "raise": 7, "body": 224, "mane": 248, "crown": 248, "eye": 36,
+    "src": "W p.85：船艏獅子（leeuw）長 9 呎（25 格）、厚 19 duim（5 格）、前端翹起 2'7\"（7 格）；荷蘭船的獅子紅身金鬃戴金冠（配色是一般認識 ⚠）。x ＝ 獅子後端（喙尖往後 25 格）"},
+  "stern_deco": {
+    "hackebort": {"z0": 112, "z1": 127, "half": 23, "arch_from": 120, "half_top": 11, "thick": 2, "field": 254, "border": 248,
+                  "ribbon": {"z0": 112, "z1": 118, "color": 6, "text": "BLAUWE HAAI", "text_color": 248},
+                  "shark": {"z_top": 126, "rows": ["..........B.....................", ".........BB.....................", "........BBB..................B..", "....BBBBBBBBBBBBBBBBBBBBBBB.BB..", "..BBEBBBBBBBBBBBBBBBBBBBBBBBB...", ".BBBWWWWWWWWWWWWWWWWWWWBBBBB....", "...WWWWW..WWW..........WB.BB....", "..........WW...............B...."], "B": 6, "W": 255, "E": 36},
+                  "src": "W p.83：船尾十字架上「照慣例裝紋章（wapen）」、最上層 hackebort 高 3'6\"（10 格）、上面可以雕海豚與獅子 —— 荷蘭船照船名在鏡板上畫那隻動物 ⇒ 藍鯊（設計決定：奶油底、藍鯊白肚、底下一條藍帶寫 BLAUWE HAAI 金字）；hackebort 高 16 格（遊戲尺度放大，⚠ 比 W 高）、頂上收成拱形；從船尾看左手 ＝ −y ⇒ 鯊魚頭朝左、字從左讀；字與鯊魚不對稱 ⇒ 這一件的鏡像差照實報"},
+    "balcony": {"floor_z": 87, "depth": 5, "half": 24, "rail_h": 5, "src": "W p.83：船尾走廊（galdery）有 5 根立柱 —— 設計決定：在 hut 那排窗下面、伸出鏡板 5 格"},
+    "quarter_gallery": {"x0": 158, "x1": 188, "z0": 70, "z1": 98, "out": 4, "roof_h": 5, "roof": 168, "win_rows": [[76, 81], [89, 94]],
+                        "src": "W p.83：兩側有側廊（galdery op zy），「常用銅或鉛皮蓋頂」⇒ 頂 168（銅）；位置與高度設計決定（kajuit 到 hut 兩層，窗對齊鏡板那兩排）"},
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [0], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.5、固定點 wick／bail／base）；一盞（不是旗艦），站在 hackebort 拱頂正中間"}
+  },
+  "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 68, "bottom_top_z": 33,
+                 "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同收穫號）；水線上橡木焦油褐 136、水線下焦油深褐 68（W：pik en teer 裡外上下）"}
+}

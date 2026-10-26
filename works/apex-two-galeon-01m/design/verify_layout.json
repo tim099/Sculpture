@@ -1,0 +1,298 @@
+{
+ "ports": {
+  "main": {
+   "n_per_side": 13,
+   "gap_min": 24,
+   "gap_max": 25,
+   "gaps": [
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    25,
+    24,
+    24,
+    24,
+    24,
+    24
+   ],
+   "clear_above_min": 3.0,
+   "half_breadth_at_port_min": 41.4,
+   "x0s": [
+    192,
+    223,
+    254,
+    285,
+    316,
+    347,
+    378,
+    410,
+    441,
+    472,
+    503,
+    534,
+    565
+   ]
+  },
+  "puente": {
+   "n_per_side": 13,
+   "gap_min": 23,
+   "gap_max": 24,
+   "gaps": [
+    23,
+    24,
+    23,
+    24,
+    23,
+    23,
+    24,
+    23,
+    24,
+    23,
+    24,
+    23
+   ],
+   "clear_above_min": 4.0,
+   "half_breadth_at_port_min": 42.1,
+   "x0s": [
+    196,
+    226,
+    257,
+    287,
+    318,
+    348,
+    378,
+    409,
+    439,
+    470,
+    500,
+    531,
+    561
+   ]
+  },
+  "tercera": {
+   "n_per_side": 12,
+   "gap_min": 25,
+   "gap_max": 26,
+   "gaps": [
+    25,
+    25,
+    25,
+    25,
+    25,
+    26,
+    25,
+    25,
+    25,
+    25,
+    25
+   ],
+   "clear_above_min": 2.0,
+   "half_breadth_at_port_min": 42.1,
+   "x0s": [
+    200,
+    231,
+    262,
+    293,
+    324,
+    355,
+    387,
+    418,
+    449,
+    480,
+    511,
+    542
+   ]
+  },
+  "alcazar": {
+   "n_per_side": 4,
+   "gap_min": 39,
+   "gap_max": 40,
+   "gaps": [
+    39,
+    40,
+    39
+   ],
+   "clear_above_min": 2.0,
+   "half_breadth_at_port_min": 36.4,
+   "x0s": [
+    176,
+    221,
+    267,
+    312
+   ]
+  },
+  "castillo": {
+   "n_per_side": 2,
+   "gap_min": 32,
+   "gap_max": 32,
+   "gaps": [
+    32
+   ],
+   "clear_above_min": 2.1,
+   "half_breadth_at_port_min": 32.4,
+   "x0s": [
+    566,
+    604
+   ]
+  },
+  "toldilla": {
+   "n_per_side": 2,
+   "gap_min": 58,
+   "gap_max": 58,
+   "gaps": [
+    58
+   ],
+   "clear_above_min": 3.0,
+   "half_breadth_at_port_min": 32.3,
+   "x0s": [
+    160,
+    223
+   ]
+  }
+ },
+ "ports_total": 94,
+ "decks": {
+  "orlop": {
+   "z": 54,
+   "span": [
+    230,
+    520
+   ]
+  },
+  "main": {
+   "z": 74,
+   "span": [
+    163,
+    630
+   ]
+  },
+  "puente": {
+   "z": 94,
+   "span": [
+    159,
+    630
+   ]
+  },
+  "tercera": {
+   "z": 114,
+   "span": [
+    154,
+    630
+   ]
+  },
+  "alcazar": {
+   "z": 134,
+   "span": [
+    149,
+    330
+   ]
+  },
+  "toldilla": {
+   "z": 152,
+   "span": [
+    145,
+    240
+   ]
+  },
+  "castillo": {
+   "z": 134,
+   "span": [
+    560,
+    630
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "fore",
+   "x": 605,
+   "heel": 17.5,
+   "platform": 250.3,
+   "truck": 426.7,
+   "above_wl_m": 36.67,
+   "yards": {
+    "course": {
+     "z": 238.3,
+     "len_m": 21.7
+    },
+    "topsail": {
+     "z": 353.6,
+     "len_m": 11.9
+    },
+    "topgallant": {
+     "z": 414.1,
+     "len_m": 6.0
+    }
+   }
+  },
+  {
+   "key": "main",
+   "x": 379,
+   "heel": 9.0,
+   "platform": 282.2,
+   "truck": 490.3,
+   "above_wl_m": 43.03,
+   "yards": {
+    "course": {
+     "z": 270.2,
+     "len_m": 27.2
+    },
+    "topsail": {
+     "z": 404.4,
+     "len_m": 14.9
+    },
+    "topgallant": {
+     "z": 475.5,
+     "len_m": 7.5
+    }
+   }
+  },
+  {
+   "key": "mizzen",
+   "x": 265,
+   "heel": 76.0,
+   "platform": 239.8,
+   "truck": 254.0,
+   "above_wl_m": 19.4,
+   "yards": {
+    "lateen": {
+     "z": 227.3,
+     "len_m": 21.7
+    }
+   }
+  },
+  {
+   "key": "bonaventure",
+   "x": 195,
+   "heel": 118.0,
+   "platform": 227.5,
+   "truck": 237.0,
+   "above_wl_m": 17.7,
+   "yards": {
+    "lateen": {
+     "z": 219.1,
+     "len_m": 14.5
+    }
+   }
+  }
+ ],
+ "bowsprit": {
+  "x0": 612,
+  "z0": 78.0,
+  "x1": 786.9,
+  "z1": 179.0,
+  "angle": 30,
+  "len": 202.0,
+  "spritsail_len": 145.0
+ },
+ "guns_by_type": {
+  "18l": 28,
+  "12l": 26,
+  "8l": 24,
+  "6l": 12,
+  "4l": 4
+ }
+}

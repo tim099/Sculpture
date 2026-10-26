@@ -1,0 +1,262 @@
+{
+  "title": "收穫號（La Cosecha）新圖紙 01：線形、側面、甲板與船樓高度、砲位表、桅帆表",
+  "task": "TASK-0589（傘）／TASK-0590（新圖紙）",
+  "author": "calli",
+  "date": "2026-10-15",
+  "sources": {
+    "FG": "F. Fernández-González, The Spanish Regulations for Shipbuilding (Ordenanzas) of the Seventeenth Century, 2009 Naval History Symposium（UPM https://oa.upm.es/id/eprint/1878/contents；兩個研究 agent 都逐頁讀過）—— 1618 年 Ordenanza 表 4 與條文翻譯",
+    "CIHCN": "Cuadernos de Historia Naval 33 cap. 7（https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/33cuaderno/07cap.pdf，讀過）—— 各作者的比例表、codo 換算",
+    "MP": "Modelismo Naval Metodología「Parte cuarta: la arboladura」（https://modelismoperianes.wordpress.com/tag/proporciones-de-cuenta-y-medida/）—— Cano 1611／Palacio 1587 桅桁比例的轉述；⚠ 二手、只讀過摘要，沒對過原典",
+    "AND": "Galeón Andalucía 複製船新聞資料（Vigo 2023 dossier https://www.vigoe.es/wp-content/uploads/2023/03/dossier_prensa_gale_vigo.pdf，讀過）",
+    "WP": "en.wikipedia Galleon／Nuestra Señora de Atocha／Spanish galleon San José（讀過）",
+    "codo": "codo de ribera ＝ 0.57468 m（1590 年起；FG 表 2–4 全用這個）⇒ 1 codo ＝ 5.7468 格"
+  },
+  "class": {"v": "1618 年 Ordenanza 的 manga 21 codos（946½ toneladas）", "src": "FG 表 4（讀過）：設計決定挑這一級 —— 遊戲裡其他船多在 40–60 m，這一級連 espolón 約 46 m"},
+  "meters_per_cell": 0.1,
+  "space": {"x": 800, "y": 320, "z": 640, "yc": 160, "note": "中線 ＝ 第 160 格（鏡像 y ↔ 320 − y）"},
+  "lines": {
+    "half_beam": {"v": 60.5, "src": "FG 表 4：manga 21 codos ＝ 12.068 m ⇒ 全寬 121 格（|dy| ≤ 60）"},
+    "keel_top": {"v": 5, "src": "設計決定：龍骨（含 false keel）0.5 m；puntal 從這裡量"},
+    "keel_half": {"v": 2, "src": "設計決定：龍骨寬 5 格（0.5 m）"},
+    "plan_half": {"v": 30, "src": "FG 表 4：plan 10½ codos ＝ 6.03 m（＝ manga／2）⇒ 半寬 30"},
+    "astilla": {"v": 7, "src": "FG 表 4：astilla（rise of floor）1¼ codos ＝ 0.72 m"},
+    "max_breadth_z": {"v": 62, "src": "FG p.14：最寬處在 puntal 的高度（10 codos ＝ 57.5 格，從龍骨頂量）⇒ z 5 ＋ 57.5"},
+    "tumblehome": {"v": 1.4, "src": "FG 1618 art.22：從 hold beams（甲板下 3½ codos）張開多少、到 puente 就收回多少 ⇒ puente 那一層的全寬 ＝ hold beams 那一層（讀數 ordenanza_check：beam_hold_beams ＝ beam_puente）"},
+    "tumblehome_ref_z": {"v": 85, "src": "＝ puente 的甲板面（decks.rows）"},
+    "tumblehome_pow": {"v": 1.0, "src": "設計決定"},
+    "tumblehome_above_per_cell": {"v": 0.12, "src": "設計決定：art.22「puente 以上 toptimbers 稍微拉直」—— 仍往內收一點（每 10 格收 1.2 格／舷），船樓頂（z 133）每舷再收約 6 格，看得出 galleon 上窄的樣子"},
+    "bilge_pow": {"v": 2.2, "src": "設計決定：圓舭的飽滿度"},
+    "s_aft": {"v": 0.45, "src": "設計決定：調到 cuadra（艉柱往前 L/4＋2 codos）的寬 ≈ manga − 2 codos（FG art.21）"},
+    "s_fwd": {"v": 0.59, "src": "設計決定：調到 mura（艏柱往後 L/4＋1 codo）的寬 ≈ manga − 1 codo（FG art.21）"},
+    "sternpost_x0": {"v": 150, "src": "設計決定：艉柱腳的位置（整艘船在 X 上的擺放）"},
+    "sternpost_rake_deg": {"v": 23.8, "src": "FG 表 4：lanzamiento a popa 5 codos ＝ 28.7 格，量到主甲板（z 65、龍骨底起 65 格）⇒ atan(28.7／65)"},
+    "wing_transom_z": {"v": 62, "src": "設計決定：yugo（wing transom）放在最寬處那一層（主甲板下緣）"},
+    "transom_ratio": {"v": 0.5, "src": "FG 表 4：yugo 10½ codos ＝ 60 格寬 ⇒ 半寬 30 ÷ 60.5"},
+    "forefoot_x": {"v": 443, "src": "FG 表 4：quilla 51 codos ＝ 293 格 ⇒ 150 ＋ 293"},
+    "stem_radius": {"v": 57.5, "src": "FG 表 4：lanzamiento a proa 10 codos ＝ 57.5 格；設計決定：艏柱是半徑 57.5 的圓弧，z 57.5 以上直立 ⇒ 主甲板高度的 rake 正好 10 codos"},
+    "deadwood_aft_z": {"v": 45, "src": "FG 表 4：rasel aft 7 codos ＝ 40 格（＋龍骨頂 5）"},
+    "deadwood_fwd_z": {"v": 18, "src": "FG 表 4：rasel fwd 2⅓ codos ＝ 13 格（＋龍骨頂 5）"},
+    "bow_pow_low": {"v": 1.7, "src": "設計決定"},
+    "bow_pow_high": {"v": 2.3, "src": "設計決定：上面鈍（galleon 圓圓的船頭）"},
+    "aft_pow": {"v": 2.0, "src": "設計決定"},
+    "top": [[80, 133], [196, 133], [200, 116], [268, 116], [272, 100], [418, 100], [422, 116], [520, 117]],
+    "top_src": "舷頂（舷牆頂）折線：每一層甲板面 ＋ 舷牆 12 格（toldilla、alcázar、castillo）／puente ＋ 15（船腰：上甲板砲門 z 91–97 頂上要留 2 格舷牆）；船樓前後緣與長度是設計決定（castillo 比較長：Andalucía 的 castillo 41.75 m² 是 toldilla 的 3 倍，AND 讀過）"
+  },
+  "waterline": {"z": 52, "src": "設計決定：吃水 5.2 m（含龍骨）—— Ordenanza 沒給吃水；Atocha 550 t 4.3 m（WP）、San José 依 codo 換算 4.9／6.75 m（WP）。主甲板砲門下緣 z 71 離水線 1.9 m"},
+  "readings_at": {"deck_z": 65, "rail_z": 116, "hold_beams_z": 45, "puente_z": 85},
+  "decks": {
+    "src": "FG 表 4：主甲板 ＝ puntal ＋ ½ codo ＝ 10½ codos（60 格，從龍骨頂量）；1618 art.5：puente、alcázar、castillo 各 3 codos（17 格）；FG 表 1：1589 年 galleon 甲板間距 3½ codos（20 格）",
+    "rows": [
+      {"key": "orlop", "name": "底艙（bodega）", "z": 45, "x_from": 190, "x_to": 430, "src": "FG art.32：21 codos 以上 hold beams 兩層、把 puntal 分成三份 ⇒ 下層在 z 45（甲板下 3½ codos，art.22）；只鋪中段給彈藥庫（設計決定）"},
+      {"key": "main", "name": "主甲板（primera cubierta）", "z": 65, "src": "FG 表 4：puntal ＋ ½ codo"},
+      {"key": "puente", "name": "上甲板（puente）", "z": 85, "src": "設計決定：主甲板 ＋ 3½ codos（20 格，1589 年 galleon 的甲板間距，FG 表 1）—— 1618 年是 3 codos（17 格），多 3 格給遊戲裡站人的頭頂"},
+      {"key": "alcazar", "name": "後甲板（alcázar）", "z": 102, "x_to": 268, "src": "1618 art.5：3 codos ＝ 17 格"},
+      {"key": "toldilla", "name": "船尾樓（toldilla）", "z": 119, "x_to": 196, "src": "1618 art.5：船尾樓 3 codos ＝ 17 格"},
+      {"key": "castillo", "name": "船首樓（castillo）", "z": 102, "x_from": 422, "src": "1618 art.5：castillo 3 codos ＝ 17 格"}
+    ],
+    "sheer": {"aft": 6, "fwd": 3, "x_mid": 300, "src": "FG 表 4：arrufadura（甲板舷弧）aft 1 codo、fwd ½ codo"}
+  },
+  "decks_build": {
+    "src": "設計決定（遊戲用的大致構造，照造船規格 §9.2–9.3；結構參考三叉戟號 draft_decks）",
+    "plank": {"interior": 177, "weather": 209, "weather_decks": ["puente", "alcazar", "toldilla", "castillo"]},
+    "beam": {"every": 16, "w": 2, "depth": {"orlop": 3, "main": 3, "puente": 3, "alcazar": 2, "toldilla": 2, "castillo": 2}, "color": 136,
+             "src": "設計決定：每 16 格一根、寬 2；船樓 2 格深 ⇒ 下一層砲門頂到樑 ≥ 4 格（verify_layout 的 clear_above 用 3 格深算，船樓更寬鬆）"},
+    "trim": 141,
+    "hatches": [
+      {"name": "後艙口", "x0": 214, "x1": 226, "half": 8, "decks": ["orlop", "main", "puente"]},
+      {"name": "主艙口", "x0": 312, "x1": 332, "half": 10, "decks": ["orlop", "main", "puente"]},
+      {"name": "前艙口", "x0": 395, "x1": 409, "half": 8, "decks": ["orlop", "main", "puente"]}],
+    "coaming_h": 2,
+    "mast_r": {"fore": 4, "main": 4, "mizzen": 3, "bonaventure": 2.5},
+    "breaks": [
+      {"name": "alcázar 前緣", "x": 268, "lo": "puente", "up": "alcazar", "doors_dy": [12], "rail_h": 7, "rail_side": "aft"},
+      {"name": "toldilla 前緣", "x": 196, "lo": "alcazar", "up": "toldilla", "doors_dy": [10], "rail_h": 7, "rail_side": "aft"},
+      {"name": "castillo 後緣", "x": 422, "lo": "puente", "up": "castillo", "doors_dy": [10], "rail_h": 7, "rail_side": "fwd"}],
+    "break_src": "1618 art.5：puente 前後兩道 break、castillo 與船尾樓各 3 codos —— 船樓前（後）緣一道艙壁（從下一層甲板到船樓甲板，兩扇門 |dy| 照 doors_dy、寬 5、高 15）＋船樓甲板邊上一道胸牆（梯子頭留口）",
+    "ladders": {
+      "rise": 3, "run": 2, "tread_half": 3, "color": 136,
+      "list": [
+        {"name": "orlop", "lo": "orlop", "up": "main", "xs": 270, "dir": 1, "dy": 0, "well": true},
+        {"name": "main-aft", "lo": "main", "up": "puente", "xs": 262, "dir": -1, "dy": 0, "well": true},
+        {"name": "main-fwd", "lo": "main", "up": "puente", "xs": 372, "dir": 1, "dy": 0, "well": true},
+        {"name": "alcazar-P", "lo": "puente", "up": "alcazar", "xs": 281, "dir": -1, "dy": -30, "head_x": 265},
+        {"name": "alcazar-S", "lo": "puente", "up": "alcazar", "xs": 281, "dir": -1, "dy": 30, "head_x": 265},
+        {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 209, "dir": -1, "dy": -22, "head_x": 193},
+        {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 209, "dir": -1, "dy": 22, "head_x": 193},
+        {"name": "castillo-P", "lo": "puente", "up": "castillo", "xs": 409, "dir": 1, "dy": -28, "head_x": 425},
+        {"name": "castillo-S", "lo": "puente", "up": "castillo", "xs": 409, "dir": 1, "dy": 28, "head_x": 425}],
+      "src": "設計決定：每 3 格一階、每階 2 格（約 56°）、踏板 7 寬；艙裡的梯子（well）在上一層開口；船樓的梯子靠在 break 外面、頭踩上船樓甲板（break 的胸牆在那裡留口）。每一層要讓人走得到的甲板都有梯子（§9.3）"}
+  },
+  "decks_preview": {"orlop": 45, "main": 65, "puente": 85, "alcazar": 102, "toldilla": 119},
+  "ports": {
+    "src": "1618 art.42：砲門下緣在甲板上 1 codo（6 格）、砲門 1¼ codos 見方（7 格）",
+    "tiers": [
+      {"deck": "main", "per_side": 9, "x_from": 168, "x_to": 452, "w": 7, "h": 8, "sill": 6, "ref_pad": 4, "ref_src": "階段八：門檻從砲門左右各多 4 格那一段甲板的最高處量（18 磅砲架 13.5 格寬 vs 砲門 7 ⇒ 兩邊各多 3.25；舷弧是一格一格的台階，砲站在高的那一階 —— 第 7 門照中心量 ⇒ 砲管頂到門楣）", "gun": "18l", "src": "設計決定：每舷 9 門（Atocha 20 門大砲 ≈ 一層每舷 10，WP；1613 年 17 codos 的船每舷 6，只讀到摘要）；18 磅 culebrina。h 7 → 8（階段八）：沿用的憲法號 18 磅砲管頂在站立面上 12.5 格，art.42 的 1¼ codos（7 格）門楣在站立面上 12 格 ⇒ 砲管頂到門楣、砲口伸不出去（draft_guns 量：主甲板 18 門砲口全在牆裡 4.5–5.5 格，碰到的全是門楣那一層）；門檻照 art.42 不動，門楣往上 1 格 —— ⚠ 偏離 art.42"},
+      {"deck": "puente", "per_side": 8, "x_from": 188, "x_to": 440, "w": 7, "h": 7, "sill": 6, "gun": "12l", "src": "設計決定：上甲板每舷 8 門 12 磅（San José 中層 10 磅，WP）"},
+      {"deck": "alcazar", "per_side": 2, "x_from": 210, "x_to": 262, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定：船樓 6 磅（San José 船樓 6 磅，WP）"},
+      {"deck": "castillo", "per_side": 2, "x_from": 430, "x_to": 461, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "設計決定。x_to 480 → 461（階段九半 TASK-0599 交船前）：第二門原本在 x 474–479，船頭吊的錨轉 45°、遊戲拿它的軸對齊外框當佔位（Blockside 40_crew.js blocked）⇒ 那門砲第三個砲手站不到（shipcheck：2／3）；第一門不動、第二門挪到 455–460"}
+    ],
+    "stern_chasers": {"deck": "main", "n": 2, "w": 7, "h": 8, "sill": 6, "gun": "18l", "src": "設計決定：主甲板船尾兩門追擊砲，從 espejo 開出去（1618 art.46：alcázar break 底下 artillery 打得到船尾）；h 7 → 8 同舷側主甲板砲門（階段八）"}
+  },
+  "masts": {
+    "src": "1618 art.66–68（FG 讀過）：主桅腳在龍骨中點、前桅腳在艏柱 rake 的中點、艏斜桅腳在主甲板。長度比例照 Cano 1611／Palacio 1587（MP，⚠ 二手）",
+    "manga_m": 12.068,
+    "rows": [
+      {"key": "fore", "x_step": 472, "rake_deg": -3, "lower_m": 29.6, "top_m": 14.8, "yards": {"course": 21.7, "topsail": 9.7},
+       "src": "x：艏柱 rake 中點 443 ＋ 57.5／2（art.68）；長：Cano 主桅 − 1 codo、上桅 ½（MP）；course yard：Cano 主帆桁少 1/5（MP）；topsail yard：Palacio 主上桅帆桁少 1/5（MP）；rake −3°（往前傾）設計決定"},
+      {"key": "main", "x_step": 296, "rake_deg": 1, "lower_m": 30.2, "top_m": 15.1, "yards": {"course": 27.2, "topsail": 12.1},
+       "src": "x：龍骨中點 150 ＋ 293／2（art.66）；長：Cano 2½ manga、上桅 ½（MP）；course yard：Cano 戰艦 2¼ manga（MP）；topsail yard：Palacio ＝ manga（MP）"},
+      {"key": "mizzen", "x_step": 205, "rake_deg": 3, "lower_m": 18.4, "yards": {"lateen": 24.5},
+       "src": "長：Palacio mesana ＝ bauprés（主桅的 28／46，MP）；lateen yard ＝ 桅 ＋ 1/3（Palacio，MP）；位置設計決定（Ordenanza 沒給）"},
+      {"key": "bonaventure", "x_step": 140, "rake_deg": 4, "lower_m": 13.8, "yards": {"lateen": 17.0},
+       "src": "設計決定：mizzen 的 3/4；大的 galleon 常有第四根 lateen 桅（WP Galleon 讀過）。x 140：v0 在 x 120，桅腳往上 z 72–79 那一段落在船尾 espejo 的牆裡（階段六 draft_masts 量到 74 格被船殼擋）⇒ 往前 20 格"},
+      {"key": "bowsprit", "x_step": 486, "angle_deg": 32, "len_m": 23.7, "yards": {"spritsail": 14.5},
+       "src": "長：Palacio bauprés ＝ trinquete 少 1/5（MP）；spritsail yard：Cano 前帆桁少 1/3（MP）；仰角 32° 設計決定；腳在主甲板（art.68）、前桅（x 472）與艏柱（x 500）之間 —— 設計決定（史實是從前桅旁邊穿過去）"}
+    ],
+    "check": "主桅頂（上桅頂）離水線 ≈ 38.6 m ⇔ Andalucía 複製船 air draft 37 m（AND 讀過）—— 只當量級對照"
+  },
+  "paint": {
+    "base": 36, "band": 242, "gold": 248, "reveal": 242, "glass": 87,
+    "src": "設計決定（calli 的顏色）：黑船殼 36 為主；玫瑰粉 242 只走 wale（細帶）與砲門外一圈（reveal）；金 248 是 wale 的上下邊、舷頂、船尾窗框；玻璃 87。研究讀數：galleries 紅配金／赭的框、好一點的船 rails 金或赭（只讀到模型論壇摘要，research_galleons §6）—— 取「紅金」的方向、換成本船的玫瑰粉。v1 每層砲列一整條 11 格的帶子 ⇒ 舷側一半是粉的，不像 galleon，改成細帶",
+    "wales": {"rows": [
+      {"deck": "main", "dz": -7, "h": 2, "src": "1618 art.52：第一條 wale 在主甲板下 1 codo（6 格）"},
+      {"deck": "main", "dz": 14, "h": 2, "src": "1618 art.52：第三條 wale 在砲門上面、主甲板上 2½ codos（14 格）"},
+      {"deck": "puente", "dz": 14, "h": 2, "src": "設計決定：puente 砲門上面同樣一條（比照 art.52 第三條）"}],
+      "src": "每條：玫瑰粉 h 列、上下各一列金；照甲板舷弧走"},
+    "lozenge": {"color": 242, "period": 10, "radius": 3, "rows": [
+      {"deck": "toldilla", "z0": 121, "z1": 131},
+      {"deck": "alcazar", "z0": 107, "z1": 114},
+      {"deck": "castillo", "z0": 107, "z1": 115}],
+      "src": "設計決定：船樓舷牆外面畫菱格（玫瑰粉菱形配黑底；週期 10 格、半徑 3）—— 只照 x、z 算 ⇒ 兩舷對稱。alcázar／castillo 從 z 107 起：puente 的 wale 照舷弧在兩頭抬到 z 105，v1 從 104 起會把它蓋黑（讀數 band_black_left 184）"},
+    "cap_gold": {"src": "設計決定：舷頂最上一格外板換金（整條舷頂）"}
+  },
+  "stern": {
+    "src": "設計決定：船尾 espejo 三排窗（puente 船長室、alcázar、toldilla）＋主甲板兩個追擊砲門（plan.ports.stern_chasers）；1618 art.69 的 galleries（最多伸出 ⅔ codo）在 TASK-0594",
+    "rows": [
+      {"deck": "main", "kind": "port", "n": 2, "w": 7, "h": 8, "sill": 6, "half": 26, "ref_x": [118, 141], "ref_src": "階段八：門檻從船尾面往裡到砲架尾那一段甲板的最高處量（x 118–141；船尾最後那一階 x 122–127 比 x 130 高 1 格，追擊砲站在那裡）"},
+      {"deck": "puente", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 24},
+      {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 24},
+      {"deck": "toldilla", "kind": "window", "n": 3, "w": 5, "h": 6, "sill": 4, "half": 18}
+    ]
+  },
+  "rig_build": {
+    "src": "設計決定（桅帆比例與位置在 plan.masts）；造船規格 §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡",
+    "colors": {"mast": 141, "top": 136, "rim_band": 242, "rim_cap": 248, "truck": 248},
+    "mast_r": {"fore": [3.5, 2.5], "main": [3.5, 2.5], "mizzen": [2.5, 1.8], "bonaventure": [2.0, 1.4]},
+    "mast_r_src": "設計決定：桅半徑（腳、頂）；比甲板桅孔（plan.decks_build.mast_r：4／4／3／2.5）小 ⇒ 用同一個圓的判斷式，桅格一定落在孔裡",
+    "topmast_r": {"fore": [2.5, 1.5], "main": [2.5, 1.5]},
+    "tops": {"main": 19, "fore": 15, "mizzen": 12, "bonaventure": 13, "rim_h": 6, "tops_z": {"bonaventure": 206},
+             "game_src": "TASK-0623：遊戲的桅頂水手站在桅軸半徑 9／12／15／18 的一圈上、一層要 6 點以上（Blockside 40_crew.js topSpot）—— 後桅 r 9 太小、bonaventure 沒有 cofa ⇒ shipcheck 桅頂水手 2／4；兩根都改 r 13（tools/crew_sim.py 模擬挑的）；bonaventure 的平台放在 hound（z 204）上面 z 206，shrouds 才不會穿過平台（照平台公式 ＝ 197，在 hound 下面）",
+             "src": "Palacio：主桅樓（cofa）上緣周長 ＝ manga（MP，⚠ 二手）⇒ 直徑 3.84 m、半徑 19 格；前桅樓小 1/5（設計決定，比照帆桁）；後桅一個小 cofa（設計決定）；cofa 是一圈籃子（rim 6 格高）"},
+    "bowsprit_r": [3.0, 2.0],
+    "yards": [
+      {"name": "yard-fore-course", "mast": "fore", "yard": "course", "sail": "fore-course", "src_work": "basecamp-frigate-constitution-01m-yard-fore-course", "src_len": 249, "brace": -15},
+      {"name": "yard-fore-topsail", "mast": "fore", "yard": "topsail", "sail": "fore-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-royal", "src_len": 93, "brace": -17},
+      {"name": "yard-main-course", "mast": "main", "yard": "course", "sail": "main-course", "src_work": "basecamp-frigate-constitution-01m-yard-main-course", "src_len": 291, "brace": -15},
+      {"name": "yard-main-topsail", "mast": "main", "yard": "topsail", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-topgallant", "src_len": 143, "brace": -17},
+      {"name": "yard-spritsail", "mast": "bowsprit", "yard": "spritsail", "sail": "spritsail", "src_work": "basecamp-frigate-constitution-01m-yard-spritsail", "src_len": 185, "brace": 0, "at_t": 0.85, "drop": 5}
+    ],
+    "yards_src": "造船規格 §2.1：方帆桁沿用憲法號的帆桁元件，只沿長度（y）縮放到本船的長度（plan.masts）；挑長度最近、固定點（arm／earing／sling／pivot／jackstay）齊全的那一根。縮過的在遊戲裡是另一份網格（§2.1）",
+    "lateen": [
+      {"mast": "mizzen", "len_m": 24.5, "angle_deg": 40, "hoist_frac": 0.4, "sail": "mizzen-lateen"},
+      {"mast": "bonaventure", "len_m": 17.0, "angle_deg": 45, "hoist_frac": 0.45, "sail": "bonaventure-lateen"}],
+    "lateen_src": "沒有現成的 lateen 帆桁 ⇒ 新做（一根斜桿，前端低、後端高）。吊點在前端往後 hoist_frac、角度設計決定：bonaventure 改 45°、吊點 45% ⇒ 後端伸出船尾約 3.7 m（v0 照 35°／40% 畫 ⇒ 8 m）。meta yard=gaff：遊戲 30_rig_physics.js 的 gaff 往下風擺（縱帆）—— 已在酒館問 ame（seq 24767）。帆桁放在桅的左舷側（y − (桅半徑＋2)），不穿過桅"
+  },
+  "rigging": {
+    "src": "設計決定；數值照造船規格 §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構參考三叉戟號 draft_rigging",
+    "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+    "channels": {"shrouds": {"fore": 5, "main": 6, "mizzen": 3, "bonaventure": 2}, "backstays": {"fore": 1, "main": 1}, "spacing": 7, "first_aft": 3, "width": 4, "below_rail": 3,
+                 "src": "設計決定：galleon 的 mesas de guarnición（channels）在舷外、舷頂下 3 格；每舷 shrouds 前 5、主 6、後 3、bonaventure 2（研究沒查到數量）；兩舷一件（照 |dy| 算 ⇒ 對稱）"},
+    "topmast_shrouds": 3,
+    "thick": {"shroud": 1.2, "topmast_shroud": 0.8, "futtock": 0.6, "backstay": 0.8, "stay": 1.4, "tm_stay": 0.9, "bobstay": 1.2, "sheet": 0.5, "course_sheet": 0.6, "tack": 0.6},
+    "ratlines": {"every": 4, "start": 7, "stop": 0.9, "min_len": 5, "th": 0.3, "tm_every": 4, "tm_th": 0.25},
+    "sails": {"fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 45, "sheet_aft": 50, "tack_fwd": 40,
+              "lateen_clew": {"mizzen": [125, 140], "bonaventure": [95, 150]},
+              "lateen_tack": {"mizzen": ["puente", 276], "bonaventure": ["toldilla", 188]},
+              "cross_texture": ["fore-course", "main-course"],
+              "src": "設計決定：course 很深（galleon 的樣子），帆腳在舷頂上 5 格；lateen 的 clew 在帆桁後端下面、sheet 綁到船尾舷頂兩舷，tack 從帆桁前端綁到甲板；兩面 course 畫勃艮第十字（紅色鋸齒交叉；16–17 世紀西班牙船的帆上常見的紋樣 —— 研究只讀到論壇摘要，設計決定）"},
+    "sail_set": {"spritsail": 3, "gaff": 2},
+    "flags": {"ensign": [36, 24], "pennant": [60, 5], "pennant_color": "#ff91aa",
+              "src": "船尾旗：勃艮第十字（Cruz de Borgoña，白底紅色鋸齒交叉）—— 1785 年以前西班牙船的旗（設計決定，研究沒逐頁讀）；掛在 bonaventure lateen 帆桁後端；主桅頂一條玫瑰粉長旗（本船自己的）"},
+    "wind": [4.5, -1.5, 0], "sail_seconds": 3
+  },
+  "espolon": {"len_beyond_stem": 72, "src": "1618 art.45：espolón ＝ manga 的 3/5 伸出艏柱 ⇒ 7.24 m",
+    "deck_top_z": 73, "thick": 3, "half_at_stem": 24, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 20, "cutwater_half": 2, "cutwater_pow": 1.5, "cutwater_band": 10,
+    "rail_h": 4, "stanchion_every": 6,
+    "design_src": "設計決定：船首喙的甲板頂 z 73（主甲板在船頭 z 68 之上 5 格）—— 艏斜桅從主甲板（x 486, z 69）以 32° 往前上，在 x 500 中心 z 77.7（下緣約 75）、x 510 到 z 84：喙放 z 73 才不會被艏斜桅穿過；研究：beakhead 在船首樓之下（WP Galleon 讀過）。下面一片 cutwater（5 格寬、沿前緣 10 格的帶子，中間跟艏柱之間留空）從 z 20 的艏柱掃到喙尖；兩舷 head rail（4 格高、每 6 格一根柱）"},
+  "figurehead": {"x": 566, "z_base": 74, "src": "設計決定：船首像 ＝ 死神見習生（兜帽斗篷、粉髮、拿鐮刀）—— 個性裝飾、本船自己做（造船規格 §2.1）；鐮刀立在中線 ⇒ 兩舷對稱；研究：王家 galleon 用戴冠金獅（worldhistory.org，讀過）—— 本船換成自己的"},
+  "stern_deco": {
+    "balcony": {"floor_z": 89, "depth": 5, "half": 26, "rail_h": 5, "src": "設計決定：puente 船長室那排窗下的船尾陽台（corredor），伸出 espejo 5 格；1618 art.69 的 galleries「最多伸出 ⅔ codo」說的是兩舷"},
+    "quarter_gallery": {"x0": 102, "x1": 140, "z0": 86, "z1": 118, "out": 4, "roof_h": 6, "src": "1618 art.69：15 codos 以上的船可以有 galleries，兩舷最多伸出 ⅔ codo（3.8 格 ⇒ 4）；位置與高度設計決定（puente 到 alcázar 兩層，蓋住階段三船尾肩膀的「滴漆」）"},
+    "name_board": {"text": "LA COSECHA", "z0": 113, "z1": 119, "src": "設計決定：船尾 espejo、alcázar 那排窗上面；3×5 字型、金字黑底玫瑰粉框 —— 字不對稱 ⇒ 這一件的鏡像差照實報"},
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [-18, 0, 18], "x": 93, "src": "沿用現有元件（work sub=components kind=light：三叉戟號船尾燈，0.05 m、scale 0.5 ＝ 0.85 m 寬、1.8 m 高、固定點 wick／bail／base）；三盞（旗艦掛三盞，研究只讀到未查證的說法）、站在 toldilla 船尾的舷頂上"}
+  },
+  "guns_build": {
+    "assembly": "calli-cosecha-01m-assembly", "hull": "calli-cosecha-01m",
+    "deck_works": {"main": "calli-cosecha-01m-deck-main", "puente": "calli-cosecha-01m-deck-puente", "alcazar": "calli-cosecha-01m-deck-alcazar", "castillo": "calli-cosecha-01m-deck-castillo"},
+    "prefix": {"main": "M", "puente": "U", "alcazar": "A", "castillo": "C"},
+    "types": {
+      "18l": {"work": "basecamp-frigate-constitution-01m-gun-long18", "scale": 0.5, "pivot": [13.5, 38.5, 0], "meta": {"kind": "gun", "gun": "18l"}, "src": "沿用憲法號 18 磅長砲（components kind=gun：0.05 m、已有 6 艘在用）；pivot ＝ 砲架前緣中間、甲板面（同餘燼號 guns_build）"},
+      "18chase": {"work": "basecamp-frigate-constitution-01m-gun-long18", "scale": 0.5, "pivot": [13.5, 38.5, 0], "meta": {"kind": "gun", "gun": "18chase"}, "src": "同一件 18 磅長砲；船尾追擊砲標 gun=18chase（憲法號、餘燼號的追擊砲都這樣標）"},
+      "12l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.5, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "12l"}, "src": "沿用風暴角號 12 磅長砲（0.05 m）；pivot 照風暴角號 deck-lower/models.json"},
+      "6l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.5, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "6l"}, "src": "沿用風暴角號 6 磅長砲（0.05 m）；pivot 照風暴角號 deck-upper/models.json"}
+    },
+    "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-2, -1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2,
+               "src": "造船規格 §4.2：從舷牆外面往裡退（每步 0.5 格），退到模型每一格的格心＋八個角（往裡縮 0.2）都不在組裝件的實心格裡；先挑 ok（砲口伸出、砲口空、腳下有甲板）、再挑低的、再退得少 —— 同餘燼號 place_guns.py。dz 從 −2 起：甲板高度取砲腳那幾點的最高，船尾那一段舷弧是台階（v1 船尾追擊砲浮在甲板上 1–2 格、support 0）"},
+    "chase": {"deck": "main", "type": "18chase", "phis": [90, 85, 95, 80, 100, 75, 105], "dl": 3,
+              "src": "主甲板船尾兩個追擊砲門（plan.ports.stern_chasers、verify_ports windows kind=port）；砲口朝 −x ＝ φ 90，照角度搜（造船規格 §4.2 追擊砲照角度搜）"},
+    "support_min": 0.5,
+    "support_src": "設計決定：砲最底下那層格子正下方有實心的比例 ≥ 0.5（不壓在艙口上）。v1 取 0.6 ⇒ 跨在舷弧台階上的砲（一半在低的那一階上懸 1 格）不算 ok；遊戲判斷掉不掉是從外框中心往下 12 格內找甲板（Blockside/src/js/10_ship.js:47）⇒ 0.5 不會掉，看起來是砲架後半懸 0.1 m（照實記）"
+  },
+  "gear_build": {
+    "assembly": "calli-cosecha-01m-assembly",
+    "magazine": {"work": "calli-cosecha-01m-magazine", "link": "彈藥庫", "title": "收穫號 彈藥庫（pañol de la pólvora）",
+                 "x0": 194, "x1": 244, "floor": 46, "ztop": 61, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft",
+                 "cap": 112, "cap_src": "照砲數換算：憲法號 54 門 138 桶 ⇒ ×44／54 ≈ 112 桶（11,200 磅）—— ⚠ 換算，不是史料（1618 Ordenanza 沒讀到火藥量）",
+                 "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+                 "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 3},
+                 "src": "位置設計決定：底艙（orlop 只鋪 x 190–430 就是留給它的）船尾那一段 —— galleon 的 pañol de la pólvora 在船尾下層（研究只讀到一般說法，⚠ 未查證）；門開在船頭那道艙壁、對著底艙梯子（foot x 269）。做法照夜燈號 draft_magazine.py（造船規格 §8：銅皮 168、松木地板 177、橡木壓條 136、門洞 5 格寬；固定點 blast、door）"},
+    "skids": {"work": "calli-cosecha-01m-boat-skids", "link": "小艇架", "title": "收穫號 小艇架（船腰三座 cradle）", "deck": "puente",
+              "xs": [305, 344, 372], "y_half": 15, "post_dy": 13, "beam_z": 96, "color": 136,
+              "src": "設計決定：船腰沒有連續 90 格的空甲板（主桅 x 292–298、主艙口 x 312–330、前梯子井 x 376–390）⇒ 小艇擱在兩座橫架上、跨過主艙口（餘燼號的小艇也墊高 11 格）；架在主桅與主艙口之間、主艙口與前梯子井之間；橫樑底在甲板上 1 m。中間那座（x 344）在小艇外框中心正下方：遊戲的「腳」是外框中心往下第一格實心（Blockside/src/js/10_ship.js:47）⇒ 腳是架子、不是 1.2 m 下面的甲板（v1 兩座 ⇒ 中心底下 12 格才碰到甲板）"},
+    "models": [
+      {"name": "舵輪", "host": "calli-cosecha-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel", "at": [224, 160.5, null], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel"},
+       "src": "沿用憲法號雙舵輪（6 艘在用）；後甲板中線、後桅（x 205）前面。⚠ 1618 年的 galleon 用 whipstaff（舵桿），舵輪要到 18 世紀 —— 遊戲的舵手要 kind=wheel，照遊戲；放在 toldilla 底下站不下（舵輪 2.1 m、那裡淨高 1.4 m）"},
+      {"name": "羅經櫃", "host": "calli-cosecha-01m-deck-alcazar", "work": "summit-night-falcon-01m-binnacle", "at": [243, 160.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"},
+       "src": "沿用夜隼號羅經櫃（4 艘在用）；舵輪前面"},
+      {"name": "主絞盤", "host": "calli-cosecha-01m-deck-puente", "work": "basecamp-ember-01m-capstan", "at": [280.5, 160.5, null], "pivot": [40, 40, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "capstan"},
+       "src": "沿用餘燼號主絞盤（7 艘在用）；上甲板中線、主桅後面（x 268 後甲板隔艙壁與主桅 x 292 之間）"},
+      {"name": "小艇", "host": "calli-cosecha-01m-deck-puente", "work": "basecamp-ember-01m-boat", "at": [345, 160.5, null], "pivot": [90, 26, 0], "scale": 0.5, "rotate": 0, "meta": {"kind": "boat", "boat": "cutter", "length_m": 9},
+       "src": "沿用餘燼號 cutter 9 m（三叉戟號也在用）；擱在小艇架上（beam 頂 z 97）、跨過主艙口 —— galleon 的 batel（⚠ 長度照元件，沒查證）"}
+    ],
+    "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（甲板舷弧、小艇架頂）",
+    "foot_reach": 12,
+    "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js:47）"
+  },
+  "rudder_anchor_build": {
+    "rudder": {"work": "calli-cosecha-01m-rudder", "title": "收穫號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 76,
+               "width": [[0, 14], [20, 14], [50, 10], [58, 5], [76, 5]], "below": 182, "above": 36, "iron": 73, "strap_every": 12, "waterline_z": 52,
+               "max_deg": 35, "bevel": 1,
+               "bevel_src": "舵前緣兩側各削 1 格（bearding）：v1 沒削 ⇒ 轉 ±35° 時兩側前緣掃進艉柱 39 格；削 1 ⇒ 0（試過 1／2／3，取最少的）",
+               "src": "設計決定：舵沿艉柱後緣（lines.x_post，斜 23.8°）從龍骨底到 z 76（主甲板追擊砲門那一帶，貼著 espejo）；3 格厚（y 159–161）、舵葉 1.4 m 往上收到 1 m、水線以上是 0.5 m 的舵頭；水線下白、上黑（同船殼）、每 12 格一道鐵箍（pintle／gudgeon 的位置，⚠ 只畫在舵上）。max_deg 35 同夜隼號／風暴角號。⚠ galleon 的舵頭從 espejo 下面的 limera 穿進船裡、接舵柄與 whipstaff —— 本船舵頭貼在 espejo 外面、沒有開孔、沒有舵柄"},
+    "anchor": {"gear_work": "calli-cosecha-01m-anchor-gear", "gear_title": "收穫號 錨架（兩舷 billboard）", "gear_link": "錨架",
+               "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.85, "pivot": [23.5, 16.5, 56.5],
+               "x_try": [482, 484, 486, 488, 490, 492], "z_try": [127, 127.5, 128, 128.5, 129, 129.5, 130, 130.5, 131, 131.5, 132], "d_step": 0.5, "d_max": 24,
+               "ledge_half": 13, "ledge_out": 3, "ledge_t": 3, "color": 136,
+               "src": "沿用共用錨元件（造船規格 §9 anchor；scale 0.85 同夜燈號 ⇒ 遊戲裡同一份網格）、meta anchor=bower；兩舷各一，吊在船頭舷外：錨臂順著船殼切線、橫桿擱在船首樓欄杆上方。錨冠底下一塊 billboard 托板（新子作品）—— 遊戲判斷掉不掉是外框中心往下找實心（10_ship.js:47），吊在舷外的錨正下方要有東西。⚠ 沒有吊錨桿（cathead）、沒有 fish tackle"},
+    "hawse": {"x": 494, "z": 88, "src": "設計決定：錨鏈孔在船頭、上甲板（puente）那一層的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
+  },
+  "gunfittings_build": {
+    "work": "calli-cosecha-01m-gunfittings", "title": "收穫號 砲具（船牆與甲板的環）", "link": "砲具",
+    "ring": {"offset": [8, 9, 10, 7, 11, 6, 12], "color": 73,
+             "src": "造船規格 §4.4（憲法號階段二十一、二十二）：船牆的環在砲門中線往船尾／船頭 8 格（不行就換 9／10／11 …）；一格鐵釘進牆、外面一格當環；高度 ＝ 那一側 eye 的高度（本船三種砲大小不一，憲法號 24 磅是甲板面 ＋8）"},
+    "deck_ring": {"back": [9, 8, 10, 7, 11, 6, 12, 13, 14], "color": 73, "src": "造船規格 §4.4：甲板的環在砲架尾（train）往船裡 9 格"},
+    "ropes": {"breeching": {"slack": 1.12, "thickness": 0.6, "color": "#b59a6a", "group": "guns/breeching"},
+              "tackle": {"slack": 1.03, "thickness": 0.35, "color": "#b59a6a", "group": "guns/tackle"},
+              "train": {"slack": 1.05, "thickness": 0.35, "color": "#b59a6a", "group": "guns/train"},
+              "src": "造船規格 §4.4 ／ §6 砲索那一列：breeching（cascabel → 兩側船牆的環）1.12、0.6；side tackle（eye → 同側的環）1.03、0.35；train tackle（train → 甲板的環）1.05、0.35；#b59a6a"},
+    "src": "TASK-0624（Tim：「繼續 GO」）。⚠ 沒做 shot garland 與 rammer／sponge（憲法號、餘燼號有）"
+  },
+  "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 36, "bottom_color": 182, "bottom_top_z": 52,
+                 "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同三叉戟號）；水線下灰白（white stuff 防船蛆，研究只讀到論壇摘要）、水線上黑；塗裝帶在 TASK-0592"}
+}

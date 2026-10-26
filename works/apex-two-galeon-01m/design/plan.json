@@ -1,0 +1,190 @@
+{
+  "title": "康塞普西翁號（Nuestra Señora de la Concepción y las Ánimas）新圖紙 01：線形、側面、甲板與船樓高度、砲位表、桅帆表",
+  "task": "TASK-0969",
+  "author": "apex-two",
+  "date": "2026-10-27",
+  "sources": {
+    "PR": "R. Palacio Ramos 2009「Los últimos galeones: el fin de la construcción naval para la Corona en el Astillero de Colindres」, Revista de Historia Naval 107（https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2009/2009107.pdf；研究代理讀過）—— Concepción y las Ánimas 的主尺寸 p.14、砲與人員 p.18、圖紙出處（Gaztañeta《Arte de fabricar Reales》1688，Lunwerg 1992 版 p.217 的右舷立面）Fig.2 圖說",
+    "FG": "F. Fernández-González 2009, The Spanish Regulations for Shipbuilding (Ordenanzas) of the Seventeenth Century（https://oa.upm.es/id/eprint/1878/；讀過）—— 1618 年 Ordenanza 的表 4 與條文（砲門 art.42、espolón art.45、wale art.52、桅位 art.66–68、galleries art.69）",
+    "MP": "modelismoperianes「Parte cuarta: la arboladura」Cap.29／30 —— Tomé Cano 1611／García de Palacio 1587 的桅桁比例轉述；⚠ 二手、沒對過原典",
+    "R": "研究筆記 references/research_concepcion_2026-10-27.md（每個數字的〔查／二手／推〕標記在那裡）",
+    "codo": "codo de ribera ＝ 0.57468 m（FG 表 2–4）⇒ 1 codo ＝ 5.7468 格"
+  },
+  "class": {"v": "Capitana Real del Mar Océano Nuestra Señora de la Concepción y las Ánimas：Eguía／Gaztañeta 1681 設計、Colindres 1687 下水；三層連續甲板（tres puentes）＋船尾樓、94 門、1,550 toneladas（arqueo；設計 1,300）", "src": "PR p.14、p.18（研究代理讀過）；Tim 2026-10-27 選「就是 Concepción 本人」、四根桅照 Tim 的參考圖"},
+  "meters_per_cell": 0.1,
+  "space": {"x": 900, "y": 320, "z": 700, "yc": 160, "note": "中線 ＝ 第 160 格（鏡像 y ↔ 320 − y）"},
+  "concepcion": {
+    "codo_cells": 5.7468,
+    "quilla_codos": 69.39, "eslora_codos": 81.33, "manga_codos": 22.5, "puntal_codos": 11.5, "plan_codos": 10.5,
+    "rake_fwd_codos": 9, "rake_aft_codos": 3,
+    "src": "PR p.14〔查〕：quilla「69 y 100/39」（讀作 69.39 是研究代理的推）、eslora「81 y 100/33」、manga 22½、puntal 11½、plan 10½ codos；艏艉 rake 原文沒給 ⇒ eslora − quilla ＝ 11.94 codos 照 1618「艏 rake 約艉的 2–3 倍」分成 9／3（研究筆記〔推〕）。這一格是線形的對照（draft_lines 的 ordenanza_check）"
+  },
+  "lines": {
+    "half_beam": {"v": 64.5, "src": "PR：manga 22½ codos ＝ 12.93 m ⇒ 全寬 129 格（|dy| ≤ 64）"},
+    "keel_top": {"v": 5, "src": "設計決定（同收穫號）：龍骨（含 false keel）0.5 m；puntal 從這裡量"},
+    "keel_half": {"v": 2, "src": "設計決定：龍骨寬 5 格（0.5 m）"},
+    "plan_half": {"v": 30, "src": "PR：plan 10½ codos ＝ 6.03 m ⇒ 半寬 30"},
+    "astilla": {"v": 7, "src": "FG 表 4：astilla（rise of floor）1¼ codos ＝ 0.72 m（同收穫號；PR 沒給）"},
+    "max_breadth_z": {"v": 71, "src": "PR：puntal 11½ codos ＝ 66.1 格、最寬處在 puntal 的高度（FG p.14）⇒ z 5 ＋ 66"},
+    "tumblehome": {"v": 1.4, "src": "FG 1618 art.22：從 hold beams 張開多少、到上一層甲板就收回多少 ⇒ 第二層甲板（puente z 94）的全寬 ＝ hold beams（z 54）那一層（讀數 ordenanza_check：beam_hold_beams ＝ beam_puente）"},
+    "tumblehome_ref_z": {"v": 94, "src": "＝ 第二層甲板 puente 的甲板面（decks.rows）"},
+    "tumblehome_pow": {"v": 1.0, "src": "設計決定"},
+    "tumblehome_above_per_cell": {"v": 0.12, "src": "設計決定（同收穫號）：第二層甲板以上每 10 格每舷收 1.2 格 ⇒ 船尾樓頂（z 162）每舷再收約 8 格；三層甲板的大船上窄的樣子"},
+    "bilge_pow": {"v": 2.2, "src": "設計決定（同收穫號）：圓舭的飽滿度"},
+    "s_aft": {"v": 0.45, "src": "設計決定：調到 cuadra（艉柱往前 L/4＋2 codos）的寬 ≈ manga − 2 codos（FG art.21）"},
+    "s_fwd": {"v": 0.59, "src": "設計決定：調到 mura（艏柱往後 L/4＋1 codo）的寬 ≈ manga − 1 codo（FG art.21）"},
+    "sternpost_x0": {"v": 180, "src": "設計決定：艉柱腳的位置（整艘船在 X 上的擺放；船尾樓往後倒、船尾走廊、bonaventure 的三角帆桁都在它後面）"},
+    "sternpost_rake_deg": {"v": 13.09, "src": "研究〔推〕：lanzamiento a popa 3 codos ＝ 17.2 格，量到第一層甲板（z 74）⇒ atan(17.2／74)"},
+    "wing_transom_z": {"v": 71, "src": "設計決定（同收穫號）：yugo（wing transom）放在最寬處那一層"},
+    "transom_ratio": {"v": 0.48, "src": "FG 表 4 通則：transom ＝ plan ＋ ¼ codo ＝ 10¾ codos ＝ 61.8 格 ⇒ 半寬 30.9 ÷ 64.5"},
+    "forefoot_x": {"v": 578.8, "src": "PR：quilla 69.39 codos ＝ 398.8 格 ⇒ 180 ＋ 398.8"},
+    "stem_radius": {"v": 51.7, "src": "研究〔推〕：lanzamiento a proa 9 codos ＝ 51.7 格；設計決定（同收穫號）：艏柱是半徑 51.7 的圓弧，z 51.7 以上直立 ⇒ 第一層甲板高度的 rake 正好 9 codos"},
+    "deadwood_aft_z": {"v": 48, "src": "FG 表 4 通則：rising aft ＝ manga／3 ＝ 7½ codos ＝ 43 格（＋龍骨頂 5）"},
+    "deadwood_fwd_z": {"v": 19, "src": "設計決定：rising fwd 2½ codos ＝ 14 格（＋龍骨頂 5；收穫號 21 codos 用 2⅓）"},
+    "bow_pow_low": {"v": 1.7, "src": "設計決定（同收穫號）"},
+    "bow_pow_high": {"v": 2.3, "src": "設計決定（同收穫號）：上面鈍（galleon 圓圓的船頭）"},
+    "aft_pow": {"v": 2.0, "src": "設計決定（同收穫號）"},
+    "top": [[100, 164], [240, 164], [244, 146], [330, 146], [334, 130], [556, 130], [560, 146], [660, 147]],
+    "top_src": "舷頂（舷牆頂）折線：toldilla 152 ＋ 12、alcázar 134 ＋ 12、船腰 tercera 114 ＋ 16（第三層砲門 z 120–125 頂上留舷牆）、castillo 134 ＋ 12（＋船頭 1）；船樓前後緣是設計決定（Tim 的參考圖：船尾樓高、船首樓短）"
+  },
+  "waterline": {"z": 60, "src": "研究〔推〕：Concepción 的吃水查不到；Atocha 吃水 4.3 m／puntal 4.80 m ≈ 0.9 ⇒ 0.9 × 6.61 ＝ 5.95 m ⇒ z 60（含龍骨）。第一層砲門下緣 z 80 離水線 2.0 m"},
+  "readings_at": {"deck_z": 74, "rail_z": 130, "hold_beams_z": 54, "puente_z": 94},
+  "decks": {
+    "src": "PR p.18：tres puentes（三層連續甲板）＋ castillo de popa；FG 表 4 通則：第一層甲板 ＝ puntal ＋ ½ codo ＝ 12 codos（69 格，從龍骨頂量）；1618 art.5：alcázar、toldilla、castillo 各 3 codos（17 格）。甲板間距：1618 是 3 codos（17）、1613 是 3¼（19）⇒ 遊戲站人要頭頂 14 格空（甲板板 1 ＋ 樑 3）、藍鯊號量過 17 不夠 ⇒ 砲甲板之間 20（同收穫號）、船樓 18",
+    "rows": [
+      {"key": "orlop", "name": "底艙（bodega）", "z": 54, "x_from": 230, "x_to": 520, "src": "設計決定：hold beams 那一層（第一層甲板下 20 格，FG art.22 的 hold beams 在甲板下 3½ codos）；只鋪中段給彈藥庫"},
+      {"key": "main", "name": "第一層甲板（primera cubierta）", "z": 74, "src": "FG 表 4 通則：puntal ＋ ½ codo ＝ 12 codos ＝ 69 格 ＋ 龍骨頂 5"},
+      {"key": "puente", "name": "第二層甲板（segunda cubierta）", "z": 94, "src": "設計決定：＋20（遊戲頭頂；見 src）"},
+      {"key": "tercera", "name": "第三層甲板（tercera cubierta）", "z": 114, "src": "設計決定：＋20；PR：三層連續甲板"},
+      {"key": "alcazar", "name": "後甲板（alcázar）", "z": 134, "x_to": 330, "src": "1618 art.5 的 3 codos（17）＋1 格給遊戲頭頂 ⇒ 18；前緣 x 330 在主桅（x 379）後面。132 → 134（draft_layout 量：第三層甲板的舷弧往船尾抬 4 格，最船尾那幾個砲門頂到 alcázar 的橫樑 clear 0 ⇒ 船樓整個抬 2）"},
+      {"key": "toldilla", "name": "船尾樓（toldilla）", "z": 152, "x_to": 240, "src": "同上 18；長到 x 240（mizzen x 265 前面）；跟著 alcázar 抬 2"},
+      {"key": "castillo", "name": "船首樓（castillo）", "z": 134, "x_from": 560, "src": "同上 18；從 x 560 到船頭（前桅 x 605 從它穿過）；跟 alcázar 同高"}
+    ],
+    "sheer": {"aft": 6, "fwd": 3, "x_mid": 375, "x_aft": 163, "x_fwd": 630, "src": "FG 表 4：arrufadura（甲板舷弧）aft 1 codo、fwd ½ codo；最低點在船長的 45%（設計決定）；舷弧量到艉柱／艏柱（第一層甲板高度的 x 163／630）為止。三層連續甲板都照這條（layout.deck_z）"}
+  },
+  "decks_preview": {"orlop": 54, "main": 74, "puente": 94, "tercera": 114, "alcazar": 134, "toldilla": 152},
+  "ports": {
+    "src": "1618 art.42：砲門下緣在甲板上 1 codo（6 格）、砲門 1¼ codos 見方（7 格）。PR p.18：94 門 ＝ 18 磅 28、12 磅 26、8 磅 24、6 磅 12、4 磅 4；各層怎麼分原文沒寫 ⇒ 研究〔推〕：重的在下、逐層減輕、每舷對稱",
+    "tiers": [
+      {"deck": "main", "per_side": 13, "x_from": 192, "x_to": 572, "w": 7, "h": 8, "sill": 6, "ref_pad": 4, "gun": "18l", "src": "18 磅每舷 13 ＋船尾追擊 2 ＝ 28；h 8（收穫號階段八：18 磅砲管頂在站立面上 12.5 格，h 7 頂到門楣 ⇒ 門楣往上 1 格，⚠ 偏離 art.42）；ref_pad 4 同收穫號"},
+      {"deck": "puente", "per_side": 13, "x_from": 196, "x_to": 568, "w": 7, "h": 7, "sill": 6, "ref_pad": 4, "gun": "12l", "src": "12 磅每舷 13 ＝ 26"},
+      {"deck": "tercera", "per_side": 12, "x_from": 200, "x_to": 548, "w": 6, "h": 6, "sill": 6, "ref_pad": 4, "gun": "8l", "src": "8 磅每舷 12 ＝ 24（x_to 548：船首樓前段船殼內收，砲擺不下）"},
+      {"deck": "alcazar", "per_side": 4, "x_from": 176, "x_to": 318, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "6 磅：後甲板每舷 4"},
+      {"deck": "castillo", "per_side": 2, "x_from": 566, "x_to": 610, "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "6 磅：船首樓每舷 2 ⇒ 6 磅合計 (4 ＋ 2) × 2 ＝ 12"},
+      {"deck": "toldilla", "per_side": 2, "x_from": 160, "x_to": 228, "w": 5, "h": 5, "sill": 5, "gun": "4l", "src": "4 磅：船尾樓每舷 2 ＝ 4"}
+    ],
+    "stern_chasers": {"deck": "main", "n": 2, "w": 7, "h": 8, "sill": 6, "gun": "18l", "src": "18 磅的另外 2 門：第一層甲板船尾兩門追擊砲，從 espejo 開出去（1618 art.46）"}
+  },
+  "masts": {
+    "src": "1618 art.66–68（FG 讀過）：主桅腳在龍骨中點、前桅腳在艏柱 rake 的中點、艏斜桅腳在第一層甲板。長度比例照 Cano 1611／Palacio 1587（MP，⚠ 二手）收斂成研究筆記的建議值〔推〕（M ＝ manga 12.93 m）。四根桅照 Tim 的參考圖（contramesana ＝ bonaventure）",
+    "manga_m": 12.93,
+    "rows": [
+      {"key": "fore", "x_step": 605, "rake_deg": -3, "lower_m": 25.3, "top_m": 12.6, "tgallant_m": 6.3, "yards": {"course": 21.7, "topsail": 11.9, "topgallant": 6.0}, "src": "x：艏柱 rake 中點 578.8 ＋ 51.7／2（art.67）；長：0.85 × 主桅、上桅 ½、頂桅 ¼（研究〔推〕）；course：Cano 主帆桁少 1/5（MP）；topsail 0.55 × course、topgallant ½ topsail（研究〔推〕）；rake −3° 同收穫號"},
+      {"key": "main", "x_step": 379, "rake_deg": 1, "lower_m": 29.7, "top_m": 14.9, "tgallant_m": 7.4, "yards": {"course": 27.2, "topsail": 14.9, "topgallant": 7.5}, "src": "x：龍骨中點 180 ＋ 398.8／2（art.66）；長：2.3 M（Cano 2½ M、manga 大於 15 codos 略短，MP）、上桅 ½、頂桅 ¼（研究〔推〕）；course 2.1 M（Escalante 約 2 M、Cano 戰艦 2¼ M，MP）"},
+      {"key": "mizzen", "x_step": 265, "rake_deg": 3, "lower_m": 17.8, "yards": {"lateen": 21.7}, "src": "長：0.6 × 主桅（Palacio mesana ＝ bauprés，MP）；lateen ＝ 前帆桁（Cano／Escalante，MP）；位置設計決定（Ordenanza 沒給；主桅與船尾之間、閃開 alcázar 前緣）"},
+      {"key": "bonaventure", "x_step": 195, "rake_deg": 4, "heel_deck": "tercera", "lower_m": 11.9, "yards": {"lateen": 14.5}, "src": "Tim 的參考圖第四根桅（contramesana）：Palacio「contras」比 mesana 短 1/3（MP；讀成 contramesana 是研究的推）；lateen 2/3 mesana 帆桁（研究〔推〕）；位置設計決定。heel_deck tercera：v0 立在第一層甲板（同 mizzen），11.9 m 的桅只比船尾樓高 4.7 m ⇒ 改立在第三層甲板（頂 z 233，比 mizzen 頂 254 低）"},
+      {"key": "bowsprit", "x_step": 612, "angle_deg": 30, "len_m": 20.2, "yards": {"spritsail": 14.5}, "src": "長：0.8 × 前桅（Palacio，MP）；cebadera 帆桁 ＝ 前帆桁少 1/3（Cano，MP）；腳在第一層甲板（art.68）、從船頭第一、二層甲板之間穿出去；仰角 30° 設計決定"}
+    ],
+    "check": "主桅頂（頂桅頂）離水線 ≈ 43 m（收穫號 38.6 m、Andalucía 複製船 air draft 37 m）—— 只當量級對照"
+  },
+  "espolon": {"len_beyond_stem": 78, "src": "1618 art.45：espolón ＝ manga 的 3/5 伸出艏柱 ⇒ 13½ codos ＝ 7.76 m",
+    "deck_top_z": 81, "thick": 3, "half_at_stem": 22, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 22, "cutwater_half": 2, "cutwater_pow": 1.5, "cutwater_band": 10, "rail_h": 4, "stanchion_every": 6,
+    "design_src": "設計決定：espolón 的甲板頂 z 81（第一層甲板在船頭 z 77 之上）—— 艏斜桅從第一層甲板（x 612, z 78）以 30° 往前上，出船頭 x 631 時中心 z 89（下緣 86）、往前越來越高 ⇒ 喙與 head rail（頂 z 85）不會被穿過；head rail 4 格高、每 6 格一根柱；下面一片 cutwater 從艏柱 z 22 掃到喙尖（同收穫號／藍鯊號的框架）"},
+  "figurehead": {"x": 650, "len": 30, "half_t": 3, "raise": 8, "body": 213, "mane": 248, "crown": 248, "eye": 36,
+    "src": "設計決定：西班牙 galeón 的船首像多是戴冠的獅子（león；Castilla y León 的紋章獸，研究筆記 §6〔推〕）⇒ 鍍金的獅子：赭金身 213、金鬃 248、金冠；長 30 格（3 m，藍鯊號 9 呎 25 格照船放大）。x ＝ 獅子後端（喙尖往後 30 格）"},
+  "stern_deco": {
+    "hackebort": {"z0": 165, "z1": 190, "half": 22, "arch_from": 182, "half_top": 16, "thick": 2, "field": 254, "border": 248,
+      "ribbon": {"z0": 165, "z1": 171, "color": 224, "text": "CONCEPCION", "text_color": 248},
+      "shark": {"z_top": 188, "rows": [
+        ".....GGGGG.....",
+        "....G.GSG.G....",
+        "......SSS......",
+        "......SSS......",
+        ".....BWWWB.....",
+        "....BBWWWBB....",
+        "....BBWSWBB....",
+        "...BBBWWWBBB...",
+        "...BBBWWWBBB...",
+        "...BBBWWWBBB...",
+        "..BBBBWWWBBBB..",
+        "..BBBBWWWBBBB..",
+        "..BBBBWWWBBBB..",
+        "...BBBWWWBBB...",
+        "..G.........G..",
+        "...GGGGGGGGG..."
+      ], "B": 6, "W": 255, "S": 246, "G": 248},
+      "src": "設計決定：船尾頂上那塊拱形板（taffrail）畫船名的聖像 —— 無原罪聖母（Inmaculada Concepción）：白袍藍斗篷、合掌、金冠、腳下新月（西班牙的標準圖像；研究筆記 §6：艉板中央宗教像〔推〕、San Francisco 1695 的雕刻照 Consejo de Guerra 寄來的圖做〔查〕）；奶油底 254 金框、下面一條紅帶寫 CONCEPCION 金字；從船尾看左手 ＝ −y ⇒ 字從左讀 ⇒ 這一件的鏡像差照實報。程式沿用藍鯊號 hackebort 的框架（plan 的鍵名 hackebort／shark 照舊，畫的是聖母）"},
+    "balcony": {"floor_z": 136, "depth": 5, "half": 24, "rail_h": 5, "src": "設計決定：船尾走廊（balcón）在 alcázar 那排窗下面、伸出 espejo 5 格；欄杆藍 6 金頂"},
+    "quarter_gallery": {"x0": 156, "x1": 179, "z0": 116, "z1": 134, "out": 4, "roof_h": 4, "roof": 224, "win_rows": [[124, 129]],
+      "src": "1618 art.69：galleries 外伸 ≤ ⅔ codo（3.8 格）⇒ out 4；位置設計決定：第三層甲板（cámara）那一層、3 個開間（x 156–179），頂到 z 138 為止 —— alcázar 第 1 門 6 磅砲在 x 176–181、z 139–144，側廊再高就蓋住它；頂 4 層紅 224 收成拱"},
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.75, "dy": [-14, 0, 14], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.75 ⇒ 比藍鯊號大一號）；三盞 ＝ 旗艦（Capitana Real）的燈號〔推〕，站在拱形板頂上"}
+  },
+  "decks_build": {
+    "src": "設計決定（遊戲用的大致構造，照造船規格 Ship_Decks §9.2–9.3；結構照藍鯊號／收穫號 draft_decks）。三層連續甲板＋三座船樓；艙室（santabárbara、cámara）只做甲板與 break，艙壁之後要配功能艙再加",
+    "plank": {"interior": 177, "weather": 209, "weather_decks": ["tercera", "alcazar", "toldilla", "castillo"]},
+    "beam": {"every": 16, "w": 2, "depth": {"orlop": 3, "main": 3, "puente": 3, "tercera": 3, "alcazar": 2, "toldilla": 2, "castillo": 2}, "color": 136,
+             "src": "設計決定（同藍鯊號）：每 16 格一根、寬 2；艙裡 3 格深、船樓 2 格深（遊戲頭頂 14 格：砲甲板間 20 ＝ 板 1 ＋ 樑 3 ＋ 16；船樓 18 ＝ 板 1 ＋ 樑 2 ＋ 15）"},
+    "trim": 141,
+    "hatches": [
+      {"name": "後艙口", "x0": 285, "x1": 295, "half": 7, "decks": ["orlop", "main", "puente", "tercera"]},
+      {"name": "主艙口", "x0": 395, "x1": 413, "half": 10, "decks": ["main", "puente", "tercera"]},
+      {"name": "前艙口", "x0": 505, "x1": 515, "half": 7, "decks": ["main", "puente", "tercera"]}
+    ],
+    "coaming_h": 2,
+    "mast_r": {"fore": 4, "main": 4, "mizzen": 3, "bonaventure": 2},
+    "breaks": [
+      {"name": "後甲板（alcázar）前緣", "x": 330, "lo": "tercera", "up": "alcazar", "doors_dy": [14], "rail_h": 7, "rail_side": "aft"},
+      {"name": "船尾樓（toldilla）前緣", "x": 240, "lo": "alcazar", "up": "toldilla", "doors_dy": [10], "rail_h": 7, "rail_side": "aft"},
+      {"name": "船首樓（castillo）後緣", "x": 560, "lo": "tercera", "up": "castillo", "doors_dy": [26], "rail_h": 7, "rail_side": "fwd"}
+    ],
+    "break_src": "設計決定（同藍鯊號）：船樓的前（後）緣一道艙壁（兩扇門 寬 5 高 15）＋船樓甲板邊上一道 7 格高的胸牆（梯子頭留口）",
+    "ladders": {
+      "rise": 3, "run": 2, "tread_half": 3, "color": 136,
+      "list": [
+        {"name": "orlop", "lo": "orlop", "up": "main", "xs": 470, "dir": -1, "dy": -16, "well": true},
+        {"name": "main-aft", "lo": "main", "up": "puente", "xs": 330, "dir": -1, "dy": 0, "well": true},
+        {"name": "main-fwd", "lo": "main", "up": "puente", "xs": 430, "dir": 1, "dy": 0, "well": true},
+        {"name": "puente-aft", "lo": "puente", "up": "tercera", "xs": 352, "dir": -1, "dy": 0, "well": true},
+        {"name": "puente-fwd", "lo": "puente", "up": "tercera", "xs": 452, "dir": 1, "dy": 0, "well": true},
+        {"name": "alcazar-P", "lo": "tercera", "up": "alcazar", "xs": 351, "dir": -1, "dy": -24, "head_x": 327},
+        {"name": "alcazar-S", "lo": "tercera", "up": "alcazar", "xs": 351, "dir": -1, "dy": 24, "head_x": 327},
+        {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 261, "dir": -1, "dy": -18, "head_x": 237},
+        {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 261, "dir": -1, "dy": 18, "head_x": 237},
+        {"name": "castillo-P", "lo": "tercera", "up": "castillo", "xs": 540, "dir": 1, "dy": -14, "head_x": 563},
+        {"name": "castillo-S", "lo": "tercera", "up": "castillo", "xs": 540, "dir": 1, "dy": 14, "head_x": 563}
+      ],
+      "src": "設計決定（照藍鯊號／收穫號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井（底艙那座靠左舷、閃開中線的艙口）；第一→二層、二→三層各前後兩座（閃開主桅 x 379、主艙口）；船樓的梯子靠在 break 外面、頭踩上船樓甲板。castillo 那兩座 v0 在 dy ±24 ⇒ 擋在第三層第 12 門砲的艙內那一側（draft_decks ports_blocked_inside 48 格）⇒ 收到 dy ±14、船首樓艙壁的門改開在 dy ±26。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
+    }
+  },
+  "paint": {
+    "base": 136, "band": 36, "gold": 248, "reveal": 224, "glass": 87,
+    "src": "設計決定（一手的塗裝查不到，研究筆記 §6〔推〕）：舷側橡木焦油褐 136、wale 黑 36（不描金）、砲門外一圈紅 224、船樓舷牆赭黃底配紅菱格、舷頂金 248、水線下白（sebo）182；雕刻描金。Tim 的參考圖是原木色的模型",
+    "wales": {
+      "rows": [
+        {"deck": "main", "dz": -6, "h": 3, "edge": false, "src": "1618 art.52：第一條 wale 在主甲板下 1 codo（6 格）"},
+        {"deck": "main", "dz": 14, "h": 3, "edge": false, "src": "1618 art.52：第三條 wale 在主甲板上 2½ codos（14 格）—— 落在第一層砲門上面"},
+        {"deck": "puente", "dz": 14, "h": 3, "edge": false, "src": "設計決定：第二層砲門上面同樣一條（比照 art.52 第三條）"},
+        {"deck": "tercera", "dz": 13, "h": 2, "edge": false, "src": "設計決定：第三層砲門上面一條細的"}
+      ],
+      "src": "每條：黑 h 列、照甲板舷弧走；不描金（edge false）"
+    },
+    "lozenge": {"color": 224, "period": 10, "radius": 3, "rows": [
+        {"deck": "toldilla", "z0": 154, "z1": 162, "bg": 213},
+        {"deck": "alcazar", "z0": 136, "z1": 144, "bg": 213},
+        {"deck": "castillo", "z0": 136, "z1": 144, "bg": 213}
+      ], "src": "設計決定：船樓舷牆外面畫紅菱格配赭黃底（研究筆記 §6：上部工程紅赭／黃赭帶）；週期 10、半徑 3，只照 x、z 算 ⇒ 兩舷對稱"},
+    "cap_gold": {"src": "設計決定：舷頂最上一格外板換金（整條舷頂）"}
+  },
+  "stern": {
+    "src": "設計決定：船尾 espejo —— 第一層甲板兩個追擊砲門；第二層（santabárbara）、第三層（cámara）、alcázar 各 5 扇窗、toldilla 3 扇；船尾走廊、側廊、聖母像在步驟 6",
+    "face_x_max": 190, "z_ref_x": 175,
+    "rows": [
+      {"deck": "main", "kind": "port", "n": 2, "w": 7, "h": 8, "sill": 6, "half": 22},
+      {"deck": "puente", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 24},
+      {"deck": "tercera", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 22},
+      {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 20},
+      {"deck": "toldilla", "kind": "window", "n": 3, "w": 5, "h": 6, "sill": 4, "half": 14}
+    ]
+  },
+  "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 182, "bottom_top_z": 60, "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同收穫號）；水線上橡木焦油褐 136、水線下白 182（sebo，研究筆記 §6〔推〕）"}
+}
