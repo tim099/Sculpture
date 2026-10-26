@@ -170,7 +170,8 @@
 - ✓ 繩與帆的端點綁 model:、ropes_broken／sails_broken／models_broken 0；帆 meta 13／13、帆自己的繩 28／28、帆桁 sail ＝ 帆名；帆裝三段表在步驟 8；組裝件 1 元件、空腔 0、link_overlap 0；vxk checksum 420549008（reimport 跟作品現在這份一樣）。
 - ✓ 舷側砲門蓋板 54 片（第一、二層＋船尾追擊砲）；匯入檢查「砲門」✗ 0。
 - 不適用：槳、撞角、蒸汽、鐵甲與金屬部件、迴旋砲／砲塔、砲身與砲座拆兩件、空艙房（沒隔艙，艙房 0）。
-- ⚠ 沒在遊戲畫面裡親眼看過的：W／S 每一段帆裝與「全收」那一刻、窗玻璃的透明與反光 —— 等 Tim 看那一格一起看。
+- ✓ 遊戲裡看過（Blocksail worktree 的 battle.html?ship=concepcion,cosecha，Blockside b720625）：載得進來（94 門、帆 13＋陣營旗 4）、滿帆 6.0 節；按 S 一段一段 ⇒ 滿帆 11 面張、戰鬥帆 7 面（三面 topsail、兩面 topgallant、兩面三角帆）、收帆 3 面 topsail、全收 0 面 —— 跟步驟 8 那張表一樣；全收那一刻帆布收成一捲掛在帆桁上。截圖 `overlays/step15_ingame_{full,furled}.jpg`。
+- ⚠ 沒特別看的：窗玻璃的透明與反光（遠景截圖看不出來）—— 等 Tim 看那一格一起看。
 - ⚠ 照實留著的匯入檢查 ⚠ 10：見步驟 14。
 
 ### todo（沒做的，照實留著）
