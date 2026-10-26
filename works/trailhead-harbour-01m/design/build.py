@@ -8,12 +8,12 @@ import sys, os, json, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 from scipy import ndimage
-import quay, town3, forts, castle, workshops, workshops2
+import quay, town3, forts, castle, workshops, workshops2, restaurant
 from quay import *
 
 ROOT = 'trailhead-harbour-01m'
 SUMMIT_ROOT = 'summit-carib-01m'
-MODULES = [quay, town3, forts, castle, workshops, workshops2]
+MODULES = [quay, town3, forts, castle, workshops, workshops2, restaurant]
 
 
 def wid(*a):

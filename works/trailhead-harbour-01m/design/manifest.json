@@ -3525,6 +3525,311 @@
    "tags": "sub",
    "title": "加拉塔堡｜高塔（塔頂 ＝ 甲板）、巨鏈的鐵環"
   },
+  "trailhead-harbour-01m-restaurant": {
+   "anchors": {
+    "door": [
+     50,
+     33,
+     4
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "sign": [
+     88,
+     4,
+     30
+    ],
+    "smoke": [
+     83,
+     122,
+     20
+    ]
+   },
+   "expect": "trailhead-harbour-01m-restaurant.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,14",
+      "style": "carib",
+      "use": "restaurant",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "食堂、廚房與擺設",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-restaurant-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "前廊",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-restaurant-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-harbour-01m-restaurant-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      33,
+      4
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      33,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      68,
+      33,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      51,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      92,
+      51,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      65,
+      86,
+      4
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往廚房）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      26,
+      104,
+      0
+     ],
+     "meta": {},
+     "name": "燻肉架",
+     "pivot": [
+      16,
+      10,
+      0
+     ],
+     "source": "summit-rocher-01m-boucan"
+    },
+    {
+     "at": [
+      26,
+      104,
+      0
+     ],
+     "meta": {
+      "kind": "light",
+      "light": "fire"
+     },
+     "name": "營火-燻肉架",
+     "pivot": [
+      6.5,
+      6.5,
+      0
+     ],
+     "source": "summit-rocher-01m-campfire"
+    },
+    {
+     "at": [
+      44,
+      120,
+      0
+     ],
+     "meta": {},
+     "name": "水桶-廚房",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      50,
+      15,
+      4
+     ],
+     "meta": {},
+     "name": "酒桶-廊",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      36.5,
+      34,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "building,carib",
+   "title": "餐廳（加勒比海的 ordinary：橫板牆的食堂、寬前廊擺長桌、吊招牌畫一口鍋、木瓦四坡頂；後院獨立的茅草廚房棚、石灶、吊肉、燻肉架 boucan）"
+  },
+  "trailhead-harbour-01m-restaurant-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-restaurant-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "餐廳｜食堂、廚房與擺設"
+  },
+  "trailhead-harbour-01m-restaurant-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-restaurant-gallery.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "餐廳｜前廊"
+  },
+  "trailhead-harbour-01m-restaurant-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-harbour-01m-restaurant-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "餐廳｜屋頂"
+  },
   "trailhead-harbour-01m-sawmill": {
    "anchors": {
     "door": [
