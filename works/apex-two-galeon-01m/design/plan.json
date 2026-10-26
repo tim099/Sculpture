@@ -81,9 +81,9 @@
     "rows": [
       {"key": "fore", "x_step": 605, "rake_deg": -3, "lower_m": 25.3, "top_m": 12.6, "tgallant_m": 6.3, "yards": {"course": 21.7, "topsail": 11.9, "topgallant": 6.0}, "src": "x：艏柱 rake 中點 578.8 ＋ 51.7／2（art.67）；長：0.85 × 主桅、上桅 ½、頂桅 ¼（研究〔推〕）；course：Cano 主帆桁少 1/5（MP）；topsail 0.55 × course、topgallant ½ topsail（研究〔推〕）；rake −3° 同收穫號"},
       {"key": "main", "x_step": 379, "rake_deg": 1, "lower_m": 29.7, "top_m": 14.9, "tgallant_m": 7.4, "yards": {"course": 27.2, "topsail": 14.9, "topgallant": 7.5}, "src": "x：龍骨中點 180 ＋ 398.8／2（art.66）；長：2.3 M（Cano 2½ M、manga 大於 15 codos 略短，MP）、上桅 ½、頂桅 ¼（研究〔推〕）；course 2.1 M（Escalante 約 2 M、Cano 戰艦 2¼ M，MP）"},
-      {"key": "mizzen", "x_step": 265, "rake_deg": 3, "lower_m": 17.8, "yards": {"lateen": 21.7}, "src": "長：0.6 × 主桅（Palacio mesana ＝ bauprés，MP）；lateen ＝ 前帆桁（Cano／Escalante，MP）；位置設計決定（Ordenanza 沒給；主桅與船尾之間、閃開 alcázar 前緣）"},
+      {"key": "mizzen", "x_step": 265, "rake_deg": 3, "lower_m": 17.8, "top_m": 8.9, "yards": {"lateen": 21.7, "topsail": 8.0}, "src": "長：0.6 × 主桅（Palacio mesana ＝ bauprés，MP）；lateen ＝ 前帆桁（Cano／Escalante，MP）；位置設計決定（Ordenanza 沒給；主桅與船尾之間、閃開 alcázar 前緣）。後中桅 top_m 8.9（½ 下桅）＋方帆 sobremesana 帆桁 8.0 m：研究〔推〕「大船可加方形 sobremesana」、Tim 的參考圖後桅有一面方的上帆（設計決定）"},
       {"key": "bonaventure", "x_step": 195, "rake_deg": 4, "heel_deck": "tercera", "lower_m": 11.9, "yards": {"lateen": 14.5}, "src": "Tim 的參考圖第四根桅（contramesana）：Palacio「contras」比 mesana 短 1/3（MP；讀成 contramesana 是研究的推）；lateen 2/3 mesana 帆桁（研究〔推〕）；位置設計決定。heel_deck tercera：v0 立在第一層甲板（同 mizzen），11.9 m 的桅只比船尾樓高 4.7 m ⇒ 改立在第三層甲板（頂 z 233，比 mizzen 頂 254 低）"},
-      {"key": "bowsprit", "x_step": 612, "angle_deg": 30, "len_m": 20.2, "yards": {"spritsail": 14.5}, "src": "長：0.8 × 前桅（Palacio，MP）；cebadera 帆桁 ＝ 前帆桁少 1/3（Cano，MP）；腳在第一層甲板（art.68）、從船頭第一、二層甲板之間穿出去；仰角 30° 設計決定"}
+      {"key": "bowsprit", "x_step": 612, "angle_deg": 30, "len_m": 20.2, "sprit_top_m": 5.0, "yards": {"spritsail": 14.5, "sprit_topsail": 6.0}, "src": "長：0.8 × 前桅（Palacio，MP）；cebadera 帆桁 ＝ 前帆桁少 1/3（Cano，MP）；腳在第一層甲板（art.68）、從船頭第一、二層甲板之間穿出去；仰角 30° 設計決定。斜桅頂桅 5.0 m＋sobrecebadera 帆桁 6.0 m：研究〔推〕「大船可加 sobrecebadera」、Tim 的參考圖艏斜桅前端有一面小方帆（設計決定，量級照藍鯊號 Witsen 的斜桅頂桅）"}
     ],
     "check": "主桅頂（頂桅頂）離水線 ≈ 43 m（收穫號 38.6 m、Andalucía 複製船 air draft 37 m）—— 只當量級對照"
   },
@@ -155,6 +155,118 @@
       ],
       "src": "設計決定（照藍鯊號／收穫號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井（底艙那座靠左舷、閃開中線的艙口）；第一→二層、二→三層各前後兩座（閃開主桅 x 379、主艙口）；船樓的梯子靠在 break 外面、頭踩上船樓甲板。castillo 那兩座 v0 在 dy ±24 ⇒ 擋在第三層第 12 門砲的艙內那一側（draft_decks ports_blocked_inside 48 格）⇒ 收到 dy ±14、船首樓艙壁的門改開在 dy ±26。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
     }
+  },
+  "rig_build": {
+    "src": "設計決定（桅帆長度與位置在 plan.masts）；造船規格 Ship_Masts §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡。程式照藍鯊號 draft_masts（上桅、十字桅頂架、斜桅頂桅）",
+    "hull_mark": "側廊窗洞:end",
+    "colors": {"mast": 141, "top": 136, "rim_band": 224, "rim_cap": 248, "truck": 248},
+    "mast_r": {"fore": [3.5, 2.5], "main": [3.5, 2.5], "mizzen": [2.5, 1.8], "bonaventure": [1.8, 1.2]},
+    "mast_r_src": "研究〔推〕：英式「每碼長 1 吋」⇒ 主桅約 0.8 m ⇒ 腳半徑 3.5、頂 2.5；比甲板桅孔（decks_build.mast_r 4／4／3／2）小",
+    "topmast_r": {"fore": [2.5, 1.5], "main": [2.5, 1.5], "mizzen": [1.5, 1.0]},
+    "tgallant_r": {"fore": [1.5, 1.0], "main": [1.5, 1.0]},
+    "tops": {"main": 14, "fore": 13, "mizzen": 11, "rim_h": 6, "src": "設計決定（同藍鯊號）：主 14、前 13、後 11（遊戲的桅頂水手站在半徑 9／12 的一圈、一層要 6 點以上）；bonaventure 沒有桅樓（只掛三角帆）；籃子 6 格高、紅腰帶、金頂"},
+    "crosstree_r": 6,
+    "bowsprit_r": [3.5, 2.0],
+    "sprit_top": {"at_from_tip": 6, "r": [1.5, 1.0], "src": "17 世紀的斜桅頂桅：立在艏斜桅前端往後 6 格（同藍鯊號）"},
+    "yards": [
+      {"name": "yard-fore-course", "mast": "fore", "yard": "course", "sail": "fore-course", "src_work": "basecamp-frigate-constitution-01m-yard-main-topsail", "src_len": 217, "brace": -15},
+      {"name": "yard-fore-topsail", "mast": "fore", "yard": "topsail", "sail": "fore-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-fore-topgallant", "src_len": 131, "brace": -17},
+      {"name": "yard-fore-topgallant", "mast": "fore", "yard": "topgallant", "sail": "fore-topgallant", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -19},
+      {"name": "yard-main-course", "mast": "main", "yard": "course", "sail": "main-course", "src_work": "basecamp-frigate-constitution-01m-yard-main-course", "src_len": 291, "brace": -15},
+      {"name": "yard-main-topsail", "mast": "main", "yard": "topsail", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-topsail", "src_len": 151, "brace": -17},
+      {"name": "yard-main-topgallant", "mast": "main", "yard": "topgallant", "sail": "main-topgallant", "src_work": "basecamp-frigate-constitution-01m-yard-fore-royal", "src_len": 87, "brace": -19},
+      {"name": "yard-mizzen-topsail", "mast": "mizzen", "yard": "topsail", "sail": "mizzen-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-topgallant", "src_len": 99, "brace": -17},
+      {"name": "yard-spritsail", "mast": "bowsprit", "yard": "spritsail", "sail": "spritsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-topgallant", "src_len": 143, "brace": 0, "at_t": 0.8, "drop": 5},
+      {"name": "yard-sprit-topsail", "mast": "bowsprit", "yard": "sprit_topsail", "sail": "sprit-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": 0}
+    ],
+    "yards_src": "Ship_Setup §2.1：方帆桁沿用憲法號的帆桁元件，只沿長度（y）縮放到 plan.masts 的長度；挑長度最近、固定點齊全的那一根（src_len ＝ arm-S − arm-P ＋ 3，同收穫號）。帆名：papahígo（course）、gavia（topsail）、juanete（topgallant）、sobremesana（mizzen-topsail）、cebadera（spritsail）、sobrecebadera（sprit-topsail）",
+    "lateen": [
+      {"mast": "mizzen", "len_m": 21.7, "angle_deg": 35, "hoist_frac": 0.4, "sail": "mizzen-lateen", "angle_src": "40 → 35：draft_masts 量到 40° 時帆桁往船尾上揚、在 x 246 擦到後桅桅樓底 1 格（yard_clash_cells 1）"},
+      {"mast": "bonaventure", "len_m": 14.5, "angle_deg": 40, "hoist_frac": 0.4, "sail": "bonaventure-lateen"}
+    ],
+    "lateen_src": "plan.masts 的 lateen 長度；角度、吊點照收穫號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5）"
+  },
+  "rigging": {
+    "src": "設計決定；數值照造船規格 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；程式照藍鯊號 draft_rigging（中桅、上桅、斜桅頂桅、橫繩組、繩梯）＋收穫號的 bonaventure（shrouds 2、支索、第二面三角帆）與勃艮第十字",
+    "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+    "channels": {
+      "shrouds": {"fore": 6, "main": 8, "mizzen": 4, "bonaventure": 2},
+      "backstays": {"fore": 1, "main": 1},
+      "spacing": {"fore": 5, "main": 6, "mizzen": 6, "bonaventure": 6},
+      "first_aft": {"fore": 2, "main": -12, "mizzen": 3, "bonaventure": 3},
+      "below_rail": {"fore": 9, "main": 3, "mizzen": 3, "bonaventure": 3},
+      "width": 4,
+      "src": "設計決定（研究沒查到西班牙船的 putting 數）：每舷 shrouds 前 6、主 8、後 4、bonaventure 2（中桅 backstay 前、主各 1）。主桅那一排從桅前 12 格起往後排（同藍鯊號）。前桅：船首樓每舷兩個 6 磅砲門在 z 139–144（x 566–571、605–610）⇒ 支索板壓到舷頂下 9 格（z 136–137，砲門底下）、間距 5、從桅後 2 格起 ⇒ deadeye 落在 x 573–603，閃開兩個砲門的 x"
+    },
+    "topmast_shrouds": 3,
+    "tgallant_shrouds": 2,
+    "thick": {"shroud": 1.3, "topmast_shroud": 0.9, "tgallant_shroud": 0.5, "futtock": 0.6, "backstay": 0.9, "stay": 1.5, "tm_stay": 1.0, "tg_stay": 0.6, "bobstay": 1.3, "sheet": 0.5, "course_sheet": 0.6, "tack": 0.6},
+    "ratlines": {"step": 4, "lower": {"start": 7, "stop": 16}, "topmast": {"start": 4, "stop": 10}, "min_span": 5, "th": 0.3, "tm_th": 0.25, "color": "#2b2620",
+      "src": "Ship_Rigging §6：橫繩組、每 4 格一道、lower start 7 stop 16、topmast start 4 stop 10、短於 5 格不畫；前、主、後桅的下桅那組 climb=1（foot ＝ 舷牆內側的甲板、head ＝ 桅頂平台靠這一舷的邊）；bonaventure 沒有桅樓 ⇒ 不做 ratlines"},
+    "sails": {
+      "fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 45, "sheet_aft": 50, "tack_fwd": 40, "bow_belay_max_x": 620,
+      "lateen_clew": {"mizzen": [205, 172], "bonaventure": [165, 185]},
+      "lateen_tack": {"mizzen": ["alcazar", 318], "bonaventure": ["toldilla", 228]},
+      "lateen_sheet_x": {"mizzen": 215},
+      "bonaventure_sheet_dy": 24,
+      "sprit_belay_x": 615,
+      "cross_texture": ["fore-course", "main-course"],
+      "src": "設計決定（照收穫號）：course 帆腳在舷頂上 5 格；上桅帆的 sheet 綁下一根帆桁同舷的 earing；後中桅帆（sobremesana）的 sheet 綁後桅桅樓邊；兩面三角帆的 clew 在帆桁後半下面、tack 從帆桁前端綁到甲板（後桅 → alcázar、bonaventure → toldilla）；後桅三角帆的 sheet 綁船尾樓兩舷舷頂 x 215、bonaventure 的綁船尾舷頂 y ±24（避開三盞燈 y ±14）。bonaventure 的 clew 放在 (165, 185)：放到 (152, 188) 的話帆的後緣在 z 218 掃到中間那盞燈（x ≤ 142.6）。兩面 course 畫勃艮第十字（同收穫號）"
+    },
+    "sail_set": {"spritsail": 3, "sprit_topsail": 3, "gaff": 2},
+    "flags": {"ensign": [40, 27], "pennant": [70, 5], "pennant_color": "#c8102e",
+      "src": "船尾旗：勃艮第十字（Cruz de Borgoña，白底紅色鋸齒交叉）—— 1785 年以前西班牙船的旗（同收穫號；研究沒逐頁讀）；掛在 bonaventure 三角帆桁後端；主桅頂一條紅長旗（Capitana Real，設計決定）"},
+    "wind": [4.5, -1.5, 0],
+    "sail_seconds": 3
+  },
+  "guns_build": {
+    "assembly": "apex-two-galeon-01m-assembly", "hull": "apex-two-galeon-01m",
+    "deck_works": {"main": "apex-two-galeon-01m-deck-main", "puente": "apex-two-galeon-01m-deck-puente", "tercera": "apex-two-galeon-01m-deck-tercera",
+                   "alcazar": "apex-two-galeon-01m-deck-alcazar", "castillo": "apex-two-galeon-01m-deck-castillo", "toldilla": "apex-two-galeon-01m-deck-toldilla"},
+    "prefix": {"main": "M", "puente": "U", "tercera": "T", "alcazar": "Q", "castillo": "F", "toldilla": "D"},
+    "types": {
+      "18l": {"work": "basecamp-frigate-constitution-01m-gun-long18", "scale": 0.5, "pivot": [13.5, 38.5, 0], "meta": {"kind": "gun", "gun": "18l"}, "src": "沿用憲法號 18 磅長砲（components kind=gun：0.05 m、scale 0.5；收穫號、餘燼號、炎羽號在用）；PR：de a 18 libras ×28（medio cañón）"},
+      "12l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.5, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "12l"}, "src": "沿用風暴角號 12 磅長砲（0.05 m、scale 0.5；收穫號、藍鯊號在用）；PR：de a 12 ×26（media culebrina）"},
+      "8l": {"work": "summit-stormkaap-01m-gun-12l", "scale": 0.45, "pivot": [9.5, 38, 0], "meta": {"kind": "gun", "gun": "8l"}, "src": "Ship_Guns §2.2：只差口徑的照現有的縮放（藍鯊號同一套：12 磅那件縮 0.45）；PR：de a 8 ×24（sacre）"},
+      "6l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.5, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "6l"}, "src": "沿用風暴角號 6 磅長砲（0.05 m、scale 0.5；收穫號船樓在用）；PR：de a 6 ×12（medio sacre）"},
+      "4l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.42, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "4l"}, "src": "同藍鯊號：風暴角號 6 磅那件縮成 0.42；PR：de a 4 ×4（falcón）"}
+    },
+    "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-2, -1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2, "src": "Ship_Guns §4.2（同收穫號／藍鯊號）：從舷牆外面往裡退（每步 0.5 格），退到模型每一格的格心＋八個角（往裡縮 0.2）都不在組裝件的實心格裡；先挑 ok（砲口伸出、砲口空、腳下有甲板）、再挑低的、再退得少"},
+    "chase": {"deck": "main", "type": "18l", "phis": [90, 85, 95, 80, 100, 75, 105], "dl": 3, "src": "第一層甲板船尾 espejo 兩個砲門（plan.ports.stern_chasers）、18 磅；砲口朝 −x ＝ φ 90，照角度搜（同收穫號）"},
+    "support_min": 0.5, "support_src": "同收穫號：砲最底下那層格子正下方有實心的比例 ≥ 0.5",
+    "override": {"tercera:5": {"dx": [0, -0.5, -1, -1.5, -2, -2.5, -3], "phi": [0, 3, -3, 6, -6], "src": "第三層第 5 個砲門（x 324–329）緊貼 alcázar 前緣艙壁（x 330）：照一般的搜尋（dx ±1、φ 0）退到 40 格都撞艙壁 ⇒ 這一門放寬：往船尾挪到 3 格、砲口斜 ±3／±6°"}}
+  },
+  "gear_build": {
+    "assembly": "apex-two-galeon-01m-assembly",
+    "magazine": {"work": "apex-two-galeon-01m-magazine", "link": "彈藥庫", "title": "康塞普西翁號 彈藥庫（pañol de la pólvora）", "x0": 236, "x1": 280, "floor": 55, "ztop": 70, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft",
+      "cap": 120, "cap_src": "研究查不到 Concepción 的火藥量 ⇒〔推〕照藍鯊號（W 1671：24 門配 3,000 pond ≈ 32 桶）每門 1.33 桶 × 94 門 ≈ 125 ⇒ 120 桶（12,000 磅 ≈ 5.4 t）",
+      "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+      "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 3},
+      "src": "設計決定：底艙（只鋪 x 230–520）船尾那一段、水線（z 60）以下；門開在船頭那道艙壁，往前沿底艙走到底艙梯子（x 455–470）；頂 ＝ 第一層甲板的樑底下。做法照收穫號／藍鯊號（夜燈號 draft_magazine.py）：銅皮、橡木框、松木地板、門洞 5 格"},
+    "skids": {"work": "apex-two-galeon-01m-boat-skids", "link": "小艇架", "title": "康塞普西翁號 小艇架（船腰三座 cradle）", "deck": "tercera", "xs": [425, 460, 495], "y_half": 15, "post_dy": 13, "beam_z": 125, "color": 136,
+      "src": "設計決定（照藍鯊號）：第三層甲板船腰（露天）主艙口（395–413）與前艙口（505–515）之間；中間那座在小艇外框中心正下方（x 460；橫樑跨過第二→三層前梯的井 x 454–468，柱在 dy ±13 站在甲板上）；橫樑底在甲板上 1.1 m"},
+    "models": [
+      {"name": "主絞盤", "host": "apex-two-galeon-01m-deck-tercera", "work": "basecamp-ember-01m-capstan", "at": [363, 160.5, null], "pivot": [40, 40, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "capstan"}, "src": "沿用餘燼號主絞盤；第三層甲板中線、第二→三層後梯的井（x 334–350）與主桅（x 379）之間（1618 art.65：capstan 在 puente —— 本船三層甲板，放在露天那一層）"},
+      {"name": "羅經櫃", "host": "apex-two-galeon-01m-deck-alcazar", "work": "summit-night-falcon-01m-binnacle", "at": [300, 160.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"}, "src": "沿用夜隼號羅經櫃；後甲板中線、舵輪（步驟 11）前面"},
+      {"name": "小艇", "host": "apex-two-galeon-01m-deck-tercera", "work": "basecamp-ember-01m-boat", "at": [460, 160.5, null], "pivot": [90, 26, 0], "scale": 0.5, "rotate": 0, "meta": {"kind": "boat", "boat": "cutter", "length_m": 9}, "src": "沿用餘燼號 cutter 9 m；擱在小艇架上（大帆船的 lancha 長度沒查證，照元件）"}
+    ],
+    "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（甲板舷弧、小艇架頂）",
+    "foot_reach": 12, "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js）"
+  },
+  "rudder_anchor_build": {
+    "rudder": {"work": "apex-two-galeon-01m-rudder", "title": "康塞普西翁號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 70, "width": [[0, 16], [20, 16], [45, 12], [55, 6], [70, 6]], "below": 182, "above": 136, "iron": 73, "strap_every": 12, "waterline_z": 60, "max_deg": 35, "bevel": 1,
+      "src": "設計決定（照收穫號／藍鯊號的做法）：舵沿艉柱後緣（lines.x_post，斜 13.1°）從龍骨底到 z 70（yugo z 71 底下，舵頭從 espejo 下面進船）；3 格厚、舵葉 1.6 m 往上收到水線上 1 m 的舵頭；水線下白（sebo，同船殼）、上橡木褐、每 12 格一道鐵箍；前緣兩側削 1 格"},
+    "spin": {"rudder": {"spin": "rudder", "spin_k": 35, "spin_min": -35, "spin_max": 35, "spin_lag": 0.3}, "wheel": {"spin": "rudder", "spin_k": 540, "spin_lag": 0.6}, "src": "Ship_Helm §9.8.1 照抄（同藍鯊號）：舵 ±max_deg、舵輪 540°"},
+    "helm": [
+      {"name": "舵輪", "host": "apex-two-galeon-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel", "at": [285, 160.5, 135], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel"}},
+      {"name": "舵輪座", "host": "apex-two-galeon-01m-deck-alcazar", "work": "basecamp-frigate-constitution-01m-wheel-stand", "at": [285, 160.5, 135], "pivot": [50, 52, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "wheel_stand"}}
+    ],
+    "helm_src": "沿用憲法號雙舵輪＋木頭雙柱座（Ship_Helm §9.8.1：掛輪要同時掛座、擺法照抄）；後甲板中線、後桅（x 265）前面、羅經櫃（x 300）後面。⚠ 1680 年代的西班牙船用舵桿（pinzote），舵輪要到 18 世紀 —— 遊戲的舵手要 kind=wheel，照遊戲（同收穫號、藍鯊號）",
+    "anchor": {"gear_work": "apex-two-galeon-01m-anchor-gear", "gear_title": "康塞普西翁號 錨架（兩舷 billboard）", "gear_link": "錨架", "work": "basecamp-frigate-constitution-01m-anchor", "scale": 1.0, "pivot": [23.5, 16.5, 56.5],
+      "x_try": [614, 616, 618, 620, 622, 624], "z_try": [136, 138, 140, 142, 144, 146, 148], "z_ref": 128, "d_step": 0.5, "d_max": 24, "ledge_half": 15, "ledge_out": 3, "ledge_t": 3, "color": 136,
+      "gun_decks": ["apex-two-galeon-01m-deck-castillo", "apex-two-galeon-01m-deck-tercera"],
+      "src": "沿用共用錨元件（scale 1.0 ＝ 憲法號原尺寸；本船是大船）、meta anchor=bower；兩舷各一，吊在船頭舷外：前桅支索板（x 573–603）、船首樓第 2 門砲（x 605–610）的前面（x 614–624 試）；錨臂順著船殼切線（z_ref 128 那一層量）。錨冠底下一塊 billboard 托板。⚠ 沒有吊錨桿（cathead）"},
+    "hawse": {"x": 626, "z": 88, "src": "設計決定：錨鏈孔在船頭、第一與第二層甲板之間的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
   },
   "paint": {
     "base": 136, "band": 36, "gold": 248, "reveal": 224, "glass": 87,

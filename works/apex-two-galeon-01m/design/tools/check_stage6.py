@@ -19,9 +19,9 @@ def ledger(work, path, label):
     print('%-22s 作品 %6d、設計 %6d、缺 %d、多 %d、色差 %d' % (label, len(cw), len(cd), len(set(cd) - set(cw)), len(set(cw) - set(cd)), sum(1 for k in set(cd) & set(cw) if cd[k] != cw[k])))
 
 
-for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'bowsprit'):
+for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'mast-bonaventure', 'bowsprit'):      # 康塞普西翁號：四根桅
     ledger('%s-%s' % (HULL, nm), os.path.join(design, 'masks', 'masts', nm + '.vox.txt'), nm)
-for k in ('mizzen',):
+for k in ('mizzen', 'bonaventure'):      # 康塞普西翁號：兩根 lateen
     ledger('%s-yard-%s-lateen' % (HULL, k), os.path.join(design, 'masks', 'yards', 'lateen-%s.vox.txt' % k), 'yard-%s-lateen' % k)
 # 船殼 ＝ 窗玻璃:end − 艏斜桅孔（康塞普西翁號的艏斜桅從船頭舷牆上面過去 ⇒ 孔 0 格、船殼不變）
 B = export_list(HULL, json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))['rig_build']['hull_mark'])

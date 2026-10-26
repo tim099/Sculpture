@@ -5,6 +5,7 @@
 #     （艙壁是 draft_decks 畫在上面那層甲板的子作品裡的）；平貼在艙壁朝外（露天那一側）的面上。
 #   · 鉸鏈直立（左右開）：固定點 hinge-a 在門板 y 0 那一邊的頂、hinge-b 在底 ⇒ 軸朝下 ⇒ 照右手定則門往模型 +x（朝外）開。
 #     艙壁朝外是 +x（x 300、207）⇒ rotate 0；朝外是 −x（x 436）⇒ rotate 180（模型 +x 轉成船的 −x，照樣往外開）。
+#   ⚠ 康塞普西翁號：門板直接引用藍鯊號的 gura-pinas-01m-door（同一支 build() 產的，Ship_Setup §2.1 用已有的元件）；門洞高度範圍 z 40–120 → 40–200（船樓在 z 115–150）
 #   輸出：masks/doors/door.vox.txt（模型座標）、doors_placement.json、verify_doors.json
 #   用法：python -I -X utf8 draft_doors.py <design>
 import sys, os, json, math, hashlib
@@ -59,7 +60,7 @@ def main():
         for d in br['doors_dy']:
             for side, sgn in (('S', 1), ('P', -1)):
                 y0 = 160 + sgn * d
-                zs = [z for z in range(40, 120) if (bx, y0, z) not in occ and (bx, y0 - 3, z) in occ and (bx, y0 + 3, z) in occ]
+                zs = [z for z in range(40, 200) if (bx, y0, z) not in occ and (bx, y0 - 3, z) in occ and (bx, y0 + 3, z) in occ]
                 zb, zt = min(zs), max(zs)
                 hole = [(bx, y, z) for y in range(y0 - 2, y0 + 3) for z in range(zb, zt + 1)]
                 if any(h in occ for h in hole) or len(zs) != zt - zb + 1:
@@ -80,7 +81,7 @@ def main():
                     problems.append('%s 門底下沒有地板' % nm)
     verify = {'doors': len(rows), 'model_cells': len(v), 'problems': problems, 'rows': rows,
               'list_sha256': hashlib.sha256(open(p, 'rb').read()).hexdigest()}
-    json.dump({'work': 'apex-two-galeon-01m-door', 'size': list(SIZE), 'pivot': list(PIVOT), 'scale': SCALE,
+    json.dump({'work': 'gura-pinas-01m-door', 'size': list(SIZE), 'pivot': list(PIVOT), 'scale': SCALE,
                'anchors': {'hinge-a': [1, 0, 31], 'hinge-b': [1, 0, 0]}, 'rows': rows},
               open(os.path.join(design, 'doors_placement.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     json.dump(verify, open(os.path.join(design, 'verify_doors.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

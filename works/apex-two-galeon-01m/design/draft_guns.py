@@ -83,22 +83,37 @@ def main():
 
     rows = []
     # ── 舷側 ──
+    OV = GB.get('override', {})                                         # 康塞普西翁號：個別砲門放寬搜尋（plan.guns_build.override，鍵 '<層>:<序號>'：dx、phi 各一串）
+    only = os.environ.get('GUNS_ONLY')                                  # 測試用：只算這一個砲門（'<層>:<序號>'），印結果就停
     for p in LY.ports(plan):
+        if only and only != '%s:%d' % (p['deck'], p['i']):
+            continue
         g = guns[p['gun']]
         xc = (p['x0'] + p['x1'] + 1) / 2.0
         zm = (p['z0'] + p['z1']) // 2
+        ov = OV.get('%s:%d' % (p['deck'], p['i']), {})
         for side, nm in ((1, 'S'), (-1, 'P')):
             mirror = side < 0
             outs = [hull_y(x, zm, side) for x in (p['x0'] - 2, p['x1'] + 2)]
             outer = max(outs) if side > 0 else min(outs)
             yin = [outer - side * d for d in (8, 14, 20, 26)]
             zd = deck_top(p['deck'], [(x, y) for x in (p['x0'], int(xc), p['x1']) for y in yin])
-            d_out = g.direction(0.0, mirror)
-            best = place(g, (xc, outer), d_out, 0.0, mirror, zd, S['dx'], lambda tip: (tip[1] - outer) * side)
+            best = None
+            for ph0 in ov.get('phi', [0.0]):
+                ph = float(ph0) * side                                  # P 舷照鏡像：角度相反（兩舷對稱檢查要 φ 相反）
+                d_out = g.direction(ph, mirror)
+                offs = [o * side for o in ov['dx']] if 'dx' in ov else S['dx']   # 側向 d_side 在 P 舷是反的 ⇒ 放寬的 dx 乘 side 才兩舷對稱（v1 P 舷的 −1.5 其實往船頭、推向艙壁）
+                b_ = place(g, (xc, outer), d_out, ph, mirror, zd, offs, lambda tip: (tip[1] - outer) * side)
+                if b_ and (best is None or (b_[0], abs(ph0)) < (best[0], best[2])):
+                    best = (b_[0], b_[1], abs(ph0))
+            if only:
+                print(nm, json.dumps(best[1] if best else None, ensure_ascii=False))
             r = {'deck': p['deck'], 'port': p['i'], 'side': nm, 'type': p['gun'], 'chase': False, 'outer': outer, 'deck_z': zd,
                  'opening': {'x': [p['x0'], p['x1']], 'z': [p['z0'], p['z1']]}}
             r.update(best[1] if best else {'ok': False, 'at': None})
             rows.append(r)
+    if only:
+        return
     # ── 船尾追擊砲（主甲板 espejo 的兩個砲門）──
     C = GB['chase']
     g = guns[C['type']]
@@ -138,6 +153,11 @@ def main():
             cnt[(pre, r['side'])] = cnt.get((pre, r['side']), 0) + 1
             r['name'] = '砲%s-%s%02d' % (pre, r['side'], cnt[(pre, r['side'])])
     rows.sort(key=lambda r: (list(GB['prefix']).index(r['deck']), r['chase'], r['side'], str(r['port'])))
+    # 康塞普西翁號：退到 back_max 都找不到零碰撞的砲照實列出來、停（v0 直接在下面 KeyError 'phi'）
+    fail = [[r['name'], r['deck'], r['type'], r.get('opening'), r.get('deck_z')] for r in rows if r.get('at') is None]
+    if fail:
+        print(json.dumps({'placed_none': fail}, ensure_ascii=False))
+        raise SystemExit('✗ 放不下 %d 門（退到 back_max 都撞）' % len(fail))
 
     def cells_of(r, dpush=0.0):
         g = guns[r['type']]

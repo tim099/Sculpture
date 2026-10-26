@@ -10,8 +10,9 @@ design = sys.argv[1]
 HULL = 'apex-two-galeon-01m'
 ASM = HULL + '-assembly'
 WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
-MASTS = [('mast-fore', '前桅', '康塞普西翁號 前桅（fokkemast＋steng＋bramsteng）'), ('mast-main', '主桅', '康塞普西翁號 主桅（grote mast＋steng＋bramsteng）'),
-         ('mast-mizzen', '後桅', '康塞普西翁號 後桅（bezaansmast＋kruissteng）'), ('bowsprit', '艏斜桅', '康塞普西翁號 艏斜桅（boegspriet＋blinde steng）')]
+MASTS = [('mast-fore', '前桅', '康塞普西翁號 前桅（trinquete＋mastelero＋juanete）'), ('mast-main', '主桅', '康塞普西翁號 主桅（árbol mayor＋mastelero＋juanete）'),
+         ('mast-mizzen', '後桅', '康塞普西翁號 後桅（mesana＋sobremesana）'), ('mast-bonaventure', '船尾小後桅', '康塞普西翁號 船尾小後桅（contramesana）'),
+         ('bowsprit', '艏斜桅', '康塞普西翁號 艏斜桅（bauprés＋斜桅頂桅）')]      # 康塞普西翁號：四根桅（多 contramesana）
 
 
 def cli(*args, ok=(0,)):

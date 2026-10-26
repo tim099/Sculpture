@@ -1,0 +1,142 @@
+{
+ "note": "draft_rudder_anchor.py 的結果（世界座標）",
+ "rudder": {
+  "work": "apex-two-galeon-01m-rudder",
+  "model": "舵",
+  "host": "apex-two-galeon-01m-assembly",
+  "at": [
+   180.0,
+   160.5,
+   0.0
+  ],
+  "pivot": [
+   180.0,
+   160.5,
+   0.0
+  ],
+  "anchors": {
+   "stock-top": [
+    160,
+    160,
+    70
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "hinge_x": 180.0,
+   "hinge_y": 160.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.2265,
+   "axis_y": 0.0,
+   "axis_z": 0.974,
+   "max_deg": 35,
+   "turn_axis": "hinge",
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  }
+ },
+ "helm": [
+  {
+   "name": "舵輪",
+   "host": "apex-two-galeon-01m-deck-alcazar",
+   "work": "basecamp-frigate-constitution-01m-wheel",
+   "at": [
+    285,
+    160.5,
+    135
+   ],
+   "pivot": [
+    50,
+    52,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "wheel",
+    "spin": "rudder",
+    "spin_k": 540,
+    "spin_lag": 0.6
+   }
+  },
+  {
+   "name": "舵輪座",
+   "host": "apex-two-galeon-01m-deck-alcazar",
+   "work": "basecamp-frigate-constitution-01m-wheel-stand",
+   "at": [
+    285,
+    160.5,
+    135
+   ],
+   "pivot": [
+    50,
+    52,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "wheel_stand"
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "apex-two-galeon-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    635.349,
+    199.849,
+    144
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 1.0,
+   "rotate": 45.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  },
+  {
+   "name": "錨-P",
+   "host": "apex-two-galeon-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    635.349,
+    121.151,
+    144
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 1.0,
+   "rotate": -45.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  }
+ ],
+ "hawse": {
+  "hawse-S": [
+   626,
+   178,
+   88
+  ],
+  "hawse-P": [
+   626,
+   142,
+   88
+  ]
+ }
+}

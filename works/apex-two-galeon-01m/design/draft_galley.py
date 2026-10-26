@@ -17,9 +17,9 @@ LEAD, IRON, SOOT, EMBER, FLAME = 109, 73, 36, 240, 252
 COPPER, COPPER_D = 200, 168
 SIZE = (30, 30, 60)
 PIVOT = (15, 15, 0)
-AT = (469.5, 160.5, 62)                      # 爐的中心 x 469.5（船艏樓甲板橫樑 x 464／480 之間放得下煙囪）、中線、腳踩上甲板面（z 61 的上一格）
+AT = (584.5, 160.5, 117)                     # 康塞普西翁號：爐的中心 x 584.5（船首樓甲板橫樑 x 576／592 之間放得下煙囪、前桅 x 603–609 之前）、中線、腳踩第三層甲板面（z 116 的上一格）
 SCALE = 0.5
-DECK_Z = 82
+DECK_Z = 134                                 # 康塞普西翁號：船首樓甲板
 
 
 def build():
@@ -140,6 +140,10 @@ def main():
                     world.add(tuple(int(math.floor(c)) for c in p))
     D = np.loadtxt(os.path.join(design, 'masks', 'decks', 'castillo.vox.txt'), delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')   # 從甲板的設計遮罩算（刻過之後重跑照樣同一份）
     hole = sorted(tuple(r) for r in D.tolist() if tuple(r[:3]) in world)
+    # 康塞普西翁號：煙囪是中空的（煙道）⇒ 只照模型格刻會在洞中間留一格甲板（懸在煙道裡、6 連通斷開 ⇒ 組裝件 2 個元件）⇒ 洞外框以內的甲板格全刻
+    if hole:
+        hx = [r[0] for r in hole]; hy = [r[1] for r in hole]; hz = {r[2] for r in hole}
+        hole = sorted(tuple(r) for r in D.tolist() if min(hx) <= r[0] <= max(hx) and min(hy) <= r[1] <= max(hy) and r[2] in hz)
     with open(os.path.join(design, 'masks', 'galley', 'deck_hole.vox.txt'), 'w', encoding='utf-8', newline='\n') as f:
         f.write('# 船艏樓甲板讓煙囪過的洞（從甲板-castillo 刻掉；帶現在的顏色）\n')
         for r in hole:
@@ -158,7 +162,8 @@ def main():
               'deck_hole': len(hole), 'hits_solid': len(hit), 'hits_sample': hit[:6], 'unsupported': len(unsupported), 'stand_aft': list(stand), 'stand_aft_ok': ok_stand,
               'colors': {str(c): sum(1 for x in v.values() if x == c) for c in sorted(set(v.values()))},
               'list_sha256': hashlib.sha256(open(os.path.join(design, 'masks', 'galley', 'galley.vox.txt'), 'rb').read()).hexdigest()}
-    json.dump({'work': 'apex-two-galeon-01m-galley', 'deck_work': 'apex-two-galeon-01m-deck-puente', 'name': '爐灶', 'at': list(AT), 'pivot': list(PIVOT), 'scale': SCALE,
+    # 康塞普西翁號：爐灶直接引用藍鯊號那件（同一支 build()；Ship_Setup §2.1）
+    json.dump({'work': 'gura-pinas-01m-galley', 'deck_work': 'apex-two-galeon-01m-deck-tercera', 'name': '爐灶', 'at': list(AT), 'pivot': list(PIVOT), 'scale': SCALE,
                'meta': {'kind': 'galley'}, 'size': list(SIZE)}, open(os.path.join(design, 'galley_placement.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     json.dump(verify, open(os.path.join(design, 'verify_galley.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(json.dumps(verify, ensure_ascii=False))

@@ -28,17 +28,17 @@ sys.stdout.reconfigure(encoding='utf-8')
 WORKS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 P_ = 'apex-two-galeon-01m'
 LIDS = {
-    'pinas': {'work': P_ + '-portlid', 'parent': P_, 'design': P_, 'title': '康塞普西翁號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m；外面船殼褐、裡面紅）'},
+    'galeon': {'work': P_ + '-portlid', 'parent': P_, 'design': P_, 'title': '康塞普西翁號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m；外面船殼褐、裡面紅）'},
 }
 SHIPS = {
-    'pinas': {'asm': P_ + '-assembly', 'design': P_, 'decks': ['甲板-main', '甲板-puente'], 'lid': 'pinas', 'name': '康塞普西翁號'},
+    'galeon': {'asm': P_ + '-assembly', 'design': P_, 'decks': ['甲板-main', '甲板-puente'], 'lid': 'galeon', 'name': '康塞普西翁號'},      # 康塞普西翁號：封閉砲甲板 ＝ 第一、二層（第三層多在船腰露天、舷牆上的砲門 ⇒ 不做，同 §9.12）
 }
-COL = {'outer': 136, 'inner': 224, 'strap': 73}      # 康塞普西翁號：關上朝外 ＝ 船殼的橡木焦油褐 136、貼船殼那一層（開著看得到）＝ 紅 224（荷蘭船砲門蓋的紅）、鉸鏈板 73
+COL = {'outer': 136, 'inner': 224, 'strap': 73}      # 康塞普西翁號：關上朝外 ＝ 船殼的橡木焦油褐 136、貼船殼那一層（開著看得到）＝ 紅 224（跟砲門外那一圈同色）、鉸鏈板 73
 RZ_FLAT = 2.0
 HOUSE_MIN = 4
 OUTLIER = 3                  # 蓋板範圍裡外表面離擬合平面超過 3 格的欄 ＝ 有東西貼著船殼凸出來（餘燼號上層 13 號砲門後緣的鐵件凸 12 格）⇒ 這一片不做
 CLOSE_BIAS = -2.0            # close_deg 少 2°：船殼是凸的，照平面擬合的角度關上會切進鼓出來那一塊（遊戲匯入檢查 v1：憲法號 7、9 號 6–7% 落進船殼）；少 2° 底緣只離開約 0.4 格
-CLOSE_ADJ = {'砲M-P03': -2.0, '砲M-S03': -2.0}   # 康塞普西翁號：遊戲匯入檢查（取網格表面的點、比整艘的格子）報這兩片關上 5% 落進船殼（這支量 2.3%）⇒ 照 Ship_Portlids「超過就依序試：close_deg 往小調」個別再少 2°
+CLOSE_ADJ = {}      # 康塞普西翁號：先不個別調（藍鯊號的 砲M-P03／S03 −2° 是那艘的讀數）；遊戲匯入檢查報了再照 Ship_Portlids 加
 SLAB = 16
 OFFS = np.array([[0.5, 0.5, 0.5]] + [[0.3 + 0.4 * (k & 1), 0.3 + 0.4 * ((k >> 1) & 1), 0.3 + 0.4 * ((k >> 2) & 1)] for k in range(8)])
 

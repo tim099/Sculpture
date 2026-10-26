@@ -1,0 +1,2850 @@
+{
+ "note": "draft_gear.py 的結果；模型 at ＝ pivot 落點（世界座標；host 子作品都在 0,0,0）",
+ "magazine": {
+  "work": "apex-two-galeon-01m-magazine",
+  "anchors": {
+   "blast": [
+    259,
+    160,
+    63
+   ],
+   "door": [
+    280,
+    160,
+    56
+   ]
+  },
+  "meta": {
+   "kind": "magazine",
+   "pos": "aft",
+   "powder_lb": 12000
+  }
+ },
+ "models": [
+  {
+   "name": "主絞盤",
+   "host": "apex-two-galeon-01m-deck-tercera",
+   "work": "basecamp-ember-01m-capstan",
+   "at": [
+    363.0,
+    160.5,
+    115.0
+   ],
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "capstan"
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "羅經櫃",
+   "host": "apex-two-galeon-01m-deck-alcazar",
+   "work": "summit-night-falcon-01m-binnacle",
+   "at": [
+    300.0,
+    160.5,
+    135.0
+   ],
+   "pivot": [
+    9,
+    13,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "binnacle"
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "小艇",
+   "host": "apex-two-galeon-01m-deck-tercera",
+   "work": "basecamp-ember-01m-boat",
+   "at": [
+    460.0,
+    160.5,
+    127.0
+   ],
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "kind": "boat",
+    "boat": "cutter",
+    "length_m": 9
+   },
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-001",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-002",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-003",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-004",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-005",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-006",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-007",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-008",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-009",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-010",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-011",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-012",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-013",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-014",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-015",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-016",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-017",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-018",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-019",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-020",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-021",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    189.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-022",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    131.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-023",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-024",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-025",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-026",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-027",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-028",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-029",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-030",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-031",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-032",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-033",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    189.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-034",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    131.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-035",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-036",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-037",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-038",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-039",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-040",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-041",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-042",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-043",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-044",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-045",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    189.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-046",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    131.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-047",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    193.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-048",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    254.0,
+    127.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-049",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-050",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-051",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-052",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-053",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-054",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-055",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-056",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-057",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-058",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-059",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    189.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-060",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    131.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-061",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    193.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-062",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    258.6,
+    127.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-063",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-064",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-065",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-066",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-067",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-068",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-069",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-070",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-071",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-072",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-073",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    189.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-074",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    131.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-075",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    193.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-076",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    263.2,
+    127.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-077",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-078",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-079",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-080",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-081",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-082",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-083",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-084",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-085",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-086",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-087",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    189.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-088",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    131.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-089",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    193.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-090",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    127.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-091",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    198.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-092",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    267.8,
+    122.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-093",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    166.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-094",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    154.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-095",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    170.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-096",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    150.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-097",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    175.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-098",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    145.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-099",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    180.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-100",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    141.0,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-101",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    184.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-102",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    136.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-103",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    189.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-104",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    131.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-105",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    193.8,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-106",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    127.2,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-107",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    198.4,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-108",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    272.4,
+    122.6,
+    56
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 0,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-109",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    175.4,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-110",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    145.6,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-111",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    184.6,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-112",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    240.2,
+    136.4,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-113",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    193.8,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-114",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    244.8,
+    127.2,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-115",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    166.2,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-116",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    154.8,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-117",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    180.0,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-118",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    141.0,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-119",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    189.2,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  },
+  {
+   "name": "桶-120",
+   "host": "apex-two-galeon-01m-magazine",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    249.4,
+    131.8,
+    63
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 0,
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   },
+   "tier": 1,
+   "foot_gap": 0
+  }
+ ]
+}

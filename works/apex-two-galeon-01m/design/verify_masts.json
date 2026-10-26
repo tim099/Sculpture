@@ -1,0 +1,962 @@
+{
+ "parts": {
+  "mast-fore": {
+   "cells": 10401,
+   "mirror_diff": 0
+  },
+  "mast-main": {
+   "cells": 12169,
+   "mirror_diff": 0
+  },
+  "mast-mizzen": {
+   "cells": 4294,
+   "mirror_diff": 0
+  },
+  "mast-bonaventure": {
+   "cells": 884,
+   "mirror_diff": 0
+  },
+  "bowsprit": {
+   "cells": 5244,
+   "mirror_diff": 0
+  }
+ },
+ "skipped_on_ship": {
+  "mast-fore": 118,
+  "bowsprit-at-fore": 6,
+  "bowsprit": 21
+ },
+ "bowsprit_hole_cells": 212,
+ "yard_ends": {
+  "yard-fore-course": {
+   "P": [
+    594.5,
+    55.7,
+    238.26
+   ],
+   "S": [
+    650.7,
+    265.3,
+    238.26
+   ],
+   "pivot": [
+    622.57,
+    160.5,
+    238.26
+   ]
+  },
+  "yard-fore-topsail": {
+   "P": [
+    610.2,
+    103.6,
+    353.58
+   ],
+   "S": [
+    645.0,
+    217.4,
+    353.58
+   ],
+   "pivot": [
+    627.61,
+    160.5,
+    353.58
+   ]
+  },
+  "yard-fore-topgallant": {
+   "P": [
+    620.5,
+    132.1,
+    414.06
+   ],
+   "S": [
+    640.0,
+    188.9,
+    414.06
+   ],
+   "pivot": [
+    630.28,
+    160.5,
+    414.06
+   ]
+  },
+  "yard-main-course": {
+   "P": [
+    345.2,
+    29.1,
+    270.24
+   ],
+   "S": [
+    415.6,
+    291.9,
+    270.24
+   ],
+   "pivot": [
+    380.44,
+    160.5,
+    270.24
+   ]
+  },
+  "yard-main-topsail": {
+   "P": [
+    355.3,
+    89.3,
+    404.42
+   ],
+   "S": [
+    398.9,
+    231.7,
+    404.42
+   ],
+   "pivot": [
+    377.1,
+    160.5,
+    404.42
+   ]
+  },
+  "yard-main-topgallant": {
+   "P": [
+    363.2,
+    125.0,
+    475.54
+   ],
+   "S": [
+    387.6,
+    196.0,
+    475.54
+   ],
+   "pivot": [
+    375.36,
+    160.5,
+    475.54
+   ]
+  },
+  "yard-mizzen-topsail": {
+   "P": [
+    245.4,
+    122.2,
+    312.74
+   ],
+   "S": [
+    268.8,
+    198.8,
+    312.74
+   ],
+   "pivot": [
+    257.09,
+    160.5,
+    312.74
+   ]
+  },
+  "yard-spritsail": {
+   "P": [
+    752.5,
+    88.0,
+    154.3
+   ],
+   "S": [
+    752.5,
+    233.0,
+    154.3
+   ],
+   "pivot": [
+    752.45,
+    160.5,
+    154.3
+   ]
+  },
+  "yard-sprit-topsail": {
+   "P": [
+    785.7,
+    130.5,
+    217.54
+   ],
+   "S": [
+    785.7,
+    190.5,
+    217.54
+   ],
+   "pivot": [
+    785.74,
+    160.5,
+    217.54
+   ]
+  },
+  "yard-mizzen-lateen": {
+   "fore": [
+    327.1,
+    156.2,
+    178.3
+   ],
+   "peak": [
+    151.1,
+    156.2,
+    301.3
+   ],
+   "pivot": [
+    257.07,
+    156.2,
+    227.3
+   ]
+  },
+  "yard-bonaventure-lateen": {
+   "fore": [
+    231.9,
+    156.8,
+    182.2
+   ],
+   "peak": [
+    121.9,
+    156.8,
+    274.2
+   ],
+   "pivot": [
+    187.93,
+    156.8,
+    219.15
+   ]
+  }
+ },
+ "yard_clash_cells": {
+  "yard-fore-course": 0,
+  "yard-fore-topsail": 0,
+  "yard-fore-topgallant": 0,
+  "yard-main-course": 0,
+  "yard-main-topsail": 0,
+  "yard-main-topgallant": 0,
+  "yard-mizzen-topsail": 0,
+  "yard-spritsail": 0,
+  "yard-sprit-topsail": 0,
+  "yard-mizzen-lateen": 0,
+  "yard-bonaventure-lateen": 0
+ },
+ "lateen_overhang_m": {
+  "yard-mizzen-lateen": -0.92,
+  "yard-bonaventure-lateen": 2.0
+ },
+ "yards": [
+  {
+   "name": "yard-fore-course",
+   "mast": "fore",
+   "work": "basecamp-frigate-constitution-01m-yard-main-topsail",
+   "at": [
+    622.57,
+    160.5,
+    238.26
+   ],
+   "pivot": [
+    2.5,
+    108.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -15
+   ],
+   "scale": [
+    1,
+    1.0,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "course",
+    "sail": "fore-course",
+    "length_m": 21.7,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -15
+   }
+  },
+  {
+   "name": "yard-fore-topsail",
+   "mast": "fore",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-topgallant",
+   "at": [
+    627.61,
+    160.5,
+    353.58
+   ],
+   "pivot": [
+    2.5,
+    65.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    0.9084,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "topsail",
+    "sail": "fore-topsail",
+    "length_m": 11.9,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-fore-topgallant",
+   "mast": "fore",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-royal",
+   "at": [
+    630.28,
+    160.5,
+    414.06
+   ],
+   "pivot": [
+    1.5,
+    32.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -19
+   ],
+   "scale": [
+    1,
+    0.9231,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "topgallant",
+    "sail": "fore-topgallant",
+    "length_m": 6.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -19
+   }
+  },
+  {
+   "name": "yard-main-course",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-main-course",
+   "at": [
+    380.44,
+    160.5,
+    270.24
+   ],
+   "pivot": [
+    3.5,
+    145.5,
+    3.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -15
+   ],
+   "scale": [
+    1,
+    0.9347,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "course",
+    "sail": "main-course",
+    "length_m": 27.2,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -15
+   }
+  },
+  {
+   "name": "yard-main-topsail",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-topsail",
+   "at": [
+    377.1,
+    160.5,
+    404.42
+   ],
+   "pivot": [
+    2.5,
+    75.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    0.9868,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topsail",
+    "sail": "main-topsail",
+    "length_m": 14.9,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-main-topgallant",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-royal",
+   "at": [
+    375.36,
+    160.5,
+    475.54
+   ],
+   "pivot": [
+    1.5,
+    43.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -19
+   ],
+   "scale": [
+    1,
+    0.8621,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topgallant",
+    "sail": "main-topgallant",
+    "length_m": 7.5,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -19
+   }
+  },
+  {
+   "name": "yard-mizzen-topsail",
+   "mast": "mizzen",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-topgallant",
+   "at": [
+    257.09,
+    160.5,
+    312.74
+   ],
+   "pivot": [
+    1.5,
+    49.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    0.8081,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "topsail",
+    "sail": "mizzen-topsail",
+    "length_m": 8.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-spritsail",
+   "mast": "bowsprit",
+   "work": "basecamp-frigate-constitution-01m-yard-main-topgallant",
+   "at": [
+    752.45,
+    160.5,
+    154.3
+   ],
+   "pivot": [
+    2.5,
+    71.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1.014,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "bowsprit",
+    "yard": "spritsail",
+    "sail": "spritsail",
+    "length_m": 14.5,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-sprit-topsail",
+   "mast": "bowsprit",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-royal",
+   "at": [
+    785.74,
+    160.5,
+    217.54
+   ],
+   "pivot": [
+    1.5,
+    32.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    0.9231,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "bowsprit",
+    "yard": "sprit_topsail",
+    "sail": "sprit-topsail",
+    "length_m": 6.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-mizzen-lateen",
+   "mast": "mizzen",
+   "work": "apex-two-galeon-01m-yard-mizzen-lateen",
+   "at": [
+    257.07,
+    156.2,
+    227.3
+   ],
+   "pivot": [
+    109.5,
+    3.5,
+    52.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "gaff",
+    "sail": "mizzen-lateen",
+    "length_m": 21.7,
+    "rig": "lateen",
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-bonaventure-lateen",
+   "mast": "bonaventure",
+   "work": "apex-two-galeon-01m-yard-bonaventure-lateen",
+   "at": [
+    187.93,
+    156.8,
+    219.15
+   ],
+   "pivot": [
+    69.5,
+    3.5,
+    40.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "bonaventure",
+    "yard": "gaff",
+    "sail": "bonaventure-lateen",
+    "length_m": 14.5,
+    "rig": "lateen",
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  }
+ ],
+ "lateen": {
+  "mizzen": {
+   "size": [
+    184,
+    7,
+    131
+   ],
+   "cells": 1430,
+   "anchors": {
+    "pivot": [
+     109,
+     3,
+     52
+    ],
+    "sling": [
+     109,
+     3,
+     54
+    ],
+    "fore": [
+     179,
+     3,
+     3
+    ],
+    "peak": [
+     3,
+     3,
+     126
+    ],
+    "jackstay-01": [
+     174,
+     3,
+     8
+    ],
+    "jackstay-02": [
+     167,
+     3,
+     13
+    ],
+    "jackstay-03": [
+     161,
+     3,
+     17
+    ],
+    "jackstay-04": [
+     154,
+     3,
+     22
+    ],
+    "jackstay-05": [
+     147,
+     3,
+     27
+    ],
+    "jackstay-06": [
+     141,
+     3,
+     31
+    ],
+    "jackstay-07": [
+     134,
+     3,
+     36
+    ],
+    "jackstay-08": [
+     128,
+     3,
+     41
+    ],
+    "jackstay-09": [
+     121,
+     3,
+     45
+    ],
+    "jackstay-10": [
+     115,
+     3,
+     50
+    ],
+    "jackstay-11": [
+     108,
+     3,
+     55
+    ],
+    "jackstay-12": [
+     102,
+     3,
+     59
+    ],
+    "jackstay-13": [
+     95,
+     3,
+     64
+    ],
+    "jackstay-14": [
+     89,
+     3,
+     68
+    ],
+    "jackstay-15": [
+     82,
+     3,
+     73
+    ],
+    "jackstay-16": [
+     75,
+     3,
+     77
+    ],
+    "jackstay-17": [
+     69,
+     3,
+     82
+    ],
+    "jackstay-18": [
+     62,
+     3,
+     86
+    ],
+    "jackstay-19": [
+     56,
+     3,
+     91
+    ],
+    "jackstay-20": [
+     49,
+     3,
+     95
+    ],
+    "jackstay-21": [
+     43,
+     3,
+     100
+    ],
+    "jackstay-22": [
+     36,
+     3,
+     104
+    ],
+    "jackstay-23": [
+     30,
+     3,
+     109
+    ],
+    "jackstay-24": [
+     23,
+     3,
+     113
+    ],
+    "jackstay-25": [
+     16,
+     3,
+     118
+    ],
+    "jackstay-26": [
+     10,
+     3,
+     122
+    ]
+   }
+  },
+  "bonaventure": {
+   "size": [
+    118,
+    7,
+    100
+   ],
+   "cells": 958,
+   "anchors": {
+    "pivot": [
+     69,
+     3,
+     40
+    ],
+    "sling": [
+     69,
+     3,
+     42
+    ],
+    "fore": [
+     113,
+     3,
+     3
+    ],
+    "peak": [
+     3,
+     3,
+     95
+    ],
+    "jackstay-01": [
+     107,
+     3,
+     9
+    ],
+    "jackstay-02": [
+     101,
+     3,
+     14
+    ],
+    "jackstay-03": [
+     95,
+     3,
+     19
+    ],
+    "jackstay-04": [
+     89,
+     3,
+     25
+    ],
+    "jackstay-05": [
+     83,
+     3,
+     30
+    ],
+    "jackstay-06": [
+     77,
+     3,
+     35
+    ],
+    "jackstay-07": [
+     71,
+     3,
+     40
+    ],
+    "jackstay-08": [
+     65,
+     3,
+     45
+    ],
+    "jackstay-09": [
+     58,
+     3,
+     51
+    ],
+    "jackstay-10": [
+     52,
+     3,
+     56
+    ],
+    "jackstay-11": [
+     46,
+     3,
+     61
+    ],
+    "jackstay-12": [
+     40,
+     3,
+     66
+    ],
+    "jackstay-13": [
+     34,
+     3,
+     70
+    ],
+    "jackstay-14": [
+     28,
+     3,
+     75
+    ],
+    "jackstay-15": [
+     22,
+     3,
+     80
+    ],
+    "jackstay-16": [
+     16,
+     3,
+     85
+    ],
+    "jackstay-17": [
+     9,
+     3,
+     91
+    ]
+   }
+  }
+ },
+ "masts": {
+  "fore": {
+   "heel": 17.5,
+   "platform": 250.3,
+   "truck": 426.7,
+   "x": 605
+  },
+  "main": {
+   "heel": 9.0,
+   "platform": 282.2,
+   "truck": 490.3,
+   "x": 379
+  },
+  "mizzen": {
+   "heel": 76.0,
+   "platform": 239.8,
+   "truck": 328.8,
+   "x": 265
+  },
+  "bonaventure": {
+   "heel": 118.0,
+   "platform": 227.5,
+   "truck": 237.0,
+   "x": 195
+  }
+ },
+ "lists": {
+  "mast-fore": [
+   10401,
+   "1faebc3ba97dcb9f1e0569cc34982d49908ae1ee7812444b83280688dd2c6e12"
+  ],
+  "mast-main": [
+   12169,
+   "10ed72737e0744146c7060d1c592cb3999e2be012d774a1d6aa44787f0a8bd62"
+  ],
+  "mast-mizzen": [
+   4294,
+   "2a43b2d7dbdc460d4717e90c455d67e66268dd963b3335b2e36dec89a8eda8c5"
+  ],
+  "mast-bonaventure": [
+   884,
+   "237cd8414d8b6dee37265839b80f14c4614652b4a1f1dc7972bb2208aca36219"
+  ],
+  "bowsprit": [
+   5244,
+   "7ad28769c3fafa65001ba0829826b4a998e7e0f480efd21fb397195ce638e4a7"
+  ],
+  "lateen-mizzen": [
+   1430,
+   "95d0269b813aaea72976d844dfc8a4305330465488de601e42f613d7ccad6835"
+  ],
+  "lateen-bonaventure": [
+   958,
+   "fb1f422ba84a1490a3c2e05af20818bf9c64985e8126499dc328081075ebc21b"
+  ],
+  "bowsprit_hole": [
+   212,
+   "40115ae579fb9f5dbc2b9f4f9ea29b30e64943f6be44f3dc6ae7c53a624850a3"
+  ]
+ }
+}

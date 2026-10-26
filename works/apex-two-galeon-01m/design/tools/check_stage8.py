@@ -76,6 +76,7 @@ for n, m in models.items():
         dev.append((round(float(d), 3), n))
 dev.sort(reverse=True)
 print('② 外框（gunsim vs CLI）最大差 %s（%d 門比過）' % (dev[0] if dev else None, len(dev)))
+print('   前五：', dev[:5], '｜不轉的（φ 是 0 或 ±90 的倍數）最大：', max((d for d in dev if abs(models[d[1]]['rotate'][2]) % 90 == 0), default=None))
 
 # ③④ 碰撞與砲口
 A = export_list(GB['assembly'], None, links=None)

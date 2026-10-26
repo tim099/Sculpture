@@ -22,7 +22,7 @@ def cli(*args, ok=(0,)):
 w = PL['work']
 path = os.path.abspath(os.path.join(design, 'masks', 'doors', 'door.vox.txt')).replace('\\', '/')
 n = sum(1 for l in open(path, encoding='utf-8') if l.strip() and not l.startswith('#'))
-if not os.path.exists(os.path.join(WORKS, w, 'work.json')):
+if w.startswith(HULL) and not os.path.exists(os.path.join(WORKS, w, 'work.json')):
     cli('op=work', 'sub=create', 'persona=apex-two', 'work=' + w, 'title=康塞普西翁號 艙壁門（直條木板、兩道鐵鉸鏈帶；左右開、鉸鏈直立；0.05 m，通用部件，kind=door）',
         'parent_work=' + HULL, 'size=%d,%d,%d' % tuple(PL['size']), 'tags=sub')
     cli('op=work', 'sub=update', 'persona=apex-two', 'work=' + w, 'meters_per_voxel=0.05')
@@ -31,7 +31,7 @@ if not os.path.exists(os.path.join(WORKS, w, 'work.json')):
     if not m or int(m.group(1).replace(',', '')) != n:
         raise SystemExit('✗ placed ≠ %d：%s' % (n, out[-800:]))
     print('✓ 建立 %s（%d 格）' % (w, n), flush=True)
-for an, at in PL['anchors'].items():
+for an, at in (PL['anchors'].items() if w.startswith(HULL) else []):      # 康塞普西翁號：引用別人的元件（gura-pinas-01m-door）⇒ 不動它的固定點
     cli('op=work', 'sub=anchor', 'persona=apex-two', 'work=' + w, 'name=' + an, 'at=%d,%d,%d' % tuple(at), 'overwrite=1',
         'note=門的鉸鏈軸（hinge-a 在上、hinge-b 在下 ⇒ 軸朝下 ⇒ 往模型 +x 開；draft_doors.py）')
 xyz = lambda v: ','.join('%g' % c for c in v)

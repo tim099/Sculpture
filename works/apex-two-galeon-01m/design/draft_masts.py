@@ -32,7 +32,7 @@ def main():
     WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
     A = export_list('apex-two-galeon-01m-assembly', None, links=None)
     own = set()                                                  # 本階段自己的件（重產時扣掉，別把自己當成船）
-    for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'bowsprit'):
+    for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'mast-bonaventure', 'bowsprit'):      # 康塞普西翁號：多一根 bonaventure
         if os.path.exists(os.path.join(WORKS, 'apex-two-galeon-01m-' + nm, 'work.json')):
             own |= set(map(tuple, export_list('apex-two-galeon-01m-' + nm, None)[:, :3].tolist()))
     occ = {tuple(r[:3]): r[3] for r in A.tolist() if tuple(r[:3]) not in own}
@@ -44,6 +44,9 @@ def main():
 
     def put(part, x, y, z, c):
         k = (int(x), int(y), int(z))
+        if part == 'bowsprit' and k in parts.get('mast-fore', {}):      # 康塞普西翁號：艏斜桅的腳靠在前桅旁邊（前桅往前傾 3°，x 611 那一欄兩根擠在一起 ⇒ link_overlap 6）⇒ 桅先放、艏斜桅讓開
+            skipped['bowsprit-at-fore'] = skipped.get('bowsprit-at-fore', 0) + 1
+            return
         if k in occ:
             skipped[part] = skipped.get(part, 0) + 1
             return
@@ -275,7 +278,7 @@ def main():
                             hits.add(k)
         clash[nm] = len(hits)
     R['yard_clash_cells'] = clash
-    stern_x = float(L.x_aft(133))
+    stern_x = float(L.x_aft(164))      # 康塞普西翁號：船尾樓頂 z 164（收穫號寫死 133）
     R['lateen_overhang_m'] = {k: round((stern_x - v['peak'][0]) * CELL, 2) for k, v in ends.items() if 'peak' in v}
     R['yards'] = place
     R['lateen'] = {k: {'size': v['size'], 'cells': len(v['cells']), 'anchors': v['anchors']} for k, v in lat.items()}
@@ -304,11 +307,11 @@ def main():
         json.dump({k: {'size': v['size'], 'anchors': v['anchors'], 'len_m': round(v['len_cells'] * CELL, 2), 'angle_deg': v['angle'], 'sail': v['sail']} for k, v in lat.items()}, f, ensure_ascii=False, indent=1)
     # 圖：側面（船＋桅＋帆桁的線）
     sc = 1.4
-    im = Image.new('RGB', (int(760 * sc) + 80, int(470 * sc) + 120), (250, 248, 240))
+    im = Image.new('RGB', (int(900 * sc) + 80, int(530 * sc) + 120), (250, 248, 240))
     d = ImageDraw.Draw(im)
     d.text((20, 10), '康塞普西翁號 新圖紙 06：桅、cofa、艏斜桅、帆桁（側面，從右舷看）　v1', fill=(0, 0, 0), font=font(18))
     X = lambda x: 40 + (x - 20) * sc
-    Z = lambda z: 50 + (470 - z) * sc
+    Z = lambda z: 50 + (530 - z) * sc
     best = {}
     for (x, y, z), c in list(occ.items()) + [(k, c) for cells in parts.values() for k, c in cells.items()]:
         if y >= YC and y > best.get((x, z), (-1, 0))[0]:
