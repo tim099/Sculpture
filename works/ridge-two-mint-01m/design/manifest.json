@@ -1,0 +1,407 @@
+{
+ "root": "ridge-two-mint-01m",
+ "works": {
+  "ridge-two-mint-01m-mint": {
+   "anchors": {
+    "door": [
+     60,
+     7,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     26,
+     146,
+     45
+    ]
+   },
+   "expect": "ridge-two-mint-01m-mint.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "common",
+      "use": "mint",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "帳房、圍牆、鑄造間與擺設",
+     "recolor": {},
+     "source": "ridge-two-mint-01m-mint-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "ridge-two-mint-01m-mint-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      7,
+      1
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      58,
+      1
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      104,
+      74,
+      1
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      46,
+      8,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    80
+   ],
+   "tags": "building,common",
+   "title": "鑄幣廠（共用：毛石帳房、鐵條窗、試金天平與錢箱；圍牆院子裡的銅錠與木炭；鑄造間的熔銅爐與風箱、砂床上的銅條、鐵砧、剪坯桌、打幣的樹墩與上下模）"
+  },
+  "ridge-two-mint-01m-mint-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mint-01m-mint-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    80
+   ],
+   "tags": "sub",
+   "title": "鑄幣廠｜帳房、圍牆、鑄造間與擺設"
+  },
+  "ridge-two-mint-01m-mint-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mint-01m-mint-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    80
+   ],
+   "tags": "sub",
+   "title": "鑄幣廠｜屋頂"
+  },
+  "ridge-two-mint-01m-powder-mill": {
+   "anchors": {
+    "door": [
+     60,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     36,
+     47,
+     42
+    ]
+   },
+   "expect": "ridge-two-mint-01m-powder-mill.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "common",
+      "use": "powder-mill",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "熬硝棚、土堤、搗藥機、火藥庫與擺設",
+     "recolor": {},
+     "source": "ridge-two-mint-01m-powder-mill-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "ridge-two-mint-01m-powder-mill-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      90,
+      121,
+      1
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "火藥庫-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      92,
+      134,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      98,
+      134,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      104,
+      134,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-3",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      92,
+      140,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-4",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      98,
+      140,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-5",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      104,
+      140,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-6",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      10,
+      12,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-熬硝棚",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    70
+   ],
+   "tags": "building,common",
+   "title": "火藥坊（共用：前半熬硝棚的爐台與銅鍋、結晶槽、木炭與硫磺；中間一道土堤；後半搗藥棚的木臼、六根木杵、凸輪軸與大手輪、篩粒晾藥的桌、厚牆的小火藥庫）"
+  },
+  "ridge-two-mint-01m-powder-mill-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mint-01m-powder-mill-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    70
+   ],
+   "tags": "sub",
+   "title": "火藥坊｜熬硝棚、土堤、搗藥機、火藥庫與擺設"
+  },
+  "ridge-two-mint-01m-powder-mill-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mint-01m-powder-mill-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    70
+   ],
+   "tags": "sub",
+   "title": "火藥坊｜屋頂"
+  }
+ }
+}
