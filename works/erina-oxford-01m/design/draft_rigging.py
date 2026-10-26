@@ -134,7 +134,7 @@ def main():
         tops[key] = (xc, zt, rt)
         for i, f in enumerate((-0.45, 0.0, 0.45), 1):
             dx = f * rt
-            dy = int(math.floor(math.sqrt(rt * rt - dx * dx))) + 1
+            dy = int(math.ceil(math.sqrt(rt * rt - dx * dx))) + 1          # 桅樓外緣外第一格（v1 floor ⇒ 後桅樓 r 10 時前緣那兩點落在桅樓的格裡）
             for s_, sg in (('S', 1), ('P', -1)):
                 A_['rim-%s-%d' % (s_, i)] = [int(math.floor(xc + dx + 0.5)), YC + sg * dy, zt - 1]
                 A_['rim-low-%s-%d' % (s_, i)] = [int(math.floor(xc + dx + 0.5)), YC + sg * dy, zt - 2]
@@ -220,7 +220,7 @@ def main():
                            ('mizzen-stay', '後桅/stay-head', '主桅/mizzenstay-foot', T['tm_stay']),
                            ('mizzen-topmast-stay', '後桅/tm-stay-head', '主桅/top-aft', T['tm_stay'])):
         rope(nm, a_, b_, 'standing/stays', th)
-    rope('bobstay-1', '船殼/bobstay-1', '艏斜桅/bob-1', 'standing/bowsprit', T['bobstay'])
+    rope('bobstay-1', '船首喙/bobstay-1', '艏斜桅/bob-1', 'standing/bowsprit', T['bobstay'])      # 步驟 6 起綁在 cutwater 前緣（以前綁艏柱，會穿過 beakhead 平台）
     for s_ in ('S', 'P'):
         rope('bowsprit-shroud-' + s_, '船殼/bs-shroud-' + s_, '艏斜桅/side-' + s_, 'standing/bowsprit', T['bobstay'])
     # ── 橫繩組（ratlines；lower 是繩梯：foot 舷牆內側的甲板、head 桅樓靠這一舷的邊）──
@@ -314,8 +314,9 @@ def main():
     # 旗
     FL = RG['flags']
     ew, eh = FL['ensign']
-    pkv = np.array(pk)
-    sail('ensign', ['model:後桅/yard-mizzen-lateen/peak', fmt(pkv - [ew, 0, 0]), fmt(pkv - [ew, 0, eh]), fmt(pkv - [0, 0, eh])],
+    DA = json.load(open(os.path.join(design, 'deco_anchors.json'), encoding='utf-8'))['ensign_staff']
+    fh = np.array(DA['flag-head'], float) + 0.5                                   # 船尾旗桿（步驟 6；以前暫掛在後桅三角帆桁後端）
+    sail('ensign', ['船尾旗桿/flag-head', fmt(fh - [ew, 0, 0]), fmt(fh - [ew, 0, eh]), '船尾旗桿/flag-foot'],
          [3], [2, 1], {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#ffffff', texture='textures/ensign.png')
     tz = VM['masts']['main']['truck_z']
     tx = ax('main', tz, 2)

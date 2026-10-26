@@ -1,9 +1,7 @@
-# 牛津號 TODO（下一步從哪接 —— 看 TASK-0972 未勾的「步驟 N」）
+# 牛津號 TODO（下一步從哪接 —— 看 TASK-0972 未勾的格）
 
-- 步驟 10 彈藥庫（底艙平台後段、火藥桶）、絞盤、甲板物件（讀 Ship_Magazine、Ship_Fittings）。
-- 步驟 11 舵（模型 kind=rudder＋stock-top＋spin；1660 年代 whipstaff、不放舵輪）、錨（共用元件）、錨鏈孔固定點（讀 Ship_Helm、Ship_Game §9 anchor）。
-- 步驟 12 砲門蓋板：後甲板底下那幾門炮甲板炮門是封閉的（讀 Ship_Portlids）。
-- 步驟 6 裝飾：beakhead、獅子船首像、船尾 quarter gallery、船名、窗的玻璃、船尾旗桿（ensign 挪過去）。
-- 步驟 14 匯入 Blockside（自己的 worktree）、ids、shipcheck、ladcheck；步驟 15 交船。
-- 之後：接進 Blocksail 船型清單（驗收第 3 格）。
-- ⚠ 第 1 格「沒核的原典核過一次」：Deane、Winfield、Lees 原書拿不到 —— 要跟 Tim 說。
+- Blockside：worktree `erina/oxford`（scratchpad/bs-oxford）合進 dev（施工場 op=start 單獨一步）；合併時 game.json ships 會跟 ame（拉貝爾號）、gura（藍鯊號）撞在清單最後 ⇒ 照順序都留。
+- Blocksail：world/fleet.js FLEET.types 加 frigate（220 t、hull oxford、war ⇒ AI 商人造船不挑它）、docs/TRADE_SIM 船型表一列、external/Blockside 指標、battle.html 重套；fleet_check 前後對拍。
+- 驗收第 1 格「沒核的原典」：Deane、Winfield、Lees 原書拿不到 —— 等 Tim 決定。
+- 驗收第 2 格的反向對照「照吃水與全長停不進太小一級的泊位」：全長 27 m（船身）、吃水 3.3 m ⇒ 照 Blocksail 泊位表量。
+- 可以之後再做：空艙房、quarter gallery、船尾燈、砲索（breeching、tackle）。

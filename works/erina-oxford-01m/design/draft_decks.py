@@ -237,8 +237,15 @@ def main():
             if f.endswith('.vox.txt'):
                 os.remove(os.path.join(dd, f))
     R['lists'] = {}
+    bp = os.path.join(design, 'masks', 'masts', 'bowsprit.vox.txt')         # 艏斜桅穿過的格（階段六開孔、由艏斜桅填滿）⇒ .state ＝ 甲板現在應有的樣子（給 delta_apply、check_decks）
+    bow = set(map(tuple, np.loadtxt(bp, delimiter=',', comments='#', dtype=int, ndmin=2)[:, :3].tolist())) if os.path.exists(bp) else set()
     for k, c in decks.items():
         R['lists']['deck-' + k] = dump(os.path.join(od, k + '.vox.txt'), c, '# 牛津號 甲板 %s（draft_decks.py；世界座標，at 0,0,0）\n' % k)
+        cs = c.copy()
+        for (x, y, z) in bow:
+            if 0 <= x - x0 < nx and 0 <= y - ylo < ny and 0 <= z < nz:
+                cs[x - x0, y - ylo, z] = 0
+        R['lists']['deck-' + k + '.state'] = dump(os.path.join(od, k + '.state.vox.txt'), cs, '# 牛津號 甲板 %s 扣掉艏斜桅穿過的格（draft_decks.py）\n' % k)
     for k, c in lad.items():
         R['lists']['ladders-' + k] = dump(os.path.join(ol, k + '.vox.txt'), c, '# 牛津號 梯子（上到 %s；世界座標，at 0,0,0）\n' % k)
     with open(os.path.join(design, 'ladder_points.json'), 'w', encoding='utf-8', newline='\n') as f:

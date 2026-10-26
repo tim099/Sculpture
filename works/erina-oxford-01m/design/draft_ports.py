@@ -124,9 +124,13 @@ def main():
                 f = first[yi, z]
                 if f < 0:
                     continue
-                stern_open[f, yi, z] = True
-                if f + 1 < nx and wall[f + 1, yi, z]:
-                    glass[f + 1, yi, z] = True
+                # 窗洞整段牆刻穿（外板、肋骨、內板）；玻璃 1 格放在窗洞第二層、另一件子作品（material=glass；Ship_Materials「窗的玻璃」：後面要是空的）
+                run = [f]
+                while run[-1] + 1 < nx and wall[run[-1] + 1, yi, z]:
+                    run.append(run[-1] + 1)
+                for xi in run:
+                    stern_open[xi, yi, z] = True
+                glass[run[1] if len(run) > 1 else f, yi, z] = True
         for yi in range(wdw['y0'] - 1 - ylo, wdw['y1'] + 2 - ylo):
             for z in range(wdw['z0'] - 1, wdw['z1'] + 2):
                 if wdw['y0'] - ylo <= yi <= wdw['y1'] - ylo and wdw['z0'] <= z <= wdw['z1']:
@@ -136,7 +140,6 @@ def main():
                     frame[f, yi, z] = True
     carve |= stern_open
     paint[frame & ~carve] = GOLD
-    paint[glass & ~carve] = GLASS
     paint[ring] = REVEAL
     paint[carve] = 0
     changes = (paint > 0) & wall & (paint != col)
@@ -187,7 +190,10 @@ def main():
         return len(idx), hashlib.sha256(open(path, 'rb').read()).hexdigest()
     n1, h1 = dump(os.path.join(out, 'carve.vox.txt'), carve, col, '# 牛津號 炮門與船尾窗開口（carvevox；第 4 欄 ＝ 刻之前的顏色，守門）\n')
     n2, h2 = dump(os.path.join(out, 'paint.vox.txt'), changes, acol, '# 牛津號 塗裝（stampvox overwrite=1：換色；不含刻掉的格）\n')
-    R['lists'] = {'carve': [n1, h1], 'paint': [n2, h2]}
+    gcol = np.zeros(wall.shape, np.uint8)
+    gcol[glass] = GLASS
+    n3, h3 = dump(os.path.join(out, 'glass.vox.txt'), glass, gcol, '# 牛津號 船尾窗玻璃（子作品 -stern-glass，關聯 meta material=glass；世界座標，at 0,0,0）\n')
+    R['lists'] = {'carve': [n1, h1], 'paint': [n2, h2], 'glass': [n3, h3]}
     # 圖紙：右舷側面＋船尾正面
     sc = 2.0
     Wp = int(nx * sc) + 120 + int(ny * sc) + 80
