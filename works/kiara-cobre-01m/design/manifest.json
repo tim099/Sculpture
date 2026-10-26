@@ -1,0 +1,229 @@
+{
+ "root": "kiara-cobre-01m",
+ "works": {
+  "kiara-cobre-01m-sanctuary": {
+   "anchors": {
+    "bell": [
+     71,
+     67,
+     91
+    ],
+    "door": [
+     80,
+     62,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "kiara-cobre-01m-sanctuary.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "16,24",
+      "style": "es",
+      "use": "caridad-cobre",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、前廊與擺設",
+     "recolor": {},
+     "source": "kiara-cobre-01m-sanctuary-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "kiara-cobre-01m-sanctuary-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      63,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-正門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      39,
+      80,
+      22
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-窗90",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      118,
+      80,
+      22
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗90",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      39,
+      122,
+      22
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-窗132",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      118,
+      122,
+      22
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗132",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      130,
+      149,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "聖器室-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      61.5,
+      46,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-前廊左",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      99.5,
+      46,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-前廊右",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    160,
+    240,
+    150
+   ],
+   "tags": "building,es",
+   "title": "慈悲聖母聖所（Santuario de la Caridad del Cobre，1660 年代：砌石刷白的長堂、雙拱鐘牆、木柱前廊、龕裡的聖像與小船；銅的還願物、聖器室；石牆圍的前庭與石十字）"
+  },
+  "kiara-cobre-01m-sanctuary-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "kiara-cobre-01m-sanctuary-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    240,
+    150
+   ],
+   "tags": "sub",
+   "title": "慈悲聖母聖所｜牆、前廊與擺設"
+  },
+  "kiara-cobre-01m-sanctuary-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "kiara-cobre-01m-sanctuary-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    240,
+    150
+   ],
+   "tags": "sub",
+   "title": "慈悲聖母聖所｜屋頂"
+  }
+ }
+}
