@@ -1,0 +1,199 @@
+{
+ "note": "draft_fit.py（步驟 16 補做）產生；build_fit.py 照它落格",
+ "hatches": [
+  {
+   "name": "艙蓋-後",
+   "work": "ame-labelle-01m-hatch-aft",
+   "title": "拉貝爾號 後艙口艙蓋（門：kind=door）",
+   "host": "ame-labelle-01m-deck-main",
+   "size": [
+    9,
+    11,
+    2
+   ],
+   "at": [
+    125,
+    75,
+    30
+   ],
+   "mask": "masks/fit/hatch-aft.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     8,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 100
+   }
+  },
+  {
+   "name": "艙蓋-主",
+   "work": "ame-labelle-01m-hatch-main",
+   "title": "拉貝爾號 主艙口艙蓋（貨艙梯子的井；嵌在圍板裡；門：kind=door）",
+   "host": "ame-labelle-01m-deck-main",
+   "size": [
+    15,
+    11,
+    2
+   ],
+   "at": [
+    147,
+    75,
+    29
+   ],
+   "mask": "masks/fit/hatch-main.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     14,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 45
+   }
+  },
+  {
+   "name": "艙蓋-前",
+   "work": "ame-labelle-01m-hatch-fore",
+   "title": "拉貝爾號 前艙口蓋（封死、嵌在圍板裡、走得過去；關聯）",
+   "host": "ame-labelle-01m-deck-main",
+   "size": [
+    9,
+    9,
+    1
+   ],
+   "at": [
+    168,
+    76,
+    30
+   ],
+   "mask": "masks/fit/hatch-fore.vox.txt",
+   "link": true
+  }
+ ],
+ "galley": {
+  "name": "爐灶",
+  "host": "ame-labelle-01m-deck-main",
+  "work": "kaguya-gloire-01m-galley",
+  "at": [
+   193.5,
+   80,
+   31
+  ],
+  "pivot": [
+   22,
+   16,
+   0
+  ],
+  "scale": 0.18,
+  "rotate": 0,
+  "meta": {
+   "kind": "galley",
+   "deco": null
+  }
+ },
+ "windlass": {
+  "work": "ame-labelle-01m-windlass",
+  "title": "拉貝爾號 絞盤（船首樓下的 windlass）",
+  "link": "絞盤",
+  "mask": "masks/fit/windlass.vox.txt"
+ },
+ "room": {
+  "work": "ame-labelle-01m-hold-room",
+  "title": "拉貝爾號 貨艙前段艙房（艙壁＋門洞）",
+  "host": "ame-labelle-01m-deck-hold",
+  "link": "艙房",
+  "mask": "masks/fit/hold_room.vox.txt",
+  "anchors": {
+   "fore.min": [
+    164,
+    73,
+    8
+   ],
+   "fore.max": [
+    184,
+    87,
+    25
+   ],
+   "fore.door": [
+    163,
+    80,
+    8
+   ]
+  },
+  "meta": {
+   "kind": "rooms"
+  }
+ },
+ "ratlines": [
+  {
+   "name": "fore-lower-S",
+   "foot": [
+    198,
+    91,
+    42
+   ],
+   "head": [
+    201,
+    84,
+    105
+   ]
+  },
+  {
+   "name": "fore-lower-P",
+   "foot": [
+    198,
+    69,
+    42
+   ],
+   "head": [
+    201,
+    76,
+    105
+   ]
+  },
+  {
+   "name": "main-lower-S",
+   "foot": [
+    131,
+    96,
+    28
+   ],
+   "head": [
+    134,
+    85,
+    123
+   ]
+  },
+  {
+   "name": "main-lower-P",
+   "foot": [
+    131,
+    64,
+    28
+   ],
+   "head": [
+    134,
+    75,
+    123
+   ]
+  }
+ ]
+}

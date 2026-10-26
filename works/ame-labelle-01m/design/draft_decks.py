@@ -64,6 +64,10 @@ def main():
         s, xs, yc = ld['dir'], ld['xs'], YC + ld['dy']
         xa, xb = sorted((xs + s * 2, xs + s * 16))         # 從第一階的上方開：lo 點（第一階）頭頂 14 格要空（v1 從 +4 開 ⇒ orlop 梯子 lo 點頂到主甲板的橫樑）
         m = (X[:, None] >= xa) & (X[:, None] <= xb) & (np.abs(Y - yc)[None, :] <= th + 2)
+        kf = ld.get('well_keep_fwd', 0)                    # 井在梯頭那一端留幾欄的兩角當甲板（踏板寬度外；步驟 16：主甲板走路格從井邊接到梯頭那一塊）
+        if kf:
+            xe = xb if s > 0 else xa
+            m &= ~((np.abs(X[:, None] - xe) < kf) & (np.abs(Y - yc)[None, :] >= th + 1))
         hole[ld['up']] |= m
         side = (X[:, None] >= xa) & (X[:, None] <= xb) & (np.abs(Y - yc)[None, :] == th + 3)
         low_end = (X[:, None] == xs + s * 1) & (np.abs(Y - yc)[None, :] <= th + 3)
