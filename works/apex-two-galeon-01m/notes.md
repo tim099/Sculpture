@@ -143,3 +143,37 @@
 - **舵輪＋座**：沿用憲法號雙舵輪 `-wheel`（spin rudder 540）＋木頭雙柱座 `-wheel-stand`，後甲板中線 x 285（後桅前、羅經櫃後）。⚠ 1680 年代西班牙船用舵桿（pinzote），遊戲要舵輪（同收穫號、藍鯊號）。
 - **錨**：共用錨元件 ×2（scale 1.0、kind=anchor、anchor=bower）吊在船頭舷外 x 620（前桅支索板、船首樓第 2 門砲之前）、ring z 144、錨臂順著船殼切線（rz ±45）、離船殼 21 格（試了 x 614–624 × z 136–148）；錨架 `-anchor-gear`（billboard 托板，關聯 `錨架`）3,944 格；錨鏈孔固定點 hawse-S／P (626, ±18, 88)（只登記、沒有開孔）。
 - 讀數（`tools/check_stage95.py`，從作品讀）：舵、錨架結果帳 0 差；舵模型 CLI ok、stock-top 8 格內有船殼、舵跟組裝件重疊 0、轉 ±35° 掃進實心 0；錨 2 隻 CLI ok、撞實心 0、腳是錨架、來源有 ring；hawse 在船殼上、在那一舷；問題 0。舵輪與座撞實心 0。遊戲讀的那一份（組裝件 `export format=parts`）：舵、舵輪都有 spin。**反向對照**：`--drop=錨-P` ⇒ 只報 P 舷沒有錨。
+
+## 步驟 12 砲門蓋板（2026-10-27）
+工具 `design/tools/portlids.py`（照抄藍鯊號的通用工具；改開頭的表成康塞普西翁號、兩層（第一、二層 ＝ 封閉砲甲板）、一件蓋板；第三層多在船腰露天 ⇒ 不做，同 §9.12）⇒ `portlids_placement.json`、`verify_portlids.json`、蓋板子作品 `-portlid`（9×10×2：外面船殼褐 136、裡面紅 224、鉸鏈板 73）。
+- 54 片：第一層 26 ＋ 第二層 26 ＋ 第一層船尾追擊砲 2（P 舷 27、rotate 180 − rz，⛔ 不用 mirror=y）；meta kind=portlid、lid_of ＝ 砲的物件 id（先做步驟 14 的匯入＋`admin.py ids`）。
+- 讀數（`portlids.py check`）：開著撞砲 0、收砲後關著撞砲 0；關著撞船最多 2.04%（> 5% 的 0 片）；砲門 54／54 蓋滿；掛上去 180 格 0 差、models_bad 0、鉸鏈最大差 0.0005。**反向對照**：house 0（砲不收）⇒ 54 片全撞砲；mirror=y ⇒ 26 片往上開。
+  ⚠ 開著撞船 32 樣本：第一層第 4 門兩舷（船尾開始收窄、外表面沿 x 斜一格 ⇒ 鉸鏈那一邊壓進外表面一層）；追擊砲收砲（house）時砲身擦船 45 樣本 ×2 —— 都只是畫面，照實留著。
+- 🩸 遊戲匯入檢查第一次 ✗ 2：第一層第 13 門兩片「關上時穿過縮回去的砲（house 6）」⇒ `HOUSE_ADJ` 這兩片至少 8（檢查建議）；⚠ 第 4 門兩片 close 86.3° 關上 5% 落進船殼 ⇒ `CLOSE_ADJ` −2°（84.3°）。重匯 ⇒ ✗ 0。重套模型時 `ids` 發的 id 保留（meta 合併）。
+
+## 步驟 14 給遊戲的 meta 與匯入（2026-10-27）
+- 組裝件的關聯 `船殼` meta kind=ship、waterline_z 60（第一次標在組裝件 part=work，遊戲讀不到 ⇒ 照藍鯊號標在關聯上；part=work 那一筆留著沒害）；ropecheck 718 端 ok（沒有 bind／snap）。
+- Blockside 自己的 worktree（分支 apex-two/0969-galeon，從 refs/heads/dev —— `dev` 同時是遠端名，要寫全名）：`admin.py import --work apex-two-galeon-01m-assembly --id concepcion --name 康塞普西翁號` ⇒ `metasync` ⇒ `ids`（271 個，加蓋板之後再 54 個）⇒ reimport。
+- 給遊戲那側填的 geo（z 從龍骨底，格 ＝ 0.1 m）：水線 60；甲板地板 orlop 55、main 75–81（舷弧）、puente 95–101、tercera 115–121、alcázar 135、castillo 135、toldilla 153 ⇒ `spar [115,155]`、`marines [35,170]`（外框含後桅帆桁與艏斜桅：x 136–787）、`center 110`、`aim 90`、`aimZ [30,460]`、`deckAim [76,130]`、`rigAim [175,450]`；船員照預設。
+  🩸 import／ids 會把整份 game.json 照 json.dump 重排（別人那幾段的單行物件被展開）⇒ 照 HEAD 原樣、只插回新船那一段（先斷言其他船與其他鍵逐字相同）。
+- 讀數：reimport checksum **420549008**、格 954,007、模型 278（網格去重 113 份）、繩 359；shipcheck ✗ 0 ⚠ 10（門 6 扇正下方沒有空格 —— 門洞在水線上 5 m 以上；第一層最後一門兩舷砲班 4／5 —— 離追擊砲 2.5 m；桅頂水手 12／16 —— bonaventure 沒有桅樓；第一層左舷追擊砲的送藥路線不連通、93／94 門走得到取用點）；ladcheck 11 座全部 ✓；廚房 1 座、廚師 1、站得住的面 4。
+- 船卡：1,822 t、水線長 50.7 m、94 門、齊射 503、帆 13、船員 482；外框全長 **65.1 m**（vxk 檔頭 bbox × 0.1；藍鯊號、收穫號同法量出 49.8／59.6 ＝ Blocksail hullLoa）。
+- 對打（Blockside `report.py`，concepcion vs cosecha、seed 1／2、120 秒、jobs 1）：開火 699、命中 56%；砲可開 81%／裝填 16%；砲被打掉平均 1.5／94；航速最高 5.8／8.5 節（平均 4.4／5.9）⇒ 開得動、砲打得出去。
+- **泊位反向對照**（gura 的 `berth_fit.cjs`，照 Blocksail 地球儀 docksFit：泊位 loa ≥ 全長、泊位與航道水深 ≥ 吃水 ＋ 1.5）：吃水 6.0、全長 65.1 ⇒ 7 城 66 個泊位：large 24／24、huge 2／2、titan 7／7 停得進；**small 0／21**（21 座太短 36 < 65.1、8 座也太淺）、boat 0／12。對照組 30 m、吃水 2 m ⇒ small 21／21。
+- Blockside：b720625（ff 合進 dev、已推；`_cache/concepcion.vxk` 先複製進共用 _cache）。
+
+## 步驟 15 交船（2026-10-27）
+照 Ship_Game §10 換一艘船時的檢查表逐條看過（遊戲那一份：`admin.py shipcheck --id concepcion` ✗ 0 ⚠ 10）：
+- ✓ ropecheck 718 端 ok、沒有 bind／snap；組裝件名 ＝ 康塞普西翁號、船殼帶 sub；mpv 0.1 每件都記（門板、爐灶、砲、火藥桶、帆桁等元件照它們自己的 0.05／0.02 m，模型明寫 scale）；開工前查過現有元件（新做的只有：船首喙、鍍金獅子、船尾裝飾與拱形板、兩根三角帆桁、蓋板 —— 個性裝飾與本船尺寸的部件）。
+- ✓ 砲 94、帆桁 11、舵輪、火藥桶 120、絞盤、羅經櫃、小艇、門 6、爐灶都是外部模型帶 kind；舵 kind=rudder＋stock-top（開局就掉的模型 ＝ 匯入檢查 ✗ 那一類，0）；spin：舵 ±35°、舵輪 540°；操舵鏈「舵令 ⇒ 甲板-alcazar/舵輪 ⇒ 舵 100%」。
+- ✓ 關聯 `船殼` kind=ship waterline_z 60（高度在步驟 14 那一段）；甲板 7 層 kind=deck、梯子 11 座 kind=ladders 四個固定點；ladcheck 11 座全部 ✓；ratlines 橫繩組、下桅 6 組繩梯；三角帆桁 2 根 rig=lateen＋fore；彈藥庫有桶、93／94 門送藥走得到；窗的玻璃獨立關聯 material=glass（698 格）；廚房 kind=galley（不標 deco）、站得住的面 4。
+- ✓ 繩與帆的端點綁 model:、ropes_broken／sails_broken／models_broken 0；帆 meta 13／13、帆自己的繩 28／28、帆桁 sail ＝ 帆名；帆裝三段表在步驟 8；組裝件 1 元件、空腔 0、link_overlap 0；vxk checksum 420549008（reimport 跟作品現在這份一樣）。
+- ✓ 舷側砲門蓋板 54 片（第一、二層＋船尾追擊砲）；匯入檢查「砲門」✗ 0。
+- 不適用：槳、撞角、蒸汽、鐵甲與金屬部件、迴旋砲／砲塔、砲身與砲座拆兩件、空艙房（沒隔艙，艙房 0）。
+- ⚠ 沒在遊戲畫面裡親眼看過的：W／S 每一段帆裝與「全收」那一刻、窗玻璃的透明與反光 —— 等 Tim 看那一格一起看。
+- ⚠ 照實留著的匯入檢查 ⚠ 10：見步驟 14。
+
+### todo（沒做的，照實留著）
+- 砲具與砲索（94 門 × 5 條；Ship_Guns §4.4）。
+- 第一層左舷追擊砲的送藥路線（走路格不連通，遊戲照直線送）。
+- 船頭往上彎進船首樓的 head rail（Tim 參考圖那種）；錨鏈孔只登記固定點、沒開孔；bonaventure 沒有桅樓（桅頂水手 12／16）。

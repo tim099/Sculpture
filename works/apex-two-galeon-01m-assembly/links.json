@@ -19,7 +19,12 @@
 			"enabled": true,
 			"created_at": "2026-10-27T01:47:08",
 			"persona": "apex-two",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 60
+			}
 		},
 		{
 			"name": "甲板-orlop",
@@ -43,6 +48,7 @@
 			"meta": {
 				"deck": "orlop",
 				"floor": "230:55,520:55",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "底艙（bodega）",
@@ -71,6 +77,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "165:81,213:78,314:75,478:75,625:78",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "第一層甲板（primera cubierta）",
@@ -99,6 +106,7 @@
 			"meta": {
 				"deck": "puente",
 				"floor": "161:101,314:95,478:95,625:98",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "第二層甲板（segunda cubierta）",
@@ -127,6 +135,7 @@
 			"meta": {
 				"deck": "tercera",
 				"floor": "156:121,314:115,478:115,625:118",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "第三層甲板（tercera cubierta）",
@@ -155,6 +164,7 @@
 			"meta": {
 				"deck": "alcazar",
 				"floor": "153:135,330:135",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 4,
 				"name": "後甲板（alcázar）",
@@ -183,6 +193,7 @@
 			"meta": {
 				"deck": "toldilla",
 				"floor": "149:153,240:153",
+				"id": "deck-6",
 				"kind": "deck",
 				"level": 6,
 				"name": "船尾樓（toldilla）",
@@ -211,6 +222,7 @@
 			"meta": {
 				"deck": "castillo",
 				"floor": "560:135,625:135",
+				"id": "deck-7",
 				"kind": "deck",
 				"level": 5,
 				"name": "船首樓（castillo）",
@@ -235,7 +247,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:33:38",
 			"persona": "apex-two",
-			"note": "步驟 6（TASK-0969）"
+			"note": "步驟 6（TASK-0969）",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "船首像",
@@ -255,7 +270,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:33:40",
 			"persona": "apex-two",
-			"note": "步驟 6（TASK-0969）"
+			"note": "步驟 6（TASK-0969）",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "船尾裝飾",
@@ -275,7 +293,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:33:41",
 			"persona": "apex-two",
-			"note": "步驟 6（TASK-0969）"
+			"note": "步驟 6（TASK-0969）",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "船尾拱形板",
@@ -295,7 +316,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:33:42",
 			"persona": "apex-two",
-			"note": "步驟 6（TASK-0969）"
+			"note": "步驟 6（TASK-0969）",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "船尾窗玻璃",
@@ -317,6 +341,7 @@
 			"persona": "apex-two",
 			"note": "步驟 6（TASK-0969）：窗的玻璃（Ship_Materials）",
 			"meta": {
+				"id": "part-5",
 				"material": "glass"
 			}
 		},
@@ -338,7 +363,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:40:28",
 			"persona": "apex-two",
-			"note": "步驟 7（TASK-0969）"
+			"note": "步驟 7（TASK-0969）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "主桅",
@@ -358,7 +386,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:40:30",
 			"persona": "apex-two",
-			"note": "步驟 7（TASK-0969）"
+			"note": "步驟 7（TASK-0969）",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "後桅",
@@ -378,7 +409,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:40:31",
 			"persona": "apex-two",
-			"note": "步驟 7（TASK-0969）"
+			"note": "步驟 7（TASK-0969）",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "船尾小後桅",
@@ -398,7 +432,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:40:32",
 			"persona": "apex-two",
-			"note": "步驟 7（TASK-0969）"
+			"note": "步驟 7（TASK-0969）",
+			"meta": {
+				"id": "part-9"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -418,7 +455,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:40:34",
 			"persona": "apex-two",
-			"note": "步驟 7（TASK-0969）"
+			"note": "步驟 7（TASK-0969）",
+			"meta": {
+				"id": "part-10"
+			}
 		},
 		{
 			"name": "支索板",
@@ -438,7 +478,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T02:47:06",
 			"persona": "apex-two",
-			"note": "步驟 8（TASK-0969）"
+			"note": "步驟 8（TASK-0969）",
+			"meta": {
+				"id": "part-11"
+			}
 		},
 		{
 			"name": "彈藥庫",
@@ -460,6 +503,7 @@
 			"persona": "apex-two",
 			"note": "步驟 10（TASK-0969）",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 12000
@@ -483,7 +527,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T03:22:06",
 			"persona": "apex-two",
-			"note": "步驟 10（TASK-0969）"
+			"note": "步驟 10（TASK-0969）",
+			"meta": {
+				"id": "part-12"
+			}
 		},
 		{
 			"name": "錨架",
@@ -503,7 +550,10 @@
 			"enabled": true,
 			"created_at": "2026-10-27T03:28:45",
 			"persona": "apex-two",
-			"note": "步驟 11（TASK-0969）"
+			"note": "步驟 11（TASK-0969）",
+			"meta": {
+				"id": "part-13"
+			}
 		}
 	]
 }

@@ -38,7 +38,8 @@ RZ_FLAT = 2.0
 HOUSE_MIN = 4
 OUTLIER = 3                  # 蓋板範圍裡外表面離擬合平面超過 3 格的欄 ＝ 有東西貼著船殼凸出來（餘燼號上層 13 號砲門後緣的鐵件凸 12 格）⇒ 這一片不做
 CLOSE_BIAS = -2.0            # close_deg 少 2°：船殼是凸的，照平面擬合的角度關上會切進鼓出來那一塊（遊戲匯入檢查 v1：憲法號 7、9 號 6–7% 落進船殼）；少 2° 底緣只離開約 0.4 格
-CLOSE_ADJ = {}      # 康塞普西翁號：先不個別調（藍鯊號的 砲M-P03／S03 −2° 是那艘的讀數）；遊戲匯入檢查報了再照 Ship_Portlids 加
+CLOSE_ADJ = {'砲M-P04': -2.0, '砲M-S04': -2.0}   # 康塞普西翁號：遊戲匯入檢查報這兩片 close_deg 86.3° 關上 5% 落進船殼（建議 85.8° 以下；這支量 2.0%）⇒ 照 Ship_Portlids 個別再少 2°
+HOUSE_ADJ = {'砲M-P13': 8, '砲M-S13': 8}      # 康塞普西翁號：遊戲匯入檢查 ✗「關上時穿過縮回去的砲：2 個取樣點（house 6 格）」，建議 house=8（照幾何至少 6.25 ＋ 1）⇒ 這兩片的 house 至少 8
 SLAB = 16
 OFFS = np.array([[0.5, 0.5, 0.5]] + [[0.3 + 0.4 * (k & 1), 0.3 + 0.4 * ((k >> 1) & 1), 0.3 + 0.4 * ((k >> 2) & 1)] for k in range(8)])
 
@@ -242,7 +243,7 @@ def draft(cache):
             # house：關上的蓋板（照遊戲的寫法繞鉸鏈反轉 close_deg）跟砲不碰，最少要沿砲軸縮幾格（0.5 一步）—— ⛔ 只照外表面估會少算蓋板的厚度與斜度（v1 量到少 2 格）
             cl = turn(place(lid_samp[S['lid']], pose), place(ha_, pose)[0], place(hb_, pose)[0] - place(ha_, pose)[0], -close)
             min_pull = next(k2 * 0.5 for k2 in range(0, 61) if sum(cross_hits(cl, gw - ax[None] * (k2 * 0.5))) == 0)
-            house = max(HOUSE_MIN, int(math.ceil(min_pull + 0.5)))          # 至少留半格：遊戲照網格表面取樣（62_ports.js portHits），跟這裡的格心＋角落不一樣（v1 剛好等於 ⇒ 匯入檢查 ✗ 1–16 點）
+            house = max(HOUSE_MIN, int(math.ceil(min_pull + 0.5)), HOUSE_ADJ.get(gname, 0))          # 至少留半格：遊戲照網格表面取樣（62_ports.js portHits），跟這裡的格心＋角落不一樣（v1 剛好等於 ⇒ 匯入檢查 ✗ 1–16 點）
             meta = {'kind': 'portlid', 'lid_of': g['meta']['id'], 'close_deg': close, 'house': house}
             if aft:                                                                    # 船尾板的座標換回船上：rotate ＋90、at ＝（sx − v, u, z）
                 at, rot = [r1(sx - at[1], 2), at[0], at[2]], r1(rot + 90)
