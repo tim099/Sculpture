@@ -1,0 +1,1751 @@
+{
+ "root": "basecamp-es-01m",
+ "works": {
+  "basecamp-es-01m-chapel": {
+   "anchors": {
+    "bell": [
+     40,
+     17,
+     69
+    ],
+    "door": [
+     40,
+     12,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-chapel.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "es",
+      "use": "chapel",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆與擺設",
+     "recolor": {},
+     "source": "basecamp-es-01m-chapel-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-chapel-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      13,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      11,
+      42,
+      20
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      66,
+      42,
+      20
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      11,
+      74,
+      20
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      66,
+      74,
+      20
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      25.5,
+      14,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門左",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "building,es",
+   "title": "小教堂（ermita：砌石刷白的一間小堂、紅陶瓦兩坡頂、正面鐘牆 espadaña 掛一口鐘、切石門框、木欄杆窗；祭壇屏、長凳；石鋪前庭與石十字）"
+  },
+  "basecamp-es-01m-chapel-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-chapel-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "小教堂｜牆與擺設"
+  },
+  "basecamp-es-01m-chapel-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-chapel-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "小教堂｜屋頂"
+  },
+  "basecamp-es-01m-customs": {
+   "anchors": {
+    "door": [
+     80,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-customs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "16,14",
+      "style": "es",
+      "use": "customs",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、拱廊、陽台與貨院",
+     "recolor": {},
+     "source": "basecamp-es-01m-customs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-customs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      27,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "樓下-大門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      27,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓下-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      126,
+      27,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓下-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      67,
+      102,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "後-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 180
+    },
+    {
+     "at": [
+      14,
+      3,
+      42
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      48,
+      3,
+      42
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      3,
+      42
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      126,
+      3,
+      42
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      3,
+      50,
+      42
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-樓上窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      3,
+      56,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-樓下窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      154,
+      50,
+      42
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-樓上窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      154,
+      56,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-樓下窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      20,
+      14,
+      1
+     ],
+     "meta": {},
+     "name": "糖桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      32,
+      14,
+      1
+     ],
+     "meta": {},
+     "name": "糖桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      56,
+      16,
+      1
+     ],
+     "meta": {},
+     "name": "貨箱-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      96,
+      16,
+      1
+     ],
+     "meta": {},
+     "name": "貨箱-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      66.5,
+      28,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-拱廊",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    160,
+    140,
+    110
+   ],
+   "tags": "building,es",
+   "title": "海關（aduana：兩層砌石刷白、臨路四跨拱廊、紅陶瓦四坡頂、樓上木陽台與木欄杆窗、紋章石牌；拱廊下大橫桿秤與待驗的貨；後面圍牆的貨院）"
+  },
+  "basecamp-es-01m-customs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-customs-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    140,
+    110
+   ],
+   "tags": "sub",
+   "title": "海關｜牆、拱廊、陽台與貨院"
+  },
+  "basecamp-es-01m-customs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-customs-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    140,
+    110
+   ],
+   "tags": "sub",
+   "title": "海關｜屋頂"
+  },
+  "basecamp-es-01m-fort": {
+   "anchors": {
+    "door": [
+     150,
+     59,
+     0
+    ],
+    "flag": [
+     140,
+     140,
+     111
+    ],
+    "flag-bottom": [
+     142,
+     140,
+     90
+    ],
+    "flag-top": [
+     142,
+     140,
+     108
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-fort.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|172,140,90|172,140,108",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "30,30",
+      "style": "es",
+      "use": "fort",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "操場（營房、井、旗杆）",
+     "recolor": {},
+     "source": "basecamp-es-01m-fort-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "rampart",
+      "floor": "0:36,300:36",
+      "kind": "deck",
+      "level": 1,
+      "material": "stone",
+      "name": "土台",
+      "thick": 6
+     },
+     "mirror": "",
+     "name": "堡牆、土台與哨亭（甲板）",
+     "recolor": {},
+     "source": "basecamp-es-01m-fort-rampart",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "magazine",
+      "material": "stone",
+      "pos": "mid",
+      "powder_lb": 400
+     },
+     "mirror": "",
+     "name": "火藥庫",
+     "recolor": {},
+     "source": "basecamp-es-01m-fort-magazine",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-fort-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      140,
+      59,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      152,
+      171,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "營房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      118,
+      171,
+      10
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "營房-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      180,
+      171,
+      10
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "營房-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      169,
+      108,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "火藥庫-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      134.5,
+      60,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    300,
+    300,
+    130
+   ],
+   "tags": "building,es",
+   "title": "碉堡（fuerte：切石四角稜堡、斜牆腳與腰線、稜堡尖四座圓頂哨亭 garita、九個砲眼與 6 磅砲、門上紋章石牌；操場的營房、火藥庫、蓄水池井口、旗杆）"
+  },
+  "basecamp-es-01m-fort-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-fort-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    130
+   ],
+   "tags": "sub",
+   "title": "碉堡｜操場（營房、井、旗杆）"
+  },
+  "basecamp-es-01m-fort-magazine": {
+   "anchors": {
+    "blast": [
+     187,
+     115,
+     10
+    ],
+    "door": [
+     169,
+     115,
+     0
+    ]
+   },
+   "links": [],
+   "mask": "basecamp-es-01m-fort-magazine.vox.txt",
+   "models": [
+    {
+     "at": [
+      180,
+      106,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      180,
+      120,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      192,
+      106,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-3",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      192,
+      120,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-4",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    130
+   ],
+   "tags": "sub",
+   "title": "碉堡｜火藥庫"
+  },
+  "basecamp-es-01m-fort-rampart": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-fort-rampart.vox.txt",
+   "models": [
+    {
+     "at": [
+      125,
+      81,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲1",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      175,
+      81,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲2",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      81,
+      150,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲3",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      90
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      219,
+      150,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲4",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      270
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      150,
+      219,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲5",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      0
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      46,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲6",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      198
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      46,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲7",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      162
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      254,
+      254,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲8",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      18
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      46,
+      254,
+      36
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲9",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      342
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    130
+   ],
+   "tags": "sub",
+   "title": "碉堡｜堡牆、土台與哨亭（甲板）"
+  },
+  "basecamp-es-01m-fort-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-fort-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    300,
+    300,
+    130
+   ],
+   "tags": "sub",
+   "title": "碉堡｜屋頂"
+  },
+  "basecamp-es-01m-hospital": {
+   "anchors": {
+    "bell": [
+     32,
+     9,
+     55
+    ],
+    "door": [
+     128,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-hospital.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "20,16",
+      "style": "es",
+      "use": "hospital",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "病房、小堂與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-hospital-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-hospital-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      59,
+      51,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "隔牆-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      22,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "小堂-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      118,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "病房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      76,
+      5,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      94,
+      5,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      142,
+      5,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      164,
+      5,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      76,
+      74,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 180
+    },
+    {
+     "at": [
+      142,
+      74,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 180
+    },
+    {
+     "at": [
+      164,
+      74,
+      16
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "後-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 180
+    },
+    {
+     "at": [
+      109,
+      74,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "病房-後門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      3,
+      31,
+      18
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "小堂-側窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      45,
+      119,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      141,
+      119,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "藥房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      166,
+      119,
+      10
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "藥房-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      112.5,
+      6,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-病房門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    200,
+    160,
+    110
+   ],
+   "tags": "building,es",
+   "title": "醫院（hospital：臨路一長棟砌石刷白、左端小堂與鐘牆、右邊兩排床的病房、紅陶瓦兩坡頂、切石門框與紋章石牌；後院三跨拱廊、廚房與藥房、蓄水池井口、藥草畦）"
+  },
+  "basecamp-es-01m-hospital-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-hospital-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    200,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "醫院｜病房、小堂與院子"
+  },
+  "basecamp-es-01m-hospital-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-hospital-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    200,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "醫院｜屋頂"
+  },
+  "basecamp-es-01m-jail": {
+   "anchors": {
+    "door": [
+     60,
+     11,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-jail.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,14",
+      "style": "es",
+      "use": "jail",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "屋、院牆與牢房",
+     "recolor": {},
+     "source": "basecamp-es-01m-jail-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-jail-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      57,
+      31,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "隔牆-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      50,
+      11,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      77,
+      62,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      14,
+      11,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-樓上窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      11,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-樓上窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      28,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-樓上窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      112,
+      28,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-樓上窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      19,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      40.5,
+      12,
+      26.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    140,
+    100
+   ],
+   "tags": "building,es",
+   "title": "監獄（cárcel real：兩層砌石刷白屋、紅陶瓦四坡頂、樓下鐵條窗、樓上木欄杆窗、切石門框與紋章石牌；高牆圍的放風院、院底三間平頂牢房、蓄水池井口）"
+  },
+  "basecamp-es-01m-jail-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-jail-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    140,
+    100
+   ],
+   "tags": "sub",
+   "title": "監獄｜屋、院牆與牢房"
+  },
+  "basecamp-es-01m-jail-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-jail-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    140,
+    100
+   ],
+   "tags": "sub",
+   "title": "監獄｜屋頂"
+  }
+ }
+}
