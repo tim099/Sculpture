@@ -42,6 +42,24 @@ def main():
             own |= set(map(tuple, export_list('gura-pinas-01m-' + nm, None)[:, :3].tolist()))
     if own:
         A = A[np.array([tuple(r) not in own for r in A[:, :3].tolist()], bool)]
+    # 側廊 v2 自己改過的格放回去再量（重跑逐位元組相同）：船殼刻掉的窗洞照原色補回、側廊的玻璃拿掉
+    gc_path = os.path.join(design, 'masks', 'deco', 'gallery_carve.vox.txt')
+    gg_path = os.path.join(design, 'masks', 'glass', 'gallery_glass.vox.txt')
+    if os.path.exists(gg_path):
+        gg = set(map(tuple, np.loadtxt(gg_path, delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')[:, :3].tolist()))
+        A = A[np.array([tuple(r) not in gg for r in A[:, :3].tolist()], bool)]
+    Hl = export_list('gura-pinas-01m', None)
+    if os.path.exists(gc_path):
+        G0 = np.loadtxt(gc_path, delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')
+        have = set(map(tuple, A[:, :3].tolist()))
+        add = np.array([r for r in G0.tolist() if tuple(r[:3]) not in have], dtype=A.dtype).reshape(-1, A.shape[1])
+        A = np.concatenate([A, add[:, :A.shape[1]]]) if len(add) else A
+        hs = set(map(tuple, Hl[:, :3].tolist()))
+        addh = np.array([r for r in G0.tolist() if tuple(r[:3]) not in hs], dtype=Hl.dtype).reshape(-1, Hl.shape[1])
+        Hl = np.concatenate([Hl, addh[:, :Hl.shape[1]]]) if len(addh) else Hl
+    hull_col = {tuple(r[:3]): int(r[3]) for r in Hl.tolist()}
+    hull_cells = set(hull_col)
+    GLASS_REAL = int(open(os.path.join(design, 'masks', 'glass', 'stern_glass.vox.txt'), encoding='utf-8').read().splitlines()[1].split(',')[3])   # 跟鏡板的玻璃同一色
     occ = set(map(tuple, A[:, :3].tolist()))
     aft, outer, fwd = {}, {}, {}
     for x, y, z in A[:, :3].tolist():
@@ -156,39 +174,80 @@ def main():
                 if fz is not None:
                     for x in range(fz - 1 - j, fz):
                         both('stern-deco', x, dy, z, WOOD)
-    # ── 兩舷側廊（伸出 out 格；下面一節收成 0、上面一個銅頂；窗畫在面上） ──
+    # ── 兩舷側廊（伸出 out 格；下面一節收成 0、上面一個銅頂） ──
+    #   v2（Tim 2026-10-26「側面窗戶是否也能改成玻璃 且打通到艙內」）：
+    #   · 每 8 格一個開間、開間的外面是直立的一片（照這一段船殼最外面那一格 ＋ out）⇒ 窗是方的（v1 外面順著船殼斜 ⇒ 每一格深淺不同、窗歪成 L 形）
+    #   · 窗的玻璃另外一份清單（masks/glass/gallery_glass.vox.txt ⇒ -stern-glass 子作品，關聯 material=glass）；
+    #     玻璃後面一路刻穿到艙裡：側廊這一段不放格、船殼的牆照 masks/deco/gallery_carve.vox.txt 刻（tools/hull_expected.py 的一步）
     Q = S['quarter_gallery']
     wrows = Q['win_rows']
+    obody = {}
     for x in range(Q['x0'], Q['x1'] + 1):
+        vs = [outer[(x, z)] for z in range(Q['z0'] + 5, Q['z1'] + 1) if (x, z) in outer and (x, YC + outer[(x, z)], z) in occ]
+        if vs:
+            obody[x] = max(vs)
+    bay = lambda x: (x - Q['x0']) // 8
+    fy = {}
+    for x, o in obody.items():
+        fy[bay(x)] = max(fy.get(bay(x), -1), o + Q['out'])
+    gal_glass, gal_shaft = {}, set()
+    for x in range(Q['x0'], Q['x1'] + 1):
+        for z in range(Q['z0'], Q['z1'] + 1):
+            if (x - Q['x0']) % 8 in (3, 4, 5) and any(a_ <= z <= b_ for a_, b_ in wrows) and bay(x) in fy:
+                gal_glass[(x, YC + fy[bay(x)], z)] = GLASS_REAL
+                gal_shaft.add((x, z))
+    for x in range(Q['x0'], Q['x1'] + 1):
+        if bay(x) not in fy:
+            continue
+        F = fy[bay(x)]
         for z in range(Q['z0'], Q['z1'] + Q['roof_h'] + 1):
             hz_ = min(z, Q['z1'])
             o = outer.get((x, hz_))
             if o is None or (x, YC + o, hz_) not in occ:
                 continue
+            ext = F - o
             if z <= Q['z0'] + 4:
-                out = max(1, round(Q['out'] * (z - Q['z0'] + 1) / 5.0))
+                out = max(1, round(ext * (z - Q['z0'] + 1) / 5.0))
             elif z > Q['z1']:
                 k = z - Q['z1']
-                out = max(0, Q['out'] - k)
+                out = max(0, ext - k)
                 inset = 2 * k
                 if x < Q['x0'] + inset or x > Q['x1'] - inset or out == 0:
                     continue
             else:
-                out = Q['out']
+                out = ext
             for d in range(1, out + 1):
                 face = d == out
+                if (x, z) in gal_shaft and z <= Q['z1']:
+                    continue                                           # 窗：外面那一格是玻璃（另一份清單）、裡面一路空到船殼
                 c = BLUE
                 if z > Q['z1']:
                     c = GOLD if z == Q['z1'] + 1 else Q['roof']
                 elif z in (Q['z0'] + 4, Q['z1']):
                     c = GOLD
-                else:
-                    for a, b in wrows:
-                        if face and a <= z <= b and (x - Q['x0']) % 8 in (3, 4, 5):
-                            c = GLASS
-                        elif face and a - 1 <= z <= b + 1 and (x - Q['x0']) % 8 in (2, 3, 4, 5, 6) and c != GLASS:
-                            c = GOLD
+                elif face and (x - Q['x0']) % 8 in (2, 3, 4, 5, 6) and any(a_ - 1 <= z <= b_ + 1 for a_, b_ in wrows):
+                    c = GOLD
+                elif face and (x - Q['x0']) % 8 in (0, 7):
+                    c = TRIM                                           # 開間之間的壁柱
                 both('stern-deco', x, o + d, z, c)
+    # 船殼的牆：窗那一欄從外面往裡刻到第一格空氣（只刻船殼的格；碰到別的件 ⇒ 照實報）
+    gal_carve, gal_block = {}, []
+    for (x, z) in sorted(gal_shaft):
+        for sgn in (1, -1):
+            o = outer.get((x, z))
+            y = YC + sgn * o
+            n = 0
+            while (x, y, z) in occ and n < 12:
+                if (x, y, z) not in hull_cells:
+                    gal_block.append((x, y, z))
+                    break
+                gal_carve[(x, y, z)] = hull_col[(x, y, z)]
+                y -= sgn
+                n += 1
+            if n >= 12:
+                gal_block.append((x, y, z))
+    for (x, y, z), c in list(gal_glass.items()):
+        gal_glass[(x, 2 * YC - y, z)] = c
     # ── hackebort：鏡板頂上那塊板（順著鏡板往後倒、頂上拱形）；奶油底、藍帶金字、藍鯊紋章 ──
     H = S['hackebort']
     z0, z1, half, af, htop = H['z0'], H['z1'], H['half'], H['arch_from'], H['half_top']
@@ -293,6 +352,27 @@ def main():
             for (x, y, z) in sorted(cells):
                 f.write('%d,%d,%d,%d\n' % (x, y, z, cells[(x, y, z)]))
         R['lists'][nm] = [len(cells), hashlib.sha256(open(p, 'rb').read()).hexdigest()]
+    # 側廊 v2：玻璃與船殼要刻的窗洞
+    os.makedirs(os.path.dirname(gg_path), exist_ok=True)
+    for path, cells, head in ((gg_path, gal_glass, '# 藍鯊號 側廊窗玻璃（draft_deco.py 側廊 v2；1 格厚、後面一路空到艙裡；併進 -stern-glass 子作品）'),
+                              (gc_path, gal_carve, '# 藍鯊號 側廊窗洞：船殼的牆要刻的格（carvevox；第 4 欄 ＝ 刻之前的顏色，守門；tools/hull_expected.py 的一步）')):
+        with open(path, 'w', encoding='utf-8', newline='\n') as f:
+            f.write(head + '\n')
+            for k in sorted(cells):
+                f.write('%d,%d,%d,%d\n' % (k + (cells[k],)))
+        R['lists'][os.path.basename(path)] = [len(cells), hashlib.sha256(open(path, 'rb').read()).hexdigest()]
+    allparts = set(allk)
+    left = {k for k in occ if k not in gal_carve}
+    deep = {}
+    for (x, y, z) in gal_carve:
+        k = (x, z, 1 if y > YC else -1)
+        deep[k] = min(deep.get(k, 10 ** 6), abs(y - YC))
+    shafts = {(x, z, 1 if y > YC else -1) for (x, y, z) in gal_glass}
+    reach = sum(1 for (x, z, sg) in shafts if (x, z, sg) in deep and (x, YC + sg * (deep[(x, z, sg)] - 1), z) not in left)
+    R['gallery_v2'] = {'glass': len(gal_glass), 'hull_carve': len(gal_carve), 'blocked': [list(b) for b in gal_block[:6]], 'blocked_n': len(gal_block),
+                       'glass_on_ship': sum(1 for k in gal_glass if k in occ and k not in gal_carve), 'glass_on_parts': sum(1 for k in gal_glass if k in allparts),
+                       'shafts': len(shafts), 'shafts_reach_cabin': reach, 'glass_mirror_diff': sum(1 for (x, y, z) in gal_glass if (x, 2 * YC - y, z) not in gal_glass),
+                       'carve_mirror_diff': sum(1 for (x, y, z) in gal_carve if (x, 2 * YC - y, z) not in gal_carve)}
     # 圖：船頭側面、船尾正面
     sc = 6
     im = Image.new('RGB', (1560, 900), (250, 248, 240))

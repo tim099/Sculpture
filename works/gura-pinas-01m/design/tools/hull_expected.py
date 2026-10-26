@@ -1,5 +1,5 @@
 # 出處：calli-cosecha-01m/design/tools/hull_expected.py（收穫號，照抄後改成藍鯊號 —— TASK-0967）
-# 船殼設計帳：照清單組出船殼該有的樣子 ＝ hull_01＋hull_02（draft_lines）− hull_fix（船樓橫桿）− 砲門刻 ＋ 塗裝換色 − 艏斜桅孔
+# 船殼設計帳：照清單組出船殼該有的樣子 ＝ hull_01＋hull_02（draft_lines）− hull_fix（船樓橫桿）− 砲門刻 ＋ 塗裝換色 − 艏斜桅孔 − 側廊窗洞
 #   用法：python -I -X utf8 tools/hull_expected.py <design> <輸出清單> [--ports=<放 carve／paint 清單的資料夾>]（不給 ⇒ masks/ports）
 #   · 階段八加高主甲板砲門時寫的：先拿舊的砲門清單組 ⇒ 要跟作品逐格相同（證明帳組得對），再拿新的組 ⇒ delta_apply 套到作品
 import os, sys
@@ -24,7 +24,8 @@ n0 = len(H)
 steps = [('hull_fix', os.path.join(design, 'masks', 'hull_fix', 'carve_breaks.vox.txt'), 'carve'),
          ('砲門刻', os.path.join(ports, 'carve.vox.txt'), 'carve'),
          ('塗裝', os.path.join(ports, 'paint.vox.txt'), 'paint'),
-         ('艏斜桅孔', os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), 'carve')]
+         ('艏斜桅孔', os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), 'carve'),
+         ('側廊窗洞', os.path.join(design, 'masks', 'deco', 'gallery_carve.vox.txt'), 'carve')]   # draft_deco.py 側廊 v2（2026-10-26）：側廊窗玻璃後面刻穿船殼的牆到艙裡
 print('船殼 %d' % n0)
 for nm, p, kind in steps:
     if not os.path.exists(p):          # 藍鯊號沒有 hull_fix；艏斜桅孔在步驟 7 才有
