@@ -151,7 +151,14 @@
 - ⚠ 兩條照實留著：送藥手站得到 11／12；船首那座往上甲板的梯腳前面 1–2 格有下甲板的帆布櫃（繞得過去）。
 
 ### todo（沒做的，照實留著）
-- 砲具與砲索（環、breeching、tackle）。
-- 門與艙蓋（kind=door）、廚房（kind=galley）。
-- 鏡板兩門船尾砲（gun-23／24）的砲門蓋板 —— portlids.py 只處理舷側砲門。
-- 錨鏈孔只登記固定點、沒開孔。
+- ~~砲具與砲索、門、廚房、鏡板兩門的砲門蓋板~~ ⇒ 下面「補做」那一段做了。
+- 錨鏈孔只登記固定點、沒開孔。艙口沒有艙蓋（本船乾舷高，艙口都在上甲板以上）。shot garland、rammer／sponge 沒做。
+
+## 補做：砲具與砲索、廚房、艙壁門、船尾板砲門蓋板（2026-10-26，Tim「繼續 go」）
+- **砲具與砲索**（Ship_Guns §4.4）：plan `gunfittings_build`（照收穫號）；`draft_gunfittings.py` ⇒ `tools/build_gunfittings.py`。子作品 `-gunfittings`（關聯 `砲具`）120 格（船牆的環 96、甲板環 24）、固定點 72；繩 120 ＝ 24 門 × 5（breeching ×2、side tackle ×2、train tackle）。
+  - 🩸 M04 的甲板環第一版找不到：P 舷正後方是底艙梯子的井（x 276–290 沒有甲板），兩舷鏡像一起找 ⇒ 兩舷都放不下；往旁邊挪 ±3／±5 繩還擦過井的圍板（x 291）⇒ 加 `deck_ring.lat`（沿砲的側向挪，兩舷同一個 lat），挪 10 格才過。
+  - 讀數（`tools/check_stage12.py`）：結果帳 0 差、固定點 72 都在實心上、繩 120 CLI 全 ok、每門五條缺 0、端點對不上 0。**反向對照**：`--drop=ring-砲M-S04-aft` ⇒ 只報那兩條。
+- **廚房爐灶**（Ship_Fittings §9.13）：現有元件只有 1850 年代的鐵製爐灶（光榮號、拿破崙號）⇒ 自己做 kombuis：`draft_galley.py` ⇒ `tools/build_galley.py`，子作品 `-galley`（0.05 m，17,548 格：鉛盤、黃磚 IJsselsteen、拱形爐口朝船尾、炭火、鐵板、銅鍋、磚煙囪上段包銅、鐵帽）、上甲板子作品的模型 `爐灶`（scale 0.5、at 469.5,160.5,62、meta kind=galley）；放在船艏樓底下中線，煙囪在兩根橫樑（x 464／480）之間穿過船艏樓甲板 ⇒ 甲板-castillo 刻 8 格（從甲板設計遮罩算，`check_decks.py` 扣掉這個洞）。撞實心 0、腳下 0 懸空、船尾那一面站得住。
+- **艙壁門**（Ship_Fittings §9.7）：`draft_doors.py` ⇒ `tools/build_doors.py`，一件門板 `-door`（0.05 m，2×14×32 ⇒ 船上 1×7×16，直條木板＋兩道鐵鉸鏈帶；固定點 hinge-a 上、hinge-b 下 ⇒ 往外開）、6 扇掛在 break 艙壁朝外那一面（後甲板 x 301、船尾樓 x 208 rotate 0；船艏樓 x 435 rotate 180），meta kind=door open=side。撞實心 0、背後都是艙壁（37 格 ＝ 7×16 − 門洞 75）。
+- **船尾板兩門追擊砲的蓋板**：`tools/portlids.py` 加 `to_aft`（砲口朝 −x ⇒ 轉成「往外 ＝ ＋y」的座標照舊量，擺法換回 rotate ＋90）⇒ 24 片；舷側 22 片重跑逐位元組相同。鏡板那兩片：鉸鏈 x 157、z 78，鏡板斜 12.8°，關上撞船 0.27%、開口 49／49 蓋滿、開著撞 0。
+- **遊戲那側**：Blockside b4326f6（重匯：格 ＋112、繩 ＋120、模型 ＋9；ids 發 galley-1、door-1～6、portlid-23／24、part-13）；shipcheck ✗ 0 ⚠ 8 —— 新的 6 筆是直立的門「正下方沒有空的格 ⇒ 打掉也不進水」（遊戲找門的開口只看門底下那一層；門洞在水線上 2.5 m 以上，照實）。廚房：廚師 1 位、四面都站得住。對打 seed 1／2：開火 203、命中 54%、船員 151。Blocksail cc086ed（Blockside → b4326f6、重套 battle.html）。

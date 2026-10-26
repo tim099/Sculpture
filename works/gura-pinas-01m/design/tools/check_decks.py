@@ -25,6 +25,10 @@ for nm, path in parts.items():
     D = np.loadtxt(path, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
     cw = dict(zip(key(W).tolist(), W[:, 3].tolist()))
     cd = dict(zip(key(D).tolist(), D[:, 3].tolist()))
+    hp = os.path.join(design, 'masks', 'galley', 'deck_hole.vox.txt')
+    if nm == 'deck-castillo' and os.path.exists(hp):                          # 藍鯊號：廚房的煙囪穿過船艏樓甲板（draft_galley.py 刻的洞）
+        for k in key(np.loadtxt(hp, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')).tolist():
+            cd.pop(k, None)
     miss, extra = len(set(cd) - set(cw)), len(set(cw) - set(cd))
     cdiff = sum(1 for k in set(cd) & set(cw) if cd[k] != cw[k])
     ov_h = len(set(cw) & hull)

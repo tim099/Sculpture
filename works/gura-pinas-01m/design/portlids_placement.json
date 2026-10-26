@@ -1,5 +1,5 @@
 {
- "count": 22,
+ "count": 24,
  "lid": {
   "anchors": {
    "hinge-a": [
@@ -32,7 +32,7 @@
   "title": "藍鯊號 砲門蓋板（上緣鉸鏈，通用部件，0.1 m；外面船殼褐、裡面紅）",
   "work": "gura-pinas-01m-portlid"
  },
- "note": "portlids.py draft（造船規格 §9.12）—— 藍鯊號：22 片（甲板-main、甲板-puente），蓋板 gura-pinas-01m-portlid [9, 9, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "note": "portlids.py draft（造船規格 §9.12）—— 藍鯊號：24 片（甲板-main、甲板-puente），蓋板 gura-pinas-01m-portlid [9, 9, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
  "rows": [
   {
    "at": [
@@ -1236,6 +1236,158 @@
   },
   {
    "at": [
+    157,
+    143.5,
+    78
+   ],
+   "face": {
+    "hinge_surf_s": 643,
+    "n": 32,
+    "resid": 0.62,
+    "rx": 12.78,
+    "rz_fit": -0.0
+   },
+   "face_frame": "aft（open_x、lid_x、hinge_surf_s、outer_s 是船尾板的座標：u ＝ y、v ＝ sx − x）",
+   "gun": {
+    "axis": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     154.8,
+     146.0,
+     72.4
+    ],
+    "need_pull": 4.2,
+    "outer_s": 642
+   },
+   "gun_model": "U-chase-stern-P",
+   "gun_path": "甲板-puente/U-chase-stern-P",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    139,
+    147
+   ],
+   "lid_z": [
+    70,
+    78
+   ],
+   "meta": {
+    "close_deg": 100.8,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-23"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-chase-stern-P",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    140,
+    146
+   ],
+   "open_z": [
+    71,
+    77
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    90
+   ],
+   "scale": 1,
+   "side": "A",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
+    157,
+    177.5,
+    78
+   ],
+   "face": {
+    "hinge_surf_s": 643,
+    "n": 32,
+    "resid": 0.62,
+    "rx": 12.78,
+    "rz_fit": -0.0
+   },
+   "face_frame": "aft（open_x、lid_x、hinge_surf_s、outer_s 是船尾板的座標：u ＝ y、v ＝ sx − x）",
+   "gun": {
+    "axis": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "min_pull": 4.0,
+    "muzzle": [
+     154.8,
+     175.0,
+     72.4
+    ],
+    "need_pull": 4.2,
+    "outer_s": 642
+   },
+   "gun_model": "U-chase-stern-S",
+   "gun_path": "甲板-puente/U-chase-stern-S",
+   "host": "甲板-puente",
+   "host_work": "gura-pinas-01m-deck-puente",
+   "lid_x": [
+    173,
+    181
+   ],
+   "lid_z": [
+    70,
+    78
+   ],
+   "meta": {
+    "close_deg": 100.8,
+    "house": 5,
+    "kind": "portlid",
+    "lid_of": "gun-24"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-chase-stern-S",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    174,
+    180
+   ],
+   "open_z": [
+    71,
+    77
+   ],
+   "pivot": [
+    4.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    90
+   ],
+   "scale": 1,
+   "side": "A",
+   "source_work": "gura-pinas-01m-portlid"
+  },
+  {
+   "at": [
     450,
     123,
     71
@@ -1693,16 +1845,5 @@
   "rz_flat_deg": 2.0,
   "slab": 16
  },
- "skipped": [
-  {
-   "gun": "甲板-puente/U-chase-stern-P",
-   "id": "gun-23",
-   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
-  },
-  {
-   "gun": "甲板-puente/U-chase-stern-S",
-   "id": "gun-24",
-   "why": "砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）"
-  }
- ]
+ "skipped": []
 }

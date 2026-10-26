@@ -34,12 +34,12 @@ if not os.path.exists(os.path.join(WORKS, w, 'work.json')):
         raise SystemExit('✗ placed ≠ %d：%s' % (n, out[-800:]))
     print('✓ 建立 %s（%d 格）' % (w, n), flush=True)
 for i, (an, at) in enumerate(sorted(PTS.items())):
-    cli('op=work', 'sub=anchor', 'persona=gura', 'work=' + w, 'name=' + an, 'at=%d,%d,%d' % tuple(at), 'overwrite=1', 'note=砲具的環（階段十二 TASK-0624；draft_gunfittings.py）')
+    cli('op=work', 'sub=anchor', 'persona=gura', 'work=' + w, 'name=' + an, 'at=%d,%d,%d' % tuple(at), 'overwrite=1', 'note=砲具的環（步驟 9 砲具 TASK-0967；draft_gunfittings.py）')
 print('✓ 固定點 %d' % len(PTS), flush=True)
-cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + FB['link'], 'source_work=' + w, 'at=0,0,0', 'note=階段十二（TASK-0624）', ok=(0, 2))
+cli('op=work', 'sub=link', 'persona=gura', 'work=' + ASM, 'name=' + FB['link'], 'source_work=' + w, 'at=0,0,0', 'note=步驟 9 砲具（TASK-0967）', ok=(0, 2))
 for i, r in enumerate(ROPES):
     cli('op=work', 'sub=rope', 'persona=gura', 'work=' + ASM, 'name=' + r['name'], 'from=' + r['from'], 'to=' + r['to'], 'slack=%g' % r['slack'],
-        'color=' + r['color'], 'thickness=%g' % r['thickness'], 'group=' + r['group'], 'overwrite=1', 'note=階段十二 砲索（TASK-0624）')
+        'color=' + r['color'], 'thickness=%g' % r['thickness'], 'group=' + r['group'], 'overwrite=1', 'note=步驟 9 砲索（TASK-0967）')
     if (i + 1) % 40 == 0:
         print('  繩 %d／%d' % (i + 1, len(ROPES)), flush=True)
 print('✓ 繩 %d；失敗 %d' % (len(ROPES), len(bad)))

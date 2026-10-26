@@ -120,8 +120,8 @@ def main():
         # 甲板環
         tr = pt(rS, 'train')
         done = None
-        for back in FB['deck_ring']['back']:
-            q = tr[:2] - d * back
+        for back, lat in [(b, l) for l in FB['deck_ring'].get('lat', [0]) for b in FB['deck_ring']['back']]:   # 藍鯊號：lat ＝ 沿砲的側向偏幾格（M04 正後方那一舷是底艙梯子的井、沒有甲板 ⇒ 往旁邊挪；同一個 lat 兩舷一起挪、照樣鏡像）
+            q = tr[:2] - d * back + t * lat
             kx, ky = int(math.floor(q[0])), int(math.floor(q[1]))
             zk = next((z for z in range(z0, z0 - 4, -1) if (kx, ky, z - 1) in occ and (kx, ky, z) not in occ), None)   # 甲板舷弧是台階：砲站在高的那一階、環可能在低的那一階（v1 沿用砲的高度 ⇒ M07、追擊砲的環腳下是空的）
             if zk is None:
@@ -131,13 +131,13 @@ def main():
                 continue
             if blocked(tr, ctr(k), gcells[nS] | {k}) or blocked(pt(rP, 'train'), ctr(mir(k)), gcells[nP] | {mir(k)}):
                 continue
-            done = (back, k)
+            done = (back, k, lat)
             break
         if done is None:
             notes.append('%s／%s 的甲板環找不到位置 ⇒ train tackle 不掛' % (nS, nP))
         else:
-            back, k = done
-            stat['deck_back_%d' % back] += 1
+            back, k, lat = done
+            stat['deck_back_%d' % back + ('_lat%+d' % lat if lat else '')] += 1
             for nm, rr, kk in ((nS, rS, k), (nP, rP, mir(k))):
                 new[kk], kind[kk] = FB['deck_ring']['color'], 'deck_ring'
                 an = 'deck-%s' % nm

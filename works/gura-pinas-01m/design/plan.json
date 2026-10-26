@@ -208,6 +208,7 @@
     "support_min": 0.5,
     "support_src": "同收穫號：砲最底下那層格子正下方有實心的比例 ≥ 0.5（遊戲判斷掉不掉是從外框中心往下 12 格內找甲板）"
   },
+  "gunfittings_build": {"work": "gura-pinas-01m-gunfittings", "title": "藍鯊號 砲具（船牆與甲板的環）", "link": "砲具", "ring": {"offset": [8, 9, 10, 7, 11, 6, 12], "color": 73, "src": "造船規格 §4.4（憲法號階段二十一、二十二）：船牆的環在砲門中線往船尾／船頭 8 格（不行就換 9／10／11 …）；一格鐵釘進牆、外面一格當環；高度 ＝ 那一側 eye 的高度（本船三種砲大小不一，憲法號 24 磅是甲板面 ＋8）"}, "deck_ring": {"back": [9, 8, 10, 7, 11, 6, 12, 13, 14], "lat": [0, -3, 3, -5, 5, 8, -10, 10, -13, 12, -16], "color": 73, "src": "造船規格 §4.4：甲板的環在砲架尾（train）往船裡 9 格"}, "ropes": {"breeching": {"slack": 1.12, "thickness": 0.6, "color": "#b59a6a", "group": "guns/breeching"}, "tackle": {"slack": 1.03, "thickness": 0.35, "color": "#b59a6a", "group": "guns/tackle"}, "train": {"slack": 1.05, "thickness": 0.35, "color": "#b59a6a", "group": "guns/train"}, "src": "造船規格 §4.4 ／ §6 砲索那一列：breeching（cascabel → 兩側船牆的環）1.12、0.6；side tackle（eye → 同側的環）1.03、0.35；train tackle（train → 甲板的環）1.05、0.35；#b59a6a"}, "src": "TASK-0967（Tim 2026-10-26「繼續 go」）：照收穫號 TASK-0624 同一套 —— 船牆的環、甲板環、breeching／side tackle／train tackle。⚠ 沒做 shot garland 與 rammer／sponge"},
   "rigging": {
     "src": "設計決定；數值照造船規格 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照收穫號 draft_rigging（改：中桅、上桅、斜桅頂桅的支索與帆；ratlines 用橫繩組 sub=ratlines、下桅那組標繩梯 climb=1 —— TASK-0678 之後的規格）",
     "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},

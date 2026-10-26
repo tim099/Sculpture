@@ -116,6 +116,13 @@ def face(occ, x, z, side, slab):
     return int(slab[0] + c.max() + 1) if side > 0 else int(slab[0] + c.min() - 1)
 
 
+def to_aft(Pt, sx):
+    """船的座標 ⇒ 船尾板的座標（藍鯊號 TASK-0967）：u ＝ y、v ＝ sx − x（連續座標；格 x ↔ 格 v ＝ sx − 1 − x）⇒ 船尾板朝外（−x）變成 +v，
+    跟舷側 S 舷同一個寫法（往外 ＝ ＋y），開口、外表面擬合、抬鉸鏈、收砲都照用；擺法換回船上 ＝ rotate ＋90、at ＝（sx − v, u, z）。"""
+    Pt = np.asarray(Pt, float)
+    return np.stack([Pt[:, 1], sx - Pt[:, 0], Pt[:, 2]], 1)
+
+
 def lid_cells(W, H):
     sx = (2, W - 3)
     c = {}
@@ -163,19 +170,30 @@ def draft(cache):
         hb_ = np.array([[W - 0.5, 0.5, 0.5]])
         Lw = LIDS[S['lid']]
         rows, skipped = [], []
+        sx = P['size'][0]
+        occ_aft = None
         for g, o in ops:
             host, gname = g['path'].rsplit('/', 1)
-            if o is None:
-                skipped.append({'gun': g['path'], 'id': g['meta']['id'], 'why': '砲口那一欄找不到封閉的開口（斜放／船尾板的追擊砲）'})
-                continue
             L = links[host]
             assert L['box'][:3] == [0, 0, 0] and L.get('turn', 0) == 0 and not L.get('mirror'), (s, host, '甲板關聯不是 at 0、不轉、不鏡像')
+            hm_g = {m['name']: m for m in host_models(L['work'])}[gname]
+            gw = place(gun_samples(cache, hm_g['work']), hm_g)
+            mz, br = np.array(g['points']['muzzle'], float), np.array(g['points']['breech'], float)
+            mz_s, ax_s = mz, (mz - br) / np.linalg.norm(mz - br)
+            occ_l, yc_l, aft = occ, yc, False
+            if o is None and ax_s[0] < -0.9:                                           # 船尾板的追擊砲（砲口朝 −x）⇒ 轉到船尾板的座標再量（藍鯊號 TASK-0967）
+                if occ_aft is None:
+                    occ_aft = np.ascontiguousarray(occ[::-1].transpose(1, 0, 2))
+                aft, occ_l, yc_l = True, occ_aft, sx / 2
+                gw, mz, br = to_aft(gw, sx), to_aft(mz[None], sx)[0], to_aft(br[None], sx)[0]
+                o = opening(occ_l, mz, yc_l)
+            if o is None:
+                skipped.append({'gun': g['path'], 'id': g['meta']['id'], 'why': '砲口那一欄找不到封閉的開口（斜放的砲）'})
+                continue
             side = o['side']
             ow, oh = o['x1'] - o['x0'] + 1, o['z1'] - o['z0'] + 1
             xc = (o['x0'] + o['x1'] + 1) / 2
             lx0, lx1 = int(math.floor(xc - W / 2)), int(math.ceil(xc + W / 2)) - 1    # 蓋板關上蓋住的 x（含端點）
-            hm_g = {m['name']: m for m in host_models(L['work'])}[gname]
-            gw = place(gun_samples(cache, hm_g['work']), hm_g)
             # 鉸鏈貼開口上緣上面那一排；開著的蓋板壓到推出去的砲（夜燈號 5 號：砲頂 115.7、開口上緣 114）⇒ 整片往上抬一格再量，最多 3 格
             for raised in range(4):
                 ztop = o['z1'] + 1 + raised
@@ -185,9 +203,9 @@ def draft(cache):
                     for z in range(lz0, ztop + 1):
                         if o['x0'] <= x <= o['x1'] and o['z0'] <= z <= o['z1']:
                             continue
-                        v = face(occ, x, z, side, o['slab'])
+                        v = face(occ_l, x, z, side, o['slab'])
                         if v is not None:
-                            fc[(x, z)] = v if side > 0 else 2 * yc - (v + 1)    # 外表面的角落座標，換成 S 舷的寫法（往外 ＝ ＋y）：S ＝ 第一格空氣的格號、P ＝ 它 ＋1，再對中線翻過來
+                            fc[(x, z)] = v if side > 0 else 2 * yc_l - (v + 1)    # 外表面的角落座標，換成 S 舷的寫法（往外 ＝ ＋y）：S ＝ 第一格空氣的格號、P ＝ 它 ＋1，再對中線翻過來
                 med = float(np.median(list(fc.values())))
                 pts = np.array([[x, z, y] for (x, z), y in sorted(fc.items())], float)
                 xcm, zcm = pts[:, 0].mean(), pts[:, 1].mean()
@@ -203,7 +221,7 @@ def draft(cache):
                 rz = 0 if abs(rz_fit) <= RZ_FLAT else r1(rz_fit)
                 close = r1(90 + rx + CLOSE_BIAS + CLOSE_ADJ.get(gname, 0.0))
                 surf = max(top)                                                        # 鉸鏈那一排的外表面（S 寫法）
-                hy = int(round(surf if side > 0 else 2 * yc - surf))                   # 實際座標：S ＝ 第一格空氣的格號、P ＝ 第一格空氣的格號 ＋1 —— 兩舷都是 at.y（§9.12：P at.y ＝ 鉸鏈格 ＋1）
+                hy = int(round(surf if side > 0 else 2 * yc_l - surf))                   # 實際座標：S ＝ 第一格空氣的格號、P ＝ 第一格空氣的格號 ＋1 —— 兩舷都是 at.y（§9.12：P at.y ＝ 鉸鏈格 ＋1）
                 at = [r1(xc, 2), hy, ztop]
                 rot = rz if side > 0 else r1(180 - rz)
                 pose = {'at': at, 'pivot': [r1(W / 2, 2), 0, 0], 'rotate': [0, 0, rot], 'scale': 1, 'mirror': 'none'}
@@ -214,25 +232,28 @@ def draft(cache):
             if odd:
                 skipped.append({'gun': g['path'], 'id': g['meta']['id'], 'why': '蓋板範圍裡有東西貼著船殼凸出：離擬合平面 > %d 格（x %s；外表面中位數 %.1f）⇒ 開關都會撞' % (OUTLIER, odd, med)})
                 continue
-            # 收砲：砲口退到外表面往裡 1 格
-            mz, br = np.array(g['points']['muzzle'], float), np.array(g['points']['breech'], float)
+            # 收砲：砲口退到外表面往裡 1 格（船尾板的砲 mz、br、gw 已經是船尾板的座標）
             ax = (mz - br) / np.linalg.norm(mz - br)
             ring = sorted(fc.values())
             outer = ring[len(ring) // 2]                                           # 這一圈外表面的中位數（S 寫法的角落座標）
-            mys = mz[1] if side > 0 else 2 * yc - mz[1]
+            mys = mz[1] if side > 0 else 2 * yc_l - mz[1]
             need = max(0.0, round((mys - (outer - 1)) / abs(ax[1]), 2))
             # house：關上的蓋板（照遊戲的寫法繞鉸鏈反轉 close_deg）跟砲不碰，最少要沿砲軸縮幾格（0.5 一步）—— ⛔ 只照外表面估會少算蓋板的厚度與斜度（v1 量到少 2 格）
             cl = turn(place(lid_samp[S['lid']], pose), place(ha_, pose)[0], place(hb_, pose)[0] - place(ha_, pose)[0], -close)
             min_pull = next(k2 * 0.5 for k2 in range(0, 61) if sum(cross_hits(cl, gw - ax[None] * (k2 * 0.5))) == 0)
             house = max(HOUSE_MIN, int(math.ceil(min_pull + 0.5)))          # 至少留半格：遊戲照網格表面取樣（62_ports.js portHits），跟這裡的格心＋角落不一樣（v1 剛好等於 ⇒ 匯入檢查 ✗ 1–16 點）
             meta = {'kind': 'portlid', 'lid_of': g['meta']['id'], 'close_deg': close, 'house': house}
+            if aft:                                                                    # 船尾板的座標換回船上：rotate ＋90、at ＝（sx − v, u, z）
+                at, rot = [r1(sx - at[1], 2), at[0], at[2]], r1(rot + 90)
             rows.append({'model': '砲門蓋-' + re.sub(r'^砲-?', '', gname), 'gun_model': gname, 'gun_path': g['path'], 'host': host, 'host_work': L['work'],
-                         'source_work': Lw['work'], 'side': 'S' if side > 0 else 'P', 'at': at, 'pivot': [r1(W / 2, 2), 0, 0], 'rotate': [0, 0, rot],
+                         'source_work': Lw['work'], 'side': 'A' if aft else ('S' if side > 0 else 'P'), 'at': at, 'pivot': [r1(W / 2, 2), 0, 0], 'rotate': [0, 0, rot],
                          'scale': 1, 'mirror': 'none', 'meta': meta,
                          'open_x': [o['x0'], o['x1']], 'open_z': [o['z0'], o['z1']], 'open_size': [ow, oh], 'lid_x': [lx0, lx1], 'lid_z': [lz0, ztop], 'raised': raised,
                          'face': {'rz_fit': round(rz_fit, 2), 'rx': round(rx, 2), 'resid': round(float(np.abs(Am @ coef - pts[:, 2]).max()), 2), 'n': len(pts),
                                   'hinge_surf_s': r1(surf, 2)},
-                         'gun': {'muzzle': [round(float(v), 2) for v in mz], 'axis': [round(float(v), 3) for v in ax], 'outer_s': outer, 'need_pull': need, 'min_pull': min_pull}})
+                         'gun': {'muzzle': [round(float(v), 2) for v in mz_s], 'axis': [round(float(v), 3) for v in ax_s], 'outer_s': outer, 'need_pull': need, 'min_pull': min_pull}})
+            if aft:
+                rows[-1]['face_frame'] = 'aft（open_x、lid_x、hinge_surf_s、outer_s 是船尾板的座標：u ＝ y、v ＝ sx − x）'
         rows.sort(key=lambda r: (r['host'], r['open_x'][0], r['side']))
         out = {'note': 'portlids.py draft（造船規格 §9.12）—— %s：%d 片（%s），蓋板 %s %s；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）' % (
                    S['name'], len(rows), '、'.join(S['decks']), Lw['work'], list(size[S['lid']])),
@@ -350,6 +371,7 @@ def check(cache):
         rows = []
         for r in PL['rows']:
             side = 1 if r['side'] == 'S' else -1
+            F = (lambda Q: to_aft(Q, sx)) if r['side'] == 'A' else (lambda Q: np.asarray(Q, float))   # 船尾板的蓋板：開口、往外照船尾板的座標量
             cd, house = r['meta']['close_deg'], r['meta']['house']
             g = hm[r['host_work']][r['gun_model']]
             gp = pm[r['gun_path']]
@@ -360,7 +382,8 @@ def check(cache):
             gin = gw - ax[None] * house
             op = place(lid_samp, r)
             cl, a, b = closed(r, cd)
-            cc, hc = cl.mean(0), (a + b) / 2
+            cc, hc = F(cl.mean(0)[None])[0], F(((a + b) / 2)[None])[0]
+            side = 1 if r['side'] == 'A' else side
             min_pull = None
             for k2 in range(0, 41):
                 if sum(cross_hits(cl, gw - ax[None] * (k2 * 0.5))) == 0:
@@ -373,7 +396,7 @@ def check(cache):
             clear = round(float(op[:, 2].min() - gw[under, 2].max()), 2) if under.any() else None
             # 開口蓋住沒：開口每一格的格心（外表面那一層）關上後在不在蓋板的佔用格 —— 照開口那一欄外表面往裡 0.5 格
             # 沿 y 看：開口每一欄 (x, z) 有沒有被關上的蓋板擋住（蓋板照 tumblehome 斜著貼，⛔ 不能拿一個 y 平面量）
-            lidxz = set(map(tuple, np.floor(cl[:, [0, 2]]).astype(int).tolist()))
+            lidxz = set(map(tuple, np.floor(F(cl)[:, [0, 2]]).astype(int).tolist()))
             hole = [(x, z) for x in range(r['open_x'][0], r['open_x'][1] + 1) for z in range(r['open_z'][0], r['open_z'][1] + 1)]
             covered = sum(1 for q in hole if q in lidxz)
             rec = {'model': r['model'], 'lid_of': r['meta']['lid_of'], 'side': r['side'], 'close_deg': cd, 'house': house,
@@ -504,7 +527,7 @@ def apply(cache, only=None, step='all'):
                      'at=' + xyz(r['at']), 'pivot=' + xyz(r['pivot']), 'rotate=' + xyz(r['rotate']), 'scale=1', 'mirror=none', 'overwrite=1',
                      'meta=' + json.dumps(meta, ensure_ascii=False, sort_keys=True),
                      'note=%s 砲門蓋板 %s ↔ %s（portlids.py：畫開著、上緣鉸鏈；%s；kind=portlid 本身是裝飾）' % (
-                         S['name'], r['model'], r['gun_model'], 'S 舷 rotate rz' if r['side'] == 'S' else 'P 舷 rotate 180 − rz（⛔ mirror=y）')])
+                         S['name'], r['model'], r['gun_model'], {'S': 'S 舷 rotate rz', 'P': 'P 舷 rotate 180 − rz（⛔ mirror=y）', 'A': '船尾板 rotate 90 ＋ rz'}[r['side']])])
             print('✓', S['name'], '模型', len(PL['rows']))
     print('ok', ok[0], 'IOException 重試', ok[1])
 

@@ -38,7 +38,8 @@ print('③ 砲索（組 guns/…，從作品讀）%d：%s；CLI 狀態不是 ok 
       sum(1 for n in ropes if st.get(n) != 'ok'), [n for n in ropes if st.get(n) != 'ok'][:4]))
 guns = {}
 for dk in ('main', 'puente', 'alcazar', 'castillo'):
-    for m in json.load(open(os.path.join(WORKS, 'gura-pinas-01m-deck-' + dk, 'models.json'), encoding='utf-8'))['models']:
+    mp = os.path.join(WORKS, 'gura-pinas-01m-deck-' + dk, 'models.json')
+    for m in (json.load(open(mp, encoding='utf-8'))['models'] if os.path.exists(mp) else []):   # 藍鯊號：船艏樓甲板上沒有模型 ⇒ 沒有 models.json
         if (m.get('meta') or {}).get('kind') == 'gun':
             guns[m['name']] = m
 need = ['breeching-aft', 'breeching-fwd', 'tackle-aft', 'tackle-fwd', 'train']

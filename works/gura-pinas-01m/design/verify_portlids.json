@@ -8,7 +8,7 @@
   "models_bad": [],
   "parts_hinge_max_diff": 0.0005
  },
- "note": "portlids.py check —— 藍鯊號：現況 ＝ 組裝件 export list（481561 格）＋ 其他模型 51 個（gun、portlid 以外；實際的格，0 個退回外框：繞 x／y 轉或不在 at 0 的關聯裡）；蓋板每格 9 個取樣點",
+ "note": "portlids.py check —— 藍鯊號：現況 ＝ 組裝件 export list（481673 格）＋ 其他模型 58 個（gun、portlid 以外；實際的格，0 個退回外框：繞 x／y 轉或不在 at 0 的關聯裡）；蓋板每格 9 個取樣點",
  "rows": [
   {
    "close_deg": 105.1,
@@ -755,6 +755,98 @@
    "side": "S"
   },
   {
+   "close_deg": 100.8,
+   "closed": {
+    "center_below_hinge": 4.02,
+    "center_out_of_hinge": -0.26,
+    "hits_gun_housed": 0,
+    "hits_ship": 4,
+    "hole_covered": "49/49",
+    "ship_pct": 0.27
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.0,
+    "need_pull": 4.2
+   },
+   "hinge_a": [
+    156.5,
+    139.5,
+    78.5
+   ],
+   "hinge_b": [
+    156.5,
+    147.5,
+    78.5
+   ],
+   "house": 5,
+   "lid_of": "gun-23",
+   "model": "砲門蓋-U-chase-stern-P",
+   "open": {
+    "box": [
+     148.0,
+     139.0,
+     78.0,
+     157.0,
+     148.0,
+     80.0
+    ],
+    "clear_above_gun": 5.02,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 729
+   },
+   "side": "A"
+  },
+  {
+   "close_deg": 100.8,
+   "closed": {
+    "center_below_hinge": 4.02,
+    "center_out_of_hinge": -0.26,
+    "hits_gun_housed": 0,
+    "hits_ship": 4,
+    "hole_covered": "49/49",
+    "ship_pct": 0.27
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 4.0,
+    "need_pull": 4.2
+   },
+   "hinge_a": [
+    156.5,
+    173.5,
+    78.5
+   ],
+   "hinge_b": [
+    156.5,
+    181.5,
+    78.5
+   ],
+   "house": 5,
+   "lid_of": "gun-24",
+   "model": "砲門蓋-U-chase-stern-S",
+   "open": {
+    "box": [
+     148.0,
+     173.0,
+     78.0,
+     157.0,
+     182.0,
+     80.0
+    ],
+    "clear_above_gun": 5.02,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 729
+   },
+   "side": "A"
+  },
+  {
    "close_deg": 79.9,
    "closed": {
     "center_below_hinge": 3.85,
@@ -1038,7 +1130,7 @@
   "P": 11,
   "center_below_hinge": [
    3.77,
-   3.99
+   4.02
   ],
   "center_out_of_hinge": [
    -0.53,
@@ -1058,10 +1150,10 @@
    0.5,
    1.0
   ],
-  "lids": 22,
+  "lids": 24,
   "open_hits_gun": 0,
   "open_hits_ship": 0,
-  "reverse_house0_lids_hit": 22,
+  "reverse_house0_lids_hit": 24,
   "reverse_mirror_y_up": 11
  }
 }
