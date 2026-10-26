@@ -1,0 +1,261 @@
+{
+ "root": "ridge-two-mine-ores-01m",
+ "works": {
+  "ridge-two-mine-ores-01m-mine-gold": {
+   "anchors": {
+    "door": [
+     60,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "ridge-two-mine-ores-01m-mine-gold.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "recipes": "gold-ore",
+      "style": "common",
+      "use": "mine",
+      "variant": "b"
+     },
+     "mirror": "",
+     "name": "岩丘、坑道與擺設",
+     "recolor": {},
+     "source": "ridge-two-mine-ores-01m-mine-gold-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "ridge-two-mine-ores-01m-mine-gold-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36,
+      60,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      49,
+      71,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-坑口",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "building,common",
+   "title": "礦坑（金礦款：含金石英的礦石堆與礦車、淘金槽、淘金木盤）"
+  },
+  "ridge-two-mine-ores-01m-mine-gold-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mine-ores-01m-mine-gold-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜岩丘、坑道與擺設"
+  },
+  "ridge-two-mine-ores-01m-mine-gold-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mine-ores-01m-mine-gold-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜屋頂"
+  },
+  "ridge-two-mine-ores-01m-mine-silver": {
+   "anchors": {
+    "door": [
+     60,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "ridge-two-mine-ores-01m-mine-silver.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "recipes": "silver-ore",
+      "style": "common",
+      "use": "mine",
+      "variant": "c"
+     },
+     "mirror": "",
+     "name": "岩丘、坑道與擺設",
+     "recolor": {},
+     "source": "ridge-two-mine-ores-01m-mine-silver-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "ridge-two-mine-ores-01m-mine-silver-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36,
+      60,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      49,
+      71,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-坑口",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "building,common",
+   "title": "礦坑（銀礦款：暗灰的銀礦、石板院上攤的礦泥餅、皮礦袋）"
+  },
+  "ridge-two-mine-ores-01m-mine-silver-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mine-ores-01m-mine-silver-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜岩丘、坑道與擺設"
+  },
+  "ridge-two-mine-ores-01m-mine-silver-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-mine-ores-01m-mine-silver-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜屋頂"
+  }
+ }
+}
