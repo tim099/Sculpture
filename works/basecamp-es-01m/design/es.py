@@ -80,9 +80,10 @@ def plaque(M, rect, cx, z0, face='front'):
             M.put('body', x, y, z, c, force=True)
 
 
-def espadana(M, xc, y0, y1, z0, w=22, steps=((0, 22), (22, 6), (28, 4)), arch=(10, 14, 6), layer='body', bell=True):
+def espadana(M, xc, y0, y1, z0, w=22, steps=((0, 22), (22, 6), (28, 4)), arch=(10, 14, 6), layer='body', bell=True, arches=None):
     """鐘牆（espadaña）：牆厚 y0..y1，從 z0 往上一段一段收窄 —— steps ＝ [(從 z0 起幾格, 這一段的寬)…]，最後一段頂上一支石十字；
-    第一段開一個圓拱洞 arch ＝ (洞寬, 洞底離 z0 幾格, 洞高到拱頂起點)，拱洞裡掛一口鐘（鐵桿吊在拱頂）。回傳 (鐘的中心, 頂 z)。"""
+    第一段開一個圓拱洞 arch ＝ (洞寬, 洞底離 z0 幾格, 洞高到拱頂起點)，拱洞裡掛一口鐘（鐵桿吊在拱頂）。
+    arches ＝ [(離 xc 幾格, 洞寬, 洞底, 洞高)…] ⇒ 開好幾個洞、各掛一口（教堂；沒給 ⇒ 照 arch 在中線開一個）。回傳 (第一口鐘的中心, 頂 z)。"""
     segs = []
     for i, (dz, ww) in enumerate(steps):
         top = z0 + (steps[i + 1][0] if i + 1 < len(steps) else dz + 6)
@@ -99,28 +100,29 @@ def espadana(M, xc, y0, y1, z0, w=22, steps=((0, 22), (22, 6), (28, 4)), arch=(1
     for y in range(y0 + 1, y1 - 1):                                    # 石十字
         M.box(layer, xc - 1, y, zt, xc + 1, y + 1, zt + 9, CORAL, force=True)
         M.box(layer, xc - 4, y, zt + 5, xc + 4, y + 1, zt + 7, CORAL, force=True)
-    aw, ab, ah = arch
-    zs = z0 + ab + ah                                                  # 拱頂起點（半圓的圓心高）
-    r = aw / 2.0
-    for x in range(xc - aw // 2, xc + aw // 2):
-        for z in range(z0 + ab, int(zs + r) + 1):
-            dx = x + 0.5 - xc
-            if z < zs or dx * dx + (z + 0.5 - zs) ** 2 <= r * r:
-                M.clear(x, y0, z, x + 1, y1, z + 1, layer)
-    bc = None
-    if bell:
-        ztop = int(zs + r)                                             # 拱頂那一層（實心）
-        while M.get(xc, (y0 + y1) // 2, ztop) is None and ztop < zt:
-            ztop += 1
-        yc = (y0 + y1) // 2
-        M.box(layer, xc - 1, yc, ztop - 3, xc + 1, yc + 1, ztop, IRON, force=True)
-        for z in range(ztop - 10, ztop - 3):                           # 鐘：上窄下寬
-            rr = 1 + (z - (ztop - 10)) * 0 + (ztop - 3 - z) // 2
-            for x in range(xc - rr - 1, xc + rr + 1):
-                for y in range(yc - min(rr, (y1 - y0) // 2 - 1), yc + min(rr, (y1 - y0) // 2 - 1) + 1):
-                    M.put(layer, x, y, z, BRONZE, force=True)
-        bc = (xc, yc, ztop - 7)
-    return bc, zt
+    bcs = []
+    for (dx0, aw, ab, ah) in (arches or [(0,) + tuple(arch)]):
+        xa = xc + dx0
+        zs = z0 + ab + ah                                              # 拱頂起點（半圓的圓心高）
+        r = aw / 2.0
+        for x in range(xa - aw // 2, xa + aw // 2):
+            for z in range(z0 + ab, int(zs + r) + 1):
+                dx = x + 0.5 - xa
+                if z < zs or dx * dx + (z + 0.5 - zs) ** 2 <= r * r:
+                    M.clear(x, y0, z, x + 1, y1, z + 1, layer)
+        if bell:
+            ztop = int(zs + r)                                         # 拱頂那一層（實心）
+            while M.get(xa, (y0 + y1) // 2, ztop) is None and ztop < zt:
+                ztop += 1
+            yc = (y0 + y1) // 2
+            M.box(layer, xa - 1, yc, ztop - 3, xa + 1, yc + 1, ztop, IRON, force=True)
+            for z in range(ztop - 10, ztop - 3):                       # 鐘：上窄下寬
+                rr = 1 + (ztop - 3 - z) // 2
+                for x in range(xa - rr - 1, xa + rr + 1):
+                    for y in range(yc - min(rr, (y1 - y0) // 2 - 1), yc + min(rr, (y1 - y0) // 2 - 1) + 1):
+                        M.put(layer, x, y, z, BRONZE, force=True)
+            bcs.append((xa, yc, ztop - 7))
+    return (bcs[0] if bcs else None), zt
 
 
 def arcade(M, x0, x1, y0, y1, piers, z_spring, z_top, layer='body', fill=CAL):

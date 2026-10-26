@@ -193,6 +193,258 @@
    "tags": "sub",
    "title": "小教堂｜屋頂"
   },
+  "basecamp-es-01m-church": {
+   "anchors": {
+    "bell": [
+     70,
+     34,
+     123
+    ],
+    "door": [
+     80,
+     28,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-church.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "16,28",
+      "style": "es",
+      "use": "church",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、扶壁與擺設",
+     "recolor": {},
+     "source": "basecamp-es-01m-church-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-church-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      29,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-正門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      29,
+      46
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-唱詩台窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      23,
+      100,
+      50
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-窗90",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      134,
+      100,
+      50
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗90",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      23,
+      140,
+      50
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-窗130",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      134,
+      140,
+      50
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗130",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      23,
+      180,
+      50
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-窗170",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      134,
+      180,
+      50
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗170",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      142,
+      195,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "聖器室-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      62.5,
+      30,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門左",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    160,
+    280,
+    170
+   ],
+   "tags": "building,es",
+   "title": "教堂（iglesia parroquial：一間的長堂、兩側扶壁、紅陶瓦兩坡頂、正面雙拱鐘牆、切石門框；聖器室、祭壇屏、長凳；石鋪前庭與石十字）"
+  },
+  "basecamp-es-01m-church-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-church-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    280,
+    170
+   ],
+   "tags": "sub",
+   "title": "教堂｜牆、扶壁與擺設"
+  },
+  "basecamp-es-01m-church-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-church-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    280,
+    170
+   ],
+   "tags": "sub",
+   "title": "教堂｜屋頂"
+  },
   "basecamp-es-01m-customs": {
    "anchors": {
     "door": [
@@ -1143,6 +1395,371 @@
    "tags": "sub",
    "title": "碉堡｜屋頂"
   },
+  "basecamp-es-01m-governor": {
+   "anchors": {
+    "door": [
+     140,
+     3,
+     0
+    ],
+    "flag": [
+     31,
+     31,
+     145
+    ],
+    "flag-bottom": [
+     33,
+     31,
+     124
+    ],
+    "flag-top": [
+     33,
+     31,
+     142
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-governor.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|57,31,124|57,31,142",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "28,22",
+      "style": "es",
+      "use": "governor",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、拱廊與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-governor-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-governor-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-正門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      74,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      98,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      162,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      186,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      230,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗5",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      74,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗（陽台裡）1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      186,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗（陽台裡）2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      3,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      230,
+      3,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      58,
+      133,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "左屋-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 90
+    },
+    {
+     "at": [
+      219,
+      133,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "右屋-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      93,
+      179,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      173,
+      179,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "倉房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      133,
+      72,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "院-後門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      122.5,
+      4,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    280,
+    220,
+    160
+   ],
+   "tags": "building,es",
+   "title": "總督府（casa de gobierno：圍著方院的兩層宅、切石門框與紋章、兩座木格柵陽台、左前角觀景樓與旗杆；院子三跨拱廊、蓄水池井口；廚房與倉房）"
+  },
+  "basecamp-es-01m-governor-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-governor-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    280,
+    220,
+    160
+   ],
+   "tags": "sub",
+   "title": "總督府｜牆、拱廊與院子"
+  },
+  "basecamp-es-01m-governor-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-governor-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    280,
+    220,
+    160
+   ],
+   "tags": "sub",
+   "title": "總督府｜屋頂"
+  },
   "basecamp-es-01m-hospital": {
    "anchors": {
     "bell": [
@@ -1485,6 +2102,2601 @@
    "tags": "sub",
    "title": "醫院｜屋頂"
   },
+  "basecamp-es-01m-house-a": {
+   "anchors": {
+    "door": [
+     24,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-a.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "es",
+      "use": "house",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      1,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      46,
+      1,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      60,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      91,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      38.5,
+      2,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "building,es",
+   "title": "住宅 A（一層的砌石屋：刷白、兩坡瓦頂、切石門框、木欄杆窗；後院院牆、廚房、蓄水池井口）"
+  },
+  "basecamp-es-01m-house-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-a-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜牆身與院子"
+  },
+  "basecamp-es-01m-house-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-a-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    80
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜屋頂"
+  },
+  "basecamp-es-01m-house-a-s": {
+   "anchors": {
+    "door": [
+     24,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-a-s.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,10",
+      "style": "es",
+      "use": "house",
+      "variant": "a-s"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-a-s-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-a-s-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      1,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      46,
+      1,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      60,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      71,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      38.5,
+      2,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    100,
+    80
+   ],
+   "tags": "building,es",
+   "title": "住宅 A（淺版 8 × 10：院子縮到後緣，一層的砌石屋：刷白、兩坡瓦頂、切石門框、木欄杆窗；後院院牆、廚房、蓄水池井口）"
+  },
+  "basecamp-es-01m-house-a-s-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-a-s-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    80
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜牆身與院子"
+  },
+  "basecamp-es-01m-house-a-s-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-a-s-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    80
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜屋頂"
+  },
+  "basecamp-es-01m-house-a-xs": {
+   "anchors": {
+    "door": [
+     24,
+     1,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-a-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "es",
+      "use": "house",
+      "variant": "a-xs"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-a-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-a-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      1,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      46,
+      1,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      60,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      38.5,
+      2,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    80,
+    80
+   ],
+   "tags": "building,es",
+   "title": "住宅 A（小版 8 × 8：沒有院子，一層的砌石屋：刷白、兩坡瓦頂、切石門框、木欄杆窗；後院院牆、廚房、蓄水池井口）"
+  },
+  "basecamp-es-01m-house-a-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-a-xs-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    80
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜牆身與院子"
+  },
+  "basecamp-es-01m-house-a-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-a-xs-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    80
+   ],
+   "tags": "sub",
+   "title": "住宅 A｜屋頂"
+  },
+  "basecamp-es-01m-house-b": {
+   "anchors": {
+    "door": [
+     28,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-b.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "es",
+      "use": "house",
+      "variant": "b"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-b-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-b-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      21,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      44,
+      5,
+      8
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      54,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "building,es",
+   "title": "住宅 B（編條糊泥的小屋 bahareque：刷白、四坡棕櫚葉頂、木板門窗；後院木柵、露天的灶）"
+  },
+  "basecamp-es-01m-house-b-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-b-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜牆身與院子"
+  },
+  "basecamp-es-01m-house-b-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-b-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    70
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜屋頂"
+  },
+  "basecamp-es-01m-house-b-s": {
+   "anchors": {
+    "door": [
+     28,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-b-s.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,10",
+      "style": "es",
+      "use": "house",
+      "variant": "b-s"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-b-s-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-b-s-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      21,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      44,
+      5,
+      8
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      54,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    100,
+    70
+   ],
+   "tags": "building,es",
+   "title": "住宅 B（淺版 8 × 10：院子縮到後緣，編條糊泥的小屋 bahareque：刷白、四坡棕櫚葉頂、木板門窗；後院木柵、露天的灶）"
+  },
+  "basecamp-es-01m-house-b-s-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-b-s-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    70
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜牆身與院子"
+  },
+  "basecamp-es-01m-house-b-s-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-b-s-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    70
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜屋頂"
+  },
+  "basecamp-es-01m-house-b-xs": {
+   "anchors": {
+    "door": [
+     28,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-b-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "es",
+      "use": "house",
+      "variant": "b-xs"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-b-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-b-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      21,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      44,
+      5,
+      8
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      54,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    80,
+    70
+   ],
+   "tags": "building,es",
+   "title": "住宅 B（小版 8 × 8：沒有院子，編條糊泥的小屋 bahareque：刷白、四坡棕櫚葉頂、木板門窗；後院木柵、露天的灶）"
+  },
+  "basecamp-es-01m-house-b-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-b-xs-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    70
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜牆身與院子"
+  },
+  "basecamp-es-01m-house-b-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-b-xs-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    70
+   ],
+   "tags": "sub",
+   "title": "住宅 B｜屋頂"
+  },
+  "basecamp-es-01m-house-c": {
+   "anchors": {
+    "door": [
+     22,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-c.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "es",
+      "use": "house",
+      "variant": "c"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-c-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-c-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-店門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-小門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      38,
+      5,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗（陽台裡）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      5,
+      38
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      64,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      91,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36.5,
+      6,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "building,es",
+   "title": "住宅 C（兩層的街屋：樓下店門與切石門框、樓上木格柵的封閉陽台、四坡瓦頂；後院院牆、廚房、井）"
+  },
+  "basecamp-es-01m-house-c-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-c-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜牆身與院子"
+  },
+  "basecamp-es-01m-house-c-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-c-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜屋頂"
+  },
+  "basecamp-es-01m-house-c-s": {
+   "anchors": {
+    "door": [
+     22,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-c-s.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,10",
+      "style": "es",
+      "use": "house",
+      "variant": "c-s"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-c-s-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-c-s-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-店門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-小門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      38,
+      5,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗（陽台裡）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      5,
+      38
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      64,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      71,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36.5,
+      6,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    100,
+    100
+   ],
+   "tags": "building,es",
+   "title": "住宅 C（淺版 8 × 10：院子縮到後緣，兩層的街屋：樓下店門與切石門框、樓上木格柵的封閉陽台、四坡瓦頂；後院院牆、廚房、井）"
+  },
+  "basecamp-es-01m-house-c-s-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-c-s-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜牆身與院子"
+  },
+  "basecamp-es-01m-house-c-s-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-c-s-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    100,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜屋頂"
+  },
+  "basecamp-es-01m-house-c-xs": {
+   "anchors": {
+    "door": [
+     22,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-c-xs.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,8",
+      "style": "es",
+      "use": "house",
+      "variant": "c-xs"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-c-xs-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-c-xs-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-店門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-小門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      38,
+      5,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗（陽台裡）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      6,
+      5,
+      38
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      64,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36.5,
+      6,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "building,es",
+   "title": "住宅 C（小版 8 × 8：沒有院子，兩層的街屋：樓下店門與切石門框、樓上木格柵的封閉陽台、四坡瓦頂；後院院牆、廚房、井）"
+  },
+  "basecamp-es-01m-house-c-xs-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-c-xs-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜牆身與院子"
+  },
+  "basecamp-es-01m-house-c-xs-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-c-xs-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    80,
+    100
+   ],
+   "tags": "sub",
+   "title": "住宅 C｜屋頂"
+  },
+  "basecamp-es-01m-house-h-a": {
+   "anchors": {
+    "door": [
+     80,
+     3,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-h-a.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 3,
+      "live": 24,
+      "lot": "16,16",
+      "style": "es",
+      "use": "house",
+      "variant": "h-a"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-h-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-h-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門廊",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      20,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-店門1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      120,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-店門2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      42,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      98,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      16,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      16,
+      3,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "三樓-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      3,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "三樓-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      88,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      88,
+      3,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "三樓-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      124,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      124,
+      3,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "三樓-窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      43,
+      68,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      109,
+      85,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "側翼-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      109,
+      82,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "側翼-二樓窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      109,
+      82,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "側翼-三樓窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      109,
+      120,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "側翼-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      109,
+      120,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "側翼-二樓窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      109,
+      120,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "側翼-三樓窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      94.5,
+      4,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    160,
+    160,
+    140
+   ],
+   "tags": "building,es",
+   "title": "高密度住宅 H-A（三層的大宅 casa de altos：臨街一棟＋右側三層側翼圍出內院；門廊、兩間店、二樓通長木格柵陽台、三樓木陽台、四坡瓦頂；蓄水池井口）"
+  },
+  "basecamp-es-01m-house-h-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-h-a-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    160,
+    140
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜牆身與院子"
+  },
+  "basecamp-es-01m-house-h-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-h-a-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    160,
+    160,
+    140
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-A｜屋頂"
+  },
+  "basecamp-es-01m-house-h-b": {
+   "anchors": {
+    "door": [
+     60,
+     3,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-h-b.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 3,
+      "live": 13,
+      "lot": "12,12",
+      "style": "es",
+      "use": "house",
+      "variant": "h-b"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-h-b-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-h-b-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門廊",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-店門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      3,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "三樓-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      3,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "三樓-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "二樓-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      3,
+      68
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "三樓-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      72,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      74.5,
+      4,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "building,es",
+   "title": "高密度住宅 H-B（三層的街屋：門廊與店、二樓木格柵陽台、三樓木欄杆窗、四坡瓦頂；後院、井）"
+  },
+  "basecamp-es-01m-house-h-b-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-h-b-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-B｜牆身與院子"
+  },
+  "basecamp-es-01m-house-h-b-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-h-b-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    140
+   ],
+   "tags": "sub",
+   "title": "高密度住宅 H-B｜屋頂"
+  },
+  "basecamp-es-01m-house-m-a": {
+   "anchors": {
+    "door": [
+     60,
+     3,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-m-a.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 2,
+      "live": 12,
+      "lot": "12,12",
+      "style": "es",
+      "use": "house",
+      "variant": "m-a"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-m-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-m-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門廊",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      16,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      16,
+      3,
+      38
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      84,
+      3,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      84,
+      3,
+      38
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      3,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗（陽台裡）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      62,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      83,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "側屋-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      74.5,
+      4,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    110
+   ],
+   "tags": "building,es",
+   "title": "中密度住宅 M-A（兩層的院落屋 casa de patio：門廊切石門框、木欄杆窗、樓上木格柵陽台、四坡瓦頂；右側廚房與下人房、院子、蓄水池井口）"
+  },
+  "basecamp-es-01m-house-m-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-m-a-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    110
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜牆身與院子"
+  },
+  "basecamp-es-01m-house-m-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-m-a-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    110
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-A｜屋頂"
+  },
+  "basecamp-es-01m-house-m-b": {
+   "anchors": {
+    "door": [
+     22,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-house-m-b.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "level": 2,
+      "live": 8,
+      "lot": "8,12",
+      "style": "es",
+      "use": "house",
+      "variant": "m-b"
+     },
+     "mirror": "",
+     "name": "牆身與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-m-b-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-house-m-b-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-店門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-小門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      5,
+      36
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗（陽台裡）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      74,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36.5,
+      6,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "building,es",
+   "title": "中密度住宅 M-B（兩層的窄街屋：樓下店門與切石門框、樓上木格柵陽台、四坡瓦頂；後院、井）"
+  },
+  "basecamp-es-01m-house-m-b-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-m-b-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-B｜牆身與院子"
+  },
+  "basecamp-es-01m-house-m-b-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-house-m-b-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "中密度住宅 M-B｜屋頂"
+  },
   "basecamp-es-01m-jail": {
    "anchors": {
     "door": [
@@ -1746,6 +4958,963 @@
    ],
    "tags": "sub",
    "title": "監獄｜屋頂"
+  },
+  "basecamp-es-01m-market": {
+   "anchors": {
+    "door": [
+     100,
+     9,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-market.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "20,16",
+      "style": "es",
+      "use": "market",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "棚、攤與肉鋪",
+     "recolor": {},
+     "source": "basecamp-es-01m-market-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-market-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      123,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "肉鋪-門1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      133,
+      123,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "肉鋪-門2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      90,
+      123,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "肉鋪-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    200,
+    160,
+    90
+   ],
+   "tags": "building,es",
+   "title": "市場（mercado：切石方墩撐著的開敞大棚、木梁、四坡瓦頂；石鋪地與攤桌、掛肉架、大橫桿秤；後面刷白的肉鋪）"
+  },
+  "basecamp-es-01m-market-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-market-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    200,
+    160,
+    90
+   ],
+   "tags": "sub",
+   "title": "市場｜棚、攤與肉鋪"
+  },
+  "basecamp-es-01m-market-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-market-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    200,
+    160,
+    90
+   ],
+   "tags": "sub",
+   "title": "市場｜屋頂"
+  },
+  "basecamp-es-01m-tavern": {
+   "anchors": {
+    "door": [
+     30,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "sign": [
+     49,
+     2,
+     26
+    ]
+   },
+   "expect": "basecamp-es-01m-tavern.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,14",
+      "style": "es",
+      "use": "tavern",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、擺設與後院",
+     "recolor": {},
+     "source": "basecamp-es-01m-tavern-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-tavern-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      20,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      62,
+      5,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      43,
+      74,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      74,
+      107,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "廚房-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      14,
+      62,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      28,
+      62,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      64,
+      62,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      78,
+      62,
+      1
+     ],
+     "meta": {},
+     "name": "酒桶-4",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      14,
+      120,
+      1
+     ],
+     "meta": {},
+     "name": "空桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      26,
+      120,
+      1
+     ],
+     "meta": {},
+     "name": "空桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      16.5,
+      6,
+      24
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    100,
+    140,
+    80
+   ],
+   "tags": "building,es",
+   "title": "酒館（pulpería：一層刷白砌石、兩坡瓦頂、切石門框、木欄杆窗、木招牌；櫃台與酒桶；後院、廚房）"
+  },
+  "basecamp-es-01m-tavern-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-tavern-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    80
+   ],
+   "tags": "sub",
+   "title": "酒館｜牆、擺設與後院"
+  },
+  "basecamp-es-01m-tavern-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-tavern-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    80
+   ],
+   "tags": "sub",
+   "title": "酒館｜屋頂"
+  },
+  "basecamp-es-01m-townhall": {
+   "anchors": {
+    "bell": [
+     100,
+     7,
+     70
+    ],
+    "door": [
+     100,
+     2,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-townhall.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "20,16",
+      "style": "es",
+      "use": "townhall",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、拱廊、陽台與院子",
+     "recolor": {},
+     "source": "basecamp-es-01m-townhall-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-townhall-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      90,
+      29,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "樓下-大門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      20,
+      29,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓下-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      29,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓下-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      29,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓下-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      160,
+      29,
+      8
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓下-窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      3,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      3,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      3,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      166,
+      3,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "樓上-窗4",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      3,
+      50,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "左-樓上窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 270
+    },
+    {
+     "at": [
+      194,
+      50,
+      40
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-樓上窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    },
+    {
+     "at": [
+      93,
+      102,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      86.5,
+      30,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-拱廊",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    200,
+    160,
+    110
+   ],
+   "tags": "building,es",
+   "title": "市政廳（cabildo：兩層刷白砌石、臨街五跨拱廊、樓上通長木陽台、門上紋章、牆頂小鐘牆、四坡瓦頂；後院、蓄水池井口）"
+  },
+  "basecamp-es-01m-townhall-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-townhall-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    200,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "市政廳｜牆、拱廊、陽台與院子"
+  },
+  "basecamp-es-01m-townhall-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-townhall-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    200,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "市政廳｜屋頂"
+  },
+  "basecamp-es-01m-warehouse": {
+   "anchors": {
+    "door": [
+     60,
+     3,
+     0
+    ],
+    "hoist": [
+     60,
+     1,
+     55
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "basecamp-es-01m-warehouse.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "es",
+      "use": "warehouse",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "牆、貨與後院",
+     "recolor": {},
+     "source": "basecamp-es-01m-warehouse-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "basecamp-es-01m-warehouse-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      47,
+      3,
+      0
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "前-貨門",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      128,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      20,
+      104,
+      1
+     ],
+     "meta": {},
+     "name": "糖桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      34,
+      104,
+      1
+     ],
+     "meta": {},
+     "name": "糖桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      80,
+      104,
+      1
+     ],
+     "meta": {},
+     "name": "糖桶-3",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      94,
+      104,
+      1
+     ],
+     "meta": {},
+     "name": "糖桶-4",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      20,
+      50,
+      1
+     ],
+     "meta": {},
+     "name": "糖桶-5",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      84,
+      40,
+      1
+     ],
+     "meta": {},
+     "name": "貨箱-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      96,
+      40,
+      1
+     ],
+     "meta": {},
+     "name": "貨箱-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      40.5,
+      4,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "building,es",
+   "title": "倉庫（almacén：刷白砌石、山牆朝街的兩坡瓦頂、大貨門與吊貨梁、鐵條氣窗；糖桶、貨箱與麻袋；後面小院）"
+  },
+  "basecamp-es-01m-warehouse-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-warehouse-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "倉庫｜牆、貨與後院"
+  },
+  "basecamp-es-01m-warehouse-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "basecamp-es-01m-warehouse-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "倉庫｜屋頂"
   }
  }
 }

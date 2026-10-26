@@ -9,9 +9,10 @@ sys.path.insert(1, os.path.join(os.path.dirname(TH), '..', 'ame-carib-civic-01m'
 import numpy as np
 from scipy import ndimage
 import es
+import es2
 from quay import composite
 key = sys.argv[1]
-fn = [f for f in es.ALL if f.__name__.replace('_', '-') == key][0]
+fn = [f for f in es.ALL + es2.ALL if f.__name__.replace('_', '-') == key][0]
 B = fn(); M = B['M']
 comp, clash = composite(M)
 a = np.zeros((M.X, M.Y, M.Z), bool)

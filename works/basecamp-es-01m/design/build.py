@@ -16,11 +16,12 @@ for sub in ('trailhead-harbour-01m', 'apex-one-industry-01m', 'meadow-farm-01m',
     if p not in sys.path:
         sys.path.insert(1, p)
 import es
+import es2
 from quay import *
 
 ROOT = 'basecamp-es-01m'
 SUMMIT_ROOT = 'summit-carib-01m'
-MODULES = [es]
+MODULES = [es, es2]
 
 
 def wid(*a):

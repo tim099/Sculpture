@@ -26,10 +26,25 @@
 | `-hospital` 醫院 | 聖多明哥 San Nicolás de Bari（1503～1552）：教堂兼醫院、中間一道禮拜、兩側住病人、拉丁十字、圍著四個院子〔摘：Afar、SAH、El Día〕 | 十字形放不進 20 × 16 m ⇒ 一長棟（左端小堂＋右邊病房）＋後院拱廊、廚房與藥房、蓄水池、藥草畦 |
 | `-fort` 碉堡（fuerte） | 哈瓦那 Real Fuerza（1558～1577）：近正方形、每邊 30 多公尺、四角稜堡、斜牆、壕溝與吊橋〔摘：Wikipedia、ancient-history-sites〕；圓筒圓頂的哨亭（garita）是西屬加勒比海堡壘的特徵〔摘：USF ClipPix〈Fort Matanzas〉〕 | 沒有壕溝（地塊 30 × 30 m）；稜堡的比例、牆高、九門 6 磅砲、營房、火藥庫照 trailhead 的四角稜堡；哨亭大小 |
 
+## 第二批（2026-10-26，Tim「第二批開工吧」）
+
+| 成品 | 照什麼 | 設計的部分 |
+|---|---|---|
+| `-church` 教堂 | 聖地牙哥的主堂 1522／1528 起造、1662 年被海盜洗劫後重建〔摘：Wikipedia〈Timeline of Santiago de Cuba〉、travel2unlimited〕；形制〔沒查到〕 | 一間的長堂、扶壁、雙拱鐘牆、聖器室、尺寸 |
+| `-townhall` 市政廳（cabildo） | 《印地亞斯法》cabildo 圍著廣場〔摘〕；哈瓦那的 Casas Capitulares 是 1776～1793 年的〔摘：OHC〕⇒ 1660 年代的形制〔沒查到〕 | 五跨拱廊、通長木陽台、小鐘牆、紋章 |
+| `-governor` 總督府 | 聖地牙哥 Velázquez 之家：樓下生意（交易所、熔金）、樓上住人、木格柵（celosía）封起來的陽台、穆德哈爾式木頂〔摘：passportandbaggage、cubadecentel〕 | 院落、觀景樓、拱廊跨數、尺寸 |
+| `-market` 市場 | 〔沒查到〕 | 切石方墩的大棚、肉鋪 |
+| `-tavern` 酒館（pulpería） | 〔沒查到〕 | 全部（住宅 A 放大） |
+| `-warehouse` 倉庫 | Atarazanas Reales 同一棟是倉庫與海關〔摘〕 | 單獨的倉庫全部 |
+| `-house-a／b／c`（＋淺版、小版） | A 砌石刷白瓦頂；B 編條糊泥＋棕櫚葉頂（古巴「bohíos de guano」〔摘：Silvio Acosta〕、cuje／embarrado 泥糊在細竹上〔摘：佛羅倫斯大學，講主堂的穹頂〕）；C 兩層、木格柵陽台（同 Velázquez 之家） | 尺寸、院子、廚房、井 |
+| `-house-m-a／m-b／h-a／h-b` | 同 C | 兩層、三層的配置、側翼、通長陽台 |
+
+- 哈瓦那的車製木陽台、木窗是 18 世紀前半才多起來、後來改鐵〔摘：OHC 的文章〕⇒ 1660 年代只給有錢人家放一座格柵陽台，不給每一棟。
+- 沒做配色變化：西屬城房子的彩色漆〔沒查到〕，只用刷白。
+
 ## 沒做的
 
 - 聖地牙哥灣口的莫羅堡（San Pedro de la Roca）：另一座特殊建築（TASK-0958 留言）。
-- 第二批（教堂、市政廳、總督府、市場、酒館、倉庫、住宅）：同一張單的第三格。
 - 戰鬥用的那一座：Blockside 的堡壘換成戰鬥單位（TASK-0955）只認 `carib-fort`、`en-fort` ⇒ `es-fort` 點了不會換（要另外在 Blockside 的船型表加一座）。
 
 ## 網頁（2026-10-26 讀）
@@ -43,3 +58,9 @@
 - Wikipedia〈Atarazanas Reales, Santo Domingo〉https://en.wikipedia.org/wiki/Atarazanas_Reales,_Santo_Domingo
 - El Día〈Los balcones de la Ciudad Colonial〉https://eldia.com.do/los-balcones-de-la-ciudad-colonial/
 - Diario de Cuba（Potosí 小堂、古巴的瓦頂）https://diariodecuba.com/cultura/1778410857_66837.html 、https://diariodecuba.com/cultura/1762084991_63663.html
+- passportandbaggage〈Casa de Velázquez〉https://passportandbaggage.com/casa-de-velazquez/
+- cubadecentel〈Museo Casa de Diego Velázquez〉https://cubadecentel.com/santiagoENG/museo_casa_de_diego_velazquez/museo_casa_de_diego_velazquezENG1.htm
+- Wikipedia〈Timeline of Santiago de Cuba〉https://en.wikipedia.org/wiki/Timeline_of_Santiago_de_Cuba
+- travel2unlimited〈Cathedral Basilica of Santiago de Cuba〉https://travel2unlimited.com/cuba-santiago-de-cuba-cathedral-basilica-of-santiago-de-cuba/
+- 佛羅倫斯大學（主堂穹頂的 cuje／embarrado）https://flore.unifi.it/handle/2158/633088
+- OHC 數位典藏（哈瓦那 Casas Capitulares、木陽台的年代）https://coleccionesdigitales.ohc.cu/
