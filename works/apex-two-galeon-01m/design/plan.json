@@ -45,7 +45,14 @@
     "bow_pow_high": {"v": 2.3, "src": "設計決定（同收穫號）：上面鈍（galleon 圓圓的船頭）"},
     "aft_pow": {"v": 2.0, "src": "設計決定（同收穫號）"},
     "top": [[100, 164], [240, 164], [244, 146], [330, 146], [334, 130], [556, 130], [560, 146], [660, 147]],
-    "top_src": "舷頂（舷牆頂）折線：toldilla 152 ＋ 12、alcázar 134 ＋ 12、船腰 tercera 114 ＋ 16（第三層砲門 z 120–125 頂上留舷牆）、castillo 134 ＋ 12（＋船頭 1）；船樓前後緣是設計決定（Tim 的參考圖：船尾樓高、船首樓短）"
+    "top_src": "舷頂（舷牆頂）折線：toldilla 152 ＋ 12、alcázar 134 ＋ 12、船腰 tercera 114 ＋ 16（第三層砲門 z 120–125 頂上留舷牆）、castillo 134 ＋ 12（＋船頭 1）；船樓前後緣是設計決定（Tim 的參考圖：船尾樓高、船首樓短）。步驟 17 起改用 top_curve（top 留著當步驟 4–16 的紀錄）",
+    "top_curve": {"knots": [[100, 164], [240, 164], [252, 146], [330, 146], [342, 130], [548, 130], [560, 146], [700, 146]],
+      "rise": [{"from": 240, "to": 128, "dz": 6, "pow": 2}, {"from": 590, "to": 631, "dz": 5, "pow": 2}],
+      "src": "步驟 17（Tim 2026-10-27「重新繪製船頭船尾曲線&裝飾」「船頭 船尾 可以參考西班牙大帆船的模型 & 圖紙」＋ San Felipe 模型的側面與船尾四分之一）：高度跟 top 一樣（toldilla 164、alcázar 146、船腰 130、castillo 146），差在 ① 船樓前後緣的落差從 4 格的直角台階改成 12 格的 smoothstep（落差都放在矮的那一邊：toldilla 前緣 x 240–252、alcázar 前緣 330–342、castillo 後緣 548–560 ⇒ 高的那層甲板邊上的舷牆不變矮）；② 船尾樓往船尾翹（x 240 ⇒ 船尾 x 128 加到 6 格）、船首樓往船頭翹（x 590 ⇒ 艏柱 631 加到 5 格），平方 ⇒ 越到頭越翹（模型的舷頂兩頭往上掃）。⚠ 前桅支索板照 top_z − 9 放（draft_rigging）⇒ 船首樓從 x 590 才翹，支索板那一段（x 573–603）最多 +0.2 格 ⇒ 不動"},
+    "beakhead": {"x": 620, "z": 96, "src": "步驟 17（Tim 2026-10-27 圈 San Felipe 模型的船頭「希望船頭能做出這個造型(有層次感)」＋ OcCre 船頭特寫）：船首樓前面一道平的 beakhead 艙壁往後退、底下的船頭往前突出、頂面是平台 ⇒ 線形在 z 96 以上、x 620 以前切掉（格心判斷）。x 620：前桅（x_step 605、往前倒 3°）在船首樓甲板 z 134 的軸 x 610.8、半徑 3.1 ⇒ 到 613.9，艙壁的牆 4 格（616–619）讓開 2 格；z 96：艏斜桅從船頭穿出去（x 631 中心 z 89、半徑 3.5 ⇒ 頂 92.5）在平台的牆（z 92–95）底下"},
+    "stern_tumble": {"z0": 100, "k": 0.1, "pow": 2, "src": "步驟 17（San Felipe 模型：船尾樓兩舷往裡倒、船尾上窄）：船尾那一段（s < s_aft，ua ＝ 1 − s ÷ s_aft）z 100 以上每往上 10 格每舷再收 1 格 × ua²（艉柱線那裡全收、往船中漸漸沒有）⇒ 船尾樓頂 z 170 那一圈每舷再收 7 格"},
+    "counter": {"c": 20, "z0": 71, "z1": 118, "round": 0.3,
+      "src": "步驟 17（San Felipe 模型的船尾：艉柱以上一片扇形 counter 往後鼓出去，兩層 stern walk 疊在上面）：wing transom（z 71）以上往後外伸，smoothstep 到 z 116（第三層甲板的高度、下層 stern walk 的地板）伸出 14 格（1.4 m），以上照艉柱的斜度；外伸那一段照 espejo 的寬往後、俯視兩角收 15%（圓的船尾）。s（長度比例）照艉柱線量 ⇒ 船身其他地方的寬一格不變。舵（z 70 以下，沿艉柱）不受影響"}
   },
   "waterline": {"z": 60, "src": "研究〔推〕：Concepción 的吃水查不到；Atocha 吃水 4.3 m／puntal 4.80 m ≈ 0.9 ⇒ 0.9 × 6.61 ＝ 5.95 m ⇒ z 60（含龍骨）。第一層砲門下緣 z 80 離水線 2.0 m"},
   "readings_at": {"deck_z": 74, "rail_z": 130, "hold_beams_z": 54, "puente_z": 94},
@@ -88,14 +95,14 @@
     "check": "主桅頂（頂桅頂）離水線 ≈ 43 m（收穫號 38.6 m、Andalucía 複製船 air draft 37 m）—— 只當量級對照"
   },
   "espolon": {"len_beyond_stem": 78, "src": "1618 art.45：espolón ＝ manga 的 3/5 伸出艏柱 ⇒ 13½ codos ＝ 7.76 m",
-    "deck_top_z": 81, "thick": 3, "half_at_stem": 22, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 22, "cutwater_half": 2, "cutwater_pow": 1.5, "cutwater_band": 10, "rail_h": 4, "stanchion_every": 6,
-    "design_src": "設計決定：espolón 的甲板頂 z 81（第一層甲板在船頭 z 77 之上）—— 艏斜桅從第一層甲板（x 612, z 78）以 30° 往前上，出船頭 x 631 時中心 z 89（下緣 86）、往前越來越高 ⇒ 喙與 head rail（頂 z 85）不會被穿過；head rail 4 格高、每 6 格一根柱；下面一片 cutwater 從艏柱 z 22 掃到喙尖（同收穫號／藍鯊號的框架）"},
-  "figurehead": {"x": 650, "len": 30, "half_t": 3, "raise": 8, "body": 213, "mane": 248, "crown": 248, "eye": 36,
-    "src": "設計決定：西班牙 galeón 的船首像多是戴冠的獅子（león；Castilla y León 的紋章獸，研究筆記 §6〔推〕）⇒ 鍍金的獅子：赭金身 213、金鬃 248、金冠；長 30 格（3 m，藍鯊號 9 呎 25 格照船放大）。x ＝ 獅子後端（喙尖往後 30 格）"},
+    "deck_top_z": 95, "thick": 3, "deck_from_x": 620, "half_at_deck_from": 26, "skirt_from_z": 82, "half_at_stem": 22, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 22, "cutwater_half": 2, "cutwater_pow": 2.0, "cutwater_band": 90, "cutwater_to_z": 82, "cutwater_tip_x": 656, "trail_off": [2, 9], "trail_from_z": 40, "rail_h": 7, "stanchion_every": 6,
+    "design_src": "步驟 17 v3：平台邊的欄杆 rail_h 4 ⇒ 7（第一人稱一步跨得上 6 格；4 格的扶手頂踩得上去、翻出平台）。步驟 17 v2（Tim 2026-10-27 在船頭側面圖上圈「是否有辦法讓船頭變成一整個平台(雕像往上移)」）：喙的甲板頂 81 ⇒ 95 ＝ beakhead 艙壁前那個平台的頂（lines.beakhead z 96 − 1）、從艙壁前 x 620 起鋪（半寬 26 收到艏柱的 22、再照 taper 收到喙尖）⇒ 船殼的平台跟喙連成一整片；甲板邊往下包側板到 z 82（原本喙的高度；上下兩條金線），最前面那一欄整片封、底下不封；knee 頂到 z 82、前緣在 x 656 接上平台底 ⇒ 平台前段懸空伸出去；獅子照 deck_top_z 跟著抬 14 格站到平台上；艏斜桅從平台中間穿出去（佔用格照樣跳過）。步驟 17 v1：cutwater_band 10 ⇒ 90 —— 喙底下的 knee of the head 從一條 10 格寬的斜條填成一整片（從艏柱前緣填到 cutwater 前緣；San Felipe 模型的船頭）；cutwater_pow 1.5 ⇒ 2.0（前緣更凹：下面貼著艏柱、上面才往前掃到喙尖）；水線以下跟船底同色 182；兩側沿前緣往裡 2、9 格兩條金線（z 40 以上，trailboard）。設計決定：espolón 的甲板頂 z 81（第一層甲板在船頭 z 77 之上）—— 艏斜桅從第一層甲板（x 612, z 78）以 30° 往前上，出船頭 x 631 時中心 z 89（下緣 86）、往前越來越高 ⇒ 喙與 head rail（頂 z 85）不會被穿過；head rail 4 格高、每 6 格一根柱；下面一片 cutwater 從艏柱 z 22 掃到喙尖（同收穫號／藍鯊號的框架）"},
+  "figurehead": {"x": 676, "len": 30, "half_t": 3, "raise": 8, "body": 213, "mane": 248, "crown": 248, "eye": 36,
+    "src": "設計決定：西班牙 galeón 的船首像多是戴冠的獅子（león；Castilla y León 的紋章獸，研究筆記 §6〔推〕）⇒ 鍍金的獅子：赭金身 213、金鬃 248、金冠；長 30 格（3 m，藍鯊號 9 呎 25 格照船放大）。x ＝ 獅子後端（喙尖往後 30 格）。步驟 17 v2：喙改成平台（甲板頂 95）⇒ 獅子跟著抬 14 格 ⇒ 在 x 650 正好擋在艏斜桅的路上（仰 30°：x 650 中心 z 100、x 670 中心 112；擋掉 216 格）⇒ 往前挪到 x 676（獅子 676–706、喙尖 708）：艏斜桅在 x 676 底 z 111.6、獅子屁股頂 ≈ 102；頭在 x 700 頂 ≈ 114、艏斜桅底 125.6"},
   "stern_deco": {
-    "hackebort": {"z0": 165, "z1": 190, "half": 22, "arch_from": 182, "half_top": 16, "thick": 2, "field": 254, "border": 248,
-      "ribbon": {"z0": 165, "z1": 171, "color": 224, "text": "CONCEPCION", "text_color": 248},
-      "shark": {"z_top": 188, "rows": [
+    "hackebort": {"z0": 170, "z1": 196, "half": 20, "arch_from": 188, "half_top": 14, "thick": 2, "field": 254, "border": 248,
+      "ribbon": {"z0": 170, "z1": 176, "color": 224, "text": "CONCEPCION", "text_color": 248},
+      "shark": {"z_top": 194, "rows": [
         ".....GGGGG.....",
         "....G.GSG.G....",
         "......SSS......",
@@ -114,20 +121,22 @@
         "...GGGGGGGGG..."
       ], "B": 6, "W": 255, "S": 246, "G": 248},
       "src": "設計決定：船尾頂上那塊拱形板（taffrail）畫船名的聖像 —— 無原罪聖母（Inmaculada Concepción）：白袍藍斗篷、合掌、金冠、腳下新月（西班牙的標準圖像；研究筆記 §6：艉板中央宗教像〔推〕、San Francisco 1695 的雕刻照 Consejo de Guerra 寄來的圖做〔查〕）；奶油底 254 金框、下面一條紅帶寫 CONCEPCION 金字；從船尾看左手 ＝ −y ⇒ 字從左讀 ⇒ 這一件的鏡像差照實報。程式沿用藍鯊號 hackebort 的框架（plan 的鍵名 hackebort／shark 照舊，畫的是聖母）"},
-    "balcony": {"floor_z": 136, "depth": 5, "half": 24, "rail_h": 5, "src": "設計決定：船尾走廊（balcón）在 alcázar 那排窗下面、伸出 espejo 5 格；欄杆藍 6 金頂"},
-    "quarter_gallery": {"x0": 156, "x1": 179, "z0": 116, "z1": 134, "out": 4, "roof_h": 4, "roof": 224, "win_rows": [[124, 129]],
-      "src": "1618 art.69：galleries 外伸 ≤ ⅔ codo（3.8 格）⇒ out 4；位置設計決定：第三層甲板（cámara）那一層、3 個開間（x 156–179），頂到 z 138 為止 —— alcázar 第 1 門 6 磅砲在 x 176–181、z 139–144，側廊再高就蓋住它；頂 4 層紅 224 收成拱"},
-    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.75, "dy": [-14, 0, 14], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.75 ⇒ 比藍鯊號大一號）；三盞 ＝ 旗艦（Capitana Real）的燈號〔推〕，站在拱形板頂上"}
+    "walks": [
+      {"name": "lower", "floor_z": 121, "dep": 6, "rail_h": 7, "x_from": 110, "x_end": 186, "bracket_every": 6, "bracket_len": 6},
+      {"name": "upper", "floor_z": 136, "dep": 5, "rail_h": 7, "x_from": 110, "x_end": 170, "bracket_every": 6, "bracket_len": 5, "bracket_off": 2}
+    ],
+    "walks_src": "步驟 17（Tim 2026-10-27「重新繪製船頭船尾曲線&裝飾」＋ San Felipe／OcCre 模型的船尾：兩層開放的 stern walk 從船尾繞過兩角、沿兩舷往前，欄杆、金扶手、底下一排金托架）：取代步驟 6 的船尾走廊（balcony，alcázar 窗下）與兩舷側廊（quarter_gallery）＋步驟 16 的側廊第二層與托架。下層地板 z 121（第三層甲板在船尾 z 120 上一格）、伸出 6、沿兩舷到 x 186（第三層第 1 門砲 x 200 前面）；上層地板 z 136（alcázar 甲板 134 上兩格，同舊的 balcony）、伸出 5、到 x 170（alcázar 第 1 門砲連金框 x 174 前面）。欄杆 7 格（v1 4 格 ⇒ 遊戲裡第一人稱一步跨得上 6 格、走出門直接踩上扶手頂；7 格 ⇒ 扶手頂離腳 7 格跨不上去）：底欄、隔一格一根藍欄杆柱、金扶手；地板外緣與下面一格金；托架每 6 格一組（沿走廊量：船尾面照 |dy|、兩舷照 x），往下 6／5 格收成 0。走廊後面的窗：船尾窗（stern.rows）＋兩舷的窗（stern.side_windows）",
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.75, "dy": [-11, 0, 11], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.75 ⇒ 比藍鯊號大一號）；三盞 ＝ 旗艦（Capitana Real）的燈號〔推〕，站在拱形板頂上"}
   },
   "ornament": {
-    "src": "步驟 16（Tim 2026-10-27「希望可以參考模型 圖紙 船身做出一些裝飾 曲線」＋三張參考：遊戲裡的側面、OcCre 式模型的船尾側廊、San Felipe 式整船模型）：一件子作品 -ornament；只放進組裝件的空格（撞到的照實數）；兩舷照 |dy| 一起產",
-    "gallery2": {"x0": 156, "x1": 171, "z0": 139, "z1": 149, "out": 3, "roof_h": 4, "roof": 224, "win": [143, 148],
-      "src": "設計決定（參考圖二：側廊上下兩層、上層比下層窄一點、開間是拱窗）：第二層疊在第一層的紅頂上（z 139 起）、2 個開間（x 156–171 —— alcázar 第 1 門砲連金框在 x 174–183，讓開）、伸出 3 格（比第一層的 4 少一格 ⇒ 往上收）；頂 4 層紅收成拱 ⇒ 最高 z 153（toldilla 第 1 門砲連金框在 z 155–163，讓開）；窗 z 143–148、最上一列只留中間兩格 ＝ 拱"},
-    "corbels": {"len": 7, "w": 2, "src": "設計決定（參考圖二：每層側廊底下一排金色渦卷托架）：第一層側廊（z 116 以下）每個開間的兩端各一個、高 7 格、寬 2 格，從船殼伸到側廊的面、往下收成 0；外面那一格金、裡面木"},
-    "balcony_corbels": {"dy_every": 8, "dy_off": 4, "len": 5, "src": "設計決定：船尾走廊底下，原本的木斜撐（每 8 格，dy 0／8／16／24）之間再加金托架（dy 4／12／20）、高 5 格、伸到走廊外緣、往下收"},
+    "src": "步驟 16（Tim 2026-10-27「希望可以參考模型 圖紙 船身做出一些裝飾 曲線」＋三張參考：遊戲裡的側面、OcCre 式模型的船尾側廊、San Felipe 式整船模型）：一件子作品 -ornament；只放進組裝件的空格（撞到的照實數）；兩舷照 |dy| 一起產。步驟 17：側廊第二層與兩組托架拿掉（stern walk 取代，在 stern_deco.walks），head rail 改三條＋格柵、加 cheek",
     "pilasters": {"src": "設計決定（參考圖二：窗與窗之間的金壁柱、窗頂的拱楣）：鏡板上每一排窗（追擊砲門那排除外），窗與窗之間、兩頭外側各一根 1 格寬的金壁柱（凸出鏡板 1 格、從窗底下 1 格到窗頂上 1 格）；每扇窗頂上 2 格一條金窗楣（比窗寬 1 格）"},
-    "head_rails": {"x_h": 598, "x_e": 646, "sag": 5, "thick": 2, "rails": [{"z_h": 112, "z_e": 96}, {"z_h": 101, "z_e": 90}], "timbers": [634, 640],
-      "src": "設計決定（參考圖三：船頭兩條往下彎再往前的金色 head rail，接到船首像後面）：每舷兩條，從船頭側面（x 598；z 112、101）往前往下彎、再往上接到船首像的頸背（x 646：獅子 x 650 往後；z 96、90）—— 二次曲線、控制點比兩頭低的那一頭再低 5 格 ⇒ 笑臉形；v1 終點 z 85／82 ⇒ 兩條在喙上壓平貼著原本的欄杆頂（z 82–85）、中間沒空；粗 2 格、上面那格金；喙上兩根 head timber（x 634、640）從喙的甲板直立撐到上面那條（只放空格 ⇒ 下面那條與喙的欄杆照舊）；notes todo「船頭往上彎的 head rail」"}
+    "head_rails": {"x_e": 648, "thick": 2, "dy_pow": 1.0, "rails": [], "timbers": [638, 643],
+      "src": "步驟 17 v1 是每舷三條細的 U 形欄杆＋直立金格柵（San Felipe 整船照）；Tim 再給 OcCre 船頭特寫 ⇒ 改成一條寬帶（head_band）＋下面兩條細金線（cheeks）⇒ rails 留空；喙上兩根 head timber（x 638、643）從喙的甲板撐到寬帶的底"},
+    "head_band": {"x_h": 616, "z_h": 136, "x_l": 648, "z_l": 107, "x_e": 670, "z_e": 112, "h": 7, "dy_e": 9, "dy_pow": 1.4, "fill": 36, "period": 8, "amp": 1.5,
+      "src": "步驟 17（OcCre 船頭特寫：從 beakhead 艙壁的上角一條寬帶彎下去接到船首像後面，深色底、上下金邊、中間金色卷草）：上緣兩段拋物線 —— 艙壁的角 x 616、z 136（船首樓菱格帶底下）往前往下到 x 652、z 100（斜率 0）再到獅子的頸背 x 666、z 104（v2：喙改成平台 z 95、獅子抬 14 格 ⇒ 最低點 107、終點 x 670、z 112（獅子挪到 x 676 ⇒ 寬帶收在獅子後面；dy 收到 9 ＜ 喙在 x 670 的半寬 10.5；帶底 z 101 在平台的欄杆頂 99 上面）；v1 終點在獅子屁股後面 x 649 ⇒ 33 格裡掉 37 格、看起來是直直掉下去）；帶高 7、2 格厚（外面那一層畫卷草，裡面那一層素的）；dy 從船殼外一格照 t^1.4 收到 11（喙在 x 666 的半寬 ≈ 12，獅子半厚 3）；底色 36（同 wale 的黑）、卷草：每 8 格一個波（振幅 1.5）＋波峰上、波谷下各一個金點"},
+    "cheeks": {"rows": [{"x0": 588, "z0": 94, "z1": 86}, {"x0": 592, "z0": 80, "z1": 74, "ext": 18}],
+      "src": "步驟 17（San Felipe 模型：喙底下船頭兩側兩條彎進艏柱的金線 cheek）：貼著船殼外面一格、x0 往前到艏柱、z 照平方往下彎（94 ⇒ 86、80 ⇒ 74），2 格高金；下面那條過了艏柱沿 knee 兩側再往前 18 格（knee 在 z 74 只到 x 650）（OcCre 船頭特寫：兩條細金線收到 knee 上）"}
   },
   "decks_build": {
     "src": "設計決定（遊戲用的大致構造，照造船規格 Ship_Decks §9.2–9.3；結構照藍鯊號／收穫號 draft_decks）。三層連續甲板＋三座船樓；艙室（santabárbara、cámara）只做甲板與 break，艙壁之後要配功能艙再加",
@@ -214,14 +223,14 @@
     "ratlines": {"step": 4, "lower": {"start": 7, "stop": 16}, "topmast": {"start": 4, "stop": 10}, "min_span": 5, "th": 0.3, "tm_th": 0.25, "color": "#2b2620",
       "src": "Ship_Rigging §6：橫繩組、每 4 格一道、lower start 7 stop 16、topmast start 4 stop 10、短於 5 格不畫；前、主、後桅的下桅那組 climb=1（foot ＝ 舷牆內側的甲板、head ＝ 桅頂平台靠這一舷的邊）；bonaventure 沒有桅樓 ⇒ 不做 ratlines"},
     "sails": {
-      "fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 45, "sheet_aft": 50, "tack_fwd": 40, "bow_belay_max_x": 620,
+      "fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 45, "sheet_aft": 50, "tack_fwd": 40, "bow_belay_max_x": 617,
       "lateen_clew": {"mizzen": [205, 172], "bonaventure": [165, 185]},
       "lateen_tack": {"mizzen": ["alcazar", 318], "bonaventure": ["toldilla", 228]},
       "lateen_sheet_x": {"mizzen": 215},
       "bonaventure_sheet_dy": 24,
       "sprit_belay_x": 615,
       "cross_texture": ["fore-course", "main-course"],
-      "src": "設計決定（照收穫號）：course 帆腳在舷頂上 5 格；上桅帆的 sheet 綁下一根帆桁同舷的 earing；後中桅帆（sobremesana）的 sheet 綁後桅桅樓邊；兩面三角帆的 clew 在帆桁後半下面、tack 從帆桁前端綁到甲板（後桅 → alcázar、bonaventure → toldilla）；後桅三角帆的 sheet 綁船尾樓兩舷舷頂 x 215、bonaventure 的綁船尾舷頂 y ±24（避開三盞燈 y ±14）。bonaventure 的 clew 放在 (165, 185)：放到 (152, 188) 的話帆的後緣在 z 218 掃到中間那盞燈（x ≤ 142.6）。兩面 course 畫勃艮第十字（同收穫號）"
+      "src": "設計決定（照收穫號）：course 帆腳在舷頂上 5 格；上桅帆的 sheet 綁下一根帆桁同舷的 earing；後中桅帆（sobremesana）的 sheet 綁後桅桅樓邊；兩面三角帆的 clew 在帆桁後半下面、tack 從帆桁前端綁到甲板（後桅 → alcázar、bonaventure → toldilla）；後桅三角帆的 sheet 綁船尾樓兩舷舷頂 x 215、bonaventure 的綁船尾舷頂 y ±24（避開三盞燈 y ±14）。bonaventure 的 clew 放在 (165, 185)：放到 (152, 188) 的話帆的後緣在 z 218 掃到中間那盞燈（x ≤ 142.6）。兩面 course 畫勃艮第十字（同收穫號）。步驟 17：bow_belay_max_x 620 ⇒ 617 —— beakhead 把 x 620 以前、z 96 以上切掉了，船頭那一欄（艏斜桅側支索、前帆 tack）改綁在艙壁頂上（牆 x 616–619）"
     },
     "sail_set": {"spritsail": 3, "sprit_topsail": 3, "gaff": 2},
     "flags": {"ensign": [40, 27], "pennant": [70, 5], "pennant_color": "#c8102e",
@@ -273,9 +282,9 @@
     ],
     "helm_src": "沿用憲法號雙舵輪＋木頭雙柱座（Ship_Helm §9.8.1：掛輪要同時掛座、擺法照抄）；後甲板中線、後桅（x 265）前面、羅經櫃（x 300）後面。⚠ 1680 年代的西班牙船用舵桿（pinzote），舵輪要到 18 世紀 —— 遊戲的舵手要 kind=wheel，照遊戲（同收穫號、藍鯊號）",
     "anchor": {"gear_work": "apex-two-galeon-01m-anchor-gear", "gear_title": "康塞普西翁號 錨架（兩舷 billboard）", "gear_link": "錨架", "work": "basecamp-frigate-constitution-01m-anchor", "scale": 1.0, "pivot": [23.5, 16.5, 56.5],
-      "x_try": [614, 616, 618, 620, 622, 624], "z_try": [136, 138, 140, 142, 144, 146, 148], "z_ref": 128, "d_step": 0.5, "d_max": 24, "ledge_half": 15, "ledge_out": 3, "ledge_t": 3, "color": 136,
+      "x_try": [606, 608, 610, 612, 614], "z_try": [136, 138, 140, 142, 144, 146, 148], "z_ref": 128, "d_step": 0.5, "d_max": 24, "ledge_half": 15, "ledge_out": 3, "ledge_t": 3, "color": 136,
       "gun_decks": ["apex-two-galeon-01m-deck-castillo", "apex-two-galeon-01m-deck-tercera"],
-      "src": "沿用共用錨元件（scale 1.0 ＝ 憲法號原尺寸；本船是大船）、meta anchor=bower；兩舷各一，吊在船頭舷外：前桅支索板（x 573–603）、船首樓第 2 門砲（x 605–610）的前面（x 614–624 試）；錨臂順著船殼切線（z_ref 128 那一層量）。錨冠底下一塊 billboard 托板。⚠ 沒有吊錨桿（cathead）"},
+      "src": "沿用共用錨元件（scale 1.0 ＝ 憲法號原尺寸；本船是大船）、meta anchor=bower；兩舷各一，吊在船頭舷外：前桅支索板（x 573–603）、船首樓第 2 門砲（x 605–610）的前面（x 614–624 試）；錨臂順著船殼切線（z_ref 128 那一層量）。錨冠底下一塊 billboard 托板。⚠ 沒有吊錨桿（cathead）。步驟 17：x_try 614–624 ⇒ 606–614 —— beakhead 把 x 620 以前、z 96 以上切掉了，量切線要 x ± 4 都有船殼"},
     "hawse": {"x": 626, "z": 88, "src": "設計決定：錨鏈孔在船頭、第一與第二層甲板之間的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
   },
   "paint": {
@@ -299,18 +308,32 @@
         {"deck": "alcazar", "z0": 136, "z1": 144, "bg": 213},
         {"deck": "castillo", "z0": 136, "z1": 144, "bg": 213}
       ], "src": "設計決定：船樓舷牆外面畫紅菱格配赭黃底（研究筆記 §6：上部工程紅赭／黃赭帶）；週期 10、半徑 3，只照 x、z 算 ⇒ 兩舷對稱"},
+    "beakhead": {"gold_z": [116], "platform_edge_gold": false, "doors": [{"dy": 10, "w": 5, "z0": 98, "h": 15, "model_h": 18, "model_z0": 96, "face": "fwd", "deck": "puente"}], "door_color": 104, "painted_doors": [], "port": {"z": 104, "r": 2, "color": 36}, "deck_color": 209,
+      "src": "步驟 17（OcCre 船頭特寫：beakhead 艙壁上兩扇拱門、一個圓窗）：艙壁朝前那一面金邊框、第三層甲板高度（z 116）一條金線、船首樓舷牆那一段（z 136–144）照側面的菱格（x 換成 y）上下金邊；兩扇真的門 dy ±10（Tim「開真的可以打開的門」⇒ v1 畫上去的拱門改成門洞）：門洞 5 × 15、底邊 z 98（艙壁的牆留 z 96–97 當門檻 ＝ 艙裡第二層甲板面 97 同高；⛔ v1 從 z 96 刻 ⇒ 門口正下方 x 616 是底下船頭的艙、腳下一路空到第一層甲板，tools/walk_doors.py 走不出去）、出去到平台（頂 z 95）往下一階 2 格；門洞外一圈金框＋頂上半圓金拱；門板 ＝ 步驟 10 那件、縮成 18 格高、從平台面 z 96 立起（連門檻一起蓋）；中間圓窗 z 104 半徑 2；平台頂面（z 95）甲板色 209、外緣金"},
+    "counter_fan": {"z0": 72, "z1": 118, "zc": 66, "dx": 1, "deg": 12, "line": 0.55, "colors": [136, 177],
+      "src": "步驟 17（San Felipe 模型的船尾：counter 上一片扇形，木色深淺相間、金線分隔）：艉柱線（lines.x_post）往後外伸的那一片外板、z 72–118；以 (中線, z 66) 為心每 12° 一條金線、線之間 136／177 輪流；頂上 z 119 一條金邊（下層 stern walk 的地板壓在 z 121）"},
     "cap_gold": {"src": "設計決定：舷頂最上一格外板換金（整條舷頂）"}
   },
   "stern": {
     "src": "設計決定：船尾 espejo —— 第一層甲板兩個追擊砲門；第二層（santabárbara）、第三層（cámara）、alcázar 各 5 扇窗、toldilla 3 扇；船尾走廊、側廊、聖母像在步驟 6",
     "face_x_max": 190, "z_ref_x": 175,
     "rows": [
-      {"deck": "main", "kind": "port", "n": 2, "w": 7, "h": 8, "sill": 6, "half": 22},
-      {"deck": "puente", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 24},
-      {"deck": "tercera", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 22},
-      {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 20},
+      {"deck": "main", "kind": "port", "n": 2, "w": 7, "h": 8, "sill": 7, "half": 22},
+      {"deck": "tercera", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 22, "door_j": 3},
+      {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 20, "door_j": 3},
       {"deck": "toldilla", "kind": "window", "n": 3, "w": 5, "h": 6, "sill": 4, "half": 14}
-    ]
+    ],
+    "rows_src": "步驟 17：追擊砲門 sill 6 ⇒ 7（counter 是斜面：砲門底下那段牆往前、頂上往後 ⇒ 18 磅砲口伸出去時砲管頂擦到砲門頂 z 93，draft_guns 兩門都退到 37.5 格、砲口在船殼裡 26 格）；第二層（puente）那排 5 扇窗拿掉 —— counter 往後外伸之後那一排落在 counter 的斜面上（San Felipe 模型的 counter 只有追擊砲門、畫扇形）",
+    "doors": [
+      {"deck": "tercera", "walk": "lower", "w": 5, "z0": 122, "h": 11, "model_h": 12},
+      {"deck": "alcazar", "walk": "upper", "w": 5, "z0": 137, "h": 13, "model_h": 14}
+    ],
+    "doors_src": "步驟 17（Tim 2026-10-27「開真的可以打開的門(第一人稱模式可以走出去) 船尾有陽台的地方也可以開門出去」）：第三層、alcázar 那兩排船尾窗正中間那一扇（door_j 3）換成門 —— 門洞 5 寬、底邊 ＝ stern walk 站的那一格（下層地板 z 121 ⇒ 122、上層 136 ⇒ 137），艙裡的甲板面 120／134 ⇒ 門口一階 +1／+2（第一人稱跨得上 6 格、船員走路格 3 格）；高 11／13：艙裡到上一層甲板的橫樑底只有 11／15 格，第一人稱頭上要 7 格（81_fps.js FP_HEAD）。門板照藍鯊號 gura-pinas-01m-door 縮放高度 ⇒ 12／14 格高（draft_doors.py）",
+    "side_windows": [
+      {"deck": "tercera", "sill": 5, "h": 7, "w": 5, "x0s": [140, 152, 164, 176]},
+      {"deck": "alcazar", "sill": 5, "h": 6, "w": 5, "x0s": [138, 150, 162]}
+    ],
+    "side_windows_src": "步驟 17：兩層 stern walk 從船尾繞到兩舷（stern_deco.walks），走廊後面的舷側開窗（跟船尾窗同一套：最外刻開、第二格玻璃、後面刻穿到艙裡）；取代步驟 6／16 的兩舷側廊。x 每 12 格一扇；上層停在 alcázar 第 1 門砲（x 176–181，金框 174–183）前面"
   },
   "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 182, "bottom_top_z": 60, "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同收穫號）；水線上橡木焦油褐 136、水線下白 182（sebo，研究筆記 §6〔推〕）"}
 }

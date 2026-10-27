@@ -27,9 +27,17 @@ def main():
     L = HL.Lines(plan)
     YC = L.YC
     WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
-    A = export_list(HULL + '-assembly', None, links=None)
-    if os.path.exists(os.path.join(WORKS, HULL + '-ornament', 'work.json')):     # 已經落過一次 ⇒ 扣掉自己（重跑才會逐位元組相同）
+    occ_arg = next((a.split('=', 1)[1] for a in sys.argv[2:] if a.startswith('--occ=')), None)
+    if occ_arg:       # 步驟 17：設計還沒落格時拿本機清單當組裝件（同 draft_deco.py --occ）；⛔ 正式產清單一律從組裝件讀
+        A = np.concatenate([np.loadtxt(p_, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')[:, :4] for p_ in occ_arg.split(';')])
+    else:
+        A = export_list(HULL + '-assembly', None, links=None)
+    if not occ_arg and os.path.exists(os.path.join(WORKS, HULL + '-ornament', 'work.json')):     # 已經落過一次 ⇒ 扣掉自己（重跑才會逐位元組相同）
         own = set(map(tuple, export_list(HULL + '-ornament', None)[:, :3].tolist()))
+        for nm in ('espolon', 'figurehead', 'stern-deco', 'hackebort'):    # 步驟 17：自己的格也屬於別的件（之前重疊了）⇒ 不扣 ⇒ 這次會讓開（v1 一扣就把重疊的格當成空的、永遠重疊下去）
+            p_ = os.path.join(design, 'masks', 'deco', nm + '.vox.txt')
+            if os.path.exists(p_):
+                own -= set(map(tuple, np.loadtxt(p_, delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')[:, :3].tolist()))
         A = A[np.array([tuple(r) not in own for r in A[:, :3].tolist()], bool)]
     occ = set(map(tuple, A[:, :3].tolist()))
     aft, outer = {}, {}
@@ -40,6 +48,12 @@ def main():
         if dy > outer.get((x, z), -1):
             outer[(x, z)] = dy
     O = plan['ornament']
+    Hh = np.loadtxt(occ_arg.split(';')[0], delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8') if occ_arg else export_list(HULL, None)
+    outer_h = {}                                                         # 步驟 17：只算船殼的最外面（cheek、寬帶貼船殼用）—— 照組裝件算會貼到錨架外面（離船殼 50 格浮空）
+    for x, y, z in Hh[:, :3].tolist():
+        dy = abs(y - YC)
+        if dy > outer_h.get((x, z), -1):
+            outer_h[(x, z)] = dy
     cells, blocked = {}, {}
 
     def both(part, x, dy, z, c):
@@ -50,84 +64,9 @@ def main():
             elif k not in cells:
                 cells[k] = (c, part)
 
-    # ── 側廊第二層（疊在第一層的紅頂上；開間、窗、壁柱照第一層的寫法，外伸少一格） ──
-    G = O['gallery2']
-    bay = lambda x: (x - G['x0']) // 8
-    fy = {}
-    for x in range(G['x0'], G['x1'] + 1):
-        vs = [outer[(x, z)] for z in range(G['z0'] + 4, G['z1'] + 1) if (x, z) in outer]
-        if vs:
-            fy[bay(x)] = max(fy.get(bay(x), -1), max(vs) + G['out'])
-    w0, w1 = G['win']
-    for x in range(G['x0'], G['x1'] + 1):
-        if bay(x) not in fy:
-            continue
-        F, bx = fy[bay(x)], (x - G['x0']) % 8
-        for z in range(G['z0'], G['z1'] + G['roof_h'] + 1):
-            hz = min(z, G['z1'])
-            o = outer.get((x, hz))
-            if o is None:
-                continue
-            ext = F - o
-            if z <= G['z0'] + 3:                                          # 底下一節往外收（同第一層）
-                out = max(1, round(ext * (z - G['z0'] + 1) / 4.0))
-            elif z > G['z1']:                                             # 頂：每層往裡收 1、兩頭各收 2 ⇒ 拱
-                k = z - G['z1']
-                out, inset = max(0, ext - k), 2 * k
-                if x < G['x0'] + inset or x > G['x1'] - inset or out == 0:
-                    continue
-            else:
-                out = ext
-            win = w0 <= z <= w1 and (bx in (2, 3, 4, 5) if z < w1 else bx in (3, 4))
-            for d in range(1, out + 1):
-                face = d == out
-                c = BLUE
-                if z > G['z1']:
-                    c = GOLD if z == G['z1'] + 1 else G['roof']
-                elif z in (G['z0'] + 3, G['z1']):
-                    c = GOLD
-                elif face and win:
-                    c = GLASS                                             # 畫上去的窗（同第一層 v1；後面是側廊的實心）
-                elif face and 1 <= bx <= 6 and w0 - 1 <= z <= w1 + 1:
-                    c = GOLD                                              # 窗框（拱的兩肩也是金）
-                elif face and bx in (0, 7):
-                    c = TRIM
-                both('gallery2', x, o + d, z, c)
-    # ── 第一層側廊底下的金托架：每個開間兩端；上面頂到側廊的面、往下收成 0 ──
-    Q = plan['stern_deco']['quarter_gallery']
-    C = O['corbels']
-    nb = (Q['x1'] - Q['x0'] + 1) // 8
-    cols = [Q['x0'] + i for i in range(C['w'])] + [Q['x1'] - i for i in range(C['w'])]
-    for k in range(1, nb):
-        cols += [Q['x0'] + 8 * k - 1 - i for i in range(C['w'] // 2)] + [Q['x0'] + 8 * k + i for i in range(C['w'] - C['w'] // 2)]
-    for x in sorted(set(cols)):
-        face = max([outer[(x, z)] for z in range(Q['z0'] + 5, Q['z1'] + 1) if (x, z) in outer] or [0])
-        for z in range(Q['z0'] + 3, Q['z0'] - C['len'] - 1, -1):
-            o = outer.get((x, z)) if z < Q['z0'] else None
-            if z >= Q['z0']:                                              # 側廊底下往外收的那一節：從船殼量（側廊的格會被 both 擋掉 ⇒ 只填外面那塊三角）
-                o = min(outer.get((x, zz), 999) for zz in range(Q['z0'] - 1, Q['z0'] - 3, -1))
-                reach = face - o
-            else:
-                if o is None:
-                    continue
-                reach = int(round((face - o) * (1 - (Q['z0'] - z) / float(C['len'] + 1)) ** 1.3))
-            for d in range(1, reach + 1):
-                both('corbel', x, o + d, z, GOLD if d >= reach - 1 else WOOD)   # 外面兩格金（看得到的那一面）
-    # ── 船尾走廊底下的金托架（原本木斜撐之間） ──
-    bal, BC = plan['stern_deco']['balcony'], O['balcony_corbels']
-    zf, dep = bal['floor_z'], bal['depth']
-    for dy in range(BC['dy_off'], bal['half'], BC['dy_every']):
-        for ddy in (dy, dy + 1):
-            for j in range(BC['len']):
-                z = zf - 1 - j
-                fz = aft.get((YC + ddy, z))
-                if fz is None:
-                    continue
-                reach = int(round(dep * (1 - j / float(BC['len'])) ** 1.2))
-                for x in range(fz - reach, fz):
-                    both('balcony_corbel', x, ddy, z, GOLD if x == fz - reach else WOOD)
+    # 步驟 17：側廊第二層、側廊底下與船尾走廊底下的托架拿掉 —— 兩層 stern walk（draft_deco.py stern_deco.walks）取代，托架在走廊底下
     # ── 鏡板的金壁柱與窗楣 ──
-    wins = [w for w in stern_windows(plan, YC) if w['kind'] == 'window']
+    wins = [w for w in stern_windows(plan, YC) if w['kind'] in ('window', 'door')]     # 步驟 17：門也算一格（壁柱照排在門的兩旁），門頂不放窗楣
     rows = {}
     for w in wins:
         rows.setdefault(w['deck'], []).append(w)
@@ -144,28 +83,32 @@ def main():
                 if fz is not None:
                     both('pilaster', fz - 1, abs(y - YC), z, GOLD)
         for w in ws:
+            if w['kind'] == 'door':
+                continue
             for y in range(w['y0'] - 1, w['y1'] + 2):
                 fz = aft.get((y, z1 + 2))
                 if fz is not None:
                     both('pilaster', fz - 1, abs(y - YC), z1 + 2, GOLD)
-    # ── 船頭的 head rail：船頭側面往前往下彎、接到喙上的欄杆頂；喙上的 head timber ──
+    # ── 步驟 17：船頭的 head rail（San Felipe 模型：每舷三條，從船頭側面往前往下彎、再往上接到船首像後面；三條之間一排直立的金格柵）＋ 船頭兩側的 cheek 金線 ──
     E, F_, H = plan['espolon'], plan['figurehead'], O['head_rails']
     xs0 = int(math.floor(float(L.x_stem(80)) + 0.5)) - 1
     zt = E['deck_top_z']
     wpar = lambda x: E['half_at_tip'] + (E['half_at_stem'] - E['half_at_tip']) * (1 - (x - xs0) / float(E['len_beyond_stem'])) ** E['taper_pow']
     rail_at = []
     for r in H['rails']:
-        p0, p2 = (H['x_h'], r['z_h']), (H['x_e'], r['z_e'])
-        p1 = ((p0[0] + p2[0]) / 2.0, min(p0[1], p2[1]) - H['sag'])
-        dy0 = outer.get((H['x_h'], r['z_h']), 0) + 1
-        dye = int(math.floor(wpar(H['x_e']) + 0.5))
+        xh, xl, xe = r['x_h'], r['x_l'], H['x_e']
+        dy0 = outer.get((xh, r['z_h']), 0) + 1
+        dye = int(math.floor(wpar(xe) + 0.5))
         at = {}
-        for i in range(0, 801):
-            t = i / 800.0
-            x = (1 - t) ** 2 * p0[0] + 2 * t * (1 - t) * p1[0] + t * t * p2[0]
-            z = (1 - t) ** 2 * p0[1] + 2 * t * (1 - t) * p1[1] + t * t * p2[1]
+        for i in range(0, 1201):                                          # 兩段拋物線：起點 ⇒ 最低點（x_l, z_l，斜率 0）⇒ 船首像後面 ⇒ U 形
+            t = i / 1200.0
+            x = xh + (xe - xh) * t
+            if x <= xl:
+                z = r['z_l'] + (r['z_h'] - r['z_l']) * ((xl - x) / float(xl - xh)) ** 2
+            else:
+                z = r['z_l'] + (r['z_e'] - r['z_l']) * ((x - xl) / float(xe - xl)) ** 2
             xi, zi = int(math.floor(x + 0.5)), max(zt + 1, int(math.floor(z + 0.5)))
-            dy = int(math.floor(dy0 + (dye - dy0) * t + 0.5))
+            dy = int(math.floor(dy0 + (dye - dy0) * t ** H.get('dy_pow', 1.0) + 0.5))
             dy = max([dy] + [outer[(xi, zz)] + 1 for zz in range(zi, zi + H['thick']) if (xi, zz) in outer])
             at.setdefault(xi, []).append((zi, dy))
         for xi, v in at.items():                                          # 同一柱取的那幾個 z、dy 都放 ⇒ 斜的地方面相接
@@ -173,13 +116,57 @@ def main():
                 for zz in range(zi, zi + H['thick']):
                     both('head_rail', xi, dy, zz, GOLD if zz == zi + H['thick'] - 1 else WOOD)
         rail_at.append(at)
-    up = rail_at[0]
-    for x in H['timbers']:                                                # head timber：喙的甲板直立撐到上面那條（只放空格 ⇒ 下面那條、喙的欄杆照舊）
-        if x not in up:
+    HB = O.get('head_band')
+    band_at = {}
+    if HB:            # OcCre 船頭特寫：最上面那條是一整條寬帶 —— 深色底、上下金邊、中間一條金色卷草（波浪＋波峰波谷各一點），從艙壁的上角彎下去接到船首像後面
+        xh, xl, xe = HB['x_h'], HB['x_l'], HB['x_e']
+        dy0 = outer_h.get((xh, HB['z_h'] - HB['h'] // 2), 0) + 1
+        for i in range(0, 2401):
+            t = i / 2400.0
+            x = xh + (xe - xh) * t
+            if x <= xl:
+                z = HB['z_l'] + (HB['z_h'] - HB['z_l']) * ((xl - x) / float(xl - xh)) ** 2
+            else:
+                z = HB['z_l'] + (HB['z_e'] - HB['z_l']) * ((x - xl) / float(xe - xl)) ** 2
+            xi, zi = int(math.floor(x + 0.5)), int(math.floor(z + 0.5))
+            dy = int(math.floor(dy0 + (HB['dy_e'] - dy0) * t ** HB.get('dy_pow', 1.0) + 0.5))
+            dy = max([dy] + [outer_h[(xi, zz)] + 1 for zz in range(zi - HB['h'] + 1, zi + 1) if (xi, zz) in outer_h])
+            band_at.setdefault(xi, set()).add((zi, dy))
+        P_, A_ = HB['period'], HB['amp']
+        mid = (HB['h'] - 1) / 2.0
+        for xi, v in band_at.items():
+            wave = mid + A_ * math.sin(2 * math.pi * xi / P_)
+            ph = (xi % P_) / float(P_)
+            for zi, dy in v:
+                for k in range(HB['h']):                                  # k 0 ＝ 下緣
+                    zz = zi - HB['h'] + 1 + k
+                    if k in (0, HB['h'] - 1):
+                        c = GOLD
+                    elif abs(k - wave) < 0.6 or (abs(ph - 0.25) < 0.07 and k == int(round(mid + A_ + 1))) or (abs(ph - 0.75) < 0.07 and k == int(round(mid - A_ - 1))):
+                        c = GOLD                                          # 卷草：波浪線＋波峰上、波谷下各一個金點（渦卷的頭）
+                    else:
+                        c = HB['fill']
+                    both('head_band', xi, dy, zz, c)
+                    both('head_band', xi, dy - 1, zz, GOLD if k in (0, HB['h'] - 1) else HB['fill'])   # 裡面那一層（朝船）
+    low_r = rail_at[-1] if rail_at else {}
+    for x in H['timbers']:                                                # 喙上的 head timber：喙的甲板直立撐到寬帶（或最下面那條欄杆）的底
+        tgt = band_at.get(x) or low_r.get(x)
+        if not tgt:
             continue
-        zu, dy = min(up[x])
+        zu, dy = min((zi - (HB['h'] - 1 if x in band_at else 0), d) for zi, d in tgt)
         for z in range(zt + 1, zu):
             both('head_timber', x, dy, z, GOLD)
+    for ck in O.get('cheeks', {}).get('rows', []):                        # cheek：船頭兩側貼著船殼往前、往下彎進艏柱的金線（凸出 1 格）
+        for x in range(ck['x0'], xs0 + 1):
+            t = (x - ck['x0']) / float(max(1, xs0 - ck['x0']))
+            z = int(math.floor(ck['z0'] + (ck['z1'] - ck['z0']) * t ** 2 + 0.5))
+            for zz in (z, z + 1):
+                o = outer_h.get((x, zz))
+                if o is not None:
+                    both('cheek', x, o + 1, zz, GOLD)
+        for x in range(xs0 + 1, xs0 + 1 + ck.get('ext', 0)):              # 步驟 17：過了艏柱沿 knee 兩側再往前（knee 半寬 cutwater_half ⇒ 貼在外面一格）
+            for zz in (ck['z1'], ck['z1'] + 1):
+                both('cheek', x, E['cutwater_half'] + 1, zz, GOLD)
 
     # ── 讀數 ──
     ports = LY.ports(plan)

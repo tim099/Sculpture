@@ -1,28 +1,29 @@
 {
  "parts": {
   "espolon": {
-   "cells": 8103,
+   "cells": 11099,
    "overlap_ship": 0,
    "overlap_other_parts": 0,
-   "cells_touching_ship": 90,
+   "cells_touching_ship": 637,
    "mirror_diff": 0,
    "bbox": [
     [
-     621,
-     138,
+     620,
+     134,
      22
     ],
     [
      708,
-     182,
-     85
+     186,
+     102
     ]
    ],
    "colors": {
-    "136": 6161,
-    "141": 12,
-    "209": 1786,
-    "248": 144
+    "136": 7633,
+    "141": 96,
+    "182": 779,
+    "209": 1861,
+    "248": 730
    }
   },
   "figurehead": {
@@ -33,14 +34,14 @@
    "mirror_diff": 0,
    "bbox": [
     [
-     650,
+     676,
      158,
-     82
+     96
     ],
     [
-     679,
+     705,
      162,
-     100
+     114
     ]
    ],
    "colors": {
@@ -50,73 +51,73 @@
    }
   },
   "stern-deco": {
-   "cells": 4196,
+   "cells": 6470,
    "overlap_ship": 0,
    "overlap_other_parts": 0,
-   "cells_touching_ship": 999,
+   "cells_touching_ship": 784,
    "mirror_diff": 0,
    "bbox": [
     [
-     143,
-     120,
-     116
+     123,
+     117,
+     115
     ],
     [
-     179,
-     200,
-     141
+     186,
+     203,
+     143
     ]
    ],
    "colors": {
-    "6": 2704,
-    "136": 204,
-    "141": 315,
-    "224": 172,
-    "248": 801
+    "6": 1310,
+    "136": 530,
+    "141": 2538,
+    "248": 2092
    }
   },
   "hackebort": {
-   "cells": 2272,
+   "cells": 2076,
    "overlap_ship": 0,
    "overlap_other_parts": 0,
-   "cells_touching_ship": 90,
+   "cells_touching_ship": 78,
    "mirror_diff": 60,
    "bbox": [
     [
-     136,
-     138,
-     165
+     115,
+     140,
+     170
     ],
     [
-     143,
-     182,
-     190
+     133,
+     180,
+     196
     ]
    ],
    "colors": {
     "6": 58,
-    "224": 103,
+    "224": 93,
     "246": 8,
-    "248": 398,
-    "254": 1676,
+    "248": 316,
+    "254": 1572,
     "255": 29
    }
   }
  },
  "skipped_on_ship": {
-  "espolon": 0,
+  "espolon": 1418,
   "figurehead": 0,
   "stern-deco": 0,
-  "hackebort": 0
+  "hackebort": 70
  },
+ "espolon_cavity_filled": 20,
  "bowsprit_clearance_hits": 0,
  "lanterns": [
   {
-   "dy": -14,
+   "dy": -11,
    "at": [
-    137.0,
-    146.5,
-    191
+    116.0,
+    149.5,
+    197
    ],
    "on_solid": true,
    "air_above": true
@@ -124,19 +125,19 @@
   {
    "dy": 0,
    "at": [
-    137.0,
+    116.0,
     160.5,
-    191
+    197
    ],
    "on_solid": true,
    "air_above": true
   },
   {
-   "dy": 14,
+   "dy": 11,
    "at": [
-    137.0,
-    174.5,
-    191
+    116.0,
+    171.5,
+    197
    ],
    "on_solid": true,
    "air_above": true
@@ -144,39 +145,39 @@
  ],
  "lists": {
   "espolon": [
-   8103,
-   "aa66ae0571465d289fd1fd6b22832c80561b53b95fa32240c9c399db893fb9ef"
+   11099,
+   "134a274854f047dfc255542ff98bd264eb873ff23cdec3a9a4bb2e8906980a3a"
   ],
   "figurehead": [
    1044,
-   "91846365753807f952400fc988e195bf5a14b411e9fb5327de90d726cc175302"
+   "2827b5b9173a74c365cc6925785a94d1cc9297e7f671a2ba60e756c77123fef5"
   ],
   "stern-deco": [
-   4196,
-   "a069519ba1ee63e61fa1b0678eab3b8ef91376c41f9060f96b638cb3a30cf929"
+   6470,
+   "264994bda75d5c9ee355162570dd0bd18b3f5efdb5ac01af1ed999a73fc722cf"
   ],
   "hackebort": [
-   2272,
-   "96cb40932da8bca8a54572caefc17c1b9d7972d6c3550bb1abdf8e9898210d95"
+   2076,
+   "9c904ee958f0e04a1141055b25a2b7a9d4316c367917d5d4abff516a15d9884c"
   ],
   "gallery_glass.vox.txt": [
-   108,
-   "aa4793ba9127a191be333b4674d5c0308c56eee83285ced59a74d935c67b21e2"
+   0,
+   "43f9992964326fc49b6d74d74cb6a7d1ce43907707e6b0f428d0cd51f989f3ef"
   ],
   "gallery_carve.vox.txt": [
-   432,
-   "5a97a72d4b3ac588cd09345eb6c3a53f89b13ed5448ac489d4c4ead557e6beb8"
+   0,
+   "28f66681a0adf03ca1a6a7d6674a4880b531ba68dd8598c4243266f1b496c1ee"
   ]
  },
  "gallery_v2": {
-  "glass": 108,
-  "hull_carve": 432,
+  "glass": 0,
+  "hull_carve": 0,
   "blocked": [],
   "blocked_n": 0,
   "glass_on_ship": 0,
   "glass_on_parts": 0,
-  "shafts": 108,
-  "shafts_reach_cabin": 108,
+  "shafts": 0,
+  "shafts_reach_cabin": 0,
   "glass_mirror_diff": 0,
   "carve_mirror_diff": 0
  }

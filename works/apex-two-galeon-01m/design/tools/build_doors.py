@@ -37,6 +37,6 @@ for an, at in (PL['anchors'].items() if w.startswith(HULL) else []):      # 康�
 xyz = lambda v: ','.join('%g' % c for c in v)
 for r in PL['rows']:
     cli('op=work', 'sub=model', 'persona=apex-two', 'work=' + r['host'], 'name=' + r['name'], 'source_work=' + w, 'at=' + xyz(r['at']), 'pivot=' + xyz(PL['pivot']),
-        'rotate=0,0,%g' % r['rotate'], 'scale=' + xyz([PL['scale']] * 3), 'overwrite=1', 'meta=' + json.dumps(r['meta'], ensure_ascii=False, separators=(',', ':')),
+        'rotate=0,0,%g' % r['rotate'], 'scale=' + xyz([PL['scale'], PL['scale'], r.get('scale_z', PL['scale'])]), 'overwrite=1', 'meta=' + json.dumps(r['meta'], ensure_ascii=False, separators=(',', ':')),
         'note=步驟 10 門（TASK-0969；draft_doors.py）：%s %s 舷的門洞、往外開' % (r['break'], r['side']))
 print('✓ 門 %d 扇' % len(PL['rows']))

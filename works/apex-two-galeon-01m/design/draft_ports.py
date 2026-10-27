@@ -46,7 +46,8 @@ def stern_windows(plan, YC):
         for j, c in enumerate(cs):
             k = int(math.floor(abs(c) + 0.5)) * (1 if c >= 0 else -1)   # 對稱取整：±c ⇒ ±k
             y0 = YC + k - (w - 1) // 2
-            out.append({'deck': row['deck'], 'j': j + 1, 'y0': y0, 'y1': y0 + w - 1, 'z0': zc, 'z1': zc + h - 1, 'kind': row['kind']})
+            kind = 'door' if row.get('door_j') == j + 1 else row['kind']      # 步驟 17：那一扇換成走出 stern walk 的門（門洞在 plan.stern.doors，draft_ports 刻；門板 draft_doors.py 擺）
+            out.append({'deck': row['deck'], 'j': j + 1, 'y0': y0, 'y1': y0 + w - 1, 'z0': zc, 'z1': zc + h - 1, 'kind': kind})
     return out
 
 
@@ -111,6 +112,70 @@ def main():
         paint[outer & (m & ~dia)[:, None, :]] = r.get('bg', BLACK)
         edge = inx[:, None] & ((zz == r['z0'] - 1) | (zz == r['z1'] + 1))
         paint[outer & edge[:, None, :]] = GOLD
+    # 步驟 17：船尾 counter 的扇形（San Felipe 模型）—— 艉柱線往後外伸的那一片外板：以 (中線, zc) 為心每 deg 度一條金線、線之間兩色輪流
+    CF = PA.get('counter_fan')
+    fan = np.zeros(wall.shape, bool)
+    if CF:
+        xp = np.array([float(L.x_post(z + 0.5)) for z in range(nz)])
+        behind = (xs_all[:, None] + 0.5) < xp[None, :] + CF['dx']
+        zr_ = (zz >= CF['z0']) & (zz <= CF['z1'])
+        dyc = np.abs(dy_of)[None, :, None] + 0.5
+        dzc = (np.arange(nz) + 0.5 - CF['zc'])[None, None, :]
+        ang = np.degrees(np.arctan2(dyc, np.maximum(dzc, 0.5)))
+        k = np.floor(ang / CF['deg'] + 0.5)
+        ray = np.hypot(dyc, dzc) * np.abs(np.sin(np.radians(ang - k * CF['deg']))) <= CF['line']
+        sector = np.where(np.floor(ang / CF['deg']) % 2 == 0, np.uint8(CF['colors'][0]), np.uint8(CF['colors'][1]))
+        fan = outer & (behind & zr_)[:, None, :]
+        paint[fan] = np.broadcast_to(sector, wall.shape)[fan]
+        paint[fan & np.broadcast_to(ray, wall.shape)] = GOLD
+        paint[outer & (behind & (zz == CF['z1'] + 1))[:, None, :]] = GOLD      # 扇形頂的金邊
+    # 步驟 17：船頭的 beakhead（lines.beakhead 切出來的艙壁與平台）—— OcCre／San Felipe 模型的船頭：
+    #   艙壁朝前那一面：金邊框、甲板高度兩條金線、船首樓舷牆那一段的菱格（照 y 排）、兩扇拱門（深色木、金框）、中間一個圓窗；平台頂面：甲板色、外緣金
+    BH, PB = plan['lines'].get('beakhead'), PA.get('beakhead')
+    if BH and PB:
+        xb, zb = BH['x'], BH['z']
+        face = outer & ~np.roll(S, -1, axis=0) & (xs_all >= xb - 4)[:, None, None] & (zz >= zb)[:, None, :]
+        yy = dy_of[None, :, None]
+        z3 = np.arange(nz)[None, None, :]
+        paint[face] = BLACK
+        fan |= face                                                       # 艙壁朝前那一面不畫 wale（讀數「帶子裡還是黑的」跟扇形一起扣）
+        r = next(r for r in LZ['rows'] if r['deck'] == 'castillo')        # 菱格：船首樓舷牆那一段（z 照側面那一條、x 換成 y）
+        uy = np.abs((np.abs(yy) % per) - per // 2)
+        vz = np.abs((z3 - r['z0']) % per - per // 2)
+        band = face & (z3 >= r['z0']) & (z3 <= r['z1'])
+        paint[band & ((uy + vz) <= rad)] = r.get('color', LZ['color'])
+        paint[band & ((uy + vz) > rad)] = r.get('bg', BLACK)
+        for zg in PB['gold_z'] + [r['z0'] - 1, r['z1'] + 1]:
+            paint[face & (z3 == zg)] = GOLD
+        nb = np.zeros(wall.shape, bool)                                   # 邊框：上下左右有一格不是艙壁面
+        for ax, sh in ((1, 1), (1, -1), (2, 1), (2, -1)):
+            nb |= face & ~np.roll(face, sh, axis=ax)
+        paint[nb] = GOLD
+        for dr in PB.get('painted_doors', []):                                          # 拱門：寬 w、高 h，頂上 w//2 列收成半圓；外一圈金
+            for sg in (1, -1):
+                cy = sg * dr['dy']
+                hw = dr['w'] / 2.0
+                zc_ = dr['z0'] + dr['h'] - hw
+                for zq in range(dr['z0'], dr['z0'] + dr['h'] + 2):
+                    for yq in range(int(math.floor(cy - hw - 1)), int(math.ceil(cy + hw + 1)) + 1):
+                        dyy = yq - cy
+                        rr = math.hypot(dyy, max(0.0, zq + 0.5 - zc_))
+                        inside_ = abs(dyy) <= hw - 0.5 and zq < dr['z0'] + dr['h'] and (zq + 0.5 <= zc_ or rr <= hw - 0.5)
+                        rim = (abs(dyy) <= hw + 0.5 and (zq + 0.5 <= zc_ or rr <= hw + 0.5)) and not inside_
+                        sel = face & (yy == yq) & (z3 == zq)
+                        if inside_:
+                            paint[sel] = PB['door_color']
+                        elif rim and zq >= dr['z0']:
+                            paint[sel] = GOLD
+        po = PB['port']
+        rr = np.hypot(yy, z3 + 0.5 - po['z'])
+        paint[face & (rr <= po['r'])] = po['color']
+        paint[face & (rr > po['r']) & (rr <= po['r'] + 1)] = GOLD
+        plat = outer & (zz == zb - 1)[:, None, :] & (xs_all >= xb)[:, None, None]
+        paint[plat] = PB['deck_color']
+        if PB.get('platform_edge_gold', True):                          # 步驟 17 v2：喙的平台從艙壁前面接上來 ⇒ 船殼平台的外緣在整片平台中間，不描金
+            edge = plat & (~np.roll(S, 1, axis=1) | ~np.roll(S, -1, axis=1) | ~np.roll(S, -1, axis=0))
+            paint[edge] = GOLD
     # 舷頂最上一格（外板那一層）金
     topz = np.array([int(math.floor(float(L.top_z(x + 0.5)) + 0.5)) for x in xs_all])
     cap = np.zeros(wall.shape, bool)
@@ -147,6 +212,8 @@ def main():
     frame = np.zeros(wall.shape, bool)
     stern_open = np.zeros(wall.shape, bool)
     for wdw in windows:
+        if wdw['kind'] == 'door':
+            continue
         for yi in range(wdw['y0'] - ylo, wdw['y1'] - ylo + 1):
             for z in range(wdw['z0'], wdw['z1'] + 1):
                 f = first[yi, z]
@@ -171,6 +238,80 @@ def main():
                 f = first[yi, z]
                 if f >= 0:
                     frame[f, yi, z] = True
+    # 步驟 17：stern walk 後面兩舷的窗（plan.stern.side_windows）—— 跟船尾窗同一套：從舷外往裡那一段牆，最外一格刻開、第二格玻璃、後面刻穿到艙裡；外面一圈金框
+    side_wins = []
+    for r in plan['stern'].get('side_windows', []):
+        for xw in r['x0s']:
+            zc = int(LY.deck_z(plan, r['deck'], xw + r['w'] / 2.0)) + r['sill']
+            side_wins.append({'deck': r['deck'], 'x0': xw, 'x1': xw + r['w'] - 1, 'z0': zc, 'z1': zc + r['h'] - 1})
+    for wdw in side_wins:
+        for sgn in (1, -1):
+            order = range(ny - 1, -1, -1) if sgn > 0 else range(ny)
+
+            def run_at(xi, z):
+                rr = []
+                for yi in order:
+                    if wall[xi, yi, z]:
+                        rr.append(yi)
+                    elif rr:
+                        break
+                return rr
+            for x in range(wdw['x0'] - 1, wdw['x1'] + 2):
+                for z in range(wdw['z0'] - 1, wdw['z1'] + 2):
+                    rr = run_at(x - x0, z)
+                    if not rr:
+                        continue
+                    if wdw['x0'] <= x <= wdw['x1'] and wdw['z0'] <= z <= wdw['z1']:
+                        stern_open[x - x0, rr[0], z] = True
+                        if len(rr) > 1:
+                            glass[x - x0, rr[1], z] = True
+                            for yi in rr[2:]:
+                                stern_open[x - x0, yi, z] = True
+                    else:
+                        frame[x - x0, rr[0], z] = True
+    # 步驟 17：真的門洞（Tim 2026-10-27「開真的可以打開的門(第一人稱模式可以走出去) 船尾有陽台的地方也可以開門出去」）——
+    #   門洞那幾欄（y0..y1 × z0..z1）整段牆刻穿；門板（比門洞每邊大一格、直立）擺在門洞外面：船尾的牆往後倒 ⇒ 門板那一面（x ≤ 門板的 x）前面的牆也刻掉 ⇒ 門嵌在凹進去的門廊裡
+    door_cut = []
+    for dr in plan['stern'].get('doors', []) + (plan['paint'].get('beakhead', {}).get('doors', []) if BH else []):
+        for sgn in ((1, -1) if dr.get('dy') else (1,)):
+            y0 = YC + sgn * dr.get('dy', 0) - dr['w'] // 2
+            y1, z0d, z1d = y0 + dr['w'] - 1, dr['z0'], dr['z0'] + dr['h'] - 1
+            ys = range(y0 - ylo, y1 - ylo + 1)
+            if dr.get('face', 'aft') == 'aft':                 # 船尾：從後面往前那一段牆
+                fx = [first[yi, z] for yi in ys for z in range(z0d, z1d + 1) if first[yi, z] >= 0]
+                xd = max(fx) - 1                                # 門板的 x（模型座標的格）：門洞最底下那一格牆的外面一格
+                for yi in range(y0 - 1 - ylo, y1 + 2 - ylo):
+                    for z in range(z0d, z0d + dr['model_h']):
+                        for xi in range(0, xd + 1):
+                            if wall[xi, yi, z]:
+                                stern_open[xi, yi, z] = True
+                for yi in ys:
+                    for z in range(z0d, z1d + 1):
+                        f = first[yi, z]
+                        while 0 <= f < nx and wall[f, yi, z]:
+                            stern_open[f, yi, z] = True
+                            f += 1
+                door_cut.append({'deck': dr['deck'], 'face': 'aft', 'y0': y0, 'y1': y1, 'z0': z0d, 'z1': z1d, 'door_x': int(xd + x0), 'model_h': dr['model_h']})
+            else:                                               # 船頭 beakhead 艙壁（朝 +x）：從前面往後那一段牆
+                xs_d = []
+                for yi in ys:
+                    for z in range(z0d, z1d + 1):
+                        c = np.nonzero(wall[:, yi, z])[0]
+                        f = c[-1] if len(c) else -1
+                        xs_d.append(f)
+                        while f >= 0 and wall[f, yi, z]:
+                            stern_open[f, yi, z] = True
+                            f -= 1
+                door_cut.append({'deck': dr['deck'], 'face': 'fwd', 'y0': y0, 'y1': y1, 'z0': z0d, 'z1': z1d, 'door_x': int(max(xs_d) + 1 + x0), 'model_h': dr['model_h'], 'model_z0': dr.get('model_z0', z0d)})
+                for yi in range(y0 - 1 - ylo, y1 + 2 - ylo):    # 門洞外一圈金框＋頂上半圓的拱（艙壁朝前那一面）
+                    for z in range(z0d, z1d + 6):
+                        dyy = yi + ylo - (y0 + y1) / 2.0
+                        arch = z > z1d and abs(math.hypot(dyy, z - z1d) - (dr['w'] / 2.0 + 1)) < 0.7
+                        rim = z <= z1d and abs(dyy) > (dr['w'] - 1) / 2.0
+                        if arch or rim or z == z1d + 1:
+                            c = np.nonzero(wall[:, yi, z])[0]
+                            if len(c):
+                                frame[c[-1], yi, z] = True
     carve |= stern_open
     glass &= ~carve
     carve |= glass                      # 玻璃從船殼拿出來、另做一件子作品（關聯 meta material=glass）⇒ masks/glass/stern_glass.vox.txt
@@ -213,11 +354,14 @@ def main():
     for w in PA['wales']['rows']:
         lo, hi = wale_rows(plan, w, xs_all)
         for xi in range(nx):
-            m = after[xi, :, lo[xi]:hi[xi] + 1] & (dist[xi, :, lo[xi]:hi[xi] + 1] <= 1.0) & (acol[xi, :, lo[xi]:hi[xi] + 1] == BLACK)
+            m = after[xi, :, lo[xi]:hi[xi] + 1] & (dist[xi, :, lo[xi]:hi[xi] + 1] <= 1.0) & (acol[xi, :, lo[xi]:hi[xi] + 1] == BLACK) & ~fan[xi, :, lo[xi]:hi[xi] + 1]   # 步驟 17：counter 的扇形蓋過 wale（扇形自己有 136 那一色）
             left_black += int(m.sum())
     R['band_black_left'] = left_black
     R['mirror_diff'] = int((after != after[:, ::-1, :]).sum() + ((acol * after) != (acol * after)[:, ::-1, :]).sum())
     R['windows'] = windows
+    R['side_windows'] = side_wins
+    R['doors'] = door_cut
+    R['side_windows_glass'] = int(sum(glass[w['x0'] - x0:w['x1'] - x0 + 1, :, w['z0']:w['z1'] + 1].sum() for w in side_wins))
     R['ports_total'] = len(ports) * 2 + len(chasers)
     if probe:
         print(json.dumps({'probe': probe[0], 'ports_not_open': see}, ensure_ascii=False))

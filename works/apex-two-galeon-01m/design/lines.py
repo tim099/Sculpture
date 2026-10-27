@@ -53,6 +53,10 @@ class Lines:
         self.k_bow_lo, self.k_bow_hi = g('bow_pow_low'), g('bow_pow_high')
         self.q_aft = g('aft_pow')
         self.top = L['top']                  # 舷頂高度：[[x, z], …] 折線
+        self.ctr = L.get('counter')          # 步驟 17：船尾 counter（wing transom 以上往後外伸）；沒有 ⇒ 船尾面照艉柱的斜度
+        self.tc = L.get('top_curve')         # 步驟 17：舷頂曲線（船樓前後緣 smoothstep 下降、兩頭往上翹）；沒有 ⇒ top 折線
+        xs = np.arange(0, plan['space']['x']) + 0.5
+        self.top_max = float(np.max(self.top_z(xs)))
 
     # ── 兩端 ──
     def x_stem(self, z):
@@ -65,9 +69,17 @@ class Lines:
         """艉柱後緣的 x（往上往後倒）。"""
         return self.x_sp0 - np.asarray(z, float) * math.tan(self.sp_rake)
 
+    def counter(self, z):
+        """船尾 counter 往後外伸幾格（步驟 17，參考 San Felipe 模型的扇形 counter）：z0（wing transom）0 ⇒ z1 外伸 c，smoothstep（兩頭相切）；z1 以上照艉柱的斜度。"""
+        z = np.asarray(z, float)
+        if not self.ctr:
+            return np.zeros(z.shape)
+        C = self.ctr
+        return float(C['c']) * smoothstep((z - C['z0']) / float(C['z1'] - C['z0']))
+
     def x_aft(self, z):
-        """船殼最後面：wing transom 以下 ＝ 艉柱；以上 ＝ 平的 espejo，順著艉柱的斜度往後倒。"""
-        return self.x_post(z)
+        """船殼最後面：wing transom 以下 ＝ 艉柱；以上 ＝ espejo，順著艉柱的斜度往後倒（步驟 17：再往後外伸 counter）。"""
+        return self.x_post(z) - self.counter(z)
 
     # ── 剖面 ──
     def hb_mid(self, z, zr):
@@ -90,7 +102,8 @@ class Lines:
         return np.where(z < zr, self.keel_hw, np.where(z < zf, floor, np.where(z <= self.z_mb, bilge, high)))
 
     def s_of(self, x, z):
-        xa, xs = self.x_aft(z), self.x_stem(z)
+        """長度方向的比例：0 ＝ 艉柱線（不是 counter 的最後面 ⇒ 加 counter 不動船身其他地方的寬）、1 ＝ 艏柱。"""
+        xa, xs = self.x_post(z), self.x_stem(z)
         return (np.asarray(x, float) - xa) / np.maximum(1.0, xs - xa)
 
     def zr(self, s):
@@ -119,12 +132,36 @@ class Lines:
         mid = self.hb_mid(z, zr)
         h = self.keel_hw + (mid - self.keel_hw) * self.breadth_k(s, z)
         h = np.where(z < zr, self.keel_hw, h)
+        st = self.P.get('stern_tumble')
+        if st:            # 步驟 17：船尾那一段（s < s_aft）z0 以上再往裡收（船尾樓上窄；San Felipe 模型的船尾兩舷往裡倒）
+            ua = np.clip(1 - s / self.s_a, 0, 1)
+            h = h - float(st['k']) * np.clip(z - float(st['z0']), 0, None) * ua ** float(st['pow'])
         inside = (s >= 0) & (s <= 1)
+        if self.ctr:      # counter：艉柱線後面那一段照 s ＝ 0 的寬（espejo 的寬）往後伸，俯視往兩角收 round（圓的船尾）
+            xp = self.x_post(z)
+            c = self.counter(z)
+            u = np.clip((xp - x) / max(1.0, float(self.ctr['c'])), 0, 1)
+            h = np.where(s < 0, self.keel_hw + (h - self.keel_hw) * (1 - float(self.ctr['round']) * u ** 2), h)
+            inside = (x >= xp - c) & (s <= 1)
+        bh = self.P.get('beakhead')
+        if bh:            # 步驟 17：船頭的層次（San Felipe）—— z 以上、x 以前切成一道平的 beakhead 艙壁；底下的船頭頂面成了平台
+            inside = inside & ~((x >= float(bh['x'])) & (z >= float(bh['z'])))
         return np.where(inside, h, -1.0)
 
     def top_z(self, x):
-        pts = np.array(self.top, float)
-        return np.interp(np.asarray(x, float), pts[:, 0], pts[:, 1])
+        x = np.asarray(x, float)
+        if not self.tc:
+            pts = np.array(self.top, float)
+            return np.interp(x, pts[:, 0], pts[:, 1])
+        # 步驟 17：節點之間照 smoothstep 走（平的那幾段不變、船樓前後緣的落差變成 S 形），再加兩頭往上翹的 rise（((離起點) ÷ (到終點))^pow × dz）
+        K = np.array(self.tc['knots'], float)
+        i = np.clip(np.searchsorted(K[:, 0], x) - 1, 0, len(K) - 2)
+        t = np.clip((x - K[i, 0]) / (K[i + 1, 0] - K[i, 0]), 0, 1)
+        z = K[i, 1] + (K[i + 1, 1] - K[i, 1]) * smoothstep(t)
+        for r in self.tc.get('rise', []):
+            u = np.clip((x - r['from']) / float(r['to'] - r['from']), 0, 1)
+            z = z + r['dz'] * u ** r['pow']
+        return z
 
     # ── 體積 ──
     def solid(self, x0, x1, zmax, extra_top=0):

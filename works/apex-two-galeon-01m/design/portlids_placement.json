@@ -36,32 +36,32 @@
  "rows": [
   {
    "at": [
-    158,
+    148,
     141.5,
     94
    ],
    "face": {
-    "hinge_surf_s": 742,
+    "hinge_surf_s": 752,
     "n": 34,
-    "resid": 0.38,
-    "rx": 14.01,
+    "resid": 0.5,
+    "rx": 41.23,
     "rz_fit": -0.0
    },
    "face_frame": "aft（open_x、lid_x、hinge_surf_s、outer_s 是船尾板的座標：u ＝ y、v ＝ sx − x）",
    "gun": {
     "axis": [
-     -0.996,
-     -0.087,
+     -1.0,
+     0.0,
      0.0
     ],
-    "min_pull": 4.0,
+    "min_pull": 1.5,
     "muzzle": [
-     155.69,
-     139.2,
+     151.0,
+     141.5,
      91.75
     ],
-    "need_pull": 3.32,
-    "outer_s": 742
+    "need_pull": 1.0,
+    "outer_s": 749
    },
    "gun_model": "M-chase-stern-P",
    "gun_path": "甲板-main/M-chase-stern-P",
@@ -76,8 +76,8 @@
     94
    ],
    "meta": {
-    "close_deg": 102,
-    "house": 5,
+    "close_deg": 129.2,
+    "house": 4,
     "kind": "portlid",
     "lid_of": "gun-27"
    },
@@ -92,15 +92,15 @@
     144
    ],
    "open_z": [
-    85,
-    92
+    86,
+    93
    ],
    "pivot": [
     4.5,
     0,
     0
    ],
-   "raised": 1,
+   "raised": 0,
    "rotate": [
     0,
     0,
@@ -112,32 +112,32 @@
   },
   {
    "at": [
-    158,
+    148,
     179.5,
     94
    ],
    "face": {
-    "hinge_surf_s": 742,
+    "hinge_surf_s": 752,
     "n": 34,
-    "resid": 0.38,
-    "rx": 14.01,
+    "resid": 0.5,
+    "rx": 41.23,
     "rz_fit": -0.0
    },
    "face_frame": "aft（open_x、lid_x、hinge_surf_s、outer_s 是船尾板的座標：u ＝ y、v ＝ sx − x）",
    "gun": {
     "axis": [
-     -0.996,
-     0.087,
+     -1.0,
+     0.0,
      0.0
     ],
-    "min_pull": 4.0,
+    "min_pull": 1.5,
     "muzzle": [
-     155.69,
-     181.8,
+     151.0,
+     179.5,
      91.75
     ],
-    "need_pull": 3.32,
-    "outer_s": 742
+    "need_pull": 1.0,
+    "outer_s": 749
    },
    "gun_model": "M-chase-stern-S",
    "gun_path": "甲板-main/M-chase-stern-S",
@@ -152,8 +152,8 @@
     94
    ],
    "meta": {
-    "close_deg": 102,
-    "house": 5,
+    "close_deg": 129.2,
+    "house": 4,
     "kind": "portlid",
     "lid_of": "gun-28"
    },
@@ -168,15 +168,15 @@
     182
    ],
    "open_z": [
-    85,
-    92
+    86,
+    93
    ],
    "pivot": [
     4.5,
     0,
     0
    ],
-   "raised": 1,
+   "raised": 0,
    "rotate": [
     0,
     0,
@@ -2145,9 +2145,9 @@
    "face": {
     "hinge_surf_s": 202,
     "n": 41,
-    "resid": 0.58,
-    "rx": -2.13,
-    "rz_fit": 10.79
+    "resid": 0.52,
+    "rx": -5.53,
+    "rz_fit": 13.1
    },
    "gun": {
     "axis": [
@@ -2157,12 +2157,12 @@
     ],
     "min_pull": 6.5,
     "muzzle": [
-     199.5,
+     200.0,
      111.75,
      106.25
     ],
-    "need_pull": 7.25,
-    "outer_s": 202.0
+    "need_pull": 8.25,
+    "outer_s": 201.0
    },
    "gun_model": "砲U-P01",
    "gun_path": "甲板-puente/砲U-P01",
@@ -2177,7 +2177,7 @@
     111
    ],
    "meta": {
-    "close_deg": 85.9,
+    "close_deg": 82.5,
     "house": 7,
     "kind": "portlid",
     "lid_of": "gun-29"
@@ -2205,7 +2205,7 @@
    "rotate": [
     0,
     0,
-    169.2
+    166.9
    ],
    "scale": 1,
    "side": "P",
@@ -2220,9 +2220,9 @@
    "face": {
     "hinge_surf_s": 203,
     "n": 41,
-    "resid": 0.58,
-    "rx": -2.13,
-    "rz_fit": 10.79
+    "resid": 0.52,
+    "rx": -5.53,
+    "rz_fit": 13.1
    },
    "gun": {
     "axis": [
@@ -2232,12 +2232,12 @@
     ],
     "min_pull": 6.5,
     "muzzle": [
-     199.5,
+     200.0,
      209.25,
      106.25
     ],
-    "need_pull": 7.25,
-    "outer_s": 203
+    "need_pull": 8.25,
+    "outer_s": 202
    },
    "gun_model": "砲U-S01",
    "gun_path": "甲板-puente/砲U-S01",
@@ -2252,7 +2252,7 @@
     111
    ],
    "meta": {
-    "close_deg": 85.9,
+    "close_deg": 82.5,
     "house": 7,
     "kind": "portlid",
     "lid_of": "gun-42"
@@ -2280,7 +2280,7 @@
    "rotate": [
     0,
     0,
-    10.8
+    13.1
    ],
    "scale": 1,
    "side": "S",
@@ -2295,9 +2295,9 @@
    "face": {
     "hinge_surf_s": 208,
     "n": 41,
-    "resid": 0.57,
-    "rx": -3.87,
-    "rz_fit": 12.02
+    "resid": 0.51,
+    "rx": -5.5,
+    "rz_fit": 10.38
    },
    "gun": {
     "axis": [
@@ -2305,13 +2305,13 @@
      -1.0,
      0.0
     ],
-    "min_pull": 7.5,
+    "min_pull": 6.5,
     "muzzle": [
-     230.5,
-     104.75,
+     229.5,
+     105.75,
      105.25
     ],
-    "need_pull": 8.25,
+    "need_pull": 7.25,
     "outer_s": 208.0
    },
    "gun_model": "砲U-P02",
@@ -2327,8 +2327,8 @@
     110
    ],
    "meta": {
-    "close_deg": 84.1,
-    "house": 8,
+    "close_deg": 82.5,
+    "house": 7,
     "kind": "portlid",
     "lid_of": "gun-34"
    },
@@ -2355,7 +2355,7 @@
    "rotate": [
     0,
     0,
-    168
+    169.6
    ],
    "scale": 1,
    "side": "P",
@@ -2370,9 +2370,9 @@
    "face": {
     "hinge_surf_s": 209,
     "n": 41,
-    "resid": 0.57,
-    "rx": -3.87,
-    "rz_fit": 12.02
+    "resid": 0.51,
+    "rx": -5.5,
+    "rz_fit": 10.38
    },
    "gun": {
     "axis": [
@@ -2380,13 +2380,13 @@
      1.0,
      0.0
     ],
-    "min_pull": 7.5,
+    "min_pull": 6.5,
     "muzzle": [
-     230.5,
-     216.25,
+     229.5,
+     215.25,
      105.25
     ],
-    "need_pull": 8.25,
+    "need_pull": 7.25,
     "outer_s": 209
    },
    "gun_model": "砲U-S02",
@@ -2402,8 +2402,8 @@
     110
    ],
    "meta": {
-    "close_deg": 84.1,
-    "house": 8,
+    "close_deg": 82.5,
+    "house": 7,
     "kind": "portlid",
     "lid_of": "gun-47"
    },
@@ -2430,7 +2430,7 @@
    "rotate": [
     0,
     0,
-    12
+    10.4
    ],
    "scale": 1,
    "side": "S",
@@ -2446,8 +2446,8 @@
     "hinge_surf_s": 213,
     "n": 41,
     "resid": 0.52,
-    "rx": -4.49,
-    "rz_fit": 8.86
+    "rx": -6.74,
+    "rz_fit": 9.28
    },
    "gun": {
     "axis": [
@@ -2477,7 +2477,7 @@
     109
    ],
    "meta": {
-    "close_deg": 83.5,
+    "close_deg": 81.3,
     "house": 8,
     "kind": "portlid",
     "lid_of": "gun-35"
@@ -2505,7 +2505,7 @@
    "rotate": [
     0,
     0,
-    171.1
+    170.7
    ],
    "scale": 1,
    "side": "P",
@@ -2521,8 +2521,8 @@
     "hinge_surf_s": 214,
     "n": 41,
     "resid": 0.52,
-    "rx": -4.49,
-    "rz_fit": 8.86
+    "rx": -6.74,
+    "rz_fit": 9.28
    },
    "gun": {
     "axis": [
@@ -2552,7 +2552,7 @@
     109
    ],
    "meta": {
-    "close_deg": 83.5,
+    "close_deg": 81.3,
     "house": 8,
     "kind": "portlid",
     "lid_of": "gun-48"
@@ -2580,7 +2580,7 @@
    "rotate": [
     0,
     0,
-    8.9
+    9.3
    ],
    "scale": 1,
    "side": "S",
@@ -2595,9 +2595,9 @@
    "face": {
     "hinge_surf_s": 217,
     "n": 41,
-    "resid": 0.52,
-    "rx": -5.51,
-    "rz_fit": 7.19
+    "resid": 0.56,
+    "rx": -6.41,
+    "rz_fit": 7.47
    },
    "gun": {
     "axis": [
@@ -2627,7 +2627,7 @@
     108
    ],
    "meta": {
-    "close_deg": 82.5,
+    "close_deg": 81.6,
     "house": 8,
     "kind": "portlid",
     "lid_of": "gun-36"
@@ -2655,7 +2655,7 @@
    "rotate": [
     0,
     0,
-    172.8
+    172.5
    ],
    "scale": 1,
    "side": "P",
@@ -2670,9 +2670,9 @@
    "face": {
     "hinge_surf_s": 218,
     "n": 41,
-    "resid": 0.52,
-    "rx": -5.51,
-    "rz_fit": 7.19
+    "resid": 0.56,
+    "rx": -6.41,
+    "rz_fit": 7.47
    },
    "gun": {
     "axis": [
@@ -2702,7 +2702,7 @@
     108
    ],
    "meta": {
-    "close_deg": 82.5,
+    "close_deg": 81.6,
     "house": 8,
     "kind": "portlid",
     "lid_of": "gun-49"
@@ -2730,7 +2730,7 @@
    "rotate": [
     0,
     0,
-    7.2
+    7.5
    ],
    "scale": 1,
    "side": "S",
@@ -2746,8 +2746,8 @@
     "hinge_surf_s": 220,
     "n": 41,
     "resid": 0.59,
-    "rx": -5.52,
-    "rz_fit": 4.81
+    "rx": -6.3,
+    "rz_fit": 5.23
    },
    "gun": {
     "axis": [
@@ -2777,7 +2777,7 @@
     107
    ],
    "meta": {
-    "close_deg": 82.5,
+    "close_deg": 81.7,
     "house": 8,
     "kind": "portlid",
     "lid_of": "gun-37"
@@ -2805,7 +2805,7 @@
    "rotate": [
     0,
     0,
-    175.2
+    174.8
    ],
    "scale": 1,
    "side": "P",
@@ -2821,8 +2821,8 @@
     "hinge_surf_s": 221,
     "n": 41,
     "resid": 0.59,
-    "rx": -5.52,
-    "rz_fit": 4.81
+    "rx": -6.3,
+    "rz_fit": 5.23
    },
    "gun": {
     "axis": [
@@ -2852,7 +2852,7 @@
     107
    ],
    "meta": {
-    "close_deg": 82.5,
+    "close_deg": 81.7,
     "house": 8,
     "kind": "portlid",
     "lid_of": "gun-50"
@@ -2880,7 +2880,7 @@
    "rotate": [
     0,
     0,
-    4.8
+    5.2
    ],
    "scale": 1,
    "side": "S",

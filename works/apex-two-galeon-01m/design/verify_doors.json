@@ -1,5 +1,5 @@
 {
- "doors": 6,
+ "doors": 10,
  "model_cells": 896,
  "problems": [],
  "rows": [
@@ -135,6 +135,102 @@
    ],
    "hits_solid": 0,
    "backed_by_bulkhead": 37,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  },
+  {
+   "name": "門-stern-tercera-C",
+   "host": "apex-two-galeon-01m-deck-tercera",
+   "break": "船尾 tercera 那一層的 stern walk",
+   "side": "C",
+   "at": [
+    131.5,
+    160.5,
+    122
+   ],
+   "rotate": 180,
+   "scale_z": 0.375,
+   "opening": [
+    5,
+    11
+   ],
+   "hits_solid": 0,
+   "opening_solid": 0,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  },
+  {
+   "name": "門-stern-alcazar-C",
+   "host": "apex-two-galeon-01m-deck-alcazar",
+   "break": "船尾 alcazar 那一層的 stern walk",
+   "side": "C",
+   "at": [
+    127.5,
+    160.5,
+    137
+   ],
+   "rotate": 180,
+   "scale_z": 0.4375,
+   "opening": [
+    5,
+    13
+   ],
+   "hits_solid": 0,
+   "opening_solid": 0,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  },
+  {
+   "name": "門-beakhead-S",
+   "host": "apex-two-galeon-01m-deck-puente",
+   "break": "beakhead 艙壁",
+   "side": "S",
+   "at": [
+    620.5,
+    170.5,
+    96
+   ],
+   "rotate": 0,
+   "scale_z": 0.5625,
+   "opening": [
+    5,
+    15
+   ],
+   "hits_solid": 0,
+   "opening_solid": 0,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  },
+  {
+   "name": "門-beakhead-P",
+   "host": "apex-two-galeon-01m-deck-puente",
+   "break": "beakhead 艙壁",
+   "side": "P",
+   "at": [
+    620.5,
+    150.5,
+    96
+   ],
+   "rotate": 0,
+   "scale_z": 0.5625,
+   "opening": [
+    5,
+    15
+   ],
+   "hits_solid": 0,
+   "opening_solid": 0,
    "foot_ok": true,
    "meta": {
     "kind": "door",

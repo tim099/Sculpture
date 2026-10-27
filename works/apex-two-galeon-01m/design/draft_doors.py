@@ -18,7 +18,8 @@ PLANK, PLANK2, SEAM, IRON = 136, 140, 96, 73
 SIZE = (2, 14, 32)
 PIVOT = (1, 7, 0)
 SCALE = 0.5
-DECK_WORK = {'alcazar': 'apex-two-galeon-01m-deck-alcazar', 'toldilla': 'apex-two-galeon-01m-deck-toldilla', 'castillo': 'apex-two-galeon-01m-deck-castillo'}
+DECK_WORK = {'alcazar': 'apex-two-galeon-01m-deck-alcazar', 'toldilla': 'apex-two-galeon-01m-deck-toldilla', 'castillo': 'apex-two-galeon-01m-deck-castillo',
+             'tercera': 'apex-two-galeon-01m-deck-tercera', 'puente': 'apex-two-galeon-01m-deck-puente'}
 
 
 def build():
@@ -79,6 +80,26 @@ def main():
                     problems.append('%s 撞實心 %d' % (nm, len(hit)))
                 if not foot:
                     problems.append('%s 門底下沒有地板' % nm)
+    # 步驟 17：船頭 beakhead 艙壁兩扇、船尾兩層 stern walk 各一扇（Tim 2026-10-27「開真的可以打開的門(第一人稱模式可以走出去) 船尾有陽台的地方也可以開門出去」）——
+    #   門洞是船殼刻的（draft_ports.py ⇒ verify_ports.json doors：門洞範圍、門板的 x）；同一件門板，高度照門洞縮放（scale z ＝ 門板格數 ÷ 32 × 2 × 0.5）
+    VP = json.load(open(os.path.join(design, 'verify_ports.json'), encoding='utf-8'))
+    for dc in VP.get('doors', []):
+        yc = (dc['y0'] + dc['y1']) // 2
+        fx, zb, mh = dc['door_x'], dc.get('model_z0', dc['z0']), dc['model_h']     # 門板底邊（beakhead：從平台面立起、比門洞低 2 格 ⇒ 連門檻一起蓋）
+        out = 1 if dc['face'] == 'fwd' else -1
+        cells = [(fx, y, z) for y in range(yc - 3, yc + 4) for z in range(zb, zb + mh)]
+        hit = [c for c in cells if c in occ]
+        hole = [(x, y, z) for x in range(fx - 6 * out, fx, out) for y in range(dc['y0'], dc['y1'] + 1) for z in range(dc['z0'], dc['z1'] + 1)]
+        foot = all((fx, y, zb - 1) in occ for y in range(yc - 3, yc + 4))
+        side = 'C' if yc == 160 else ('S' if yc > 160 else 'P')
+        nm = '門-%s-%s' % ('beakhead' if dc['face'] == 'fwd' else 'stern-' + dc['deck'], side)
+        rows.append({'name': nm, 'host': DECK_WORK[dc['deck']], 'break': 'beakhead 艙壁' if dc['face'] == 'fwd' else '船尾 %s 那一層的 stern walk' % dc['deck'], 'side': side,
+                     'at': [fx + 0.5, yc + 0.5, zb], 'rotate': 0 if out > 0 else 180, 'scale_z': mh / 32.0, 'opening': [dc['y1'] - dc['y0'] + 1, dc['z1'] - dc['z0'] + 1],
+                     'hits_solid': len(hit), 'opening_solid': sum(1 for h in hole if h in occ), 'foot_ok': foot, 'meta': {'kind': 'door', 'open': 'side'}})
+        if hit:
+            problems.append('%s 撞實心 %d' % (nm, len(hit)))
+        if not foot:
+            problems.append('%s 門底下沒有地板' % nm)
     verify = {'doors': len(rows), 'model_cells': len(v), 'problems': problems, 'rows': rows,
               'list_sha256': hashlib.sha256(open(p, 'rb').read()).hexdigest()}
     json.dump({'work': 'gura-pinas-01m-door', 'size': list(SIZE), 'pivot': list(PIVOT), 'scale': SCALE,
@@ -87,7 +108,7 @@ def main():
     json.dump(verify, open(os.path.join(design, 'verify_doors.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(json.dumps({k: verify[k] for k in ('doors', 'model_cells', 'problems')}, ensure_ascii=False))
     for r in rows:
-        print(' ', r['name'], r['at'], 'rot', r['rotate'], '洞', r['opening'], '撞', r['hits_solid'], '背後艙壁', r['backed_by_bulkhead'], '腳', r['foot_ok'])
+        print(' ', r['name'], r['at'], 'rot', r['rotate'], '洞', r['opening'], '撞', r['hits_solid'], '背後艙壁', r.get('backed_by_bulkhead'), '門洞裡實心', r.get('opening_solid'), '腳', r['foot_ok'])
 
 
 if __name__ == '__main__':

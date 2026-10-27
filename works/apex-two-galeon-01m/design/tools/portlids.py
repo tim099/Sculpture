@@ -84,10 +84,10 @@ def r1(v, k=1):
     return int(v) if v == int(v) else v
 
 
-def opening(occ, mz, yc):
+def opening(occ, mz, yc, wz=14):
     side = 1 if mz[1] > yc else -1
     xm, zm = int(math.floor(mz[0])), int(math.floor(mz[2]))
-    win = occ[xm - 14:xm + 15, :, zm - 14:zm + 15]
+    win = occ[xm - 14:xm + 15, :, zm - wz:zm + wz + 1]      # wz：外表面只看砲口上下幾格（康塞普西翁號步驟 17：船尾 counter 是斜的，±14 會量到上面往後凸 12 格的那段 ⇒ 牆那一段量偏、開口灌水漏出去）
     ys = np.nonzero(win.any(axis=(0, 2)))[0]
     ys = ys[ys > yc] if side > 0 else ys[ys < yc]
     yo = int(ys.max()) if side > 0 else int(ys.min())
@@ -188,7 +188,7 @@ def draft(cache):
                     occ_aft = np.ascontiguousarray(occ[::-1].transpose(1, 0, 2))
                 aft, occ_l, yc_l = True, occ_aft, sx / 2
                 gw, mz, br = to_aft(gw, sx), to_aft(mz[None], sx)[0], to_aft(br[None], sx)[0]
-                o = opening(occ_l, mz, yc_l)
+                o = opening(occ_l, mz, yc_l, wz=6)
             if o is None:
                 skipped.append({'gun': g['path'], 'id': g['meta']['id'], 'why': '砲口那一欄找不到封閉的開口（斜放的砲）'})
                 continue

@@ -38,10 +38,14 @@ def main():
     L = HL.Lines(plan)
     YC = L.YC
     WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
-    A = export_list('apex-two-galeon-01m-assembly', None, links=None)
+    occ_arg = next((a.split('=', 1)[1] for a in sys.argv[2:] if a.startswith('--occ=')), None)
+    if occ_arg:       # 步驟 17：設計還沒落格時拿本機清單當「船」（--occ=<清單;清單…>：船殼帳＋甲板＋梯子…）；⛔ 正式產清單一律從組裝件讀
+        A = np.concatenate([np.loadtxt(p_, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')[:, :4] for p_ in occ_arg.split(';')])
+    else:
+        A = export_list('apex-two-galeon-01m-assembly', None, links=None)
     # 船 ＝ 組裝件扣掉本步驟自己的件（已經落過一次的話；收穫號 v1 沒扣 ⇒ 重產時把舊裝飾當成船）
     own = set()
-    for nm in EXCLUDE:
+    for nm in (() if occ_arg else EXCLUDE):
         if os.path.exists(os.path.join(WORKS, 'apex-two-galeon-01m-' + nm, 'work.json')):
             own |= set(map(tuple, export_list('apex-two-galeon-01m-' + nm, None)[:, :3].tolist()))
     if own:
@@ -54,8 +58,8 @@ def main():
         if os.path.exists(gp):
             gg = set(map(tuple, np.loadtxt(gp, delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')[:, :3].tolist()))
             A = A[np.array([tuple(r) not in gg for r in A[:, :3].tolist()], bool)]
-    Hl = export_list('apex-two-galeon-01m', None)
-    if os.path.exists(gc_path):
+    Hl = np.loadtxt(occ_arg.split(';')[0], delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')[:, :4] if occ_arg else export_list('apex-two-galeon-01m', None)
+    if os.path.exists(gc_path) and not occ_arg:
         G0 = np.loadtxt(gc_path, delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')
         have = set(map(tuple, A[:, :3].tolist()))
         add = np.array([r for r in G0.tolist() if tuple(r[:3]) not in have], dtype=A.dtype).reshape(-1, A.shape[1])
@@ -93,11 +97,23 @@ def main():
     tip = xs0 + E['len_beyond_stem']
     zt, th = E['deck_top_z'], E['thick']
     wpar = lambda x: E['half_at_tip'] + (E['half_at_stem'] - E['half_at_tip']) * (1 - (x - xs0) / float(E['len_beyond_stem'])) ** E['taper_pow']
-    for x in range(xs0 + 1, tip + 1):
-        w = int(math.floor(wpar(x) + 0.5))
+    x_d0 = E.get('deck_from_x', xs0 + 1)                               # 步驟 17：從 beakhead 艙壁前面起鋪 ⇒ 跟船殼的平台連成一整片（船殼佔的格照樣跳過）
+
+    def wdeck(x):
+        if x <= xs0:                                                     # 艙壁到艏柱：從艙壁的半寬收到喙根的半寬
+            return E['half_at_stem'] + (E.get('half_at_deck_from', E['half_at_stem']) - E['half_at_stem']) * (xs0 - x) / float(max(1, xs0 - x_d0))
+        return wpar(x)
+    zsk = E.get('skirt_from_z')
+    for x in range(x_d0, tip + 1):
+        w = int(math.floor(wdeck(x) + 0.5))
         for dy in range(0, w + 1):
             for z in range(zt - th + 1, zt + 1):
                 both('espolon', x, dy, z, DECK if z == zt else TRIM)
+        if zsk is not None:                                              # 側板：甲板邊往下包到 skirt_from_z（Tim「讓船頭變成一整個平台」—— 側面看是一整塊；底下不封 ⇒ 沒有封閉空腔），最前面那一欄整片封
+            wn = int(math.floor(wdeck(x + 1) + 0.5)) if x < tip else 0
+            for z in range(zsk, zt - th + 1):
+                for dy in range(min(wn, w), w + 1):
+                    both('espolon', x, dy, z, GOLD if z in (zsk, zt - th) else TRIM)
         for z in range(zt + 1, zt + 1 + E['rail_h']):
             cap = z == zt + E['rail_h']
             if x > F['x'] - 6:
@@ -109,13 +125,21 @@ def main():
                 for dy in range(w2, w):
                     both('espolon', x, dy, z, GOLD)
     z_cw0 = E['cutwater_from_z']
-    for z in range(z_cw0, zt - th + 1):
-        u = (z - z_cw0) / float(zt - th + 1 - z_cw0)
+    cw_top = E.get('cutwater_to_z', zt - th + 1)                         # 步驟 17：knee 頂到平台底（skirt_from_z）、前緣在 cutwater_tip_x 接上 ⇒ 平台前段懸空伸出去（Tim 圈的那條線）
+    cw_tip = E.get('cutwater_tip_x', tip)
+    for z in range(z_cw0, cw_top):
+        u = (z - z_cw0) / float(cw_top - z_cw0)
         xa = fwd.get(z, xs0) + 1
-        xf = int(math.floor(xa + (tip - xa) * u ** E['cutwater_pow'] + 0.5))
+        xf = int(math.floor(xa + (cw_tip - xa) * u ** E['cutwater_pow'] + 0.5))
         for x in range(max(xa, xf - E['cutwater_band']), max(xa, xf) + 1):
             for dy in range(0, E['cutwater_half'] + 1):
-                both('espolon', x, dy, z, GOLD if xf - x == 2 and dy == E['cutwater_half'] else TRIM)
+                if dy == E['cutwater_half'] and z >= E.get('trail_from_z', 999) and xf - x in E.get('trail_off', ()):
+                    c = GOLD                                           # 步驟 17：knee 兩側的金線（trailboard），沿前緣往裡 trail_off 格
+                elif z < plan['hull_build']['bottom_top_z']:
+                    c = plan['hull_build']['bottom_color']            # 步驟 17：水線以下跟船底同色（knee 填成一整片之後露出來）
+                else:
+                    c = GOLD if xf - x == 2 and dy == E['cutwater_half'] else TRIM
+                both('espolon', x, dy, z, c)
     # ── 船首像：紅獅子（W p.85：長 9 呎、厚 19 duim、前端翹起 2'7"）——趴在喙尖上、往前往上翹 ──
     xr, ln, ht, rs = F['x'], F['len'], F['half_t'], F['raise']
     xf_ = xr + ln
@@ -153,107 +177,59 @@ def main():
         put('figurehead', xr + 2 - k // 3, YC, z, mane if k >= 5 else body)
         if k and k % 3 == 0:                                            # 往後挪一格的那一階補一格 ⇒ 面相接（v1 只在斜角相接 ⇒ 尾端 1 格浮空）
             put('figurehead', xr + 3 - k // 3, YC, z, mane if k >= 5 else body)
-    # ── 船尾走廊（hut 那排窗下面） ──
+    # ── 步驟 17：兩層 stern walk（San Felipe／OcCre 模型：開放的走廊從船尾繞過兩角、沿兩舷往前到 x_end；欄杆、金扶手、底下一排金托架）──
+    #   取代步驟 6 的船尾走廊＋兩舷側廊（側廊的窗改成船殼上的窗：plan.stern.side_windows，在 draft_ports.py）
     S = plan['stern_deco']
-    bal = S['balcony']
-    zf, dep, hb = bal['floor_z'], bal['depth'], bal['half']
-    for dy in range(0, hb + 1):
-        fxa = aft.get((YC + dy, zf))
-        if fxa is None:
-            continue
-        for x in range(fxa - dep, fxa):
-            both('stern-deco', x, dy, zf, WOOD)
-        xo = fxa - dep
-        for z in range(zf + 1, zf + bal['rail_h'] + 1):
-            cap = z == zf + bal['rail_h']
-            if cap or dy % 3 == 0 or dy == hb:
-                both('stern-deco', xo, dy, z, GOLD if cap else BLUE)
-        if dy == hb:
-            for z in range(zf + 1, zf + bal['rail_h'] + 1):
-                fz = aft.get((YC + dy, z), fxa)                        # 鏡板往後倒：每一層的船尾位置不同
-                for x in range(xo, min(fxa, fz)):
-                    if z == zf + bal['rail_h'] or (x - xo) % 2 == 0:
-                        both('stern-deco', x, dy, z, GOLD if z == zf + bal['rail_h'] else BLUE)
-        if dy % 8 == 0:                                                # 托架：斜撐接回鏡板
-            for j, z in enumerate(range(zf - 4, zf)):
-                fz = aft.get((YC + dy, z))
-                if fz is not None:
-                    for x in range(fz - 1 - j, fz):
-                        both('stern-deco', x, dy, z, WOOD)
-    # ── 兩舷側廊（伸出 out 格；下面一節收成 0、上面一個銅頂） ──
-    #   v2（Tim 2026-10-26「側面窗戶是否也能改成玻璃 且打通到艙內」）：
-    #   · 每 8 格一個開間、開間的外面是直立的一片（照這一段船殼最外面那一格 ＋ out）⇒ 窗是方的（v1 外面順著船殼斜 ⇒ 每一格深淺不同、窗歪成 L 形）
-    #   · 窗的玻璃另外一份清單（masks/glass/gallery_glass.vox.txt ⇒ -stern-glass 子作品，關聯 material=glass）；
-    #     玻璃後面一路刻穿到艙裡：側廊這一段不放格、船殼的牆照 masks/deco/gallery_carve.vox.txt 刻（tools/hull_expected.py 的一步）
-    Q = S['quarter_gallery']
-    wrows = Q['win_rows']
-    obody = {}
-    for x in range(Q['x0'], Q['x1'] + 1):
-        vs = [outer[(x, z)] for z in range(Q['z0'] + 5, Q['z1'] + 1) if (x, z) in outer and (x, YC + outer[(x, z)], z) in occ]
-        if vs:
-            obody[x] = max(vs)
-    bay = lambda x: (x - Q['x0']) // 8
-    fy = {}
-    for x, o in obody.items():
-        fy[bay(x)] = max(fy.get(bay(x), -1), o + Q['out'])
-    gal_glass, gal_shaft = {}, set()
-    for x in range(Q['x0'], Q['x1'] + 1):
-        for z in range(Q['z0'], Q['z1'] + 1):
-            if (x - Q['x0']) % 8 in (3, 4, 5) and any(a_ <= z <= b_ for a_, b_ in wrows) and bay(x) in fy:
-                gal_glass[(x, YC + fy[bay(x)], z)] = GLASS_REAL
-                gal_shaft.add((x, z))
-    for x in range(Q['x0'], Q['x1'] + 1):
-        if bay(x) not in fy:
-            continue
-        F = fy[bay(x)]
-        for z in range(Q['z0'], Q['z1'] + Q['roof_h'] + 1):
-            hz_ = min(z, Q['z1'])
-            o = outer.get((x, hz_))
-            if o is None or (x, YC + o, hz_) not in occ:
-                continue
-            ext = F - o
-            if z <= Q['z0'] + 4:
-                out = max(1, round(ext * (z - Q['z0'] + 1) / 5.0))
-            elif z > Q['z1']:
-                k = z - Q['z1']
-                out = max(0, ext - k)
-                inset = 2 * k
-                if x < Q['x0'] + inset or x > Q['x1'] - inset or out == 0:
-                    continue
-            else:
-                out = ext
-            for d in range(1, out + 1):
-                face = d == out
-                if (x, z) in gal_shaft and z <= Q['z1']:
-                    continue                                           # 窗：外面那一格是玻璃（另一份清單）、裡面一路空到船殼
-                c = BLUE
-                if z > Q['z1']:
-                    c = GOLD if z == Q['z1'] + 1 else Q['roof']
-                elif z in (Q['z0'] + 4, Q['z1']):
-                    c = GOLD
-                elif face and (x - Q['x0']) % 8 in (2, 3, 4, 5, 6) and any(a_ - 1 <= z <= b_ + 1 for a_, b_ in wrows):
-                    c = GOLD
-                elif face and (x - Q['x0']) % 8 in (0, 7):
-                    c = TRIM                                           # 開間之間的壁柱
-                both('stern-deco', x, o + d, z, c)
-    # 船殼的牆：窗那一欄從外面往裡刻到第一格空氣（只刻船殼的格；碰到別的件 ⇒ 照實報）
-    gal_carve, gal_block = {}, []
-    for (x, z) in sorted(gal_shaft):
-        for sgn in (1, -1):
-            o = outer.get((x, z))
-            y = YC + sgn * o
-            n = 0
-            while (x, y, z) in occ and n < 12:
-                if (x, y, z) not in hull_cells:
-                    gal_block.append((x, y, z))
-                    break
-                gal_carve[(x, y, z)] = hull_col[(x, y, z)]
-                y -= sgn
-                n += 1
-            if n >= 12:
-                gal_block.append((x, y, z))
-    for (x, y, z), c in list(gal_glass.items()):
-        gal_glass[(x, 2 * YC - y, z)] = c
+    from scipy import ndimage
+    occ_np = A[:, :3]
+    gal_glass, gal_carve, gal_block = {}, {}, []
+    walk_info = []
+    for T in S['walks']:
+        f, dep, rh = T['floor_z'], T['dep'], T['rail_h']
+        xl, xh = T['x_from'], T['x_end']
+        yl, yh = YC - 80, YC + 80
+        ox = xl - dep
+        X_ = np.arange(xh - xl + 1 + 2 * dep)[:, None] + ox
+        Y_ = np.arange(yh - yl + 1)[None, :] + yl
+
+        def env(zq):                                                     # 那一層的船殼外形：照線形（窗、門刻出來的凹口不算外面；v1 照格子 ⇒ 托架落進窗洞裡浮空）
+            hb_ = L.hb(np.broadcast_to(X_ + 0.5, (X_.shape[0], Y_.shape[1])), np.full((X_.shape[0], Y_.shape[1]), zq + 0.5))
+            return (np.abs(Y_ - YC) <= hb_) & (zq <= L.top_z(X_ + 0.5) + 0.5)
+        E = env(f)
+        dist, (ix, iy) = ndimage.distance_transform_edt(~E, return_indices=True)
+        W_ = (~E) & (dist <= dep) & (X_ <= xh)
+        ring = W_ & (dist > dep - 1.5)                                   # 外緣 1.5 格 ⇒ 斜的地方兩格相接（6 連通；v1 dep − 1 只有斜角相接 ⇒ 扶手斷成單格）
+        Ez = {}                                                          # 地板以下每一層的船（填滿內部）：托架往裡接到那一層的船殼
+        for k in range(1, T['bracket_len'] + 2):
+            Ez[f - k] = env(f - k)
+        ring |= W_ & (X_ == xh)                                          # 走廊的前端封一片欄杆
+        hx, hy = ix + ox, np.abs(iy + yl - YC)
+        per = hy + (hx - int(np.floor(float(L.x_aft(f + 0.5)))))         # 沿走廊的位置（船尾面 ≈ |dy|、兩舷 ≈ 往前的 x）⇒ 托架每 every 一組
+        brk = (np.mod(per + T.get('bracket_off', 0), T['bracket_every']) < 2) & W_      # bracket_off：整組錯開（步驟 17：上層走廊正中間那組會撞到下層的門頂）
+        n0 = 0
+        for xi, yi in np.argwhere(W_):
+            x, y = int(X_[xi, 0]), int(Y_[0, yi])
+            dy = y - YC
+            if dy < 0:
+                continue                                                 # 只算右舷 ⇒ both() 鏡到左舷
+            both('stern-deco', x, dy, f, GOLD if ring[xi, yi] else WOOD)
+            if not Ez[f - 1][xi, yi]:
+                both('stern-deco', x, dy, f - 1, GOLD if ring[xi, yi] else WOOD)    # 地板 2 格厚：外緣下面那一條金（腰線）；v1 只有外緣 ⇒ 船殼往外鼓的那段被圍成封閉空腔
+            if ring[xi, yi]:
+                for z in range(f + 1, f + rh + 1):
+                    if z == f + rh:
+                        both('stern-deco', x, dy, z, GOLD)               # 扶手
+                    elif z == f + 1:
+                        both('stern-deco', x, dy, z, TRIM)               # 底欄
+                    elif (x + y) % 2 == 0:
+                        both('stern-deco', x, dy, z, BLUE)               # 欄杆柱（隔一格一根）
+            if brk[xi, yi]:                                              # 托架：從地板底下往下收成 0（外面那一格金）；裡面接到那一層的船殼
+                for k in range(1, T['bracket_len'] + 1):
+                    reach = dep * (1 - k / float(T['bracket_len'] + 1)) ** 1.2
+                    if dist[xi, yi] <= reach and not Ez[f - 1 - k][xi, yi]:
+                        both('stern-deco', x, dy, f - 1 - k, GOLD if dist[xi, yi] > reach - 1.2 else WOOD)
+            n0 += 1
+        walk_info.append({'floor_z': f, 'footprint_S': n0})
     # ── hackebort：鏡板頂上那塊板（順著鏡板往後倒、頂上拱形）；奶油底、藍帶金字、藍鯊紋章 ──
     H = S['hackebort']
     z0, z1, half, af, htop = H['z0'], H['z1'], H['half'], H['arch_from'], H['half_top']
@@ -303,6 +279,22 @@ def main():
             if ch in SH:
                 dy = c - wsh // 2
                 put('hackebort', face[(dy, z)], YC + dy, z, SH[ch])
+    # 步驟 17 v2：喙的側板貼著船殼的那幾格會跟船殼圍出 1 格的縫（封閉空腔）⇒ 喙的範圍外擴 3 格的框裡，船＋所有部件填滿內部、多出來的空格補進喙（木色）
+    if plan['espolon'].get('skirt_from_z') is not None and parts.get('espolon'):     # （E 在 stern walk 那一段被拿去當外形了 ⇒ 直接讀 plan）
+        from scipy import ndimage
+        ek = np.array(list(parts['espolon'].keys()))
+        lo_, hi_ = ek.min(axis=0) - 3, ek.max(axis=0) + 4
+        G = np.zeros(tuple(hi_ - lo_), bool)
+        for src in (occ, *[set(c) for c in parts.values()]):
+            for (x, y, z) in src:
+                if lo_[0] <= x < hi_[0] and lo_[1] <= y < hi_[1] and lo_[2] <= z < hi_[2]:
+                    G[x - lo_[0], y - lo_[1], z - lo_[2]] = True
+        holes = ndimage.binary_fill_holes(G) & ~G
+        for xi, yi, zi in np.argwhere(holes):
+            put('espolon', xi + lo_[0], yi + lo_[1], zi + lo_[2], TRIM)
+        espolon_filled = int(holes.sum())
+    else:
+        espolon_filled = 0
     # 裝飾不蓋船的格：落在佔用格上的照實數出來、不放
     skipped = {}
     for nm in list(parts):
@@ -315,7 +307,7 @@ def main():
         parts[nm] = {(x, y + int(dv), z): c for (x, y, z), c in parts[nm].items()}
 
     # ── 讀數 ──
-    R = {'parts': {}, 'skipped_on_ship': skipped}
+    R = {'parts': {}, 'skipped_on_ship': skipped, 'espolon_cavity_filled': espolon_filled}
     allk = {}
     for nm, cells in parts.items():
         ks = set(cells)

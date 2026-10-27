@@ -124,6 +124,16 @@ def main():
                 if not any(G.solid(int(math.floor(cc[0] - n[0] * k)), int(math.floor(cc[1] - n[1] * k)), z) for k in np.arange(0.5, 30, 0.5)):
                     continue                                                       # 往裡走碰不到船殼 ⇒ 不靠船
                 gear[(x, y, z)] = AN['color']
+    if gear:                                                                   # 步驟 17：只留最大的那一塊（6 連通）—— 錨改掛 x 612 之後托板斜邊有 2 格的小塊只有斜角相接、浮空
+        from scipy import ndimage
+        gk = np.array(sorted(gear))
+        lo_ = gk.min(axis=0)
+        M = np.zeros(tuple(gk.max(axis=0) - lo_ + 1), bool)
+        M[tuple((gk - lo_).T)] = True
+        lab, nl = ndimage.label(M)
+        if nl > 1:
+            big = np.argmax(np.bincount(lab.ravel())[1:]) + 1
+            gear = {k: c for k, c in gear.items() if lab[tuple(np.array(k) - lo_)] == big}
     for (x, y, z), c in list(gear.items()):
         gear[(x, 2 * YC - y, z)] = c
     gear_on_solid = sum(1 for k in gear if G.solid(*k))

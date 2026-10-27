@@ -8,97 +8,97 @@
   "models_bad": [],
   "parts_hinge_max_diff": 0.0005
  },
- "note": "portlids.py check —— 康塞普西翁號：現況 ＝ 組裝件 export list（954007 格）＋ 其他模型 149 個（gun、portlid 以外；實際的格，0 個退回外框：繞 x／y 轉或不在 at 0 的關聯裡）；蓋板每格 9 個取樣點",
+ "note": "portlids.py check —— 康塞普西翁號：現況 ＝ 組裝件 export list（971029 格）＋ 其他模型 153 個（gun、portlid 以外；實際的格，0 個退回外框：繞 x／y 轉或不在 at 0 的關聯裡）；蓋板每格 9 個取樣點",
  "rows": [
   {
-   "close_deg": 102,
+   "close_deg": 129.2,
    "closed": {
-    "center_below_hinge": 4.51,
-    "center_out_of_hinge": -0.45,
+    "center_below_hinge": 3.8,
+    "center_out_of_hinge": -2.46,
     "hits_gun_housed": 0,
-    "hits_ship": 8,
+    "hits_ship": 26,
     "hole_covered": "56/56",
-    "ship_pct": 0.49
+    "ship_pct": 1.6
    },
    "gun": {
-    "housed_hits_ship": 45,
-    "min_pull_clear_lid": 4.0,
-    "need_pull": 3.32
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 1.5,
+    "need_pull": 1.0
    },
    "hinge_a": [
-    157.5,
+    147.5,
     137.5,
     94.5
    ],
    "hinge_b": [
-    157.5,
+    147.5,
     145.5,
     94.5
    ],
-   "house": 5,
+   "house": 4,
    "lid_of": "gun-27",
    "model": "砲門蓋-M-chase-stern-P",
    "open": {
     "box": [
-     148.0,
+     138.0,
      137.0,
      94.0,
-     158.0,
+     148.0,
      146.0,
      96.0
     ],
-    "clear_above_gun": 0.95,
+    "clear_above_gun": null,
     "hits_gun": 0,
-    "hits_ship": 0
+    "hits_ship": 81
    },
    "reverse": {
-    "house0_closed_hits_gun": 1473
+    "house0_closed_hits_gun": 230
    },
    "side": "A"
   },
   {
-   "close_deg": 102,
+   "close_deg": 129.2,
    "closed": {
-    "center_below_hinge": 4.51,
-    "center_out_of_hinge": -0.45,
+    "center_below_hinge": 3.8,
+    "center_out_of_hinge": -2.46,
     "hits_gun_housed": 0,
-    "hits_ship": 8,
+    "hits_ship": 26,
     "hole_covered": "56/56",
-    "ship_pct": 0.49
+    "ship_pct": 1.6
    },
    "gun": {
-    "housed_hits_ship": 45,
-    "min_pull_clear_lid": 4.0,
-    "need_pull": 3.32
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 1.5,
+    "need_pull": 1.0
    },
    "hinge_a": [
-    157.5,
+    147.5,
     175.5,
     94.5
    ],
    "hinge_b": [
-    157.5,
+    147.5,
     183.5,
     94.5
    ],
-   "house": 5,
+   "house": 4,
    "lid_of": "gun-28",
    "model": "砲門蓋-M-chase-stern-S",
    "open": {
     "box": [
-     148.0,
+     138.0,
      175.0,
      94.0,
-     158.0,
+     148.0,
      184.0,
      96.0
     ],
-    "clear_above_gun": 0.95,
+    "clear_above_gun": null,
     "hits_gun": 0,
-    "hits_ship": 0
+    "hits_ship": 81
    },
    "reverse": {
-    "house0_closed_hits_gun": 1473
+    "house0_closed_hits_gun": 230
    },
    "side": "A"
   },
@@ -382,14 +382,14 @@
    "side": "S"
   },
   {
-   "close_deg": 86.3,
+   "close_deg": 84.3,
    "closed": {
-    "center_below_hinge": 4.46,
-    "center_out_of_hinge": 0.78,
+    "center_below_hinge": 4.43,
+    "center_out_of_hinge": 0.94,
     "hits_gun_housed": 0,
-    "hits_ship": 29,
+    "hits_ship": 19,
     "hole_covered": "56/56",
-    "ship_pct": 1.79
+    "ship_pct": 1.17
    },
    "gun": {
     "housed_hits_ship": 0,
@@ -423,20 +423,20 @@
     "hits_ship": 12
    },
    "reverse": {
-    "house0_closed_hits_gun": 1221,
-    "mirror_y_center_below_hinge": -4.52
+    "house0_closed_hits_gun": 1410,
+    "mirror_y_center_below_hinge": -4.53
    },
    "side": "P"
   },
   {
-   "close_deg": 86.3,
+   "close_deg": 84.3,
    "closed": {
-    "center_below_hinge": 4.46,
-    "center_out_of_hinge": 0.78,
+    "center_below_hinge": 4.43,
+    "center_out_of_hinge": 0.94,
     "hits_gun_housed": 0,
-    "hits_ship": 29,
+    "hits_ship": 19,
     "hole_covered": "56/56",
-    "ship_pct": 1.79
+    "ship_pct": 1.17
    },
    "gun": {
     "housed_hits_ship": 0,
@@ -470,7 +470,7 @@
     "hits_ship": 12
    },
    "reverse": {
-    "house0_closed_hits_gun": 1225
+    "house0_closed_hits_gun": 1414
    },
    "side": "S"
   },
@@ -1243,7 +1243,7 @@
     107.508,
     90.5
    ],
-   "house": 6,
+   "house": 8,
    "lid_of": "gun-5",
    "model": "砲門蓋-M-P13",
    "open": {
@@ -1290,7 +1290,7 @@
     211.476,
     90.5
    ],
-   "house": 6,
+   "house": 8,
    "lid_of": "gun-18",
    "model": "砲門蓋-M-S13",
    "open": {
@@ -1312,10 +1312,10 @@
    "side": "S"
   },
   {
-   "close_deg": 85.9,
+   "close_deg": 82.5,
    "closed": {
-    "center_below_hinge": 4.45,
-    "center_out_of_hinge": 0.81,
+    "center_below_hinge": 4.4,
+    "center_out_of_hinge": 1.05,
     "hits_gun_housed": 0,
     "hits_ship": 0,
     "hole_covered": "49/49",
@@ -1324,16 +1324,16 @@
    "gun": {
     "housed_hits_ship": 0,
     "min_pull_clear_lid": 6.5,
-    "need_pull": 7.25
+    "need_pull": 8.25
    },
    "hinge_a": [
-    203.335,
-    116.759,
+    203.283,
+    116.606,
     111.5
    ],
    "hinge_b": [
-    195.477,
-    118.258,
+    195.491,
+    118.42,
     111.5
    ],
    "house": 7,
@@ -1341,11 +1341,11 @@
    "model": "砲門蓋-U-P01",
    "open": {
     "box": [
-     193.206,
-     107.334,
+     192.851,
+     107.24,
      111.0,
-     203.92,
-     118.843,
+     203.883,
+     119.02,
      113.0
     ],
     "clear_above_gun": 3.45,
@@ -1353,16 +1353,16 @@
     "hits_ship": 0
    },
    "reverse": {
-    "house0_closed_hits_gun": 1357,
-    "mirror_y_center_below_hinge": -4.52
+    "house0_closed_hits_gun": 1290,
+    "mirror_y_center_below_hinge": -4.53
    },
    "side": "P"
   },
   {
-   "close_deg": 85.9,
+   "close_deg": 82.5,
    "closed": {
-    "center_below_hinge": 4.45,
-    "center_out_of_hinge": 0.81,
+    "center_below_hinge": 4.4,
+    "center_out_of_hinge": 1.05,
     "hits_gun_housed": 0,
     "hits_ship": 0,
     "hole_covered": "49/49",
@@ -1371,16 +1371,16 @@
    "gun": {
     "housed_hits_ship": 0,
     "min_pull_clear_lid": 6.5,
-    "need_pull": 7.25
+    "need_pull": 8.25
    },
    "hinge_a": [
-    195.477,
-    202.742,
+    195.491,
+    202.58,
     111.5
    ],
    "hinge_b": [
-    203.335,
-    204.241,
+    203.283,
+    204.394,
     111.5
    ],
    "house": 7,
@@ -1388,11 +1388,11 @@
    "model": "砲門蓋-U-S01",
    "open": {
     "box": [
-     193.206,
-     202.157,
+     192.851,
+     201.98,
      111.0,
-     203.92,
-     213.666,
+     203.883,
+     213.76,
      113.0
     ],
     "clear_above_gun": 3.45,
@@ -1400,193 +1400,7 @@
     "hits_ship": 0
    },
    "reverse": {
-    "house0_closed_hits_gun": 1357
-   },
-   "side": "S"
-  },
-  {
-   "close_deg": 84.1,
-   "closed": {
-    "center_below_hinge": 4.42,
-    "center_out_of_hinge": 0.94,
-    "hits_gun_housed": 0,
-    "hits_ship": 0,
-    "hole_covered": "49/49",
-    "ship_pct": 0.0
-   },
-   "gun": {
-    "housed_hits_ship": 0,
-    "min_pull_clear_lid": 7.5,
-    "need_pull": 8.25
-   },
-   "hinge_a": [
-    233.309,
-    110.679,
-    110.5
-   ],
-   "hinge_b": [
-    225.483,
-    112.343,
-    110.5
-   ],
-   "house": 8,
-   "lid_of": "gun-34",
-   "model": "砲門蓋-U-P02",
-   "open": {
-    "box": [
-     223.019,
-     101.283,
-     110.0,
-     233.902,
-     112.936,
-     112.0
-    ],
-    "clear_above_gun": 3.45,
-    "hits_gun": 0,
-    "hits_ship": 0
-   },
-   "reverse": {
-    "house0_closed_hits_gun": 1305,
-    "mirror_y_center_below_hinge": -4.53
-   },
-   "side": "P"
-  },
-  {
-   "close_deg": 84.1,
-   "closed": {
-    "center_below_hinge": 4.42,
-    "center_out_of_hinge": 0.94,
-    "hits_gun_housed": 0,
-    "hits_ship": 0,
-    "hole_covered": "49/49",
-    "ship_pct": 0.0
-   },
-   "gun": {
-    "housed_hits_ship": 0,
-    "min_pull_clear_lid": 7.5,
-    "need_pull": 8.25
-   },
-   "hinge_a": [
-    225.483,
-    208.657,
-    110.5
-   ],
-   "hinge_b": [
-    233.309,
-    210.321,
-    110.5
-   ],
-   "house": 8,
-   "lid_of": "gun-47",
-   "model": "砲門蓋-U-S02",
-   "open": {
-    "box": [
-     223.019,
-     208.064,
-     110.0,
-     233.902,
-     219.717,
-     112.0
-    ],
-    "clear_above_gun": 3.45,
-    "hits_gun": 0,
-    "hits_ship": 0
-   },
-   "reverse": {
-    "house0_closed_hits_gun": 1305
-   },
-   "side": "S"
-  },
-  {
-   "close_deg": 83.5,
-   "closed": {
-    "center_below_hinge": 4.41,
-    "center_out_of_hinge": 0.99,
-    "hits_gun_housed": 0,
-    "hits_ship": 5,
-    "hole_covered": "49/49",
-    "ship_pct": 0.31
-   },
-   "gun": {
-    "housed_hits_ship": 0,
-    "min_pull_clear_lid": 7.5,
-    "need_pull": 8.25
-   },
-   "hinge_a": [
-    264.374,
-    105.887,
-    109.5
-   ],
-   "hinge_b": [
-    256.471,
-    107.125,
-    109.5
-   ],
-   "house": 8,
-   "lid_of": "gun-35",
-   "model": "砲門蓋-U-P03",
-   "open": {
-    "box": [
-     254.507,
-     96.424,
-     109.0,
-     264.946,
-     107.696,
-     111.0
-    ],
-    "clear_above_gun": 3.45,
-    "hits_gun": 0,
-    "hits_ship": 4
-   },
-   "reverse": {
-    "house0_closed_hits_gun": 1460,
-    "mirror_y_center_below_hinge": -4.53
-   },
-   "side": "P"
-  },
-  {
-   "close_deg": 83.5,
-   "closed": {
-    "center_below_hinge": 4.41,
-    "center_out_of_hinge": 0.99,
-    "hits_gun_housed": 0,
-    "hits_ship": 5,
-    "hole_covered": "49/49",
-    "ship_pct": 0.31
-   },
-   "gun": {
-    "housed_hits_ship": 0,
-    "min_pull_clear_lid": 7.5,
-    "need_pull": 8.25
-   },
-   "hinge_a": [
-    256.471,
-    213.875,
-    109.5
-   ],
-   "hinge_b": [
-    264.374,
-    215.113,
-    109.5
-   ],
-   "house": 8,
-   "lid_of": "gun-48",
-   "model": "砲門蓋-U-S03",
-   "open": {
-    "box": [
-     254.507,
-     213.304,
-     109.0,
-     264.946,
-     224.576,
-     111.0
-    ],
-    "clear_above_gun": 3.45,
-    "hits_gun": 0,
-    "hits_ship": 4
-   },
-   "reverse": {
-    "house0_closed_hits_gun": 1460
+    "house0_closed_hits_gun": 1290
    },
    "side": "S"
   },
@@ -1596,9 +1410,102 @@
     "center_below_hinge": 4.4,
     "center_out_of_hinge": 1.07,
     "hits_gun_housed": 0,
-    "hits_ship": 1,
+    "hits_ship": 0,
     "hole_covered": "49/49",
-    "ship_pct": 0.06
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.5,
+    "need_pull": 7.25
+   },
+   "hinge_a": [
+    233.344,
+    110.786,
+    110.5
+   ],
+   "hinge_b": [
+    225.475,
+    112.23,
+    110.5
+   ],
+   "house": 7,
+   "lid_of": "gun-34",
+   "model": "砲門蓋-U-P02",
+   "open": {
+    "box": [
+     223.269,
+     101.352,
+     110.0,
+     233.926,
+     112.812,
+     112.0
+    ],
+    "clear_above_gun": 3.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 1239,
+    "mirror_y_center_below_hinge": -4.53
+   },
+   "side": "P"
+  },
+  {
+   "close_deg": 82.5,
+   "closed": {
+    "center_below_hinge": 4.4,
+    "center_out_of_hinge": 1.07,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "hole_covered": "49/49",
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 6.5,
+    "need_pull": 7.25
+   },
+   "hinge_a": [
+    225.475,
+    208.77,
+    110.5
+   ],
+   "hinge_b": [
+    233.344,
+    210.214,
+    110.5
+   ],
+   "house": 7,
+   "lid_of": "gun-47",
+   "model": "砲門蓋-U-S02",
+   "open": {
+    "box": [
+     223.269,
+     208.188,
+     110.0,
+     233.926,
+     219.648,
+     112.0
+    ],
+    "clear_above_gun": 3.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 1239
+   },
+   "side": "S"
+  },
+  {
+   "close_deg": 81.3,
+   "closed": {
+    "center_below_hinge": 4.37,
+    "center_out_of_hinge": 1.16,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "hole_covered": "49/49",
+    "ship_pct": 0.0
    },
    "gun": {
     "housed_hits_ship": 0,
@@ -1606,13 +1513,106 @@
     "need_pull": 8.25
    },
    "hinge_a": [
-    294.406,
-    102.003,
+    264.367,
+    105.86,
+    109.5
+   ],
+   "hinge_b": [
+    256.472,
+    107.153,
+    109.5
+   ],
+   "house": 8,
+   "lid_of": "gun-35",
+   "model": "砲門蓋-U-P03",
+   "open": {
+    "box": [
+     254.443,
+     96.404,
+     109.0,
+     264.941,
+     107.727,
+     111.0
+    ],
+    "clear_above_gun": 3.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 1330,
+    "mirror_y_center_below_hinge": -4.52
+   },
+   "side": "P"
+  },
+  {
+   "close_deg": 81.3,
+   "closed": {
+    "center_below_hinge": 4.37,
+    "center_out_of_hinge": 1.16,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "hole_covered": "49/49",
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "hinge_a": [
+    256.472,
+    213.847,
+    109.5
+   ],
+   "hinge_b": [
+    264.367,
+    215.14,
+    109.5
+   ],
+   "house": 8,
+   "lid_of": "gun-48",
+   "model": "砲門蓋-U-S03",
+   "open": {
+    "box": [
+     254.443,
+     213.273,
+     109.0,
+     264.941,
+     224.596,
+     111.0
+    ],
+    "clear_above_gun": 3.45,
+    "hits_gun": 0,
+    "hits_ship": 0
+   },
+   "reverse": {
+    "house0_closed_hits_gun": 1330
+   },
+   "side": "S"
+  },
+  {
+   "close_deg": 81.6,
+   "closed": {
+    "center_below_hinge": 4.38,
+    "center_out_of_hinge": 1.14,
+    "hits_gun_housed": 0,
+    "hits_ship": 0,
+    "hole_covered": "49/49",
+    "ship_pct": 0.0
+   },
+   "gun": {
+    "housed_hits_ship": 0,
+    "min_pull_clear_lid": 7.5,
+    "need_pull": 8.25
+   },
+   "hinge_a": [
+    294.401,
+    101.982,
     108.5
    ],
    "hinge_b": [
     286.469,
-    103.005,
+    103.026,
     108.5
    ],
    "house": 8,
@@ -1620,11 +1620,11 @@
    "model": "砲門蓋-U-P04",
    "open": {
     "box": [
-     284.782,
-     92.515,
+     284.733,
+     92.498,
      108.0,
-     294.965,
-     103.564,
+     294.962,
+     103.587,
      110.0
     ],
     "clear_above_gun": 3.45,
@@ -1633,19 +1633,19 @@
    },
    "reverse": {
     "house0_closed_hits_gun": 1331,
-    "mirror_y_center_below_hinge": -4.53
+    "mirror_y_center_below_hinge": -4.52
    },
    "side": "P"
   },
   {
-   "close_deg": 82.5,
+   "close_deg": 81.6,
    "closed": {
-    "center_below_hinge": 4.4,
-    "center_out_of_hinge": 1.07,
+    "center_below_hinge": 4.38,
+    "center_out_of_hinge": 1.14,
     "hits_gun_housed": 0,
-    "hits_ship": 1,
+    "hits_ship": 0,
     "hole_covered": "49/49",
-    "ship_pct": 0.06
+    "ship_pct": 0.0
    },
    "gun": {
     "housed_hits_ship": 0,
@@ -1654,12 +1654,12 @@
    },
    "hinge_a": [
     286.469,
-    217.995,
+    217.974,
     108.5
    ],
    "hinge_b": [
-    294.406,
-    218.997,
+    294.401,
+    219.018,
     108.5
    ],
    "house": 8,
@@ -1667,11 +1667,11 @@
    "model": "砲門蓋-U-S04",
    "open": {
     "box": [
-     284.782,
-     217.436,
+     284.733,
+     217.413,
      108.0,
-     294.965,
-     228.485,
+     294.962,
+     228.502,
      110.0
     ],
     "clear_above_gun": 3.45,
@@ -1684,10 +1684,10 @@
    "side": "S"
   },
   {
-   "close_deg": 82.5,
+   "close_deg": 81.7,
    "closed": {
-    "center_below_hinge": 4.4,
-    "center_out_of_hinge": 1.08,
+    "center_below_hinge": 4.38,
+    "center_out_of_hinge": 1.14,
     "hits_gun_housed": 0,
     "hits_ship": 0,
     "hole_covered": "49/49",
@@ -1699,13 +1699,13 @@
     "need_pull": 8.25
    },
    "hinge_a": [
-    325.444,
-    99.167,
+    325.438,
+    99.14,
     107.5
    ],
    "hinge_b": [
-    317.472,
-    99.836,
+    317.471,
+    99.865,
     107.5
    ],
    "house": 8,
@@ -1713,11 +1713,11 @@
    "model": "砲門蓋-U-P05",
    "open": {
     "box": [
-     316.179,
-     89.659,
+     316.112,
+     89.633,
      107.0,
-     325.984,
-     100.377,
+     325.981,
+     100.408,
      109.0
     ],
     "clear_above_gun": 3.45,
@@ -1725,16 +1725,16 @@
     "hits_ship": 0
    },
    "reverse": {
-    "house0_closed_hits_gun": 1384,
+    "house0_closed_hits_gun": 1276,
     "mirror_y_center_below_hinge": -4.53
    },
    "side": "P"
   },
   {
-   "close_deg": 82.5,
+   "close_deg": 81.7,
    "closed": {
-    "center_below_hinge": 4.4,
-    "center_out_of_hinge": 1.08,
+    "center_below_hinge": 4.38,
+    "center_out_of_hinge": 1.14,
     "hits_gun_housed": 0,
     "hits_ship": 0,
     "hole_covered": "49/49",
@@ -1746,13 +1746,13 @@
     "need_pull": 8.25
    },
    "hinge_a": [
-    317.472,
-    221.164,
+    317.471,
+    221.135,
     107.5
    ],
    "hinge_b": [
-    325.444,
-    221.833,
+    325.438,
+    221.86,
     107.5
    ],
    "house": 8,
@@ -1760,11 +1760,11 @@
    "model": "砲門蓋-U-S05",
    "open": {
     "box": [
-     316.179,
-     220.623,
+     316.112,
+     220.592,
      107.0,
-     325.984,
-     231.341,
+     325.981,
+     231.367,
      109.0
     ],
     "clear_above_gun": 3.45,
@@ -1772,7 +1772,7 @@
     "hits_ship": 0
    },
    "reverse": {
-    "house0_closed_hits_gun": 1384
+    "house0_closed_hits_gun": 1276
    },
    "side": "S"
   },
@@ -2524,20 +2524,20 @@
  "summary": {
   "P": 26,
   "center_below_hinge": [
-   4.36,
-   4.51
+   3.8,
+   4.49
   ],
   "center_out_of_hinge": [
-   -0.45,
+   -2.46,
    1.22
   ],
   "closed_hits_gun_housed": 0,
   "closed_ship_pct_max": 2.04,
   "closed_ship_pct_over5": [],
-  "gun_housed_hits_ship": 198,
+  "gun_housed_hits_ship": 108,
   "hole_not_covered": [],
   "house": [
-   5,
+   4,
    6,
    7,
    8,
@@ -2545,11 +2545,11 @@
   ],
   "house_slack": [
    0.5,
-   1.0
+   2.5
   ],
   "lids": 54,
   "open_hits_gun": 0,
-  "open_hits_ship": 32,
+  "open_hits_ship": 186,
   "reverse_house0_lids_hit": 54,
   "reverse_mirror_y_up": 26
  }

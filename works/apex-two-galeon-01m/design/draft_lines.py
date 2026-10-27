@@ -31,7 +31,7 @@ EXTRA = 60   # 舷頂以上多算的層數：要大於舷頂最大的落差（�
 def hull_volume(L, plan):
     """回傳 (x0, ylo, S, dist)：S ＝ 外形實心（舷頂切齊）、dist ＝ 到船外的距離（EDT，1 ＝ 貼著外面那一層）。"""
     Z = plan['lines']
-    zmax = int(max(p[1] for p in Z['top'])) + 2
+    zmax = int(math.ceil(L.top_max)) + 2          # 步驟 17：舷頂是曲線（lines.top_curve）⇒ 照 lines 算出來的最高處
     zs = np.arange(0, zmax + 1) + 0.5
     xa = float(np.min(L.x_aft(zs)))
     xs_ = float(np.max(L.x_stem(zs)))
@@ -115,7 +115,7 @@ def readings(L, plan, S, wall, x0, ylo):
         'keel_length_m': round(keel * m, 3), 'extreme_beam_m': round(beam_cells * m, 3), 'extreme_beam_cells': beam_cells,
         'waterline_beam_m': round(wl_beam * m, 3),
         'length_beam_ratio': round(lgd / max(1, beam_cells), 3), 'keel_beam_ratio': round(keel / max(1, beam_cells), 3),
-        'hull_top_max_z': int(max(p[1] for p in plan['lines']['top'])), 'waterline_z': wl,
+        'hull_top_max_z': int(math.ceil(L.top_max)), 'waterline_z': wl,
         'displacement_t_at_wl': round(disp, 1), 'solid_cells': int(S.sum()), 'wall_cells': int(wall.sum()),
         'components_6': int(ncomp), 'cavity_cells': cav, 'mirror_diff_cells': sym,
         'x_range': [int(x0 + xs[0]), int(x0 + xs[-1])],
