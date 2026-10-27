@@ -1,0 +1,312 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "gura-flyingfish-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T17:39:33",
+			"persona": "gura",
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 25
+			}
+		},
+		{
+			"name": "船殼-窗玻璃",
+			"work": "gura-flyingfish-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:27:48",
+			"persona": "gura",
+			"note": "拆件：從 `船殼`（gura-flyingfish-01m）拆出（TASK-0646）",
+			"meta": {
+				"id": "part-1",
+				"material": "glass"
+			}
+		},
+		{
+			"name": "甲板-hold",
+			"work": "gura-flyingfish-01m-deck-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:22:15",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "hold",
+				"floor": "112:14,188:14",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 0,
+				"name": "貨艙地板",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "gura-flyingfish-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:22:15",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "main",
+				"floor": "105:32,114:31,167:31,190:34,207:36",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 2,
+				"name": "主甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-cabin",
+			"work": "gura-flyingfish-01m-deck-cabin",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:22:15",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "cabin",
+				"floor": "86:22,103:22",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 1,
+				"name": "船尾艙房",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-quarter",
+			"work": "gura-flyingfish-01m-deck-quarter",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:22:16",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "quarter",
+				"floor": "75:41,104:41",
+				"id": "deck-4",
+				"kind": "deck",
+				"level": 3,
+				"name": "後甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "主桅",
+			"work": "gura-flyingfish-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:31:20",
+			"persona": "gura",
+			"note": "步驟 7（TASK-0971）",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "艏斜桅",
+			"work": "gura-flyingfish-01m-bowsprit",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:31:22",
+			"persona": "gura",
+			"note": "步驟 7（TASK-0971）",
+			"meta": {
+				"id": "part-3"
+			}
+		},
+		{
+			"name": "支索板",
+			"work": "gura-flyingfish-01m-channels",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:36:00",
+			"persona": "gura",
+			"note": "步驟 8（TASK-0971）",
+			"meta": {
+				"id": "part-4"
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "gura-flyingfish-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:43:50",
+			"persona": "gura",
+			"note": "步驟 10（TASK-0971）",
+			"meta": {
+				"hoist": "ladders-1#hold",
+				"id": "magazine-1",
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 600
+			}
+		},
+		{
+			"name": "絞盤",
+			"work": "gura-flyingfish-01m-windlass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:44:47",
+			"persona": "gura",
+			"note": "步驟 16 補做（TASK-0971；draft_fit.py）",
+			"meta": {
+				"id": "part-5"
+			}
+		},
+		{
+			"name": "錨架",
+			"work": "gura-flyingfish-01m-anchor-gear",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T18:47:48",
+			"persona": "gura",
+			"note": "步驟 11（TASK-0971）",
+			"meta": {
+				"id": "part-6"
+			}
+		}
+	]
+}

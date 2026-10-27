@@ -1,0 +1,127 @@
+{
+ "note": "draft_rudder_anchor.py 的結果（世界座標）",
+ "rudder": {
+  "work": "gura-flyingfish-01m-rudder",
+  "model": "舵",
+  "host": "gura-flyingfish-01m-assembly",
+  "at": [
+   90.0,
+   80.5,
+   0.0
+  ],
+  "pivot": [
+   90.0,
+   80.5,
+   0.0
+  ],
+  "anchors": {
+   "stock-top": [
+    78,
+    80,
+    24
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "hinge_x": 90.0,
+   "hinge_y": 80.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.3746,
+   "axis_y": 0.0,
+   "axis_z": 0.9272,
+   "max_deg": 35,
+   "turn_axis": "hinge"
+  }
+ },
+ "tiller": {
+  "work": "gura-flyingfish-01m-tiller",
+  "model": "舵柄",
+  "host": "gura-flyingfish-01m-deck-quarter",
+  "at": [
+   76.5,
+   80.5,
+   41.0
+  ],
+  "pivot": [
+   76.5,
+   80.5,
+   41.0
+  ],
+  "anchors": {
+   "spin-a": [
+    76,
+    80,
+    41
+   ],
+   "spin-b": [
+    76,
+    80,
+    44
+   ]
+  },
+  "meta": {
+   "kind": "tiller",
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  }
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "gura-flyingfish-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    205.15,
+    100.24,
+    42
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.22,
+   "rotate": 58.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  },
+  {
+   "name": "錨-P",
+   "host": "gura-flyingfish-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    205.15,
+    60.76,
+    42
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.22,
+   "rotate": -58.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  }
+ ],
+ "hawse": {
+  "hawse-S": [
+   206,
+   92,
+   37
+  ],
+  "hawse-P": [
+   206,
+   68,
+   37
+  ]
+ }
+}

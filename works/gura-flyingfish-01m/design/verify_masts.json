@@ -1,0 +1,261 @@
+{
+ "parts": {
+  "mast-main": {
+   "cells": 1041,
+   "mirror_diff": 0
+  },
+  "bowsprit": {
+   "cells": 659,
+   "mirror_diff": 0
+  }
+ },
+ "skipped_on_ship": {
+  "mast-main": 18
+ },
+ "bowsprit_hole_cells": 0,
+ "yard_ends": {
+  "yard-main-crossjack": {
+   "P": [
+    137.1,
+    51.5,
+    109.0
+   ],
+   "S": [
+    152.6,
+    109.5,
+    109.0
+   ],
+   "pivot": [
+    144.84,
+    80.5,
+    109.0
+   ]
+  },
+  "yard-main-topsail": {
+   "P": [
+    129.6,
+    59.0,
+    141.0
+   ],
+   "S": [
+    142.7,
+    102.0,
+    141.0
+   ],
+   "pivot": [
+    136.16,
+    80.5,
+    141.0
+   ]
+  },
+  "yard-main-gaff": {
+   "fore": [
+    141.19,
+    80.5,
+    106.5
+   ],
+   "peak": [
+    99.1,
+    80.5,
+    135.2
+   ],
+   "pivot": [
+    141.19,
+    80.5,
+    106.5
+   ]
+  },
+  "yard-main-boom": {
+   "fore": [
+    155.15,
+    80.5,
+    50.5
+   ],
+   "peak": [
+    33.4,
+    80.5,
+    57.6
+   ],
+   "pivot": [
+    155.15,
+    80.5,
+    50.5
+   ]
+  }
+ },
+ "yard_clash_cells": {
+  "yard-main-crossjack": 0,
+  "yard-main-topsail": 0,
+  "yard-main-gaff": 0,
+  "yard-main-boom": 0
+ },
+ "overhang_past_stern_m": {
+  "yard-main-gaff": -2.89,
+  "yard-main-boom": 3.68
+ },
+ "yards": [
+  {
+   "name": "yard-main-crossjack",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-main-royal",
+   "at": [
+    144.84,
+    80.5,
+    109.0
+   ],
+   "pivot": [
+    2.5,
+    46.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -15
+   ],
+   "scale": [
+    1,
+    0.6452,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "crossjack",
+    "sail": "main-topsail",
+    "length_m": 6.0,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -15
+   }
+  },
+  {
+   "name": "yard-main-topsail",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-royal",
+   "at": [
+    136.16,
+    80.5,
+    141.0
+   ],
+   "pivot": [
+    1.5,
+    32.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    0.6923,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topsail",
+    "sail": "main-topsail",
+    "length_m": 4.5,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-main-gaff",
+   "mast": "main",
+   "work": "gura-tridente-01m-yard-mizzen-gaff",
+   "at": [
+    141.19,
+    80.5,
+    106.5
+   ],
+   "pivot": [
+    127.5,
+    1.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.3343,
+    0.3343,
+    0.3343
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "gaff",
+    "sail": "mainsail",
+    "length_m": 5.1,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-main-boom",
+   "mast": "main",
+   "work": "gura-tridente-01m-yard-mizzen-boom",
+   "at": [
+    155.15,
+    80.5,
+    50.5
+   ],
+   "pivot": [
+    138.5,
+    1.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.8826,
+    0.8826,
+    0.8826
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "boom",
+    "sail": "mainsail",
+    "length_m": 12.2,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  }
+ ],
+ "lateen": {},
+ "masts": {
+  "main": {
+   "heel": 8.5,
+   "platform": 112.5,
+   "truck": 168.5,
+   "x": 165
+  }
+ },
+ "lists": {
+  "mast-main": [
+   1041,
+   "cb2700c4d2c285e27f7255b1ad5fcd2d50b8c1bad33268bd28992cb601a6d6b7"
+  ],
+  "bowsprit": [
+   659,
+   "25a72a8a5e4ce4fa69964ffa7ce8235949601e63e3b04d0d7dc6a7afb126cb15"
+  ],
+  "bowsprit_hole": [
+   0,
+   "fd428e068a17468dbe99d15aab20632ae240f08180a225fdfd2ac4283c344f65"
+  ]
+ }
+}

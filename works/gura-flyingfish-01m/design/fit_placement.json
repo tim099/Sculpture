@@ -1,0 +1,128 @@
+{
+ "note": "draft_fit.py（步驟 16 補做）產生；build_fit.py 照它落格",
+ "hatches": [
+  {
+   "name": "艙蓋-主",
+   "work": "gura-flyingfish-01m-hatch-main",
+   "title": "飛魚號 主艙口艙蓋（貨艙梯子的井；嵌在圍板裡；門：kind=door）",
+   "host": "gura-flyingfish-01m-deck-main",
+   "size": [
+    10,
+    11,
+    2
+   ],
+   "at": [
+    133,
+    75,
+    31
+   ],
+   "mask": "masks/fit/hatch-main.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     9,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 100
+   }
+  },
+  {
+   "name": "艙蓋-前",
+   "work": "gura-flyingfish-01m-hatch-fore",
+   "title": "飛魚號 前艙口艙蓋（蓋在圍板上；門：kind=door）",
+   "host": "gura-flyingfish-01m-deck-main",
+   "size": [
+    9,
+    11,
+    2
+   ],
+   "at": [
+    184,
+    75,
+    36
+   ],
+   "mask": "masks/fit/hatch-fore.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     8,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 100
+   }
+  }
+ ],
+ "galley": {
+  "name": "爐灶",
+  "host": "gura-flyingfish-01m-deck-main",
+  "work": "kaguya-gloire-01m-galley",
+  "at": [
+   168.0,
+   80.5,
+   32
+  ],
+  "pivot": [
+   22,
+   16,
+   0
+  ],
+  "scale": 0.18,
+  "rotate": 0,
+  "meta": {
+   "kind": "galley"
+  }
+ },
+ "windlass": {
+  "work": "gura-flyingfish-01m-windlass",
+  "title": "飛魚號 絞盤（船頭甲板上的 windlass）",
+  "link": "絞盤",
+  "mask": "masks/fit/windlass.vox.txt"
+ },
+ "room": null,
+ "ratlines": [
+  {
+   "name": "main-lower-S",
+   "foot": [
+    151,
+    96,
+    31
+   ],
+   "head": [
+    141,
+    85,
+    114
+   ]
+  },
+  {
+   "name": "main-lower-P",
+   "foot": [
+    151,
+    64,
+    31
+   ],
+   "head": [
+    141,
+    75,
+    114
+   ]
+  }
+ ]
+}

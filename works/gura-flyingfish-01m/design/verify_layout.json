@@ -1,0 +1,98 @@
+{
+ "ports": {
+  "main": {
+   "n_per_side": 2,
+   "gap_min": 53,
+   "gap_max": 53,
+   "gaps": [
+    53
+   ],
+   "clear_above_min": 2.0,
+   "half_breadth_at_port_min": 19.5,
+   "x0s": [
+    118,
+    176
+   ]
+  }
+ },
+ "ports_total": 4,
+ "decks": {
+  "hold": {
+   "z": 13,
+   "span": [
+    112,
+    188
+   ]
+  },
+  "main": {
+   "z": 30,
+   "span": [
+    105,
+    207
+   ]
+  },
+  "cabin": {
+   "z": 21,
+   "span": [
+    82,
+    103
+   ]
+  },
+  "quarter": {
+   "z": 40,
+   "span": [
+    74,
+    104
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "main",
+   "x": 165,
+   "heel": 8.5,
+   "platform": 112.5,
+   "truck": 168.5,
+   "above_wl_m": 14.35,
+   "yards": {
+    "crossjack": {
+     "z": 112.0,
+     "len_m": 6.0
+    },
+    "topsail": {
+     "z": 141.0,
+     "len_m": 4.5
+    },
+    "gaff": {
+     "z": 108.0,
+     "len_m": 5.1
+    },
+    "boom": {
+     "z": 46.0,
+     "len_m": 12.2
+    }
+   }
+  }
+ ],
+ "bowsprit": {
+  "x0": 198,
+  "z0": 42.0,
+  "x1": 292.0,
+  "z1": 76.2,
+  "angle": 20,
+  "len": 100.0,
+  "spritsail_len": 0.0
+ },
+ "sloop": {
+  "gaff_peak": [
+   96.0,
+   133.5
+  ],
+  "boom_end": [
+   34.8,
+   63.0
+  ],
+  "boom_over_taffrail": 9.1,
+  "boom_end_past_stern_m": 3.54
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "艙蓋-主": {
+  "cells": 129,
+  "box": [
+   133,
+   75,
+   31,
+   143,
+   86,
+   33
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "opening": 110,
+  "opening_through": 92,
+  "rim_z": 30,
+  "rim_solid": 0
+ },
+ "艙蓋-前": {
+  "cells": 118,
+  "box": [
+   184,
+   75,
+   36,
+   193,
+   86,
+   38
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "opening": 84,
+  "opening_through": 63,
+  "rim_z": 35,
+  "rim_solid": 15
+ },
+ "廚房": {
+  "box": [
+   164.04,
+   77.62,
+   32,
+   171.96,
+   83.38,
+   39.92
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "faces": [
+   {
+    "face": "−x",
+    "at": [
+     162.04,
+     80.5
+    ],
+    "walk": [
+     161,
+     80,
+     31
+    ],
+    "d": 0.54
+   },
+   {
+    "face": "+x",
+    "at": [
+     173.96,
+     80.5
+    ],
+    "walk": [
+     173,
+     80,
+     32
+    ],
+    "d": 0.46
+   },
+   {
+    "face": "−y",
+    "at": [
+     168.0,
+     75.62
+    ],
+    "walk": [
+     167,
+     75,
+     31
+    ],
+    "d": 0.51
+   },
+   {
+    "face": "+y",
+    "at": [
+     168.0,
+     85.38
+    ],
+    "walk": [
+     167,
+     85,
+     31
+    ],
+    "d": 0.51
+   }
+  ],
+  "faces_ok": 4
+ },
+ "絞盤": {
+  "cells": 308,
+  "deck_z": 34,
+  "top_z": 40,
+  "inner_y": [
+   64,
+   96
+  ],
+  "posts_y": [
+   [
+    68,
+    69
+   ],
+   [
+    91,
+    92
+   ]
+  ],
+  "barrel_y": [
+   70,
+   90
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "posts_touch": [
+   true,
+   true
+  ]
+ },
+ "繩梯": [
+  {
+   "name": "main-lower-S",
+   "foot_ok": true,
+   "head_ok": true
+  },
+  {
+   "name": "main-lower-P",
+   "foot_ok": true,
+   "head_ok": true
+  }
+ ]
+}
