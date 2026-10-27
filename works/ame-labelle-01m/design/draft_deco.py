@@ -4,6 +4,8 @@
 #   輸出：masks/deco/head.vox.txt、figurehead.vox.txt、bouteilles.vox.txt（世界座標，at 0,0,0）、fleurs_paint.vox.txt（船殼 stampvox overwrite=1）、
 #         verify_deco.json、sheet05_deco_v1.png
 #   用法：python -I -X utf8 draft_deco.py <design> [--probe=fleur_dy=<船寬方向偏移>]（反向對照：百合花整排往一舷偏，⛔ 不寫檔）
+#         [--hull=<船殼帳>]（TASK-1045：船殼改了還沒落格 ⇒ 拿 tools/hull_expected.py 組的帳當船殼）
+#   · TASK-1045：plan 有 deco.head.platform ⇒ 船首喙改成 beakhead 平台版（head_platform：喙甲板、側板、欄杆、head 寬帶、cheek、填縫）；knee 只到平台底、herpes 不畫
 #   · 收穫號的 draft_deco.py 是 galleon 的 espolón 與 galleries，本船重寫；出處只有讀作品的 wio（calli-cosecha-01m/design/tools/wio.py）。
 import sys, os, json, math, hashlib
 import numpy as np
@@ -36,6 +38,121 @@ def bez(p0, p1, p2, n=80):
         yield tuple((1 - t) ** 2 * a + 2 * (1 - t) * t * b + t * t * c for a, b, c in zip(p0, p1, p2))
 
 
+def head_platform(plan, PF, occ, side, put, YC, parts):
+    """TASK-1045（Ship_Ends §4.3、§4.4；做法照 apex-two-galeon-01m 的 espolon／head_band／cheeks，程式本船重寫）：
+    喙的甲板跟船殼切口底下的平台同高、連成一整片（船殼佔的格 put 會跳過）、外伸那一段包側板（底下不封、最前面那一欄封）、
+    平台邊的欄杆（底欄、柱子只在最外那一層每 post_every 格一根、金扶手）、head 寬帶（艙壁上角彎到船首像後面）、cheek 兩條金線。
+    回傳讀數。"""
+    bx = int(plan['lines']['beakhead']['x'])
+    zt, th = PF['top_z'], PF['thick']
+    x0, x1 = bx, PF['tip_x']
+    R = {}
+
+    def half(x):
+        t = (x - x0) / float(x1 - x0)
+        return PF['half_tip'] + (PF['half_from'] - PF['half_tip']) * (1 - t) ** PF['pow']
+    # 平台：喙的甲板（zt − th + 1 .. zt）；E[x] ＝ 平台頂那一層最外的 |dy|（喙或船殼，取大的）
+    E, over = {}, {}
+    for x in range(x0, x1 + 1):
+        h = int(math.floor(half(x) + 0.5))
+        hs = side.get((x, zt), -1)
+        E[x] = max(h, hs)
+        over[x] = h > hs
+        for dy in range(0, h + 1):
+            for z in range(zt - th + 1, zt + 1):
+                for sg in (1, -1):
+                    put('head', x, YC + sg * dy, z, PF['deck_color'])
+    # 側板：只在喙比船殼寬的那一段；跟下一欄的 E 之間補齊（斜的地方不留縫），最前面那一欄 E[x1 + 1] 當 0 ⇒ 整片封
+    zs0 = PF['skirt_to_z']
+    for x in range(x0, x1 + 1):
+        if not over[x]:
+            continue
+        nxt = E.get(x + 1, 0) if x < x1 else 0
+        for dy in range(min(E[x], nxt), E[x] + 1):
+            for z in range(zs0, zt - th + 1):
+                c = PF['gold'] if z in (zs0, zt - th) else PF['skirt_color']
+                for sg in (1, -1):
+                    put('head', x, YC + sg * dy, z, c)
+    # 欄杆：沿 E 走到 rail_end、前端橫一道；底欄 zt＋1、扶手 zt＋rail_h（金）、柱子 zt＋2 .. zt＋rail_h−1
+    RL = PF['rail']
+    xe = RL['x_end']
+    zb, zc = zt + 1, zt + RL['h']
+    for x in range(x0, xe + 1):
+        nxt = E[x + 1] if x < xe else E[x]
+        for dy in range(min(E[x], nxt), E[x] + 1):
+            for sg in (1, -1):
+                put('head', x, YC + sg * dy, zb, RL['color'])
+                put('head', x, YC + sg * dy, zc, PF['gold'])
+        if (x - x0) % RL['post_every'] == 0:
+            for z in range(zb + 1, zc):
+                for sg in (1, -1):
+                    put('head', x, YC + sg * E[x], z, RL['color'])
+    for dy in range(0, E[xe] + 1):
+        for sg in (1, -1):
+            put('head', xe, YC + sg * dy, zb, RL['color'])
+            put('head', xe, YC + sg * dy, zc, PF['gold'])
+            if dy % RL['post_every'] == 0:
+                for z in range(zb + 1, zc):
+                    put('head', xe, YC + sg * dy, z, RL['color'])
+    # head 寬帶：上緣兩段拋物線（艙壁上角 → 最低點斜率 0 → 船首像後面）、帶高 h、1 格厚；dy 從艙壁那一欄船殼的最外一格照 t^p 收到 dy_e
+    #   （起點跟艙壁角的船殼同一個 dy ⇒ 面貼面接上；外一格只有斜角相碰 ⇒ 浮空）
+    B = PF['band']
+    dy0 = side.get((x0 - 1, B['z_h']), 0)
+
+    def btop(x):
+        if x <= B['x_l']:
+            return B['z_l'] + (B['z_h'] - B['z_l']) * ((B['x_l'] - x) / float(B['x_l'] - B['x_h'])) ** 2
+        return B['z_l'] + (B['z_e'] - B['z_l']) * ((x - B['x_l']) / float(B['x_e'] - B['x_l'])) ** 2
+
+    def bdy(x):
+        t = (x - B['x_h']) / float(B['x_e'] - B['x_h'])
+        return dy0 + (B['dy_e'] - dy0) * t ** B['dy_pow']
+    band_lo = 99
+    for x in range(B['x_h'], B['x_e'] + 1):
+        ztop_ = int(math.floor(btop(x) + 0.5))
+        d0 = int(math.floor(bdy(x) + 0.5))
+        d1 = int(math.floor(bdy(x + 1) + 0.5)) if x < B['x_e'] else d0
+        for dy in range(min(d0, d1), max(d0, d1) + 1) if d1 < d0 else (d0,):
+            for z in range(ztop_ - B['h'] + 1, ztop_ + 1):
+                c = PF['gold'] if z in (ztop_, ztop_ - B['h'] + 1) else B['fill']
+                for sg in (1, -1):
+                    put('head', x, YC + sg * dy, z, c)
+        band_lo = min(band_lo, ztop_ - B['h'] + 1)
+    R['band_bottom_min_z'] = band_lo
+    R['rail_top_z'] = zc
+    # cheek：船頭兩側貼著船殼外一格的金線（照 x 線性往下），dy 跳格的地方補齊
+    for ch in PF['cheeks']:
+        prev = None
+        for x in range(ch['x0'], ch['x1'] + 1):
+            z = int(math.floor(ch['z0'] + (ch['z1'] - ch['z0']) * (x - ch['x0']) / float(ch['x1'] - ch['x0']) + 0.5))
+            if (x, z) not in side:
+                continue
+            d = side[(x, z)] + 1
+            for dy in (range(d, prev + 1) if prev is not None and prev > d else (d,)):
+                for sg in (1, -1):
+                    put('head', x, YC + sg * dy, z, PF['gold'])
+            prev = d
+    # 封閉的小空腔（側板、平台、船殼圍出來的縫）：框裡從框邊灌，灌不到的空格補進喙（Ship_Ends §4.3 espolon_cavity_filled）
+    from scipy import ndimage
+    fx0, fx1, fy0, fy1, fz0, fz1 = x0 - 3, x1 + 3, YC - 30, YC + 30, zs0 - 4, zc + 12
+    sol = np.zeros((fx1 - fx0 + 1, fy1 - fy0 + 1, fz1 - fz0 + 1), bool)
+    for src in (occ, parts['head']):
+        for (x, y, z) in src:
+            if fx0 <= x <= fx1 and fy0 <= y <= fy1 and fz0 <= z <= fz1:
+                sol[x - fx0, y - fy0, z - fz0] = True
+    lab, n = ndimage.label(~sol)
+    edge = set(np.unique(np.concatenate([lab[0].ravel(), lab[-1].ravel(), lab[:, 0].ravel(), lab[:, -1].ravel(), lab[:, :, 0].ravel(), lab[:, :, -1].ravel()])))
+    filled = 0
+    for i in range(1, n + 1):
+        if i in edge:
+            continue
+        for xi, yi, zi in np.argwhere(lab == i):
+            put('head', xi + fx0, yi + fy0, zi + fz0, PF['skirt_color'])
+            filled += 1
+    R['cavity_filled'] = filled
+    return R
+
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     design = sys.argv[1]
@@ -44,7 +161,12 @@ def main():
     L = HL.Lines(plan)
     YC = L.YC
     D = plan['deco']
-    W = export_list('ame-labelle-01m', None)
+    hull_list = next((a.split('=', 1)[1] for a in sys.argv[2:] if a.startswith('--hull=')), None)
+    if hull_list:
+        # TASK-1045：船殼改了還沒落格 ⇒ 拿 tools/hull_expected.py 組的帳當船殼
+        W = np.loadtxt(hull_list, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
+    else:
+        W = export_list('ame-labelle-01m', None)
     occ = {(x, y, z): c for x, y, z, c in W.tolist()}
     # 船頭外緣：中線那一欄每個 z 最前面的格
     bow = {}
@@ -73,6 +195,10 @@ def main():
     # ── 船首喙：knee of head（中線 3 格厚）──
     H = D['head']
     ext_max, z0k, z1k, ztop = H['ext'], H['z_from'], H['z_full'], H['z_top']
+    PF = H.get('platform')
+    if PF:
+        # TASK-1045：knee 只到平台底（平台另外鋪）
+        ztop = PF['top_z'] - PF['thick']
     tip_x = None
     for z in range(z0k, ztop + 1):
         if z not in bow:
@@ -85,8 +211,12 @@ def main():
                 put('head', x, YC + dy, z, c)
         if z == H['z_tip_top']:
             tip_x = xe
-    # head rails：每舷兩根（2 格高、1 格厚），從船頭舷牆掃到 knee 的前端
-    for r in H['rails']:
+    RP = None
+    if PF:
+        tip_x = PF['tip_x']
+        RP = head_platform(plan, PF, occ, side, put, YC, parts)
+    # head rails：每舷兩根（2 格高、1 格厚），從船頭舷牆掃到 knee 的前端（TASK-1045 平台版：herpes 換成平台欄杆＋head 寬帶）
+    for r in ([] if PF else H['rails']):
         zs, ze = r['z_hull'], r['z_tip']
         xs = bow[zs] - 2
         hb0 = side.get((xs, zs), 10)
@@ -97,7 +227,7 @@ def main():
 
     # ── 船首像：Mlle de Fontanges（立在 knee 前端上面，直立；局部 u 往船頭、v 船寬、w 往上）──
     F = D['figurehead']
-    bx, bz = tip_x - F['back'], H['z_tip_top'] + 1
+    bx, bz = tip_x - F['back'], (PF['top_z'] if PF else H['z_tip_top']) + 1
     for w, row in enumerate(F['rows']):
         for (u0, u1, vh, c) in row:
             for u in range(u0, u1 + 1):
@@ -150,6 +280,8 @@ def main():
 
     # ── 讀數 ──
     R = {'parts': {k: len(v) for k, v in parts.items()}, 'fleur_cells': len(paint), 'tip_x': tip_x}
+    if RP:
+        R['platform'] = RP
     allp = {}
     for k, v in parts.items():
         for kk in v:

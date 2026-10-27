@@ -5,7 +5,8 @@
 #     · 艏柱：x ＝ forefoot ＋ stem_rake·(z／stem_ref_z)^stem_pow（devis 的艏柱傾出量在 26.8 格高，GR p.6）；艉柱直的往後倒（devis 傾出）；
 #     · 船尾 wing transom 以上是一整片平的 tableau（照艉柱的斜度往後倒），以下收到艉柱；
 #     · 貨船的鼓肚中剖面：平一點的船底、飽滿的圓舭，船腰 tumblehome 1 pi；
-#     · 舷頂是一條折線：quarterdeck 高、船腰低、forecastle 高（船首喙另做子作品）。
+#     · 舷頂是一條折線：quarterdeck 高、船腰低、forecastle 高（船首喙另做子作品）；
+#     · TASK-1045：plan 有 lines.beakhead ⇒ 船首樓前面切一道平的 beakhead 艙壁（Ship_Ends §2）。
 #   被 draft_lines.py 與之後的階段 import；只讀 plan.json、不碰作品。
 import json, math, os
 import numpy as np
@@ -119,6 +120,10 @@ class Lines:
         h = self.keel_hw + (mid - self.keel_hw) * self.breadth_k(s, z)
         h = np.where(z < zr, self.keel_hw, h)
         inside = (s >= 0) & (s <= 1)
+        bh = self.P.get('beakhead')
+        if bh:
+            # TASK-1045（Ship_Ends §2，出處 apex-two-galeon-01m/design/lines.py 步驟 17）：z 以上、x 以前切掉 ⇒ 船首樓前面一道平的 beakhead 艙壁、底下的船頭頂面成了平台
+            inside = inside & ~((x >= float(bh['x'])) & (z >= float(bh['z'])))
         return np.where(inside, h, -1.0)
 
     def top_z(self, x):
