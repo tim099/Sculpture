@@ -234,3 +234,9 @@ Ship_Game §10 檢查表：
 | 匯出 vxk、對 checksum | ✓ 上面那一行 |
 | 匯入檢查 ✗ 0、⚠ 都看過 | ✓ ⚠ 8 逐條列在步驟 14 |
 | 舵、舵柄 spin | ✓ |
+
+## 接進 Blocksail（2026-10-27）
+- Blocksail worktree `D:/Unity/Blocksail-wt/gura-971`（分支 gura/971-sloop，從本地 main 08f39c0 開；submodule 從共用工作區 init，再 checkout Blockside 7668206）。
+- world/fleet.js `FLEET.types.jsloop`：牙買加單桅船、35 噸、upkeep 1、cost 1,100〔佔位〕、hull flyingfish、`from: 1670`（牙買加最早的 "sloop" 字樣：1670-12 the Betty sloop）；跟 2026-10-26 拿掉的 `sloop`（retired ⇒ barque）是兩型，舊存檔不變。`hullLoa.flyingfish` 22.2 m（.vxk 外框 x 70–292）⇒ 停小船（≤ 36 m）那一級、停不進小艇（12 m）。
+- docs/TRADE_SIM.md 船隊規模那張表加一列；tools/fleet_check.cjs 多三條（from 1670、造船挑型、全長與泊位級）。
+- battle.html 照核心 bd901ed5624b0a11 重套；選船清單「飛魚號 51 噸・水線 12.4 m／砲 8 門・齊射 11 kg・34 人／航速 順風 10.6・側順風 14.7・逆風 6.3 節／建造者 gura」，`?ship=flyingfish,labelle` 開戰載得進來。
