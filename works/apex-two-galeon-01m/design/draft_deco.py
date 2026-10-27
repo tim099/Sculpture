@@ -20,6 +20,7 @@ from wio import export_list
 
 BLACK, GOLD, GLASS, WOOD, TRIM, DECK, BLUE = 36, 248, 87, 141, 136, 209, 6
 PARTS = ('espolon', 'figurehead', 'stern-deco', 'hackebort')
+EXCLUDE = PARTS + ('ornament',)          # 步驟 16 的裝飾（draft_ornament.py）是疊在本步驟上面的 ⇒ 重產本步驟時也扣掉（才會逐位元組相同）
 
 FONT = {  # 3×5，列由上往下
     'B': ['XX.', 'X.X', 'XX.', 'X.X', 'XX.'], 'L': ['X..', 'X..', 'X..', 'X..', 'XXX'], 'A': ['.X.', 'X.X', 'XXX', 'X.X', 'X.X'],
@@ -40,7 +41,7 @@ def main():
     A = export_list('apex-two-galeon-01m-assembly', None, links=None)
     # 船 ＝ 組裝件扣掉本步驟自己的件（已經落過一次的話；收穫號 v1 沒扣 ⇒ 重產時把舊裝飾當成船）
     own = set()
-    for nm in PARTS:
+    for nm in EXCLUDE:
         if os.path.exists(os.path.join(WORKS, 'apex-two-galeon-01m-' + nm, 'work.json')):
             own |= set(map(tuple, export_list('apex-two-galeon-01m-' + nm, None)[:, :3].tolist()))
     if own:

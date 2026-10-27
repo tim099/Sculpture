@@ -17,9 +17,20 @@ from draft_lines import hull_volume, shell_colors, font, palette_rgb
 
 
 def wale_rows(plan, w, xs):
-    """一條 wale 的玫瑰粉那幾列：z 範圍（含端點）＝ 甲板面 ＋ dz .. ＋ h − 1（照甲板舷弧）；陣列吃 x。"""
-    lo = np.array([int(LY.deck_z(plan, w['deck'], x + 0.5)) + w['dz'] for x in np.atleast_1d(xs)])
-    return lo, lo + w['h'] - 1
+    """一條 wale 的玫瑰粉那幾列：z 範圍（含端點）＝ 甲板面 ＋ dz .. ＋ h − 1（照甲板舷弧）；陣列吃 x。
+    康塞普西翁號（Tim 2026-10-27「船身做出一些裝飾 曲線」）：plan paint.wales.sheer 有的話，再加 wale 自己多出來的舷弧（1618 Table 4：wale 比甲板翹）：
+      船中 mid_x 往兩頭照 ((離船中) ÷ (到那一頭))^pow 加到 aft／fwd 格（過了那一頭照那一頭）× 這一條的 sheer_k；
+      這一條有 z_max ⇒ 頂超過 z_max 的那幾柱不畫（wale 收進船樓的菱格帶底下）⇒ lo 回 −1。"""
+    xa = np.atleast_1d(xs)
+    lo = np.array([int(LY.deck_z(plan, w['deck'], x + 0.5)) + w['dz'] for x in xa])
+    sh = plan['paint']['wales'].get('sheer')
+    if sh and w.get('sheer_k', 1):
+        m = sh['mid_x']
+        u = np.where(xa < m, np.clip((m - xa) / float(m - sh['aft_x']), 0, 1), np.clip((xa - m) / float(sh['fwd_x'] - m), 0, 1))
+        lo = lo + np.floor(np.where(xa < m, sh['aft'], sh['fwd']) * w.get('sheer_k', 1) * u ** sh['pow'] + 0.5).astype(int)
+    if 'z_max' in w:
+        lo = np.where(lo + w['h'] - 1 > w['z_max'], -1, lo)
+    return lo, np.where(lo < 0, -2, lo + w['h'] - 1)
 
 
 def stern_windows(plan, YC):
@@ -107,6 +118,20 @@ def main():
         zt = min(nz - 1, topz[xi])
         cap[xi, :, zt] = outer[xi, :, zt]
     paint[cap] = GOLD
+    # 砲門的金框（康塞普西翁號 paint.wreath）：那幾層的砲門，紅框（離開口 1 格）外面再一圈（離開口 2 格）金
+    WR = PA.get('wreath')
+    if WR:
+        wreath = np.zeros(wall.shape, bool)
+        for p in ports:
+            if p['deck'] not in WR['decks'] or (skip and (p['deck'], p['i']) == skip):
+                continue
+            for side in (1, -1):
+                ysel = (dy_of * side) >= 6
+                xr = slice(p['x0'] - 2 - x0, p['x1'] + 3 - x0)
+                zr = slice(p['z0'] - 2, p['z1'] + 3)
+                wreath[xr, :, zr] |= outer[xr, :, zr] & ysel[None, :, None]
+        wreath &= ~ring & ~carve
+        paint[wreath] = WR['color']
     paint[ring] = REVEAL
 
     # ── 船尾面：每個 (y, z) 從最後面往前那一段牆 ──

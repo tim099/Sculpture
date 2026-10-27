@@ -119,6 +119,16 @@
       "src": "1618 art.69：galleries 外伸 ≤ ⅔ codo（3.8 格）⇒ out 4；位置設計決定：第三層甲板（cámara）那一層、3 個開間（x 156–179），頂到 z 138 為止 —— alcázar 第 1 門 6 磅砲在 x 176–181、z 139–144，側廊再高就蓋住它；頂 4 層紅 224 收成拱"},
     "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.75, "dy": [-14, 0, 14], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.75 ⇒ 比藍鯊號大一號）；三盞 ＝ 旗艦（Capitana Real）的燈號〔推〕，站在拱形板頂上"}
   },
+  "ornament": {
+    "src": "步驟 16（Tim 2026-10-27「希望可以參考模型 圖紙 船身做出一些裝飾 曲線」＋三張參考：遊戲裡的側面、OcCre 式模型的船尾側廊、San Felipe 式整船模型）：一件子作品 -ornament；只放進組裝件的空格（撞到的照實數）；兩舷照 |dy| 一起產",
+    "gallery2": {"x0": 156, "x1": 171, "z0": 139, "z1": 149, "out": 3, "roof_h": 4, "roof": 224, "win": [143, 148],
+      "src": "設計決定（參考圖二：側廊上下兩層、上層比下層窄一點、開間是拱窗）：第二層疊在第一層的紅頂上（z 139 起）、2 個開間（x 156–171 —— alcázar 第 1 門砲連金框在 x 174–183，讓開）、伸出 3 格（比第一層的 4 少一格 ⇒ 往上收）；頂 4 層紅收成拱 ⇒ 最高 z 153（toldilla 第 1 門砲連金框在 z 155–163，讓開）；窗 z 143–148、最上一列只留中間兩格 ＝ 拱"},
+    "corbels": {"len": 7, "w": 2, "src": "設計決定（參考圖二：每層側廊底下一排金色渦卷托架）：第一層側廊（z 116 以下）每個開間的兩端各一個、高 7 格、寬 2 格，從船殼伸到側廊的面、往下收成 0；外面那一格金、裡面木"},
+    "balcony_corbels": {"dy_every": 8, "dy_off": 4, "len": 5, "src": "設計決定：船尾走廊底下，原本的木斜撐（每 8 格，dy 0／8／16／24）之間再加金托架（dy 4／12／20）、高 5 格、伸到走廊外緣、往下收"},
+    "pilasters": {"src": "設計決定（參考圖二：窗與窗之間的金壁柱、窗頂的拱楣）：鏡板上每一排窗（追擊砲門那排除外），窗與窗之間、兩頭外側各一根 1 格寬的金壁柱（凸出鏡板 1 格、從窗底下 1 格到窗頂上 1 格）；每扇窗頂上 2 格一條金窗楣（比窗寬 1 格）"},
+    "head_rails": {"x_h": 598, "x_e": 646, "sag": 5, "thick": 2, "rails": [{"z_h": 112, "z_e": 96}, {"z_h": 101, "z_e": 90}], "timbers": [634, 640],
+      "src": "設計決定（參考圖三：船頭兩條往下彎再往前的金色 head rail，接到船首像後面）：每舷兩條，從船頭側面（x 598；z 112、101）往前往下彎、再往上接到船首像的頸背（x 646：獅子 x 650 往後；z 96、90）—— 二次曲線、控制點比兩頭低的那一頭再低 5 格 ⇒ 笑臉形；v1 終點 z 85／82 ⇒ 兩條在喙上壓平貼著原本的欄杆頂（z 82–85）、中間沒空；粗 2 格、上面那格金；喙上兩根 head timber（x 634、640）從喙的甲板直立撐到上面那條（只放空格 ⇒ 下面那條與喙的欄杆照舊）；notes todo「船頭往上彎的 head rail」"}
+  },
   "decks_build": {
     "src": "設計決定（遊戲用的大致構造，照造船規格 Ship_Decks §9.2–9.3；結構照藍鯊號／收穫號 draft_decks）。三層連續甲板＋三座船樓；艙室（santabárbara、cámara）只做甲板與 break，艙壁之後要配功能艙再加",
     "plank": {"interior": 177, "weather": 209, "weather_decks": ["tercera", "alcazar", "toldilla", "castillo"]},
@@ -146,14 +156,14 @@
         {"name": "main-fwd", "lo": "main", "up": "puente", "xs": 430, "dir": 1, "dy": 0, "well": true},
         {"name": "puente-aft", "lo": "puente", "up": "tercera", "xs": 352, "dir": -1, "dy": 0, "well": true},
         {"name": "puente-fwd", "lo": "puente", "up": "tercera", "xs": 452, "dir": 1, "dy": 0, "well": true},
-        {"name": "alcazar-P", "lo": "tercera", "up": "alcazar", "xs": 351, "dir": -1, "dy": -24, "head_x": 327},
-        {"name": "alcazar-S", "lo": "tercera", "up": "alcazar", "xs": 351, "dir": -1, "dy": 24, "head_x": 327},
-        {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 261, "dir": -1, "dy": -18, "head_x": 237},
-        {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 261, "dir": -1, "dy": 18, "head_x": 237},
-        {"name": "castillo-P", "lo": "tercera", "up": "castillo", "xs": 540, "dir": 1, "dy": -14, "head_x": 563},
-        {"name": "castillo-S", "lo": "tercera", "up": "castillo", "xs": 540, "dir": 1, "dy": 14, "head_x": 563}
+        {"name": "alcazar-P", "lo": "tercera", "up": "alcazar", "xs": 346, "dir": -1, "dy": -24, "head_x": 327},
+        {"name": "alcazar-S", "lo": "tercera", "up": "alcazar", "xs": 346, "dir": -1, "dy": 24, "head_x": 327},
+        {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 254, "dir": -1, "dy": -18, "head_x": 237},
+        {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 254, "dir": -1, "dy": 18, "head_x": 237},
+        {"name": "castillo-P", "lo": "tercera", "up": "castillo", "xs": 544, "dir": 1, "dy": -14, "head_x": 563},
+        {"name": "castillo-S", "lo": "tercera", "up": "castillo", "xs": 544, "dir": 1, "dy": 14, "head_x": 563}
       ],
-      "src": "設計決定（照藍鯊號／收穫號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井（底艙那座靠左舷、閃開中線的艙口）；第一→二層、二→三層各前後兩座（閃開主桅 x 379、主艙口）；船樓的梯子靠在 break 外面、頭踩上船樓甲板。castillo 那兩座 v0 在 dy ±24 ⇒ 擋在第三層第 12 門砲的艙內那一側（draft_decks ports_blocked_inside 48 格）⇒ 收到 dy ±14、船首樓艙壁的門改開在 dy ±26。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
+      "src": "設計決定（照藍鯊號／收穫號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井（底艙那座靠左舷、閃開中線的艙口）；第一→二層、二→三層各前後兩座（閃開主桅 x 379、主艙口）；船樓的梯子靠在 break 外面、頭踩上船樓甲板。castillo 那兩座 v0 在 dy ±24 ⇒ 擋在第三層第 12 門砲的艙內那一側（draft_decks ports_blocked_inside 48 格）⇒ 收到 dy ±14、船首樓艙壁的門改開在 dy ±26。船樓梯子的 xs 讓梯頂（xs ＋ dir × (run × (階 ＋ 1) ＋ run − 1)）貼著 break 艙壁（藍鯊號六座都是空 0 格）：v1 照舊的 351／261／540 ⇒ 梯頂停在半空、離艙壁 5／7／4 格（Tim 2026-10-27 遊戲裡看到）⇒ 346／254／544。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
     }
   },
   "rig_build": {
@@ -276,10 +286,14 @@
         {"deck": "main", "dz": -6, "h": 3, "edge": false, "src": "1618 art.52：第一條 wale 在主甲板下 1 codo（6 格）"},
         {"deck": "main", "dz": 14, "h": 3, "edge": false, "src": "1618 art.52：第三條 wale 在主甲板上 2½ codos（14 格）—— 落在第一層砲門上面"},
         {"deck": "puente", "dz": 14, "h": 3, "edge": false, "src": "設計決定：第二層砲門上面同樣一條（比照 art.52 第三條）"},
-        {"deck": "tercera", "dz": 13, "h": 2, "edge": false, "src": "設計決定：第三層砲門上面一條細的"}
+        {"deck": "tercera", "dz": 13, "h": 2, "edge": false, "sheer_k": 0.5, "z_max": 133, "src": "設計決定：第三層砲門上面一條細的；舷弧只加一半、頂超過 z 133 的那幾柱不畫（收進 alcázar／castillo 菱格帶 z 136 的金邊底下，留 1 列褐）"}
       ],
-      "src": "每條：黑 h 列、照甲板舷弧走；不描金（edge false）"
+      "sheer": {"mid_x": 380, "aft_x": 165, "fwd_x": 620, "aft": 8, "fwd": 8, "pow": 2,
+        "src": "Tim 2026-10-27「船身做出一些裝飾 曲線」⇒ 1618 Table 4：wale 的舷弧船艏 1¾–2、船艉 2¼–2½ codos（10–11.5／13–14 格；研究筆記 §6〔查〕），比甲板的舷弧（艏 ½、艉 1 codo；本船甲板在 x 165 高 6、x 620 高 3 格）多翹 ⇒ wale 自己再加：船中 x 380（甲板最低處）往兩頭照平方加到 艉 8（x 165，合計 14）、艏 8（x 620，合計 11）；砲門照舊跟甲板走 ⇒ 碰到的那幾格照樣被砲門的紅框蓋掉"},
+      "src": "每條：黑 h 列、照甲板舷弧走＋sheer；不描金（edge false）"
     },
+    "wreath": {"decks": ["tercera", "alcazar", "castillo", "toldilla"], "color": 248,
+      "src": "設計決定（Tim 2026-10-27 的參考模型：上面幾層砲門外一圈金色花框）：第三層甲板與船樓的砲門，紅框外再一圈金（離開口 2 格那一圈，只換外板色與菱格帶的格）；下兩層的砲門不描（重砲甲板樸素）"},
     "lozenge": {"color": 224, "period": 10, "radius": 3, "rows": [
         {"deck": "toldilla", "z0": 154, "z1": 162, "bg": 213},
         {"deck": "alcazar", "z0": 136, "z1": 144, "bg": 213},
