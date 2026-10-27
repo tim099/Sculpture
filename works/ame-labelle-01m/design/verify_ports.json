@@ -1,18 +1,19 @@
 {
- "carve_cells": 500,
- "paint_cells": 5873,
+ "carve_cells": 710,
+ "paint_cells": 5842,
  "carve_by_color": {
-  "141": 150,
-  "177": 350
+  "141": 220,
+  "177": 490
  },
  "paint_to": {
-  "36": 1849,
-  "74": 3448,
+  "36": 1814,
+  "74": 3250,
   "87": 50,
   "160": 432,
-  "248": 94
+  "209": 82,
+  "248": 214
  },
- "after_cells": 48163,
+ "after_cells": 47758,
  "ports_not_open": [],
  "stern_ports_not_open": [],
  "band_black_left": 0,
@@ -38,14 +39,39 @@
   }
  ],
  "ports_total": 6,
+ "doors": [
+  {
+   "deck": "main",
+   "face": "fwd",
+   "y0": 83,
+   "y1": 87,
+   "z0": 32,
+   "z1": 38,
+   "door_x": 216,
+   "model_h": 8,
+   "model_z0": 32
+  },
+  {
+   "deck": "main",
+   "face": "fwd",
+   "y0": 73,
+   "y1": 77,
+   "z0": 32,
+   "z1": 38,
+   "door_x": 216,
+   "model_h": 8,
+   "model_z0": 32
+  }
+ ],
+ "door_holes_solid": 0,
  "lists": {
   "carve": [
-   500,
-   "913916ee5c813adecaa35bff2971e2e6ea7423ebd19058552c7f1422b1d4b95d"
+   710,
+   "9c92ac270020f6eca949fe8c051514c395c5e57112367df6ec109544729f6f9d"
   ],
   "paint": [
-   5873,
-   "4e9959d85adfb83c817209f7cb32a44306bb5c55b4a2f0165af8946014a3d39e"
+   5842,
+   "5222edc3ce403e5b6ac84b1d09a8428931639a9e300968cf972d35911d9120de"
   ]
  }
 }

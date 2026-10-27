@@ -5,6 +5,7 @@
 #         masks/bowsprit_hole/carve.vox.txt（船殼要刻的格，帶刻之前的顏色守門）、yards_placement.json（每根帆桁模型的 at／pivot／rotate／scale／meta）、
 #         verify_masts.json、sheet06_masts_v1.png
 #   用法：python -I -X utf8 draft_masts.py <design> [--probe=pivot=<帆桁名>:<dz>]（反向對照：某根帆桁的吊點偏幾格，⛔ 不寫檔）
+#         [--hull=<船殼帳>]（TASK-1045：船殼改了還沒落格 ⇒ 拿 tools/hull_expected.py 組的帳量艏斜桅孔；不給 ⇒ 讀作品）
 import sys, os, json, math, hashlib
 import numpy as np
 from PIL import Image, ImageDraw
@@ -28,14 +29,21 @@ def main():
     YC = L.YC
     RB = plan['rig_build']
     C = RB['colors']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    # worktree 跑：SCULPT_WORKS 指回共用的 works（作品資料只有那一份；不給 ⇒ 照這個資料夾往上兩層）
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))
     A = export_list('ame-labelle-01m-assembly', None, links=None)
     own = set()                                                  # 本階段自己的件（重產時扣掉，別把自己當成船）
     for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'bowsprit'):
         if os.path.exists(os.path.join(WORKS, 'ame-labelle-01m-' + nm, 'work.json')):
             own |= set(map(tuple, export_list('ame-labelle-01m-' + nm, None)[:, :3].tolist()))
     occ = {tuple(r[:3]): r[3] for r in A.tolist() if tuple(r[:3]) not in own}
-    hull = {tuple(r[:3]): r[3] for r in export_list('ame-labelle-01m', '裝飾:end').tolist()}   # 開艏斜桅孔之前的船殼（重產時孔的清單才不會變空）
+    hull_list = next((a.split('=', 1)[1] for a in sys.argv[2:] if a.startswith('--hull=')), None)
+    if hull_list:
+        # TASK-1045：還沒落格的船殼帳（tools/hull_expected.py 的輸出、孔的清單空著時組的）⇒ 照新的 beakhead 艙壁量孔
+        H_ = np.loadtxt(hull_list, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
+        hull = {tuple(r[:3]): r[3] for r in H_.tolist()}
+    else:
+        hull = {tuple(r[:3]): r[3] for r in export_list('ame-labelle-01m', '裝飾:end').tolist()}   # 開艏斜桅孔之前的船殼（重產時孔的清單才不會變空）
     occ.update({k: c for k, c in hull.items() if k not in occ})   # 刻掉的那幾格在「船」裡照樣算（讓艏斜桅自己決定要不要佔）
     M = {m['key']: m for m in LY.masts(plan, L)}
     parts = {}

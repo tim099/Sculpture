@@ -5,6 +5,7 @@
 #         verify_ports.json、sheet03_ports_paint_v1.png
 #   用法：python -I -X utf8 draft_ports.py <design> [--probe=skip_port=<層>:<序號>]   （probe：少開一個砲門重量，⛔ 不寫檔）
 #   · 結構照 gura-tridente-01m/design/draft_ports.py（開口、reveal、船尾面的「從最後面往前那一段牆」、對稱取整的窗）；配色與菱格是本船的。
+#   · TASK-1045：plan 有 paint.beakhead ⇒ beakhead 艙壁那一面（漆、門洞、圓窗）與平台頂面；門洞寫進 verify_ports.json 的 doors（draft_doors.py 讀）。
 import sys, os, json, math, hashlib
 import numpy as np
 from PIL import Image, ImageDraw
@@ -141,6 +142,49 @@ def main():
             # 只塗船尾面那一層（f 在 x_aft 往前 2 格以內）—— v1 沒限制 ⇒ 船尾肩膀上的舷側格被塗成金點
             if f >= 0 and wall[f, yi, z] and f + x0 <= float(L.x_aft(z + 0.5)) + 2:
                 paint[f, yi, z] = GOLD if (z == zwt or z == topz[f] - 1) else FRIEZE
+    # ── TASK-1045 beakhead 艙壁那一面（Ship_Ends §3；plan 有 paint.beakhead 才做）：門洞整段牆刻穿；最前面那一層藍底、
+    #    四周與舷頂下一列金、船首樓甲板那一列金、門框金、中間圓窗；平台頂面（切口下一格）甲板色、最外緣照舊黑 ──
+    BK = PA.get('beakhead')
+    doors = []
+    if BK:
+        bx, bz = int(plan['lines']['beakhead']['x']), int(plan['lines']['beakhead']['z'])
+        T = int(plan['hull_build']['wall'])
+        fi = bx - 1 - x0
+        holes = []
+        for d in BK['doors']:
+            for sgn in (1, -1):
+                ya, yb = sorted((YC + sgn * d['dy0'], YC + sgn * d['dy1']))
+                z0d, z1d = d['z0'], d['z0'] + d['h'] - 1
+                sl = (slice(bx - T - x0, bx - x0), slice(ya - ylo, yb - ylo + 1), slice(z0d, z1d + 1))
+                carve[sl] |= wall[sl]
+                holes.append((ya, yb, z0d, z1d))
+                doors.append({'deck': d['deck'], 'face': 'fwd', 'y0': ya, 'y1': yb, 'z0': z0d, 'z1': z1d, 'door_x': bx,
+                              'model_h': d['model_h'], 'model_z0': z0d})
+        zf = np.nonzero(wall[fi].any(axis=0))[0]
+        ztop = int(zf[-1])
+        pw = BK['port']
+        for z in range(bz, ztop):
+            ys = np.nonzero(wall[fi, :, z])[0]
+            if not len(ys):
+                continue
+            for yi in ys:
+                y = yi + ylo
+                c = BK['face_color']
+                if yi in (ys[0], ys[-1]) or z in (ztop - 1, BK['line_z']):
+                    c = GOLD
+                for ya, yb, z0d, z1d in holes:
+                    if ya - 1 <= y <= yb + 1 and z0d <= z <= z1d + 1:
+                        c = GOLD
+                rr = math.hypot(y - YC, z + 0.5 - pw['z'])
+                if rr <= pw['r']:
+                    c = pw['color']
+                elif rr <= pw['r'] + 1:
+                    c = GOLD
+                paint[fi, yi, z] = c
+        for xi in range(bx - x0, nx):
+            ys = np.nonzero(wall[xi, :, bz - 1])[0]
+            if len(ys) > 2:
+                paint[xi, ys[1]:ys[-1], bz - 1] = BK['deck_color']
     paint[frame & ~carve] = GOLD
     paint[glass & ~carve] = GLASS
     paint[carve] = 0
@@ -187,6 +231,9 @@ def main():
     R['mirror_diff'] = int((after != after[:, ::-1, :]).sum() + ((acol * after) != (acol * after)[:, ::-1, :]).sum())
     R['windows'] = windows
     R['ports_total'] = len(ports) * 2 + len(chasers)
+    if BK:
+        R['doors'] = doors
+        R['door_holes_solid'] = int(sum(after[bx - T - x0:bx - x0, d['y0'] - ylo:d['y1'] - ylo + 1, d['z0']:d['z1'] + 1].sum() for d in doors))
     if probe:
         print(json.dumps({'probe': probe[0], 'ports_not_open': see}, ensure_ascii=False))
         return

@@ -135,7 +135,8 @@
    "src": "設計決定"
   },
   "top": [[40, 47], [79, 47], [82, 38], [136, 37], [186, 39], [189, 47], [240, 48]],
-  "top_src": "舷頂（舷牆頂）折線：quarterdeck 40 ＋ 欄 7（到 x 79）、船腰主甲板 ＋ 10 格舷牆（GR p.15：wale 上三道 9 po 板到 waist rail，約 1 m）、forecastle 41 ＋ 6（從 x 189）；break 的位置是設計決定（GR p.11：break 在後桅後面）"
+  "top_src": "舷頂（舷牆頂）折線：quarterdeck 40 ＋ 欄 7（到 x 79）、船腰主甲板 ＋ 10 格舷牆（GR p.15：wale 上三道 9 po 板到 waist rail，約 1 m）、forecastle 41 ＋ 6（從 x 189）；break 的位置是設計決定（GR p.11：break 在後桅後面）",
+  "beakhead": {"x": 216, "z": 32, "src": "TASK-1045（Tim 2026-10-27「1027 參考這個task 也開task優化拉貝爾號的船頭吧」＋康塞普西翁號船頭截圖；做法 Ship_Ends §2）：z 32 以上、x 216 以前切掉 ⇒ 船首樓前面一道平的 beakhead 艙壁（牆 3 格 ＝ 船殼的牆，x 213–215），底下的船頭頂面成平台。z 32：平台頂 z 31 ＝ 船頭那段主甲板的甲板頂（x 207–215 甲板頂 31）⇒ 從艙裡走出去不用跨台階；x 216：絞盤在 x 207–210（兩根立柱 dy ±7–8）⇒ 艙壁裡面留 x 211–212 兩格走道，迴旋砲 P04／S04 在 x 212.5 的舷頂上 ⇒ 艙壁兩舷照舊有舷牆撐著。設計決定：史料只寫「小 éperon、每側 2 根 herpes」（FR p.1、p.8），沒有 beakhead 艙壁的出處；艏斜桅（x 205、z 42、28°）從艙壁頂上 x 213–215、z 45–48 穿過去 ⇒ 艏斜桅孔照 draft_masts 量"}
  },
  "waterline": {
   "z": 23,
@@ -308,7 +309,10 @@
   },
   "frieze_src": "設計決定：upper wale 以上到舷頂下一格漆藍（74）、舷頂最上一格黑 —— 17 世紀法國船的上部常見藍底（Boudriot 的彩圖沒拿到，⚠ 沒核）；砲門框紅 160（設計決定）",
   "transom_src": "設計決定：wing transom 以上的 tableau 藍底、wing transom 那一列與 tableau 外框金 248；三朵百合花在步驟 6（GR p.4：poop 上三朵 fleurs-de-lis）",
-  "stern_x_max": 75
+  "stern_x_max": 75,
+  "beakhead": {"face_color": 74, "line_z": 41, "deck_color": 209, "port": {"z": 35.5, "r": 1.5, "color": 36},
+   "doors": [{"deck": "main", "dy0": 3, "dy1": 7, "z0": 32, "h": 7, "model_h": 8}],
+   "src": "TASK-1045（Ship_Ends §3、§5）：艙壁朝前那一面跟舷側同一套 —— 藍底 74、四周與舷頂下一列金、船首樓甲板那一列（z 41）金；兩扇真的門 dy ±3..7（絞盤兩根立柱在 dy ±7–8 的後面、中間是絞筒 ⇒ 門在立柱裡面那一段，出門往兩旁繞），門洞 5 × 7、底邊 z 32 ＝ 艙裡甲板面（主甲板頂 31，船首樓底 z 40 ⇒ 艙裡頭上 8 格、第一人稱要 7），門框金；兩扇門中間一個圓窗（漆的，z 35.5、半徑 1.5、外一圈金）；平台頂面甲板色 209（同露天甲板）、最外緣照舷頂黑。門板 8 格高（連門楣一起蓋）—— 全是設計決定"}
  },
  "stern": {
   "rows": [
@@ -359,7 +363,13 @@
     {"z_hull": 37, "z_tip": 33, "mid_dx": 7, "mid_dy": 9, "tip_back": 3},
     {"z_hull": 33, "z_tip": 30, "mid_dx": 7, "mid_dy": 8, "tip_back": 5}
    ],
-   "src": "設計決定：knee of head 伸出艏柱 1.5 m（小 éperon）、中線 3 格厚、前端上緣金；herpes 每舷兩根，從船頭舷牆掃到 knee 前端"
+   "src": "設計決定：knee of head 伸出艏柱 1.5 m（小 éperon）、中線 3 格厚、前端上緣金；herpes 每舷兩根，從船頭舷牆掃到 knee 前端",
+   "platform": {"top_z": 31, "thick": 2, "tip_x": 236, "half_from": 10, "half_tip": 2, "pow": 1.3,
+    "skirt_to_z": 27, "deck_color": 209, "skirt_color": 74, "gold": 248,
+    "rail": {"x_end": 231, "h": 7, "post_every": 3, "color": 141},
+    "band": {"x_h": 216, "z_h": 46, "x_l": 226, "z_l": 41, "x_e": 231, "z_e": 43, "h": 3, "dy_e": 2, "dy_pow": 1.4, "fill": 36},
+    "cheeks": [{"x0": 204, "z0": 27, "x1": 220, "z1": 25}, {"x0": 211, "z0": 23, "x1": 220, "z1": 21}],
+    "src": "TASK-1045（Ship_Ends §4.3、§4.4；Tim 給的康塞普西翁號船頭截圖）：喙改成跟 beakhead 平台同高的一整片 —— 甲板頂 z 31（＝ 切口下一格 ＝ 艙裡主甲板頂）、2 格厚，從艙壁前 x 216 起鋪、半寬 10（艙壁那裡船殼的半寬）照 (1 − t)^1.3 收到喙尖 x 236 的 2；比船殼寬的那一段側板包到 z 27（上下金、中間藍 74，跟舷側的 frieze 同色），最前面那一欄整片封、底下不封；knee 照舊（z 12 起、x 236 前緣）、只到平台底 z 29；ext_upper 那一段與兩對 herpes 拿掉 —— 史料的「每側 2 根 herpes」換成平台邊的欄杆（下）＋ head 寬帶（上）。欄杆 7 格高（第一人稱一步上 6 格 ⇒ 翻不出去，Ship_Ends §4.1）、柱子只在最外那一層每 3 格一根、底欄與柱 141、金扶手，前端在 x 231 橫一道（船首像在 x 233–236）。head 寬帶：艙壁上角（x 216、z 46，跟船殼同一個 dy）兩段拋物線 ⇒ 最低 x 226、z 41 ⇒ 船首像後面 x 231、z 43；帶高 3（金、黑 36、金）、1 格厚，帶底最低 z 39 在扶手頂 38 上面；dy 照 t^1.4 收到 2。cheek：船頭兩側貼著船殼外一格的兩條金線（x 204–220 z 27→25、x 211–220 z 23→21；下面那條 v1 從 x 206 起 ⇒ 撞錨架托板 10 格（x 200–210、z 23–24），從 x 211 起）。船首像跟著平台站低 1 格（z 32 起）。尺寸與配色全是設計決定"}
   },
   "figurehead": {
    "back": 3,
@@ -429,6 +439,8 @@
    "fullness": 1.05, "course_clew_above_rail": 3, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 18,
    "sheet_aft": {"fore": 18, "main": 24}, "tack_fwd": {"fore": 16, "main": 20},
    "lateen_clew": {"mizzen": [60, 52]}, "lateen_tack": {"mizzen": ["main", 100]}, "lateen_sheet_x": 56,
+   "bow_belay_max_x": 211, "bs_shroud": [210, 47],
+   "bow_src": "TASK-1045：beakhead 把 x 216 以前、z 32 以上的舷頂切掉了 ⇒ 船頭那一欄的綁點（前帆 tack、斜杠帆 sheet，原本 x 216／218）退到船首樓舷頂 x 211（x 212.5 是迴旋砲）；艏斜桅 shroud（原本 x 222、z 38）改綁在船首樓舷頂 x 210（同康塞普西翁號綁在艙壁頂上）—— 🩸 v1 綁在平台底下的船頭 x 219、z 29 ⇒ 往上拉到艏斜桅會穿過平台欄杆與 head 寬帶，每條 7 格（draft_rigging 的 ropes_through_solid）",
    "src": "設計決定：course 帆腳在舷頂上 3 格；lateen 的 clew 在帆桁後端下面、sheet 綁到船尾舷頂兩舷，tack 從帆桁前端綁到主甲板 x 100"
   },
   "flags": {"ensign": [16, 11], "pennant": [26, 2], "pennant_color": "#e8eef8",

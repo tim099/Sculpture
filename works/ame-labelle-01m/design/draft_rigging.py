@@ -44,7 +44,8 @@ def main():
     YC = L.YC
     RG = plan['rigging']
     RB = plan['rig_build']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    # worktree 跑：SCULPT_WORKS 指回共用的 works（作品資料只有那一份；不給 ⇒ 照這個資料夾往上兩層）
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))
     YP = json.load(open(os.path.join(design, 'yards_placement.json'), encoding='utf-8'))
     M = {m['key']: m for m in LY.masts(plan, L)}
     A = export_list('ame-labelle-01m-assembly', None, links=None)
@@ -164,17 +165,20 @@ def main():
     H = anchors['hull']
     SL = RG['sails']
     belay = {}
+    # TASK-1045：beakhead 把船頭那一段舷頂切掉了 ⇒ 船頭那一欄的綁點上限照 plan（Ship_Ends §6 的 bow_belay_max_x）；沒給 ⇒ 原本的 220／218
+    bmax = SL.get('bow_belay_max_x', 220)
     for key in ('fore', 'main'):
-        belay['%s-sheet' % key] = min(220, M[key]['x'] - SL['sheet_aft'][key])
-        belay['%s-tack' % key] = min(220, M[key]['x'] + SL['tack_fwd'][key])
-    belay['sprit'] = 218
+        belay['%s-sheet' % key] = min(bmax, M[key]['x'] - SL['sheet_aft'][key])
+        belay['%s-tack' % key] = min(bmax, M[key]['x'] + SL['tack_fwd'][key])
+    belay['sprit'] = min(218, bmax)
     belay['mizzen-lateen'] = SL['lateen_sheet_x']
     for nm, x in belay.items():
         p = rail(x)
         H['belay-%s-S' % nm] = [p[0], YC + p[1], p[2]]
         H['belay-%s-P' % nm] = [p[0], YC - p[1], p[2]]
+    bsx, bsz = SL.get('bs_shroud', [222, 38])
     for s_, sg in (('S', 1), ('P', -1)):
-        H['bs-shroud-' + s_] = [222, YC + sg * hout[(222, 38)], 38]
+        H['bs-shroud-' + s_] = [bsx, YC + sg * hout[(bsx, bsz)], bsz]
     for key, (deck, x) in SL['lateen_tack'].items():
         z = int(LY.deck_z(plan, deck, x + 0.5)) + 1
         anchors['deck-' + deck]['tack-%s' % key] = [x, YC, z]
