@@ -1,0 +1,114 @@
+{
+ "ports": {
+  "main": {
+   "n_per_side": 4,
+   "gap_min": 23,
+   "gap_max": 58,
+   "gaps": [
+    23,
+    58,
+    28
+   ],
+   "clear_above_min": 3.2,
+   "half_breadth_at_port_min": 28.2,
+   "x0s": [
+    145,
+    175,
+    240,
+    275
+   ]
+  }
+ },
+ "ports_total": 8,
+ "decks": {
+  "hold": {
+   "z": 7,
+   "span": [
+    100,
+    330
+   ]
+  },
+  "main": {
+   "z": 36,
+   "span": [
+    55,
+    366
+   ]
+  },
+  "quarter": {
+   "z": 58,
+   "span": [
+    51,
+    121
+   ]
+  },
+  "forecastle": {
+   "z": 59,
+   "span": [
+    345,
+    381
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "fore",
+   "x": 344,
+   "heel": 13.5,
+   "platform": 169.9,
+   "truck": 275.9,
+   "above_wl_m": 24.59,
+   "yards": {
+    "course": {
+     "z": 157.9,
+     "len_m": 11.9
+    },
+    "topsail": {
+     "z": 256.8,
+     "len_m": 6.8
+    }
+   }
+  },
+  {
+   "key": "main",
+   "x": 211,
+   "heel": 7.0,
+   "platform": 208.5,
+   "truck": 340.5,
+   "above_wl_m": 31.05,
+   "yards": {
+    "course": {
+     "z": 196.5,
+     "len_m": 14.4
+    },
+    "topsail": {
+     "z": 316.7,
+     "len_m": 8.1
+    }
+   }
+  },
+  {
+   "key": "mizzen",
+   "x": 110,
+   "heel": 40.0,
+   "platform": 164.2,
+   "truck": 175.0,
+   "above_wl_m": 14.5,
+   "yards": {
+    "lateen": {
+     "z": 154.8,
+     "len_m": 11.0
+    }
+   }
+  }
+ ],
+ "bowsprit": {
+  "x0": 352,
+  "z0": 60.0,
+  "x1": 463.9,
+  "z1": 129.9,
+  "angle": 32,
+  "len": 132.0,
+  "spritsail_len": 82.0
+ }
+}

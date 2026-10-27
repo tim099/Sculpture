@@ -1,0 +1,381 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "甲板-hold",
+			"work": "abigail-fluyt-01m-deck-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:28:37",
+			"persona": "Abigail",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "hold",
+				"floor": "127:8,311:8",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 0,
+				"name": "貨艙地板（ruim）",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "abigail-fluyt-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:28:37",
+			"persona": "Abigail",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "main",
+				"floor": "59:43,86:43,121:40,204:37,280:37,313:39,357:45,366:45",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 1,
+				"name": "主甲板（overloop）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-quarter",
+			"work": "abigail-fluyt-01m-deck-quarter",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:28:38",
+			"persona": "Abigail",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "quarter",
+				"floor": "54:59,121:59",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 2,
+				"name": "後甲板（halfdek）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-forecastle",
+			"work": "abigail-fluyt-01m-deck-forecastle",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:28:39",
+			"persona": "Abigail",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "forecastle",
+				"floor": "345:60,377:60",
+				"id": "deck-4",
+				"kind": "deck",
+				"level": 3,
+				"name": "船首樓（bak）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "船殼",
+			"work": "abigail-fluyt-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:28:49",
+			"persona": "Abigail",
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 30
+			}
+		},
+		{
+			"name": "船殼-窗玻璃",
+			"work": "abigail-fluyt-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:33:50",
+			"persona": "Abigail",
+			"note": "拆件：從 `船殼`（abigail-fluyt-01m）拆出（TASK-0646）",
+			"meta": {
+				"id": "part-1",
+				"material": "glass"
+			}
+		},
+		{
+			"name": "船首喙",
+			"work": "abigail-fluyt-01m-head",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:33:42",
+			"persona": "Abigail",
+			"note": "步驟 6：knee of head＋head rails",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "前桅",
+			"work": "abigail-fluyt-01m-mast-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:38:29",
+			"persona": "Abigail",
+			"note": "步驟 7（TASK-0966）",
+			"meta": {
+				"id": "part-3"
+			}
+		},
+		{
+			"name": "主桅",
+			"work": "abigail-fluyt-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:38:31",
+			"persona": "Abigail",
+			"note": "步驟 7（TASK-0966）",
+			"meta": {
+				"id": "part-4"
+			}
+		},
+		{
+			"name": "後桅",
+			"work": "abigail-fluyt-01m-mast-mizzen",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:38:33",
+			"persona": "Abigail",
+			"note": "步驟 7（TASK-0966）",
+			"meta": {
+				"id": "part-5"
+			}
+		},
+		{
+			"name": "艏斜桅",
+			"work": "abigail-fluyt-01m-bowsprit",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:38:34",
+			"persona": "Abigail",
+			"note": "步驟 7（TASK-0966）",
+			"meta": {
+				"id": "part-6"
+			}
+		},
+		{
+			"name": "支索板",
+			"work": "abigail-fluyt-01m-channels",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:45:56",
+			"persona": "Abigail",
+			"note": "步驟 8（TASK-0966）",
+			"meta": {
+				"id": "part-7"
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "abigail-fluyt-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:56:53",
+			"persona": "Abigail",
+			"note": "步驟 10（TASK-0966）",
+			"meta": {
+				"hoist": "ladders-2#quarter-S,ladders-3#forecastle-S",
+				"id": "magazine-1",
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 2000
+			}
+		},
+		{
+			"name": "小艇架",
+			"work": "abigail-fluyt-01m-boat-skids",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T00:56:56",
+			"persona": "Abigail",
+			"note": "步驟 10（TASK-0966）",
+			"meta": {
+				"id": "part-8"
+			}
+		},
+		{
+			"name": "錨架",
+			"work": "abigail-fluyt-01m-anchor-gear",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T01:02:39",
+			"persona": "Abigail",
+			"note": "步驟 11（TASK-0966）",
+			"meta": {
+				"id": "part-9"
+			}
+		}
+	]
+}

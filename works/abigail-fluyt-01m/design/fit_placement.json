@@ -1,0 +1,244 @@
+{
+ "note": "draft_fit.py（步驟 16 補做）產生；build_fit.py 照它落格",
+ "hatches": [
+  {
+   "name": "艙蓋-後",
+   "work": "abigail-fluyt-01m-hatch-aft",
+   "title": "澤漢號 後艙口艙蓋（門：kind=door）",
+   "host": "abigail-fluyt-01m-deck-main",
+   "size": [
+    13,
+    13,
+    2
+   ],
+   "at": [
+    156,
+    90,
+    41
+   ],
+   "mask": "masks/fit/hatch-aft.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     12,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 100
+   }
+  },
+  {
+   "name": "艙蓋-主",
+   "work": "abigail-fluyt-01m-hatch-main",
+   "title": "澤漢號 主艙口艙蓋（門：kind=door）",
+   "host": "abigail-fluyt-01m-deck-main",
+   "size": [
+    17,
+    17,
+    2
+   ],
+   "at": [
+    221,
+    88,
+    39
+   ],
+   "mask": "masks/fit/hatch-main.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     16,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 100
+   }
+  },
+  {
+   "name": "艙蓋-井",
+   "work": "abigail-fluyt-01m-hatch-well",
+   "title": "澤漢號 貨艙梯子井的艙蓋（門：kind=door）",
+   "host": "abigail-fluyt-01m-deck-main",
+   "size": [
+    21,
+    13,
+    2
+   ],
+   "at": [
+    253,
+    90,
+    39
+   ],
+   "mask": "masks/fit/hatch-well.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     20,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 30
+   }
+  },
+  {
+   "name": "艙蓋-前",
+   "work": "abigail-fluyt-01m-hatch-fore",
+   "title": "澤漢號 前艙口艙蓋（門：kind=door）",
+   "host": "abigail-fluyt-01m-deck-main",
+   "size": [
+    15,
+    13,
+    2
+   ],
+   "at": [
+    298,
+    90,
+    41
+   ],
+   "mask": "masks/fit/hatch-fore.vox.txt",
+   "anchors": {
+    "hinge-a": [
+     0,
+     0,
+     0
+    ],
+    "hinge-b": [
+     14,
+     0,
+     0
+    ]
+   },
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "open_deg": 100
+   }
+  }
+ ],
+ "galley": {
+  "name": "爐灶",
+  "host": "abigail-fluyt-01m-deck-main",
+  "work": "kaguya-gloire-01m-galley",
+  "at": [
+   359.0,
+   104,
+   45
+  ],
+  "pivot": [
+   22,
+   16,
+   0
+  ],
+  "scale": 0.18,
+  "rotate": 0,
+  "meta": {
+   "kind": "galley",
+   "deco": null
+  }
+ },
+ "windlass": null,
+ "room": {
+  "work": "abigail-fluyt-01m-cabin-room",
+  "title": "澤漢號 船長室（後甲板底下；艙壁＋門洞）",
+  "host": "abigail-fluyt-01m-deck-main",
+  "link": "艙房",
+  "mask": "masks/fit/hold_room.vox.txt",
+  "anchors": {
+   "cabin.min": [
+    89,
+    85,
+    42
+   ],
+   "cabin.max": [
+    102,
+    107,
+    55
+   ],
+   "cabin.door": [
+    88,
+    96,
+    42
+   ]
+  },
+  "meta": {
+   "kind": "rooms"
+  }
+ },
+ "ratlines": [
+  {
+   "name": "fore-lower-S",
+   "foot": [
+    352,
+    112,
+    60
+   ],
+   "head": [
+    355,
+    104,
+    177
+   ]
+  },
+  {
+   "name": "fore-lower-P",
+   "foot": [
+    352,
+    80,
+    60
+   ],
+   "head": [
+    355,
+    88,
+    177
+   ]
+  },
+  {
+   "name": "main-lower-S",
+   "foot": [
+    199,
+    122,
+    38
+   ],
+   "head": [
+    204,
+    105,
+    209
+   ]
+  },
+  {
+   "name": "main-lower-P",
+   "foot": [
+    199,
+    70,
+    38
+   ],
+   "head": [
+    204,
+    87,
+    209
+   ]
+  }
+ ]
+}

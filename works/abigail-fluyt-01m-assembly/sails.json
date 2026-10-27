@@ -1,0 +1,321 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "fore-course",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:前桅/yard-fore-course/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:前桅/yard-fore-course/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "371.89,142.30,71.00",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "347.35,50.70,71.00",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:54",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "course"
+			}
+		},
+		{
+			"name": "fore-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:前桅/yard-fore-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:前桅/yard-fore-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "371.89,142.30,166.90",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "347.35,50.70,166.90",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:55",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "main-course",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:主桅/yard-main-course/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:主桅/yard-main-course/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "224.69,152.53,53.00",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "194.67,40.47,53.00",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:55",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "course"
+			}
+		},
+		{
+			"name": "main-topsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:主桅/yard-main-topsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:主桅/yard-main-topsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "224.69,152.53,198.48",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "194.67,40.47,198.48",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:56",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "topsail"
+			}
+		},
+		{
+			"name": "spritsail",
+			"corners": [
+				{
+					"name": "head_p",
+					"at": "model:艏斜桅/yard-spritsail/earing-P",
+					"pin": true
+				},
+				{
+					"name": "head_s",
+					"at": "model:艏斜桅/yard-spritsail/earing-S",
+					"pin": true
+				},
+				{
+					"name": "clew_s",
+					"at": "455.65,128.73,92.96",
+					"pin": false
+				},
+				{
+					"name": "clew_p",
+					"at": "455.65,64.27,92.96",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:56",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "spritsail"
+			}
+		},
+		{
+			"name": "mizzen-lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:後桅/yard-mizzen-lateen/fore",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "model:後桅/yard-mizzen-lateen/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "62.50,96.50,76.50",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:57",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "gaff"
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "",
+					"at": "model:後桅/yard-mizzen-lateen/peak",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "29.99,92.80,196.75",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "29.99,92.80,180.75",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "model:後桅/yard-mizzen-lateen/3,3,57",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#ffffff",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:57",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag"
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "",
+					"at": "199.85,96.50,339.00",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "163.35,96.50,338.00",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "199.85,96.50,336.00",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#c8303c",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8（TASK-0966）",
+			"persona": "Abigail",
+			"created_at": "2026-10-28T00:46:58",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main"
+			}
+		}
+	]
+}

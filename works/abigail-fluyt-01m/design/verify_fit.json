@@ -1,0 +1,184 @@
+{
+ "艙蓋-後": {
+  "cells": 192,
+  "box": [
+   156,
+   90,
+   41,
+   169,
+   103,
+   43
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "opening": 134,
+  "opening_through": 121,
+  "rim_z": 40,
+  "rim_solid": 35
+ },
+ "艙蓋-主": {
+  "cells": 320,
+  "box": [
+   221,
+   88,
+   39,
+   238,
+   105,
+   41
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "opening": 225,
+  "opening_through": 225,
+  "rim_z": 38,
+  "rim_solid": 64
+ },
+ "艙蓋-井": {
+  "cells": 296,
+  "box": [
+   253,
+   90,
+   39,
+   274,
+   103,
+   41
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "opening": 222,
+  "opening_through": 205,
+  "rim_z": 38,
+  "rim_solid": 51
+ },
+ "艙蓋-前": {
+  "cells": 218,
+  "box": [
+   298,
+   90,
+   41,
+   313,
+   103,
+   43
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "opening": 158,
+  "opening_through": 143,
+  "rim_z": 40,
+  "rim_solid": 37
+ },
+ "廚房": {
+  "box": [
+   355.04,
+   101.12,
+   45,
+   362.96,
+   106.88,
+   52.92
+  ],
+  "hit_solid": 0,
+  "hit_models": [],
+  "faces": [
+   {
+    "face": "−x",
+    "at": [
+     353.04,
+     104.0
+    ],
+    "walk": [
+     353,
+     104,
+     44
+    ],
+    "d": 0.68
+   },
+   {
+    "face": "+x",
+    "at": [
+     364.96,
+     104.0
+    ],
+    "walk": [
+     364,
+     104,
+     45
+    ],
+    "d": 0.68
+   },
+   {
+    "face": "−y",
+    "at": [
+     359.0,
+     99.12
+    ],
+    "walk": [
+     359,
+     99,
+     45
+    ],
+    "d": 0.63
+   },
+   {
+    "face": "+y",
+    "at": [
+     359.0,
+     108.88
+    ],
+    "walk": [
+     359,
+     108,
+     45
+    ],
+    "d": 0.63
+   }
+  ],
+  "faces_ok": 4
+ },
+ "絞盤": {
+  "skip": "不做：船首樓底下的主甲板只到 x 366、前桅在 x 352 ⇒ 橫的 windlass 放不下；改成 gear_build 的直立主絞盤"
+ },
+ "艙房": {
+  "wall_cells": 542,
+  "wall_hit_models": [],
+  "box": [
+   89,
+   85,
+   42,
+   102,
+   107,
+   55
+  ],
+  "size_m": [
+   1.4,
+   2.3,
+   1.4
+  ],
+  "nonair": 0,
+  "nofloor": 0,
+  "models_in": [],
+  "door_stand": true,
+  "out_stand": 1
+ },
+ "繩梯": [
+  {
+   "name": "fore-lower-S",
+   "foot_ok": true,
+   "head_ok": true
+  },
+  {
+   "name": "fore-lower-P",
+   "foot_ok": true,
+   "head_ok": true
+  },
+  {
+   "name": "main-lower-S",
+   "foot_ok": true,
+   "head_ok": true
+  },
+  {
+   "name": "main-lower-P",
+   "foot_ok": true,
+   "head_ok": true
+  }
+ ]
+}

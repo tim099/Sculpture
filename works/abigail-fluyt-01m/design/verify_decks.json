@@ -1,0 +1,323 @@
+{
+ "decks": {
+  "hold": {
+   "cells": 9326,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 2664,
+    "177": 6662
+   },
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 20822,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 5806,
+    "141": 430,
+    "209": 14586
+   },
+   "mirror_diff": 0
+  },
+  "quarter": {
+   "cells": 4142,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 998,
+    "141": 788,
+    "209": 2356
+   },
+   "mirror_diff": 0
+  },
+  "forecastle": {
+   "cells": 2040,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 370,
+    "141": 686,
+    "209": 984
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "main": {
+   "cells": 298,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "quarter": {
+   "cells": 396,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "forecastle": {
+   "cells": 416,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "main",
+   "lo": "hold",
+   "points": {
+    "foot": [
+     251,
+     96,
+     8
+    ],
+    "lo": [
+     254,
+     96,
+     11
+    ],
+    "hi": [
+     270,
+     96,
+     35
+    ],
+    "head": [
+     274,
+     96,
+     37
+    ]
+   },
+   "steps": 9
+  },
+  "quarter-P": {
+   "up": "quarter",
+   "lo": "main",
+   "points": {
+    "foot": [
+     137,
+     84,
+     40
+    ],
+    "lo": [
+     134,
+     84,
+     43
+    ],
+    "hi": [
+     124,
+     84,
+     58
+    ],
+    "head": [
+     118,
+     84,
+     59
+    ]
+   },
+   "steps": 6
+  },
+  "quarter-S": {
+   "up": "quarter",
+   "lo": "main",
+   "points": {
+    "foot": [
+     137,
+     108,
+     40
+    ],
+    "lo": [
+     134,
+     108,
+     43
+    ],
+    "hi": [
+     124,
+     108,
+     58
+    ],
+    "head": [
+     118,
+     108,
+     59
+    ]
+   },
+   "steps": 6
+  },
+  "forecastle-P": {
+   "up": "forecastle",
+   "lo": "main",
+   "points": {
+    "foot": [
+     328,
+     84,
+     41
+    ],
+    "lo": [
+     331,
+     84,
+     44
+    ],
+    "hi": [
+     341,
+     84,
+     59
+    ],
+    "head": [
+     348,
+     84,
+     60
+    ]
+   },
+   "steps": 6
+  },
+  "forecastle-S": {
+   "up": "forecastle",
+   "lo": "main",
+   "points": {
+    "foot": [
+     328,
+     108,
+     41
+    ],
+    "lo": [
+     331,
+     108,
+     44
+    ],
+    "hi": [
+     341,
+     108,
+     59
+    ],
+    "head": [
+     348,
+     108,
+     60
+    ]
+   },
+   "steps": 6
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 5,
+ "reach": {
+  "hold": [
+   "hold"
+  ],
+  "main": [
+   "forecastle-P",
+   "forecastle-S",
+   "hold",
+   "quarter-P",
+   "quarter-S"
+  ],
+  "quarter": [
+   "quarter-P",
+   "quarter-S"
+  ],
+  "forecastle": [
+   "forecastle-P",
+   "forecastle-S"
+  ]
+ },
+ "holes": {
+  "hold": 0,
+  "main": 739,
+  "quarter": 57,
+  "forecastle": 55
+ },
+ "cavities_filled": [
+  {
+   "deck": "hold",
+   "cells": 10,
+   "x": [
+    126,
+    129
+   ],
+   "z": [
+    6,
+    6
+   ]
+  },
+  {
+   "deck": "hold",
+   "cells": 24,
+   "x": [
+    132,
+    139
+   ],
+   "z": [
+    6,
+    6
+   ]
+  },
+  {
+   "deck": "hold",
+   "cells": 2158,
+   "x": [
+    141,
+    299
+   ],
+   "z": [
+    5,
+    6
+   ]
+  },
+  {
+   "deck": "hold",
+   "cells": 24,
+   "x": [
+    302,
+    309
+   ],
+   "z": [
+    6,
+    6
+   ]
+  },
+  {
+   "deck": "hold",
+   "cells": 2,
+   "x": [
+    312,
+    313
+   ],
+   "z": [
+    6,
+    6
+   ]
+  }
+ ],
+ "lists": {
+  "deck-hold": [
+   9326,
+   "bdf5202a09c708e28fef5da216403d0651d4746e0d29ee7b5d8d45d68d28781a"
+  ],
+  "deck-main": [
+   20822,
+   "1dce3ef89c832eaf7b13e845645645a3ad456a548003bf984b683d377b09682f"
+  ],
+  "deck-quarter": [
+   4142,
+   "66f536586037539c0d40a11148a69f4b20cd9a65104cb7744e3e8c9b1b347bc8"
+  ],
+  "deck-forecastle": [
+   2040,
+   "06761be050696c17069e4ff7fd87993fdd25526f848ede592895a9da097dc177"
+  ],
+  "ladders-main": [
+   298,
+   "353204e99d4d7eeb467be74d62c5f6729ae7500325154c00d0bfa85ebbc04ba1"
+  ],
+  "ladders-quarter": [
+   396,
+   "9ffb018574d297ce6133b6bef827b54b429a226213c31810849a5cab6610da0a"
+  ],
+  "ladders-forecastle": [
+   416,
+   "8f495b1948f0b0833d7f7583ea715bbbdb77a9b490f3d2692d7a51a173faad66"
+  ]
+ }
+}
