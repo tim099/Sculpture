@@ -122,9 +122,10 @@
       ], "B": 6, "W": 255, "S": 246, "G": 248},
       "src": "設計決定：船尾頂上那塊拱形板（taffrail）畫船名的聖像 —— 無原罪聖母（Inmaculada Concepción）：白袍藍斗篷、合掌、金冠、腳下新月（西班牙的標準圖像；研究筆記 §6：艉板中央宗教像〔推〕、San Francisco 1695 的雕刻照 Consejo de Guerra 寄來的圖做〔查〕）；奶油底 254 金框、下面一條紅帶寫 CONCEPCION 金字；從船尾看左手 ＝ −y ⇒ 字從左讀 ⇒ 這一件的鏡像差照實報。程式沿用藍鯊號 hackebort 的框架（plan 的鍵名 hackebort／shark 照舊，畫的是聖母）"},
     "walks": [
-      {"name": "lower", "floor_z": 121, "dep": 6, "rail_h": 7, "x_from": 110, "x_end": 186, "bracket_every": 6, "bracket_len": 6},
-      {"name": "upper", "floor_z": 136, "dep": 5, "rail_h": 7, "x_from": 110, "x_end": 170, "bracket_every": 6, "bracket_len": 5, "bracket_off": 2}
+      {"name": "lower", "floor_z": 121, "dep": 6, "rail_h": 7, "x_from": 110, "x_end": 186, "bracket_every": 6, "bracket_len": 6, "post_every": 3},
+      {"name": "upper", "floor_z": 136, "dep": 5, "rail_h": 7, "x_from": 110, "x_end": 170, "bracket_every": 6, "bracket_len": 5, "bracket_off": 2, "post_every": 3}
     ],
+    "posts_src": "步驟 19（Tim 2026-10-27「船尾的陽台是否可以改成欄杆(目前一整片會遮住窗戶視野)」）：欄杆柱只留外緣最外那一層（＋前端那一片）、沿走廊每 3 格一根（per 跟托架同一把尺）；扶手、底欄、高度 7 不變 ⇒ 柱子之間 2 格空、扶手底下 5 格（第一人稱頭上要 7 格 ⇒ 鑽不過去）。v1 外緣 2 層各隔一格一根，前後兩層錯開 ⇒ 從窗裡、從船外看過去都是一整片",
     "walks_src": "步驟 17（Tim 2026-10-27「重新繪製船頭船尾曲線&裝飾」＋ San Felipe／OcCre 模型的船尾：兩層開放的 stern walk 從船尾繞過兩角、沿兩舷往前，欄杆、金扶手、底下一排金托架）：取代步驟 6 的船尾走廊（balcony，alcázar 窗下）與兩舷側廊（quarter_gallery）＋步驟 16 的側廊第二層與托架。下層地板 z 121（第三層甲板在船尾 z 120 上一格）、伸出 6、沿兩舷到 x 186（第三層第 1 門砲 x 200 前面）；上層地板 z 136（alcázar 甲板 134 上兩格，同舊的 balcony）、伸出 5、到 x 170（alcázar 第 1 門砲連金框 x 174 前面）。欄杆 7 格（v1 4 格 ⇒ 遊戲裡第一人稱一步跨得上 6 格、走出門直接踩上扶手頂；7 格 ⇒ 扶手頂離腳 7 格跨不上去）：底欄、隔一格一根藍欄杆柱、金扶手；地板外緣與下面一格金；托架每 6 格一組（沿走廊量：船尾面照 |dy|、兩舷照 x），往下 6／5 格收成 0。走廊後面的窗：船尾窗（stern.rows）＋兩舷的窗（stern.side_windows）",
     "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.75, "dy": [-11, 0, 11], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.75 ⇒ 比藍鯊號大一號）；三盞 ＝ 旗艦（Capitana Real）的燈號〔推〕，站在拱形板頂上"}
   },

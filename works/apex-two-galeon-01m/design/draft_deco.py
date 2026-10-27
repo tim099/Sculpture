@@ -206,6 +206,15 @@ def main():
         hx, hy = ix + ox, np.abs(iy + yl - YC)
         per = hy + (hx - int(np.floor(float(L.x_aft(f + 0.5)))))         # 沿走廊的位置（船尾面 ≈ |dy|、兩舷 ≈ 往前的 x）⇒ 托架每 every 一組
         brk = (np.mod(per + T.get('bracket_off', 0), T['bracket_every']) < 2) & W_      # bracket_off：整組錯開（步驟 17：上層走廊正中間那組會撞到下層的門頂）
+        pe = T.get('post_every')
+        if pe:                                                           # 步驟 19（Tim「船尾的陽台是否可以改成欄杆(目前一整片會遮住窗戶視野)」）：欄杆柱只在最外那一層、沿走廊每 pe 格一根；v1 外緣 2 層各隔一格一根 ⇒ 前後錯開、看過去一整片
+            ay = np.abs(Y_ - YC)
+            face = ((hx - X_) > (ay - hy)) | (X_ == xh)                  # 船尾面（在最近那格船殼的後面）與前端那一片照 |dy| 排、兩舷（在外側）照 x 排 ⇒ 間距均勻（per 在斜的舷邊上會三根擠一起、再空十幾格）
+            post = ring & ((dist > dep - 1) | (X_ == xh)) & (np.mod(np.where(face, ay, X_), pe) == 0)
+            op_ = os.path.join(design, 'masks', 'deco', 'ornament.vox.txt')     # 鏡板的金壁柱（步驟 16 ornament，疊在本步驟上面）站在欄杆這一圈裡 ⇒ 那一格柱子讓開（壁柱本身就是一根金柱；不讓 ⇒ link_overlap 10）
+            orn = set(map(tuple, np.loadtxt(op_, delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')[:, :3].tolist())) if os.path.exists(op_) else set()
+        else:
+            post, orn = ring & (np.mod(X_ + Y_, 2) == 0), set()
         n0 = 0
         for xi, yi in np.argwhere(W_):
             x, y = int(X_[xi, 0]), int(Y_[0, yi])
@@ -221,8 +230,8 @@ def main():
                         both('stern-deco', x, dy, z, GOLD)               # 扶手
                     elif z == f + 1:
                         both('stern-deco', x, dy, z, TRIM)               # 底欄
-                    elif (x + y) % 2 == 0:
-                        both('stern-deco', x, dy, z, BLUE)               # 欄杆柱（隔一格一根）
+                    elif post[xi, yi] and (x, y, z) not in orn and (x, 2 * YC - y, z) not in orn:
+                        both('stern-deco', x, dy, z, BLUE)               # 欄杆柱
             if brk[xi, yi]:                                              # 托架：從地板底下往下收成 0（外面那一格金）；裡面接到那一層的船殼
                 for k in range(1, T['bracket_len'] + 1):
                     reach = dep * (1 - k / float(T['bracket_len'] + 1)) ** 1.2

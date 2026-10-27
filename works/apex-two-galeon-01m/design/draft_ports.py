@@ -211,6 +211,7 @@ def main():
     glass = np.zeros(wall.shape, bool)
     frame = np.zeros(wall.shape, bool)
     stern_open = np.zeros(wall.shape, bool)
+    chase = np.zeros(wall.shape, bool)              # 船尾追擊砲門（整段刻穿、沒有玻璃）⇒ 步驟 19 封玻璃時不算窗
     for wdw in windows:
         if wdw['kind'] == 'door':
             continue
@@ -225,6 +226,7 @@ def main():
                 if wdw['kind'] == 'port':
                     for xi in run:
                         stern_open[xi, yi, z] = True
+                        chase[xi, yi, z] = True
                 else:
                     stern_open[f, yi, z] = True
                     if len(run) > 1:
@@ -269,6 +271,8 @@ def main():
                                 stern_open[x - x0, yi, z] = True
                     else:
                         frame[x - x0, rr[0], z] = True
+    win = (stern_open | glass) & ~chase             # 步驟 19：有玻璃的窗洞（船尾窗＋兩舷的窗），門洞刻之前
+    open_pre_door = stern_open.copy()
     # 步驟 17：真的門洞（Tim 2026-10-27「開真的可以打開的門(第一人稱模式可以走出去) 船尾有陽台的地方也可以開門出去」）——
     #   門洞那幾欄（y0..y1 × z0..z1）整段牆刻穿；門板（比門洞每邊大一格、直立）擺在門洞外面：船尾的牆往後倒 ⇒ 門板那一面（x ≤ 門板的 x）前面的牆也刻掉 ⇒ 門嵌在凹進去的門廊裡
     door_cut = []
@@ -312,6 +316,28 @@ def main():
                             c = np.nonzero(wall[:, yi, z])[0]
                             if len(c):
                                 frame[c[-1], yi, z] = True
+    # 步驟 19（Tim 2026-10-27「玻璃好像有縫」）：玻璃改成窗洞裡「從船外數進來第二層」—— 窗洞的格照 6 連通量離船外的距離，距離 1 的那一層整層是玻璃。
+    #   v1 一柱一柱放「從外往裡第二格」：直的牆一樣，斜的牆（船尾兩個轉角）上相鄰兩柱的玻璃只在斜角相碰、轉角的船尾窗跟舷窗之間空一格 ⇒ 空氣從斜角鑽過去（tools/glass_seal.py：漏 6 片）。
+    #   距離每走一步只變 1 ⇒ 從船外（距離 0）走到艙裡一定踩過距離 1 那一層 ⇒ 那一層封得住；牆只有 1 格厚、外面那格就貼著艙裡 ⇒ 那一格也是玻璃。
+    from scipy import ndimage
+    st6 = ndimage.generate_binary_structure(3, 1)
+    acc = lambda a, ax: np.maximum.accumulate(a, axis=ax)
+    racc = lambda a, ax: np.flip(acc(np.flip(a, ax), ax), ax)
+    enc = acc(wall, 0) & racc(wall, 0) & acc(wall, 1) & racc(wall, 1)
+    reg = win & ~(stern_open & ~open_pre_door)      # 門洞刻穿的格不算窗
+    d = np.full(wall.shape, -1, int)
+    front = reg & ndimage.binary_dilation(~wall & ~enc, st6)
+    k = 0
+    while front.any():
+        d[front] = k
+        k += 1
+        front = reg & (d < 0) & ndimage.binary_dilation(front, st6)
+    newglass = reg & ((d == 1) | ((d == 0) & ndimage.binary_dilation(~wall & enc, st6)))
+    opn = reg & ~newglass                           # 斜的地方距離 1 那一層會轉折、夾住 1 格跟哪邊都不通的空氣（組裝件封閉空腔 2 格，最上排轉角那扇）⇒ 填成玻璃
+    newglass |= opn & ~ndimage.binary_propagation(~wall, structure=st6, mask=opn | ~wall)
+    R_glass_v1 = int(glass.sum())
+    glass = (glass & ~reg) | newglass
+    stern_open = (stern_open | reg) & ~newglass
     carve |= stern_open
     glass &= ~carve
     carve |= glass                      # 玻璃從船殼拿出來、另做一件子作品（關聯 meta material=glass）⇒ masks/glass/stern_glass.vox.txt
@@ -363,6 +389,7 @@ def main():
     R['doors'] = door_cut
     R['side_windows_glass'] = int(sum(glass[w['x0'] - x0:w['x1'] - x0 + 1, :, w['z0']:w['z1'] + 1].sum() for w in side_wins))
     R['ports_total'] = len(ports) * 2 + len(chasers)
+    R['glass_cells'], R['glass_cells_v1'] = int(glass.sum()), R_glass_v1     # 步驟 19：窗洞第二層整層是玻璃（v1 一柱一格）
     if probe:
         print(json.dumps({'probe': probe[0], 'ports_not_open': see}, ensure_ascii=False))
         return
