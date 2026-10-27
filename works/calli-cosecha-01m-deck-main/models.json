@@ -806,7 +806,7 @@
 			"mirror": "y",
 			"color": "",
 			"enabled": true,
-			"note": "18 磅追擊砲（憲法號 -gun-long18）（階段八 TASK-0597；P 舷、船尾；draft_guns.py back 8、砲口伸出 3.5）",
+			"note": "18 磅追擊砲（憲法號 -gun-long18）（階段八 TASK-0597；P 舷、船尾；draft_guns.py back 11、砲口伸出 0.5）",
 			"persona": "calli",
 			"created_at": "2026-10-15T14:59:23",
 			"meta": {
@@ -849,7 +849,7 @@
 			"mirror": "",
 			"color": "",
 			"enabled": true,
-			"note": "18 磅追擊砲（憲法號 -gun-long18）（階段八 TASK-0597；S 舷、船尾；draft_guns.py back 8、砲口伸出 3.5）",
+			"note": "18 磅追擊砲（憲法號 -gun-long18）（階段八 TASK-0597；S 舷、船尾；draft_guns.py back 11、砲口伸出 0.5）",
 			"persona": "calli",
 			"created_at": "2026-10-15T14:59:24",
 			"meta": {
@@ -859,6 +859,846 @@
 				"kind": "gun",
 				"port": "stern",
 				"side": "S"
+			}
+		},
+		{
+			"name": "砲門蓋-M-chase-stern-P",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				103,
+				137.5,
+				85
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				93.7
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-chase-stern-P ↔ M-chase-stern-P（portlids.py：畫開著、上緣鉸鏈；船尾板 rotate 90 ＋ rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:30",
+			"meta": {
+				"close_deg": 141.6,
+				"house": 4,
+				"id": "portlid-1",
+				"kind": "portlid",
+				"lid_of": "gun-19"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				171.5,
+				113,
+				82
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				166
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P01 ↔ 砲M-P01（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:30",
+			"meta": {
+				"close_deg": 89.1,
+				"house": 6,
+				"id": "portlid-2",
+				"kind": "portlid",
+				"lid_of": "gun-1"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				171.5,
+				208,
+				82
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				14
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S01 ↔ 砲M-S01（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:31",
+			"meta": {
+				"close_deg": 89.1,
+				"house": 6,
+				"id": "portlid-3",
+				"kind": "portlid",
+				"lid_of": "gun-10"
+			}
+		},
+		{
+			"name": "砲門蓋-M-chase-stern-S",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				103,
+				183.5,
+				85
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				86.3
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-chase-stern-S ↔ M-chase-stern-S（portlids.py：畫開著、上緣鉸鏈；船尾板 rotate 90 ＋ rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:31",
+			"meta": {
+				"close_deg": 141.6,
+				"house": 4,
+				"id": "portlid-4",
+				"kind": "portlid",
+				"lid_of": "gun-20"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P02",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				206.5,
+				107,
+				81
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				172.1
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P02 ↔ 砲M-P02（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:31",
+			"meta": {
+				"close_deg": 87.4,
+				"house": 7,
+				"id": "portlid-5",
+				"kind": "portlid",
+				"lid_of": "gun-2"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S02",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				206.5,
+				214,
+				81
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				7.9
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S02 ↔ 砲M-S02（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:32",
+			"meta": {
+				"close_deg": 87.4,
+				"house": 7,
+				"id": "portlid-6",
+				"kind": "portlid",
+				"lid_of": "gun-11"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P03",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				240.5,
+				103,
+				80
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				175.3
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P03 ↔ 砲M-P03（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:32",
+			"meta": {
+				"close_deg": 86.1,
+				"house": 7,
+				"id": "portlid-7",
+				"kind": "portlid",
+				"lid_of": "gun-3"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S03",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				240.5,
+				218,
+				80
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				4.7
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S03 ↔ 砲M-S03（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:32",
+			"meta": {
+				"close_deg": 86.1,
+				"house": 7,
+				"id": "portlid-8",
+				"kind": "portlid",
+				"lid_of": "gun-12"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P04",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				275.5,
+				101,
+				79
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				180
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P04 ↔ 砲M-P04（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:33",
+			"meta": {
+				"close_deg": 88,
+				"house": 7,
+				"id": "portlid-9",
+				"kind": "portlid",
+				"lid_of": "gun-4"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S04",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				275.5,
+				220,
+				79
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S04 ↔ 砲M-S04（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:33",
+			"meta": {
+				"close_deg": 88,
+				"house": 7,
+				"id": "portlid-10",
+				"kind": "portlid",
+				"lid_of": "gun-13"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P05",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				309.5,
+				101,
+				79
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				180
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P05 ↔ 砲M-P05（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:33",
+			"meta": {
+				"close_deg": 88,
+				"house": 7,
+				"id": "portlid-11",
+				"kind": "portlid",
+				"lid_of": "gun-5"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S05",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				309.5,
+				220,
+				79
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S05 ↔ 砲M-S05（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:34",
+			"meta": {
+				"close_deg": 88,
+				"house": 7,
+				"id": "portlid-12",
+				"kind": "portlid",
+				"lid_of": "gun-14"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P06",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				344.5,
+				101,
+				79
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				180
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P06 ↔ 砲M-P06（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:34",
+			"meta": {
+				"close_deg": 88,
+				"house": 7,
+				"id": "portlid-13",
+				"kind": "portlid",
+				"lid_of": "gun-6"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S06",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				344.5,
+				220,
+				79
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S06 ↔ 砲M-S06（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:34",
+			"meta": {
+				"close_deg": 88,
+				"house": 7,
+				"id": "portlid-14",
+				"kind": "portlid",
+				"lid_of": "gun-15"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P07",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				379.5,
+				102,
+				80
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				184
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P07 ↔ 砲M-P07（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:34",
+			"meta": {
+				"close_deg": 84.1,
+				"house": 8,
+				"id": "portlid-15",
+				"kind": "portlid",
+				"lid_of": "gun-7"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S07",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				379.5,
+				219,
+				80
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				-4
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S07 ↔ 砲M-S07（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:35",
+			"meta": {
+				"close_deg": 84.1,
+				"house": 8,
+				"id": "portlid-16",
+				"kind": "portlid",
+				"lid_of": "gun-16"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P08",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				413.5,
+				105,
+				80
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				189.1
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P08 ↔ 砲M-P08（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:35",
+			"meta": {
+				"close_deg": 83.4,
+				"house": 7,
+				"id": "portlid-17",
+				"kind": "portlid",
+				"lid_of": "gun-8"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S08",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				413.5,
+				216,
+				80
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				-9.1
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S08 ↔ 砲M-S08（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:35",
+			"meta": {
+				"close_deg": 83.4,
+				"house": 7,
+				"id": "portlid-18",
+				"kind": "portlid",
+				"lid_of": "gun-17"
+			}
+		},
+		{
+			"name": "砲門蓋-M-P09",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				448.5,
+				112,
+				81
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				196.9
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-P09 ↔ 砲M-P09（portlids.py：畫開著、上緣鉸鏈；P 舷 rotate 180 − rz（⛔ mirror=y）；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:36",
+			"meta": {
+				"close_deg": 84.1,
+				"house": 7,
+				"id": "portlid-19",
+				"kind": "portlid",
+				"lid_of": "gun-9"
+			}
+		},
+		{
+			"name": "砲門蓋-M-S09",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "calli-cosecha-01m-portlid",
+			"axes": "sculpt",
+			"at": [
+				448.5,
+				209,
+				81
+			],
+			"pivot": [
+				4.5,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				-16.9
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "收穫號 砲門蓋板 砲門蓋-M-S09 ↔ 砲M-S09（portlids.py：畫開著、上緣鉸鏈；S 舷 rotate rz；kind=portlid 本身是裝飾）",
+			"persona": "calli",
+			"created_at": "2026-10-27T22:43:36",
+			"meta": {
+				"close_deg": 84.1,
+				"house": 7,
+				"id": "portlid-20",
+				"kind": "portlid",
+				"lid_of": "gun-18"
 			}
 		}
 	]

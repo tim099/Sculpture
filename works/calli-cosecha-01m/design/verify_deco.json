@@ -1,29 +1,30 @@
 {
  "parts": {
   "espolon": {
-   "cells": 7961,
+   "cells": 10675,
    "overlap_ship": 0,
    "overlap_other_parts": 0,
-   "cells_touching_ship": 85,
+   "cells_touching_ship": 603,
    "mirror_diff": 0,
    "bbox": [
     [
      487,
-     136,
+     131,
      20
     ],
     [
      572,
-     184,
-     77
+     189,
+     93
     ]
    ],
    "colors": {
-    "36": 5865,
-    "141": 60,
-    "209": 1782,
-    "242": 94,
-    "248": 160
+    "36": 7254,
+    "141": 156,
+    "182": 610,
+    "209": 1921,
+    "242": 2,
+    "248": 732
    }
   },
   "figurehead": {
@@ -36,12 +37,12 @@
     [
      563,
      156,
-     74
+     87
     ],
     [
      582,
      164,
-     105
+     118
     ]
    ],
    "colors": {
@@ -54,29 +55,28 @@
    }
   },
   "stern-deco": {
-   "cells": 9754,
+   "cells": 9224,
    "overlap_ship": 0,
    "overlap_other_parts": 0,
-   "cells_touching_ship": 2611,
+   "cells_touching_ship": 1291,
    "mirror_diff": 0,
    "bbox": [
     [
-     102,
-     117,
-     85
+     87,
+     107,
+     87
     ],
     [
-     140,
-     203,
-     121
+     184,
+     213,
+     111
     ]
    ],
    "colors": {
-    "36": 6174,
-    "87": 328,
-    "141": 335,
-    "242": 1108,
-    "248": 1809
+    "36": 812,
+    "141": 4237,
+    "242": 820,
+    "248": 3355
    }
   },
   "name-board": {
@@ -87,14 +87,14 @@
    "mirror_diff": 58,
    "bbox": [
     [
-     96,
+     78,
      140,
-     113
+     130
     ],
     [
-     99,
+     84,
      180,
-     119
+     136
     ]
    ],
    "colors": {
@@ -105,19 +105,30 @@
   }
  },
  "skipped_on_ship": {
-  "espolon": 0,
+  "espolon": 1918,
   "figurehead": 0,
-  "stern-deco": 10,
+  "stern-deco": 0,
   "name-board": 0
  },
- "bowsprit_clearance_hits": 0,
+ "espolon_cavity_filled": 0,
+ "stern_walks": [
+  {
+   "floor_z": 92,
+   "footprint_S": 563
+  },
+  {
+   "floor_z": 104,
+   "footprint_S": 711
+  }
+ ],
+ "bowsprit_clearance_hits": 8,
  "lanterns": [
   {
-   "dy": -18,
+   "dy": -14,
    "at": [
-    93.5,
-    142.5,
-    134
+    80.5,
+    146.5,
+    139
    ],
    "on_solid": true,
    "air_above": true
@@ -125,19 +136,19 @@
   {
    "dy": 0,
    "at": [
-    93.5,
+    80.5,
     160.5,
-    134
+    139
    ],
    "on_solid": true,
    "air_above": true
   },
   {
-   "dy": 18,
+   "dy": 14,
    "at": [
-    93.5,
-    178.5,
-    134
+    80.5,
+    174.5,
+    139
    ],
    "on_solid": true,
    "air_above": true
@@ -145,20 +156,20 @@
  ],
  "lists": {
   "espolon": [
-   7961,
-   "c6acfb759f0ab479d40becfac42ff3209a6faf56e55f3d7281893849870bd089"
+   10675,
+   "f8f9e03d40f26819715fb1ac45e8809c6b213f669d5a186802774f06e5a5dafe"
   ],
   "figurehead": [
    734,
-   "1788428032b05a5e5f10478165978ec44d9ccb1fa8e95bb3a08c40070ddeaa5b"
+   "895596c150fc011ed68da6ed6dbca22227b7f422fd75ead515a031720964b02d"
   ],
   "stern-deco": [
-   9754,
-   "441e314841ccfab4221ced3622424f584d69f8ef62c02ac573eb319b275af144"
+   9224,
+   "83fed4c95c8321bcbc472e6c4e281fa7fc8c75f4b10e774a0e3b627c1b712fba"
   ],
   "name-board": [
    287,
-   "381de94567992658b0799174c4e5f27b58678cf87d8ec2b5235e1a3265737b3f"
+   "c08cd71757cd595e96c44663b37063e1b852560e05542160e1233a35d72a0e99"
   ]
  }
 }

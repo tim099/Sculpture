@@ -40,7 +40,15 @@
     "bow_pow_high": {"v": 2.3, "src": "設計決定：上面鈍（galleon 圓圓的船頭）"},
     "aft_pow": {"v": 2.0, "src": "設計決定"},
     "top": [[80, 133], [196, 133], [200, 116], [268, 116], [272, 100], [418, 100], [422, 116], [520, 117]],
-    "top_src": "舷頂（舷牆頂）折線：每一層甲板面 ＋ 舷牆 12 格（toldilla、alcázar、castillo）／puente ＋ 15（船腰：上甲板砲門 z 91–97 頂上要留 2 格舷牆）；船樓前後緣與長度是設計決定（castillo 比較長：Andalucía 的 castillo 41.75 m² 是 toldilla 的 3 倍，AND 讀過）"
+    "top_src": "舷頂（舷牆頂）折線：每一層甲板面 ＋ 舷牆 12 格（toldilla、alcázar、castillo）／puente ＋ 15（船腰：上甲板砲門 z 91–97 頂上要留 2 格舷牆）；船樓前後緣與長度是設計決定（castillo 比較長：Andalucía 的 castillo 41.75 m² 是 toldilla 的 3 倍，AND 讀過）。TASK-1027 起改用 top_curve（top 留著當階段一到十二的紀錄）",
+    "top_curve": {"knots": [[80, 133], [196, 133], [208, 116], [268, 116], [280, 100], [410, 100], [422, 116], [520, 117]],
+      "rise": [{"from": 196, "to": 82, "dz": 5, "pow": 2}, {"from": 465, "to": 500, "dz": 4, "pow": 2}],
+      "src": "TASK-1027（照 Ship_Ends §2、康塞普西翁號步驟 17；Tim 2026-10-27「主要是船頭可以優化」＋康塞普西翁號的船頭）：高度跟 top 一樣（toldilla 133、alcázar 116、船腰 100、castillo 116–117），差在 ① 船樓前後緣的落差從 4 格的直角台階改成 12 格的 smoothstep，落差放在矮的那一邊（toldilla 前緣 x 196–208 在 alcázar 那段、alcázar 前緣 268–280 與 castillo 後緣 410–422 在船腰那段）⇒ 高的那層甲板邊上的舷牆不變矮；② 船尾樓往船尾翹（x 196 ⇒ 90 加到 5 格）、船首樓往船頭翹（x 465 ⇒ 艏柱 500 加到 4 格；前桅支索板 x 431–472 照 top_z − below_rail 放 ⇒ 從 465 才翹，472 那裡 +0.2 格）"},
+    "beakhead": {"x": 487, "z": 87,
+      "src": "TASK-1027（Ship_Ends §2：船首樓前面一道平的 beakhead 艙壁往後退、底下的船頭往前突出、頂面是平台）：z 87 以上、x 487 以前切掉。x 487：前桅在船首樓那幾層最前到 x 480（masks/masts/mast-fore z 110–117）⇒ 讓開 2 格、艙壁的牆 4 格（483–486）；z 87：平台頂 86 ＝ 艙裡 puente 甲板在船頭那一格（頂 88、站 89）低 2 ⇒ 艙壁留 87–88 當門檻、出門往下一階 2；艏斜桅從 (486, 69) 以 32° 往前上，艏柱 x 500 中心 77.7、頂約 81 ⇒ 在平台的牆（83–86）底下"},
+    "stern_tumble": {"z0": 80, "k": 0.1, "pow": 2, "src": "TASK-1027（Ship_Ends §2：船尾樓兩舷往裡倒、船尾上窄）：船尾那一段（s < s_aft，ua ＝ 1 − s ÷ s_aft）z 80 以上每往上 10 格每舷再收 1 格 × ua²（艉柱線那裡全收、往船中漸漸沒有）⇒ 船尾樓頂 z 138 那一圈每舷再收約 6 格"},
+    "counter": {"c": 11, "z0": 74, "z1": 90, "round": 0.3,
+      "src": "TASK-1027（Ship_Ends §2：艉柱以上一片扇形 counter 往後鼓出去，兩層 stern walk 疊在上面）：z 74 以上往後外伸，smoothstep 到 z 90 伸出 11 格（1.1 m），以上照艉柱的斜度；俯視兩角收 30%（圓的船尾）。z0 74 而不是 wing transom 62：舵沿艉柱一路到 z 76（x 111–115、stock-top 113,160,76），從 62 起伸 ⇒ z 70 那裡船殼已經往後 2.5 格、把舵頭包進去；z1 90 ＝ 下層 stern walk 的地板（92）底下。s 照艉柱線量 ⇒ 船身其他地方的寬一格不變"}
   },
   "waterline": {"z": 52, "src": "設計決定：吃水 5.2 m（含龍骨）—— Ordenanza 沒給吃水；Atocha 550 t 4.3 m（WP）、San José 依 codo 換算 4.9／6.75 m（WP）。主甲板砲門下緣 z 71 離水線 1.9 m"},
   "readings_at": {"deck_z": 65, "rail_z": 116, "hold_beams_z": 45, "puente_z": 85},
@@ -128,16 +136,32 @@
       {"deck": "alcazar", "z0": 107, "z1": 114},
       {"deck": "castillo", "z0": 107, "z1": 115}],
       "src": "設計決定：船樓舷牆外面畫菱格（玫瑰粉菱形配黑底；週期 10 格、半徑 3）—— 只照 x、z 算 ⇒ 兩舷對稱。alcázar／castillo 從 z 107 起：puente 的 wale 照舷弧在兩頭抬到 z 105，v1 從 104 起會把它蓋黑（讀數 band_black_left 184）"},
+    "beakhead": {"gold_z": [102], "platform_edge_gold": false, "doors": [{"dy": 11, "w": 5, "z0": 89, "h": 9, "model_h": 12, "model_z0": 87, "face": "fwd", "deck": "puente"}], "port": {"z": 94, "r": 2, "color": 36}, "deck_color": 209,
+      "src": "TASK-1027（Ship_Ends §3、§5；OcCre 船頭特寫）：beakhead 艙壁朝前那一面金邊框、船首樓甲板高度（z 102）一條金線、船首樓舷牆那一段（z 107–115）照側面的菱格（x 換成 y）上下金邊；兩扇真的門 dy ±11：門洞 5 × 9（z 89–97 ＝ 艙裡 puente 甲板站 89 到船首樓橫樑底 99 以下；第一人稱頭上 7 格）、艙壁的牆留 z 87–88 當門檻、出去到平台（頂 86、站 87）往下一階 2；門洞外一圈金框＋頂上半圓金拱；門板沿用藍鯊號 gura-pinas-01m-door、縮成 12 格高、從平台面 z 87 立起（連門檻一起蓋）；中間圓窗 z 94 半徑 2；平台頂面（z 86）甲板色 209、外緣不描金（喙的平台接上來）"},
+    "counter_fan": {"z0": 75, "z1": 90, "zc": 70, "dx": 1, "deg": 12, "line": 0.55, "colors": [36, 242],
+      "src": "TASK-1027（Ship_Ends §3；San Felipe 模型的 counter 扇形）：艉柱線（lines.x_post）往後外伸的那一片外板、z 75–90；以 (中線, z 70) 為心每 12° 一條金線、線之間黑 36／玫瑰粉 242 輪流（本船的配色，同菱格）；頂上 z 91 一條金邊（下層 stern walk 的地板壓在 z 91–92）"},
     "cap_gold": {"src": "設計決定：舷頂最上一格外板換金（整條舷頂）"}
   },
   "stern": {
     "src": "設計決定：船尾 espejo 三排窗（puente 船長室、alcázar、toldilla）＋主甲板兩個追擊砲門（plan.ports.stern_chasers）；1618 art.69 的 galleries（最多伸出 ⅔ codo）在 TASK-0594",
     "rows": [
       {"deck": "main", "kind": "port", "n": 2, "w": 7, "h": 8, "sill": 6, "half": 26, "ref_x": [118, 141], "ref_src": "階段八：門檻從船尾面往裡到砲架尾那一段甲板的最高處量（x 118–141；船尾最後那一階 x 122–127 比 x 130 高 1 格，追擊砲站在那裡）"},
-      {"deck": "puente", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 24},
-      {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 24},
+      {"deck": "puente", "kind": "window", "n": 5, "w": 5, "h": 7, "sill": 5, "half": 24, "door_j": 3},
+      {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 5, "half": 24, "door_j": 3},
       {"deck": "toldilla", "kind": "window", "n": 3, "w": 5, "h": 6, "sill": 4, "half": 18}
-    ]
+    ],
+    "glass_work": true,
+    "glass_src": "TASK-1027（Tim 2026-10-27「窗戶可以改玻璃」）：玻璃從船殼拿出來另做一件子作品 -stern-glass（關聯 meta material=glass）、窗洞照離船外的 6 連通距離 1 那一層整層是玻璃（康塞普西翁號步驟 19：一柱一格會在斜角漏縫）、後面刻穿到艙裡 ⇒ 從艙裡看得到外面；之前是玻璃色 87 漆在牆裡、後面實心",
+    "doors": [
+      {"deck": "puente", "walk": "lower", "w": 5, "z0": 93, "h": 7, "model_h": 8},
+      {"deck": "alcazar", "walk": "upper", "w": 5, "z0": 105, "h": 11, "model_h": 12}
+    ],
+    "doors_src": "TASK-1027（Ship_Ends §5；Tim 2026-10-27「開真的可以打開的門(第一人稱模式可以走出去) 船尾有陽台的地方也可以開門出去」照康塞普西翁號）：puente、alcázar 那兩排船尾窗正中間那一扇（door_j 3）換成門 —— 門洞 5 寬、底邊 ＝ stern walk 站的那一格（下層地板 92 ⇒ 93、上層 104 ⇒ 105），艙裡的甲板站 92／103 ⇒ 門口一階 +1／+2；高 7／11：艙裡到上一層甲板的橫樑底 100／116，第一人稱頭上要 7 格（81_fps.js FP_HEAD）。門板照藍鯊號 gura-pinas-01m-door 縮放高度 ⇒ 8／12 格高（draft_doors.py）",
+    "side_windows": [
+      {"deck": "puente", "sill": 5, "h": 7, "w": 5, "x0s": [122, 134, 146, 158, 170]},
+      {"deck": "alcazar", "sill": 5, "h": 6, "w": 5, "x0s": [118, 130, 142, 154, 166]}
+    ],
+    "side_windows_src": "TASK-1027：兩層 stern walk 從船尾繞到兩舷（stern_deco.walks），走廊後面的舷側開窗（跟船尾窗同一套：最外刻開、第二層玻璃、後面刻穿到艙裡）；取代階段五兩舷 quarter galleries 上畫的窗。x 每 12 格一扇，停在 x_end 前面"
   },
   "rig_build": {
     "src": "設計決定（桅帆比例與位置在 plan.masts）；造船規格 §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡",
@@ -170,7 +194,8 @@
     "topmast_shrouds": 3,
     "thick": {"shroud": 1.2, "topmast_shroud": 0.8, "futtock": 0.6, "backstay": 0.8, "stay": 1.4, "tm_stay": 0.9, "bobstay": 1.2, "sheet": 0.5, "course_sheet": 0.6, "tack": 0.6},
     "ratlines": {"every": 4, "start": 7, "stop": 0.9, "min_len": 5, "th": 0.3, "tm_every": 4, "tm_th": 0.25},
-    "sails": {"fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 45, "sheet_aft": 50, "tack_fwd": 40,
+    "sails": {"fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 45, "sheet_aft": 50, "tack_fwd": 40, "bow_belay_max_x": 485,
+              "bow_belay_src": "TASK-1027：beakhead 把 x 487 以前、z 87 以上切掉 ⇒ 船頭那一欄（前帆 tack、spritsail、艏斜桅側支索）改綁在艙壁的牆（483–486）頂上；之前 495／490",
               "lateen_clew": {"mizzen": [125, 140], "bonaventure": [95, 150]},
               "lateen_tack": {"mizzen": ["puente", 276], "bonaventure": ["toldilla", 188]},
               "cross_texture": ["fore-course", "main-course"],
@@ -181,15 +206,29 @@
     "wind": [4.5, -1.5, 0], "sail_seconds": 3
   },
   "espolon": {"len_beyond_stem": 72, "src": "1618 art.45：espolón ＝ manga 的 3/5 伸出艏柱 ⇒ 7.24 m",
-    "deck_top_z": 73, "thick": 3, "half_at_stem": 24, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 20, "cutwater_half": 2, "cutwater_pow": 1.5, "cutwater_band": 10,
-    "rail_h": 4, "stanchion_every": 6,
+    "deck_top_z": 86, "thick": 3, "half_at_stem": 24, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 20, "cutwater_half": 2, "cutwater_pow": 2.0, "cutwater_band": 90,
+    "rail_h": 7, "stanchion_every": 6,
+    "deck_from_x": 487, "half_at_deck_from": 29, "skirt_from_z": 74, "cutwater_to_z": 74, "cutwater_tip_x": 524, "trail_off": [2, 7], "trail_from_z": 53,
+    "platform_src": "TASK-1027（Tim 2026-10-27「主要是船頭可以優化」＋康塞普西翁號的船頭；Ship_Ends §4.3）：喙改成跟 beakhead 平台同高的一整片平台 —— deck_top_z 73 ⇒ 86（lines.beakhead z 87 − 1）、從艙壁前 x 487 起鋪（半寬 29 ＝ 船殼在那裡的寬，收到艏柱的 24、再照 taper 收到喙尖）⇒ 船殼的平台跟喙連成一整片；甲板邊往下包側板到 z 74（原本喙的高度；上下兩條金線）、最前面那一欄整片封、底下不封；knee（cutwater_band 10 ⇒ 90 填成一整片、pow 1.5 ⇒ 2.0 前緣更凹）頂到 z 74、前緣在 x 524 接上平台底 ⇒ 平台前段懸空伸出去；水線以下跟船底同色 182；兩側沿前緣往裡 2、7 格兩條金線（z 53 以上，trailboard）。欄杆 rail_h 4 ⇒ 7：第一人稱一步跨得上 6 格（81_fps.js），4 格的扶手頂踩得上去、翻出平台（康塞普西翁號 v1）。艏斜桅從平台中間穿出去（x 508–520 那一段；佔用格照樣跳過）",
     "design_src": "設計決定：船首喙的甲板頂 z 73（主甲板在船頭 z 68 之上 5 格）—— 艏斜桅從主甲板（x 486, z 69）以 32° 往前上，在 x 500 中心 z 77.7（下緣約 75）、x 510 到 z 84：喙放 z 73 才不會被艏斜桅穿過；研究：beakhead 在船首樓之下（WP Galleon 讀過）。下面一片 cutwater（5 格寬、沿前緣 10 格的帶子，中間跟艏柱之間留空）從 z 20 的艏柱掃到喙尖；兩舷 head rail（4 格高、每 6 格一根柱）"},
-  "figurehead": {"x": 566, "z_base": 74, "src": "設計決定：船首像 ＝ 死神見習生（兜帽斗篷、粉髮、拿鐮刀）—— 個性裝飾、本船自己做（造船規格 §2.1）；鐮刀立在中線 ⇒ 兩舷對稱；研究：王家 galleon 用戴冠金獅（worldhistory.org，讀過）—— 本船換成自己的"},
+  "figurehead": {"x": 566, "z_base": 87, "raise_src": "TASK-1027：喙改成平台（甲板頂 73 ⇒ 86）⇒ 站上去、z_base 74 ⇒ 87；艏斜桅在 x 572 中心 z 122.7、鐮刀柄頂 118 ⇒ 不擋（x 不用挪）", "src": "設計決定：船首像 ＝ 死神見習生（兜帽斗篷、粉髮、拿鐮刀）—— 個性裝飾、本船自己做（造船規格 §2.1）；鐮刀立在中線 ⇒ 兩舷對稱；研究：王家 galleon 用戴冠金獅（worldhistory.org，讀過）—— 本船換成自己的"},
+  "ornament": {
+    "src": "TASK-1027（Ship_Ends §4.4，照康塞普西翁號步驟 17）：一件子作品 -ornament（draft_ornament.py）；只放進組裝件的空格（撞到的照實數）；兩舷照 |dy| 一起產",
+    "head_rails": {"rails": [], "timbers": [506, 512], "thick": 2, "src": "head rail 不做細欄杆（康塞普西翁號 v1 三條 U 形 ⇒ Tim 給 OcCre 特寫後改成一條寬帶）；喙上兩根 head timber（x 506、512）從平台撐到寬帶的底"},
+    "head_band": {"x_h": 486, "z_h": 105, "x_l": 518, "z_l": 99, "x_e": 558, "z_e": 103, "h": 6, "dy_e": 4, "dy_pow": 1.4, "fill": 36, "period": 8, "amp": 1.0,
+      "src": "TASK-1027（OcCre 船頭特寫：從 beakhead 艙壁的上角一條寬帶彎下去接到船首像後面，深色底、上下金邊、中間金色卷草）：上緣兩段拋物線 —— 艙壁的角 x 486、z 105（船首樓菱格帶 107–115 的金邊底下）往前往下到 x 518、z 99（斜率 0；帶底 94 在平台欄杆頂 93 上面）再到死神見習生的背後 x 558、z 103；帶高 6、2 格厚（外面那一層畫卷草、裡面素的）；dy 從船殼外一格照 t^1.4 收到 4（喙在 x 558 的半寬 ≈ 5）；底色黑 36、卷草：每 8 格一個波（振幅 1）"},
+    "cheeks": {"rows": [{"x0": 466, "z0": 72, "z1": 66}, {"x0": 470, "z0": 62, "z1": 57, "ext": 12}],
+      "src": "TASK-1027（San Felipe 模型：船頭兩側兩條彎進艏柱的金線 cheek）：貼著船殼外面一格、x0 往前到艏柱、z 照平方往下彎（72 ⇒ 66、62 ⇒ 57），2 格高金；放在平台側板（z 74–83）底下才看得到；下面那條過了艏柱沿 knee 兩側再往前 12 格（knee 在 z 57 到 x 511）"}
+  },
   "stern_deco": {
-    "balcony": {"floor_z": 89, "depth": 5, "half": 26, "rail_h": 5, "src": "設計決定：puente 船長室那排窗下的船尾陽台（corredor），伸出 espejo 5 格；1618 art.69 的 galleries「最多伸出 ⅔ codo」說的是兩舷"},
-    "quarter_gallery": {"x0": 102, "x1": 140, "z0": 86, "z1": 118, "out": 4, "roof_h": 6, "src": "1618 art.69：15 codos 以上的船可以有 galleries，兩舷最多伸出 ⅔ codo（3.8 格 ⇒ 4）；位置與高度設計決定（puente 到 alcázar 兩層，蓋住階段三船尾肩膀的「滴漆」）"},
-    "name_board": {"text": "LA COSECHA", "z0": 113, "z1": 119, "src": "設計決定：船尾 espejo、alcázar 那排窗上面；3×5 字型、金字黑底玫瑰粉框 —— 字不對稱 ⇒ 這一件的鏡像差照實報"},
-    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [-18, 0, 18], "x": 93, "src": "沿用現有元件（work sub=components kind=light：三叉戟號船尾燈，0.05 m、scale 0.5 ＝ 0.85 m 寬、1.8 m 高、固定點 wick／bail／base）；三盞（旗艦掛三盞，研究只讀到未查證的說法）、站在 toldilla 船尾的舷頂上"}
+    "walks": [
+      {"name": "lower", "floor_z": 92, "dep": 5, "rail_h": 7, "x_from": 95, "x_end": 182, "bracket_every": 6, "bracket_len": 5, "post_every": 3},
+      {"name": "upper", "floor_z": 104, "dep": 6, "rail_h": 7, "x_from": 88, "x_end": 184, "bracket_every": 6, "bracket_len": 5, "bracket_off": 2, "post_every": 3,
+       "dep_src": "v1 伸出 4 ⇒ 6：鏡板往後倒（23.8°），地板 104 那裡船殼在 x 93、頭頂 111 那裡已經在 x 90 ⇒ 伸出 4、欄杆佔外面兩層，門口外面沒有一格站得住（tools/walk_doors.py：上層的門找不到門外的站點）"}
+    ],
+    "walks_src": "TASK-1027（Ship_Ends §4.1，照康塞普西翁號步驟 17／19）：兩層開放的 stern walk 從船尾繞過兩角、沿兩舷往前（欄杆、金扶手、底下一排金托架），取代階段五的船尾陽台（balcony：floor 89、伸出 5、半寬 26）與兩舷 quarter galleries（x 102–140、z 86–118、伸出 4）。下層地板 z 92（puente 甲板在船尾頂 91、站 92 ⇒ 門口一階 +1）、伸出 5、沿兩舷到 x 182（puente 第 1 門砲 x 188 前面）；上層地板 z 104（alcázar 頂 102、站 103 ⇒ +2）、伸出 4、到 x 184（toldilla 前緣 196、後桅支索板從 x 190 起）。下層走廊頭上到上層地板底（103）有 10 格（第一人稱 7）。欄杆 7 格（第一人稱一步上 6 格）：底欄黑、欄杆柱玫瑰粉（只放最外那一層、每 3 格一根 ⇒ 從窗裡看得出去）、金扶手；地板 2 格厚外緣金；托架每 6 格一組往下收（上層錯開 2 格讓下層的門）。走廊後面的窗：船尾窗（stern.rows）＋兩舷的窗（stern.side_windows）",
+    "name_board": {"text": "LA COSECHA", "z0": 130, "z1": 136, "move_src": "TASK-1027：z 113–119 ⇒ 130–136（toldilla 那排窗上面、船尾頂 137–138 底下）—— 上層 stern walk 的門洞 z 105–115 刻穿了鏡板正中間，原本的高度在門洞那幾欄找不到鏡板（v1 預覽字貼到艙裡的 bonaventure 桅上 x 134）；船尾往裡收之後那裡的鏡板 ±21 寬，39 格的字剛好放得下", "src":"設計決定：船尾 espejo、alcázar 那排窗上面；3×5 字型、金字黑底玫瑰粉框 —— 字不對稱 ⇒ 這一件的鏡像差照實報"},
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [-14, 0, 14], "x": 80, "move_src": "TASK-1027：counter 往後伸、船尾樓翹 5 格又往裡收 ⇒ 船尾頂在 x 78–82、z 138、半寬 18 ⇒ 燈 x 93 ⇒ 80、dy ±18 ⇒ ±14", "src":"沿用現有元件（work sub=components kind=light：三叉戟號船尾燈，0.05 m、scale 0.5 ＝ 0.85 m 寬、1.8 m 高、固定點 wick／bail／base）；三盞（旗艦掛三盞，研究只讀到未查證的說法）、站在 toldilla 船尾的舷頂上"}
   },
   "guns_build": {
     "assembly": "calli-cosecha-01m-assembly", "hull": "calli-cosecha-01m",
@@ -241,10 +280,10 @@
                "src": "設計決定：舵沿艉柱後緣（lines.x_post，斜 23.8°）從龍骨底到 z 76（主甲板追擊砲門那一帶，貼著 espejo）；3 格厚（y 159–161）、舵葉 1.4 m 往上收到 1 m、水線以上是 0.5 m 的舵頭；水線下白、上黑（同船殼）、每 12 格一道鐵箍（pintle／gudgeon 的位置，⚠ 只畫在舵上）。max_deg 35 同夜隼號／風暴角號。⚠ galleon 的舵頭從 espejo 下面的 limera 穿進船裡、接舵柄與 whipstaff —— 本船舵頭貼在 espejo 外面、沒有開孔、沒有舵柄"},
     "anchor": {"gear_work": "calli-cosecha-01m-anchor-gear", "gear_title": "收穫號 錨架（兩舷 billboard）", "gear_link": "錨架",
                "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.85, "pivot": [23.5, 16.5, 56.5],
-               "x_try": [482, 484, 486, 488, 490, 492], "z_try": [127, 127.5, 128, 128.5, 129, 129.5, 130, 130.5, 131, 131.5, 132], "d_step": 0.5, "d_max": 24,
+               "x_try": [474, 476, 478, 480, 482], "x_try_src": "TASK-1027：beakhead 把 x 487 以前、z 87 以上切掉 ⇒ 量切線要 x ± 4 都有船殼 ⇒ 482–492 ⇒ 474–482（前桅支索板到 x 472）", "z_try": [127, 127.5, 128, 128.5, 129, 129.5, 130, 130.5, 131, 131.5, 132], "d_step": 0.5, "d_max": 24,
                "ledge_half": 13, "ledge_out": 3, "ledge_t": 3, "color": 136,
                "src": "沿用共用錨元件（造船規格 §9 anchor；scale 0.85 同夜燈號 ⇒ 遊戲裡同一份網格）、meta anchor=bower；兩舷各一，吊在船頭舷外：錨臂順著船殼切線、橫桿擱在船首樓欄杆上方。錨冠底下一塊 billboard 托板（新子作品）—— 遊戲判斷掉不掉是外框中心往下找實心（10_ship.js:47），吊在舷外的錨正下方要有東西。⚠ 沒有吊錨桿（cathead）、沒有 fish tackle"},
-    "hawse": {"x": 494, "z": 88, "src": "設計決定：錨鏈孔在船頭、上甲板（puente）那一層的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
+    "hawse": {"x": 494, "z": 80, "z_src": "TASK-1027：z 88 ⇒ 80 —— beakhead 把 z 87 以上、x 487 以前切掉（x 494 z 88 已經是平台上面的空氣）；80 在平台的牆（83–86）底下、船殼還在", "src":"設計決定：錨鏈孔在船頭、上甲板（puente）那一層的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
   },
   "gunfittings_build": {
     "work": "calli-cosecha-01m-gunfittings", "title": "收穫號 砲具（船牆與甲板的環）", "link": "砲具",

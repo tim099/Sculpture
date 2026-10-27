@@ -18,12 +18,24 @@ def xyz(v):
     return ','.join(num(float(c)) for c in v)
 
 
+WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+have_id = {}                    # TASK-1027：重落模型時 meta= 整份覆寫 ⇒ 把 Blockside admin.py ids 發好的物件 id 帶上（蓋板的 lid_of 照它配；不帶 ⇒ 下一次 ids 重發、換號）
+for w in set(GB['deck_works'].values()):
+    mp = os.path.join(WORKS, w, 'models.json')
+    if os.path.exists(mp):
+        M = json.load(open(mp, encoding='utf-8'))
+        for m in (M.get('models', M).values() if isinstance(M.get('models', M), dict) else M.get('models', [])):
+            if (m.get('meta') or {}).get('id'):
+                have_id[(w, m['name'])] = m['meta']['id']
+
 ok = bad = 0
 for r in PL:
     t = GB['types'][r['type']]
     s = float(t['scale'])
     meta = dict(t['meta'])
     meta.update({'deck': r['deck'], 'side': r['side'], 'port': r['port'] if isinstance(r['port'], int) else 'stern'})
+    if (GB['deck_works'][r['deck']], r['name']) in have_id:
+        meta['id'] = have_id[(GB['deck_works'][r['deck']], r['name'])]
     note = '%s（階段八 TASK-0597；%s 舷%s；draft_guns.py back %s、砲口伸出 %s）' % (
         NAMES[r['type']], r['side'], ('、%s 第 %d 個砲門' % (r['deck'], r['port'])) if isinstance(r['port'], int) else '、船尾', num(float(r['back'])), num(float(r['muzzle_beyond'])))
     args = ['op=work', 'sub=model', 'persona=calli', 'work=' + GB['deck_works'][r['deck']], 'name=' + r['name'], 'source_work=' + t['work'],

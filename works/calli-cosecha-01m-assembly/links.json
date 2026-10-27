@@ -105,7 +105,7 @@
 			"note": "階段四",
 			"meta": {
 				"deck": "puente",
-				"floor": "114:92,248:86,381:86,495:89",
+				"floor": "104:92,248:86,381:86,482:88",
 				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
@@ -134,7 +134,7 @@
 			"note": "階段四",
 			"meta": {
 				"deck": "alcazar",
-				"floor": "109:103,268:103",
+				"floor": "98:103,268:103",
 				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
@@ -163,7 +163,7 @@
 			"note": "階段四",
 			"meta": {
 				"deck": "toldilla",
-				"floor": "101:120,196:120",
+				"floor": "90:120,196:120",
 				"id": "deck-5",
 				"kind": "deck",
 				"level": 5,
@@ -192,7 +192,7 @@
 			"note": "階段四",
 			"meta": {
 				"deck": "castillo",
-				"floor": "422:103,495:103",
+				"floor": "422:103,482:103",
 				"id": "deck-6",
 				"kind": "deck",
 				"level": 4,
@@ -523,6 +523,53 @@
 			"note": "階段十二（TASK-0624）",
 			"meta": {
 				"id": "part-13"
+			}
+		},
+		{
+			"name": "裝飾",
+			"work": "calli-cosecha-01m-ornament",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				800,
+				320,
+				640
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T22:02:42",
+			"persona": "calli",
+			"note": "TASK-1027：船頭的 head 寬帶、cheek、head timber（照 Ship_Ends §4.4、康塞普西翁號步驟 17）",
+			"meta": {
+				"id": "part-14"
+			}
+		},
+		{
+			"name": "窗玻璃",
+			"work": "calli-cosecha-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				800,
+				320,
+				640
+			],
+			"enabled": true,
+			"created_at": "2026-10-27T22:02:44",
+			"persona": "calli",
+			"note": "TASK-1027：窗的玻璃（Tim「窗戶可以改玻璃」；Ship_Materials）",
+			"meta": {
+				"id": "part-15",
+				"material": "glass"
 			}
 		}
 	]

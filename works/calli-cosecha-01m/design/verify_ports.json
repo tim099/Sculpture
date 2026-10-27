@@ -1,17 +1,17 @@
 {
- "carve_cells": 9183,
- "paint_cells": 19198,
+ "carve_cells": 14187,
+ "paint_cells": 20452,
  "carve_by_color": {
-  "36": 2607,
-  "141": 4384,
-  "177": 2192
+  "36": 3472,
+  "141": 7184,
+  "177": 3531
  },
  "paint_to": {
-  "87": 415,
-  "242": 11679,
-  "248": 7104
+  "209": 570,
+  "242": 11788,
+  "248": 8094
  },
- "after_cells": 417638,
+ "after_cells": 420148,
  "ports_not_open": [],
  "stern_ports_not_open": [],
  "band_black_left": 0,
@@ -60,7 +60,7 @@
    "y1": 162,
    "z0": 95,
    "z1": 101,
-   "kind": "window"
+   "kind": "door"
   },
   {
    "deck": "puente",
@@ -105,7 +105,7 @@
    "y1": 162,
    "z0": 107,
    "z1": 112,
-   "kind": "window"
+   "kind": "door"
   },
   {
    "deck": "alcazar",
@@ -153,15 +153,138 @@
    "kind": "window"
   }
  ],
+ "side_windows": [
+  {
+   "deck": "puente",
+   "x0": 122,
+   "x1": 126,
+   "z0": 96,
+   "z1": 102
+  },
+  {
+   "deck": "puente",
+   "x0": 134,
+   "x1": 138,
+   "z0": 95,
+   "z1": 101
+  },
+  {
+   "deck": "puente",
+   "x0": 146,
+   "x1": 150,
+   "z0": 94,
+   "z1": 100
+  },
+  {
+   "deck": "puente",
+   "x0": 158,
+   "x1": 162,
+   "z0": 94,
+   "z1": 100
+  },
+  {
+   "deck": "puente",
+   "x0": 170,
+   "x1": 174,
+   "z0": 93,
+   "z1": 99
+  },
+  {
+   "deck": "alcazar",
+   "x0": 118,
+   "x1": 122,
+   "z0": 107,
+   "z1": 112
+  },
+  {
+   "deck": "alcazar",
+   "x0": 130,
+   "x1": 134,
+   "z0": 107,
+   "z1": 112
+  },
+  {
+   "deck": "alcazar",
+   "x0": 142,
+   "x1": 146,
+   "z0": 107,
+   "z1": 112
+  },
+  {
+   "deck": "alcazar",
+   "x0": 154,
+   "x1": 158,
+   "z0": 107,
+   "z1": 112
+  },
+  {
+   "deck": "alcazar",
+   "x0": 166,
+   "x1": 170,
+   "z0": 107,
+   "z1": 112
+  }
+ ],
+ "doors": [
+  {
+   "deck": "puente",
+   "face": "aft",
+   "y0": 158,
+   "y1": 162,
+   "z0": 93,
+   "z1": 99,
+   "door_x": 97,
+   "model_h": 8
+  },
+  {
+   "deck": "alcazar",
+   "face": "aft",
+   "y0": 158,
+   "y1": 162,
+   "z0": 105,
+   "z1": 115,
+   "door_x": 91,
+   "model_h": 12
+  },
+  {
+   "deck": "puente",
+   "face": "fwd",
+   "y0": 169,
+   "y1": 173,
+   "z0": 89,
+   "z1": 97,
+   "door_x": 487,
+   "model_h": 12,
+   "model_z0": 87
+  },
+  {
+   "deck": "puente",
+   "face": "fwd",
+   "y0": 147,
+   "y1": 151,
+   "z0": 89,
+   "z1": 97,
+   "door_x": 487,
+   "model_h": 12,
+   "model_z0": 87
+  }
+ ],
+ "side_windows_glass": 650,
+ "glass_cells": 1132,
+ "glass_cells_v1": 1000,
  "ports_total": 44,
  "lists": {
   "carve": [
-   9183,
-   "49d7d017048feb4c4703ff4f7ac418de3eb17c68848eb9413c2e9eb17122ddcc"
+   14187,
+   "3dc22fc007bcfadfd57da3d19fb3e2a853976938ed9ca35622c1c99699befbb4"
   ],
   "paint": [
-   19198,
-   "f6324b2d34416645fb65f27382a1205304d691d26c27502f2a34db82eaf36ab3"
+   20452,
+   "8eb869388c51fb79d654eee42ba483b83ee8baee431039041ed6f01053febb59"
+  ],
+  "glass": [
+   1132,
+   "0a7cdf4d8164d59e0c1d2df9b2a1ae061bcfa3fa05f4fa59411a4c80beb9b83a"
   ]
  }
 }

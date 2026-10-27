@@ -168,10 +168,11 @@ def main():
     H = anchors['hull']
     SL = RG['sails']
     belay = {}
+    bmax = SL.get('bow_belay_max_x', 495)      # TASK-1027：beakhead 把 x 487 以前、z 87 以上切掉 ⇒ 船頭那一欄改綁在艙壁頂上（照康塞普西翁號 bow_belay_max_x）
     for key in ('fore', 'main'):
-        belay['%s-sheet' % key] = min(495, M[key]['x'] - SL['sheet_aft'])
-        belay['%s-tack' % key] = min(495, M[key]['x'] + SL['tack_fwd'])
-    belay['sprit'] = 490
+        belay['%s-sheet' % key] = min(bmax, M[key]['x'] - SL['sheet_aft'])
+        belay['%s-tack' % key] = min(bmax, M[key]['x'] + SL['tack_fwd'])
+    belay['sprit'] = min(490, bmax)
     belay['mizzen-lateen'] = 112
     for nm, x in belay.items():
         p = rail(x)
@@ -181,7 +182,8 @@ def main():
         y = YC + sg * 24
         x = min(xx for (xx, yy, zz) in hull if yy == y and zz == 133)
         H['belay-bonaventure-lateen-' + s_] = [x, y, 133]
-        H['bs-shroud-' + s_] = [495, YC + sg * hout[(495, 95)], 95]
+        xs_ = min(495, bmax)
+        H['bs-shroud-' + s_] = [xs_, YC + sg * hout[(xs_, 95)], 95]
     # 甲板上的 lateen tack
     for key, (deck, x) in SL['lateen_tack'].items():
         z = int(LY.deck_z(plan, deck, x + 0.5)) + 1

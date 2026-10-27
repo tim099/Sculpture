@@ -5,6 +5,9 @@ import os, sys
 sys.stdout.reconfigure(encoding='utf-8')
 design, out = sys.argv[1], sys.argv[2]
 ports = next((a.split('=', 1)[1] for a in sys.argv[3:] if a.startswith('--ports=')), os.path.join(design, 'masks', 'ports'))
+# --skip=hull_fix（TASK-1027）：船殼重產之後不刻 hull_fix —— 那份是階段二 EXTRA 12 時代的橫桿，現在的 draft_lines（EXTRA 60）本來就沒有（舊清單裡 0 格）；
+#   新的舷頂 S 形讓其中 10 格（x 195／196、dy ±44、z 129–133）變成真的舷牆，照刻會在 toldilla 前緣開洞
+skip = set(next((a.split('=', 1)[1] for a in sys.argv[3:] if a.startswith('--skip=')), '').split(',')) - {''}
 
 
 def load(p):
@@ -17,8 +20,9 @@ def load(p):
 
 
 H = {}
-for f in ('hull_01.vox.txt', 'hull_02.vox.txt'):
-    H.update(load(os.path.join(design, 'masks', 'hull', f)))
+for f in sorted(os.listdir(os.path.join(design, 'masks', 'hull'))):      # TASK-1027：船頭船尾重畫之後船殼可能變三份清單 ⇒ 讀全部 hull_*（照康塞普西翁號）
+    if f.startswith('hull_') and f.endswith('.vox.txt'):
+        H.update(load(os.path.join(design, 'masks', 'hull', f)))
 n0 = len(H)
 steps = [('hull_fix', os.path.join(design, 'masks', 'hull_fix', 'carve_breaks.vox.txt'), 'carve'),
          ('砲門刻', os.path.join(ports, 'carve.vox.txt'), 'carve'),
@@ -26,6 +30,12 @@ steps = [('hull_fix', os.path.join(design, 'masks', 'hull_fix', 'carve_breaks.vo
          ('艏斜桅孔', os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), 'carve')]
 print('船殼 %d' % n0)
 for nm, p, kind in steps:
+    if nm in skip:
+        print('  · %s：--skip，不套' % nm)
+        continue
+    if not os.path.exists(p):
+        print('  · %s：沒有清單，跳過' % nm)
+        continue
     L = load(p)
     miss = [k for k in L if k not in H]
     if kind == 'carve':

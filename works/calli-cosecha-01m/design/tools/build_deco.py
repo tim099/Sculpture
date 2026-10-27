@@ -46,6 +46,7 @@ LA = plan['stern_deco']['lanterns']
 for lt, side in zip(V['lanterns'], ('P', 'C', 'S')):
     x, y, z = lt['at']
     cli('op=work', 'sub=model', 'persona=calli', 'work=%s-stern-deco' % HULL, 'name=lantern-' + side, 'source_work=' + LA['source'],
-        'at=%g,%g,%g' % (x, y, z), 'pivot=8.5,8.5,0', 'scale=%g' % LA['scale'], 'meta={"kind":"light"}', 'note=階段五 船尾燈（沿用三叉戟號船尾燈）', ok=(0, 2))
+        'at=%g,%g,%g' % (x, y, z), 'pivot=8.5,8.5,0', 'scale=%g' % LA['scale'], 'meta={"kind":"light"}', 'overwrite=1',     # TASK-1027：船尾頂搬了 ⇒ 重跑要搬燈
+        'note=階段五 船尾燈（沿用三叉戟號船尾燈）；TASK-1027 搬到新的船尾頂', ok=(0, 2))
 print('✓ 船尾燈 3 盞')
 print('\n'.join(cli('op=work', 'sub=links', 'work=' + ASM).splitlines()[-24:]))
