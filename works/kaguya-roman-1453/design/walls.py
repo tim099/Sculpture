@@ -93,7 +93,7 @@ def li_section():
     return B
 
 
-def inner_tower(M, x0, x1, yc, h=92, salt=''):
+def inner_tower(M, x0, x1, yc, h=92, salt='', tun=True):
     """內牆方塔：x0..x1（10.4 m）、往外凸到牆外 6 m、城裡那側凸 0.4 m；上層兩扇圓拱窗、下層射口、塔頂雉堞、走道穿過。"""
     yo, yi = yc - IN_T - 30, yc + IN_T + 2
     block(M, x0, yo, x1, yi, 0, h, MI)
@@ -108,6 +108,8 @@ def inner_tower(M, x0, x1, yc, h=92, salt=''):
         opening(M, 'y', yo, +1, x0 + u + 3, x0 + u + 5, 28, 38, 3, arch=False, brick=False)
     for (xp, d) in ((x0, +1), (x1 - 1, -1)):               # 兩側（露在牆外那一段）各一扇窗
         opening(M, 'x', xp, d, yo + 8, yo + 16, h - 28, h - 10, 3)
+    if not tun:                                            # 不挖通道（四面門洞塔的塞子：照這一份減掉挖好的那一份）
+        return
     tunnel(M, x0, x1, yc, 5, IN_TOP, IN_TOP + 6)
     for (xp, d) in ((x0, +1), (x1 - 1, -1)):               # 通道口的磚拱
         for y in range(yc - 7, yc + 7):
@@ -202,7 +204,7 @@ def lo_section():
     return B
 
 
-def outer_tower(M, x0, x1, yc, h=54, crescent=False):
+def outer_tower(M, x0, x1, yc, h=54, crescent=False, tun=True):
     """外牆的塔：方塔，或新月塔（外面是半圓）；寬 x1 − x0（7 m）、外凸到牆外 5 m、高 10.8 m＋雉堞。"""
     yo, yi = yc - OUT_T - 25, yc + OUT_T + 1
     r = (x1 - x0) / 2.0
@@ -225,7 +227,8 @@ def outer_tower(M, x0, x1, yc, h=54, crescent=False):
     opening(M, 'y', yo + (0 if not crescent else 0), +1, xm - 3, xm + 3, h - 20, h - 8, 3 if not crescent else 4)
     for xs in (x0 + 7, x1 - 8):
         opening(M, 'y', yo if not crescent else int(yr - math.sqrt(max(0.0, r * r - (xs + 0.5 - xc) ** 2))), +1, xs, xs + 1, 16, 24, 3, arch=False, brick=False)
-    tunnel(M, x0, x1, yc, 3, OUT_TOP, OUT_TOP + 4)
+    if tun:
+        tunnel(M, x0, x1, yc, 3, OUT_TOP, OUT_TOP + 4)
 
 
 def lo_tower(crescent):
@@ -305,7 +308,7 @@ def s_section():
     return B
 
 
-def sea_tower(M, x0, x1, yc, h=80):
+def sea_tower(M, x0, x1, yc, h=80, tun=True):
     """海牆方塔：寬 x1 − x0、外凸到牆外 4 m、高 16 m＋雉堞；上層兩扇窗、下層射口、走道穿過。"""
     yo, yi = yc - SEA_T - 20, yc + SEA_T + 1
     block(M, x0, yo, x1, yi, 0, h, MS)
@@ -322,7 +325,8 @@ def sea_tower(M, x0, x1, yc, h=80):
         opening(M, 'y', yo, +1, x0 + w // 2 - 3, x0 + w // 2 + 4, h - 24, h - 9, 3)
     for xs in (x0 + 8, x1 - 9):
         opening(M, 'y', yo, +1, xs, xs + 2, 26, 34, 3, arch=False, brick=False)
-    tunnel(M, x0, x1, yc, 4, SEA_TOP, SEA_TOP + 5)
+    if tun:
+        tunnel(M, x0, x1, yc, 4, SEA_TOP, SEA_TOP + 5)
 
 
 def s_tower():
@@ -534,7 +538,104 @@ def s_gate_mangana():
     return B
 
 
+# ═════════════ 四面門洞塔與塞子（Tim 2026-10-27「需要讓牆通過的地方有門洞」「另外會需要做三叉 四叉版本」「可以用子模型挖洞(或是原本的就挖好洞 子模型填上洞來切換)」）═════════════
+# 牆接牆的接點（Blockside townWallJx：T、十字、兩道端點對接）擺這一件：一般的塔再挖一條橫過牆的通道（牆外那一面、城裡那一面各一個門洞，跟沿牆的通道在塔心十字交叉）
+#   ⇒ 四面都有門洞；沒有牆接上的那幾面，遊戲照同一個位置、同一個轉向再擺那一面的塞子（plug-a／b ＝ 沿牆那兩面、plug-o ＝ 牆外、plug-i ＝ 城裡）。
+#   塞子 ＝ 那一面門洞從面往裡 PLUG_D 格（挖之前那一份減掉挖好的這一份）、顏色照挖之前那一格 ⇒ 塞上了跟一般的塔一樣（磚拱圈留著，像封起來的門）；框跟四面門洞塔一樣大（擺法照抄）。
+#   接口：wall-a／wall-b（沿牆兩面，同一般的塔）、wall-c ＝ 牆外那一面、wall-d ＝ 城裡那一面（那一格朝外的面；x 是塔心）——
+#   塔往牆外凸得多、往城裡凸得少，模型框卻是對稱的 ⇒ 遊戲要照接口量那一面在哪，不能照框（以前接進來的牆照框停，停在離城裡那一面兩三公尺外）。
+PLUG_D = 5                                                 # 塞子從面往裡幾格（外牆塔牆外那一面的門洞落在窗上：窗 3 格深、窗底的暗格也要補回來）
+
+
+def tunnel_y(M, y0, y1, xc, half, z0, spring):
+    """橫過牆的通道：沿 y 挖 y0..y1、寬 2·half（中心 xc）、底 z0、起拱 spring；地面鋪石（同 tunnel，換一個軸）。"""
+    for y in range(y0, y1):
+        for x in range(int(xc - half - 1), int(xc + half + 1)):
+            for z in range(z0, spring + half + 2):
+                dx = x + 0.5 - xc
+                d = math.hypot(dx, z + 0.5 - spring) if z >= spring else abs(dx)
+                if d < half:
+                    M.cells.pop((x, y, z), None)
+        for x in range(int(xc - half), int(xc + half)):
+            if (x, y, z0 - 1) in M.cells:
+                M.cells[(x, y, z0 - 1)] = PAVE
+
+
+def y_ring(M, yp, xc, spring, r_out, z_lo):
+    """橫通道口的磚拱：那一面（y ＝ yp）離拱心 r_out 以內、還在的格改紅磚（洞本身已經挖掉）。"""
+    for x in range(int(xc - r_out - 1), int(xc + r_out + 1)):
+        for z in range(z_lo, spring + int(r_out) + 2):
+            if (x, yp, z) in M.cells and math.hypot(x + 0.5 - xc, z + 0.5 - spring) < r_out:
+                M.cells[(x, yp, z)] = BRICK
+
+
+CROSS = {   # 套 ⇒ 塔怎麼蓋（同 li_tower／lo_tower／s_tower）、塔身 x0..x1、yo（牆外那一面）、yi（城裡那一面的外側）、通道半寬、走道高、起拱、磚拱外徑、砌法
+    'land-inner': dict(size=(60, 88, 102), yc=44, prof=lambda M, yc: (inner_profile(M, 0, 4, yc), inner_profile(M, 56, 60, yc)),
+                       tower=lambda M, yc, tun: inner_tower(M, 4, 56, yc, tun=tun), x0=4, x1=56, yo=44 - IN_T - 30, yi=44 + IN_T + 2,
+                       half=5, top=IN_TOP, spring=IN_TOP + 6, ring=6.6, mason=MI),
+    'land-outer': dict(size=(45, 64, 64), yc=32, prof=lambda M, yc: (outer_profile(M, 0, 5, yc), outer_profile(M, 40, 45, yc)),
+                       tower=lambda M, yc, tun: outer_tower(M, 5, 40, yc, tun=tun), x0=5, x1=40, yo=32 - OUT_T - 25, yi=32 + OUT_T + 1,
+                       half=3, top=OUT_TOP, spring=OUT_TOP + 4, ring=4.6, mason=MO),
+    'sea': dict(size=(55, 60, 90), yc=30, prof=lambda M, yc: (sea_profile(M, 0, 5, yc), sea_profile(M, 50, 55, yc)),
+                tower=lambda M, yc, tun: sea_tower(M, 5, 50, yc, tun=tun), x0=5, x1=50, yo=30 - SEA_T - 20, yi=30 + SEA_T + 1,
+                half=4, top=SEA_TOP, spring=SEA_TOP + 5, ring=5.6, mason=MS),
+}
+
+
+def cross_model(set_, solid=False):
+    """四面門洞塔（solid ⇒ 一般的塔、通道都不挖：拿來減出塞子）。"""
+    c = CROSS[set_]
+    M = Model(c['size'])
+    c['prof'](M, c['yc'])
+    c['tower'](M, c['yc'], not solid)
+    if not solid:
+        xc = (c['x0'] + c['x1']) / 2.0
+        tunnel_y(M, c['yo'], c['yi'], xc, c['half'], c['top'], c['spring'])
+        for yp in (c['yo'], c['yi'] - 1):
+            y_ring(M, yp, xc, c['spring'], c['ring'], c['top'] + 2)
+    return M
+
+
+def cross(set_):
+    c = CROSS[set_]
+    _, B = W(set_, 'cross', '四面門洞塔（牆接牆的接點：沿牆、牆外、城裡四面都有門洞；沒接牆的那一面遊戲擺塞子）', c['size'])
+    B['M'] = M = cross_model(set_)
+    xa = (c['x0'] + c['x1']) // 2
+    M.anchor('wall-a', 0, c['yc'], 0)
+    M.anchor('wall-b', c['size'][0] - 1, c['yc'], 0)
+    M.anchor('wall-c', xa, c['yo'], 0)
+    M.anchor('wall-d', xa, c['yi'] - 1, 0)
+    return B
+
+
+PLUG_FACE = {'a': '沿牆 −x 那一面', 'b': '沿牆 +x 那一面', 'o': '牆外那一面', 'i': '城裡那一面'}
+
+
+def plug(set_, face):
+    c = CROSS[set_]
+    M, B = W(set_, 'plug', '塞子（四面門洞塔%s的門洞；框、擺法同四面門洞塔）' % PLUG_FACE[face], c['size'], variant=face)
+    full, cut = cross_model(set_, solid=True), cross_model(set_)
+    xc = (c['x0'] + c['x1']) / 2.0
+    for (x, y, z), col in full.cells.items():
+        if (x, y, z) in cut.cells:
+            continue
+        if face == 'a' and not (c['x0'] <= x < c['x0'] + PLUG_D and abs(y + 0.5 - c['yc']) < c['half'] + 1):
+            continue
+        if face == 'b' and not (c['x1'] - PLUG_D <= x < c['x1'] and abs(y + 0.5 - c['yc']) < c['half'] + 1):
+            continue
+        if face == 'o' and not (c['yo'] <= y < c['yo'] + PLUG_D and abs(x + 0.5 - xc) < c['half'] + 1):
+            continue
+        if face == 'i' and not (c['yi'] - PLUG_D <= y < c['yi'] and abs(x + 0.5 - xc) < c['half'] + 1):
+            continue
+        M.put(x, y, z, col)
+    p = {'a': (c['x0'], c['yc']), 'b': (c['x1'] - 1, c['yc']), 'o': (int(xc), c['yo']), 'i': (int(xc), c['yi'] - 1)}[face]
+    M.anchor('door', p[0], p[1], c['top'])
+    return B
+
+
 ALL = [li_section, li_tower, li_gate, li_end,
        lo_section, lambda: lo_tower(False), lambda: lo_tower(True), lo_gate, lo_end,
        s_section, s_tower, s_gate, s_end,
-       li_gate_golden, lo_gate_golden, s_gate_mangana]
+       li_gate_golden, lo_gate_golden, s_gate_mangana] + \
+      [(lambda st: lambda: cross(st))(st) for st in ('land-inner', 'land-outer', 'sea')] + \
+      [(lambda st, f: lambda: plug(st, f))(st, f) for st in ('land-inner', 'land-outer', 'sea') for f in 'aboi']
