@@ -170,8 +170,10 @@
         {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 254, "dir": -1, "dy": -18, "head_x": 237},
         {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 254, "dir": -1, "dy": 18, "head_x": 237},
         {"name": "castillo-P", "lo": "tercera", "up": "castillo", "xs": 544, "dir": 1, "dy": -14, "head_x": 563},
-        {"name": "castillo-S", "lo": "tercera", "up": "castillo", "xs": 544, "dir": 1, "dy": 14, "head_x": 563}
+        {"name": "castillo-S", "lo": "tercera", "up": "castillo", "xs": 544, "dir": 1, "dy": 14, "head_x": 563},
+        {"name": "hold", "lo": "hold", "up": "orlop", "xs": 352, "dir": -1, "dy": 0, "head_x": 317, "well": true, "well_a": 16, "well_b": 33}
       ],
+      "hold_src": "貨艙梯子（TASK-1028；Tim 2026-10-27「是否可以補上通往貨艙的樓梯」）：底艙甲板（x 230–520、z 54）底下的貨艙艙底在中線 z 7–16，v0 一座梯子都沒有。中線、梯腳 x 353（離主桅 x 379 遠 26 格）往船尾爬、梯頂 x 317 站上底艙甲板（彈藥庫門 x 281–288 前面 30 格、閃開後艙口 x 285–295）；15 階比一層甲板長兩倍多 ⇒ 底艙甲板的梯井只開上半段（well_a 16 ～ well_b 33：頭頂 1.4 m 碰得到底艙甲板橫樑的那幾階）",
       "src": "設計決定（照藍鯊號／收穫號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井（底艙那座靠左舷、閃開中線的艙口）；第一→二層、二→三層各前後兩座（閃開主桅 x 379、主艙口）；船樓的梯子靠在 break 外面、頭踩上船樓甲板。castillo 那兩座 v0 在 dy ±24 ⇒ 擋在第三層第 12 門砲的艙內那一側（draft_decks ports_blocked_inside 48 格）⇒ 收到 dy ±14、船首樓艙壁的門改開在 dy ±26。船樓梯子的 xs 讓梯頂（xs ＋ dir × (run × (階 ＋ 1) ＋ run − 1)）貼著 break 艙壁（藍鯊號六座都是空 0 格）：v1 照舊的 351／261／540 ⇒ 梯頂停在半空、離艙壁 5／7／4 格（Tim 2026-10-27 遊戲裡看到）⇒ 346／254／544。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
     }
   },

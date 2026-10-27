@@ -63,11 +63,12 @@ def main():
         if not ld.get('well'):
             continue
         s, xs, yc = ld['dir'], ld['xs'], YC + ld['dy']
-        xa, xb = sorted((xs + s * 2, xs + s * 16))         # 從第一階的上方開：lo 點（第一階）頭頂 14 格要空（v1 從 +4 開 ⇒ orlop 梯子 lo 點頂到主甲板的橫樑）
+        wa, wb = ld.get('well_a', 2), ld.get('well_b', 16)  # 從第一階的上方開：lo 點（第一階）頭頂 14 格要空（v1 從 +4 開 ⇒ orlop 梯子 lo 點頂到主甲板的橫樑）
+        xa, xb = sorted((xs + s * wa, xs + s * wb))        # 貨艙梯子（TASK-1028）比一層甲板長兩倍多 ⇒ 只開上半段（well_a／well_b：頭頂碰得到上一層的那幾階）
         m = (X[:, None] >= xa) & (X[:, None] <= xb) & (np.abs(Y - yc)[None, :] <= th + 2)
         hole[ld['up']] |= m
         side = (X[:, None] >= xa) & (X[:, None] <= xb) & (np.abs(Y - yc)[None, :] == th + 3)
-        low_end = (X[:, None] == xs + s * 1) & (np.abs(Y - yc)[None, :] <= th + 3)
+        low_end = (X[:, None] == xs + s * (wa - 1)) & (np.abs(Y - yc)[None, :] <= th + 3)
         coam[ld['up']] |= side | low_end
     mast_keys = [m['key'] for m in plan['masts']['rows'] if m['key'] != 'bowsprit']
     MS = {m['key']: m for m in LY.masts(plan, L)}
@@ -131,7 +132,10 @@ def main():
         cell = lad.setdefault(up, np.zeros(S.shape, np.uint8))
         s, xs = ld['dir'], ld['xs']
         yc = YC + ld['dy']
-        zl = int(zdeck[lo][xs - x0])
+        if lo == 'hold':                                   # 貨艙梯子（TASK-1028）：梯腳踩艙底 ＝ 梯腳那一柱船殼內板的頂（艙裡最低那一格的下面）
+            zl = int(np.argmax(inside[xs - s - x0, yc - ylo, :])) - 1
+        else:
+            zl = int(zdeck[lo][xs - x0])
         hx = ld.get('head_x', xs + s * 18)
         zu = int(zdeck[up][hx - x0])
         n = (zu - zl - 1) // LD['rise']                    # 最上一階到上一層甲板面 ≤ rise
