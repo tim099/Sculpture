@@ -19,7 +19,12 @@
 			"enabled": true,
 			"created_at": "2026-10-28T09:05:44",
 			"persona": "gura",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 24
+			}
 		},
 		{
 			"name": "船殼-窗玻璃",
@@ -41,6 +46,7 @@
 			"persona": "gura",
 			"note": "拆件：從 `船殼`（gura-swallow-01m）拆出（TASK-0646）",
 			"meta": {
+				"id": "part-1",
 				"material": "glass"
 			}
 		},
@@ -66,6 +72,7 @@
 			"meta": {
 				"deck": "hold",
 				"floor": "128:11,240:11",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "貨艙地板",
@@ -94,6 +101,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "141:32,205:32,256:37",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 2,
 				"name": "主甲板",
@@ -122,6 +130,7 @@
 			"meta": {
 				"deck": "cabin",
 				"floor": "104:26,139:26",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 1,
 				"name": "船尾艙房",
@@ -150,6 +159,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "98:45,140:45",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "後甲板",
@@ -174,7 +184,10 @@
 			"enabled": true,
 			"created_at": "2026-10-28T09:50:09",
 			"persona": "gura",
-			"note": "步驟 7（TASK-0968）"
+			"note": "步驟 7（TASK-0968）",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -194,7 +207,10 @@
 			"enabled": true,
 			"created_at": "2026-10-28T09:50:10",
 			"persona": "gura",
-			"note": "步驟 7（TASK-0968）"
+			"note": "步驟 7（TASK-0968）",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "後桅",
@@ -214,7 +230,10 @@
 			"enabled": true,
 			"created_at": "2026-10-28T09:50:41",
 			"persona": "gura",
-			"note": "步驟 7（TASK-0968）"
+			"note": "步驟 7（TASK-0968）",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "支索板",
@@ -234,7 +253,10 @@
 			"enabled": true,
 			"created_at": "2026-10-28T09:55:16",
 			"persona": "gura",
-			"note": "步驟 8（TASK-0968）"
+			"note": "步驟 8（TASK-0968）",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "彈藥庫",
@@ -256,6 +278,7 @@
 			"persona": "gura",
 			"note": "步驟 10（TASK-0968）",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 600
@@ -279,7 +302,10 @@
 			"enabled": true,
 			"created_at": "2026-10-28T10:01:24",
 			"persona": "gura",
-			"note": "步驟 10（TASK-0968；draft_fit.py）"
+			"note": "步驟 10（TASK-0968；draft_fit.py）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "錨架",
@@ -299,7 +325,10 @@
 			"enabled": true,
 			"created_at": "2026-10-28T10:03:53",
 			"persona": "gura",
-			"note": "步驟 11（TASK-0968）"
+			"note": "步驟 11（TASK-0968）",
+			"meta": {
+				"id": "part-7"
+			}
 		}
 	]
 }

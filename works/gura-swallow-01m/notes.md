@@ -173,3 +173,21 @@
 - 組起來（引擎 stats）：64,095 格、1 元件、空腔 0、鏡像差 0。
 - **反向對照**：`--probe=shift=錨-S:-6`（右舷錨往船殼推 6 格）⇒ 錨-S 撞 717、錨-P 0。
 - 產生程式重跑：4 個輸出檔逐位元組相同。過程圖 `overlays/stage11_helm_anchor.png`。
+
+## 步驟 14 給遊戲的 meta 與匯入 Blockside（2026-10-28）
+- 船殼關聯 meta kind=ship、waterline_z=24。`work sub=ropecheck`：繩 79（含橫繩）、158 端全部 ok；link_overlap 0。新做的元件不用標 render（沒有新的桶、槳、舵輪；船首像、舵柄很小）。
+- 在自己的 Blockside worktree（`D:/Unity/Blockside-wt/gura-968`，從 dev 36da004 開、`_cache` 從共用工作區抄進去；提交前快轉到 dev 9091d0f、重建）：`admin.py import --work gura-swallow-01m-assembly --id swallow --name 燕子號` ⇒ reimport ×2 ⇒ `admin.py ids --id swallow`。⚠ import／reimport／ids 會把 config/game.json 整份重排 ⇒ 照 HEAD 原樣、只在 ships 最後插 ships[swallow] 那一筆（scratchpad 的 gamejson_fix_swallow.py），再 `admin.py build`。
+- 匯入檢查第一輪 ✗ 4、在雕刻這邊修掉的：
+  1. ✗ 後甲板兩座梯子的梯腳出口被第 1 門砲擋住：砲往裡退到零碰撞之後砲架尾到中線兩側 6–10 格（y 70–74／86–90），梯腳在 dy ±8 ⇒ 挪到 dy ±4。步驟 5 的設計檢查只看砲門的砲道，看不到砲退進來的位置。
+  2. ✗ 後甲板、船長艙走不到（甲板連通 ⑤）：break 前面那一塊（後甲板梯子的梯腳）被夾成孤島 —— 遊戲的尋路把每個模型外框外擴 1 格當障礙（Blockside 40_crew.js blocked），第 1 門砲兩舷擋到 x 157、中線只剩 y 77–84，主艙口圍板擋中線 ⇒ 貨艙梯子與井往船頭挪（v2 3 格還是孤島：圍板 x 158 緊貼砲的外框 ⇒ v3 再 6 格，井 163–176、head 178），x 158–163 留一整排橫的走道。主艙口艙蓋跟著挪（x 165，模型 at 改、格子不動）。
+  3. ⚠ 樓梯自檢 ④ 貨艙梯子梯頂踩空 3 柱：井開 18 格、最後一階在 x 166–167 ⇒ 井只開到最後一階（well_len 14）、head 挪到井邊外 2 格；主艙口艙蓋縮成 12 × 11（delta 刻 65 貼 10 換色 9、hinge-b 改 [11,0,0]）—— 飛魚號同一個坑。
+  每一輪：plan.json → draft_decks／draft_fit → `tools/delta_apply.py`（deck-main、deck-quarter、ladders-main、ladders-quarter、hatch-main）補到差 0 → 梯子固定點 overwrite → check_decks 6 件 10,998 格缺 0／多 0／色差 0、梯子點 16／16。
+- 最後：**匯入檢查 ✗ 0、⚠ 2**（送藥手 2／3、軍官 0／2 —— 沒有舵輪的船，40_crew.js 照 HULL_X0 ＋ 160 找軍官站位 ⇒ 落在船頭外；同飛魚號）；樓梯自檢 4 座 ✗ 0、⚠ 0；甲板連通 4 層都接得到（主甲板船頭絞盤前面 5.3 m² 接不到：絞盤橫跨甲板寬，＜ 10 m² 只列不報）；火藥 6／6 門走得到取用點（最遠 4.7 m）；操舵 舵令 ⇒ 舵柄 ⇒ 舵；廚房 1 座（站得住的面 4）；門 2 扇（開口 132、—）。彈藥庫 hoist 不用寫。
+- game.json ships[swallow]：geo spar [31, 40]、marines [32, 53]、center 45、aim 31、aimZ [5, 223]、deckAim [31, 45]、rigAim [55, 220]；cfg pump 2；crew 照飛魚號（軍官 2、舵手 1、桅頂 0、陸戰隊 4、marineGap 14、handsK 0.25、航海士 0）；role merchant。選船卡片：85 噸・水線 14.9 m・砲 6 門・齊射 11・7 面帆・34 人。
+- 對拍（無頭、headless=1、#dump；對照組 `admin.py snapshot refs/heads/dev`）：`?demo=60&dump=1&seed=3` 089b6e562974、`&seed=2&ship=falcon,stormkaap` 79a38474d3c9、`&seed=3&ship=labelle,flyingfish` 457aec4be0c7 —— dev 兩次、新成品兩次逐位元組相同。
+- 戰局（一個種子，讀數不是結論）：`?demo=120&seed=3&ship=swallow,flyingfish` ⇒ 燕子號開 51 發、命中 21、航速 2.3–5.6 m/s、戰鬥帆 0.51、廚房 30 人吃到飯。
+
+## 步驟 15 交船（2026-10-28）
+- 換一艘船時的檢查表（Ship_Game §10）逐條看過：ropecheck 全 ok（沒有 bind／snap）；組裝件名「燕子號」、船殼「燕子號 船殼」帶 sub；組裝件與每件子作品記了 meters_per_voxel、模型都明寫 scale；開工前查過 components（砲、錨、火藥桶、羅經櫃、爐灶、帆桁都引用現有的；新做的只有船首像、lateen 帆桁、舵、舵柄、艙蓋、絞盤、彈藥庫 —— 本船的尺寸或個性裝飾）；爐灶是廚房（kind=galley、沒標 deco）；砲、帆桁、火藥桶、羅經櫃是外部模型帶 kind；舵 kind=rudder＋spin、stock-top；舵柄 kind=tiller＋spin；船殼關聯 kind=ship、waterline_z；梯子 kind=ladders 四點；樓梯自檢 ✗ 0；ratlines 是橫繩組、lower 標了 climb=1；彈藥庫裡有桶；每層甲板 kind=deck；三角帆桁 yard=gaff＋rig=lateen＋fore；全船木頭（沒有材質關聯）；窗玻璃是獨立關聯 material=glass；空艙房不做；砲零碰撞、砲口在船殼外；艙蓋 kind=door；沒有封閉砲甲板 ⇒ 沒有砲門蓋板；繩帆 broken 0、帆繩 meta 0 缺；帆裝三段的表在步驟 8；組裝件 1 元件、空腔 0、link_overlap 0、兩舷對稱；產生程式重跑逐位元組相同。
+- **給遊戲那側填 geo 的高度**（世界 z，0.1 m／格）：龍骨底 0；水線 24；貨艙地板 10（站 11）；船長艙地板 25（站 26）；主甲板 31（站 32；舷弧 141:32 → 256:37）；後甲板 44（站 45）；舷頂 船腰 39、船頭 46、船尾 52–53；砲軸 37–39；主桅平台 141、主桅頂 223；後桅頂 117；course 帆桁 129、topsail 帆桁 209；艏斜桅尖 (323, 82)；船殼 x 95–262（全長含艏斜桅 x 90–323）。
+- checksum：Blockside `_cache/swallow.vxk` ＝ `c:37b56e4ec9b192ec4bb19dc92af9b6e688802a25`（vxk_lock）。
