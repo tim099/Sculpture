@@ -1,0 +1,432 @@
+{
+ "title": "飛魚號（牙買加／百慕達 sloop，Chapman 的線形 × 0.675）新圖紙 01：線形、側面、甲板高度、砲位表、桅帆表",
+ "task": "TASK-0971（傘 TASK-0964）",
+ "author": "gura",
+ "date": "2026-10-27",
+ "sources": {
+  "CH": "Chapelle, The Baltimore Clipper (1930) p.9–12、圖版 p.11「Bermuda Sloop — from Chapman」（重繪 Chapman, Architectura Navalis Mercatoria 1768；Chapelle 推定約 1750 年的船）—— https://archive.org/details/baltimoreclipper00howa 掃描 n27；本作品 references/chapelle1930_p11_*（gura 對過圖下的尺寸與 p.9–10 原文）",
+  "M": "gura 在 CH 圖版上量的（〔量圖〕，誤差 ±10%；線圖 LBP 60′9″ ＝ AP 到 FP ≈ 1500 px、帆圖比例尺 20 ft）",
+  "R": "references/research_sloop_2026-10-27.md（研究代理＋gura 對過的；噸位、砲、人的表）",
+  "scale": "本船 ＝ CH × 0.675（照 CH 的長寬比 2.87 ＋ BOM 公式反推 35 t ⇒ LBP 41 ft）；CH 1 ft ＝ 0.675 × 3.048 ＝ 2.057 格"
+ },
+ "class": {
+  "v": "牙買加／百慕達單桅 sloop（縱帆主帆＋方 topsail），35 t bm〔估〕；⚠ 1666 年偏早 —— 當泛用的小單桅船",
+  "src": "R §1、§4：1680 年小船 14–35 t、c.1700 百慕達 30–40 t 取中；CH p.9「square topsails, long bowsprits and loose-foot mainsails」"
+ },
+ "meters_per_cell": 0.1,
+ "space": {
+  "x": 400,
+  "y": 160,
+  "z": 320,
+  "yc": 80,
+  "note": "中線 ＝ 第 80 格（鏡像 y ↔ 160 − y）；x 留給 boom 伸出船尾、長艏斜桅"
+ },
+ "lines": {
+  "half_beam": {
+   "v": 21.5,
+   "src": "CH：Beam moulded 21′2″ × 2.057 ＝ 43.5 格 ⇒ 全寬 43 格（|dy| ≤ 21；寬只能是奇數）"
+  },
+  "keel_top": {
+   "v": 3,
+   "src": "設計決定：龍骨 0.3 m"
+  },
+  "keel_half": {
+   "v": 1,
+   "src": "設計決定：龍骨寬 3 格（0.3 m）"
+  },
+  "plan_half": {
+   "v": 14,
+   "src": "M（橫剖面）：船中剖面從龍骨直直的 V 往外到半寬 ≈ 15 格才轉成圓舭"
+  },
+  "astilla": {
+   "v": 9,
+   "src": "M（橫剖面）：V 的那一段升 ≈ 9.7 格 ⇒ 斜 ≈ 33°（CH p.170 的表 25°，研究代理讀；取量到的）"
+  },
+  "max_breadth_z": {
+   "v": 18,
+   "src": "M（橫剖面）：最寬處在龍骨底到甲板的 65% 高（龍骨座標 17.5）"
+  },
+  "tumblehome": {
+   "v": 1,
+   "src": "M（橫剖面）：最寬處以上幾乎直、到舷頂收 ≈ 1 格"
+  },
+  "tumblehome_ref_z": {
+   "v": 37,
+   "src": "＝ 船腰舷頂（世界 z 40）在龍骨座標的高度（drag 在船中抬 3 格）"
+  },
+  "tumblehome_pow": {
+   "v": 1.4,
+   "src": "設計決定"
+  },
+  "tumblehome_above_per_cell": {
+   "v": 0.05,
+   "src": "設計決定：船尾加高的舷牆再往內收一點"
+  },
+  "bilge_pow": {
+   "v": 2.0,
+   "src": "M（橫剖面）：V 上面是一段紮實的圓舭（比拉貝爾號的鼓肚 2.3 尖一點）"
+  },
+  "s_aft": {
+   "v": 0.45,
+   "src": "M（半寬圖）：最寬處在船中稍前、船尾收得長（fine run）"
+  },
+  "s_fwd": {
+   "v": 0.68,
+   "src": "M（半寬圖）：船頭飽滿、收得短"
+  },
+  "sternpost_x0": {
+   "v": 90,
+   "src": "設計決定：艉柱腳（後緣）的 x；艉柱在水線（z 25）的後緣 ＝ AP ＝ x 80（CH 的 AP 在艉柱後緣、舵在它後面）"
+  },
+  "sternpost_rake_deg": {
+   "v": 22,
+   "src": "M（線圖）：艉柱 rabbet 那條線傾 ≈ 22°（CH p.10「very raking stern … post」）"
+  },
+  "sternpost_top_z": {
+   "v": 47,
+   "src": "＝ 船尾舷頂"
+  },
+  "wing_transom_z": {
+   "v": 24,
+   "src": "設計決定：方艉的 wing transom 在甲板下一點（CH 線圖：艉柱頂接一片斜的方艉）"
+  },
+  "transom_ratio": {
+   "v": 0.62,
+   "src": "設計決定：方艉半寬 ÷ 最寬（CH 半寬圖船尾那一段，量不準）"
+  },
+  "forefoot_x": {
+   "v": 186,
+   "src": "設計決定：讓艏柱在水線（世界 z 25、龍骨座標 18）到 x 205 ⇒ LBP 125 格（CH 60′9″ × 2.057 ＝ 125.0）；直龍骨 96 格（CH 量到 ≈ 44 ft × 2.057 ＝ 91）"
+  },
+  "stem_rake": {
+   "v": 24,
+   "src": "M（線圖）：forefoot 從 FP 後 ≈ 10.6 ft 開始彎、到甲板高度在 FP 前 ≈ 1 ft ⇒ 甲板高度（龍骨座標 28）比 forefoot 前 24 格"
+  },
+  "stem_ref_z": {
+   "v": 28,
+   "src": "＝ 船頭甲板在龍骨座標的高度"
+  },
+  "stem_pow": {
+   "v": 0.5,
+   "src": "設計決定：圓弧的 forefoot（x ∝ √z，底下跟龍骨相切）—— CH「very raking stem」"
+  },
+  "stem_top_z": {
+   "v": 43,
+   "src": "＝ 船頭舷頂"
+  },
+  "deadwood_aft_z": {
+   "v": 11,
+   "src": "M（橫剖面船尾那幾站）：船尾深 V、deadwood 抬到 1.1 m"
+  },
+  "deadwood_fwd_z": {
+   "v": 4,
+   "src": "設計決定：船頭 deadwood 0.4 m"
+  },
+  "bow_pow_low": {
+   "v": 1.8,
+   "src": "設計決定"
+  },
+  "bow_pow_high": {
+   "v": 2.6,
+   "src": "M（半寬圖）：上面的船頭很鈍、飽滿"
+  },
+  "aft_pow": {
+   "v": 1.4,
+   "src": "設計決定"
+  },
+  "drag_deg": {
+   "v": 3.5,
+   "src": "CH 線圖：龍骨畫平、水線斜 ⇒ 吃水 船尾 12.4 ft、船頭 8.7 ft（M；CH 標 12′3″），差 3.7 ft ÷ LBP 60.75 ⇒ 3.5°；CH p.10「deep drag of the keel」"
+  },
+  "top": [[62, 49], [100, 48], [104, 48], [113, 40], [188, 40], [205, 42], [216, 43]],
+  "top_src": "舷頂（舷牆頂，世界 z）折線：船腰甲板 z 30 ＋ 10 格舷牆（CH 量到 ≈ 3 ft × 0.675 ＝ 0.6 m；遊戲要 1 m 的舷牆擋人、砲門 ⇒ 設計決定）；船尾（CH「the high stern」，M 量到船尾舷頂比水線高 ≈ 11 ft × 2.057 ＝ 23 格 ⇒ 48）＝ 後甲板 40 ＋ 8 格欄、往船尾升到 49；break（x 104）往前 9 格降到船腰 40（CH 的高舷牆一路斜到船長一半 —— 本船有後甲板 ⇒ 降在 break，設計決定）；船頭 42–43"
+ },
+ "waterline": {
+  "z": 25,
+  "src": "CH：Draught of water 12′3″（船尾）× 2.057 ＝ 25.2 ⇒ z 25（世界座標 ＝ 龍骨底在船尾那一段）；船頭吃水 25 − 龍骨抬起 7.1 ＝ 17.9（CH 量到 8.7 ft ＝ 17.9）"
+ },
+ "readings_at": {
+  "deck_z": 30,
+  "rail_z": 40,
+  "length_z": 25,
+  "wing_transom_z": 24
+ },
+ "chapman": {
+  "lbp_cells": 125.0,
+  "beam_cells": 43.55,
+  "draft_aft_cells": 25.2,
+  "draft_fwd_cells": 17.9,
+  "post_rake_deg": 22,
+  "src": "CH 圖下的 60′9″、21′2″、12′3″ × 2.057；船頭吃水、艉柱傾是 M"
+ },
+ "decks": {
+  "src": "CH p.10：「no deck plans of the Bermudian sloop exist」⇒ 全是設計決定：主甲板（舷弧）＋ 船尾抬高的後甲板（CH「the high stern」）＋ 底下的船尾艙房 ＋ 貨艙地板（結構照拉貝爾號：break 一道艙壁）",
+  "rows": [
+   {
+    "key": "hold",
+    "name": "貨艙地板",
+    "z": 13,
+    "x_from": 112,
+    "x_to": 188,
+    "src": "設計決定：V 形船底 ⇒ z 13 那裡內寬才有 1.4–1.8 m（x 120–160；v1 z 9 只有 0.5–0.8 m）；到主甲板樑下 15 格（1.5 m，小船的貨艙站不直）；彈藥庫也在這一層"
+   },
+   {
+    "key": "main",
+    "name": "主甲板",
+    "z": 30,
+    "x_from": 105,
+    "src": "M：船中龍骨底到甲板 ≈ 13 ft × 2.057 ＝ 26.7（龍骨座標）＋ drag 在船中抬 3.4 ⇒ 世界 z 30；水線 25 ⇒ 乾舷 0.5 m（CH「low freeboard」）；x 104 是 break 艙壁"
+   },
+   {
+    "key": "cabin",
+    "name": "船尾艙房地板",
+    "z": 21,
+    "x_to": 103,
+    "src": "設計決定：船尾深 V，z 21 那裡才夠寬（x 90 內寬 1.3 m、x 100 1.9 m；v1 z 17 只有 0.3–1.3 m）；到後甲板樑下 17 格（1.7 m）"
+   },
+   {
+    "key": "quarter",
+    "name": "後甲板",
+    "z": 40,
+    "x_to": 104,
+    "src": "設計決定：比 break 那裡的主甲板（z 31）高 9 格 ⇒ 舷頂 48 ＝ 40 ＋ 8 格欄（CH 的高船尾）；底下的艙房才站得直；鋪到 x 104 蓋住 break 艙壁頂（v1 到 103 ⇒ 胸牆中段浮空、組裝件 2 個元件）"
+   }
+  ],
+  "sheer": {
+   "aft": 2,
+   "fwd": 5,
+   "x_mid": 150,
+   "x_aft": 80,
+   "x_fwd": 207,
+   "src": "M：以水線為準量甲板線 ⇒ 船尾比船中高 ≈ 1 格、船頭高 ≈ 5 格（CH 圖上看起來船尾高，是因為龍骨畫平）；船尾取 2"
+  }
+ },
+ "decks_preview": {
+  "hold": 13,
+  "cabin": 21,
+  "main": 30,
+  "quarter": 40
+ },
+ "ports": {
+  "src": "R：1663 牙買加 barque 3 門、1684 聖多明哥 barque 4 門〔查〕⇒ 4 門 4 磅砲（磅數照 CH 的 4-pounders）；CH 每舷 5 個砲門 ⇒ 小一號的船取其中 2 個位置",
+  "tiers": [
+   {
+    "deck": "main",
+    "per_side": 2,
+    "xc": [120.5, 178.5],
+    "w": 5,
+    "h": 5,
+    "sill": 3,
+    "gun": "4l",
+    "src": "位置：M 量到 CH 的砲門在 AP 前 13.0／22.7／32.6／42.7／50.8 ft ⇒ × 2.057 ＋ 80 ＝ x 107／127／147／168／184；取主艙口後面一個（120.5）、桅前面一個（178.5），避開桅旁的 channels（x 155–166）；砲門 18 吋見方、下緣離甲板 0.3 m（設計決定，照拉貝爾號 4 磅砲）"
+   }
+  ]
+ },
+ "masts": {
+  "src": "M（帆圖，CH 自己標 Approximate Sail Plan）× 0.675：單桅後傾 14°（CH p.10「The rake of the mast was extreme」）；甲板到桅頂 70 ft；下桅到桅帽 ≈ 66%；方帆只做 topsail 一面（CH p.9「square topsails」；topgallant 與 course 不做 —— 設計決定）",
+  "rows": [
+   {
+    "key": "main",
+    "x_step": 165,
+    "rake_deg": 14,
+    "lower_m": 11.3,
+    "top_m": 5.6,
+    "yards": {
+     "crossjack": {"len_m": 6.0, "z": 109, "src": "M：下帆桁 29 ft × 0.675 ＝ 6.0 m，掛在桅頂橫桁下 3 格（topsail 的帆角綁它；本身不掛帆）；v1 z 112 跟 trestletrees 同高 ⇒ 會穿過去"},
+     "topsail": {"len_m": 4.5, "z": 141, "src": "M：topsail 帆桁 22 ft × 0.675 ＝ 4.5 m、在甲板上 11.1 m（CH p.10「The square topsails seem very small」）"},
+     "gaff": {"len_m": 5.1, "z": 106, "angle_deg": 34.3, "src": "M：gaff 25 ft × 0.675 ＝ 5.1 m、仰 ≈ 30°；jaws 在桅頂橫桁下 0.6 m；仰角照元件（三叉戟號 mizzen gaff 本身斜 34.3°，等比縮）"},
+     "boom": {"len_m": 12.2, "z": 50, "angle_deg": 3.3, "src": "M：boom 60 ft × 0.675 ＝ 12.2 m（伸出船尾 ≈ 3.5 m）、往船尾仰 7°；jaws 在主甲板上 2.0 m（CH 量到 0.65 m；設計決定抬高 ⇒ 掃過後甲板時離地 1.3 m、越過船尾舷頂）；仰角照元件（三叉戟號 mizzen boom 本身斜 3.3°，等比縮）"}
+    },
+    "src": "x：CH 的桅在甲板處在 AP 前 40.4 ft（LBP 66%）⇒ x 160；桅腳往前 5 格（後傾 14°、腳在 keelson）；lower_m ＝ 桅腳到桅帽的高、top_m ＝ 平台到桅頂（甲板到桅頂 13.9 m）"
+   },
+   {
+    "key": "bowsprit",
+    "x_step": 198,
+    "deck": "main",
+    "heel_dz": 8,
+    "angle_deg": 20,
+    "len_m": 10.0,
+    "yards": {},
+    "src": "M：艏斜桅＋jib-boom 舷外 46 ft × 0.675 ＝ 9.5 m、仰 21°（CH p.9「long bowsprits」）⇒ 一根 10 m、仰 20°；腳架在甲板上 0.8 m 的 bitts、從艏柱頭上越過去（設計決定；v1 0.5 m ⇒ 在艏柱頭那裡桿底比舷頂低 1 格）"
+   }
+  ]
+ },
+ "headsails": [
+  {"key": "staysail", "head": "hounds", "tack": "stem", "foot_m": 3.3, "clew_dz": 5, "src": "M：CH 帆圖 3 面艏帆，最裡面那面從桅頂橫桁下到艏柱頭"},
+  {"key": "jib", "head": "topmast", "tack": "bowsprit", "foot_m": 9.0, "clew_dz": -18, "src": "M：外面那面從上桅頂到艏斜桅頂（CH 有 jib-boom 再一面 flying jib —— 本船一根艏斜桅、兩面艏帆，設計決定）"}
+ ],
+ "decks_build": {
+  "src": "設計決定（遊戲用的大致構造，照 Ship_Decks §9.2–9.3；結構照拉貝爾號 draft_decks）",
+  "plank": {"interior": 177, "weather": 209, "weather_decks": ["main", "quarter"]},
+  "beam": {"every": 12, "w": 2, "depth": {"hold": 1, "main": 2, "cabin": 1, "quarter": 2}, "color": 136, "src": "設計決定：每 1.2 m 一根、深 0.2 m（照拉貝爾號）"},
+  "trim": 141,
+  "hatches": [
+   {"name": "前艙口", "x0": 185, "x1": 191, "half": 4, "decks": ["main"]}
+  ],
+  "hatch_src": "設計決定：主艙口 ＝ 貨艙梯子的井（x 133–142，主桅後面；v1 133–147）；桅前面一個小的前艙口（x 185–191），避開第 2 門砲（往裡退到中線附近）與艏斜桅腳（x 198）",
+  "coaming_h": 2,
+  "mast_r": {"main": 2.5},
+  "breaks": [
+   {"name": "後甲板前緣", "x": 104, "lo": "cabin", "up": "quarter", "doors_dy": [], "rail_h": 5, "bulkhead": true}
+  ],
+  "break_src": "設計決定：x 104 一道艙壁（艙房地板到後甲板；不開門 —— 主甲板到後甲板只有 9 格高）；後甲板邊 5 格胸牆、兩座梯子頭留口；艙房走後甲板的井下去",
+  "ladders": {
+   "rise": 3,
+   "run": 2,
+   "tread_half": 3,
+   "color": 136,
+   "list": [
+    {"name": "hold", "lo": "hold", "up": "main", "xs": 131, "dir": 1, "dy": 0, "well": true, "well_len": 11, "head_x": 144, "well_src": "步驟 14 樓梯自檢 ④：v1 井照拉貝爾號開 15 格（x 133–147）、本船只有 5 階 ⇒ 最後一階（x 141–142）到梯頂 head（x 149）之間 x 145–147 三柱踩空 ⇒ 井開到最後一階為止（x 142）、head 挪到井邊外 2 格（x 144）"},
+    {"name": "quarter-P", "lo": "main", "up": "quarter", "xs": 112, "dir": -1, "dy": -12, "head_x": 101},
+    {"name": "quarter-S", "lo": "main", "up": "quarter", "xs": 112, "dir": -1, "dy": 12, "head_x": 101},
+    {"name": "cabin", "lo": "cabin", "up": "quarter", "xs": 101, "dir": -1, "dy": 0, "well": true}
+   ],
+   "src": "設計決定：每 3 格一階、每階 2 格、踏板 7 寬（同拉貝爾號）；貨艙梯子在主甲板開井（＝ 主艙口）、往船頭上；後甲板兩舷的梯子靠在 break 外面往船尾上、頭踩上後甲板；艙房梯子從 break 艙壁前面往船尾上、在後甲板開井、頭在 x 83（後甲板只有 3 m 長 ⇒ 往船頭上會頂到 break）"
+  }
+ },
+ "deco": {
+  "src": "步驟 6；全是設計決定（CH 沒有裝飾的圖；小 sloop 本來就樸素）：船首一條飛魚（船名）、方艉一條金色的直立飛魚、兩扇船尾窗的玻璃；不做船尾燈（boom 掃過船尾舷頂上 0.9 m，燈會被掃到）",
+  "figurehead": {"work": "gura-flyingfish-01m-figurehead", "model": "船首像", "z": 36, "gap": 1, "len": 9,
+   "colors": {"back": 42, "belly": 218, "wing": 151, "eye": 36},
+   "src": "設計決定：飛魚 0.9 m，尾巴貼著艏柱、頭往前往上翹，胸鰭（翅膀）往後掠、兩邊各張開 0.6 m；在艏斜桅底下"},
+  "emblem": {"z0": 36, "color": 248,
+   "rows": ["...G...G...", "....G.G....", ".....G.....", "....GGG....", "...GGGGG...", ".GGGGGGGGG.", "GG..GGG..GG", "G...GGG...G", "....GGG....", ".....G....."],
+   "src": "設計決定：方艉正中一條直立的金色飛魚（翅膀張開、左右對稱 ⇒ 船殼鏡像差照樣 0），z 36–45；rows 由下往上"},
+  "glass": {"color": 87, "work": "gura-flyingfish-01m-stern-glass", "link": "船殼-窗玻璃", "src": "Ship_Materials §9.5：每扇窗的玻璃獨立關聯 material=glass、後面要空"}
+ },
+ "rig_build": {
+  "src": "設計決定（桅帆比例與位置在 plan.masts）；Ship_Masts §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡",
+  "colors": {"mast": 141, "top": 136, "truck": 248},
+  "mast_r": {"main": [1.8, 1.4]},
+  "mast_r_src": "設計決定：桅直徑 0.36 m（腳）→ 0.28 m（下桅頂）—— CH p.10「Her spars were heavy」；甲板桅孔 2.5（桅後傾 14° ⇒ 水平截面沿 x 半徑 1.86）",
+  "topmast_r": {"main": [1.1, 0.7]},
+  "crosstrees": {"main": 6},
+  "crosstrees_src": "設計決定：sloop 沒有桅樓平台、只有桅頂橫桁 ⇒ trestletrees（沿 x）＋ crosstrees（沿 y），半長 6 格。⚠ 遊戲的桅頂水手要平台 ⇒ 本船派不出桅頂水手（同拉貝爾號）",
+  "bowsprit_r": [1.6, 1.0],
+  "bowsprit_heel_block": {"x_back": 2, "x_fwd": 3, "half": 2, "src": "設計決定：艏斜桅腳架在甲板上 0.8 m（plan.masts bowsprit heel_dz）⇒ 腳下一塊墊木（bitts）從甲板接到桿底，x 196–201、|dy| ≤ 2"},
+  "yards": [
+   {"name": "yard-main-crossjack", "mast": "main", "yard": "crossjack", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-main-royal", "src_len": 93, "brace": -15},
+   {"name": "yard-main-topsail", "mast": "main", "yard": "topsail", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -17}
+  ],
+  "yards_src": "Ship_Setup §2.1：方帆桁沿用憲法號最細的 royal（截面 4×3），只沿長度（y）縮放：下帆桁 6.0 m ← main-royal（×0.645）、topsail 帆桁 4.5 m ← mizzen-royal（×0.692）；下帆桁本身不掛帆、是 topsail 的帆腳桁 ⇒ sail 也標 main-topsail（Ship_Masts：最低那根方帆桁標 crossjack ⇒ 遊戲照它認桅）",
+  "gaffs": [
+   {"name": "yard-main-gaff", "yard": "gaff", "sail": "mainsail", "src_work": "gura-tridente-01m-yard-mizzen-gaff", "src_end": "peak"},
+   {"name": "yard-main-boom", "yard": "boom", "sail": "mainsail", "src_work": "gura-tridente-01m-yard-mizzen-boom", "src_end": "end"}
+  ],
+  "gaffs_src": "Ship_Setup §2.1：gaff、boom 沿用三叉戟號 mizzen 的元件，整件等比縮到本船長度（pivot 就是 jaws 往前一點、放在桅軸上 ⇒ 繞桅擺）",
+  "lateen": []
+ },
+ "rigging": {
+  "src": "數值照 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；CH 線圖桅旁 4 個 deadeye（M）⇒ 每舷 3 根 shroud ＋ 1 根 backstay；sloop 的艏帆：staysail（前支索）＋ jib（上桅支索到艏斜桅頂）",
+  "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+  "channels": {"shrouds": 3, "spacing": 4, "first_aft": 2, "backstay_aft": 26, "width": 3, "below_rail": 0,
+   "src": "M：CH 的 4 個 deadeye 在桅（甲板處）後 0–5.6 ft ⇒ 3 根 shroud 從桅後 2 格起每 4 格一根；backstay 在桅後 26 格（桅後傾 14°、桅頂在甲板桅位後 2 m ⇒ backstay 要再往後才拉得住；設計決定）；channels 在舷頂那兩格的舷外，x 範圍避開兩門砲"},
+  "topmast_shrouds": 2,
+  "thick": {"shroud": 0.6, "topmast_shroud": 0.45, "futtock": 0.35, "backstay": 0.45, "stay": 0.8, "tm_stay": 0.6, "bobstay": 0.7, "sheet": 0.35, "main_sheet": 0.45},
+  "thick_src": "設計決定：拉貝爾號（0.7／0.5／…）照本船桅徑再縮一點",
+  "ratlines": {"step": 4, "start": 5, "stop": 12, "min_span": 4, "th": 0.25, "src": "Ship_Rigging §6：橫繩組；沒有桅樓平台 ⇒ 先不標 climb"},
+  "sails": {"fullness": 1.05, "clew_in": 0.1, "staysail_head": 0.72, "jib_head": 0.78, "forestay_t": 0.15,
+   "staysail_clew": [176, 52], "jib_clew": [196, 56], "staysail_sheet_x": 172, "jib_sheet_x": 186, "mainsheet_boom": "foot-96",
+   "src": "設計決定：staysail 的 tack 在艏斜桅上 15%（艏柱頭前面一點）、head 在前支索 72%；jib 的 tack 在艏斜桅頂、head 在上桅支索 78%（Ship_Rigging §7：70–80%）；兩面的 clew 自由、sheet 綁兩舷舷頂；mainsail 四角綁 gaff／boom（只有 leech 自由），main sheet 從 boom 船尾舷頂上方那一點拉到船尾舷頂中線"},
+  "flags": {"ensign": [12, 8], "ensign_luff_anchor": "top-128", "pennant": [26, 2], "pennant_color": "#f2f2f0",
+   "src": "設計決定：英國紅旗（red ensign：紅底、左上角聖喬治十字；1666 年牙買加的英國船）掛在 gaff 峰；桅頂一條白長旗"},
+  "wind": [4.5, -1.5, 0],
+  "sail_seconds": 3
+ },
+ "guns_build": {
+  "assembly": "gura-flyingfish-01m-assembly",
+  "hull": "gura-flyingfish-01m",
+  "deck_works": {"main": "gura-flyingfish-01m-deck-main", "quarter": "gura-flyingfish-01m-deck-quarter"},
+  "prefix": {"main": "M", "quarter": "Q"},
+  "types": {
+   "4l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.375, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "4l"},
+    "src": "照拉貝爾號（同一個元件、同一個縮放 ⇒ 遊戲裡同一份網格）：風暴角號 6 磅長砲縮成 6 ft（1.95 m）的 4 磅砲管；夜隼號自己的 4 磅砲（0.05 m 原尺寸）砲架 0.8 m 高、砲軸離甲板 0.6 m ⇒ 砲門要開到舷頂，不用"},
+   "pierrier": {"work": "apex-one-reale-01m-gun-pierrier", "scale": 0.39, "pivot": [5.5, 18.5, 0], "meta": {"kind": "gun", "gun": "pierrier", "mount": "turret", "arc": "-80,80", "rate": 45},
+    "src": "照拉貝爾號：皇家號的叉架後膛迴旋砲縮 0.39（1.48 m）；mount=turret、arc ±80、rate 45"}
+  },
+  "swivels": {"type": "pierrier", "rows": [{"deck": "main", "x": 128}, {"deck": "main", "x": 172}],
+   "src": "R：小 sloop 4–6 門迴旋砲〔估〕⇒ 每舷 2 個插座；位置設計決定：船腰（第 1 門砲與主艙口之間）、桅前（爐灶與第 2 門砲之間）；插在舷牆頂（那一欄船殼最高那一層、牆厚中間）。🩸 v1 每舷 3 個（後甲板 x 92 一個）⇒ 匯入檢查 ✗ 後甲板找不到 9×9 的取用點（3 m 長的後甲板上有舵柄、羅經櫃、艙房的井）；改用右舷梯子吊火藥 ⇒ 桶擺在梯腳旁、把梯腳出口堵死（✗ 樓梯）⇒ 後甲板不放砲；v2 船頭那對放在 x 199（第 2 門砲前面）⇒ 遊戲照「那一層最靠船頭的那一門」定站人高度（Blockside 10_ship.js gunDecksMeta 的 main）⇒ 拿到舷頂上的迴旋砲 z 42 ⇒ 主甲板的取用點量在 z 34–47、找不到 ⇒ 挪到第 2 門砲後面（x 172）"},
+  "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-1, 0, 1], "step": 0.5, "back_max": 25, "inset": 0.2, "src": "照拉貝爾號（Ship_Guns §4.2）"},
+  "support_min": 0.5,
+  "support_src": "照拉貝爾號"
+ },
+ "gear_build": {
+  "assembly": "gura-flyingfish-01m-assembly",
+  "magazine": {"work": "gura-flyingfish-01m-magazine", "link": "彈藥庫", "title": "飛魚號 彈藥庫（貨艙後段）", "x0": 113, "x1": 126, "floor": 14, "ztop": 27, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft", "cap": 6, "hoist": "ladders-1#hold", "hoist_src": "步驟 14 匯入檢查 ✗ 取用點（主甲板找不到 9×9 的空地：兩門砲往裡退到中線、主艙口、桅、爐灶擠在一起）⇒ Ship_Magazine §8：主甲板從貨艙梯子吊（桶在貨艙地板梯腳旁、送藥手在梯頭）；梯子的 id 是 admin.py ids 發的。後甲板不放砲（見 guns_build.swivels）",
+   "cap_src": "照砲數換算（拉貝爾號：每門約 2.6 桶）⇒ 4 門 4 磅＋6 門迴旋砲 ≈ 10 桶 —— 但 V 形船底的貨艙後段只放得下 6 桶（底層 4、木架 2；600 磅 ≈ 4 磅砲一發 1.3 磅 × 450 發）⇒ 6 —— ⚠ 換算，不是史料",
+   "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+   "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 1},
+   "src": "設計決定：貨艙地板（z 13）上、主艙口梯子（腳 x 130）後面 x 113–126，地板 z 14、頂 z 27（主甲板樑下）；門開在船頭那道艙壁、對著梯腳；做法照拉貝爾號 draft_gear（銅皮 168、松木地板 177、橡木框 136、門洞 5 格寬；Ship_Magazine §8）"},
+  "skids": {"work": "gura-flyingfish-01m-boat-skids", "link": "小艇架", "title": "", "deck": "main", "xs": [], "y_half": 0, "post_dy": 0, "beam_z": 0, "color": 136, "z_lo": 0,
+   "src": "不做：sloop 的小艇拖在船尾（甲板上沒有地方：主艙口梯子的頭、兩門砲、桅、前艙口、絞盤擠在 12.5 m 裡）；遊戲的 kind=boat 沒有功能（Blockside config/meta_kinds.json game null）—— 設計決定"},
+  "models": [
+   {"name": "羅經櫃", "host": "gura-flyingfish-01m-deck-quarter", "work": "summit-night-falcon-01m-binnacle", "at": [80, 86.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"},
+    "src": "設計決定：後甲板、舵柄右舷旁（舵柄在 x 80 只掃得到 ±3 格）、艙房梯子的井（|dy| ≤ 5）後面；照拉貝爾號搬過去的位置（v1 dy 8.5 ⇒ 外框碰到舷牆內壁、被量到舷頂上 z 49）"}
+  ],
+  "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（同拉貝爾號）",
+  "foot_reach": 12,
+  "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js:47）"
+ },
+ "fit_build": {
+  "src": "步驟 10：艙蓋（露天出入口的門）、廚房、絞盤、下桅繩梯（拉貝爾號是步驟 16 補做的那一套，本船一起做）；空艙房不做（貨艙窄、桅與梯子佔中線；船尾艙房只有梯子那麼寬）",
+  "assembly": "gura-flyingfish-01m-assembly",
+  "hatches": {"host": "gura-flyingfish-01m-deck-main", "colors": {"plank": 209, "frame": 136, "iron": 73},
+   "list": [
+    {"name": "艙蓋-主", "work": "gura-flyingfish-01m-hatch-main", "title": "飛魚號 主艙口艙蓋（貨艙梯子的井；嵌在圍板裡；門：kind=door）", "x0": 133, "x1": 142, "y0": 75, "y1": 85, "z": 31, "open_deg": 100},
+    {"name": "艙蓋-前", "work": "gura-flyingfish-01m-hatch-fore", "title": "飛魚號 前艙口艙蓋（蓋在圍板上；門：kind=door）", "x0": 184, "x1": 192, "y0": 75, "y1": 85, "z": 36, "open_deg": 100}
+   ],
+   "floor_main": "105:32,114:31,167:31,190:34,207:36",
+   "src": "Ship_Fittings §9.7：主甲板離水線 0.5 m ⇒ 露天、通到船艙的艙口都要門。從作品量：主艙口圍板 x 132–142、y 74–86、z 31–32（梯頭那一端 x 143 不圍；v1 井到 147）⇒ 蓋子嵌在圍板裡、跟開口一樣大（10 × 11），底 z 31 ⇒ 開口層 z 30；前艙口圍板 x 184–192、y 75–85、z 33–35（跟著舷弧一階）⇒ 蓋子比開口每邊大一格、蓋在圍板最高那一層上（z 36）。鉸鏈沿 +x 在左舷那一邊（往上掀）。船尾艙房的井（後甲板上）不做：舵柄掃在井上、後甲板離水線 1.5 m —— 設計決定（照拉貝爾號）"},
+  "galley": {"host": "gura-flyingfish-01m-deck-main", "name": "爐灶", "work": "kaguya-gloire-01m-galley", "at": [168, 80.5, null], "pivot": [22, 16, 0], "scale": 0.18, "rotate": 0, "meta": {"kind": "galley"},
+   "src": "Ship_Fittings §9.13：小船的爐灶（caboose）放在主甲板露天、桅前面中線 x 164–172（光榮號的爐灶縮 0.18 ⇒ 0.8 m，同拉貝爾號）；爐門（元件 x=0 那一面）朝船尾 ⇒ 廚師站桅與爐灶之間、伙夫站兩舷；在第 2 門砲（外框 x 175 起）後面 —— 設計決定"},
+  "windlass": {"work": "gura-flyingfish-01m-windlass", "title": "飛魚號 絞盤（船頭甲板上的 windlass）", "link": "絞盤", "x": 193, "post_h": 7, "barrel_dz": 4.5, "barrel_r": 2.0, "post_w": 2, "post_in": 3, "colors": {"oak": 136, "barrel": 141, "dark": 36},
+   "src": "設計決定：sloop 的錨用船頭甲板上的橫式 windlass ⇒ 前艙口（圍板到 x 192）與艏斜桅腳墊木（x 196 起）之間 x 193–194：兩根立柱（bitts，0.2 m 見方、高 0.7 m（舷牆頂那麼高）、離舷牆內壁 3 格）、中間一根橫的絞筒（半徑 0.2 m、軸心離甲板 0.45 m），每 3 格一圈深色撬棍孔；關聯（格子），不標 kind（遊戲的 capstan 是直立的絞盤）"},
+  "ratlines": {"list": [
+    {"name": "main-lower-S", "foot": [151, 96, 31], "head": [141, 85, 114]},
+    {"name": "main-lower-P", "foot": [151, 64, 31], "head": [141, 75, 114]}],
+   "src": "Ship_Rigging §6 繩梯：foot ＝ 舷牆內側第一格甲板再往內 2 格（這一組最低一道中點 x ≈ 151；船腰內緣 |dy| 18 ⇒ 16）；head ＝ 桅頂靠這一舷那根 crosstree 上（本船沒有桅樓：crosstree x 141、z 113 ⇒ 踩在上面那一格 z 114，|dy| 5）。頭不在任何一層甲板上 ⇒ 只有第一人稱爬得上去，水手照舊走梯子"}
+ },
+ "rudder_anchor_build": {
+  "rudder": {"work": "gura-flyingfish-01m-rudder", "title": "飛魚號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 24, "width": [[0, 8], [10, 6], [20, 4], [24, 3]], "below": 182, "above": 36, "iron": 73, "strap_every": 6, "waterline_z": 25, "max_deg": 35, "bevel": 1,
+   "src": "M（CH 線圖）：舵掛在斜 22° 的艉柱後面、往下越寬（舵葉底 ≈ 4 ft × 2.057 ＝ 8 格、水線 1.5 ft ⇒ 3 格）⇒ 沿 x_post 從龍骨底到 wing transom（z 24）；3 格厚；水線下白（整支在水線下）、每 6 格一道鐵箍；max_deg 35、bevel 1 照拉貝爾號"},
+  "tiller": {"work": "gura-flyingfish-01m-tiller", "title": "飛魚號 舵柄", "model": "舵柄", "x_stock": null, "z_deck": 41, "z": 44, "len": 9, "color": 136, "stock_color": 141,
+   "src": "設計決定：sloop 用舵柄（沒有舵輪）⇒ 獨立模型 kind=tiller（Ship_Helm 操舵鏈）；舵頭從後甲板方艉內側冒出來（x_stock ＝ 中線那一欄方艉牆後面第一格空氣，1×3、z 41–44），舵柄沿中線往前 0.9 m、高 z 43–44（後甲板上 0.3–0.4 m）；轉軸垂直、跟舵同一個舵角。⚠ 舵頭在 wing transom 與後甲板之間那一段沒畫（藏在船尾牆裡，同拉貝爾號）；⚠ 艙房梯子的梯頭（x 83）在舵柄掃得到的範圍裡"},
+  "anchor": {"gear_work": "gura-flyingfish-01m-anchor-gear", "gear_title": "飛魚號 錨架（兩舷 billboard）", "gear_link": "錨架", "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.22, "pivot": [23.5, 16.5, 56.5],
+   "x_try": [202, 204, 206], "z_try": [42, 42.5, 43, 43.5, 44], "z_hull": 37, "d_step": 0.5, "d_max": 16, "ledge_half": 4, "ledge_out": 2, "ledge_t": 2, "color": 136,
+   "obstacles": "gura-flyingfish-01m-deck-main", "obstacle_prefix": "迴旋砲",
+   "src": "沿用共用錨元件（Ship_Game §9 anchor）縮 0.22（錨幹 1.2 m，設計決定：35 噸的小船；v1 0.25、環掛在 z 39 ⇒ 錨冠碰到水線、托板在水裡 ⇒ 縮小、環抬到舷頂上）、meta anchor=bower；兩舷各一、吊在船頭舷外（照拉貝爾號：錨臂順著船殼切線、往外推到零碰撞，錨冠底下一塊 billboard 托板）；避開船頭的迴旋砲（x 199）"},
+  "hawse": {"x": 206, "z": 37, "src": "設計決定：錨鏈孔在船頭、主甲板上方那一層的船殼外面（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
+ },
+ "hull_build": {
+  "wall": 3,
+  "frame_color": 141,
+  "inner_color": 177,
+  "side_color": 177,
+  "bottom_color": 182,
+  "bottom_top_z": 25,
+  "src": "設計決定：牆 3 格（外板 1、肋骨 1、內板 1）；水線下灰白（白漆防船蛆）、水線上原木（百慕達雪松，R §3 轉述 Labat）"
+ },
+ "paint": {
+  "base": 177,
+  "black": 36,
+  "frieze": 168,
+  "gold": 248,
+  "reveal": 160,
+  "glass": 87,
+  "wales": {
+   "rows": [
+    {"name": "wale", "deck": "main", "dz": -2, "h": 2, "color": 36}
+   ],
+   "src": "CH 線圖：砲門底下一道 wale（甲板那一層）⇒ 甲板面 −2..−1 黑（顏色設計決定）"
+  },
+  "frieze_rows": 3,
+  "frieze_src": "設計決定：舷頂下 3 列漆赭紅 168（加勒比的小船，跟拉貝爾號的藍分開；v1 wale 到舷頂整片 ⇒ 太重）、中間原木、舷頂最上一格黑、砲門框紅 160",
+  "transom_src": "設計決定：wing transom 以上的方艉赭紅、wing transom 那一列與舷頂下一列金 248；船名在步驟 6",
+  "stern_x_max": 84
+ },
+ "stern": {
+  "rows": [
+   {"deck": "cabin", "n": 2, "w": 3, "h": 4, "half": 7, "sill": 7, "kind": "window", "src": "設計決定：船尾艙房（地板 z 21）方艉上兩扇小窗，下緣離地板 0.7 m（z 28，水線上 0.3 m）；CH 沒有船尾圖"}
+  ]
+ }
+}

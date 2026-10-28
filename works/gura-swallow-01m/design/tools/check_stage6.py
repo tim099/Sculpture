@@ -1,0 +1,69 @@
+# 抄來的（燕子號 TASK-0968）：出處 gura-flyingfish-01m/design/tools/check_stage6.py（飛魚號；作品 id、船名、單號已換）
+# 抄來的（飛魚號 TASK-0971）：出處 ame-labelle-01m/design/tools/check_stage6.py（拉貝爾號；作品 id、persona、船名、作品尺寸已換）
+# 飛魚號 步驟 7（TASK-0971）；出處 calli-cosecha-01m/design/tools/check_stage6.py（沒有 bonaventure、甲板沒有桅孔搬位、船殼基準換 裝飾:end）。
+# 原檔頭：階段六（TASK-0595）讀數：桅／艏斜桅／lateen 帆桁子作品匯出 vs 清單（結果帳）、船殼 ＝ 砲門:end − 艏斜桅孔、帆桁模型的 meta 與固定點
+#   用法：python -I -X utf8 tools/check_stage6.py <design>
+import json, os, sys
+import numpy as np
+sys.stdout.reconfigure(encoding='utf-8')
+design = sys.argv[1]
+sys.path.insert(0, os.path.join(design, 'tools'))
+from wio import export_list, key
+HULL = 'gura-swallow-01m'
+WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+
+
+def ledger(work, path, label):
+    W = export_list(work, None)
+    D = np.loadtxt(path, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
+    cw, cd = dict(zip(key(W).tolist(), W[:, 3].tolist())), dict(zip(key(D).tolist(), D[:, 3].tolist()))
+    print('%-22s 作品 %6d、設計 %6d、缺 %d、多 %d、色差 %d' % (label, len(cw), len(cd), len(set(cd) - set(cw)), len(set(cw) - set(cd)), sum(1 for k in set(cd) & set(cw) if cd[k] != cw[k])))
+
+
+for nm in ('mast-main', 'bowsprit'):          # 燕子號：單桅
+    ledger('%s-%s' % (HULL, nm), os.path.join(design, 'masks', 'masts', nm + '.vox.txt'), nm)
+for k in ():                                 # 燕子號：沒有 lateen
+    ledger('%s-yard-%s-lateen' % (HULL, k), os.path.join(design, 'masks', 'yards', 'lateen-%s.vox.txt' % k), 'yard-%s-lateen' % k)
+# 船殼 ＝ 裝飾:end − 艏斜桅孔
+B = export_list(HULL, '裝飾:end')
+N = export_list(HULL, None)
+H = np.loadtxt(os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
+if H.size == 0:
+    H = np.zeros((0, 4), np.int32)          # 本船艏斜桅從船首樓甲板上越過船頭欄杆 ⇒ 孔 0 格
+want = dict(zip(key(B).tolist(), B[:, 3].tolist()))
+for k in key(H).tolist():
+    want.pop(k, None)
+want = {k: c for k, c in want.items() if c != 87}   # 燕子號：窗玻璃（87）在 裝飾:end 之後拆到 -stern-glass（split 不是刀，不進標記）
+got = dict(zip(key(N).tolist(), N[:, 3].tolist()))
+print('船殼（裝飾:end − 艏斜桅孔 %d）：作品 %d、設計 %d、缺 %d、多 %d、色差 %d' % (len(H), len(got), len(want), len(set(want) - set(got)), len(set(got) - set(want)),
+      sum(1 for k in set(want) & set(got) if want[k] != got[k])))
+# 帆桁模型：meta 齊全、來源作品有 pivot／earing（方帆）或 fore／peak（lateen）
+P = json.load(open(os.path.join(design, 'yards_placement.json'), encoding='utf-8'))
+bad = []
+for p in P:
+    host = '%s-%s' % (HULL, 'bowsprit' if p['mast'] == 'bowsprit' else 'mast-' + p['mast'])
+    ms = {m['name']: m for m in json.load(open(os.path.join(WORKS, host, 'models.json'), encoding='utf-8'))['models']}
+    m = ms.get(p['name'])
+    if not m:
+        bad.append((p['name'], '模型不在 ' + host)); continue
+    for fk in ('at', 'pivot', 'rotate', 'scale'):
+        if [round(float(a), 2) for a in m[fk]] != [round(float(a), 2) for a in p[fk]]:
+            bad.append((p['name'], '%s 作品 %s ≠ 設計 %s' % (fk, m[fk], p[fk])))
+    mt = m.get('meta', {})
+    for k in ('kind', 'mast', 'yard', 'sail', 'pivot_anchor'):
+        if not mt.get(k):
+            bad.append((p['name'], '少 meta ' + k))
+    an = {a['name'] for a in json.load(open(os.path.join(WORKS, m['work'], 'anchors.json'), encoding='utf-8'))['anchors']}
+    yk = m['meta'].get('yard')
+    if p['name'].endswith('lateen'):
+        need = ('pivot', 'fore', 'peak')
+    elif yk == 'gaff':
+        need = ('pivot', 'peak', 'throat')
+    elif yk == 'boom':
+        need = ('pivot', 'jaws', 'end')
+    else:
+        need = ('pivot', 'earing-P', 'earing-S', 'arm-P', 'arm-S')
+    for k in need:
+        if k not in an:
+            bad.append((p['name'], '來源少固定點 ' + k))
+print('帆桁模型 %d 根；問題 %s' % (len(P), bad or 0))
