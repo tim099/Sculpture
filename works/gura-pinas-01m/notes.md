@@ -179,4 +179,40 @@
 - 讀數：換之前不改 plan 重跑 `draft_guns.py` ⇒ guns_placement.json 逐位元組相同；換之後只有 puente 4 門 4l 那 4 列變：at 跟以前一樣、back 4／5、砲口伸出 4.61 ⇒ 4.25（第 1 門）、3.61 ⇒ 3.25（第 2 門）、not_ok 0、砲撞砲 0、兩舷不對稱 0。
 - 落格：只重掛 4 門 4l（`sub=model overwrite=1`，meta 帶著 Blockside 配的 id）；`tools/build_guns.py` 的 NAMES['4l'] 跟著改。
 - ⚠ **砲具的環還沒抬**：重跑 `draft_gunfittings.py` ⇒ 這 4 門的船牆環要高一格（新砲的 eye 比較高；ring-砲U-*-aft／fwd z 64 ⇒ 65、66 ⇒ 67，P02／S02 的 aft 環 y 也挪一格），其他 20 門、甲板環、繩表都不變。子作品 `gura-pinas-01m-gunfittings` 的格子只有作者能刻 ⇒ 本小姐沒動格子、固定點也退回原位，`gunfittings_points.json`／mask 照舊是 HEAD 那一份（作品跟設計檔一致）；現在環比 eye 低 0.1 m、繩照樣接得上。請 gura 跑：`draft_gunfittings.py .` ⇒ `tools/delta_apply.py . gura-pinas-01m-gunfittings masks/gunfittings/gunfittings.vox.txt`（刻 16、貼 16）⇒ `tools/build_gunfittings.py .`。
+  - ✅ gura 2026-10-28 跑了（船頭 v2 那一趟一起）：`draft_gunfittings.py` 的差剛好刻 16、貼 16（標記 `砲具環抬高`），讀回 0 差；`build_gunfittings.py` 固定點 72、繩 120 全掛上。vxk 檔頭的差：砲具 8 個環各高一格、那 4 門的 16 條砲索。
 - Blockside：`admin.py reimport --id pinas` ⇒ 格數、checksum 都沒變（沒有夾帶別的改動），vxk 只差 4 門砲與它們的 20 條砲索；匯入檢查 ✗ 0、⚠ 9（跟 10-27 那份逐行相同）；卡片沒變。
+
+## 船頭 v2：照 Witsen 的 galjoen（TASK-0967，2026-10-28）
+
+Tim：「967 參考 task TASK-1045 船頭船尾優化一下吧」→「船尾感覺ok」「可以只優化船頭」→「然後可以開個門可以走到船頭」。做法照 Senate 文件 `Ship_Ends` 的船頭那幾節，但**荷蘭船不是康塞普西翁號那種平的 beakhead 艙壁** —— 先叫研究代理讀 Witsen 1671 原書（`references/research_pinas_bow_2026-10-28.md`；頁碼是印刷頁，archive.org 的 page_numbers 多 1）：
+
+- 圓船首；bak 甲板只到艏柱裡面 6½ 呎、前面一道前隔板開一或兩道門，船員「waer men door op 't Galjoen gaet」（II p.483）〔查〕；bak 欄杆在前角收成渦卷、船首上緣沿凹弧降到 galjoen〔查，圖版 N°24〕。
+- galjoen：每側三條 regelingen、最上一條的後端在 cathead 底下刻一個人頭；4 根 knies；兩道 cheek 夾 kam；獅子 9 呎、比 uitlegger 前端再突出 14 吋；es 在獅背上 2'2"〔查 p.86–87〕；平台高度 W 沒寫〔估：verdek ＋ 0–3 呎、往前漸升〕。
+
+改了什麼（`design/`，worktree 分支 `gura/pinas-bow`；程式都是「plan 有新鍵才走」，舊 plan 一格不變）：
+
+- `lines.top`：bak 前角 x 525 以前沿凹弧降到艏柱 z 75（525 那一點 ＝ 舊折線在 525 的值 93.713 ⇒ x ≤ 524 的舷頂跟以前差 1e-14）。
+- `decks.rows.castillo.x_to` 525 ＋ `decks_build.breaks` 多一道「船艏樓（bak）前隔板」x 525（兩道門 dy 4–8、藍底金框 `face`、門板名 `door_tag` 前）—— `draft_decks.py` 的 break 吃 `face`。
+- `ports.bow_gangway`（`draft_ports.py`）：艏柱上緣中線開 7 格寬的缺口（門外的露天上甲板直接走上平台）＋「船頭補實」`masks/ports/bow_fill.vox.txt`（x ≥ 533、z ≥ 60 的船殼裡面除了走道填實；`tools/hull_expected.py` 多一步 `add`）。
+- `espolon.v2`（`draft_deco.py` `galjoen_v2`）：平台 z 68 往前升到 76、格柵、側板；knee；三條 regelingen（平台上 1／4／7 格起、2 格高、條間 1 格縫）；knies 4 根；cheek 兩道＋kam；cathead；人頭；es；封閉空氣補進喙。獅子 x 574 ⇒ 578、身體跟著平台頂走。
+- `rig_build.bobstay_z` [40, 45]（`draft_rigging.py`）：bobstay 腳在 knee 前緣、繩從獅子後面上去（喙尖底下是側板與獅子）。
+- 新工具：`tools/walk_doors.py`（拉貝爾號那支改的：門從 plan 的 break 來、多驗走得到 galjoen、欄杆頂照那一欄的平台頂算、`--asm`／`--add` 拿本機清單跑）、`tools/render_preview.py`、`tools/ledger_delta.py`（照抄拉貝爾號）；所有讀 WORKS 的程式吃 `SCULPT_WORKS`（worktree 只放 design/）。
+
+讀數：
+
+- 控制組：同一份作品、HEAD 的 plan，HEAD 的程式 vs 新程式 ⇒ ports／decks／deco／doors／rigging 的 17 份輸出與船殼帳逐位元組相同。
+- 線形：1 元件、空腔 0、鏡像差 0；船殼 329,884 ⇒ 327,064 格（標記 `船頭門`（第一版、後來退掉）、`船頭v2線形`、`船頭v2缺口`、`船頭v2補實`），每一刀讀回 0 差。
+- 喙 6,032 ⇒ 13,442 格、獅子 855 ⇒ 863；撞艏斜桅 0、跟其他件重疊 0、鏡像差 0；bak 甲板 刻 358／貼 797；門板 8 扇（新的 `門-castillo前-S／P` 在 x 526.5、撞 0、腳下有地板；第一版掛在圓船頭牆外的 `門-船頭-S／P` 已 unmodel）。
+- 組裝件 487,441 格：1 元件、封閉空腔 0、link_overlap 0；ropecheck 447 條、894 端 ok。
+- 第一人稱（`walk_doors.py`）：兩道門走得出去、走得回來、走得到 galjoen 平台（446 格）、站得上 regelingen 頂 0；反向對照：門洞當實心 ⇒ 走不到平台；欄杆壓到 4 格 ⇒ 站得上 172 格。遊戲裡 `__game.fp` 從 bak 底下按 W 走出前隔板、穿過缺口、沿平台走到獅子後面（x 579、z 74）。
+- Blockside（worktree `gura/pinas-bow`）：reimport ＋ ids（`idNext.door` 7 ⇒ 9）＋ metasync（bak 的 floor 436–533 ⇒ 436–525，`src/decks.py` 量的）；匯入檢查 ✗ 0、⚠ 11（多的 2 條是前隔板的兩扇門「門被打掉也不會從這裡進水」，跟另外 6 扇同一類）；樓梯自檢 9 座 ✗ 0；甲板連通 ✗ 0；超載極限 1,189 ⇒ 1,201 噸（吃水同樣再深 4.40 m、進水點照舊是船腰）；卡片 599 ⇒ 600 噸、水線長 37.1 ⇒ 36.8 m（knee 改了）。vxk 檔頭跟改之前比：換了雜湊的關聯只有船殼、bak 甲板、船首喙、船首像、砲具；固定點只差 bobstay 兩個與砲具 8 個環；模型多 2 個（門）。外框長沒變（艏斜桅前端 x 647 比獅子前）⇒ Blocksail `hullLoa` 不用改。
+- 圖：`overlays/task0967_bow_{q,side,top}.png`（`render_preview.py`）、`task0967_bow_ingame_{galjoen,q}.jpg`（遊戲裡）。
+
+🩸 途中自己抓到的：
+
+- 第一版照康塞普西翁號在圓船頭的牆上開兩扇門、喙是 Spanish 式往下凹的三條 rail —— 研究回來才知道荷蘭船的門在 bak 前隔板 ⇒ 整個重做（第一版的門洞在下一刀的船殼帳裡補回）。
+- bak 底下最前面那個砲門（x 513–518）整欄刻開 ⇒ 只拿作品算「船殼裡」的話平台鋪進艙裡 192 格 ⇒ 改成作品 ∪ 線形外形。
+- 平台往前升、獅子照後端那一格的平台高 ⇒ 身體踩進平台 1 格 ⇒ 身體跟著那一欄的平台頂。
+- cathead 每一欄各自量船殼寬再取整 ⇒ 末端一柱錯開浮空 ⇒ 從同一個基點每半格取樣。
+- 舷頂的新節點寫成 [525, 94] ⇒ bak 那段斜率變了、`draft_rigging` 照舷頂小數算的前桅支索板 deadeye 全升 1 格（格子沒變，vxk 檔頭比對抓到）⇒ 525 那一點用舊折線的值。
+- 第一人稱站上 regelingen 頂 240 格：船首上緣在艏柱降到平台高度 ⇒ 從平台一步踩上舷頂、沿著舷頂走上去；舷頂抬到 75 之後還有 244 格 —— 路線（`trace` 印出來）是圓船頭的內面一層一層往上收、像台階（x 533：1→3→6 格）⇒ 船頭補實成直的牆、中線開走道 ⇒ 0。
