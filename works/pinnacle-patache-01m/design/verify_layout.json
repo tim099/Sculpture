@@ -1,0 +1,117 @@
+{
+ "ports": {
+  "main": {
+   "n_per_side": 4,
+   "gap_min": 14,
+   "gap_max": 15,
+   "gaps": [
+    15,
+    14,
+    15
+   ],
+   "clear_above_min": 5.0,
+   "half_breadth_at_port_min": 24.9,
+   "x0s": [
+    132,
+    154,
+    175,
+    197
+   ]
+  }
+ },
+ "ports_total": 8,
+ "decks": {
+  "orlop": {
+   "z": 12,
+   "span": [
+    92,
+    230
+   ]
+  },
+  "main": {
+   "z": 32,
+   "span": [
+    59,
+    265
+   ]
+  },
+  "tolda": {
+   "z": 50,
+   "span": [
+    52,
+    122
+   ]
+  },
+  "castillo": {
+   "z": 50,
+   "span": [
+    222,
+    265
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "fore",
+   "x": 254,
+   "heel": 8.5,
+   "platform": 116.1,
+   "truck": 175.1,
+   "above_wl_m": 15.11,
+   "yards": {
+    "course": {
+     "z": 104.1,
+     "len_m": 9.7
+    },
+    "topsail": {
+     "z": 164.5,
+     "len_m": 5.3
+    }
+   }
+  },
+  {
+   "key": "main",
+   "x": 156,
+   "heel": 7.0,
+   "platform": 134.0,
+   "truck": 203.0,
+   "above_wl_m": 17.9,
+   "yards": {
+    "course": {
+     "z": 122.0,
+     "len_m": 12.1
+    },
+    "topsail": {
+     "z": 190.5,
+     "len_m": 6.6
+    }
+   }
+  },
+  {
+   "key": "mizzen",
+   "x": 100,
+   "heel": 34.0,
+   "platform": 110.4,
+   "truck": 117.0,
+   "above_wl_m": 9.3,
+   "yards": {
+    "lateen": {
+     "z": 104.5,
+     "len_m": 9.7
+    }
+   }
+  }
+ ],
+ "bowsprit": {
+  "x0": 258,
+  "z0": 36.0,
+  "x1": 339.4,
+  "z1": 83.0,
+  "angle": 30,
+  "len": 94.0,
+  "spritsail_len": 65.0
+ },
+ "guns_by_type": {
+  "4l": 8
+ }
+}

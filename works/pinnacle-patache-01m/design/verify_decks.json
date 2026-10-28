@@ -1,0 +1,217 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 4897,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 898,
+    "177": 3999
+   },
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 10556,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 2876,
+    "141": 86,
+    "209": 7594
+   },
+   "mirror_diff": 0
+  },
+  "tolda": {
+   "cells": 3264,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 488,
+    "141": 712,
+    "209": 2064
+   },
+   "mirror_diff": 0
+  },
+  "castillo": {
+   "cells": 2012,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 308,
+    "141": 656,
+    "209": 1048
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "main": {
+   "cells": 212,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "tolda": {
+   "cells": 186,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "castillo": {
+   "cells": 182,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "orlop": {
+   "up": "main",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     165,
+     160,
+     13
+    ],
+    "lo": [
+     168,
+     160,
+     16
+    ],
+    "hi": [
+     178,
+     160,
+     31
+    ],
+    "head": [
+     185,
+     160,
+     33
+    ]
+   },
+   "steps": 6
+  },
+  "tolda": {
+   "up": "tolda",
+   "lo": "main",
+   "points": {
+    "foot": [
+     137,
+     160,
+     33
+    ],
+    "lo": [
+     134,
+     160,
+     36
+    ],
+    "hi": [
+     126,
+     160,
+     48
+    ],
+    "head": [
+     119,
+     160,
+     51
+    ]
+   },
+   "steps": 5
+  },
+  "castillo": {
+   "up": "castillo",
+   "lo": "main",
+   "points": {
+    "foot": [
+     207,
+     160,
+     34
+    ],
+    "lo": [
+     210,
+     160,
+     37
+    ],
+    "hi": [
+     218,
+     160,
+     49
+    ],
+    "head": [
+     225,
+     160,
+     51
+    ]
+   },
+   "steps": 5
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 3,
+ "reach": {
+  "orlop": [
+   "orlop"
+  ],
+  "main": [
+   "castillo",
+   "orlop",
+   "tolda"
+  ],
+  "tolda": [
+   "tolda"
+  ],
+  "castillo": [
+   "castillo"
+  ]
+ },
+ "holes": {
+  "orlop": 54,
+  "main": 217,
+  "tolda": 64,
+  "castillo": 64
+ },
+ "cavities_filled": [
+  {
+   "deck": "orlop",
+   "cells": 2,
+   "x": [
+    110,
+    111
+   ],
+   "z": [
+    11,
+    11
+   ]
+  }
+ ],
+ "lists": {
+  "deck-orlop": [
+   4897,
+   "43e18624d9c0f715bca2b4b336e460575d45db890131a0ceb88a2731f9a5e546"
+  ],
+  "deck-main": [
+   10556,
+   "2c8f7fb91a0a4b40d191da86a78994b3329c5333d48304bd33af2e0804f2ef93"
+  ],
+  "deck-tolda": [
+   3264,
+   "f4f41cdcde7645947c38f5756ed4abd921d781168c3d4a678b3b0e7b9da55fd5"
+  ],
+  "deck-castillo": [
+   2012,
+   "6408c0d92e7a57343e6e3cc5abb7600475172acb4cd6d91ab4ce0ac9387d3bb9"
+  ],
+  "ladders-main": [
+   212,
+   "f8d6f6ac3993adf2f8cced8df5b66a95c2f1112cca53cfc9cc8d74db09975c75"
+  ],
+  "ladders-tolda": [
+   186,
+   "cf2760199e39b64f135a6c368d4bec79e82c9fedf9024115230b6ad147d329b9"
+  ],
+  "ladders-castillo": [
+   182,
+   "7df095a2f05cd769f62ae828c94f0d87f7d53f3d4036dbd8669822de0f1bfb50"
+  ]
+ }
+}

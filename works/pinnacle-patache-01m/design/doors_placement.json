@@ -1,0 +1,120 @@
+{
+ "work": "gura-pinas-01m-door",
+ "size": [
+  2,
+  14,
+  32
+ ],
+ "pivot": [
+  1,
+  7,
+  0
+ ],
+ "scale": 0.5,
+ "anchors": {
+  "hinge-a": [
+   1,
+   0,
+   31
+  ],
+  "hinge-b": [
+   1,
+   0,
+   0
+  ]
+ },
+ "rows": [
+  {
+   "name": "門-tolda-S",
+   "host": "pinnacle-patache-01m-deck-tolda",
+   "break": "船尾樓（tolda）前緣",
+   "side": "S",
+   "at": [
+    123.5,
+    172.5,
+    34
+   ],
+   "rotate": 0,
+   "opening": [
+    75,
+    15
+   ],
+   "hits_solid": 0,
+   "backed_by_bulkhead": 37,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  },
+  {
+   "name": "門-tolda-P",
+   "host": "pinnacle-patache-01m-deck-tolda",
+   "break": "船尾樓（tolda）前緣",
+   "side": "P",
+   "at": [
+    123.5,
+    148.5,
+    34
+   ],
+   "rotate": 0,
+   "opening": [
+    75,
+    15
+   ],
+   "hits_solid": 0,
+   "backed_by_bulkhead": 37,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  },
+  {
+   "name": "門-castillo-S",
+   "host": "pinnacle-patache-01m-deck-castillo",
+   "break": "船首樓（castillo）後緣",
+   "side": "S",
+   "at": [
+    221.5,
+    172.5,
+    34
+   ],
+   "rotate": 180,
+   "opening": [
+    75,
+    15
+   ],
+   "hits_solid": 0,
+   "backed_by_bulkhead": 37,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  },
+  {
+   "name": "門-castillo-P",
+   "host": "pinnacle-patache-01m-deck-castillo",
+   "break": "船首樓（castillo）後緣",
+   "side": "P",
+   "at": [
+    221.5,
+    148.5,
+    34
+   ],
+   "rotate": 180,
+   "opening": [
+    75,
+    15
+   ],
+   "hits_solid": 0,
+   "backed_by_bulkhead": 37,
+   "foot_ok": true,
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   }
+  }
+ ]
+}

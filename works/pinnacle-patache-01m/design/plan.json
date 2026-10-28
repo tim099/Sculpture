@@ -1,0 +1,280 @@
+{
+  "title": "聖羅曼號（patache，1618 年條例 10 codos）新圖紙 01：線形、側面、甲板與船樓高度、砲位表、桅帆表",
+  "task": "TASK-0970",
+  "author": "pinnacle",
+  "date": "2026-10-28",
+  "sources": {
+    "FG": "F. Fernández-González 2009, The Spanish Regulations for Shipbuilding (Ordenanzas) of the Seventeenth Century（https://oa.upm.es/id/eprint/1878；研究代理讀過）—— 1613 Table 3（patache 8／9／10 codos）、1618 Table 4（9–13 codos）與條文英譯（art.5、16、21、22、32、41、42、45、46、52、66–69）",
+    "IHCN": "Cuadernos IHCN nº 33 第 7 章 p.35–36 —— codo de ribera 0.57468 m、tonelada 8 立方 codos（Casado Soto）",
+    "HAR": "C. H. Haring 1918, Trade and Navigation between Spain and the Indies, pp. 312–315、358 —— 1522／1552 年武裝與人員條例",
+    "WPA": "en.wikipedia List of ships of the Spanish Armada（引 Hutchinson 2013）—— 1588 年 10 艘 patache 的噸、砲、人",
+    "SG": "Sigüenza y Góngora 1691〈Relación de lo sucedido a la Armada de Barlovento〉—— patache「el Santo Cristo de San Román」（船名）",
+    "R": "研究筆記 references/research_patache_2026-10-28.md（每個數字的〔查／估〕標記在那裡）",
+    "codo": "codo de ribera ＝ 0.57468 m（IHCN p.36、FG）⇒ 1 codo ＝ 5.7468 格"
+  },
+  "class": {"v": "patache（aviso、海岸巡防）：1618 年 Ordenanza 的 10 codos navío —— 106⅛ toneladas、一層甲板、矮的 tolda；1613 年同寬 10 codos 那一級明文叫 patache（94½ t）", "src": "FG Table 3、Table 4（研究代理讀過）；船名借 SG 的 Armada de Barlovento patache（那艘船自己的尺寸查不到）"},
+  "meters_per_cell": 0.1,
+  "space": {"x": 400, "y": 320, "z": 260, "yc": 160, "note": "中線 ＝ 第 160 格（鏡像 y ↔ 320 − y）"},
+  "ordenanza": {
+    "codo_cells": 5.7468,
+    "quilla_codos": 30, "eslora_codos": 36, "manga_codos": 10, "puntal_codos": 4.5, "plan_codos": 5,
+    "rake_fwd_codos": 4, "rake_aft_codos": 2,
+    "src": "FG 1618 Table 4 的 10 codos 那一欄〔查〕：龍骨 30、全長 36、寬 10、艙深 4½、底寬 5、艏外伸 4、艉外伸 2（龍骨＋兩頭外伸 ＝ 全長，研究代理逐欄驗過）。這一格是線形的對照（draft_lines 的 ordenanza_check）"
+  },
+  "lines": {
+    "half_beam": {"v": 28.7, "src": "FG：manga 10 codos ＝ 5.75 m ⇒ 全寬 57 格（|dy| ≤ 28）"},
+    "keel_top": {"v": 3, "src": "設計決定（同拉貝爾號）：龍骨（含 false keel）0.3 m；puntal 從這裡量"},
+    "keel_half": {"v": 1, "src": "設計決定：龍骨寬 3 格（0.3 m）"},
+    "plan_half": {"v": 14.4, "src": "FG：plan 5 codos ＝ 2.87 m ⇒ 半寬 14.4（通則：底寬 ＝ 船寬／2）"},
+    "astilla": {"v": 3, "src": "FG Table 4：astilla muerta ½ codo ＝ 0.29 m"},
+    "max_breadth_z": {"v": 29, "src": "FG：puntal 4½ codos ＝ 25.9 格、量到最寬處 ⇒ z 3 ＋ 25.9"},
+    "tumblehome": {"v": 0.6, "src": "設計決定：最寬處到主甲板（3 格）每舷收 0.6 —— 小船的 recogimiento 輕"},
+    "tumblehome_ref_z": {"v": 32, "src": "＝ 主甲板面（decks.rows main）"},
+    "tumblehome_pow": {"v": 1.0, "src": "設計決定"},
+    "tumblehome_above_per_cell": {"v": 0.1, "src": "設計決定：主甲板以上每 10 格每舷收 1 格 ⇒ 船尾樓頂（z 62）每舷再收 3 格"},
+    "bilge_pow": {"v": 2.2, "src": "設計決定（同康塞普西翁號）"},
+    "s_aft": {"v": 0.50, "src": "設計決定：tools/tune_lines.py 掃 s_aft × s_fwd × aft_pow 對 art.21 —— cuadra（艉柱往前 L/4＋2 codos）的寬 ≈ manga − 2 codos ＝ 45.5（寬只能是奇數格 ⇒ 47）；康塞普西翁號那組 0.45／0.59／2.0 ⇒ cuadra 55（本船短，2 codos 佔的比例大）"},
+    "s_fwd": {"v": 0.51, "src": "設計決定（同上）：mura（艏柱往後 L/4＋1 codo）的寬 ≈ manga − 1 codo ＝ 51.3 ⇒ 51"},
+    "sternpost_x0": {"v": 70, "src": "設計決定：艉柱腳的位置（整艘船在 X 上的擺放；後桅三角帆桁、船尾旗在它後面）"},
+    "sternpost_rake_deg": {"v": 19.75, "src": "FG：lanzamiento a popa 2 codos ＝ 11.5 格，量到主甲板（z 32）⇒ atan(11.5／32)"},
+    "wing_transom_z": {"v": 29, "src": "設計決定（同康塞普西翁號）：yugo 放在最寬處那一層；FG art.41：船尾彎到 yugo 為止（下段圓艉）"},
+    "transom_ratio": {"v": 0.525, "src": "FG Table 4：yugo 5¼ codos ＝ 30.2 格 ⇒ 半寬 15.1 ÷ 28.7"},
+    "forefoot_x": {"v": 242.4, "src": "FG：quilla 30 codos ＝ 172.4 格 ⇒ 70 ＋ 172.4"},
+    "stem_radius": {"v": 23.0, "src": "FG：lanzamiento a proa 4 codos ＝ 23.0 格；設計決定（同康塞普西翁號）：艏柱是半徑 23 的圓弧，z 23 以上直立 ⇒ 主甲板高度的 rake 正好 4 codos"},
+    "deadwood_aft_z": {"v": 22, "src": "FG Table 4：rasel popa 3⅓ codos ＝ 19.2 格（＋龍骨頂 3）"},
+    "deadwood_fwd_z": {"v": 9, "src": "FG Table 4：艏的 rasel 是艉的 ⅓ ＝ 1.1 codos ＝ 6.4 格（＋龍骨頂 3）"},
+    "bow_pow_low": {"v": 1.7, "src": "設計決定（同康塞普西翁號）"},
+    "bow_pow_high": {"v": 2.3, "src": "設計決定（同康塞普西翁號）：上面鈍"},
+    "aft_pow": {"v": 1.2, "src": "設計決定（tools/tune_lines.py，見 s_aft）：船尾收得早一點 ⇒ cuadra 對得上 art.21"},
+    "top": [[40, 62], [120, 62], [128, 50], [214, 50], [222, 60], [280, 60]],
+    "top_src": "舷頂（舷牆頂）折線：tolda 50 ＋ 12、船腰 主甲板 32 ＋ 18（砲門 z 38–44 頂上 wale 與舷牆）、castillo 50 ＋ 10；只當 top_curve 的對照",
+    "top_curve": {"knots": [[40, 62], [120, 62], [130, 50], [212, 50], [222, 60], [280, 60]],
+      "rise": [{"from": 120, "to": 50, "dz": 4, "pow": 2}, {"from": 250, "to": 266, "dz": 3, "pow": 2}],
+      "src": "Ship_Ends §2：船樓前後緣的落差照 smoothstep 走、落在矮的那一邊（tolda 前緣 x 120–130、castillo 後緣 212–222 ⇒ 高的那層甲板邊上的舷牆不變矮）；船尾往船尾翹 4、船首往船頭翹 3（平方）。高度：tolda 甲板 50 ＋ 12、船腰 50（主甲板中段 32 ＋ 18）、castillo 甲板 50 ＋ 10（設計決定）"},
+    "stern_tumble": {"z0": 34, "k": 0.1, "pow": 2, "src": "Ship_Ends §2：船尾那一段 z 34（主甲板之上）以上每 10 格每舷再收 1 格 × ua² ⇒ 船尾樓頂 z 62 那一圈每舷再收約 3 格"}
+  },
+  "waterline": {"z": 24, "src": "研究〔估〕：吃水約等於 0.9 × puntal（Atocha 4.3／4.80）⇒ 0.9 × 2.59 ＝ 2.33 m ＋ 龍骨 ⇒ z 24（2.4 m）。砲門下緣 z 38 離水線 1.4 m"},
+  "readings_at": {"deck_z": 32, "rail_z": 50, "hold_beams_z": 16, "puente_z": 32},
+  "decks": {
+    "src": "FG 1618 Table 4、art.5：10 codos 只有一層甲板（沒有 puente、alcázar），船尾一座「low」的 tolda；甲板 ＝ 最寬處 ＋ ½ codo ＝ 5 codos（28.7 格，從龍骨頂量）。遊戲站人要頭頂 14 格（甲板板 1 ＋ 樑 2 ＋ 14 ＝ 17）⇒ tolda、castillo 都比主甲板高 18（⚠ 條文的 low 約 2 codos ＝ 11.5 格，為了遊戲抬高）",
+    "rows": [
+      {"key": "orlop", "name": "艙底板（plan de la bodega）", "z": 12, "x_from": 92, "x_to": 230, "src": "設計決定：貨艙底鋪一層板給彈藥庫與站人（頭頂到主甲板樑 16 格）；FG art.32 的 baos vacíos 在艙深一半（z 16），本船不做"},
+      {"key": "main", "name": "主甲板（cubierta）", "z": 32, "src": "FG Table 4：甲板 5 codos ＝ 28.7 格 ＋ 龍骨頂 3"},
+      {"key": "tolda", "name": "船尾樓（tolda）", "z": 50, "x_to": 122, "src": "FG Table 4：10 codos 有一座 low 的 tolda；高 18（遊戲頭頂，見 src）；長到 x 122（主桅 x 156 後面、後桅 x 100 從它穿過）"},
+      {"key": "castillo", "name": "船首樓（castillo）", "z": 50, "x_from": 222, "src": "設計決定：條文 9–12 codos 沒寫 castillo（查不到）⇒ 短的一座、跟 tolda 同高，從 x 222 到船頭（前桅 x 254 從它穿過；錨孔 art.5 在它底下）"}
+    ],
+    "sheer": {"aft": 6, "fwd": 3, "x_mid": 150, "x_aft": 59, "x_fwd": 265, "src": "FG Table 4 通則：甲板舷弧 aft 1 codo、fwd ½ codo；最低點在船長的 45%（設計決定）；量到艉柱／艏柱（主甲板高度的 x 59／265）為止"}
+  },
+  "decks_preview": {"orlop": 12, "main": 32, "tolda": 50, "castillo": 50},
+  "ports": {
+    "src": "FG 1618 art.42：砲門下緣在甲板上 1 codo（6 格）、砲門 1¼ codos 見方（7 格）〔查〕。砲數研究〔估〕：每舷 4 門露天主甲板、從舷牆砲門打（1522 年 100 t 4 門大砲；1552 年 100–170 t 8 門；1588 年 patache 6–14 門）；口徑 4 磅（piezas de a 4，研究 3–6 磅的中間）",
+    "tiers": [
+      {"deck": "main", "per_side": 4, "x_from": 132, "x_to": 204, "w": 7, "h": 7, "sill": 6, "ref_pad": 3, "gun": "4l", "src": "4 磅每舷 4；船腰 tolda 前緣（x 122）與 castillo 梯子（x 207–221）之間。v1 x_to 212 ⇒ 第 4 門（x 205–212）跟 castillo 梯子並排、船頭那裡船殼收窄砲往裡伸到 |dy| 7.5、梯子側板在 |dy| 4 ⇒ 中間只剩 3 格，遊戲的走路格（每 2 格一點）過不去 ⇒ castillo 底下（廚房）整塊接不到（Blockside 匯入檢查：樓梯自檢 ⑤ 主甲板 x 215–259 一塊 9.2 m²、廚房四面都走不到）⇒ 收到 204"}
+    ],
+    "stern_chasers": {"deck": "main", "n": 0, "w": 7, "h": 7, "sill": 6, "gun": "4l", "src": "設計決定：沒有船尾追擊砲（研究沒查到；8 門都在舷側）"}
+  },
+  "masts": {
+    "src": "1618 art.66–67（FG 讀過）：主桅腳在龍骨中點、前桅腳在艏柱 rake 的中點；art.68：艏斜桅腳在主甲板。長度：1618 art.72–91 查不到 ⇒ 研究〔估〕主桅 2.4 × manga（17 世紀歐洲 2.4–2.6）、前 0.85、後 0.6、上桅 ½；三桅：前、主方帆＋gavia、後桅三角帆、艏斜桅 cebadera（研究 §4〔估〕）",
+    "manga_m": 5.75,
+    "rows": [
+      {"key": "fore", "x_step": 254, "rake_deg": -3, "lower_m": 11.7, "top_m": 5.9, "yards": {"course": 9.7, "topsail": 5.3}, "src": "x：艏柱 rake 中點 242.4 ＋ 23／2（art.67）；長：0.85 × 主桅、上桅 ½（研究〔估〕）；course ＝ 主 course 少 1/5（Cano，同康塞普西翁號）；topsail 0.55 × course"},
+      {"key": "main", "x_step": 156, "rake_deg": 1, "lower_m": 13.8, "top_m": 6.9, "yards": {"course": 12.1, "topsail": 6.6}, "src": "x：龍骨中點 70 ＋ 172.4／2（art.66）；長 2.4 × 5.75 m（研究〔估〕）、上桅 ½；course 2.1 M（同康塞普西翁號）"},
+      {"key": "mizzen", "x_step": 100, "rake_deg": 3, "lower_m": 8.3, "yards": {"lateen": 9.7}, "src": "長：0.6 × 主桅（Palacio mesana ＝ bauprés 的量級，同康塞普西翁號）；lateen ＝ 前 course 帆桁（Cano／Escalante）；位置設計決定（條文沒寫）：tolda 中段、立在主甲板"},
+      {"key": "bowsprit", "x_step": 258, "angle_deg": 30, "len_m": 9.4, "yards": {"spritsail": 6.5}, "src": "長：0.8 × 前桅（Palacio，同康塞普西翁號）；cebadera 帆桁 ＝ 前 course 少 1/3（Cano）；腳在主甲板（art.68）、從船頭 castillo 底下穿出去；仰角 30° 設計決定"}
+    ],
+    "check": "主桅頂離水線 ≈ 18 m —— 只當量級對照"
+  },
+  "espolon": {"len_beyond_stem": 34, "src": "FG 1618 art.45：espolón ＝ manga 的 3/5 伸出艏柱 ⇒ 6 codos ＝ 3.45 m",
+    "deck_top_z": 36, "thick": 2, "skirt_from_z": 32, "half_at_stem": 9, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 6, "cutwater_half": 1, "cutwater_pow": 2.0, "cutwater_band": 40, "cutwater_to_z": 32, "cutwater_tip_x": 286, "trail_off": [2, 6], "trail_from_z": 20, "rail_h": 7, "stanchion_every": 4,
+    "design_src": "設計決定（照 Ship_Ends §4.3 的整片平台＋knee，縮成本船）：喙的甲板頂 z 36（v0 37 ⇒ draft_deco 量艏斜桅那條線（半徑 3）被擋 6 格：出船頭 x 264 底 36.5）—— 艏斜桅從主甲板 (258, z 36) 仰 30° 出船頭（x 266 中心 z 40.6、半徑 2.5 ⇒ 底 38）在平台上面；castillo 甲板 50 在上面 ⇒ 喙比 castillo 低一層（小船的喙接在船頭中段）。半寬從艏柱 9 收到喙尖 2；側板包到 z 33（上下金線、底下不封）；knee 從艏柱 z 6 掃到 x 286 接平台底、水線下白；兩側 trailboard 金線；欄杆 7 格（Ship_Ends：一步跨得上 6 格）、每 4 格一根柱。⛔ 沒有 beakhead 艙壁（前桅 x 254 離艏柱只有 11 格）"},
+  "figurehead": {"x": 282, "len": 16, "half_t": 2.5, "raise": 2, "body": 213, "mane": 248, "crown": 248, "eye": 36,
+    "src": "設計決定：西班牙船的船首像多是戴冠的獅子（同康塞普西翁號，研究沒查到 patache 的船首像）⇒ 鍍金的獅子縮成 1.6 m；x ＝ 獅子後端，頭在喙尖往後 3 格 ⇒ 艏斜桅（x 290 底 ≈ 52）從獅子頭上過去；v0 x 281 ⇒ 尾巴尖 (281, z 46) 在艏斜桅半徑 3 裡（draft_deco 量 1 格）⇒ 往前 1 格"},
+  "stern_deco": {
+    "hackebort": {"z0": 66, "z1": 84, "half": 14, "arch_from": 78, "half_top": 8, "thick": 2, "field": 254, "border": 248,
+      "ribbon": {"z0": 66, "z1": 73, "color": 224, "text": "S ROMAN", "text_color": 248},
+      "shark": {"z_top": 82, "rows": [
+        ".....B.....",
+        "....GSG....",
+        "BSSSSSSSSSB",
+        ".....S.....",
+        "....WWW....",
+        ".....S.....",
+        ".....S.....",
+        ".....B.....",
+        ".....B....."
+      ], "B": 104, "W": 255, "S": 246, "G": 248},
+      "src": "設計決定：船尾頂上那塊拱形板畫船名的聖像 —— Santo Cristo（十字架上的基督：深色十字、膚色、白腰布、金光環），下面紅帶金字 S ROMAN（3×5 的字 25 格寬 ⇒ 板半寬 14；v0 名帶 z 65–71 ⇒ 字的最下一列壓在板底的金框上 ⇒ 66–73、字上下各留 1 列）；奶油底金框。程式沿用康塞普西翁號 hackebort 的框架（plan 的鍵名 hackebort／shark 照舊）；從船尾看左手 ＝ −y ⇒ 字從左讀 ⇒ 這一件的鏡像差照實報"},
+    "walks": [],
+    "walks_src": "1618 art.69：船寬 15 codos 以下不准加船尾走廊 ⇒ 不做 stern walk",
+    "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [0], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.5）；一盞 ＝ 不是旗艦〔估〕，站在拱形板頂上"}
+  },
+  "decks_build": {
+    "src": "設計決定（遊戲用的大致構造，照造船規格 Ship_Decks §9.2–9.3；結構照康塞普西翁號 draft_decks）。一層主甲板（船腰露天）＋tolda＋castillo＋艙底板；艙室只做甲板與 break",
+    "plank": {"interior": 177, "weather": 209, "weather_decks": ["main", "tolda", "castillo"]},
+    "beam": {"every": 16, "w": 2, "depth": {"orlop": 2, "main": 3, "tolda": 2, "castillo": 2}, "color": 136,
+             "src": "設計決定（同康塞普西翁號）：每 16 格一根、寬 2；主甲板 3 格深、船樓與艙底板 2 格深（tolda／castillo 高 18 ＝ 板 1 ＋ 樑 2 ＋ 頭頂 15）"},
+    "trim": 141,
+    "hatches": [],
+    "hatches_src": "v1 有一個主艙口 x 190–200（半寬 6、圍欄到 |dy| 7）⇒ 船腰只有 5.7 m 寬、砲尾往裡伸到 |dy| 8.5–10.5，艙口圍欄與小艇架的柱跟第 4 門砲並排的地方只剩 1–2 格，遊戲的走路格（每 2 格一點）過不去 ⇒ castillo 與它底下（廚房）整塊接不到（Blockside 匯入檢查 ✗ 甲板走不到、樓梯自檢 ⑤）⇒ 拿掉；下貨艙走艙底板的梯子（主甲板開井）。小船的艙口照實是小的 —— 設計決定",
+    "coaming_h": 2,
+    "mast_r": {"fore": 3, "main": 3, "mizzen": 2},
+    "breaks": [
+      {"name": "船尾樓（tolda）前緣", "x": 122, "lo": "main", "up": "tolda", "doors_dy": [12], "rail_h": 7, "rail_side": "aft"},
+      {"name": "船首樓（castillo）後緣", "x": 222, "lo": "main", "up": "castillo", "doors_dy": [12], "rail_h": 7, "rail_side": "fwd"}
+    ],
+    "break_src": "設計決定（同康塞普西翁號）：船樓前（後）緣一道艙壁（兩扇門 寬 5，dy ±12：讓開中線的梯子）＋船樓甲板邊上一道 7 格高的胸牆（梯子頭留口）",
+    "ladders": {
+      "rise": 3, "run": 2, "tread_half": 3, "color": 136,
+      "list": [
+        {"name": "orlop", "lo": "orlop", "up": "main", "xs": 166, "dir": 1, "dy": 0, "head_x": 185, "well": true},
+        {"name": "tolda", "lo": "main", "up": "tolda", "xs": 136, "dir": -1, "dy": 0, "head_x": 119},
+        {"name": "castillo", "lo": "main", "up": "castillo", "xs": 208, "dir": 1, "dy": 0, "head_x": 225}
+      ],
+      "src": "設計決定：每 3 格一階、每階 2 格、踏板 7 寬（同康塞普西翁號）。砲架往裡伸到 |dy| 約 10 ⇒ 梯子都放中線。船樓的梯子靠在 break 外面、梯頂 ＝ xs ＋ 走向 × (2 × (階 ＋ 1) ＋ 1) 貼著艙壁（tolda：136 − 13 ＝ 123、break 122；castillo：208 ＋ 13 ＝ 221、break 222；Ship_Decks §9.3 ④）；艙底板的梯子在主桅（x 153–159）與主艙口（189–201）之間往船頭爬、主甲板開井"
+    }
+  },
+  "rig_build": {
+    "src": "設計決定（桅帆長度與位置在 plan.masts）；造船規格 Ship_Masts §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡。程式照康塞普西翁號 draft_masts（小船：沒有上桅、沒有斜桅頂桅）",
+    "hull_mark": "砲門:end",
+    "colors": {"mast": 141, "top": 136, "rim_band": 224, "rim_cap": 248, "truck": 248},
+    "mast_r": {"fore": [1.8, 1.3], "main": [2.0, 1.4], "mizzen": [1.3, 0.9]},
+    "mast_r_src": "研究〔估〕：英式「每碼長 1 吋」⇒ 主桅 13.8 m ≈ 15 碼 ⇒ 直徑 0.38 m ⇒ 腳半徑 2.0；比甲板桅孔（decks_build.mast_r 3／3／2）小",
+    "topmast_r": {"fore": [1.2, 0.8], "main": [1.3, 0.9]},
+    "tgallant_r": {},
+    "tops": {"main": 11, "fore": 10, "rim_h": 5, "src": "設計決定：主 11、前 10（遊戲的桅頂水手站在半徑 9／12 的一圈、一層要 6 點以上 ⇒ 不能再小）；後桅只掛三角帆、沒有桅樓（同康塞普西翁號的 bonaventure）；籃子 5 格高、紅腰帶、金頂"},
+    "heel_ext": {"main": 3, "src": "draft_masts：組裝件 2 個元件 —— 主桅（2,673 格）浮空：桅腳 z 8（龍骨頂 3 ＋ 4，抄康塞普西翁號的 keelson 高度），船殼在中線只到 z 4（本船牆 3 格），甲板的桅孔半徑 3 比桅 2 大 ⇒ 整根沒碰到東西 ⇒ 桅腳往下接 3 格到 z 5（坐在船殼上；軸與平台不動，甲板的孔不變）"},
+    "crosstree_r": 4,
+    "bowsprit_r": [2.0, 1.2],
+    "yards": [
+      {"name": "yard-fore-course", "mast": "fore", "yard": "course", "sail": "fore-course", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-topgallant", "src_len": 99, "brace": -15},
+      {"name": "yard-fore-topsail", "mast": "fore", "yard": "topsail", "sail": "fore-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -17},
+      {"name": "yard-main-course", "mast": "main", "yard": "course", "sail": "main-course", "src_work": "basecamp-frigate-constitution-01m-yard-main-topgallant", "src_len": 143, "brace": -15},
+      {"name": "yard-main-topsail", "mast": "main", "yard": "topsail", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -17},
+      {"name": "yard-spritsail", "mast": "bowsprit", "yard": "spritsail", "sail": "spritsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": 0, "at_t": 0.8, "drop": 4}
+    ],
+    "yards_src": "Ship_Setup §2.1：方帆桁沿用憲法號的帆桁元件，只沿長度（y）縮放到 plan.masts 的長度；挑長度最近、固定點齊全的那一根（src_len ＝ arm-S − arm-P ＋ 3，同康塞普西翁號）。帆名：papahígo（course）、gavia（topsail）、cebadera（spritsail）",
+    "lateen": [
+      {"mast": "mizzen", "len_m": 9.7, "angle_deg": 40, "hoist_frac": 0.4, "sail": "mizzen-lateen"}
+    ],
+    "lateen_src": "plan.masts 的 lateen 長度；角度、吊點照康塞普西翁號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5）"
+  },
+  "rigging": {
+    "src": "設計決定；數值照造船規格 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；程式照康塞普西翁號 draft_rigging（前、主桅有桅樓＋中桅；後桅只有下桅＝康塞普西翁號 bonaventure 那一套；沒有上桅、斜桅頂桅）",
+    "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+    "channels": {
+      "shrouds": {"fore": 4, "main": 5, "mizzen": 2},
+      "backstays": {"fore": 1, "main": 1},
+      "spacing": {"fore": 4, "main": 4, "mizzen": 5},
+      "first_aft": {"fore": 2, "main": -8, "mizzen": 2},
+      "below_rail": {"fore": 3, "main": 2, "mizzen": 3},
+      "width": 3,
+      "src": "設計決定（研究沒查到 patache 的 shroud 數）：每舷 shrouds 前 4、主 5、後 2（中桅 backstay 前、主各 1）—— 量級照拉貝爾號（前 3、主 4）往上一級。主桅那一排從桅前 8 格起往後排、在舷頂下 2 格（船腰砲門頂 z 甲板 ＋ 12 之上）；前桅在 castillo 舷頂下 3；後桅在 tolda 舷頂下 3"
+    },
+    "topmast_shrouds": 2,
+    "tgallant_shrouds": 0,
+    "thick": {"shroud": 0.9, "topmast_shroud": 0.6, "tgallant_shroud": 0.4, "futtock": 0.4, "backstay": 0.6, "stay": 1.0, "tm_stay": 0.7, "tg_stay": 0.5, "bobstay": 0.9, "sheet": 0.4, "course_sheet": 0.45, "tack": 0.45},
+    "bobstay_z": [18, 26],
+    "ratlines": {"step": 4, "lower": {"start": 6, "stop": 12}, "topmast": {"start": 4, "stop": 8}, "min_span": 4, "th": 0.3, "tm_th": 0.25, "color": "#2b2620",
+      "src": "Ship_Rigging §6：橫繩組、每 4 格一道；小船 ⇒ lower start 6 stop 12、topmast start 4 stop 8、短於 4 格不畫；前、主桅的下桅那組 climb=1（foot ＝ 舷牆內側的甲板、head ＝ 桅頂平台靠這一舷的邊）；後桅沒有桅樓 ⇒ 不做 ratlines"},
+    "sails": {
+      "fullness": 1.05, "course_clew_above_rail": 4, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 18, "sheet_aft": 25, "tack_fwd": 20, "bow_belay_max_x": 260,
+      "lateen_clew": {"mizzen": [62, 72]},
+      "lateen_tack": {"mizzen": ["tolda", 118]},
+      "lateen_sheet_x": {"mizzen": 56},
+      "sprit_belay_x": 256,
+      "cross_texture": ["fore-course", "main-course"],
+      "src": "設計決定（照康塞普西翁號、縮成本船）：course 帆腳在舷頂上 4 格；上桅帆的 sheet 綁下一根帆桁同舷的 earing；三角帆的 clew 在帆桁後半下面 (62, z 72)、tack 從帆桁前端綁到 tolda 前緣 x 118、sheet 綁船尾舷頂 x 56；cebadera 的 sheet 綁船頭舷頂 x 256。兩面 course 畫勃艮第十字（同康塞普西翁號）"
+    },
+    "bobstay_src": "喙（knee）在 z 6–36 ⇒ 兩條 bobstay 的腳在 knee 最前面那一格 z 18、26（康塞普西翁號寫死 55、70）",
+    "sail_set": {"spritsail": 3},
+    "flags": {"ensign": [16, 11], "pennant": [30, 3], "pennant_color": "#c8102e",
+      "src": "船尾旗：勃艮第十字（Cruz de Borgoña）—— 1785 年以前西班牙船的旗（同康塞普西翁號）；掛在後桅三角帆桁後端；主桅頂一條紅長旗（設計決定）；尺寸照船縮"},
+    "wind": [4.5, -1.5, 0],
+    "sail_seconds": 3
+  },
+  "gun4l": {
+    "work": "pinnacle-patache-01m-gun-4l", "title": "4 磅長砲（gun 4l，鐵砲管＋兩軸四輪砲架；通用部件，0.05 m）", "mpv": 0.05,
+    "colors": {"barrel": 36, "carriage": 132, "quoin": 136, "iron": 73},
+    "AZ": 14,
+    "barrel": {"trunnion_from_base": 17, "bore_r": 0.8, "bore_depth": 6,
+      "profile": [[0, 3.2], [1.5, 3.2], [1.5, 2.7], [14, 2.7], [14, 3.0], [15, 3.0], [15, 2.4], [23, 2.4], [23, 2.15], [36, 1.75], [36, 1.5], [37.5, 1.5], [37.5, 2.2], [39, 2.2], [39, 1.9], [40, 1.9]]},
+    "carriage": {"front_from_trunnion": 5, "len": 20, "cheek_x": [3, 4], "cheek_steps": [[0, 15], [6, 13], [10, 12], [14, 10]], "cheek_bottom": 5, "arch": [5, 12, 6],
+      "wheel_front_r": 3.0, "wheel_rear_r": 2.7, "axle_front_back": 3, "axle_rear_fwd": 3, "bed_len": 8, "quoin_len": 5, "eye_back": 9, "eye_z": 9},
+    "src": "Tim 2026-10-28「3 或 4 磅 請另外做炮(炮只有同型號共用模型)」⇒ 新做一件通用部件（Ship_Guns §2.2 的作法），⛔ 不拿 6 磅縮。尺寸〔估〕：17 世紀 4 磅鐵砲管約 6½ 呎 ≈ 2.0 m（砲口到 cascabel 40＋4 格 × 0.05 m；拉貝爾號出土那門 4 磅 6 pi ＝ 1.95 m 同量級）、砲尾外徑 0.32 m、砲口 0.19 m、內膛 0.08 m（4 磅彈 ≈ 7.8 cm）；砲架：西班牙海用兩軸四輪 cureña（長 1.0 m、耳軸高 0.73 m、實心木輪 truck 直徑 0.3 m）—— v0 耳軸 0.53 m（AZ 10）⇒ 砲軸在主甲板上 5.25 格、砲門下緣在甲板上 6 格（art.42）⇒ 8 門砲口都卡在砲門下緣、退到砲口在船殼裡 3–22 格（draft_guns）⇒ AZ 14、cheek 跟著加高、輪子加大。外形分段（base ring、第一 reinforce、reinforce ring、第二 reinforce、chase、muzzle swell）選在格子上看得出台階的半徑（Ship_Guns §4.1）"
+  },
+  "guns_build": {
+    "assembly": "pinnacle-patache-01m-assembly", "hull": "pinnacle-patache-01m",
+    "deck_works": {"main": "pinnacle-patache-01m-deck-main", "tolda": "pinnacle-patache-01m-deck-tolda", "castillo": "pinnacle-patache-01m-deck-castillo"},
+    "prefix": {"main": "M", "tolda": "T", "castillo": "F"},
+    "types": {
+      "4l": {"work": "pinnacle-patache-01m-gun-4l", "scale": 0.5, "pivot": [6.5, 28, 0], "meta": {"kind": "gun", "gun": "4l"}, "src": "新做的通用部件（draft_gun4l.py；Tim 2026-10-28「3 或 4 磅 請另外做炮」）0.05 m、scale 0.5；pivot ＝ 砲架前緣中間、甲板面那一層；砲種表已有 4l（4 磅砲）"},
+      "pierrier": {"work": "apex-one-reale-01m-gun-pierrier", "scale": 0.39, "pivot": [5.5, 18.5, 0], "meta": {"kind": "gun", "gun": "pierrier", "mount": "turret", "arc": "-80,80", "rate": 45}, "src": "同一種砲共用模型：皇家號的叉架後膛迴旋砲（通用部件，0.05 m），scale、pivot、meta 照拉貝爾號（0.39 ⇒ 1.48 m；跟拉貝爾號同一份網格）；西班牙的 verso／pedrero 同一類"}
+    },
+    "swivels": {"type": "pierrier", "rows": [{"deck": "main", "x": 133}, {"deck": "main", "x": 168}, {"deck": "main", "x": 189}, {"deck": "main", "x": 211}],
+      "src": "研究〔估〕：迴旋砲 6–8 門（1552 年 100–170 t 級 versos 12、1522 年 100 t 旋轉砲 24）⇒ 8 門、每舷 4；插在船腰的舷牆頂（那一欄船殼最高那一層、牆厚中間；照拉貝爾號）：x 133（第 1 門砲門上面的舷牆頂；x 128 在 tolda 前緣的 S 形舷頂上、撞 69 樣本）、168（主桅 channels x 144–164 前面）、189（第 3、4 門之間）、211（第 4 門與 castillo 後緣之間）。v1 tolda 兩門、castillo 一門、船腰一門 ⇒ tolda、castillo 變成砲甲板、要有取用點（9×9 平地）—— 兩座船樓太窄放不下；改用彈藥庫 hoist（梯腳擺桶）⇒ 中線的梯子腳前就是船腰唯一往船頭的走道，桶一擺就把 castillo 與它底下（廚房）整塊切開（Blockside 匯入檢查 ✗ 甲板走不到、取用點）⇒ 迴旋砲全部放船腰的舷牆頂（史料：舷牆與船樓的叉架都有，設計決定）"},
+    "chase": {"deck": "main", "type": "4l", "phis": [90], "dl": 3, "src": "沒有船尾追擊砲門（plan.ports.stern_chasers n 0、船尾那一排是窗）⇒ 這一段不放（照 verify_ports 的 port 找，0 個）"},
+    "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-2, -1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2, "src": "Ship_Guns §4.2（同康塞普西翁號）"},
+    "support_min": 0.5, "support_src": "同康塞普西翁號：砲最底下那層格子正下方有實心的比例 ≥ 0.5",
+    "override": {}
+  },
+  "gear_build": {
+    "assembly": "pinnacle-patache-01m-assembly",
+    "magazine": {"work": "pinnacle-patache-01m-magazine", "link": "彈藥庫", "title": "聖羅曼號 彈藥庫（pañol de la pólvora）", "x0": 122, "x1": 146, "floor": 13, "ztop": 28, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft",
+      "cap": 10, "cap_src": "HAR p.314：1552 年條例 100–170 t 級配火藥 9 cwt 1 qr（≈ 1,036 磅）〔查，OCR 重排〕⇒ 10 桶 × 100 磅",
+      "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+      "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 3},
+      "src": "設計決定：艙底板（z 12）船尾那一段 x 122–146（再往後艙底板窄到半寬 1–6 格）、主桅前面就是艙底板梯子（x 165）；水線（z 24）以下；門開在船頭那道艙壁；頂 ＝ 主甲板的樑底下。做法照康塞普西翁號（銅皮、橡木框、松木地板、門洞 5 格）"},
+    "skids": {"work": "pinnacle-patache-01m-boat-skids", "link": "小艇架", "title": "聖羅曼號 小艇架（船腰三座 cradle）", "deck": "main", "xs": [170, 183, 196], "y_half": 12, "post_dy": 7, "beam_z": 47, "color": 136,
+      "src": "設計決定：主甲板船腰、橫跨艙底板梯子的井（172–186）；橫樑底在甲板上 1.4 m（z 47，人從底下走得過、遊戲頭頂 14 格）；柱在 dy ±7（站在艙口／梯子井的圍欄外緣；v1 ±11 ⇒ 中間那座 x 183 的柱擋在第 3 門砲（砲門 x 181–187）的砲架上、步驟 11 重算砲時兩門放不下 —— 步驟 9 量砲的時候小艇架還沒落格；橫樑 z 47 在砲上面不擋）；中間那座 x 183 在小艇外框中心正下方（v0 只有兩座 ⇒ 遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心 ⇒ 小艇報掉下去）"},
+    "models": [
+      {"name": "主絞盤", "host": "pinnacle-patache-01m-deck-main", "work": "basecamp-ember-01m-capstan", "at": [146, 160.5, null], "pivot": [40, 40, 0], "scale": 0.12, "rotate": 0, "meta": {"kind": "capstan"}, "src": "沿用餘燼號主絞盤縮成 1.0 m（小船）；主甲板中線、tolda 梯子腳（x 137）與主桅（x 153）之間（1618 art.65：capstan 在 puente —— 本船沒有 puente，放在主甲板）"},
+      {"name": "羅經櫃", "host": "pinnacle-patache-01m-deck-tolda", "work": "summit-night-falcon-01m-binnacle", "at": [110, 160.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"}, "src": "沿用夜隼號羅經櫃；tolda 中線、後桅（x 100）與梯子頭（x 119）之間、舵輪（步驟 11）前面"},
+      {"name": "小艇", "host": "pinnacle-patache-01m-deck-main", "work": "basecamp-ember-01m-boat", "at": [183, 160.5, 49], "pivot": [90, 26, 0], "scale": 0.25, "rotate": 0, "meta": {"kind": "boat", "boat": "cutter", "length_m": 4.5}, "src": "沿用餘燼號 cutter 縮成 4.5 m 的 batel（小艇不是砲 ⇒ 可以縮）；擱在小艇架上（z 49 ＝ 橫樑頂 48 ＋ 1；v0 給 null 讓程式量 ⇒ 艇比兩根立柱的間距窄、從橫樑底下滑進去，停在主艙口圍欄上 z 36）"}
+    ],
+    "z_src": "at 的 z 給 null ⇒ 產生程式量：模型最底層那幾格腳下最高的實心 ＋ 1（甲板舷弧、小艇架頂）",
+    "foot_reach": 12, "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（Blockside/src/js/10_ship.js）"
+  },
+  "rudder_anchor_build": {
+    "rudder": {"work": "pinnacle-patache-01m-rudder", "title": "聖羅曼號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 28, "width": [[0, 9], [8, 9], [16, 7], [21, 4], [28, 4]], "below": 182, "above": 136, "iron": 73, "strap_every": 6, "waterline_z": 24, "max_deg": 35, "bevel": 1,
+      "src": "設計決定（照康塞普西翁號的做法縮成本船）：舵沿艉柱後緣（lines.x_post，斜 19.75°）從龍骨底到 z 28（yugo z 29 底下，舵頭從鏡板下面進船）；3 格厚、舵葉 0.9 m 往上收到水線上 0.4 m 的舵頭；水線下白（sebo）、上橡木褐、每 6 格一道鐵箍；前緣兩側削 1 格"},
+    "spin": {"rudder": {"spin": "rudder", "spin_k": 35, "spin_min": -35, "spin_max": 35, "spin_lag": 0.3}, "wheel": {"spin": "rudder", "spin_k": 540, "spin_lag": 0.6}, "src": "Ship_Helm §9.8.1 照抄（同康塞普西翁號）：舵 ±max_deg、舵輪 540°"},
+    "helm": [
+      {"name": "舵輪", "host": "pinnacle-patache-01m-deck-tolda", "work": "basecamp-frigate-constitution-01m-wheel", "at": [89, 160.5, 51], "pivot": [50, 52, 0], "scale": 0.13, "rotate": 0, "meta": {"kind": "wheel"}},
+      {"name": "舵輪座", "host": "pinnacle-patache-01m-deck-tolda", "work": "basecamp-frigate-constitution-01m-wheel-stand", "at": [89, 160.5, 51], "pivot": [50, 52, 0], "scale": 0.13, "rotate": 0, "meta": {"kind": "wheel_stand"}}
+    ],
+    "helm_src": "沿用憲法號雙舵輪＋木頭雙柱座（Ship_Helm §9.8.1：掛輪要同時掛座、擺法照抄）、縮成 0.13（小船）；tolda 中線 x 89、後桅（x 100）後面（v0 x 104 在後桅前面 ⇒ 輪與座把後桅包在中間、撞 12,298／41,600 樣本；tolda 上後桅前面只剩 x 101–119，又有羅經櫃 110、梯子頭 119）。⚠ 1660 年代西班牙船用舵桿（pinzote），舵輪要到 18 世紀 —— 遊戲的舵手要 kind=wheel，照遊戲（同收穫號、康塞普西翁號）",
+    "anchor": {"gear_work": "pinnacle-patache-01m-anchor-gear", "gear_title": "聖羅曼號 錨架（兩舷 billboard）", "gear_link": "錨架", "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.5, "pivot": [23.5, 16.5, 56.5],
+      "x_try": [254, 256, 258, 260], "z_try": [52, 54, 56, 58], "z_ref": 48, "d_step": 0.5, "d_max": 16, "ledge_half": 8, "ledge_out": 2, "ledge_t": 2, "color": 136,
+      "gun_decks": ["pinnacle-patache-01m-deck-castillo", "pinnacle-patache-01m-deck-main"],
+      "src": "沿用共用錨元件縮成一半（scale 0.5 ⇒ 小船的錨；不是砲 ⇒ 可以縮）、meta anchor=bower；兩舷各一，吊在船頭舷外、前桅支索板（x 236–252）前面（x 254–260 試）；錨臂順著船殼切線（z_ref 48 那一層量）；錨冠底下一塊 billboard 托板"},
+    "hawse": {"x": 262, "z": 41, "src": "FG art.5：錨孔在船首樓底下、盡量高 ⇒ 主甲板（船頭 z 35）與 castillo（50）之間（只登記固定點 hawse-S／P，⚠ 沒有開孔）"}
+  },
+  "paint": {
+    "base": 136, "band": 36, "gold": 248, "reveal": 224, "glass": 87,
+    "src": "設計決定（一手的塗裝查不到，同康塞普西翁號的配色）：舷側橡木焦油褐 136、wale 黑 36（不描金）、砲門外一圈紅 224、船樓舷牆赭黃底配紅菱格、舷頂金 248、水線 z 24 以下白 182（sebo）。小船不描砲門金框（康塞普西翁號的 wreath 不用）",
+    "wales": {
+      "rows": [
+        {"deck": "main", "dz": -7, "h": 2, "edge": false, "src": "1618 art.52：第一條 wale 在主甲板下 1 codo（6 格）"},
+        {"deck": "main", "dz": -2, "h": 2, "edge": false, "src": "1618 art.52：第二條在甲板橫樑的樑頭"},
+        {"deck": "main", "dz": 14, "h": 2, "edge": false, "src": "1618 art.52：第三條在砲門之上、主甲板上 2½ codos（14 格；砲門頂 z 甲板 ＋ 12）"}
+      ],
+      "sheer": {"mid_x": 150, "aft_x": 59, "fwd_x": 265, "aft": 3, "fwd": 3, "pow": 2,
+        "src": "FG 1618 Table 4：wale 的舷弧 艉 1½、艏 1 codo（8.6／5.7 格），比甲板（艉 1、艏 ½ codo ＝ 6／3 格）多翹 ⇒ wale 自己再加 艉 3、艏 3（船中 x 150 往兩頭照平方）"},
+      "src": "每條：黑 h 列、照甲板舷弧走＋sheer；不描金（edge false）"
+    },
+    "lozenge": {"color": 224, "period": 8, "radius": 2, "rows": [
+        {"deck": "tolda", "z0": 52, "z1": 59, "bg": 213},
+        {"deck": "castillo", "z0": 52, "z1": 57, "bg": 213}
+      ], "src": "設計決定（同康塞普西翁號的船樓舷牆：紅菱格配赭黃底，研究沒查到 patache 的塗裝）；船小 ⇒ 週期 8、半徑 2"},
+    "cap_gold": {"src": "設計決定：舷頂最上一格外板換金（整條舷頂）"}
+  },
+  "stern": {
+    "src": "設計決定：船尾 espejo（yugo z 29 以上平的鏡板，FG art.41 以下是圓艉）—— tolda 底下的船長室（cámara）3 扇窗（真玻璃、後面刻穿）；沒有追擊砲門、沒有船尾走廊（art.69）",
+    "face_x_max": 80, "z_ref_x": 62,
+    "rows": [
+      {"deck": "main", "kind": "window", "n": 3, "w": 5, "h": 5, "sill": 4, "half": 12}
+    ],
+    "rows_src": "tolda 底下（主甲板在船尾 z 38、tolda 甲板 z 50 的樑底 z 47）⇒ 窗 z 42–46；三扇在 |dy| ≤ 12（鏡板在那個高度半寬 ≈ 14）"
+  },
+  "hull_build": {"wall": 3, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 182, "bottom_top_z": 24, "src": "設計決定：牆 3 格（外板 1、肋骨 1、內板 1；FG art.57 8–10 codos 的外板 1/9 codo ＝ 6 cm，小船比康塞普西翁號薄）；水線上橡木焦油褐 136、水線下白 182（sebo，同康塞普西翁號）"}
+}
