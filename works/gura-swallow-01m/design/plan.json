@@ -538,7 +538,7 @@
   "lateen_src": "照拉貝爾號（ame-labelle-01m）的 lateen 子作品：7.9 m（R 推）、前低後高 40°（V 的素描約 40–45°；照拉貝爾號 40）、掛點在前端往後 40%"
  },
  "rigging": {
-  "src": "數值照 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；CH 線圖桅旁 4 個 deadeye（M）⇒ 每舷 3 根 shroud ＋ 1 根 backstay；sloop 的艏帆：staysail（前支索）＋ jib（上桅支索到艏斜桅頂）",
+  "src": "數值照 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照拉貝爾號（方帆主桅＋lateen 後桅）、艏帆照飛魚號；側支索主桅每舷 4、後桅 2、上桅 2（只有桅頂橫桁兩端）—— V PAE5267 主桅旁看得到 4 根 shroud（設計決定照它）",
   "colors": {
    "standing": "#2b2620",
    "running": "#a08458",
@@ -547,66 +547,100 @@
    "deadeye": 36
   },
   "channels": {
-   "shrouds": 3,
-   "spacing": 4,
+   "shrouds": {
+    "main": 4,
+    "mizzen": 2
+   },
+   "backstays": {
+    "main": 1
+   },
+   "spacing": {
+    "main": 5,
+    "mizzen": 5
+   },
    "first_aft": 2,
-   "backstay_aft": 26,
    "width": 3,
    "below_rail": 0,
-   "src": "M：CH 的 4 個 deadeye 在桅（甲板處）後 0–5.6 ft ⇒ 3 根 shroud 從桅後 2 格起每 4 格一根；backstay 在桅後 26 格（桅後傾 14°、桅頂在甲板桅位後 2 m ⇒ backstay 要再往後才拉得住；設計決定）；channels 在舷頂那兩格的舷外，x 範圍避開兩門砲"
+   "src": "設計決定：channels 在舷頂那兩格的舷外（砲門頂上面）；主桅 deadeye x 183／178／173／168＋backstay 163（在第 1 門砲 152.5 與第 2 門 206.5 之間）；後桅 x 131／126（後甲板舷牆）；spacing 5（拉貝爾號 v1 3 ⇒ ratlines 第一道就短於 4）；兩舷一件"
   },
   "topmast_shrouds": 2,
   "thick": {
-   "shroud": 0.6,
-   "topmast_shroud": 0.45,
-   "futtock": 0.35,
-   "backstay": 0.45,
-   "stay": 0.8,
+   "shroud": 0.75,
+   "topmast_shroud": 0.5,
+   "futtock": 0.4,
+   "backstay": 0.55,
+   "stay": 0.95,
    "tm_stay": 0.6,
-   "bobstay": 0.7,
+   "bobstay": 0.8,
    "sheet": 0.35,
-   "main_sheet": 0.45
+   "course_sheet": 0.45,
+   "tack": 0.4
   },
-  "thick_src": "設計決定：拉貝爾號（0.7／0.5／…）照本船桅徑再縮一點",
+  "thick_src": "設計決定：拉貝爾號（0.7／0.5／…）照本船主桅徑（0.44 m ＞ 拉貝爾號 0.4 m）稍粗一點",
   "ratlines": {
    "step": 4,
    "start": 5,
    "stop": 12,
    "min_span": 4,
    "th": 0.25,
-   "src": "Ship_Rigging §6：橫繩組；沒有桅樓平台 ⇒ 先不標 climb"
+   "tm_step": 4,
+   "tm_start": 3,
+   "tm_stop": 6,
+   "tm_th": 0.2,
+   "src": "Ship_Rigging §6：橫繩組（sub=ratlines），每 4 格一道；沒有桅樓平台 ⇒ 繩梯的 head 站不住 ⇒ 不標 climb（同拉貝爾號）"
   },
   "sails": {
    "fullness": 1.05,
+   "course_clew_above_rail": 3,
+   "course_in": 0.9,
    "clew_in": 0.1,
+   "sheet_aft": {
+    "main": 30
+   },
+   "tack_fwd": {
+    "main": 30
+   },
+   "lateen_clew": {
+    "mizzen": [
+     100,
+     60
+    ]
+   },
+   "lateen_tack": {
+    "mizzen": [
+     "main",
+     152
+    ]
+   },
+   "lateen_sheet_x": 100,
    "staysail_head": 0.72,
    "jib_head": 0.78,
    "forestay_t": 0.15,
    "staysail_clew": [
-    176,
-    52
-   ],
-   "jib_clew": [
-    196,
+    212,
     56
    ],
-   "staysail_sheet_x": 172,
-   "jib_sheet_x": 186,
-   "mainsheet_boom": "foot-96",
-   "src": "設計決定：staysail 的 tack 在艏斜桅上 15%（艏柱頭前面一點）、head 在前支索 72%；jib 的 tack 在艏斜桅頂、head 在上桅支索 78%（Ship_Rigging §7：70–80%）；兩面的 clew 自由、sheet 綁兩舷舷頂；mainsail 四角綁 gaff／boom（只有 leech 自由），main sheet 從 boom 船尾舷頂上方那一點拉到船尾舷頂中線"
+   "jib_clew": [
+    244,
+    60
+   ],
+   "staysail_sheet_x": 204,
+   "jib_sheet_x": 222,
+   "bobstay_z": 28,
+   "bs_shroud_x": 250,
+   "src": "設計決定：course 帆腳在舷頂上 3 格、sheet 綁主桅後 30 格（x 155）、tack 綁主桅前 30 格（x 215）的舷頂；lateen 的 clew 在帆桁後端下面（x 100、z 60，船尾舷頂 53 上面）、sheet 綁到船尾舷頂兩舷，tack 從帆桁前端綁到主甲板 x 152（break 前面、貨艙井 154 後面）；staysail 的 tack 在艏斜桅上 15%、head 在主支索 72%；jib 的 tack 在艏斜桅頂、head 在上桅支索 78%（Ship_Rigging §7：70–80%）；兩面的 clew 自由、sheet 綁兩舷舷頂（x 204／222）；bobstay 腳在艏柱前緣 z 28（船首像 37–41 底下）、艏斜桅 shroud 綁船頭舷頂 x 250"
   },
   "flags": {
    "ensign": [
     12,
     8
    ],
-   "ensign_luff_anchor": "top-128",
    "pennant": [
     26,
     2
    ],
    "pennant_color": "#f2f2f0",
-   "src": "設計決定：英國紅旗（red ensign：紅底、左上角聖喬治十字；1666 年牙買加的英國船）掛在 gaff 峰；桅頂一條白長旗"
+   "src": "設計決定：英國紅旗（red ensign：紅底、左上角聖喬治十字；1665 年派到牙買加的英國海軍 ketch）掛在後桅 lateen 帆桁後端；主桅頂一條白長旗"
   },
   "wind": [
    4.5,
@@ -619,12 +653,10 @@
   "assembly": "gura-swallow-01m-assembly",
   "hull": "gura-swallow-01m",
   "deck_works": {
-   "main": "gura-swallow-01m-deck-main",
-   "quarter": "gura-swallow-01m-deck-quarter"
+   "main": "gura-swallow-01m-deck-main"
   },
   "prefix": {
-   "main": "M",
-   "quarter": "Q"
+   "main": "M"
   },
   "types": {
    "4l": {
@@ -639,7 +671,7 @@
      "kind": "gun",
      "gun": "4l"
     },
-    "src": "照拉貝爾號（同一個元件、同一個縮放 ⇒ 遊戲裡同一份網格）：風暴角號 6 磅長砲縮成 6 ft（1.95 m）的 4 磅砲管；夜隼號自己的 4 磅砲（0.05 m 原尺寸）砲架 0.8 m 高、砲軸離甲板 0.6 m ⇒ 砲門要開到舷頂，不用"
+    "src": "照飛魚號、拉貝爾號（同一個元件、同一個縮放 ⇒ 遊戲裡同一份網格）：風暴角號 6 磅長砲縮成 6 ft（1.95 m）的 4 磅砲管 —— minion 級（R §6：Swallow 的砲種沒驗到，名目 6 門）"
    },
    "pierrier": {
     "work": "apex-one-reale-01m-gun-pierrier",
@@ -661,17 +693,8 @@
   },
   "swivels": {
    "type": "pierrier",
-   "rows": [
-    {
-     "deck": "main",
-     "x": 128
-    },
-    {
-     "deck": "main",
-     "x": 172
-    }
-   ],
-   "src": "R：小 sloop 4–6 門迴旋砲〔估〕⇒ 每舷 2 個插座；位置設計決定：船腰（第 1 門砲與主艙口之間）、桅前（爐灶與第 2 門砲之間）；插在舷牆頂（那一欄船殼最高那一層、牆厚中間）。🩸 v1 每舷 3 個（後甲板 x 92 一個）⇒ 匯入檢查 ✗ 後甲板找不到 9×9 的取用點（3 m 長的後甲板上有舵柄、羅經櫃、艙房的井）；改用右舷梯子吊火藥 ⇒ 桶擺在梯腳旁、把梯腳出口堵死（✗ 樓梯）⇒ 後甲板不放砲；v2 船頭那對放在 x 199（第 2 門砲前面）⇒ 遊戲照「那一層最靠船頭的那一門」定站人高度（Blockside 10_ship.js gunDecksMeta 的 main）⇒ 拿到舷頂上的迴旋砲 z 42 ⇒ 主甲板的取用點量在 z 34–47、找不到 ⇒ 挪到第 2 門砲後面（x 172）"
+   "rows": [],
+   "src": "本船不放迴旋砲：W 只有名目 6 門、迴旋砲沒有史料（R：0–4 可選、〔推〕）；也避開飛魚號 v2 的坑（舷頂迴旋砲比舷側砲靠船頭 ⇒ 遊戲照它定主甲板的站人高度、取用點找不到）"
   },
   "search": {
    "dx": [

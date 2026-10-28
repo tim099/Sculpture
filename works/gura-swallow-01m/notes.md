@@ -112,3 +112,36 @@
 - 組起來（引擎 stats）：61,469 格、1 元件、空腔 0、鏡像差 0。
 - **反向對照**：`--probe=pivot=yard-main-course:-95`（course 降 9.5 m 到舷牆的高度）⇒ 撞格 0 → 60，其他 0（−75 只降到 z 54、還在舷牆上面 ⇒ 0，尺沒問題、是探得太淺）。
 - 產生程式重跑：8 個輸出檔逐位元組相同。過程圖 `overlays/stage7_masts.png`。
+
+## 步驟 8 索具、帆、旗（2026-10-28）
+設計 plan.json `rigging`；產生 `design/draft_rigging.py` —— **換成拉貝爾號那支**（`ame-labelle-01m/design/draft_rigging.py`：方帆主桅＋lateen 後桅；飛魚號那支是單桅 sloop 專用的，原檔留在 gura 的 scratchpad 沒進作品）；改成 ketch：只有主桅＋後桅、沒有 spritsail、沒有船首喙；主支索／上桅支索落在艏斜桅、staysail＋jib、bobstay 腳在艏柱前緣、英國紅旗（這幾段照飛魚號）⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/ensign.png`、`verify_rigging.json`；落格 `design/tools/rigging_apply.py`（沒改）。
+- channels（`-channels`，546 格，兩舷一件）：主桅 deadeye x 183／178／173／168＋backstay 163，後桅 x 131／126；在舷頂那兩格的舷外（砲門頂上面）。
+- 靜索：shrouds 主桅每舷 4、後桅 2；上桅 shrouds＋futtock 每舷 2（桅頂橫桁兩端）；上桅 backstay 每舷 1；main-stay（主桅 → 艏斜桅根往前 15%）、main-topmast-stay（→ 艏斜桅頂）、mizzen-stay（後桅 → 主桅腳）；bobstay 1（艏柱前緣 z 28）、艏斜桅 shroud 兩舷（船頭舷頂 x 250）。
+- ratlines：橫繩組 4（主桅、後桅 × 兩舷；每 4 格一道，38 道）；沒有桅樓平台 ⇒ 不標 climb。
+- 帆 5 面：main-course（帆腳在舷頂上 3 格、sheet x 155、tack x 215）、main-topsail（sheet 綁 course 帆桁 earing）、mizzen-lateen（sail=gaff、rig=lateen；clew x 100 z 60、sheet 綁船尾舷頂、tack 綁主甲板 x 152）、staysail（tack 艏斜桅 15%、head 主支索 72%）、jib（tack 艏斜桅頂、head 上桅支索 78%）。旗 2 面：英國紅旗（lateen 帆桁後端）、白長旗（主桅頂）。
+- **帆裝三段**（Ship_Rigging §9.1；照 sail 的預設，沒寫 set）：
+
+| 帆裝 | 張哪幾面 |
+|---|---|
+| 收帆（1） | main-topsail、jib |
+| 戰鬥帆（2） | main-topsail、jib、mizzen-lateen |
+| 滿帆（3） | main-topsail、jib、mizzen-lateen、main-course、staysail |
+
+讀數：
+- 設計：channels 鏡像差 0、跟船上的格重疊 0；固定點落在實心格 0；靜索穿過實心 0；帆自己的繩沒 meta 0；繩名重複 0。
+- 引擎：繩 41（standing 28、running 13）＋橫繩 38 道全部 ok、broken 0；帆 7 面（含旗）、sails_broken 0。
+- **結果帳**：channels 作品 ＝ 清單（delta_apply --dry 差 0）。組起來 62,015 格、1 元件、空腔 0、鏡像差 0。
+- **反向對照**：`--probe=nometa=jib.sheet-S` ⇒「帆自己的繩沒 meta」報那一條。
+- 產生程式重跑：4 個輸出檔逐位元組相同。過程圖 `overlays/stage8_rig_{bowq,side}.png`。
+
+## 步驟 9 砲（2026-10-28）
+設計 plan.json `guns_build`；產生 `design/draft_guns.py`（出處飛魚號，邏輯照用）、`design/gunsim.py`（照抄）⇒ `guns_placement.json`、`verify_guns.json`；落格 `design/tools/build_guns.py`；檢查 `design/tools/check_stage8.py`（照抄）。
+- 4 磅砲 6 門（W：名目 6 門；砲種「4-pounder」沒驗到 ⇒ minion 級 ≈ 4 磅）：跟飛魚號、拉貝爾號同一個元件同一個縮放 —— 風暴角號 6 磅長砲 `summit-stormkaap-01m-gun-6l` 縮 0.375（砲管 1.95 m）、meta kind=gun、gun=4l；掛在 `甲板-main`，名 `砲M-<S|P>01..03`；P 舷 mirror=y。
+- 不放迴旋砲：W 只有名目 6 門、迴旋砲沒有史料；也避開飛魚號 v2 的坑（舷頂迴旋砲比舷側砲靠船頭 ⇒ 遊戲照它定主甲板的站人高度）。
+- 擺法：從船殼外面沿砲身往裡退（0.5 格一步）到零碰撞；退 2.5–4 格、砲口伸出 3.7–5.2 格、砲軸 z 37–39；腳下甲板 support 最低 0.5（＝ 門檻）。
+讀數：
+- 設計：6 門全部 ok（零碰撞、砲口伸出、砲口空、腳下有甲板）；砲跟砲不撞；兩舷對稱差 0。
+- 作品（check_stage8，從 CLI 讀）：模型 6＝設計 6、CLI ok 6；參數差 0；外框（gunsim vs CLI）最大差 0.025 格；碰撞 0；砲口不在船殼外 0；meta 不合 0（4l 6）。
+- **反向對照**：`--probe=push=砲M-S01:4`（往外推 4 格）⇒ 那一門碰撞樣本 913，其他 0。
+- 過程圖 `overlays/stage9_guns.png`（sails=0、ropes=0）。
+- ⚠ 沒做：砲具與砲索（Ship_Guns §4.4，「要的話」；同飛魚號、拉貝爾號不做）。

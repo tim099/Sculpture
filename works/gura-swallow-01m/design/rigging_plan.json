@@ -1,0 +1,1165 @@
+{
+ "anchors": {
+  "hull": {
+   "bobstay-foot": [
+    255,
+    80,
+    28
+   ],
+   "belay-main-sheet-S": [
+    155,
+    100,
+    39
+   ],
+   "belay-main-sheet-P": [
+    155,
+    60,
+    39
+   ],
+   "belay-main-tack-S": [
+    215,
+    102,
+    40
+   ],
+   "belay-main-tack-P": [
+    215,
+    58,
+    40
+   ],
+   "belay-mizzen-lateen-S": [
+    100,
+    91,
+    52
+   ],
+   "belay-mizzen-lateen-P": [
+    100,
+    69,
+    52
+   ],
+   "belay-staysail-S": [
+    204,
+    102,
+    39
+   ],
+   "belay-staysail-P": [
+    204,
+    58,
+    39
+   ],
+   "belay-jib-S": [
+    222,
+    101,
+    40
+   ],
+   "belay-jib-P": [
+    222,
+    59,
+    40
+   ],
+   "bs-shroud-S": [
+    250,
+    97,
+    44
+   ],
+   "bs-shroud-P": [
+    250,
+    63,
+    44
+   ]
+  },
+  "channels": {
+   "deadeye-main-S-1": [
+    183,
+    105,
+    42
+   ],
+   "deadeye-main-P-1": [
+    183,
+    55,
+    42
+   ],
+   "deadeye-main-S-2": [
+    178,
+    105,
+    42
+   ],
+   "deadeye-main-P-2": [
+    178,
+    55,
+    42
+   ],
+   "deadeye-main-S-3": [
+    173,
+    105,
+    42
+   ],
+   "deadeye-main-P-3": [
+    173,
+    55,
+    42
+   ],
+   "deadeye-main-S-4": [
+    168,
+    104,
+    42
+   ],
+   "deadeye-main-P-4": [
+    168,
+    56,
+    42
+   ],
+   "deadeye-main-S-5": [
+    163,
+    104,
+    42
+   ],
+   "deadeye-main-P-5": [
+    163,
+    56,
+    42
+   ],
+   "deadeye-mizzen-S-1": [
+    131,
+    100,
+    55
+   ],
+   "deadeye-mizzen-P-1": [
+    131,
+    60,
+    55
+   ],
+   "deadeye-mizzen-S-2": [
+    126,
+    99,
+    55
+   ],
+   "deadeye-mizzen-P-2": [
+    126,
+    61,
+    55
+   ]
+  },
+  "main": {
+   "hound-S": [
+    180,
+    82,
+    138
+   ],
+   "hound-P": [
+    180,
+    78,
+    138
+   ],
+   "stay-head": [
+    183,
+    80,
+    138
+   ],
+   "futtock-S": [
+    181,
+    82,
+    129
+   ],
+   "futtock-P": [
+    181,
+    78,
+    129
+   ],
+   "tm-hound-S": [
+    178,
+    81,
+    218
+   ],
+   "tm-hound-P": [
+    178,
+    79,
+    218
+   ],
+   "tm-stay-head": [
+    179,
+    80,
+    218
+   ],
+   "xtree-S-1": [
+    182,
+    87,
+    142
+   ],
+   "xtree-low-S-1": [
+    182,
+    87,
+    141
+   ],
+   "xtree-P-1": [
+    182,
+    73,
+    142
+   ],
+   "xtree-low-P-1": [
+    182,
+    73,
+    141
+   ],
+   "xtree-S-2": [
+    178,
+    87,
+    142
+   ],
+   "xtree-low-S-2": [
+    178,
+    87,
+    141
+   ],
+   "xtree-P-2": [
+    178,
+    73,
+    142
+   ],
+   "xtree-low-P-2": [
+    178,
+    73,
+    141
+   ],
+   "xtree-aft": [
+    177,
+    80,
+    142
+   ],
+   "mizzenstay-foot": [
+    180,
+    80,
+    34
+   ],
+   "staysail.head": [
+    202,
+    80,
+    113
+   ],
+   "jib.head": [
+    210,
+    80,
+    188
+   ]
+  },
+  "mizzen": {
+   "hound-S": [
+    126,
+    82,
+    113
+   ],
+   "hound-P": [
+    126,
+    78,
+    113
+   ],
+   "stay-head": [
+    127,
+    80,
+    113
+   ]
+  },
+  "bowsprit": {
+   "forestay-foot": [
+    250,
+    80,
+    49
+   ],
+   "cap-top": [
+    320,
+    80,
+    83
+   ],
+   "side-S": [
+    276,
+    82,
+    59
+   ],
+   "side-P": [
+    276,
+    78,
+    59
+   ],
+   "bob-1": [
+    303,
+    80,
+    69
+   ]
+  },
+  "deck-main": {
+   "tack-mizzen": [
+    152,
+    80,
+    32
+   ]
+  }
+ },
+ "anchor_works": {
+  "hull": "gura-swallow-01m",
+  "channels": "gura-swallow-01m-channels",
+  "bowsprit": "gura-swallow-01m-bowsprit",
+  "deck-main": "gura-swallow-01m-deck-main",
+  "main": "gura-swallow-01m-mast-main",
+  "mizzen": "gura-swallow-01m-mast-mizzen"
+ },
+ "ropes": [
+  {
+   "name": "main-shroud-S-1",
+   "from": "支索板/deadeye-main-S-1",
+   "to": "主桅/hound-S",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-2",
+   "from": "支索板/deadeye-main-S-2",
+   "to": "主桅/hound-S",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-3",
+   "from": "支索板/deadeye-main-S-3",
+   "to": "主桅/hound-S",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-4",
+   "from": "支索板/deadeye-main-S-4",
+   "to": "主桅/hound-S",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-topmast-backstay-S-1",
+   "from": "支索板/deadeye-main-S-5",
+   "to": "主桅/tm-hound-S",
+   "group": "standing/backstays",
+   "thickness": 0.55,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-topmast-shroud-S-1",
+   "from": "主桅/xtree-S-1",
+   "to": "主桅/tm-hound-S",
+   "group": "standing/topmast-shrouds",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-futtock-S-1",
+   "from": "主桅/xtree-low-S-1",
+   "to": "主桅/futtock-S",
+   "group": "standing/futtock-shrouds",
+   "thickness": 0.4,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-topmast-shroud-S-2",
+   "from": "主桅/xtree-S-2",
+   "to": "主桅/tm-hound-S",
+   "group": "standing/topmast-shrouds",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-futtock-S-2",
+   "from": "主桅/xtree-low-S-2",
+   "to": "主桅/futtock-S",
+   "group": "standing/futtock-shrouds",
+   "thickness": 0.4,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-P-1",
+   "from": "支索板/deadeye-main-P-1",
+   "to": "主桅/hound-P",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-P-2",
+   "from": "支索板/deadeye-main-P-2",
+   "to": "主桅/hound-P",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-P-3",
+   "from": "支索板/deadeye-main-P-3",
+   "to": "主桅/hound-P",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-P-4",
+   "from": "支索板/deadeye-main-P-4",
+   "to": "主桅/hound-P",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-topmast-backstay-P-1",
+   "from": "支索板/deadeye-main-P-5",
+   "to": "主桅/tm-hound-P",
+   "group": "standing/backstays",
+   "thickness": 0.55,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-topmast-shroud-P-1",
+   "from": "主桅/xtree-P-1",
+   "to": "主桅/tm-hound-P",
+   "group": "standing/topmast-shrouds",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-futtock-P-1",
+   "from": "主桅/xtree-low-P-1",
+   "to": "主桅/futtock-P",
+   "group": "standing/futtock-shrouds",
+   "thickness": 0.4,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-topmast-shroud-P-2",
+   "from": "主桅/xtree-P-2",
+   "to": "主桅/tm-hound-P",
+   "group": "standing/topmast-shrouds",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-futtock-P-2",
+   "from": "主桅/xtree-low-P-2",
+   "to": "主桅/futtock-P",
+   "group": "standing/futtock-shrouds",
+   "thickness": 0.4,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-S-1",
+   "from": "支索板/deadeye-mizzen-S-1",
+   "to": "後桅/hound-S",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-S-2",
+   "from": "支索板/deadeye-mizzen-S-2",
+   "to": "後桅/hound-S",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-P-1",
+   "from": "支索板/deadeye-mizzen-P-1",
+   "to": "後桅/hound-P",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-P-2",
+   "from": "支索板/deadeye-mizzen-P-2",
+   "to": "後桅/hound-P",
+   "group": "standing/shrouds",
+   "thickness": 0.75,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-stay",
+   "from": "主桅/stay-head",
+   "to": "艏斜桅/forestay-foot",
+   "group": "standing/stays",
+   "thickness": 0.95,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-topmast-stay",
+   "from": "主桅/tm-stay-head",
+   "to": "艏斜桅/cap-top",
+   "group": "standing/stays",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "mizzen-stay",
+   "from": "後桅/stay-head",
+   "to": "主桅/mizzenstay-foot",
+   "group": "standing/stays",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "bobstay-1",
+   "from": "船殼/bobstay-foot",
+   "to": "艏斜桅/bob-1",
+   "group": "standing/bowsprit",
+   "thickness": 0.8,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "bowsprit-shroud-S",
+   "from": "船殼/bs-shroud-S",
+   "to": "艏斜桅/side-S",
+   "group": "standing/bowsprit",
+   "thickness": 0.8,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "bowsprit-shroud-P",
+   "from": "船殼/bs-shroud-P",
+   "to": "艏斜桅/side-P",
+   "group": "standing/bowsprit",
+   "thickness": 0.8,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": null
+  },
+  {
+   "name": "main-course.sheet-S",
+   "from": "sail:main-course/clew_s",
+   "to": "船殼/belay-main-sheet-S",
+   "group": "running/sheets",
+   "thickness": 0.45,
+   "slack": 1.02,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "main-course"
+   }
+  },
+  {
+   "name": "main-course.tack-S",
+   "from": "sail:main-course/clew_s",
+   "to": "船殼/belay-main-tack-S",
+   "group": "running/tacks",
+   "thickness": 0.4,
+   "slack": 1.02,
+   "color": "#a08458",
+   "meta": {
+    "kind": "tack",
+    "sail": "main-course"
+   }
+  },
+  {
+   "name": "main-course.sheet-P",
+   "from": "sail:main-course/clew_p",
+   "to": "船殼/belay-main-sheet-P",
+   "group": "running/sheets",
+   "thickness": 0.45,
+   "slack": 1.02,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "main-course"
+   }
+  },
+  {
+   "name": "main-course.tack-P",
+   "from": "sail:main-course/clew_p",
+   "to": "船殼/belay-main-tack-P",
+   "group": "running/tacks",
+   "thickness": 0.4,
+   "slack": 1.02,
+   "color": "#a08458",
+   "meta": {
+    "kind": "tack",
+    "sail": "main-course"
+   }
+  },
+  {
+   "name": "main-topsail.sheet-S",
+   "from": "sail:main-topsail/clew_s",
+   "to": "model:主桅/yard-main-course/earing-S",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "main-topsail"
+   }
+  },
+  {
+   "name": "main-topsail.sheet-P",
+   "from": "sail:main-topsail/clew_p",
+   "to": "model:主桅/yard-main-course/earing-P",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "main-topsail"
+   }
+  },
+  {
+   "name": "staysail.sheet-S",
+   "from": "sail:staysail/clew",
+   "to": "船殼/belay-staysail-S",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.04,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "staysail"
+   }
+  },
+  {
+   "name": "staysail.sheet-P",
+   "from": "sail:staysail/clew",
+   "to": "船殼/belay-staysail-P",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.04,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "staysail"
+   }
+  },
+  {
+   "name": "jib.sheet-S",
+   "from": "sail:jib/clew",
+   "to": "船殼/belay-jib-S",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.04,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "jib"
+   }
+  },
+  {
+   "name": "jib.sheet-P",
+   "from": "sail:jib/clew",
+   "to": "船殼/belay-jib-P",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.04,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "jib"
+   }
+  },
+  {
+   "name": "mizzen-lateen.sheet-S",
+   "from": "sail:mizzen-lateen/clew",
+   "to": "船殼/belay-mizzen-lateen-S",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.03,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "mizzen-lateen"
+   }
+  },
+  {
+   "name": "mizzen-lateen.sheet-P",
+   "from": "sail:mizzen-lateen/clew",
+   "to": "船殼/belay-mizzen-lateen-P",
+   "group": "running/sheets",
+   "thickness": 0.35,
+   "slack": 1.03,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "mizzen-lateen"
+   }
+  },
+  {
+   "name": "mizzen-lateen.tack",
+   "from": "sail:mizzen-lateen/tack",
+   "to": "甲板-main/tack-mizzen",
+   "group": "running/tacks",
+   "thickness": 0.4,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "tack",
+    "sail": "mizzen-lateen"
+   }
+  }
+ ],
+ "ratline_sets": [
+  {
+   "name": "main-lower-S",
+   "rope_a": "main-shroud-S-1",
+   "rope_b": "main-shroud-S-4",
+   "step": 4,
+   "start": 5,
+   "stop": 12,
+   "min_span": 4,
+   "thickness": 0.25,
+   "group": "ratlines/lower"
+  },
+  {
+   "name": "main-lower-P",
+   "rope_a": "main-shroud-P-1",
+   "rope_b": "main-shroud-P-4",
+   "step": 4,
+   "start": 5,
+   "stop": 12,
+   "min_span": 4,
+   "thickness": 0.25,
+   "group": "ratlines/lower"
+  },
+  {
+   "name": "mizzen-lower-S",
+   "rope_a": "mizzen-shroud-S-1",
+   "rope_b": "mizzen-shroud-S-2",
+   "step": 4,
+   "start": 5,
+   "stop": 12,
+   "min_span": 4,
+   "thickness": 0.25,
+   "group": "ratlines/lower"
+  },
+  {
+   "name": "mizzen-lower-P",
+   "rope_a": "mizzen-shroud-P-1",
+   "rope_b": "mizzen-shroud-P-2",
+   "step": 4,
+   "start": 5,
+   "stop": 12,
+   "min_span": 4,
+   "thickness": 0.25,
+   "group": "ratlines/lower"
+  }
+ ],
+ "sails": [
+  {
+   "name": "main-course",
+   "corners": [
+    "model:主桅/yard-main-course/earing-P",
+    "model:主桅/yard-main-course/earing-S",
+    "199.28,130.71,42.00",
+    "172.38,30.29,42.00"
+   ],
+   "corner_names": [
+    "head_p",
+    "head_s",
+    "clew_s",
+    "clew_p"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew_s",
+    "clew_p"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "main",
+    "sail": "course"
+   },
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "main-topsail",
+   "corners": [
+    "model:主桅/yard-main-topsail/earing-P",
+    "model:主桅/yard-main-topsail/earing-S",
+    "199.28,130.71,131.32",
+    "172.38,30.29,131.32"
+   ],
+   "corner_names": [
+    "head_p",
+    "head_s",
+    "clew_s",
+    "clew_p"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew_s",
+    "clew_p"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "main",
+    "sail": "topsail"
+   },
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "staysail",
+   "corners": [
+    "艏斜桅/forestay-foot",
+    "主桅/staysail.head",
+    "212.50,80.50,56.50"
+   ],
+   "corner_names": [
+    "tack",
+    "head",
+    "clew"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "bowsprit",
+    "sail": "staysail"
+   },
+   "fullness": 1.06,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "jib",
+   "corners": [
+    "艏斜桅/cap-top",
+    "主桅/jib.head",
+    "244.50,80.50,60.50"
+   ],
+   "corner_names": [
+    "tack",
+    "head",
+    "clew"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "bowsprit",
+    "sail": "jib"
+   },
+   "fullness": 1.06,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "mizzen-lateen",
+   "corners": [
+    "model:後桅/yard-mizzen-lateen/fore",
+    "model:後桅/yard-mizzen-lateen/peak",
+    "100.50,80.50,60.50"
+   ],
+   "corner_names": [
+    "tack",
+    "head",
+    "clew"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "mizzen",
+    "sail": "gaff"
+   },
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "ensign",
+   "corners": [
+    "model:後桅/yard-mizzen-lateen/peak",
+    "78.46,77.00,130.50",
+    "78.46,77.00,122.50",
+    "model:後桅/yard-mizzen-lateen/3,3,45"
+   ],
+   "corner_names": null,
+   "bind": [
+    3
+   ],
+   "free": [
+    2,
+    1
+   ],
+   "meta": {
+    "kind": "flag",
+    "flag": "ensign"
+   },
+   "fullness": 1.04,
+   "color": "#ffffff",
+   "texture": "textures/ensign.png"
+  },
+  {
+   "name": "pennant",
+   "corners": [
+    "177.94,80.50,222.00",
+    "151.44,80.50,221.00",
+    "177.94,80.50,220.00"
+   ],
+   "corner_names": null,
+   "bind": [
+    2
+   ],
+   "free": [
+    1
+   ],
+   "meta": {
+    "kind": "flag",
+    "flag": "pennant",
+    "mast": "main"
+   },
+   "fullness": 1.04,
+   "color": "#f2f2f0",
+   "texture": null
+  }
+ ],
+ "meta": [
+  [
+   "sail",
+   "main-course",
+   {
+    "kind": "sail",
+    "mast": "main",
+    "sail": "course"
+   }
+  ],
+  [
+   "sail",
+   "main-topsail",
+   {
+    "kind": "sail",
+    "mast": "main",
+    "sail": "topsail"
+   }
+  ],
+  [
+   "sail",
+   "staysail",
+   {
+    "kind": "sail",
+    "mast": "bowsprit",
+    "sail": "staysail"
+   }
+  ],
+  [
+   "sail",
+   "jib",
+   {
+    "kind": "sail",
+    "mast": "bowsprit",
+    "sail": "jib"
+   }
+  ],
+  [
+   "sail",
+   "mizzen-lateen",
+   {
+    "kind": "sail",
+    "mast": "mizzen",
+    "sail": "gaff"
+   }
+  ],
+  [
+   "sail",
+   "ensign",
+   {
+    "kind": "flag",
+    "flag": "ensign"
+   }
+  ],
+  [
+   "sail",
+   "pennant",
+   {
+    "kind": "flag",
+    "flag": "pennant",
+    "mast": "main"
+   }
+  ],
+  [
+   "rope",
+   "main-course.sheet-S",
+   {
+    "kind": "sheet",
+    "sail": "main-course"
+   }
+  ],
+  [
+   "rope",
+   "main-course.tack-S",
+   {
+    "kind": "tack",
+    "sail": "main-course"
+   }
+  ],
+  [
+   "rope",
+   "main-course.sheet-P",
+   {
+    "kind": "sheet",
+    "sail": "main-course"
+   }
+  ],
+  [
+   "rope",
+   "main-course.tack-P",
+   {
+    "kind": "tack",
+    "sail": "main-course"
+   }
+  ],
+  [
+   "rope",
+   "main-topsail.sheet-S",
+   {
+    "kind": "sheet",
+    "sail": "main-topsail"
+   }
+  ],
+  [
+   "rope",
+   "main-topsail.sheet-P",
+   {
+    "kind": "sheet",
+    "sail": "main-topsail"
+   }
+  ],
+  [
+   "rope",
+   "staysail.sheet-S",
+   {
+    "kind": "sheet",
+    "sail": "staysail"
+   }
+  ],
+  [
+   "rope",
+   "staysail.sheet-P",
+   {
+    "kind": "sheet",
+    "sail": "staysail"
+   }
+  ],
+  [
+   "rope",
+   "jib.sheet-S",
+   {
+    "kind": "sheet",
+    "sail": "jib"
+   }
+  ],
+  [
+   "rope",
+   "jib.sheet-P",
+   {
+    "kind": "sheet",
+    "sail": "jib"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-lateen.sheet-S",
+   {
+    "kind": "sheet",
+    "sail": "mizzen-lateen"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-lateen.sheet-P",
+   {
+    "kind": "sheet",
+    "sail": "mizzen-lateen"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-lateen.tack",
+   {
+    "kind": "tack",
+    "sail": "mizzen-lateen"
+   }
+  ]
+ ],
+ "wind": [
+  4.5,
+  -1.5,
+  0
+ ],
+ "sail_seconds": 3
+}

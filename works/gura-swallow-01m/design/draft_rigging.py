@@ -1,13 +1,12 @@
-# 抄來的（燕子號 TASK-0968）：出處 gura-flyingfish-01m/design/draft_rigging.py（飛魚號；作品 id、船名、單號已換）
-# 燕子號 步驟 8（TASK-0968）：channels（兩舷一件）、桅／艏斜桅／船殼的固定點、靜索、ratlines（橫繩組）、帆（斜桁主帆、topsail、staysail、jib）、帆自己的繩、旗、meta
-#   出處：ame-labelle-01m/design/draft_rigging.py（拉貝爾號；它又出自收穫號 階段七）—— 結構（channels、桅上的點、繩、wpt、穿實心的讀數、輸出）照抄，
-#   改成單桅 sloop：
-#     · 一根桅（後傾 14°）：channels 的 x 照桅在舷頂高度的軸；backstay 的 deadeye 另外往後（backstay_aft）
-#     · 前支索落在艏斜桅根（forestay_t）、上桅支索落在艏斜桅頂；bobstay 落在艏柱前緣（沒有船首喙）
-#     · 帆：mainsail（四角綁 gaff／boom 模型，只有 leech 自由）＋ main sheet；topsail（帆腳 sheet 綁下帆桁 earing）；staysail、jib（luff 沿支索、clew 自由、兩舷 sheet）
-#     · 旗：紅旗掛 gaff 峰、白長旗掛桅頂
-#   輸入：plan.json（rigging、rig_build、masts）＋ yards_placement.json（帆桁模型）＋ 組裝件現在的格子（CLI 匯出）
-#   輸出：masks/rigging/channels.vox.txt（世界座標，at 0,0,0）、rigging_plan.json（固定點、繩、橫繩組、帆、meta）、textures/ensign.png、verify_rigging.json
+# 抄來的（燕子號 TASK-0968）：出處 ame-labelle-01m/design/draft_rigging.py（拉貝爾號；作品 id、船名、單號已換 —— 飛魚號那支是單桅 sloop 專用的，本船兩根桅照拉貝爾號）
+# 燕子號 步驟 8（TASK-0968）：channels（兩舷一件）、桅／艏斜桅／船殼／甲板的固定點、靜索、ratlines（橫繩組）、帆（方帆、lateen、staysail、jib）、帆自己的繩、旗、meta
+#   燕子號（ketch）改的地方：只有主桅＋後桅、沒有 spritsail、沒有船首喙；主支索／上桅支索落在艏斜桅、staysail＋jib、bobstay 腳在艏柱前緣、英國紅旗（這幾段照飛魚號 draft_rigging.py）
+#   出處：calli-cosecha-01m/design/draft_rigging.py（收穫號 階段七）；改的地方：
+#     · 沒有桅樓 ⇒ 上桅 shrouds、futtock 綁桅頂橫桁兩端；main topmast stay 綁前桅橫桁後端
+#     · ratlines 改成橫繩組（Ship_Rigging §6，TASK-0678；收穫號那時候還是一條一條的子繩）⇒ 輸出 ratline_sets，tools/rigging_apply.py ratlines 那一步下 sub=ratlines
+#     · channels 每根桅自己的 spacing、在舷頂那兩格（砲門頂上面）；沒有 bonaventure；旗換成法國的白底三朵金百合
+#   輸入：plan.json（rigging、rig_build、masts）＋ yards_placement.json／yards_lateen.json（帆桁模型）＋ 組裝件現在的格子（CLI 匯出）
+#   輸出：masks/rigging/channels.vox.txt（世界座標，at 0,0,0）、rigging_plan.json（固定點、繩、橫繩組、帆、meta）、textures/*.png、verify_rigging.json
 #   用法：python -I -X utf8 draft_rigging.py <design> [--probe=nometa=<繩名>]（反向對照：拿掉一條繩的 meta，看報不報；⛔ 不寫檔）
 import sys, os, json, math, hashlib
 import numpy as np
@@ -19,12 +18,12 @@ import lines as HL
 import layout as LY
 from wio import export_list
 
-KEY = 'main'
-LK = '主桅'
+LINK = {'main': '主桅', 'mizzen': '後桅', 'bowsprit': '艏斜桅'}
+MASTS = ('main', 'mizzen')                # 燕子號：ketch 兩根桅（拉貝爾號三根）
 
 
 def ensign_png(path, W, H):
-    """英國紅旗（red ensign）：紅底、左上角（靠旗桿那一邊的上半）白底聖喬治紅十字。"""
+    """英國紅旗（red ensign）：紅底、左上角（靠旗桿那一邊的上半）白底聖喬治紅十字（出處：飛魚號 draft_rigging.py）。"""
     s = 4
     im = Image.new('RGBA', (W * s, H * s), (190, 22, 30, 255))
     px = im.load()
@@ -50,10 +49,10 @@ def main():
     YC = L.YC
     RG = plan['rigging']
     RB = plan['rig_build']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    # worktree 跑：SCULPT_WORKS 指回共用的 works（作品資料只有那一份；不給 ⇒ 照這個資料夾往上兩層）
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))
     YP = json.load(open(os.path.join(design, 'yards_placement.json'), encoding='utf-8'))
     M = {m['key']: m for m in LY.masts(plan, L)}
-    m = M[KEY]
     A = export_list('gura-swallow-01m-assembly', None, links=None)
     own = set()
     if os.path.exists(os.path.join(WORKS, 'gura-swallow-01m-channels', 'work.json')):
@@ -69,25 +68,27 @@ def main():
     for x, y, z in hull:
         htop[x] = max(htop.get(x, -1), z)
 
-    def mast_r(z):
-        r0, r1 = RB['mast_r'][KEY]
-        if z <= m['lower_top']:
+    def mast_r(key, z):
+        m = M[key]
+        r0, r1 = RB['mast_r'][key]
+        if z <= m['lower_top'] or key not in RB['topmast_r']:
             zh, zt = math.floor(m['heel']) + 1, math.floor(m['lower_top'])
             return r0 + (r1 - r0) * (z - zh) / max(1, zt - zh)
-        t0, t1 = RB['topmast_r'][KEY]
+        t0, t1 = RB['topmast_r'][key]
         zp, zt2 = math.floor(m['platform']), math.floor(m['truck'])
         return t0 + (t1 - t0) * (z - zp - 1) / max(1, zt2 - zp - 1)
 
-    ax = lambda z: float(LY.mast_axis_x(plan, KEY, z + 0.5, L))
-    anchors = {k: {} for k in ('hull', 'channels', 'main', 'bowsprit')}
+    ax = lambda key, z: float(LY.mast_axis_x(plan, key, z + 0.5, L))
+    anchors = {k: {} for k in ('hull', 'channels', 'main', 'mizzen', 'bowsprit', 'deck-main')}
     # ── channels（兩舷一件）＋ deadeye：舷頂那兩格的舷外 ──
     CH = RG['channels']
-    xr = int(round(ax(40)))                                          # 桅在舷頂高度的 x
-    xs = [xr - CH['first_aft'] - i * CH['spacing'] for i in range(CH['shrouds'])] + [xr - CH['backstay_aft']]
     chan, skipped = {}, 0
-    for lo, hi in ((min(xs[:-1]) - 2, max(xs[:-1]) + 2), (xs[-1] - 2, xs[-1] + 2)):
-        for x in range(lo, hi + 1):
-            zc = htop[x] - CH['below_rail']
+    for key in MASTS:
+        xm = M[key]['x']
+        n = CH['shrouds'][key] + CH['backstays'].get(key, 0)
+        xs = [xm - CH['first_aft'] - i * CH['spacing'][key] for i in range(n)]
+        zc = htop[xm] - CH['below_rail']
+        for x in range(min(xs) - 2, max(xs) + 3):
             o = max(hout.get((x, zc - 1), -1), hout.get((x, zc), -1))
             if o < 0:
                 continue
@@ -98,39 +99,47 @@ def main():
                             skipped += 1
                         else:
                             chan[(x, y, z)] = RG['colors']['channel']
-    for i, x in enumerate(xs, 1):
-        zc = htop[x] - CH['below_rail']
-        o = max(hout.get((x, zc - 1), -1), hout.get((x, zc), -1))
-        dyo = o + CH['width']
-        for ddx in (-1, 0, 1):
-            for z in range(zc + 1, zc + 4):
-                for y in (YC + dyo, YC - dyo):
-                    chan[(x + ddx, y, z)] = RG['colors']['deadeye']
-        anchors['channels']['deadeye-S-%d' % i] = [x, YC + dyo, zc + 3]
-        anchors['channels']['deadeye-P-%d' % i] = [x, YC - dyo, zc + 3]
+        for i, x in enumerate(xs, 1):
+            o = max(hout.get((x, zc - 1), -1), hout.get((x, zc), -1))
+            dyo = o + CH['width']
+            for ddx in (-1, 0, 1):
+                for z in range(zc + 1, zc + 4):
+                    for y in (YC + dyo, YC - dyo):
+                        chan[(x + ddx, y, z)] = RG['colors']['deadeye']
+            anchors['channels']['deadeye-%s-S-%d' % (key, i)] = [x, YC + dyo, zc + 3]
+            anchors['channels']['deadeye-%s-P-%d' % (key, i)] = [x, YC - dyo, zc + 3]
     # ── 桅上的點（桅子作品世界座標）──
-    CT = RB['crosstrees'][KEY]
-    MA = anchors['main']
-    zp = int(math.floor(m['platform']))
-    zh = zp - 3
-    r = mast_r(zh)
-    for s_, sg in (('S', 1), ('P', -1)):
-        MA['hound-' + s_] = [int(round(ax(zh))), YC + sg * (int(math.floor(r)) + 1), zh]
-    MA['stay-head'] = [int(math.floor(ax(zh) + r)) + 1, YC, zh]
-    rr = int(math.floor(RB['mast_r'][KEY][1])) + 1
-    xa = round(ax(zp))
-    zf = zp - 12
-    for s_, sg in (('S', 1), ('P', -1)):
-        MA['futtock-' + s_] = [int(round(ax(zf))), YC + sg * (int(math.floor(mast_r(zf))) + 1), zf]
-    zt = int(math.floor(m['truck'])) - 5
-    rt = mast_r(zt)
-    for s_, sg in (('S', 1), ('P', -1)):
-        MA['tm-hound-' + s_] = [int(round(ax(zt))), YC + sg * (int(math.floor(rt)) + 1), zt]
-    MA['tm-stay-head'] = [int(math.floor(ax(zt) + rt)) + 1, YC, zt]
-    for i, dx in enumerate((rr, -rr), 1):
+    CT = RB['crosstrees']
+    for key in MASTS:
+        m = M[key]
+        A_ = anchors[key]
+        zp = int(math.floor(m['platform']))
+        zh = zp - 3 if key in CT else int(math.floor(m['lower_top'])) - 4
+        r = mast_r(key, zh)
         for s_, sg in (('S', 1), ('P', -1)):
-            MA['xtree-%s-%d' % (s_, i)] = [xa + dx, YC + sg * (CT + 1), zp + 1]
-            MA['xtree-low-%s-%d' % (s_, i)] = [xa + dx, YC + sg * (CT + 1), zp]
+            A_['hound-' + s_] = [int(round(ax(key, zh))), YC + sg * (int(math.floor(r)) + 1), zh]
+        A_['stay-head'] = [int(math.floor(ax(key, zh) + r)) + 1, YC, zh]
+        if key in RB['topmast_r']:
+            r1 = RB['mast_r'][key][1]
+            rr = int(math.floor(r1)) + 1                     # 橫桁的位置（同 draft_masts）
+            xa = round(ax(key, zp))
+            zf = zp - 12
+            for s_, sg in (('S', 1), ('P', -1)):
+                A_['futtock-' + s_] = [int(round(ax(key, zf))), YC + sg * (int(math.floor(mast_r(key, zf))) + 1), zf]
+            zt = int(math.floor(m['truck'])) - 5
+            rt = mast_r(key, zt)
+            for s_, sg in (('S', 1), ('P', -1)):
+                A_['tm-hound-' + s_] = [int(round(ax(key, zt))), YC + sg * (int(math.floor(rt)) + 1), zt]
+            A_['tm-stay-head'] = [int(math.floor(ax(key, zt) + rt)) + 1, YC, zt]
+            # 桅頂橫桁兩端外一格（crosstrees 沿 y 在 x ± rr、z zp＋1；v1 點在橫桁實心格上）：上桅 shrouds 從這裡起、futtock 從它底下
+            for i, dx in enumerate((rr, -rr), 1):
+                for s_, sg in (('S', 1), ('P', -1)):
+                    A_['xtree-%s-%d' % (s_, i)] = [xa + dx, YC + sg * (CT[key] + 1), zp + 1]
+                    A_['xtree-low-%s-%d' % (s_, i)] = [xa + dx, YC + sg * (CT[key] + 1), zp]
+            A_['xtree-aft'] = [xa - rr - 1, YC, zp + 1]
+    for key, nm, deck in (('main', 'mizzenstay-foot', 'main'),):          # 燕子號：沒有前桅 ⇒ 主支索落在艏斜桅（下面「繩」那一段）
+        z = int(LY.deck_z(plan, deck, M[key]['x'] + 0.5)) + 3
+        anchors[key][nm] = [int(math.floor(ax(key, z) - mast_r(key, z))) - 1, YC, z]
     # ── 艏斜桅上的點 ──
     B = LY.bowsprit(plan)
     a = math.radians(B['angle'])
@@ -143,28 +152,39 @@ def main():
     cell = lambda p: [int(math.floor(p[0])), int(math.floor(p[1])), int(math.floor(p[2]))]
     BA = anchors['bowsprit']
     SL = RG['sails']
-    tf = SL['forestay_t'] * Lb
+    tf = SL['forestay_t'] * Lb                          # 燕子號：前支索（＝ 主支索）落在艏斜桅根往前 forestay_t（照飛魚號；拉貝爾號是 0.35、前桅支索）
     BA['forestay-foot'] = cell(Hh + tf * u + (rb(tf) + 1) * w)
     BA['cap-top'] = cell(Hh + (Lb - 3) * u + (rb(Lb) + 1.5) * w)
     for s_, sg in (('S', 1), ('P', -1)):
         BA['side-' + s_] = cell(Hh + 0.45 * Lb * u + np.array([0, sg * (rb(0.45 * Lb) + 1), 0]))
-    BA['bob-1'] = cell(Hh + 0.75 * Lb * u - (rb(0.75 * Lb) + 1) * w)
-    # ── 船殼上的點 ──
-    H = anchors['hull']
-    zb = 30
-    H['bobstay-foot'] = [max(x for (x, y, z) in hull if y == YC and z == zb), YC, zb]      # 艏柱前緣
-    zs = max(z for (x, y, z) in hull if y == YC and x < 90)
-    H['mainsheet'] = [min(x for (x, y, z) in hull if y == YC and z == zs), YC, zs]         # 船尾舷頂中線
-    for s_, sg in (('S', 1), ('P', -1)):
-        H['bs-shroud-' + s_] = [205, YC + sg * hout[(205, htop[205])], htop[205]]
+    for i, f in enumerate((0.75,), 1):                 # 一條 bobstay
+        BA['bob-%d' % i] = cell(Hh + f * Lb * u - (rb(f * Lb) + 1) * w)
 
+    # ── 船殼上的點：舷頂（那一欄最外那一格）——帆腳索、tack、lateen sheet、艏帆 sheet、艏斜桅 shroud；bobstay 腳在艏柱前緣（沒有船首喙，照飛魚號）──
     def rail(x):
         z = htop[x]
         return [x, hout[(x, z)], z]
-    for nm, x in (('staysail', SL['staysail_sheet_x']), ('jib', SL['jib_sheet_x'])):
+    H = anchors['hull']
+    zb = SL['bobstay_z']
+    H['bobstay-foot'] = [max(x for (x, y, z) in hull if y == YC and z == zb), YC, zb]
+    belay = {}
+    for key in ('main',):
+        belay['%s-sheet' % key] = M[key]['x'] - SL['sheet_aft'][key]
+        belay['%s-tack' % key] = M[key]['x'] + SL['tack_fwd'][key]
+    belay['mizzen-lateen'] = SL['lateen_sheet_x']
+    belay['staysail'] = SL['staysail_sheet_x']
+    belay['jib'] = SL['jib_sheet_x']
+    for nm, x in belay.items():
         p = rail(x)
         H['belay-%s-S' % nm] = [p[0], YC + p[1], p[2]]
         H['belay-%s-P' % nm] = [p[0], YC - p[1], p[2]]
+    bsx = SL['bs_shroud_x']
+    bsz = htop[bsx]
+    for s_, sg in (('S', 1), ('P', -1)):
+        H['bs-shroud-' + s_] = [bsx, YC + sg * hout[(bsx, bsz)], bsz]
+    for key, (deck, x) in SL['lateen_tack'].items():
+        z = int(LY.deck_z(plan, deck, x + 0.5)) + 1
+        anchors['deck-' + deck]['tack-%s' % key] = [x, YC, z]
 
     # ── 繩 ──
     C = RG['colors']
@@ -173,33 +193,49 @@ def main():
 
     def rope(name, a_, b_, group, th, slack=1.0, color=None, meta=None):
         ropes.append({'name': name, 'from': a_, 'to': b_, 'group': group, 'thickness': th, 'slack': slack, 'color': color or C['standing'], 'meta': meta})
-    ns = CH['shrouds']
-    for s_ in ('S', 'P'):
-        for i in range(1, ns + 1):
-            rope('main-shroud-%s-%d' % (s_, i), '支索板/deadeye-%s-%d' % (s_, i), '%s/hound-%s' % (LK, s_), 'standing/shrouds', T['shroud'])
-        rope('main-topmast-backstay-%s-1' % s_, '支索板/deadeye-%s-%d' % (s_, ns + 1), '%s/tm-hound-%s' % (LK, s_), 'standing/backstays', T['backstay'])
-        for i in range(1, RG['topmast_shrouds'] + 1):
-            rope('main-topmast-shroud-%s-%d' % (s_, i), '%s/xtree-%s-%d' % (LK, s_, i), '%s/tm-hound-%s' % (LK, s_), 'standing/topmast-shrouds', T['topmast_shroud'])
-            rope('main-futtock-%s-%d' % (s_, i), '%s/xtree-low-%s-%d' % (LK, s_, i), '%s/futtock-%s' % (LK, s_), 'standing/futtock-shrouds', T['futtock'])
-    rope('fore-stay', '%s/stay-head' % LK, '艏斜桅/forestay-foot', 'standing/stays', T['stay'])
-    rope('jib-stay', '%s/tm-stay-head' % LK, '艏斜桅/cap-top', 'standing/stays', T['tm_stay'])
-    rope('bobstay-1', '船殼/bobstay-foot', '艏斜桅/bob-1', 'standing/bowsprit', T['bobstay'])
+    for key in MASTS:
+        Lk = LINK[key]
+        ns, nb = CH['shrouds'][key], CH['backstays'].get(key, 0)
+        for s_ in ('S', 'P'):
+            for i in range(1, ns + 1):
+                rope('%s-shroud-%s-%d' % (key, s_, i), '支索板/deadeye-%s-%s-%d' % (key, s_, i), '%s/hound-%s' % (Lk, s_), 'standing/shrouds', T['shroud'])
+            for b in range(1, nb + 1):
+                rope('%s-topmast-backstay-%s-%d' % (key, s_, b), '支索板/deadeye-%s-%s-%d' % (key, s_, ns + b), '%s/tm-hound-%s' % (Lk, s_), 'standing/backstays', T['backstay'])
+            if key in RB['topmast_r']:
+                for i in range(1, RG['topmast_shrouds'] + 1):
+                    rope('%s-topmast-shroud-%s-%d' % (key, s_, i), '%s/xtree-%s-%d' % (Lk, s_, i), '%s/tm-hound-%s' % (Lk, s_), 'standing/topmast-shrouds', T['topmast_shroud'])
+                    rope('%s-futtock-%s-%d' % (key, s_, i), '%s/xtree-low-%s-%d' % (Lk, s_, i), '%s/futtock-%s' % (Lk, s_), 'standing/futtock-shrouds', T['futtock'])
+    for nm, a_, b_, th in (('main-stay', '主桅/stay-head', '艏斜桅/forestay-foot', T['stay']),          # 燕子號：主支索、上桅支索都落在艏斜桅（沒有前桅）
+                           ('main-topmast-stay', '主桅/tm-stay-head', '艏斜桅/cap-top', T['tm_stay']),
+                           ('mizzen-stay', '後桅/stay-head', '主桅/mizzenstay-foot', T['tm_stay'])):
+        rope(nm, a_, b_, 'standing/stays', th)
+    for i in (1,):
+        rope('bobstay-%d' % i, '船殼/bobstay-foot', '艏斜桅/bob-%d' % i, 'standing/bowsprit', T['bobstay'])
     for s_ in ('S', 'P'):
         rope('bowsprit-shroud-' + s_, '船殼/bs-shroud-' + s_, '艏斜桅/side-' + s_, 'standing/bowsprit', T['bobstay'])
+    # ratlines：橫繩組（每根桅、每一層、每一舷一組；rope_a ＝ 最前那根 ＝ 1 號）
     RL = RG['ratlines']
-    rsets = [{'name': 'main-lower-%s' % s_, 'rope_a': 'main-shroud-%s-1' % s_, 'rope_b': 'main-shroud-%s-%d' % (s_, ns),
-              'step': RL['step'], 'start': RL['start'], 'stop': RL['stop'], 'min_span': RL['min_span'], 'thickness': RL['th'], 'group': 'ratlines/lower'} for s_ in ('S', 'P')]
+    rsets = []
+    for key in MASTS:
+        for s_ in ('S', 'P'):
+            rsets.append({'name': '%s-lower-%s' % (key, s_), 'rope_a': '%s-shroud-%s-1' % (key, s_), 'rope_b': '%s-shroud-%s-%d' % (key, s_, CH['shrouds'][key]),
+                          'step': RL['step'], 'start': RL['start'], 'stop': RL['stop'], 'min_span': RL['min_span'], 'thickness': RL['th'], 'group': 'ratlines/lower'})
+            if key in RB['topmast_r'] and RG['topmast_shrouds'] >= 3:      # 本船上桅只有兩根 shroud（桅頂橫桁兩端、底下相距 4 格往上收攏）⇒ 第一道就短於 min_span，不做（v1 照做 ⇒ CLI 擋下）
+                rsets.append({'name': '%s-topmast-%s' % (key, s_), 'rope_a': '%s-topmast-shroud-%s-1' % (key, s_), 'rope_b': '%s-topmast-shroud-%s-%d' % (key, s_, RG['topmast_shrouds']),
+                              'step': RL['tm_step'], 'start': RL['tm_start'], 'stop': RL['tm_stop'], 'min_span': RL['min_span'], 'thickness': RL['tm_th'], 'group': 'ratlines/topmast'})
 
     def wpt(spec):
         fr, nm = spec.split('/', 1)
-        part = {'支索板': 'channels', '船殼': 'hull', '艏斜桅': 'bowsprit', LK: 'main'}[fr]
+        part = {'支索板': 'channels', '船殼': 'hull', '甲板-main': 'deck-main'}.get(fr)
+        if part is None:
+            part = {v: k for k, v in LINK.items()}[fr]
         return np.array(anchors[part][nm], float) + 0.5
 
-    # ── 艏帆的 head：支索上 72%／78% 那一點（登記在主桅子作品；支索 slack 1 拉直 ⇒ luff 沿著它）──
-    for nm, stay, f in (('staysail', 'fore-stay', SL['staysail_head']), ('jib', 'jib-stay', SL['jib_head'])):
+    # ── 艏帆的 head：支索上 staysail_head／jib_head 那一點（登記在主桅子作品；支索 slack 1 拉直 ⇒ luff 沿著它；出處：飛魚號）──
+    for nm, stay, f in (('staysail', 'main-stay', SL['staysail_head']), ('jib', 'main-topmast-stay', SL['jib_head'])):
         rp = next(r_ for r_ in ropes if r_['name'] == stay)
         lo, hi = wpt(rp['to']), wpt(rp['from'])
-        MA[nm + '.head'] = cell(lo + f * (hi - lo))
+        anchors['main'][nm + '.head'] = cell(lo + f * (hi - lo))
 
     # ── 帆 ──
     def src_anchors(work):
@@ -219,71 +255,90 @@ def main():
                       'fullness': fullness or SL['fullness'], 'color': color or C['sail'], 'texture': texture})
     fmt = lambda p: '%.2f,%.2f,%.2f' % tuple(p)
     os.makedirs(os.path.join(design, 'textures'), exist_ok=True)
-    # mainsail：throat、peak（gaff）、clew（boom end）、tack（boom jaws）；綁 gaff、boom、桅三條邊
-    g, bm = 'model:%s/yard-main-gaff/' % LK, 'model:%s/yard-main-boom/' % LK
-    sail('mainsail', [g + 'throat', g + 'peak', bm + 'end', bm + 'jaws'], [0, 2, 3], [], {'kind': 'sail', 'mast': KEY, 'sail': 'gaff'},
-         ['throat', 'peak', 'clew', 'tack'])
-    rope('mainsail.sheet', bm + SL['mainsheet_boom'], '船殼/mainsheet', 'running/sheets', T['main_sheet'], 1.05, C['running'], {'kind': 'sheet', 'sail': 'mainsail'})
-    # topsail：帆頂釘在 topsail 帆桁兩個 earing 之間、帆腳兩角自由，sheet 綁下帆桁同舷的 earing
-    cy, ty = 'yard-main-crossjack', 'yard-main-topsail'
-    cps = []
-    for s_ in ('S', 'P'):
-        e, pv = model_pt(cy, 'earing-' + s_), np.array(next(y for y in YP if y['name'] == cy)['at'])
-        p = e + SL['clew_in'] * (pv - e)
-        p[2] += 2
-        cps.append(fmt(p))
-    nm = 'main-topsail'
-    sail(nm, ['model:%s/%s/earing-P' % (LK, ty), 'model:%s/%s/earing-S' % (LK, ty), cps[0], cps[1]], [0], ['clew_s', 'clew_p'],
-         {'kind': 'sail', 'mast': KEY, 'sail': 'topsail'}, ['head_p', 'head_s', 'clew_s', 'clew_p'])
-    for s_, c in (('S', 'clew_s'), ('P', 'clew_p')):
-        rope('%s.sheet-%s' % (nm, s_), 'sail:%s/%s' % (nm, c), 'model:%s/%s/earing-%s' % (LK, cy, s_), 'running/sheets', T['sheet'], 1.0, C['running'], {'kind': 'sheet', 'sail': nm})
-    # staysail、jib：tack（艏斜桅）、head（支索上）、clew 自由；兩舷 sheet
+    for key in ('main',):
+        Lk = LINK[key]
+        cy, ty = 'yard-%s-course' % key, 'yard-%s-topsail' % key
+        cps = []
+        for s_ in ('S', 'P'):
+            e, pv = model_pt(cy, 'earing-' + s_), np.array(next(y for y in YP if y['name'] == cy)['at'])
+            p = pv + SL['course_in'] * (e - pv)
+            p[2] = htop[int(p[0])] + SL['course_clew_above_rail']
+            cps.append(fmt(p))
+        nm = '%s-course' % key
+        sail(nm, ['model:%s/%s/earing-P' % (Lk, cy), 'model:%s/%s/earing-S' % (Lk, cy), cps[0], cps[1]], [0], ['clew_s', 'clew_p'],
+             {'kind': 'sail', 'mast': key, 'sail': 'course'}, ['head_p', 'head_s', 'clew_s', 'clew_p'])
+        for s_, c in (('S', 'clew_s'), ('P', 'clew_p')):
+            rope('%s.sheet-%s' % (nm, s_), 'sail:%s/%s' % (nm, c), '船殼/belay-%s-sheet-%s' % (key, s_), 'running/sheets', T['course_sheet'], 1.02, C['running'], {'kind': 'sheet', 'sail': nm})
+            rope('%s.tack-%s' % (nm, s_), 'sail:%s/%s' % (nm, c), '船殼/belay-%s-tack-%s' % (key, s_), 'running/tacks', T['tack'], 1.02, C['running'], {'kind': 'tack', 'sail': nm})
+        cps = []
+        for s_ in ('S', 'P'):
+            e, pv = model_pt(cy, 'earing-' + s_), np.array(next(y for y in YP if y['name'] == cy)['at'])
+            p = e + SL['clew_in'] * (pv - e)
+            p[2] += 2
+            cps.append(fmt(p))
+        nm = '%s-topsail' % key
+        sail(nm, ['model:%s/%s/earing-P' % (Lk, ty), 'model:%s/%s/earing-S' % (Lk, ty), cps[0], cps[1]], [0], ['clew_s', 'clew_p'],
+             {'kind': 'sail', 'mast': key, 'sail': 'topsail'}, ['head_p', 'head_s', 'clew_s', 'clew_p'])
+        for s_, c in (('S', 'clew_s'), ('P', 'clew_p')):
+            rope('%s.sheet-%s' % (nm, s_), 'sail:%s/%s' % (nm, c), 'model:%s/%s/earing-%s' % (Lk, cy, s_), 'running/sheets', T['sheet'], 1.0, C['running'], {'kind': 'sheet', 'sail': nm})
+    # 燕子號：沒有 spritsail ⇒ staysail、jib（出處：飛魚號）：tack（艏斜桅）、head（支索上）、clew 自由；兩舷 sheet
     for nm, tack, kind, clew in (('staysail', '艏斜桅/forestay-foot', 'staysail', SL['staysail_clew']), ('jib', '艏斜桅/cap-top', 'jib', SL['jib_clew'])):
-        sail(nm, [tack, '%s/%s.head' % (LK, nm), fmt([clew[0] + 0.5, YC + 0.5, clew[1] + 0.5])], [0], ['clew'],
+        sail(nm, [tack, '主桅/%s.head' % nm, fmt([clew[0] + 0.5, YC + 0.5, clew[1] + 0.5])], [0], ['clew'],
              {'kind': 'sail', 'mast': 'bowsprit', 'sail': kind}, ['tack', 'head', 'clew'], fullness=1.06)
         for s_ in ('S', 'P'):
             rope('%s.sheet-%s' % (nm, s_), 'sail:%s/clew' % nm, '船殼/belay-%s-%s' % (nm, s_), 'running/sheets', T['sheet'], 1.04, C['running'], {'kind': 'sheet', 'sail': nm})
     for r_ in ropes:                                                 # 艏帆的 luff 沿支索 ⇒ 那兩條支索拉直
-        if r_['name'] in ('fore-stay', 'jib-stay'):
+        if r_['name'] in ('main-stay', 'main-topmast-stay'):
             r_['slack'] = 1.0
-    # 旗：紅旗掛 gaff 峰（luff 沿 gaff 往下到 top-128）、白長旗掛桅頂
+    for key in ('mizzen',):
+        Lk = LINK[key]
+        nm = '%s-lateen' % key
+        yn = 'yard-%s-lateen' % key
+        cx, cz = SL['lateen_clew'][key]
+        sail(nm, ['model:%s/%s/fore' % (Lk, yn), 'model:%s/%s/peak' % (Lk, yn), fmt([cx + 0.5, YC + 0.5, cz + 0.5])], [0], ['clew'],
+             {'kind': 'sail', 'mast': key, 'sail': 'gaff'}, ['tack', 'head', 'clew'])
+        for s_ in ('S', 'P'):
+            rope('%s.sheet-%s' % (nm, s_), 'sail:%s/clew' % nm, '船殼/belay-%s-lateen-%s' % (key, s_), 'running/sheets', T['sheet'], 1.03, C['running'], {'kind': 'sheet', 'sail': nm})
+        deck = SL['lateen_tack'][key][0]
+        rope('%s.tack' % nm, 'sail:%s/tack' % nm, '甲板-%s/tack-%s' % (deck, key), 'running/tacks', T['tack'], 1.0, C['running'], {'kind': 'tack', 'sail': nm})
+    # 旗：英國紅旗掛在後桅 lateen 帆桁後端；主桅頂長旗
     FL = RG['flags']
     ew, eh = FL['ensign']
-    pk = model_pt('yard-main-gaff', 'peak')
-    lu = model_pt('yard-main-gaff', FL['ensign_luff_anchor'])
-    sail('ensign', [g + 'peak', fmt(pk - [ew, 0, 0]), fmt(pk - [ew, 0, eh]), g + FL['ensign_luff_anchor']],
-         [3], [2, 1], {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#be161e', texture='textures/ensign.png')
-    tz = math.floor(m['truck'])
-    tx = ax(tz)
+    LAT = json.load(open(os.path.join(design, 'yards_lateen.json'), encoding='utf-8'))
+    pk_loc = LAT['mizzen']['anchors']['peak']
+    pyp = next(y for y in YP if y['name'] == 'yard-mizzen-lateen')
+    pk = np.array(pyp['at']) + (np.array(pk_loc, float) + 0.5 - np.array(pyp['pivot']))
+    sail('ensign', ['model:後桅/yard-mizzen-lateen/peak', fmt(pk - [ew, 0, 0]), fmt(pk - [ew, 0, eh]),
+                    'model:後桅/yard-mizzen-lateen/%d,%d,%d' % (pk_loc[0], pk_loc[1], pk_loc[2] - eh)],
+         [3], [2, 1], {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#ffffff', texture='textures/ensign.png')
+    tz = math.floor(M['main']['truck'])
+    tx = ax('main', tz)
     pl_, ph = FL['pennant']
     sail('pennant', [fmt([tx + 0.5, YC + 0.5, tz - 1]), fmt([tx - pl_, YC + 0.5, tz - 2]), fmt([tx + 0.5, YC + 0.5, tz - 1 - ph])],
-         [2], [1], {'kind': 'flag', 'flag': 'pennant', 'mast': KEY}, None, fullness=1.04, color=FL['pennant_color'])
+         [2], [1], {'kind': 'flag', 'flag': 'pennant', 'mast': 'main'}, None, fullness=1.04, color=FL['pennant_color'])
     ensign_png(os.path.join(design, 'textures', 'ensign.png'), ew, eh)
 
-    metas = [['sail', s['name'], s['meta']] for s in sails] + [['rope', r_['name'], r_['meta']] for r_ in ropes if r_['meta']]
+    metas = [['sail', s['name'], s['meta']] for s in sails] + [['rope', r['name'], r['meta']] for r in ropes if r['meta']]
     if probe:
-        nmp = probe[0].split('=')[1]
-        metas = [mm for mm in metas if not (mm[0] == 'rope' and mm[1] == nmp)]
+        nm = probe[0].split('=')[1]
+        metas = [m for m in metas if not (m[0] == 'rope' and m[1] == nm)]
     # ── 讀數 ──
-    names = [r_['name'] for r_ in ropes]
-    need = [r_['name'] for r_ in ropes if r_['name'].split('.')[0] in {s['name'] for s in sails} and '.' in r_['name']]
-    have = {mm[1] for mm in metas if mm[0] == 'rope'}
-    # 帆裝三段（Ship_Rigging §9.1）：set 或照 sail 的預設
-    dflt = {'topsail': 1, 'jib': 1, 'topgallant': 2, 'gaff': 2}
-    lvl = {s['name']: s['meta'].get('set', dflt.get(s['meta'].get('sail'), 3)) for s in sails if s['meta']['kind'] == 'sail'}
-    R = {'channels': {'cells': len(chan), 'skipped_on_ship': skipped, 'deadeye_x': xs, 'mirror_diff': sum(1 for (x, y, z), c in chan.items() if chan.get((x, 2 * YC - y, z)) != c)},
+    names = [r['name'] for r in ropes]
+    need = [r['name'] for r in ropes if r['name'].split('.')[0] in {s['name'] for s in sails} and '.' in r['name']]
+    have = {m[1] for m in metas if m[0] == 'rope'}
+    R = {'channels': {'cells': len(chan), 'skipped_on_ship': skipped, 'mirror_diff': sum(1 for (x, y, z), c in chan.items() if chan.get((x, 2 * YC - y, z)) != c)},
          'anchors': {k: len(v) for k, v in anchors.items()}, 'ropes': len(ropes), 'ratline_sets': len(rsets),
-         'groups': {gg: sum(1 for r_ in ropes if r_['group'] == gg) for gg in sorted({r_['group'] for r_ in ropes})},
-         'sails': len(sails), 'meta': {'sails': sum(1 for mm in metas if mm[0] == 'sail'), 'ropes': len(have)},
+         'groups': {g: sum(1 for r in ropes if r['group'] == g) for g in sorted({r['group'] for r in ropes})},
+         'sails': len(sails), 'meta': {'sails': sum(1 for m in metas if m[0] == 'sail'), 'ropes': len(have)},
          'sail_ropes_without_meta': sorted(set(need) - have), 'dup_rope_names': len(names) - len(set(names)),
-         'anchors_in_solid': sorted('%s/%s' % (k, n) for k, v in anchors.items() for n, p in v.items() if tuple(p) in occ and k != 'hull'),
-         'sail_sets': {str(k): sorted(n for n, v in lvl.items() if v <= k) for k in (1, 2, 3)}}
+         'anchors_in_solid': sorted('%s/%s' % (k, n) for k, v in anchors.items() for n, p in v.items() if tuple(p) in occ and k != 'hull')}
+    # 繩穿過船上的格嗎（靜索：兩端各留 3 格不算）
     solid = set(occ) | set(chan)
     thru = {}
-    for r_ in ropes:
-        if r_['from'].startswith(('sail:', 'model:', 'rope:')) or r_['to'].startswith(('sail:', 'model:', 'rope:')):
+    for r in ropes:
+        if r['from'].startswith(('sail:', 'model:', 'rope:')) or r['to'].startswith(('sail:', 'model:', 'rope:')):
             continue
-        a_, b_ = wpt(r_['from']), wpt(r_['to'])
+        a_, b_ = wpt(r['from']), wpt(r['to'])
         n = int(np.linalg.norm(b_ - a_) / 0.5) + 1
         hits = set()
         for t in np.linspace(0, 1, n):
@@ -294,7 +349,7 @@ def main():
             if k in solid:
                 hits.add(k)
         if hits:
-            thru[r_['name']] = len(hits)
+            thru[r['name']] = len(hits)
     R['ropes_through_solid'] = thru
     if probe:
         print(json.dumps({'probe': probe[0], 'sail_ropes_without_meta': R['sail_ropes_without_meta']}, ensure_ascii=False))
@@ -306,7 +361,10 @@ def main():
         for k in sorted(chan):
             f.write('%d,%d,%d,%d\n' % (k[0], k[1], k[2], chan[k]))
     R['channels']['sha256'] = hashlib.sha256(open(p, 'rb').read()).hexdigest()
-    works = {'hull': 'gura-swallow-01m', 'channels': 'gura-swallow-01m-channels', 'bowsprit': 'gura-swallow-01m-bowsprit', 'main': 'gura-swallow-01m-mast-main'}
+    works = {'hull': 'gura-swallow-01m', 'channels': 'gura-swallow-01m-channels', 'bowsprit': 'gura-swallow-01m-bowsprit',
+             'deck-main': 'gura-swallow-01m-deck-main'}
+    for k in MASTS:
+        works[k] = 'gura-swallow-01m-mast-' + k
     out = {'anchors': anchors, 'anchor_works': works, 'ropes': ropes, 'ratline_sets': rsets, 'sails': sails, 'meta': metas, 'wind': RG['wind'], 'sail_seconds': RG['sail_seconds']}
     with open(os.path.join(design, 'rigging_plan.json'), 'w', encoding='utf-8', newline='\n') as f:
         json.dump(out, f, ensure_ascii=False, indent=1, default=lambda o: o.item())
