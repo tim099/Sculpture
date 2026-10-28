@@ -1,0 +1,176 @@
+{
+ "title": "牛津號（Oxford, 1656）—— 英國五等艦（frigate）新圖紙",
+ "task": "TASK-0972",
+ "author": "erina",
+ "date": "2026-10-26",
+ "sources": "references/research_oxford_2026-10-26.md（〔查〕〔二手〕〔設計〕三種標記）",
+ "meters_per_cell": 0.1,
+ "ft": 3.048,
+ "space": {"x": 448, "y": 192, "z": 384, "yc": 96, "note": "中線 ＝ 第 96 格（鏡像 y ↔ 192 − y）"},
+ "lines": {
+  "half_beam": {"v": 36.5, "src": "〔查〕寬 24 ft ＝ 73.2 格 ⇒ 全寬 73 格（|dy| ≤ 36）"},
+  "keel_top": {"v": 4, "src": "〔設計〕龍骨（含 false keel）0.4 m"},
+  "keel_half": {"v": 2, "src": "〔設計〕龍骨寬 5 格（0.5 m；英國 17 世紀龍骨 sided 約 1 ft 4 in）"},
+  "plan_half": {"v": 12, "src": "〔設計〕底肋平的那一段半寬 1.2 m（約 1/3 船寬）"},
+  "astilla": {"v": 3, "src": "〔設計〕rising of the floor：平底外緣比龍骨頂高 0.3 m"},
+  "max_breadth_z": {"v": 36, "src": "〔設計〕最寬處在主 wale、炮甲板下緣附近（水線 z 31 之上 0.5 m）"},
+  "tumblehome": {"v": 4.0, "src": "〔設計〕到後甲板那一層每舷內收 0.4 m（17 世紀英國船明顯的 tumblehome）"},
+  "tumblehome_ref_z": {"v": 62, "src": "≈ 後甲板面（decks.qd）"},
+  "tumblehome_pow": {"v": 1.5, "src": "〔設計〕"},
+  "tumblehome_above_per_cell": {"v": 0.1, "src": "〔設計〕後甲板以上每往上一格再收 0.1 格"},
+  "bilge_pow": {"v": 2.0, "src": "〔設計〕圓舭的飽滿度"},
+  "s_aft": {"v": 0.42, "src": "〔設計〕船尾收縮從長度 42% 起（細長的 run：cod's head and mackerel tail）"},
+  "s_fwd": {"v": 0.64, "src": "〔設計〕船頭收縮從 64% 起"},
+  "sternpost_x0": {"v": 58, "src": "〔設計〕艉柱腳的位置（整艘船在 X 上的擺放）"},
+  "sternpost_rake_deg": {"v": 11.0, "src": "〔設計〕艉柱往後倒 11°（炮甲板 z 40 那裡往後 7.8 格）"},
+  "wing_transom_z": {"v": 44, "src": "〔設計〕方艉（square tuck）：wing transom 在炮甲板炮門下緣附近；以下到 tuck（約水線）是平的船尾板"},
+  "transom_ratio": {"v": 0.68, "src": "〔設計〕wing transom 寬約 2/3 船寬"},
+  "forefoot_x": {"v": 277, "src": "〔查〕龍骨 72 ft ＝ 219.5 格 ⇒ 58 ＋ 219"},
+  "stem_a": {"v": 33, "src": "〔設計〕艏柱是 1/4 橢圓（水平半軸 33、垂直半軸 78）：炮甲板 z 40 那裡往前 29.2 格 ⇒ 炮甲板長 ＝ 306.2 − 50.2 ＝ 256 格 ＝ 84 ft（〔設計〕72 ft × 1.17，同時代比值 1.144–1.200）"},
+  "stem_b": {"v": 78, "src": "〔設計〕艏柱頭在 z 78（艏樓頂上）"},
+  "deadwood_aft_z": {"v": 30, "src": "〔設計〕船尾 deadwood 抬到 z 30（run 細）"},
+  "deadwood_fwd_z": {"v": 12, "src": "〔設計〕"},
+  "bow_pow_low": {"v": 1.9, "src": "〔設計〕"},
+  "bow_pow_high": {"v": 2.6, "src": "〔設計〕上面鈍：17 世紀英國船飽滿的圓船頭"},
+  "aft_pow": {"v": 1.7, "src": "〔設計〕"},
+  "end_hollow": {"v": 3.0, "src": "〔設計〕兩頭的剖面往下凹（deadwood 上面高腳杯形的肩）：f ** (1 + 3·e)"},
+  "top": [[36, 97], [96, 89], [98, 76], [128, 74], [158, 72], [160, 55], [185, 55], [222, 56], [260, 58], [262, 71], [290, 73], [320, 77]],
+  "top_src": "舷頂（舷牆頂）折線 ＝ decks 每一層的甲板面 ＋ 舷牆：艉樓 poop ＋9、後甲板 ＋13（saker 炮門頂 ＋11 上面留 2 格）、船腰 ＋15（demi-culverin 炮門頂 ＋13 上面留 2 格）、艏樓 ＋10；前後緣位置是〔設計〕"
+ },
+ "waterline": {"z": 33, "src": "〔設計〕吃水 3.3 m（〔查〕11 ft ＝ 3.35 m；龍骨平放）⇒ 排水量 287 t（220 噸 bm 的 1.3 倍，同時代量級）；炮甲板只高出水面 0.7 m、炮門下緣 1.3 m —— 1650 年代 frigate 本來就低舷"},
+ "readings_at": {"deck_z": 40, "rail_z": 55, "qd_z": 62},
+ "decks_preview": {"炮甲板": 40, "後甲板": 60, "艉樓": 80, "艏樓": 62},
+ "decks": {
+  "orlop": {"z": 21, "x0": 100, "x1": 250, "src": "〔設計〕底艙平台（第一層空氣 z 21）：火藥庫、補給；離炮甲板樑底 1.6 m（遊戲頭頂 14 格）"},
+  "gun": {"z_low": 40, "x_low": 185, "rise_aft": 10, "x_aft": 50, "rise_fwd": 7, "x_fwd": 306, "src": "〔設計〕炮甲板面（第一層空氣）船中 z 40：龍骨頂 4 ＋ 底肋與內板 3 ＋〔查〕艙深 10 ft（30.5 格）＋ 甲板 3 ≈ 40；舷弧船尾 +1.0 m、船頭 +0.7 m"},
+  "qd": {"x0": 50, "x1": 158, "over": 19, "src": "〔設計〕後甲板 ＝ 炮甲板 ＋ 1.9 m（頭頂 14 格＋樑），從船尾到主桅後面"},
+  "poop": {"x0": 46, "x1": 96, "over": 17, "src": "〔設計〕艉樓 ＝ 後甲板 ＋ 1.7 m，蓋在船長室上"},
+  "fc": {"x0": 262, "x1": 312, "over": 18, "src": "〔設計〕艏樓 ＝ 炮甲板 ＋ 1.8 m"}
+ },
+ "ports": {
+  "gun": {"x": [72, 98, 124, 150, 176, 200, 224, 248], "w": 7, "h": 7, "sill": 6, "gun": "8l", "src": "〔查〕16 門 demi-culverin、每舷 8；〔設計〕間距 26 格（8.5 ft；最前三門 24 格 —— 讓艏樓梯子、又讓第 7 門的砲班站得下：v1 第 7、8 門隔 2.0 m，匯入檢查砲班 2／3），炮門 0.7 m 見方、下緣離甲板 0.6 m"},
+  "qd": {"x": [74, 104, 134], "w": 6, "h": 6, "sill": 5, "gun": "6l", "src": "〔查〕6 門 saker 在後甲板、每舷 3；〔設計〕位置。試過往前挪到 102／124／146 ⇒ 後甲板前取用點找不到 9×9 空地、被遊戲擺到艏樓梯頂 ⇒ 挪回來（送藥手 10／11 缺的是炮甲板最後一對，不是這裡）"}
+ },
+ "masts": {
+  "_src": "〔二手〕主桅照 Lees 1670 年規則（（龍骨 72＋寬 24＋艙深 10）÷ 1.66 ＝ 63.9 ft，不加寬度修正）；其他桅與帆桁的比例都是〔設計〕：17 世紀上桅短、帆桁長 —— 量級參考 Lees 轉述的 18 世紀比例（前桅 8/9、主上桅 3/5）與收穫號 calli 的 galleon（主帆桁 ÷ 主桅 0.9）取中間。z 一律是格；heel ＝ 桅腳那一格（龍骨頂上的 keelson）",
+  "main":   {"x": 180, "rake_deg": -2, "heel_z": 8,  "len": 195, "head": 22, "r": [4.0, 3.0], "src": "64 ft；桅頭（top 以上）22 格 ＝ 1/9"},
+  "main_top": {"len": 107, "head": 12, "r": [2.5, 1.8], "src": "0.55 × 主桅 ＝ 35 ft"},
+  "main_tg":  {"len": 49, "head": 0, "r": [1.5, 1.0], "src": "0.25 × 主桅 ＝ 16 ft"},
+  "fore":   {"x": 274, "rake_deg": 0, "heel_z": 10, "len": 174, "head": 20, "r": [3.8, 2.8], "src": "57 ft ＝ 0.89 × 主桅"},
+  "fore_top": {"len": 98, "head": 11, "r": [2.4, 1.7], "src": "0.5 × 主桅 ＝ 32 ft"},
+  "fore_tg":  {"len": 43, "head": 0, "r": [1.4, 1.0], "src": "14 ft"},
+  "mizzen": {"x": 92, "rake_deg": -4, "heel_z": 14, "len": 146, "head": 14, "r": [2.8, 2.0], "src": "48 ft ＝ 0.75 × 主桅"},
+  "mizzen_top": {"len": 64, "head": 0, "r": [1.6, 1.1], "src": "0.33 × 主桅 ＝ 21 ft"},
+  "bowsprit": {"heel": [284, 49], "len": 116, "steeve_deg": 35, "r": [3.5, 2.2], "src": "0.6 × 主桅 ＝ 38 ft；仰 35°（17 世紀艏斜桅陡）；桅腳在前桅前面的炮甲板上（v0 放 x 262 會穿過前桅）、從艏樓前緣穿出去（船頭牆開孔，收穫號的做法）"},
+  "yards": {
+   "main_course":  {"len": 160, "on": "main", "z": 176, "src": "16 m ＝ 2.2 × 寬（17 世紀主帆桁約 2.1–2.4 × 寬）"},
+   "main_topsail": {"len": 80,  "on": "main_top", "z": 262, "src": "½ 主帆桁"},
+   "main_tg":      {"len": 40,  "on": "main_tg", "z": 316, "src": "½ 上桅帆桁"},
+   "fore_course":  {"len": 140, "on": "fore", "z": 160, "src": "0.875 × 主帆桁"},
+   "fore_topsail": {"len": 70,  "on": "fore_top", "z": 246, "src": "½ 前帆桁"},
+   "fore_tg":      {"len": 35,  "on": "fore_tg", "z": 290, "src": "½ 前上桅帆桁"},
+   "crossjack":    {"len": 70,  "on": "mizzen", "z": 142, "src": "後桅頂下的橫桁：不掛帆，給後上桅帆的帆腳綁"},
+   "mizzen_topsail": {"len": 50, "on": "mizzen_top", "z": 200, "src": "後上桅帆（17 世紀英國船有）"},
+   "mizzen_lateen": {"len": 136, "on": "mizzen", "z": 128, "angle_deg": 40, "sling_frac": 0.42, "src": "0.85 × 主帆桁；前端低、後端高 40°；吊點在前端往後 42%"},
+   "spritsail":    {"len": 96,  "on": "bowsprit", "frac": 0.85, "drop": 8, "src": "0.6 × 主帆桁；吊在艏斜桅 85% 處下面"}
+  }
+ },
+ "decks_build": {
+  "src": "〔設計〕遊戲用的大致構造（造船規格 §9.2–9.3）；結構照收穫號 calli 的 draft_decks（甲板板＋橫樑＋圍欄、break、梯子踏板與 stringer、封閉空腔）",
+  "names": {"orlop": "底艙平台", "gun": "炮甲板", "qd": "後甲板", "poop": "艉樓", "fc": "艏樓"},
+  "levels": {"orlop": 0, "gun": 1, "qd": 2, "fc": 2, "poop": 3},
+  "spans": {"orlop": [100, 250], "gun": [40, 320], "qd": [40, 158], "poop": [36, 96], "fc": [262, 320]},
+  "plank": {"interior": 177, "weather": 209, "weather_decks": ["qd", "poop", "fc"]},
+  "beam": {"every": 13, "phase": 72, "w": 2, "depth": {"orlop": 3, "gun": 3, "qd": 2, "poop": 2, "fc": 2}, "color": 136, "src": "〔設計〕每 13 格一根（炮門底下一根、兩門之間一根）、寬 2"},
+  "trim": 141, "coaming_h": 2,
+  "hatches": [
+   {"name": "主艙口", "x0": 190, "x1": 204, "half": 8, "decks": ["gun"]},
+   {"name": "前艙口", "x0": 232, "x1": 244, "half": 7, "decks": ["gun"]}
+  ],
+  "mast_r": {"fore": 4.5, "main": 4.5, "mizzen": 3.5},
+  "breaks_src": "〔設計〕v1 門開在兩舷（|dy| 18）⇒ 門前面是梯子（|dy| 8–16）與砲（|dy| ≥ 14.9）、走出來是死角 ⇒ 匯入檢查 16 門砲的送藥手走不到取用點 ⇒ 後甲板前緣、艏樓後緣的門改開在中線",
+  "breaks": [
+   {"name": "後甲板前緣", "x": 158, "lo": "gun", "up": "qd", "doors_dy": [0], "rail_h": 8},
+   {"name": "艉樓前緣", "x": 96, "lo": "qd", "up": "poop", "doors_dy": [14], "rail_h": 7},
+   {"name": "艏樓後緣", "x": 262, "lo": "gun", "up": "fc", "doors_dy": [0], "rail_h": 7}
+  ],
+  "ladders": {"rise": 3, "run": 2, "tread_half": 3, "color": 136, "list": [
+   {"name": "hold", "lo": "orlop", "up": "gun", "xs": 156, "dir": -1, "dy": 0, "well": true, "src": "v1 在船腰 x 207（主艙口與前艙口之間）⇒ 火藥庫單一間時遊戲把取用點擺在火藥庫前後 1.6 m、夾在兩門砲中間、桶把取用點圍死（匯入檢查 16 門走不到）⇒ 挪到後甲板底下、緊鄰火藥庫，火藥庫標 hoist ＝ 這座梯子（火藥從艙口吊上來）"},
+   {"name": "qd-P", "lo": "gun", "up": "qd", "xs": 172, "dir": -1, "dy": -12, "head_x": 155},
+   {"name": "qd-S", "lo": "gun", "up": "qd", "xs": 172, "dir": -1, "dy": 12, "head_x": 155},
+   {"name": "poop", "lo": "qd", "up": "poop", "xs": 110, "dir": -1, "dy": 0, "head_x": 93},
+   {"name": "fc-P", "lo": "gun", "up": "fc", "xs": 251, "dir": 1, "dy": -12, "head_x": 265},
+   {"name": "fc-S", "lo": "gun", "up": "fc", "xs": 251, "dir": 1, "dy": 12, "head_x": 265}
+  ], "src": "〔設計〕每 3 格一階、每階 2 格、踏板 7 寬；梯子放在兩門炮之間的空檔（炮門 x ± 3 以外）；底艙梯子在炮甲板開井（主艙口與前艙口之間）"}
+ },
+ "rig_build": {
+  "src": "〔設計〕桅樓（round top，17 世紀圓的平台＋矮欄）主 r 13、前 r 11、後 r 10（v1 後 r 7 ⇒ 遊戲的桅頂水手站位半徑 9–18 格、後桅樓站不下，匯入檢查 8／12）；上桅在下桅頭前面（doubling）；方帆桁照造船規格 §2.1 引用風暴角號（summit，17 世紀荷蘭船）的帆桁元件等比縮放；後桅三角帆桁新做（要有 fore 固定點，§5）",
+  "colors": {"mast": 141, "top": 136, "rim": 36, "cap": 36, "yard": 136},
+  "tops": {"main": 13, "fore": 11, "mizzen": 10},
+  "yard_src": {
+   "main_course": ["summit-stormkaap-01m-yard-main-course", 235, "course"],
+   "main_topsail": ["summit-stormkaap-01m-yard-main-topsail", 123, "topsail"],
+   "main_tg": ["summit-stormkaap-01m-yard-main-topgallant", 77, "topgallant"],
+   "fore_course": ["summit-stormkaap-01m-yard-fore-course", 207, "course"],
+   "fore_topsail": ["summit-stormkaap-01m-yard-fore-topsail", 111, "topsail"],
+   "fore_tg": ["summit-stormkaap-01m-yard-fore-topgallant", 57, "topgallant"],
+   "crossjack": ["summit-stormkaap-01m-yard-main-topsail", 123, "crossjack"],
+   "mizzen_topsail": ["summit-stormkaap-01m-yard-mizzen-topsail", 67, "topsail"],
+   "spritsail": ["summit-stormkaap-01m-yard-spritsail", 155, "spritsail"]
+  },
+  "sail_of_yard": {"main_course": "main-course", "main_topsail": "main-topsail", "main_tg": "main-topgallant", "fore_course": "fore-course", "fore_topsail": "fore-topsail", "fore_tg": "fore-topgallant", "crossjack": "", "mizzen_topsail": "mizzen-topsail", "spritsail": "spritsail", "mizzen_lateen": "mizzen-lateen"}
+ },
+ "rigging": {
+  "src": "〔設計〕數值照造船規格 §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照收穫號 calli 的 draft_rigging；ratlines 改用橫繩組（§6，TASK-0678）",
+  "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+  "channels": {"shrouds": {"fore": 5, "main": 6, "mizzen": 3}, "backstays": {"fore": 1, "main": 1}, "spacing": 7, "first_aft": 3, "width": 4, "below_rail": 0, "layers": 1,
+   "src": "〔設計〕channels 在舷外、舷頂那一列、1 格厚（0.1 m；v1 舷頂下 1 格、2 格厚 ⇒ 炮門蓋板開著水平伸出去撞到 channels，portlids check open_hits_ship 576）；每舷 shrouds 主 6、前 5、後 3（17 世紀五等艦的量級，沒查到確數）"},
+  "topmast_shrouds": 3,
+  "thick": {"shroud": 1.0, "topmast_shroud": 0.7, "futtock": 0.5, "backstay": 0.7, "stay": 1.2, "tm_stay": 0.8, "bobstay": 1.0, "sheet": 0.45, "course_sheet": 0.55, "tack": 0.55},
+  "ratlines": {"step": 4, "start": 7, "stop": 16, "min_span": 5, "th": 0.3, "tm_step": 4, "tm_start": 4, "tm_stop": 10, "tm_th": 0.25},
+  "sails": {"fullness": 1.05, "course_clew_above_rail": 8, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 36, "sheet_aft": 50, "tack_fwd": 40,
+   "lateen_clew_dx": 4, "lateen_clew_above_rail": 6, "lateen_tack_deck": "qd",
+   "src": "〔設計〕course 帆腳在舷頂上 0.8 m；上一層帆的 clew 綁在下一根帆桁的 earing 旁；spritsail 掛在艏斜桅帆桁下 3.6 m；後桅三角帆 clew 在帆桁後端下、sheet 綁船尾舷頂兩舷，tack 從帆桁前端綁到後甲板"},
+  "sail_set": {"spritsail": 3},
+  "flags": {"ensign": [36, 24], "pennant": [50, 4], "pennant_color": "#c8201e",
+   "src": "〔設計〕船尾：紅色 ensign（左上角白底紅聖喬治十字；1660 年代英國船）掛在船尾旗桿（步驟 6；以前暫掛在後桅三角帆桁的後端）；主桅頂紅色長旗"},
+  "wind": [4.5, -1.5, 0], "sail_seconds": 3
+ },
+ "guns_build": {
+  "assembly": "erina-oxford-01m-assembly", "hull": "erina-oxford-01m",
+  "deck_works": {"gun": "erina-oxford-01m-deck-gun", "qd": "erina-oxford-01m-deck-qd"},
+  "prefix": {"gun": "G", "qd": "Q"},
+  "types": {
+   "8l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.55, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "8l"}, "src": "demi-culverin（約 9–10 磅）⇒ 遊戲 8l；沿用風暴角號 6 磅長砲元件放大 0.55（皇家號 8l 的做法、造船規格 §2.1 只差口徑一點的照縮放）"},
+   "6l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.5, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "6l"}, "src": "saker（約 5¼ 磅）⇒ 遊戲 6l；風暴角號 6 磅長砲元件原尺寸"}
+  },
+  "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2, "src": "照收穫號 draft_guns（造船規格 §4.2：從舷牆外面往裡退到零碰撞、砲口伸出、腳下有甲板）"},
+  "support_min": 0.5
+ },
+ "gear": {"src": "〔設計〕火藥庫照 Ship_Magazine §8（一定放桶）；露天艙口的艙蓋照 Ship_Fittings §9.7（低乾舷 ⇒ 露天的出入口都該有門）；廚房 §9.13；元件都是現成的（§2.1）", "magazine": {"x_aft": 100, "x_fwd": 127, "door_half": 2, "door_h": 15, "color": 136, "meta": {"kind": "magazine", "pos": "aft", "hoist": "甲板-gun/梯子/hold"}, "src": "〔設計〕底艙平台後段 x 101–126（牛津號 1669 在 Île-à-Vache 火藥庫爆炸）；前牆中間門 5 寬 1.5 m 高"}, "models": [{"name": "桶-01", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [105.5, 85.5, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "桶-02", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [105.5, 91.0, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "桶-03", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [105.5, 102.0, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "桶-04", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [105.5, 107.5, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "桶-05", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [111.5, 85.5, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "桶-06", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [111.5, 91.0, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "桶-07", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [111.5, 102.0, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "桶-08", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [111.5, 107.5, 22], "meta": {"kind": "powder", "powder_lb": 100}}, {"name": "艙蓋-主", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "meadow-monitor-01m-hatch", "pivot": [0, 0, 0], "scale": [1, 1.4615, 1], "at": [189, 87, 43], "meta": {"kind": "door", "open": "up"}, "need_support": false, "src": "主艙口 x 190–204、|dy| ≤ 8 ＋ 圍欄一圈 ⇒ 17 × 19；放在圍欄頂（甲板板 z 40、圍欄 41–42）"}, {"name": "艙蓋-前", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "meadow-monitor-01m-hatch", "pivot": [0, 0, 0], "scale": [0.8824, 1.3077, 1], "at": [231, 88, 44], "meta": {"kind": "door", "open": "up"}, "need_support": false, "src": "前艙口 x 232–244、|dy| ≤ 7 ＋ 圍欄 ⇒ 15 × 17；甲板板 z 41、圍欄 42–43"}, {"name": "爐灶", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "kaguya-gloire-01m-galley", "pivot": [22, 16, 0], "scale": 0.33, "at": [279.5, 84, 45], "meta": {"kind": "galley"}, "src": "艏樓底下的炮甲板（淨高 15 格 ⇒ 光榮號的爐灶縮到 0.33）、左舷側（中線是艏斜桅的根）"}, {"name": "絞盤", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-capstan", "pivot": [40, 40, 0], "scale": 0.16, "at": [116.5, 96.5, 43], "meta": {"kind": "capstan"}, "src": "後甲板底下的炮甲板中線（餘燼號的主絞盤 ×0.16 ⇒ 直徑 1.3 m）"}]},
+ "rudder_anchor_build": {"rudder": {"work": "erina-oxford-01m-rudder", "title": "牛津號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 56, "width": [[0, 13], [15, 12], [33, 8], [44, 5], [56, 4]], "below": 182, "above": 36, "iron": 73, "strap_every": 10, "waterline_z": 33, "max_deg": 35, "bevel": 1, "src": "〔設計〕舵沿艉柱後緣（x_post，斜 11°）從龍骨底到 z 56（炮甲板船尾那一帶，貼著方艉的船尾板）；3 格厚、舵葉 1.3 m 往上收到 0.4 m 的舵頭；水線下白、上黑、每 10 格一道鐵箍；max_deg 35；前緣兩側削 1 格（收穫號量過：不削 ⇒ 轉舵掃進艉柱）。⚠ 1660 年代英國船的舵頭從 counter 穿進炮甲板接舵柄與 whipstaff —— 本船舵頭貼在船尾板外面、沒有開孔、沒有舵柄；不放舵輪（舵輪 1700 年代才有）"}, "anchor": {"gear_work": "erina-oxford-01m-anchor-gear", "gear_title": "牛津號 錨架（兩舷 billboard）", "gear_link": "錨架", "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.55, "pivot": [23.5, 16.5, 56.5], "x_try": [286, 288, 290, 292, 294, 296], "z_try": [64, 64.5, 65, 65.5, 66, 66.5, 67, 67.5, 68], "z_side": 62, "d_step": 0.5, "d_max": 24, "ledge_half": 9, "ledge_out": 3, "ledge_t": 2, "color": 136, "src": "〔設計〕共用錨元件（Ship_Game §9 anchor）×0.55（220 噸 bm；收穫號 946 toneladas 用 0.85）、meta anchor=bower；兩舷各一，吊在船頭舷外：錨臂順著船殼切線、錨環在艏樓舷頂下。錨冠底下一塊 billboard 托板（遊戲判斷掉不掉是外框中心往下找實心）。⚠ 沒有吊錨桿（cathead）"}, "hawse": {"x": 298, "z": 50, "src": "〔設計〕錨鏈孔在船頭、炮甲板那一層的船殼外面（只登記固定點 hawse-S／P，沒有開孔）"}},
+ "deco": {"src": "〔設計〕1650 年代英國船：開放式 beakhead（艏樓前牆前面一塊收尖的平台）、knee of the head（cutwater）、兩舷兩條 head rail、鍍金獅子船首像（Stuart 時代英國船的標準船首像，戴冠）；船尾直立旗桿掛紅 ensign（以前暫掛在後桅三角帆桁後端）", "colors": {"plank": 209, "gold": 248, "hull": 177, "hull_below": 182, "blue": 6, "mane": 244, "eye": 36, "crown": 192, "staff": 141}, "beakhead": {"z_deck": 54, "x_tip": 328, "half": 13, "pow": 1.4, "cut_z0": 26, "bob_z": 38, "rails": [{"from": [305, 70], "to_z": 62, "color": "gold", "posts": [314, 321]}, {"from": [306, 64], "to_z": 58, "color": "blue"}], "src": "〔設計〕平台面 z 54（炮甲板與艏樓之間、在艏斜桅底下）、伸出艏柱到 x 328（約 1.9 m）、半寬 1.3 m 收尖；cutwater 從水線下 z 26 的艏柱斜著伸到平台尖底下（3 格寬，前緣金）；bobstay 綁在 cutwater 前緣 z 38"}, "figurehead": {"x": 322, "src": "〔設計〕鍍金獅子（身長 1.1 m、高 1.5 m），站在平台尖上朝前，紅冠；艏斜桅在牠頭頂上 0.7 m"}, "ensign_staff": {"x": 41, "h": 45, "src": "〔設計〕船尾最後面那一欄舷頂上的直立旗桿（4.5 m），ensign 從桿頂往船尾飄"}},
+ "paint": {
+  "_src": "〔設計〕1660 年代英國船：水線上外板上清漆的木色（bright sides）、wale 塗黑（瀝青）、炮門以上的上部構造藍底金邊的飾帶、炮門內框紅色、水線下白色防蟲塗料；色號看過 palette_rgb（RGB332）",
+  "black": 36, "blue": 6, "gold": 248, "reveal": 192, "glass": 155, "wood": 177,
+  "wales": [
+   {"name": "main-lower", "dz": -6, "h": 2, "src": "主 wale 下條：炮甲板面下 0.5–0.6 m"},
+   {"name": "main-upper", "dz": -2, "h": 2, "src": "主 wale 上條：炮甲板面下 0.1–0.2 m（炮門下緣在甲板上 0.6 m）"},
+   {"name": "channel", "dz": 14, "h": 2, "src": "channel wale：炮甲板炮門頂（＋13）上面；船腰那一段剛好是舷頂兩格（黑色舷緣）"}
+  ],
+  "frieze_from_dz": 16, "src_frieze": "channel wale 以上（後甲板、艉樓、艏樓的舷牆）藍底；上下緣各一列金；舷頂最上一格黑"
+ },
+ "stern": {
+  "x_max": 100,
+  "wing_band": [44, 45],
+  "rows": [
+   {"deck": "gun", "n": 4, "w": 5, "h": 7, "sill": 7, "half": 20, "kind": "window", "src": "〔設計〕炮甲板船長室（great cabin）船尾窗 4 扇"},
+   {"deck": "qd", "n": 4, "w": 5, "h": 6, "sill": 5, "half": 18, "kind": "window", "src": "〔設計〕後甲板 coach 船尾窗 4 扇"}
+  ],
+  "src": "〔設計〕方艉：wing transom 一條黑（z 44–45）、以下船尾板木色、以上藍底金框兩排窗（17 世紀英國五等艦的船尾一般兩排窗）"
+ },
+ "hull_build": {
+  "wall": 3, "side_color": 177, "bottom_color": 182, "bottom_top_z": 33, "frame_color": 141, "inner_color": 177,
+  "src": "〔設計〕牆 3 格（外板、肋骨、內板）；水線以上外板天然木色（17 世紀英國船 bright／ochre）、水線下灰白（白色防蟲塗料 white stuff）—— 色號看過 palette_rgb 再定（階段二）"
+ }
+}
