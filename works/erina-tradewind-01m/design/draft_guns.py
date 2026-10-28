@@ -1,6 +1,7 @@
 # 出處：erina-oxford-01m/design/draft_guns.py（TASK-0972 牛津號；TASK-1097 抄來改成信風號 brig）
-# 信風號 階段八（TASK-0972）：砲 —— 全部是外部模型，沿用風暴角號的 6 磅長砲元件（造船規格 §2.1），掛在所在甲板的子作品上
-#   炮甲板（deck-gun）：每舷 8 門 demi-culverin ⇒ 8l（scale 0.55）；後甲板（deck-qd）：每舷 3 門 saker ⇒ 6l（scale 0.5）
+# 信風號 步驟 9（TASK-1097）：砲 —— 全部是外部模型，掛在所在甲板的子作品上
+#   主甲板（deck-gun）：每舷 2 門 4 磅砲（pinnacle 的 4 磅專用元件 ×0.5）從舷牆砲門打；
+#   迴旋砲 pierrier 6 門：後甲板舷頂每舷 2、艏樓舷頂每舷 1（座的插銷底落在舷頂上一格，撞到就往上墊；砲口要伸出船殼外）
 #   擺法（造船規格 §4.2）：沿砲身方向從船殼外面往裡退（每步 0.5 格），退到模型每一格的格心＋八個角（往裡縮 inset）都不在組裝件的實心格裡；
 #   再看砲口有沒有伸出船殼、砲口那一點是不是空的、砲腳下有沒有甲板。S 舷 ＝ +y；P 舷 mirror=y、各自搜。
 #   來源：calli-cosecha-01m/design/draft_guns.py（照抄後改：本船的炮門清單、沒有船尾追擊砲）
@@ -100,6 +101,31 @@ def main():
                  'opening': {'x': [p['x0'], p['x1']], 'z': [p['z0'], p['z1']]}}
             r.update(best[1] if best else {'ok': False, 'at': None})
             rows.append(r)
+    # ── 迴旋砲：舷頂上（Ship_Guns §4.2.1；擺法照飛魚號：S 舷照原樣、P 舷 mirror=y）──
+    gs = guns['pierrier']
+    for sw in GB['swivels']:
+        x = sw['x']
+        for side, nm in ((1, 'S'), (-1, 'P')):
+            mirror = side < 0
+            zs = [z for (xx, y, z) in Hs if xx == x]
+            ztop = max(zs)
+            ys = [y for (xx, y, z) in Hs if xx == x and z == ztop]
+            yr = (max(ys) - 1) if side > 0 else (min(ys) + 1)                  # 舷頂那一列的中間（外板往裡一格）
+            outer = (max(ys) + 1) if side > 0 else min(ys)
+            best = None
+            for dz in range(1, 5):
+                at = (x + 0.5, yr + 0.5, float(ztop + dz))
+                if G.hit(gs.world(gs.samples, at, 0.0, mirror)).any():
+                    continue
+                tip = gs.world(gs.anchors['muzzle'][None], at, 0.0, mirror)[0]
+                beyond = (tip[1] - outer) * side
+                tip_free = not G.hit(tip[None])[0]
+                best = {'at': r3(at), 'phi': 0.0, 'back': 0, 'off': 0, 'dz': dz, 'muzzle_beyond': round(float(beyond), 2), 'muzzle_free': tip_free,
+                        'support': 1.0, 'axis_z': round(float(tip[2]), 2), 'ok': bool(beyond > 0 and tip_free)}
+                break
+            r = {'deck': sw['deck'], 'port': 'sw%d' % x, 'side': nm, 'type': 'pierrier', 'chase': False, 'outer': outer, 'deck_z': ztop}
+            r.update(best or {'ok': False, 'at': None})
+            rows.append(r)
     # ── 命名 ──
     cnt = {}
     for r in rows:
@@ -107,9 +133,12 @@ def main():
         if r['chase']:
             r['name'] = '%s-chase-stern-%s' % (pre, r['side'])
         else:
-            cnt[(pre, r['side'])] = cnt.get((pre, r['side']), 0) + 1
-            r['name'] = '砲%s-%s%02d' % (pre, r['side'], cnt[(pre, r['side'])])
-    rows.sort(key=lambda r: (list(GB['prefix']).index(r['deck']), r['chase'], r['side'], str(r['port'])))
+            kind = '迴旋砲' if r['type'] == 'pierrier' else '砲'
+            cnt[(kind, pre, r['side'])] = cnt.get((kind, pre, r['side']), 0) + 1
+            r['name'] = '%s%s-%s%02d' % (kind, pre, r['side'], cnt[(kind, pre, r['side'])])
+    rows.sort(key=lambda r: (r['type'] == 'pierrier', list(GB['prefix']).index(r['deck']), r['side'], str(r['port'])))
+    for i, r in enumerate(rows, 1):
+        r['id'] = 'gun-%d' % i                                # 物件 id 自己先發（迴旋砲的座 mount_of 要指它；Ship_Guns §4.2.1）
 
     def cells_of(r, dpush=0.0):
         g = guns[r['type']]

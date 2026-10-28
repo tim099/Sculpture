@@ -1,5 +1,5 @@
 # 出處：erina-oxford-01m/design/tools/build_gear.py（TASK-0972 牛津號；TASK-1097 抄來改成信風號 brig）
-# 信風號 步驟 10 落地：火藥庫子作品（牆＋固定點 blast／door）＋關聯（kind=magazine）、火藥桶（掛在火藥庫裡）、艙蓋／爐灶／絞盤（掛在炮甲板）
+# 信風號 步驟 10 落地：火藥庫子作品（牆＋固定點 blast／door）＋關聯（kind=magazine）、火藥桶（掛在火藥庫裡）、艙蓋／爐灶／絞盤／小艇（掛在主甲板）、羅經櫃（後甲板）
 #   用法：python -I -X utf8 tools/build_gear.py <design>（先跑 draft_gear.py；模型 overwrite=1、子作品已存在不重貼）
 #   結構照 tools/build_masts.py
 import json, os, re, subprocess, sys
@@ -10,7 +10,7 @@ HULL = 'erina-tradewind-01m'
 ASM = HULL + '-assembly'
 WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
 G = json.load(open(os.path.join(design, 'gear_placement.json'), encoding='utf-8'))
-HOST = {'magazine': HULL + '-magazine', 'deck-gun': HULL + '-deck-gun'}
+HOST = {'magazine': HULL + '-magazine', 'deck-gun': HULL + '-deck-gun', 'deck-qd': HULL + '-deck-qd'}
 
 
 def cli(*args, ok=(0,)):

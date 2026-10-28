@@ -1,5 +1,6 @@
 # 出處：erina-oxford-01m/design/draft_gear.py（TASK-0972 牛津號；TASK-1097 抄來改成信風號 brig）
-# 信風號 步驟 10（TASK-0972）：火藥庫（底艙平台後段的牆＋門）、火藥桶、艙蓋（露天艙口擋水）、爐灶（廚房）、絞盤
+# 信風號 步驟 10（TASK-1097）：火藥庫（底艙平台後段的牆＋門）、火藥桶、艙蓋（露天艙口擋水）、爐灶（廚房）、絞盤、小艇、羅經櫃
+#   跟牛津號不同：火藥庫的牆砌到上面那一層甲板底下（船長艙範圍裡是下沉的船長艙地板）
 #   輸入：plan.json（gear）＋ 組裝件現在的格子（CLI 匯出，藏掉本階段自己的關聯）＋ parts（砲模型的外框）
 #   輸出：masks/gear/magazine.vox.txt（火藥庫子作品，世界座標）、gear_placement.json（每個模型：放在哪件甲板、at、pivot、scale、meta）、verify_gear.json
 #   用法：python -I -X utf8 draft_gear.py <design> [--probe=shift=<模型名>:<dx>]（反向對照：把一件往 x 推幾格，看碰撞報不報；⛔ 不寫檔）
@@ -54,8 +55,10 @@ def main():
     zf = plan['decks']['orlop']['z'] + 1                       # 底艙平台第一層空氣
     xs = np.arange(0, plan['space']['x'])
     wall = {}
-    for x in (x0, x1):
-        ztop = int(math.floor(float(L.gun_z(x + 0.5)))) - 1      # 炮甲板板子底下那一格
+    for x in ((x0, x1) if M.get('aft_wall', True) else (x1,)):          # 信風號：不砌後牆（後牆會把船長艙底下、船尾那一段封成空腔）⇒ 火藥庫往後一直到船殼
+        cab = plan['decks']['cabin']
+        up = 'cabin' if cab['x0'] <= x <= cab['x1'] else 'gun'      # 信風號：火藥庫上面是下沉的船長艙地板（不是主甲板）
+        ztop = int(math.floor(float(L.deck_z(up, x + 0.5)))) - 1   # 上面那一層甲板板子底下那一格
         for z in range(zf, ztop + 1):
             h = float(L.hb(np.array([x + 0.5]), np.array([z + 0.5]))[0])
             if h < 0:

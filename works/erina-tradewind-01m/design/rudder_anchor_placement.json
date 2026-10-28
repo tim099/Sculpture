@@ -1,0 +1,127 @@
+{
+ "note": "draft_rudder_anchor.py 的結果（世界座標）",
+ "rudder": {
+  "work": "erina-tradewind-01m-rudder",
+  "model": "舵",
+  "host": "erina-tradewind-01m-assembly",
+  "at": [
+   52.0,
+   96.5,
+   0.0
+  ],
+  "pivot": [
+   52.0,
+   96.5,
+   0.0
+  ],
+  "anchors": {
+   "stock-top": [
+    44,
+    96,
+    67
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "hinge_x": 52.0,
+   "hinge_y": 96.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.0872,
+   "axis_y": 0.0,
+   "axis_z": 0.9962,
+   "max_deg": 35,
+   "turn_axis": "hinge"
+  }
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "erina-tradewind-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    270.925,
+    134.701,
+    58
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.45,
+   "rotate": 76.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  },
+  {
+   "name": "錨-P",
+   "host": "erina-tradewind-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    270.925,
+    58.299,
+    58
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.45,
+   "rotate": -76.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  }
+ ],
+ "tiller": {
+  "work": "erina-tradewind-01m-tiller",
+  "model": "舵柄",
+  "host": "erina-tradewind-01m-deck-qd",
+  "at": [
+   52.0,
+   96.5,
+   0.0
+  ],
+  "pivot": [
+   52.0,
+   96.5,
+   0.0
+  ],
+  "anchors": {
+   "spin-a": [
+    45,
+    96,
+    66
+   ],
+   "spin-b": [
+    45,
+    96,
+    67
+   ]
+  },
+  "meta": {
+   "kind": "tiller",
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  }
+ },
+ "hawse": {
+  "hawse-S": [
+   288,
+   111,
+   54
+  ],
+  "hawse-P": [
+   288,
+   81,
+   54
+  ]
+ }
+}

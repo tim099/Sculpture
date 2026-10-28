@@ -1,5 +1,7 @@
 # 出處：erina-oxford-01m/design/draft_rudder_anchor.py（TASK-0972 牛津號；TASK-1097 抄來改成信風號 brig）
-# 信風號 步驟 11（TASK-0972）：舵（新子作品，外部模型、kind=rudder、stock-top、spin）、錨（共用錨元件 ×2、kind=anchor）＋錨架托板、錨鏈孔 hawse-S／P
+# 信風號 步驟 11（TASK-1097）：舵（新子作品，外部模型、kind=rudder、stock-top、spin）、舵柄（新子作品，kind=tiller、spin-a／b）＋船尾舷牆的 helm port、
+#   錨（共用錨元件 ×2、kind=anchor）＋錨架托板、錨鏈孔 hawse-S／P
+#   跟牛津號不同：多了舵柄（brig 照 Supply 用舵柄：舵頭從船尾板外面升到後甲板的高度，舵柄穿過船尾舷牆一個小口伸進後甲板）
 #   來源：calli-cosecha-01m/design/draft_rudder_anchor.py（照抄後改：作品 id、本船沒有艏樓砲、船殼的 z 參考寫進 plan）
 #   用法：python -I -X utf8 draft_rudder_anchor.py <design> [--probe=shift=<錨-S|錨-P>:<dz>]（反向對照：那一隻錨上下挪幾格，印碰撞，⛔ 不寫檔）
 import sys, os, json, math, hashlib
@@ -24,10 +26,13 @@ def main():
     WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
     A = export_list('erina-tradewind-01m-assembly', None, links=None)
     own = set()
-    if os.path.exists(os.path.join(WORKS, AN['gear_work'], 'work.json')):
-        own = set(map(tuple, export_list(AN['gear_work'], None)[:, :3].tolist()))
+    for w_ in (AN['gear_work'], RU['tiller_work']):
+        if os.path.exists(os.path.join(WORKS, w_, 'work.json')):
+            own |= set(map(tuple, export_list(w_, None)[:, :3].tolist()))
     A = np.array([r for r in A.tolist() if tuple(r[:3]) not in own], np.int32)
     H = export_list('erina-tradewind-01m', None)
+    Hc0 = {tuple(r[:3]): r[3] for r in H.tolist()}
+    Hs0 = set(Hc0)
     minx = {}
     for x, y, z in H[:, :3].tolist():
         if x < minx.get((y, z), 10 ** 9):
@@ -51,8 +56,24 @@ def main():
     stock_top = [top[len(top) // 2], YC, RU['z_top']]
     hinge = [round(float(L.x_post(0.0)), 3), YC + 0.5, 0.0]
     axis = [round(-math.sin(rake), 4), 0.0, round(math.cos(rake), 4)]
-    Gs = Grid(A)
+    Gs = Grid(A, pad=16)                     # 🩸 pad 4：舵後緣伸出組裝件外框 ⇒ 框外當實心 ⇒ 舵 198 格「落在實心」假警報
     r_hits = sum(1 for k in rudder if Gs.solid(*k))
+    # ── 舵柄：舵頭上面那兩層、從舵的軸往前穿過船尾舷牆（helm port：那幾格船殼刻掉）伸進後甲板 ──
+    TI = RU['tiller']
+    xa = int(math.floor(float(L.x_post(TI['z'] + 0.5)))) - 1                        # 舵軸在舵柄高度的 x（舵的前緣後一格）
+    tiller, port = {}, {}
+    for z in range(TI['z'], TI['z'] + TI['h']):
+        for y in range(YC - TI['half'], YC + TI['half'] + 1):
+            for x in range(xa, TI['x_end'] + 1):
+                if (x, y, z) in rudder:
+                    continue
+                if (x, y, z) in Hs0:
+                    port[(x, y, z)] = Hc0[(x, y, z)]                                  # 船殼那幾格：刻掉（帶顏色守門），舵柄填進去
+                elif Gs.solid(x, y, z):
+                    continue
+                tiller[(x, y, z)] = TI['color'] if x < TI['x_end'] - 1 else TI['end_color']
+    t_hits = sum(1 for k in tiller if Gs.solid(*k) and k not in port)
+    spin_a, spin_b = [xa, YC, TI['z']], [xa, YC, TI['z'] + TI['h'] - 1]
 
     # ── 錨：共用錨元件，錨臂順著船殼切線、往外推到零碰撞 ──
     cas = []                                                                       # 本船艏樓上沒有砲
@@ -142,6 +163,8 @@ def main():
     yh = ymax(HW['x'], HW['z'])
     hawse = {'hawse-S': [HW['x'], yh, HW['z']], 'hawse-P': [HW['x'], 2 * YC - yh, HW['z']]}
     v = {'read': {'assembly_voxels_minus_own': int(len(A))},
+         'tiller': {'cells': len(tiller), 'on_solid_not_port': t_hits, 'helm_port_cells': len(port), 'spin_a': spin_a, 'spin_b': spin_b,
+                    'mirror_diff': sum(1 for (x, y, z), c in tiller.items() if tiller.get((x, 2 * YC - y, z)) != c)},
          'rudder': {'cells': len(rudder), 'on_solid': r_hits, 'z': [0, RU['z_top']], 'stock_top': stock_top,
                     'stock_top_to_hull': min(abs(stock_top[0] - x) for x in [minx.get((YC, RU['z_top']), 10 ** 9)]),
                     'hinge': hinge, 'axis': axis, 'mirror_diff': sum(1 for (x, y, z), c in rudder.items() if rudder.get((x, 2 * YC - y, z)) != c)},
@@ -151,7 +174,7 @@ def main():
     out = os.path.join(design, 'masks', 'rudder')
     os.makedirs(out, exist_ok=True)
     lists = {}
-    for nm, part in (('rudder', rudder), ('anchor_gear', gear)):
+    for nm, part in (('rudder', rudder), ('anchor_gear', gear), ('tiller', tiller), ('helm_port_hull', port)):
         pth = os.path.join(out, nm + '.vox.txt')
         with open(pth, 'w', encoding='utf-8', newline='\n') as f:
             f.write('# 信風號 %s（世界座標、at 0,0,0；draft_rudder_anchor.py）\n' % nm)
@@ -166,10 +189,12 @@ def main():
                                  'max_deg': RU['max_deg'], 'turn_axis': 'hinge'}},
              'anchors': [{'name': r['name'], 'host': AN['gear_work'], 'work': AN['work'], 'at': r['at'], 'pivot': AN['pivot'], 'scale': AN['scale'], 'rotate': r['rz'],
                           'meta': {'kind': 'anchor', 'anchor': 'bower'}} for r in rows],
+             'tiller': {'work': RU['tiller_work'], 'model': '舵柄', 'host': RU['tiller_host'], 'at': hinge, 'pivot': hinge, 'anchors': {'spin-a': spin_a, 'spin-b': spin_b},
+                        'meta': {'kind': 'tiller', 'spin': 'rudder', 'spin_k': RU['max_deg'], 'spin_min': -RU['max_deg'], 'spin_max': RU['max_deg'], 'spin_lag': 0.3}},
              'hawse': hawse}
     json.dump(place, open(os.path.join(design, 'rudder_anchor_placement.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
     json.dump(v, open(os.path.join(design, 'verify_rudder_anchor.json'), 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
-    print(json.dumps({k: v[k] for k in ('rudder', 'gear', 'hawse', 'lists')}, ensure_ascii=False))
+    print(json.dumps({k: v[k] for k in ('rudder', 'tiller', 'gear', 'hawse', 'lists')}, ensure_ascii=False))
     print(json.dumps({k: v['anchor'][k] for k in ('chosen', 'P', 'mirror_diff_cells', 'rows')}, ensure_ascii=False))
     print(json.dumps(v['anchor']['tried'], ensure_ascii=False))
 

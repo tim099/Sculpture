@@ -34,11 +34,11 @@
   "bow_pow_high": {"v": 2.8, "src": "〔設計〕上面鈍：18 世紀英國商船飽滿的船頭（bluff bow）"},
   "aft_pow": {"v": 1.8, "src": "〔設計〕"},
   "end_hollow": {"v": 2.5, "src": "〔設計〕兩頭的剖面往下凹（deadwood 肩）：f ** (1 + 2.5·e)"},
-  "top": [[44, 73], [108, 66], [110, 57], [165, 55], [215, 56], [248, 58], [250, 66], [296, 68]],
-  "top_src": "舷頂（舷牆頂）折線 ＝ decks 每一層的甲板面 ＋ 舷牆：後甲板 ＋8（taffrail、迴旋砲架）、船腰 ＋10（〔推〕舷牆約 3 ft；4 磅砲門頂 ＋8 上面留 2 格）、艏樓 ＋6；前後緣位置是〔設計〕（後甲板到 x 109 ＝〔推〕ZAZ5427 量約 20 ft、艏樓從 x 250 ＝ 前桅穿過艏樓甲板）"
+  "top": [[44, 73], [108, 66], [110, 60], [165, 58], [215, 59], [248, 61], [250, 66], [296, 68]],
+  "top_src": "舷頂（舷牆頂）折線 ＝ decks 每一層的甲板面 ＋ 舷牆：後甲板 ＋8（taffrail、迴旋砲架）、船腰 ＋13（〔設計〕v1 照〔推〕約 3 ft 的 ＋10 ⇒ 4 磅砲在砲架上砲軸離甲板 0.73 m、頂到砲門上緣推不出去（draft_guns 退 11–27 格砲口還在船殼裡）⇒ 舷牆加高到 1.3 m、砲門 ＋5..＋10）、艏樓 ＋6；前後緣位置是〔設計〕（後甲板到 x 109 ＝〔推〕ZAZ5427 量約 20 ft、艏樓從 x 250 ＝ 前桅穿過艏樓甲板）"
  },
  "waterline": {"z": 32, "src": "〔推〕吃水約 9.5／10.5／11.5 ft（艏／平均／艉；找不到原始吃水，照艙深 11.5 ft 的滿載貨船估，低信心）⇒ 平放取平均 3.2 m；主甲板邊離水 1.3 m"},
- "readings_at": {"deck_z": 45, "rail_z": 55, "qd_z": 57},
+ "readings_at": {"deck_z": 45, "rail_z": 58, "qd_z": 57},
  "decks_preview": {"主甲板": 45, "後甲板": 57, "艏樓": 60},
  "decks": {
   "orlop": {"z": 22, "x0": 60, "x1": 135, "src": "〔設計〕貨艙後段的平台（板面 z 22）：火藥庫、補給；平台以前整段是貨艙（〔源〕ZAZ5430 只有一層主甲板、下面是貨艙）；往前伸到船腰 x 135 ⇒ 從船腰開梯井下來（後甲板底下淨高不夠站梯口）"},
@@ -48,7 +48,7 @@
   "fc": {"x0": 250, "x1": 296, "over": 11, "src": "〔推〕艏樓很短（〔源〕ZAZ5430）；〔設計〕從 x 250 起讓前桅（x 260）穿過艏樓甲板、高出主甲板 1.1 m"}
  },
  "ports": {
-  "gun": {"x": [124, 206], "w": 5, "h": 5, "sill": 3, "gun": "4l", "src": "〔二手〕Supply 1759：4 門 3 磅砲＋6 門 ½ 磅旋轉砲（Winfield 經 Wikipedia；砲門位置原圖上沒能確認）；遊戲砲種表沒有 3 磅舷側砲 ⇒〔設計〕用最接近的 4 磅（long4，砲班 2）；每舷 2 門開在船腰舷牆：x 124（後甲板前緣與主桅 channels 之間）、x 206（主艙口與前桅之間）；砲門 0.5 m 見方、下緣離甲板 0.3 m"}
+  "gun": {"x": [124, 206], "w": 5, "h": 6, "sill": 5, "gun": "4l", "src": "〔二手〕Supply 1759：4 門 3 磅砲＋6 門 ½ 磅旋轉砲（Winfield 經 Wikipedia；砲門位置原圖上沒能確認）；遊戲砲種表沒有 3 磅舷側砲 ⇒〔設計〕用最接近的 4 磅（long4，砲班 2）；每舷 2 門開在船腰舷牆：x 124（後甲板前緣與主桅 channels 之間）、x 206（主艙口與前桅之間）；砲門 0.5 × 0.6 m、下緣離甲板 0.5 m（v1 0.3 m ⇒ 砲軸對不到砲門，見 lines.top_src）"}
  },
  "masts": {
   "_src": "〔源〕Steel 1794 p.52「BRIGS, 150 TONS」商船桅桁表（下桅、上桅、頂桅、帆桁、艏斜桅、三角帆桿、主帆 boom 與 gaff 的長度與直徑）；桅位〔推〕在 Supply 原圖 ZAZ5427／5430 量（Steel 規則前桅 3/20 L、主桅 2/3 L ⇒ Supply 兩根都偏前，照 Supply）。z 一律是格；heel ＝ 桅腳那一格（龍骨頂上的 keelson）；head ＝ 桅頭（top 以上，跟下一節重疊的 doubling）",
@@ -71,7 +71,7 @@
    "main_boom": {"len": 104, "on": "main", "jaws_z": 78, "angle_deg": 3, "src": "〔源〕34 ft（Steel 表印在 Driver Boom 列、欄內註 Main Boom）、直徑約 8¾ in；〔設計〕jaws ＝ gaff jaws 往下 82 格（〔源〕Steel 帆表 Brigs 主帆前緣 9 碼 ≈ 8.2 m）、往上翹 3°（船尾後甲板舷頂上還有約 1 m）"},
    "main_gaff": {"len": 56, "on": "main", "jaws_z": 160, "angle_deg": 35, "src": "〔源〕18 ft 6 in（印在 Cross Jack 列、欄內註 Gaff）、直徑 6 in；〔設計〕jaws 在主桅頂橫桁下 6 格、斜上 35° ⇒ 主帆後緣約 12.3 m（〔源〕Steel 帆表後緣 13½ 碼 ≈ 12.3 m）"}
   },
-  "rig": {"course_foot_above_rail": 18, "forestay_frac": 0.3, "staysail_clew_above_rail": 14, "jibstay_frac": 0.9, "jib_clew_above_bowsprit": 14, "src": "〔設計〕前橫帆帆腳離舷頂 1.8 m（〔源〕Steel 帆表前橫帆深約 6½ 碼）；前支索落在艏斜桅 30% 處、前上桅支索（三角帆）落在三角帆桿 90% 處；艏帆的帆腳角是〔設計〕"}
+  "rig": {"course_foot_above_rail": 18, "forestay_frac": 0.42, "staysail_clew_above_rail": 14, "jibstay_frac": 0.9, "jib_clew_above_bowsprit": 14, "src": "〔設計〕前橫帆帆腳離舷頂 1.8 m（〔源〕Steel 帆表前橫帆深約 6½ 碼）；前支索落在艏斜桅 42% 處（30% 那一點還在艏樓牆裡，draft_rigging anchors_in_solid）、前上桅支索（三角帆）落在三角帆桿 90% 處；艏帆的帆腳角是〔設計〕"}
  },
  "decks_build": {
   "src": "〔設計〕遊戲用的大致構造（Ship_Decks §9.2–9.3）；結構照牛津號 draft_decks（甲板板＋橫樑＋圍欄、break、梯子踏板與 stringer、封閉空腔）",
@@ -117,6 +117,61 @@
   },
   "sail_of_yard": {"main_crossjack": "main-topsail", "main_topsail": "main-topsail", "main_tg": "main-topgallant", "fore_course": "fore-course", "fore_topsail": "fore-topsail", "fore_tg": "fore-topgallant", "main_gaff": "mainsail", "main_boom": "mainsail"},
   "src_lengths": "元件長度：風暴角號照它的書卡（牛津號 rig_build 量過）；三叉戟號 gaff ＝ pivot (127,1,1) → peak (1,1,87) 152.6 格、boom ＝ pivot (138,1,1) → end (0,1,9) 138.2 格（anchors.json）"
+ },
+ "guns_build": {
+  "assembly": "erina-tradewind-01m-assembly", "hull": "erina-tradewind-01m",
+  "deck_works": {"gun": "erina-tradewind-01m-deck-gun", "qd": "erina-tradewind-01m-deck-qd", "fc": "erina-tradewind-01m-deck-fc"},
+  "prefix": {"gun": "M", "qd": "Q", "fc": "F"},
+  "types": {
+   "4l": {"work": "pinnacle-patache-01m-gun-4l", "scale": 0.5, "pivot": [6.5, 30, 0], "meta": {"kind": "gun", "gun": "4l"}, "src": "〔二手〕Supply 1759 的 3 磅砲 ⇒ 遊戲沒有 3 磅舷側砲 ⇒〔設計〕4 磅（long4）；4 磅專用元件（聖羅曼號 pinnacle 做的通用部件，0.05 m ⇒ ×0.5 原尺寸；Ship_Guns §2.2：4 磅不拿 6 磅縮）"},
+   "pierrier": {"work": "apex-one-reale-01m-gun-pierrier", "mount_work": "apex-one-reale-01m-gun-pierrier-mount", "scale": 0.5, "pivot": [5.5, 18.5, 0], "meta": {"kind": "gun", "gun": "pierrier", "mount": "turret", "arc": "-80,80", "rate": 45}, "src": "〔二手〕Supply 1759 的 6 門 ½ 磅旋轉砲 ⇒ 遊戲的迴旋砲 pierrier（皇家號的共用件，叉架已拆成座 ⇒ 每門補一個「座」雙生 kind=gunmount、mount_of；Ship_Guns §4.2.1）；meta 照飛魚號（mount=turret、arc −80..80、rate 45）"}
+  },
+  "swivels": [{"deck": "qd", "x": 62}, {"deck": "qd", "x": 92}, {"deck": "fc", "x": 278}],
+  "swivels_src": "〔設計〕後甲板舷頂每舷 2 門、艏樓舷頂每舷 1 門（共 6 門 ＝〔二手〕Supply 的 6 門旋轉砲）；座的插銷底落在舷頂上一格，撞到就往上墊",
+  "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2, "src": "照牛津號 draft_guns（Ship_Guns §4.2：從舷牆外面往裡退到零碰撞、砲口伸出、腳下有甲板）"},
+  "support_min": 0.5
+ },
+ "gear": {
+  "src": "〔設計〕火藥庫照 Ship_Magazine §8（一定放桶、hoist ＝ 船腰那座梯子）；露天艙口的艙蓋照 Ship_Fittings §9.7；廚房 §9.13；元件都是現成的（Ship_Setup §2.1）；〔源〕ZAZ5430：主桅後面有絞盤、主艙口在兩桅之間",
+  "magazine": {"x_aft": 52, "x_fwd": 108, "aft_wall": false, "door_half": 2, "door_h": 11, "color": 136, "meta": {"kind": "magazine", "pos": "aft", "hoist": "甲板-gun/梯子/orlop"}, "src": "〔設計〕底艙平台後段一直到船尾（船長艙底下；v1 x 84 砌後牆 ⇒ 船尾那一段封成 15,358 格的空腔 ⇒ 不砌後牆）；前牆中間門 0.5 m 寬、1.1 m 高（上面就是船長艙地板）；門對著船腰梯子的梯腳（x 115）"},
+  "models": [
+   {"name": "桶-01", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [92.5, 91.5, 23], "meta": {"kind": "powder", "powder_lb": 100}},
+   {"name": "桶-02", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [92.5, 101.5, 23], "meta": {"kind": "powder", "powder_lb": 100}},
+   {"name": "桶-03", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [99.5, 91.5, 23], "meta": {"kind": "powder", "powder_lb": 100}},
+   {"name": "桶-04", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [99.5, 101.5, 23], "meta": {"kind": "powder", "powder_lb": 100}},
+   {"name": "艙蓋-主", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "meadow-monitor-01m-hatch", "pivot": [0, 0, 0], "scale": [1.7059, 1.4615, 1], "at": [169, 87, 48], "meta": {"kind": "door", "open": "up"}, "need_support": false, "src": "主艙口 x 170–196、|dy| ≤ 8 ＋ 圍欄一圈 ⇒ 29 × 19；放在圍欄頂（甲板板 z 45、圍欄 46–47）"},
+   {"name": "艙蓋-梯井", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "meadow-monitor-01m-hatch", "pivot": [0, 0, 0], "scale": [1, 1, 1], "at": [117, 90, 49], "meta": {"kind": "door", "open": "up"}, "need_support": false, "src": "船腰梯井 x 118–132、|dy| ≤ 5 ＋ 兩側與梯腳那一頭的圍欄 ⇒ 17 × 13；圍欄頂 x 117 那一頭 z 48（舷弧）"},
+   {"name": "小艇", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-boat", "pivot": [90, 26, 0], "scale": 0.2556, "at": [225.5, 96.5, 49], "meta": {"kind": "boat"}, "need_support": false, "src": "〔設計〕4.6 m 小艇擱在前艙口上（艙口圍欄頂上一格）、x 202–248：貨艙梯子梯頂（x 199）前面到艏樓 break 前；餘燼號 9 m cutter ×0.2556"},
+   {"name": "爐灶", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "kaguya-gloire-01m-galley", "pivot": [22, 16, 0], "scale": 0.22, "at": [156.5, 96.5, 46], "meta": {"kind": "galley"}, "src": "〔設計〕船腰主桅與主艙口之間（艏樓底下淨高不夠站廚師；〔源〕18 世紀商船的 caboose 擺在露天甲板）"},
+   {"name": "絞盤", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-capstan", "pivot": [40, 40, 0], "scale": 0.1, "at": [138.5, 96.5, 46], "meta": {"kind": "capstan"}, "src": "〔源〕ZAZ5430 主桅後面有絞盤；〔設計〕梯井蓋（x 133）與主桅（x 143）之間只有 1 m ⇒ ×0.1"},
+   {"name": "羅經櫃", "host": "deck-qd", "host_link": "甲板-qd", "source_work": "summit-night-falcon-01m-binnacle", "pivot": [9, 13, 0], "scale": 0.2, "at": [86, 96.5, 60], "meta": {"kind": "binnacle"}, "src": "〔設計〕後甲板中線、舵柄前端前面（照飛魚號 ×0.2）"}
+  ]
+ },
+ "rudder_anchor_build": {
+  "rudder": {"work": "erina-tradewind-01m-rudder", "title": "信風號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 67,
+             "width": [[0, 12], [12, 11], [32, 7], [44, 4], [67, 3]], "below": 182, "above": 36, "iron": 73, "strap_every": 10, "waterline_z": 32, "max_deg": 35, "bevel": 1,
+             "tiller_work": "erina-tradewind-01m-tiller", "tiller_host": "erina-tradewind-01m-deck-qd",
+             "tiller": {"z": 66, "h": 2, "half": 1, "x_end": 76, "color": 136, "end_color": 36},
+             "src": "〔設計〕舵沿艉柱後緣（x_post，斜 5°）從龍骨底到 z 67（後甲板的高度，舵頭在方艉船尾板外面）；3 格厚、舵葉 1.2 m 往上收到 0.3 m；水線下白、上黑、每 10 格一道鐵箍；max_deg 35；前緣兩側削 1 格。〔推〕舵柄（Supply ZAZ5430 的判讀；Steel 160 噸 brig 索具表列 wheel or tiller）：舵頭上面那兩層、從舵軸往前 3.1 m 伸進後甲板，穿過船尾舷牆的小口（helm port：那幾格船殼刻掉）；獨立模型 kind=tiller（Ship_Helm §9.8.1 操舵鏈）"},
+  "anchor": {"gear_work": "erina-tradewind-01m-anchor-gear", "gear_title": "信風號 錨床（兩舷 billboard）", "gear_link": "錨床", "work": "basecamp-frigate-constitution-01m-anchor", "scale": 0.45, "pivot": [23.5, 16.5, 56.5],
+             "x_try": [266, 268, 270, 272, 274, 276, 278], "z_try": [58, 58.5, 59, 59.5, 60, 60.5, 61, 61.5, 62, 62.5, 63, 63.5, 64], "z_side": 56, "d_step": 0.5, "d_max": 24,
+             "ledge_half": 7, "ledge_out": 3, "ledge_t": 2, "color": 136,
+             "src": "〔設計〕共用錨元件（Ship_Game §9 anchor）×0.45（150 噸級；牛津號 220 噸 ×0.55）、meta anchor=bower；兩舷各一，掛在船頭舷外、錨架（步驟 6 cathead）後面：錨臂順著船殼切線。錨冠底下一塊 billboard 托板（遊戲判斷掉不掉是外框中心往下找實心）"},
+  "hawse": {"x": 288, "z": 54, "src": "〔設計〕錨鏈孔在船頭、主甲板那一層的船殼外面（只登記固定點 hawse-S／P，沒有開孔）"}
+ },
+ "rigging": {
+  "src": "〔設計〕數值照 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照牛津號 draft_rigging；主帆、艏帆、船旗的掛法照飛魚號（gura-flyingfish-01m）；〔源〕Steel 160 噸 brig 索具表：前、主桅 shrouds 各「3 Pair」（每舷 3 根）、jib、前支索",
+  "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+  "channels": {"shrouds": {"fore": 3, "main": 3}, "backstays": {"fore": 1, "main": 1}, "spacing": 7, "first_aft": 3, "width": 4, "below_rail": 0, "layers": 1, "src": "〔設計〕channels 在舷外、舷頂那一列、1 格厚（牛津號 v1 舷頂下 1 格 2 格厚會擋砲門蓋板）；〔源〕每舷 shrouds 3、〔設計〕上桅 backstay 1"},
+  "topmast_shrouds": 2,
+  "thick": {"shroud": 0.8, "topmast_shroud": 0.6, "futtock": 0.45, "backstay": 0.6, "stay": 1.0, "tm_stay": 0.7, "bobstay": 0.8, "sheet": 0.4, "course_sheet": 0.5, "tack": 0.5},
+  "ratlines": {"step": 4, "start": 7, "stop": 16, "min_span": 5, "th": 0.3, "tm_step": 4, "tm_start": 4, "tm_stop": 10, "tm_th": 0.25},
+  "sails": {"fullness": 1.05, "course_clew_above_rail": 18, "course_in": 0.9, "clew_in": 0.1, "sheet_aft": 50, "tack_fwd": 25, "head_frac": 0.75,
+            "staysail_belay_x": 266, "jib_belay_x": 284, "bs_shroud_z": 56, "mainsheet_boom_point": "foot-120",
+            "headsail_clew": {"staysail": [0.15, 18, 14], "jib": [0.15, 20, 14]},
+            "src": "〔設計〕前橫帆帆腳在舷頂上 1.8 m（同 layout.rig）；上一層帆的 clew 綁在下一根帆桁的 earing 旁（主上桅帆綁 crossjack）；艏帆 head 在支索 75% 處（Ship_Rigging §7）、clew 從 tack 往 head 15% 再往後 1.8–2.0 m、不高過 tack 1.4 m；主帆 sheet 從帆杆後段綁到後甲板中線"},
+  "flags": {"ensign": [24, 16], "ensign_gaff_point": "top-128", "src": "〔設計〕英國紅旗（1707 年以後的 Union 角）掛斜桁尖（主帆杆伸出船尾、不立旗桿）；商船不掛長旗（遊戲另外在桅頂加陣營旗）"},
+  "wind": [4.5, -1.5, 0], "sail_seconds": 3
  },
  "deco": {
   "src": "〔源〕RMG ZAZ5427 圖說：Supply 是 scroll head（渦卷船首）、沒有人像；有錨架（cathead）。造型細節〔設計〕；船旗掛斜桁尖（主帆杆伸出船尾 ⇒ 不立船尾旗桿）",

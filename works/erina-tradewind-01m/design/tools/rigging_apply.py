@@ -41,20 +41,20 @@ if 'channels' in steps:
         if int(re.search(r'🔢 placed = (\d+)', out).group(1)) != n:
             raise SystemExit('✗ channels placed')
         print('✓ channels %d 格' % n)
-    cli('op=work', 'sub=link', 'persona=erina', 'work=' + ASM, 'name=支索板', 'source_work=' + w, 'at=0,0,0', 'note=階段七（TASK-0972）', ok=(0, 2))
+    cli('op=work', 'sub=link', 'persona=erina', 'work=' + ASM, 'name=支索板', 'source_work=' + w, 'at=0,0,0', 'note=步驟 8（TASK-1097）', ok=(0, 2))
 if 'anchors' in steps:
     k = 0
     for part, items in P['anchors'].items():
         work = P['anchor_works'][part]
         for nm, xyz in sorted(items.items()):
-            cli('op=work', 'sub=anchor', 'persona=erina', 'work=' + work, 'name=' + nm, 'at=%d,%d,%d' % tuple(xyz), 'overwrite=1', 'note=階段七（draft_rigging.py）')
+            cli('op=work', 'sub=anchor', 'persona=erina', 'work=' + work, 'name=' + nm, 'at=%d,%d,%d' % tuple(xyz), 'overwrite=1', 'note=步驟 8（draft_rigging.py）')
             k += 1
     print('✓ 固定點 %d' % k)
 
 
 def rope(r):
     cli('op=work', 'sub=rope', 'persona=erina', 'work=' + ASM, 'name=' + r['name'], 'from=' + r['from'], 'to=' + r['to'], 'slack=%g' % r['slack'],
-        'color=' + r['color'], 'thickness=%g' % r['thickness'], 'group=' + r['group'], 'overwrite=1', 'note=階段七（TASK-0972）')
+        'color=' + r['color'], 'thickness=%g' % r['thickness'], 'group=' + r['group'], 'overwrite=1', 'note=步驟 8（TASK-1097）')
 
 
 if 'ropes' in steps:
@@ -76,7 +76,7 @@ if 'ratlines' in steps:
 if 'sails' in steps:
     for s in P['sails']:
         args = ['op=work', 'sub=sail', 'persona=erina', 'work=' + ASM, 'name=' + s['name'], 'corners=' + '|'.join(s['corners']), 'bind=' + ','.join(map(str, s['bind'])),
-                'color=' + s['color'], 'fullness=%g' % s['fullness'], 'overwrite=1', 'note=階段七（TASK-0972）']
+                'color=' + s['color'], 'fullness=%g' % s['fullness'], 'overwrite=1', 'note=步驟 8（TASK-1097）']
         if s['corner_names']:
             args.append('corner_names=' + '|'.join(s['corner_names']))
         if s['free']:

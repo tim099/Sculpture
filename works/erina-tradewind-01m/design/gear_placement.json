@@ -1,0 +1,245 @@
+{
+ "anchors": {
+  "blast": [
+   89,
+   96,
+   29
+  ],
+  "door": [
+   108,
+   96,
+   23
+  ]
+ },
+ "models": [
+  {
+   "name": "桶-01",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    92.5,
+    91.5,
+    23
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-02",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    92.5,
+    101.5,
+    23
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-03",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    99.5,
+    91.5,
+    23
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-04",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    99.5,
+    101.5,
+    23
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "艙蓋-主",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "meadow-monitor-01m-hatch",
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1.7059,
+    1.4615,
+    1
+   ],
+   "at": [
+    169,
+    87,
+    48
+   ],
+   "meta": {
+    "kind": "door",
+    "open": "up"
+   },
+   "need_support": false,
+   "src": "主艙口 x 170–196、|dy| ≤ 8 ＋ 圍欄一圈 ⇒ 29 × 19；放在圍欄頂（甲板板 z 45、圍欄 46–47）"
+  },
+  {
+   "name": "艙蓋-梯井",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "meadow-monitor-01m-hatch",
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "at": [
+    117,
+    90,
+    49
+   ],
+   "meta": {
+    "kind": "door",
+    "open": "up"
+   },
+   "need_support": false,
+   "src": "船腰梯井 x 118–132、|dy| ≤ 5 ＋ 兩側與梯腳那一頭的圍欄 ⇒ 17 × 13；圍欄頂 x 117 那一頭 z 48（舷弧）"
+  },
+  {
+   "name": "小艇",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "basecamp-ember-01m-boat",
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.2556,
+   "at": [
+    225.5,
+    96.5,
+    49
+   ],
+   "meta": {
+    "kind": "boat"
+   },
+   "need_support": false,
+   "src": "〔設計〕4.6 m 小艇擱在前艙口上（艙口圍欄頂上一格）、x 202–248：貨艙梯子梯頂（x 199）前面到艏樓 break 前；餘燼號 9 m cutter ×0.2556"
+  },
+  {
+   "name": "爐灶",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "kaguya-gloire-01m-galley",
+   "pivot": [
+    22,
+    16,
+    0
+   ],
+   "scale": 0.22,
+   "at": [
+    156.5,
+    96.5,
+    46
+   ],
+   "meta": {
+    "kind": "galley"
+   },
+   "src": "〔設計〕船腰主桅與主艙口之間（艏樓底下淨高不夠站廚師；〔源〕18 世紀商船的 caboose 擺在露天甲板）"
+  },
+  {
+   "name": "絞盤",
+   "host": "deck-gun",
+   "host_link": "甲板-gun",
+   "source_work": "basecamp-ember-01m-capstan",
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.1,
+   "at": [
+    138.5,
+    96.5,
+    46
+   ],
+   "meta": {
+    "kind": "capstan"
+   },
+   "src": "〔源〕ZAZ5430 主桅後面有絞盤；〔設計〕梯井蓋（x 133）與主桅（x 143）之間只有 1 m ⇒ ×0.1"
+  },
+  {
+   "name": "羅經櫃",
+   "host": "deck-qd",
+   "host_link": "甲板-qd",
+   "source_work": "summit-night-falcon-01m-binnacle",
+   "pivot": [
+    9,
+    13,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    86,
+    96.5,
+    60
+   ],
+   "meta": {
+    "kind": "binnacle"
+   },
+   "src": "〔設計〕後甲板中線、舵柄前端前面（照飛魚號 ×0.2）"
+  }
+ ],
+ "magazine_meta": {
+  "kind": "magazine",
+  "pos": "aft",
+  "hoist": "甲板-gun/梯子/orlop",
+  "powder_lb": 400
+ }
+}

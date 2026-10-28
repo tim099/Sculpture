@@ -19,6 +19,11 @@ bp = os.path.join(design, 'masks', 'masts', 'bowsprit.vox.txt')
 if os.path.exists(bp):
     for r in np.loadtxt(bp, delimiter=',', comments='#', dtype=np.int32, ndmin=2).tolist():
         st.pop(tuple(r[:3]), None)
+# 舵柄穿過船尾舷牆的 helm port（步驟 11 刻掉、由舵柄填滿）
+hp = os.path.join(design, 'masks', 'rudder', 'helm_port_hull.vox.txt')
+if os.path.exists(hp):
+    for r in np.loadtxt(hp, delimiter=',', comments='#', dtype=np.int32, ndmin=2).tolist():
+        st.pop(tuple(r[:3]), None)
 with open(os.path.join(design, 'masks', 'hull_state.vox.txt'), 'w', encoding='utf-8', newline='\n') as f:
     f.write('# 信風號 船殼現在應該的樣子（hull − 炮門開口 ＋ 塗裝）\n')
     for k in sorted(st):

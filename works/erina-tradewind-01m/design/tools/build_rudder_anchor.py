@@ -1,4 +1,4 @@
-# 出處：erina-oxford-01m/design/tools/build_rudder_anchor.py（TASK-0972 牛津號；TASK-1097 抄來改成信風號 brig）
+# 出處：erina-oxford-01m/design/tools/build_rudder_anchor.py（TASK-1097 牛津號；TASK-1097 抄來改成信風號 brig）
 # 來源：calli-cosecha-01m/design/tools/build_rudder_anchor.py（照抄後改：HULL、persona erina、框；舵的 meta 加 spin（Ship_Helm §9.8.1））
 # 階段九半落格：舵子作品（貼＋固定點 stock-top）＋ 組裝件的舵模型（meta kind=rudder、鉸鏈）；錨架子作品（貼＋關聯 錨架）＋ 兩隻錨模型（掛在錨架裡）；船殼固定點 hawse-S／P
 #   用法：python -I -X utf8 tools/build_rudder_anchor.py <design>
@@ -57,13 +57,31 @@ subwork(RU['work'], RU['title'], os.path.join(design, 'masks', 'rudder', 'rudder
 for an, at in R['anchors'].items():
     cli('op=work', 'sub=anchor', 'persona=erina', 'work=' + RU['work'], 'name=' + an, 'at=' + xyz(at), 'overwrite=1', 'note=舵頭（遊戲在它旁邊 8 格內找掛住的船尾格；造船規格 §9 rudder）')
 cli('op=work', 'sub=model', 'persona=erina', 'work=' + R['host'], 'name=' + R['model'], 'source_work=' + RU['work'], 'at=' + xyz(R['at']), 'pivot=' + xyz(R['pivot']),
-    'rotate=0,0,0', 'scale=1,1,1', 'overwrite=1', meta(R['meta']), 'note=步驟 11（TASK-0972）：舵（at ＝ pivot ＝ 鉸鏈下端 ⇒ 子作品的世界座標原樣）')
+    'rotate=0,0,0', 'scale=1,1,1', 'overwrite=1', meta(R['meta']), 'note=步驟 11（TASK-1097）：舵（at ＝ pivot ＝ 鉸鏈下端 ⇒ 子作品的世界座標原樣）')
 subwork(AN['gear_work'], AN['gear_title'], os.path.join(design, 'masks', 'rudder', 'anchor_gear.vox.txt'))
-cli('op=work', 'sub=link', 'persona=erina', 'work=' + ASM, 'name=' + AN['gear_link'], 'source_work=' + AN['gear_work'], 'at=0,0,0', 'note=步驟 11（TASK-0972）', ok=(0, 2))
+cli('op=work', 'sub=link', 'persona=erina', 'work=' + ASM, 'name=' + AN['gear_link'], 'source_work=' + AN['gear_work'], 'at=0,0,0', 'note=步驟 11（TASK-1097）', ok=(0, 2))
 for a in PL['anchors']:
     s = float(a['scale'])
     cli('op=work', 'sub=model', 'persona=erina', 'work=' + a['host'], 'name=' + a['name'], 'source_work=' + a['work'], 'at=' + xyz(a['at']), 'pivot=' + xyz(a['pivot']),
-        'rotate=0,0,' + num(float(a['rotate'])), 'scale=' + xyz([s, s, s]), 'overwrite=1', meta(a['meta']), 'note=步驟 11（TASK-0972）：共用錨元件、吊在船頭舷外、錨冠落在 billboard 上')
+        'rotate=0,0,' + num(float(a['rotate'])), 'scale=' + xyz([s, s, s]), 'overwrite=1', meta(a['meta']), 'note=步驟 11（TASK-1097）：共用錨元件、吊在船頭舷外、錨冠落在 billboard 上')
 for nm, at in PL['hawse'].items():
-    cli('op=work', 'sub=anchor', 'persona=erina', 'work=' + HULL, 'name=' + nm, 'at=' + xyz(at), 'overwrite=1', 'note=錨鏈孔（步驟 11 TASK-0972；只登記固定點、沒有開孔）')
-print('✓ 舵模型、錨 %d、hawse %d' % (len(PL['anchors']), len(PL['hawse'])))
+    cli('op=work', 'sub=anchor', 'persona=erina', 'work=' + HULL, 'name=' + nm, 'at=' + xyz(at), 'overwrite=1', 'note=錨鏈孔（步驟 11 TASK-1097；只登記固定點、沒有開孔）')
+# 舵柄：船尾舷牆的 helm port（船殼那幾格 carvevox 帶顏色守門）⇒ 舵柄子作品（貼＋固定點 spin-a／b）⇒ 後甲板子作品的舵柄模型（kind=tiller）
+T = PL['tiller']
+hp = os.path.join(design, 'masks', 'rudder', 'helm_port_hull.vox.txt')
+marks = json.load(open(os.path.join(WORKS, HULL, 'marks.json'), encoding='utf-8')) if os.path.exists(os.path.join(WORKS, HULL, 'marks.json')) else {}
+if 'helm port' not in json.dumps(marks, ensure_ascii=False):
+    n = sum(1 for l in open(hp, encoding='utf-8') if l.strip() and not l.startswith('#'))
+    out = cli('op=carvevox', 'persona=erina', 'work=' + HULL, 'voxels=' + os.path.abspath(hp).replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % n)
+    m = re.search(r'placed\D{0,12}(\d[\d,]*)', out)
+    if not m or int(m.group(1).replace(',', '')) != n:
+        print(out[-1500:])
+        raise SystemExit('✗ helm port carved ≠ %d' % n)
+    cli('op=work', 'sub=mark', 'persona=erina', 'work=' + HULL, 'name=helm port', 'note=步驟 11（TASK-1097）：舵柄穿過船尾舷牆的小口 %d 格（由舵柄填滿）' % n)
+    print('✓ helm port 刻 %d' % n)
+subwork(T['work'], '信風號 舵柄（tiller，0.1 m）', os.path.join(design, 'masks', 'rudder', 'tiller.vox.txt'))
+for an, at in T['anchors'].items():
+    cli('op=work', 'sub=anchor', 'persona=erina', 'work=' + T['work'], 'name=' + an, 'at=' + xyz(at), 'overwrite=1', 'note=舵柄繞舵軸轉（spin-a → spin-b；Ship_Helm §9.8）')
+cli('op=work', 'sub=model', 'persona=erina', 'work=' + T['host'], 'name=' + T['model'], 'source_work=' + T['work'], 'at=' + xyz(T['at']), 'pivot=' + xyz(T['pivot']),
+    'rotate=0,0,0', 'scale=1,1,1', 'overwrite=1', meta(T['meta']), 'note=步驟 11（TASK-1097）：舵柄（at ＝ pivot ⇒ 子作品的世界座標原樣；操舵鏈 kind=tiller）')
+print('✓ 舵模型、舵柄、錨 %d、hawse %d' % (len(PL['anchors']), len(PL['hawse'])))

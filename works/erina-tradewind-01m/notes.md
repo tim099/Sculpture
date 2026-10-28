@@ -81,3 +81,47 @@
 - 艏斜桅（`-bowsprit`）：根部 (262, 50)、仰 16°、9.8 m；**三角帆桿**疊在艏斜桅上面（同一件子作品，軸線往上平移兩個半徑）、伸到 (405, 94)；艏斜桅尖一個黑 cap 箍住。開孔：船殼 32 格＋主甲板 4 格（carvevox 帶顏色守門、標記 `艏斜桅孔`，孔由艏斜桅填滿）。
 - 帆桁 8 根（外部模型，掛在各自的桅子作品裡）：方帆桁 6 根照 Ship_Setup §2.1 引用風暴角號（summit）元件等比縮放（main crossjack ×0.943〔yard=crossjack、sail=main-topsail：brig 沒有主橫帆〕、main topsail ×0.740、main topgallant ×0.831、fore course ×0.531、fore topsail ×0.820、fore topgallant ×1.123）；**主帆 gaff ×0.367、boom ×0.753 引用三叉戟號（gura）元件**（元件本來就斜：gaff 約 34°、boom 約 3°；pivot 在主桅軸心、jaws 高度 160／78；sail=mainsail，照飛魚號的寫法）。
 - 讀數：組裝件 1 元件、空腔 0、鏡像差 0、link_overlap 0；models_broken 0。過程圖 `overlays/stage7_masts.png`。
+
+## 步驟 8 索具、帆、旗（2026-10-29）
+- `draft_rigging.py`（照牛津號的結構改寫；主帆、艏帆、船旗的掛法照飛魚號 gura-flyingfish-01m）⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/ensign.png`、`verify_rigging.json`；落地 `tools/rigging_apply.py`（channels → 固定點 70 → 繩 41 → 橫繩組 8 → 帆 9 → 帆的繩 16 → 風 → meta 26）。
+- channels：兩舷一件（592 格）、舷頂那一列、1 格厚；〔源〕Steel 160 噸 brig 索具表 shrouds 每舷 3 根（前、主）＋上桅 backstay 1、上桅 shrouds 2。
+- 靜索：shrouds 12、上桅 backstay 4、上桅 shrouds 8、futtock 8、支索 5（fore-stay → 艏斜桅 42%、jib-stay → 三角帆桿 90%、fore-topmast-stay → 艏斜桅尖、main-stay → 前桅腳、main-topmast-stay → 前桅樓後緣）、bobstay ＋ 艏斜桅 shrouds 3。
+  - 🩸 前支索下端 v1 落在艏斜桅 30% ⇒ 那一點還在艏樓牆裡（anchors_in_solid）⇒ 42%（plan.masts.rig.forestay_frac；layout 的艏帆一起跟著）。
+- 橫繩組 8：下桅 4 組 climb=1（foot 舷牆內側甲板、head 桅樓靠這一舷的邊）、上桅 4 組。
+- 帆 9＋旗：fore course／topsail／topgallant、main topsail（帆腳綁 crossjack）／topgallant、**mainsail**（gaff＋boom，throat／peak／end／jaws 四角、三條邊釘住）、fore-staysail、jib（head 在支索 75%）、船旗 ensign（1707 年以後的英國紅旗、掛斜桁尖、kind=flag flag=ensign、有貼圖）。帆自己的繩 17 條全帶 meta（kind=sheet／tack、sail=帆名）。
+
+| 帆裝 | 張的帆 |
+|---|---|
+| 收帆（1） | fore-topsail、main-topsail、jib |
+| 戰鬥帆（2） | ＋ fore-topgallant、main-topgallant、mainsail |
+| 滿帆（3） | ＋ fore-course、fore-staysail |
+
+- 讀數：ropecheck 繩 147 條、兩端 294 全 ok、link_overlap 0；view ropes_broken 0、sails_broken 0、models_broken 0；帆的繩沒 meta 0、meta 的帆名對不上 0、重名 0；固定點落在實心 0。**反向對照** `--probe=nometa=jib-sheet-S` ⇒ 報那一條。
+- 過程圖 `overlays/stage8_rigging.png`。
+
+## 步驟 9 砲（2026-10-29）
+- `draft_guns.py`（照牛津號的搜法：從舷牆外面往裡退到零碰撞、砲口伸出、腳下有甲板；加一段迴旋砲：座的插銷底落在舷頂上一格）＋ `gunsim.py`（照抄）⇒ `guns_placement.json`、`verify_guns.json`；落格 `tools/build_guns.py`。
+- 主甲板 4 門 4 磅砲（〔二手〕Supply 的 3 磅砲；遊戲沒有 3 磅舷側砲）⇒ `pinnacle-patache-01m-gun-4l` ×0.5（4 磅專用元件，Ship_Guns §2.2）；P 舷 mirror=y。
+- 迴旋砲 6 門（〔二手〕Supply 的 6 門 ½ 磅旋轉砲）⇒ `apex-one-reale-01m-gun-pierrier` ×0.5：後甲板舷頂每舷 2（x 62、92）、艏樓舷頂每舷 1（x 278）；meta 照飛魚號（mount=turret、arc −80..80、rate 45、port swNNN）；每門一個「座」雙生 `<名>座`（`-gun-pierrier-mount`、kind=gunmount、mount_of ＝ 那門砲的 id，Ship_Guns §4.2.1）。物件 id 自己先發（gun-1…10、gunmount-5…10）。
+- 🩸 **v1 4 磅砲推不出砲門**：砲在砲架上砲軸離甲板 0.73 m，v1 砲門在甲板上 0.3–0.8 m、船腰舷牆 ＋10 ⇒ 砲管頂到砲門上緣，退 11–27 格砲口還在船殼裡 ⇒ **船腰舷牆加高到 ＋13（1.3 m）、砲門改 ＋5..＋10**：
+  - plan.lines.top 船腰四點 ＋3、ports sill 5 h 6；draft_lines／draft_layout／draft_ports 重跑 ⇒ `tools/hull_state.py` ⇒ `tools/delta_apply.py`（標記 `舷牆加高`：刻 180、貼 2,634、換色 1,418）⇒ 作品對設計 0／0／0。
+  - channels 跟著新的舷頂（draft_rigging 重跑 ⇒ delta_apply 刻 546、貼 546、換色 46 ⇒ 0／0／0；固定點 70、橫繩組 8 overwrite）。
+- 讀數：10 門全 ok —— 4 磅砲退 2–3 格、砲口伸出 4.25–5.25 格、腳下支撐 0.5–1.0；迴旋砲砲口伸出 7.5 格；砲跟砲不撞 0、兩舷不對稱 0；組裝件 1 元件、空腔 0、鏡像差 0；models_broken 0。**反向對照** `--probe=push=砲M-S01:4` ⇒ 報那一門的碰撞樣本。
+- 砲具與砲索沒做（Ship_Steps「要的話」；4 門小砲）。
+
+## 步驟 10 火藥庫與甲板物件（2026-10-29）
+- `draft_gear.py`（模型取樣點不落在實心格、不進砲的外框、量腳下支撐）⇒ `masks/gear/magazine.vox.txt`、`gear_placement.json`、`verify_gear.json`；落地 `tools/build_gear.py`。
+- 火藥庫（`-magazine`，關聯 `彈藥庫`，meta `kind=magazine pos=aft powder_lb=400 hoist=甲板-gun/梯子/orlop`）：底艙平台後段一直到船尾、前牆 x 108 中線門 0.5 × 1.1 m（對著船腰梯子的梯腳 x 115）；牆砌到上面那一層甲板底下（船長艙範圍裡是下沉的船長艙地板）。固定點 blast (89,96,29)、door (108,96,23)。4 個火藥桶（憲法號共用桶 ×0.2，各 100 lb）。
+  - 🩸 v1 在 x 84 砌後牆 ⇒ 船長艙底下、船尾那一段被封成 15,358 格的空腔 ⇒ 不砌後牆（`aft_wall: false`，delta_apply 刻 547）。
+- 主甲板：艙蓋-主（莫尼特號艙蓋 ×1.71／1.46，蓋在主艙口圍欄頂）、艙蓋-梯井（×1）、**小艇**（餘燼號 9 m cutter ×0.2556 ⇒ 4.6 m，擱在前艙口上、x 202–248；前艙口不另做艙蓋）、**爐灶**（光榮號 ×0.22，kind=galley；擺在主桅與主艙口之間 —— 艏樓底下淨高不夠站廚師）、**絞盤**（餘燼號 ×0.1；〔源〕ZAZ5430 主桅後面；梯井蓋與主桅之間只有 1 m）。後甲板：**羅經櫃**（夜隼號 ×0.2）。
+- 讀數：10 個模型碰撞 0、不進砲的外框 0；火藥桶、爐灶、絞盤、羅經櫃腳下支撐 1.0（艙蓋與小艇擱在圍欄上，不要求）；組裝件 1 元件、空腔 0、鏡像差 0；models_broken 0。**反向對照** `--probe=shift=絞盤:5` ⇒ 報撞到主桅。
+- 起錨機（windlass，〔源〕ZAZ5430 前桅後面）沒做：現成元件沒有（Ship_Guns §2.2 ⇒ 要的話另做通用部件）。
+
+## 步驟 11 舵、舵柄、錨（2026-10-29）
+- `draft_rudder_anchor.py`（照牛津號改：加舵柄與 helm port）、`tools/build_rudder_anchor.py`。
+- 舵子作品 `-rudder`（1,292 格，沿艉柱、z 0–67、前緣兩側削 1 格；水線下白、上黑、每 10 格鐵箍）掛成模型 `舵`：kind=rudder、hinge (52, 96.5, 0)、axis (−0.087, 0, 0.996)、max 35°、spin=rudder ±35°；stock-top (44,96,67)。
+- **舵柄**（〔推〕Supply 用舵柄）子作品 `-tiller`（190 格，z 66–67、3 格寬，從舵軸往前伸到後甲板 x 76）掛在後甲板子作品成模型 `舵柄`：kind=tiller、spin=rudder ±35°、固定點 spin-a／b 在舵軸上（Ship_Helm §9.8.1 操舵鏈）。船尾舷牆的 **helm port** 刻 18 格（標記 `helm port`，由舵柄填滿；`tools/hull_state.py` 也扣掉這 18 格）。不放舵輪。
+- 錨：共用錨元件 ×0.45（150 噸級；牛津號 220 噸 ×0.55）、meta anchor=bower；兩舷各一，掛在船頭舷外、錨架後面（x 271，錨臂順著船殼切線 rz ±76°）＋錨床 `-anchor-gear`（888 格，關聯 `錨床`：錨冠落在 billboard 上，foot_gap 0）；船殼固定點 hawse-S／P (288, ±15, 54)。
+- 🩸 舵 v1 報 198 格「落在實心」：`Grid` 框外一律當實心、舵後緣伸出組裝件外框 ⇒ pad 16 ⇒ 0（組裝件裡沒有一件真的跟舵重疊，逐件量過）。
+- 讀數：舵 on_solid 0、舵柄 on_solid 0、錨碰撞 0、錨床 on_solid 0、全部鏡像差 0；組裝件 1 元件、空腔 0、鏡像差 0；ropecheck 145 條兩端全 ok（舷牆加高後 channels 往上 3 格、下桅 shroud 變短 ⇒ 橫繩組展開少 2 道）；models_broken 0。**反向對照** `--probe=shift=錨-S:-6` ⇒ 報碰撞。
+- 過程圖 `overlays/stage11_stern.png`、`stage10_gear.png`。
