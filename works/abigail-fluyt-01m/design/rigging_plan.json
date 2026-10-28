@@ -462,17 +462,27 @@
    "hound-S": [
     103,
     98,
-    171
+    168
    ],
    "hound-P": [
     103,
     94,
-    171
+    168
    ],
    "stay-head": [
     105,
     96,
-    171
+    168
+   ],
+   "climb-head-S": [
+    103,
+    104,
+    172
+   ],
+   "climb-head-P": [
+    103,
+    88,
+    172
    ]
   },
   "bowsprit": {
@@ -1492,7 +1502,18 @@
    "stop": 12,
    "min_span": 4,
    "thickness": 0.25,
-   "group": "ratlines/lower"
+   "group": "ratlines/lower",
+   "climb": 1,
+   "foot": [
+    103,
+    113,
+    59
+   ],
+   "head": [
+    103,
+    104,
+    172
+   ]
   },
   {
    "name": "mizzen-lower-P",
@@ -1503,7 +1524,18 @@
    "stop": 12,
    "min_span": 4,
    "thickness": 0.25,
-   "group": "ratlines/lower"
+   "group": "ratlines/lower",
+   "climb": 1,
+   "foot": [
+    103,
+    79,
+    59
+   ],
+   "head": [
+    103,
+    88,
+    172
+   ]
   }
  ],
  "sails": [

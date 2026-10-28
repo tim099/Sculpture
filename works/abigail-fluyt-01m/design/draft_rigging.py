@@ -106,7 +106,7 @@ def main():
     for key in MASTS:
         m = M[key]
         A_ = anchors[key]
-        zp = int(math.floor(m['platform']))
+        zp = TP.get('z', {}).get(key, int(math.floor(m['platform'])))   # 桅樓平台另外指定高度（後桅，同 draft_masts）
         zh = zp - 3 if key in TP else int(math.floor(m['lower_top'])) - 4
         r = mast_r(key, zh)
         for s_, sg in (('S', 1), ('P', -1)):
@@ -134,6 +134,10 @@ def main():
             for s_, sg in (('S', 1), ('P', -1)):
                 A_['climb-head-' + s_] = [xa, YC + sg * (Rt - 3), zp + 1]
             A_['top-aft'] = [xa - Rt - 1, YC, zp + 1]
+        elif key in TP:                                          # 有桅樓、沒有上桅（後桅）：只有繩梯 head
+            Rt, xa = TP[key], round(ax(key, zp))
+            for s_, sg in (('S', 1), ('P', -1)):
+                A_['climb-head-' + s_] = [xa, YC + sg * (Rt - 3), zp + 1]
     for key, nm, deck in (('fore', 'mainstay-foot', 'forecastle'), ('main', 'mizzenstay-foot', 'main')):
         z = int(LY.deck_z(plan, deck, M[key]['x'] + 0.5)) + 3
         anchors[key][nm] = [int(math.floor(ax(key, z) - mast_r(key, z))) - 1, YC, z]

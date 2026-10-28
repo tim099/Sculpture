@@ -52,9 +52,13 @@ def main():
     for key, m in M.items():
         r0, r1 = RB['mast_r'][key]
         zh, zt, zp = int(math.floor(m['heel'])) + 1, int(math.floor(m['lower_top'])), int(math.floor(m['platform']))
+        zp = RB.get('tops', {}).get('z', {}).get(key, zp)          # 桅樓平台另外指定高度（後桅：讓 lateen 帆桁從平台底下過；plan.rig_build.tops.z）
         part = 'mast-' + key
-        for z in range(zh, zt + 1):
-            r = r0 + (r1 - r0) * (z - zh) / max(1, zt - zh)
+        ze = zt                                                  # 下桅畫到哪：有桅樓、沒有上桅、平台又被抬高 ⇒ 桅頂露出籃子頂一格（收窄照原本的 zh..zt，上面那幾格用 r1）
+        if RB.get('tops', {}).get(key) and key not in RB['topmast_r']:
+            ze = max(zt, zp + RB['tops']['rim_h'] + 1)
+        for z in range(zh, ze + 1):
+            r = r0 + (r1 - r0) * min(z - zh, zt - zh) / max(1, zt - zh)
             xa = float(LY.mast_axis_x(plan, key, z + 0.5, L))
             for x in range(int(xa - r) - 1, int(xa + r) + 2):
                 for dy in range(0, int(r) + 1):
@@ -249,6 +253,8 @@ def main():
     R['yards'] = place
     R['lateen'] = {k: {'size': v['size'], 'cells': len(v['cells']), 'anchors': v['anchors']} for k, v in lat.items()}
     R['masts'] = {k: {'heel': round(m['heel'], 1), 'platform': round(m['platform'], 1), 'truck': round(m['truck'], 1), 'x': m['x']} for k, m in M.items()}
+    for k, z in RB.get('tops', {}).get('z', {}).items():
+        R['masts'][k]['top_z'] = z                              # 桅樓平台實際落在哪（tops.z 另外指定的）
     if probe:
         print(json.dumps({'probe': probe[0], 'yard_clash_cells': clash}, ensure_ascii=False))
         return

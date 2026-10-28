@@ -18,7 +18,7 @@ def main():
         'thick_src': '設計決定：拉貝爾號的粗細照本船桅徑放大約 1.25',
         'ratlines': {'step': 4, 'start': 5, 'stop': 12, 'min_span': 4, 'th': 0.25, 'tm_step': 4, 'tm_start': 3, 'tm_stop': 8, 'tm_th': 0.2,
                      'climb_deck': {'fore': 'forecastle', 'main': 'main', 'mizzen': 'quarter'},
-                     'src': 'Ship_Rigging §6：橫繩組（sub=ratlines），每 4 格一道；前、主桅下桅標繩梯 climb=1（foot 舷牆內側的甲板、head 桅樓平台這一舷的邊）；上桅、後桅不標'},
+                     'src': 'Ship_Rigging §6：橫繩組（sub=ratlines），每 4 格一道；前、主、後桅下桅標繩梯 climb=1（foot 舷牆內側的甲板、head 桅樓平台這一舷的邊；後桅 2026-10-28 加了桅樓）；上桅不標'},
         'sails': {'fullness': 1.05, 'course_clew_above_rail': 3, 'course_in': 0.9, 'clew_in': 0.1, 'sprit_drop': 24, 'sheet_aft': {'fore': 27, 'main': 36},
                   'tack_fwd': {'fore': 24, 'main': 30}, 'belay_x_max': 380, 'sprit_belay_x': 370, 'bs_shroud_x': 376,
                   'lateen_clew': {'mizzen': [62, 76]}, 'lateen_tack': {'mizzen': ['main', 140]}, 'lateen_sheet_x': 56,
