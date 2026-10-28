@@ -145,3 +145,31 @@
 - **反向對照**：`--probe=push=砲M-S01:4`（往外推 4 格）⇒ 那一門碰撞樣本 913，其他 0。
 - 過程圖 `overlays/stage9_guns.png`（sails=0、ropes=0）。
 - ⚠ 沒做：砲具與砲索（Ship_Guns §4.4，「要的話」；同飛魚號、拉貝爾號不做）。
+
+## 步驟 10 彈藥庫與甲板物件（2026-10-28）
+設計 plan.json `gear_build`、`fit_build`；產生 `design/draft_gear.py`、`design/draft_fit.py`（出處飛魚號，沒改邏輯）⇒ `masks/gear/magazine.vox.txt`、`masks/fit/{hatch-main,hatch-fore,windlass}.vox.txt`、`gear_placement.json`、`fit_placement.json`、`verify_gear.json`、`verify_fit.json`；落格 `design/tools/build_gear.py`、`build_fit.py`；檢查 `design/tools/check_stage9.py`。
+- 彈藥庫 `-magazine`（1,436 格，關聯 `彈藥庫`）：貨艙後段 x 132–148、地板 z 11、頂 z 28；銅皮 168、松木地板 177、橡木框 136；門開在船頭那面（x 148），正對貨艙梯腳（x 153）。火藥桶 6（底層 4、木架 2；600 磅）—— 照砲數換算想放 16 桶，貨艙後段只放得下 6（⚠ 換算，不是史料）。固定點 blast (141, 80, 20)、door (148, 80, 12)。hoist 先不寫：步驟 14 照匯入檢查的取用點再定。
+- 羅經櫃（夜隼號的，scale 0.2，kind=binnacle）：後甲板 (128, 86.5, 45)，船長艙井前面、後桅腳旁。🩸 v1 右舷 dy 9 ⇒ 碰到舷牆內壁、被量到舷頂上 z 53；v2 中線 ⇒ 後桅往後傾 4°、在後甲板高度桅軸落在 x 129–131 ⇒ 撞桅 ⇒ dy 6。
+- 小艇不做（拖在船尾；遊戲的 kind=boat 沒有功能）。
+- 艙蓋（kind=door，掛在 `甲板-main`）：主艙口 `-hatch-main`（206 格，嵌在圍板裡、17 × 11、底 z 32）、前艙口 `-hatch-fore`（129 格，蓋在圍板上 z 35）；鉸鏈沿 +x 在左舷那邊（往上掀）。
+- 爐灶（光榮號的縮 0.18，kind=galley）：主甲板中線 x 190–197（主桅與前艙口之間）；四面都量得到走路格。
+- 絞盤 `-windlass`（380 格，關聯 `絞盤`）：船頭甲板 x 232–233（第 3 門砲與艏斜桅腳墊木之間）；兩根立柱高到舷牆頂（z 41）、中間一根橫的絞筒。
+- 下桅繩梯（climb=1）：main-lower-S／P，foot 主甲板 (175, 99／61, 32)、head 桅頂靠船尾那根 crosstree 上 (178, 85／75, 143)；只有第一人稱爬得上去。
+讀數：
+- 設計：新格落在實心上 0、封閉空腔 0、浮空 0；模型碰撞 0、腳下 12 格內有實心；艙蓋、爐灶、絞盤撞實心 0、撞模型 0；繩梯兩頭都站得住；鏡像差 0。
+- **結果帳**（check_stage9）：彈藥庫 1,436 缺 0／多 0／色差 0；模型 7＝設計 7、CLI ok 7；火藥 6 × 100 ＝ 600 磅；blast、door 是空氣、door 腳下實心；參數差 0、撞實心 0。
+- 組起來（引擎 stats）：63,831 格、1 元件、空腔 0、鏡像差 0。
+- **反向對照**：`check_stage9.py --drop=羅經櫃` ⇒ 缺 binnacle；`draft_fit.py --probe=galley_x=184`（爐灶塞到桅上）⇒ 站得住的面 4 → 0。
+- 產生程式重跑：清單與擺放 6 個檔逐位元組相同。
+
+## 步驟 11 舵、舵柄、錨（2026-10-28）
+設計 plan.json `rudder_anchor_build`；產生 `design/draft_rudder_anchor.py`（出處飛魚號，沒改邏輯）⇒ `masks/rudder/{rudder,tiller,anchor_gear}.vox.txt`、`rudder_anchor_placement.json`、`verify_rudder_anchor.json`；落格 `design/tools/build_rudder_anchor.py`；檢查 `design/tools/check_stage95.py`。
+- 舵 `-rudder`（608 格，模型 `舵`，kind=rudder＋spin）：沿斜 18° 的艉柱後面，從龍骨底到 wing transom（z 31）；舵葉底 1.0 m、水線 0.5 m、3 格厚；水線下白、每 6 格一道鐵箍；鉸鏈 (112, 80.5, 0)、軸沿艉柱、max_deg 35；stock-top (99, 80, 31)。轉 ±35° 掃進組裝件實心 0。
+- 舵柄 `-tiller`（42 格，模型 `舵柄` 掛在 `甲板-quarter`，kind=tiller＋spin）：舵頭從窄平艉板內側（x 100）冒出來、沿中線往前到 x 115、高 z 47–48（從船長艙井的圍板 z 46 上面越過去）。⚠ 舵頭在 wing transom（z 31）與後甲板之間那一段沒畫（藏在船尾牆裡，同飛魚號）。🩸 v1 z_deck 給甲板面 44 本身 ⇒ 往前找第一格空氣找到井口 x 108 ⇒ 舵頭懸在井上 3 格、舵柄尾撞圍板 ⇒ 45／48。
+- 錨（共用元件縮 0.28，錨幹 1.5 m，anchor=bower）：兩舷吊在船頭舷外 x 240、環 z 44，錨臂順著船殼切線往外推 5.5 格到零碰撞；錨冠底下一塊 billboard 托板（`-anchor-gear`，264 格，關聯 `錨架`）。錨鏈孔只登記固定點 hawse-S／P (246, 98／62, 39)，⚠ 沒有開孔。
+讀數：
+- 設計：舵、舵柄、錨架落在實心上 0；錨碰撞 0、腳落在錨架上；鏡像差 0。
+- **結果帳**（check_stage95）：舵 608、錨架 264 缺 0／多 0／色差 0（舵柄另外對：作品 42 ＝ 清單 42）；舵模型 ok、跟組裝件重疊 0；錨 2 ok、來源有 ring；hawse 兩點在那一舷的船殼格上；問題 0。
+- 組起來（引擎 stats）：64,095 格、1 元件、空腔 0、鏡像差 0。
+- **反向對照**：`--probe=shift=錨-S:-6`（右舷錨往船殼推 6 格）⇒ 錨-S 撞 717、錨-P 0。
+- 產生程式重跑：4 個輸出檔逐位元組相同。過程圖 `overlays/stage11_helm_anchor.png`。

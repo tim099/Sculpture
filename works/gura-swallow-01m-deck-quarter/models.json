@@ -1,0 +1,86 @@
+{
+	"schema": 2,
+	"models": [
+		{
+			"name": "羅經櫃",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "summit-night-falcon-01m-binnacle",
+			"axes": "sculpt",
+			"at": [
+				128,
+				86.5,
+				45
+			],
+			"pivot": [
+				9,
+				13,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.2,
+				0.2,
+				0.2
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（TASK-0968；draft_gear.py）",
+			"persona": "gura",
+			"created_at": "2026-10-28T10:01:15",
+			"meta": {
+				"kind": "binnacle"
+			}
+		},
+		{
+			"name": "舵柄",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "gura-swallow-01m-tiller",
+			"axes": "sculpt",
+			"at": [
+				100.5,
+				80.5,
+				45
+			],
+			"pivot": [
+				100.5,
+				80.5,
+				45
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 11（TASK-0968）：舵柄（sloop 沒有舵輪）；跟舵同一個舵角",
+			"persona": "gura",
+			"created_at": "2026-10-28T10:03:52",
+			"meta": {
+				"kind": "tiller",
+				"spin": "rudder",
+				"spin_k": 35,
+				"spin_lag": 0.3,
+				"spin_max": 35,
+				"spin_min": -35
+			}
+		}
+	]
+}
