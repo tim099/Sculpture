@@ -8,7 +8,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
 GB = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))['guns_build']
 PL = json.load(open(os.path.join(design, 'guns_placement.json'), encoding='utf-8'))['rows']
-NAMES = {'4l': '4 磅砲（風暴角號 -gun-6l 縮 0.375）', 'pierrier': '迴旋砲 pierrier（皇家號 -gun-pierrier 縮 0.39）'}
+NAMES = {'4l': '4 磅砲（4 磅砲通用部件 pinnacle-patache-01m-gun-4l 縮 0.443；Tim 2026-10-28 換）', 'pierrier': '迴旋砲 pierrier（皇家號 -gun-pierrier 縮 0.39）'}
 
 
 def num(v):

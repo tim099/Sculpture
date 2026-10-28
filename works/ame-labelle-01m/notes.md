@@ -252,3 +252,11 @@ Tim：「1027 參考這個task 也開task優化拉貝爾號的船頭吧」（附
   - 匯入檢查 ✗ 0、⚠ 7（dev 5 ＋ 兩扇新門的「門被打掉也不會從這裡進水」，門洞在水線上很高，同康塞普西翁號、收穫號）；樓梯自檢 6 座 ✗ 0、⚠ 3、甲板連通 ✗ 0（跟 dev 同）；廚房 1 座、廚師 1 位、站得住的面 3、船員 46、5 層甲板都接得到（跟 dev 同）；模型 57 ⇒ 59。
   - 對拍（無頭 Chrome、headless=1、#dump 取 sha256 前 12 碼；對照組 ＝ 改之前的成品抄出來、跑兩次逐位元組相同）：`demo=60&seed=3` 089b6e562974、`demo=60&seed=2&ship=falcon,stormkaap` 79a38474d3c9 改之前／之後相同；`demo=60&seed=3&ship=labelle,falcon` 56d66800ecba ⇒ 4207e98b8d03（拉貝爾號自己那一局本來就該變 ⇒ 這把尺量得到這次的改動）。船檔只有 `ship-labelle.js` 不同。
   - 遊戲裡（worktree 成品、`?blue=labelle&mode=sail&start=1&debug=1`）：`overlays/task1045_ingame_bowq.jpg`。第一人稱（`__game.fp` 傳送到平台、鍵盤事件要帶 `key: 'w'`）：兩扇門從平台走進艙（x 220.5 ⇒ 211.6，停在絞盤前）、再走回平台（⇒ 222.3，欄杆擋住），往舷側走被欄杆擋住（z 一直是 32）。⚠ `__game.fp(true, …)` 重新進第一人稱會重生在遊戲自己挑的點（x 230.5、z 39，平台前端欄杆頂）—— 那不是走上去的；只轉向用 `__game.fp(null, null, yaw)`。
+
+## 換砲：4 磅砲換成自己的模型（pinnacle，2026-10-28）
+
+- Tim 2026-10-28：「拉貝爾號、康塞普西翁號、藍鯊號 四磅炮替換(這屬於遊戲meta 直接換)」＋「炮只有同型號共用模型」（Ship_Guns §2.2）⇒ `guns_build.types.4l` 從風暴角號 `-gun-6l` 縮 0.375 換成 4 磅砲通用部件 `pinnacle-patache-01m-gun-4l`（聖羅曼號 TASK-0970 新做；pivot [6.5, 28, 0]）。
+- scale：0.5（模型原尺寸，砲管 2.2 m）試過 ⇒ 第 3 門（x 164–168，甲板高一格）砲尾上緣頂到砲門上楣 (166, 97, 37)、第 2 門只能退到砲口縮進船殼 ⇒ 照 GR p.13 出土那門 6 pi ＝ 1.95 m 縮：0.5 × 1.95 ÷ 2.2 ＝ **0.443**（同一種砲照船縮放，Ship_Guns §2.2 允許）。
+- 讀數：重跑 `draft_guns.py`（換之前先不改 plan 重跑 ⇒ guns_placement.json 逐位元組相同）⇒ 只有 4l 那 6 列變：at 全部跟以前一樣、back 2、砲口伸出 5.69 ⇒ 5.31、not_ok 0、砲撞砲 0、兩舷不對稱 0。
+- 落格：只重掛 6 門 4l（`sub=model overwrite=1`，meta 帶著 Blockside 配的 id gun-1～6；其他砲沒動）；`tools/build_guns.py` 的 NAMES['4l'] 跟著改。
+- Blockside：`admin.py reimport --id labelle` ⇒ 匯入檢查 ✗ 0、⚠ 7（跟 10-27 那份逐行比只多「門 beakhead ×2 底下沒有空格」，跟砲無關）；卡片沒變。

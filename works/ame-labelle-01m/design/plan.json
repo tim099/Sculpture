@@ -454,8 +454,8 @@
   "deck_works": {"main": "ame-labelle-01m-deck-main", "quarter": "ame-labelle-01m-deck-quarter", "forecastle": "ame-labelle-01m-deck-forecastle"},
   "prefix": {"main": "M", "quarter": "Q", "forecastle": "F"},
   "types": {
-   "4l": {"work": "summit-stormkaap-01m-gun-6l", "scale": 0.375, "pivot": [8.5, 33, 0], "meta": {"kind": "gun", "gun": "4l"},
-          "src": "Ship_Guns §2.2：只差口徑 ⇒ 縮放現有的 —— 風暴角號 6 磅長砲（0.05 m；砲管 cascabel→muzzle 52 格 ＝ 2.6 m）縮成 GR p.13 的 4 磅砲管 6 pi ＝ 1.95 m ⇒ 0.05 × 0.75 ÷ 0.1 ＝ 0.375；pivot 照收穫號（砲架前緣中間、甲板面）；砲種表已有 4l（4 磅砲）"},
+   "4l": {"work": "pinnacle-patache-01m-gun-4l", "scale": 0.443, "pivot": [6.5, 28, 0], "meta": {"kind": "gun", "gun": "4l"},
+          "src": "Tim 2026-10-28「拉貝爾號、康塞普西翁號、藍鯊號 四磅炮替換(這屬於遊戲meta 直接換)」＋「炮只有同型號共用模型」⇒ 換成 4 磅砲通用部件 pinnacle-patache-01m-gun-4l（聖羅曼號 TASK-0970 新做；0.05 m、pivot ＝ 砲架前緣中間、甲板面）；同一種砲照船縮放（Ship_Guns §2.2）：模型砲管 2.2 m（verify_gun4l barrel_m）縮成 GR p.13 出土那門 6 pi ＝ 1.95 m ⇒ 0.5 × 1.95 ÷ 2.2 ＝ 0.443（scale 0.5 試過：第 3 門砲門 x 164–168 的甲板高一格、砲尾上緣頂到砲門上楣 (166, 97, 37)，第 2 門退到砲口縮進船殼）。舊：風暴角號 -gun-6l 縮 0.375 —— Ship_Guns §2.2：只差口徑 ⇒ 縮放現有的 —— 風暴角號 6 磅長砲（0.05 m；砲管 cascabel→muzzle 52 格 ＝ 2.6 m）縮成 GR p.13 的 4 磅砲管 6 pi ＝ 1.95 m ⇒ 0.05 × 0.75 ÷ 0.1 ＝ 0.375；pivot 照收穫號（砲架前緣中間、甲板面）；砲種表已有 4l（4 磅砲）"},
    "pierrier": {"work": "apex-one-reale-01m-gun-pierrier", "scale": 0.39, "pivot": [5.5, 18.5, 0], "meta": {"kind": "gun", "gun": "pierrier", "mount": "turret", "arc": "-80,80", "rate": 45},
                 "src": "皇家號的叉架後膛迴旋砲（通用部件，0.05 m、1.9 m 長）縮成 GR p.16 出土那門（口到柄尾 1.478 m）⇒ 0.5 × 0.78 ＝ 0.39；pivot ＝ 叉架插銷底（站在欄杆上那一點）；meta 照皇家號、越嶺號（mount=turret、arc ±80、rate 45）"}
   },

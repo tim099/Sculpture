@@ -172,3 +172,11 @@
 - 🩸 第一版玻璃的 y 寫成「離中線幾格」沒加中線 ⇒ 玻璃落在 y 32／288（船外 12 m），遊戲裡兩排藍塊浮在船尾旁邊；雕刻的預覽看起來對（窗洞是空的、看起來暗暗的）。改了之後檢查玻璃前後都是空氣、y 123–128／192–197。
 - 讀數：帳先證明（不加新的一步組出來跟船殼逐格相同）再套：船殼刻 1,158、側廊刻 1,160／貼 2,734／換色 384、玻璃 288；讀回 0 差；重跑逐位元組相同；link_overlap 0；每扇窗刻到艙裡的空氣 288／288、擋住 0、兩舷鏡像差 0。
 - 遊戲那側：Blockside 6e498f3（shipcheck ✗ 0，玻璃 513 格；遊戲裡看得到透明的窗、後面的艙）。Blocksail 由 basecamp 的 fa62978 帶到 Blockside 5b30c28（包含 6e498f3）⇒ 我的換指針那一筆多餘、丟掉。
+
+## 換砲：4 磅砲換成自己的模型（pinnacle，2026-10-28）
+
+- Tim 2026-10-28：「拉貝爾號、康塞普西翁號、藍鯊號 四磅炮替換(這屬於遊戲meta 直接換)」＋「炮只有同型號共用模型」（Ship_Guns §2.2）⇒ `guns_build.types.4l` 從風暴角號 `-gun-6l` 縮 0.42 換成 4 磅砲通用部件 `pinnacle-patache-01m-gun-4l`（聖羅曼號 TASK-0970 新做；scale 0.5 ＝ 模型原尺寸、砲管 2.2 m；pivot [6.5, 28, 0]）。8 磅（12 磅縮 0.45）沒換 —— Tim 這次只點 4 磅。
+- 讀數：換之前不改 plan 重跑 `draft_guns.py` ⇒ guns_placement.json 逐位元組相同；換之後只有 puente 4 門 4l 那 4 列變：at 跟以前一樣、back 4／5、砲口伸出 4.61 ⇒ 4.25（第 1 門）、3.61 ⇒ 3.25（第 2 門）、not_ok 0、砲撞砲 0、兩舷不對稱 0。
+- 落格：只重掛 4 門 4l（`sub=model overwrite=1`，meta 帶著 Blockside 配的 id）；`tools/build_guns.py` 的 NAMES['4l'] 跟著改。
+- ⚠ **砲具的環還沒抬**：重跑 `draft_gunfittings.py` ⇒ 這 4 門的船牆環要高一格（新砲的 eye 比較高；ring-砲U-*-aft／fwd z 64 ⇒ 65、66 ⇒ 67，P02／S02 的 aft 環 y 也挪一格），其他 20 門、甲板環、繩表都不變。子作品 `gura-pinas-01m-gunfittings` 的格子只有作者能刻 ⇒ 本小姐沒動格子、固定點也退回原位，`gunfittings_points.json`／mask 照舊是 HEAD 那一份（作品跟設計檔一致）；現在環比 eye 低 0.1 m、繩照樣接得上。請 gura 跑：`draft_gunfittings.py .` ⇒ `tools/delta_apply.py . gura-pinas-01m-gunfittings masks/gunfittings/gunfittings.vox.txt`（刻 16、貼 16）⇒ `tools/build_gunfittings.py .`。
+- Blockside：`admin.py reimport --id pinas` ⇒ 格數、checksum 都沒變（沒有夾帶別的改動），vxk 只差 4 門砲與它們的 20 條砲索；匯入檢查 ✗ 0、⚠ 9（跟 10-27 那份逐行相同）；卡片沒變。
