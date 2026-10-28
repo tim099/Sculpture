@@ -1,0 +1,302 @@
+{
+ "parts": {
+  "mast-main": {
+   "cells": 1886,
+   "mirror_diff": 0
+  },
+  "mast-mizzen": {
+   "cells": 490,
+   "mirror_diff": 0
+  },
+  "bowsprit": {
+   "cells": 741,
+   "mirror_diff": 0
+  }
+ },
+ "skipped_on_ship": {
+  "mast-mizzen": 2
+ },
+ "bowsprit_hole_cells": 0,
+ "yard_ends": {
+  "yard-main-course": {
+   "P": [
+    168.9,
+    17.2,
+    129.32
+   ],
+   "S": [
+    202.8,
+    143.8,
+    129.32
+   ],
+   "pivot": [
+    185.83,
+    80.5,
+    129.32
+   ]
+  },
+  "yard-main-topsail": {
+   "P": [
+    171.7,
+    46.1,
+    208.56
+   ],
+   "S": [
+    192.8,
+    114.9,
+    208.56
+   ],
+   "pivot": [
+    182.26,
+    80.5,
+    208.56
+   ]
+  },
+  "yard-mizzen-lateen": {
+   "fore": [
+    149.5,
+    77.0,
+    80.5
+   ],
+   "peak": [
+    90.5,
+    77.0,
+    130.5
+   ],
+   "pivot": [
+    126.46,
+    77.0,
+    100.5
+   ]
+  }
+ },
+ "yard_clash_cells": {
+  "yard-main-course": 0,
+  "yard-main-topsail": 0,
+  "yard-mizzen-lateen": 0
+ },
+ "overhang_past_stern_m": {
+  "yard-mizzen-lateen": 0.43
+ },
+ "yards": [
+  {
+   "name": "yard-main-course",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-main-royal",
+   "at": [
+    185.83,
+    80.5,
+    129.32
+   ],
+   "pivot": [
+    2.5,
+    46.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -15
+   ],
+   "scale": [
+    1,
+    1.4086,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "course",
+    "sail": "main-course",
+    "length_m": 13.1,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -15
+   }
+  },
+  {
+   "name": "yard-main-topsail",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-royal",
+   "at": [
+    182.26,
+    80.5,
+    208.56
+   ],
+   "pivot": [
+    1.5,
+    32.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    1.1077,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topsail",
+    "sail": "main-topsail",
+    "length_m": 7.2,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-mizzen-lateen",
+   "mast": "mizzen",
+   "work": "gura-swallow-01m-yard-mizzen-lateen",
+   "at": [
+    126.46,
+    77.0,
+    100.5
+   ],
+   "pivot": [
+    39.5,
+    3.5,
+    23.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "gaff",
+    "sail": "mizzen-lateen",
+    "length_m": 7.9,
+    "rig": "lateen",
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  }
+ ],
+ "lateen": {
+  "mizzen": {
+   "size": [
+    67,
+    7,
+    57
+   ],
+   "cells": 527,
+   "anchors": {
+    "pivot": [
+     39,
+     3,
+     23
+    ],
+    "sling": [
+     39,
+     3,
+     24
+    ],
+    "fore": [
+     62,
+     3,
+     3
+    ],
+    "peak": [
+     3,
+     3,
+     53
+    ],
+    "jackstay-01": [
+     57,
+     3,
+     9
+    ],
+    "jackstay-02": [
+     51,
+     3,
+     14
+    ],
+    "jackstay-03": [
+     45,
+     3,
+     19
+    ],
+    "jackstay-04": [
+     39,
+     3,
+     24
+    ],
+    "jackstay-05": [
+     32,
+     3,
+     30
+    ],
+    "jackstay-06": [
+     26,
+     3,
+     35
+    ],
+    "jackstay-07": [
+     20,
+     3,
+     40
+    ],
+    "jackstay-08": [
+     14,
+     3,
+     45
+    ],
+    "jackstay-09": [
+     8,
+     3,
+     50
+    ]
+   }
+  }
+ },
+ "masts": {
+  "main": {
+   "heel": 7.0,
+   "platform": 141.3,
+   "truck": 223.3,
+   "x": 185
+  },
+  "mizzen": {
+   "heel": 7.0,
+   "platform": 108.2,
+   "truck": 117.0,
+   "x": 133
+  }
+ },
+ "lists": {
+  "mast-main": [
+   1886,
+   "5c568223ee82525dc8bd2b258ac3e9f63a4a0fd6394f79c53091884b4da2502c"
+  ],
+  "mast-mizzen": [
+   490,
+   "f90fa6459764685f6b7a86de53458267b37e5517f94dabd43cb9869e2c9c6e6b"
+  ],
+  "bowsprit": [
+   741,
+   "a68d178fb6069e427b020d9de25d50aefdd422fb1b6f9d7d12de96ab55baf28a"
+  ],
+  "lateen-mizzen": [
+   527,
+   "057b99e6d5d6546a60de05652e10cf5f0cf6d1e1777bf732dda7299bb853eb4b"
+  ],
+  "bowsprit_hole": [
+   0,
+   "fe642d925cae8008475bb6846663b95a42020434d472ccbabd986b6cfbe1807d"
+  ]
+ }
+}

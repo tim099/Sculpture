@@ -1,5 +1,5 @@
 # 抄來的（燕子號 TASK-0968）：出處 gura-flyingfish-01m/design/draft_deco.py（飛魚號；作品 id、船名、單號已換）
-# 燕子號 步驟 6（TASK-0968）：裝飾 —— 船首像（飛魚）、方艉的金色飛魚（船殼換色）、船尾窗玻璃後面刻穿
+# 燕子號 步驟 6（TASK-0968）：裝飾 —— 船首像（燕子）、窄平艉板的金色燕子（船殼換色）、船尾窗玻璃後面刻穿
 #   本船自己寫的（拉貝爾號那支是 knee of head、Fontanges 船首像、假艉廊、百合花，換掉）；船頭外緣、船尾面從作品匯出量（⛔ 不拿設計陣列當作品）。
 #   輸入：plan.json（deco、masts 的 bowsprit）＋ 船殼作品（CLI 匯出）
 #   輸出：masks/deco/figurehead.vox.txt（世界座標，at 0,0,0）、masks/deco/emblem_paint.vox.txt（船殼 stampvox overwrite=1）、
@@ -17,13 +17,14 @@ from draft_lines import font, palette_rgb
 from wio import export_list
 
 
-def fish(F):
-    """局部座標 (u 往船頭, v 船寬, w 往上) ⇒ 顏色；u 0 ＝ 尾巴根。身體沿 u 漸粗漸細、往上翹；胸鰭往後掠、上反；尾巴分叉。"""
+def swallow(F):
+    """燕子號：局部座標 (u 往船頭, v 船寬, w 往上) ⇒ 顏色；u 0 ＝ 尾巴根。身體沿 u 漸粗漸細、頭微微往上；
+    藏青的背、白腹、喉嚨一圈紅褐；翅膀從肩往後掠、往外漸低（滑翔）；尾巴左右分叉成兩根長尾羽。"""
     C = F['colors']
     out = {}
     n = F['len']
-    rad = [0.7, 0.9, 1.2, 1.5, 1.7, 1.7, 1.5, 1.2, 0.8]
-    wc = lambda u: 0.25 * u
+    rad = [0.8, 1.1, 1.4, 1.6, 1.6, 1.4, 1.2, 0.9]
+    wc = lambda u: 0.15 * u
     for u in range(n):
         r = rad[min(u, len(rad) - 1)]
         R = int(math.ceil(r))
@@ -31,19 +32,20 @@ def fish(F):
             for w in range(-R - 1, R + 2):
                 dw = w - wc(u)
                 if v * v + dw * dw <= r * r + 0.25:
-                    out[(u, v, w)] = C['back'] if dw > 0.3 else C['belly']
+                    out[(u, v, w)] = C['back'] if dw > 0.3 else (C['throat'] if u >= n - 3 else C['belly'])
+    out[(n, 0, int(round(wc(n))))] = C['eye']                     # 嘴：頭前面一格（深色）
     ue = n - 2                                                    # 眼睛：頭後面一格、兩側
     out[(ue, 1, int(round(wc(ue) + 0.6)))] = C['eye']
     out[(ue, -1, int(round(wc(ue) + 0.6)))] = C['eye']
-    for v in range(2, 7):                                         # 胸鰭（翅膀）：前緣 6 − 0.5(v−2)、後緣 3 − 0.6(v−2)，每往外一格抬 0.3
-        a, b = 3 - 0.6 * (v - 2), 6 - 0.5 * (v - 2)
+    for v in range(2, 8):                                         # 翅膀：前緣 5.5 − 0.6(v−2)、後緣 3 − 0.8(v−2)，每往外一格低 0.25
+        a, b = 3 - 0.8 * (v - 2), 5.5 - 0.6 * (v - 2)
         for u in range(int(math.ceil(a)), int(math.floor(b)) + 1):
-            w = int(round(wc(u) + 0.3 * (v - 2)))
+            w = int(round(wc(u) + 0.6 - 0.25 * (v - 2)))
             for s in (1, -1):
-                out[(u, s * v, w)] = C['wing']
-    for k in (1, 2):                                              # 尾巴：u −1、−2 往上下分叉
+                out[(u, s * v, w)] = C['back']
+    for k in (1, 2, 3, 4):                                        # 尾巴：u −1..−4 往兩舷分叉（燕尾）
         for s in (1, -1):
-            out[(-k, 0, s * k)] = C['back']
+            out[(-k, s * ((k + 1) // 2), 0)] = C['back']
     return out
 
 
@@ -69,7 +71,7 @@ def main():
     bx = bow[bz] + 1 + F['gap']
     fig = {}
     embedded = 0
-    for (u, v, w), c in fish(F).items():
+    for (u, v, w), c in swallow(F).items():
         p = (bx + u, YC + v, bz + w)
         if p in occ:              # 尾巴尖插進艏柱的那幾格不放（v1 3 格撞船殼）
             embedded += 1
@@ -140,15 +142,15 @@ def main():
                 f.write('%d,%d,%d,%d\n' % (x, y, z, cells[(x, y, z)]))
         return [len(cells), hashlib.sha256(open(path, 'rb').read()).hexdigest()]
     R['lists'] = {
-        'figurehead': dump(os.path.join(design, 'masks', 'deco', 'figurehead.vox.txt'), fig, '# 燕子號 船首像（飛魚；世界座標，at 0,0,0）\n'),
-        'emblem': dump(os.path.join(design, 'masks', 'deco', 'emblem_paint.vox.txt'), paint, '# 燕子號 方艉金魚（船殼 stampvox overwrite=1）\n'),
+        'figurehead': dump(os.path.join(design, 'masks', 'deco', 'figurehead.vox.txt'), fig, '# 燕子號 船首像（燕子；世界座標，at 0,0,0）\n'),
+        'emblem': dump(os.path.join(design, 'masks', 'deco', 'emblem_paint.vox.txt'), paint, '# 燕子號 艉板金燕（船殼 stampvox overwrite=1）\n'),
         'carve_behind': dump(os.path.join(design, 'masks', 'glass', 'carve_behind.vox.txt'), behind, '# 燕子號 船尾窗玻璃後面的牆（carvevox，第 4 欄 ＝ 現在的顏色）\n')}
 
     # ── 圖：船頭側面（船首像）、船尾正面（金魚＋窗） ──
     sc = 10
     im = Image.new('RGB', (1100, 520), (250, 248, 240))
     d = ImageDraw.Draw(im)
-    d.text((10, 6), '燕子號 新圖紙 05：船首像（飛魚）、方艉金魚、船尾窗玻璃　v1', fill=(0, 0, 0), font=font(18))
+    d.text((10, 6), '燕子號 新圖紙 05：船首像（燕子）、艉板金燕、船尾窗玻璃　v1', fill=(0, 0, 0), font=font(18))
     ox, oz = 20, 480
     x_lo, z_lo = 195, 28
     side = {}

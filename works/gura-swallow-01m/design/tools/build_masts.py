@@ -11,7 +11,7 @@ design = sys.argv[1]
 HULL = 'gura-swallow-01m'
 ASM = HULL + '-assembly'
 WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
-MASTS = [('mast-main', '主桅', '燕子號 主桅（單桅，後傾 14°）'), ('bowsprit', '艏斜桅', '燕子號 艏斜桅（10 m，仰 20°）')]   # 燕子號：單桅
+MASTS = [('mast-main', '主桅', '燕子號 主桅（下桅＋上桅，後傾 2°）'), ('mast-mizzen', '後桅', '燕子號 後桅（三角帆，後傾 4°）'), ('bowsprit', '艏斜桅', '燕子號 艏斜桅（9.5 m，仰 26°）')]   # 燕子號：ketch 兩根桅（v1 照飛魚號只有主桅 ⇒ 後桅沒建、lateen 模型的 host 不存在，sub=model exit 2 被 ok=(0, 2) 吞掉）
 
 
 def cli(*args, ok=(0,)):

@@ -1,0 +1,223 @@
+{
+ "decks": {
+  "hold": {
+   "cells": 2391,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 211,
+    "177": 2180
+   },
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 5620,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1376,
+    "141": 170,
+    "209": 4074
+   },
+   "mirror_diff": 0
+  },
+  "cabin": {
+   "cells": 546,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 66,
+    "177": 480
+   },
+   "mirror_diff": 0
+  },
+  "quarter": {
+   "cells": 1724,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 202,
+    "141": 723,
+    "209": 799
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "main": {
+   "cells": 216,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "quarter": {
+   "cells": 466,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "main",
+   "lo": "hold",
+   "points": {
+    "foot": [
+     153,
+     80,
+     11
+    ],
+    "lo": [
+     156,
+     80,
+     14
+    ],
+    "hi": [
+     166,
+     80,
+     29
+    ],
+    "head": [
+     174,
+     80,
+     32
+    ]
+   },
+   "steps": 6
+  },
+  "quarter-P": {
+   "up": "quarter",
+   "lo": "main",
+   "points": {
+    "foot": [
+     150,
+     72,
+     32
+    ],
+    "lo": [
+     147,
+     72,
+     35
+    ],
+    "hi": [
+     141,
+     72,
+     44
+    ],
+    "head": [
+     136,
+     72,
+     45
+    ]
+   },
+   "steps": 4
+  },
+  "quarter-S": {
+   "up": "quarter",
+   "lo": "main",
+   "points": {
+    "foot": [
+     150,
+     88,
+     32
+    ],
+    "lo": [
+     147,
+     88,
+     35
+    ],
+    "hi": [
+     141,
+     88,
+     44
+    ],
+    "head": [
+     136,
+     88,
+     45
+    ]
+   },
+   "steps": 4
+  },
+  "cabin": {
+   "up": "quarter",
+   "lo": "cabin",
+   "points": {
+    "foot": [
+     125,
+     80,
+     26
+    ],
+    "lo": [
+     122,
+     80,
+     29
+    ],
+    "hi": [
+     112,
+     80,
+     44
+    ],
+    "head": [
+     106,
+     80,
+     45
+    ]
+   },
+   "steps": 6
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 4,
+ "reach": {
+  "hold": [
+   "hold"
+  ],
+  "main": [
+   "hold",
+   "quarter-P",
+   "quarter-S"
+  ],
+  "cabin": [
+   "cabin"
+  ],
+  "quarter": [
+   "cabin",
+   "quarter-P",
+   "quarter-S"
+  ]
+ },
+ "holes": {
+  "hold": 31,
+  "main": 290,
+  "cabin": 31,
+  "quarter": 196
+ },
+ "cavities_filled": [],
+ "lists": {
+  "deck-hold": [
+   2391,
+   "4512ef5f4952d45135092e3496f2caf54d4ae2d600914439b85fa8571b663da6"
+  ],
+  "deck-main": [
+   5620,
+   "876b0e479e128ebb7cbe9b259804ae861ded8870e2458b1728a6467d196866a1"
+  ],
+  "deck-cabin": [
+   546,
+   "0389272b8abe9af3bcbfd3ee521ae046b52d03a6f6a29e0c1a943c217c144495"
+  ],
+  "deck-quarter": [
+   1724,
+   "4bed2ea02600b9eb0b84b2455fafbcf2bb361e892853049fc862de5ada091454"
+  ],
+  "ladders-main": [
+   216,
+   "58dde1efa7c5a003457d318bdffdc9a48ddb7e13475e2d92c45cf4dad12c64ee"
+  ],
+  "ladders-quarter": [
+   466,
+   "f33822cab38648d49f981bb17f7ae50e610263d542085fd834b6fb824c7b4aee"
+  ]
+ }
+}

@@ -1,5 +1,5 @@
 {
-	"schema": 1,
+	"schema": 3,
 	"links": [
 		{
 			"name": "船殼",
@@ -20,6 +20,201 @@
 			"created_at": "2026-10-28T09:05:44",
 			"persona": "gura",
 			"note": ""
+		},
+		{
+			"name": "船殼-窗玻璃",
+			"work": "gura-swallow-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:48:08",
+			"persona": "gura",
+			"note": "拆件：從 `船殼`（gura-swallow-01m）拆出（TASK-0646）",
+			"meta": {
+				"material": "glass"
+			}
+		},
+		{
+			"name": "甲板-hold",
+			"work": "gura-swallow-01m-deck-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:44:19",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "hold",
+				"floor": "128:11,240:11",
+				"kind": "deck",
+				"level": 0,
+				"name": "貨艙地板",
+				"thick": 1
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "gura-swallow-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:44:19",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "main",
+				"floor": "141:32,205:32,256:37",
+				"kind": "deck",
+				"level": 2,
+				"name": "主甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-cabin",
+			"work": "gura-swallow-01m-deck-cabin",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:44:20",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "cabin",
+				"floor": "104:26,139:26",
+				"kind": "deck",
+				"level": 1,
+				"name": "船尾艙房",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-quarter",
+			"work": "gura-swallow-01m-deck-quarter",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:44:20",
+			"persona": "gura",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "quarter",
+				"floor": "98:45,140:45",
+				"kind": "deck",
+				"level": 3,
+				"name": "後甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "主桅",
+			"work": "gura-swallow-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:50:09",
+			"persona": "gura",
+			"note": "步驟 7（TASK-0968）"
+		},
+		{
+			"name": "艏斜桅",
+			"work": "gura-swallow-01m-bowsprit",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:50:10",
+			"persona": "gura",
+			"note": "步驟 7（TASK-0968）"
+		},
+		{
+			"name": "後桅",
+			"work": "gura-swallow-01m-mast-mizzen",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				400,
+				160,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-10-28T09:50:41",
+			"persona": "gura",
+			"note": "步驟 7（TASK-0968）"
 		}
 	]
 }

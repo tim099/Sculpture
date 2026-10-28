@@ -68,3 +68,47 @@
   - 船殼線形對照（`tools/check_hull.py`，`船殼:end`）：結果帳 47,887 缺 0／多 0／色差 0；210 點差 0；`probe_x=164`（設計那一站 +3）⇒ 報 13 點、最大 3。
   - 引擎 `stats structure=1 mirror=y:80`：1 元件、空腔 0、鏡像差 0。
 - 過程圖 `overlays/stage4_hull_{bowq,sternq,side}.png`。⚠ 艙裡是空的（甲板在步驟 5）。
+
+## 步驟 5 甲板、梯子（2026-10-28）
+設計 plan.json `decks_build`；產生 `design/draft_decks.py`（出處飛魚號，沒改邏輯）⇒ `masks/decks/<層>.vox.txt`、`masks/ladders/<上面那層>.vox.txt`、`ladder_points.json`、`verify_decks.json`、`sheet04_decks_v1.png`；落格 `design/tools/build_decks.py`。
+- 甲板（甲板面 z）：貨艙地板 10（x 128–240）、船尾艙房 25（x ≤ 139）、主甲板 31（舷弧，x 141 起）、後甲板 44（x ≤ 140，蓋住 break 艙壁頂）。
+- 開口：主艙口 ＝ 貨艙梯子的井（x 154–171）、前艙口 200–207（半寬 4）、桅孔 主 r 2.5／後 r 2.0。
+- break：x 140 一道艙壁（艙房地板到後甲板，不開門 —— 主甲板 32 比艙房地板高 0.7 m）＋後甲板邊 5 格胸牆、兩座梯子頭留口。
+- 梯子 4 座（每 3 格一階、每階 2 格、踏板 7 寬）：貨艙→主甲板（井，x 154 往船頭、頭 x 174）、主甲板→後甲板兩舷（dy ±8，x 149 往船尾、頭 x 136）、艙房→後甲板（井，x 124 往船尾、頭 x 106；後桅 x 133 在它前面）。
+- 🩸 v1 貨艙地板 z 8 ⇒ 貼著平船底內面、只剩中間一條 645 格 ⇒ z 10（2,391 格）；v1 後甲板梯子 xs 150 ⇒ 梯腳落在第 1 門砲的砲道（x 150–154）、兩舷各擋 1 格；v2 148 ⇒ 最後一階壓在後甲板邊的實心上 ⇒ 149。
+- 子作品（parent 船殼、tags sub、0.1 m、400×160×320、at 0,0,0）：`-deck-{hold,cabin,main,quarter}`、`-ladders-{main,quarter}`（關聯 `梯子`，meta kind=ladders；固定點 `<梯名>.foot／lo／hi／head`）。
+- **甲板 meta**（§9.3，`design/decks_meta.tsv`）：每層 `export format=vxk links=none` ⇒ Blockside `src/decks.py` 量（第二把尺）：貨艙 11、艙房 26、主甲板 141:32,205:32,256:37、後甲板 45 ＝ 設計（甲板面 ＋1）；兩頭太窄取樣點湊不到 ⇒ 範圍照設計（貨艙 128–240、艙房 104–139、後甲板 98–140）。level：hold 0、cabin 1、main 2、quarter 3。
+- 預覽 preset：`藏船殼`。過程圖 `overlays/stage5_decks.png`。
+讀數：
+- 設計那一側：零件重疊 0、跟船殼重疊 0、每件鏡像差 0、梯子點問題 0、砲門往艙裡被擋 0。
+- **結果帳**（`tools/check_decks.py`，每件從匯出讀）：6 件 10,963 格，缺 0、多 0、色差 0；跟船殼重疊 0、彼此重疊 0；梯子點 16／16、跟設計差 0。
+- 組裝件 `stats structure=1 mirror=y:80`：1 元件（58,376）、空腔 0、鏡像差 0。
+- **反向對照**：`draft_decks.py --probe=drop_ladder=quarter-S` ⇒ 3 座；後甲板、主甲板的 reach 少 quarter-S。
+
+## 步驟 6 裝飾（2026-10-28）
+設計 plan.json `deco`；產生 `design/draft_deco.py`（出處飛魚號；`fish()` 換成 `swallow()`）⇒ `masks/deco/{figurehead,emblem_paint}.vox.txt`、`masks/glass/carve_behind.vox.txt`、`verify_deco.json`、`sheet05_deco_v1.png`；讀數 `design/tools/check_deco.py`。
+- 船首像 `-figurehead`（外部模型 `船首像`，meta deco=1，88 格）：一隻 0.8 m 的燕子（＋燕尾 0.4 m），尾巴貼著艏柱（z 38）、頭往前；翅膀往後掠、兩邊各張 0.7 m；藏青 37 的背、白腹 218、紅褐的喉 164、眼與嘴 36。在艏斜桅底下（撞艏斜桅 0）；燕尾插進艏柱的 6 格不放。
+- 艉板金燕（船殼換色 39 格，標記 `裝飾`）：窄平艉板正中一隻金色燕子剪影（燕尾在下、翅膀張開、左右對稱），z 38–47（兩扇窗 z 32–35 的上面），只塗原本是紅 160 的格。
+- 船尾窗玻璃（Ship_Materials §9.5）：船殼色 87 的 24 格 `work sub=split … confirm=1` ⇒ `-stern-glass`「燕子號 船尾窗玻璃」（雙生關聯 `船殼-窗玻璃`，meta material=glass；拆前拆後外觀不變）；玻璃後面那層內板刻穿 24 格（顏色守門）⇒ 玻璃往船頭那一格在組裝件裡空 24／24（後面是船長艙）。
+- 船尾燈：步驟 10 照後桅三角帆桁會不會掃到再定。
+讀數：
+- 設計：船首像撞船殼 0、撞艏斜桅 0、鏡像差 0；金燕鏡像差 0、跳過 0。
+- **結果帳**（check_deco，作品從匯出讀）：船殼 47,365 ＝ `裝飾:begin` ＋ 金燕換色 − 刻 24 − 拆出去的玻璃 24，缺 0／多 0／色差 0；窗玻璃 24、船首像 88 同清單。
+- 組起來（引擎 stats）：58,352 格、1 元件、空腔 0、鏡像差 0。
+- **反向對照**：`--probe=emblem_dy=3`（金燕整隻往右舷偏 3）⇒ 鏡像差 0 → 30。
+- 產生程式重跑（`--mark=裝飾:begin`）：5 個輸出檔逐位元組相同。過程圖 `overlays/stage6_deco_{bowq,sternq}.png`。
+
+## 步驟 7 桅與帆桁（2026-10-28）
+設計 plan.json `masts`、`rig_build`；產生 `design/draft_masts.py`（出處飛魚號，沒改邏輯；lateen 的寫法是拉貝爾號那套）⇒ `masks/masts/{mast-main,mast-mizzen,bowsprit}.vox.txt`、`masks/yards/lateen-mizzen.vox.txt`、`yards_placement.json`、`yards_lateen.json`、`verify_masts.json`、`sheet06_masts_v1.png`；落格 `design/tools/build_masts.py`；讀數 `design/tools/check_stage6.py`（兩支都加了後桅）。
+- 主桅 `-mast-main`（1,886 格）：x 185、後傾 2°、腳 z 7（keelson）、下桅頂（平台）141、上桅頂 223；直徑 0.44 → 0.32 m、上桅 0.26 → 0.16 m；桅頂 trestletrees＋crosstrees（半長 6，沒有桅樓平台 ⇒ 派不出桅頂水手）。
+- 後桅 `-mast-mizzen`（490 格）：x 133、後傾 4°、腳 z 7、頂 117（後甲板上 7.3 m）；直徑 0.26 → 0.2 m。桅腳在 z 8 那 2 格碰到船尾 deadwood 上的內板 ⇒ 讓給船殼（腳坐在船底上）。
+- 艏斜桅 `-bowsprit`（741 格）：腳 (238, 40)、仰 26°、9.5 m、尖 (323, 82)；從艏柱頭上越過去（艏斜桅孔 0 格）；腳下墊木 x 236–241。
+- 帆桁（外部模型，放在各自的桅子作品裡）：
+  - `yard-main-course` 13.1 m ← 憲法號 main-royal 只沿長度 ×1.41，z 129、brace −15；`yard-main-topsail` 7.2 m ← mizzen-royal ×1.11，z 209、brace −17。
+  - `yard-mizzen-lateen` 7.9 m（本船自己的子作品 `-yard-mizzen-lateen`，527 格、固定點 13）：前低後高 40°、掛點在前端往後 40%；前端 (149.5, z 80)、後端 (90.5, z 130)，伸出船尾 0.43 m；meta yard=gaff、rig=lateen。
+- 🩸 v1 build_masts 照飛魚號只建主桅 ⇒ 後桅沒建、lateen 模型的 host 不存在，sub=model 的 exit 2 被 ok=(0, 2) 吞掉、還印「帆桁模型 3 根」⇒ MASTS 加後桅；每根桅子作品的模型清單讀回：主桅 2、後桅 1。
+讀數：
+- **結果帳**（check_stage6）：主桅 1,886、後桅 490、艏斜桅 741 缺 0／多 0／色差 0；船殼 ＝ `裝飾:end` 差 0；帆桁模型 3 根 meta 與來源固定點問題 0；帆桁撞格 0。
+- 組起來（引擎 stats）：61,469 格、1 元件、空腔 0、鏡像差 0。
+- **反向對照**：`--probe=pivot=yard-main-course:-95`（course 降 9.5 m 到舷牆的高度）⇒ 撞格 0 → 60，其他 0（−75 只降到 z 54、還在舷牆上面 ⇒ 0，尺沒問題、是探得太淺）。
+- 產生程式重跑：8 個輸出檔逐位元組相同。過程圖 `overlays/stage7_masts.png`。

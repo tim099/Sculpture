@@ -20,7 +20,7 @@ def ledger(work, path, label):
     print('%-22s 作品 %6d、設計 %6d、缺 %d、多 %d、色差 %d' % (label, len(cw), len(cd), len(set(cd) - set(cw)), len(set(cw) - set(cd)), sum(1 for k in set(cd) & set(cw) if cd[k] != cw[k])))
 
 
-for nm in ('mast-main', 'bowsprit'):          # 燕子號：單桅
+for nm in ('mast-main', 'mast-mizzen', 'bowsprit'):          # 燕子號：ketch 兩根桅＋艏斜桅
     ledger('%s-%s' % (HULL, nm), os.path.join(design, 'masks', 'masts', nm + '.vox.txt'), nm)
 for k in ():                                 # 燕子號：沒有 lateen
     ledger('%s-yard-%s-lateen' % (HULL, k), os.path.join(design, 'masks', 'yards', 'lateen-%s.vox.txt' % k), 'yard-%s-lateen' % k)
