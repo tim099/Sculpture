@@ -8,7 +8,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
 HULL = 'gura-pinas-01m'
 ASM = HULL + '-assembly'
-WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
 RB = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))['rudder_anchor_build']
 PL = json.load(open(os.path.join(design, 'rudder_anchor_placement.json'), encoding='utf-8'))
 

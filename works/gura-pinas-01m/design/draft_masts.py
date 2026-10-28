@@ -28,7 +28,7 @@ def main():
     YC = L.YC
     RB = plan['rig_build']
     C = RB['colors']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
     A = export_list('gura-pinas-01m-assembly', None, links=None)
     own = set()                                                  # 本階段自己的件（重產時扣掉，別把自己當成船）
     for nm in ('mast-fore', 'mast-main', 'mast-mizzen', 'bowsprit'):

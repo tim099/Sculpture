@@ -26,6 +26,226 @@ FONT = {  # 3×5，列由上往下
 }
 
 
+def chain6(pts):
+    """相鄰兩點（x 差 1）連成 6 連通：先往前一格、再在新的那一欄補 dy 與 z（船頭往前收 ⇒ 補的格在新那一欄的船殼外面）"""
+    out = []
+    for i, p in enumerate(pts):
+        if i:
+            _, y, z = out[-1]
+            x1, y1, z1 = p
+            while y != y1:
+                out.append((x1, y, z))
+                y += 1 if y1 > y else -1
+            while z != z1:
+                out.append((x1, y, z))
+                z += 1 if z1 > z else -1
+        out.append(p)
+    return out
+
+
+def galjoen_v2(V, F, xs0, Hl, L, YC, put, both, R):
+    """TASK-0967 船頭 v2（Tim 2026-10-28「967 參考 TASK-1045 船頭…優化一下」「可以只優化船頭」「開個門可以走到船頭」）：
+    照 Witsen 1671 的 galjoen（研究筆記 references/research_pinas_bow_2026-10-28.md）——
+    平台（uitlegger 上的格柵、側板、前面一欄封）從艏柱往前漸升；knee 從首柱填到平台底；每側三條 regelingen 從 cathead 底下沿船頭兩舷往前、
+    跟著平台往上收到 es 底下；4 根 head timber（knies，第 1 根貼艏柱、每 2 呎一根）；兩道 cheek 夾一條 trailboard（kam）；
+    最上一條 rail 的後端是撐 cathead 的金人頭（mans hooft）；cathead；獅子背上 2'2" 的 es 渦卷。
+    船殼的外形只拿船殼算（Ship_Ends §4.4：拿組裝件算 ⇒ 貼到錨架外面）。回傳平台頂 z 的函式（獅子的腳踩在上面）。"""
+    hout, hfwd, htop = {}, {}, {}
+    for x, y, z, c in Hl.tolist():
+        if x < 470:
+            continue
+        dy = abs(y - YC)
+        if dy > hout.get((x, z), -1):
+            hout[(x, z)] = dy
+        if dy == 0 and x > hfwd.get(z, -1):
+            hfwd[z] = x
+        if z > htop.get(x, -1):
+            htop[x] = z
+    ho = lambda x, z: hout.get((x, min(z, htop.get(x, z))), -1)        # 舷頂以上 ⇒ 照舷頂那一格的半寬（rail 沿著降下來的船首上緣走，不會跑到中線）
+    lin_c = {}
+
+    def inhull(x, dy, z):
+        """作品的格 ∪ 線形外形 —— bak 底下的砲門（x 513–518）整欄刻開，只看作品會把平台鋪進艙裡"""
+        if dy <= hout.get((x, z), -1):
+            return True
+        if (x, z) not in lin_c:
+            top = float(L.top_z(x + 0.5))
+            lin_c[(x, z)] = float(L.hb(np.array([x + 0.5]), np.array([z + 0.5]))[0]) if z + 0.5 <= top + 0.5 else -1.0
+        return dy <= lin_c[(x, z)]
+    P = V['platform']
+    th = P['thick']
+    tip = xs0 + V['len_beyond_stem']
+    x_from = P['x_from']
+    ztf = lambda x: P['top_z'] + int(math.floor(P['rise'] * max(0.0, min(1.0, (x - xs0) / float(tip - xs0))) ** P['rise_pow'] + 0.5))
+    hw = lambda x: P['half_tip'] + (P['half_root'] - P['half_tip']) * max(0.0, (tip - x) / float(tip - x_from)) ** P['taper_pow']
+    # ── 平台：中間格柵（每 3 格一條深色）、最外兩格素的甲板色；船殼佔的格跳過 ⇒ 圍著圓船頭接成一圈 ──
+    edge = {}
+    for x in range(x_from, tip + 1):
+        w = int(math.floor(hw(x) + 0.5))
+        zt = ztf(x)
+        for dy in range(0, w + 1):
+            for z in range(zt - th + 1, zt + 1):
+                if inhull(x, dy, z):
+                    continue
+                grate = z == zt and dy <= w - 2 and (x % 3 == 0 or dy % 3 == 0)
+                both('galjoen', x, dy, z, TRIM if (z < zt or grate) else DECK)
+        if not inhull(x, w, zt):
+            edge[x] = w
+    # ── 側板：平台外緣往下包 skirt.h 格、上下兩條金；寬度往前收的地方補台階（面相接）；最前面那一欄整片封、底下不封 ──
+    S = P['skirt']
+    for x in sorted(edge):
+        e = edge[x]
+        e2 = edge.get(x + 1, e)
+        zt = ztf(x)
+        zs0 = zt - th - S['h'] + 1
+        dys = range(0, e + 1) if x == tip else range(min(e, e2), e + 1)
+        for dy in dys:
+            for z in range(zs0, zt - th + 1):
+                if not inhull(x, dy, z):
+                    both('galjoen', x, dy, z, GOLD if z in (zs0, zt - th) and dy == e else TRIM)
+    # ── knee（scheg）：首柱前緣填到前緣曲線（從 from_z 的首柱掃到喙尖往後 back 格的平台底）；只填到那一欄的平台底；水線（wl）以下跟船底同色 ──
+    K = V['knee']
+    tipk = tip - K['back']
+    z0k, z1k = K['from_z'], ztf(tipk) - th
+    prof = {}
+    for z in range(z0k, z1k + 1):
+        u = (z - z0k) / float(z1k - z0k)
+        xa = hfwd.get(z, xs0) + 1
+        xf = int(math.floor(xa + (tipk - xa) * u ** K['pow'] + 0.5))
+        for x in range(xa, max(xa, xf) + 1):
+            if z <= ztf(x) - th:
+                prof[(x, z)] = K['below'] if z < K['wl'] else TRIM
+    # trailboard：knee 兩側沿前下緣往裡 K['line'] 格一條金線（水線上 2 格起）
+    edge2 = [(x, z) for (x, z) in prof if ((x + 1, z) not in prof and z < ztf(x + 1) - th) or ((x, z - 1) not in prof and x > hfwd.get(z - 1, -10 ** 6))]
+    dist = {p: 0 for p in edge2}
+    q = list(edge2)
+    while q:
+        nq = []
+        for (x, z) in q:
+            for ddx in (-1, 0, 1):
+                for ddz in (-1, 0, 1):
+                    n = (x + ddx, z + ddz)
+                    if n in prof and n not in dist:
+                        dist[n] = dist[(x, z)] + 1
+                        nq.append(n)
+        q = nq
+    side = {}
+    for (x, z), c in prof.items():
+        for dy in range(0, K['half'] + 1):
+            gl = dy == K['half'] and dist.get((x, z)) == K['line'] and z >= K['line_from_z']
+            both('galjoen', x, dy, z, GOLD if gl else c)
+            if dy == K['half'] and not gl:
+                side[(x, z)] = c
+    # ── cheek（W：兩道 kniehout，6 呎與 5½ 呎）：船頭兩舷貼著船殼往前、過了首柱沿 knee 兩側再往前（不超過 knee 那一高度的前緣往裡 2 格）──
+    R['cheeks'] = []
+    cz = []
+    for ch in V['cheeks']:
+        pts = []
+        for x in range(ch['x0'], ch['x1'] + 1):
+            t = (x - ch['x0']) / float(ch['x1'] - ch['x0'])
+            z = int(round(ch['z0'] - ch['drop'] * t ** ch['pow']))
+            if x <= hfwd.get(z, -1):
+                dy = max(hout.get((x, z), -1), hout.get((x, z + 1), -1)) + 1
+            elif (x + 2, z) in prof and (x + 2, z + 1) in prof:
+                dy = K['half'] + 1
+            else:
+                break
+            pts.append((x, dy, z))
+        cells = chain6(pts)
+        inside = 0
+        for (x, dy, z) in cells:
+            for zz in (z, z + 1):
+                if dy > hout.get((x, zz), -1):
+                    both('galjoen', x, dy, zz, GOLD)
+                else:
+                    inside += 1                                       # 從船殼側轉到 knee 側那一步補的格落在首柱裡 ⇒ 不放（船殼本身接得上）
+        cz.append({x: z for (x, dy, z) in pts})
+        R['cheeks'].append({'cells': len(cells), 'x': [pts[0][0], pts[-1][0]], 'in_hull_dropped': inside})
+    # kam（W：兩道 cheek 中間雕花的 trailboard）：knee 側面、兩道 cheek 中間那一段 —— 底色＋每 4 格一個金點的卷草
+    KM = V['kam']
+    nk = 0
+    hi, lo = cz[0], cz[1]
+    for x in sorted(set(hi) & set(lo)):
+        for z in range(lo[x] + 2, hi[x]):
+            if (x, z) in side:
+                both('galjoen', x, K['half'], z, KM['dot'] if (x + 2 * z) % 4 == 0 else KM['color'])
+                nk += 1
+    R['kam_cells_per_side'] = nk
+    # ── regelingen（W p.86–87：每側 3 條）：平台外緣上 h 格（平台還在船殼裡的地方 ⇒ 貼船殼外一格）；後段往 cathead 底下翹 up·((x_l − x)/(x_l − x_h))²；
+    #    2 格高（下面 color、上面金）——遊戲：最上一條在平台上 8 格、條與條之間 1 格縫 ⇒ 第一人稱踩不上去（W 的格柵在中間那條的頂，這裡照遊戲抬高）──
+    R['rails'] = []
+    tops, rz = {}, []
+    for r in V['rails']:
+        pts = []
+        for x in range(r['x_h'], r['x_e'] + 1):
+            bump = r['up'] * ((r['x_l'] - x) / float(r['x_l'] - r['x_h'])) ** 2 if x < r['x_l'] else 0.0
+            z = ztf(x) + r['h'] + int(math.floor(bump + 0.5))
+            dy = max(edge.get(x, -1), ho(x, z) + 1, ho(x, z + 1) + 1)
+            pts.append((x, dy, z))
+        cells = chain6(pts)
+        for (x, dy, z) in cells:
+            both('galjoen', x, dy, z, r['color'])
+            both('galjoen', x, dy, z + 1, GOLD)
+            if x in edge and dy == edge[x]:
+                tops[x] = max(tops.get(x, -1), z + 1)
+        rz.append(pts)
+        R['rails'].append({'cells': len(cells), 'above_deck': sorted({z - ztf(x) for (x, dy, z) in pts if x in edge})[:3]})
+    # head timber（knies）：第 1 根貼艏柱、之後每 every 格一根，n 根；平台外緣、從平台面立到最上一條 rail
+    HT = V['timbers']
+    nt = []
+    for k in range(HT['n']):
+        x = xs0 + 1 + k * HT['every']
+        if x in tops:
+            for z in range(ztf(x) + 1, tops[x]):
+                both('galjoen', x, edge[x], z, HT['color'])
+            nt.append(x)
+    R['timbers'] = nt
+    # 撐 cathead 的金人頭（mans hooft）：最上一條 rail 的後端
+    MH = V['mans_head']
+    x_, dy_, z_ = rz[-1][0]
+    cx, cdy, czz = x_ + MH['dx'], dy_ + MH['ddy'], z_ + MH['dz']
+    for x in range(int(cx - 3), int(cx + 4)):
+        for dy in range(int(cdy - 3), int(cdy + 4)):
+            for z in range(int(czz - 3), int(czz + 4)):
+                if (x + 0.5 - cx) ** 2 + (dy - cdy) ** 2 + (z + 0.5 - czz) ** 2 <= MH['r'] ** 2 and dy > ho(x, z):
+                    both('galjoen', x, dy, z, GOLD)
+    # cathead（W：比欄杆外突 2 呎、8 × 10 吋）：bak 前角舷外一根方木、斜往前往外；端面金
+    CT = V['cathead']
+    a = math.radians(CT['deg'])
+    dy0 = ho(CT['x'], CT['z'])                                           # 基點：bak 前角那一欄的舷外；從這裡沿（sin, cos）方向每半格取一次 ⇒ 方木一整根連著
+    cat = {}
+    for i in range(0, 2 * CT['len'] + 1):
+        t = i / 2.0
+        for j in range(-2 * CT['half'], 2 * CT['half'] + 1):
+            dd = j / 2.0
+            x = int(math.floor(CT['x'] + t * math.sin(a) + dd * math.cos(a) + 0.5))
+            dy = int(math.floor(dy0 + t * math.cos(a) - dd * math.sin(a) + 0.5))
+            for z in range(CT['z'] - CT['half'], CT['z'] + CT['half'] + 1):
+                if dy > ho(x, z):
+                    cat[(x, dy, z)] = GOLD if t >= CT['len'] - 1 else CT['color']
+    for (x, dy, z), c in cat.items():
+        both('galjoen', x, dy, z, c)
+    R['cathead_cells_per_side'] = len(cat)
+    # es（W：獅子背上 2'2" 的渦卷）：獅子身體中段上 h 格一圈金環（中線兩格厚）、一根金柱接回獅背 —— regelingen 收到它底下
+    ES = V['es']
+    xr, ln, rs = F['x'], F['len'], F['raise']
+    zc = lambda x: ztf(x) + 4 + rs * (x - xr) / float(ln)
+    ex = xr + ES['dx']
+    back = int(zc(ex) + 3.2)
+    ez = back + ES['h']
+    for x in range(int(ex - ES['r'] - 2), int(ex + ES['r'] + 3)):
+        for z in range(int(ez - ES['r'] - 2), int(ez + ES['r'] + 3)):
+            d = math.hypot(x - ex, z - ez)
+            if ES['r'] - 0.7 <= d <= ES['r'] + 0.7:
+                for dy in (0, 1):
+                    both('galjoen', x, dy, z, GOLD)
+    for z in range(back + 1, int(ez - ES['r'] + 1)):
+        for dy in (0, 1):
+            both('galjoen', ex, dy, z, GOLD)
+    R.update({'top_z': [ztf(xs0), ztf(tip)], 'tip': tip, 'edge_x': [min(edge), max(edge)], 'knee_cells_2d': len(prof), 'es': [ex, ez]})
+    return ztf
+
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     design = sys.argv[1]
@@ -33,7 +253,7 @@ def main():
     plan = HL.load_plan(design)
     L = HL.Lines(plan)
     YC = L.YC
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
     A = export_list('gura-pinas-01m-assembly', None, links=None)
     # 船 ＝ 組裝件扣掉本步驟自己的件（已經落過一次的話；收穫號 v1 沒扣 ⇒ 重產時把舊裝飾當成船）
     own = set()
@@ -72,6 +292,7 @@ def main():
         if x >= 400 and y == YC and x > fwd.get(z, -1):
             fwd[z] = x
     parts = {}
+    R_v2 = {}
 
     def put(part, x, y, z, c):
         parts.setdefault(part, {})[(int(x), int(y), int(z))] = c
@@ -84,36 +305,40 @@ def main():
     E = plan['espolon']
     F = plan['figurehead']
     xs0 = int(math.floor(float(L.x_stem(80)) + 0.5)) - 1           # 艏柱前緣那一格（z 73.6 以上直立）
-    tip = xs0 + E['len_beyond_stem']
-    zt, th = E['deck_top_z'], E['thick']
-    wpar = lambda x: E['half_at_tip'] + (E['half_at_stem'] - E['half_at_tip']) * (1 - (x - xs0) / float(E['len_beyond_stem'])) ** E['taper_pow']
-    for x in range(xs0 + 1, tip + 1):
-        w = int(math.floor(wpar(x) + 0.5))
-        for dy in range(0, w + 1):
-            for z in range(zt - th + 1, zt + 1):
-                both('galjoen', x, dy, z, DECK if z == zt else TRIM)
-        for z in range(zt + 1, zt + 1 + E['rail_h']):
-            cap = z == zt + E['rail_h']
-            if x > F['x'] - 6:
-                continue                                              # head rail 停在獅子後面（收穫號 v1 跟船首像重疊）
-            if cap or (x - xs0) % E['stanchion_every'] == 0:
-                both('galjoen', x, w, z, GOLD if cap else WOOD)
-            if cap:                                                   # 寬度往前收的地方補台階 ⇒ 頂條面相接（收穫號 v1 只在斜角相接）
-                w2 = int(math.floor(wpar(x + 1) + 0.5))
-                for dy in range(w2, w):
-                    both('galjoen', x, dy, z, GOLD)
-    z_cw0 = E['cutwater_from_z']
-    for z in range(z_cw0, zt - th + 1):
-        u = (z - z_cw0) / float(zt - th + 1 - z_cw0)
-        xa = fwd.get(z, xs0) + 1
-        xf = int(math.floor(xa + (tip - xa) * u ** E['cutwater_pow'] + 0.5))
-        for x in range(max(xa, xf - E['cutwater_band']), max(xa, xf) + 1):
-            for dy in range(0, E['cutwater_half'] + 1):
-                both('galjoen', x, dy, z, GOLD if xf - x == 2 and dy == E['cutwater_half'] else TRIM)
+    if E.get('v2'):                                                   # TASK-0967 船頭 v2：plan 有 espolon.v2 才走（沒有 ⇒ 下面 v1 一格不變）
+        ztf = galjoen_v2(E['v2'], F, xs0, Hl, L, YC, put, both, R_v2)
+    else:
+        tip = xs0 + E['len_beyond_stem']
+        zt, th = E['deck_top_z'], E['thick']
+        ztf = lambda x: zt
+        wpar = lambda x: E['half_at_tip'] + (E['half_at_stem'] - E['half_at_tip']) * (1 - (x - xs0) / float(E['len_beyond_stem'])) ** E['taper_pow']
+        for x in range(xs0 + 1, tip + 1):
+            w = int(math.floor(wpar(x) + 0.5))
+            for dy in range(0, w + 1):
+                for z in range(zt - th + 1, zt + 1):
+                    both('galjoen', x, dy, z, DECK if z == zt else TRIM)
+            for z in range(zt + 1, zt + 1 + E['rail_h']):
+                cap = z == zt + E['rail_h']
+                if x > F['x'] - 6:
+                    continue                                              # head rail 停在獅子後面（收穫號 v1 跟船首像重疊）
+                if cap or (x - xs0) % E['stanchion_every'] == 0:
+                    both('galjoen', x, w, z, GOLD if cap else WOOD)
+                if cap:                                                   # 寬度往前收的地方補台階 ⇒ 頂條面相接（收穫號 v1 只在斜角相接）
+                    w2 = int(math.floor(wpar(x + 1) + 0.5))
+                    for dy in range(w2, w):
+                        both('galjoen', x, dy, z, GOLD)
+        z_cw0 = E['cutwater_from_z']
+        for z in range(z_cw0, zt - th + 1):
+            u = (z - z_cw0) / float(zt - th + 1 - z_cw0)
+            xa = fwd.get(z, xs0) + 1
+            xf = int(math.floor(xa + (tip - xa) * u ** E['cutwater_pow'] + 0.5))
+            for x in range(max(xa, xf - E['cutwater_band']), max(xa, xf) + 1):
+                for dy in range(0, E['cutwater_half'] + 1):
+                    both('galjoen', x, dy, z, GOLD if xf - x == 2 and dy == E['cutwater_half'] else TRIM)
     # ── 船首像：紅獅子（W p.85：長 9 呎、厚 19 duim、前端翹起 2'7"）——趴在喙尖上、往前往上翹 ──
     xr, ln, ht, rs = F['x'], F['len'], F['half_t'], F['raise']
     xf_ = xr + ln
-    zc = lambda x: zt + 4 + rs * (x - xr) / float(ln)               # 身體中線的高度
+    zc = lambda x: ztf(x) + 4 + rs * (x - xr) / float(ln)           # 身體中線的高度（v2 的平台往前升 ⇒ 跟著那一欄的平台頂）
     body, mane, crown, eye = F['body'], F['mane'], F['crown'], F['eye']
     for x in range(xr + 2, xf_ - 4):                                   # 身體（橢圓截面：半厚 ht、半高 3.2）
         for z in range(int(zc(x) - 4), int(zc(x) + 5)):
@@ -141,7 +366,7 @@ def main():
     for x0_, x1_ in ((xr + 3, xr + 6), (xf_ - 9, xf_ - 6)):           # 後腳、前腳：從喙的甲板面往上接到身體
         for x in range(x0_, x1_ + 1):
             for dy in (1, 2):
-                for z in range(zt + 1, int(zc(x)) + 1):
+                for z in range(ztf(x) + 1, int(zc(x)) + 1):
                     both('figurehead', x, dy, z, body)
     for k, z in enumerate(range(int(zc(xr)), int(zc(xr)) + 7)):        # 尾巴：從屁股往後上翹，尾端一撮金
         put('figurehead', xr + 2 - k // 3, YC, z, mane if k >= 5 else body)
@@ -299,9 +524,23 @@ def main():
                 put('hackebort', face[(dy, z)], YC + dy, z, SH[ch])
     # 裝飾不蓋船的格：落在佔用格上的照實數出來、不放
     skipped = {}
+    if R_v2:                                                            # galjoen v2 跟船殼、其他件圍出來的封閉空氣（6 連通、框外擴 3 格）⇒ 補進 galjoen（Ship_Ends §4.3 填縫）
+        from scipy import ndimage
+        gk = np.array(list(parts['galjoen']))
+        lo_, hi_ = gk.min(axis=0) - 3, gk.max(axis=0) + 3
+        sol = np.zeros(tuple(hi_ - lo_ + 1), bool)
+        for k in list(occ) + [k for nm_ in parts for k in parts[nm_]]:
+            if all(lo_[i] <= k[i] <= hi_[i] for i in range(3)):
+                sol[k[0] - lo_[0], k[1] - lo_[1], k[2] - lo_[2]] = True
+        cav = ndimage.binary_fill_holes(sol) & ~sol
+        for (i, j, k) in np.argwhere(cav).tolist():
+            put('galjoen', i + lo_[0], j + lo_[1], k + lo_[2], TRIM)
+        R_v2['cavity_filled'] = int(cav.sum())
     for nm in list(parts):
         bad = [k for k in parts[nm] if k in occ]
         skipped[nm] = len(bad)
+        if bad and R_v2:
+            R_v2.setdefault('skipped_sample', {})[nm] = sorted(bad)[:12]
         for k in bad:
             del parts[nm][k]
     if probe:
@@ -310,6 +549,8 @@ def main():
 
     # ── 讀數 ──
     R = {'parts': {}, 'skipped_on_ship': skipped}
+    if R_v2:
+        R['galjoen_v2'] = R_v2
     allk = {}
     for nm, cells in parts.items():
         ks = set(cells)

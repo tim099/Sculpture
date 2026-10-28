@@ -104,7 +104,7 @@ for m in models:
 # ── 桅頂（照 Blockside 10_ship.js findMasts ＋ 40_crew.js topSpot）：每根桅最低的橫帆桁（沒有 ⇒ 最低的非 boom 帆桁）吊點 ⇒ 桅的 x（吊點 ±45 內、
 #    吊點下 10–40 格、中線 ±4 格子最多的那一欄）；從吊點高度往上，第一層「半徑 9／12／15／18、16 個角度」有 6 個以上站得住（腳下實心、頭頂 14 格空）的平台 ──
 CY = 160
-WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
 ys = {}
 for f in sorted(os.listdir(WORKS)):
     if f.startswith('gura-pinas-01m-mast-') or f == 'gura-pinas-01m-bowsprit':

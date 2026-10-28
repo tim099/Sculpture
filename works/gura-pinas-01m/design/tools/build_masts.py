@@ -8,7 +8,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
 HULL = 'gura-pinas-01m'
 ASM = HULL + '-assembly'
-WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
 MASTS = [('mast-fore', '前桅', '藍鯊號 前桅（fokkemast＋steng＋bramsteng）'), ('mast-main', '主桅', '藍鯊號 主桅（grote mast＋steng＋bramsteng）'),
          ('mast-mizzen', '後桅', '藍鯊號 後桅（bezaansmast＋kruissteng）'), ('bowsprit', '艏斜桅', '藍鯊號 艏斜桅（boegspriet＋blinde steng）')]
 

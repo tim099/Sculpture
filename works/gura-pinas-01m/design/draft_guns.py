@@ -30,7 +30,7 @@ def main():
     plan = HL.load_plan(design)
     GB = plan['guns_build']
     S = GB['search']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
     A = export_list(GB['assembly'], None, links=None)
     G = Grid(A)
     H = export_list(GB['hull'], None)

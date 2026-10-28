@@ -148,6 +148,21 @@ def main():
     carve |= stern_open
     glass &= ~carve
     carve |= glass                      # 玻璃從船殼拿出來、另做一件子作品（關聯 meta material=glass）⇒ masks/glass/stern_glass.vox.txt
+    # ── TASK-0967 船頭 v2（plan 有 ports.bow_gangway 才做）：艏柱上緣中線開一道缺口 —— bak 前隔板的門外（露天的上甲板）直接走上 galjoen 平台；
+    #    兩旁的船首上緣比平台高 7 格以上 ⇒ 第一人稱踩不上去（不然沿著舷頂走到 regelingen 頂上）；缺口兩側與底那一圈外板描金 ──
+    GW = plan['ports'].get('bow_gangway')
+    if GW:
+        sl = (slice(GW['x_from'] - x0, nx), slice(YC - GW['dy'] - ylo, YC + GW['dy'] + 1 - ylo), slice(GW['z0'], nz))
+        carve[sl] |= wall[sl]
+        fr = (slice(GW['x_from'] - x0, nx), slice(YC - GW['dy'] - 1 - ylo, YC + GW['dy'] + 2 - ylo), slice(GW['z0'] - 1, nz))
+        frame[fr] |= wall[fr] & (dist[fr] <= 1.0)
+        # 船頭補實：艏柱那一段（x ≥ fill_x）的船殼裡面，z fill_z0 以上除了缺口那條走道全部填實 —— 圓船頭的內面一層一層往上收、像台階（x 533 量到 1→3→6 格），
+        # 第一人稱踩著它爬上舷頂、再走上 regelingen ⇒ 補成直的牆（tools/hull_expected.py「船頭補實」那一步加進船殼）
+        zz3 = np.arange(nz)[None, None, :]
+        corridor = (np.abs(dy_of) <= GW['dy'])[None, :, None] & (zz3 >= GW['z0'])
+        fz = (slice(GW['fill_x'] - x0, nx), slice(None), slice(GW['fill_z0'], nz))
+        bow_fill = np.zeros(wall.shape, bool)
+        bow_fill[fz] = S[fz] & ~wall[fz] & ~corridor[:, fz[1], fz[2]]
     paint[frame & ~carve] = GOLD
     paint[carve] = 0
     changes = (paint > 0) & wall & (paint != col)
@@ -213,6 +228,10 @@ def main():
     os.makedirs(og, exist_ok=True)
     n3, h3 = dump(os.path.join(og, 'stern_glass.vox.txt'), glass, gcol, '# 藍鯊號 船尾窗玻璃（1 格厚、後面是空的；子作品 -stern-glass，關聯 meta material=glass）\n')
     R['lists'] = {'carve': [n1, h1], 'paint': [n2, h2], 'glass': [n3, h3]}
+    if GW:
+        n4, h4 = dump(os.path.join(out, 'bow_fill.vox.txt'), bow_fill, np.full(wall.shape, plan['hull_build']['inner_color'], np.uint8),
+                      '# 藍鯊號 船頭補實（TASK-0967 船頭 v2；艏柱那一段船殼裡面除了走道填實 ⇒ 直的牆；tools/hull_expected.py 加進船殼）\n')
+        R['lists']['bow_fill'] = [n4, h4]
     # 圖紙：右舷側面＋船尾正面
     sc = 2.0
     Wp = int(nx * sc) + 120 + int(ny * sc) + 80

@@ -50,7 +50,7 @@ def main():
     YC = L.YC
     RG = plan['rigging']
     RB = plan['rig_build']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
     YP = json.load(open(os.path.join(design, 'yards_placement.json'), encoding='utf-8'))
     M = {m['key']: m for m in LY.masts(plan, L)}
     A = export_list('gura-pinas-01m-assembly', None, links=None)
@@ -180,7 +180,7 @@ def main():
     BA['sprit-top'] = [int(math.floor(sx)), YC, int(math.floor(sz0 + st_len)) - 1]
     # ── 船首喙的 bobstay 腳：cutwater 最前面那一格 ──
     gal = {tuple(r[:3]) for r in export_list('gura-pinas-01m-galjoen', None).tolist()}
-    for i, z in enumerate((45, 58), 1):
+    for i, z in enumerate(RB.get('bobstay_z', (45, 58)), 1):        # TASK-0967 船頭 v2：腳的高度照 plan（喙尖底下是平台側板與獅子 ⇒ 腳要在 knee 前緣、繩從獅子後面上去）
         xf = max(x for (x, y, zz) in gal if y == YC and zz == z)
         anchors['galjoen']['bobstay-%d' % i] = [xf, YC, z]
     # ── 船殼上的點：舷頂（那一欄最外那一格）——帆腳索、tack、三角帆 sheet、艏斜桅 shroud ──

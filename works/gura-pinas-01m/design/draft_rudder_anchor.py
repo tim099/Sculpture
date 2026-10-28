@@ -22,7 +22,7 @@ def main():
     RB = plan['rudder_anchor_build']
     RU, AN, HW = RB['rudder'], RB['anchor'], RB['hawse']
     YC = plan['space']['yc']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
     A = export_list('gura-pinas-01m-assembly', None, links=None)
     own = set()
     if os.path.exists(os.path.join(WORKS, AN['gear_work'], 'work.json')):

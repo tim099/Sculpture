@@ -7,7 +7,7 @@ import json, os, re, subprocess, sys
 sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
 HULL = 'gura-pinas-01m'
-WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
 PL = json.load(open(os.path.join(design, 'galley_placement.json'), encoding='utf-8'))
 sys.path.insert(0, os.path.join(design, 'tools'))
 from wio import export_list

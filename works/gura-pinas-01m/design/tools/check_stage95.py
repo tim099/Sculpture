@@ -14,7 +14,7 @@ sys.path.insert(0, design)
 sys.path.insert(0, os.path.join(design, 'tools'))
 from wio import export_list, key
 from gunsim import Grid, Gun
-WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
 RB = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))['rudder_anchor_build']
 RU, AN = RB['rudder'], RB['anchor']
 HULL, ASM = 'gura-pinas-01m', 'gura-pinas-01m-assembly'

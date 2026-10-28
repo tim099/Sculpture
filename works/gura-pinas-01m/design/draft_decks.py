@@ -112,9 +112,24 @@ def main():
         door = np.zeros(ny, bool)
         for d in br['doors_dy']:
             door |= np.abs(np.abs(DY) - d) <= 2
+        F = br.get('face')
+        frame = np.zeros(ny, bool)
+        for d in br['doors_dy']:
+            frame |= np.abs(np.abs(DY) - d) == 3
         for z in range(zl + 1, zu):
             rowm = inside[xi, :, z] & ~(door & (z <= zl + 15))
-            decks[br['up']][xi, rowm & (decks[br['up']][xi, :, z] == 0), z] = B['trim']
+            c = np.full(ny, B['trim'], np.uint8)
+            if F:                                                   # TASK-0967 bak 前隔板（露在船頭那一面）：底色、上下與兩端金、門框一圈金
+                c[:] = F['color']
+                ys = np.nonzero(inside[xi, :, z])[0]
+                gold = (frame & (z <= zl + 16)) | (door & (z == zl + 16))
+                if len(ys):
+                    gold[[ys[0], ys[-1]]] = True
+                if z in (zl + 1, zu - 1):
+                    gold[:] = True
+                c[gold] = F['gold']
+            sel = rowm & (decks[br['up']][xi, :, z] == 0)
+            decks[br['up']][xi, sel, z] = c[sel]
         gap = np.zeros(ny, bool)
         for yc in gaps.get(br['up'], []):
             gap |= np.abs(Y - yc) <= th + 1

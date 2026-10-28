@@ -68,7 +68,7 @@ def main():
                 hit = [c for c in cells if c in occ]
                 back = sum(1 for (x, y, z) in cells if (bx, y, z) in occ)
                 foot = all((fx, y, zb - 1) in occ for y in range(y0 - 3, y0 + 4))
-                nm = '門-%s-%s' % (br['up'], side)
+                nm = '門-%s%s-%s' % (br['up'], br.get('door_tag', ''), side)   # TASK-0967：bak 前隔板也掛在 castillo ⇒ door_tag「前」分開名字
                 rows.append({'name': nm, 'host': DECK_WORK[br['up']], 'break': br['name'], 'side': side,
                              'at': [fx + 0.5, y0 + 0.5, zb], 'rotate': 0 if out > 0 else 180, 'opening': [len(hole), zt - zb + 1],
                              'hits_solid': len(hit), 'backed_by_bulkhead': back, 'foot_ok': foot,

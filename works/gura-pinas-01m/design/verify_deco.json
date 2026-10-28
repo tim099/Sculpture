@@ -1,51 +1,53 @@
 {
  "parts": {
   "galjoen": {
-   "cells": 6032,
+   "cells": 13442,
    "overlap_ship": 0,
    "overlap_other_parts": 0,
-   "cells_touching_ship": 119,
+   "cells_touching_ship": 695,
    "mirror_diff": 0,
    "bbox": [
     [
      515,
-     142,
+     131,
      20
     ],
     [
      599,
-     178,
-     76
+     189,
+     94
     ]
    ],
    "colors": {
-    "136": 4636,
-    "141": 30,
-    "209": 1194,
-    "248": 172
+    "6": 626,
+    "68": 336,
+    "136": 10150,
+    "141": 144,
+    "209": 694,
+    "248": 1492
    }
   },
   "figurehead": {
-   "cells": 855,
+   "cells": 863,
    "overlap_ship": 0,
    "overlap_other_parts": 0,
    "cells_touching_ship": 0,
    "mirror_diff": 0,
    "bbox": [
     [
-     574,
+     578,
      158,
-     73
+     75
     ],
     [
-     598,
+     602,
      162,
-     90
+     94
     ]
    ],
    "colors": {
     "36": 2,
-    "224": 675,
+    "224": 683,
     "248": 178
    }
   },
@@ -108,6 +110,75 @@
   "stern-deco": 0,
   "hackebort": 0
  },
+ "galjoen_v2": {
+  "cheeks": [
+   {
+    "cells": 41,
+    "x": [
+     527,
+     548
+    ],
+    "in_hull_dropped": 0
+   },
+   {
+    "cells": 33,
+    "x": [
+     529,
+     546
+    ],
+    "in_hull_dropped": 0
+   }
+  ],
+  "kam_cells_per_side": 62,
+  "rails": [
+   {
+    "cells": 101,
+    "above_deck": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "cells": 101,
+    "above_deck": [
+     4,
+     5,
+     6
+    ]
+   },
+   {
+    "cells": 101,
+    "above_deck": [
+     7,
+     8,
+     9
+    ]
+   }
+  ],
+  "timbers": [
+   538,
+   544,
+   550,
+   556
+  ],
+  "cathead_cells_per_side": 60,
+  "top_z": [
+   68,
+   76
+  ],
+  "tip": 599,
+  "edge_x": [
+   531,
+   599
+  ],
+  "knee_cells_2d": 1048,
+  "es": [
+   590,
+   91
+  ],
+  "cavity_filled": 4
+ },
  "bowsprit_clearance_hits": 0,
  "lanterns": [
   {
@@ -123,12 +194,12 @@
  ],
  "lists": {
   "galjoen": [
-   6032,
-   "3933c3bff1405cf4c055842adab3205df9a323fd9408829f2a54a6ee7f1d0791"
+   13442,
+   "4988e6ea514c44de9e081f38dfc262011952c936f7320607d77d9228d0c419c9"
   ],
   "figurehead": [
-   855,
-   "433193f69540ee42bd2da2f17880baa07578c22dcd8be60cce33a530f54baaf0"
+   863,
+   "12f719d6d0e53027f145dbee898f8e5a42602c3409f30eadff60394aa4475587"
   ],
   "stern-deco": [
    9010,

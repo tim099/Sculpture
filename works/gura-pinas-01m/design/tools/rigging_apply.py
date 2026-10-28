@@ -10,7 +10,7 @@ design = sys.argv[1]
 steps = [a for a in sys.argv[2:] if not a.startswith('--')] or ['channels', 'anchors', 'ropes', 'ratlines', 'sails', 'sailropes', 'wind', 'meta']
 HULL = 'gura-pinas-01m'
 ASM = HULL + '-assembly'
-WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
 P = json.load(open(os.path.join(design, 'rigging_plan.json'), encoding='utf-8'))
 retries = 0
 

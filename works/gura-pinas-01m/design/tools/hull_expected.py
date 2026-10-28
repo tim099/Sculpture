@@ -25,7 +25,8 @@ steps = [('hull_fix', os.path.join(design, 'masks', 'hull_fix', 'carve_breaks.vo
          ('砲門刻', os.path.join(ports, 'carve.vox.txt'), 'carve'),
          ('塗裝', os.path.join(ports, 'paint.vox.txt'), 'paint'),
          ('艏斜桅孔', os.path.join(design, 'masks', 'bowsprit_hole', 'carve.vox.txt'), 'carve'),
-         ('側廊窗洞', os.path.join(design, 'masks', 'deco', 'gallery_carve.vox.txt'), 'carve')]   # draft_deco.py 側廊 v2（2026-10-26）：側廊窗玻璃後面刻穿船殼的牆到艙裡
+         ('側廊窗洞', os.path.join(design, 'masks', 'deco', 'gallery_carve.vox.txt'), 'carve'),
+         ('船頭補實', os.path.join(ports, 'bow_fill.vox.txt'), 'add')]          # TASK-0967 船頭 v2：draft_ports.py 的 ports.bow_gangway（艏柱裡面除了走道填實）   # draft_deco.py 側廊 v2（2026-10-26）：側廊窗玻璃後面刻穿船殼的牆到艙裡
 print('船殼 %d' % n0)
 for nm, p, kind in steps:
     if not os.path.exists(p):          # 藍鯊號沒有 hull_fix；艏斜桅孔在步驟 7 才有
@@ -38,6 +39,10 @@ for nm, p, kind in steps:
         for k in L:
             H.pop(k, None)
         print('  − %s %d（不在船殼裡 %d、守門色不同 %d）' % (nm, len(L), len(miss), guard))
+    elif kind == 'add':
+        clash = sum(1 for k in L if k in H)
+        H.update(L)
+        print('  ＋ %s %d（本來就在船殼裡 %d）' % (nm, len(L), clash))
     else:
         for k, c in L.items():
             if k in H:

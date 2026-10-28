@@ -26,7 +26,7 @@ def main():
     GB = plan['gear_build']
     MG, SK = GB['magazine'], GB['skids']
     YC = plan['space']['yc']
-    WORKS = os.path.dirname(os.path.dirname(os.path.abspath(design)))
+    WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
     A = export_list(GB['assembly'], None, links=None)
     own = set()
     for w in (MG['work'], SK['work']):

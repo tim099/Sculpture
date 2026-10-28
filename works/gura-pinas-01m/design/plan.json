@@ -41,8 +41,8 @@
     "bow_pow_low": {"v": 1.8, "src": "設計決定"},
     "bow_pow_high": {"v": 2.6, "src": "設計決定：上面鈍（荷蘭船飽滿的船頭）"},
     "aft_pow": {"v": 3.0, "src": "設計決定：荷蘭船船尾水線下飽滿（同上，對 W 的體積）"},
-    "top": [[150, 111], [205, 111], [209, 96], [300, 96], [304, 76], [434, 76], [438, 93], [560, 94]],
-    "top_src": "舷頂折線：船尾樓（hut）頂 101 ＋ 10、後甲板（halfdek）84 ＋ 12、船腰上甲板（約 60–61）＋ 15、船艏樓（bak）82 ＋ 11 —— W 的上欄從主桅往船尾一路翹高（p.~80：raa-hout 以上 2'8½\" → 7'9\"），這裡用台階表現；船尾鏡板頂上的 hackebort（taffrail）是裝飾，在步驟 6"
+    "top": [[150, 111], [205, 111], [209, 96], [300, 96], [304, 76], [434, 76], [438, 93], [525, 93.71311475409836], [527, 89], [529, 85], [531, 81], [533, 78], [535, 76], [537, 75], [560, 75]],
+    "top_src": "舷頂折線：船尾樓（hut）頂 101 ＋ 10、後甲板（halfdek）84 ＋ 12、船腰上甲板（約 60–61）＋ 15、船艏樓（bak）82 ＋ 11 —— W 的上欄從主桅往船尾一路翹高（p.~80：raa-hout 以上 2'8½\" → 7'9\"），這裡用台階表現；船尾鏡板頂上的 hackebort（taffrail）是裝飾，在步驟 6。TASK-0967 船頭 v2：bak 前角 x 525 以前沿凹弧（525→537：93.71、89、85、81、78、76、75；525 那一點 ＝ 舊折線 438→560 在 525 的值 93 ＋ 87⁄122 ⇒ x 525 以前的舷頂一格都不動 —— 第一版寫 94，bak 舷頂高了一格、前桅支索板跟著升 1 格，vxk 檔頭比對抓到）降到艏柱 z 75（比 galjoen 平台頂 68 高 7 格 ⇒ 第一人稱從平台、前甲板都踩不上舷頂；中線的缺口見 ports.bow_gangway）—— W 的 bak 甲板只到艏柱裡面 6½ 呎、前面一道前隔板，bak 欄杆在前角收成渦卷再沿凹弧降到 galjoen〔查 W p.89、圖版 N°24；弧線是設計決定〕"
   },
   "waterline": {"z": 33, "src": "W p.~359：Witsen 拿這艘船算排水量時用的吃水 10 呎 —— 從龍骨頂（rabbet）量：tools/tune_lines.py 掃了 32 組線形，到 W 的 596 m³ 都在龍骨頂往上 9.6–11.0 呎（從龍骨底量的話 10 呎只裝得下 415–540 m³，船中剖面撐不到）⇒ z 5 ＋ 28.3 ≈ 33"},
   "readings_at": {"deck_z": 42, "rail_z": 76, "hold_beams_z": 42, "puente_z": 60},
@@ -54,7 +54,7 @@
       {"key": "puente", "name": "上甲板（verdek）", "z": 60, "src": "W p.76–77：甲板間 6 呎（樑高前 5'9½\"、後 6'6\" ＝ 16.4–18.4 格）⇒ 設計取 18（6'4\"）：遊戲站人要頭頂 14 格空（甲板板 1 ＋ 樑 3），17 不夠"},
       {"key": "alcazar", "name": "後甲板（halfdek）", "z": 84, "x_to": 300, "src": "設計決定：W 的 kajuit（halfdek 底下）樑高 6'2\"–7'（17.5–19.8 格）；上甲板船尾因舷弧抬到 66 ⇒ 84 讓船尾那端也有 18 格；前緣在主桅後面"},
       {"key": "toldilla", "name": "船尾樓（hut）", "z": 101, "x_to": 207, "src": "W p.~80：hut 側高前 5、後 6½ 呎（14–18 格）、waterbortje 長 17 呎 ⇒ 設計 17 格、長到 x 207（48 格 ＝ 17 呎）"},
-      {"key": "castillo", "name": "船艏樓（bak）", "z": 82, "x_from": 436, "src": "W p.93：bak 5½ 呎（15.6 格）⇒ 設計 17（遊戲頭頂 14 格；上甲板船頭因舷弧在 64–65）；W 的 bak 裡有 3 個砲門（離首柱 6½、17、31 呎）⇒ 往後長到 x 436"}
+      {"key": "castillo", "name": "船艏樓（bak）", "z": 82, "x_from": 436, "x_to": 525, "x_to_src": "TASK-0967：bak 甲板收到前隔板 x 525（W p.89：艏柱裡面 6½ 呎 ≈ x 515；bak 底下最前面那個砲門 x 513–518 與它的砲具環 x 523 ⇒ 往前挪到 525，設計決定）", "src": "W p.93：bak 5½ 呎（15.6 格）⇒ 設計 17（遊戲頭頂 14 格；上甲板船頭因舷弧在 64–65）；W 的 bak 裡有 3 個砲門（離首柱 6½、17、31 呎）⇒ 往後長到 x 436"}
     ],
     "sheer": {"aft": 6, "fwd": 4, "x_mid": 412, "x_aft": 160, "x_fwd": 538, "src": "設計決定：舷弧最低點在 hals（W：離船艏 1/3 船長 ＝ x 412）；往船尾抬 6 格、往船頭 4 格（W 的甲板舷弧數字在 p.81–82，OCR 沒逐站讀）"}
   },
@@ -73,7 +73,9 @@
     "breaks": [
       {"name": "後甲板（halfdek）前緣", "x": 300, "lo": "puente", "up": "alcazar", "doors_dy": [12], "rail_h": 7, "rail_side": "aft"},
       {"name": "船尾樓（hut）前緣", "x": 207, "lo": "alcazar", "up": "toldilla", "doors_dy": [9], "rail_h": 7, "rail_side": "aft"},
-      {"name": "船艏樓（bak）後緣", "x": 436, "lo": "puente", "up": "castillo", "doors_dy": [10], "rail_h": 7, "rail_side": "fwd"}],
+      {"name": "船艏樓（bak）後緣", "x": 436, "lo": "puente", "up": "castillo", "doors_dy": [10], "rail_h": 7, "rail_side": "fwd"},
+      {"name": "船艏樓（bak）前隔板", "x": 525, "lo": "puente", "up": "castillo", "doors_dy": [6], "rail_h": 7, "rail_side": "aft", "face": {"color": 6, "gold": 248}, "door_tag": "前",
+       "src": "TASK-0967（Tim 2026-10-28「開個門可以走到船頭」）：W p.89 bak 的前隔板開一或兩道門（各 2'6\" 寬）、II p.483「hebben voor een Schilt, waer men door op 't Galjoen gaet」〔查〕⇒ 兩道門 dy 4–8（寬 5、高 15，同另外三道 break）；門外是露天的上甲板（x 526–533）、跨過艏柱上緣就是 galjoen 平台；藍底金框（設計決定，跟上層舷牆同色）；W 是彎的前隔板，這裡是直的（設計決定）"}],
     "break_src": "設計決定：後甲板、船尾樓、船艏樓的前（後）緣一道艙壁（兩扇門 寬 5 高 15）＋船樓甲板邊上一道 7 格高的胸牆（梯子頭留口）—— W 的 bak 上有防步槍的胸牆（mosquet schoot vrye schans）",
     "ladders": {
       "rise": 3, "run": 2, "tread_half": 3, "color": 136,
@@ -98,7 +100,13 @@
       {"deck": "puente", "per_side": 3, "x0s": [447, 487, 513], "w": 6, "h": 6, "sill": 5, "gun": "8l",
        "src": "W：bak 裡離首柱 6½、17、31 呎（x 538 − 18.4／48.1／87.8 ⇒ 砲門中心 516、490、450）；上甲板（verdek）那一層、bak 底下"}
     ],
-    "stern_chasers": {"deck": "puente", "n": 2, "w": 7, "h": 7, "sill": 6, "gun": "6l", "src": "W p.73：「klossen van de poorten in de spiegel」—— 鏡板上有砲門（數量沒寫）⇒ 上甲板船尾兩個（kajuit），放 W 的兩門青銅 6 磅 drake"}
+    "stern_chasers": {"deck": "puente", "n": 2, "w": 7, "h": 7, "sill": 6, "gun": "6l", "src": "W p.73：「klossen van de poorten in de spiegel」—— 鏡板上有砲門（數量沒寫）⇒ 上甲板船尾兩個（kajuit），放 W 的兩門青銅 6 磅 drake"},
+    "bow_gangway": {"dy": 3,
+      "z0": 65,
+      "x_from": 528,
+      "fill_x": 533,
+      "fill_z0": 60,
+      "src": "TASK-0967 船頭 v2（Tim 2026-10-28「開個門可以走到船頭」）：艏柱上緣中線開一道 7 格寬的缺口（dy ≤ 3、z 65 起刻到舷頂）⇒ bak 前隔板的門外（露天的上甲板，頂 z 64）直接走上 galjoen 平台（頂 68，一步 4 格）；兩旁船首上緣 z 75 以上 ⇒ 從平台、前甲板都踩不上舷頂（不然沿著舷頂走到 regelingen 頂上，walk_doors 量過 240 格）。設計決定 —— W：船員從前隔板的門走上 galjoen（II p.483），中間怎麼過艏柱沒寫；fill_x 533、fill_z0 60：艏柱那一段（前甲板的甲板只到 x 532）船殼裡面除了走道從 z 60 起填實 ⇒ 兩旁是直的牆（圓船頭的內面像台階，第一人稱踩著爬上舷頂 —— walk_doors 量過）"}
   },
   "guns_alloc": {
     "src": "W p.282（頁面圖核過）：24 門 —— 青銅 12 磅 ×6（2 門 kamerswijs）、青銅 6 磅 drake ×2、鐵 12 磅 ×4、鐵 8 磅 ×8、鐵 4 磅 ×4；「最重的砲放在船身中段」",
@@ -147,7 +155,8 @@
     ],
     "yards_src": "Ship_Setup §2.1：方帆桁沿用憲法號的帆桁元件，只沿長度（y）縮放到 W 的長度；挑長度最近、固定點齊全的那一根（src_len ＝ arm-S − arm-P ＋ 3，同收穫號）。縮過的在遊戲裡是另一份網格。帆名：W 有 bramzeil（上桅帆）、kruiszeil（後中桅帆）、blinde（斜桅帆）、boven blinde（斜桅頂帆）",
     "lateen": [{"mast": "mizzen", "len_m": 17.55, "angle_deg": 40, "hoist_frac": 0.4, "sail": "mizzen-lateen"}],
-    "lateen_src": "W：後桅三角帆桁 62 呎（比後桅長 ⇒ lateen）；角度、吊點照收穫號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5；ame 2026-10-15 收穫號那次確認過遊戲照 gaff 畫）"
+    "lateen_src": "W：後桅三角帆桁 62 呎（比後桅長 ⇒ lateen）；角度、吊點照收穫號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5；ame 2026-10-15 收穫號那次確認過遊戲照 gaff 畫）",
+    "bobstay_z": [40, 45]
   },
   "rudder_anchor_build": {
     "rudder": {"work": "gura-pinas-01m-rudder", "title": "藍鯊號 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 66,
@@ -254,9 +263,22 @@
   "espolon": {"len_beyond_stem": 62, "src": "W p.85：galjoen 下延伸樑（uitlegger）長 22 呎 ＝ 62 格（步驟 6 做）",
     "deck_top_z": 72, "thick": 3, "half_at_stem": 18, "half_at_tip": 2, "taper_pow": 1.2, "cutwater_from_z": 20, "cutwater_half": 2, "cutwater_pow": 1.5, "cutwater_band": 10,
     "rail_h": 4, "stanchion_every": 6,
-    "design_src": "設計決定：galjoen 的甲板頂 z 72（上甲板在船頭 64–65 之上）—— 艏斜桅從上甲板（x 500, z 63）以 30° 往前上，在 x 537 中心 z 84、x 560 到 z 98 ⇒ 喙與 head rail（頂 z 76）不會被穿過；W 的三條 regelingen 簡化成一條 head rail（4 格高、每 6 格一根柱）；下面一片 cutwater 從首柱 z 20 掃到喙尖"},
-  "figurehead": {"x": 574, "len": 25, "half_t": 2.5, "raise": 7, "body": 224, "mane": 248, "crown": 248, "eye": 36,
-    "src": "W p.85：船艏獅子（leeuw）長 9 呎（25 格）、厚 19 duim（5 格）、前端翹起 2'7\"（7 格）；荷蘭船的獅子紅身金鬃戴金冠（配色是一般認識 ⚠）。x ＝ 獅子後端（喙尖往後 25 格）"},
+    "design_src": "設計決定：galjoen 的甲板頂 z 72（上甲板在船頭 64–65 之上）—— 艏斜桅從上甲板（x 500, z 63）以 30° 往前上，在 x 537 中心 z 84、x 560 到 z 98 ⇒ 喙與 head rail（頂 z 76）不會被穿過；W 的三條 regelingen 簡化成一條 head rail（4 格高、每 6 格一根柱）；下面一片 cutwater 從首柱 z 20 掃到喙尖",
+    "v2": {"len_beyond_stem": 62,
+      "src": "TASK-0967 船頭 v2（Tim 2026-10-28「967 參考 TASK-1045 船頭…優化一下」「可以只優化船頭」「開個門可以走到船頭」）。照 Witsen 1671 的 galjoen —— 頁碼是印刷頁（archive.org 的 page_numbers 比印刷頁多 1）；考證在 references/research_pinas_bow_2026-10-28.md。uitlegger 22 呎 ＝ 62 格〔查 W p.86–87〕",
+      "platform": {"top_z": 68, "rise": 8, "rise_pow": 1.0, "thick": 3, "x_from": 515, "half_root": 24, "half_tip": 3, "taper_pow": 1.3, "skirt": {"h": 4}, "src": "平台頂在艏柱 z 68 ＝ 上甲板（verdek，船頭 z 64）＋ 4 格（約 1½ 呎）、往前漸升 8 格到喙尖〔估：W 沒直接寫高度，研究筆記 §1 建議 verdek ＋ 0–3 呎、往前漸升〕；格柵（W：galjoen 上是格柵）每 3 格一條深色；從 x 515 起半寬 24 往喙尖收到 3（設計決定），船殼佔的格跳過 ⇒ 圍著圓船頭接成一圈"},
+      "knee": {"from_z": 20, "back": 6, "pow": 1.6, "half": 3, "line": 3, "line_from_z": 35, "wl": 33, "below": 68, "src": "設計決定：knee（scheg）從首柱 z 20 填到平台底、前緣曲線掃到喙尖往後 6 格（獅子胸口底下）；7 格寬（W：uitlegger 根部 14 × 17 吋 ≈ 4 × 5 格，knee 比它寬一點）；水線 z 33 以下跟船底同色 68、以上船殼褐 136；兩側沿前下緣往裡 3 格一條金線，水線上 2 格起"},
+      "cheeks": [{"x0": 527, "x1": 548, "z0": 56, "drop": 2, "pow": 1.0}, {"x0": 529, "x1": 546, "z0": 49, "drop": 2, "pow": 1.0}],
+      "cheeks_src": "W p.60、p.86–87：船頭兩側各兩道 cheek（kniehout，6 呎與 5½ 呎 ≈ 17、16 格），夾在第 2、第 3 道 wale 之間（z 44–46、57–58）〔查〕；起訖點是設計決定",
+      "kam": {"color": 6, "dot": 248, "src": "W：兩道 cheek 中間是雕花的 kam（trailboard）〔查〕；藍底金點卷草是設計決定（跟上層舷牆同色）"},
+      "rails": [{"h": 1, "up": 9, "x_h": 524, "x_l": 546, "x_e": 590, "color": 6}, {"h": 4, "up": 9, "x_h": 524, "x_l": 546, "x_e": 590, "color": 6}, {"h": 7, "up": 9, "x_h": 524, "x_l": 546, "x_e": 590, "color": 6}],
+      "rails_src": "W p.86–87：每側 3 條 regelingen，收到 es 的渦卷下方；最上一條的後端在 cathead 正下方、刻一個人頭（mans hooft）撐住 cathead〔查，圖版〈Het Galjoen〉〕；整組從後往前跟著 galjoen 往上〔查〕。間距：W 是後端約 1 呎、前端 5–6½ 吋，格柵在中間那條的頂下 1 吋 —— 遊戲裡第一人稱一步上 6 格、頭上要 7 格 ⇒ 改成平台上 1／4／7 格起、每條 2 格高、條間 1 格縫（最上一條頂在平台上 8 格，踩不上去；Ship_Ends §4.1）〔設計決定，跟 W 不同〕",
+      "timbers": {"n": 4, "every": 6, "color": 141, "src": "W p.87：4 根 knies，第 1 根貼艏柱、之後約每 2 呎一根，立在 uitlegger 上〔查〕；頂部的圓拱沒做（三條 rail 之間只有 1 格縫，放不下）"},
+      "mans_head": {"dx": -1, "ddy": 1, "dz": 2, "r": 1.8},
+      "cathead": {"x": 522, "z": 89, "len": 7, "half": 1, "deg": 35, "color": 141, "src": "W：cathead（kraanbalk）比欄杆外突 2 呎、斷面 8 × 10 吋〔查〕⇒ 舷外 6 格、3 × 3；在 bak 前角舷頂下、往前斜 35°（設計決定）；端面金"},
+      "es": {"dx": 12, "h": 6, "r": 2.5, "src": "W：es（渦卷）在獅子背上 2'2\"（6 格）〔查〕；形狀簡化成一圈金環、一根金柱接回獅背（設計決定）"}}},
+  "figurehead": {"x": 578, "len": 25, "half_t": 2.5, "raise": 7, "body": 224, "mane": 248, "crown": 248, "eye": 36,
+    "src": "W p.85：船艏獅子（leeuw）長 9 呎（25 格）、厚 19 duim（5 格）、前端翹起 2'7\"（7 格）；荷蘭船的獅子紅身金鬃戴金冠（配色是一般認識 ⚠）。x ＝ 獅子後端。TASK-0967 船頭 v2：574 ⇒ 578（W：獅子比 uitlegger 前端再突出 14 吋 ≈ 4 格〔查〕；喙尖 x 599 ⇒ 獅子前端 603）"},
   "stern_deco": {
     "hackebort": {"z0": 112, "z1": 127, "half": 23, "arch_from": 120, "half_top": 11, "thick": 2, "field": 254, "border": 248,
                   "ribbon": {"z0": 112, "z1": 118, "color": 6, "text": "BLAUWE HAAI", "text_color": 248},
