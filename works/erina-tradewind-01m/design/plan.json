@@ -95,11 +95,11 @@
    {"name": "hold", "lo": "hold", "up": "gun", "xs": 170, "dir": 1, "dy": 0, "head_x": 199, "src": "貨艙梯子（§9.3 ⑥）：梯腳踩艙底、在主艙口裡往前爬，梯頂出艙口前緣"},
    {"name": "orlop", "lo": "orlop", "up": "gun", "xs": 116, "dir": 1, "dy": 0, "well": true, "head_x": 134, "src": "底艙平台（火藥庫）⇄ 船腰：梯井開在後甲板前緣前面（火藥庫 hoist ＝ 這座）"},
    {"name": "cabin", "lo": "cabin", "up": "gun", "xs": 103, "dir": 1, "dy": 0, "head_x": 112, "src": "船長艙 ⇄ 船腰：穿過 break 的門"},
-   {"name": "qd-P", "lo": "gun", "up": "qd", "xs": 117, "dir": -1, "dy": -14, "head_x": 106},
-   {"name": "qd-S", "lo": "gun", "up": "qd", "xs": 117, "dir": -1, "dy": 14, "head_x": 106},
+   {"name": "qd-P", "lo": "gun", "up": "qd", "xs": 117, "dir": -1, "dy": -10, "head_x": 106},
+   {"name": "qd-S", "lo": "gun", "up": "qd", "xs": 117, "dir": -1, "dy": 10, "head_x": 106},
    {"name": "fc-P", "lo": "gun", "up": "fc", "xs": 240, "dir": 1, "dy": -14, "head_x": 253},
    {"name": "fc-S", "lo": "gun", "up": "fc", "xs": 240, "dir": 1, "dy": 14, "head_x": 253}
-  ], "src": "〔設計〕每 3 格一階、每階 2 格、踏板 7 寬；後甲板、艏樓梯子在兩舷（|dy| 14），中線留給門與梯井"}
+  ], "src": "〔設計〕每 3 格一階、每階 2 格、踏板 7 寬；艏樓梯子在兩舷（|dy| 14）、後甲板梯子 |dy| 10（v1 14 ⇒ 梯腳正前方是左舷第一門 4 磅砲）；中線留給門與梯井"}
  },
  "rig_build": {
   "src": "〔設計〕桅樓（top）主、前 r 11（遊戲的桅頂水手站位半徑 9–18 格；牛津號 r 7 站不下）；上桅在下桅頭前面（doubling）；方帆桁照 Ship_Setup §2.1 引用風暴角號（summit）的帆桁元件等比縮放；主帆 gaff／boom 引用三叉戟號（gura）的元件（元件本來就斜：gaff 約 34°、boom 約 3°；飛魚號也這樣用）",
@@ -133,7 +133,7 @@
  },
  "gear": {
   "src": "〔設計〕火藥庫照 Ship_Magazine §8（一定放桶、hoist ＝ 船腰那座梯子）；露天艙口的艙蓋照 Ship_Fittings §9.7；廚房 §9.13；元件都是現成的（Ship_Setup §2.1）；〔源〕ZAZ5430：主桅後面有絞盤、主艙口在兩桅之間",
-  "magazine": {"x_aft": 52, "x_fwd": 108, "aft_wall": false, "door_half": 2, "door_h": 11, "color": 136, "meta": {"kind": "magazine", "pos": "aft", "hoist": "甲板-gun/梯子/orlop"}, "src": "〔設計〕底艙平台後段一直到船尾（船長艙底下；v1 x 84 砌後牆 ⇒ 船尾那一段封成 15,358 格的空腔 ⇒ 不砌後牆）；前牆中間門 0.5 m 寬、1.1 m 高（上面就是船長艙地板）；門對著船腰梯子的梯腳（x 115）"},
+  "magazine": {"x_aft": 52, "x_fwd": 106, "aft_wall": false, "door_half": 2, "door_h": 14, "color": 136, "meta": {"kind": "magazine", "pos": "aft", "hoist": "甲板-gun/梯子/orlop"}, "src": "〔設計〕底艙平台後段一直到船尾（船長艙底下；v1 x 84 砌後牆 ⇒ 船尾那一段封成 15,358 格的空腔 ⇒ 不砌後牆）；前牆 x 106 中間門 0.5 m 寬、1.4 m 高（v1 x 108 正上方壓著一根船長艙橫樑、門 1.1 m ⇒ 匯入檢查「底艙平台有一塊走不到」）；門對著船腰梯子的梯腳（x 115）"},
   "models": [
    {"name": "桶-01", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [92.5, 91.5, 23], "meta": {"kind": "powder", "powder_lb": 100}},
    {"name": "桶-02", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [92.5, 101.5, 23], "meta": {"kind": "powder", "powder_lb": 100}},
@@ -141,9 +141,9 @@
    {"name": "桶-04", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [99.5, 101.5, 23], "meta": {"kind": "powder", "powder_lb": 100}},
    {"name": "艙蓋-主", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "meadow-monitor-01m-hatch", "pivot": [0, 0, 0], "scale": [1.7059, 1.4615, 1], "at": [169, 87, 48], "meta": {"kind": "door", "open": "up"}, "need_support": false, "src": "主艙口 x 170–196、|dy| ≤ 8 ＋ 圍欄一圈 ⇒ 29 × 19；放在圍欄頂（甲板板 z 45、圍欄 46–47）"},
    {"name": "艙蓋-梯井", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "meadow-monitor-01m-hatch", "pivot": [0, 0, 0], "scale": [1, 1, 1], "at": [117, 90, 49], "meta": {"kind": "door", "open": "up"}, "need_support": false, "src": "船腰梯井 x 118–132、|dy| ≤ 5 ＋ 兩側與梯腳那一頭的圍欄 ⇒ 17 × 13；圍欄頂 x 117 那一頭 z 48（舷弧）"},
-   {"name": "小艇", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-boat", "pivot": [90, 26, 0], "scale": 0.2556, "at": [225.5, 96.5, 49], "meta": {"kind": "boat"}, "need_support": false, "src": "〔設計〕4.6 m 小艇擱在前艙口上（艙口圍欄頂上一格）、x 202–248：貨艙梯子梯頂（x 199）前面到艏樓 break 前；餘燼號 9 m cutter ×0.2556"},
-   {"name": "爐灶", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "kaguya-gloire-01m-galley", "pivot": [22, 16, 0], "scale": 0.22, "at": [156.5, 96.5, 46], "meta": {"kind": "galley"}, "src": "〔設計〕船腰主桅與主艙口之間（艏樓底下淨高不夠站廚師；〔源〕18 世紀商船的 caboose 擺在露天甲板）"},
-   {"name": "絞盤", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-capstan", "pivot": [40, 40, 0], "scale": 0.1, "at": [138.5, 96.5, 46], "meta": {"kind": "capstan"}, "src": "〔源〕ZAZ5430 主桅後面有絞盤；〔設計〕梯井蓋（x 133）與主桅（x 143）之間只有 1 m ⇒ ×0.1"},
+   {"name": "小艇", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-boat", "pivot": [90, 26, 0], "scale": 0.24, "at": [227.5, 96.5, 49], "meta": {"kind": "boat"}, "need_support": false, "src": "〔設計〕4.3 m 小艇擱在前艙口上（艙口圍欄頂上一格）、x 206–249：貨艙梯子梯頂（x 199）前面留 6 格到艏樓 break 前；餘燼號 9 m cutter ×0.24（v1 ×0.2556 從 x 202 起 ⇒ 匯入檢查「梯頂正前方擋住」）"},
+   {"name": "爐灶", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "kaguya-gloire-01m-galley", "pivot": [22, 16, 0], "scale": 0.22, "at": [162.5, 96.5, 46], "meta": {"kind": "galley"}, "src": "〔設計〕船腰主桅與主艙口之間（艏樓底下淨高不夠站廚師；〔源〕18 世紀商船的 caboose 擺在露天甲板）"},
+   {"name": "絞盤", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-capstan", "pivot": [40, 40, 0], "scale": 0.09, "at": [151.5, 96.5, 46], "meta": {"kind": "capstan"}, "src": "〔源〕ZAZ5430 主桅後面有絞盤；〔設計〕v1 擺在主桅後面（梯井蓋與主桅之間）⇒ 匯入檢查「船腰梯子梯頂正前方擋住」⇒ 挪到主桅前面 x 151.5、×0.09（主桅與爐灶之間）"},
    {"name": "羅經櫃", "host": "deck-qd", "host_link": "甲板-qd", "source_work": "summit-night-falcon-01m-binnacle", "pivot": [9, 13, 0], "scale": 0.2, "at": [86, 96.5, 60], "meta": {"kind": "binnacle"}, "src": "〔設計〕後甲板中線、舵柄前端前面（照飛魚號 ×0.2）"}
   ]
  },

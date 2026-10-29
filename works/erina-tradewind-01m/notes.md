@@ -125,3 +125,27 @@
 - 🩸 舵 v1 報 198 格「落在實心」：`Grid` 框外一律當實心、舵後緣伸出組裝件外框 ⇒ pad 16 ⇒ 0（組裝件裡沒有一件真的跟舵重疊，逐件量過）。
 - 讀數：舵 on_solid 0、舵柄 on_solid 0、錨碰撞 0、錨床 on_solid 0、全部鏡像差 0；組裝件 1 元件、空腔 0、鏡像差 0；ropecheck 145 條兩端全 ok（舷牆加高後 channels 往上 3 格、下桅 shroud 變短 ⇒ 橫繩組展開少 2 道）；models_broken 0。**反向對照** `--probe=shift=錨-S:-6` ⇒ 報碰撞。
 - 過程圖 `overlays/stage11_stern.png`、`stage10_gear.png`。
+
+## 步驟 14 匯進 Blockside（2026-10-29）
+- Blockside 自己的 worktree（`D:/Unity/Blockside-wt/erina-tradewind`、分支 `erina/tradewind`，從 heads/dev 454908e 開；`_cache` 先從共用的複製過去）：`admin.py import --work erina-tradewind-01m-assembly --id tradewind --name 信風號` → `ids` → 修完 ⚠ → `reimport`。
+- 第一次匯入檢查 ✗ 0、⚠ 18 ⇒ 逐條修：
+  - 🩸 水線 meta 沒標上（步驟 4 那次 `sub=meta` 少了 `part=link` 被擋、沒注意）⇒ 遊戲用憲法號的 z 63 ⇒ 漏水 4 處（z 59 ＝「水線下 0.40 m」，水從舷牆頂翻進來）、排水量錯 ⇒ 補 `part=link name=船殼 meta={kind:ship, waterline_z:32}`。
+  - 梯頂正前方擋住 ×3：小艇 ×0.2556 → ×0.24、往前挪（讓開貨艙梯子梯頂）；絞盤挪到主桅前面、爐灶往前（讓開船腰梯子梯頂）；後甲板梯子 |dy| 14 → 10（讓開左舷第一門砲）。
+  - 底艙平台一塊走不到（火藥庫裡面）：前牆 x 108 正上方壓著船長艙橫樑、門只有 1.1 m ⇒ 前牆挪到 x 106、門 1.4 m。
+  - geo、船員站不下：遊戲那側填 `ships[tradewind]`（見下）。
+- 落到作品：draft_decks／draft_gear 重跑 ⇒ delta_apply（後甲板 刻 16 貼 94、後甲板梯子 刻 156 貼 152、主甲板 貼 2〔桅腳往下伸之後主桅在甲板高度的軸往船尾 0.08 格，桅孔邊多兩格木板〕、火藥庫 刻 648 貼 786）⇒ 梯子點 overwrite、模型重掛；check_decks 0、組裝件 1 元件／空腔 0／鏡像差 0／link_overlap 0。
+- **最後一次匯入檢查 ✗ 0、⚠ 2**：兩條都是貨艙梯子「尋路沒收」（梯腳踩艙底，Ship_Decks §9.3 ⑥ 寫明的預期）。火藥 10／10 門走得到取用點（最遠 7.6 m）、砲班站不滿 0、廚房站得住 4 面、操舵「舵令 ⇒ 舵柄 ⇒ 舵 100%」、樓梯自檢 7 座 ✗ 0、甲板 5 層都接得到、繩 145 條 290 端全 ok（照外框猜 0）、超載極限再多載 405 噸／吃水再深 2.70 m；材質 橡木 159,262 格 111.5 t、玻璃 100 格。
+- `ships[tradewind]`：role merchant；geo spar [46,65]、marines [70,157]、center 55、aim 42、aimZ [5,300]、deckAim [46,60]、rigAim [120,290]；cfg pump 2；crew officers 1、helm 1、top 1、marines 0、monkeys 1、handsK 0.25、navigator 0；idNext 補 gun 11、gunmount 11（砲的 id 是 draft_guns 先發的，ids 不會記）。
+  - 🩸 import 把整份 game.json 重 dump（164 行）⇒ 拿 HEAD 只插信風號那一筆（+31 行）、斷言語意跟匯入後的版本逐項相等 ⇒ `admin.py build` 重建、srccheck ✓。
+- Blockside `1e96edc`（worktree 提交）⇒ 共用 dev 快轉 454908e → 1e96edc（施工場 `coding-20261029T005852Z-erina`）；共用 `_cache` 補 tradewind.vxk、verify 1514 份網格一致；共用樹上別人沒提交的 ship_cards.json 照原樣寫回。**沒推**。
+- 新做的元件不標 render：舵、舵柄是子作品格子（不是繞軸對稱的桶、槳、舵輪）。
+
+## 步驟 15 交船（2026-10-29）
+- 交船檢查表（Ship_Game §10）逐條：ropecheck 290 端全 ok（沒有 bind／snap）✓、名稱與 sub ✓、mpv 與每個模型的 scale 明寫 ✓、components 先查過（現成：4 磅砲、pierrier＋座、方帆桁、gaff／boom、火藥桶、錨、艙蓋、小艇、爐灶、絞盤、羅經櫃；新做：舵、舵柄、火藥庫牆、船首、錨架、錨床、船尾窗玻璃 —— 船的個性部件或沒有現成的）✓、爐灶 kind=galley 不標 deco ✓、舵模型＋stock-top＋spin ✓、舵柄 kind=tiller＋spin、操舵鏈對得上 ✓、kind=ship waterline_z 32 ✓、梯子 kind=ladders 四點 ✓、樓梯自檢 ✗ 0 ✓、橫繩組＋繩梯 🪜 ✓、火藥桶 ✓、甲板 meta ✓、玻璃 material=glass ✓、砲零碰撞＋砲口出船殼 ✓、pierrier 座雙生 mount_of ✓、露天艙口有門（主艙口、梯井；前艙口被小艇蓋住）✓、砲門蓋板不適用（砲從露天甲板的舷牆砲門打）、繩帆模型斷 0 ✓、帆與帆的繩 meta ✓、帆裝三段表 ✓（遊戲裡 W／S 每段看一次 ⇒ 等 Tim）、1 元件／空腔 0／link_overlap 0／兩舷對稱 ✓、產生程式重跑逐位元組相同 ✓（艏斜桅孔、helm port 兩份清單已刻過 ⇒ 重算是空的；verify_*.json 帶組裝件當下的格數 ⇒ 還原成提交的版本）、匯入檢查 ✗ 0 ⚠ 都看過 ✓。
+- 空艙房沒標（遊戲用不到時可以之後加）；迴旋砲 arc −80..80 照飛魚號、擺角沒逐角量；起錨機沒做。
+- checksum：遊戲那側 `_cache/tradewind.vxk` 就是 reimport 當下匯出的那份，`admin.py verify` 成品跟它一致。
+
+## 給遊戲那側填 geo 用的高度（已經照這些填進 Blockside game.json ships[tradewind].geo）
+- 水線 z 32；主甲板（第一層空氣）船中 z 46、船尾 54、船頭 52；船長艙 z 40–46；後甲板 z 61–65；艏樓 z 61–63；底艙平台 z 23。
+- 4 磅砲軸 z 53–54、迴旋砲軸 z 72–75；桅樓：主 z 164–165、前 150–151；桅頂：主 297、前 288（離甲板 25.2／24.0 m）。
+- 船殼 x 46（船尾板）～ 292（艏柱），渦卷到 x ~305、艏斜桅尖 356、三角帆桿尖 405、主帆杆尖 x 41。**全長（vxk bbox）35.8 m**、寬 10.6 m（帆桁）、高 29.6 m；船身 24.6 m。

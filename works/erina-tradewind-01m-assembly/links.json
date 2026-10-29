@@ -19,7 +19,12 @@
 			"enabled": true,
 			"created_at": "2026-10-29T01:04:05",
 			"persona": "erina",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-1",
+				"kind": "ship",
+				"waterline_z": 32
+			}
 		},
 		{
 			"name": "甲板-orlop",
@@ -43,6 +48,7 @@
 			"meta": {
 				"deck": "orlop",
 				"floor": "72:23,135:23",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "底艙平台",
@@ -71,6 +77,7 @@
 			"meta": {
 				"deck": "cabin",
 				"floor": "51:45,109:39",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "船長艙",
@@ -99,6 +106,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "110:47,215:46,287:51",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "主甲板",
@@ -127,6 +135,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "49:64,93:59,109:59",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 3,
 				"name": "後甲板",
@@ -155,6 +164,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "250:60,288:62",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 4,
 				"name": "艏樓",
@@ -179,7 +189,10 @@
 			"enabled": true,
 			"created_at": "2026-10-29T01:50:24",
 			"persona": "erina",
-			"note": "步驟 6（draft_deco.py）"
+			"note": "步驟 6（draft_deco.py）",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "錨架",
@@ -199,7 +212,10 @@
 			"enabled": true,
 			"created_at": "2026-10-29T01:50:26",
 			"persona": "erina",
-			"note": "步驟 6（draft_deco.py）"
+			"note": "步驟 6（draft_deco.py）",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "船尾窗玻璃",
@@ -221,6 +237,7 @@
 			"persona": "erina",
 			"note": "步驟 6（draft_deco.py）",
 			"meta": {
+				"id": "part-4",
 				"material": "glass"
 			}
 		},
@@ -242,7 +259,10 @@
 			"enabled": true,
 			"created_at": "2026-10-29T01:54:51",
 			"persona": "erina",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "前桅",
@@ -262,7 +282,10 @@
 			"enabled": true,
 			"created_at": "2026-10-29T01:54:51",
 			"persona": "erina",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -282,7 +305,10 @@
 			"enabled": true,
 			"created_at": "2026-10-29T01:54:51",
 			"persona": "erina",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "支索板",
@@ -302,7 +328,10 @@
 			"enabled": true,
 			"created_at": "2026-10-29T02:00:17",
 			"persona": "erina",
-			"note": "步驟 8（TASK-1097）"
+			"note": "步驟 8（TASK-1097）",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "彈藥庫",
@@ -324,7 +353,8 @@
 			"persona": "erina",
 			"note": "步驟 10：火藥庫",
 			"meta": {
-				"hoist": "甲板-gun/梯子/orlop",
+				"hoist": "ladders-1#orlop",
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 400
@@ -348,7 +378,10 @@
 			"enabled": true,
 			"created_at": "2026-10-29T02:15:19",
 			"persona": "erina",
-			"note": "步驟 11（TASK-1097）"
+			"note": "步驟 11（TASK-1097）",
+			"meta": {
+				"id": "part-9"
+			}
 		}
 	]
 }
