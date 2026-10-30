@@ -1,0 +1,973 @@
+{
+ "root": "calli-civic-01m",
+ "works": {
+  "calli-civic-01m-en-chapel": {
+   "anchors": {
+    "bell": [
+     40,
+     24,
+     71
+    ],
+    "door": [
+     40,
+     14,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ]
+   },
+   "expect": "calli-civic-01m-en-chapel.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "8,12",
+      "style": "en",
+      "use": "chapel",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "磚牆、鐘樓與擺設",
+     "recolor": {},
+     "source": "calli-civic-01m-en-chapel-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "calli-civic-01m-en-chapel-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      15,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      30,
+      15,
+      46
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-門上窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      11,
+      36,
+      14
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "左-窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      66,
+      36,
+      14
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "右-窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 90
+    },
+    {
+     "at": [
+      11,
+      70,
+      14
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "左-窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      66,
+      70,
+      14
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "右-窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 90
+    },
+    {
+     "at": [
+      30,
+      106,
+      16
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      27.5,
+      16,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門左",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "building,en",
+   "title": "英國小教堂（chapel of ease：磚造一間、紅瓦兩坡頂、磚山牆、屋脊上刷白的木鐘樓掛一口鐘；聖餐桌與欄杆、十誡與主禱文的板、木講台、長凳；門前小路與墓碑）"
+  },
+  "calli-civic-01m-en-chapel-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-en-chapel-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "英國小教堂｜磚牆、鐘樓與擺設"
+  },
+  "calli-civic-01m-en-chapel-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-en-chapel-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    120,
+    100
+   ],
+   "tags": "sub",
+   "title": "英國小教堂｜屋頂"
+  },
+  "calli-civic-01m-en-jail": {
+   "anchors": {
+    "door": [
+     60,
+     11,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     24,
+     42,
+     1
+    ],
+    "work-a1-to": [
+     24,
+     35,
+     9
+    ],
+    "work-a2": [
+     30,
+     22,
+     1
+    ],
+    "work-a2-to": [
+     30,
+     15,
+     12
+    ],
+    "work-b1": [
+     88,
+     47,
+     1
+    ],
+    "work-b1-to": [
+     88,
+     53,
+     14
+    ],
+    "work-b2": [
+     78,
+     30,
+     1
+    ],
+    "work-b2-to": [
+     78,
+     24,
+     10
+    ],
+    "work-b3": [
+     100,
+     30,
+     1
+    ],
+    "work-b3-to": [
+     106,
+     30,
+     10
+    ]
+   },
+   "expect": "calli-civic-01m-en-jail.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,14",
+      "style": "en",
+      "use": "jail",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "磚屋、院牆與牢房",
+     "recolor": {},
+     "source": "calli-civic-01m-en-jail-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "calli-civic-01m-en-jail-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      57,
+      31,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "隔牆-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 270
+    },
+    {
+     "at": [
+      53,
+      11,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      77,
+      62,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      14,
+      11,
+      40
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-樓上窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      11,
+      40
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-樓上窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      40
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-樓上窗中",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      28,
+      40
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "左-樓上窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      112,
+      28,
+      40
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "右-樓上窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 90
+    },
+    {
+     "at": [
+      20,
+      46,
+      58
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "煙囪",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    },
+    {
+     "at": [
+      19,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      86,
+      103,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "牢房-門3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      46.5,
+      12,
+      26.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    140,
+    100
+   ],
+   "tags": "building,en",
+   "title": "英國監獄（gaol：兩層磚屋、紅瓦四坡頂、煙囪、樓下鐵條窗、樓上平開窗、門旁一副枷；磚牆圍的放風院、院底三間單坡瓦頂的牢房、井）"
+  },
+  "calli-civic-01m-en-jail-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-en-jail-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    140,
+    100
+   ],
+   "tags": "sub",
+   "title": "英國監獄｜磚屋、院牆與牢房"
+  },
+  "calli-civic-01m-en-jail-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-en-jail-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    140,
+    100
+   ],
+   "tags": "sub",
+   "title": "英國監獄｜屋頂"
+  },
+  "calli-civic-01m-es-battery": {
+   "anchors": {
+    "door": [
+     9,
+     1,
+     0
+    ],
+    "flag": [
+     22,
+     96,
+     81
+    ],
+    "flag-bottom": [
+     24,
+     96,
+     60
+    ],
+    "flag-top": [
+     24,
+     96,
+     78
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     60,
+     25,
+     3
+    ],
+    "work-a1-to": [
+     60,
+     18,
+     12
+    ],
+    "work-b1": [
+     82,
+     25,
+     3
+    ],
+    "work-b1-to": [
+     88,
+     18,
+     12
+    ],
+    "work-c1": [
+     30,
+     25,
+     3
+    ],
+    "work-c1-to": [
+     30,
+     18,
+     12
+    ]
+   },
+   "expect": "calli-civic-01m-es-battery.composite.txt",
+   "flags": [
+    {
+     "bind": "0",
+     "color": 255,
+     "corners": "flag-top|flag-bottom|52,96,60|52,96,78",
+     "free": "2,3",
+     "meta": {
+      "flag": "ensign",
+      "kind": "flag",
+      "pattern": "white"
+     },
+     "name": "flag"
+    }
+   ],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "style": "es",
+      "use": "battery",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "砲彈堆與旗杆",
+     "recolor": {},
+     "source": "calli-civic-01m-es-battery-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "battery",
+      "floor": "0:4,120:4",
+      "kind": "deck",
+      "level": 0,
+      "material": "stone",
+      "name": "砲床",
+      "thick": 4
+     },
+     "mirror": "",
+     "name": "胸牆、哨亭與砲床（甲板）",
+     "recolor": {},
+     "source": "calli-civic-01m-es-battery-rampart",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "magazine",
+      "material": "stone",
+      "pos": "mid",
+      "powder_lb": 200
+     },
+     "mirror": "",
+     "name": "火藥庫",
+     "recolor": {},
+     "source": "calli-civic-01m-es-battery-magazine",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "calli-civic-01m-es-battery-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      80,
+      83,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "火藥庫-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      78.5,
+      84,
+      20
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-火藥庫",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "building,es",
+   "title": "西班牙砲台（batería：切石胸牆與刷白翼牆、三個外張砲眼、右前角的圓形哨亭、木砲床、三門 6 磅砲、刷白砌石的小火藥庫、旗杆）"
+  },
+  "calli-civic-01m-es-battery-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-es-battery-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "西班牙砲台｜砲彈堆與旗杆"
+  },
+  "calli-civic-01m-es-battery-magazine": {
+   "anchors": {
+    "blast": [
+     87,
+     98,
+     10
+    ],
+    "door": [
+     87,
+     83,
+     0
+    ]
+   },
+   "links": [],
+   "mask": "calli-civic-01m-es-battery-magazine.vox.txt",
+   "models": [
+    {
+     "at": [
+      80,
+      100,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      94,
+      100,
+      1
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "scale": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "西班牙砲台｜火藥庫"
+  },
+  "calli-civic-01m-es-battery-rampart": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-es-battery-rampart.vox.txt",
+   "models": [
+    {
+     "at": [
+      30,
+      35,
+      4
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲1",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      60,
+      35,
+      4
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲2",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    },
+    {
+     "at": [
+      88,
+      35,
+      4
+     ],
+     "meta": {
+      "gun": "6l",
+      "kind": "gun"
+     },
+     "name": "砲3",
+     "pivot": [
+      8.5,
+      27.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      180
+     ],
+     "source": "summit-stormkaap-01m-gun-6l"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "西班牙砲台｜胸牆、哨亭與砲床（甲板）"
+  },
+  "calli-civic-01m-es-battery-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-es-battery-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    90
+   ],
+   "tags": "sub",
+   "title": "西班牙砲台｜屋頂"
+  }
+ }
+}
