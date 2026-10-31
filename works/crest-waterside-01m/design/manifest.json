@@ -1,0 +1,1257 @@
+{
+ "root": "crest-waterside-01m",
+ "works": {
+  "crest-waterside-01m-boat-shed-water": {
+   "anchors": {
+    "door": [
+     18,
+     0,
+     21
+    ],
+    "lot-0": [
+     0,
+     0,
+     21
+    ],
+    "work-a1": [
+     40,
+     74,
+     21
+    ],
+    "work-a1-to": [
+     40,
+     67,
+     30
+    ],
+    "work-a2": [
+     26,
+     74,
+     21
+    ],
+    "work-a2-to": [
+     32,
+     67,
+     30
+    ],
+    "work-b1": [
+     40,
+     60,
+     21
+    ],
+    "work-b1-to": [
+     40,
+     67,
+     30
+    ],
+    "work-c1": [
+     56,
+     37,
+     21
+    ],
+    "work-c1-to": [
+     49,
+     35,
+     30
+    ]
+   },
+   "expect": "crest-waterside-01m-boat-shed-water.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "deckz": 2.0,
+      "kind": "building",
+      "lot": "8,16",
+      "slip": "8,4,2",
+      "style": "common",
+      "use": "boat-shed",
+      "variant": "a",
+      "water": 4
+     },
+     "mirror": "",
+     "name": "棚架、船台與擺設",
+     "recolor": {},
+     "source": "crest-waterside-01m-boat-shed-water-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-waterside-01m-boat-shed-water-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      11,
+      3,
+      21
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "船棚-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      12,
+      52,
+      21
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      26.5,
+      6,
+      47.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      40,
+      67,
+      32
+     ],
+     "meta": {},
+     "name": "小艇",
+     "pivot": [
+      90,
+      26,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      90
+     ],
+     "source": "basecamp-ember-01m-boat"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    80,
+    160,
+    92
+   ],
+   "tags": "building,common",
+   "title": "船棚水上版（共用：兩坡木瓦頂的長棚、正面木板牆與門、背面敞開；兩條滑道從棚裡斜進水、一艘 9 m 小艇、拉船的絞盤、槳架）"
+  },
+  "crest-waterside-01m-boat-shed-water-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-boat-shed-water-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    160,
+    92
+   ],
+   "tags": "sub",
+   "title": "船棚水上版｜棚架、船台與擺設"
+  },
+  "crest-waterside-01m-boat-shed-water-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-boat-shed-water-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    80,
+    160,
+    92
+   ],
+   "tags": "sub",
+   "title": "船棚水上版｜屋頂"
+  },
+  "crest-waterside-01m-careening-wharf-water": {
+   "anchors": {
+    "door": [
+     65,
+     0,
+     16
+    ],
+    "lot-0": [
+     0,
+     0,
+     16
+    ],
+    "work-a1": [
+     243,
+     83,
+     16
+    ],
+    "work-a1-to": [
+     244,
+     82,
+     25
+    ],
+    "work-b1": [
+     311,
+     83,
+     16
+    ],
+    "work-b1-to": [
+     304,
+     80,
+     25
+    ],
+    "work-c1": [
+     215,
+     182,
+     16
+    ],
+    "work-c1-to": [
+     220,
+     188,
+     25
+    ],
+    "work-d1": [
+     115,
+     182,
+     16
+    ],
+    "work-d1-to": [
+     120,
+     188,
+     25
+    ],
+    "work-e1": [
+     129,
+     194,
+     16
+    ],
+    "work-e1-to": [
+     121,
+     191,
+     25
+    ],
+    "work-e2": [
+     268,
+     93,
+     16
+    ],
+    "work-e2-to": [
+     268,
+     84,
+     25
+    ],
+    "work-f1": [
+     229,
+     194,
+     16
+    ],
+    "work-f1-to": [
+     221,
+     191,
+     25
+    ],
+    "work-f2": [
+     296,
+     93,
+     16
+    ],
+    "work-f2-to": [
+     296,
+     84,
+     25
+    ],
+    "work-h1": [
+     296,
+     66,
+     16
+    ],
+    "work-h1-to": [
+     296,
+     74,
+     25
+    ],
+    "work-h2": [
+     268,
+     66,
+     16
+    ],
+    "work-h2-to": [
+     268,
+     74,
+     25
+    ],
+    "work-i1": [
+     142,
+     125,
+     16
+    ],
+    "work-i1-to": [
+     158,
+     125,
+     25
+    ],
+    "work-j1": [
+     174,
+     125,
+     16
+    ],
+    "work-j1-to": [
+     158,
+     125,
+     25
+    ],
+    "work-k1": [
+     250,
+     113,
+     16
+    ],
+    "work-k1-to": [
+     250,
+     130,
+     25
+    ],
+    "work-l1": [
+     250,
+     147,
+     16
+    ],
+    "work-l1-to": [
+     250,
+     130,
+     25
+    ]
+   },
+   "expect": "crest-waterside-01m-careening-wharf-water.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "deckz": 1.5,
+      "kind": "building",
+      "lot": "32,20",
+      "style": "common",
+      "use": "careening-wharf",
+      "variant": "a",
+      "water": 8
+     },
+     "mirror": "",
+     "name": "平台上的設施",
+     "recolor": {},
+     "source": "crest-waterside-01m-careening-wharf-water-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-waterside-01m-careening-wharf-water-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      9,
+      16
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "倉庫-貨門-181",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      104,
+      104,
+      16
+     ],
+     "meta": {},
+     "name": "瀝青桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      30,
+      92,
+      16
+     ],
+     "meta": {},
+     "name": "貨箱-門口",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      50,
+      92,
+      16
+     ],
+     "meta": {},
+     "name": "酒桶-門口",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      156.5,
+      104,
+      34.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-絞盤屋",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    320,
+    200,
+    85
+   ],
+   "tags": "building,common",
+   "title": "修船碼頭水上版（共用：伸進水裡的木平台、船靠背面邊上；絞盤屋與兩座絞盤、導向滑車、粗繫纜樁與厚護舷、木板倉庫、三座工具棚、瀝青鍋、下水的梯）"
+  },
+  "crest-waterside-01m-careening-wharf-water-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-careening-wharf-water-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    320,
+    200,
+    85
+   ],
+   "tags": "sub",
+   "title": "修船碼頭水上版｜平台上的設施"
+  },
+  "crest-waterside-01m-careening-wharf-water-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-careening-wharf-water-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    320,
+    200,
+    85
+   ],
+   "tags": "sub",
+   "title": "修船碼頭水上版｜屋頂"
+  },
+  "crest-waterside-01m-shipyard-large-water": {
+   "anchors": {
+    "door": [
+     400,
+     0,
+     26
+    ],
+    "lot-0": [
+     0,
+     0,
+     26
+    ],
+    "work-a1": [
+     295,
+     140,
+     26
+    ],
+    "work-a1-to": [
+     288,
+     139,
+     35
+    ],
+    "work-a2": [
+     365,
+     189,
+     26
+    ],
+    "work-a2-to": [
+     372,
+     188,
+     35
+    ],
+    "work-a3": [
+     365,
+     174,
+     26
+    ],
+    "work-a3-to": [
+     372,
+     175,
+     35
+    ],
+    "work-b1": [
+     104,
+     140,
+     26
+    ],
+    "work-b1-to": [
+     112,
+     139,
+     35
+    ],
+    "work-c1": [
+     434,
+     189,
+     26
+    ],
+    "work-c1-to": [
+     427,
+     188,
+     35
+    ],
+    "work-c2": [
+     434,
+     174,
+     26
+    ],
+    "work-c2-to": [
+     427,
+     175,
+     35
+    ],
+    "work-c3": [
+     504,
+     121,
+     26
+    ],
+    "work-c3-to": [
+     512,
+     116,
+     35
+    ],
+    "work-d1": [
+     305,
+     391,
+     26
+    ],
+    "work-d1-to": [
+     298,
+     386,
+     35
+    ],
+    "work-e1": [
+     214,
+     391,
+     26
+    ],
+    "work-e1-to": [
+     222,
+     386,
+     35
+    ],
+    "work-f1": [
+     775,
+     121,
+     26
+    ],
+    "work-f1-to": [
+     768,
+     116,
+     35
+    ],
+    "work-g1": [
+     420,
+     134,
+     26
+    ],
+    "work-g1-to": [
+     422,
+     140,
+     35
+    ],
+    "work-h1": [
+     380,
+     134,
+     26
+    ],
+    "work-h1-to": [
+     378,
+     140,
+     35
+    ],
+    "work-i1": [
+     290,
+     374,
+     26
+    ],
+    "work-i1-to": [
+     290,
+     382,
+     35
+    ],
+    "work-i2": [
+     276,
+     374,
+     26
+    ],
+    "work-i2-to": [
+     276,
+     382,
+     35
+    ],
+    "work-i3": [
+     262,
+     374,
+     26
+    ],
+    "work-i3-to": [
+     262,
+     382,
+     35
+    ],
+    "work-i4": [
+     248,
+     374,
+     26
+    ],
+    "work-i4-to": [
+     248,
+     382,
+     35
+    ],
+    "work-i5": [
+     234,
+     374,
+     26
+    ],
+    "work-i5-to": [
+     234,
+     382,
+     35
+    ],
+    "work-j1": [
+     760,
+     104,
+     26
+    ],
+    "work-j1-to": [
+     760,
+     112,
+     35
+    ],
+    "work-j2": [
+     746,
+     104,
+     26
+    ],
+    "work-j2-to": [
+     746,
+     112,
+     35
+    ],
+    "work-j3": [
+     732,
+     104,
+     26
+    ],
+    "work-j3-to": [
+     732,
+     112,
+     35
+    ]
+   },
+   "expect": "crest-waterside-01m-shipyard-large-water.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "deckz": 2.5,
+      "kind": "building",
+      "lot": "80,52",
+      "slip": "32,14,2.5",
+      "style": "common",
+      "use": "shipyard-large",
+      "variant": "a",
+      "water": 20
+     },
+     "mirror": "",
+     "name": "船台、骨架與設施",
+     "recolor": {},
+     "source": "crest-waterside-01m-shipyard-large-water-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-waterside-01m-shipyard-large-water-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      147,
+      19,
+      26
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "倉庫-貨門-171",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    },
+    {
+     "at": [
+      48,
+      119,
+      26
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "鐵匠鋪-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      164,
+      52
+     ],
+     "meta": {
+      "part": "chimney"
+     },
+     "mirror": "",
+     "name": "鐵匠鋪-煙囪",
+     "recolor": {},
+     "source": "summit-bourg-fr-01m-part-chimney",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      536,
+      152,
+      26
+     ],
+     "meta": {},
+     "name": "瀝青桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      548,
+      152,
+      26
+     ],
+     "meta": {},
+     "name": "瀝青桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      140.5,
+      20,
+      52.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-倉庫",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      140.5,
+      260,
+      39
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-起重架",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    800,
+    520,
+    175
+   ],
+   "tags": "building,common",
+   "title": "大船廠水上版（共用：寬船台從平台斜進水、上面一艘 26 m 的船骨架；起桅的起重架、剛鋪的龍骨、長倉庫、桅杆棚、鐵匠鋪、木料、三座絞盤、護舷）"
+  },
+  "crest-waterside-01m-shipyard-large-water-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-shipyard-large-water-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    800,
+    520,
+    175
+   ],
+   "tags": "sub",
+   "title": "大船廠水上版｜船台、骨架與設施"
+  },
+  "crest-waterside-01m-shipyard-large-water-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-shipyard-large-water-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    800,
+    520,
+    175
+   ],
+   "tags": "sub",
+   "title": "大船廠水上版｜屋頂"
+  },
+  "crest-waterside-01m-shipyard-small-water": {
+   "anchors": {
+    "door": [
+     200,
+     0,
+     21
+    ],
+    "lot-0": [
+     0,
+     0,
+     21
+    ],
+    "work-a1": [
+     145,
+     160,
+     21
+    ],
+    "work-a1-to": [
+     138,
+     159,
+     30
+    ],
+    "work-b1": [
+     14,
+     160,
+     21
+    ],
+    "work-b1-to": [
+     22,
+     159,
+     30
+    ],
+    "work-c1": [
+     264,
+     161,
+     21
+    ],
+    "work-c1-to": [
+     272,
+     156,
+     30
+    ],
+    "work-d1": [
+     370,
+     144,
+     21
+    ],
+    "work-d1-to": [
+     370,
+     152,
+     30
+    ],
+    "work-d2": [
+     342,
+     144,
+     21
+    ],
+    "work-d2-to": [
+     342,
+     152,
+     30
+    ],
+    "work-d3": [
+     314,
+     144,
+     21
+    ],
+    "work-d3-to": [
+     314,
+     152,
+     30
+    ],
+    "work-d4": [
+     286,
+     144,
+     21
+    ],
+    "work-d4-to": [
+     286,
+     152,
+     30
+    ],
+    "work-e1": [
+     120,
+     217,
+     21
+    ],
+    "work-e1-to": [
+     120,
+     210,
+     30
+    ],
+    "work-e2": [
+     43,
+     217,
+     21
+    ],
+    "work-e2-to": [
+     43,
+     210,
+     30
+    ],
+    "work-f1": [
+     120,
+     194,
+     21
+    ],
+    "work-f1-to": [
+     120,
+     202,
+     30
+    ],
+    "work-f2": [
+     43,
+     194,
+     21
+    ],
+    "work-f2-to": [
+     43,
+     202,
+     30
+    ],
+    "work-g1": [
+     165,
+     90,
+     21
+    ],
+    "work-g1-to": [
+     178,
+     90,
+     30
+    ],
+    "work-h1": [
+     235,
+     90,
+     21
+    ],
+    "work-h1-to": [
+     222,
+     90,
+     30
+    ],
+    "work-i1": [
+     36,
+     46,
+     21
+    ],
+    "work-i1-to": [
+     36,
+     56,
+     30
+    ],
+    "work-j1": [
+     50,
+     100,
+     21
+    ],
+    "work-j1-to": [
+     50,
+     88,
+     30
+    ],
+    "work-k1": [
+     280,
+     120,
+     21
+    ],
+    "work-k1-to": [
+     280,
+     108,
+     24
+    ]
+   },
+   "expect": "crest-waterside-01m-shipyard-small-water.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 0,
+      "deckz": 2.0,
+      "kind": "building",
+      "lot": "40,32",
+      "slip": "20,8,2",
+      "style": "common",
+      "use": "shipyard-small",
+      "variant": "a",
+      "water": 12
+     },
+     "mirror": "",
+     "name": "船台、骨架與設施",
+     "recolor": {},
+     "source": "crest-waterside-01m-shipyard-small-water-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-waterside-01m-shipyard-small-water-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      304,
+      9,
+      21
+     ],
+     "meta": {
+      "part": "cartdoor"
+     },
+     "mirror": "",
+     "name": "倉庫-貨門-162",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-cartdoor",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      136,
+      88,
+      21
+     ],
+     "meta": {},
+     "name": "瀝青桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      26,
+      22,
+      21
+     ],
+     "meta": {},
+     "name": "貨箱-棚",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      298.5,
+      10,
+      43.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-倉庫",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    400,
+    320,
+    110
+   ],
+   "tags": "building,common",
+   "title": "小船廠水上版（共用：船台從平台斜進水、上面一艘 16 m 的 sloop 骨架；工棚、鋸木架、瀝青鍋、木板倉庫、蒸板火槽、木料場、兩座絞盤、護舷）"
+  },
+  "crest-waterside-01m-shipyard-small-water-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-shipyard-small-water-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    400,
+    320,
+    110
+   ],
+   "tags": "sub",
+   "title": "小船廠水上版｜船台、骨架與設施"
+  },
+  "crest-waterside-01m-shipyard-small-water-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-shipyard-small-water-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    400,
+    320,
+    110
+   ],
+   "tags": "sub",
+   "title": "小船廠水上版｜屋頂"
+  }
+ }
+}
