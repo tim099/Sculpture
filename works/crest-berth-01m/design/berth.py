@@ -18,6 +18,35 @@ if TRAIL not in sys.path:
     sys.path.insert(0, TRAIL)
 from quay import *                                                     # noqa: E402,F401  rope_line、spar、tackle_block、bollard ＋ harbour（capstan、rope_coil、log_pile）＋ civic／kit
 
+def rope(M, name, a, b, color=ROPE, thick=0.5, slack=1.0):
+    """一條真的繩（雕刻引擎的 work sub=rope，不是格子；放在這裡、不放 trailhead 的 quay.py：別人的作品只有作者能雕；Blocksail TASK-0899，Tim 2026-10-31「建築的繩索GO 同時可以修改起重機 用繩索替換掉格子」）：
+    記在 M.ropes（a、b ＝ 兩端的格座標、可帶小數；thick ＝ 直徑（格）；slack ＝ 繩長 ÷ 直線距離）⇒ build.py 寫進 manifest 的 ropes ⇒ apply.py ropes 拉繩
+    ⇒ Blocksail tools/townmodels.py ropes_of 匯進索引、遊戲（Blockside 63_towns.js townRopes）照它畫。端點要貼著格（1.5 格內）或掛在別的繩上，不然遊戲不畫。"""
+    if not hasattr(M, 'ropes'):
+        M.ropes = []
+    M.ropes.append({'name': name, 'a': [float(v) for v in a], 'b': [float(v) for v in b], 'color': color, 'thick': thick, 'slack': slack})
+
+
+def rope_ground(lab, ground, ropes, r=2):
+    """浮空的判斷把繩算進去：一端貼著（r 格內）已經接到地面的那一團、另一端的那一團也算接到（吊鉤、貨網只靠繩掛著）；一路傳到不再變。回傳新的 ground（標號集合）。"""
+    X, Y, Z = lab.shape
+
+    def labs(P):
+        x0, y0, z0 = (int(math.floor(v)) for v in P)
+        s = lab[max(0, x0 - r):min(X, x0 + r + 1), max(0, y0 - r):min(Y, y0 + r + 1), max(0, z0 - r):min(Z, z0 + r + 1)]
+        return set(int(v) for v in s.ravel()) - {0}
+    ends = [(labs(R['a']), labs(R['b'])) for R in ropes]
+    g = set(ground)
+    while True:
+        add = set()
+        for A, B in ends:
+            if A & g: add |= B - g
+            if B & g: add |= A - g
+        if not add:
+            return g
+        g |= add
+
+
 EDGE, SINK = 3.0, 2.0                    # 棧橋邊在 y = EDGE × 10；棧橋面在 z = SINK × 10〔設計：最窄的棧橋 6 m ⇒ 一半 3 m 剛好到中線〕
 EY, ZD = int(EDGE * 10), int(SINK * 10)
 # 五級（同 world/town.js BERTH_CLS：泊位長 len（沿棧橋）、預留那一塊往外 out、平台 apron、指形棧橋寬 fw；fl ＝ 指形棧橋伸多長〔設計：船長的八成上下〕）
@@ -41,6 +70,8 @@ class Deck:
         s.M.oob += s.T.oob
         for m in s.T.models:
             m = dict(m); m['at'] = [m['at'][0], m['at'][1], m['at'][2] + ZD]; s.M.models.append(m)
+        for R in getattr(s.T, 'ropes', []):                             # 繩（berth.py rope）跟著往上搬
+            rope(s.M, R['name'], [R['a'][0], R['a'][1], R['a'][2] + ZD], [R['b'][0], R['b'][1], R['b'][2] + ZD], R['color'], R['thick'], R['slack'])
         return s.M
 
 
@@ -171,12 +202,12 @@ def treadwheel_crane(T, x0, reach, salt=0, y0=4):
         rope_line(T, (x0 + dx + 0.5, ry + 0.5, 71), (x0 + dx + 0.5, ty, tz), FRAME, r=1)
     rope_line(T, (x0 + 0.5, Y1 - 1.5, 30), (x0 + 0.5, Y1 + reach * 0.5, 68), FRAME, r=1)
     tackle_block(T, x0, ty - 2, tz - 8, 6)                              # 臂頂的滑車
-    rope_line(T, (x0 + 1.5, Y1 - 4.5, cz + 2), (x0 + 1.5, ty - 1, tz - 2), ROPE)   # 從輪軸捲上來的繩 ⇒ 臂頂
+    rope(T, '起重機%d-捲繩' % x0, (x0 + 1.5, Y1 - 4.5, cz + 2), (x0 + 1.5, ty - 1, tz - 2), thick=0.6)   # 從輪軸捲上來的繩 ⇒ 臂頂（真的繩：2026-10-31 換掉格子，TASK-0899）
     hz = 30                                                            # 吊鉤離棧橋面 3 m
-    rope_line(T, (x0 + 0.5, ty - 1.5, tz - 8), (x0 + 0.5, ty - 1.5, hz + 4), ROPE)
+    rope(T, '起重機%d-吊鉤索' % x0, (x0 + 0.5, ty - 1.5, tz - 8), (x0 + 0.5, ty - 1.5, hz + 4), thick=0.6)
     T.box('body', x0, ty - 2, hz, x0 + 1, ty - 1, hz + 4, IRON, force=True)
-    for (dx, dy) in ((-5, -4), (5, -4), (-5, 5), (5, 5)):              # 貨網（同起重架的那一張）
-        rope_line(T, (x0 + 0.5, ty - 1.5, hz), (x0 + 0.5 + dx, ty - 1.5 + dy, hz - 9), ROPE)
+    for k, (dx, dy) in enumerate(((-5, -4), (5, -4), (-5, 5), (5, 5))):   # 貨網（同起重架的那一張）：四條吊索是繩
+        rope(T, '起重機%d-貨網吊索-%d' % (x0, k + 1), (x0 + 0.5, ty - 1.5, hz), (x0 + 0.5 + dx, ty - 1.5 + dy, hz - 9), thick=0.4)
     for x in range(x0 - 6, x0 + 7):
         for y in range(ty - 7, ty + 5):
             T.put('body', x, y, hz - 10, ROPE, force=True)

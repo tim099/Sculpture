@@ -168,6 +168,16 @@
    ],
    "mpv": 0.1,
    "order": 2,
+   "ropes": [
+    {
+     "color": "#b69155",
+     "from": "40.5,18.5,26.5",
+     "name": "絞盤繩",
+     "slack": 1.0,
+     "thickness": 0.5,
+     "to": "40.5,40.5,32.5"
+    }
+   ],
    "size": [
     80,
     160,
@@ -484,6 +494,40 @@
    ],
    "mpv": 0.1,
    "order": 2,
+   "ropes": [
+    {
+     "color": "#b69155",
+     "from": "158.5,129.5,21.5",
+     "name": "拉船索-1",
+     "slack": 1.0,
+     "thickness": 0.6,
+     "to": "120.5,189.5,26.5"
+    },
+    {
+     "color": "#b69155",
+     "from": "120.5,191.5,25.5",
+     "name": "拉船索-1-出",
+     "slack": 1.02,
+     "thickness": 0.6,
+     "to": "120.5,198.5,20.5"
+    },
+    {
+     "color": "#b69155",
+     "from": "250.5,134.5,21.5",
+     "name": "拉船索-2",
+     "slack": 1.0,
+     "thickness": 0.6,
+     "to": "220.5,189.5,26.5"
+    },
+    {
+     "color": "#b69155",
+     "from": "220.5,191.5,25.5",
+     "name": "拉船索-2-出",
+     "slack": 1.02,
+     "thickness": 0.6,
+     "to": "220.5,198.5,20.5"
+    }
+   ],
    "size": [
     320,
     200,
@@ -521,6 +565,283 @@
    ],
    "tags": "sub",
    "title": "修船碼頭水上版｜屋頂"
+  },
+  "crest-waterside-01m-sheers": {
+   "anchors": {
+    "door": [
+     30,
+     0,
+     0
+    ],
+    "hoist": [
+     50,
+     17,
+     103
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     52,
+     28,
+     0
+    ],
+    "work-a1-to": [
+     50,
+     20,
+     9
+    ],
+    "work-b1": [
+     38,
+     20,
+     0
+    ],
+    "work-b1-to": [
+     46,
+     16,
+     9
+    ],
+    "work-b2": [
+     41,
+     5,
+     0
+    ],
+    "work-b2-to": [
+     48,
+     8,
+     9
+    ],
+    "work-c1": [
+     62,
+     14,
+     0
+    ],
+    "work-c1-to": [
+     54,
+     16,
+     9
+    ]
+   },
+   "expect": "crest-waterside-01m-sheers.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,10",
+      "style": "common",
+      "use": "sheers",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "起重架與絞盤",
+     "recolor": {},
+     "source": "crest-waterside-01m-sheers-body",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      16,
+      22,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      16,
+      36,
+      0
+     ],
+     "meta": {},
+     "name": "貨箱-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-crate"
+    },
+    {
+     "at": [
+      84,
+      22,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      84,
+      36,
+      0
+     ],
+     "meta": {},
+     "name": "酒桶-2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      50.5,
+      94,
+      13
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-穩索樁",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "ropes": [
+    {
+     "color": "#b69155",
+     "from": "50.5,13.5,121.5",
+     "name": "前穩索",
+     "slack": 1.0,
+     "thickness": 0.7,
+     "to": "50.5,4.5,9.5"
+    },
+    {
+     "color": "#b69155",
+     "from": "50.5,19.5,121.5",
+     "name": "後穩索",
+     "slack": 1.0,
+     "thickness": 0.7,
+     "to": "50.5,95.5,15.5"
+    },
+    {
+     "color": "#b69155",
+     "from": "50.5,16.5,116",
+     "name": "吊滑車索",
+     "slack": 1.0,
+     "thickness": 0.7,
+     "to": "50.5,16.5,110"
+    },
+    {
+     "color": "#b69155",
+     "from": "49.5,16.5,104",
+     "name": "吊索-1",
+     "slack": 1.0,
+     "thickness": 0.6,
+     "to": "49.5,16.5,34"
+    },
+    {
+     "color": "#b69155",
+     "from": "51.5,16.5,104",
+     "name": "吊索-2",
+     "slack": 1.0,
+     "thickness": 0.6,
+     "to": "51.5,16.5,34"
+    },
+    {
+     "color": "#b69155",
+     "from": "50.5,16.5,24",
+     "name": "貨網吊索-1",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "45.5,12.5,14"
+    },
+    {
+     "color": "#b69155",
+     "from": "50.5,16.5,24",
+     "name": "貨網吊索-2",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "55.5,12.5,14"
+    },
+    {
+     "color": "#b69155",
+     "from": "50.5,16.5,24",
+     "name": "貨網吊索-3",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "45.5,21.5,14"
+    },
+    {
+     "color": "#b69155",
+     "from": "50.5,16.5,24",
+     "name": "貨網吊索-4",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "55.5,21.5,14"
+    },
+    {
+     "color": "#b69155",
+     "from": "52.5,16.5,109",
+     "name": "拉索",
+     "slack": 1.0,
+     "thickness": 0.6,
+     "to": "51.5,62.5,3.5"
+    },
+    {
+     "color": "#b69155",
+     "from": "51.5,64.5,5.5",
+     "name": "拉索-絞盤",
+     "slack": 1.0,
+     "thickness": 0.6,
+     "to": "51.5,78.5,5.5"
+    }
+   ],
+   "size": [
+    100,
+    100,
+    130
+   ],
+   "tags": "building,common",
+   "title": "起重架（共用：照 trailhead-harbour-01m-sheers，穩索、吊索、拉索換成真的繩；兩根圓材叉成 A 字、滑車與吊鉤、導向滑車接絞盤；碼頭邊卸貨）"
+  },
+  "crest-waterside-01m-sheers-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-waterside-01m-sheers-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    100,
+    130
+   ],
+   "tags": "sub",
+   "title": "起重架｜起重架與絞盤"
   },
   "crest-waterside-01m-shipyard-large-water": {
    "anchors": {
@@ -893,6 +1214,40 @@
    ],
    "mpv": 0.1,
    "order": 2,
+   "ropes": [
+    {
+     "color": "#b69155",
+     "from": "140.5,484.5,158",
+     "name": "起桅架-後穩索",
+     "slack": 1.0,
+     "thickness": 0.8,
+     "to": "140.5,262.5,41.5"
+    },
+    {
+     "color": "#b69155",
+     "from": "140.5,488.5,152",
+     "name": "起桅架-吊滑車索",
+     "slack": 1.0,
+     "thickness": 0.8,
+     "to": "140.5,488.5,144"
+    },
+    {
+     "color": "#b69155",
+     "from": "140.5,488.5,136",
+     "name": "起桅架-吊索",
+     "slack": 1.0,
+     "thickness": 0.7,
+     "to": "140.5,488.5,66"
+    },
+    {
+     "color": "#b69155",
+     "from": "142.5,488.5,142",
+     "name": "起桅架-拉索",
+     "slack": 1.0,
+     "thickness": 0.7,
+     "to": "140.5,300.5,29.5"
+    }
+   ],
    "size": [
     800,
     520,
@@ -1215,6 +1570,7 @@
    ],
    "mpv": 0.1,
    "order": 2,
+   "ropes": [],
    "size": [
     400,
     320,

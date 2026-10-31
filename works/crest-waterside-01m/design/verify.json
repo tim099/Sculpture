@@ -11,7 +11,7 @@
   "composite_cavity": 0,
   "composite_components": 1,
   "composite_floating": [],
-  "composite_voxels": 53328,
+  "composite_voxels": 53302,
   "door": [
    18,
    0,
@@ -30,8 +30,8 @@
     ],
     "cavity": 0,
     "components": 1,
-    "md5": "e6cfae65d4edace84baed861a4ae6fc2",
-    "voxels": 27630
+    "md5": "08f981aa0b2e0495c284c3f9d8337f6a",
+    "voxels": 27604
    },
    "crest-waterside-01m-boat-shed-water-roof": {
     "bbox": [
@@ -56,6 +56,7 @@
   "models": 3,
   "oob": 0,
   "part_clash": 0,
+  "ropes": 1,
   "size": [
    80,
    160,
@@ -76,7 +77,7 @@
   "composite_cavity": 0,
   "composite_components": 1,
   "composite_floating": [],
-  "composite_voxels": 145234,
+  "composite_voxels": 145029,
   "door": [
    65,
    0,
@@ -95,8 +96,8 @@
     ],
     "cavity": 0,
     "components": 1,
-    "md5": "452ca60c8a095382881da2450dc42e61",
-    "voxels": 109000
+    "md5": "f0a5c57c1b1d78630583056220e8c97e",
+    "voxels": 108795
    },
    "crest-waterside-01m-careening-wharf-water-roof": {
     "bbox": [
@@ -121,6 +122,7 @@
   "models": 4,
   "oob": 0,
   "part_clash": 0,
+  "ropes": 4,
   "size": [
    320,
    200,
@@ -128,6 +130,58 @@
   ],
   "style": "common",
   "use": "careening-wharf"
+ },
+ "crest-waterside-01m-sheers": {
+  "bbox": [
+   19,
+   1,
+   0,
+   88,
+   98,
+   125
+  ],
+  "composite_cavity": 0,
+  "composite_components": 8,
+  "composite_floating": [],
+  "composite_voxels": 7841,
+  "door": [
+   30,
+   0,
+   0
+  ],
+  "door_ok": true,
+  "layers": {
+   "crest-waterside-01m-sheers-body": {
+    "bbox": [
+     19,
+     1,
+     0,
+     88,
+     98,
+     125
+    ],
+    "cavity": 0,
+    "components": 8,
+    "md5": "c7f8f919ca6d957581fdb650e5fc8585",
+    "voxels": 7841
+   }
+  },
+  "links": 1,
+  "lot": [
+   10,
+   10
+  ],
+  "models": 5,
+  "oob": 0,
+  "part_clash": 0,
+  "ropes": 11,
+  "size": [
+   100,
+   100,
+   130
+  ],
+  "style": "common",
+  "use": "sheers"
  },
  "crest-waterside-01m-shipyard-large-water": {
   "bbox": [
@@ -139,9 +193,9 @@
    162
   ],
   "composite_cavity": 0,
-  "composite_components": 1,
+  "composite_components": 3,
   "composite_floating": [],
-  "composite_voxels": 747625,
+  "composite_voxels": 746906,
   "door": [
    400,
    0,
@@ -159,9 +213,9 @@
      162
     ],
     "cavity": 0,
-    "components": 1,
-    "md5": "6ad2b0ec73379e32c320635e5e3a7427",
-    "voxels": 650969
+    "components": 3,
+    "md5": "17a125bbefc3e9813fdfb3bc50301194",
+    "voxels": 650250
    },
    "crest-waterside-01m-shipyard-large-water-roof": {
     "bbox": [
@@ -186,6 +240,7 @@
   "models": 4,
   "oob": 0,
   "part_clash": 0,
+  "ropes": 4,
   "size": [
    800,
    520,
@@ -251,6 +306,7 @@
   "models": 3,
   "oob": 0,
   "part_clash": 0,
+  "ropes": 0,
   "size": [
    400,
    320,

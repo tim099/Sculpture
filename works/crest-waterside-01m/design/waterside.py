@@ -58,6 +58,8 @@ class Water:
             m = dict(m); m['at'] = [m['at'][0], m['at'][1], m['at'][2] + dz]; s.M.models.append(m)
         for k, (x, y, z) in s.T.anchors.items():
             s.M.anchors[k] = (x, y, z + dz)
+        for R in getattr(s.T, 'ropes', []):                             # 繩（berth.py rope）跟著往上搬
+            rope(s.M, R['name'], [R['a'][0], R['a'][1], R['a'][2] + dz], [R['b'][0], R['b'][1], R['b'][2] + dz], R['color'], R['thick'], R['slack'])
         return s.M
 
 
@@ -176,7 +178,7 @@ def boat_shed_water():
     for y in (40, 66, 92):                                             # 小艇的墊木：架在兩條滑道上，頂面水平（z ZD ＋ 12）
         M.box('body', 30, y, zw(y) + 3, 50, y + 3, ZD + 12, FRAME, force=True)
     M.models.append({'name': '小艇', 'source': 'basecamp-ember-01m-boat', 'at': [40, 67, ZD + 12], 'pivot': [90, 26, 0], 'rotate': [0, 0, 90], 'meta': {}})   # 9 m：y 22～112，尾端過了船台口 3 m、在水面上 1 m 多
-    rope_line(M, (40.5, 18.5, ZD + 5.5), (40.5, 40.5, ZD + 11.5))      # 絞盤的繩 ⇒ 第一根墊木（拴船首的環在那裡）
+    rope(M, '絞盤繩', (40.5, 18.5, ZD + 6.5), (40.5, 40.5, ZD + 12.5), thick=0.5)   # 絞盤的繩 ⇒ 第一根墊木（拴船首的環在那裡；真的繩，TASK-0899）
     slip_ladder(M, 8, Y - 2, ZD + 1)
     work(M, [('a1', 40, 74, 21, 40, 67, 30), ('a2', 26, 74, 21, 32, 67, 30), ('b1', 40, 60, 21, 40, 67, 30), ('c1', 56, 37, 21, 49, 35, 30)])   # 小艇底下、槳架前
     return finish({'key': 'boat-shed-water', 'title': '船棚水上版（共用：兩坡木瓦頂的長棚、正面木板牆與門、背面敞開；兩條滑道從棚裡斜進水、一艘 9 m 小艇、拉船的絞盤、槳架）',
@@ -272,12 +274,12 @@ def shipyard_large_water():
                 if (abs(x - hx) >= 4 or abs(y - hy) >= 4) and math.hypot(x - hx, (y - hy) * 1.5) <= 6.5:
                     T.put('body', x, y, z, ROPE, force=True)
     T.box('body', ax - 2, 260, 0, ax + 2, 264, 16, FRAME)              # 後穩索的地樁
-    rope_line(T, (hx + 0.5, hy - 3.5, hz + 4), (ax + 0.5, 262.5, 15.5))
-    rope_line(T, (hx + 0.5, hy + 0.5, hz - 2), (hx + 0.5, hy + 0.5, hz - 10))
+    rope(T, '起桅架-後穩索', (hx + 0.5, hy - 3.5, hz + 4), (ax + 0.5, 262.5, 15.5), thick=0.8)   # 起桅架的繩都是真的繩（TASK-0899）
+    rope(T, '起桅架-吊滑車索', (hx + 0.5, hy + 0.5, hz - 2), (hx + 0.5, hy + 0.5, hz - 10), thick=0.8)
     tackle_block(T, hx, hy, hz - 18, 8)
-    rope_line(T, (hx + 0.5, hy + 0.5, hz - 18), (hx + 0.5, hy + 0.5, 40))
+    rope(T, '起桅架-吊索', (hx + 0.5, hy + 0.5, hz - 18), (hx + 0.5, hy + 0.5, 40), thick=0.7)
     tackle_block(T, hx, hy, 34, 6)
-    rope_line(T, (hx + 2.5, hy + 0.5, hz - 12), (ax + 0.5, 300.5, 3.5))   # 拉的那一頭 ⇒ 導向滑車 ⇒ 絞盤
+    rope(T, '起桅架-拉索', (hx + 2.5, hy + 0.5, hz - 12), (ax + 0.5, 300.5, 3.5), thick=0.7)   # 拉的那一頭 ⇒ 導向滑車 ⇒ 絞盤
     T.box('body', ax - 2, 298, 0, ax + 3, 304, 3, FRAME)
     capstan(T, ax, 280)
     for y in range(240, 450):                                          # 第二艘：剛鋪的龍骨（擱在平台的墩上）、艏艉柱
@@ -345,8 +347,8 @@ def careening_wharf_water():
     for k, (cx, cy, bx) in enumerate(((158, 125, 120), (250, 130, 220))):   # 拉船的繩：絞盤 ⇒ 背面邊上的導向滑車（掛在粗樁上）
         T.box('body', bx - 3, Y - 12, 0, bx + 3, Y - 6, 14, FRAME)
         tackle_block(T, bx, Y - 10, 8, 5)
-        rope_line(T, (cx + 0.5, cy + 4.5, 5.5), (bx + 0.5, Y - 10.5, 10.5))
-        rope_line(T, (bx + 0.5, Y - 8.5, 9.5), (bx + 0.5, Y - 1.5, 4.5))
+        rope(T, '拉船索-%d' % (k + 1), (cx + 0.5, cy + 4.5, 5.5), (bx + 0.5, Y - 10.5, 10.5), thick=0.6)   # 真的繩（TASK-0899）
+        rope(T, '拉船索-%d-出' % (k + 1), (bx + 0.5, Y - 8.5, 9.5), (bx + 0.5, Y - 1.5, 4.5), thick=0.6, slack=1.02)
     for x in range(30, X - 10, 50):
         if abs(x - 120) > 12 and abs(x - 220) > 12:
             bollard(T, x, Y - 8, 11)

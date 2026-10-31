@@ -6,6 +6,7 @@
 #   links    加關聯（同名同設定就跳過；位置、轉向、翻面不同 ⇒ overwrite=1；替換色、meta 直接改；清單裡沒有的拿掉）
 #   models   加外部模型（同上）
 #   sails    掛布旗（manifest 的 flags：work sub=sail ＋ sub=meta part=sail；同名已在 ⇒ 跳過）
+#   ropes    拉繩（manifest 的 ropes：work sub=rope；同名同設定就跳過，設定不同 ⇒ unrope 再拉；清單裡沒有的拿掉。TASK-0899）
 #   check    只讀：每件作品匯出跟清單逐格比（缺／多／色差）＋ stats structure；組裝件匯出跟 build.py 的組好清單比
 import sys, os, json, re, subprocess
 
@@ -174,6 +175,24 @@ for w, W in sel:
             cli(['op=work', 'sub=sail', 'persona=' + P, 'work=' + w, 'name=' + S['name'], 'corners=' + S['corners'], 'bind=' + S['bind'], 'free=' + S['free'], 'color=%d' % S['color']])
             cli(['op=work', 'sub=meta', 'persona=' + P, 'work=' + w, 'part=sail', 'name=' + S['name'], 'meta=' + json.dumps(S['meta'], ensure_ascii=False, sort_keys=True)])
             print(w, 'sail', S['name'])
+    elif step == 'ropes':
+        want = W.get('ropes') or []
+        cur = {r['name']: r for r in (jload(w, 'ropes.json') or {}).get('ropes', [])}
+        if not want and not cur:
+            continue
+        num = lambda v: [round(float(c), 3) for c in str(v).split(',')] if str(v).count(',') == 2 else str(v)
+        for nm in sorted(set(cur) - {R['name'] for R in want}):
+            cli(['op=work', 'sub=unrope', 'persona=' + P, 'work=' + w, 'name=' + nm])
+            print(w, 'unrope', nm)
+        for R in want:
+            c = cur.get(R['name'])
+            if c and num(c.get('from')) == num(R['from']) and num(c.get('to')) == num(R['to']) and str(c.get('color') or '').lower() == R['color']                     and float(c.get('thickness') or 0) == float(R['thickness']) and float(c.get('slack') or 1) == float(R['slack']):
+                continue
+            if c:
+                cli(['op=work', 'sub=unrope', 'persona=' + P, 'work=' + w, 'name=' + R['name']])
+            cli(['op=work', 'sub=rope', 'persona=' + P, 'work=' + w, 'name=' + R['name'], 'from=' + R['from'], 'to=' + R['to'], 'color=' + R['color'],
+                 'thickness=%g' % R['thickness'], 'slack=%g' % R['slack']])
+        print(w, 'ropes', len(want))
     elif step == 'check':
         want = rd(os.path.join(D, 'masks', W['mask'])) if W['mask'] else (rd(os.path.join(D, 'masks', W['expect'])) if W.get('expect') else None)
         if want is None:
@@ -187,5 +206,5 @@ for w, W in sel:
         keys = [k for k in nums if re.search(r'compon|cavit|overlap|clip', k)]
         print(w, '作品 %d 格｜缺 %d 多 %d 色差 %d｜' % (len(cur), miss, extra, diff) + '  '.join('%s=%s' % (k, nums[k]) for k in keys))
     else:
-        raise SystemExit('步驟？ create|stamp|anchors|links|models|sails|check')
+        raise SystemExit('步驟？ create|stamp|anchors|links|models|sails|ropes|check')
 print(step, 'ok', ok, 'bad', bad)

@@ -8,12 +8,12 @@ import sys, os, json, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 from scipy import ndimage
-import waterside
+import waterside, cranes
 from waterside import *
 
 ROOT = 'crest-waterside-01m'
 SUMMIT_ROOT = 'summit-carib-01m'
-MODULES = [waterside]
+MODULES = [waterside, cranes]
 
 
 def wid(*a):
@@ -27,7 +27,7 @@ def dump(path, cells):
     return hashlib.md5(open(path, 'rb').read()).hexdigest()
 
 
-def structure(cells, dims, floating=False, ground=(0,)):
+def structure(cells, dims, floating=False, ground=(0,), ropes=()):
     """元件數（6 連通）、封閉空腔格數；floating ⇒ 另回「沒碰到地面（z 0）的元件」的格數清單。"""
     if not cells:
         return (0, 0, []) if floating else (0, 0)
@@ -39,8 +39,16 @@ def structure(cells, dims, floating=False, ground=(0,)):
     if not floating:
         return int(n), cav
     ground = set(np.concatenate([np.unique(lab[:, :, g]) for g in ground])) - {0}   # 泊位：棧橋面（z SINK × 10）也算地面（berth.py）
+    ground = rope_ground(lab, ground, ropes)                         # 掛在繩上的那一團（吊鉤、貨網）算接到（berth.py rope_ground）
     fl = [int((lab == i).sum()) for i in range(1, n + 1) if i not in ground]
     return int(n), cav, fl
+
+
+def rope_list(M):
+    """M.ropes（berth.py rope）⇒ manifest 的 ropes：apply.py ropes 照它下 work sub=rope（端點 x,y,z 格座標、色 #RRGGBB、粗細 ＝ 直徑格、鬆緊）。"""
+    f = lambda v: ','.join('%g' % round(c, 3) for c in v)
+    return [{'name': R['name'], 'from': f(R['a']), 'to': f(R['b']), 'color': '#%02x%02x%02x' % rgb(R['color']), 'thickness': R['thick'], 'slack': R['slack']}
+            for R in getattr(M, 'ropes', [])]
 
 
 def bbox(cells):
@@ -94,14 +102,14 @@ def main():
         comp, clash = composite(M)
         dump(os.path.join(D, 'masks', pw + '.composite.txt'), comp)
         man['works'][pw] = {'title': B['title'], 'size': [M.X, M.Y, M.Z], 'tags': 'building,' + style, 'mask': None, 'expect': pw + '.composite.txt',
-                            'anchors': {k: list(v) for k, v in M.anchors.items()}, 'links': links, 'models': M.models, 'order': 2,
+                            'anchors': {k: list(v) for k, v in M.anchors.items()}, 'links': links, 'models': M.models, 'order': 2, 'ropes': rope_list(M),
                             'flags': B.get('flags', []), 'mpv': B.get('mpv', 0.1)}
         dx, dy, dz = M.anchors['door']
         door_ok = (dx, dy, dz) not in comp and (dz == 0 or B.get('door_deck') or (dx, dy, dz - 1) in comp) and (dx, dy, dz + 1) not in comp   # 泊位：腳下是遊戲畫的棧橋面
-        n, cav, fl = structure(comp, (M.X, M.Y, M.Z), floating=True, ground=B.get('ground', (0,)))
+        n, cav, fl = structure(comp, (M.X, M.Y, M.Z), floating=True, ground=B.get('ground', (0,)), ropes=getattr(M, 'ropes', []))
         ver[pw] = {'lot': list(B['lot']), 'size': [M.X, M.Y, M.Z], 'style': style, 'use': B['use'], 'oob': M.oob, 'part_clash': clash, 'composite_voxels': len(comp),
                    'composite_components': n, 'composite_floating': fl, 'composite_cavity': cav, 'bbox': bbox(comp), 'door': list(M.anchors['door']), 'door_ok': door_ok,
-                   'links': len(links), 'models': len(M.models), 'layers': layer_ver}
+                   'links': len(links), 'models': len(M.models), 'ropes': len(getattr(M, 'ropes', [])), 'layers': layer_ver}
         sheet(comp, (M.X, M.Y, M.Z), os.path.join(D, 'sheets', key + '.png'),
               '%s｜地塊 %g × %g m｜%d 格（組好）｜框 %s' % (B['title'].split('（')[0], B['lot'][0], B['lot'][1], len(comp), 'x'.join(str(v) for v in (M.X, M.Y, M.Z))), px=B.get('px', 3))
         print(key, json.dumps({k: v for k, v in ver[pw].items() if k != 'layers'}, ensure_ascii=False))
