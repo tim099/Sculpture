@@ -1,6 +1,318 @@
 {
  "root": "calli-civic-01m",
  "works": {
+  "calli-civic-01m-carib-school": {
+   "anchors": {
+    "door": [
+     60,
+     25,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     30,
+     38,
+     9
+    ],
+    "work-a1-to": [
+     44,
+     38,
+     20
+    ],
+    "work-a2": [
+     36,
+     52,
+     6
+    ],
+    "work-a2-to": [
+     50,
+     52,
+     18
+    ],
+    "work-b1": [
+     66,
+     31,
+     6
+    ],
+    "work-b1-to": [
+     66,
+     50,
+     14
+    ],
+    "work-b2": [
+     82,
+     69,
+     6
+    ],
+    "work-b2-to": [
+     82,
+     50,
+     14
+    ],
+    "work-c1": [
+     23,
+     66,
+     9
+    ],
+    "work-c1-to": [
+     23,
+     72,
+     20
+    ]
+   },
+   "expect": "calli-civic-01m-carib-school.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,10",
+      "style": "carib",
+      "use": "school",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "教室與後院",
+     "recolor": {},
+     "source": "calli-civic-01m-carib-school-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "前廊",
+     "recolor": {},
+     "source": "calli-civic-01m-carib-school-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "calli-civic-01m-carib-school-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      25,
+      6
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-大門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      74,
+      6
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      16,
+      25,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      84,
+      25,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      74,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      80,
+      74,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      108,
+      41,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      46.5,
+      26,
+      22.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-廊",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      74,
+      86,
+      0
+     ],
+     "meta": {},
+     "name": "水桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    100,
+    80
+   ],
+   "tags": "building,carib",
+   "title": "加勒比海的學校（petite école：毛石台基、釘板教室、木瓦四坡頂、前廊與台階、開著百葉的窗；講台、老師的桌椅、木十字、書架、四排長桌長凳；後院木柵、吊鐘木架）"
+  },
+  "calli-civic-01m-carib-school-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-carib-school-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    100,
+    80
+   ],
+   "tags": "sub",
+   "title": "加勒比海的學校｜教室與後院"
+  },
+  "calli-civic-01m-carib-school-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-carib-school-gallery.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    100,
+    80
+   ],
+   "tags": "sub",
+   "title": "加勒比海的學校｜前廊"
+  },
+  "calli-civic-01m-carib-school-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-carib-school-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    100,
+    80
+   ],
+   "tags": "sub",
+   "title": "加勒比海的學校｜屋頂"
+  },
   "calli-civic-01m-en-chapel": {
    "anchors": {
     "bell": [

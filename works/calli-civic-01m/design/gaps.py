@@ -297,5 +297,102 @@ def es_battery():
             'layer_anchors': {'magazine': {'blast': (87, 98, 10), 'door': (87, mr[1] - 1, 0)}},
             'layer_models': {'rampart': guns_m, 'magazine': kegs}}
 
+# ─────────────────────────────── 加勒比海的學校（école）12 × 10 m ───────────────────────────────
+def desk(M, x0, x1, y0, y1, zb, h, top=FLOOR, layer='body'):
+    """一張桌（或長凳）：四角的腳從 zb 立到 zb ＋ h、頂一片板。"""
+    for x, y in ((x0, y0), (x1 - 2, y0), (x0, y1 - 2), (x1 - 2, y1 - 2)):
+        M.box(layer, x, y, zb, x + 2, y + 2, zb + h, FRAME)
+    M.box(layer, x0, y0, zb + h, x1, y1, zb + h + 1, top)
 
-ALL = [en_chapel, en_jail, es_battery]
+
+BOOKS = (160, 100, SH_GREEN, SH_BLUE, DARK, 136)   # 書背：紅、褐、綠、藍、黑、牛皮
+
+
+def book_row(M, x0, x1, y0, y1, z, salt=0, axis='x'):
+    """一排立著的書（一本 1 格寬、高 3～4 格；色照雜湊）。"""
+    n = (x1 - x0) if axis == 'x' else (y1 - y0)
+    for i in range(n):
+        if h01('bk', i, z, salt) < 0.12:
+            continue
+        c = BOOKS[int(h01('bc', i, z, salt) * len(BOOKS)) % len(BOOKS)]
+        hh = 3 + (h01('bh', i, z, salt) < 0.5)
+        if axis == 'x':
+            M.box('body', x0 + i, y0, z, x0 + i + 1, y1, z + hh, c)
+        else:
+            M.box('body', x0, y0 + i, z, x1, y0 + i + 1, z + hh, c)
+
+
+def carib_school():
+    """加勒比海的學校（petite école）：毛石台基上一間釘板的教室（10 × 5 m）、木瓦四坡頂、前廊與三級台階、雙扇門、開著木板百葉的窗（街上看得到裡面）；
+    裡面左端一座講台（老師的桌椅）、牆上木十字、書架；學生的長桌與長凳四排面向講台、桌上攤著書；後院木柵、一副吊鐘的木架、長凳、水桶。
+    - 照什麼：牆、屋頂、門廊、門窗全照 summit-carib-01m 的住宅 A（同一套木構）；17 世紀法屬島上的孩子多半由教士或修會教讀寫與教理〔摘：通說〕。
+    - 設計：當年島上的學校長什麼樣子〔沒查到〕⇒ 平面、講台、四排桌凳、吊鐘架全部是設計（17 世紀還沒有黑板 ⇒ 不放）。"""
+    X, Y, Z = 120, 100, 80
+    M = Model((X, Y, Z))
+    X0, Y0, X1, Y1, GY0 = 10, 26, 110, 76, 12
+    R, t, fl = (X0, Y0, X1, Y1), 2, 6
+    rubble_walls(M, (X0, GY0, X1, Y1), 0, fl - 1, 4, salt=3301)      # 毛石台基（含前廊底下）
+    M.box('body', X0 + 4, GY0 + 4, 0, X1 - 4, Y1 - 4, fl - 1, EARTH_W)
+    M.box('body', X0, Y0, fl - 1, X1, Y1, fl, FLOOR)
+    board_walls(M, R, fl, 37, t)
+    M.box('gallery', X0, GY0, fl - 1, X1, Y0, fl, FLOOR)
+    put_part(M, 'door-double', '前-大門', 'front', R, 60, fl, t)
+    put_part(M, 'door-plank', '後-門（往院子）', 'back', R, 60, fl, t)
+    for i, cx in enumerate((26, 94)):
+        put_part(M, 'window-board', '前-窗%d' % (i + 1), 'front', R, cx, fl + 7, t)
+    for i, cx in enumerate((24, 90)):
+        put_part(M, 'window-board', '後-窗%d' % (i + 1), 'back', R, cx, fl + 7, t)
+    put_part(M, 'window-board', '右-窗', 'right', R, (Y0 + Y1) // 2, fl + 7, t)
+    steps(M, 52, 68, GY0, 3, 2, 3, back=False, layer='body', color=RUBBLE)
+    steps(M, 54, 66, Y1, 3, 2, 3, back=True, layer='body', color=RUBBLE)
+    M.anchor('door', 60, Y0 - 1, fl)
+    top = shingle_roof(M, [{'x0': X0, 'y0': Y0, 'x1': X1, 'y1': Y1, 'ze': 37, 'p': 0.8, 'over': (4, 4, Y0 - GY0 + 3, 4), 'kick': {'front': 0.45}}], salt=3302)
+    gallery_posts(M, (X0, 34, 84, X1 - 2), GY0, fl, top)
+    desk(M, 16, 40, 14, 17, fl, 3, layer='gallery')                    # 前廊靠左一條長凳（等上課的孩子）
+    # 講台（左端）：老師的桌椅；左牆上木十字；後牆角的書架
+    zp = fl + 3
+    M.box('body', X0 + t, 30, fl, 34, 68, zp, FLOOR)
+    desk(M, 18, 28, 42, 60, zp, 7)
+    book_row(M, 20, 26, 44, 47, zp + 8, salt=1)
+    M.box('body', 14, 48, zp, 17, 54, zp + 4, FRAME)                    # 椅子：座、靠背（老師面向 +x 的學生）
+    M.box('body', 13, 48, zp + 4, 17, 54, zp + 5, FLOOR)
+    M.box('body', 13, 48, zp + 5, 14, 54, zp + 12, FRAME)
+    M.box('body', X0 + t, 50, fl + 16, X0 + t + 1, 52, fl + 27, FRAME)  # 木十字
+    M.box('body', X0 + t, 47, fl + 22, X0 + t + 1, 55, fl + 24, FRAME)
+    S = (14, 70, 32, 74)                                                # 書架（靠後牆）
+    for x in (S[0], S[2] - 2):
+        M.box('body', x, S[1], fl, x + 2, S[3], fl + 24, FRAME)
+    for i, z in enumerate((fl, fl + 6, fl + 12, fl + 18, fl + 24)):
+        M.box('body', S[0], S[1], z, S[2], S[3], z + 1, FLOOR)
+        if z < fl + 24:
+            book_row(M, S[0] + 2, S[2] - 2, S[1] + 1, S[3], z + 1, salt=10 + i)
+    # 學生：四排長桌＋長凳（面向講台 ⇒ 桌在 x 小的那一邊、凳在後面），桌上攤著書
+    for r, x in enumerate((42, 58, 74, 90)):
+        desk(M, x, x + 4, 36, 66, fl, 6)
+        desk(M, x + 7, x + 10, 36, 66, fl, 3)
+        for j, y in enumerate((39, 47, 55, 61)):
+            if h01('ob', r, j) < 0.7:
+                M.box('body', x + 1, y, fl + 7, x + 3, y + 3, fl + 8, BOOKS[(r + j) % len(BOOKS)])
+                M.box('body', x + 1, y + 1, fl + 7, x + 3, y + 2, fl + 8, LIME)   # 攤開的書頁
+    # 後院：木柵、吊鐘的木架、長凳、水桶
+    yb = Y - 2
+    palisade(M, [(X0, Y1), (1, Y1), (1, yb), (X - 2, yb), (X - 2, Y1), (X1 - 1, Y1)], gap={(x, yb) for x in range(54, 66)})
+    for x in (92, 104):
+        M.box('body', x, 86, 0, x + 2, 88, 30, FRAME)
+    M.box('body', 90, 86, 30, 108, 88, 32, FRAME)
+    bell_at(M, 99, 87, 30)
+    bench(M, 14, 40, 86, 89)
+    M.models += [{'name': '燈籠-廊', 'source': 'summit-rocher-01m-lantern', 'at': [46.5, Y0, 22.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
+                 {'name': '水桶-院', 'source': 'summit-rocher-01m-barrel', 'at': [74, 86, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+    M.anchor('lot-0', 0, 0, 0)
+    # 工作點（BUILDING_SPEC §5；服務 ＝ 菜單最多人的那道 jobs 2 × 二級 mult 2 ＝ 4 ＋ 1）：a 講台（台前、桌旁），b 兩條走道（前、後），c 書架前
+    for nm, at, to in (('a1', (30, 38, zp), (44, 38, fl + 14)), ('a2', (36, 52, fl), (50, 52, fl + 12)), ('b1', (66, 31, fl), (66, 50, fl + 8)),
+                       ('b2', (82, 69, fl), (82, 50, fl + 8)), ('c1', (23, 66, zp), (23, 72, fl + 14))):
+        M.anchor('work-' + nm, *at)
+        M.anchor('work-%s-to' % nm, *to)
+    return {'key': 'carib-school', 'style': 'carib',
+            'title': '加勒比海的學校（petite école：毛石台基、釘板教室、木瓦四坡頂、前廊與台階、開著百葉的窗；講台、老師的桌椅、木十字、書架、四排長桌長凳；後院木柵、吊鐘木架）',
+            'use': 'school', 'lot': (12, 10), 'M': M, 'layers': {'body': '教室與後院', 'gallery': '前廊', 'roof': '屋頂'}}
+
+
+ALL = [en_chapel, en_jail, es_battery, carib_school]
