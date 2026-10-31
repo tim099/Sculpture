@@ -1,0 +1,509 @@
+{
+ "root": "ridge-two-inn-01m",
+ "works": {
+  "ridge-two-inn-01m-carib-inn": {
+   "anchors": {
+    "door": [
+     60,
+     29,
+     6
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "sign": [
+     105,
+     2,
+     33
+    ],
+    "work-a1": [
+     90,
+     78,
+     6
+    ],
+    "work-a1-to": [
+     90,
+     70,
+     18
+    ],
+    "work-b1": [
+     44,
+     58,
+     6
+    ],
+    "work-b1-to": [
+     34,
+     58,
+     14
+    ],
+    "work-c1": [
+     30,
+     50,
+     39
+    ],
+    "work-c1-to": [
+     17,
+     60,
+     39
+    ],
+    "work-d1": [
+     30,
+     58,
+     39
+    ],
+    "work-d1-to": [
+     30,
+     70,
+     44
+    ],
+    "work-e1": [
+     52,
+     120,
+     0
+    ],
+    "work-e1-to": [
+     52,
+     124,
+     18
+    ],
+    "work-f1": [
+     56,
+     64,
+     39
+    ],
+    "work-f1-to": [
+     64,
+     72,
+     44
+    ],
+    "work-g1": [
+     86,
+     62,
+     39
+    ],
+    "work-g1-to": [
+     94,
+     72,
+     44
+    ]
+   },
+   "expect": "ridge-two-inn-01m-carib-inn.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "style": "carib",
+      "use": "inn",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "樓、客房與後院",
+     "recolor": {},
+     "source": "ridge-two-inn-01m-carib-inn-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "外廊與陽台",
+     "recolor": {},
+     "source": "ridge-two-inn-01m-carib-inn-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "ridge-two-inn-01m-carib-inn-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      29,
+      6
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-大門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      22,
+      29,
+      15
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      78,
+      29,
+      15
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      85,
+      90,
+      6
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      90,
+      15
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "後-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      108,
+      51,
+      15
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      53,
+      29,
+      39
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "樓上-前-門（往陽台）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      22,
+      29,
+      47
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "樓上-前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      78,
+      29,
+      47
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "樓上-前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      26,
+      90,
+      47
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "樓上-後-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      56,
+      90,
+      47
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "樓上-後-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      85,
+      90,
+      47
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "樓上-後-窗3",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 180
+    },
+    {
+     "at": [
+      108,
+      60,
+      47
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "樓上-右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      9,
+      60,
+      47
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "樓上-左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      30,
+      106,
+      0
+     ],
+     "meta": {},
+     "name": "洗衣桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      104,
+      106,
+      0
+     ],
+     "meta": {},
+     "name": "水桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      92,
+      80,
+      6
+     ],
+     "meta": {},
+     "name": "酒桶-櫃台1",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      100,
+      80,
+      6
+     ],
+     "meta": {},
+     "name": "酒桶-櫃台2",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      46.5,
+      30,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      74.5,
+      30,
+      60.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-陽台",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "building,carib",
+   "title": "加勒比海的客棧（posada／inn：毛石台基上兩層的橫板木樓、木瓦四坡頂、上下兩層的外廊與陽台欄杆；樓下大堂、櫃台、樓梯；樓上通鋪與兩間客房；招牌畫一張床；後院曬床單）"
+  },
+  "ridge-two-inn-01m-carib-inn-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-inn-01m-carib-inn-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "加勒比海的客棧｜樓、客房與後院"
+  },
+  "ridge-two-inn-01m-carib-inn-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-inn-01m-carib-inn-gallery.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "加勒比海的客棧｜外廊與陽台"
+  },
+  "ridge-two-inn-01m-carib-inn-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-inn-01m-carib-inn-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    110
+   ],
+   "tags": "sub",
+   "title": "加勒比海的客棧｜屋頂"
+  }
+ }
+}
