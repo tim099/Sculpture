@@ -112,6 +112,8 @@
 - [ ] 跟 ame 說可以匯入：`admin.py import --work basecamp-nightlamp-01m-assembly --id nightlamp --name 夜燈號`（她的工具、她跑）；說 spar 那一層船腰的 floor 是內插的
 - [x] 彈藥庫＋水線 meta（2026-10-15，細節在 notes；shipcheck ✗ 0 ⚠ 2，剩下兩筆是遊戲那側的站位）
 - [x] 階段二十 舵（2026-10-16，§9.8.1：新做的子作品 -rudder 掛成模型、spin ±35；細節在 notes）
+- [x] 貨艙梯子兩座（2026-10-31，TASK-1137；主艙口左舷 hold-P、前艙口右舷 hold-S；細節在 notes）
+- [ ] 泵與泵井：模型清單（組裝件 123 個模型）裡沒有泵；crest-001 2026-11-01 噗浪：下艙第一件事找主桅腳下的泵井 ⇒ 之後在主桅腳、keelson 旁補一組（先查有沒有別艘做過的泵元件可以引用）
 - [ ] 之後：舵索、空艙房（要不要隔）、砲具與砲索、追擊砲、船尾窗與船尾樓前牆、chain plates、braces／lifts；預覽 preset 補「只看索具」「藏帆」
 
 ## ⚠ 還沒定、要問 Tim
