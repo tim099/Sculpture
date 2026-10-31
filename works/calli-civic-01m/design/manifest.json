@@ -899,6 +899,320 @@
    "tags": "sub",
    "title": "英國監獄｜屋頂"
   },
+  "calli-civic-01m-en-school": {
+   "anchors": {
+    "bell": [
+     95,
+     85,
+     23
+    ],
+    "door": [
+     60,
+     19,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     30,
+     36,
+     4
+    ],
+    "work-a1-to": [
+     44,
+     36,
+     13
+    ],
+    "work-a2": [
+     37,
+     46,
+     1
+    ],
+    "work-a2-to": [
+     50,
+     46,
+     11
+    ],
+    "work-b1": [
+     66,
+     26,
+     1
+    ],
+    "work-b1-to": [
+     66,
+     46,
+     9
+    ],
+    "work-b2": [
+     82,
+     65,
+     1
+    ],
+    "work-b2-to": [
+     82,
+     46,
+     9
+    ],
+    "work-c1": [
+     22,
+     30,
+     4
+    ],
+    "work-c1-to": [
+     22,
+     25,
+     15
+    ]
+   },
+   "expect": "calli-civic-01m-en-school.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,10",
+      "style": "en",
+      "use": "school",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "教室與後院",
+     "recolor": {},
+     "source": "calli-civic-01m-en-school-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "calli-civic-01m-en-school-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      19,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      70,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      30,
+      19,
+      10
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      76,
+      19,
+      10
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 0
+    },
+    {
+     "at": [
+      18,
+      70,
+      10
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      80,
+      70,
+      10
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 180
+    },
+    {
+     "at": [
+      9,
+      36,
+      10
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 270
+    },
+    {
+     "at": [
+      108,
+      36,
+      10
+     ],
+     "meta": {
+      "part": "window"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {
+      "49": 136
+     },
+     "source": "summit-bourg-fr-01m-part-window",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      46.5,
+      20,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    },
+    {
+     "at": [
+      72,
+      82,
+      0
+     ],
+     "meta": {},
+     "name": "水桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    100,
+    80
+   ],
+   "tags": "building,en",
+   "title": "英國的學校（petty school：磚造一間教室、紅瓦四坡頂、雙扇門與平開窗、門前磚鋪小路；講台、老師的桌椅、十誡與主禱文的板、書架、四排長桌長凳；後院磚牆、吊鐘木架）"
+  },
+  "calli-civic-01m-en-school-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-en-school-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    100,
+    80
+   ],
+   "tags": "sub",
+   "title": "英國的學校｜教室與後院"
+  },
+  "calli-civic-01m-en-school-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-en-school-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    100,
+    80
+   ],
+   "tags": "sub",
+   "title": "英國的學校｜屋頂"
+  },
   "calli-civic-01m-es-battery": {
    "anchors": {
     "door": [
@@ -1280,6 +1594,293 @@
    ],
    "tags": "sub",
    "title": "西班牙砲台｜屋頂"
+  },
+  "calli-civic-01m-es-school": {
+   "anchors": {
+    "bell": [
+     86,
+     22,
+     47
+    ],
+    "door": [
+     60,
+     19,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     30,
+     36,
+     4
+    ],
+    "work-a1-to": [
+     44,
+     36,
+     13
+    ],
+    "work-a2": [
+     37,
+     46,
+     1
+    ],
+    "work-a2-to": [
+     50,
+     46,
+     11
+    ],
+    "work-b1": [
+     66,
+     26,
+     1
+    ],
+    "work-b1-to": [
+     66,
+     46,
+     9
+    ],
+    "work-b2": [
+     82,
+     65,
+     1
+    ],
+    "work-b2-to": [
+     82,
+     46,
+     9
+    ],
+    "work-c1": [
+     22,
+     30,
+     4
+    ],
+    "work-c1-to": [
+     22,
+     25,
+     15
+    ]
+   },
+   "expect": "calli-civic-01m-es-school.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,10",
+      "style": "es",
+      "use": "school",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "教室與後院",
+     "recolor": {},
+     "source": "calli-civic-01m-es-school-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "calli-civic-01m-es-school-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      19,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      70,
+      0
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    },
+    {
+     "at": [
+      24,
+      19,
+      14
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      76,
+      19,
+      14
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 0
+    },
+    {
+     "at": [
+      18,
+      70,
+      14
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "後-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 180
+    },
+    {
+     "at": [
+      80,
+      70,
+      14
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "後-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 180
+    },
+    {
+     "at": [
+      108,
+      36,
+      14
+     ],
+     "meta": {
+      "part": "window-baluster"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-baluster",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      72,
+      82,
+      0
+     ],
+     "meta": {},
+     "name": "水桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      46.5,
+      20,
+      26
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    100,
+    100
+   ],
+   "tags": "building,es",
+   "title": "西班牙的學校（escuela de primeras letras：刷白砌石一間教室、紅陶瓦兩坡頂、正面小鐘牆掛一口鐘、切石門框的雙扇門、木欄杆窗；講台、老師的桌椅、木十字、書架、四排長桌長凳；後院砌石牆、蓄水池井口）"
+  },
+  "calli-civic-01m-es-school-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-es-school-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    100,
+    100
+   ],
+   "tags": "sub",
+   "title": "西班牙的學校｜教室與後院"
+  },
+  "calli-civic-01m-es-school-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "calli-civic-01m-es-school-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    100,
+    100
+   ],
+   "tags": "sub",
+   "title": "西班牙的學校｜屋頂"
   }
  }
 }

@@ -395,4 +395,133 @@ def carib_school():
             'use': 'school', 'lot': (12, 10), 'M': M, 'layers': {'body': '教室與後院', 'gallery': '前廊', 'roof': '屋頂'}}
 
 
-ALL = [en_chapel, en_jail, es_battery, carib_school]
+# ─────────────────────────────── 英國、西班牙的學校 12 × 10 m（TASK-1135）───────────────────────────────
+#   平面同 carib-school（左端講台、四排長桌長凳面向講台、書架、後院吊鐘）⇒ 換成各自那一套的牆、屋頂、門窗與擺設；工作點同 5 點。
+def school_room(M, X0, Y0, X1, Y1, t, zf):
+    """教室裡面：左端講台（老師的桌椅）、前牆左角的書架、四排長桌＋長凳（面向講台）、桌上攤著書。回傳講台面 zp。"""
+    zp = zf + 3
+    M.box('body', X0 + t, Y0 + t + 4, zf, 34, Y1 - t - 4, zp, FLOOR)
+    desk(M, 18, 28, 38, 54, zp, 7)
+    book_row(M, 20, 26, 40, 43, zp + 8, salt=21)
+    M.box('body', X0 + t + 1, 43, zp, X0 + t + 4, 49, zp + 4, FRAME)          # 椅子：座、靠背（老師面向 +x 的學生）
+    M.box('body', X0 + t, 43, zp + 4, X0 + t + 4, 49, zp + 5, FLOOR)
+    M.box('body', X0 + t, 43, zp + 5, X0 + t + 1, 49, zp + 12, FRAME)
+    S = (X0 + t, Y0 + t, X0 + t + 18, Y0 + t + 4)                         # 書架（前牆左角）
+    for x in (S[0], S[2] - 2):
+        M.box('body', x, S[1], zf, x + 2, S[3], zf + 24, FRAME)
+    for i, z in enumerate((zf, zf + 6, zf + 12, zf + 18, zf + 24)):
+        M.box('body', S[0], S[1], z, S[2], S[3], z + 1, FLOOR)
+        if z < zf + 24:
+            book_row(M, S[0] + 2, S[2] - 2, S[1], S[3] - 1, z + 1, salt=30 + i)
+    for r, x in enumerate((42, 58, 74, 90)):
+        desk(M, x, x + 4, Y0 + t + 7, Y1 - t - 8, zf, 6)
+        desk(M, x + 7, x + 10, Y0 + t + 7, Y1 - t - 8, zf, 3)
+        for j, y in enumerate((Y0 + t + 9, Y0 + t + 16, Y0 + t + 23, Y0 + t + 29)):
+            if h01('ob', r, j, 7) < 0.7:
+                M.box('body', x + 1, y, zf + 7, x + 3, y + 3, zf + 8, BOOKS[(r + j + 2) % len(BOOKS)])
+                M.box('body', x + 1, y + 1, zf + 7, x + 3, y + 2, zf + 8, LIME)
+    return zp
+
+
+def school_work(M, Y0, Y1, t, zf, zp):
+    """工作點（BUILDING_SPEC §5；同 carib-school：服務 jobs 2 × 二級 mult 2 ＝ 4 ＋ 1）：a 講台（台前、台邊），b 兩條走道（前、後），c 書架前。"""
+    ya, yb = Y0 + t + 2, Y1 - t - 3
+    for nm, at, to in (('a1', (30, 36, zp), (44, 36, zf + 12)), ('a2', (37, 46, zf), (50, 46, zf + 10)), ('b1', (66, ya, zf), (66, 46, zf + 8)),
+                       ('b2', (82, yb, zf), (82, 46, zf + 8)), ('c1', (22, Y0 + t + 6, zp), (22, Y0 + t + 1, zf + 14))):
+        M.anchor('work-' + nm, *at)
+        M.anchor('work-%s-to' % nm, *to)
+
+
+def en_school():
+    """英國的學校（petty school）：磚造一間教室（10 × 5.2 m、牆高 3.6 m）、紅瓦四坡頂；正面雙扇門、門前磚鋪小路、前後各兩扇窗、兩側各一扇；
+    裡面磚鋪地、左端講台（老師的桌椅）、講台後面的後牆上十誡與主禱文的板、前牆左角書架、四排長桌長凳面向講台、桌上攤著書；後院磚牆、木架吊一口鐘、長凳、水桶。
+    - 照什麼：磚牆紅瓦同 ame 的 english.py（皇家港「goodly Brick Houses」）；英國國教的學校在牆上掛十誡與主禱文的板、不掛十字架〔摘：同 en-chapel 的通法〕。
+    - 設計：英屬加勒比 1660 年代的學校長什麼樣子〔沒查到〕⇒ 平面、講台、桌凳、吊鐘架全部是設計（還沒有黑板 ⇒ 不放）。"""
+    X, Y, Z = 120, 100, 80
+    M = Model((X, Y, Z))
+    R = (10, 20, 110, 72)
+    t, H = 4, 36
+    M.box('body', 50, 0, 0, 70, R[1], 1, PAVE)                          # 門前磚鋪小路
+    brick_walls(M, R, 0, H, t, salt=3501)
+    M.box('body', R[0] + t, R[1] + t, 0, R[2] - t, R[3] - t, 1, PAVE)
+    put_part(M, 'door-double', '前-門', 'front', R, 60, 0, t)
+    put_part(M, 'door-plank', '後-門（往院子）', 'back', R, 60, 0, t)
+    for i, cx in enumerate((40, 86)):
+        put_part(M, 'window', '前-窗%d' % (i + 1), 'front', R, cx, 10, t)
+    for i, cx in enumerate((28, 90)):
+        put_part(M, 'window', '後-窗%d' % (i + 1), 'back', R, cx, 10, t)
+    for f in ('left', 'right'):
+        put_part(M, 'window', '%s-窗' % {'left': '左', 'right': '右'}[f], f, R, 46, 10, t)
+    tile_roof(M, [{'x0': R[0], 'y0': R[1], 'x1': R[2], 'y1': R[3], 'ze': H, 'p': 0.6, 'over': (3, 3, 4, 3)}], salt=3502)
+    zp = school_room(M, *R, t, 1)
+    tablet(M, 15, 23, R[3] - t - 1, 14, 30)                             # 十誡（左）、主禱文（右）：講台後面的後牆
+    tablet(M, 34, 42, R[3] - t - 1, 14, 30)
+    # 後院：三面磚牆（後牆中間開口）、吊鐘的木架、長凳、水桶
+    for (x0, y0, x1, y1) in ((10, R[3], 14, 98), (106, R[3], 110, 98)):
+        brick_walls(M, (x0, y0, x1, y1), 0, 18, 4, salt=3503 + x0)
+    for (x0, x1) in ((10, 54), (66, 110)):
+        brick_walls(M, (x0, 94, x1, 98), 0, 18, 4, salt=3510 + x0)
+    for x in (88, 100):
+        M.box('body', x, 84, 0, x + 2, 86, 30, FRAME)
+    M.box('body', 86, 84, 30, 104, 86, 32, FRAME)
+    bc = bell_at(M, 95, 85, 30)
+    bench(M, 18, 44, 84, 87)
+    M.models += [{'name': '燈籠-門', 'source': 'summit-rocher-01m-lantern', 'at': [46.5, R[1], 24.5], 'pivot': [4.5, 13, 15.5], 'meta': {'kind': 'light'}},
+                 {'name': '水桶-院', 'source': 'summit-rocher-01m-barrel', 'at': [72, 82, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+    yield_to_parts(M)
+    M.anchor('door', 60, R[1] - 1, 1)                                     # 門前的鋪面上一格
+    M.anchor('bell', *bc)
+    M.anchor('lot-0', 0, 0, 0)
+    school_work(M, R[1], R[3], t, 1, zp)
+    return {'key': 'en-school', 'style': 'en',
+            'title': '英國的學校（petty school：磚造一間教室、紅瓦四坡頂、雙扇門與平開窗、門前磚鋪小路；講台、老師的桌椅、十誡與主禱文的板、書架、四排長桌長凳；後院磚牆、吊鐘木架）',
+            'use': 'school', 'lot': (12, 10), 'M': M, 'layers': {'body': '教室與後院', 'roof': '屋頂'}}
+
+
+def es_school():
+    """西班牙的學校（escuela de primeras letras）：刷白砌石一間教室（10 × 5.2 m、牆高 4 m）、紅陶瓦兩坡頂、兩端刷白山牆；正面牆上一座小鐘牆（espadaña）掛一口鐘；
+    切石門框的雙扇門、木欄杆窗；裡面陶磚地、左端講台（老師的桌椅）、左牆上木十字、前牆左角書架、四排長桌長凳面向講台；後院砌石牆、蓄水池井口、長凳、水桶；門前卵石。
+    - 照什麼：牆、屋頂、鐘牆、門框、窗全照 basecamp 的 es.py（同一套的小堂、醫院）；西屬城鎮的讀寫課（primeras letras）多半由修會或教區開〔摘：通說〕。
+    - 設計：哈瓦那、聖多明哥 1660 年代的學校長什麼樣子〔沒查到〕⇒ 平面、鐘牆的位置、講台、桌凳全部是設計（還沒有黑板 ⇒ 不放）。"""
+    X, Y, Z = 120, 100, 100
+    M = Model((X, Y, Z))
+    R = (10, 20, 110, 72)
+    t, H = 4, 40
+    cobbles(M, 0, 0, X, R[1], salt=3601)
+    masonry(M, R, 0, H, t, plinth=5, salt=3602)
+    tile_floor(M, R[0] + t, R[1] + t, R[2] - t, R[3] - t)
+    tile_roof(M, [{'x0': R[0], 'y0': R[1], 'x1': R[2], 'y1': R[3], 'ze': H, 'p': 0.55, 'over': (3, 3, 4, 4), 'gable': 'x'}], salt=3603)
+    for x0, x1 in ((R[0], R[0] + t), (R[2] - t, R[2])):
+        end_gable(M, x0, x1, R[1], R[3], H, 0.55, z0=H, color=CAL, edge=CORAL)
+    bc, zt = espadana(M, 86, R[1], R[1] + t, H - 1, w=16, steps=((0, 16), (16, 8), (22, 4)), arch=(8, 4, 7))
+    put_part(M, 'door-double', '前-門', 'front', R, 60, 0, t)
+    portal(M, R, 60, 20, 27, salt=3604)
+    put_part(M, 'door-plank', '後-門（往院子）', 'back', R, 60, 0, t)
+    for i, cx in enumerate((34, 86)):
+        put_part(M, 'window-baluster', '前-窗%d' % (i + 1), 'front', R, cx, 14, t)
+    for i, cx in enumerate((28, 90)):
+        put_part(M, 'window-baluster', '後-窗%d' % (i + 1), 'back', R, cx, 14, t)
+    put_part(M, 'window-baluster', '右-窗', 'right', R, 46, 14, t)
+    zp = school_room(M, *R, t, 1)
+    M.box('body', R[0] + t, 45, 16, R[0] + t + 1, 47, 30, FRAME)        # 左牆上的木十字
+    M.box('body', R[0] + t, 42, 24, R[0] + t + 1, 50, 26, FRAME)
+    # 後院：砌石牆（後牆中間開口）、蓄水池井口、長凳、水桶
+    for (x0, y0, x1, y1) in ((10, R[3], 14, 98), (106, R[3], 110, 98)):
+        masonry(M, (x0, y0, x1, y1), 0, 20, 4, plinth=3, salt=3605 + x0)
+    for (x0, x1) in ((10, 54), (66, 110)):
+        masonry(M, (x0, 94, x1, 98), 0, 20, 4, plinth=3, salt=3610 + x0)
+    aljibe(M, 92, 84, 6, 8)
+    bench(M, 18, 44, 84, 87)
+    M.models += [{'name': '水桶-院', 'source': 'summit-rocher-01m-barrel', 'at': [72, 82, 0], 'pivot': [6, 6, 0], 'meta': {}}]
+    lantern(M, '燈籠-門', (46.5, R[1], 26))
+    yield_to_parts(M)
+    M.anchor('door', 60, R[1] - 1, 1)                                     # 門前的鋪面上一格
+    M.anchor('bell', *bc)
+    M.anchor('lot-0', 0, 0, 0)
+    school_work(M, R[1], R[3], t, 1, zp)
+    return {'key': 'es-school', 'style': 'es',
+            'title': '西班牙的學校（escuela de primeras letras：刷白砌石一間教室、紅陶瓦兩坡頂、正面小鐘牆掛一口鐘、切石門框的雙扇門、木欄杆窗；講台、老師的桌椅、木十字、書架、四排長桌長凳；後院砌石牆、蓄水池井口）',
+            'use': 'school', 'lot': (12, 10), 'M': M, 'layers': {'body': '教室與後院', 'roof': '屋頂'}}
+
+
+ALL = [en_chapel, en_jail, es_battery, carib_school, en_school, es_school]
