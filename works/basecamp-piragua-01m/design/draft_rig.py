@@ -175,10 +175,9 @@ def main():
         anchors.append({'work': 'hull', 'name': 'belay-sheet-%s' % side, 'at': a})
         ropes.append({'name': 'lateen.sheet-%s' % side, 'from': 'sail:lateen/clew', 'to': '船殼/belay-sheet-%s' % side, 'slack': 1.03,
                       'thickness': 0.35, 'color': '#a08458', 'group': 'running/sheets', 'meta': {'kind': 'sheet', 'sail': 'lateen'}})
-    tx = max(x for x in gun_z if occ[x, YC, gun_z[x]] == 1 and x <= 122)
-    tack = [tx, YC, gun_z[tx]]
+    tack = rim(occ, rg['tack']['x'], -1, YC)                   # 左舷舷頂：v1 綁船頭中線 x 122 ⇒ tack 從船頭迴旋砲的砲管穿過去（步驟 9 渲圖抓到）
     anchors.append({'work': 'hull', 'name': 'tack', 'at': tack})
-    ropes.append({'name': 'lateen.tack', 'from': 'model:桅/yard/fore', 'to': '船殼/tack', 'slack': 1.02, 'thickness': 0.4, 'color': '#a08458',
+    ropes.append({'name': 'lateen.tack', 'from': 'model:桅/yard/fore', 'to': '船殼/tack', 'slack': 1.0, 'thickness': 0.4, 'color': '#a08458',
                   'group': 'running/tacks', 'meta': {'kind': 'tack', 'sail': 'lateen'}})
     sails.append({'name': 'lateen', 'corners': ['model:桅/yard/fore', 'model:桅/yard/peak', '%.1f,%.1f,%.1f' % tuple(clew)],
                   'corner_names': ['tack', 'head', 'clew'], 'bind': [0], 'free': ['clew'], 'color': rg['sail']['color'],

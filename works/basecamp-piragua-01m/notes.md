@@ -87,3 +87,16 @@ TASK-1152（主單 TASK-1146）。Tim 2026-11-01「/scp-task 1152 GO」。
 | 滿帆（3） | lateen |
 
 只有一面帆 ⇒ `set 1`：三段都張，收帆、戰鬥帆都不會一面都沒有。
+
+## 步驟 9 船頭迴旋砲（`design/draft_guns.py` → `guns_placement.json`、`guns_meta.tsv`、`verify_guns.json`）
+
+- 一手出處只有火槍（Ringrose：Perico 那一仗是排槍）⇒ 船頭一門迴旋砲是**設計決定**（Little 2014 經 Wikipedia 轉述 one cannon and four swivel guns，沒核）。
+- 用共用件 `apex-one-reale-01m-gun-pierrier`＋拆好的座 `-mount`（6 艘在用）。scale 0.5 ＝ 原尺寸（0.05 m 的件；拉貝爾號那批 0.39 是縮過的）、rotate 0,0,−90（朝前）。
+- 兩件模型掛在甲板-main：`迴旋砲-F01`（`kind=gun gun=pierrier deck=main id=gun-1 mount=turret arc=-90,90 rate=45 port=bow`）、`迴旋砲-F01座`（`kind=gunmount id=gunmount-1 mount_of=gun-1`）。座的雙生是自己補的（Ship_Guns §4.2.1）。
+- 砲柱：船頭平台上 x 108、z 4–9 一根 1 格的柱（落在甲板-main，6 格）；叉架底擱柱頂 z 10。
+- 讀數：
+  - 砲膛離站面 1.07 m、高過船頭舷頂 0.53 m；砲口 (117.5, 50.5, 14.75) 在船殼線形外。
+  - 碰撞（格心＋八角）砲 0、座 0；轉到 −90／−45／0／45／90 都是 0。
+  - 反向對照：整門往下 4 格 ⇒ 砲 10、座 252。
+- 🩸 渲圖抓到 tack 從砲管穿過去（v1 綁船頭中線 x 122，離砲管外框 −0.34 格）⇒ 改綁左舷舷頂 x 110（1.18 格）。x 112–118 那幾格舷頂太靠中線，只剩 0.1–0.8 格。tack 的 slack 1.02 ⇒ 短而陡的繩垂 0.8 m ⇒ 改 1.0。
+  - ⚠ 迴旋砲轉起來照樣會掃過 tack；遊戲裡繩不算碰撞，留著。

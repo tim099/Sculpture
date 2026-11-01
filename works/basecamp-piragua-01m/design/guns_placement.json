@@ -1,0 +1,60 @@
+{
+ "host": "basecamp-piragua-01m-deck-main",
+ "models": [
+  {
+   "name": "迴旋砲-F01",
+   "work": "apex-one-reale-01m-gun-pierrier",
+   "at": [
+    108.5,
+    50.5,
+    10
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "deck": "main",
+    "id": "gun-1",
+    "mount": "turret",
+    "arc": "-90,90",
+    "rate": 45,
+    "port": "bow"
+   }
+  },
+  {
+   "name": "迴旋砲-F01座",
+   "work": "apex-one-reale-01m-gun-pierrier-mount",
+   "at": [
+    108.5,
+    50.5,
+    10
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "meta": {
+    "kind": "gunmount",
+    "id": "gunmount-1",
+    "mount_of": "gun-1"
+   }
+  }
+ ]
+}
