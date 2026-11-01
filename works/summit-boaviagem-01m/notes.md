@@ -110,3 +110,26 @@
 - 錨：共用錨元件 ×0.45、meta anchor=bower；兩舷各一（x 303.8、z 64.5，錨臂順著船殼切線 rz ±69.5°）＋錨床 `-anchor-gear`（744 格，錨冠落在 billboard 上，foot_gap 0）；船殼固定點 hawse-S／P (316, ±17, 57)。
 - 讀數：舵 on_solid 0、舵柄 on_solid 0、錨碰撞 0、錨床 on_solid 0、全部鏡像差 0；組裝件 1 元件、空腔 0、鏡像差 0；ropecheck 129 條兩端全 ok；繩／帆／模型斷 0。**反向對照** `--probe=shift=錨-S:-6` ⇒ 錨-S 碰撞 1,438、錨-P 0。
 - 過程圖 `overlays/stage11_stern.png`。
+
+## 步驟 14 匯進 Blockside（2026-11-01）
+- Blockside 自己的 worktree（`D:/Unity/Blockside-wt/summit-boaviagem`、分支 `summit/boaviagem`，從 heads/dev 349939a 開；`_cache` 先從共用的複製過去）：`admin.py import --work summit-boaviagem-01m-assembly --id boaviagem --name 好旅號` → `ids` → 修 ⚠ → `reimport`。
+- 第一次匯入檢查 ✗ 0、⚠ 10 ⇒ 逐條：
+  - geo、船員站不下 ×5 ⇒ 遊戲那側填 `ships[boaviagem]`（見下）。
+  - 🩸 **小艇擋路**：×0.2（約 3.6 m）擱在前艙口上、從 x 235 擋到 270 ⇒ 艏樓底下那一塊主甲板（x 274–316、16.9 m²）走不到、貨艙梯頂出口堵住 ⇒ ×0.13（約 2.3 m）、挪到 x 257.5（draft_gear 重跑 → build_gear → reimport）。
+- **最後一次匯入檢查 ✗ 0、⚠ 4**：貨艙梯子尋路沒收 ×2（Ship_Decks §9.3 ⑥ 的預期）；艉樓右舷梯頂前面是遊戲擺的取用點火藥桶（23_powder.js，報告寫明雕刻作品不用改）；桅頂水手 1／4（遊戲照「每根桅 × crew.top」要人，三根三角帆桅沒有桅樓；40_crew.js 找不到站位就不加人 ⇒ 不會有浮空的水手）。火藥 12／12 門走得到（最遠 12.2 m）、廚房站得住 4 面、操舵「舵令 ⇒ 舵柄 ⇒ 舵 100%」、樓梯自檢 8 座 ✗ 0、甲板 5 層都接得到、超載再多載 429 噸／吃水再深 2.90 m；材質 橡木 178,192 格 124.7 t、玻璃 150 格。
+- `ships[boaviagem]`：role merchant；gangway (215.5, 143.5／49.5, 61.5)；geo spar [45,74]、marines [90,172]、center 60、aim 40、aimZ [5,300]、deckAim [45,74]、rigAim [110,295]；cfg pump 2；crew 照信風號（officers 1、helm 1、top 1、marines 0、monkeys 1、handsK 0.25、navigator 0）；idNext 補 gun 13、gunmount 13（砲的 id 是 draft_guns 先發的）。
+  - 🩸 import／reimport 會把整份 game.json 重 dump ⇒ 拿 HEAD 只插好旅號那一筆（+79 行），斷言別的 37 艘逐項相同（scratchpad insert_game.py）；reimport 之後再插一次 ⇒ `admin.py build` 重建、srccheck ✓、verify 1,536 份網格一致。
+- Blockside `0254ca0`（worktree 提交）。提交時共用 dev 已經走到 d79eee8（ridge-two 的百夫長號 TASK-1153＋townbld）⇒ 把 dev 合進分支（`6018649`）：衝突都是兩邊在同一個位置各加一艘船 ⇒ 兩艘都留（game.json 那一段是從物件中間切開的，補 `}` `},` `{`；斷言 ＝ dev 的 38 艘＋好旅號）；index.html 取 dev 的再 build；worktree `_cache` 補 centurion.vxk；dev 帶進來的表演船遠近分級 ⇒ `admin.py showlod --id boaviagem`（--check 全 ✓）。
+- 共用 dev 快轉 349939a…d79eee8 → 6018649（施工場 `coding-20261101T072323Z-summit`）；共用樹上別人沒提交的 ship_cards.json（幾艘船的船員數）先存成 patch、ff 之後原樣套回；共用 `_cache` 補 boaviagem.vxk、verify 1,595 份網格一致。**推上 dev**（d79eee8..6018649，推之前列過 dev/dev..heads/dev 只有這兩筆）。worktree 已拆。
+- 新做的元件不標 render：舵、舵柄、三角帆桁是子作品格子。
+
+## 步驟 15 交船（2026-11-01）
+- 交船檢查表（Ship_Game §10）逐條：ropecheck 258 端全 ok（沒有 bind／snap）✓、名稱與 sub ✓、mpv 與每個模型的 scale 明寫 ✓、components 先查過（現成：4 磅砲、pierrier＋座、方帆桁、火藥桶、錨、艙蓋、小艇、爐灶、絞盤、羅經櫃；新做：三角帆桁 ×3、舵、舵柄、火藥庫牆、船首、錨架、錨床、船尾窗玻璃）✓、爐灶 kind=galley ✓、舵模型＋stock-top＋spin ✓、舵柄 kind=tiller、操舵鏈 100% ✓、kind=ship waterline_z 30 ✓、梯子 kind=ladders 四點 ✓、樓梯自檢 ✗ 0 ✓、橫繩組＋前桅繩梯 ✓、火藥桶 ✓、甲板 meta ✓、三角帆桁 gaff＋lateen＋fore ✓、玻璃 material=glass ✓、砲零碰撞＋砲口出船殼 ✓、pierrier 座雙生 ✓、露天艙口有門（主艙口、梯井；前艙口被小艇蓋住）✓、砲門蓋板不適用（露天甲板的舷牆砲門）、繩帆模型斷 0 ✓、帆與帆的繩 meta ✓、帆裝三段表 ✓（遊戲裡 W／S 每段看一次 ⇒ 還沒看）、1 元件／空腔 0／link_overlap 0 ✓、匯入檢查 ✗ 0 ⚠ 都看過 ✓。
+- 產生程式重跑逐位元組相同：只對 draft_lines、draft_layout、draft_rigging 量過；其他幾支沒有逐一量。
+- 空艙房沒標；迴旋砲 arc 照飛魚號、擺角沒逐角量。
+- checksum：遊戲那側 `_cache/boaviagem.vxk` 就是 reimport 當下匯出的那份，`admin.py verify` 成品跟它一致。
+
+## 給遊戲那側填 geo 用的高度（已照這些填進 Blockside game.json ships[boaviagem].geo）
+- 水線 z 30；主甲板（第一層空氣）船中 z 45、船尾 54、船頭 52；後甲板 z 65–74；艉樓 z 86–92；艏樓 z 65–68；底艙平台 z 23。
+- 4 磅砲軸 z 52–53、迴旋砲軸 z 79–105；前桅樓 z 144–147；桅頂：前 206、主 204、後 168、最後 164；三角帆桁尾端最高 z 294（主）。
+- 船殼 x 約 80（船尾板）～ 322（艏柱）、艏斜桅尖 x 394；最後桅三角帆桁尾端伸到 x 57（模型，不算進 vxk 外框）。
