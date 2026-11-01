@@ -1,0 +1,1220 @@
+{
+ "title": "好旅號（方帆卡拉維爾 caravela redonda，約 150 tonéis 葡萄牙商船）—— 新圖紙",
+ "task": "TASK-1151",
+ "author": "summit",
+ "date": "2026-11-01",
+ "sources": "references/research_caravela_2026-11-01.md（〔源〕〔二手〕〔推〕〔設計〕四種標記）：年代與帆裝照 Domingues 2009（Encyclopaedia of Portuguese Expansion）；主尺寸只有二手（Livro Náutico 龍骨約 18 m、長寬比 3:1–4:1、海軍博物館模型約 30×9×4.5 m）⇒ 其餘都是〔設計〕",
+ "meters_per_cell": 0.1,
+ "ft": 3.048,
+ "space": {
+  "x": 448,
+  "y": 192,
+  "z": 384,
+  "yc": 96,
+  "note": "中線 ＝ 第 96 格（鏡像 y ↔ 192 − y）"
+ },
+ "lines": {
+  "half_beam": {
+   "v": 37,
+   "src": "〔設計〕最大寬 7.4 m：甲板長約 23.6 m ÷ 7.4 ＝ 3.2，落在〔二手〕長寬比 3:1–4:1（Pimentel Barata 經維基）"
+  },
+  "keel_top": {
+   "v": 4,
+   "src": "〔設計〕龍骨 0.4 m"
+  },
+  "keel_half": {
+   "v": 2,
+   "src": "〔設計〕龍骨寬 5 格"
+  },
+  "plan_half": {
+   "v": 12,
+   "src": "〔設計〕底肋平的那一段半寬 1.2 m"
+  },
+  "astilla": {
+   "v": 4,
+   "src": "〔設計〕rising of the floor 0.4 m（16–17 世紀伊比利船底比 18 世紀運貨船尖）"
+  },
+  "max_breadth_z": {
+   "v": 38,
+   "src": "〔設計〕最寬處在水線 z 30 之上 0.8 m"
+  },
+  "tumblehome": {
+   "v": 3.5,
+   "src": "〔設計〕到舷頂每舷內收 0.35 m（伊比利船的 tumblehome 強）"
+  },
+  "tumblehome_ref_z": {
+   "v": 58,
+   "src": "≈ 船腰舷頂"
+  },
+  "tumblehome_pow": {
+   "v": 1.4,
+   "src": "〔設計〕"
+  },
+  "tumblehome_above_per_cell": {
+   "v": 0.08,
+   "src": "〔設計〕後甲板、艉樓、艏樓舷牆再往上每格收 0.08 格"
+  },
+  "bilge_pow": {
+   "v": 2.0,
+   "src": "〔設計〕圓舭比運貨船瘦"
+  },
+  "s_aft": {
+   "v": 0.32,
+   "src": "〔設計〕船尾收縮從長度 32% 起"
+  },
+  "s_fwd": {
+   "v": 0.62,
+   "src": "〔設計〕船頭收縮從 62% 起（卡拉維爾船頭比運貨船尖）"
+  },
+  "sternpost_x0": {
+   "v": 96,
+   "src": "〔設計〕艉柱腳的位置（船尾後面留給最後桅三角帆桁伸出去）"
+  },
+  "sternpost_rake_deg": {
+   "v": 9.0,
+   "src": "〔設計〕艉柱往後倒 9°"
+  },
+  "wing_transom_z": {
+   "v": 40,
+   "src": "〔設計〕方艉（painel）：wing transom 在主甲板下 0.4 m"
+  },
+  "transom_ratio": {
+   "v": 0.55,
+   "src": "〔設計〕wing transom 寬約 0.55 船寬"
+  },
+  "forefoot_x": {
+   "v": 276,
+   "src": "〔二手〕龍骨約 18 m（Livro Náutico 經搜尋摘要；沒讀到原文）⇒ 96 ＋ 180"
+  },
+  "stem_a": {
+   "v": 46,
+   "src": "〔設計〕艏柱（roda）彎、往前倒：頂端比 forefoot 往前 4.6 m"
+  },
+  "stem_b": {
+   "v": 70,
+   "src": "〔設計〕艏柱頭 z 70"
+  },
+  "deadwood_aft_z": {
+   "v": 24,
+   "src": "〔設計〕照信風號"
+  },
+  "deadwood_fwd_z": {
+   "v": 10,
+   "src": "〔設計〕照信風號"
+  },
+  "bow_pow_low": {
+   "v": 2.0,
+   "src": "〔設計〕照信風號"
+  },
+  "bow_pow_high": {
+   "v": 2.8,
+   "src": "〔設計〕照信風號"
+  },
+  "aft_pow": {
+   "v": 1.8,
+   "src": "〔設計〕照信風號"
+  },
+  "end_hollow": {
+   "v": 2.5,
+   "src": "〔設計〕照信風號"
+  },
+  "top": [
+   [
+    92,
+    99
+   ],
+   [
+    130,
+    94
+   ],
+   [
+    131,
+    76
+   ],
+   [
+    175,
+    73
+   ],
+   [
+    177,
+    58
+   ],
+   [
+    240,
+    58
+   ],
+   [
+    278,
+    60
+   ],
+   [
+    280,
+    72
+   ],
+   [
+    324,
+    76
+   ]
+  ],
+  "top_src": "舷頂（舷牆頂）折線 ＝ decks 每一層的甲板面 ＋ 舷牆：艉樓 ＋8、後甲板 ＋8、船腰 ＋13（照信風號：4 磅砲推得出砲門）、艏樓 ＋8 —— 〔設計〕；卡拉維爾的高船尾、矮船頭照 Domingues 2009 的描述與海軍博物館模型的樣子"
+ },
+ "waterline": {
+  "z": 30,
+  "src": "〔推〕吃水 3.0 m：艙深約 3.7 m 的商船半載到滿載之間（〔源〕Domingues：巴西航線只裝半載）"
+ },
+ "readings_at": {
+  "deck_z": 44,
+  "rail_z": 57,
+  "qd_z": 64
+ },
+ "decks_preview": {
+  "主甲板": 44,
+  "後甲板": 64,
+  "艉樓": 82,
+  "艏樓": 64
+ },
+ "decks": {
+  "orlop": {
+   "z": 22,
+   "x0": 100,
+   "x1": 170,
+   "src": "〔設計〕貨艙後段的平台（板面 z 22）：火藥庫、補給"
+  },
+  "cabin": {
+   "x0": 96,
+   "x1": 175,
+   "over": 0,
+   "src": "〔設計〕後甲板底下的艙房在主甲板那一層（後甲板高出 2.0 m，不必下沉）"
+  },
+  "gun": {
+   "z_low": 44,
+   "x_low": 200,
+   "rise_aft": 9,
+   "x_aft": 92,
+   "rise_fwd": 7,
+   "x_fwd": 320,
+   "src": "〔設計〕主甲板面（第一層空氣）船中 z 44：龍骨頂 4 ＋ 底肋與內板 3 ＋ 艙深約 3.4 m ＋ 甲板 3；舷弧船尾 +0.9、船頭 +0.7 m"
+  },
+  "qd": {
+   "x0": 92,
+   "x1": 175,
+   "over": 20,
+   "src": "〔設計〕後甲板（tolda）高出主甲板 2.0 m、從船尾到主桅後面（約 0.35 L）"
+  },
+  "poop": {
+   "x0": 92,
+   "x1": 130,
+   "over": 18,
+   "src": "〔設計〕艉樓（toldilla）在後甲板上面再高 1.8 m、長約 3.8 m"
+  },
+  "fc": {
+   "x0": 280,
+   "x1": 324,
+   "over": 17,
+   "src": "〔設計〕小艏樓（castelo de proa）高出主甲板 1.7 m、從 x 280 到艏柱"
+  }
+ },
+ "ports": {
+  "gun": {
+   "x": [
+    228,
+    258
+   ],
+   "w": 5,
+   "h": 6,
+   "sill": 5,
+   "gun": "4l",
+   "src": "〔設計〕商船：主甲板船腰每舷 2 門 4 磅砲（查不到具體配砲；開法照信風號：下緣在甲板上 0.5 m、0.5 × 0.6 m）"
+  }
+ },
+ "masts": {
+  "_src": "〔源〕Domingues 2009：方帆卡拉維爾 ＝ 三根三角帆桅＋船頭一根方帆桅；〔設計〕桅位、高度、帆桁長照三角帆船的常見比例（主三角帆桁約 1.3 倍龍骨長、斜 50° 左右、前端放到舷牆上幾公尺）",
+  "fore": {
+   "x": 298,
+   "rake_deg": 5.0,
+   "heel_z": 10,
+   "len": 150,
+   "head": 14,
+   "r": [
+    2.2,
+    1.7
+   ],
+   "src": "〔設計〕前桅（traquete）在艏樓裡、往前倒 5°；下桅頂 z 146（離主甲板約 9.7 m）—— 比主桅矮（主桅掛最大的三角帆）"
+  },
+  "fore_top": {
+   "len": 60,
+   "head": 5,
+   "r": [
+    1.3,
+    1.0
+   ],
+   "src": "〔設計〕前上桅 6 m（掛上桅帆）"
+  },
+  "main": {
+   "x": 205,
+   "rake_deg": -2.0,
+   "heel_z": 4,
+   "len": 200,
+   "head": 6,
+   "r": [
+    2.8,
+    2.1
+   ],
+   "src": "〔設計〕主桅（mastro grande）在船中稍前、往後倒 2°；桅頂 z 204（離甲板約 16 m，四根裡最高），單根、沒有上桅"
+  },
+  "mizzen": {
+   "x": 152,
+   "rake_deg": -3.0,
+   "heel_z": 8,
+   "len": 160,
+   "head": 5,
+   "r": [
+    2.1,
+    1.6
+   ],
+   "src": "〔設計〕後桅（mezena）穿過後甲板；桅頂 z 168（離後甲板約 10 m）"
+  },
+  "bonav": {
+   "x": 112,
+   "rake_deg": -4.0,
+   "heel_z": 14,
+   "len": 150,
+   "head": 5,
+   "r": [
+    1.6,
+    1.2
+   ],
+   "src": "〔設計〕最後桅（contramezena）穿過後甲板與艉樓；桅頂 z 164（離艉樓約 7.5 m）"
+  },
+  "bowsprit": {
+   "heel": [
+    312,
+    70
+   ],
+   "len": 88,
+   "steeve_deg": 22,
+   "r": [
+    1.8,
+    1.2
+   ],
+   "src": "〔設計〕短艏斜桅：撐前支索、不掛斜桅帆；桅腳在前桅前面的艏樓甲板上（v1 桅腳 x 304 壓在前桅上 ⇒ 312）"
+  },
+  "yards": {
+   "_src": "方帆桁的 z 照桅的各節算；三角帆桁 ＝ sling（吊點）在桅頂下 drop、往船尾往上斜 angle_deg、吊點前面那一段佔全長 fwd",
+   "fore_course": {
+    "len": 110,
+    "on": "fore",
+    "drop": 4,
+    "src": "〔設計〕前帆桁 11 m（約 1.5 倍船寬）"
+   },
+   "fore_topsail": {
+    "len": 70,
+    "on": "fore_top",
+    "drop": 4,
+    "src": "〔設計〕前上桅帆桁 7 m"
+   },
+   "main_lateen": {
+    "len": 240,
+    "on": "main",
+    "drop": 6,
+    "angle_deg": 55,
+    "fwd": 0.48,
+    "src": "〔設計〕主三角帆桁 24 m（約 1.3 倍龍骨）、斜 55°、吊點前面 11.5 m ⇒ 前端在船腰舷牆上約 4.5 m（tack 用滑車拉到甲板）"
+   },
+   "mizzen_lateen": {
+    "len": 170,
+    "on": "mizzen",
+    "drop": 5,
+    "angle_deg": 52,
+    "fwd": 0.42,
+    "src": "〔設計〕後三角帆桁 17 m"
+   },
+   "bonav_lateen": {
+    "len": 120,
+    "on": "bonav",
+    "drop": 5,
+    "angle_deg": 50,
+    "fwd": 0.42,
+    "src": "〔設計〕最後三角帆桁 12 m（尾端伸出船尾約 3 m）"
+   }
+  },
+  "rig": {
+   "course_foot_above_rail": 16,
+   "forestay_frac": 0.55,
+   "lateen_clew_above_rail": 10,
+   "src": "〔設計〕前帆帆腳離舷頂 1.6 m；前支索落在艏斜桅 55% 處；三角帆的 clew 在舷頂上 1.0 m"
+  }
+ },
+ "decks_build": {
+  "src": "〔設計〕遊戲用的大致構造（Ship_Decks §9.2–9.3）；結構照信風號 draft_decks（甲板板＋橫樑＋圍欄、break、梯子踏板與 stringer）。好旅號沒有下沉的船長艙：後甲板高出主甲板 2.0 m ⇒ 後甲板底下的艙房就是主甲板那一層",
+  "names": {
+   "orlop": "底艙平台",
+   "gun": "主甲板",
+   "qd": "後甲板",
+   "poop": "艉樓",
+   "fc": "艏樓"
+  },
+  "codes": {
+   "orlop": "orlop",
+   "gun": "main",
+   "qd": "quarter",
+   "poop": "poop",
+   "fc": "forecastle"
+  },
+  "levels": {
+   "orlop": 0,
+   "gun": 1,
+   "qd": 2,
+   "poop": 3,
+   "fc": 2
+  },
+  "spans": {
+   "orlop": [
+    100,
+    170
+   ],
+   "gun": [
+    80,
+    324
+   ],
+   "qd": [
+    80,
+    175
+   ],
+   "poop": [
+    80,
+    130
+   ],
+   "fc": [
+    280,
+    324
+   ]
+  },
+  "plank": {
+   "interior": 177,
+   "weather": 209,
+   "weather_decks": [
+    "gun",
+    "qd",
+    "poop",
+    "fc"
+   ]
+  },
+  "beam": {
+   "every": 12,
+   "phase": 0,
+   "w": 2,
+   "depth": {
+    "orlop": 3,
+    "gun": 3,
+    "qd": 2,
+    "poop": 2,
+    "fc": 2
+   },
+   "color": 136,
+   "src": "〔設計〕每 12 格一根、寬 2"
+  },
+  "trim": 141,
+  "coaming_h": 2,
+  "hatches": [
+   {
+    "name": "主艙口",
+    "x0": 212,
+    "x1": 236,
+    "half": 8,
+    "decks": [
+     "gun"
+    ],
+    "src": "〔設計〕主桅前面、兩門砲之間的中線；2.5 × 1.7 m（貨艙梯子在裡面）"
+   },
+   {
+    "name": "前艙口",
+    "x0": 242,
+    "x1": 252,
+    "half": 6,
+    "decks": [
+     "gun"
+    ],
+    "src": "〔設計〕艏樓前面"
+   }
+  ],
+  "mast_r": {
+   "fore": 3.0,
+   "main": 3.5,
+   "mizzen": 3.0,
+   "bonav": 2.5
+  },
+  "breaks": [
+   {
+    "name": "後甲板前緣",
+    "x": 175,
+    "lo": "gun",
+    "up": "qd",
+    "doors_dy": [
+     0
+    ],
+    "rail_h": 8,
+    "src": "〔設計〕艙壁從主甲板到後甲板，門開在中線（後甲板底下的艙房）；後甲板邊胸牆 0.8 m、梯子頭留口"
+   },
+   {
+    "name": "艉樓前緣",
+    "x": 130,
+    "lo": "qd",
+    "up": "poop",
+    "doors_dy": [
+     0
+    ],
+    "rail_h": 8,
+    "src": "〔設計〕艙壁從後甲板到艉樓，門開在中線（艉樓底下的船長艙）"
+   },
+   {
+    "name": "艏樓後緣",
+    "x": 280,
+    "lo": "gun",
+    "up": "fc",
+    "doors_dy": [
+     0
+    ],
+    "rail_h": 6,
+    "src": "〔設計〕艏樓底下的艙"
+   }
+  ],
+  "ladders": {
+   "rise": 3,
+   "run": 2,
+   "tread_half": 3,
+   "color": 136,
+   "list": [
+    {
+     "name": "hold",
+     "lo": "hold",
+     "up": "gun",
+     "xs": 212,
+     "dir": 1,
+     "dy": 0,
+     "head_x": 239,
+     "src": "貨艙梯子（§9.3 ⑥）：梯腳踩艙底、在主艙口裡往前爬"
+    },
+    {
+     "name": "orlop",
+     "lo": "orlop",
+     "up": "gun",
+     "xs": 122,
+     "dir": 1,
+     "dy": 0,
+     "well": true,
+     "head_x": 140,
+     "src": "底艙平台 ⇄ 主甲板（後甲板底下的艙房裡，梯井開在主甲板；避開最後桅 x 110、後桅 x 150）"
+    },
+    {
+     "name": "qd-P",
+     "lo": "gun",
+     "up": "qd",
+     "xs": 189,
+     "dir": -1,
+     "dy": -10,
+     "head_x": 172,
+     "src": "主甲板 ⇄ 後甲板（後甲板前緣前面往船尾爬）"
+    },
+    {
+     "name": "qd-S",
+     "lo": "gun",
+     "up": "qd",
+     "xs": 189,
+     "dir": -1,
+     "dy": 10,
+     "head_x": 172,
+     "src": "同上，右舷"
+    },
+    {
+     "name": "poop-P",
+     "lo": "qd",
+     "up": "poop",
+     "xs": 144,
+     "dir": -1,
+     "dy": -10,
+     "head_x": 127,
+     "src": "後甲板 ⇄ 艉樓（艉樓前緣前面往船尾爬；避開後桅 x 150 中線）"
+    },
+    {
+     "name": "poop-S",
+     "lo": "qd",
+     "up": "poop",
+     "xs": 144,
+     "dir": -1,
+     "dy": 10,
+     "head_x": 127,
+     "src": "同上，右舷"
+    },
+    {
+     "name": "fc-P",
+     "lo": "gun",
+     "up": "fc",
+     "xs": 266,
+     "dir": 1,
+     "dy": -12,
+     "head_x": 283,
+     "src": "主甲板 ⇄ 艏樓"
+    },
+    {
+     "name": "fc-S",
+     "lo": "gun",
+     "up": "fc",
+     "xs": 266,
+     "dir": 1,
+     "dy": 12,
+     "head_x": 283,
+     "src": "同上，右舷"
+    }
+   ],
+   "src": "〔設計〕每 3 格一階、每階 2 格、踏板 7 寬；後甲板、艉樓梯子 |dy| 10，艏樓 |dy| 12；中線留給門、梯井、桅"
+  }
+ },
+ "rig_build": {
+  "src": "〔設計〕前桅桅樓 r 9（遊戲的桅頂水手站位半徑 9–18 格）；上桅在下桅頭前面（doubling）；方帆桁照 Ship_Setup §2.1 縮放風暴角號（summit）的元件；三角帆桁三根照牛津號的做法自己產生（沿 x、中段粗兩頭細），主桅不放桅樓（三角帆桁吊點就在桅頂下、桅樓會擋帆桁）",
+  "colors": {
+   "mast": 141,
+   "top": 136,
+   "rim": 36,
+   "cap": 36,
+   "yard": 136
+  },
+  "tops": {
+   "fore": 9
+  },
+  "yard_src": {
+   "fore_course": [
+    "summit-stormkaap-01m-yard-fore-course",
+    207,
+    "course"
+   ],
+   "fore_topsail": [
+    "summit-stormkaap-01m-yard-fore-topsail",
+    111,
+    "topsail"
+   ]
+  },
+  "sail_of_yard": {
+   "fore_course": "fore-course",
+   "fore_topsail": "fore-topsail",
+   "main_lateen": "main-lateen",
+   "mizzen_lateen": "mizzen-lateen",
+   "bonav_lateen": "bonav-lateen"
+  },
+  "src_lengths": "元件長度：風暴角號照它的書卡（牛津號 rig_build 量過）；三叉戟號 gaff ＝ pivot (127,1,1) → peak (1,1,87) 152.6 格、boom ＝ pivot (138,1,1) → end (0,1,9) 138.2 格（anchors.json）",
+  "lateen_r": {
+   "main": 2.6,
+   "mizzen": 2.1,
+   "bonav": 1.7
+  }
+ },
+ "guns_build": {
+  "assembly": "summit-boaviagem-01m-assembly",
+  "hull": "summit-boaviagem-01m",
+  "deck_works": {
+   "gun": "summit-boaviagem-01m-deck-gun",
+   "qd": "summit-boaviagem-01m-deck-qd",
+   "poop": "summit-boaviagem-01m-deck-poop",
+   "fc": "summit-boaviagem-01m-deck-fc"
+  },
+  "prefix": {
+   "gun": "M",
+   "qd": "Q",
+   "poop": "P",
+   "fc": "F"
+  },
+  "types": {
+   "4l": {
+    "work": "pinnacle-patache-01m-gun-4l",
+    "scale": 0.5,
+    "pivot": [
+     6.5,
+     30,
+     0
+    ],
+    "meta": {
+     "kind": "gun",
+     "gun": "4l"
+    },
+    "src": "〔設計〕商船每舷 2 門 4 磅砲（查不到卡拉維爾的具體配砲）；4 磅專用元件（聖羅曼號 pinnacle 做的通用部件，0.05 m ⇒ ×0.5 原尺寸；Ship_Guns §2.2）"
+   },
+   "pierrier": {
+    "work": "apex-one-reale-01m-gun-pierrier",
+    "mount_work": "apex-one-reale-01m-gun-pierrier-mount",
+    "scale": 0.5,
+    "pivot": [
+     5.5,
+     18.5,
+     0
+    ],
+    "meta": {
+     "kind": "gun",
+     "gun": "pierrier",
+     "mount": "turret",
+     "arc": "-80,80",
+     "rate": 45
+    },
+    "src": "〔設計〕迴旋砲（berço）⇒ 遊戲的 pierrier（皇家號的共用件，叉架已拆成座 ⇒ 每門補一個「座」雙生 kind=gunmount、mount_of；Ship_Guns §4.2.1）；meta 照飛魚號"
+   }
+  },
+  "swivels": [
+   {
+    "deck": "poop",
+    "x": 88
+   },
+   {
+    "deck": "poop",
+    "x": 120
+   },
+   {
+    "deck": "qd",
+    "x": 165
+   },
+   {
+    "deck": "fc",
+    "x": 310
+   }
+  ],
+  "swivels_src": "〔設計〕舷頂迴旋砲每舷 4 門：艉樓 2（x 88、120，避開最後桅 channels x 99–112）、後甲板 1（x 165，避開後桅 channels 139–152）、艏樓 1（x 310，避開前桅 channels 278–298）；座的插銷底落在舷頂上一格，撞到就往上墊",
+  "search": {
+   "dx": [
+    0,
+    0.5,
+    -0.5,
+    1,
+    -1
+   ],
+   "dz": [
+    -1,
+    0,
+    1
+   ],
+   "step": 0.5,
+   "back_max": 40,
+   "inset": 0.2,
+   "src": "照牛津號 draft_guns（Ship_Guns §4.2：從舷牆外面往裡退到零碰撞、砲口伸出、腳下有甲板）"
+  },
+  "support_min": 0.5
+ },
+ "gear": {
+  "src": "〔設計〕火藥庫照 Ship_Magazine §8（一定放桶、hoist ＝ 主甲板那座底艙梯子）；露天艙口的艙蓋照 Ship_Fittings §9.7；廚房 §9.13；元件都是現成的（Ship_Setup §2.1）；位置都是〔設計〕",
+  "magazine": {
+   "x_aft": 140,
+   "x_fwd": 170,
+   "aft_wall": true,
+   "door_half": 2,
+   "door_h": 14,
+   "color": 136,
+   "meta": {
+    "kind": "magazine",
+    "pos": "aft",
+    "hoist": "甲板-gun/梯子/orlop"
+   },
+   "src": "〔設計〕底艙平台前段（x 140–170；後段太窄、最後桅又穿過中線 —— v1 放 x 100–117 四個桶都撞到）；兩道牆、門開在後牆 x 140（0.5 × 1.4 m），朝底艙梯子的梯腳 x 121",
+   "door_at": "aft"
+  },
+  "models": [
+   {
+    "name": "桶-01",
+    "host": "magazine",
+    "host_link": "彈藥庫",
+    "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+    "pivot": [
+     11,
+     11,
+     0
+    ],
+    "scale": 0.2,
+    "at": [
+     156.5,
+     90.5,
+     23
+    ],
+    "meta": {
+     "kind": "powder",
+     "powder_lb": 100
+    }
+   },
+   {
+    "name": "桶-02",
+    "host": "magazine",
+    "host_link": "彈藥庫",
+    "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+    "pivot": [
+     11,
+     11,
+     0
+    ],
+    "scale": 0.2,
+    "at": [
+     156.5,
+     102.5,
+     23
+    ],
+    "meta": {
+     "kind": "powder",
+     "powder_lb": 100
+    }
+   },
+   {
+    "name": "桶-03",
+    "host": "magazine",
+    "host_link": "彈藥庫",
+    "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+    "pivot": [
+     11,
+     11,
+     0
+    ],
+    "scale": 0.2,
+    "at": [
+     163.5,
+     90.5,
+     23
+    ],
+    "meta": {
+     "kind": "powder",
+     "powder_lb": 100
+    }
+   },
+   {
+    "name": "桶-04",
+    "host": "magazine",
+    "host_link": "彈藥庫",
+    "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+    "pivot": [
+     11,
+     11,
+     0
+    ],
+    "scale": 0.2,
+    "at": [
+     163.5,
+     102.5,
+     23
+    ],
+    "meta": {
+     "kind": "powder",
+     "powder_lb": 100
+    }
+   },
+   {
+    "name": "艙蓋-主",
+    "host": "deck-gun",
+    "host_link": "甲板-gun",
+    "source_work": "meadow-monitor-01m-hatch",
+    "pivot": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1.5799,
+     1.4615,
+     1
+    ],
+    "at": [
+     211,
+     87,
+     47
+    ],
+    "meta": {
+     "kind": "door",
+     "open": "up"
+    },
+    "need_support": false,
+    "src": "主艙口 x 170–196、|dy| ≤ 8 ＋ 圍欄一圈 ⇒ 29 × 19；放在圍欄頂（甲板板 z 45、圍欄 46–47）"
+   },
+   {
+    "name": "艙蓋-梯井",
+    "host": "deck-gun",
+    "host_link": "甲板-gun",
+    "source_work": "meadow-monitor-01m-hatch",
+    "pivot": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "at": [
+     123,
+     90,
+     51
+    ],
+    "meta": {
+     "kind": "door",
+     "open": "up"
+    },
+    "need_support": false,
+    "src": "船腰梯井 x 118–132、|dy| ≤ 5 ＋ 兩側與梯腳那一頭的圍欄 ⇒ 17 × 13；圍欄頂 x 117 那一頭 z 48（舷弧）"
+   },
+   {
+    "name": "小艇",
+    "host": "deck-gun",
+    "host_link": "甲板-gun",
+    "source_work": "basecamp-ember-01m-boat",
+    "pivot": [
+     90,
+     26,
+     0
+    ],
+    "scale": 0.2,
+    "at": [
+     252.5,
+     96.5,
+     48
+    ],
+    "meta": {
+     "kind": "boat"
+    },
+    "need_support": false,
+    "src": "〔設計〕4.3 m 小艇擱在前艙口上（艙口圍欄頂上一格）、x 206–249：貨艙梯子梯頂（x 199）前面留 6 格到艏樓 break 前；餘燼號 9 m cutter ×0.24（v1 ×0.2556 從 x 202 起 ⇒ 匯入檢查「梯頂正前方擋住」）"
+   },
+   {
+    "name": "爐灶",
+    "host": "deck-gun",
+    "host_link": "甲板-gun",
+    "source_work": "kaguya-gloire-01m-galley",
+    "pivot": [
+     22,
+     16,
+     0
+    ],
+    "scale": 0.22,
+    "at": [
+     193.5,
+     96.5,
+     45
+    ],
+    "meta": {
+     "kind": "galley"
+    },
+    "src": "〔設計〕船腰主桅與主艙口之間（艏樓底下淨高不夠站廚師；〔源〕18 世紀商船的 caboose 擺在露天甲板）"
+   },
+   {
+    "name": "絞盤",
+    "host": "deck-qd",
+    "host_link": "甲板-qd",
+    "source_work": "basecamp-ember-01m-capstan",
+    "pivot": [
+     40,
+     40,
+     0
+    ],
+    "scale": 0.09,
+    "at": [
+     163.5,
+     96.5,
+     66
+    ],
+    "meta": {
+     "kind": "capstan"
+    },
+    "src": "〔源〕ZAZ5430 主桅後面有絞盤；〔設計〕v1 擺在主桅後面（梯井蓋與主桅之間）⇒ 匯入檢查「船腰梯子梯頂正前方擋住」⇒ 挪到主桅前面 x 151.5、×0.09（主桅與爐灶之間）"
+   },
+   {
+    "name": "羅經櫃",
+    "host": "deck-qd",
+    "host_link": "甲板-qd",
+    "source_work": "summit-night-falcon-01m-binnacle",
+    "pivot": [
+     9,
+     13,
+     0
+    ],
+    "scale": 0.2,
+    "at": [
+     119,
+     96.5,
+     70
+    ],
+    "meta": {
+     "kind": "binnacle"
+    },
+    "src": "〔設計〕後甲板中線、舵柄前端前面（照飛魚號 ×0.2）"
+   }
+  ]
+ },
+ "rudder_anchor_build": {
+  "rudder": {
+   "work": "summit-boaviagem-01m-rudder",
+   "title": "好旅號 舵（沿艉柱，0.1 m）",
+   "model": "舵",
+   "half_t": 1,
+   "z_top": 77,
+   "width": [
+    [
+     0,
+     12
+    ],
+    [
+     12,
+     11
+    ],
+    [
+     30,
+     7
+    ],
+    [
+     44,
+     4
+    ],
+    [
+     77,
+     3
+    ]
+   ],
+   "below": 182,
+   "above": 36,
+   "iron": 73,
+   "strap_every": 10,
+   "waterline_z": 30,
+   "max_deg": 35,
+   "bevel": 1,
+   "tiller_work": "summit-boaviagem-01m-tiller",
+   "tiller_host": "summit-boaviagem-01m-deck-qd",
+   "tiller": {
+    "z": 76,
+    "h": 2,
+    "half": 1,
+    "x_end": 100,
+    "color": 136,
+    "end_color": 36
+   },
+   "src": "〔設計〕舵沿艉柱後緣（倒 9°）從龍骨底到 z 77（後甲板那一層、艉樓底下）；3 格厚、舵葉 1.2 m 往上收到 0.3 m；水線下白、上黑、每 10 格鐵箍；max_deg 35；前緣兩側削 1 格。舵柄在艉樓底下往前伸到 x 100（最後桅在 x 110）"
+  },
+  "anchor": {
+   "gear_work": "summit-boaviagem-01m-anchor-gear",
+   "gear_title": "好旅號 錨床（兩舷 billboard）",
+   "gear_link": "錨床",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "scale": 0.45,
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "x_try": [
+    296,
+    298,
+    300,
+    302,
+    304,
+    306,
+    308
+   ],
+   "z_try": [
+    58,
+    58.5,
+    59,
+    59.5,
+    60,
+    60.5,
+    61,
+    61.5,
+    62,
+    62.5,
+    63,
+    63.5,
+    64,
+    64.5,
+    65,
+    66,
+    67
+   ],
+   "z_side": 58,
+   "d_step": 0.5,
+   "d_max": 24,
+   "ledge_half": 7,
+   "ledge_out": 3,
+   "ledge_t": 2,
+   "color": 136,
+   "src": "〔設計〕共用錨元件（Ship_Game §9 anchor）×0.45（同信風號 150 噸級）、meta anchor=bower；兩舷各一，掛在船頭舷外、錨架（x 312）後面，錨臂順著船殼切線"
+  },
+  "hawse": {
+   "x": 316,
+   "z": 57,
+   "src": "〔設計〕錨鏈孔在船頭、主甲板那一層的船殼外面（只登記固定點 hawse-S／P，沒有開孔）"
+  }
+ },
+ "rigging": {
+  "src": "〔設計〕數值照 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；結構照信風號 draft_rigging；三角帆的掛法照牛津號（erina-oxford-01m）；shrouds 每舷前 3、主 4、後 2、最後 2（〔設計〕查不到卡拉維爾的索具表）",
+  "colors": {
+   "standing": "#2b2620",
+   "running": "#a08458",
+   "sail": "#f2ead8",
+   "channel": 136,
+   "deadeye": 36
+  },
+  "channels": {
+   "shrouds": {
+    "fore": 3,
+    "main": 4,
+    "mizzen": 2,
+    "bonav": 2
+   },
+   "backstays": {
+    "fore": 1
+   },
+   "spacing": 7,
+   "first_aft": 3,
+   "width": 4,
+   "below_rail": 0,
+   "layers": 1,
+   "src": "〔設計〕channels 在舷外、舷頂那一列、1 格厚；每舷 shrouds 前 3、主 4、後 2、最後 2；前上桅 backstay 1"
+  },
+  "topmast_shrouds": 2,
+  "thick": {
+   "shroud": 0.8,
+   "topmast_shroud": 0.6,
+   "futtock": 0.45,
+   "backstay": 0.6,
+   "stay": 1.0,
+   "tm_stay": 0.7,
+   "bobstay": 0.8,
+   "sheet": 0.4,
+   "course_sheet": 0.5,
+   "tack": 0.5
+  },
+  "ratlines": {
+   "step": 4,
+   "start": 7,
+   "stop": 16,
+   "min_span": 5,
+   "th": 0.3,
+   "tm_step": 4,
+   "tm_start": 4,
+   "tm_stop": 10,
+   "tm_th": 0.25
+  },
+  "sails": {
+   "fullness": 1.05,
+   "course_clew_above_rail": 16,
+   "course_in": 0.9,
+   "clew_in": 0.1,
+   "sheet_aft": 40,
+   "tack_fwd": 20,
+   "bs_shroud_z": 60,
+   "src": "〔設計〕前帆帆腳在舷頂上 1.6 m、sheet 往後 4 m、tack 往前 2 m；上桅帆 clew 綁前帆桁的 earing 旁；三角帆 clew 在帆桁尾端往前 0.6 m、舷頂上 1.0 m，sheet 兩舷綁舷頂、tack 拉到帆桁前端正下方的甲板（照牛津號）",
+   "lateen_clew_dx": 6,
+   "lateen_clew_above_rail": 10,
+   "lateen_sheet_fwd": 4
+  },
+  "flags": {
+   "ensign": [
+    24,
+    16
+   ],
+   "ensign_yard_point": "top-02",
+   "src": "〔設計〕葡萄牙國旗（白底、王徽：紅邊框、五個藍色小盾，冠省略）掛最後桅三角帆桁的尾端；遊戲照陣營旗另外換"
+  },
+  "wind": [
+   4.5,
+   -1.5,
+   0
+  ],
+  "sail_seconds": 3,
+  "hound_below": 4
+ },
+ "deco": {
+  "src": "〔設計〕卡拉維爾的艏柱（roda）彎、往前倒、沒有 beakhead 平台與船首像 ⇒ 只留一段小 cutwater（knee）、柱頭一個金色圓頭；兩舷錨架；船尾窗玻璃。查不到同型船的裝飾資料",
+  "colors": {
+   "wood": 177,
+   "below": 182,
+   "black": 36,
+   "gold": 248,
+   "cat": 141
+  },
+  "knee": {
+   "z0": 26,
+   "z1": 66,
+   "ext": 6,
+   "pow": 0.8,
+   "bob_z": 40,
+   "src": "〔設計〕小 cutwater：水線下 z 26 從艏柱長出來、頂 z 66 比艏柱前緣往前 0.6 m（艏斜桅那條線底下）"
+  },
+  "scroll": {
+   "r": 2.0,
+   "turns": 1.0,
+   "src": "〔設計〕柱頭：knee 頂端前面一個 0.4 m 的金色圓頭（黑螺旋 1 圈）"
+  },
+  "cathead": {
+   "x": 312,
+   "z": 72,
+   "fwd_deg": 25,
+   "inboard": 3,
+   "out": 10,
+   "src": "〔設計〕艏樓舷牆頂下 3 格、往前斜 25°、伸出舷外 1.0 m；錨在步驟 11 掛上"
+  }
+ },
+ "hull_build": {
+  "wall": 3,
+  "side_color": 177,
+  "bottom_color": 182,
+  "bottom_top_z": 32,
+  "frame_color": 141,
+  "inner_color": 177,
+  "src": "〔設計〕牆 3 格（外板、肋骨、內板）；〔源〕RMG SLR0581（約 1795 商船 brig 模型照片）舷側木本色或亮油 ⇒ 水線以上木色、水線下灰白（白色防蟲塗料）—— 色號照牛津號（看過 palette_rgb）"
+ },
+ "paint": {
+  "_src": "〔設計〕查不到 17 世紀葡萄牙商船卡拉維爾的塗裝 ⇒ 舷側木本色（塗焦油）、兩條黑 wale、舷頂下兩列紅色飾帶、舷牆內側紅；水線下灰白（同信風號的防蟲塗料色）",
+  "black": 36,
+  "band": 192,
+  "gold": 248,
+  "reveal": 192,
+  "glass": 155,
+  "wood": 177,
+  "wales": [
+   {
+    "name": "main-lower",
+    "dz": -6,
+    "h": 2,
+    "src": "〔設計〕下條 wale：主甲板面下 0.5–0.6 m"
+   },
+   {
+    "name": "main-upper",
+    "dz": -2,
+    "h": 2,
+    "src": "〔設計〕上條 wale：主甲板面下 0.1–0.2 m"
+   }
+  ],
+  "band_rows": 2,
+  "src_band": "舷頂下兩列外板紅色飾帶（192，同舷牆內側）；舷頂最上一格黑"
+ },
+ "stern": {
+  "x_max": 100,
+  "x_ref": 92,
+  "wing_band": [
+   40,
+   41
+  ],
+  "rows": [
+   {
+    "deck": "qd",
+    "n": 4,
+    "w": 5,
+    "h": 5,
+    "sill": -12,
+    "half": 18,
+    "kind": "window",
+    "src": "〔設計〕後甲板底下艙房（主甲板那一層）的船尾窗 4 扇"
+   },
+   {
+    "deck": "poop",
+    "n": 2,
+    "w": 5,
+    "h": 5,
+    "sill": -12,
+    "half": 10,
+    "kind": "window",
+    "src": "〔設計〕艉樓底下（後甲板那一層）的船長艙 2 扇"
+   }
+  ],
+  "src": "〔設計〕方艉（painel）：wing transom 一條黑（z 40–41）、以上船尾板木色＋兩排窗"
+ },
+ "_todo": "下面這幾段（decks_build 以後）是信風號的原樣，還沒換成好旅號 —— 到那一步再改（步驟 5–11）"
+}

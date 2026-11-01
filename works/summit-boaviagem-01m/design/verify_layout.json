@@ -1,0 +1,280 @@
+{
+ "waterline_z": 30.0,
+ "port_gaps_gun": [
+  25
+ ],
+ "ports": [
+  {
+   "deck": "gun",
+   "x": 228,
+   "sill_z": 49,
+   "sill_above_wl_m": 1.9,
+   "top_z": 55,
+   "ceiling_z": 58.0,
+   "margin": 3.0,
+   "half_beam_at_sill": 35.4
+  },
+  {
+   "deck": "gun",
+   "x": 258,
+   "sill_z": 50,
+   "sill_above_wl_m": 2.0,
+   "top_z": 56,
+   "ceiling_z": 58.9,
+   "margin": 2.9,
+   "half_beam_at_sill": 34.8
+  }
+ ],
+ "masts": {
+  "fore": {
+   "heel_z": 10,
+   "top_z": 206,
+   "truck_above_wl_m": 17.6,
+   "truck_above_deck_m": 15.73,
+   "x_at_deck": 301.4,
+   "stages": [
+    [
+     "lower",
+     10,
+     160
+    ],
+    [
+     "top",
+     146,
+     206
+    ]
+   ]
+  },
+  "main": {
+   "heel_z": 4,
+   "top_z": 204,
+   "truck_above_wl_m": 17.4,
+   "truck_above_deck_m": 16.0,
+   "x_at_deck": 203.6,
+   "stages": [
+    [
+     "lower",
+     4,
+     204
+    ]
+   ]
+  },
+  "mizzen": {
+   "heel_z": 8,
+   "top_z": 168,
+   "truck_above_wl_m": 13.8,
+   "truck_above_deck_m": 12.22,
+   "x_at_deck": 150.0,
+   "stages": [
+    [
+     "lower",
+     8,
+     168
+    ]
+   ]
+  },
+  "bonav": {
+   "heel_z": 14,
+   "top_z": 164,
+   "truck_above_wl_m": 13.4,
+   "truck_above_deck_m": 11.4,
+   "x_at_deck": 109.5,
+   "stages": [
+    [
+     "lower",
+     14,
+     164
+    ]
+   ]
+  }
+ },
+ "bowsprit_tip": [
+  393.6,
+  103.0
+ ],
+ "bowsprit_z_over_stem_head": 74.0,
+ "stem_head": [
+  322.0,
+  70.0
+ ],
+ "yards": {
+  "fore_course": {
+   "x": 309.5,
+   "z": 142.0,
+   "len": 110,
+   "on": "fore",
+   "mast": "fore",
+   "kind": "square"
+  },
+  "fore_topsail": {
+   "x": 314.4,
+   "z": 197.0,
+   "len": 70,
+   "on": "fore_top",
+   "mast": "fore",
+   "kind": "square"
+  },
+  "main_lateen": {
+   "x": 198.4,
+   "z": 192.0,
+   "len": 240,
+   "on": "main",
+   "mast": "main",
+   "kind": "lateen",
+   "angle_deg": 55,
+   "fore": [
+    264.51090080319193,
+    97.63368449790815
+   ],
+   "peak": [
+    126.85255607894088,
+    294.2301751272662
+   ],
+   "end": [
+    126.85255607894088,
+    294.2301751272662
+   ]
+  },
+  "mizzen_lateen": {
+   "x": 144.1,
+   "z": 158.0,
+   "len": 170,
+   "on": "mizzen",
+   "mast": "mizzen",
+   "kind": "lateen",
+   "angle_deg": 52,
+   "fore": [
+    188.0970624457958,
+    101.73603219248005
+   ],
+   "peak": [
+    83.43461164043393,
+    235.69786030562278
+   ],
+   "end": [
+    83.43461164043393,
+    235.69786030562278
+   ]
+  },
+  "bonav_lateen": {
+   "x": 102.2,
+   "z": 154.0,
+   "len": 120,
+   "on": "bonav",
+   "mast": "bonav",
+   "kind": "lateen",
+   "angle_deg": 50,
+   "fore": [
+    134.60674185611015,
+    115.39136006680351
+   ],
+   "peak": [
+    57.472228693725405,
+    207.31669324108088
+   ],
+   "end": [
+    57.472228693725405,
+    207.31669324108088
+   ]
+  }
+ },
+ "sail_area_m2": 322.1,
+ "sails": {
+  "fore-course": 51.3,
+  "fore-topsail": 51.0,
+  "main-lateen": [
+   [
+    262.5,
+    98.6
+   ],
+   [
+    128.9,
+    293.2
+   ],
+   [
+    132.9,
+    85.9
+   ]
+  ],
+  "mizzen-lateen": [
+   [
+    186.1,
+    102.7
+   ],
+   [
+    85.4,
+    234.7
+   ],
+   [
+    89.4,
+    109.0
+   ]
+  ],
+  "bonav-lateen": [
+   [
+    132.6,
+    116.4
+   ],
+   [
+    59.5,
+    206.3
+   ],
+   [
+    63.5,
+    109.0
+   ]
+  ]
+ },
+ "fore_course_foot_above_rail": 16.0,
+ "lateen": {
+  "main_lateen": {
+   "fore": [
+    264.5,
+    97.6
+   ],
+   "peak": [
+    126.9,
+    294.2
+   ],
+   "fore_above_rail": 38.3,
+   "peak_past_stern": -45.8,
+   "over_other_mast_tops": {
+    "mizzen": 102.3
+   }
+  },
+  "mizzen_lateen": {
+   "fore": [
+    188.1,
+    101.7
+   ],
+   "peak": [
+    83.4,
+    235.7
+   ],
+   "fore_above_rail": 43.7,
+   "peak_past_stern": -3.1,
+   "over_other_mast_tops": {
+    "bonav": 48.6
+   }
+  },
+  "bonav_lateen": {
+   "fore": [
+    134.6,
+    115.4
+   ],
+   "peak": [
+    57.5,
+    207.3
+   ],
+   "fore_above_rail": 39.6,
+   "peak_past_stern": 22.8,
+   "over_other_mast_tops": {}
+  }
+ },
+ "x_extent": [
+  57.5,
+  393.6
+ ],
+ "longest_square_yard": 110,
+ "problems": []
+}

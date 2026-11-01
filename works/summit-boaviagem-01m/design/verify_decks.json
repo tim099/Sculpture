@@ -1,0 +1,395 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 3820,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1295,
+    "177": 2525
+   },
+   "mirror_diff": 0
+  },
+  "gun": {
+   "cells": 19416,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 6397,
+    "141": 366,
+    "209": 12653
+   },
+   "mirror_diff": 0
+  },
+  "qd": {
+   "cells": 7311,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1454,
+    "141": 1325,
+    "209": 4532
+   },
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 3404,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 580,
+    "141": 826,
+    "209": 1998
+   },
+   "mirror_diff": 0
+  },
+  "fc": {
+   "cells": 3328,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 524,
+    "141": 1073,
+    "209": 1731
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "gun": {
+   "cells": 622,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "qd": {
+   "cells": 396,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 400,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "fc": {
+   "cells": 372,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "gun",
+   "lo": "hold",
+   "points": {
+    "foot": [
+     211,
+     96,
+     4
+    ],
+    "lo": [
+     214,
+     96,
+     7
+    ],
+    "hi": [
+     238,
+     96,
+     43
+    ],
+    "head": [
+     239,
+     96,
+     45
+    ]
+   },
+   "steps": 13
+  },
+  "orlop": {
+   "up": "gun",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     121,
+     96,
+     23
+    ],
+    "lo": [
+     124,
+     96,
+     26
+    ],
+    "hi": [
+     136,
+     96,
+     44
+    ],
+    "head": [
+     140,
+     96,
+     47
+    ]
+   },
+   "steps": 7
+  },
+  "qd-P": {
+   "up": "qd",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     190,
+     86,
+     45
+    ],
+    "lo": [
+     187,
+     86,
+     48
+    ],
+    "hi": [
+     177,
+     86,
+     63
+    ],
+    "head": [
+     172,
+     86,
+     65
+    ]
+   },
+   "steps": 6
+  },
+  "qd-S": {
+   "up": "qd",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     190,
+     106,
+     45
+    ],
+    "lo": [
+     187,
+     106,
+     48
+    ],
+    "hi": [
+     177,
+     106,
+     63
+    ],
+    "head": [
+     172,
+     106,
+     65
+    ]
+   },
+   "steps": 6
+  },
+  "poop-P": {
+   "up": "poop",
+   "lo": "qd",
+   "points": {
+    "foot": [
+     145,
+     86,
+     67
+    ],
+    "lo": [
+     142,
+     86,
+     70
+    ],
+    "hi": [
+     132,
+     86,
+     85
+    ],
+    "head": [
+     127,
+     86,
+     87
+    ]
+   },
+   "steps": 6
+  },
+  "poop-S": {
+   "up": "poop",
+   "lo": "qd",
+   "points": {
+    "foot": [
+     145,
+     106,
+     67
+    ],
+    "lo": [
+     142,
+     106,
+     70
+    ],
+    "hi": [
+     132,
+     106,
+     85
+    ],
+    "head": [
+     127,
+     106,
+     87
+    ]
+   },
+   "steps": 6
+  },
+  "fc-P": {
+   "up": "fc",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     265,
+     84,
+     47
+    ],
+    "lo": [
+     268,
+     84,
+     50
+    ],
+    "hi": [
+     276,
+     84,
+     62
+    ],
+    "head": [
+     283,
+     84,
+     65
+    ]
+   },
+   "steps": 5
+  },
+  "fc-S": {
+   "up": "fc",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     265,
+     108,
+     47
+    ],
+    "lo": [
+     268,
+     108,
+     50
+    ],
+    "hi": [
+     276,
+     108,
+     62
+    ],
+    "head": [
+     283,
+     108,
+     65
+    ]
+   },
+   "steps": 5
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 8,
+ "reach": {
+  "orlop": [
+   "orlop"
+  ],
+  "gun": [
+   "fc-P",
+   "fc-S",
+   "hold",
+   "orlop",
+   "qd-P",
+   "qd-S"
+  ],
+  "qd": [
+   "poop-P",
+   "poop-S",
+   "qd-P",
+   "qd-S"
+  ],
+  "poop": [
+   "poop-P",
+   "poop-S"
+  ],
+  "fc": [
+   "fc-P",
+   "fc-S"
+  ]
+ },
+ "holes": {
+  "orlop": 45,
+  "gun": 845,
+  "qd": 47,
+  "poop": 21,
+  "fc": 26
+ },
+ "cavities_filled": [],
+ "lists": {
+  "deck-orlop": [
+   3820,
+   "03e7b2657a9e6a0724593f9d74992f4092b557543e4a238c08836bf1762e7000"
+  ],
+  "deck-orlop.state": [
+   3820,
+   "504d0d527926386d66d1cd2e51aa979b00d4deaaec91a96939242846541cbe47"
+  ],
+  "deck-gun": [
+   19416,
+   "aee857e99ea982717b5f01c826dcbb473eedf12215b93a6c87edf75d912cfbc0"
+  ],
+  "deck-gun.state": [
+   19416,
+   "e5900d743e687f0a38a122d34fb3281fb2f44addc22f55062c7a4b1ab092dd30"
+  ],
+  "deck-qd": [
+   7311,
+   "f2f69f1731584aba67f5ae401b9b376f850a97ede7de0e73417ddf394086f0a9"
+  ],
+  "deck-qd.state": [
+   7311,
+   "aab8f54cb21015f017cbe9da83c2028b93b044eba61787cc98058fcaca0119d4"
+  ],
+  "deck-poop": [
+   3404,
+   "054acbeb3ea5827b745fca54284fdedeceaee8eb4828073547992ecb0f567728"
+  ],
+  "deck-poop.state": [
+   3404,
+   "3ff70b39bc4c408138ef7dae3205ea5002a3e67a540587ed360adc3cf1b7930b"
+  ],
+  "deck-fc": [
+   3328,
+   "d4b3e622994abf8d03970fdf8965726ea8f457f7c668b3d29f6c5af8cc5d2ea1"
+  ],
+  "deck-fc.state": [
+   3328,
+   "5d9d6c10218ebd19fae7514d8e21b105eed226c3f14be4458e9f346b4d615a9f"
+  ],
+  "ladders-gun": [
+   622,
+   "10e5641013cf4ae6c98fb3ad5333bb7052e465b409f0e3109dc1d15fecd1068a"
+  ],
+  "ladders-qd": [
+   396,
+   "ac7734d4015f67f16d39def7abf6e93bd945bc6ad5d91d4f5f283831f9270881"
+  ],
+  "ladders-poop": [
+   400,
+   "253130c483d70e3203ad96dc6ce4148cf98c832eec45684888da8525447ac781"
+  ],
+  "ladders-fc": [
+   372,
+   "974e2b66a4c928485bfeb03db610498c0d4457f7ce6475b5ab3f201de8348f2b"
+  ]
+ }
+}

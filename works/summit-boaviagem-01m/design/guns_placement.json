@@ -1,0 +1,345 @@
+{
+ "note": "draft_guns.py 的結果；at ＝ 模型的 at（pivot 落點）、phi ＝ rotate z、P 舷 mirror=y",
+ "rows": [
+  {
+   "deck": "gun",
+   "port": 1,
+   "side": "P",
+   "type": "4l",
+   "chase": false,
+   "outer": 62,
+   "deck_z": 45,
+   "opening": {
+    "x": [
+     226,
+     230
+    ],
+    "z": [
+     49,
+     54
+    ]
+   },
+   "at": [
+    228.5,
+    63.0,
+    45.0
+   ],
+   "phi": 0.0,
+   "back": 1.0,
+   "off": 0,
+   "dz": 0,
+   "muzzle_beyond": 6.25,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 52.25,
+   "ok": true,
+   "name": "砲M-P01",
+   "id": "gun-1"
+  },
+  {
+   "deck": "gun",
+   "port": 2,
+   "side": "P",
+   "type": "4l",
+   "chase": false,
+   "outer": 62,
+   "deck_z": 46,
+   "opening": {
+    "x": [
+     256,
+     260
+    ],
+    "z": [
+     50,
+     55
+    ]
+   },
+   "at": [
+    258.5,
+    64.0,
+    46.0
+   ],
+   "phi": 0.0,
+   "back": 2.0,
+   "off": 0,
+   "dz": 0,
+   "muzzle_beyond": 5.25,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 53.25,
+   "ok": true,
+   "name": "砲M-P02",
+   "id": "gun-2"
+  },
+  {
+   "deck": "gun",
+   "port": 1,
+   "side": "S",
+   "type": "4l",
+   "chase": false,
+   "outer": 131,
+   "deck_z": 45,
+   "opening": {
+    "x": [
+     226,
+     230
+    ],
+    "z": [
+     49,
+     54
+    ]
+   },
+   "at": [
+    228.5,
+    130.0,
+    45.0
+   ],
+   "phi": 0.0,
+   "back": 1.0,
+   "off": 0,
+   "dz": 0,
+   "muzzle_beyond": 6.25,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 52.25,
+   "ok": true,
+   "name": "砲M-S01",
+   "id": "gun-3"
+  },
+  {
+   "deck": "gun",
+   "port": 2,
+   "side": "S",
+   "type": "4l",
+   "chase": false,
+   "outer": 131,
+   "deck_z": 46,
+   "opening": {
+    "x": [
+     256,
+     260
+    ],
+    "z": [
+     50,
+     55
+    ]
+   },
+   "at": [
+    258.5,
+    129.0,
+    46.0
+   ],
+   "phi": 0.0,
+   "back": 2.0,
+   "off": 0,
+   "dz": 0,
+   "muzzle_beyond": 5.25,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 53.25,
+   "ok": true,
+   "name": "砲M-S02",
+   "id": "gun-4"
+  },
+  {
+   "deck": "qd",
+   "port": "sw165",
+   "side": "P",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 64,
+   "deck_z": 73,
+   "at": [
+    165.5,
+    65.5,
+    74.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 78.75,
+   "ok": true,
+   "name": "迴旋砲Q-P01",
+   "id": "gun-5"
+  },
+  {
+   "deck": "qd",
+   "port": "sw165",
+   "side": "S",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 129,
+   "deck_z": 73,
+   "at": [
+    165.5,
+    127.5,
+    74.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 78.75,
+   "ok": true,
+   "name": "迴旋砲Q-S01",
+   "id": "gun-6"
+  },
+  {
+   "deck": "poop",
+   "port": "sw120",
+   "side": "P",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 70,
+   "deck_z": 95,
+   "at": [
+    120.5,
+    71.5,
+    96.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 100.75,
+   "ok": true,
+   "name": "迴旋砲P-P02",
+   "id": "gun-7"
+  },
+  {
+   "deck": "poop",
+   "port": "sw88",
+   "side": "P",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 77,
+   "deck_z": 99,
+   "at": [
+    88.5,
+    78.5,
+    100.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 104.75,
+   "ok": true,
+   "name": "迴旋砲P-P01",
+   "id": "gun-8"
+  },
+  {
+   "deck": "poop",
+   "port": "sw120",
+   "side": "S",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 123,
+   "deck_z": 95,
+   "at": [
+    120.5,
+    121.5,
+    96.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 100.75,
+   "ok": true,
+   "name": "迴旋砲P-S02",
+   "id": "gun-9"
+  },
+  {
+   "deck": "poop",
+   "port": "sw88",
+   "side": "S",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 116,
+   "deck_z": 99,
+   "at": [
+    88.5,
+    114.5,
+    100.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 104.75,
+   "ok": true,
+   "name": "迴旋砲P-S01",
+   "id": "gun-10"
+  },
+  {
+   "deck": "fc",
+   "port": "sw310",
+   "side": "P",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 74,
+   "deck_z": 74,
+   "at": [
+    310.5,
+    75.5,
+    75.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 79.75,
+   "ok": true,
+   "name": "迴旋砲F-P01",
+   "id": "gun-11"
+  },
+  {
+   "deck": "fc",
+   "port": "sw310",
+   "side": "S",
+   "type": "pierrier",
+   "chase": false,
+   "outer": 119,
+   "deck_z": 74,
+   "at": [
+    310.5,
+    117.5,
+    75.0
+   ],
+   "phi": 0.0,
+   "back": 0,
+   "off": 0,
+   "dz": 1,
+   "muzzle_beyond": 7.5,
+   "muzzle_free": true,
+   "support": 1.0,
+   "axis_z": 79.75,
+   "ok": true,
+   "name": "迴旋砲F-S01",
+   "id": "gun-12"
+  }
+ ]
+}
