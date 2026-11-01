@@ -261,3 +261,10 @@ Tim：「康塞普西翁號 船尾的陽台是否可以改成欄杆(目前一整
 - 讀數：換之前不改 plan 重跑 `draft_guns.py` ⇒ guns_placement.json 逐位元組相同；換之後只有 toldilla 4 門 4l 那 4 列變：at x 往船尾挪 0.5 格（163.5 ⇒ 163、226.5 ⇒ 226；dx 搜尋挑的）、back 5／4 不變、砲口伸出 3.61 ⇒ 3.25、4.61 ⇒ 4.25、not_ok 0、砲撞砲 0、兩舷不對稱 0。
 - 落格：只重掛 4 門 4l（`sub=model overwrite=1`，meta 帶著 Blockside 配的 id）；`tools/build_guns.py` 的 NAMES['4l'] 跟著改。本船沒有砲具子作品 ⇒ 不用重跑 gunfittings。
 - Blockside：`admin.py reimport --id concepcion` ⇒ 格數、checksum 都沒變，vxk 只差那 4 門砲；匯入檢查 ✗ 0、⚠ 13（跟 10-27 那份逐行相同；合進 dev 384234e 新的火藥取用點之後也是 ✗ 0、⚠ 13）；卡片沒變。
+
+## 換砲：8 磅砲換成自己的模型（ridge-two，2026-11-01）
+
+- Tim 2026-11-01：「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」（Ship_Guns §2.2 砲只跟同一種砲共用模型）⇒ `guns_build.types.8l` 從風暴角號 `-gun-12l` 縮 0.45 換成 8 磅砲通用部件 `ridge-two-centurion-01m-gun-8l`（scale 0.5 ＝ 原尺寸；pivot [7.5, 35, 0]）。
+- 讀數：換之前不改 plan 重跑 `draft_guns.py` ⇒ guns_placement.json 逐位元組相同；換之後只有 tercera 24 門 8l 那 24 列變：16 門 at 挪了、back 4–5 ⇒ 3–5、砲口伸出 5.12–6.12 ⇒ 6.75–8.75、砲軸高 121.53–125.53 ⇒ 123.25–127.25；not_ok 0。
+- 落格：只重掛 24 門 8l（`sub=model overwrite=1`，meta 帶著 id）；`tools/build_guns.py` 的 NAMES['8l'] 跟著改。本船沒有砲具子作品。
+- Blockside `reimport --id concepcion`：格數、checksum、模型數、繩數都沒變；匯入檢查 ✗ 0、⚠ 14（跟換之前一樣，後座 6–7 ⇒ 6–8 格）。

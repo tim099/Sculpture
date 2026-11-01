@@ -8,7 +8,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 design = sys.argv[1]
 GB = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))['guns_build']
 PL = json.load(open(os.path.join(design, 'guns_placement.json'), encoding='utf-8'))['rows']
-NAMES = {'8l': 'demi-culverin ⇒ 8 磅長砲（風暴角號 -gun-6l ×0.55）', '6l': 'saker ⇒ 6 磅砲（風暴角號 -gun-6l）'}
+NAMES = {'8l': 'demi-culverin ⇒ 8 磅長砲（8 磅砲通用部件 ridge-two-centurion-01m-gun-8l；Tim 2026-11-01 換）', '6l': 'saker ⇒ 6 磅砲（風暴角號 -gun-6l）'}
 
 
 def num(v):

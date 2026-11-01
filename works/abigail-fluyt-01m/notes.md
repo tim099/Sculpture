@@ -258,3 +258,10 @@ Ship_Game §10 檢查表：
 | 匯出 vxk、對 checksum | ✓ 上面那一行 |
 | 匯入檢查 ✗ 0、⚠ 都看過 | ✓ ⚠ 0（10-28 修正前 ⚠ 3，列在步驟 14；修法見「修正」那一段） |
 | 舵、舵柄 spin | ✓ |
+
+## 換砲：4 磅砲換成自己的模型（ridge-two，2026-11-01）
+
+- Tim 2026-11-01：「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」（Ship_Guns §2.2 砲只跟同一種砲共用模型）⇒ `guns_build.types.4l` 從風暴角號 `-gun-6l` 縮 0.375 換成 4 磅砲通用部件 `pinnacle-patache-01m-gun-4l` 縮 0.443（拉貝爾號同一個縮放 ⇒ 遊戲裡同一份網格；pivot [6.5, 28, 0]）。
+- 讀數：換之前不改 plan 重跑 `draft_guns.py` ⇒ guns_placement.json 逐位元組相同；換之後只有 main 8 門 4l 那 8 列變：back 2–3 不變、2 門 at x 挪 0.5、砲口伸出 4.69–5.69 ⇒ 4.31–5.31；not_ok 0。
+- 落格：只重掛 8 門 4l（`sub=model overwrite=1`，meta 帶著 id）；`tools/build_guns.py` 的 NAMES['4l'] 跟著改。本船沒有砲具子作品（plan 沒有 gunfittings_build）。
+- Blockside `reimport --id zeehaen`：格數、checksum、模型數、繩數都沒變；匯入檢查 ✗ 0、⚠ 1 ⇒ 0 —— 少掉的是「灶沒有 smoke」：reimport 順帶把作品裡已經登記、還沒匯入的爐灶 smoke 固定點帶進來（不是本次改的）。

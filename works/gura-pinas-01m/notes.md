@@ -216,3 +216,12 @@ Tim：「967 參考 task TASK-1045 船頭船尾優化一下吧」→「船尾感
 - cathead 每一欄各自量船殼寬再取整 ⇒ 末端一柱錯開浮空 ⇒ 從同一個基點每半格取樣。
 - 舷頂的新節點寫成 [525, 94] ⇒ bak 那段斜率變了、`draft_rigging` 照舷頂小數算的前桅支索板 deadeye 全升 1 格（格子沒變，vxk 檔頭比對抓到）⇒ 525 那一點用舊折線的值。
 - 第一人稱站上 regelingen 頂 240 格：船首上緣在艏柱降到平台高度 ⇒ 從平台一步踩上舷頂、沿著舷頂走上去；舷頂抬到 75 之後還有 244 格 —— 路線（`trace` 印出來）是圓船頭的內面一層一層往上收、像台階（x 533：1→3→6 格）⇒ 船頭補實成直的牆、中線開走道 ⇒ 0。
+
+## 換砲：8 磅砲換成自己的模型（ridge-two，2026-11-01）
+
+- Tim 2026-11-01：「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」（Ship_Guns §2.2 砲只跟同一種砲共用模型）⇒ `guns_build.types.8l` 從風暴角號 `-gun-12l` 縮 0.45 換成 8 磅砲通用部件 `ridge-two-centurion-01m-gun-8l`（scale 0.5 ＝ 原尺寸；pivot [7.5, 35, 0]）。6 磅 drake（6 磅縮 0.4）是同一種砲縮放，沒動。
+- 讀數：換之前不改 plan 重跑 `draft_guns.py` ⇒ guns_placement.json 逐位元組相同；換之後只有 8 門 8l 那 8 列變（main 6、puente 2）：back 4–9.5 ⇒ 5–9、砲口伸出 0.62–6.12 ⇒ 2.75–6.75（M-P01／S01 從 0.62 ⇒ 2.75）、砲軸高 49.52–70.53 ⇒ 51.25–72.25；not_ok 0。
+- 落格：只重掛 8 門 8l（`sub=model overwrite=1`，meta 帶著 id）；`tools/build_guns.py` 的 NAMES['8l'] 跟著改。
+- 砲門蓋：匯入檢查 ✗ 2「關上時穿過縮回去的砲」（砲門蓋-U-P03／U-S03，house 5）⇒ 照修法 meta house 8（`sub=meta part=model`）。
+- ⚠ **砲具的環還沒挪**：重跑 `draft_gunfittings.py` ⇒ 這 8 門的船牆環要挪（刻 40、貼 40）。Tim 同日拍板「炮具相關視為遊戲meta 不限定只有作者能修改」，但雕刻引擎還只放行梯子作品（`✗ blocked：只有作品作者 gura 可以雕刻`）⇒ 格子沒動、設計檔退回 HEAD；現在環比 eye 低一點、繩照樣接得上。引擎放行之後照這三行跑：`draft_gunfittings.py .` ⇒ `tools/delta_apply.py . gura-pinas-01m-gunfittings masks/gunfittings/gunfittings.vox.txt` ⇒ `tools/build_gunfittings.py .`。
+- Blockside `reimport --id pinas`：格數、checksum、模型數、繩數都沒變；匯入檢查 ✗ 0、⚠ 11（跟換之前一樣）。
