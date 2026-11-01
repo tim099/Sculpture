@@ -130,6 +130,38 @@
 - 讀數：舵 on_solid 0、舵柄 on_solid（helm port 以外）0、錨床 on_solid 0、錨碰撞 0、碰到迴旋砲外框 0、舵／舵柄／錨床／錨 鏡像差全 0；**反向對照** `--probe=shift=錨-S:-3` ⇒ 錨-S 撞錨床 1,981、錨-P 0；`shift=錨-S:6` ⇒ 碰到 `甲板-fc/迴旋砲F-S01座` 的外框；`shift=錨-P:0` ⇒ 0；重跑 6 個輸出逐位元組相同。結果帳 舵 1,277、錨床 672、舵柄 166 缺 0／多 0／色差 0；船殼 100,883 格（＝ 100,985 − 艏斜桅孔 84 − helm port 18），helm port 18 格船殼裡剩 0、舵柄填滿 18／18。組裝件 158,392 格（＝ 157,738 − 18 ＋ 672）1 元件、空腔 0、鏡像差 0、link_overlap 0、link_clipped 0；ropecheck 繩 206、兩端 412 全 ok；觀測 models_drawn 47（＋舵、舵柄、錨 ×2）、models_broken 0、ropes_broken 0、sails_broken 0。回讀（export parts）：舵、舵柄的 spin 都在、錨 anchor=bower；子作品 tags sub、0.1 m、parent 船殼。
 - 過程圖 `overlays/stage11_stern.png`、`stage11_bow.png`（不畫帆與繩；region 只裁格子、框外的模型照畫 ⇒ 浮在空中的是別處的模型）。
 
+## 步驟 14 匯進 Blockside（2026-11-02）
+- 先提交作品：Sculpture `76f38c6d`（步驟 1–11，199 檔，Refs TASK-1149）。
+- Blockside 自己的 worktree `D:/Unity/Blockside-wt/kaguya-guineaman`（分支 `kaguya/guineaman`，從 heads/dev 9ea8e4b；`_cache` 含 town/ 從共用的整份複製、diff -rq 一致）⇒ `admin.py import --work kaguya-guineaman-01m-assembly --id guineaman --name 幾內亞船`。
+- 第一次匯入檢查 ✗ 2、⚠ 15：
+  - ✗ **艏樓走不到**：艏樓梯子 |dy| 9 的內側樑（y 91／101）把艏樓前牆中線門（x 228、y 94–98、z 40–54）後面的走道夾成 9 格，往前 5 格就被前桅（y 93–99）堵死 ⇒ 艏樓底下那一塊主甲板（x 228–262）和艏樓整團接不回主幹（樓梯自檢本身 ✗ 0，是「甲板連通」那一條）。⇒ plan 的 fc-P／S 改 |dy| 13（前桅兩邊各留 5 格），draft_decks 重跑只動 fc 甲板與 fc 梯子；`delta_apply` 套（甲板刻 220／貼 240、梯子刻 264／貼 264），梯子四點固定點重寫。
+    - 🩸 控制組抓到：步驟 5 存的 `fc.state.vox.txt` 跟作品差 49 格 ＝ 步驟 7 刻掉的艏斜桅孔（那時艏斜桅還沒落格）；新跑的 state 已經扣掉 ⇒ 直接當目標。
+    - 讀數：兩件跟清單差 0；組裝件 158,412（＋20）1 元件、空腔 0、鏡像差 0、link_overlap 0；ropecheck 412 端 ok。
+  - ✗ **艉樓找不到取用點**：Blockside `10_ship.js gunDecksMeta` 每一層的站人高度 zr 照那一層最前面那門砲的外框底（[a−8, a+5]）；艉樓、後甲板、艏樓都只有舷頂迴旋砲（外框底 90／73／68，比地板高 11.5／16.5／11）⇒ zr 抬到舷牆頂上：艉樓地板不在範圍 ⇒ 一塊空地都找不到（✗）、三層的 hoist 都選不到梯子（梯頭 z 75／57／57 不在範圍）、後甲板的取用點落到艉樓地板上（z 75–80 剛好在 65–78 裡）。設定檔預設取用點（維吉尼亞號 rooms 的 deck items）也不行：deckGrid 照同一個 zr 量站得住的格。記憶 [[blockside-gundeck-height-bowmost-gun]] 同一個坑（飛魚號當時把迴旋砲挪到 carriage 砲後面）。
+  - 重匯之後 ✗ 照舊 ⇒ 開成品（`?debug=1&shipcheck=guineaman&headless=1`）把主甲板那一層的走路格印出來：艏樓門洞 x 228、y 94–98 本身走得、屬於艏樓底下那一塊；**擋住的是遊戲自動擺的兩樣東西** —— 艏樓的取用點（hoist fc-P：照梯腳旁 9×9 找，落在船腰 x 215–225、y 89–99）、自動補的帆布櫃（`pumpAuto` 照「離外框中點 x 184 最近、靠中線」，船腰中線 164–216 被爐灶、主艙口、小艇佔滿 ⇒ 落在 x 214–226、y 93–99）⇒ 兩樣都堵在艏樓門口。梯子挪到 |dy| 13 照樣留著（前桅兩邊多一條路，不壞）。
+    - 實際的取用點（遊戲量）：主甲板 ＝ lower 艙口（桶在下層甲板 x 140–150）✓；後甲板 ＝ 選到 poop 梯子（梯頭 z 75 在它的 zr 62–75 裡；桶在艉樓梯腳旁的後甲板）✓；艏樓 ＝ fc-P（擋門）；艉樓 ＝ 沒有（✗）。後甲板前緣 x 141 底下是通的（大艙跟船腰整片連著）⇒ 自動擺在那裡的抽水機（x 143–153）不擋人。
+  - 修法（Blockside game.json `ships[guineaman].rooms` 的甲板預設，遊戲那側本船的資料、不動程式）：`甲板-fc` 擺一組取用點的桶（格 4,5 ⇒ x 248–257、y 86–95，艏樓甲板上）、`甲板-poop` 擺桶（格 0,5）＋帆布櫃（格 0,7 轉 90°；帆布櫃「全船至少一件」連別層的預設一起算 ⇒ 主甲板不再自動補一件到艏樓門口）。格子是在頁面裡照 deckGrid 的算法（5 格一塊、照那一層的 zr 量站得住）算的：艏樓站得住的只有 x 243–262、y 81–110；艉樓只有船尾 x 47–56、y 86–110（zr 79–92 的關係）。
+- `admin.py ids --id guineaman`：寫回 11 件作品（關聯、模型 id；砲的 id 是 draft_guns 先發的、不動），_cache 的 vxk 同步 45 件。🩸 彈藥庫的 hoist 是逗號分開的好幾座 ⇒ `ids` 不拆（✗ 找不到這個部件、照舊）⇒ 手寫成 `ladders-1#lower,ladders-2#qd-P,ladders-3#poop`（`work sub=meta part=link`；fc-P 拿掉）、plan 跟著改、`metasync --id guineaman`。
+- game.json：import／ids／metasync 都重 dump 整份 ⇒ 拿 HEAD 只在 ships 尾巴插本船一筆（scratchpad `t1149/game_insert.py`：斷言 HEAD ＋ 本船 ＝ import 那一份，再補 role merchant、gangway、geo、cfg pump 2、crew（照好旅號：officers 1、helm 1、top 1、marines 0、monkeys 1、handsK 0.25、navigator 0）、names、rooms）⇒ +109 行。
+- 建成品 ⇒ 匯入檢查 ✗ 1：艏樓的預設桅取用點沒擺上 —— 🩸 遊戲記的迴旋砲外框 z 從 65 起（連砲座），格 4,5 那一排算進砲班的位置 ⇒ 改格 4,6（x 248–257、y 91–100，艏樓中線剩下唯一一塊 2×2）⇒ ✗ 0、⚠ 5；火藥 16／16 門走得到、甲板 5 層都接得到。
+- ⚠「桅頂水手 2／3」追下去是 **遊戲把船尾旗桿當成後桅**（`T.masts` 後桅 @x 44）：`10_ship.js findMasts` 拿最低的橫帆桁（後桅是 crossjack，pivot x 84、z 118）往下 10–40 格（z 78–108）在 ±45 格裡挑中線實心最多的那一欄；後桅往後倒 4° ⇒ 每一欄只蓋到一截（x 80：93、x 81：87），船尾板＋旗桿那一欄（x 44：127）贏了 ⇒ 桅頂水手、倒了沒、敵艦瞄桅都看錯那一根。
+  - 修（Blockside，`MAST_RUN = 18`）：超過 18 格的欄切成一段一段相連的，挑離帆桁轉軸最近的那一段、段裡照舊取最多的；一段都沒有 ⇒ 整個窗照舊。
+  - **對照**（同一份 worktree、改之前那一版成品當控制組；頁面裡每一型 `loadHull` ＋ `fleet` 開一場、讀 `__game.stats().masts`）：35 型（堡壘 fixed 不算，它們沒有帆桁、走舊的找法）34 型逐字相同，只有本船 後桅 44 → 80（後桅在那一段 z 的中心 79.3–81.4）。scratchpad `t1149/masts_before.json`。
+  - ⇒ 匯入檢查 ✗ 0、⚠ 4（四座船樓梯子的梯腳正前方是船樓前牆，要往旁邊繞 —— 步驟 5 把梯子搬進船樓底下的取捨，樓梯自檢 ✗ 0）。
+- **最後一次匯入檢查 ✗ 0、⚠ 4**：火藥 16／16 門走得到取用點（2 門跨層走梯子；最遠 10.6 m）、甲板 5 層都接得到、操舵 舵令 ⇒ 舵柄 ⇒ 舵 100%、廚房站得住 4 面、砲班站不滿 0、彈藥庫 1（取用點 4：主甲板 lower 艙口、後甲板 poop 艙口、艏樓與艉樓照預設）。選船卡：191 噸、21.8 m、砲 16（4 磅 10、迴旋砲 6）、齊射 24、帆 9、船員 54。
+  - 船員 54（遊戲照砲班＋預備水手算）比 Henrietta Marie 的約 18 人多 —— 戰鬥要人操砲；照好旅號的配置，沒另外壓。
+- 成品：`showlod --id guineaman` ⇒ `git checkout -- index.html` ⇒ `build` ⇒ `showlod --check`（42 型 ✓）⇒ `srccheck` ✓ ⇒ `verify` 1,642 份網格一致。
+- 試開一場（頁面 `loadHull` ＋ `fleet`，對憲法號、`__game.run(10)` × 6）：滿帆、順風 8.6 節、三根桅都認得、60 秒開 74 發、打中 33 發、12 門有人操作；被憲法號打掉 4 門、吃水深了 0.85 m（打得到的距離，正常）。
+- 新做的元件不標 render：舵、舵柄、三角帆桁、格柵是子作品格子（同好旅號）。
+- 提交：Blockside worktree `25eb85e`（8 檔：成品、showlod、船檔、game.json、ship_cards、vxk_lock、10_ship.js、template）⇒ 施工場 `coding-20261101T175549Z-kaguya`（範圍 Blockside 子模組＋Blocksail battle.html）⇒ 共用 dev 快轉 9ea8e4b → 25eb85e（共用樹上別人沒提交的 ship_cards.json 船員數先存 patch、快轉後原樣套回）⇒ 共用 `_cache` 補 guineaman.vxk、`verify` 一致 ⇒ Blocksail `e7e001c7`（指標＋post-merge 掛鉤重套的 battle.html）。worktree 拆了、分支 `-d` 刪了。
+  - ⚠ **Blockside dev 沒推**：dev/dev..heads/dev 底下還有一筆不是本小姐的 9ea8e4b（"Show food quality with transparent four-grade dish frames"）—— 要不要一起推等 Tim。Blocksail 推也等 Tim。
+
+## 給遊戲那側填 geo 用的高度（已照這些填進 Blockside game.json ships[guineaman].geo）
+- 水線 z 29；主甲板（第一層空氣）船中 z 38、船尾 45、船頭 43；後甲板 z 56–63；艉樓 z 75–80；艏樓 z 56–59；下層甲板 z 21。
+- 4 磅砲外框 z 38–47；迴旋砲外框底 後甲板 73、艉樓 90、艏樓 68；前桅樓 z 約 131；桅頂離水線 主 24.4、前 21.6、後 14.7 m（z 273、245、176）。
+- 遊戲量的外框 hx0 42 ～ hx1 327（含舵、帆桁、艏斜桅尖）；船殼 x 44（船尾板頂）～ 268（艏柱）、船首喙到 288。
+- geo：spar [38, 63]、marines [52, 102]、center 50、aim 33、aimZ [5, 280]、deckAim [38, 63]、rigAim [100, 270]、qx 80。
+
 ## 步驟 3 的起點（2026-11-01 定的方向，留著對照）
 - **產生程式從牛津號抄**（`erina-oxford-01m/design`）：1656 年英國五等艦，同時代、同國 ⇒ 方艉（wing transom＋船尾板兩排窗）、tumblehome、17 世紀英國船頭都對；同一個框 448 × 192 × 384、yc 96。信風號、好旅號都是從它抄的（好旅號修過的坑先看它 notes 再抄）。
   - ⚠ 三套的 `lines.py` 都沒有 Ship_Ends 的 counter／beakhead／stern_tumble —— 120 噸商船不需要兩層 stern walk、整片 beakhead 平台；要的只有小的船首喙與方艉，照牛津號原本的寫法縮。
@@ -140,5 +172,7 @@
 - 奴隸船才有的構造（步驟 5、10 再定、都要標出處）：下層甲板（slave deck，大概 1.5 m 淨高）、主甲板上的格柵艙口與通風口、主桅前橫過甲板的 barricado（17 世紀末的文獻有：Thomas Phillips 1693–94 Hannibal 的航海日誌；1666 年有沒有要查）。⇒ 步驟 10 再查：Phillips 那一條沒查到原文，見步驟 10。
 
 ## 下一步
-- 步驟 12、13 單上刪了（砲在露天甲板、沒有槳）⇒ 下一步是步驟 14：給遊戲的 meta 與匯入 Blockside（Ship_Game §9、§9.4、§12）。照好旅號的步驟 14：Blockside 自己的 worktree（`_cache` 先從共用的複製）⇒ `admin.py import --work kaguya-guineaman-01m-assembly --id <id> --name 幾內亞船` ⇒ `ids`（砲的 id 是 draft_guns 先發的：gun-1..16、gunmount-11..16）⇒ 修 ⚠ ⇒ `reimport`；import／reimport 會重 dump 整份 game.json ⇒ 拿 HEAD 只插本船那一筆、斷言別的船逐項相同。⚠ 立場：ships[] 那一筆不能讓玩家造或買（Blocksail 那一型是單上 #3，另外做）。
-- 還沒提交：作品資料夾（含 design/）全部還沒提交到 Sculpture。
+- 步驟 15 交船：換一艘船時的檢查表逐條看（Ship_Game §10）、跟遊戲那側對 checksum（共用 `_cache/guineaman.vxk` ＝ lock `c:1ce9c17bcd…`）。
+- 單上 #3：Blocksail 有一型畫它（玩家不能造、不能買；AI 商人照載重挑船型時不挑它；fleet_check 沒動的船型讀數不變）—— 還沒做。
+- 單上 #1 造船資料、#4 Tim 看過一次。
+- Blockside dev 推不推（底下有別人的 9ea8e4b）等 Tim；Blocksail main 推也等 Tim。

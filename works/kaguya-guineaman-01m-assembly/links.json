@@ -21,6 +21,7 @@
 			"persona": "kaguya",
 			"note": "",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 29
 			}
@@ -47,6 +48,7 @@
 			"meta": {
 				"deck": "orlop",
 				"floor": "79:21,228:21",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "下層甲板",
@@ -75,6 +77,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "53:45,124:38,204:38,263:43",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "主甲板",
@@ -103,6 +106,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "50:63,95:58,141:56",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "後甲板",
@@ -131,6 +135,7 @@
 			"meta": {
 				"deck": "poop",
 				"floor": "47:80,90:75",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 4,
 				"name": "艉樓",
@@ -159,6 +164,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "228:56,265:59",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 3,
 				"name": "艏樓",
@@ -183,7 +189,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T22:49:41",
 			"persona": "kaguya",
-			"note": "步驟 6（draft_deco.py）"
+			"note": "步驟 6（draft_deco.py）",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "船尾旗桿",
@@ -203,7 +212,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T22:49:44",
 			"persona": "kaguya",
-			"note": "步驟 6（draft_deco.py）"
+			"note": "步驟 6（draft_deco.py）",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "船尾窗玻璃",
@@ -225,6 +237,7 @@
 			"persona": "kaguya",
 			"note": "步驟 6（draft_deco.py）",
 			"meta": {
+				"id": "part-3",
 				"material": "glass"
 			}
 		},
@@ -246,7 +259,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T22:56:10",
 			"persona": "kaguya",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "前桅",
@@ -266,7 +282,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T22:56:11",
 			"persona": "kaguya",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-5"
+			}
 		},
 		{
 			"name": "後桅",
@@ -286,7 +305,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T22:56:11",
 			"persona": "kaguya",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "艏斜桅",
@@ -306,7 +328,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T22:56:11",
 			"persona": "kaguya",
-			"note": "階段六"
+			"note": "階段六",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "支索板",
@@ -326,7 +351,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T23:03:44",
 			"persona": "kaguya",
-			"note": "階段七（TASK-1149）"
+			"note": "階段七（TASK-1149）",
+			"meta": {
+				"id": "part-8"
+			}
 		},
 		{
 			"name": "彈藥庫",
@@ -348,7 +376,8 @@
 			"persona": "kaguya",
 			"note": "步驟 10：火藥庫",
 			"meta": {
-				"hoist": "甲板-gun/梯子/lower,甲板-qd/梯子/qd-P,甲板-poop/梯子/poop,甲板-fc/梯子/fc-P",
+				"hoist": "ladders-1#lower,ladders-2#qd-P,ladders-3#poop",
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 400
@@ -372,7 +401,10 @@
 			"enabled": true,
 			"created_at": "2026-11-01T23:52:59",
 			"persona": "kaguya",
-			"note": "步驟 11（TASK-1149）"
+			"note": "步驟 11（TASK-1149）",
+			"meta": {
+				"id": "part-9"
+			}
 		}
 	]
 }
