@@ -159,3 +159,11 @@ TASK-1152（主單 TASK-1146）。Tim 2026-11-01「/scp-task 1152 GO」。
   - 結果帳：甲板-main 397 格（清單 − 桅孔 ＋ 砲柱）、舵槳 47、彈藥庫 0，缺 0／多 0／色差 0。
   - 走路格 1 群 9.28 m²；桶碰撞 0（反向對照 12,748）。
   - 舵槳 0／±35° 碰撞 0（反向對照沉 3 格 6／5／22）；14 支槳碰撞 0、seat 14／14。
+
+## 步驟 14 匯進 Blockside（Blockside 分支 basecamp/piragua 39095b5）
+
+- `admin.py import --id piragua` ⇒ reimport ⇒ `ids`（發號：船殼關聯 ship-1、甲板 deck-1、帆桁 yard-1、桅 part-1；我手寫的 gun-1／gunmount-1／oar-1…14／anchor-1／rudder-1／magazine-1／powder-1 照留）⇒ metasync。
+- 槳元件標預設 meta `render=pole`（長桿式低面數網格，Ship_Render）；舵槳不標（有一支往裡彎的舵柄，不是直的）。
+- 匯入檢查 ✗ 0、⚠ 0；樓梯自檢 0 座、甲板連通 1 層都接得到。
+- 遊戲裡量到的：帆裝 0 收、1–3 張（＝ 步驟 8 那張表）；只排它一艘、收帆、俥鐘全速 ⇒ 槳 5.6 節（`cfg.base` 4 × 娛樂加成 1.4）；第一人稱從船頭走到船尾。
+- 遊戲那側為這艘補了三條退路（只在原本那條路完全找不到時才走；全船對照 39 艘報告逐份相同）：取用點排成一排、木工台挑撐得住的腳、geo.marineY／qx。
