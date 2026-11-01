@@ -153,3 +153,8 @@
 - 換一艘船時的檢查表（Ship_Game §10）逐條：ropecheck ✓（bind／snap 0、照外框猜 0）、名稱與 sub ✓、mpv 與模型 scale ✓、現成元件（18 磅、6 磅砲、方帆桁、三角帆桁、火藥桶、錨、艙蓋、爐灶、絞盤）✓／新做的（8 磅砲通用部件、砲門蓋板、舵、火藥庫、裝飾）列在上面 ✓、舵模型＋stock-top＋spin ✓、沒有舵輪（舵柄在舵上）✓、kind=ship waterline_z 43 ✓、梯子＋樓梯自檢 8 座 ✓、橫繩組＋繩梯 ✓、火藥桶＋取用點 48／48 ✓、甲板 meta ✓、三角帆桁 rig=lateen＋fore ✓、玻璃 ✓、砲零碰撞 ✓、砲門蓋板 ✓、繩帆模型斷 0 ✓、帆與帆的繩 meta ✓、帆裝三段表 ✓、1 元件／空腔 0／重疊 0／鏡像 0 ✓、shipcheck ✗ 0 ✓、spin ✓。空艙房沒標（遊戲用不到時可以之後加）。
 - checksum：Blockside `_cache/centurion.vxk`（鎖檔 c:f97201517b2a）vs 從作品重新匯出 ⇒ 格子逐位元組相同、檔頭只差 253 條繩的 `bind`（Blockside 匯入時 ropebind 加的，作品匯出本來就沒有）。
   - ⚠ `admin.py cache --all` 那天把 30 艘都報「作品變過」—— 本船量出來只差 bind，別艘多半同一個原因（不是本小姐的船，沒動它們的 _cache）。
+
+## 接進遊戲（2026-11-01）
+- Blockside：分支 `ridge-two/centurion` 0534a1d（匯入）＋ d2fb64d（合 dev 349939a：取 dev 的成品再整個重建；dev 新加的 ships/showlod.js 補烘本船 ⇒ showlod --check 31 型 ✓）⇒ ff 進子模組的 dev。共用 `_cache/centurion.vxk` 指紋 ＝ 鎖檔 c:f9720151。⚠ **Blockside dev 還沒推**（推送被權限擋下，等 Tim）。
+- Blocksail：737bfd6a ff 進 main（沒推）—— `FLEET.types.fourth`（531 t、war、hull centurion）、`hullLoa` 48.9、`SAILOR.crew` 180、TRADE_SIM 船型表、fleet_check 兩條；子模組 → d2fb64d、battle.html 重套。fleet_check 前後 ✓ 89 → 91、✗ 0，起始檔一年讀數一位不差。
+- 遊戲裡（worktree 成品 `?ship=centurion`，對手憲法號）：開局掉落的模型 0；W／S 帆裝 0–3 段跟上面那張表一樣；側順風 12.1 節；一輪舷側排出 23 門。截圖 `overlays/stage14_ingame_sailing.jpg`。
