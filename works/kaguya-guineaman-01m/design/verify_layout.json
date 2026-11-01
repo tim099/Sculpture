@@ -1,0 +1,212 @@
+{
+ "waterline_z": 29.0,
+ "port_gaps_gun": [
+  23,
+  21,
+  21,
+  19
+ ],
+ "ports": [
+  {
+   "deck": "gun",
+   "x": 118,
+   "sill_z": 43,
+   "sill_above_wl_m": 1.4,
+   "top_z": 48,
+   "ceiling_z": 53.3,
+   "margin": 5.3,
+   "half_beam_at_sill": 28.8
+  },
+  {
+   "deck": "gun",
+   "x": 146,
+   "sill_z": 42,
+   "sill_above_wl_m": 1.3,
+   "top_z": 47,
+   "ceiling_z": 50.0,
+   "margin": 3.0,
+   "half_beam_at_sill": 29.6
+  },
+  {
+   "deck": "gun",
+   "x": 172,
+   "sill_z": 42,
+   "sill_above_wl_m": 1.3,
+   "top_z": 47,
+   "ceiling_z": 50.3,
+   "margin": 3.3,
+   "half_beam_at_sill": 29.6
+  },
+  {
+   "deck": "gun",
+   "x": 198,
+   "sill_z": 42,
+   "sill_above_wl_m": 1.3,
+   "top_z": 47,
+   "ceiling_z": 51.1,
+   "margin": 4.1,
+   "half_beam_at_sill": 29.6
+  },
+  {
+   "deck": "gun",
+   "x": 222,
+   "sill_z": 43,
+   "sill_above_wl_m": 1.4,
+   "top_z": 48,
+   "ceiling_z": 51.9,
+   "margin": 3.9,
+   "half_beam_at_sill": 28.6
+  }
+ ],
+ "masts": {
+  "main": {
+   "heel_z": 7,
+   "top_z": 273,
+   "truck_above_wl_m": 24.4,
+   "x_at_gundeck": 159.0,
+   "stages": [
+    [
+     "lower",
+     7,
+     170
+    ],
+    [
+     "top",
+     152,
+     242
+    ],
+    [
+     "tg",
+     232,
+     273
+    ]
+   ]
+  },
+  "fore": {
+   "heel_z": 8,
+   "top_z": 245,
+   "truck_above_wl_m": 21.6,
+   "x_at_gundeck": 236.0,
+   "stages": [
+    [
+     "lower",
+     8,
+     153
+    ],
+    [
+     "top",
+     136,
+     218
+    ],
+    [
+     "tg",
+     209,
+     245
+    ]
+   ]
+  },
+  "mizzen": {
+   "heel_z": 12,
+   "top_z": 176,
+   "truck_above_wl_m": 14.7,
+   "x_at_gundeck": 84.0,
+   "stages": [
+    [
+     "lower",
+     12,
+     134
+    ],
+    [
+     "top",
+     122,
+     176
+    ]
+   ]
+  }
+ },
+ "bowsprit_tip": [
+  326.3,
+  102.2
+ ],
+ "bowsprit_z_over_stem_head": 62.1,
+ "stem_head": [
+  269.0,
+  64.0
+ ],
+ "yards": {
+  "main_course": {
+   "x": 155.1,
+   "z": 147.0,
+   "len": 134,
+   "on": "main",
+   "mast": "main"
+  },
+  "main_topsail": {
+   "x": 152.6,
+   "z": 220.0,
+   "len": 67,
+   "on": "main_top",
+   "mast": "main"
+  },
+  "main_tg": {
+   "x": 151.0,
+   "z": 265.0,
+   "len": 34,
+   "on": "main_tg",
+   "mast": "main"
+  },
+  "fore_course": {
+   "x": 236.0,
+   "z": 131.0,
+   "len": 117,
+   "on": "fore",
+   "mast": "fore"
+  },
+  "fore_topsail": {
+   "x": 236.0,
+   "z": 197.0,
+   "len": 59,
+   "on": "fore_top",
+   "mast": "fore"
+  },
+  "fore_tg": {
+   "x": 236.0,
+   "z": 237.0,
+   "len": 29,
+   "on": "fore_tg",
+   "mast": "fore"
+  },
+  "crossjack": {
+   "x": 78.6,
+   "z": 118.0,
+   "len": 59,
+   "on": "mizzen",
+   "mast": "mizzen"
+  },
+  "mizzen_topsail": {
+   "x": 75.2,
+   "z": 166.0,
+   "len": 42,
+   "on": "mizzen_top",
+   "mast": "mizzen"
+  },
+  "mizzen_lateen": {
+   "x": 79.6,
+   "z": 104.0,
+   "len": 114,
+   "on": "mizzen",
+   "mast": "mizzen"
+  },
+  "spritsail": {
+   "x": 314.2,
+   "z": 86.8,
+   "len": 80,
+   "on": "bowsprit",
+   "mast": "bowsprit"
+  }
+ },
+ "sail_area_m2": 389.1,
+ "main-course_foot_above_rail": 10.0,
+ "fore-course_foot_above_rail": 10.0,
+ "problems": []
+}

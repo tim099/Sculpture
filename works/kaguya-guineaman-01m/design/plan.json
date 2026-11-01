@@ -1,0 +1,122 @@
+{
+ "title": "幾內亞船（Guineaman，1660 年代英國奴隸船，約 120 噸）—— 新圖紙",
+ "task": "TASK-1149",
+ "author": "kaguya",
+ "date": "2026-11-01",
+ "sources": "references/research_guineaman_2026-11-01.md（〔查〕〔二手〕〔推〕〔設計〕四種標記）；產生程式與參數結構出自 erina-oxford-01m（plan_oxford_ref.json 只拿來對照）",
+ "meters_per_cell": 0.1,
+ "ft": 3.048,
+ "space": {"x": 448, "y": 192, "z": 384, "yc": 96, "note": "中線 ＝ 第 96 格（鏡像 y ↔ 192 − y）"},
+ "lines": {
+  "half_beam": {"v": 30.5, "src": "〔設計〕寬 20 ft ＝ 61.0 格 ⇒ 全寬 61 格（|dy| ≤ 30）；120 噸：龍骨 60 × 寬 20 × 艙深 9 ÷ 94 ＝ 115（research §3）"},
+  "keel_top": {"v": 4, "src": "〔設計〕龍骨（含 false keel）0.4 m"},
+  "keel_half": {"v": 1.5, "src": "〔設計〕龍骨寬 3 格（0.3 m；120 噸商船的龍骨 sided 約 1 ft）"},
+  "plan_half": {"v": 10, "src": "〔設計〕底肋平的那一段半寬 1.0 m（牛津號 12 × 0.833）"},
+  "astilla": {"v": 2, "src": "〔設計〕rising of the floor 0.2 m：商船的底比 frigate 平（裝得多）"},
+  "max_breadth_z": {"v": 33, "src": "〔設計〕最寬處在水線 z 29 之上 0.4 m"},
+  "tumblehome": {"v": 3.0, "src": "〔設計〕到後甲板那一層每舷內收 0.3 m（17 世紀英國船的 tumblehome，商船比牛津號 0.4 m 小）"},
+  "tumblehome_ref_z": {"v": 55, "src": "≈ 後甲板面（主甲板 37 ＋ qd over 18）"},
+  "tumblehome_pow": {"v": 1.5, "src": "〔設計〕"},
+  "tumblehome_above_per_cell": {"v": 0.1, "src": "〔設計〕後甲板以上每往上一格再收 0.1 格"},
+  "bilge_pow": {"v": 2.3, "src": "〔設計〕圓舭比牛津號（2.0）飽滿：商船"},
+  "s_aft": {"v": 0.38, "src": "〔設計〕船尾收縮從長度 38% 起（牛津號 42%；商船的 run 比 frigate 短、肚子大）"},
+  "s_fwd": {"v": 0.68, "src": "〔設計〕船頭收縮從 68% 起（牛津號 64%；飽滿的船頭）"},
+  "sternpost_x0": {"v": 58, "src": "〔設計〕艉柱腳的位置（同牛津號）"},
+  "sternpost_rake_deg": {"v": 10.0, "src": "〔設計〕艉柱往後倒 10°"},
+  "wing_transom_z": {"v": 40, "src": "〔設計〕方艉（square tuck）：wing transom 在主甲板砲門下緣附近（甲板 37 ＋ 3）"},
+  "transom_ratio": {"v": 0.65, "src": "〔設計〕wing transom 寬約 2/3 船寬"},
+  "forefoot_x": {"v": 241, "src": "〔設計〕龍骨 60 ft ＝ 182.9 格 ⇒ 58 ＋ 183"},
+  "stem_a": {"v": 28, "src": "〔設計〕艏柱 1/4 橢圓的水平半軸（牛津號 33 × 0.833）⇒ 主甲板長約 70 ft（龍骨 × 1.17，research §3）"},
+  "stem_b": {"v": 64, "src": "〔設計〕艏柱頭在 z 64（艏樓舷頂附近）"},
+  "deadwood_aft_z": {"v": 24, "src": "〔設計〕船尾 deadwood 抬到 z 24（商船的 run 比牛津號 30 飽滿）"},
+  "deadwood_fwd_z": {"v": 10, "src": "〔設計〕"},
+  "bow_pow_low": {"v": 1.9, "src": "〔設計〕"},
+  "bow_pow_high": {"v": 2.6, "src": "〔設計〕上面鈍：17 世紀英國船飽滿的圓船頭"},
+  "aft_pow": {"v": 1.9, "src": "〔設計〕（牛津號 1.7；商船船尾比較飽滿）"},
+  "end_hollow": {"v": 2.5, "src": "〔設計〕兩頭的剖面往下凹（牛津號 3.0）"},
+  "top": [[36, 90], [90, 82], [92, 70], [141, 67], [143, 50], [164, 50], [226, 52], [228, 63], [256, 65], [280, 68]],
+  "top_src": "舷頂（舷牆頂）折線 ＝ decks 每一層的甲板面 ＋ 舷牆：艉樓 poop ＋8、後甲板 ＋12、船腰 ＋13（4 磅砲門頂 ＋10 上面留 3 格）、艏樓 ＋8；前後緣位置是〔設計〕"
+ },
+ "waterline": {"z": 29, "src": "〔推〕吃水 2.9 m（9.5 ft；滿載商船，比艙深 9 ft 略深 —— research §3）"},
+ "readings_at": {"deck_z": 37, "rail_z": 50, "qd_z": 55},
+ "decks_preview": {"主甲板": 37, "後甲板": 55, "艉樓": 71, "艏樓": 53, "下層甲板": 20},
+ "decks": {
+  "orlop": {"z": 20, "x0": 70, "x1": 228, "src": "〔設計〕下層甲板（第一層空氣 z 20；奴隸船艙裡整層，research §6）：到主甲板：樑之間 1.6 m、樑底下 1.3 m（遊戲船員頭頂 14 格 ⇒ 梯子點避開樑；17 世紀奴隸船的下層淨高本來就低）；底下到龍骨的艙放水桶"},
+  "gun": {"z_low": 37, "x_low": 164, "rise_aft": 8, "x_aft": 51, "rise_fwd": 6, "x_fwd": 265, "src": "〔設計〕主甲板面（第一層空氣）船中 z 37：龍骨頂 4 ＋ 底肋與內板 3 ＋〔設計〕艙深 9 ft（27.4 格）＋ 甲板 3 ≈ 37；舷弧船尾 +0.8 m、船頭 +0.6 m"},
+  "qd": {"x0": 51, "x1": 141, "over": 18, "src": "〔設計〕後甲板 ＝ 主甲板 ＋ 1.8 m（頭頂 14 格＋樑），從船尾到主桅後面（牛津號 x 50–158 × 0.833）"},
+  "poop": {"x0": 48, "x1": 90, "over": 16, "src": "〔設計〕艉樓（roundhouse）＝ 後甲板 ＋ 1.6 m，蓋在船長艙上"},
+  "fc": {"x0": 228, "x1": 272, "over": 16, "src": "〔設計〕艏樓 ＝ 主甲板 ＋ 1.6 m"}
+ },
+ "ports": {
+  "gun": {"x": [118, 146, 172, 198, 222], "w": 5, "h": 5, "sill": 5, "gun": "4l", "src": "〔設計〕10 門 4 磅、每舷 5（research §5）：後甲板底下 1、船腰 4；砲門 0.5 m 見方、下緣離甲板 0.5 m；間距 24–28 格"}
+ },
+ "masts": {
+  "_src": "〔二手〕主桅照 Lees 轉述的 1670 年規則（（龍骨 60＋寬 20＋艙深 9）÷ 1.66 ＝ 53.6 ft）；其他桅與帆桁都照牛津號的比例（〔設計〕）、位置照牛津號 × 0.833（從艉柱腳量）。z 一律是格；heel ＝ 桅腳那一格",
+  "main": {"x": 160, "rake_deg": -2, "heel_z": 7, "len": 163, "head": 18, "r": [3.3, 2.5], "src": "53.6 ft；桅頭 18 格 ≈ 1/9"},
+  "main_top": {"len": 90, "head": 10, "r": [2.1, 1.5], "src": "0.55 × 主桅"},
+  "main_tg": {"len": 41, "head": 0, "r": [1.3, 0.9], "src": "0.25 × 主桅"},
+  "fore": {"x": 236, "rake_deg": 0, "heel_z": 8, "len": 145, "head": 17, "r": [3.2, 2.4], "src": "0.89 × 主桅"},
+  "fore_top": {"len": 82, "head": 9, "r": [2.0, 1.4], "src": "0.5 × 主桅"},
+  "fore_tg": {"len": 36, "head": 0, "r": [1.2, 0.9], "src": "0.22 × 主桅"},
+  "mizzen": {"x": 86, "rake_deg": -4, "heel_z": 12, "len": 122, "head": 12, "r": [2.4, 1.7], "src": "0.75 × 主桅"},
+  "mizzen_top": {"len": 54, "head": 0, "r": [1.4, 1.0], "src": "0.33 × 主桅"},
+  "bowsprit": {"heel": [246, 46], "len": 98, "steeve_deg": 35, "r": [3.0, 1.9], "src": "0.6 × 主桅；仰 35°（17 世紀艏斜桅陡）；桅腳在前桅前面的主甲板上、從艏樓前緣穿出去"},
+  "yards": {
+   "main_course": {"len": 134, "on": "main", "z": 147, "src": "13.4 m ＝ 2.2 × 寬（17 世紀主帆桁約 2.1–2.4 × 寬）；桅樓下 5 格"},
+   "main_topsail": {"len": 67, "on": "main_top", "z": 220, "src": "½ 主帆桁"},
+   "main_tg": {"len": 34, "on": "main_tg", "z": 265, "src": "½ 上桅帆桁"},
+   "fore_course": {"len": 117, "on": "fore", "z": 131, "src": "0.875 × 主帆桁"},
+   "fore_topsail": {"len": 59, "on": "fore_top", "z": 197, "src": "½ 前帆桁"},
+   "fore_tg": {"len": 29, "on": "fore_tg", "z": 237, "src": "½ 前上桅帆桁"},
+   "crossjack": {"len": 59, "on": "mizzen", "z": 118, "src": "後桅頂下的橫桁：不掛帆，給後上桅帆的帆腳綁"},
+   "mizzen_topsail": {"len": 42, "on": "mizzen_top", "z": 166, "src": "後上桅帆"},
+   "mizzen_lateen": {"len": 114, "on": "mizzen", "z": 104, "angle_deg": 40, "sling_frac": 0.42, "src": "0.85 × 主帆桁；前端低、後端高 40°；吊點在前端往後 42%"},
+   "spritsail": {"len": 80, "on": "bowsprit", "frac": 0.85, "drop": 7, "src": "0.6 × 主帆桁；吊在艏斜桅 85% 處下面"}
+  }
+ },
+ "decks_build": {"src": "〔設計〕遊戲用的大致構造（Ship_Decks §9.2–9.3）；程式照牛津號 draft_decks（甲板板＋橫樑＋圍欄、break、梯子踏板與 stringer、封閉空腔）", "names": {"orlop": "下層甲板", "gun": "主甲板", "qd": "後甲板", "poop": "艉樓", "fc": "艏樓"}, "levels": {"orlop": 0, "gun": 1, "qd": 2, "fc": 2, "poop": 3}, "spans": {"orlop": [70, 228], "gun": [40, 275], "qd": [40, 141], "poop": [36, 90], "fc": [228, 275]}, "spans_src": "〔設計〕下層甲板（奴隸船艙裡整層，research §6）x 70–228：船尾 deadwood 以前、艏樓艙壁以後；主甲板整條船長；後甲板到主桅後面 x 141；艏樓從 x 228", "plank": {"interior": 177, "weather": 209, "weather_decks": ["qd", "poop", "fc"]}, "beam": {"every": 13, "phase": 118, "w": 2, "depth": {"orlop": 3, "gun": 3, "qd": 2, "poop": 2, "fc": 2}, "color": 136, "src": "〔設計〕每 13 格一根、相位照第 1 門砲門 x 118（砲門底下一根、兩門之間一根）、寬 2；下層甲板到主甲板：樑之間淨高 1.6 m、樑底下 1.3 m"}, "trim": 141, "coaming_h": 2, "hatches": [{"name": "主艙口", "x0": 176, "x1": 188, "half": 7, "decks": ["gun"]}, {"name": "前艙口", "x0": 200, "x1": 208, "half": 6, "decks": ["gun"]}], "hatches_src": "〔設計〕主艙口在主桅與前桅之間、前艙口在第 4 門砲（x 198）的中線；兩個都只開主甲板（下層甲板整層鋪滿）；格柵蓋步驟 10 再做", "mast_r": {"fore": 3.8, "main": 3.8, "mizzen": 3.0}, "breaks_src": "〔設計〕門照牛津號 v2 的教訓開在中線（後甲板前緣、艏樓後緣）—— 兩舷是梯子與砲，門開在旁邊走出來是死角；艉樓前緣的門開在 |dy| 14（中線是上艉樓的梯子）", "breaks": [{"name": "後甲板前緣", "x": 141, "lo": "gun", "up": "qd", "doors_dy": [0], "rail_h": 8}, {"name": "艉樓前緣", "x": 90, "lo": "qd", "up": "poop", "doors_dy": [14], "rail_h": 7}, {"name": "艏樓後緣", "x": 228, "lo": "gun", "up": "fc", "doors_dy": [0], "rail_h": 7}], "ladders": {"rise": 3, "run": 2, "tread_half": 3, "color": 136, "list": [{"name": "lower", "lo": "orlop", "up": "gun", "xs": 134, "dir": -1, "dy": 0, "well": true, "well_b": 13, "head_x": 119, "src": "5 階 ⇒ 井開到最上一階（xs − 13）、head 在井口外 2 格；下層甲板 ⇄ 主甲板：在後甲板底下的大艙裡開井（x 116–132），之後的火藥庫放下層甲板船尾、緊鄰這座（火藥從井口吊上來）"}, {"name": "qd-P", "lo": "gun", "up": "qd", "xs": 138, "dir": -1, "dy": -9, "well": true, "src": "後甲板底下（大艙裡）從井口上後甲板：v1 放在船腰 x 142–157 ⇒ 外側 stringer（|dy| 13）擋在第 2 門砲（x 146）後面、砲班站的地方；船腰 21 m 擠不出砲與砲之間 18 格長的空檔。門開在後甲板前緣中線、梯子在 |dy| 9"}, {"name": "qd-S", "lo": "gun", "up": "qd", "xs": 138, "dir": -1, "dy": 9, "well": true}, {"name": "poop", "lo": "qd", "up": "poop", "xs": 104, "dir": -1, "dy": 0, "head_x": 87, "src": "中線；梯頂離後桅（艉樓那一層 x 約 82）5 格"}, {"name": "fc-P", "lo": "gun", "up": "fc", "xs": 230, "dir": 1, "dy": -9, "well": true, "well_b": 13, "head_x": 245, "src": "艏樓底下從井口上艏樓（v1 在船腰 x 213–232 擋在第 5 門砲 x 222 後面，同後甲板）；艏樓高 1.6 m 只有 5 階 ⇒ 井開到最上一階（xs ＋ 13）、head 在井口外 2 格"}, {"name": "fc-S", "lo": "gun", "up": "fc", "xs": 230, "dir": 1, "dy": 9, "well": true, "well_b": 13, "head_x": 245}], "src": "〔設計〕每 3 格一階、每階 2 格、踏板 7 寬（同牛津號）"}},
+ "rig_build": {"src": "〔設計〕桅樓（round top，17 世紀圓的平台＋矮欄）主 r 12、前 r 11、後 r 10 —— 不照船的比例縮：遊戲的桅頂水手站位半徑 9–18 格（牛津號 v1 後桅 r 7 ⇒ 站不下）；上桅在下桅頭前面（doubling）；方帆桁照 Ship_Setup §2.1 引用風暴角號（summit，17 世紀荷蘭船）的帆桁元件等比縮放（同牛津號）；後桅三角帆桁新做（要有 fore 固定點，Ship_Masts §5）", "colors": {"mast": 141, "top": 136, "rim": 36, "cap": 36, "yard": 136}, "tops": {"main": 12, "fore": 11, "mizzen": 10}, "yard_src": {"main_course": ["summit-stormkaap-01m-yard-main-course", 235, "course"], "main_topsail": ["summit-stormkaap-01m-yard-main-topsail", 123, "topsail"], "main_tg": ["summit-stormkaap-01m-yard-main-topgallant", 77, "topgallant"], "fore_course": ["summit-stormkaap-01m-yard-fore-course", 207, "course"], "fore_topsail": ["summit-stormkaap-01m-yard-fore-topsail", 111, "topsail"], "fore_tg": ["summit-stormkaap-01m-yard-fore-topgallant", 57, "topgallant"], "crossjack": ["summit-stormkaap-01m-yard-main-topsail", 123, "crossjack"], "mizzen_topsail": ["summit-stormkaap-01m-yard-mizzen-topsail", 67, "topsail"], "spritsail": ["summit-stormkaap-01m-yard-spritsail", 155, "spritsail"]}, "sail_of_yard": {"main_course": "main-course", "main_topsail": "main-topsail", "main_tg": "main-topgallant", "fore_course": "fore-course", "fore_topsail": "fore-topsail", "fore_tg": "fore-topgallant", "crossjack": "", "mizzen_topsail": "mizzen-topsail", "spritsail": "spritsail", "mizzen_lateen": "mizzen-lateen"}},
+ "rigging": {"src": "〔設計〕數值照 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；程式照牛津號的 draft_rigging（ratlines 用橫繩組）；粗細照船小一號", "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36}, "channels": {"shrouds": {"fore": 4, "main": 5, "mizzen": 3}, "backstays": {"fore": 1, "main": 1}, "spacing": 6, "first_aft": 3, "width": 4, "below_rail": 0, "layers": 1, "src": "〔設計〕channels 在舷外、舷頂那一列、1 格厚（同牛津號 v2）⇒ 在砲門頂（甲板 ＋10）上面，不擋砲門；每舷 shrouds 主 5、前 4、後 3、間距 0.6 m（120 噸三桅商船的量級，沒查到確數）"}, "topmast_shrouds": 3, "thick": {"shroud": 0.8, "topmast_shroud": 0.6, "futtock": 0.4, "backstay": 0.6, "stay": 1.0, "tm_stay": 0.7, "bobstay": 0.8, "sheet": 0.4, "course_sheet": 0.5, "tack": 0.5}, "ratlines": {"step": 4, "start": 7, "stop": 16, "min_span": 5, "th": 0.3, "tm_step": 4, "tm_start": 4, "tm_stop": 10, "tm_th": 0.25}, "mizzenstay_foot_z": 60, "mizzenstay_src": "〔設計〕後桅支索綁主桅的高度 z 60：主甲板 37 上 2.3 m（人從底下走過）；經過後甲板前緣 x 141 時離後甲板 1.4 m 以上", "sails": {"fullness": 1.05, "course_clew_above_rail": 8, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 30, "sheet_aft": 42, "tack_fwd": 34, "lateen_clew_dx": 4, "lateen_clew_above_rail": 6, "lateen_tack_deck": "qd", "bow_belay_x": 262, "stern_belay_x": 45, "src": "〔設計〕course 帆腳在舷頂上 0.8 m；上一層帆的 clew 綁在下一根帆桁的 earing 旁；spritsail 掛在艏斜桅帆桁下 3.0 m；後桅三角帆 clew 在帆桁後端下、sheet 綁船尾舷頂兩舷（x 45），tack 從帆桁前端綁到後甲板；船頭能綁的最前一欄 x 262（艏樓舷頂，艏柱在 268）"}, "sail_set": {"spritsail": 3}, "flags": {"ensign": [30, 20], "pennant": [42, 4], "pennant_color": "#c8201e", "src": "〔設計〕船尾旗桿掛紅色 ensign（左上角白底紅聖喬治十字；英國商船，1674 年才正式定為商船旗，1660 年代已常見）、主桅頂紅色長旗；大小照船小一號（牛津號 36 × 24）"}, "wind": [4.5, -1.5, 0], "sail_seconds": 3},
+ "guns_build": {"assembly": "kaguya-guineaman-01m-assembly", "hull": "kaguya-guineaman-01m", "deck_works": {"gun": "kaguya-guineaman-01m-deck-gun", "qd": "kaguya-guineaman-01m-deck-qd", "poop": "kaguya-guineaman-01m-deck-poop", "fc": "kaguya-guineaman-01m-deck-fc"}, "prefix": {"gun": "M", "qd": "Q", "poop": "P", "fc": "F"}, "types": {"4l": {"work": "pinnacle-patache-01m-gun-4l", "scale": 0.5, "pivot": [6.5, 30, 0], "meta": {"kind": "gun", "gun": "4l"}, "src": "〔設計〕10 門 4 磅（每舷 5，research §5；Henrietta Marie 船骸只找到 1 門，砲數是推的）；4 磅專用元件（聖羅曼號 pinnacle 做的通用部件，0.05 m ⇒ ×0.5 原尺寸；Ship_Guns §2.2）"}, "pierrier": {"work": "apex-one-reale-01m-gun-pierrier", "mount_work": "apex-one-reale-01m-gun-pierrier-mount", "scale": 0.5, "pivot": [5.5, 18.5, 0], "meta": {"kind": "gun", "gun": "pierrier", "mount": "turret", "arc": "-80,80", "rate": 45}, "src": "〔設計〕舷頂迴旋砲（swivel）⇒ 遊戲的 pierrier（皇家號的共用件，叉架已拆成座 ⇒ 每門補一個「座」雙生 kind=gunmount、mount_of；Ship_Guns §4.2.1）；meta 照好旅號、飛魚號"}}, "swivels": [{"deck": "poop", "x": 58}, {"deck": "qd", "x": 105}, {"deck": "fc", "x": 250}], "swivels_src": "〔設計〕舷頂迴旋砲每舷 3 門：艉樓 x 58（後桅 channels x 68–86 以後）、後甲板 x 105（後桅與主桅 channels 之間 87–122）、艏樓 x 250（前桅 channels 206–236 以前）；17 世紀末的奴隸船文獻有後甲板的砲對著甲板（research §2；Hannibal 1693–94），數量是推的", "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-1, 0, 1], "step": 0.5, "back_max": 40, "inset": 0.2, "src": "照牛津號 draft_guns（Ship_Guns §4.2：從舷牆外面往裡退到零碰撞、砲口伸出、腳下有甲板）"}, "support_min": 0.5},
+ "gear": {
+ "src": "〔設計〕步驟 10：火藥庫照 Ship_Magazine §8（一定放桶）、艙口格柵照 Ship_Game §9 grating（做法照風暴角號）、廚房 Ship_Fittings §9.13；擺法照好旅號（同框、同時代的商船）；奴隸船的構造見 research §6",
+ "magazine": {"x_aft": 92, "x_fwd": 116, "aft_wall": false, "door_half": 2, "door_h": 14, "color": 136,
+  "meta": {"kind": "magazine", "pos": "aft", "hoist": "甲板-gun/梯子/lower,甲板-qd/梯子/qd-P,甲板-poop/梯子/poop,甲板-fc/梯子/fc-P"},
+  "src": "〔設計〕下層甲板船尾 x 93–115（後桅 x 86 在火藥庫裡）；只砌前牆 x 116（後牆會把船尾那一段封成空腔 —— 好旅號）、門開在前牆中線 0.5 × 1.4 m、朝 lower 梯腳 x 135；hoist 每一層列一座梯子（後甲板 z 56–63 跟艏樓 56–59 高度重疊 ⇒ 不寫會找到同一格，Ship_Magazine §8）"},
+ "gratings": [
+  {"name": "格柵-主艙口", "work_suffix": "grating-main", "title": "幾內亞船 主艙口格柵（0.05 m；外部模型 scale 0.5）", "host": "deck-gun", "host_link": "甲板-gun", "at": [176, 89, 38], "open": [13, 15], "coaming_top": 39, "src": "主艙口開口 x 176–188、y 89–103（13 × 15）；圍板 141 在 z 38–39 ⇒ 格柵頂齊圍板頂（世界 z 40.0）"},
+  {"name": "格柵-前艙口", "work_suffix": "grating-fore", "title": "幾內亞船 前艙口格柵（0.05 m；外部模型 scale 0.5）", "host": "deck-gun", "host_link": "甲板-gun", "at": [200, 90, 38], "open": [9, 13], "coaming_top": 39, "src": "前艙口開口 x 200–208、y 90–102（9 × 13）；圍板 z 38–39（前面那一道照舷弧到 40）"}
+ ],
+ "grating_colors": {"long": 177, "cross": 136, "bar": 141, "src": "照風暴角號／憲法號：1 格條 1 格空（0.05 m ⇒ 5 cm 的洞）、縱條 177、橫條 136、hatch bar 同圍板色 141"},
+ "models": [
+  {"name": "桶-01", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [96.5, 88.5, 21], "meta": {"kind": "powder", "powder_lb": 100}},
+  {"name": "桶-02", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [96.5, 104.5, 21], "meta": {"kind": "powder", "powder_lb": 100}},
+  {"name": "桶-03", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [102.5, 88.5, 21], "meta": {"kind": "powder", "powder_lb": 100}},
+  {"name": "桶-04", "host": "magazine", "host_link": "彈藥庫", "source_work": "basecamp-frigate-constitution-01m-powder-barrel", "pivot": [11, 11, 0], "scale": 0.2, "at": [102.5, 104.5, 21], "meta": {"kind": "powder", "powder_lb": 100}},
+  {"name": "爐灶", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "kaguya-gloire-01m-galley", "pivot": [22, 16, 0], "scale": 0.22, "at": [169, 96.5, 38], "meta": {"kind": "galley"}, "src": "〔設計〕船腰、主桅與主艙口之間（照好旅號：艏樓底下淨高 1.3 m 站不了廚師；露天 ⇒ 共用件的 smoke 固定點照樣對）"},
+  {"name": "小艇", "host": "deck-gun", "host_link": "甲板-gun", "source_work": "basecamp-ember-01m-boat", "pivot": [90, 26, 0], "scale": 0.13, "at": [204.5, 96.5, 41], "meta": {"kind": "boat"}, "need_support": false, "src": "〔設計〕約 2.3 m 小艇擱在前艙口前面那道圍板上（照舷弧升到 z 40；z 40 ⇒ 撞那 5 格）（餘燼號 9 m cutter ×0.13，同好旅號）；主艙口的格柵留著不蓋"},
+  {"name": "絞盤", "host": "deck-qd", "host_link": "甲板-qd", "source_work": "basecamp-ember-01m-capstan", "pivot": [40, 40, 0], "scale": 0.09, "at": [113.5, 96.5, 57], "meta": {"kind": "capstan"}, "src": "〔設計〕後甲板中線、艉樓梯腳（x 105）與後甲板梯頂（x 120）之間（餘燼號主絞盤 ×0.09，同好旅號）"},
+  {"name": "羅經櫃", "host": "deck-qd", "host_link": "甲板-qd", "source_work": "summit-night-falcon-01m-binnacle", "pivot": [9, 13, 0], "scale": 0.2, "at": [77, 96.5, 60], "meta": {"kind": "binnacle"}, "src": "〔設計〕艉樓底下的後甲板中線、後桅後面（後桅往後倒 4°，z 60 以上退到 x 80 ⇒ x 79.5 撞 4,134 個取樣點） —— 步驟 11 的 whipstaff 舵手站這裡（照飛魚號 ×0.2，同好旅號）"}
+ ]
+},
+ "rudder_anchor_build": {
+ "rudder": {"work": "kaguya-guineaman-01m-rudder", "title": "幾內亞船 舵（沿艉柱，0.1 m）", "model": "舵", "half_t": 1, "z_top": 70,
+  "width": [[0, 12], [12, 11], [29, 7], [44, 4], [70, 3]], "below": 182, "above": 36, "iron": 73, "strap_every": 10, "waterline_z": 29, "max_deg": 35, "bevel": 1,
+  "tiller_work": "kaguya-guineaman-01m-tiller", "tiller_host": "kaguya-guineaman-01m-deck-qd",
+  "tiller": {"z": 69, "h": 2, "half": 1, "x_end": 71, "color": 136, "end_color": 36},
+  "src": "〔設計〕舵沿艉柱後緣（倒 10°）從龍骨底到 z 70（艉樓底下那一層）；3 格厚、舵葉 1.2 m 往上收到 0.3 m；水線下白、上黑、每 10 格鐵箍；max_deg 35；前緣兩側削 1 格。舵柄 z 69–70 穿過船尾板（helm port）伸進艉樓底下到 x 71（羅經櫃從 x 75 起；後桅 x 80–88）。〔查〕1660 年代英國船是舵柄＋whipstaff（舵柄在下一層、whipstaff 穿上來給艉樓底下的舵手）—— 這一版把舵柄直接放在舵手那一層（好旅號的寫法），whipstaff 不做：遊戲的操舵鏈只認舵柄（kind=tiller），一根跟著舵柄擺的 whipstaff 做不出槓桿的動作；不放舵輪（舵輪 1700 年代才有）"},
+ "anchor": {"gear_work": "kaguya-guineaman-01m-anchor-gear", "gear_title": "幾內亞船 錨床（兩舷 billboard）", "gear_link": "錨床", "work": "basecamp-frigate-constitution-01m-anchor",
+  "scale": 0.42, "pivot": [23.5, 16.5, 56.5], "x_try": [250, 252, 254, 256, 258, 260, 262], "z_try": [60, 60.5, 61, 61.5, 62, 62.5, 63], "z_side": 56,
+  "d_step": 0.5, "d_max": 24, "ledge_half": 7, "ledge_out": 3, "ledge_t": 2, "color": 136,
+  "src": "〔設計〕共用錨元件（Ship_Game §9 anchor）×0.42（好旅號 150 噸級 0.45；錨重照噸位、長度照立方根 ⇒ (120/150)^(1/3) × 0.45 ≈ 0.42）、meta anchor=bower；兩舷各一，掛在船頭舷外、艏樓舷頂底下，錨臂順著船殼切線；艏樓的迴旋砲（x 249–253、z 65 以上）的外框不碰；錨環只試 z 60–63（艏樓舷頂 z 64 底下）—— v1 從 z 54 試起、同樣貼船取最低 ⇒ 錨冠垂到 z 31，只比水線高 0.2 m。〔查〕Henrietta Marie 船骸找到 2 隻錨"},
+ "hawse": {"x": 260, "z": 47, "src": "〔設計〕錨鏈孔在船頭、主甲板那一層（艏樓底下）的船殼外面（只登記固定點 hawse-S／P，沒有開孔）"}
+},
+ "deco": {"src": "〔設計〕1660 年代英國商船：開放式 beakhead（艏柱前一塊收尖的平台，比牛津號小）、knee of the head（cutwater）、兩舷兩條 head rail、獅子船首像（17 世紀英國船常見；⛔ 不戴王冠 —— 王冠是王家艦的，商船不放；做成外部模型標 deco=1）；船尾直立旗桿掛 ensign。船名板不做（1660 年代英國船船尾不寫船名，同牛津號）；船尾燈不做（舷頂窄、會撞到旗桿）", "colors": {"plank": 209, "gold": 248, "hull": 177, "hull_below": 182, "blue": 6, "mane": 244, "eye": 36, "crown": 192, "staff": 141}, "beakhead": {"z_deck": 49, "x_tip": 288, "half": 11, "pow": 1.4, "cut_z0": 22, "bob_z": 34, "rails": [{"from": [262, 64], "to_z": 56, "color": "gold", "posts": [268, 272]}, {"from": [263, 59], "to_z": 53, "color": "blue"}], "src": "〔設計〕平台面 z 49（主甲板船頭 43 與艏樓 59 之間、艏斜桅底下：艏柱那裡艏斜桅在 z 61；v1 51 ⇒ 獅子尾巴伸進艏斜桅的路）、伸出艏柱（x 268）到 x 288（約 2.0 m；獅子前腳要站在平台上）、半寬 1.1 m 收尖（牛津號 × 0.85）；cutwater 從水線下 z 22 的艏柱斜到平台尖底下（3 格寬，前緣金）；bobstay 綁在 cutwater 前緣 z 34；head rail 從艏樓舷頂（x 262、z 64）彎下來收在船首像後面"}, "figurehead": {"x": 282, "crown": false, "src": "〔設計〕金色獅子（身長 1.1 m、高 1.3 m，同牛津號的造型、不戴冠），站在平台尖上朝前；艏斜桅在牠頭頂上約 0.7 m"}, "ensign_staff": {"x": 43, "h": 38, "src": "〔設計〕船尾最後面那一欄舷頂（x 43、z 88）上的直立旗桿 3.8 m（牛津號 4.5 m × 0.85），ensign 從桿頂往船尾飄"}},
+ "paint": {"_src": "〔設計〕1660 年代英國商船：水線上外板木色（bright sides）、wale 塗黑（瀝青）、只有船樓的舷牆有藍底金邊的飾帶（商船比牛津號素：船腰沒有飾帶）、砲門內框紅色、水線下灰白；色號沿用牛津號（看過 palette_rgb）", "black": 36, "blue": 6, "gold": 248, "reveal": 192, "glass": 155, "wood": 177, "wales": [{"name": "main-lower", "dz": -6, "h": 2, "src": "主 wale 下條：主甲板面下 0.5–0.6 m"}, {"name": "main-upper", "dz": -2, "h": 2, "src": "主 wale 上條：主甲板面下 0.1–0.2 m（砲門下緣在甲板上 0.5 m）"}, {"name": "channel", "dz": 11, "h": 2, "src": "channel wale：砲門頂（＋10）上面一格；船腰舷頂 ＋13 那一格是黑色舷緣"}], "frieze_from_dz": 14, "src_frieze": "船腰舷頂（＋13）上面一格（＋14）以上 ＝ 後甲板、艉樓、艏樓的舷牆：藍底、上下緣各一列金；舷頂最上一格黑"},
+ "stern": {"x_max": 85, "x_ref": 52, "wing_band": [40, 41], "rows": [{"deck": "gun", "n": 4, "w": 5, "h": 5, "sill": 6, "half": 15, "kind": "window", "src": "〔設計〕後甲板底下的大艙（主甲板那一層）船尾窗 4 扇"}, {"deck": "qd", "n": 2, "w": 5, "h": 5, "sill": 5, "half": 9, "kind": "window", "src": "〔設計〕艉樓底下的船長艙（後甲板那一層）2 扇"}], "src": "〔設計〕方艉：wing transom 一條黑（z 40–41，plan.lines.wing_transom_z）、以上藍底金框兩排窗（17 世紀英國船；商船比牛津號少一半窗）；x_ref ＝ 窗高的參考欄（艉柱在主甲板那裡的 x）"},
+ "hull_build": {
+  "wall": 3, "side_color": 177, "bottom_color": 182, "bottom_top_z": 29, "frame_color": 141, "inner_color": 177,
+  "src": "〔設計〕牆 3 格（外板、肋骨、內板）；水線以上外板天然木色（17 世紀英國船 bright／ochre）、水線下灰白（白色防蟲塗料 white stuff；幾內亞船：上界照本船水線 z 29）—— 色號看過 palette_rgb 再定（階段二）"
+ },
+ "_todo": "（空）—— 牛津號原文的段落到步驟 11 都換成本船了"
+}
