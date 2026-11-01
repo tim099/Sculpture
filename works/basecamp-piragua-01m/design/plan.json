@@ -38,12 +38,16 @@
   "end_half_fwd": {"v": 0.5, "src": "設計決定：船頭收到 1 格（尖）"}
  },
  "layout": {
-  "thwarts": {"v": {"x": [33, 42, 51, 60, 69, 78, 87], "top_z": 4, "thick": 1, "width_x": 3}, "src": "D1 划 14 支槳 ⇒ 7 塊坐板、每塊兩人各划一舷（D5 thwarts or benches）；間距 0.9 m〔設計決定，槳手前後的空間〕；坐面 z 4 頂 ＝ 艙底上 0.35 m、舷頂再高 0.35 m 給槳靠"},
+  "thwarts": {"v": {"x": [33, 42, 51, 60, 69, 78, 87], "top_z": 4, "thick": 1, "width_x": 3}, "src": "D1 划 14 支槳 ⇒ 7 塊坐板、每塊兩人各划一舷（D5 thwarts or benches）；間距 0.9 m〔設計決定，槳手前後的空間〕；top_z ＝ 坐面上第一層空氣：板在 z 3、坐面離艙底（z 1）0.3 m ＝ 遊戲走路一步的上限（再高艙底就被坐板切斷）、舷頂 z 8 再高 0.4 m 給槳靠"},
   "oars": {"v": {"per_side": 7, "rowlock": "strap", "at_x_offset": 1}, "src": "D1 14 支槳（每舷 7）；D5 槳用繩環（straps）掛，沒寫槳栓 ⇒ 槳靠在舷頂、繩環綁在舷頂〔推〕"},
   "steersman": {"v": {"x": [17, 27]}, "src": "設計決定：船尾平的那頭站舵手（舵槳，步驟 11）"},
   "bow_platform": {"v": {"x": [100, 118]}, "src": "設計決定：船頭空出來放迴旋砲、上岸時先跳下去的人"},
   "mast": {"v": {"x": 87, "through_thwart": 87, "step_z": 1, "height_m": 6.5, "unstep": true}, "src": "E7 只張一面大帆 ⇒ 一根桅；位置在第七塊坐板（船中偏前，桅綁在坐板上、腳踩艙底）〔設計決定〕；高 6.5 m〔設計決定：約船長六成〕；可拆（Wikipedia Periagua 轉述 masts could be struck，沒核）"},
   "sail": {"v": {"type": "lateen", "area_m2": 18}, "src": "一手出處都沒寫帆型 ⇒ 設計決定：一面拉丁帆（唯一的圖 H 是 1744 年西班牙 piragua、像拉丁帆；遊戲有 rig=lateen 的轉法，越嶺號用過）；面積約 18 m²〔設計決定〕"}
+ },
+ "deck_build": {
+  "colors": {"v": {"thwart": 141, "platform": 141}, "src": "設計決定：坐板與平台是另外鋸的板（141 ≈ 145,109,85，比挖出來的內面灰）"},
+  "meta": {"v": {"deck": "main", "level": 0, "name": "艙底（坐板）", "thick": 1}, "src": "露天船只有一層：艙底是船殼自己的底（thick 1 ＝ 底 1 格）；floor 由 draft_deck.py 照走路格量"}
  },
  "hull_build": {
   "wall": {"v": 1, "src": "換算：底 3 吋、舷 2–1.5 吋（D8）都不到 0.1 m ⇒ 1 格（比實物厚，0.1 m 格只能這樣）"},
