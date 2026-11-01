@@ -1,0 +1,92 @@
+{
+ "note": "draft_rudder_anchor.py 的結果（世界座標）",
+ "rudder": {
+  "work": "ridge-two-centurion-01m-rudder",
+  "model": "舵",
+  "host": "ridge-two-centurion-01m-assembly",
+  "at": [
+   72.0,
+   128.5,
+   0.0
+  ],
+  "pivot": [
+   72.0,
+   128.5,
+   0.0
+  ],
+  "anchors": {
+   "stock-top": [
+    54,
+    128,
+    72
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "hinge_x": 72.0,
+   "hinge_y": 128.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.1908,
+   "axis_y": 0.0,
+   "axis_z": 0.9816,
+   "max_deg": 35,
+   "turn_axis": "hinge"
+  }
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "ridge-two-centurion-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    442.715,
+    166.144,
+    93.5
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.72,
+   "rotate": 58.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  },
+  {
+   "name": "錨-P",
+   "host": "ridge-two-centurion-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    442.715,
+    90.856,
+    93.5
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.72,
+   "rotate": -58.0,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  }
+ ],
+ "hawse": {
+  "hawse-S": [
+   435,
+   150,
+   62
+  ],
+  "hawse-P": [
+   435,
+   106,
+   62
+  ]
+ }
+}

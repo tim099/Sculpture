@@ -1,0 +1,3347 @@
+{
+ "count": 44,
+ "lid": {
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    10,
+    0,
+    0
+   ]
+  },
+  "cells": 220,
+  "design": "ridge-two-centurion-01m",
+  "file": "ridge-two-centurion-01m/design/masks/portlids/lid.txt",
+  "meters_per_voxel": 0.1,
+  "parent": "ridge-two-centurion-01m",
+  "pivot": [
+   5.5,
+   0,
+   0
+  ],
+  "sha256": "62db631e6457c4df1fb6e51c6fc9a2cec76abac9c2de091b92b9296c2c3d4abe",
+  "size": [
+   11,
+   10,
+   2
+  ],
+  "title": "百夫長號 砲門蓋板（上緣鉸鏈，0.1 m）",
+  "work": "ridge-two-centurion-01m-portlid"
+ },
+ "note": "portlids.py draft（造船規格 §9.12）—— 百夫長號：44 片（甲板-gun、甲板-upper），蓋板 ridge-two-centurion-01m-portlid [11, 10, 2]；砲照組裝件 export parts、開口照組裝件 export list 量（見程式開頭）",
+ "rows": [
+  {
+   "at": [
+    88.5,
+    93,
+    73
+   ],
+   "face": {
+    "hinge_surf_s": 163,
+    "n": 38,
+    "resid": 0.55,
+    "rx": -6.3,
+    "rz_fit": 7.72
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     89.0,
+     85.0,
+     70.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 163.0
+   },
+   "gun_model": "砲L-P01",
+   "gun_path": "甲板-gun/砲L-P01",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    83,
+    93
+   ],
+   "lid_z": [
+    64,
+    73
+   ],
+   "meta": {
+    "close_deg": 81.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-1"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P01",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    84,
+    92
+   ],
+   "open_z": [
+    65,
+    72
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    172.3
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    88.5,
+    164,
+    73
+   ],
+   "face": {
+    "hinge_surf_s": 164,
+    "n": 38,
+    "resid": 0.55,
+    "rx": -6.3,
+    "rz_fit": 7.72
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     89.0,
+     172.0,
+     70.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 164
+   },
+   "gun_model": "砲L-S01",
+   "gun_path": "甲板-gun/砲L-S01",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    83,
+    93
+   ],
+   "lid_z": [
+    64,
+    73
+   ],
+   "meta": {
+    "close_deg": 81.7,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-11"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S01",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    84,
+    92
+   ],
+   "open_z": [
+    65,
+    72
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    7.7
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    118.5,
+    89,
+    70
+   ],
+   "face": {
+    "hinge_surf_s": 167,
+    "n": 38,
+    "resid": 0.51,
+    "rx": -4.27,
+    "rz_fit": 4.34
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     118.5,
+     82.0,
+     67.75
+    ],
+    "need_pull": 8.0,
+    "outer_s": 167.0
+   },
+   "gun_model": "砲L-P02",
+   "gun_path": "甲板-gun/砲L-P02",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    113,
+    123
+   ],
+   "lid_z": [
+    61,
+    70
+   ],
+   "meta": {
+    "close_deg": 83.7,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-3"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P02",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    114,
+    122
+   ],
+   "open_z": [
+    62,
+    69
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    175.7
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    118.5,
+    168,
+    70
+   ],
+   "face": {
+    "hinge_surf_s": 168,
+    "n": 38,
+    "resid": 0.51,
+    "rx": -4.27,
+    "rz_fit": 4.34
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     118.5,
+     175.0,
+     67.75
+    ],
+    "need_pull": 8.0,
+    "outer_s": 168
+   },
+   "gun_model": "砲L-S02",
+   "gun_path": "甲板-gun/砲L-S02",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    113,
+    123
+   ],
+   "lid_z": [
+    61,
+    70
+   ],
+   "meta": {
+    "close_deg": 83.7,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-13"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S02",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    114,
+    122
+   ],
+   "open_z": [
+    62,
+    69
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    4.3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    148.5,
+    87,
+    68
+   ],
+   "face": {
+    "hinge_surf_s": 169,
+    "n": 38,
+    "resid": 0.92,
+    "rx": 6.63,
+    "rz_fit": 1.85
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     148.5,
+     82.0,
+     64.75
+    ],
+    "need_pull": 6.0,
+    "outer_s": 169.0
+   },
+   "gun_model": "砲L-P03",
+   "gun_path": "甲板-gun/砲L-P03",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    143,
+    153
+   ],
+   "lid_z": [
+    59,
+    68
+   ],
+   "meta": {
+    "close_deg": 94.6,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-4"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P03",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    144,
+    152
+   ],
+   "open_z": [
+    60,
+    67
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    148.5,
+    170,
+    68
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 38,
+    "resid": 0.92,
+    "rx": 6.63,
+    "rz_fit": 1.85
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 6.5,
+    "muzzle": [
+     148.5,
+     175.0,
+     64.75
+    ],
+    "need_pull": 6.0,
+    "outer_s": 170
+   },
+   "gun_model": "砲L-S03",
+   "gun_path": "甲板-gun/砲L-S03",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    143,
+    153
+   ],
+   "lid_z": [
+    59,
+    68
+   ],
+   "meta": {
+    "close_deg": 94.6,
+    "house": 7,
+    "kind": "portlid",
+    "lid_of": "gun-14"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S03",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    144,
+    152
+   ],
+   "open_z": [
+    60,
+    67
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    178.5,
+    85,
+    66
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 38,
+    "resid": 0.54,
+    "rx": 2.33,
+    "rz_fit": 2.95
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     178.5,
+     78.0,
+     62.75
+    ],
+    "need_pull": 8.0,
+    "outer_s": 171.0
+   },
+   "gun_model": "砲L-P04",
+   "gun_path": "甲板-gun/砲L-P04",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    173,
+    183
+   ],
+   "lid_z": [
+    57,
+    66
+   ],
+   "meta": {
+    "close_deg": 90.3,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-5"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P04",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    174,
+    182
+   ],
+   "open_z": [
+    58,
+    65
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    177
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    178.5,
+    172,
+    66
+   ],
+   "face": {
+    "hinge_surf_s": 172,
+    "n": 38,
+    "resid": 0.54,
+    "rx": 2.33,
+    "rz_fit": 2.95
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.5,
+    "muzzle": [
+     178.5,
+     179.0,
+     62.75
+    ],
+    "need_pull": 8.0,
+    "outer_s": 172
+   },
+   "gun_model": "砲L-S04",
+   "gun_path": "甲板-gun/砲L-S04",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    173,
+    183
+   ],
+   "lid_z": [
+    57,
+    66
+   ],
+   "meta": {
+    "close_deg": 90.3,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-15"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S04",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    174,
+    182
+   ],
+   "open_z": [
+    58,
+    65
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    3
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    208.5,
+    83,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 173,
+    "n": 38,
+    "resid": 0.6,
+    "rx": -5.66,
+    "rz_fit": 2.77
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     209.5,
+     74.0,
+     61.75
+    ],
+    "need_pull": 10.0,
+    "outer_s": 173.0
+   },
+   "gun_model": "砲L-P05",
+   "gun_path": "甲板-gun/砲L-P05",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    203,
+    213
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 82.3,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-6"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P05",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    204,
+    212
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    177.2
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    208.5,
+    174,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 174,
+    "n": 38,
+    "resid": 0.6,
+    "rx": -5.66,
+    "rz_fit": 2.77
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     209.5,
+     183.0,
+     61.75
+    ],
+    "need_pull": 10.0,
+    "outer_s": 174
+   },
+   "gun_model": "砲L-S05",
+   "gun_path": "甲板-gun/砲L-S05",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    203,
+    213
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 82.3,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-16"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S05",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    204,
+    212
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    2.8
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    238.5,
+    83,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 173,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.63,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     238.5,
+     74.0,
+     61.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 174.0
+   },
+   "gun_model": "砲L-P06",
+   "gun_path": "甲板-gun/砲L-P06",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    233,
+    243
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-7"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P06",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    234,
+    242
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    238.5,
+    174,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 174,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.63,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     238.5,
+     183.0,
+     61.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 175
+   },
+   "gun_model": "砲L-S06",
+   "gun_path": "甲板-gun/砲L-S06",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    233,
+    243
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-17"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S06",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    234,
+    242
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    268.5,
+    83,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 173,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.63,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     268.5,
+     74.0,
+     61.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 174.0
+   },
+   "gun_model": "砲L-P07",
+   "gun_path": "甲板-gun/砲L-P07",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    263,
+    273
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-8"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P07",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    264,
+    272
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    268.5,
+    174,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 174,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.63,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     268.5,
+     183.0,
+     61.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 175
+   },
+   "gun_model": "砲L-S07",
+   "gun_path": "甲板-gun/砲L-S07",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    263,
+    273
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-18"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S07",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    264,
+    272
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    298.5,
+    83,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 173,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.63,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     298.5,
+     74.0,
+     61.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 174.0
+   },
+   "gun_model": "砲L-P08",
+   "gun_path": "甲板-gun/砲L-P08",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    293,
+    303
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-9"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P08",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    294,
+    302
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    298.5,
+    174,
+    65
+   ],
+   "face": {
+    "hinge_surf_s": 174,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.63,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     298.5,
+     183.0,
+     61.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 175
+   },
+   "gun_model": "砲L-S08",
+   "gun_path": "甲板-gun/砲L-S08",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    293,
+    303
+   ],
+   "lid_z": [
+    56,
+    65
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-19"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S08",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    294,
+    302
+   ],
+   "open_z": [
+    57,
+    64
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    328.5,
+    83,
+    66
+   ],
+   "face": {
+    "hinge_surf_s": 173,
+    "n": 38,
+    "resid": 0.48,
+    "rx": -6.95,
+    "rz_fit": -0.92
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     328.0,
+     74.0,
+     62.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 174.0
+   },
+   "gun_model": "砲L-P09",
+   "gun_path": "甲板-gun/砲L-P09",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    323,
+    333
+   ],
+   "lid_z": [
+    57,
+    66
+   ],
+   "meta": {
+    "close_deg": 81.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-10"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P09",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    324,
+    332
+   ],
+   "open_z": [
+    58,
+    65
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    328.5,
+    174,
+    66
+   ],
+   "face": {
+    "hinge_surf_s": 174,
+    "n": 38,
+    "resid": 0.48,
+    "rx": -6.95,
+    "rz_fit": -0.92
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.5,
+    "muzzle": [
+     328.0,
+     183.0,
+     62.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 175
+   },
+   "gun_model": "砲L-S09",
+   "gun_path": "甲板-gun/砲L-S09",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    323,
+    333
+   ],
+   "lid_z": [
+    57,
+    66
+   ],
+   "meta": {
+    "close_deg": 81.1,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-20"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S09",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    324,
+    332
+   ],
+   "open_z": [
+    58,
+    65
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    358.5,
+    84,
+    67
+   ],
+   "face": {
+    "hinge_surf_s": 172,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.79,
+    "rz_fit": -5.07
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     358.5,
+     76.0,
+     64.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 172.0
+   },
+   "gun_model": "砲L-P10",
+   "gun_path": "甲板-gun/砲L-P10",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    353,
+    363
+   ],
+   "lid_z": [
+    58,
+    67
+   ],
+   "meta": {
+    "close_deg": 81.2,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-2"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-P10",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    354,
+    362
+   ],
+   "open_z": [
+    59,
+    66
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    185.1
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    358.5,
+    173,
+    67
+   ],
+   "face": {
+    "hinge_surf_s": 173,
+    "n": 38,
+    "resid": 0.57,
+    "rx": -6.79,
+    "rz_fit": -5.07
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 8.5,
+    "muzzle": [
+     358.5,
+     181.0,
+     64.75
+    ],
+    "need_pull": 9.0,
+    "outer_s": 173
+   },
+   "gun_model": "砲L-S10",
+   "gun_path": "甲板-gun/砲L-S10",
+   "host": "甲板-gun",
+   "host_work": "ridge-two-centurion-01m-deck-gun",
+   "lid_x": [
+    353,
+    363
+   ],
+   "lid_z": [
+    58,
+    67
+   ],
+   "meta": {
+    "close_deg": 81.2,
+    "house": 9,
+    "kind": "portlid",
+    "lid_of": "gun-12"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-L-S10",
+   "open_size": [
+    9,
+    8
+   ],
+   "open_x": [
+    354,
+    362
+   ],
+   "open_z": [
+    59,
+    66
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -5.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    80.5,
+    96,
+    92
+   ],
+   "face": {
+    "hinge_surf_s": 160,
+    "n": 61,
+    "resid": 0.48,
+    "rx": -6.62,
+    "rz_fit": 7.13
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     81.0,
+     88.75,
+     86.75
+    ],
+    "need_pull": 8.25,
+    "outer_s": 160.0
+   },
+   "gun_model": "砲U-P01",
+   "gun_path": "甲板-upper/砲U-P01",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    75,
+    85
+   ],
+   "lid_z": [
+    83,
+    92
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-21"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P01",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    77,
+    83
+   ],
+   "open_z": [
+    85,
+    91
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    172.9
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    80.5,
+    161,
+    92
+   ],
+   "face": {
+    "hinge_surf_s": 161,
+    "n": 61,
+    "resid": 0.48,
+    "rx": -6.62,
+    "rz_fit": 7.13
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 7.0,
+    "muzzle": [
+     81.0,
+     168.25,
+     86.75
+    ],
+    "need_pull": 8.25,
+    "outer_s": 161
+   },
+   "gun_model": "砲U-S01",
+   "gun_path": "甲板-upper/砲U-S01",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    75,
+    85
+   ],
+   "lid_z": [
+    83,
+    92
+   ],
+   "meta": {
+    "close_deg": 81.4,
+    "house": 8,
+    "kind": "portlid",
+    "lid_of": "gun-33"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S01",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    77,
+    83
+   ],
+   "open_z": [
+    85,
+    91
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    7.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    108.5,
+    93,
+    89
+   ],
+   "face": {
+    "hinge_surf_s": 163,
+    "n": 61,
+    "resid": 0.53,
+    "rx": -8.47,
+    "rz_fit": 6.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     109.0,
+     83.25,
+     85.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 163.0
+   },
+   "gun_model": "砲U-P02",
+   "gun_path": "甲板-upper/砲U-P02",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    103,
+    113
+   ],
+   "lid_z": [
+    80,
+    89
+   ],
+   "meta": {
+    "close_deg": 79.5,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-25"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P02",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    105,
+    111
+   ],
+   "open_z": [
+    82,
+    88
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    174
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    108.5,
+    164,
+    89
+   ],
+   "face": {
+    "hinge_surf_s": 164,
+    "n": 61,
+    "resid": 0.53,
+    "rx": -8.47,
+    "rz_fit": 6.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     109.0,
+     173.75,
+     85.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 164
+   },
+   "gun_model": "砲U-S02",
+   "gun_path": "甲板-upper/砲U-S02",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    103,
+    113
+   ],
+   "lid_z": [
+    80,
+    89
+   ],
+   "meta": {
+    "close_deg": 79.5,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-37"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S02",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    105,
+    111
+   ],
+   "open_z": [
+    82,
+    88
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    6
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    136.5,
+    90,
+    87
+   ],
+   "face": {
+    "hinge_surf_s": 166,
+    "n": 61,
+    "resid": 0.5,
+    "rx": -10.05,
+    "rz_fit": 5.12
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     137.0,
+     80.25,
+     83.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 166.0
+   },
+   "gun_model": "砲U-P03",
+   "gun_path": "甲板-upper/砲U-P03",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    131,
+    141
+   ],
+   "lid_z": [
+    78,
+    87
+   ],
+   "meta": {
+    "close_deg": 78,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-26"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P03",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    133,
+    139
+   ],
+   "open_z": [
+    80,
+    86
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    174.9
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    136.5,
+    167,
+    87
+   ],
+   "face": {
+    "hinge_surf_s": 167,
+    "n": 61,
+    "resid": 0.5,
+    "rx": -10.05,
+    "rz_fit": 5.12
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     137.0,
+     176.75,
+     83.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 167
+   },
+   "gun_model": "砲U-S03",
+   "gun_path": "甲板-upper/砲U-S03",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    131,
+    141
+   ],
+   "lid_z": [
+    78,
+    87
+   ],
+   "meta": {
+    "close_deg": 78,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-38"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S03",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    133,
+    139
+   ],
+   "open_z": [
+    80,
+    86
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    5.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    164.5,
+    88,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 168,
+    "n": 61,
+    "resid": 0.62,
+    "rx": -8.47,
+    "rz_fit": 3.1
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     164.5,
+     78.25,
+     81.25
+    ],
+    "need_pull": 9.75,
+    "outer_s": 169.0
+   },
+   "gun_model": "砲U-P04",
+   "gun_path": "甲板-upper/砲U-P04",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    159,
+    169
+   ],
+   "lid_z": [
+    76,
+    85
+   ],
+   "meta": {
+    "close_deg": 79.5,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-27"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P04",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    161,
+    167
+   ],
+   "open_z": [
+    78,
+    84
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    176.9
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    164.5,
+    169,
+    85
+   ],
+   "face": {
+    "hinge_surf_s": 169,
+    "n": 61,
+    "resid": 0.62,
+    "rx": -8.47,
+    "rz_fit": 3.1
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     164.5,
+     178.75,
+     81.25
+    ],
+    "need_pull": 9.75,
+    "outer_s": 170
+   },
+   "gun_model": "砲U-S04",
+   "gun_path": "甲板-upper/砲U-S04",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    159,
+    169
+   ],
+   "lid_z": [
+    76,
+    85
+   ],
+   "meta": {
+    "close_deg": 79.5,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-39"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S04",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    161,
+    167
+   ],
+   "open_z": [
+    78,
+    84
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    3.1
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    192.5,
+    86,
+    84
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 61,
+    "resid": 0.55,
+    "rx": -10.89,
+    "rz_fit": 2.47
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     192.5,
+     76.25,
+     80.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 170.0
+   },
+   "gun_model": "砲U-P05",
+   "gun_path": "甲板-upper/砲U-P05",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    187,
+    197
+   ],
+   "lid_z": [
+    75,
+    84
+   ],
+   "meta": {
+    "close_deg": 77.1,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-28"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P05",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    189,
+    195
+   ],
+   "open_z": [
+    77,
+    83
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    177.5
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    192.5,
+    171,
+    84
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 61,
+    "resid": 0.55,
+    "rx": -10.89,
+    "rz_fit": 2.47
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     192.5,
+     180.75,
+     80.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 171
+   },
+   "gun_model": "砲U-S05",
+   "gun_path": "甲板-upper/砲U-S05",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    187,
+    197
+   ],
+   "lid_z": [
+    75,
+    84
+   ],
+   "meta": {
+    "close_deg": 77.1,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-40"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S05",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    189,
+    195
+   ],
+   "open_z": [
+    77,
+    83
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    2.5
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    220.5,
+    86,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     220.5,
+     75.25,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 171.0
+   },
+   "gun_model": "砲U-P06",
+   "gun_path": "甲板-upper/砲U-P06",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    215,
+    225
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-29"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P06",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    217,
+    223
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    220.5,
+    171,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     220.5,
+     181.75,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 172
+   },
+   "gun_model": "砲U-S06",
+   "gun_path": "甲板-upper/砲U-S06",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    215,
+    225
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-41"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S06",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    217,
+    223
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    248.5,
+    86,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     248.5,
+     75.25,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 171.0
+   },
+   "gun_model": "砲U-P07",
+   "gun_path": "甲板-upper/砲U-P07",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    243,
+    253
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-30"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P07",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    245,
+    251
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    248.5,
+    171,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     248.5,
+     181.75,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 172
+   },
+   "gun_model": "砲U-S07",
+   "gun_path": "甲板-upper/砲U-S07",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    243,
+    253
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-42"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S07",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    245,
+    251
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    276.5,
+    86,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     276.5,
+     75.25,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 171.0
+   },
+   "gun_model": "砲U-P08",
+   "gun_path": "甲板-upper/砲U-P08",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    271,
+    281
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-31"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P08",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    273,
+    279
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    276.5,
+    171,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     276.5,
+     181.75,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 172
+   },
+   "gun_model": "砲U-S08",
+   "gun_path": "甲板-upper/砲U-S08",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    271,
+    281
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-43"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S08",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    273,
+    279
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    304.5,
+    86,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": 0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     304.5,
+     75.25,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 171.0
+   },
+   "gun_model": "砲U-P09",
+   "gun_path": "甲板-upper/砲U-P09",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    299,
+    309
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-32"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P09",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    301,
+    307
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    304.5,
+    171,
+    83
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 61,
+    "resid": 0.57,
+    "rx": -12.17,
+    "rz_fit": -0.0
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 11.0,
+    "muzzle": [
+     304.5,
+     181.75,
+     79.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 172
+   },
+   "gun_model": "砲U-S09",
+   "gun_path": "甲板-upper/砲U-S09",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    299,
+    309
+   ],
+   "lid_z": [
+    74,
+    83
+   ],
+   "meta": {
+    "close_deg": 75.8,
+    "house": 12,
+    "kind": "portlid",
+    "lid_of": "gun-44"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S09",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    301,
+    307
+   ],
+   "open_z": [
+    76,
+    82
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    332.5,
+    86,
+    84
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 61,
+    "resid": 0.68,
+    "rx": -8.48,
+    "rz_fit": -1.33
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     332.5,
+     76.25,
+     80.25
+    ],
+    "need_pull": 9.75,
+    "outer_s": 171.0
+   },
+   "gun_model": "砲U-P10",
+   "gun_path": "甲板-upper/砲U-P10",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    327,
+    337
+   ],
+   "lid_z": [
+    75,
+    84
+   ],
+   "meta": {
+    "close_deg": 79.5,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-22"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P10",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    329,
+    335
+   ],
+   "open_z": [
+    77,
+    83
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    332.5,
+    171,
+    84
+   ],
+   "face": {
+    "hinge_surf_s": 171,
+    "n": 61,
+    "resid": 0.68,
+    "rx": -8.48,
+    "rz_fit": -1.33
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     332.5,
+     180.75,
+     80.25
+    ],
+    "need_pull": 9.75,
+    "outer_s": 172
+   },
+   "gun_model": "砲U-S10",
+   "gun_path": "甲板-upper/砲U-S10",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    327,
+    337
+   ],
+   "lid_z": [
+    75,
+    84
+   ],
+   "meta": {
+    "close_deg": 79.5,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-34"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S10",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    329,
+    335
+   ],
+   "open_z": [
+    77,
+    83
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    360.5,
+    87,
+    86
+   ],
+   "face": {
+    "hinge_surf_s": 169,
+    "n": 61,
+    "resid": 0.53,
+    "rx": -11.41,
+    "rz_fit": -4.05
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     360.5,
+     77.25,
+     82.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 169.0
+   },
+   "gun_model": "砲U-P11",
+   "gun_path": "甲板-upper/砲U-P11",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    355,
+    365
+   ],
+   "lid_z": [
+    77,
+    86
+   ],
+   "meta": {
+    "close_deg": 76.6,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-23"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P11",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    357,
+    363
+   ],
+   "open_z": [
+    79,
+    85
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    184
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    360.5,
+    170,
+    86
+   ],
+   "face": {
+    "hinge_surf_s": 170,
+    "n": 61,
+    "resid": 0.53,
+    "rx": -11.41,
+    "rz_fit": -4.05
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 10.0,
+    "muzzle": [
+     360.5,
+     179.75,
+     82.25
+    ],
+    "need_pull": 10.75,
+    "outer_s": 170
+   },
+   "gun_model": "砲U-S11",
+   "gun_path": "甲板-upper/砲U-S11",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    355,
+    365
+   ],
+   "lid_z": [
+    77,
+    86
+   ],
+   "meta": {
+    "close_deg": 76.6,
+    "house": 11,
+    "kind": "portlid",
+    "lid_of": "gun-35"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S11",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    357,
+    363
+   ],
+   "open_z": [
+    79,
+    85
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -4
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    388.5,
+    90,
+    87
+   ],
+   "face": {
+    "hinge_surf_s": 166,
+    "n": 61,
+    "resid": 0.54,
+    "rx": -8.61,
+    "rz_fit": -7.87
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     388.5,
+     81.25,
+     83.25
+    ],
+    "need_pull": 9.75,
+    "outer_s": 166.0
+   },
+   "gun_model": "砲U-P12",
+   "gun_path": "甲板-upper/砲U-P12",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    383,
+    393
+   ],
+   "lid_z": [
+    78,
+    87
+   ],
+   "meta": {
+    "close_deg": 79.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-24"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-P12",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    385,
+    391
+   ],
+   "open_z": [
+    80,
+    86
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    187.9
+   ],
+   "scale": 1,
+   "side": "P",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  },
+  {
+   "at": [
+    388.5,
+    167,
+    87
+   ],
+   "face": {
+    "hinge_surf_s": 167,
+    "n": 61,
+    "resid": 0.54,
+    "rx": -8.61,
+    "rz_fit": -7.87
+   },
+   "gun": {
+    "axis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "min_pull": 9.0,
+    "muzzle": [
+     388.5,
+     175.75,
+     83.25
+    ],
+    "need_pull": 9.75,
+    "outer_s": 167
+   },
+   "gun_model": "砲U-S12",
+   "gun_path": "甲板-upper/砲U-S12",
+   "host": "甲板-upper",
+   "host_work": "ridge-two-centurion-01m-deck-upper",
+   "lid_x": [
+    383,
+    393
+   ],
+   "lid_z": [
+    78,
+    87
+   ],
+   "meta": {
+    "close_deg": 79.4,
+    "house": 10,
+    "kind": "portlid",
+    "lid_of": "gun-36"
+   },
+   "mirror": "none",
+   "model": "砲門蓋-U-S12",
+   "open_size": [
+    7,
+    7
+   ],
+   "open_x": [
+    385,
+    391
+   ],
+   "open_z": [
+    80,
+    86
+   ],
+   "pivot": [
+    5.5,
+    0,
+    0
+   ],
+   "raised": 0,
+   "rotate": [
+    0,
+    0,
+    -7.9
+   ],
+   "scale": 1,
+   "side": "S",
+   "source_work": "ridge-two-centurion-01m-portlid"
+  }
+ ],
+ "rules": {
+  "close_bias_deg": -2.0,
+  "house_margin": 0.5,
+  "house_min": 4,
+  "outlier": 3,
+  "rz_flat_deg": 2.0,
+  "slab": 16
+ },
+ "skipped": []
+}

@@ -1,0 +1,427 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 24350,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 6882,
+    "177": 17468
+   },
+   "mirror_diff": 0
+  },
+  "gun": {
+   "cells": 39655,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 11124,
+    "141": 366,
+    "177": 28165
+   },
+   "mirror_diff": 0
+  },
+  "upper": {
+   "cells": 38956,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 11040,
+    "141": 452,
+    "209": 27464
+   },
+   "mirror_diff": 0
+  },
+  "qd": {
+   "cells": 16588,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 3242,
+    "141": 1493,
+    "209": 11853
+   },
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 6870,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1322,
+    "141": 968,
+    "209": 4580
+   },
+   "mirror_diff": 0
+  },
+  "fc": {
+   "cells": 8687,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1508,
+    "141": 1653,
+    "209": 5526
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "gun": {
+   "cells": 212,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "upper": {
+   "cells": 424,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "qd": {
+   "cells": 392,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 186,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "fc": {
+   "cells": 334,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "gun",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     191,
+     128,
+     32
+    ],
+    "lo": [
+     188,
+     128,
+     35
+    ],
+    "hi": [
+     178,
+     128,
+     50
+    ],
+    "head": [
+     172,
+     128,
+     52
+    ]
+   },
+   "steps": 6
+  },
+  "up-P": {
+   "up": "upper",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     245,
+     116,
+     51
+    ],
+    "lo": [
+     248,
+     116,
+     54
+    ],
+    "hi": [
+     258,
+     116,
+     69
+    ],
+    "head": [
+     264,
+     116,
+     71
+    ]
+   },
+   "steps": 6
+  },
+  "up-S": {
+   "up": "upper",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     245,
+     140,
+     51
+    ],
+    "lo": [
+     248,
+     140,
+     54
+    ],
+    "hi": [
+     258,
+     140,
+     69
+    ],
+    "head": [
+     264,
+     140,
+     71
+    ]
+   },
+   "steps": 6
+  },
+  "qd-P": {
+   "up": "qd",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     245,
+     116,
+     71
+    ],
+    "lo": [
+     242,
+     116,
+     74
+    ],
+    "hi": [
+     232,
+     116,
+     89
+    ],
+    "head": [
+     227,
+     116,
+     90
+    ]
+   },
+   "steps": 6
+  },
+  "qd-S": {
+   "up": "qd",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     245,
+     140,
+     71
+    ],
+    "lo": [
+     242,
+     140,
+     74
+    ],
+    "hi": [
+     232,
+     140,
+     89
+    ],
+    "head": [
+     227,
+     140,
+     90
+    ]
+   },
+   "steps": 6
+  },
+  "poop": {
+   "up": "poop",
+   "lo": "qd",
+   "points": {
+    "foot": [
+     147,
+     128,
+     93
+    ],
+    "lo": [
+     144,
+     128,
+     96
+    ],
+    "hi": [
+     136,
+     128,
+     108
+    ],
+    "head": [
+     129,
+     128,
+     111
+    ]
+   },
+   "steps": 5
+  },
+  "fc-P": {
+   "up": "fc",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     340,
+     116,
+     73
+    ],
+    "lo": [
+     343,
+     116,
+     76
+    ],
+    "hi": [
+     351,
+     116,
+     88
+    ],
+    "head": [
+     355,
+     116,
+     91
+    ]
+   },
+   "steps": 5
+  },
+  "fc-S": {
+   "up": "fc",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     340,
+     140,
+     73
+    ],
+    "lo": [
+     343,
+     140,
+     76
+    ],
+    "hi": [
+     351,
+     140,
+     88
+    ],
+    "head": [
+     355,
+     140,
+     91
+    ]
+   },
+   "steps": 5
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 8,
+ "reach": {
+  "orlop": [
+   "hold"
+  ],
+  "gun": [
+   "hold",
+   "up-P",
+   "up-S"
+  ],
+  "upper": [
+   "fc-P",
+   "fc-S",
+   "qd-P",
+   "qd-S",
+   "up-P",
+   "up-S"
+  ],
+  "qd": [
+   "poop",
+   "qd-P",
+   "qd-S"
+  ],
+  "poop": [
+   "poop"
+  ],
+  "fc": [
+   "fc-P",
+   "fc-S"
+  ]
+ },
+ "holes": {
+  "orlop": 177,
+  "gun": 975,
+  "upper": 1148,
+  "qd": 65,
+  "poop": 61,
+  "fc": 97
+ },
+ "cavities_filled": [],
+ "lists": {
+  "deck-orlop": [
+   24350,
+   "391e77b0cb99590fcfe1aecac95f3d9ce5facd88161f5fceff4aaa8608b6c0d5"
+  ],
+  "deck-orlop.state": [
+   24350,
+   "6c39b6a4597786142e5186f35ddf489c7ead3586e375d46f94dbc9480db9aa4c"
+  ],
+  "deck-gun": [
+   39655,
+   "2266fcc42e56c4626597d265d7fe91f591e0790a69cdf06b1d2199d1edbdcbbe"
+  ],
+  "deck-gun.state": [
+   39655,
+   "5573ba3a11c4a601afa5dd7c2d2da8eda818381358c56e376c52c668e8489fd4"
+  ],
+  "deck-upper": [
+   38956,
+   "b82cc8b125b27903998b2426eb35abe779617416ef0517769e9eb7763efd55c1"
+  ],
+  "deck-upper.state": [
+   38933,
+   "55fb7512d354fecd74b872daddcf900e32e17b194098ffb0d5242224ee04f8e8"
+  ],
+  "deck-qd": [
+   16588,
+   "e1631fbc159364c9956ba496605a4d5b2f5b03cb6406349038f98f8cc718682e"
+  ],
+  "deck-qd.state": [
+   16588,
+   "4fd93a21c643ab6fdb23bf6cbcc43b748e01da55f2bb074ecd224c6df5f10dfb"
+  ],
+  "deck-poop": [
+   6870,
+   "3cb86cf12ae7df8f457455540eaddc2aff9db88abce4c37f58491ef778425015"
+  ],
+  "deck-poop.state": [
+   6870,
+   "f4a5cdd5790406bddcb3b6ca3550183ada7120be5583c6c91614c4988bbde6fd"
+  ],
+  "deck-fc": [
+   8687,
+   "c5ec90d27d1b01d0c80561dd4ff045619217a05a66c77e673b529286b6a89026"
+  ],
+  "deck-fc.state": [
+   8530,
+   "5a31e4e81d9e9e9a3110feef9959f00e8d8da91ca67dc132ab2f6c323c6c8a95"
+  ],
+  "ladders-gun": [
+   212,
+   "1ebae52b086e9d460f0c4364738587ff4b7ec51ee8c6ac432a0e1a5169dd5b8f"
+  ],
+  "ladders-upper": [
+   424,
+   "7ff4d2ff3be29c5c4541cde4f8a57351eea66ce04bf31255d4fb8da158987aa5"
+  ],
+  "ladders-qd": [
+   392,
+   "24ca6847581a1880459dcf999afd9665d84c0506437759351732e0b39cc39c82"
+  ],
+  "ladders-poop": [
+   186,
+   "b23041fbaf91b813251cc653188a9b34c63f19899cc026441a9c6d9fab20a64b"
+  ],
+  "ladders-fc": [
+   334,
+   "330fd651e79e4f2e5ce9b057c9c103121ad07aa604d7c9244b612c434e247acf"
+  ]
+ }
+}
