@@ -358,11 +358,12 @@
   "guns": {
     "src": "蘇士奎哈納號：造船規格 §2.1 砲沿用現有元件（餘燼號 -gun-long32），不新做；1853 年的砲沒有一手出處（RES §6）⇒ 設計決定（照 PINEAU 6＋3、密西西比號的配置）：明輪後面每舷 3 門 8 吋 Paixhans 舷側砲＋船頭兩舷各一門、船尾一門 10 吋 Paixhans 迴旋砲（mount=pivot）",
     "types": {
-      "long32": {"work": "basecamp-ember-01m-gun-long32", "code": "9d", "scale": 0.5, "title": "8 吋 Paixhans 砲彈砲（遊戲沒有 8 吋 ⇒ 代碼借 9 吋 Dahlgren 砲彈砲 9d，最接近的一型；元件同維吉尼亞號）"},
+      "long32": {"work": "ridge-two-centurion-01m-gun-dahlgren9", "code": "9d", "scale": 0.5, "swap": "TASK-1155（ridge-two 2026-11-01）：換成 IX 吋 Dahlgren 通用部件（Ship_Guns §2.2 砲只跟同一種砲共用模型；以前拿餘燼號 32 磅 ×0.5）；擺法照 ridge-two-centurion-01m/design/place1155.py（新砲口對舊砲口、零碰撞，6 門都不用退）", "title": "8 吋 Paixhans 砲彈砲（遊戲沒有 8 吋 ⇒ 代碼借 9 吋 Dahlgren 砲彈砲 9d，最接近的一型；元件同維吉尼亞號）"},
       "pivot10": {
-        "work": "basecamp-ember-01m-gun-long32",
+        "work": "ridge-two-centurion-01m-gun-dahlgren11",
         "code": "11d",
-        "scale": 0.55,
+        "scale": 0.5,
+        "swap": "TASK-1155（ridge-two 2026-11-01）：換成 XI 吋 Dahlgren 通用部件（以前拿餘燼號 32 磅 ×0.55）；滑軌拆成 -gun-dahlgren11-mount（雙生「<名>座」kind=gunmount、mount_of）；轉軸中心照舊 ⇒ meta pivot 7.425 ⇒ 14.075；每個砲門角度＋換砲門那段都量 0",
         "title": "10 吋 Paixhans 迴旋砲（遊戲沒有 10 吋 ⇒ 代碼借 XI 吋 Dahlgren 11d；模型 × 0.55 比舷側砲大一號）"
       }
     },

@@ -60,3 +60,9 @@
 - 艏斜桅穿過 knee 頂 43 格、後桅腳壓到 orlop 26 格（都是現況先有的格，桅讓）。
 - 4 條繩拉直時擦到 1–2 格（futtock 5 號、fore-topmast-stay、bobstay-2）。
 - 明輪軸 r 3 從砲甲板板底下過、板開縫蓋軸罩（史實是曲柄箱，設計簡化）。
+
+## 換砲：Dahlgren 換成自己的模型（ridge-two，TASK-1155，2026-11-01）
+
+- Tim 2026-11-01：「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」（Ship_Guns §2.2 砲只跟同一種砲共用模型）⇒ 9d 的 6 門換成 IX 吋 Dahlgren 通用部件 `ridge-two-centurion-01m-gun-dahlgren9`、11d 的 3 門迴旋砲換成 XI 吋 Dahlgren `-gun-dahlgren11`（以前都拿餘燼號 32 磅 ×0.5／×0.55）。plan `guns.types` 的 work／scale 跟著改（加了 `swap` 說明）；砲碼照舊（8 吋／10 吋 Paixhans 借 9d／11d，見上面）。
+- 擺法（ridge-two-centurion-01m/design/place1155.py）：沿舊砲的砲軸、新砲口對到舊砲口 ⇒ 舷側 6 門都不用退、砲口一樣、零碰撞；迴旋砲 3 門轉軸中心照舊 ⇒ meta pivot 7.425 ⇒ 14.075，每個砲門角度＋換砲門那段都量 0。
+- XI 吋的滑軌拆成砲座：雙生「砲-10in-前S座／前P座／艉座」kind=gunmount、`mount_of` gun-7／8／9、id gunmount-1..3。

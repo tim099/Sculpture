@@ -173,3 +173,4 @@ Tim：「可以試著加一些艙室嗎(或是原本就沒有)」「送藥手&�
 - 讀數：`draft_guns.py` 重跑只有 gun-8-S／P 兩列變：at x 580.575 ⇒ 580.75、碰撞 0、其他 17 門逐位元組相同；sheet04 重畫。
 - 落格：手動重掛 gun-8-S／P（`sub=model overwrite=1`，meta 帶著 id gun-2／gun-3）—— `tools/build_guns.py` 沒有 overwrite、也不帶 id，沒用它。
 - Blockside `reimport --id reale`：格數、checksum、模型數、繩數都沒變；匯入檢查 ✗ 0、⚠ 8（跟換之前一樣，只差送藥距離 0.1 m）。
+- TASK-1155（同日）：36 磅也換了 —— plan `guns.components` 加 `gun36l`（36 磅 coursier 砲通用部件 `ridge-two-centurion-01m-gun-36l`，青銅砲管＋滑橇砲架），船頭 `gun-36` 從 `long32` 放大 0.52 改 `gun36l` scale 0.5。`draft_guns.py` 只有 gun-36 一列變：at x 574.94 ⇒ 572.75、砲口 x 609 ⇒ 612（＝ 目標 muzzle_x）、砲軸高 40.7 ⇒ 40.75、碰撞 0；手動重掛（meta 帶 id gun-1）。⚠ 滑軌（中央走道裡 35 pi 的軌道）照舊沒做。

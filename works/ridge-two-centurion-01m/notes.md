@@ -158,3 +158,21 @@
 - Blockside：分支 `ridge-two/centurion` 0534a1d（匯入）＋ d2fb64d（合 dev 349939a：取 dev 的成品再整個重建；dev 新加的 ships/showlod.js 補烘本船 ⇒ showlod --check 31 型 ✓）⇒ ff 進子模組的 dev。共用 `_cache/centurion.vxk` 指紋 ＝ 鎖檔 c:f9720151。⚠ **Blockside dev 還沒推**（推送被權限擋下，等 Tim）。
 - Blocksail：737bfd6a ff 進 main（沒推）—— `FLEET.types.fourth`（531 t、war、hull centurion）、`hullLoa` 48.9、`SAILOR.crew` 180、TRADE_SIM 船型表、fleet_check 兩條；子模組 → d2fb64d、battle.html 重套。fleet_check 前後 ✓ 89 → 91、✗ 0，起始檔一年讀數一位不差。
 - 遊戲裡（worktree 成品 `?ship=centurion`，對手憲法號）：開局掉落的模型 0；W／S 帆裝 0–3 段跟上面那張表一樣；側順風 12.1 節；一輪舷側排出 23 門。截圖 `overlays/stage14_ingame_sailing.jpg`。
+
+## 通用部件：五種還沒有模型的砲（TASK-1155，2026-11-01）
+
+- Tim 2026-11-01：「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」→「然後第二張先開成task」→「/scp-task 1155 GO」。Ship_Guns §2.2 砲只跟同一種砲共用模型。
+- 別人的船殼底下不能開子作品（`只有任務作品作者可以建立其子作品`）⇒ 跟 8 磅砲一樣掛在本船底下。產生程式 `design/draft_guns1155.py`，參數與出處 `design/guns1155.json`（〔查〕〔估〕〔設計〕標好）⇒ `masks/guns1155/<代碼>.vox.txt`、`verify_guns1155.json`。每件 1 元件、空腔 0、左右鏡像差 0；固定點 muzzle（內膛空格）／breech／cascabel／train／trunnion／eye-aft／eye-fwd；作品預設 meta `kind=gun, gun=<代碼>`；pivot ＝ 砲架前緣中間、甲板面。
+
+| 作品 | 砲 | 框 | 砲管 | 砲軸高 | 砲架 |
+|---|---|---|---|---|---|
+| `-gun-36l` | 36 磅 coursier（青銅，色 140；一對 dolphins） | 21×79×32 | 3.4 m | 1.18 m | 滑橇（affût de coursier，沒有輪子） |
+| `-gun-dahlgren9` | IX 吋 Dahlgren（汽水瓶形） | 25×72×33 | 3.3 m | 1.13 m | Marsilly（前兩輪、後滑木貼甲板） |
+| `-gun-dahlgren11`＋`-mount` | XI 吋 Dahlgren | 29×90×37 | 4.05 m | 1.28 m | 樞軸滑軌（滑軌拆成砲座） |
+| `-gun-brooke64` | 6.4 吋 Brooke（單箍 7 圈） | 21×75×34 | 3.6 m | 1.28 m | Marsilly |
+| `-gun-brooke7`＋`-mount` | 7 吋 Brooke（單箍 8 圈） | 23×84×37 | 3.7 m | 1.38 m | 樞軸滑軌（滑軌拆成砲座） |
+
+- 砲軸高照三艘船上暫代砲的砲軸高（scale 0.5 時 11–13.5 格）⇒ 砲門不用改。IX 吋第一版耳軸 24 格：蘇士奎哈納號第 3 門的砲管頂到砲門上楣（z 105）、要往裡退 7 格、砲口縮在船殼裡 ⇒ 降到 22（＝ 舊砲的 1.125 m），6 門都不用退。
+- 36 磅第一版青銅用色 173，渲出來偏粉紅 ⇒ 140。
+- 樞軸砲的滑軌（色 100）用 `work sub=split` 拆成 `-mount`（Ship_Guns §4.2.1）：引用它的 5 門自動多一個雙生「<名>座」kind=gunmount，meta `mount_of` 指到自己那門砲的 id ⇒ 開火只退砲身＋砲架，滑軌跟著轉、不退。
+- 擺法：`design/place1155.py`（沿舊砲的砲軸放，新砲口先對到舊砲口、撞到就往裡退；舷側砲照作者的搜尋沿船長挪 ±2；樞軸砲轉軸中心照舊、每個砲門角度＋換砲門那段（拉進 runin、每 2.5°）都量）。皇家號照它自己的 `draft_guns.py`。

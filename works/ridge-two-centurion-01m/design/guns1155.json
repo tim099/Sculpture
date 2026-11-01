@@ -1,0 +1,62 @@
+{
+ "src": "TASK-1155（Tim 2026-11-01「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」→ 第二步：雕刻庫還沒有自己模型的砲種）。Ship_Guns §2.2 砲只跟同一種砲共用模型、§4.1 座標（x 中線、砲口 +y、z 0 ＝ 甲板面）。0.05 m／格。標記：〔查〕有出處、〔估〕照同類推、〔設計〕本小姐的決定。出處：Wikipedia「Dahlgren gun」（IX 吋 131 in、9,000 lb；XI 吋 161 in、15,700 lb；IX 吋舷側裝 Marsilly 砲架、XI 吋裝樞軸）、Wikipedia「Brooke rifle」（6.4 吋 141.85 in、單箍 9,100 lb；7 吋單箍 146.05 in、15,000 lb；箍厚 2 in、每圈寬 6 in；CSS Virginia 舷側 2 門 6.4 吋、船頭船尾樞軸各 1 門 7 吋單箍）、皇家號 research_galley_2026-10-18（36 磅青銅 coursier、沿 11.4 m 滑軌）。外徑、耳軸位置、砲架尺寸沒查到一手 ⇒〔估〕。耳軸高照現在三艘船上暫代砲的砲軸高（scale 0.5 時 11–13.5 格）⇒ 砲門不用改。",
+ "colors": {"iron": 36, "bronze": 140, "carriage": 132, "slide": 100, "quoin": 136, "fit": 73},
+ "guns": {
+  "36l": {
+   "work": "ridge-two-centurion-01m-gun-36l",
+   "title": "36 磅 coursier 砲（gun 36l，青銅砲管＋槳帆船船頭的滑橇砲架；通用部件，0.05 m）",
+   "barrel_color": "bronze",
+   "AZ": 23,
+   "barrel": {"len": 64, "bore_r": 1.8, "bore_depth": 10, "trunnion_s": 27, "trunnion_r": 1.6, "cascabel": [1.6, 2, 2.4, 2],
+    "profile": [[0, 5.6], [1, 6.5], [3, 6.5], [3, 6.1], [21, 5.8], [21, 6.3], [23, 6.3], [23, 5.5], [31, 5.3], [31, 5.8], [32.5, 5.8], [32.5, 4.9], [58, 3.8], [58, 4.3], [59, 4.3], [59, 3.9], [61, 4.4], [63, 4.6], [63, 4.0], [64, 4.0]],
+    "dolphins": {"s": [24, 28], "dx": 2, "h": 2},
+    "src": "〔查〕36 livres、青銅、coursier（皇家號 research）；〔估〕砲管 3.4 m（法國 36 livres 長砲 10–11 pieds）、砲尾外徑 0.65 m、砲口 0.4 m；外形照法國青銅砲：base ring、第一 reinforce、ring、第二 reinforce、chase、muzzle astragal 與 swell，第二 reinforce 上一對 dolphins（提把）"},
+   "carriage": {"type": "sled", "k": [7, 8], "front_from_trunnion": 7, "len": 50, "top_steps": [[0, 24], [10, 21], [22, 18], [34, 15]], "bed": 4,
+    "src": "〔設計〕affût de coursier：沒有輪子的長滑橇砲架，整個底面貼著滑軌（滑軌是皇家號中央走道的一部分，不在這件裡）；長 2.5 m"}
+  },
+  "9d": {
+   "work": "ridge-two-centurion-01m-gun-dahlgren9",
+   "title": "IX 吋 Dahlgren 砲彈砲（gun 9d，汽水瓶形鐵砲管＋Marsilly 舷側砲架；通用部件，0.05 m）",
+   "barrel_color": "iron",
+   "AZ": 22,
+   "barrel": {"len": 62, "bore_r": 2.3, "bore_depth": 10, "trunnion_s": 25, "trunnion_r": 1.6, "cascabel": [1.8, 2, 2.6, 2],
+    "profile": [[0, 5.0], [1, 6.8], [2, 7.7], [3.5, 8.1], [14, 8.1], [20, 7.6], [26, 6.8], [32, 5.9], [38, 5.1], [44, 4.5], [50, 4.2], [57, 4.0], [57, 4.6], [61, 4.6], [61, 4.2], [62, 4.2]],
+    "src": "〔查〕全長 131 in（3.33 m）、口徑 9 in；〔估〕砲尾最大外徑 0.81 m、砲口外徑 0.4 m、muzzle swell 小；汽水瓶形：砲尾到耳軸後面最粗、往前一路收"},
+   "carriage": {"type": "marsilly", "k": [9, 10], "front_from_trunnion": 6, "len": 42, "top_steps": [[0, 23], [9, 20], [19, 17], [29, 14]], "bottom": 7, "front_axle_back": 4, "truck_r": 4.2, "skid_len": 8,
+    "src": "〔查〕IX 吋舷側裝 Marsilly 砲架；〔估〕兩片 cheek、前面一根軸兩個實心木輪（truck）、後面沒有輪子、尾端一塊滑木貼甲板（Marsilly 的特點：後座時尾端在甲板上磨）；長 2.1 m"}
+  },
+  "11d": {
+   "work": "ridge-two-centurion-01m-gun-dahlgren11",
+   "title": "XI 吋 Dahlgren 砲彈砲（gun 11d，汽水瓶形鐵砲管＋樞軸滑軌砲架；通用部件，0.05 m；滑軌拆成砲座）",
+   "barrel_color": "iron",
+   "AZ": 25,
+   "barrel": {"len": 77, "bore_r": 2.8, "bore_depth": 12, "trunnion_s": 31, "trunnion_r": 1.8, "cascabel": [2.0, 2, 2.9, 2],
+    "profile": [[0, 5.8], [1, 8.0], [2.5, 9.2], [4, 9.6], [17, 9.6], [25, 9.0], [32, 8.1], [40, 7.0], [47, 6.1], [55, 5.4], [62, 5.1], [71, 4.9], [71, 5.6], [76, 5.6], [76, 5.1], [77, 5.1]],
+    "src": "〔查〕全長 161 in（4.09 m）、口徑 11 in、裝樞軸；〔估〕砲尾最大外徑 0.96 m、砲口外徑 0.5 m；外形照 IX 吋放大"},
+   "carriage": {"type": "slide", "k": [11, 12], "front_from_trunnion": 7, "len": 46, "top_steps": [[0, 26], [10, 23], [21, 20], [32, 17]], "slide_h": 5, "slide_fwd": 10, "slide_back": 6, "rail_w": 3,
+    "src": "〔查〕XI 吋裝樞軸（pivot）；〔估〕樞軸砲的砲架坐在一副滑軌（slide）上：砲架沒有輪子、沿滑軌後座，滑軌繞樞軸栓轉；砲架長 2.3 m、滑軌比砲架前後各長 0.5／0.3 m、高 0.25 m。滑軌拆成砲座（Ship_Guns §4.2.1：開火只退砲身＋砲架，滑軌跟著轉、不退）"}
+  },
+  "64b": {
+   "work": "ridge-two-centurion-01m-gun-brooke64",
+   "title": "6.4 吋 Brooke 線膛砲（gun 64b，單箍鐵砲管＋Marsilly 舷側砲架；通用部件，0.05 m）",
+   "barrel_color": "iron",
+   "AZ": 25,
+   "barrel": {"len": 68, "bore_r": 1.6, "bore_depth": 10, "trunnion_s": 26, "trunnion_r": 1.5, "cascabel": [1.6, 2, 2.4, 2],
+    "profile": [[0, 4.6], [1, 6.6], [3, 6.6], [3, 6.2], [4, 6.2], [4, 6.6], [6, 6.6], [6, 6.2], [7, 6.2], [7, 6.6], [9, 6.6], [9, 6.2], [10, 6.2], [10, 6.6], [12, 6.6], [12, 6.2], [13, 6.2], [13, 6.6], [15, 6.6], [15, 6.2], [16, 6.2], [16, 6.6], [18, 6.6], [18, 6.2], [19, 6.2], [19, 6.6], [21, 6.6], [21, 5.6], [27, 5.4], [68, 3.3]],
+    "src": "〔查〕全長 141.85 in（3.60 m）、口徑 6.4 in；箍：2 in 厚、每圈 6 in 寬（一圈 3 格：2 格滿、1 格接縫）⇒ 7 圈套在砲尾；〔估〕鐵砲身外徑 0.56 m、加箍 0.66 m、砲口外徑 0.33 m；Brooke 的砲身是一根直的圓錐，沒有 muzzle swell"},
+   "carriage": {"type": "marsilly", "k": [7, 8], "front_from_trunnion": 6, "len": 40, "top_steps": [[0, 26], [9, 23], [19, 20], [29, 17]], "bottom": 7, "front_axle_back": 4, "truck_r": 4.2, "skid_len": 8,
+    "src": "〔估〕CSS Virginia 的舷側砲跟 IX 吋 Dahlgren 同一型砲架（Marsilly）"}
+  },
+  "7b": {
+   "work": "ridge-two-centurion-01m-gun-brooke7",
+   "title": "7 吋 Brooke 線膛砲（gun 7b，單箍鐵砲管＋樞軸滑軌砲架；通用部件，0.05 m；滑軌拆成砲座）",
+   "barrel_color": "iron",
+   "AZ": 27,
+   "barrel": {"len": 70, "bore_r": 1.8, "bore_depth": 10, "trunnion_s": 28, "trunnion_r": 1.7, "cascabel": [1.8, 2, 2.7, 2],
+    "profile": [[0, 5.2], [1, 7.4], [3, 7.4], [3, 7.0], [4, 7.0], [4, 7.4], [6, 7.4], [6, 7.0], [7, 7.0], [7, 7.4], [9, 7.4], [9, 7.0], [10, 7.0], [10, 7.4], [12, 7.4], [12, 7.0], [13, 7.0], [13, 7.4], [15, 7.4], [15, 7.0], [16, 7.0], [16, 7.4], [18, 7.4], [18, 7.0], [19, 7.0], [19, 7.4], [21, 7.4], [21, 7.0], [22, 7.0], [22, 7.4], [24, 7.4], [24, 6.4], [29, 6.2], [70, 3.6]],
+    "src": "〔查〕全長 146.05 in（3.71 m）、口徑 7 in、單箍；CSS Virginia 船頭船尾樞軸各一門；箍 2 in 厚、6 in 寬 ⇒ 8 圈；〔估〕鐵砲身外徑 0.64 m、加箍 0.74 m、砲口外徑 0.36 m"},
+   "carriage": {"type": "slide", "k": [8, 9], "front_from_trunnion": 7, "len": 44, "top_steps": [[0, 28], [10, 25], [21, 22], [32, 19]], "slide_h": 5, "slide_fwd": 10, "slide_back": 6, "rail_w": 3,
+    "src": "〔估〕樞軸滑軌砲架（同 XI 吋 Dahlgren 那一型的做法）；滑軌拆成砲座"}
+  }
+ }
+}
