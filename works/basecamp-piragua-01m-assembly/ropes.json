@@ -1,0 +1,121 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "shroud-P1",
+			"from": "桅/hound-P",
+			"to": "船殼/shroud-P1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:30",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-P2",
+			"from": "桅/hound-P",
+			"to": "船殼/shroud-P2",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:30",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "lateen.sheet-P",
+			"from": "sail:lateen/clew",
+			"to": "船殼/belay-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:31",
+			"meta": {
+				"kind": "sheet",
+				"sail": "lateen"
+			}
+		},
+		{
+			"name": "shroud-S1",
+			"from": "桅/hound-S",
+			"to": "船殼/shroud-S1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:31",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-S2",
+			"from": "桅/hound-S",
+			"to": "船殼/shroud-S2",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:31",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "lateen.sheet-S",
+			"from": "sail:lateen/clew",
+			"to": "船殼/belay-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:32",
+			"meta": {
+				"kind": "sheet",
+				"sail": "lateen"
+			}
+		},
+		{
+			"name": "lateen.tack",
+			"from": "model:桅/yard/fore",
+			"to": "船殼/tack",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:32",
+			"meta": {
+				"kind": "tack",
+				"sail": "lateen"
+			}
+		}
+	],
+	"groups": []
+}

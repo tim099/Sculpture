@@ -63,3 +63,27 @@ TASK-1152（主單 TASK-1146）。Tim 2026-11-01「/scp-task 1152 GO」。
   - 反向對照：坐板升 1 格（坐面 0.4 m）⇒ 斷成 9 群。
   - 🩸 v1 沒限高度 ⇒ 升了照樣 1 群：人沿著舷側內面一階一階的牆走上舷頂繞過去。遊戲只收 floor −2～+3，所以 v1 的尺比遊戲寬。
 - ⚠ 第一人稱與樓梯自檢要匯進遊戲才量得到 ⇒ 步驟 14 一起讀。
+
+## 步驟 7–8 桅、拉丁帆桁、帆、索具、長旗（`design/draft_rig.py` → `sheet03_rig_v1.png`、`yards.json`、`rig_plan.json`；落格 `tools/build_rig.py`）
+
+- 出處：越嶺號的 draft_masts.py／build_rig.py（一根桅、拉丁帆桁）。改的地方：靜索、帆腳索綁舷頂（沒有舷外槳架），tack 綁船頭，只掛一面長旗。
+- 桅 `basecamp-piragua-01m-mast`：x 87、穿過第七塊坐板（坐板刻 1 格桅孔）、腳踩艙底、艙底到桅頂 5.0 m、桅頭 3×3×4 格（色 68）。可拆 ⇒ 不做桅座。
+- 帆桁 `basecamp-piragua-01m-yard`：8.5 m、45°、吊點離前端 40%、掛在桅的左舷側；外部模型放在桅子作品裡（scale 1、rotate 0）。
+  - meta：`kind=yard mast=main yard=gaff rig=lateen sail=lateen`；固定點 pivot／fore／peak。
+- 帆 `lateen` 17.6 m²（前緣 1、後緣 0.75、帆腳 0.65）：帆腳角離舷頂 1.1 m、前端離舷頂 1.35 m。meta `kind=sail mast=main sail=gaff set=1`。
+- 繩 7 條：靜索每舷 2（hound → 舷頂 x 83、92）、帆腳索兩舷（→ 舷頂 x 50）、tack（帆桁前端 → 船頭 x 122）；帆自己的繩都標了 `kind=sheet／tack sail=lateen`。
+- 長旗：暗紅、桅頂；meta `kind=flag flag=pennant`。
+- 🩸 v1 照越嶺號的帆比例（0.82／0.575）＋帆桁 35°：帆腳那條邊往後下斜 20°，帆腳角比前端低 1.7 m、落進艙裡（帆面碰撞 1）⇒ 帆桁改 45°、比例改 0.75／0.65、桅加高到 5 m。
+- 讀數：帆桁碰撞 0、帆面碰撞 0；ropecheck 7 條／14 端全綁好；觀測 ropes_broken 0、sails_broken 0；組裝件 link_overlap 0。
+  - 反向對照：帆桁往下 3 m ⇒ 帆桁碰撞 7、帆面 30。
+- 拉丁帆擺角：pivot 到 fore 的水平距離 2.4 m < 遊戲的 2.5 m ⇒ 遊戲的拉丁帆限制在這艘船上不起作用（照 gaff 擺）。⚠ 遊戲裡要看一次會不會甩出舷外。
+
+帆裝三段（Ship_Rigging §9.1）：
+
+| 帆裝 | 張哪幾面 |
+|---|---|
+| 收帆（1） | lateen |
+| 戰鬥帆（2） | lateen |
+| 滿帆（3） | lateen |
+
+只有一面帆 ⇒ `set 1`：三段都張，收帆、戰鬥帆都不會一面都沒有。

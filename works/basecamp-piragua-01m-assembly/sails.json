@@ -1,0 +1,82 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:桅/yard/fore",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "model:桅/yard/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "56.4,48.5,19.0",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:29",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff",
+				"set": "1"
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "87.5,50.5,51.0",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "57.5,50.5,50.0",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "87.5,50.5,47.0",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#7a1a14",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8",
+			"persona": "basecamp",
+			"created_at": "2026-11-01T15:26:30",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main"
+			}
+		}
+	]
+}
