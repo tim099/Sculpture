@@ -100,3 +100,12 @@ TASK-1152（主單 TASK-1146）。Tim 2026-11-01「/scp-task 1152 GO」。
   - 反向對照：整門往下 4 格 ⇒ 砲 10、座 252。
 - 🩸 渲圖抓到 tack 從砲管穿過去（v1 綁船頭中線 x 122，離砲管外框 −0.34 格）⇒ 改綁左舷舷頂 x 110（1.18 格）。x 112–118 那幾格舷頂太靠中線，只剩 0.1–0.8 格。tack 的 slack 1.02 ⇒ 短而陡的繩垂 0.8 m ⇒ 改 1.0。
   - ⚠ 迴旋砲轉起來照樣會掃過 tack；遊戲裡繩不算碰撞，留著。
+
+## 步驟 10 彈藥庫與甲板物件（`design/draft_magazine.py` → `magazine_placement.json`、`verify_magazine.json`；落格 `tools/build_magazine.py`）
+
+- 露天船沒有艙房 ⇒ 彈藥庫 `basecamp-piragua-01m-magazine`「杉心號 彈藥庫」＝ 舵手腳前一塊 0.5 × 0.5 m 墊板（x 21–25、z 1，25 格；讓火藥離開艙底積水〔設計決定〕）＋一個火藥桶。
+  - 桶引用憲法號的 `basecamp-frigate-constitution-01m-powder-barrel`（scale 0.2、pivot 11,11,0），meta `kind=powder powder_lb=50 id=powder-1`。
+  - 固定點：blast (23,50,4)、door (26,50,1)。
+  - 關聯「彈藥庫」meta：`kind=magazine pos=aft powder_lb=50 id=magazine-1`；沒有梯子 ⇒ 不寫 hoist。
+- 讀數：桶碰撞（格心＋八角）0；反向對照桶往下 1 格 ⇒ 12,748。墊板＋桶的外框當擋路之後，走路格照樣 1 群、9.28 m²（坐板那一步是 9.53）。
+- 這艘船沒有的：門與艙蓋（沒有艙口）、廚房（獨木舟上不生火）、小艇（它自己就是小艇）、絞盤、羅經櫃。被打掉怎麼演照預設（帆桁照規格表是 fall）。
