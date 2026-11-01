@@ -1,4 +1,4 @@
 # 好旅號 TODO（TASK-1151）
-- 接進 Blocksail：FLEET.types 加一型（hull boaviagem、hullLoa 照 vxk 外框實量、噸位／船員／造價照資料）；誰用（葡萄牙 pt？西班牙 es？）、要不要 from、要不要進開場 seedMix：Tim 定。fleet_check 前後對照。
-  - Blocksail 的 external/Blockside 要指到 Blockside 6018649 以上（battle.html 會被 shellsync hook 自動重殼）。
-- 遊戲裡看一次：W／S 每一段帆裝、三角帆往下風擺的樣子（rig=lateen 限制擺角）、Tim 看過。
+- ✅ 2026-11-01 遊戲裡開過（Blockside dev f63471f 沙盒）：三段帆裝 5／4／1 面、換舷時三角帆桁 +22.7／+28.7 ⇒ −22.7／−36.1／−54.1°、兩舷 12 門都開過（讀數在 TASK-1151 留言 #6）。剩「Tim 看過一次」。
+- 引擎的小事（沒改）：mast meta `bonaventure` 不在 10_ship.js findMasts 的中文名表 ⇒ HUD 印「bonaventure✓」；收穫號推論一樣。
+- Blocksail 已接（main f275512b、f69a9081，沒推）；推 Blocksail 前 Blockside dev 要先有 39095b5（basecamp 的杉心號）。
