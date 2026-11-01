@@ -1,0 +1,92 @@
+{
+ "note": "draft_rudder_anchor.py 的結果（世界座標）",
+ "rudder": {
+  "work": "apex-two-barbados-01m-rudder",
+  "model": "舵",
+  "host": "apex-two-barbados-01m-assembly",
+  "at": [
+   58.0,
+   96.5,
+   0.0
+  ],
+  "pivot": [
+   58.0,
+   96.5,
+   0.0
+  ],
+  "anchors": {
+   "stock-top": [
+    42,
+    96,
+    74
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "hinge_x": 58.0,
+   "hinge_y": 96.5,
+   "hinge_z": 0.0,
+   "axis_x": -0.1736,
+   "axis_y": 0.0,
+   "axis_z": 0.9848,
+   "max_deg": 35,
+   "turn_axis": "hinge"
+  }
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "apex-two-barbados-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    308.713,
+    134.236,
+    81
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.55,
+   "rotate": 69.5,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  },
+  {
+   "name": "錨-P",
+   "host": "apex-two-barbados-01m-anchor-gear",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    308.713,
+    58.764,
+    81
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    56.5
+   ],
+   "scale": 0.55,
+   "rotate": -69.5,
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   }
+  }
+ ],
+ "hawse": {
+  "hawse-S": [
+   314,
+   117,
+   69
+  ],
+  "hawse-P": [
+   314,
+   75,
+   69
+  ]
+ }
+}

@@ -1,0 +1,376 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 19931,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 5876,
+    "141": 342,
+    "177": 13713
+   },
+   "mirror_diff": 0
+  },
+  "gun": {
+   "cells": 21684,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 6372,
+    "141": 318,
+    "177": 14994
+   },
+   "mirror_diff": 454
+  },
+  "qd": {
+   "cells": 8294,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1502,
+    "141": 1278,
+    "209": 5514
+   },
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 3966,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 700,
+    "141": 849,
+    "209": 2417
+   },
+   "mirror_diff": 90
+  },
+  "fc": {
+   "cells": 3724,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 586,
+    "141": 1116,
+    "209": 2022
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "gun": {
+   "cells": 182,
+   "hull_overlap": 0,
+   "mirror_diff": 364
+  },
+  "orlop": {
+   "cells": 362,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "qd": {
+   "cells": 372,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 186,
+   "hull_overlap": 0,
+   "mirror_diff": 372
+  },
+  "fc": {
+   "cells": 372,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "gun",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     151,
+     84,
+     43
+    ],
+    "lo": [
+     148,
+     84,
+     46
+    ],
+    "hi": [
+     140,
+     84,
+     58
+    ],
+    "head": [
+     138,
+     84,
+     61
+    ]
+   },
+   "steps": 5
+  },
+  "cargo": {
+   "up": "orlop",
+   "lo": "hold",
+   "points": {
+    "foot": [
+     251,
+     96,
+     4
+    ],
+    "lo": [
+     254,
+     96,
+     7
+    ],
+    "hi": [
+     276,
+     96,
+     40
+    ],
+    "head": [
+     280,
+     96,
+     43
+    ]
+   },
+   "steps": 12
+  },
+  "qd-P": {
+   "up": "qd",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     165,
+     84,
+     60
+    ],
+    "lo": [
+     162,
+     84,
+     63
+    ],
+    "hi": [
+     154,
+     84,
+     75
+    ],
+    "head": [
+     147,
+     84,
+     78
+    ]
+   },
+   "steps": 5
+  },
+  "qd-S": {
+   "up": "qd",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     165,
+     108,
+     60
+    ],
+    "lo": [
+     162,
+     108,
+     63
+    ],
+    "hi": [
+     154,
+     108,
+     75
+    ],
+    "head": [
+     147,
+     108,
+     78
+    ]
+   },
+   "steps": 5
+  },
+  "poop": {
+   "up": "poop",
+   "lo": "qd",
+   "points": {
+    "foot": [
+     111,
+     84,
+     80
+    ],
+    "lo": [
+     108,
+     84,
+     83
+    ],
+    "hi": [
+     100,
+     84,
+     95
+    ],
+    "head": [
+     93,
+     84,
+     98
+    ]
+   },
+   "steps": 5
+  },
+  "fc-P": {
+   "up": "fc",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     261,
+     84,
+     62
+    ],
+    "lo": [
+     264,
+     84,
+     65
+    ],
+    "hi": [
+     272,
+     84,
+     77
+    ],
+    "head": [
+     279,
+     84,
+     80
+    ]
+   },
+   "steps": 5
+  },
+  "fc-S": {
+   "up": "fc",
+   "lo": "gun",
+   "points": {
+    "foot": [
+     261,
+     108,
+     62
+    ],
+    "lo": [
+     264,
+     108,
+     65
+    ],
+    "hi": [
+     272,
+     108,
+     77
+    ],
+    "head": [
+     279,
+     108,
+     80
+    ]
+   },
+   "steps": 5
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 7,
+ "reach": {
+  "orlop": [
+   "cargo",
+   "hold"
+  ],
+  "gun": [
+   "fc-P",
+   "fc-S",
+   "hold",
+   "qd-P",
+   "qd-S"
+  ],
+  "qd": [
+   "poop",
+   "qd-P",
+   "qd-S"
+  ],
+  "poop": [
+   "poop"
+  ],
+  "fc": [
+   "fc-P",
+   "fc-S"
+  ]
+ },
+ "holes": {
+  "orlop": 786,
+  "gun": 722,
+  "qd": 41,
+  "poop": 39,
+  "fc": 69
+ },
+ "cavities_filled": [],
+ "lists": {
+  "deck-orlop": [
+   19931,
+   "8eef0a4cfb82955892496adee144b997082287556018b9715f0cdf8695d10517"
+  ],
+  "deck-orlop.state": [
+   19931,
+   "5dbc541d95eef3a165f118acc8dc728812d3ecae11b02b2721d4ae0aa779b94d"
+  ],
+  "deck-gun": [
+   21684,
+   "db4d02fd141a709cd70067bf1b11bef2491757b5649b0317aa97d98e2717a6c4"
+  ],
+  "deck-gun.state": [
+   21684,
+   "3dc3aaeb6fb84fe7854e55d15a4986f407630b803b58bc6ad3cd09f0343d7ab3"
+  ],
+  "deck-qd": [
+   8294,
+   "942f23441d4ed7e9a5c34c9f0cf07394972392333c9ec573965e75d09ca85538"
+  ],
+  "deck-qd.state": [
+   8294,
+   "b4471798654bda1a11a72bd68f7b8b8d908c70b8e5aad02e7242017bbd5041a5"
+  ],
+  "deck-poop": [
+   3966,
+   "f3ef8bf2361fb1d7e45df6794be411eca306c049a8da52429fd886d236bb7f32"
+  ],
+  "deck-poop.state": [
+   3966,
+   "6007bd385ea416ff8b420b2ef4817249e8106f7033648597f90500be4ef6c554"
+  ],
+  "deck-fc": [
+   3724,
+   "6709d963aa2a8a3cf4b82ca7d5c998753f7a49d2904da2aef158f60c1e8e7d91"
+  ],
+  "deck-fc.state": [
+   3715,
+   "2e84a53efd4c4a9dff3352a3db9608f5d2d4353bef7515e2c9934e2af9ee63f9"
+  ],
+  "ladders-gun": [
+   182,
+   "118f9e7e40c07057cc82727d35e1d2306d0a0100aed090b59d8da389d8ebaac7"
+  ],
+  "ladders-orlop": [
+   362,
+   "d1cc96bb18863bf80afe77d0875f2f6cac3b58a7289c9daaf82a038dd4fa0d12"
+  ],
+  "ladders-qd": [
+   372,
+   "d7df113e7bff31a4bde4a2fbb714389d7eb9669c6814db514cd6f53384d03ed0"
+  ],
+  "ladders-poop": [
+   186,
+   "5ccb607540cff14ccb2617095531f78a55bdfd2ee1133c181eccc0c4a213eea3"
+  ],
+  "ladders-fc": [
+   372,
+   "006667a20a7d4c024a80eeca59ca30a0a4fbb4d1b0392abb83f7a25bbeb3085f"
+  ]
+ }
+}
