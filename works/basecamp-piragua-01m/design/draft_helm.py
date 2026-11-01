@@ -31,8 +31,10 @@ def solids(plan):
     G = V(plan['guns'])
     post = [(G['post']['x'], plan['space']['yc'], z) for z in range(G['post']['z0'], G['post']['z1'] + 1)]
     occ = DG.solids(plan, post)
-    b = np.loadtxt(os.path.join(HERE, 'masks', 'magazine', 'board.vox.txt'), delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
-    occ[b[:, 0], b[:, 1], b[:, 2]] = True
+    f = os.path.join(HERE, 'masks', 'magazine', 'board.vox.txt')     # 彈藥庫墊板（v1；步驟 14 做了船尾平台之後拿掉 ⇒ 檔案不在）
+    if os.path.exists(f):
+        b = np.loadtxt(f, delimiter=',', comments='#', dtype=np.int32, ndmin=2, encoding='utf-8')
+        occ[b[:, 0], b[:, 1], b[:, 2]] = True
     return occ
 
 

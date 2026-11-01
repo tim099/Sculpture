@@ -58,6 +58,10 @@ def build(plan, probe):
     for x in range(bp['x'][0], bp['x'][1] + 1):
         D[x, :, seat_z][hollow[x, :, seat_z]] = col['platform']
     parts.append({'name': 'bow-platform', 'x': bp['x'], 'z': seat_z})
+    sp = V(plan['layout']['stern_platform'])                  # 船尾平台（步驟 14 匯入檢查 ✗ 取用點：要一塊 9×9 格的平地）
+    for x in range(sp['x'][0], sp['x'][1] + 1):
+        D[x, :, seat_z][hollow[x, :, seat_z]] = col['platform']
+    parts.append({'name': 'stern-platform', 'x': sp['x'], 'z': seat_z})
     return L, H, S, D, parts
 
 

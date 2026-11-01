@@ -37,7 +37,7 @@ def main():
     S = L.solid(0, SX - 1, 39, 0)
     hollow = S & (H == 0)
     board = {}
-    for x in range(M['board']['x'][0], M['board']['x'][1] + 1):
+    for x in (range(M['board']['x'][0], M['board']['x'][1] + 1) if M['board'] else []):   # v2 沒有墊板（桶擱在船尾平台上）
         for y in range(YC - M['board']['half_y'], YC + M['board']['half_y'] + 1):
             z = M['board']['z']
             assert hollow[x, y, z], ('墊板落在船殼上', x, y, z)
@@ -46,7 +46,7 @@ def main():
     occ = DG.solids(plan, post)
     for k in board:
         occ[k] = True
-    at = [M['barrel_x'] + 0.5, YC + 0.5, M['board']['z'] + 1 + probe.get('dz', 0)]
+    at = [M['barrel_x'] + 0.5, YC + 0.5, (M['board']['z'] + 1 if M['board'] else M['stand_z']) + probe.get('dz', 0)]
     pivot = [11, 11, 0]
     cells = DG.export(BARREL)[:, :3].astype(float)
     hits = 0
@@ -73,14 +73,15 @@ def main():
     if probe:
         print(json.dumps({'probe': probe, 'barrel_hits': hits}, ensure_ascii=False))
         return
-    os.makedirs(os.path.join(HERE, 'masks', 'magazine'), exist_ok=True)
-    with open(os.path.join(HERE, 'masks', 'magazine', 'board.vox.txt'), 'w', encoding='utf-8', newline='\n') as f:
-        f.write('# 杉心號 彈藥庫的墊板（draft_magazine.py）x,y,z,color —— at 0,0,0\n')
-        f.write(''.join('%d,%d,%d,%d\n' % (k[0], k[1], k[2], c) for k, c in sorted(board.items())))
-    cx = (M['board']['x'][0] + M['board']['x'][1]) // 2
+    if board:
+        os.makedirs(os.path.join(HERE, 'masks', 'magazine'), exist_ok=True)
+        with open(os.path.join(HERE, 'masks', 'magazine', 'board.vox.txt'), 'w', encoding='utf-8', newline='\n') as f:
+            f.write('# 杉心號 彈藥庫的墊板（draft_magazine.py）x,y,z,color —— at 0,0,0\n')
+            f.write(''.join('%d,%d,%d,%d\n' % (k[0], k[1], k[2], c) for k, c in sorted(board.items())))
+    z0 = int(at[2])                                                    # 桶站的那一層（第一層空氣）
     out = {'host': 'basecamp-piragua-01m-magazine', 'link': '彈藥庫',
            'link_meta': {'kind': 'magazine', 'pos': 'aft', 'powder_lb': M['powder_lb'], 'id': 'magazine-1'},
-           'anchors': {'blast': [cx, YC, M['board']['z'] + 3], 'door': [M['board']['x'][1] + 1, YC, M['board']['z']]},
+           'anchors': {'blast': [M['barrel_x'], YC, z0 + 3], 'door': [M['barrel_x'] + 3, YC, z0]},
            'models': [{'name': '桶-001', 'work': BARREL, 'at': at, 'pivot': pivot, 'scale': M['scale'], 'rotate': [0, 0, 0],
                        'meta': {'kind': 'powder', 'powder_lb': M['powder_lb'], 'id': 'powder-1'}}]}
     with open(os.path.join(HERE, 'magazine_placement.json'), 'w', encoding='utf-8', newline='\n') as f:
