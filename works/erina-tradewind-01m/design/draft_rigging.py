@@ -305,12 +305,13 @@ def main():
         sail(nm, [tack, head, fmt(clew)], [0], ['clew'], {'kind': 'sail', 'mast': 'bowsprit', 'sail': kind}, ['tack', 'head', 'clew'], fullness=1.06)
         for s_ in ('S', 'P'):
             rope('%s-sheet-%s' % (nm, s_), 'sail:%s/clew' % nm, '船殼/belay-%s-%s' % ('jib' if nm == 'jib' else 'staysail', s_), 'running/sheets', T['sheet'], 1.04, C['running'], {'kind': 'sheet', 'sail': nm})
-    # 旗：船旗掛斜桁尖（peak 與往前一點的 top-*，照飛魚號）
+    # 旗：船旗掛斜桁尖，旗邊垂直往下（下角是斜桁模型裡 peak 正下方那一點 ⇒ 跟著斜桁轉；照三叉戟號），只綁旗邊、飛邊兩角放開（free 1、2）
+    #   ⛔ 以前下角綁斜桁上往前的 top-128、四角全綁 ⇒ 旗邊沿斜桁擠成 0.74 m（飛邊 1.6 m）的梯形、兩頭釘死不會飄（Tim 2026-11-01）
     FL = RG['flags']
     ew, eh = FL['ensign']
     pk = pt(G, 'peak')
-    sail('ensign', ['model:%s/peak' % G, fmt(pk - [ew, 0, 0]), fmt(pk - [ew, 0, eh]), 'model:%s/%s' % (G, FL['ensign_gaff_point'])],
-         [3], None, {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#be161e', texture='textures/ensign.png')
+    sail('ensign', ['model:%s/peak' % G, fmt(pk - [ew, 0, 0]), fmt(pk - [ew, 0, eh]), 'model:%s/%s' % (G, ','.join('%g' % c for c in FL['ensign_luff_model']))],
+         [3], [1, 2], {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#be161e', texture='textures/ensign.png')
     ensign_png(os.path.join(design, 'textures', 'ensign.png'), 36, 24)
 
     metas = [['sail', s['name'], s['meta']] for s in sails] + [['rope', r['name'], r['meta']] for r in ropes if r['meta']]
