@@ -157,3 +157,60 @@
 - 錨：憲法號共用錨 ×0.55，兩舷，rz ±69.5、x 304、z 81、離船殼 1.2 m，撞 0、腳下踩在錨架托板 `-anchor-gear`（1,056 格）上。
 - 船殼固定點 hawse-S／P (314, 117／75, 69)。
 - 讀數：組裝件 270,012 格、1 元件、空腔 0、鏡像差 0；models_drawn 33、models_broken 0、link_overlap 0。圖 `overlays/step11_stern.png`。
+
+## 步驟 14 給遊戲的 meta 與匯入 Blockside（2026-11-01）
+- 組裝件關聯 `船殼` meta `kind=ship waterline_z=35`；ropecheck 繩 254 條、兩端 508 全綁好。
+- Blockside 自己的 worktree：`D:/Unity/Blockside-wt/apex-two-barbados`，分支 `apex-two/barbados`，從本機 `refs/heads/dev` 39095b5 開，`_cache` 先從共用的複製過去。
+  - `admin.py import --work apex-two-barbados-01m-assembly --id barbados --name 巴貝多商人號`；`admin.py ids --id barbados`：55 件，寫回 12 件作品的 meta。
+- 匯入檢查一路修下來（✗ 3 ⇒ 0、⚠ 25 ⇒ 2）：
+  - ✗ 後甲板、艏樓、艉樓走不到：hold 梯子在中線，梯井 x 134–148 緊貼後甲板前緣的門（x 150、中線）⇒ 船腰走不進後甲板底下。
+    - 修法：挪到左舷 dy −12、梯井只開到最上一階（well_b 10 ⇒ x 140–148）、梯頭 x 138。
+    - 這一條也連帶讓送藥手 8／8、爐灶、抽水機都走得到。
+  - ⚠ 樓梯自檢 ④ 梯頂沒貼到甲板邊：後甲板兩座、艉樓那座各往船尾 2 格；艉樓那座挪到左舷（v1 梯頭正對後桅）。
+  - ⚠ 火藥庫後面那塊下甲板走不到（x 60–102、約 17 m²）⇒ 火藥庫後牆也開一扇門（`magazine.door_aft`）。
+  - ⚠ geo 沒填、軍官／陸戰隊站不下 ⇒ game.json 本船那一列：
+    - geo：spar [59, 90]、marines [112, 76]、qx 60（沒有舵輪 ⇒ 軍官站位照外框起點往前 qx 格，預設 160 會落在船腰兩個艙口之間）、center 80、aim 64、aimZ [10, 330]、deckAim [61, 74]、rigAim [130, 330]。
+    - crew：照澤漢號的商船配置；cfg pump 3。
+  - 剩的 ⚠ 2：貨艙梯子「尋路沒收」—— Ship_Decks §9.3 ⑥：梯腳踩艙底的梯子本來就不進尋路，第一人稱爬得到。
+- 甲板與梯子改了 ⇒ 每件 `delta_apply`、梯子點 overwrite。
+  - 🩸 `masks/decks/` 有 `<層>.state.vox.txt`（扣掉艏斜桅孔）：迴圈兩份都套 ⇒ deck-fc 被補回 9 格孔 ⇒ 再照 state 刻掉。之後重套只用 `.state`。
+  - 鏡像差 0 ⇒ 430／210：hold 和艉樓那兩座梯子只在左舷（刻意的）。
+- 匯入檢查讀數：砲 8 門、0 門缺人；船員 45；帆 10、桅 3；彈藥庫 1（取用點 1）；甲板 5；梯子 6（＋貨艙梯子）；錨兩舷 ring＋hawse；水線 z 35。
+  - 材質：橡木 269,675 格 188.8 t、玻璃 300 格；超載極限再 656 噸。
+  - 樓梯自檢 7 座 ✗ 0；甲板連通 5 層＋艙底都接得到；廚房 1 座站得住 4 面。
+- game.json：import／reimport／ids 會重排整份 ⇒ 照 HEAD 原樣、只插本船那一列（64 行）；JSON 內容跟重排版逐項相同；重建成品、`srccheck` 對得回來。
+- 對打（`report.py --match barbados,oxford --seeds 1,2 --secs 120 --jobs 1`）：
+  - 本船：開火 82、命中 60%；砲可開 80%、裝填 17%；帆從全張收到戰鬥帆（1 ⇒ 0.52）。
+  - 航速：本船平均 4.8／6.6 節、最高 5.5／12.2；牛津號平均 6.4／7.5。
+  - ⇒ 開得動、砲打得出去。
+- 外框 x 38–402 ⇒ 全長 36.5 m（含艏斜桅；帆桁是模型不算）⇒ 超過小船泊位 36 m。
+- Blockside 提交 1f91158（分支 `apex-two/barbados`，還沒合進 dev）。
+- 合併（2026-11-01）：
+  - Blockside dev ff 到 fba8de6，已推 dev。之前先把 dev f63471f 合進分支：表演船遠近分級；本船補烘 showlod：123×51×99 塊、留 9,326、5 KB。
+  - 共用 `_cache/barbados.vxk` 指紋 = lock（c:d14e5274aa9f）。
+  - Blocksail main ff 到 eb758b04（`FLEET.types.merchant`、fleet_check、TRADE_SIM 表；子模組 → fba8de6、battle.html 重套），**沒推**。
+
+## 步驟 15 交船（2026-11-01）
+- vxk：barbados.vxk 格數 269,975、checksum 2538202501、繩 254、帆 10、模型 33、零件 22（admin.py reimport 讀數）。
+- 給遊戲那側的高度（geo 照這些填了）：
+  - 水線 z 35。
+  - 甲板地板：下甲板 43、上甲板（船腰）59–60、後甲板 78–87、艏樓 80–85、艉樓 98–103。
+  - 砲門下緣 z 65–66、砲軸 67–68；船腰舷頂 72–75。
+  - 桅頂：主 336、前 305、後 231；course 帆桁 主 182、前 164。
+  - 外框 x 38–402（船尾旗桿到艏斜桅尖）。
+- Ship_Game §10 檢查表逐條：
+  - ropecheck ✓（綁定猜 0、不靠 0）。
+  - 名稱與 sub ✓；mpv 與模型 scale ✓。
+  - 現成元件 ✓：砲、方帆桁、三角帆桁、火藥桶、錨、艙蓋、爐灶、絞盤；新做的元件 0。
+  - 爐灶 = 廚房（kind=galley、沒標 deco、4 面站得住）✓。
+  - 舵模型＋stock-top＋spin ✓；沒有舵輪、舵柄畫在舵上（whipstaff）✓。
+  - kind=ship waterline_z 35 ✓；梯子＋樓梯自檢 ✗ 0 ✓；橫繩組＋繩梯 ✓。
+  - 火藥桶＋送藥手 8／8 ✓；甲板 meta ✓；三角帆桁 gaff＋lateen＋fore ✓；玻璃 material=glass、6 連通 ✓。
+  - 艙蓋 kind=door ✓；砲門蓋板不適用（露天船腰）。
+  - 繩帆模型斷 0 ✓；帆與帆的繩 meta ✓；帆裝三段表 ✓。
+  - 1 元件／空腔 0／link_overlap 0 ✓（鏡像差：只在左舷的兩座梯子）。
+  - 重跑逐位元組相同 ✓；shipcheck ✗ 0 ✓、⚠ 2 看過（貨艙梯子）。
+- 沒做／沒驗：
+  - 空艙房沒標。
+  - 遊戲裡沒截圖看玻璃透明、沒在遊戲裡按 W／S 一段一段看帆（對打報表看得到帆從 1 收到 0.52）。
+  - 等 Tim 看船。
