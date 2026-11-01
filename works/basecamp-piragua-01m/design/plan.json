@@ -1,0 +1,57 @@
+{
+ "title": "杉心號 —— 1666 年前後加勒比海盜的大獨木舟 piragua／periago（雪松挖的平底獨木舟，一頭尖一頭平；14 支槳、一面大帆）",
+ "task": "TASK-1152（主單 TASK-1146）",
+ "name": {"v": "杉心號", "src": "設計決定：Dampier 說最好的 periago 是雪松挖的、「nothing but the tree itself made hollow」"},
+ "author": "basecamp",
+ "date": "2026-11-01",
+ "sources": {
+  "R": "references/research_piragua_2026-11-01.md（每一條的原文與有沒有核過）",
+  "D3": "Dampier 1697 第 3 章：periago 是雪松挖的、平底、一頭尖一頭平",
+  "D8": "Dampier 1697 第 8 章：Davis 造的兩艘大獨木舟 36 呎 × 5–6 呎、32 呎；底厚 3 吋、舷 2 吋到頂 1.5 吋；先把樹的上面削平",
+  "D1": "Dampier 1697 第 1 章：periago 划 14 支槳",
+  "D5": "Dampier 1697 第 5 章：坐板、繩環、槳；拿來送人上岸",
+  "E7": "Exquemelin 第 VII 章：雪松造、只張一面大帆的船叫 piragua",
+  "RV": "Ringrose 第 V／VII 章：periagua 重、划不快；小的 periagua 載 32 人以上"
+ },
+ "meters_per_cell": 0.1,
+ "space": {"hull": [140, 101, 40], "assembly": [140, 101, 100], "yc": 50, "src": "設計決定：寬 101 留給舷外的槳；長 140 前後留舵槳與船頭"},
+ "waterline": {"z": 3, "src": "設計決定（查不到吃水）：載 20–30 人約 0.35 m ⇒ z 0–2 在水下、DWL 在 z 3 底面；讀數 verify_lines.json 的排水量對一次"},
+ "lines": {
+  "x_aft": {"v": 15, "src": "設計決定：船尾平的那一頭（transom）"},
+  "x_fwd": {"v": 125, "src": "換算：全長 36 呎 ＝ 11.0 m（D8 Davis 那艘大的）⇒ 110 格（15 → 125）"},
+  "x_mid": {"v": 62, "src": "設計決定：最寬那一站在船中偏後（樹幹根部那頭比較粗 ⇒ 平的船尾）"},
+  "half_beam": {"v": 8.6, "src": "換算：寬 5–6 呎（D8）取 5.5 呎 ＝ 1.68 m ⇒ 17 格（2·8＋1）；8.6 而不是 8 ⇒ 舷頂下那一格的格心也量得到 |dy| 8（v1 寫 8 只有 15 格寬）"},
+  "bottom_half": {"v": 5, "src": "設計決定：平底（D3）半寬約船寬的六成"},
+  "section_pow": {"v": 0.55, "src": "設計決定：圓木挖出來的剖面 ⇒ 舭圓、舷側往上收直"},
+  "depth_mid": {"v": 8, "src": "設計決定（查不到深）：舷頂 z 8 ＝ 船底到舷頂 0.8 m、乾舷約 0.5 m（DWL z 3）"},
+  "flat_aft": {"v": 15, "src": "設計決定：平底一路平到船尾（平的那頭直接是 transom）"},
+  "flat_fwd": {"v": 100, "src": "設計決定：船頭最後 2.5 m 往上翹"},
+  "rocker_pow_fwd": {"v": 1.8, "src": "設計決定"},
+  "end_z_fwd": {"v": 5, "src": "設計決定：船頭底翹 0.5 m（上岸時船頭先上沙灘）"},
+  "sheer_z_aft": {"v": 8, "src": "設計決定：上面先削平（D8 squaring the uppermost side）⇒ 舷頂幾乎是平的"},
+  "sheer_z_fwd": {"v": 10, "src": "設計決定：船頭比船中高 0.2 m"},
+  "sheer_pow_aft": {"v": 2.0, "src": "設計決定"},
+  "sheer_pow_fwd": {"v": 2.5, "src": "設計決定"},
+  "plan_pow_aft": {"v": 2.0, "src": "設計決定：船尾收得少（平的那頭還有 1.1 m 寬）"},
+  "plan_pow_fwd": {"v": 1.6, "src": "設計決定：船頭收成尖（D3 一頭尖）"},
+  "end_half_aft": {"v": 5.5, "src": "設計決定：船尾平板半寬 ⇒ 舷頂寬約 1.2 m"},
+  "end_half_fwd": {"v": 0.5, "src": "設計決定：船頭收到 1 格（尖）"}
+ },
+ "layout": {
+  "thwarts": {"v": {"x": [33, 42, 51, 60, 69, 78, 87], "top_z": 4, "thick": 1, "width_x": 3}, "src": "D1 划 14 支槳 ⇒ 7 塊坐板、每塊兩人各划一舷（D5 thwarts or benches）；間距 0.9 m〔設計決定，槳手前後的空間〕；坐面 z 4 頂 ＝ 艙底上 0.35 m、舷頂再高 0.35 m 給槳靠"},
+  "oars": {"v": {"per_side": 7, "rowlock": "strap", "at_x_offset": 1}, "src": "D1 14 支槳（每舷 7）；D5 槳用繩環（straps）掛，沒寫槳栓 ⇒ 槳靠在舷頂、繩環綁在舷頂〔推〕"},
+  "steersman": {"v": {"x": [17, 27]}, "src": "設計決定：船尾平的那頭站舵手（舵槳，步驟 11）"},
+  "bow_platform": {"v": {"x": [100, 118]}, "src": "設計決定：船頭空出來放迴旋砲、上岸時先跳下去的人"},
+  "mast": {"v": {"x": 87, "through_thwart": 87, "step_z": 1, "height_m": 6.5, "unstep": true}, "src": "E7 只張一面大帆 ⇒ 一根桅；位置在第七塊坐板（船中偏前，桅綁在坐板上、腳踩艙底）〔設計決定〕；高 6.5 m〔設計決定：約船長六成〕；可拆（Wikipedia Periagua 轉述 masts could be struck，沒核）"},
+  "sail": {"v": {"type": "lateen", "area_m2": 18}, "src": "一手出處都沒寫帆型 ⇒ 設計決定：一面拉丁帆（唯一的圖 H 是 1744 年西班牙 piragua、像拉丁帆；遊戲有 rig=lateen 的轉法，越嶺號用過）；面積約 18 m²〔設計決定〕"}
+ },
+ "hull_build": {
+  "wall": {"v": 1, "src": "換算：底 3 吋、舷 2–1.5 吋（D8）都不到 0.1 m ⇒ 1 格（比實物厚，0.1 m 格只能這樣）"},
+  "colors": {
+   "hull": {"v": 136, "src": "設計決定：雪松外皮的紅褐（RGB332 136 ≈ 145,72,0）；v1 用 169（182,72,85）渲出來偏粉紅"},
+   "inner": {"v": 173, "src": "設計決定：挖出來的內面比較淺（173 ≈ 182,109,85）；艙底（上面是艙內）一律這個色"},
+   "below": {"v": 100, "src": "設計決定：水線下塗焦油的深褐（100 ≈ 109,36,0）"},
+   "band": {"v": 68, "src": "設計決定：舷頂一格深色（68 ≈ 72,36,0）"}
+  }
+ }
+}
