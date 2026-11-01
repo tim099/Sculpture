@@ -1,0 +1,302 @@
+{
+ "root": "trailhead-cookshop-01m",
+ "works": {
+  "trailhead-cookshop-01m-carib-cookshop": {
+   "anchors": {
+    "door": [
+     22,
+     21,
+     4
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "sign": [
+     88,
+     4,
+     30
+    ],
+    "smoke": [
+     71,
+     55,
+     40
+    ],
+    "work-a1": [
+     40,
+     33,
+     4
+    ],
+    "work-a1-to": [
+     40,
+     24,
+     14
+    ],
+    "work-a2": [
+     58,
+     33,
+     4
+    ],
+    "work-a2-to": [
+     58,
+     24,
+     14
+    ],
+    "work-b1": [
+     32,
+     57,
+     4
+    ],
+    "work-b1-to": [
+     32,
+     50,
+     13
+    ],
+    "work-c1": [
+     70,
+     46,
+     4
+    ],
+    "work-c1-to": [
+     70,
+     54,
+     11
+    ],
+    "work-d1": [
+     82,
+     100,
+     1
+    ],
+    "work-d1-to": [
+     82,
+     108,
+     8
+    ],
+    "work-e1": [
+     64,
+     100,
+     1
+    ],
+    "work-e1-to": [
+     64,
+     112,
+     5
+    ],
+    "work-f1": [
+     22,
+     86,
+     0
+    ],
+    "work-f1-to": [
+     22,
+     78,
+     9
+    ]
+   },
+   "expect": "trailhead-cookshop-01m-carib-cookshop.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,14",
+      "style": "carib",
+      "use": "cookshop",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "屋、擺設與後院",
+     "recolor": {},
+     "source": "trailhead-cookshop-01m-carib-cookshop-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "窗口、遮陽與長凳",
+     "recolor": {},
+     "source": "trailhead-cookshop-01m-carib-cookshop-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "trailhead-cookshop-01m-carib-cookshop-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      21,
+      4
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      34,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      84,
+      34,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      23,
+      64,
+      4
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      44,
+      84,
+      0
+     ],
+     "meta": {},
+     "name": "水桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      28.5,
+      22,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "building,carib",
+   "title": "加勒比海的小飯館（bodegón／cook-shop：小一號的橫板牆屋子、臨街大窗口與伸出牆外的櫃台、撐起來的木板遮陽；櫃台上的魚派與燉菜碗；招牌畫一條魚躺在派上；後院圓頂烤爐、烤木薯餅的陶盤、殺魚桌、曬魚架）"
+  },
+  "trailhead-cookshop-01m-carib-cookshop-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-cookshop-01m-carib-cookshop-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "加勒比海的小飯館｜屋、擺設與後院"
+  },
+  "trailhead-cookshop-01m-carib-cookshop-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-cookshop-01m-carib-cookshop-gallery.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "加勒比海的小飯館｜窗口、遮陽與長凳"
+  },
+  "trailhead-cookshop-01m-carib-cookshop-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "trailhead-cookshop-01m-carib-cookshop-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    140,
+    72
+   ],
+   "tags": "sub",
+   "title": "加勒比海的小飯館｜屋頂"
+  }
+ }
+}
