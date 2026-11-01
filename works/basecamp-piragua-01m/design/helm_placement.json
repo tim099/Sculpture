@@ -1,0 +1,99 @@
+{
+ "steer_work": "basecamp-piragua-01m-rudder",
+ "steer_anchors": {
+  "stock-top": [
+   26,
+   58,
+   8
+  ],
+  "loom-top": [
+   30,
+   57,
+   10
+  ],
+  "blade-tip": [
+   10,
+   60,
+   1
+  ],
+  "tiller-end": [
+   27,
+   53,
+   12
+  ]
+ },
+ "models": [
+  {
+   "host": "basecamp-piragua-01m-assembly",
+   "name": "舵槳",
+   "work": "basecamp-piragua-01m-rudder",
+   "at": [
+    26.5,
+    58.5,
+    8.5
+   ],
+   "pivot": [
+    26.5,
+    58.5,
+    8.5
+   ],
+   "scale": 1,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "rudder",
+    "rudder": "quarter",
+    "hinge_x": 26.5,
+    "hinge_y": 58.5,
+    "hinge_z": 8.5,
+    "axis_x": -0.9119,
+    "axis_y": 0.1403,
+    "axis_z": -0.3858,
+    "max_deg": 35,
+    "turn_axis": "hinge",
+    "spin": "rudder",
+    "spin_k": 35,
+    "spin_min": -35,
+    "spin_max": 35,
+    "spin_lag": 0.3,
+    "id": "rudder-1"
+   }
+  },
+  {
+   "host": "basecamp-piragua-01m-deck-main",
+   "name": "anchor-S",
+   "work": "kotoko-fusta-01m-anchor-grapnel",
+   "at": [
+    112.5,
+    56.5,
+    10.5
+   ],
+   "pivot": [
+    9.5,
+    9.5,
+    24.0
+   ],
+   "scale": 0.3,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower",
+    "id": "anchor-1"
+   }
+  }
+ ],
+ "hull_anchors": {
+  "hawse-S": [
+   112,
+   52,
+   8
+  ]
+ }
+}

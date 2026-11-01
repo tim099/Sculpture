@@ -109,3 +109,19 @@ TASK-1152（主單 TASK-1146）。Tim 2026-11-01「/scp-task 1152 GO」。
   - 關聯「彈藥庫」meta：`kind=magazine pos=aft powder_lb=50 id=magazine-1`；沒有梯子 ⇒ 不寫 hoist。
 - 讀數：桶碰撞（格心＋八角）0；反向對照桶往下 1 格 ⇒ 12,748。墊板＋桶的外框當擋路之後，走路格照樣 1 群、9.28 m²（坐板那一步是 9.53）。
 - 這艘船沒有的：門與艙蓋（沒有艙口）、廚房（獨木舟上不生火）、小艇（它自己就是小艇）、絞盤、羅經櫃。被打掉怎麼演照預設（帆桁照規格表是 fall）。
+
+## 步驟 11 舵槳與錨（`design/draft_helm.py` → `helm_placement.json`、`verify_helm.json`；落格 `tools/build_helm.py`）
+
+- 舵槳：一手出處沒寫怎麼操舵 ⇒ 推論（研究筆記：船尾一支舵槳最可能）。
+  - 本來想做中線、搭在船尾平板上。但船尾後面只有 1.5 m、組裝件底是 z 0，槳葉會穿出框底 ⇒ 改**右舷船尾側**（同蓬特號）。
+  - 子作品 `basecamp-piragua-01m-rudder`「杉心號 舵槳（右舷船尾側）」整船的框、47 格、長 2.1 m；綁點 P (26.5, 58.5, 8.5)（右舷舷頂外 1 格）、槳葉中心在 DWL、舵柄往船裡伸給站在船尾的舵手。
+  - 模型「舵槳」掛在組裝件：`kind=rudder rudder=quarter`、hinge ＝ P、axis 沿槳柄、`max_deg 35`、`spin=rudder spin_k=35 ±35 lag 0.3`、`id=rudder-1`。
+  - 固定點：stock-top（綁點那一格，旁邊 8 格內有 283 格船）、loom-top、blade-tip、tiller-end。
+  - 讀數：碰撞（格心＋八角）0°／+35°／−35° 都 0；全部格 z ≥ 0.55。
+  - 反向對照：往下沉 3 格 ⇒ 13／6／20。
+  - 🩸 v1 綁點貼著舷頂外緣 ⇒ 轉 ±35° 槳柄的格角擦進舷頂 5／3 格 ⇒ 往外挪 1 格。
+  - 沒有舵輪（舵柄畫在舵槳上，同 fusta、蓬特號）。
+- 錨：一隻四爪錨（共用件 `kotoko-fusta-01m-anchor-grapnel`，scale 0.3 ⇒ 高 0.69 m）。
+  - 掛在右舷船頭外側（錨環頂 ＝ pivot，同越嶺號），模型在甲板-main，meta `kind=anchor anchor=bower id=anchor-1`。
+  - 船殼登記錨鏈孔 `hawse-S` (112, 52, 8)。
+  - 讀數：碰撞 0。反向對照：往船殼推 3 格 ⇒ 178（往下沉碰不到東西，那把尺不會叫）。
