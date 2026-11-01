@@ -306,13 +306,14 @@ def main():
         for s_ in ('S', 'P'):
             rope('%s-sheet-%s' % (nm, s_), 'sail:%s/clew' % nm, '船殼/belay-%s-%s' % (nm, s_), 'running/sheets', T['sheet'], 1.03, C['running'], {'kind': 'sheet', 'sail': nm})
         rope('%s-tack' % nm, 'sail:%s/tack' % nm, tacks[key], 'running/tacks', T['tack'], 1.0, C['running'], {'kind': 'tack', 'sail': nm})
-    # 旗：葡萄牙國旗掛最後桅三角帆桁的尾端（peak 與往前 ensign_yard_point）
+    # 旗：葡萄牙國旗掛最後桅三角帆桁的尾端，旗邊垂直往下（下角是帆桁模型裡 peak 正下方那一點 ⇒ 跟著帆桁轉；照三叉戟號），只綁旗邊、飛邊兩角放開（free 1、2）
+    #   ⛔ 以前下角綁帆桁上往前的 top-02、四角全綁 ⇒ 旗邊沿帆桁斜下去、梯形、兩頭釘死不會飄（erina 2026-11-01，Tim 回報信風號同一個毛病）
     FL = RG['flags']
     ew, eh = FL['ensign']
     YB = '最後桅/yard-bonav-lateen'
     pk = pt(YB, 'peak')
-    sail('ensign', ['model:%s/peak' % YB, fmt(pk - [ew, 0, 0]), fmt(pk - [ew, 0, eh]), 'model:%s/%s' % (YB, FL['ensign_yard_point'])],
-         [3], None, {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#f0eee4', texture='textures/ensign.png')
+    sail('ensign', ['model:%s/peak' % YB, fmt(pk - [ew, 0, 0]), fmt(pk - [ew, 0, eh]), 'model:%s/%s' % (YB, ','.join('%g' % c for c in FL['ensign_luff_model']))],
+         [3], [1, 2], {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#f0eee4', texture='textures/ensign.png')
     portugal_png(os.path.join(design, 'textures', 'ensign.png'), 36, 24)
 
     metas = [['sail', s['name'], s['meta']] for s in sails] + [['rope', r['name'], r['meta']] for r in ropes if r['meta']]
