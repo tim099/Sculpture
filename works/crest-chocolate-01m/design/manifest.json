@@ -1,0 +1,332 @@
+{
+ "root": "crest-chocolate-01m",
+ "works": {
+  "crest-chocolate-01m-carib-chocolate-house": {
+   "anchors": {
+    "door": [
+     50,
+     29,
+     4
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "sign": [
+     89,
+     4,
+     30
+    ],
+    "smoke": [
+     79,
+     104,
+     20
+    ],
+    "work-a1": [
+     72,
+     72,
+     4
+    ],
+    "work-a1-to": [
+     72,
+     63,
+     15
+    ],
+    "work-b1": [
+     17,
+     62,
+     4
+    ],
+    "work-b1-to": [
+     17,
+     70,
+     8
+    ],
+    "work-c1": [
+     27,
+     47,
+     4
+    ],
+    "work-c1-to": [
+     18,
+     42,
+     13
+    ],
+    "work-d1": [
+     56,
+     44,
+     4
+    ],
+    "work-d1-to": [
+     70,
+     42,
+     13
+    ],
+    "work-e1": [
+     22,
+     88,
+     0
+    ],
+    "work-e1-to": [
+     22,
+     100,
+     8
+    ],
+    "work-f1": [
+     50,
+     22,
+     4
+    ],
+    "work-f1-to": [
+     18,
+     20,
+     13
+    ],
+    "work-g1": [
+     79,
+     94,
+     1
+    ],
+    "work-g1-to": [
+     79,
+     104,
+     8
+    ]
+   },
+   "expect": "crest-chocolate-01m-carib-chocolate-house.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "10,12",
+      "style": "carib",
+      "use": "chocolate-house",
+      "variant": "a"
+     },
+     "mirror": "",
+     "name": "屋、擺設與後院",
+     "recolor": {},
+     "source": "crest-chocolate-01m-carib-chocolate-house-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "gallery"
+     },
+     "mirror": "",
+     "name": "前廊",
+     "recolor": {},
+     "source": "crest-chocolate-01m-carib-chocolate-house-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "crest-chocolate-01m-carib-chocolate-house-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      40,
+      29,
+      4
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      29,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗1",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      68,
+      29,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "前-窗2",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 0
+    },
+    {
+     "at": [
+      5,
+      38,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "左-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 270
+    },
+    {
+     "at": [
+      92,
+      38,
+      13
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    },
+    {
+     "at": [
+      33,
+      78,
+      4
+     ],
+     "meta": {
+      "part": "door-plank"
+     },
+     "mirror": "",
+     "name": "後-門（往院子）",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-plank",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      48,
+      108,
+      0
+     ],
+     "meta": {},
+     "name": "水桶-院",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      36.5,
+      30,
+      24.5
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    100,
+    120,
+    72
+   ],
+   "tags": "building,carib",
+   "title": "加勒比海的巧克力館（chocolatería／chocolate house：橫板牆的屋子、木瓦四坡頂蓋住前廊；屋裡小桌、長櫃台上的銅巧克力壺與攪棒、磨可可的石磨台；招牌畫一杯熱巧克力；後院曬可可豆的架子與灶棚）"
+  },
+  "crest-chocolate-01m-carib-chocolate-house-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-chocolate-01m-carib-chocolate-house-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    120,
+    72
+   ],
+   "tags": "sub",
+   "title": "加勒比海的巧克力館｜屋、擺設與後院"
+  },
+  "crest-chocolate-01m-carib-chocolate-house-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-chocolate-01m-carib-chocolate-house-gallery.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    120,
+    72
+   ],
+   "tags": "sub",
+   "title": "加勒比海的巧克力館｜前廊"
+  },
+  "crest-chocolate-01m-carib-chocolate-house-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "crest-chocolate-01m-carib-chocolate-house-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    100,
+    120,
+    72
+   ],
+   "tags": "sub",
+   "title": "加勒比海的巧克力館｜屋頂"
+  }
+ }
+}
