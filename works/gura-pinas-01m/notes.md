@@ -225,3 +225,4 @@ Tim：「967 參考 task TASK-1045 船頭船尾優化一下吧」→「船尾感
 - 砲門蓋：匯入檢查 ✗ 2「關上時穿過縮回去的砲」（砲門蓋-U-P03／U-S03，house 5）⇒ 照修法 meta house 8（`sub=meta part=model`）。
 - ⚠ **砲具的環還沒挪**：重跑 `draft_gunfittings.py` ⇒ 這 8 門的船牆環要挪（刻 40、貼 40）。Tim 同日拍板「炮具相關視為遊戲meta 不限定只有作者能修改」，但雕刻引擎還只放行梯子作品（`✗ blocked：只有作品作者 gura 可以雕刻`）⇒ 格子沒動、設計檔退回 HEAD；現在環比 eye 低一點、繩照樣接得上。引擎放行之後照這三行跑：`draft_gunfittings.py .` ⇒ `tools/delta_apply.py . gura-pinas-01m-gunfittings masks/gunfittings/gunfittings.vox.txt` ⇒ `tools/build_gunfittings.py .`。
 - Blockside `reimport --id pinas`：格數、checksum、模型數、繩數都沒變；匯入檢查 ✗ 0、⚠ 11（跟換之前一樣）。
+- ✅ 同日引擎放行砲具作品（Senate c80510b：被 kind=gunfittings 關聯引用的作品格子不限作者；砲具關聯補了 `kind=gunfittings`）⇒ ridge-two 跑了上面三行：`draft_gunfittings.py` 刻 40、貼 40，讀回 0 差；`build_gunfittings.py` 固定點 72 全掛上（ring-* 8 門的環挪到新砲的 eye 高）。繩那一步被擋（繩照舊只有作者能改），但 `gun_ropes.json` 沒變 —— 繩照固定點名字接、跟著環走，不用重掛。

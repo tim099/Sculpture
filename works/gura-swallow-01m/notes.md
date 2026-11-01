@@ -191,3 +191,10 @@
 - 換一艘船時的檢查表（Ship_Game §10）逐條看過：ropecheck 全 ok（沒有 bind／snap）；組裝件名「燕子號」、船殼「燕子號 船殼」帶 sub；組裝件與每件子作品記了 meters_per_voxel、模型都明寫 scale；開工前查過 components（砲、錨、火藥桶、羅經櫃、爐灶、帆桁都引用現有的；新做的只有船首像、lateen 帆桁、舵、舵柄、艙蓋、絞盤、彈藥庫 —— 本船的尺寸或個性裝飾）；爐灶是廚房（kind=galley、沒標 deco）；砲、帆桁、火藥桶、羅經櫃是外部模型帶 kind；舵 kind=rudder＋spin、stock-top；舵柄 kind=tiller＋spin；船殼關聯 kind=ship、waterline_z；梯子 kind=ladders 四點；樓梯自檢 ✗ 0；ratlines 是橫繩組、lower 標了 climb=1；彈藥庫裡有桶；每層甲板 kind=deck；三角帆桁 yard=gaff＋rig=lateen＋fore；全船木頭（沒有材質關聯）；窗玻璃是獨立關聯 material=glass；空艙房不做；砲零碰撞、砲口在船殼外；艙蓋 kind=door；沒有封閉砲甲板 ⇒ 沒有砲門蓋板；繩帆 broken 0、帆繩 meta 0 缺；帆裝三段的表在步驟 8；組裝件 1 元件、空腔 0、link_overlap 0、兩舷對稱；產生程式重跑逐位元組相同。
 - **給遊戲那側填 geo 的高度**（世界 z，0.1 m／格）：龍骨底 0；水線 24；貨艙地板 10（站 11）；船長艙地板 25（站 26）；主甲板 31（站 32；舷弧 141:32 → 256:37）；後甲板 44（站 45）；舷頂 船腰 39、船頭 46、船尾 52–53；砲軸 37–39；主桅平台 141、主桅頂 223；後桅頂 117；course 帆桁 129、topsail 帆桁 209；艏斜桅尖 (323, 82)；船殼 x 95–262（全長含艏斜桅 x 90–323）。
 - checksum：Blockside `_cache/swallow.vxk` ＝ `c:37b56e4ec9b192ec4bb19dc92af9b6e688802a25`（vxk_lock）。
+
+## 換砲：4 磅砲換成自己的模型（ridge-two，2026-11-01）
+
+- Tim 2026-11-01：「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」→「飛魚 燕子 如果縮四磅炮呢」（Ship_Guns §2.2 砲只跟同一種砲共用模型；同一種砲在不同船可以縮放）⇒ `guns_build.types.4l` 從風暴角號 `-gun-6l` 縮 0.375 換成 4 磅砲通用部件 `pinnacle-patache-01m-gun-4l` 縮 **0.35**（pivot [6.5, 28, 0]；砲管 1.54 m）。
+- 為什麼這麼小：4 磅砲件的砲架比較高。第 2 門（x 204–208、砲門 z 34–38、甲板 33）：0.443 砲管頂到上楣 z 39、往裡退到 25 格都撞（draft_guns KeyError phi）；0.4 有 2 門砲口縮在牆裡；0.375 放得下但第 2 門砲口只伸出 0.19 格；**0.35** 六門都放得下。
+- 讀數：只有 main 6 門 4l 那 6 列變：back 2.5–4 ⇒ 3–4、砲口伸出 3.69–5.19 ⇒ 1.77–2.78、砲軸高差 0.02 格；not_ok 0。
+- 落格：只重掛 6 門 4l（`sub=model overwrite=1`，meta 帶著 id）；`tools/build_guns.py` 的 NAMES['4l'] 跟著改。本船沒有砲具子作品。

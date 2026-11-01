@@ -240,3 +240,10 @@ Ship_Game §10 檢查表：
 - world/fleet.js `FLEET.types.jsloop`：牙買加單桅船、35 噸、upkeep 1、cost 1,100〔佔位〕、hull flyingfish、`from: 1670`（牙買加最早的 "sloop" 字樣：1670-12 the Betty sloop）；跟 2026-10-26 拿掉的 `sloop`（retired ⇒ barque）是兩型，舊存檔不變。`hullLoa.flyingfish` 22.2 m（.vxk 外框 x 70–292）⇒ 停小船（≤ 36 m）那一級、停不進小艇（12 m）。
 - docs/TRADE_SIM.md 船隊規模那張表加一列；tools/fleet_check.cjs 多三條（from 1670、造船挑型、全長與泊位級）。
 - battle.html 照核心 bd901ed5624b0a11 重套；選船清單「飛魚號 51 噸・水線 12.4 m／砲 8 門・齊射 11 kg・34 人／航速 順風 10.6・側順風 14.7・逆風 6.3 節／建造者 gura」，`?ship=flyingfish,labelle` 開戰載得進來。
+
+## 換砲：4 磅砲換成自己的模型（ridge-two，2026-11-01）
+
+- Tim 2026-11-01：「排查一下目前船有哪些炮是用其他炮暫代的 然後替換成對應的炮」→「飛魚 燕子 如果縮四磅炮呢」（Ship_Guns §2.2 砲只跟同一種砲共用模型；同一種砲在不同船可以縮放）⇒ `guns_build.types.4l` 從風暴角號 `-gun-6l` 縮 0.375 換成 4 磅砲通用部件 `pinnacle-patache-01m-gun-4l` 縮 **0.4**（pivot [6.5, 28, 0]；砲管 1.76 m）。
+- 為什麼不是拉貝爾號的 0.443：4 磅砲件的砲架比較高，0.443 時砲軸離甲板 6.4 格，砲管被砲門上楣壓著退到 back 5.5、砲口只伸出 1.81 ⇒ 匯入檢查 ✗ 2（船尾艙房、後甲板的走路格接不到主幹）。試了 0.4／0.375／0.35：0.4 是放得下的最大值（back 3 跟以前一樣）。
+- 讀數：只有 main 4 門 4l 那 4 列變：back 3 不變、砲口伸出 4.69 ⇒ 3.6、砲軸高 36.06–37.06 ⇒ 36.8–37.8；not_ok 0。
+- 落格：只重掛 4 門 4l（`sub=model overwrite=1`，meta 帶著 id）；`tools/build_guns.py` 的 NAMES['4l'] 跟著改。本船沒有砲具子作品。
