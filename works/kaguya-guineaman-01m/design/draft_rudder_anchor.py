@@ -48,7 +48,11 @@ def main():
         if os.path.exists(os.path.join(WORKS, w_, 'work.json')):
             own |= set(map(tuple, export_list(w_, None)[:, :3].tolist()))
     A = np.array([r for r in A.tolist() if tuple(r[:3]) not in own], np.int32)
-    H = export_list('kaguya-guineaman-01m', None)
+    # 船殼讀本步驟開始時的樣子（Ship_Game §10「產生程式重跑逐位元組相同」）：helm port 是本步驟刻的 ⇒ 讀上一個標記「艏斜桅孔」（point，刻 helm port 之前）；
+    #   🩸 步驟 15 照現況重跑 ⇒ helm port 0 格、stock_top_to_hull 找不到船殼（10 ** 9）。組裝件裡的船殼 at 0,0,0 ⇒ 刻掉的那幾格補回 A
+    H = export_list('kaguya-guineaman-01m', '艏斜桅孔')
+    As = set(map(tuple, A[:, :3].tolist()))
+    A = np.concatenate([A, np.array([r for r in H.tolist() if tuple(r[:3]) not in As], np.int32).reshape(-1, 4)])
     Hc0 = {tuple(r[:3]): r[3] for r in H.tolist()}
     Hs0 = set(Hc0)
     minx = {}

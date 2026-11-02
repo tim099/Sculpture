@@ -156,6 +156,31 @@
 - 提交：Blockside worktree `25eb85e`（8 檔：成品、showlod、船檔、game.json、ship_cards、vxk_lock、10_ship.js、template）⇒ 施工場 `coding-20261101T175549Z-kaguya`（範圍 Blockside 子模組＋Blocksail battle.html）⇒ 共用 dev 快轉 9ea8e4b → 25eb85e（共用樹上別人沒提交的 ship_cards.json 船員數先存 patch、快轉後原樣套回）⇒ 共用 `_cache` 補 guineaman.vxk、`verify` 一致 ⇒ Blocksail `e7e001c7`（指標＋post-merge 掛鉤重套的 battle.html）。worktree 拆了、分支 `-d` 刪了。
   - ⚠ **Blockside dev 沒推**：dev/dev..heads/dev 底下還有一筆不是本小姐的 9ea8e4b（"Show food quality with transparent four-grade dish frames"）—— 要不要一起推等 Tim。Blocksail 推也等 Tim。
 
+## 步驟 15 交船（2026-11-02）
+Ship_Game §10 逐條看過。不適用的不列：槳帆船與甲板下的槳、撞角、鐵甲／煙囪／主機／鍋爐、薄金屬板、跟著砲轉的裝甲、砲塔層、蒸汽艦、砲門蓋板（步驟 12 刪了：砲在露天甲板從舷牆砲門打）、新砲種（4 磅砲、迴旋砲都是現有的）。遊戲那側在臨時 Blockside worktree（heads/dev 528ca70、`_cache` 從共用的整份複製、diff -rq 一致）量，⛔ 不在共用樹跑（上面有別人沒提交的 ship_cards.json）。
+- **繩**：ropecheck 412 端全 ok（bind／snap／onrope／odd／manual 0）；橫繩組 12、下桅 6 組都有 🪜。帆 11 面都有 meta（沒有 meta 0）；帆桁 10 根 meta 都有 `mast`、`sail`（crossjack 不掛帆、sail 空）；三角帆桁 `yard=gaff rig=lateen`、固定點 fore。
+- **名稱與比例**：組裝件「幾內亞船」、船殼「幾內亞船 船殼」tags sub；27 件作品都記了比例（0.1 m，格柵 0.05 m）、子作品都有 sub；47 個模型都明寫 scale。
+- **元件**（開工前跑過 components，步驟 2）。新做的、為什麼不用現有的：
+  - 後桅三角帆桁：牛津號有 `erina-oxford-01m-yard-mizzen-lateen`（13.6 m、固定點 23），×0.84 縮得到。〔取捨〕留著抄來的 draft_masts 照 plan 產生的那一根 —— 帆頭綁的 top-NN 固定點照長度排，縮放會連粗細與點距一起縮。
+  - 格柵：憲法號兩件照它自己的艙口量（1930 圖），縮放會改掉 5 cm 的條距 ⇒ 照本船艙口新做（風暴角號同樣做法）。
+  - 火藥庫、舵、舵柄、錨床：貼著本船船殼的結構（元件清單裡的舵、舵柄也都是各船自己的）。
+- **舵與操舵**：舵 kind=rudder（hinge、axis、max 35°、turn_axis）、stock-top；遊戲裡開局 `__game.lostModels(0)` ＝ []（shipcheck 頁、pve 開一場各量一次）；spin 舵與舵柄 ±35°（匯入檢查讀數那一行列得出來）；操舵 舵令 ⇒ 舵柄 ⇒ 舵 100%。
+- **甲板、梯子、火藥、廚房**：甲板 5 層 kind=deck；梯子 6 座 kind=ladders、四點；ladcheck ✗ 0、⚠ 4（四座船樓梯子的梯腳正前方是船樓前牆／第 5 門砲，要往旁邊繞 —— 步驟 5 把梯子搬進船樓底下的取捨）；甲板連通 5 層都接得到；火藥 16／16 門走得到；爐灶 kind=galley（不標 deco）、站得住 4 面。
+- **玻璃**：180 格都在船上、material=glass；1 格厚（另 30 格是艉柱倒 10° 的接縫補格，Ship_Materials「窗的玻璃」）；150 欄後面每一欄至少 3.2 m 是空的（看得到艙裡）。遊戲 `T.glsN` 180（當透明格另外畫）、截圖看得到天空的反光。
+- **砲**：4 磅砲 10 門零碰撞、砲口在殼外（步驟 9）。迴旋砲 6 門 砲＋座一起掃 −80～80°（每 5°）：撞實心 0、碰到別的模型外框 0（scratchpad `t1149/s15/swivel_sweep.py`）；**反向對照** F-S01 往下 2 格 ⇒ 每個角度撞 318–324 個取樣點、只報這一門；往外 8 往下 7 ⇒ 碰到 `錨床/錨-S` 的外框。座 6 件配到 6 門。
+- **門、艙蓋：沒有 kind=door**。〔取捨〕主、前艙口是格柵（奴隸船艙裡通風，research §6），蓋上艙蓋就不是格柵；三道 break 的門洞是直立的、高在水線上（§9.7：直立的門遊戲本來就不擋水）；遊戲沒門 ⇒ 不當進水口；超載極限 再多載 253 噸（吃水再深 2.20 m）水才從舷牆頂進來。牛津號的主、前艙口有艙蓋 —— 要的話是兩件門模型、不動別的件。
+- **空艙房**：沒標（步驟 5：下層甲板要不要隔艙房等玩法單）。
+- **材質**：全船橡木 158,232 格 110.8 噸、玻璃 0.5 噸（匯入檢查）；沒有混合材質 ⇒ 不另算重量帳。
+- **帆裝**：遊戲裡 S 從滿帆一段一段收到全收、W 再加回滿帆，每一段張的帆跟步驟 8 的表逐面相同；全收時每面布收成一捲在帆桁上。
+- **結構**：組裝件 158,412 格、1 元件、空腔 0、鏡像差 0、link_overlap 0、link_clipped 0。
+- **產生程式重跑**：10 支全跑 ⇒ 跟提交的比 4 檔不同：
+  - `gear_placement.json` 的 hoist ＝ 步驟 14 改進 plan 的 id 寫法（提交時沒重產）；`verify_guns.json` 只有讀到的組裝件格數（後面幾步加的格）。
+  - 🩸 `draft_rudder_anchor.py` 讀船殼的**現況** ⇒ helm port 已經刻了 ⇒ helm port 0 格、`stock_top_to_hull` 找不到船殼（10⁹）。改成讀上一個標記「艏斜桅孔」（point，刻 helm port 之前：100,901 格）、刻掉的 18 格補回組裝件 ⇒ 跟提交的只差讀到的組裝件格數 157,738 → 157,758（＋20 ＝ 步驟 14 艏樓梯子那一次 delta）。
+  - 改完 10 支再全跑一次：輸出逐位元組相同。draft_masts 的艏斜桅孔清單也是讀現況（刻完是 0、跟提交的一樣），沒動。
+- **checksum**：從作品重新匯出一份 vs 共用 `_cache/guineaman.vxk`（＝ lock `c:1ce9c17bcd…`）：格子逐格相同（158,412）、header 只差 `rig.ropes[].bind` 127 條 —— 那是 Blockside `ropebind` 匯入後寫進 `_cache` 的（遊戲照它綁繩），指紋連它一起算；拿掉 bind ⇒ header 完全相同、vxk_compare ✓。好旅號同樣（bind 79 條）⇒ 從作品重新匯出的指紋對不上任何有 bind 的 lock（`admin.py cache` 會把它們報成「作品變過了」）—— Blockside 那側的事，沒改。
+  - ⚠ 2026-11-02 10:16 summit 在本船主桅／前桅／後桅／艏斜桅的關聯加了 `kind=mast`＋`mast`（整個船隊一起標、還沒提交；meta_log 有記）⇒ 之後重新匯出 header 會多這四筆，等 summit 那一輪同步之後再對。
+- **匯入檢查**（同一個 worktree 重跑）✗ 0、⚠ 4（就是上面四座梯子）；卡片沒變。
+
 ## 給遊戲那側填 geo 用的高度（已照這些填進 Blockside game.json ships[guineaman].geo）
 - 水線 z 29；主甲板（第一層空氣）船中 z 38、船尾 45、船頭 43；後甲板 z 56–63；艉樓 z 75–80；艏樓 z 56–59；下層甲板 z 21。
 - 4 磅砲外框 z 38–47；迴旋砲外框底 後甲板 73、艉樓 90、艏樓 68；前桅樓 z 約 131；桅頂離水線 主 24.4、前 21.6、後 14.7 m（z 273、245、176）。
@@ -172,7 +197,6 @@
 - 奴隸船才有的構造（步驟 5、10 再定、都要標出處）：下層甲板（slave deck，大概 1.5 m 淨高）、主甲板上的格柵艙口與通風口、主桅前橫過甲板的 barricado（17 世紀末的文獻有：Thomas Phillips 1693–94 Hannibal 的航海日誌；1666 年有沒有要查）。⇒ 步驟 10 再查：Phillips 那一條沒查到原文，見步驟 10。
 
 ## 下一步
-- 步驟 15 交船：換一艘船時的檢查表逐條看（Ship_Game §10）、跟遊戲那側對 checksum（共用 `_cache/guineaman.vxk` ＝ lock `c:1ce9c17bcd…`）。
 - 單上 #3：Blocksail 有一型畫它（玩家不能造、不能買；AI 商人照載重挑船型時不挑它；fleet_check 沒動的船型讀數不變）—— 還沒做。
 - 單上 #1 造船資料、#4 Tim 看過一次。
-- Blockside dev 推不推（底下有別人的 9ea8e4b）等 Tim；Blocksail main 推也等 Tim。
+- Blockside 25eb85e、Blocksail e7e001c7 已在遠端（2026-11-02 早上量）；Sculpture 76f38c6d、b3c66622 推不推等 Tim。
