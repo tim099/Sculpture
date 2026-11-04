@@ -1,0 +1,491 @@
+{
+ "root": "ridge-two-salt-01m",
+ "works": {
+  "ridge-two-salt-01m-mine-rocksalt": {
+   "anchors": {
+    "door": [
+     60,
+     4,
+     1
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a2": [
+     72,
+     50,
+     1
+    ],
+    "work-a2-to": [
+     64,
+     47,
+     10
+    ],
+    "work-a3": [
+     71,
+     36,
+     1
+    ],
+    "work-a3-to": [
+     64,
+     42,
+     10
+    ],
+    "work-b1": [
+     47,
+     49,
+     1
+    ],
+    "work-b1-to": [
+     55,
+     46,
+     10
+    ],
+    "work-b2": [
+     39,
+     63,
+     1
+    ],
+    "work-b2-to": [
+     32,
+     59,
+     10
+    ],
+    "work-b3": [
+     48,
+     35,
+     1
+    ],
+    "work-b3-to": [
+     56,
+     42,
+     10
+    ],
+    "work-c1": [
+     20,
+     84,
+     1
+    ],
+    "work-c1-to": [
+     24,
+     92,
+     10
+    ],
+    "work-d1": [
+     24,
+     46,
+     1
+    ],
+    "work-d1-to": [
+     24,
+     54,
+     10
+    ],
+    "work-e1": [
+     85,
+     51,
+     1
+    ],
+    "work-e1-to": [
+     85,
+     44,
+     10
+    ],
+    "work-e2": [
+     104,
+     51,
+     1
+    ],
+    "work-e2-to": [
+     104,
+     44,
+     10
+    ],
+    "work-f1": [
+     83,
+     74,
+     1
+    ],
+    "work-f1-to": [
+     84,
+     82,
+     10
+    ]
+   },
+   "expect": "ridge-two-salt-01m-mine-rocksalt.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,16",
+      "recipes": "rock-salt",
+      "style": "common",
+      "use": "mine",
+      "variant": "d"
+     },
+     "mirror": "",
+     "name": "岩丘、坑道與擺設",
+     "recolor": {},
+     "source": "ridge-two-salt-01m-mine-rocksalt-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "ridge-two-salt-01m-mine-rocksalt-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      36,
+      60,
+      0
+     ],
+     "meta": {},
+     "name": "水桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      49,
+      71,
+      18
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-坑口",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "building,common",
+   "title": "礦坑（鹽岩款：淡粉的岩鹽、鑿成塊的鹽磚、鹽袋）"
+  },
+  "ridge-two-salt-01m-mine-rocksalt-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-salt-01m-mine-rocksalt-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜岩丘、坑道與擺設"
+  },
+  "ridge-two-salt-01m-mine-rocksalt-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-salt-01m-mine-rocksalt-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    160,
+    100
+   ],
+   "tags": "sub",
+   "title": "礦坑｜屋頂"
+  },
+  "ridge-two-salt-01m-saltpan-marsh": {
+   "anchors": {
+    "door": [
+     34,
+     5,
+     0
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "work-a1": [
+     52,
+     25,
+     1
+    ],
+    "work-a1-to": [
+     59,
+     22,
+     10
+    ],
+    "work-b1": [
+     66,
+     32,
+     0
+    ],
+    "work-b1-to": [
+     64,
+     25,
+     9
+    ],
+    "work-c1": [
+     90,
+     35,
+     0
+    ],
+    "work-c1-to": [
+     90,
+     27,
+     9
+    ],
+    "work-d1": [
+     78,
+     6,
+     0
+    ],
+    "work-d1-to": [
+     72,
+     13,
+     9
+    ],
+    "work-d2": [
+     94,
+     13,
+     0
+    ],
+    "work-d2-to": [
+     91,
+     21,
+     9
+    ],
+    "work-d3": [
+     112,
+     15,
+     0
+    ],
+    "work-d3-to": [
+     104,
+     23,
+     9
+    ],
+    "work-e1": [
+     112,
+     36,
+     0
+    ],
+    "work-e1-to": [
+     104,
+     28,
+     9
+    ],
+    "work-f1": [
+     35,
+     85,
+     2
+    ],
+    "work-f1-to": [
+     35,
+     95,
+     11
+    ],
+    "work-f2": [
+     60,
+     95,
+     2
+    ],
+    "work-f2-to": [
+     60,
+     105,
+     11
+    ],
+    "work-f3": [
+     85,
+     85,
+     2
+    ],
+    "work-f3-to": [
+     85,
+     95,
+     11
+    ]
+   },
+   "expect": "ridge-two-salt-01m-saltpan-marsh.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "kind": "building",
+      "lot": "12,12",
+      "recipes": "salt-marsh",
+      "style": "common",
+      "use": "saltpan",
+      "variant": "b"
+     },
+     "mirror": "",
+     "name": "鹽池、鹽倉與擺設",
+     "recolor": {},
+     "source": "ridge-two-salt-01m-saltpan-marsh-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "ridge-two-salt-01m-saltpan-marsh-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      24,
+      5,
+      0
+     ],
+     "meta": {
+      "part": "door-double"
+     },
+     "mirror": "",
+     "name": "前-門",
+     "recolor": {},
+     "source": "summit-carib-01m-part-door-double",
+     "turn": 0
+    },
+    {
+     "at": [
+      58,
+      12,
+      9
+     ],
+     "meta": {
+      "part": "window-board"
+     },
+     "mirror": "",
+     "name": "右-窗",
+     "recolor": {},
+     "source": "summit-carib-01m-part-window-board",
+     "turn": 90
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      112,
+      10,
+      0
+     ],
+     "meta": {},
+     "name": "鹽桶",
+     "pivot": [
+      6,
+      6,
+      0
+     ],
+     "source": "summit-rocher-01m-barrel"
+    },
+    {
+     "at": [
+      48.5,
+      6,
+      22
+     ],
+     "meta": {
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "mpv": 0.1,
+   "order": 2,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "building,common",
+   "title": "鹽田（沼澤鹽款：灰的海灣鹽、池埂上鹽沼的草）"
+  },
+  "ridge-two-salt-01m-saltpan-marsh-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-salt-01m-saltpan-marsh-body.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "sub",
+   "title": "鹽田｜鹽池、鹽倉與擺設"
+  },
+  "ridge-two-salt-01m-saltpan-marsh-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "ridge-two-salt-01m-saltpan-marsh-roof.vox.txt",
+   "models": [],
+   "mpv": 0.1,
+   "order": 1,
+   "size": [
+    120,
+    120,
+    50
+   ],
+   "tags": "sub",
+   "title": "鹽田｜屋頂"
+  }
+ }
+}
