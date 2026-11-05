@@ -110,7 +110,7 @@ def kastellion():
     M.box('rampart', 248, 0, 66, 252, 2, 86, RED, force=True)
     M.box('rampart', 238, 0, 74, 262, 2, 78, RED, force=True)
     M.box('rampart', GX0, 2, 0, GX1, 2 + WF, 2, STONE_J, force=True)   # 門洞鋪地（從牆面那一線起：門口那一格要是空氣）
-    lantern(M, '燈籠-門', (221, 0, 32))
+    lantern(M, '燈籠-門', (221, 2, 32))                                # 掛在牆面上（牆面 y 2；以前 at 在 y 0 ⇒ 跟牆隔兩格空氣，匯入檢查「開場就掉」）
     M.anchor('door', 250, 0, 0)
     # 塔（Megálos Pýrgos）：頂上城垛；院子那一面一扇門、右牆牆頂一扇門（進木樓板那一層）
     T = np.zeros((X, Y, Z), bool)
@@ -139,14 +139,15 @@ def kastellion():
     for (x, y, z) in zip(*np.nonzero(T)):
         M.put('tower', int(x), int(y), int(z), bt(int(x), int(y), int(z)), force=True)
     M.box('rampart', TX0 + 20, TY0 + 20, HW - 2, TX1 - 20, TY1 - 20, HW, FLOOR, force=True)   # 塔裡的木樓板（＝ 牆頂那一層甲板）
-    # 直梯：貼著塔裡的右牆（x 476..477）、從木樓板到塔頂；爬的人在 −x 那一側，梯頂往 −x 走出梯口
+    # 直梯：立在梯口靠 −x 的那一邊（x 470..471，頂端貼著塔頂石板的邊）、從木樓板到塔頂；爬的人在 +x 那一側、面朝 −x，
+    #   到頂往前跨過梯頂就踩上甲板（樓梯自檢 ④：以前梯子貼著右牆、爬的人在梯口裡 ⇒ 最上一階到甲板邊懸空 6 柱）
     for z in range(HW, TH):
         for y in (331, 338):
-            M.put('ladder', 476, y, z, FRAME)
-            M.put('ladder', 477, y, z, FRAME)
+            M.put('ladder', 470, y, z, FRAME)
+            M.put('ladder', 471, y, z, FRAME)
         if (z - HW) % 3 == 2:
             for y in range(332, 338):
-                M.put('ladder', 476, y, z, FRAME)
+                M.put('ladder', 471, y, z, FRAME)
     ft, fb = flagpole01(M, 434, 334, TH, TH + 90, layer='tower')
     M.anchor('flag', 434, 334, TH + 92)
     M.anchor('flag-top', *ft)
@@ -222,7 +223,14 @@ def kastellion():
                            meta={'kind': 'gunmount', 'mount_of': g['meta']['id'], 'id': 'gunmount-%s' % g['meta']['id'].split('-')[1]}))
     kegs = [powder_keg('火藥桶-%d' % (i + 1), x, y, 2) for i, (x, y) in enumerate(((52, 72), (64, 72), (52, 84), (64, 84)))]
     M.anchor('lot-0', 0, 0, 0)
-    LA = {'L1.foot': (475, 335, HW), 'L1.lo': (475, 335, HW + 2), 'L1.hi': (475, 335, TH - 1), 'L1.head': (468, 335, TH)}
+    # 駐軍的工作點（summit 2026-10-25 在 0.2 m 版標的 work-<名>／-to ⇒ 座標 ×2；塔頂 z 260、牆頂 z 100、e1 站在石階上）：寫進產生程式，apply anchors 才不會當成清單外的拿掉
+    for nm, at, to in (('a1', (386, 286, 260), (382, 282, 268)), ('b1', (486, 386, 260), (490, 390, 268)), ('a2', (386, 386, 260), (382, 390, 268)),
+                       ('b2', (486, 286, 260), (490, 282, 268)), ('a3', (386, 346, 260), (380, 346, 268)), ('a4', (446, 286, 260), (446, 280, 268)),
+                       ('a5', (446, 386, 260), (446, 392, 268)), ('a6', (486, 346, 260), (492, 346, 268)), ('c1', (12, 386, 100), (8, 390, 108)),
+                       ('d1', (486, 12, 100), (490, 8, 108)), ('c2', (12, 12, 100), (8, 8, 108)), ('e1', (28, 346, 86), (20, 346, 94))):
+        M.anchor('work-' + nm, *at)
+        M.anchor('work-%s-to' % nm, *to)
+    LA ={'L1.foot': (472, 335, HW), 'L1.lo': (472, 335, HW + 2), 'L1.hi': (472, 335, TH - 2), 'L1.head': (468, 335, TH)}
     return {'key': 'kastellion', 'mpv': 0.1,
             'title': '加拉塔堡（Kastellion／聖十字堡 1453：帶狀磚石的高牆與城垛、26 m 的高塔、巨鏈的鐵環、城門與熱那亞紅十字牌、院子裡的小堂、倉房、火藥間；九門 bombardella、塔頂兩門迴旋砲）',
             'use': 'fort', 'lot': (50, 40), 'M': M, 'style': 'genoa', 'flags': [flag],
@@ -230,7 +238,7 @@ def kastellion():
                        'ladder': '塔裡的直梯（牆頂那一層 ⇒ 塔頂）'},
             'layer_meta': {'rampart': {'kind': 'deck', 'deck': 'wall', 'level': 1, 'name': '牆頂', 'floor': '0:%d,%d:%d' % (HW, X, HW), 'thick': 12, 'material': 'stone'},
                            'tower': {'kind': 'deck', 'deck': 'tower', 'level': 2, 'name': '塔頂', 'floor': '%d:%d,%d:%d' % (TX0, TH, TX1, TH), 'thick': 12, 'material': 'stone'},
-                           'magazine': {'kind': 'magazine', 'pos': 'mid', 'powder_lb': 100 * len(kegs), 'material': 'stone'},
+                           'magazine': {'kind': 'magazine', 'pos': 'mid', 'powder_lb': 100 * len(kegs), 'material': 'stone', 'hoist': '塔裡的直梯（牆頂那一層 ⇒ 塔頂）/L1'},   # 塔頂的砲：火藥從直梯吊上去（取用點在梯腳、梯頭）
                            'ladder': {'kind': 'ladders'}},
             'layer_anchors': {'magazine': {'blast': (64, 78, 12), 'door': (MR[2], 74, 0)}, 'ladder': LA},
             'layer_models': {'rampart': guns_w, 'tower': guns_t, 'magazine': kegs}}
