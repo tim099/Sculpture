@@ -1,33 +1,73 @@
 {
- "mpv": 0.2,
+ "mpv": 0.1,
  "root": "kaguya-galata-tower-1453",
  "works": {
   "kaguya-galata-tower-1453": {
    "anchors": {
     "door": [
-     80,
-     126,
+     160,
+     252,
      0
     ],
     "flag": [
-     79,
-     79,
-     222
+     158,
+     158,
+     445
     ],
     "flag-bottom": [
-     81,
-     79,
-     215
+     162,
+     158,
+     431
     ],
     "flag-top": [
-     81,
-     79,
-     222
+     162,
+     158,
+     445
     ],
     "lot-0": [
      0,
      0,
      0
+    ],
+    "work-a1": [
+     151,
+     257,
+     1
+    ],
+    "work-a1-to": [
+     151,
+     281,
+     9
+    ],
+    "work-a2": [
+     169,
+     257,
+     1
+    ],
+    "work-a2-to": [
+     169,
+     281,
+     9
+    ],
+    "work-a3": [
+     137,
+     269,
+     1
+    ],
+    "work-a3-to": [
+     125,
+     293,
+     9
+    ],
+    "work-a4": [
+     183,
+     269,
+     1
+    ],
+    "work-a4-to": [
+     195,
+     293,
+     9
     ]
    },
    "expect": "kaguya-galata-tower-1453.composite.txt",
@@ -42,7 +82,6 @@
       "base": 0,
       "kind": "building",
       "lot": "32,32",
-      "model": null,
       "style": "genoa",
       "use": "galata-tower",
       "variant": "a"
@@ -67,6 +106,81 @@
      "recolor": {},
      "source": "kaguya-galata-tower-1453-roof",
      "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "gun",
+      "floor": "115:174,204:174",
+      "kind": "deck",
+      "level": 0,
+      "material": "stone",
+      "name": "3 層砲台",
+      "thick": 2
+     },
+     "mirror": "",
+     "name": "3 層砲甲板",
+     "recolor": {},
+     "source": "kaguya-galata-tower-1453-deck-gun",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": "top",
+      "floor": "81:300,238:300",
+      "kind": "deck",
+      "level": 1,
+      "material": "stone",
+      "name": "頂層砲台",
+      "thick": 2
+     },
+     "mirror": "",
+     "name": "頂層砲台",
+     "recolor": {},
+     "source": "kaguya-galata-tower-1453-deck-top",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "ladders"
+     },
+     "mirror": "",
+     "name": "直梯",
+     "recolor": {},
+     "source": "kaguya-galata-tower-1453-ladder",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "kind": "magazine",
+      "material": "wood",
+      "pos": "mid",
+      "powder_lb": 200
+     },
+     "mirror": "",
+     "name": "火藥間",
+     "recolor": {},
+     "source": "kaguya-galata-tower-1453-magazine",
+     "turn": 0
     }
    ],
    "mask": null,
@@ -75,7 +189,7 @@
     {
      "bind": "0",
      "color": 255,
-     "corners": "flag-top|flag-bottom|92,79,215|92,79,222",
+     "corners": "flag-top|flag-bottom|184,158,431|184,158,445",
      "free": "2,3",
      "meta": {
       "flag": "ensign",
@@ -86,9 +200,9 @@
     }
    ],
    "size": [
-    160,
-    160,
-    250
+    320,
+    320,
+    500
    ],
    "tags": "building,genoa",
    "title": "加拉塔塔 1453（基督塔 Christea Turris，熱那亞，1348）"
@@ -97,24 +211,406 @@
    "anchors": {},
    "links": [],
    "mask": "kaguya-galata-tower-1453-body.vox.txt",
+   "models": [],
    "order": 10,
    "size": [
-    160,
-    160,
-    250
+    320,
+    320,
+    500
    ],
    "tags": "sub",
    "title": "加拉塔塔 1453｜塔身（石砌、磚層、射口、盲拱、托石、雉堞、樓板、門、1452 年外堡）"
+  },
+  "kaguya-galata-tower-1453-deck-gun": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-galata-tower-1453-deck-gun.vox.txt",
+   "models": [
+    {
+     "at": [
+      189.0,
+      110.0,
+      176
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "id": "gun-1",
+      "kind": "gun"
+     },
+     "name": "砲-1",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      -150
+     ],
+     "scale": 0.5,
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    },
+    {
+     "at": [
+      145.0,
+      104.0,
+      176
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "id": "gun-2",
+      "kind": "gun"
+     },
+     "name": "砲-2",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      165
+     ],
+     "scale": 0.5,
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    },
+    {
+     "at": [
+      110.0,
+      131.0,
+      176
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "id": "gun-3",
+      "kind": "gun"
+     },
+     "name": "砲-3",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      120
+     ],
+     "scale": 0.5,
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    }
+   ],
+   "order": 30,
+   "size": [
+    320,
+    320,
+    500
+   ],
+   "tags": "sub",
+   "title": "加拉塔塔 1453｜3 層砲甲板（樓板）與三門砲"
+  },
+  "kaguya-galata-tower-1453-deck-top": {
+   "anchors": {},
+   "links": [],
+   "mask": "kaguya-galata-tower-1453-deck-top.vox.txt",
+   "models": [
+    {
+     "at": [
+      221.5,
+      173.0,
+      300
+     ],
+     "meta": {
+      "ammo": "firebolt",
+      "gun": "springald",
+      "id": "gun-4",
+      "kind": "gun",
+      "mount": "pivot",
+      "ports": "0,20,-20",
+      "weapon": "springald"
+     },
+     "name": "重弩-1",
+     "pivot": [
+      15.5,
+      18.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      -78
+     ],
+     "scale": 0.5,
+     "source": "erina-dromon-01m-ballista"
+    },
+    {
+     "at": [
+      200.5,
+      196.5,
+      300
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "id": "gun-5",
+      "kind": "gun"
+     },
+     "name": "砲-5",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      -48
+     ],
+     "scale": 0.5,
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    },
+    {
+     "at": [
+      179.5,
+      220.0,
+      300
+     ],
+     "meta": {
+      "ammo": "firebolt",
+      "gun": "springald",
+      "id": "gun-6",
+      "kind": "gun",
+      "mount": "pivot",
+      "ports": "0,20,-20",
+      "weapon": "springald"
+     },
+     "name": "重弩-2",
+     "pivot": [
+      15.5,
+      18.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      -18
+     ],
+     "scale": 0.5,
+     "source": "erina-dromon-01m-ballista"
+    },
+    {
+     "at": [
+      147.0,
+      221.5,
+      300
+     ],
+     "meta": {
+      "ammo": "firebolt",
+      "gun": "springald",
+      "id": "gun-7",
+      "kind": "gun",
+      "mount": "pivot",
+      "ports": "0,20,-20",
+      "weapon": "springald"
+     },
+     "name": "重弩-3",
+     "pivot": [
+      15.5,
+      18.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      12
+     ],
+     "scale": 0.5,
+     "source": "erina-dromon-01m-ballista"
+    },
+    {
+     "at": [
+      123.5,
+      200.5,
+      300
+     ],
+     "meta": {
+      "gun": "bombardella",
+      "id": "gun-8",
+      "kind": "gun"
+     },
+     "name": "砲-8",
+     "pivot": [
+      6.5,
+      0,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      42
+     ],
+     "scale": 0.5,
+     "source": "kotoko-fusta-01m-gun-bombardella"
+    },
+    {
+     "at": [
+      100.0,
+      179.5,
+      300
+     ],
+     "meta": {
+      "ammo": "firebolt",
+      "gun": "springald",
+      "id": "gun-9",
+      "kind": "gun",
+      "mount": "pivot",
+      "ports": "0,20,-20",
+      "weapon": "springald"
+     },
+     "name": "重弩-4",
+     "pivot": [
+      15.5,
+      18.5,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      72
+     ],
+     "scale": 0.5,
+     "source": "erina-dromon-01m-ballista"
+    }
+   ],
+   "order": 40,
+   "size": [
+    320,
+    320,
+    500
+   ],
+   "tags": "sub",
+   "title": "加拉塔塔 1453｜頂層砲台（塔頂樓板與牆頂）與重弩、砲"
+  },
+  "kaguya-galata-tower-1453-ladder": {
+   "anchors": {
+    "L1.foot": [
+     123,
+     160,
+     174
+    ],
+    "L1.head": [
+     131,
+     160,
+     300
+    ],
+    "L1.hi": [
+     123,
+     160,
+     298
+    ],
+    "L1.lo": [
+     123,
+     160,
+     176
+    ]
+   },
+   "links": [],
+   "mask": "kaguya-galata-tower-1453-ladder.vox.txt",
+   "models": [],
+   "order": 50,
+   "size": [
+    320,
+    320,
+    500
+   ],
+   "tags": "sub",
+   "title": "加拉塔塔 1453｜3 層 ⇒ 頂層的直梯"
+  },
+  "kaguya-galata-tower-1453-magazine": {
+   "anchors": {
+    "blast": [
+     160,
+     193,
+     176
+    ],
+    "door": [
+     160,
+     186,
+     174
+    ]
+   },
+   "links": [],
+   "mask": "kaguya-galata-tower-1453-magazine.vox.txt",
+   "models": [
+    {
+     "at": [
+      156.0,
+      192.0,
+      174
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-1",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      0
+     ],
+     "scale": 0.2,
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    },
+    {
+     "at": [
+      164.0,
+      192.0,
+      174
+     ],
+     "meta": {
+      "kind": "powder",
+      "powder_lb": 100
+     },
+     "name": "火藥桶-2",
+     "pivot": [
+      11,
+      11,
+      0
+     ],
+     "rotate": [
+      0,
+      0,
+      0
+     ],
+     "scale": 0.2,
+     "source": "basecamp-frigate-constitution-01m-powder-barrel"
+    }
+   ],
+   "order": 60,
+   "size": [
+    320,
+    320,
+    500
+   ],
+   "tags": "sub",
+   "title": "加拉塔塔 1453｜火藥間（3 層、木板圍起來）"
   },
   "kaguya-galata-tower-1453-roof": {
    "anchors": {},
    "links": [],
    "mask": "kaguya-galata-tower-1453-roof.vox.txt",
+   "models": [],
    "order": 20,
    "size": [
-    160,
-    160,
-    250
+    320,
+    320,
+    500
    ],
    "tags": "sub",
    "title": "加拉塔塔 1453｜屋頂（鉛皮圓錐）與頂飾（旗杆、熱那亞旗、帶十字的金球）"

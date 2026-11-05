@@ -1,6 +1,6 @@
 {
  "title": "加拉塔塔 1453（基督塔 Christea Turris，熱那亞，1348）",
- "mpv": 0.2,
+ "mpv": 0.1,
  "frame_m": [32, 32, 50],
  "frame_note": "作品框 ＝ 地塊（32 × 32 m，中心 ＝ 塔中心）；正面（y 0）朝城外（北），門在背面（城裡、南）。地塊 rot 270（Blocksail 規劃：臨路那一邊朝北）",
  "tower": {
@@ -18,7 +18,34 @@
   "door": {"angle": 90, "w": 1.6, "h": 3.0},
   "embrasures": {"z0": 17.6, "h": 1.2, "w": 0.8, "angles": [-60, -105, -150]},
   "slits_irregular": {"per_floor": 4, "w": 0.2, "h": [1.2, 1.8]},
-  "slits_regular": {"z0": 22.2, "h": 1.8, "w": 0.2, "n": 8}
+  "slits_regular": {"z0": 22.2, "h": 1.8, "w": 0.2, "n": 8},
+  "work_spots_02m": {"work-a1": [75, 128, 0], "work-a1-to": [75, 140, 4], "work-a2": [84, 128, 0], "work-a2-to": [84, 140, 4], "work-a3": [68, 134, 0], "work-a3-to": [62, 146, 4], "work-a4": [91, 134, 0], "work-a4-to": [97, 146, 4]},
+  "drum": {"r0": 4.475, "t": 0.6, "doors": [0, 90, 180, -90], "door_w": 1.2, "door_h": 1.8}
+ },
+ "armament": {
+  "gundeck_floor": 17.17,
+  "deep_sill": 0.4,
+  "gun_open_deg": 9,
+  "hatch": {"x": -3.4, "y": 0.0, "w": 1.0, "d": 1.2},
+  "gundeck": [
+   {"name": "砲-1", "id": "gun-1", "gun": "bombardella", "a": -60},
+   {"name": "砲-2", "id": "gun-2", "gun": "bombardella", "a": -105},
+   {"name": "砲-3", "id": "gun-3", "gun": "bombardella", "a": -150}
+  ],
+  "top": [
+   {"name": "重弩-1", "id": "gun-4", "gun": "springald", "a": 12},
+   {"name": "砲-5", "id": "gun-5", "gun": "bombardella", "a": 42},
+   {"name": "重弩-2", "id": "gun-6", "gun": "springald", "a": 72},
+   {"name": "重弩-3", "id": "gun-7", "gun": "springald", "a": 102},
+   {"name": "砲-8", "id": "gun-8", "gun": "bombardella", "a": 132},
+   {"name": "重弩-4", "id": "gun-9", "gun": "springald", "a": 162}
+  ],
+  "magazine": {"a": 90, "r": 3.3, "w": 1.8, "d": 1.0, "h": 1.0, "barrels": 2},
+  "components": {
+   "bombardella": {"work": "kotoko-fusta-01m-gun-bombardella", "scale": 0.25, "pivot": [6.5, 0, 0], "len_m": 2.3},
+   "springald": {"work": "erina-dromon-01m-ballista", "scale": 0.25, "pivot": [15.5, 18.5, 0], "front_m": 1.48},
+   "powder": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.1}
+  }
  },
  "barbican": {"r": 14.0, "t": 1.4, "h": 5.0, "crenel_h": 0.8, "a0": -48, "a1": -195},
  "colors": {
@@ -38,6 +65,9 @@
   "finial": "參考資料：Sağlam 2021：塔上有一個大十字（多半是帶十字的球）；尺寸是設計決定",
   "stone colors": "參考資料：Sağlam 2021：粗鑿的大塊雜石（深黃、淺棕、深灰、深藍）夾碎磚、不規則層；比例是設計決定（第一版深藍 6％、灰藍 20％ 遠看像迷彩 ⇒ 降到 3％／13％、暖色調高）",
   "barbican": "參考資料：Sağlam 2021：塔前的半圓外堡，石碑記 1452-04-01，防火砲的 faussebraye；半徑、高、厚是設計決定（沒有尺寸資料）；兩端接城牆（a0／a1 ＝ 城牆兩支在作品座標的方向，照 Blocksail 史料表 galata-wall 第 7、9 點算）",
-  "door": "設計決定：地面層、朝城裡（南）"
+  "door": "設計決定：地面層、朝城裡（南）",
+  "armament": "Sağlam 2021 §63：一般射口又深又窄、底斜，不適合弓手（多半通風採光）；3 層三個大射口大概是真正的砲眼；主火力推測在頂層雉堞平台。§51：1394–1402 鄂圖曼用扭力投射機攻城；§53：1452 外堡防火砲。⚠ 沒有史料記塔上架了什麼 ⇒ 武器種類、數量、位置全是設計決定（Tim 2026-11-05「加上炮&弩箭」「做強化版弩炮 確保射的到」，TASK-1025）：3 層砲眼 bombardella ×3（照原朝向：朝陸、跟 1452 外堡同一側）；頂層朝水那半圈（城裡、南）重弩 springald ×4、bombardella ×2，架在挖深的垛口後",
+  "drum": "設計決定：撐屋頂的鼓座從 6.8 m 縮到 4.475 m（內牆線）、開四道門 ⇒ 雉堞後面多出 2.75 m 寬、屋簷蓋著的走道；以前鼓座跟雉堞之間只有 0.4 m，頂層站不下武器",
+  "hatch": "設計決定：3 層到頂層一道直梯，穿過 4、5 層樓板與頂層樓板（樓梯廊道本來在牆裡、沒畫）"
  }
 }

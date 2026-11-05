@@ -20,3 +20,5 @@ model_cache/
 # 遮罩的組合檔（2026-10-20，Tim 拍板）：design 的產生程式把部件遮罩組起來的產物（法式建築套件 16 個共 121 MB），可以重生 ⇒ 不入版控
 # （已經追蹤的不受影響：kaguya-roman-1453 那一個照舊追蹤）
 works/*/design/masks/*.composite.txt
+# 加拉塔塔改成 0.1 m（2026-11-05，TASK-1025）：部件遮罩是 design/build.py 決定論重產的（塔身 74 MB）⇒ 不入版控
+works/kaguya-galata-tower-1453/design/masks/*.vox.txt

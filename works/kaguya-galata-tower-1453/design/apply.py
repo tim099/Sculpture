@@ -19,6 +19,7 @@ os.makedirs(TMP, exist_ok=True)
 ok = bad = 0
 P = 'kaguya'
 MPV = man.get('mpv', 0.1)
+CHUNK = 900000
 
 
 def cli(args, quiet_fail=False):
@@ -87,11 +88,14 @@ for w, W in sel:
         for nm, cells, args in (('carve', carve, ['op=carvevox']), ('stamp', add, ['op=stampvox', 'overwrite=1'])):
             if not cells:
                 continue
-            p = os.path.join(TMP, '%s.%s.vox.txt' % (w, nm))
-            dump(p, cells)
-            rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(cells), 'draft=0', 'share=0'])
-            m = re.search(r'placed\s*=\s*(\d+)', out)
-            print(w, nm, len(cells), 'rc', rc, 'placed', m.group(1) if m else '?')
+            items = sorted(cells.items())
+            for i0 in range(0, len(items), CHUNK):                 # 單刀上限 100 萬格 ⇒ 切成每份 90 萬（0.1 m 的塔身 481 萬格）
+                part = dict(items[i0:i0 + CHUNK])
+                p = os.path.join(TMP, '%s.%s.%d.vox.txt' % (w, nm, i0 // CHUNK))
+                dump(p, part)
+                rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(part), 'draft=0', 'share=0'])
+                m = re.search(r'placed\s*=\s*(\d+)', out)
+                print(w, nm, i0 // CHUNK, len(part), 'rc', rc, 'placed', m.group(1) if m else '?')
         print(w, '現況 %d → 清單 %d｜刻 %d、補／換色 %d' % (len(cur), len(want), len(carve), len(add)))
     elif step == 'anchors':
         have = {}
@@ -119,6 +123,10 @@ for w, W in sel:
             same_rest = c and (c.get('recolor') or '') == rc_s and (c.get('meta') or {}) == L['meta']
             if same_geo and same_rest:
                 continue
+            if same_geo and (c.get('recolor') or '') == rc_s:      # 只差 meta ⇒ sub=meta（重掛同名關聯會被擋）；清單沒有的鍵給 null 刪掉
+                mt = dict(L['meta']); mt.update({k: None for k in (c.get('meta') or {}) if k not in L['meta']})
+                cli(['op=work', 'sub=meta', 'persona=' + P, 'work=' + w, 'part=link', 'name=' + L['name'], 'meta=' + json.dumps(mt, ensure_ascii=False, sort_keys=True)])
+                continue
             args = ['op=work', 'sub=link', 'persona=' + P, 'work=' + w, 'name=' + L['name'], 'source_work=' + L['source'], 'at=' + fmt(L['at']), 'turn=%d' % L['turn']]
             if L['mirror']:
                 args.append('mirror=' + L['mirror'])
@@ -130,18 +138,35 @@ for w, W in sel:
                 args.append('overwrite=1')
             cli(args)
         print(w, 'links', len(W['links']))
+    elif step == 'sails':                                      # 布旗（TASK-1025 補：以前手下 CLI；0.1 m 之後飛角的格座標要跟著換）
+        cur = {s['name']: s for s in (jload(w, 'sails.json') or {}).get('sails', [])}
+        for S in W.get('sails', []):
+            c = cur.get(S['name'])
+            have = '|'.join(k['at'] for k in c['corners']) if c else None
+            if have != S['corners']:
+                if c:
+                    cli(['op=work', 'sub=unsail', 'persona=' + P, 'work=' + w, 'name=' + S['name']])
+                cli(['op=work', 'sub=sail', 'persona=' + P, 'work=' + w, 'name=' + S['name'], 'corners=' + S['corners'], 'bind=' + S['bind'], 'free=' + S['free'], 'color=%d' % S['color']])
+                c = None
+            if not c or (c.get('meta') or {}) != S['meta']:
+                cli(['op=work', 'sub=meta', 'persona=' + P, 'work=' + w, 'part=sail', 'name=' + S['name'], 'meta=' + json.dumps(S['meta'], ensure_ascii=False, sort_keys=True)])
+        print(w, 'sails', len(W.get('sails', [])))
     elif step == 'models':
         cur = {m['name']: m for m in (jload(w, 'models.json') or {}).get('models', [])}
         for m in W.get('models', []):
             c = cur.get(m['name'])
             rot = m.get('rotate', [0, 0, 0])
-            if c and c.get('work') == m['source'] and list(c['at']) == list(m['at']) and list(c['pivot']) == list(m['pivot']) and list(c['rotate']) == list(rot) and (c.get('meta') or {}) == m['meta']:
+            sc = m.get('scale')                                # 沒寫 ⇒ CLI 照兩件作品的一格幾公尺換算
+            if c and c.get('work') == m['source'] and list(c['at']) == list(m['at']) and list(c['pivot']) == list(m['pivot']) and list(c['rotate']) == list(rot) and (c.get('meta') or {}) == m['meta'] \
+                    and (sc is None or all(abs(v - sc) < 1e-6 for v in c.get('scale', []))):
                 continue
             args = ['op=work', 'sub=model', 'persona=' + P, 'work=' + w, 'name=' + m['name'], 'source_work=' + m['source'],
                     'at=' + fmt(m['at']), 'pivot=' + fmt(m['pivot']), 'rotate=' + fmt(rot)]
+            if sc is not None:
+                args.append('scale=%g' % sc)
             if m['meta']:
                 args.append('meta=' + json.dumps(m['meta'], ensure_ascii=False, sort_keys=True))
-            if c and c.get('work') != m['source']:
+            if c:                                              # 已經有這個名字（位置、縮放或來源變了）⇒ 照清單蓋掉
                 args.append('overwrite=1')
             cli(args)
         print(w, 'models', len(W.get('models', [])))
