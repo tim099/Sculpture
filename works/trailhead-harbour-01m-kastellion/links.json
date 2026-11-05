@@ -12,12 +12,12 @@
 			"turn": 0,
 			"mirror": "",
 			"pivot": [
-				250,
-				200,
-				180
+				500,
+				400,
+				360
 			],
 			"enabled": true,
-			"created_at": "2026-10-23T18:22:44",
+			"created_at": "2026-11-05T11:29:28",
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
@@ -40,22 +40,22 @@
 			"turn": 0,
 			"mirror": "",
 			"pivot": [
-				250,
-				200,
-				180
+				500,
+				400,
+				360
 			],
 			"enabled": true,
-			"created_at": "2026-10-23T18:22:44",
+			"created_at": "2026-11-05T11:29:30",
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
 				"deck": "wall",
-				"floor": "0:50,250:50",
+				"floor": "0:100,500:100",
 				"kind": "deck",
 				"level": 1,
 				"material": "stone",
 				"name": "牆頂",
-				"thick": 6
+				"thick": 12
 			}
 		},
 		{
@@ -69,22 +69,22 @@
 			"turn": 0,
 			"mirror": "",
 			"pivot": [
-				250,
-				200,
-				180
+				500,
+				400,
+				360
 			],
 			"enabled": true,
-			"created_at": "2026-10-23T18:22:44",
+			"created_at": "2026-11-05T11:29:32",
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
 				"deck": "tower",
-				"floor": "188:130,249:130",
+				"floor": "376:260,498:260",
 				"kind": "deck",
 				"level": 2,
 				"material": "stone",
 				"name": "塔頂",
-				"thick": 6
+				"thick": 12
 			}
 		},
 		{
@@ -98,19 +98,19 @@
 			"turn": 0,
 			"mirror": "",
 			"pivot": [
-				250,
-				200,
-				180
+				500,
+				400,
+				360
 			],
 			"enabled": true,
-			"created_at": "2026-10-23T18:22:45",
+			"created_at": "2026-11-05T11:29:34",
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
 				"kind": "magazine",
 				"material": "stone",
 				"pos": "mid",
-				"powder_lb": 200
+				"powder_lb": 400
 			}
 		},
 		{
@@ -124,16 +124,39 @@
 			"turn": 0,
 			"mirror": "",
 			"pivot": [
-				250,
-				200,
-				180
+				500,
+				400,
+				360
 			],
 			"enabled": true,
-			"created_at": "2026-10-23T18:22:45",
+			"created_at": "2026-11-05T11:29:36",
 			"persona": "trailhead",
 			"note": "",
 			"meta": {
 				"part": "roof"
+			}
+		},
+		{
+			"name": "塔裡的直梯（牆頂那一層 ⇒ 塔頂）",
+			"work": "trailhead-harbour-01m-kastellion-ladder",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				500,
+				400,
+				360
+			],
+			"enabled": true,
+			"created_at": "2026-11-05T11:29:37",
+			"persona": "trailhead",
+			"note": "",
+			"meta": {
+				"kind": "ladders"
 			}
 		}
 	]

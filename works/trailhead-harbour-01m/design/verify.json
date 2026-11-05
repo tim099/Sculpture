@@ -865,19 +865,19 @@
  },
  "trailhead-harbour-01m-kastellion": {
   "bbox": [
-   1,
+   2,
    0,
    0,
-   250,
-   199,
-   177
+   500,
+   398,
+   354
   ],
-  "composite_cavity": 210,
+  "composite_cavity": 0,
   "composite_components": 3,
   "composite_floating": [],
-  "composite_voxels": 461619,
+  "composite_voxels": 3678251,
   "door": [
-   125,
+   250,
    0,
    0
   ],
@@ -885,76 +885,90 @@
   "layers": {
    "trailhead-harbour-01m-kastellion-body": {
     "bbox": [
-     60,
-     90,
+     120,
+     180,
      0,
-     170,
-     188,
-     25
+     340,
+     376,
+     50
     ],
     "cavity": 0,
     "components": 2,
-    "md5": "aab14f86ee8d53f17a495c4b5a8d5591",
-    "voxels": 20758
+    "md5": "9108478d5d9a2d9d3f87b11a6262173f",
+    "voxels": 167080
+   },
+   "trailhead-harbour-01m-kastellion-ladder": {
+    "bbox": [
+     476,
+     331,
+     100,
+     478,
+     339,
+     260
+    ],
+    "cavity": 0,
+    "components": 1,
+    "md5": "ee0954f99ea503c6895873f16554198c",
+    "voxels": 958
    },
    "trailhead-harbour-01m-kastellion-magazine": {
     "bbox": [
-     20,
-     26,
+     40,
+     52,
      0,
-     44,
-     48,
-     16
+     88,
+     96,
+     32
     ],
     "cavity": 0,
     "components": 1,
-    "md5": "62464aac009b4f7a92bafa7da95d4b75",
-    "voxels": 3776
+    "md5": "d8107ac521e9d5320b96ac14836830b8",
+    "voxels": 30732
    },
    "trailhead-harbour-01m-kastellion-rampart": {
     "bbox": [
-     1,
+     2,
      0,
      0,
-     249,
-     199,
-     58
+     498,
+     398,
+     116
     ],
     "cavity": 0,
     "components": 5,
-    "md5": "d5fe8fc012de47dc0de7e22d1d982312",
-    "voxels": 254169
+    "md5": "6588a2d3eb9459a552526cafb15f6aed",
+    "voxels": 2048523
    },
    "trailhead-harbour-01m-kastellion-roof": {
     "bbox": [
-     19,
-     25,
-     14,
-     170,
-     188,
-     44
+     38,
+     50,
+     29,
+     340,
+     376,
+     89
     ],
     "cavity": 0,
-    "components": 2,
-    "md5": "74b0b5995aa7609c647feaf73e878d77",
-    "voxels": 9568
+    "components": 3,
+    "md5": "4c61d31f15ee2ec5ebcda82ec9855931",
+    "voxels": 41568
    },
    "trailhead-harbour-01m-kastellion-tower": {
     "bbox": [
-     188,
-     138,
+     376,
+     276,
      0,
-     250,
-     199,
-     177
+     500,
+     398,
+     354
     ],
     "cavity": 0,
     "components": 1,
-    "md5": "12fcbbb8d49ea27c20192859cbaf6e05",
-    "voxels": 173348
+    "md5": "903956756e71c90759cf9170a397a68b",
+    "voxels": 1389390
    }
   },
-  "links": 5,
+  "links": 6,
   "lot": [
    50,
    40
@@ -963,9 +977,9 @@
   "oob": 0,
   "part_clash": 0,
   "size": [
-   250,
-   200,
-   180
+   500,
+   400,
+   360
   ],
   "style": "genoa",
   "use": "fort"

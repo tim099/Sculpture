@@ -85,13 +85,14 @@ for w, W in sel:
         carve = {k: c for k, c in cur.items() if k not in want}
         add = {k: c for k, c in want.items() if cur.get(k) != c}
         for nm, cells, args in (('carve', carve, ['op=carvevox']), ('stamp', add, ['op=stampvox', 'overwrite=1'])):
-            if not cells:
-                continue
-            p = os.path.join(TMP, '%s.%s.vox.txt' % (w, nm))
-            dump(p, cells)
-            rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(cells), 'draft=0', 'share=0'])
-            m = re.search(r'placed\s*=\s*(\d+)', out)
-            print(w, nm, len(cells), 'rc', rc, 'placed', m.group(1) if m else '?')
+            items = sorted(cells.items())
+            for i in range(0, len(items), 900000):                      # 一刀上限 1,000,000 格（加拉塔堡 0.1 m 的城牆 2,048,523 格）⇒ 切成每刀 90 萬
+                part = dict(items[i:i + 900000])
+                p = os.path.join(TMP, '%s.%s.%d.vox.txt' % (w, nm, i // 900000))
+                dump(p, part)
+                rc, out = cli(args + ['persona=' + P, 'work=' + w, 'voxels=' + p.replace('\\', '/'), 'at=0,0,0', 'expect_pixels=%d' % len(part), 'draft=0', 'share=0'])
+                m = re.search(r'placed\s*=\s*(\d+)', out)
+                print(w, nm, len(part), 'rc', rc, 'placed', m.group(1) if m else '?', flush=True)
         print(w, '現況 %d → 清單 %d｜刻 %d、補／換色 %d' % (len(cur), len(want), len(carve), len(add)))
     elif step == 'anchors':
         have = {}
