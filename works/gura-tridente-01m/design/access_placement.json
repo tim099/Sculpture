@@ -1,0 +1,635 @@
+{
+ "doors": {
+  "work": "gura-pinas-01m-door",
+  "size": [
+   2,
+   14,
+   32
+  ],
+  "pivot": [
+   1,
+   7,
+   0
+  ],
+  "rows": [
+   {
+    "name": "門-stern-spar",
+    "host": "gura-tridente-01m-deck-spar",
+    "at": [
+     75.5,
+     200.5,
+     163
+    ],
+    "rotate": 180,
+    "scale": [
+     0.5,
+     0.642857,
+     0.5
+    ],
+    "opening": [
+     7,
+     15
+    ],
+    "why": "船尾 spar 那一層的陽台",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-stern-upper",
+    "host": "gura-tridente-01m-deck-upper",
+    "at": [
+     79.5,
+     200.5,
+     140
+    ],
+    "rotate": 180,
+    "scale": [
+     0.5,
+     0.642857,
+     0.5
+    ],
+    "opening": [
+     7,
+     15
+    ],
+    "why": "船尾 upper 那一層的陽台",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-stern-middle",
+    "host": "gura-tridente-01m-deck-middle",
+    "at": [
+     83.5,
+     200.5,
+     117
+    ],
+    "rotate": 180,
+    "scale": [
+     0.5,
+     0.642857,
+     0.5
+    ],
+    "opening": [
+     7,
+     15
+    ],
+    "why": "船尾 middle 那一層的陽台",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-bow-P",
+    "host": "gura-tridente-01m-deck-upper",
+    "at": [
+     720.5,
+     190.5,
+     149
+    ],
+    "rotate": 0,
+    "scale": [
+     0.5,
+     0.5,
+     0.46875
+    ],
+    "opening": [
+     5,
+     14
+    ],
+    "why": "圓船頭往格柵平台",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-bow-S",
+    "host": "gura-tridente-01m-deck-upper",
+    "at": [
+     720.5,
+     210.5,
+     149
+    ],
+    "rotate": 0,
+    "scale": [
+     0.5,
+     0.5,
+     0.46875
+    ],
+    "opening": [
+     5,
+     14
+    ],
+    "why": "圓船頭往格柵平台",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-poop-P",
+    "host": "gura-tridente-01m-deck-poop",
+    "at": [
+     229.5,
+     184.5,
+     160
+    ],
+    "rotate": 0,
+    "scale": [
+     0.5,
+     0.5,
+     0.53125
+    ],
+    "opening": [
+     5,
+     16
+    ],
+    "why": "poop 前緣艙壁",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-poop-S",
+    "host": "gura-tridente-01m-deck-poop",
+    "at": [
+     229.5,
+     216.5,
+     160
+    ],
+    "rotate": 0,
+    "scale": [
+     0.5,
+     0.5,
+     0.53125
+    ],
+    "opening": [
+     5,
+     16
+    ],
+    "why": "poop 前緣艙壁",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-magazine-aft",
+    "host": "gura-tridente-01m-deck-hold",
+    "at": [
+     297.5,
+     200.5,
+     31
+    ],
+    "rotate": 0,
+    "scale": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "opening": [
+     5,
+     15
+    ],
+    "why": "彈藥庫門（朝貨艙平台）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-magazine-fore",
+    "host": "gura-tridente-01m-deck-hold",
+    "at": [
+     561.5,
+     200.5,
+     31
+    ],
+    "rotate": 180,
+    "scale": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "opening": [
+     5,
+     15
+    ],
+    "why": "彈藥庫門（朝貨艙平台）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-1",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     21.5,
+     -0.5,
+     1
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-2",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     64.5,
+     -0.5,
+     1
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-3",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     106.5,
+     -0.5,
+     0
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-4",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     146.5,
+     -0.5,
+     0
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-5",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     186.5,
+     -0.5,
+     0
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-6",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     226.5,
+     -0.5,
+     0
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-7",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     266.5,
+     -0.5,
+     0
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-8",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     301.5,
+     -0.5,
+     1
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-9",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     331.5,
+     -0.5,
+     1
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-10",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     368.5,
+     -0.5,
+     2
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   },
+   {
+    "name": "門-艙房-11",
+    "host": "gura-tridente-01m-rooms-orlop",
+    "at": [
+     407.5,
+     -0.5,
+     3
+    ],
+    "rotate": 270,
+    "scale": [
+     0.5,
+     0.642857,
+     0.59375
+    ],
+    "opening": [
+     7,
+     18
+    ],
+    "why": "orlop 艙房門洞（朝中線走道）",
+    "hits_solid": 0,
+    "foot_air": 0,
+    "meta": {
+     "kind": "door",
+     "open": "side"
+    }
+   }
+  ]
+ },
+ "ladders": {
+  "gura-tridente-01m-ladders-orlop": {
+   "hold-main": {
+    "cells": 362,
+    "dropped": 8,
+    "steps": 11,
+    "run": 2,
+    "points": {
+     "foot": [
+      476,
+      200,
+      31
+     ],
+     "lo": [
+      479,
+      200,
+      34
+     ],
+     "hi": [
+      499,
+      200,
+      64
+     ],
+     "head": [
+      502,
+      200,
+      67
+     ]
+    }
+   },
+   "hold-aft": {
+    "cells": 192,
+    "dropped": 4,
+    "steps": 12,
+    "run": 1,
+    "points": {
+     "foot": [
+      313,
+      200,
+      31
+     ],
+     "lo": [
+      311,
+      200,
+      34
+     ],
+     "hi": [
+      300,
+      200,
+      67
+     ],
+     "head": [
+      298,
+      200,
+      68
+     ]
+    }
+   }
+  },
+  "gura-tridente-01m-ladders-hold": {
+   "bilge": {
+    "cells": 228,
+    "dropped": 14,
+    "steps": 7,
+    "run": 2,
+    "points": {
+     "foot": [
+      382,
+      200,
+      9
+     ],
+     "lo": [
+      385,
+      200,
+      12
+     ],
+     "hi": [
+      397,
+      200,
+      30
+     ],
+     "head": [
+      400,
+      200,
+      31
+     ]
+    }
+   }
+  }
+ },
+ "deck_meta": {
+  "kind": "deck",
+  "deck": "hold",
+  "level": -1,
+  "name": "貨艙",
+  "floor": "236:31,632:31",
+  "thick": 4
+ }
+}
