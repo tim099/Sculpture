@@ -1,0 +1,1 @@
+1613 Spanish Atlantic truncated-conical piedra ostionera watchtower and harbour lighthouse with cordón magistral and domed lantern (0.1m/vox)

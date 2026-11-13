@@ -1,0 +1,1 @@
+1644 Provençal square-plinth cylindrical harbour beacon tower with mid-shaft faux-mâchicoulis cordon and domed stone lantern (0.1m/vox)

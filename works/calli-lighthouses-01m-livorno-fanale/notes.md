@@ -1,0 +1,1 @@
+14th-century Pisan/Medici 13-sided polygonal stepped stone base and twin machicolated cylindrical lighthouse drums (0.1m/vox)
