@@ -1,0 +1,165 @@
+{
+ "anchors": [
+  {
+   "at": [
+    32,
+    36,
+    29
+   ],
+   "name": "door",
+   "work": "summit-stormkaap-01m-magazine",
+   "world": [
+    172,
+    136,
+    29
+   ]
+  },
+  {
+   "at": [
+    172,
+    136,
+    29
+   ],
+   "name": "hold-mag.head",
+   "work": "summit-stormkaap-01m-ladders-hold",
+   "world": [
+    172,
+    136,
+    29
+   ]
+  }
+ ],
+ "assembly_before": 549740,
+ "expect_assembly_after": 549746,
+ "files": {
+  "ladders-hold.add.vox.txt": {
+   "cells": 6,
+   "op": "stampvox",
+   "path": "masks/mag_door/ladders-hold.add.vox.txt",
+   "sha256": "fb28c658a895e7d0ba9644e9e4f0017dadaa1f6f82e81170b98c7069367f03ca",
+   "work": "summit-stormkaap-01m-ladders-hold"
+  },
+  "magazine.add.vox.txt": {
+   "cells": 75,
+   "op": "stampvox",
+   "path": "masks/mag_door/magazine.add.vox.txt",
+   "sha256": "c196a496f72892aff67ddb84cd8fb0684f44b60b12bcf4b4a52e2b57079f8970",
+   "work": "summit-stormkaap-01m-magazine"
+  },
+  "magazine.carve.vox.txt": {
+   "cells": 75,
+   "op": "carvevox",
+   "path": "masks/mag_door/magazine.carve.vox.txt",
+   "sha256": "7c87a8d7d163495e928dfaeb9f1c6e271be99a842f4f2a22c2f958be3132c785",
+   "work": "summit-stormkaap-01m-magazine"
+  }
+ },
+ "head": [
+  172,
+  136,
+  29
+ ],
+ "head_stand": true,
+ "inside_stand": [
+  134,
+  135,
+  136,
+  137,
+  138
+ ],
+ "new_door": [
+  [
+   172,
+   134,
+   29
+  ],
+  [
+   172,
+   138,
+   43
+  ]
+ ],
+ "old_air_after": 0,
+ "old_door": [
+  [
+   172,
+   128,
+   29
+  ],
+  [
+   172,
+   132,
+   43
+  ]
+ ],
+ "step": [
+  [
+   173,
+   135,
+   27
+  ],
+  [
+   173,
+   137,
+   28
+  ]
+ ],
+ "step_stand": [
+  135,
+  136,
+  137
+ ],
+ "threshold": [
+  [
+   172,
+   134,
+   29
+  ],
+  [
+   172,
+   135,
+   29
+  ],
+  [
+   172,
+   136,
+   29
+  ],
+  [
+   172,
+   137,
+   29
+  ],
+  [
+   172,
+   138,
+   29
+  ],
+  [
+   173,
+   134,
+   29
+  ],
+  [
+   173,
+   135,
+   29
+  ],
+  [
+   173,
+   136,
+   29
+  ],
+  [
+   173,
+   137,
+   29
+  ],
+  [
+   173,
+   138,
+   29
+  ]
+ ],
+ "threshold_stand": 10
+}
