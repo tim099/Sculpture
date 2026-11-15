@@ -1,0 +1,84 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "metal-parts",
+			"work": "gura-venice-clocktower-1666-metal",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				100,
+				80,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-11-13T11:06:03",
+			"persona": "gura",
+			"note": "",
+			"meta": {
+				"material": "copper"
+			}
+		},
+		{
+			"name": "窗玻璃",
+			"work": "gura-venice-clocktower-1666-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				100,
+				80,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-11-13T22:51:05",
+			"persona": "gura",
+			"note": "",
+			"meta": {
+				"material": "glass",
+				"part": "window"
+			}
+		},
+		{
+			"name": "時針",
+			"work": "gura-venice-clocktower-1666-hand",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				100,
+				80,
+				320
+			],
+			"enabled": true,
+			"created_at": "2026-11-14T23:04:04",
+			"persona": "gura",
+			"note": "太陽指針：照遊戲時刻轉（義大利時制，日落 18:00 ＝ XXIV，每小時 15°）",
+			"meta": {
+				"spin": "tod",
+				"spin_axis_x": 0,
+				"spin_axis_y": 1,
+				"spin_axis_z": 0,
+				"spin_k": -15,
+				"spin_mode": "angle",
+				"spin_pivot_x": 50.5,
+				"spin_pivot_y": 2.0,
+				"spin_pivot_z": 143.5,
+				"spin_zero": 18
+			}
+		}
+	]
+}
