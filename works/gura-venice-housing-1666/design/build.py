@@ -12,6 +12,7 @@ from common import *
 import vparts
 import venice_dense
 import venice_low
+import venice_tall
 
 ROOT = venice_dense.ROOT
 STYLE = 'venice'
@@ -145,7 +146,7 @@ def main():
         sheet(P['cells'], P['dims'], os.path.join(D, 'sheets', 'part-' + pid + '.png'), P['title'], px=8)
 
     # ── 房子 ──
-    for fn in venice_low.ALL + venice_dense.ALL:
+    for fn in venice_low.ALL + venice_dense.ALL + venice_tall.ALL:
         B = fn()
         key = B['key']
         if want and key not in want:
@@ -194,7 +195,7 @@ def main():
             print('   ', w, lv)
 
     # ── 配色變化：一件組裝件、一條關聯指到原型＋替換色 ⇒ 不另存格子 ──
-    for key, base, rc, title in venice_low.VARIANTS + venice_dense.VARIANTS:
+    for key, base, rc, title in venice_low.VARIANTS + venice_dense.VARIANTS + venice_tall.VARIANTS:
         if want and key not in want and 'variants' not in want:
             continue
         bw, pw = wid(STYLE, base), wid(STYLE, key)

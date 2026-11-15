@@ -309,6 +309,20 @@
    "tags": "sub,part",
    "title": "哥德式單窗（反曲尖拱、伊斯特拉石框與窗台、小圓玻璃、兩片綠窗板開著，部件，0.1 m）"
   },
+  "gura-venice-housing-1666-part-windowp": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-part-windowp.vox.txt",
+   "models": [],
+   "order": 0,
+   "size": [
+    15,
+    3,
+    16
+   ],
+   "tags": "sub,part",
+   "title": "出租公寓的小方窗（Ghetto：0.7 × 1.3 m、石窗台、小圓玻璃、兩片窄綠窗板開著，部件，0.1 m）"
+  },
   "gura-venice-housing-1666-part-windowq": {
    "anchors": {},
    "links": [],
@@ -5593,6 +5607,5561 @@
    ],
    "tags": "building,venice",
    "title": "中密度住宅 M-B2（M-B 的配色變化：土黃灰泥、灰藍窗板；替換色，不另存格子）"
+  },
+  "gura-venice-housing-1666-venice-house-t-a": {
+   "anchors": {
+    "door": [
+     56,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     24,
+     40,
+     209
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-a.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 80,
+      "lot": "20,16",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-a"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-a-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.45,
+      "build1": 0.8,
+      "part": "gallery",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂平台",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-a-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-a-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      48,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      79,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      120,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      153,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      35,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      110,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      148,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗8",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      169,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗9",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      17,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      35,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      91,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      112,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      131,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      150,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗8",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      169,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗9",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      34,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      91,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      112,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      129,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      150,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗8",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      169,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗9",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      35,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      93,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      110,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      129,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      148,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗8",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      167,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗9",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      16,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      36,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      55,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      149,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗8",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      168,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗9",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      36,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      74,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      93,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      111,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      129,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      149,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗8",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      168,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗9",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      134,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      25,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      52,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      106,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      133,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      160,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      25,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      52,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      106,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      133,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      160,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      25,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      52,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      106,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      133,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      160,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      25,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      52,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      106,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      133,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      160,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      25,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      52,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      106,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      133,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      160,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      25,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      52,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      79,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      106,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      133,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      160,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      44.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    200,
+    160,
+    248
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-A（20 × 16：七層的出租公寓 —— 一樓紅灰泥畫白磚縫、三間店面夾兩道門（兩座樓梯），樓上一排排小方窗、各層窗位不完全對齊，最上面兩層是加蓋的米白灰泥；三根喇叭煙囪、屋頂木平台；後面小院；威尼斯紅灰泥、綠窗板）"
+  },
+  "gura-venice-housing-1666-venice-house-t-a-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-a-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    200,
+    160,
+    248
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-A｜牆身"
+  },
+  "gura-venice-housing-1666-venice-house-t-a-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-a-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    200,
+    160,
+    248
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-A｜屋頂平台"
+  },
+  "gura-venice-housing-1666-venice-house-t-a-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-a-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    200,
+    160,
+    248
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-A｜屋頂"
+  },
+  "gura-venice-housing-1666-venice-house-t-a2": {
+   "anchors": {
+    "door": [
+     56,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     24,
+     40,
+     209
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-a2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 80,
+      "lot": "20,16",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-a2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "169": 213,
+      "218": 246,
+      "49": 100
+     },
+     "source": "gura-venice-housing-1666-venice-house-t-a",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    200,
+    160,
+    248
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-A2（T-A 的配色變化：土黃灰泥、加蓋那兩層粉、深褐窗板；替換色，不另存格子）"
+  },
+  "gura-venice-housing-1666-venice-house-t-b": {
+   "anchors": {
+    "door": [
+     56,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     22,
+     44,
+     208
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-b.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 64,
+      "lot": "16,16",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-b"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-b-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.45,
+      "build1": 0.8,
+      "part": "gallery",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂平台",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-b-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-b-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      48,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      79,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      122,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      34,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      90,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      110,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      35,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      90,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      109,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      71,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      109,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      91,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      109,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      16,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      91,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      111,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      130,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      35,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      54,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      73,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      92,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      110,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗6",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      128,
+      11,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "7樓-窗7",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      134,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      99,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      126,
+      134,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      99,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      126,
+      134,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      99,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      126,
+      134,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      99,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      126,
+      134,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      99,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      126,
+      134,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      18,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      45,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      72,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      99,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      126,
+      134,
+      166
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-7樓窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      44.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    160,
+    160,
+    248
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-B（16 × 16：七層的出租公寓 —— 一樓兩間店面兩道門、樓上小方窗、最上面兩層加蓋的粉灰泥；兩根喇叭煙囪、屋頂木平台；後面小院；土黃灰泥、綠窗板）"
+  },
+  "gura-venice-housing-1666-venice-house-t-b-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-b-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    248
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-B｜牆身"
+  },
+  "gura-venice-housing-1666-venice-house-t-b-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-b-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    248
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-B｜屋頂平台"
+  },
+  "gura-venice-housing-1666-venice-house-t-b-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-b-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    160,
+    160,
+    248
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-B｜屋頂"
+  },
+  "gura-venice-housing-1666-venice-house-t-b2": {
+   "anchors": {
+    "door": [
+     56,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     22,
+     44,
+     208
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-b2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 64,
+      "lot": "16,16",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-b2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "213": 218,
+      "246": 213,
+      "49": 78
+     },
+     "source": "gura-venice-housing-1666-venice-house-t-b",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    160,
+    160,
+    248
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-B2（T-B 的配色變化：米白灰泥、加蓋那兩層土黃、灰藍窗板；替換色，不另存格子）"
+  },
+  "gura-venice-housing-1666-venice-house-t-c": {
+   "anchors": {
+    "door": [
+     60,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     20,
+     40,
+     183
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-c.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 36,
+      "lot": "12,12",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-c"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-c-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.45,
+      "build1": 0.8,
+      "part": "gallery",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂平台",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-c-gallery",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-c-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      9,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      85,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      34,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      71,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      91,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      89,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      70,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      89,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      71,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      91,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      15,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      53,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      72,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      89,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗5",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      94,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      94,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      39,
+      94,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      66,
+      94,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      93,
+      94,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      94,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      39,
+      94,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      66,
+      94,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      93,
+      94,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      94,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      39,
+      94,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      66,
+      94,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      93,
+      94,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      94,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      39,
+      94,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      66,
+      94,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      93,
+      94,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      12,
+      94,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      39,
+      94,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      66,
+      94,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      93,
+      94,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗4",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      48.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    120,
+    120,
+    223
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-C（12 × 12：六層 —— 一樓兩間店面夾門、樓上小方窗、最上面兩層加蓋的土黃灰泥；兩根喇叭煙囪、屋頂木平台；後面小院；米白灰泥、綠窗板）"
+  },
+  "gura-venice-housing-1666-venice-house-t-c-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-c-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    223
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-C｜牆身"
+  },
+  "gura-venice-housing-1666-venice-house-t-c-gallery": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-c-gallery.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    223
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-C｜屋頂平台"
+  },
+  "gura-venice-housing-1666-venice-house-t-c-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-c-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    120,
+    120,
+    223
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-C｜屋頂"
+  },
+  "gura-venice-housing-1666-venice-house-t-c2": {
+   "anchors": {
+    "door": [
+     60,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     20,
+     40,
+     183
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-c2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 36,
+      "lot": "12,12",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-c2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "213": 218,
+      "218": 169,
+      "49": 100
+     },
+     "source": "gura-venice-housing-1666-venice-house-t-c",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    120,
+    120,
+    223
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-C2（T-C 的配色變化：威尼斯紅灰泥、加蓋那兩層米白、深褐窗板；替換色，不另存格子）"
+  },
+  "gura-venice-housing-1666-venice-house-t-d": {
+   "anchors": {
+    "door": [
+     18,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     60,
+     44,
+     182
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-d.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 24,
+      "lot": "8,12",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-d"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-d-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-d-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      41,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      12,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      31,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      50,
+      11,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "6樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      94,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      94,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      94,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      94,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      94,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      94,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      94,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      94,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      94,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      94,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      94,
+      141
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-6樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      6.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    120,
+    223
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-D（8 × 12：六層的窄樓 —— 一樓門＋店面、樓上三列小方窗、最上面兩層加蓋的米白灰泥；一根喇叭煙囪；後面小院；粉灰泥、綠窗板）"
+  },
+  "gura-venice-housing-1666-venice-house-t-d-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-d-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    223
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-D｜牆身"
+  },
+  "gura-venice-housing-1666-venice-house-t-d-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-d-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    120,
+    223
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-D｜屋頂"
+  },
+  "gura-venice-housing-1666-venice-house-t-d2": {
+   "anchors": {
+    "door": [
+     18,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     60,
+     44,
+     182
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-d2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 24,
+      "lot": "8,12",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-d2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "218": 169,
+      "246": 213,
+      "49": 78
+     },
+     "source": "gura-venice-housing-1666-venice-house-t-d",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    120,
+    223
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-D2（T-D 的配色變化：土黃灰泥、加蓋那兩層威尼斯紅、灰藍窗板；替換色，不另存格子）"
+  },
+  "gura-venice-housing-1666-venice-house-t-e": {
+   "anchors": {
+    "door": [
+     18,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     60,
+     40,
+     157
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-e.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 16,
+      "lot": "8,8",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-e"
+     },
+     "mirror": "",
+     "name": "牆身",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-e-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "build0": 0.6,
+      "build1": 0.9,
+      "part": "roof",
+      "sweep": "z"
+     },
+     "mirror": "",
+     "name": "屋頂",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-venice-house-t-e-roof",
+     "turn": 0
+    },
+    {
+     "at": [
+      10,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "前-門1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 0
+    },
+    {
+     "at": [
+      41,
+      11,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "shop"
+     },
+     "mirror": "",
+     "name": "前-店面2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-shop",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      31,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      11,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "2樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      33,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      51,
+      11,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "3樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      14,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      31,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "4樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      13,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      52,
+      11,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "5樓-窗3",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 0
+    },
+    {
+     "at": [
+      32,
+      72,
+      3
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "door"
+     },
+     "mirror": "",
+     "name": "後-門",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-door",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      72,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      72,
+      41
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-2樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      72,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      72,
+      66
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-3樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      72,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      72,
+      91
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-4樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      19,
+      72,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗1",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    },
+    {
+     "at": [
+      46,
+      72,
+      116
+     ],
+     "meta": {
+      "build0": 0.85,
+      "build1": 0.85,
+      "part": "windowp"
+     },
+     "mirror": "",
+     "name": "後-5樓窗2",
+     "recolor": {},
+     "source": "gura-venice-housing-1666-part-windowp",
+     "turn": 180
+    }
+   ],
+   "mask": null,
+   "models": [
+    {
+     "at": [
+      6.5,
+      12,
+      24.5
+     ],
+     "meta": {
+      "build0": 1.0,
+      "build1": 1.0,
+      "kind": "light"
+     },
+     "name": "燈籠-門",
+     "pivot": [
+      4.5,
+      13,
+      15.5
+     ],
+     "source": "summit-rocher-01m-lantern"
+    }
+   ],
+   "order": 2,
+   "size": [
+    80,
+    80,
+    198
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-E（8 × 8：五層的窄樓 —— 一樓門＋店面、樓上三列小方窗、最上面一層加蓋的土黃灰泥；一根喇叭煙囪；沒有院子；威尼斯紅灰泥、綠窗板）"
+  },
+  "gura-venice-housing-1666-venice-house-t-e-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-e-body.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    198
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-E｜牆身"
+  },
+  "gura-venice-housing-1666-venice-house-t-e-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-housing-1666-venice-house-t-e-roof.vox.txt",
+   "models": [],
+   "order": 1,
+   "size": [
+    80,
+    80,
+    198
+   ],
+   "tags": "sub",
+   "title": "超高密度住宅 T-E｜屋頂"
+  },
+  "gura-venice-housing-1666-venice-house-t-e2": {
+   "anchors": {
+    "door": [
+     18,
+     11,
+     3
+    ],
+    "lot-0": [
+     0,
+     0,
+     0
+    ],
+    "smoke": [
+     60,
+     40,
+     157
+    ]
+   },
+   "expect": "gura-venice-housing-1666-venice-house-t-e2.composite.txt",
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "base": 4,
+      "build0": 0.0,
+      "build1": 0.6,
+      "kind": "building",
+      "level": 4,
+      "live": 16,
+      "lot": "8,8",
+      "style": "venice",
+      "sweep": "z",
+      "use": "house",
+      "variant": "t-e2"
+     },
+     "mirror": "",
+     "name": "本體",
+     "recolor": {
+      "169": 218,
+      "213": 246,
+      "49": 100
+     },
+     "source": "gura-venice-housing-1666-venice-house-t-e",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "order": 3,
+   "size": [
+    80,
+    80,
+    198
+   ],
+   "tags": "building,venice",
+   "title": "超高密度住宅 T-E2（T-E 的配色變化：米白灰泥、加蓋那一層粉、深褐窗板；替換色，不另存格子）"
   }
  }
 }

@@ -213,7 +213,25 @@ def trifora():
     return P('trifora', '三連窗（trifora：三個反曲尖拱、伊斯特拉石小柱與框、小圓玻璃，部件，0.1 m）', (W, H, D), v, list(SS))
 
 
-ALL = [window, windowq, door, doorg, shop, trifora]
+def windowp():
+    """出租公寓的小方窗（Ghetto 那種：TASK-1291 第 4 級）：0.7 × 1.3 m 的開口、只有一道伊斯特拉石窗台、牆上抹灰的窗框（不另做石框：外牆薄、石材極少）；
+    小圓玻璃；兩片綠窗板開著（窄）。"""
+    v = {}
+    W, H, D = 15, 3, 16
+    S = [(x, z) for x in range(4, 11) for z in range(2, 15)]
+    SS = set(S)
+    for x in range(3, 12):
+        v[(x, 0, 1)] = ISTRIA_G                                     # 窗台
+    for (x, z) in S:
+        if _edge(SS, x, z):
+            v[(x, 1, z)] = ISTRIA_G
+    _glass(v, S)
+    _scuri(v, 0, 3, 2, 15)
+    _scuri(v, 12, 15, 2, 15)
+    return P('windowp', '出租公寓的小方窗（Ghetto：0.7 × 1.3 m、石窗台、小圓玻璃、兩片窄綠窗板開著，部件，0.1 m）', (W, H, D), v, S)
+
+
+ALL = [window, windowq, door, doorg, shop, trifora, windowp]
 
 
 def all_parts():
