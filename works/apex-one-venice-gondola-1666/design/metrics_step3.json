@@ -1,0 +1,67 @@
+{
+  "scale_m": 0.1,
+  "voxel_count": 4420,
+  "components": 1,
+  "cavities": 0,
+  "bbox_vx": {
+    "x": [
+      4,
+      108
+    ],
+    "y": [
+      17,
+      30
+    ],
+    "z": [
+      0,
+      22
+    ]
+  },
+  "loa_m": 10.5,
+  "hull_beam_m": 1.4,
+  "waterline_z_idx": 2,
+  "draft_m": 0.2,
+  "poppa_deck_top_above_wl_m": 0.4,
+  "bow_ferro_above_wl_m": 1.0,
+  "stern_ferro_above_wl_m": 0.8,
+  "standing_gondoliere_peak_above_wl_m": 2.1,
+  "crouched_gondoliere_above_wl_m": 1.75,
+  "passengers_max_above_wl_m": 1.1,
+  "oar_kinematics": {
+    "forcola_y_from_cl_m": 0.45,
+    "forcola_z_above_wl_m": 0.65,
+    "neutral_stbd_reach_m": 1.735,
+    "neutral_swept_beam_m": 2.435,
+    "neutral_blade_depth_below_wl_m": 0.996,
+    "neutral_grip_above_wl_m": 1.444,
+    "dynamic_max_stbd_reach_m": 2.518,
+    "dynamic_peak_swept_beam_m": 3.218,
+    "aft_stroke_min_stbd_m": 0.608,
+    "feathered_pass_beam_m": 1.408,
+    "min_blade_z_below_wl_m": 0.996,
+    "max_grip_z_above_wl_m": 1.444
+  },
+  "clearance_envelopes": {
+    "E1_dynamic_catch": {
+      "height_m": 2.1,
+      "width_m": 3.22
+    },
+    "E2_standing_neutral": {
+      "height_m": 2.1,
+      "width_m": 2.44
+    },
+    "E3_standing_feathered": {
+      "height_m": 2.1,
+      "width_m": 1.5
+    },
+    "E4_crouched_feathered": {
+      "height_m": 1.75,
+      "width_m": 1.5
+    },
+    "E5_uncrewed_moored": {
+      "height_m": 1.05,
+      "width_m": 1.4
+    }
+  },
+  "min_canal_depth_m": 1.25
+}
