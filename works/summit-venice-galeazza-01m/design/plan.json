@@ -1,0 +1,80 @@
+{
+  "title": "威尼斯加萊賽戰船 galeazza，約 1666 年（de Zuanne 1686 的大型）",
+  "task": "TASK-1302",
+  "meters_per_cell": 0.1,
+  "space": {
+    "hull": [660, 321, 160],
+    "assembly": [660, 321, 360],
+    "yc": 160
+  },
+  "units": "1 piede veneto = 0.3477 m；1 passo = 5 piedi",
+  "sources": {
+    "zuanne": "Stefano de Zuanne, L'architettura navale 1686（BL Add MS 38655），Lo Basso《Uomini da remo》2003 p.14 n.8 轉引：29 passi da roda in roda、25 piedi 寬、9 piedi 高、32 門砲。https://www.storiamediterranea.it/wp-content/uploads/mediterranea/p2477/b1661.pdf",
+    "faustina": "MSN 素描「Galeazza alla Faustina」（inv. 1159，舊目錄 1669；與 de Zuanne f.67v 同圖）：艏樓弧形兩層砲門、艉樓拱頂艙。references/msn_faustina_side.jpg",
+    "msn_model": "Museo Storico Navale galeazza 模型（Patrone 書照片）：圓弧艏樓與船殼一體、弧面砲門。references/msn_model_bow.jpg",
+    "coronelli": "Coronelli, Galeazze vedute per poppa e per fianco, 約 1691：高舷牆下緣一排拱形槳門、三桅三角帆、艉樓拱頂艙、衝角。references/coronelli_1691.jpg",
+    "grevenbroeck": "Grevenbroeck 約 1750 彩圖（Museo Correr）：深色船殼、鍍金艉樓、紅金旗。references/grevenbroeck_c1750.jpg",
+    "dallacqua": "Zuan Maria dall'Acqua 1750 建造圖（MSN N66）：51.36 × 8.71 × 3.10 m、25 banchi。https://www.veniceboats.com/it-progetti-piani-navi-sottili-2.htm",
+    "furttenbach": "Furttenbach, Architectura Navalis 1629 p.79：每舷 28 槳、每槳 6 人；舷側小砲夾在槳之間；艉樓比上甲板高 10 palmi。https://www.digitale-sammlungen.de/en/view/bsb10862644?page=131",
+    "turato": "Turato 2025, NAM 23 art.3：艏樓是寬而堅固、可能半圓形的平台，排除高聳獨立圓塔。",
+    "tim": "Tim 2026-11-16：「希望造最大型 且船頭有圓形炮樓」＋附圖（references/tim_reference_model.webp）",
+    "credits": "lines.py 抄 meadow-venice-galea-01m/design/lines.py（皇家號／越嶺號的槳帆船線形）。"
+  },
+  "waterline": {
+    "z": 21,
+    "src": "設計：吃水查不到（16 世紀 galia grossa 約 10 piedi 太深，型深才 9 piedi）；先取 2.1 m（含龍骨 0.2 m 以上 1.9 m），遊戲匯入時照排水量再定。"
+  },
+  "oars": {
+    "layout": "a scaloccio",
+    "per_side": 25,
+    "rowers_per_oar": 6,
+    "length_m": 14.0,
+    "src": "每舷 25：Dall'Acqua 1750；每槳 6 人：Furttenbach 1629、Lo Basso p.132（308 名）；14 m：1633 Molin 報告。左右一樣 25（設計：不學 galea 的 25／24，讓匯入檢查沒有左右差）。"
+  },
+  "layout": {
+    "deck_top_z": {"v": 31, "src": "設計：主甲板（coverta）最上一層板 z 31，第一層空氣 z 32（舷頂 z 33 以下 0.2 m，甲板邊收進舷頂）。"},
+    "postizza_out": {"v": 15, "src": "1592 galie grosse 舷外槳架每側外伸 4 p 7 dita = 1.54 m（Lazzarini 2021 p.33）⇒ 15 格；舷牆立在槳架外緣（Coronelli 封閉高舷牆）。"},
+    "bulwark_top_z": {"v": 48, "src": "設計：舷牆頂離甲板 1.6 m，擋住站著划的槳手（Coronelli 看不到划手）。"},
+    "bulwark_thick": {"v": 2, "src": "設計。"},
+    "oar_x0": {"v": 160, "src": "設計：第一支槳（最靠船尾）x 160，在艉樓前緣 x 150 之前留 1 m。"},
+    "oar_pitch": {"v": 12.5, "src": "設計：槳距 1.25 m（galea 1.2 m；galeazza 的槳手站姿划、略寬）。25 支 ⇒ 最後一支 x 460。"},
+    "oar_port": {"v": {"z0": 38, "z1": 42, "half_w": 2}, "src": "Coronelli 拱形槳門；設計：門 0.5 m 高、0.5 m 寬、頂一格做拱，pivot 在門底上一格 z 39。"},
+    "corsia": {"v": {"half_w": 6, "top_z": 37}, "src": "Lepanto 後 corsia 3½ piedi = 1.23 m（Lazzarini 2021，Turato p.91）⇒ 13 格；高 0.6 m 是設計（Furttenbach 寫 8 palmi 太高，槳手越不過）。"},
+    "bench": {"v": {"top_z": 34, "y_in": 8, "y_out": 54}, "src": "設計：槳手踩的划凳面 z 34（0.3 m），從 corsia 邊到舷牆內。"},
+    "bow_castle": {"v": {"cx": 520, "r": 58, "x_back": 466, "deck_z": 51, "top_z": 62, "wall": 3}, "src": "Tim 指定圓形砲樓；MSN 模型與 Faustina 圖：圓弧、與船身一體、兩層砲門；Turato：半圓平台。半徑 5.8 m ＝ 船寬一半＋槳架外伸，跟舷牆外緣齊（設計）；前緣 x 578 懸出艏柱 2.2 m，由下面的 giogo 托著。下層砲艙淨高 1.9 m（z 32–50）、頂層平台 z 51、胸牆到 z 62。"},
+    "stern_castle": {"v": {"x_front": 150, "deck_z": 51, "rail_z": 58, "cabin": {"x0": 64, "x1": 124, "top_z": 82}}, "src": "Furttenbach：艉樓比上甲板高 10 palmi（約 2.5 m）⇒ 設計 2.0 m（平台板 z 51，跟艏樓頂同高）；Coronelli／Faustina 的拱頂艙 ⇒ 拱頂到 z 82。"},
+    "spur": {"v": {"x_tip": 632, "z_root": 24, "z_tip": 29}, "src": "Furttenbach 1629 sperone 30 palmi（約 7.4 m，palmo 單位未證實）⇒ 設計 7.6 m（艏柱 556 → 632），略往上翹；整根在艏樓地板（z 29）以下。"},
+    "masts": {"v": {"trinchetto": 452, "maestra": 318, "mezzana": 168}, "src": "Coronelli／Grevenbroeck 三桅：前桅緊貼艏樓後、主桅在 corsia 正中（Furttenbach）、後桅貼艉樓前；高度與帆桁到步驟 7 再定（查不到 ⇒ 設計）。"},
+    "rig_table": {"v": {
+      "maestra":    {"x": 318, "top_z": 232, "yard_m": 30.0, "sail": "lateen"},
+      "trinchetto": {"x": 452, "top_z": 200, "yard_m": 24.0, "sail": "lateen"},
+      "mezzana":    {"x": 168, "top_z": 176, "yard_m": 18.0, "sail": "lateen"}},
+      "src": "設計：桅高、帆桁長查不到。照 meadow galea（43 m 船、主桅頂 z 184、甲板 z 18）按船長 ×1.16 放大，再加甲板高差：主桅頂離甲板約 20 m；帆桁長約主桅高 1.5 倍（galea 量到的比例）。前、後桅照 Coronelli 版畫目測主桅的 0.85、0.75。帆素白（Tim 附圖的紅白條紋查不到出處）。"}
+  },
+  "lines": {
+    "sternpost_head_x": {"v": 52, "src": "設計：艉柱後留 5.2 m 給艉樓懸出與舵。"},
+    "stem_head_x": {"v": 556, "src": "de Zuanne 29 passi = 50.42 m da roda in roda ⇒ 504 格（52 → 556）。"},
+    "keel_aft_x": {"v": 102, "src": "設計：艉柱到平龍骨約柱間長一成（同 galea）。"},
+    "keel_fwd_x": {"v": 496, "src": "設計：艏柱到平龍骨約柱間長一成二（同 galea）。"},
+    "keel_top": {"v": 2, "src": "設計：龍骨高 0.2 m。"},
+    "keel_half": {"v": 1, "src": "設計：龍骨半寬約 0.1 m。"},
+    "stem_head_z": {"v": 38, "src": "設計：艏柱頂高過舷頂 0.5 m，艏樓坐在上面。"},
+    "sternpost_head_z": {"v": 42, "src": "設計：艉柱頂比舷頂高 0.9 m，艉樓坐在上面。"},
+    "half_beam": {"v": 43, "src": "de Zuanne 25 piedi = 8.69 m ⇒ 全寬 87 格（2·43 + 1）。"},
+    "deck_side_z": {"v": 33, "src": "de Zuanne 9 piedi = 3.13 m 型深，加龍骨 0.2 m ⇒ 舷頂（甲板邊）z 33。"},
+    "floor_half": {"v": 24, "src": "設計：比 galea 平底更寬（約半寬的 0.55），galeazza 要載重砲。"},
+    "floor_rise": {"v": 1, "src": "設計：平底外緣上升 0.1 m（同 galea）。"},
+    "bilge_pow": {"v": 2.4, "src": "設計：舭部比 galea 飽滿（MSN 模型船腹圓胖）。"},
+    "s_aft": {"v": 0.26, "src": "設計：後端收縮從船長 26% 開始（比 galea 0.31 短 ⇒ 中段平行部分長、船尾較飽滿，Faustina 圖）。"},
+    "s_fwd": {"v": 0.66, "src": "設計：前端收縮從 66% 開始（Faustina 圖船頭比 galea 飽滿，要撐艏樓）。"},
+    "deadwood_aft_z": {"v": 14, "src": "設計：艉端填材上抬。"},
+    "deadwood_fwd_z": {"v": 12, "src": "設計：艏端填材上抬。"},
+    "aft_pow": {"v": 2.2, "src": "設計：船尾收得比 galea 慢（艉樓寬）。"},
+    "fwd_pow": {"v": 2.4, "src": "設計：船頭飽滿，撐得住圓弧艏樓（MSN 模型）。"},
+    "stern_top_ratio": {"v": 0.42, "src": "設計：船尾頂留寬平台給艉樓（Coronelli／Grevenbroeck 艉視都是寬艉）。"},
+    "sheer_aft": {"v": 6, "src": "設計：Faustina 圖船身舷弧平，起翹靠兩頭的樓。"},
+    "sheer_fwd": {"v": 4, "src": "同上。"},
+    "sheer_s_aft": {"v": 0.25, "src": "設計：舷弧從艉樓起點開始抬。"},
+    "sheer_s_fwd": {"v": 0.78, "src": "設計：舷弧到艏樓才抬。"}
+  }
+}
