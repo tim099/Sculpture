@@ -22,3 +22,8 @@ design/plan.json 每個數字標出處或「設計」。線形程式 lines.py �
 - 金飾 873 格（子作品 -gilt ⇒ 組裝件外部模型「金飾」meta deco=1，可隱藏）：艉樓拱頂艙後壁外的聖馬可有翼獅（紅底圓盾、金獅、光環、書）＋圓形艏樓正面兩門 50 磅砲門之間的金框紅心徽飾。依據：Grevenbroeck 鍍金艉樓、紅金旗；Coronelli 版畫的聖馬可盾；MSN 模型艏樓正面雕飾。
 - 船名不做：17 世紀威尼斯 galeazza 以指揮官姓氏稱呼（Lo Basso p.130 前後），沒有船名板可依。
 - 讀數：組裝件匯出 338,220 格（模型不在格子清單裡）對設計缺 0／多 0／色差 0；元件 1、封閉空腔 0、鏡像差 0；玻璃鏡像差 0；draft_deco 重跑同雜湊。圖：stage03_deco_view.png。
+
+## 三桅與三角帆桁（步驟 7，2026-11-16）
+- draft_masts.py ⇒ rig.json＋masks/rig/；apply_masts.py：每根下桅一件子作品（組裝件關聯 mast-main／mast-fore／mast-mizzen，meta kind=mast、mast=main｜fore｜mizzen），帆桁一件子作品 ⇒ 桅子作品裡的外部模型 yard-*（kind=yard、yard=gaff、rig=lateen、固定點 pivot／peak／fore、sail=<桅>-lateen）。
+- 尺寸查不到 ⇒ 照 meadow galea 的相對座標放大（主 ×1.19、前 ×1.15、後 ×0.66），基準 corsia 頂 z 38：主桅頂 z 232、帆桁 34.4 m（轉軸 z 177）；前桅頂 z 194、20.8 m；後桅頂 z 146、19.1 m。主帆 clew 挪到 x 185 讓開後桅。
+- 讀數：組裝件匯出 345,097 格對設計缺 0／多 0／色差 0；元件 1、封閉空腔 0、鏡像差 0；三根桅腳都踩在 corsia 頂、跟現況重疊 0；draft_masts 重跑同雜湊。圖：stage04_masts_view.png。

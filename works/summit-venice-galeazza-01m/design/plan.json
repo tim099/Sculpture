@@ -46,10 +46,10 @@
     "spur": {"v": {"x_tip": 632, "z_root": 24, "z_tip": 29}, "src": "Furttenbach 1629 sperone 30 palmi（約 7.4 m，palmo 單位未證實）⇒ 設計 7.6 m（艏柱 556 → 632），略往上翹；整根在艏樓地板（z 29）以下。"},
     "masts": {"v": {"trinchetto": 452, "maestra": 318, "mezzana": 168}, "src": "Coronelli／Grevenbroeck 三桅：前桅緊貼艏樓後、主桅在 corsia 正中（Furttenbach）、後桅貼艉樓前；高度與帆桁到步驟 7 再定（查不到 ⇒ 設計）。"},
     "rig_table": {"v": {
-      "maestra":    {"x": 318, "top_z": 232, "yard_m": 30.0, "sail": "lateen"},
-      "trinchetto": {"x": 452, "top_z": 200, "yard_m": 24.0, "sail": "lateen"},
-      "mezzana":    {"x": 168, "top_z": 176, "yard_m": 18.0, "sail": "lateen"}},
-      "src": "設計：桅高、帆桁長查不到。照 meadow galea（43 m 船、主桅頂 z 184、甲板 z 18）按船長 ×1.16 放大，再加甲板高差：主桅頂離甲板約 20 m；帆桁長約主桅高 1.5 倍（galea 量到的比例）。前、後桅照 Coronelli 版畫目測主桅的 0.85、0.75。帆素白（Tim 附圖的紅白條紋查不到出處）。"}
+      "maestra":    {"x": 318, "top_z": 232, "yard_m": 34.4, "sail": "lateen"},
+      "trinchetto": {"x": 452, "top_z": 194, "yard_m": 20.8, "sail": "lateen"},
+      "mezzana":    {"x": 168, "top_z": 146, "yard_m": 19.1, "sail": "lateen"}},
+      "src": "設計：桅高、帆桁長查不到。照 meadow galea（43 m 船、主桅頂 z 184、甲板 z 18）按船長 ×1.16 放大，再加甲板高差：主桅頂離甲板約 20 m；帆桁長約主桅高 1.5 倍（galea 量到的比例）。步驟 7 實際取值照 draft_masts.py：主桅照 galea 主帆 ×1.19、前桅照 galea 前帆 ×1.15、後桅照 galea 主帆 ×0.66（以 rig.json 為準）。帆素白（Tim 附圖的紅白條紋查不到出處）。"}
   },
   "lines": {
     "sternpost_head_x": {"v": 52, "src": "設計：艉柱後留 5.2 m 給艉樓懸出與舵。"},
