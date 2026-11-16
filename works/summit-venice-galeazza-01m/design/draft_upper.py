@@ -5,6 +5,7 @@
 座標同 lines.py：X 船長（船頭 +X）、Y 寬（中線 160）、Z 高（龍骨底 0）；格 k 佔 [k, k+1)、格心 k+0.5。
 """
 import hashlib
+import math
 import json
 from pathlib import Path
 import sys
@@ -32,6 +33,7 @@ def main():
     hull = np.loadtxt(D / 'masks/hull/hull_01.vox.txt', delimiter=',', dtype=np.int32)
     occ = np.zeros((NX, NY, NZ), np.uint8)
     occ[hull[:, 0], hull[:, 1], hull[:, 2]] = hull[:, 3]
+    hull_col = {(int(a), int(b), int(c)): int(d) for a, b, c, d in hull}
 
     deck_top = lv(plan, 'deck_top_z')
     post_out = lv(plan, 'postizza_out')
@@ -95,9 +97,10 @@ def main():
     z0c, ztop = 29, bc['top_z']
     ang = np.degrees(np.arctan2(Y - YC, np.maximum(dx, 1e-6)))       # 0° ＝ 正前方（x ≥ cx 那半圓）
     ports = np.zeros((NX, NY, NZ), bool)
-    for a in (-36, -12, 12, 36):                                        # 下層 4 門：2 × 50 磅 colubrina（中）＋2 × 20 磅 cannone（斜）
+    a50 = math.degrees(math.asin(13 / (r + 0.5)))                       # 50 磅兩門平行朝前、離中線 ±13 格（步驟 9：±12° 斜放兩門會在船裡撞在一起）
+    for a in (-36, -a50, a50, 36):                                      # 下層 4 門：2 × 50 磅 colubrina（中）＋2 × 20 磅 cannone（斜）；z 36..45（50 磅砲管徑 0.6 m）
         tang = np.abs(np.radians(ang - a)) * r
-        ports |= (X >= cx) & (tang <= 3.5) & (Z >= 37) & (Z <= 43)
+        ports |= (X >= cx) & (tang <= 3.5) & (Z >= 36) & (Z <= 45)
     for a in (-100, -72, -45, -18, 18, 45, 72, 100):                    # 頂層 8 個砲眼：colubrina 14、falcone 6、petriera 14
         aa = np.clip(np.abs(a), 0, 90) * np.sign(a)
         tang = np.abs(np.radians(ang - aa)) * r
@@ -127,7 +130,12 @@ def main():
     swall = stern & (dy <= HB) & (dy > HB - 2) & (Z > SH) & (Z <= sc['rail_z'])
     win = np.zeros_like(swall)
     for xw in range(sx0 + 14, sx1 - 8, 15):                             # 側窗：艉樓下的艙（dragante）
-        win |= (np.abs(X - xw) <= 2) & (Z >= 40) & (Z <= 46)
+        if xw == sx0 + 74:                                              # 第 5 扇是 30 磅 cannone 的砲門（步驟 9）：跟艏樓側砲門同高 z 37..45、寬 7
+            win |= (np.abs(X - xw) <= 3) & (Z >= 37) & (Z <= 45)
+        else:
+            win |= (np.abs(X - xw) <= 2) & (Z >= 40) & (Z <= 46)
+    # 艉樓平台欄杆的砲眼（步驟 9）：14 磅 colubrina（x 125..131）、3 磅 falcone（x 145..149）從欄杆上打，欄杆 z 55..58 開口
+    win |= (((X >= 125) & (X <= 131)) | ((X >= 145) & (X <= 149))) & (Z >= 55) & (Z <= sc['rail_z'])
     put(swall & ~win, DARK, 'stern_walls')
     tran = (X >= sx0) & (X <= sx0 + 1) & (dy <= HB) & (Z > SH) & (Z <= sc['rail_z'])
     twin = ((np.abs(dy - 10) <= 3) | (np.abs(dy - 24) <= 3)) & (Z >= 40) & (Z <= 46)
@@ -168,6 +176,11 @@ def main():
         ztop_k = z0c - 1 if x <= cx + r else sp['z_root'] + 1             # 艏樓底下一路頂到托板，不留縫
         put((X == x) & (dy <= 1) & (Z >= int(round(zb))) & (Z <= ztop_k), DARK, 'spur_knee')
     new[(new > 0) & (Z <= plan['waterline']['z']) & (X >= x0s - 40) & (occ == 0)] = BOTTOM   # 水線下塗船底色
+    # 艏樓裡的舊船殼（步驟 9）：船殼 01 的舷頂與艏柱頭在艏樓圓盤裡、主甲板面以上（z ≥ 32）凸出來 2–6 格，擋住艏樓下層的砲架與 50 磅砲口
+    #   ⇒ 艏樓牆裡面那一圈（牆內側以內）的船殼格刻掉，艏樓牆就是船頭的舷；清單寫 masks/upper/hull_cut_01.vox.txt（帶原色，carvevox 守門）
+    cut = (occ > 0) & (X >= bc['x_back'] + 3) & (rr <= r + 0.5 - th) & (Z >= deck_top + 1)
+    cutc = np.argwhere(cut)
+    occ[cut] = 0
     cells = np.argwhere(new > 0)
     union = (occ > 0) | (new > 0)
     lab, ncomp = ndimage.label(union)
@@ -186,6 +199,9 @@ def main():
     out = D / 'masks/upper/upper_01.vox.txt'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_bytes(body)
+    cbody = ''.join(f'{x},{y},{z},{hull_col[(x, y, z)]}\n' for x, y, z in cutc.tolist()).encode('ascii')
+    (D / 'masks/upper/hull_cut_01.vox.txt').write_bytes(cbody)
+    stats['hull_cut'] = len(cutc)
     stats['sha256'] = hashlib.sha256(body).hexdigest()
     (D / 'verify_upper.json').write_text(json.dumps(stats, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(stats, ensure_ascii=False))

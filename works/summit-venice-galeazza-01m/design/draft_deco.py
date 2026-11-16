@@ -22,6 +22,7 @@ sys.path.insert(0, str(D))
 from lines import Lines, load_plan
 
 GLASS, GOLD, GOLD2, RED = 155, 212, 208, 160
+TRANSOM_GLASS = False   # 步驟 9：艉封板兩扇窗是 30 磅 colubrina 的艉砲門（de Zuanne 艉 2 colubrina da 30），不裝玻璃
 
 
 def lion(w=29, h=25):
@@ -77,7 +78,7 @@ def main():
         if not (abs(dy - 10) <= 3 or abs(dy - 24) <= 3):
             continue
         for z in range(40, 47):
-            if dy <= hb(sx0, L.z_side) and not occ[sx0, y, z] and not occ[sx0 + 2, y, z]:
+            if TRANSOM_GLASS and dy <= hb(sx0, L.z_side) and not occ[sx0, y, z] and not occ[sx0 + 2, y, z]:
                 glass[(sx0, y, z)] = GLASS
     # 側窗：x ＝ sx0+14 起每 15 格、|x−xw| ≤ 2、z 40..46；玻璃放在牆最外那層（dy ＝ HB），後面那層（HB−1）是洞
     gunport_x = sx0 + 74                # 第 5 扇（x 128）：30 磅 cannone 的砲門，跟 draft_upper 的窗序同一把尺

@@ -37,3 +37,19 @@ design/plan.json 每個數字標出處或「設計」。線形程式 lines.py �
   | 戰鬥帆（2） | fore-lateen、main-lateen |
   | 滿帆（3） | fore-lateen、main-lateen、mizzen-lateen |
 - 讀數：ropecheck 繩 189 條（含 ratlines 展開）兩端 378 個都綁好；view（風 4.5,−1.5,0）帆 7（3 帆＋4 旗）、sails_broken 0、ropes_broken 0、models_broken 0；link_overlap 0。圖：stage05_rig_view.png。
+
+## 砲：32 門＋六種新砲（步驟 9，2026-11-16）
+- Tim：「Build new gun types」⇒ 缺的威尼斯砲種一律做新的通用部件＋遊戲砲種（不拿別的口徑暫代）。
+- 通用部件（draft_guns_venice.py ⇒ apply_gun_parts.py；0.05 m、模型 scale 0.5；座標照 Ship_Guns §4.1；青銅 168／箍 208、砲架 132）：
+  | 代碼 | 作品 | 格 | 框 | 砲管 | 砲軸高 | 固定點 |
+  |---|---|---|---|---|---|---|
+  | ven20 cannone da 20 | -gun-ven20 | 3,029 | 15×54×24 | 2.6 m | 0.83 m | muzzle／breech／cascabel／train／trunnion／eye-aft／eye-fwd |
+  | ven30c cannone da 30 | -gun-ven30c | 4,141 | 17×60×25 | 2.9 m | 0.83 m | 同上 |
+  | ven14 colubrina da 14 | -gun-ven14 | 2,429 | 15×70×21 | 3.4 m | 0.73 m | 同上 |
+  | ven30 colubrina da 30 | -gun-ven30 | 5,046 | 17×88×30 | 4.3 m | 1.13 m | 同上 |
+  | ven3 falcone da 3 | -gun-ven3 | 1,181 | 11×40×19 | 1.9 m | 0.73 m | 同上 |
+  | ven14p petriera da 14（叉架迴旋） | -gun-ven14p | 667 | 13×38×20 | 1.75 m | 0.73 m | muzzle／breech／cascabel／trunnion／pivot（作品 meta mount=turret） |
+  每件 1 元件、空腔 0、x 鏡像差 0；遊戲數值在 plan.json guns.types（〔估〕）。50 磅（ven50）、6 磅（ven6）引用 meadow galea 的 corsiero、falcone。
+- 32 門照 de Zuanne 1686（位置是設計）：艏樓下層 2 ven50（平行朝前、離中線 ±1.3 m）＋2 ven20（±36°）＋4 ven30c（側砲門 x 486／504）；艏樓頂 2 ven14（±18°）＋2 ven6（±45°）＋4 ven14p（±72°、x 510）；艉樓下艙 2 ven30（艉封板窗朝後）＋2 ven30c（x 128 側砲門）；艉樓平台 2 ven14（x 128）＋2 ven3（x 147）；兩舷舷牆頂 8 ven14p（槳與槳之間）。
+- 為了砲改的船殼：艏樓裡舊船殼的舷頂與艏柱頭（z ≥ 32，1,364 格）刻掉（hull_cut_01）；艏樓下層前面四個砲門 z 36–45，50 磅兩門改成平行朝前（±12° 兩門在船裡撞在一起）；艉樓 x 128 側窗改成砲門（z 37–45、寬 7）；艉樓平台欄杆砲眼（x 125–131、145–149，z 55–58）；艉封板兩扇窗是 30 磅艉砲門、拿掉玻璃（玻璃 378 ⇒ 280）。
+- 讀數（draft_place_guns.py、gun_layout.json）：32 門每一門的格心＋八角零碰撞（含先擺的砲）、砲口在牆外、砲口往前 4 m 射線碰到船 0；叉架迴旋砲每 5° 量：舷牆頂 8 門 ±70°、艏樓頂 ±72° 兩門 ±10°、x 510 兩門 ±20°。view：models_drawn 36（砲 32＋帆桁 3＋金飾 1）、models_broken 0。圖：stage06_guns_view.png。

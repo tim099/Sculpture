@@ -35,7 +35,7 @@ def component(suffix, title, lists):
         cli('work', sub='update', work=work, meters_per_voxel=0.1, tags='sub')
     if not list((where / 'events').rglob('*.json')) if (where / 'events').exists() else True:
         for p in lists:
-            n = sum(1 for l in p.read_text().splitlines() if l.strip())
+            n = sum(1 for l in p.read_text(encoding='utf-8').splitlines() if l.strip() and not l.startswith('#'))
             out = cli('stampvox', work=work, voxels=str(p).replace('\\', '/'), at='0,0,0', expect_pixels=n, share=0)
             m = re.search(r'placed\D{0,12}(\d[\d,]*)', out)
             placed = int(m.group(1).replace(',', '')) if m else None

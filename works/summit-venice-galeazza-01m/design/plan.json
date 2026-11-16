@@ -51,6 +51,20 @@
       "mezzana":    {"x": 168, "top_z": 146, "yard_m": 19.1, "sail": "lateen"}},
       "src": "設計：桅高、帆桁長查不到。照 meadow galea（43 m 船、主桅頂 z 184、甲板 z 18）按船長 ×1.16 放大，再加甲板高差：主桅頂離甲板約 20 m；帆桁長約主桅高 1.5 倍（galea 量到的比例）。步驟 7 實際取值照 draft_masts.py：主桅照 galea 主帆 ×1.19、前桅照 galea 前帆 ×1.15、後桅照 galea 主帆 ×0.66（以 rig.json 為準）。帆素白（Tim 附圖的紅白條紋查不到出處）。"}
   },
+  "guns": {
+    "src": "de Zuanne 1686（Lo Basso 2003 p.14 n.8）32 門：艏 corsia 2 colubrina da 50、艏樓 2 colubrina da 14＋2 falcone da 6＋4 petriera da 14、艏另 2 cannone da 20；艉 2 colubrina da 30＋2 colubrina da 14＋2 falcone da 3；兩舷 6 cannone da 30＋8 petriera da 14。每一門擺哪裡是設計（原文只列數量）。",
+    "libbra_kg": {"v": 0.30122, "src": "跟 meadow 的 ven50（15.061 kg）、ven6（1.80732 kg）同一個威尼斯砲用磅（libbra sottile 0.30122 kg）。"},
+    "types": {
+      "ven20":  {"name": "20 威尼斯磅砲（cannone da 20）", "kind": "cannone", "lb": 20, "len_m": 2.3, "base_r_m": 0.21, "muzzle_r_m": 0.15, "AZ": 16, "V": 160, "reload": 1.0, "big": true, "hole": 0.95, "crew": 5, "min": 2, "mass": 2.0, "dmg": 60},
+      "ven30c": {"name": "30 威尼斯磅砲（cannone da 30）", "kind": "cannone", "lb": 30, "len_m": 2.6, "base_r_m": 0.24, "muzzle_r_m": 0.17, "AZ": 16, "V": 160, "reload": 1.15, "big": true, "hole": 1.05, "crew": 6, "min": 3, "mass": 2.6, "dmg": 80},
+      "ven14":  {"name": "14 威尼斯磅長砲（colubrina da 14）", "kind": "colubrina", "lb": 14, "len_m": 3.2, "base_r_m": 0.17, "muzzle_r_m": 0.11, "AZ": 14, "V": 175, "reload": 0.9, "big": false, "hole": 0.8, "crew": 4, "min": 2, "mass": 1.6, "dmg": 48},
+      "ven30":  {"name": "30 威尼斯磅長砲（colubrina da 30）", "kind": "colubrina", "lb": 30, "len_m": 4.0, "base_r_m": 0.22, "muzzle_r_m": 0.15, "AZ": 22, "V": 178, "reload": 1.25, "big": true, "hole": 1.05, "crew": 6, "min": 3, "mass": 3.0, "dmg": 85},
+      "ven3":   {"name": "3 威尼斯磅輕砲（falcone da 3）", "kind": "falcone", "lb": 3, "len_m": 1.7, "base_r_m": 0.09, "muzzle_r_m": 0.06, "AZ": 14, "V": 160, "reload": 0.5, "big": false, "hole": 0.5, "crew": 2, "min": 1, "mass": 0.3, "dmg": 25},
+      "ven14p": {"name": "14 威尼斯磅石彈砲（petriera da 14，叉架迴旋）", "kind": "petriera", "lb": 14, "len_m": 1.3, "base_r_m": 0.15, "muzzle_r_m": 0.13, "AZ": 14, "V": 120, "reload": 0.6, "big": false, "hole": 0.9, "crew": 2, "min": 1, "mass": 0.45, "dmg": 40}
+    },
+    "types_src": "設計（標〔估〕）：彈重 ＝ 磅 × 0.30122 kg；初速、裝填、砲班、砲重、每發傷害照現有砲種內插（Ship_Guns §2.2：6 磅 40、12 磅 55、24 磅 100、32 磅長砲 130；cannone 短而粗、colubrina 長而細、petriera 短、射石彈）。長度：cannone 約 18 倍口徑、colubrina 約 30 倍、falcone 約 28 倍、petriera 約 9 倍（Guilmartin《Gunpowder and Galleys》的分類，倍數是設計取整，沒逐頁讀）。",
+    "dmg_existing": {"ven50": 133, "ven6": 35, "src": "meadow 2026-11-16 加 ven50／ven6 時沒有加每發傷害（DMG 沒這兩種 ⇒ b.dmg undefined）；本船一起補：ven50 照 32 磅長砲 14.5 kg 130、36 磅 16.3 kg 140 內插（15.06 kg ⇒ 133）、ven6 照 4 磅 1.8 kg 35。"}
+  },
   "lines": {
     "sternpost_head_x": {"v": 52, "src": "設計：艉柱後留 5.2 m 給艉樓懸出與舵。"},
     "stem_head_x": {"v": 556, "src": "de Zuanne 29 passi = 50.42 m da roda in roda ⇒ 504 格（52 → 556）。"},
