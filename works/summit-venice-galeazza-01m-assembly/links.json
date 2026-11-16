@@ -1,5 +1,5 @@
 {
-	"schema": 1,
+	"schema": 3,
 	"links": [
 		{
 			"name": "船殼",
@@ -20,6 +20,231 @@
 			"created_at": "2026-11-16T18:12:27",
 			"persona": "summit",
 			"note": ""
+		},
+		{
+			"name": "甲板-main",
+			"work": "summit-venice-galeazza-01m-deck",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:25",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"deck": "main",
+				"floor": "54:32,578:32",
+				"kind": "deck",
+				"level": 0,
+				"name": "主甲板（划槳甲板）",
+				"thick": 3,
+				"walk": "152:35,155:35,156:38,459:38,460:35,465:35",
+				"walk_y": "154:166"
+			}
+		},
+		{
+			"name": "划凳",
+			"work": "summit-venice-galeazza-01m-benches",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:26",
+			"persona": "summit",
+			"note": ""
+		},
+		{
+			"name": "甲板-forecastle",
+			"work": "summit-venice-galeazza-01m-deck-bow",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:28",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"deck": "forecastle",
+				"floor": "466:52,578:52",
+				"kind": "deck",
+				"level": 1,
+				"name": "艏樓（圓形砲樓頂）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-quarter",
+			"work": "summit-venice-galeazza-01m-deck-stern",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:30",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"deck": "quarter",
+				"floor": "56:52,151:52",
+				"kind": "deck",
+				"level": 2,
+				"name": "艉樓平台",
+				"thick": 3
+			}
+		},
+		{
+			"name": "梯子-艏樓",
+			"work": "summit-venice-galeazza-01m-ladder-bow",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:34",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"bow-S.decks": "main,forecastle",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "梯子-艏樓-鏡像",
+			"work": "summit-venice-galeazza-01m-ladder-bow",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:34",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"bow-S.decks": "main,forecastle",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "梯子-艉樓",
+			"work": "summit-venice-galeazza-01m-ladder-stern",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:37",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"kind": "ladders",
+				"stern-S.decks": "main,quarter"
+			}
+		},
+		{
+			"name": "梯子-艉樓-鏡像",
+			"work": "summit-venice-galeazza-01m-ladder-stern",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:37",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"kind": "ladders",
+				"stern-S.decks": "main,quarter"
+			}
+		},
+		{
+			"name": "梯子-底艙",
+			"work": "summit-venice-galeazza-01m-ladder-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-16T19:03:39",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"kind": "ladders"
+			}
 		}
 	]
 }
