@@ -27,3 +27,13 @@ design/plan.json 每個數字標出處或「設計」。線形程式 lines.py �
 - draft_masts.py ⇒ rig.json＋masks/rig/；apply_masts.py：每根下桅一件子作品（組裝件關聯 mast-main／mast-fore／mast-mizzen，meta kind=mast、mast=main｜fore｜mizzen），帆桁一件子作品 ⇒ 桅子作品裡的外部模型 yard-*（kind=yard、yard=gaff、rig=lateen、固定點 pivot／peak／fore、sail=<桅>-lateen）。
 - 尺寸查不到 ⇒ 照 meadow galea 的相對座標放大（主 ×1.19、前 ×1.15、後 ×0.66），基準 corsia 頂 z 38：主桅頂 z 232、帆桁 34.4 m（轉軸 z 177）；前桅頂 z 194、20.8 m；後桅頂 z 146、19.1 m。主帆 clew 挪到 x 185 讓開後桅。
 - 讀數：組裝件匯出 345,097 格對設計缺 0／多 0／色差 0；元件 1、封閉空腔 0、鏡像差 0；三根桅腳都踩在 corsia 頂、跟現況重疊 0；draft_masts 重跑同雜湊。圖：stage04_masts_view.png。
+
+## 帆、索具、旗（步驟 8，2026-11-16）
+- apply_rigging.py：三面三角帆（peak／tack 釘在帆桁模型的 peak／fore、clew free 由 sheet 拉住，帆布 #f2ead8 素白）；每根桅每舷 3 條 shroud（hound → 舷牆頂）＋ratlines 橫繩組（step 4，不標 climb：桅上沒有站得住的平台）；tack／sheet／halyard 各 3；艉樓旗桿（子作品 -flagstaff，關聯「艉旗桿」）掛聖馬可國旗（貼圖照抄 meadow galea 的 venice-ensign.png，meta flag=ensign、nation=venice）；三根帆桁 peak 各一面紅長旗（flag=pennant、nation=none；Grevenbroeck 帆桁頂的飄帶）。
+- 帆裝三段（meta set）：
+  | 帆裝 | 張哪幾面 |
+  |---|---|
+  | 收帆（1） | fore-lateen |
+  | 戰鬥帆（2） | fore-lateen、main-lateen |
+  | 滿帆（3） | fore-lateen、main-lateen、mizzen-lateen |
+- 讀數：ropecheck 繩 189 條（含 ratlines 展開）兩端 378 個都綁好；view（風 4.5,−1.5,0）帆 7（3 帆＋4 旗）、sails_broken 0、ropes_broken 0、models_broken 0；link_overlap 0。圖：stage05_rig_view.png。

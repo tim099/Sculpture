@@ -1,5 +1,5 @@
 - 步驟 14 匯入後跑 admin.py ladcheck（⑤ 甲板連通、⑥ 艙底）；底艙梯尋路不收（貨艙梯）是預期的 ⚠。
-- 帆用素白（紅白條紋查不到出處，Tim 要再改）；艉燈（威尼斯 capitana 三盞 fanò）放步驟 10 的燈。
-- 步驟 7–8 三桅三角帆（rig_table 是設計值）。步驟 9 砲：ven50（meadow corsiero）、ven6（falcone）、pierrier；30／20／14／3 磅要不要新砲種。
+- 帆用素白（紅白條紋查不到出處，Tim 要再改）；艉燈（威尼斯 capitana 三盞 fanò）放步驟 10。
 - 步驟 13 槳：25／25、每支 6 人、14 m；元件可能縮放皇家號 7 人槳或 meadow galea 槳。
 - 衝角在水線上（史料；Tim 2026-11-16「保持水面上」）⇒ 不做撞角（Ship_Fittings §9.11 不適用）。
+- 步驟 9 砲：ven50（meadow corsiero）、ven6（falcone）、pierrier；30／20／14／3 磅要不要新砲種。

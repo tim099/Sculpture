@@ -1,0 +1,268 @@
+{
+	"schema": 3,
+	"wind": [
+		0,
+		0,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "main-lateen",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:mast-main/yard-main/peak",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:mast-main/yard-main/fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "185,158,130",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.07,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-11-16T19:24:57",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff",
+				"set": 2
+			}
+		},
+		{
+			"name": "main-pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "model:mast-main/yard-main/peak",
+					"pin": true
+				},
+				{
+					"name": "foot",
+					"at": "model:mast-main/yard-main/pennant",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "68,160,291",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b3202a",
+			"res": 0,
+			"fullness": 1.02,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-11-16T19:25:01",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main",
+				"nation": "none"
+			}
+		},
+		{
+			"name": "fore-lateen",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:mast-fore/yard-fore/peak",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:mast-fore/yard-fore/fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "408,158,93",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.07,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-11-16T19:25:02",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "gaff",
+				"set": 1
+			}
+		},
+		{
+			"name": "fore-pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "model:mast-fore/yard-fore/peak",
+					"pin": true
+				},
+				{
+					"name": "foot",
+					"at": "model:mast-fore/yard-fore/pennant",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "330,160,220",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b3202a",
+			"res": 0,
+			"fullness": 1.02,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-11-16T19:25:06",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "fore",
+				"nation": "none"
+			}
+		},
+		{
+			"name": "mizzen-lateen",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:mast-mizzen/yard-mizzen/peak",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:mast-mizzen/yard-mizzen/fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "76,158,89",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.07,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-11-16T19:25:07",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "gaff",
+				"set": 3
+			}
+		},
+		{
+			"name": "mizzen-pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "model:mast-mizzen/yard-mizzen/peak",
+					"pin": true
+				},
+				{
+					"name": "foot",
+					"at": "model:mast-mizzen/yard-mizzen/pennant",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "2,160,173",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#b3202a",
+			"res": 0,
+			"fullness": 1.02,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-11-16T19:25:12",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "mizzen",
+				"nation": "none"
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "head",
+					"at": "艉旗桿/ensign-head",
+					"pin": true
+				},
+				{
+					"name": "fly-top",
+					"at": "25,160,103",
+					"pin": false
+				},
+				{
+					"name": "fly-foot",
+					"at": "25,160,85",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "艉旗桿/ensign-foot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#ffffff",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "",
+			"persona": "summit",
+			"created_at": "2026-11-16T19:25:15",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"nation": "venice"
+			}
+		}
+	]
+}
