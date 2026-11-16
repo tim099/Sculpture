@@ -2,4 +2,3 @@
 - 帆用素白（紅白條紋查不到出處，Tim 要再改）；艉燈（威尼斯 capitana 三盞 fanò）放步驟 10。
 - 步驟 13 槳：25／25、每支 6 人、14 m；元件可能縮放皇家號 7 人槳或 meadow galea 槳。
 - 衝角在水線上（史料；Tim 2026-11-16「保持水面上」）⇒ 不做撞角（Ship_Fittings §9.11 不適用）。
-- 步驟 9 遊戲砲種：Blockside 分支 summit/galeazza-guns-1302（六種新砲＋補 ven50／ven6 每發傷害）等合進 dev；合了才算「meta gun= 在遊戲砲種表」。
