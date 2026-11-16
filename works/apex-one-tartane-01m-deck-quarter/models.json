@@ -1,0 +1,88 @@
+{
+	"schema": 2,
+	"models": [
+		{
+			"name": "羅經櫃",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "summit-night-falcon-01m-binnacle",
+			"axes": "sculpt",
+			"at": [
+				114.5,
+				96.5,
+				36
+			],
+			"pivot": [
+				9,
+				13,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				180
+			],
+			"scale": [
+				0.2,
+				0.2,
+				0.2
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（TASK-1299；draft_fit.py）",
+			"persona": "apex-one",
+			"created_at": "2026-11-16T18:47:25",
+			"meta": {
+				"id": "binnacle-1",
+				"kind": "binnacle"
+			}
+		},
+		{
+			"name": "舵柄",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-tartane-01m-tiller",
+			"axes": "sculpt",
+			"at": [
+				92.5,
+				96.5,
+				36
+			],
+			"pivot": [
+				92.5,
+				96.5,
+				36
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 11（TASK-1299；draft_rudder_anchor.py）",
+			"persona": "apex-one",
+			"created_at": "2026-11-16T18:49:33",
+			"meta": {
+				"id": "tiller-1",
+				"kind": "tiller",
+				"spin": "rudder",
+				"spin_k": 35,
+				"spin_lag": 0.3,
+				"spin_max": 35,
+				"spin_min": -35
+			}
+		}
+	]
+}

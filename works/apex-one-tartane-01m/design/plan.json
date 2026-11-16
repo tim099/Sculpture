@@ -1,0 +1,527 @@
+{
+ "title": "塔爾塔納（Tartane de négoce，約 1666，雙桅商用型）新圖紙 01：線形、側面、甲板高度、桅帆表",
+ "task": "TASK-1299（傘 TASK-1211 地中海船③）",
+ "author": "apex-one",
+ "date": "2026-11-16",
+ "sources": {
+  "JV": "Jean Jouve, Desseins de tous les Bâtiments qui Naviguent sur la Méditerranée (1679), Pl. 19–20 (tartanes à deux mâts / de négoce) vs Pl. 16 (tartane de pêche) —— 雙桅配置（前傾約 23–25° 之 trinquet + 舯部近垂直之 mestre + 短斜桅 bout-dehors / foc）、低腰甲板與短尾樓輪廓",
+  "SZ": "Stefano de Zuanne de Michiel, L'Architettura Navale (1686, BL Add MS 38655), 'tartana di piedi 42 in colomba' —— 龍骨 42 威尼斯尺（piede veneto ≈ 0.3477 m ⇒ 14.60 m）、寬平底 soler、舭緣緩微起翹（約 0.17 m）",
+  "PG": "Paragan 1 wreck (Corsica, late 17th/early 18th c.), É. Rieth & F. Cibecchini / H. Botcazou, Archaeonautica 21 (2021) —— 復原龍骨 ~14.4 m、船長 ~19 m、最大寬 5.0–5.30 m、艙深 2.25–2.50 m、平底圓舭淺吃水商船結構",
+  "GR": "Pierre Grandchamp, La France en Tunisie au XVIIe siècle IV, 3 (1621 突尼斯 300 cantars 貨契約 ≈ 14.3–15.0 公噸載貨量) ⇒ 定位為中小型沿岸雙桅商船",
+  "PORTS": "Blocksail/world/areas/livorno.js（berth-boat max LOA 12 m、berth-small max LOA 36 m / 水深 10.1–15.43 m / 航道 8.38–8.57 m）與 docs/TOWNS_1660S_NORTH_AFRICA.md（突尼斯潟湖沙洲淺水 ~1 m、拉古萊特外港可供商船停泊）"
+ },
+ "class": {
+  "v": "17 世紀地中海雙桅商用塔爾塔納（tartane de négoce），300 cantars 沿岸商船，約 60 t 排水量、無艦載舷砲（純風帆商船）",
+  "src": "JV Pl.19–20；GR 1621；PG / SZ 等比取中小型商船級距"
+ },
+ "meters_per_cell": 0.1,
+ "space": {
+  "x": 360,
+  "y": 192,
+  "z": 320,
+  "yc": 96,
+  "note": "中線 y = 96（整數對稱 y ↔ 192 − y），船頭朝 +X，船尾朝 -X，z=0 為護龍骨底面"
+ },
+ "lines": {
+  "half_beam": {
+   "v": 25.1,
+   "src": "參考資料（PG 5.0–5.30 m / JV ~5 m）：半寬 25.1 格 ⇒ 含中線 51 格 ＝ 5.10 m（長寬比 17.5/5.1 = 3.43，符地中海商船 3.1–3.6:1）"
+  },
+  "keel_top": {
+   "v": 3,
+   "src": "設計決定：外部龍骨 ＋ 護龍骨高 0.30 m（3 格）"
+  },
+  "keel_half": {
+   "v": 1,
+   "src": "設計決定：龍骨寬 3 格（0.30 m，中線 ±1 格）"
+  },
+  "max_breadth_z": {
+   "v": 16,
+   "src": "設計決定：最大船寬高度位於設計水線（z=15）上 1 格（1.6 m），符合滿腹圓舭沿岸貨船"
+  },
+  "tumblehome": {
+   "v": 2.0,
+   "src": "設計決定：中剖面至主甲板每舷輕微內收 0.20 m（地中海商用 tartane 舷牆近直僅微收）"
+  },
+  "tumblehome_ref_z": {
+   "v": 25,
+   "src": "設計決定：內收基準高 2.5 m（船腰主甲板上緣）"
+  },
+  "tumblehome_pow": {
+   "v": 1.5,
+   "src": "設計決定：tumblehome 漸變指數"
+  },
+  "tumblehome_above_per_cell": {
+   "v": 0.03,
+   "src": "設計決定：主甲板以上舷牆幾近垂直僅微收"
+  },
+  "bilge_pow": {
+   "v": 2.15,
+   "src": "參考資料（PG / SZ）：平底寬圓舭剖面超橢圓指數"
+  },
+  "plan_half": {
+   "v": 11,
+   "src": "參考資料（SZ 1686 flat floor 1.16–2.30 m）：全平底寬 23 格（2.30 m ⇒ 半寬 11 格）"
+  },
+  "astilla": {
+   "v": 2,
+   "src": "參考資料（SZ 1686 floor heads 起翹約 17 cm）：平底外緣起翹 0.20 m（2 格）"
+  },
+  "s_aft": {
+   "v": 0.36,
+   "src": "設計決定：船尾線型收斂起點（後 36% 龍骨起逐漸收尖）"
+  },
+  "s_fwd": {
+   "v": 0.64,
+   "src": "設計決定：船頭線型收斂起點（前 36% 飽滿貨船船肩收圓至艏柱）"
+  },
+  "sternpost_x0": {
+   "v": 90,
+   "src": "設計決定：艉柱底腳 x = 90（後方留 9.0 m 空間容納舵與雙拉丁帆桁後伸端）"
+  },
+  "sternpost_rake_deg": {
+   "v": 4.0,
+   "src": "設計決定：地中海商用 tartane 近直艉柱（微後傾 4°）"
+  },
+  "wing_transom_z": {
+   "v": 25,
+   "src": "設計決定：主翼梁高度 2.5 m（以下收到艉柱、以上展成窄尾鏡 tableau 容納尾艙窗）"
+  },
+  "transom_ratio": {
+   "v": 0.54,
+   "src": "設計決定：尾鏡寬為最大船寬之 54%（約 2.75 m），較大西洋方尾窄且合 JV Pl.19–20 收束船尾比例"
+  },
+  "forefoot_x": {
+   "v": 226,
+   "src": "參考資料（SZ 14.6 m / PG 14.4 m 龍骨經 1621 300-cantars 商船等比縮至 13.6 m）：龍骨底長 136 格（13.60 m）⇒ forefoot x = 90 + 136 = 226"
+  },
+  "stem_rake": {
+   "v": 40.0,
+   "src": "參考資料（JV Pl.19–20 弧形大幅前伸艏柱）：至 z=33 傾出 4.0 m（40 格，使船長達 ~17.7 m）"
+  },
+  "stem_ref_z": {
+   "v": 33.0,
+   "src": "設計決定：艏柱傾出參考高 z = 33"
+  },
+  "stem_pow": {
+   "v": 0.58,
+   "src": "設計決定：艏柱前弧與平龍骨圓順相切並於上方挺立"
+  },
+  "stem_top_z": {
+   "v": 37,
+   "src": "設計決定：艏柱頂端（capion 基部）高達 3.7 m"
+  },
+  "deadwood_aft_z": {
+   "v": 12,
+   "src": "設計決定：艉端 deadwood 填材抬至 1.2 m（與水線下修尖剖面平順銜接）"
+  },
+  "deadwood_fwd_z": {
+   "v": 7,
+   "src": "設計決定：艏端 deadwood 填材抬至 0.7 m"
+  },
+  "bow_pow_low": {
+   "v": 1.65,
+   "src": "設計決定：水線下略尖切水"
+  },
+  "bow_pow_high": {
+   "v": 2.1,
+   "src": "設計決定：水線上地中海貨船飽滿圓肩"
+  },
+  "aft_pow": {
+   "v": 1.65,
+   "src": "設計決定：艉部平順收窄導水進舵"
+  },
+  "top": [[86, 42], [134, 42], [136, 32], [185, 31], [235, 34], [267, 36.2], [272, 36.2]],
+  "top_src": "參考資料（JV Pl.19–20）：典型低腰（船腰舷牆頂 z=31 ≈ 主甲板上 0.8 m）與短尾樓（dunette 舷牆頂 z=42 @ x≤134），船首為無艉艏高樓之敞開順滑弧形舷弧至 z=36.2（避開最頂端斜角單格切斷，保持 6 連通＝1）"
+ },
+ "waterline": {
+  "z": 15,
+  "src": "設計決定＋港口對照：滿載設計水線 1.50 m（z=15）；相較大西洋深龍骨船明顯淺吃水（~55–62 t 滿載排水，利於地中海沿岸與拉古萊特外港停靠，同時深於突尼斯潟湖 1 m 淺灘）"
+ },
+ "readings_at": {
+  "deck_z": 24,
+  "rail_z": 31,
+  "length_z": 33,
+  "wing_transom_z": 25
+ },
+ "devis": {
+  "keel_cells": 136.0,
+  "length_cells": 178.3,
+  "beam_cells": 51.0,
+  "stem_rake_cells": 40.0,
+  "stern_rake_cells": 2.3,
+  "stem_height_cells": 36.0,
+  "sternpost_height_cells": 36.0,
+  "depth_hold_cells": 20.0,
+  "wing_transom_width_cells": 27.5,
+  "src": "由 SZ 1686 / PG / JV Pl.19–20 依 1621 年 300-cantars 商船尺寸推導之目標讀數"
+ },
+ "decks": {
+  "src": "JV Pl.19–20 & PG：全通封閉主甲板（pont）＋ 貨艙底板（cale）＋ 船尾略下沉之船長尾艙（chambre）＋ 上方短尾樓（dunette，無艏樓）",
+  "rows": [
+   {
+    "key": "hold",
+    "name": "貨艙底板（cale）",
+    "z": 6,
+    "x_from": 124,
+    "x_to": 216,
+    "src": "設計決定：貨艙地板（x 124–216，主桅與前桅間 9.2 m 長）鋪於底肋上 z=6；離主甲板底樑凈高 ~1.5 m"
+   },
+   {
+    "key": "main",
+    "name": "主甲板（pont）",
+    "z": 23,
+    "x_from": 135,
+    "src": "參考資料（PG 艙深 ~2.2 m / 小一級取 ~2.0 m）：舯主甲板面 z=23，依地中海舷弧向艏起翹至 27、向艉起翹至 25；起於 x=135（x=134 為 quarter break 隔艙壁，零重疊）"
+   },
+   {
+    "key": "cabin",
+    "name": "船尾艙室底板（chambre）",
+    "z": 19,
+    "x_to": 133,
+    "src": "設計決定：尾艙地板 z=19（x 89–133），給船長／帳房 1.4 m 淨高（34−19）"
+   },
+   {
+    "key": "quarter",
+    "name": "艉樓後甲板（dunette）",
+    "z": 35,
+    "x_to": 134,
+    "src": "設計決定：高出後緣主甲板 1.0 m（z=35，x 88–134），設舵柄（barre franche）、羅經櫃與尾燈"
+   }
+  ],
+  "sheer": {
+   "aft": 2,
+   "fwd": 4,
+   "x_mid": 175,
+   "x_aft": 134,
+   "x_fwd": 262,
+   "src": "設計決定：主甲板拋物線舷弧（向艉抬 +0.2 m 至 x=134，向艏抬 +0.4 m 至 x=262）"
+  }
+ },
+ "decks_preview": {
+  "hold": 6,
+  "cabin": 19,
+  "main": 23,
+  "quarter": 35
+ },
+ "ports": {
+  "src": "未武裝商用 tartane（GR 1621 300-cantars 商船契約），無舷側艦砲",
+  "tiers": []
+ },
+ "masts": {
+  "src": "JV Pl.19–20（1679 雙桅商用型）＋ H. Botcazou 2021：雙拉丁斜桁桅（舯近垂直主桅 mestre＋前傾約 23° 之前桅 trinquet）＋長出船首之短斜桅（bout-dehors）張船首三角帆（foc / polacre）",
+  "rows": [
+   {
+    "key": "fore",
+    "label": "前桅（trinquet）",
+    "x_step": 236,
+    "rake_deg": -23,
+    "lower_m": 12.2,
+    "yard_frac": 0.74,
+    "yards": {
+     "lateen": 10.4
+    },
+    "src": "JV Pl.19–20：前桅 trinquet 位於船首處大幅前傾（23°，此處 rake_deg = -23）；立於前方底龍骨（x=236），垂直升 12.2 m（斜長 13.3 m）；拉丁斜桁 10.4 m 掛於 74% 高處"
+   },
+   {
+    "key": "main",
+    "label": "主桅（mestre）",
+    "x_step": 158,
+    "rake_deg": 0,
+    "lower_m": 16.0,
+    "yard_frac": 0.81,
+    "yards": {
+     "lateen": 18.4
+    },
+    "src": "JV Pl.19–20 / SZ 1686：主桅 mestre 垂直立於龍骨中點（x=158）；整根立桅高 16.0 m；主拉丁斜桁 18.4 m 掛於 81% 高處（逾船殼全長）"
+   },
+   {
+    "key": "bowsprit",
+    "label": "船首斜桅（bout-dehors）",
+    "x_step": 252,
+    "deck": "main",
+    "z0": 33,
+    "angle_deg": 15,
+    "len_m": 8.2,
+    "yards": {},
+    "extra_sail": "foc",
+    "src": "JV Pl.19–20：纖細前伸船首斜桅自前桅前方甲板座（x=252, z=33）以 15° 仰角前伸 8.2 m，與前傾前桅（x=247）及下方雕首像（z≤35）皆零重疊"
+   }
+  ],
+  "check": "主桅頂 z ≈ 167（離水線 15.2 m）；主斜桁 18.4 m（船殼長 17.8 m 之 1.03 倍）；trinquet、mestre、foc 三面帆在側面與三維空間互不干擾"
+ },
+ "hull_build": {
+  "wall": 3,
+  "bottom_color": 218,
+  "bottom_top_z": 16,
+  "side_color": 141,
+  "frame_color": 104,
+  "inner_color": 177,
+  "src": "3 格牆（外板 1＋肋骨 1＋內板 1）；地中海傳統船底塗白牛脂硫磺膏（spalmé 色號 218 至水線 z 16 含收邊）；舷側油浸橡松木 141、內肋骨 104、內襯板 177"
+ },
+ "paint": {
+  "base": 141,
+  "wale": 68,
+  "cap": 68,
+  "frieze": 209,
+  "red": 164,
+  "gold": 208,
+  "stern_x_max": 105,
+  "wales": {
+   "rows": [
+    {
+     "name": "主護舷帶（main wale）",
+     "deck": "main",
+     "dz": -2,
+     "h": 3,
+     "color": 68,
+     "src": "JV Pl.19–20 雙重護舷帶：下道緊貼主甲板下緣（3 格高），深橡木色 68"
+    },
+    {
+     "name": "上護舷帶（upper wale）",
+     "deck": "main",
+     "dz": 3,
+     "h": 2,
+     "color": 68,
+     "src": "JV Pl.19–20：主甲板上 3 格上道護舷帶（2 格高），深橡木色 68"
+    }
+   ]
+  },
+  "src": "JV Pl.19–20 地中海商船配色：深橡木雙道護舷帶（68）、上舷牆暖赭飾帶（209）、艉樓與尾鏡威尼斯紅底（164）配金赭飾邊（208）"
+ },
+ "stern": {
+  "src": "步驟 4 開出三扇船尾艙窗洞（貫穿 3 格船殼，步驟 6 再嵌 1 格厚玻璃），對稱於中線 yc=96",
+  "rows": [
+   {
+    "deck": "cabin",
+    "sill": 8,
+    "n": 3,
+    "w": 3,
+    "h": 5,
+    "half": 8.5,
+    "kind": "port",
+    "src": "設計決定：cabin 地板 z=19＋8 ⇒ 窗檻 z=27..31（高 0.5 m），3 扇對稱奇寬（3×5 格）方拱窗開通 tail/cabin，間距 3 格木挺"
+   }
+  ]
+ },
+ "decks_build": {
+  "src": "設計決定（步驟 5，照 Ship_Decks §9.2–9.3）：貨艙底板 hold、主甲板 pont、尾艙 chambre、艉樓後甲板 dunette",
+  "plank": {
+   "interior": 177,
+   "weather": 209,
+   "weather_decks": ["main", "quarter"],
+   "src": "甲板露天鋪暖棕松木 209、艙內鋪淺松木 177"
+  },
+  "beam": {
+   "every": 10,
+   "w": 2,
+   "depth": {
+    "hold": 1,
+    "main": 2,
+    "cabin": 1,
+    "quarter": 1
+   },
+   "color": 104,
+   "src": "地中海小型商船約每 1.0 m（10 格）一道 0.2 m 寬橫樑（主甲板深 2 格、其餘 1 格），深橡木 104"
+  },
+  "trim": 141,
+  "hatches": [
+   {
+    "name": "主貨艙口",
+    "x0": 174,
+    "x1": 192,
+    "half": 6,
+    "decks": ["main"],
+    "src": "主甲板貨艙大口（1.9 m × 1.3 m，供吊裝酒桶、橄欖油甕與貨箱進貨艙；步驟 10 蓋可拆格柵蓋板）"
+   }
+  ],
+  "coaming_h": 2,
+  "mast_r": {
+   "fore": 2,
+   "main": 2.5
+  },
+  "breaks": [
+   {
+    "name": "艉樓前艙壁",
+    "x": 134,
+    "lo": "cabin",
+    "up": "quarter",
+    "doors_dy": [],
+    "windows_dy": [6, 12],
+    "rail_h": 5,
+    "bulkhead": true,
+    "src": "x=134 橫隔艙壁擋浪保護尾艙，上方艉樓前緣設 0.5 m 胸牆並在兩舷梯頭留口"
+   }
+  ],
+  "ladders": {
+   "rise": 3,
+   "run": 2,
+   "tread_half": 2,
+   "color": 141,
+   "list": [
+    {
+     "name": "hold",
+     "lo": "hold",
+     "up": "main",
+     "xs": 201,
+     "dir": 1,
+     "dy": 0,
+     "head_x": 214,
+     "well": true,
+     "well_from_step": 1,
+     "src": "貨艙專設梯井（x=203..212），與主貨艙口分開以免被貨艙蓋或小艇堵死"
+    },
+    {
+     "name": "cabin",
+     "lo": "cabin",
+     "up": "quarter",
+     "xs": 118,
+     "dir": 1,
+     "dy": 0,
+     "head_x": 131,
+     "well": true,
+     "well_from_step": 1,
+     "src": "尾艙直上艉樓之 companion 樓梯（x=120..129），head x=131 距前方 x=134 胸牆留足兩格淨空（ladcheck ✓）"
+    },
+    {
+     "name": "quarter-P",
+     "lo": "main",
+     "up": "quarter",
+     "xs": 142,
+     "dir": -1,
+     "dy": -9,
+     "head_x": 132,
+     "src": "左舷主甲板上艉樓梯，緊貼 x=134 break 胸牆口（零欄空）"
+    },
+    {
+     "name": "quarter-S",
+     "lo": "main",
+     "up": "quarter",
+     "xs": 142,
+     "dir": -1,
+     "dy": 9,
+     "head_x": 132,
+     "src": "右舷主甲板上艉樓梯，與左舷對稱"
+    }
+   ],
+   "src": "每 3 格爬一階（0.3 m）、踏深 2 格、寬 5 格（0.5 m）含兩側 1 格扶板共 7 寬；每層皆可通達主幹"
+  }
+ },
+ "fit_build": {
+  "src": "步驟 10（TASK-1299）：依地中海雙桅商用 tartane 需求設貨艙蓋（kind=door）、小艇架＋小艇、前甲板絞盤、艉樓羅經櫃、雙尾燈與貨艙貨物，優先沿用共用元件",
+  "assembly": "apex-one-tartane-01m-assembly",
+  "hatch": {
+   "name": "艙蓋-主",
+   "work": "apex-one-tartane-01m-hatch-main",
+   "title": "塔爾塔納 主貨艙格柵艙蓋（kind=door）",
+   "host": "apex-one-tartane-01m-deck-main",
+   "x0": 173,
+   "x1": 193,
+   "y0": 89,
+   "y1": 103,
+   "z": 26,
+   "open_deg": 30,
+   "colors": {"frame": 141, "batten": 104, "plank": 209, "iron": 73},
+   "src": "主貨艙口 174..192 × 90..102 圍板頂 z=25，艙蓋比開口每邊大 1 格蓋於 z=26；鉸鏈沿 -y 左舷、向上掀 30°（最高 z=33.5 < 小艇架縱托樑底 z=36）"
+  },
+  "skids": {
+   "work": "apex-one-tartane-01m-boat-skids",
+   "link": "小艇架",
+   "title": "塔爾塔納 小艇架（船腰橫跨主艙口＋龍骨縱托樑）",
+   "xs": [[170, 171], [194, 195]],
+   "y_lo": 89,
+   "y_hi": 103,
+   "post_ys": [89, 90, 102, 103],
+   "beam_z0": 35,
+   "beam_z1": 36,
+   "cradle_y": [95, 96, 97],
+   "color": 141,
+   "src": "設計決定：跨於主貨艙口前後（x=170..171 與 194..195），立柱落 y=89..90/102..103，兩舷各留 1.0–1.2 m 寬人行通道；z=36 加中線龍骨縱托樑撐住小艇（foot_gap=0 且 z=36 > 艙蓋掀開頂 z=33.5）"
+  },
+  "models": [
+   {"name": "小艇", "host": "apex-one-tartane-01m-deck-main", "work": "basecamp-ember-01m-boat", "at": [182.5, 96.5, 37.0], "pivot": [90, 26, 0], "scale": 0.19, "rotate": 0,
+    "meta": {"kind": "boat", "boat": "cutter", "length_m": 3.4},
+    "src": "沿用共用小艇（scale 0.19 ⇒ 3.42 × 0.99 m canot）擱於小艇架橫樑上（z=37）"},
+   {"name": "絞盤", "host": "apex-one-tartane-01m-deck-main", "work": "basecamp-ember-01m-capstan", "at": [232.5, 96.5, null], "pivot": [40, 40, 0], "scale": 0.125, "rotate": 0,
+    "meta": {"kind": "capstan"},
+    "src": "沿用共用絞盤（scale 0.125 ⇒ Ø 0.90 m × 高 0.83 m cabestan），置於大桅前支索腳與前桅間前甲板中線"},
+   {"name": "羅經櫃", "host": "apex-one-tartane-01m-deck-quarter", "work": "summit-night-falcon-01m-binnacle", "at": [114.5, 96.5, null], "pivot": [9, 13, 0], "scale": 0.20, "rotate": 180,
+    "meta": {"kind": "binnacle"},
+    "src": "沿用夜隼號羅經櫃（1:1 比例 0.36 × 0.52 × 0.96 m），置於艉樓舵柄端前、朝艉（180°）方便舵手看盤"},
+   {"name": "尾燈-P", "host": "apex-one-tartane-01m-assembly", "work": "gura-tridente-01m-lantern", "at": [89.0, 87.5, null], "pivot": [8.5, 8.5, 0], "scale": 0.25, "rotate": 0,
+    "meta": {"kind": "light", "light_color": "#ff9e40"},
+    "src": "沿用三叉戟號船尾燈（scale 0.25），成對置於艉樓兩角舷牆頂（z=43），避開中線國旗桿 x=90 與 deco-船名牌 x≤86"},
+   {"name": "尾燈-S", "host": "apex-one-tartane-01m-assembly", "work": "gura-tridente-01m-lantern", "at": [89.0, 105.5, null], "pivot": [8.5, 8.5, 0], "scale": 0.25, "rotate": 0,
+    "meta": {"kind": "light", "light_color": "#ff9e40"},
+    "src": "右舷對稱艉燈"},
+   {"name": "貨桶-1P", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-barrel", "at": [175.5, 91.0, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨桶-1S", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-barrel", "at": [175.5, 102.0, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨桶-2P", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-barrel", "at": [182.5, 91.0, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨桶-2S", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-barrel", "at": [182.5, 102.0, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨桶-3P", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-barrel", "at": [189.5, 91.0, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨桶-3S", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-barrel", "at": [189.5, 102.0, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-1P", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [138.0, 91.5, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-1S", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [138.0, 101.5, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-2P", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [145.0, 91.5, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-2S", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [145.0, 101.5, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-3P", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [145.0, 91.5, 13.0], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-3S", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [145.0, 101.5, 13.0], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-4P", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [167.5, 91.5, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}},
+   {"name": "貨箱-4S", "host": "apex-one-tartane-01m-deck-hold", "work": "summit-rocher-01m-crate", "at": [167.5, 101.5, null], "pivot": [6, 6, 0], "scale": 0.5, "rotate": 0, "meta": {"deco": 1}}
+  ],
+  "foot_reach": 12
+ },
+ "rudder_anchor_build": {
+  "rudder": {
+   "work": "apex-one-tartane-01m-rudder",
+   "title": "塔爾塔納 舵（沿艉柱，0.1 m）",
+   "model": "舵",
+   "half_t": 1,
+   "z_top": 24,
+   "width": [[0, 9], [10, 8], [18, 6], [22, 4], [24, 3]],
+   "below": 218,
+   "above": 68,
+   "iron": 73,
+   "strap_every": 6,
+   "waterline_z": 15,
+   "max_deg": 35,
+   "bevel": 1,
+   "src": "設計決定：沿艉柱後緣（4°）自龍骨底 z=0 升至 z=24（緊貼 deco-船尾陽台底緣 z=25 下方 1 格、與陽台及船尾窗零碰撞），水線下白牛脂 218、水線上深橡木 68、每 6 格鐵箍 73"
+  },
+  "tiller": {
+   "work": "apex-one-tartane-01m-tiller",
+   "title": "塔爾塔納 舵柄（barre franche）",
+   "model": "舵柄",
+   "x_stock": 92,
+   "z_deck": 36,
+   "z": 39,
+   "x_end": 110,
+   "color": 141,
+   "stock_color": 104,
+   "src": "17 世紀地中海雙桅 tartane 史實以長木舵柄（barre franche）操舵；舵頭 x=92（避開旗桿 x=90），舵柄伸至 x=110、高 z=38..39，不碰羅經櫃（x=114.5）與尾艙梯井（x=120）"
+  },
+  "anchor": {
+   "gear_work": "apex-one-tartane-01m-anchor-gear",
+   "gear_title": "塔爾塔納 錨架（兩舷托板）",
+   "gear_link": "錨架",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "scale": 0.28,
+   "pivot": [23.5, 16.5, 56.5],
+   "x_try": [238, 240, 242, 244],
+   "z_try": [35.5, 36.0, 36.5, 37.0, 37.5],
+   "z_hull": 28,
+   "d_step": 0.5,
+   "d_max": 14,
+   "ledge_half": 4,
+   "ledge_out": 2,
+   "ledge_t": 2,
+   "color": 68,
+   "src": "沿用共用錨元件（scale 0.28 ⇒ 1.62 m 錨幹），錨環齊舷緣上方（z≈36）貼靠前桅後方舷肩（x=238..244，完全避開 x=247..261 支索板與支索），錨冠落 z≈20 緊貼船側托板（高出水線 z=15 達 0.5 m）"
+  },
+  "hawse": {
+   "x": 259,
+   "z": 29,
+   "src": "設計決定：船首兩舷錨鏈孔固定點 hawse-P/S 設於 x=259, z=29"
+  }
+ }
+}

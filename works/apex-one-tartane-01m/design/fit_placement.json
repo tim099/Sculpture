@@ -1,0 +1,600 @@
+{
+ "note": "draft_fit.py（步驟 10）產生；tools/build_fit.py 照它落格與掛載模型",
+ "hatch": {
+  "name": "艙蓋-主",
+  "work": "apex-one-tartane-01m-hatch-main",
+  "title": "塔爾塔納 主貨艙格柵艙蓋（kind=door）",
+  "host": "apex-one-tartane-01m-deck-main",
+  "size": [
+   21,
+   15,
+   2
+  ],
+  "at": [
+   173,
+   89,
+   26
+  ],
+  "mask": "masks/fit/hatch-main.vox.txt",
+  "anchors": {
+   "hinge-a": [
+    0,
+    0,
+    0
+   ],
+   "hinge-b": [
+    20,
+    0,
+    0
+   ]
+  },
+  "meta": {
+   "kind": "door",
+   "open": "up",
+   "open_deg": 30
+  }
+ },
+ "skids": {
+  "work": "apex-one-tartane-01m-boat-skids",
+  "title": "塔爾塔納 小艇架（船腰橫跨主艙口＋龍骨縱托樑）",
+  "link": "小艇架",
+  "mask": "masks/fit/skids.vox.txt"
+ },
+ "models": [
+  {
+   "name": "小艇",
+   "host": "apex-one-tartane-01m-deck-main",
+   "work": "basecamp-ember-01m-boat",
+   "at": [
+    182.5,
+    96.5,
+    37.0
+   ],
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.19,
+   "rotate": 0,
+   "meta": {
+    "kind": "boat",
+    "boat": "cutter",
+    "length_m": 3.4
+   },
+   "foot_gap": 0,
+   "box": [
+    165.4,
+    91.56,
+    37.0,
+    199.6,
+    101.44,
+    41.18
+   ]
+  },
+  {
+   "name": "絞盤",
+   "host": "apex-one-tartane-01m-deck-main",
+   "work": "basecamp-ember-01m-capstan",
+   "at": [
+    232.5,
+    96.5,
+    26.0
+   ],
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.125,
+   "rotate": 0,
+   "meta": {
+    "kind": "capstan"
+   },
+   "foot_gap": 0,
+   "box": [
+    228.0,
+    92.0,
+    26.0,
+    237.0,
+    101.0,
+    34.25
+   ]
+  },
+  {
+   "name": "羅經櫃",
+   "host": "apex-one-tartane-01m-deck-quarter",
+   "work": "summit-night-falcon-01m-binnacle",
+   "at": [
+    114.5,
+    96.5,
+    36.0
+   ],
+   "pivot": [
+    9,
+    13,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": 180,
+   "meta": {
+    "kind": "binnacle"
+   },
+   "foot_gap": 0,
+   "box": [
+    112.7,
+    93.9,
+    36.0,
+    116.3,
+    99.1,
+    45.6
+   ]
+  },
+  {
+   "name": "尾燈-P",
+   "host": "apex-one-tartane-01m-assembly",
+   "work": "gura-tridente-01m-lantern",
+   "at": [
+    89.0,
+    87.5,
+    43.0
+   ],
+   "pivot": [
+    8.5,
+    8.5,
+    0
+   ],
+   "scale": 0.25,
+   "rotate": 0,
+   "meta": {
+    "kind": "light",
+    "light_color": "#ff9e40"
+   },
+   "foot_gap": 0,
+   "box": [
+    87.12,
+    85.62,
+    43.0,
+    90.88,
+    89.38,
+    52.0
+   ]
+  },
+  {
+   "name": "尾燈-S",
+   "host": "apex-one-tartane-01m-assembly",
+   "work": "gura-tridente-01m-lantern",
+   "at": [
+    89.0,
+    105.5,
+    43.0
+   ],
+   "pivot": [
+    8.5,
+    8.5,
+    0
+   ],
+   "scale": 0.25,
+   "rotate": 0,
+   "meta": {
+    "kind": "light",
+    "light_color": "#ff9e40"
+   },
+   "foot_gap": 0,
+   "box": [
+    87.12,
+    103.62,
+    43.0,
+    90.88,
+    107.38,
+    52.0
+   ]
+  },
+  {
+   "name": "貨桶-1P",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-barrel",
+   "at": [
+    175.5,
+    91.0,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    172.5,
+    88.0,
+    7.0,
+    178.5,
+    94.0,
+    16.0
+   ]
+  },
+  {
+   "name": "貨桶-1S",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-barrel",
+   "at": [
+    175.5,
+    102.0,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    172.5,
+    99.0,
+    7.0,
+    178.5,
+    105.0,
+    16.0
+   ]
+  },
+  {
+   "name": "貨桶-2P",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-barrel",
+   "at": [
+    182.5,
+    91.0,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    179.5,
+    88.0,
+    7.0,
+    185.5,
+    94.0,
+    16.0
+   ]
+  },
+  {
+   "name": "貨桶-2S",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-barrel",
+   "at": [
+    182.5,
+    102.0,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    179.5,
+    99.0,
+    7.0,
+    185.5,
+    105.0,
+    16.0
+   ]
+  },
+  {
+   "name": "貨桶-3P",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-barrel",
+   "at": [
+    189.5,
+    91.0,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    186.5,
+    88.0,
+    7.0,
+    192.5,
+    94.0,
+    16.0
+   ]
+  },
+  {
+   "name": "貨桶-3S",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-barrel",
+   "at": [
+    189.5,
+    102.0,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    186.5,
+    99.0,
+    7.0,
+    192.5,
+    105.0,
+    16.0
+   ]
+  },
+  {
+   "name": "貨箱-1P",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    138.0,
+    91.5,
+    8.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 1,
+   "box": [
+    135.0,
+    88.5,
+    8.0,
+    141.0,
+    94.5,
+    14.0
+   ]
+  },
+  {
+   "name": "貨箱-1S",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    138.0,
+    101.5,
+    8.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 1,
+   "box": [
+    135.0,
+    98.5,
+    8.0,
+    141.0,
+    104.5,
+    14.0
+   ]
+  },
+  {
+   "name": "貨箱-2P",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    145.0,
+    91.5,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    142.0,
+    88.5,
+    7.0,
+    148.0,
+    94.5,
+    13.0
+   ]
+  },
+  {
+   "name": "貨箱-2S",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    145.0,
+    101.5,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    142.0,
+    98.5,
+    7.0,
+    148.0,
+    104.5,
+    13.0
+   ]
+  },
+  {
+   "name": "貨箱-3P",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    145.0,
+    91.5,
+    13.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 6,
+   "box": [
+    142.0,
+    88.5,
+    13.0,
+    148.0,
+    94.5,
+    19.0
+   ]
+  },
+  {
+   "name": "貨箱-3S",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    145.0,
+    101.5,
+    13.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 6,
+   "box": [
+    142.0,
+    98.5,
+    13.0,
+    148.0,
+    104.5,
+    19.0
+   ]
+  },
+  {
+   "name": "貨箱-4P",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    167.5,
+    91.5,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    164.5,
+    88.5,
+    7.0,
+    170.5,
+    94.5,
+    13.0
+   ]
+  },
+  {
+   "name": "貨箱-4S",
+   "host": "apex-one-tartane-01m-deck-hold",
+   "work": "summit-rocher-01m-crate",
+   "at": [
+    167.5,
+    101.5,
+    7.0
+   ],
+   "pivot": [
+    6,
+    6,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": 0,
+   "meta": {
+    "deco": 1
+   },
+   "foot_gap": 0,
+   "box": [
+    164.5,
+    98.5,
+    7.0,
+    170.5,
+    104.5,
+    13.0
+   ]
+  }
+ ]
+}
