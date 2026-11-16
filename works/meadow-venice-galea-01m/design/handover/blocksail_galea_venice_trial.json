@@ -1,0 +1,1345 @@
+{
+  "ok": true,
+  "errors": [],
+  "stages": {
+    "load": {
+      "model": "cargo replaces an equal mass of removable ballast at the game full-load weight",
+      "mass": {
+        "fullT": 134.6861,
+        "standardT": 114.6861,
+        "fixedBallastT": 6,
+        "cargoT": 20,
+        "cargoWant": 20,
+        "cargoShort": 0,
+        "configBallastT": 26,
+        "hydroDesignT": 134.8131,
+        "draughtFull": 1.2992,
+        "draughtStandard": 1.1791,
+        "voxelM": 0.1
+      },
+      "initial": {
+        "t": 0,
+        "pos": [
+          0.0252,
+          0.0061
+        ],
+        "speed": 0,
+        "forward": 0,
+        "waterDepth": 10.2,
+        "draught": 1.3764,
+        "keelClearance": 8.7236,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "auto",
+        "heading": 352.3324,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      }
+    },
+    "harbour": {
+      "id": "berth-large-1",
+      "town": "town-venice",
+      "chartedDepth": 9.22,
+      "nearbyGround": [
+        {
+          "key": "27_29",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 7177,
+          "pier": 0
+        },
+        {
+          "key": "28_29",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 4279,
+          "pier": 2
+        },
+        {
+          "key": "29_29",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 3332,
+          "pier": 3
+        },
+        {
+          "key": "27_28",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 5135,
+          "pier": 0
+        },
+        {
+          "key": "30_29",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 3783,
+          "pier": 1
+        },
+        {
+          "key": "28_28",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 5906,
+          "pier": 0
+        },
+        {
+          "key": "29_28",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 5196,
+          "pier": 0
+        },
+        {
+          "key": "30_28",
+          "mesh": true,
+          "dirty": false,
+          "triangles": 3659,
+          "pier": 0
+        }
+      ],
+      "berthHeading": 185.44,
+      "path": [
+        [
+          -17.900000000000546,
+          -132.96000000000004
+        ],
+        [
+          3.399999999999636,
+          25.329999999999927
+        ],
+        [
+          1289.8799999999992,
+          737.3199999999997
+        ],
+        [
+          2456.5200000000004,
+          -142.6900000000005
+        ]
+      ],
+      "loadedTown": [
+        {
+          "id": "town-venice",
+          "groundTiles": 17,
+          "buildingsLoaded": true
+        }
+      ]
+    },
+    "sail": {
+      "duration": 32.0167,
+      "minimumClearance": 8.1929,
+      "maximumSpeed": 1.3865,
+      "groundFrames": 0,
+      "quayFrames": 0,
+      "first": {
+        "t": 0.0167,
+        "pos": [
+          0.0221,
+          -0.0168
+        ],
+        "speed": 1.3865,
+        "forward": 1.3865,
+        "waterDepth": 10.2,
+        "draught": 1.3756,
+        "keelClearance": 8.7244,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 352.3324,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      },
+      "last": {
+        "t": 32.0167,
+        "pos": [
+          -7.0859,
+          -43.8321
+        ],
+        "speed": 1.3865,
+        "forward": 1.3865,
+        "waterDepth": 10.2,
+        "draught": 1.6963,
+        "keelClearance": 8.4819,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 349.1268,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      },
+      "end": {
+        "t": 32.0167,
+        "pos": [
+          -7.0859,
+          -43.8321
+        ],
+        "speed": 1.3865,
+        "forward": 1.3865,
+        "waterDepth": 10.2,
+        "draught": 1.6963,
+        "keelClearance": 8.4819,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 349.1268,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      }
+    },
+    "anchor": {
+      "before": {
+        "t": 32.0167,
+        "pos": [
+          -7.0859,
+          -43.8321
+        ],
+        "speed": 1.3865,
+        "forward": 1.3865,
+        "waterDepth": 10.2,
+        "draught": 1.6963,
+        "keelClearance": 8.4819,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 349.1268,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": null,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      },
+      "down": {
+        "duration": 2.8667,
+        "minimumClearance": 8.4857,
+        "maximumSpeed": 1.3826,
+        "groundFrames": 0,
+        "quayFrames": 0,
+        "first": {
+          "t": 32.0333,
+          "pos": [
+            -7.0904,
+            -43.8545
+          ],
+          "speed": 1.3826,
+          "forward": 1.3826,
+          "waterDepth": 10.2,
+          "draught": 1.692,
+          "keelClearance": 8.4857,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 349.125,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "drop",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "drop",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": false,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "last": {
+          "t": 34.7833,
+          "pos": [
+            -7.7077,
+            -46.7991
+          ],
+          "speed": 0.8737,
+          "forward": 0.8737,
+          "waterDepth": 10.2,
+          "draught": 1.0659,
+          "keelClearance": 9.1341,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9678,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "drop",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "drop",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": false,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "end": {
+          "t": 34.8833,
+          "pos": [
+            -7.7188,
+            -46.8864
+          ],
+          "speed": 0.8593,
+          "forward": 0.8593,
+          "waterDepth": 10.2,
+          "draught": 1.059,
+          "keelClearance": 9.141,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9653,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        }
+      },
+      "slowing": {
+        "duration": 21.2,
+        "minimumClearance": 8.1449,
+        "maximumSpeed": 0.8569,
+        "groundFrames": 0,
+        "quayFrames": 0,
+        "first": {
+          "t": 34.9,
+          "pos": [
+            -7.7205,
+            -46.9008
+          ],
+          "speed": 0.8569,
+          "forward": 0.8569,
+          "waterDepth": 10.2,
+          "draught": 1.058,
+          "keelClearance": 9.142,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9648,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "last": {
+          "t": 55.9,
+          "pos": [
+            -8.6561,
+            -51.8091
+          ],
+          "speed": 0.0257,
+          "forward": 0.0257,
+          "waterDepth": 10.2,
+          "draught": 0.8843,
+          "keelClearance": 9.2157,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9151,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "end": {
+          "t": 56.0833,
+          "pos": [
+            -8.635,
+            -51.8119
+          ],
+          "speed": 0.025,
+          "forward": 0.025,
+          "waterDepth": 10.2,
+          "draught": 0.8695,
+          "keelClearance": 9.2305,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9151,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        }
+      },
+      "hold": {
+        "duration": 15.0167,
+        "minimumClearance": 8.2498,
+        "maximumSpeed": 0.0249,
+        "groundFrames": 0,
+        "quayFrames": 0,
+        "first": {
+          "t": 56.1,
+          "pos": [
+            -8.6331,
+            -51.8122
+          ],
+          "speed": 0.0249,
+          "forward": 0.0249,
+          "waterDepth": 10.2,
+          "draught": 0.8718,
+          "keelClearance": 9.2313,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9151,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "last": {
+          "t": 71.1,
+          "pos": [
+            -8.6012,
+            -51.975
+          ],
+          "speed": 0.002,
+          "forward": 0.002,
+          "waterDepth": 10.2,
+          "draught": 1.3255,
+          "keelClearance": 8.7745,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9151,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "end": {
+          "t": 71.1,
+          "pos": [
+            -8.6012,
+            -51.975
+          ],
+          "speed": 0.002,
+          "forward": 0.002,
+          "waterDepth": 10.2,
+          "draught": 1.3255,
+          "keelClearance": 8.7745,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "sail",
+          "sail": "off",
+          "heading": 348.9151,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        }
+      },
+      "drift": 0.1659,
+      "stoppingDistance": 8.2827
+    },
+    "weigh": {
+      "duration": 8.0167,
+      "minimumClearance": 8.5583,
+      "maximumSpeed": 0.002,
+      "groundFrames": 0,
+      "quayFrames": 0,
+      "first": {
+        "t": 71.1167,
+        "pos": [
+          -8.6008,
+          -51.9751
+        ],
+        "speed": 0.002,
+        "forward": 0.002,
+        "waterDepth": 10.2,
+        "draught": 1.3278,
+        "keelClearance": 8.7722,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 348.9151,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "weigh",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "weigh",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": true,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      },
+      "last": {
+        "t": 79.1167,
+        "pos": [
+          -8.6397,
+          -51.9472
+        ],
+        "speed": 0.0008,
+        "forward": 0.0008,
+        "waterDepth": 10.2,
+        "draught": 1.2565,
+        "keelClearance": 8.9435,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 348.9151,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      },
+      "end": {
+        "t": 79.1167,
+        "pos": [
+          -8.6397,
+          -51.9472
+        ],
+        "speed": 0.0008,
+        "forward": 0.0008,
+        "waterDepth": 10.2,
+        "draught": 1.2565,
+        "keelClearance": 8.9435,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 348.9151,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      }
+    },
+    "dock": {
+      "before": {
+        "t": 79.1167,
+        "pos": [
+          -8.6397,
+          -51.9472
+        ],
+        "speed": 0.0008,
+        "forward": 0.0008,
+        "waterDepth": 10.2,
+        "draught": 1.2565,
+        "keelClearance": 8.9435,
+        "lift": 0.0008,
+        "sink": 0,
+        "mode": "sail",
+        "sail": "manual",
+        "heading": 348.9151,
+        "anchors": [
+          {
+            "side": "P",
+            "state": "up",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-1"
+          },
+          {
+            "side": "S",
+            "state": "up",
+            "depth": 10.1,
+            "hawse": true,
+            "model": "anchor-2"
+          }
+        ],
+        "held": false,
+        "hullLost": 0,
+        "groundLoss": 0,
+        "quay": null,
+        "sunk": false
+      },
+      "pathMeters": 80.28052650110315,
+      "usesGameApproach": true,
+      "approach": {
+        "duration": 18.6333,
+        "minimumClearance": 8.2385,
+        "maximumSpeed": 6.2788,
+        "groundFrames": 0,
+        "quayFrames": 0,
+        "first": {
+          "t": 79.1333,
+          "pos": [
+            -8.6388,
+            -51.9673
+          ],
+          "speed": 6.2788,
+          "forward": 6.2788,
+          "waterDepth": 10.2,
+          "draught": 1.2653,
+          "keelClearance": 8.9347,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 350.9263,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "up",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "up",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": false,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "last": {
+          "t": 97.6333,
+          "pos": [
+            -10.1006,
+            -131.4765
+          ],
+          "speed": 2.8157,
+          "forward": 2.8157,
+          "waterDepth": 10.1,
+          "draught": 1.3246,
+          "keelClearance": 8.7754,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4628,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "up",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "up",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": false,
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "end": {
+          "t": 97.75,
+          "pos": [
+            -10.1052,
+            -131.8192
+          ],
+          "speed": 0,
+          "forward": 0,
+          "waterDepth": 10.1,
+          "draught": 1.2717,
+          "keelClearance": 8.8283,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4448,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "up",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "up",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": false,
+          "moor": {
+            "x": -10.083803641026366,
+            "z": -132.21477272085406,
+            "yaw": -1.6657410808335857,
+            "dock": "berth-large-1"
+          },
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        }
+      },
+      "settling": {
+        "duration": 4.0167,
+        "minimumClearance": 8.2918,
+        "maximumSpeed": 0,
+        "groundFrames": 0,
+        "quayFrames": 0,
+        "first": {
+          "t": 97.7667,
+          "pos": [
+            -10.105,
+            -131.8326
+          ],
+          "speed": 0,
+          "forward": 0,
+          "waterDepth": 10.1,
+          "draught": 1.2642,
+          "keelClearance": 8.8358,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4447,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "drop",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "drop",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": false,
+          "moor": {
+            "x": -10.083803641026366,
+            "z": -132.21477272085406,
+            "yaw": -1.6657410808335857,
+            "dock": "berth-large-1"
+          },
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "last": {
+          "t": 101.7667,
+          "pos": [
+            -10.0825,
+            -132.1978
+          ],
+          "speed": 0,
+          "forward": 0,
+          "waterDepth": 10.1,
+          "draught": 1.8082,
+          "keelClearance": 8.2918,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4399,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "moor": {
+            "x": -10.083803641026366,
+            "z": -132.21477272085406,
+            "yaw": -1.6657410808335857,
+            "dock": "berth-large-1"
+          },
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "end": {
+          "t": 101.7667,
+          "pos": [
+            -10.0825,
+            -132.1978
+          ],
+          "speed": 0,
+          "forward": 0,
+          "waterDepth": 10.1,
+          "draught": 1.8082,
+          "keelClearance": 8.2918,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4399,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "moor": {
+            "x": -10.083803641026366,
+            "z": -132.21477272085406,
+            "yaw": -1.6657410808335857,
+            "dock": "berth-large-1"
+          },
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        }
+      },
+      "after": {
+        "duration": 15.0167,
+        "minimumClearance": 8.0059,
+        "maximumSpeed": 0,
+        "groundFrames": 0,
+        "quayFrames": 0,
+        "first": {
+          "t": 101.7833,
+          "pos": [
+            -10.0833,
+            -132.198
+          ],
+          "speed": 0,
+          "forward": 0,
+          "waterDepth": 10.1,
+          "draught": 1.8159,
+          "keelClearance": 8.2841,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4399,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "moor": {
+            "x": -10.083803641026366,
+            "z": -132.21477272085406,
+            "yaw": -1.6657410808335857,
+            "dock": "berth-large-1"
+          },
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "last": {
+          "t": 116.7833,
+          "pos": [
+            -10.1342,
+            -132.2107
+          ],
+          "speed": 0,
+          "forward": 0,
+          "waterDepth": 10.1,
+          "draught": 1.6656,
+          "keelClearance": 8.3344,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4399,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "moor": {
+            "x": -10.083803641026366,
+            "z": -132.21477272085406,
+            "yaw": -1.6657410808335857,
+            "dock": "berth-large-1"
+          },
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        },
+        "end": {
+          "t": 116.7833,
+          "pos": [
+            -10.1342,
+            -132.2107
+          ],
+          "speed": 0,
+          "forward": 0,
+          "waterDepth": 10.1,
+          "draught": 1.6656,
+          "keelClearance": 8.3344,
+          "lift": 0.0008,
+          "sink": 0,
+          "mode": "town",
+          "sail": "manual",
+          "heading": 185.4399,
+          "anchors": [
+            {
+              "side": "P",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-1"
+            },
+            {
+              "side": "S",
+              "state": "down",
+              "depth": 10.1,
+              "hawse": true,
+              "model": "anchor-2"
+            }
+          ],
+          "held": true,
+          "moor": {
+            "x": -10.083803641026366,
+            "z": -132.21477272085406,
+            "yaw": -1.6657410808335857,
+            "dock": "berth-large-1"
+          },
+          "hullLost": 0,
+          "groundLoss": 0,
+          "quay": null,
+          "sunk": false
+        }
+      },
+      "result": "停好了",
+      "alignment": 0,
+      "berthError": 0.0506,
+      "drift": 0.0525
+    }
+  },
+  "host": {
+    "phase": "started",
+    "events": [
+      {
+        "bsmap": "started",
+        "back": 1,
+        "hdg": 0,
+        "x": 0.0251885368488729,
+        "z": 0.006081485655158758,
+        "shipHdg": 352.3324185961887
+      },
+      {
+        "bsmap": "docksNeed",
+        "towns": [
+          "town-venice"
+        ]
+      }
+    ],
+    "plan": {
+      "start": [
+        12.34435432,
+        45.43156012
+      ],
+      "hdg": 352.33254457763644,
+      "x": 7362.02,
+      "y": 7565.34,
+      "towns": [
+        "town-venice"
+      ],
+      "berth": {
+        "berth": "berth-large-1",
+        "cls": "large",
+        "loa": 80,
+        "on": "pier-1",
+        "at": [
+          12.344125,
+          45.432763
+        ],
+        "hdg": 185.44,
+        "depth": 9.22,
+        "kind": "pier",
+        "clear": 256,
+        "path": [
+          [
+            12.344125,
+            45.432763
+          ],
+          [
+            12.344398,
+            45.431331
+          ],
+          [
+            12.360886,
+            45.42489
+          ],
+          [
+            12.375838,
+            45.432851
+          ]
+        ],
+        "pathDepth": 10.01
+      },
+      "naturalSite": {
+        "x": 7362.02,
+        "y": 7565.34,
+        "r": 35,
+        "land": null,
+        "ok": true,
+        "here": true,
+        "depth": 10.1,
+        "hdg": 350,
+        "clear": null,
+        "h": null
+      }
+    }
+  },
+  "generator": {
+    "made": 208,
+    "idb": 0,
+    "bake": 0,
+    "deep": 0,
+    "msAvg": 181,
+    "queued": 0,
+    "workers": 2,
+    "inPage": false,
+    "frame": "12.25,45.5",
+    "pre": null,
+    "done": 208,
+    "wins": 1,
+    "winMs": 4,
+    "towns": {
+      "town-venice": {
+        "src": "live",
+        "ms": 74573
+      }
+    },
+    "warm": null
+  }
+}

@@ -1,0 +1,123 @@
+{
+	"schema": 3,
+	"wind": [
+		0,
+		0,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "main-lateen",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:mast-main/yard-main/peak",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:mast-main/yard-main/fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "109,158,98",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#e7d9b8",
+			"res": 0,
+			"fullness": 1.07,
+			"enabled": true,
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-15T14:01:07",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff"
+			}
+		},
+		{
+			"name": "fore-lateen",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:mast-fore/yard-fore/peak",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:mast-fore/yard-fore/fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "355,158,69",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#e7d9b8",
+			"res": 0,
+			"fullness": 1.07,
+			"enabled": true,
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-15T14:01:13",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "gaff",
+				"set": 1
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "head",
+					"at": "stern/ensign-head",
+					"pin": true
+				},
+				{
+					"name": "fly-top",
+					"at": "1,160,69",
+					"pin": false
+				},
+				{
+					"name": "fly-foot",
+					"at": "1,160,52",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "stern/ensign-foot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#ffffff",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-15T15:03:57",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"nation": "venice"
+			}
+		}
+	]
+}

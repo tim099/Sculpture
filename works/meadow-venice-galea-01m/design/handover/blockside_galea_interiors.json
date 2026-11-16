@@ -1,0 +1,139 @@
+{
+  "title": "Blockside（方舷）",
+  "ship": "galea",
+  "checksum": 1348073871,
+  "waterlineZ": 13,
+  "mode": "sail",
+  "guns": [
+    {
+      "type": "veniceFalcone6",
+      "crew": 2,
+      "want": 2
+    },
+    {
+      "type": "veniceFalcone6",
+      "crew": 2,
+      "want": 2
+    },
+    {
+      "type": "veniceCorsiero50",
+      "crew": 7,
+      "want": 7
+    },
+    {
+      "type": "veniceFalcone6",
+      "crew": 2,
+      "want": 2
+    },
+    {
+      "type": "veniceFalcone6",
+      "crew": 2,
+      "want": 2
+    }
+  ],
+  "oars": 49,
+  "rowerCount": 196,
+  "anchors": [
+    {
+      "id": "anchor-1",
+      "hawse": true
+    },
+    {
+      "id": "anchor-2",
+      "hawse": true
+    }
+  ],
+  "stations": 2,
+  "ladders": [
+    {
+      "name": "hold-ladder/hold-access",
+      "steps": [
+        [
+          211,
+          160,
+          5
+        ],
+        [
+          223,
+          160,
+          20
+        ]
+      ],
+      "ia": [
+        209.5,
+        160.5,
+        5
+      ],
+      "broken": false
+    }
+  ],
+  "rooms": [
+    {
+      "name": "hold-floor/hold-stores/stores",
+      "min": [
+        193,
+        157,
+        5
+      ],
+      "max": [
+        202,
+        163,
+        18
+      ],
+      "m": [
+        1,
+        0.7,
+        1.4
+      ],
+      "type": null,
+      "furn": 0,
+      "alive": 0,
+      "items": "",
+      "buff": {},
+      "cap": 0,
+      "eff": 0
+    }
+  ],
+  "hatch": [
+    {
+      "id": "door-1",
+      "cells": 142,
+      "hinged": true
+    }
+  ],
+  "rig": {
+    "ropes": 16,
+    "sails": 5,
+    "broken": 0
+  },
+  "magazines": [
+    4
+  ],
+  "t": 0.03,
+  "climbUp": {
+    "from": [
+      210.5,
+      160.5,
+      5
+    ],
+    "to": [
+      224.5,
+      160.5,
+      21
+    ],
+    "peakHatchOpening": 1
+  },
+  "climbDown": {
+    "from": [
+      224.5,
+      160.5,
+      21
+    ],
+    "to": [
+      210.5,
+      160.5,
+      5
+    ],
+    "peakHatchOpening": 1
+  }
+}

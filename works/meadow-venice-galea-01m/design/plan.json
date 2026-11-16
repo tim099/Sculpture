@@ -1,0 +1,136 @@
+{
+  "title": "威尼斯普通槳帆船 galea sottile，約 1666 年",
+  "task": "TASK-1297",
+  "meters_per_cell": 0.1,
+  "space": {
+    "hull": [
+      560,
+      321,
+      280
+    ],
+    "assembly": [
+      560,
+      321,
+      280
+    ],
+    "yc": 160
+  },
+  "sources": {
+    "senate": "ASVe, Senato Mar reg. 77 ff. 178v–180r；1619-11-02 規格見 Lazzarini，《Boschi, legnami, costruzioni navali》§3–4。",
+    "n64": "https://www.veniceboats.com/it-progetti-piani-navi-sottili-2.htm，Artù Chiggiato N64 小圖供端部與舷弧近似。",
+    "survey": "https://air.iuav.it/bitstream/11578/295653/1/isprs-archives-XLIII-B2-2020-1371-2020.pdf，半模定年有異說，採船體輪廓。",
+    "oars": "https://www.hippocampus.si/ISBN/978-961-6963-73-2.pdf，頁115–118，Loredana 船員供述研究。",
+    "credits": "lines.py 承 apex-one-reale-01m / kotoko-fusta-01m 的槳帆船線形程式。"
+  },
+  "waterline": {
+    "z": 11,
+    "src": "船殼最初落格使用的底色分界，保留供船殼圖與匯出重跑。",
+    "blocksail_full_load_z": 13,
+    "blocksail_full_load_source": "遊戲設計值。裝上 50／6 威尼斯磅砲後，z=11 的排水量不足以配置可換壓艙，因此把遊戲滿載水線調到 z=13。"
+  },
+  "oars": {
+    "layout": "a scaloccio",
+    "starboard": 25,
+    "port": 24,
+    "rowers_per_oar": 4,
+    "src": "依 1605 年 Loredana 實例及 Lo Basso 等人對威尼斯同型船的研究作 1666 原型取值，待甲板階段驗證。"
+  },
+  "lines": {
+    "sternpost_head_x": {
+      "v": 39,
+      "src": "設計：艉柱後留 3.9 m 空間。"
+    },
+    "stem_head_x": {
+      "v": 474,
+      "src": "1619 年 43.46 m 柱間長，取 435 格。"
+    },
+    "keel_aft_x": {
+      "v": 82,
+      "src": "N64 側視小圖估：艉柱至平龍骨約柱間長一成。"
+    },
+    "keel_fwd_x": {
+      "v": 422,
+      "src": "N64 側視小圖估：艏柱至平龍骨約柱間長一成二。"
+    },
+    "keel_top": {
+      "v": 2,
+      "src": "設計：龍骨高 0.2 m。"
+    },
+    "keel_half": {
+      "v": 1,
+      "src": "設計：龍骨數位化半寬約 0.1 m。"
+    },
+    "stem_head_z": {
+      "v": 27,
+      "src": "設計：艏柱和艏甲板保留高度。"
+    },
+    "sternpost_head_z": {
+      "v": 31,
+      "src": "N64 艉端較高；柱頂取值屬設計。"
+    },
+    "half_beam": {
+      "v": 27,
+      "src": "1619 年 bocca 5.48 m，取 55 格全寬。"
+    },
+    "deck_side_z": {
+      "v": 19,
+      "src": "1619 年 pontal 1.82 m，加龍骨約 0.2 m，取中段外高 2.0 m。"
+    },
+    "floor_half": {
+      "v": 14,
+      "src": "N64 橫剖為相對平的底、圓舭；平底取殼寬約一半。"
+    },
+    "floor_rise": {
+      "v": 1,
+      "src": "設計：平底外緣上升 0.1 m。"
+    },
+    "bilge_pow": {
+      "v": 2,
+      "src": "設計：圓舭用橢圓近似 N64 中段剖面。"
+    },
+    "s_aft": {
+      "v": 0.31,
+      "src": "N64 概讀，後端收縮終點。"
+    },
+    "s_fwd": {
+      "v": 0.61,
+      "src": "N64 概讀，前端收縮起點。"
+    },
+    "deadwood_aft_z": {
+      "v": 12,
+      "src": "設計：艉端填材上抬。"
+    },
+    "deadwood_fwd_z": {
+      "v": 11,
+      "src": "設計：艏端填材上抬。"
+    },
+    "aft_pow": {
+      "v": 1.9,
+      "src": "依 N64 概讀的端部曲線選擇。"
+    },
+    "fwd_pow": {
+      "v": 1.9,
+      "src": "同上，非原圖精讀。"
+    },
+    "stern_top_ratio": {
+      "v": 0.23,
+      "src": "設計：艉甲板留收束的平臺。"
+    },
+    "sheer_aft": {
+      "v": 9,
+      "src": "N64 顯示船尾舷弧比船頭更高，幅度為設計值。"
+    },
+    "sheer_fwd": {
+      "v": 5,
+      "src": "見舷弧註。"
+    },
+    "sheer_s_aft": {
+      "v": 0.33,
+      "src": "設計：釋放舷弧至中段。"
+    },
+    "sheer_s_fwd": {
+      "v": 0.72,
+      "src": "設計：收尾段舷弧自此抬升。"
+    }
+  }
+}

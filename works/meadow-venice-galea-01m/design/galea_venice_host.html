@@ -1,0 +1,69 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Galea – Venice sea trial</title>
+<style>html,body,iframe{width:100%;height:100%;margin:0;border:0;display:block;background:#152c38}</style>
+<script src="world/world.js"></script>
+<script src="world/areas.js"></script>
+<script src="world/water.js"></script>
+<script src="world/bathy.js"></script>
+<script src="world/species.js"></script>
+<script src="world/terrain.js"></script>
+<script src="world/chunks.js"></script>
+<script src="world/town_store.js"></script>
+<script src="world/mapgen.js"></script>
+<script src="world/town_export.js"></script>
+<script src="world/town_link.js"></script>
+<script src="world/goods.js"></script>
+<script src="world/recipes.js"></script>
+<script src="world/buildings.js"></script>
+<script src="world/prod.js"></script>
+<script src="world/annex.js"></script>
+<iframe id="game" title="Blocksail Venice sea trial"></iframe>
+<script>
+const frame = document.getElementById('game');
+window.hostState = { phase: 'world', events: [] };
+async function launch() {
+  const W = await BSW.open('world/');
+  W.areaSet = await BSW.openAreas('world/');
+  W.areas = W.areaSet.list;
+  await BSW.attachWater(W, 'world/');
+  await BSW.attachBathy(W, 'world/');
+  const town = W.areas.find(t => t.id === 'town-venice');
+  const berth = town.docks.find(d => d.berth === 'berth-large-1');
+  const start = berth.path[0].map((n,i) => n + 0.84 * (berth.path[1][i] - n));
+  const [lon,lat] = start;
+  const G = BSW.mapgen(W, { base: 'world/', workers: 2 });
+  const [lon0,lat0] = G.origin(lon,lat);
+  hostState.phase = 'plan';
+  const A = await G.plan({ lon, lat, lon0, lat0, R: BSW.chunkN(4096), r: 35, depth: 3, ring: 1, hdg: 350, here: { draft: 1.3, loa: 46 } });
+  const mx = Math.cos(A.lat0 * Math.PI/180) * 111320;
+  const metric = q => [Math.round((q[0] - A.lon0) * mx * 100)/100, Math.round((A.lat0 - q[1]) * 110540 * 100)/100];
+  const [x,y] = metric(start), [tx,ty] = metric(berth.at);
+  const hdg = (Math.atan2(tx-x,y-ty)*180/Math.PI + 360)%360;
+  A.sites.unshift({ok:true,x,y,hdg});
+  hostState.plan = { start, hdg, x, y, towns: A.towns, berth, naturalSite: A.sites[1] };
+  window.addEventListener('message', e => {
+    const msg = e.data;
+    if (e.source !== frame.contentWindow || !msg || !msg.bsmap) return;
+    if (['docksNeed','started','mode','error'].includes(msg.bsmap)) hostState.events.push(msg);
+    if (msg.bsmap === 'started') {
+      hostState.phase = 'started';
+      frame.contentWindow.postMessage({bsmap:'go'}, '*');
+    }
+    if (msg.bsmap === 'docksNeed') {
+      const rows = msg.towns.includes(town.id) ? [{
+        town: town.id, ring: town.range.map(metric), docks: [{
+          id: berth.berth, kind: berth.kind, at: metric(berth.at), hdg: berth.hdg,
+          depth: berth.depth, path: berth.path.map(metric), cls: berth.cls
+        }]
+      }] : [];
+      frame.contentWindow.postMessage({bsmap:'docks',docks:rows}, '*');
+    }
+  });
+  G.serve(frame.contentWindow);
+  window.hostStats = () => G.stats();
+  hostState.phase = 'launch';
+  frame.src = 'battle-dock-galea-probe.html?map=@host&site=0&start=1&blue=galea&red=galea&mode=sail&hdg='+hdg+'&debug=1&gfx=low&g_deco=1&prefs=0&lerp=0&seed=1297&wdir=110&wspd=0.65&tod=10';
+}
+launch().catch(e => {hostState.error=e.stack; console.error(e);});
+</script>

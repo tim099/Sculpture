@@ -1,0 +1,377 @@
+{
+  "page": "Blocksail",
+  "ship": "威尼斯槳帆船",
+  "checksum": 3759540210,
+  "waterline": 11,
+  "dt": 0.016666666666666666,
+  "crew": 196,
+  "oars": 49,
+  "sailArtCols": 1,
+  "roles": {
+    "draw": "crewFrame and drawCrew; oar crew are fixed-root sprites with two work frames",
+    "probe": "oar cube center and 8 near-corners every third engine tick, against exported timber"
+  },
+  "legs": [
+    {
+      "label": "straight_furled",
+      "initial": {
+        "t": 0,
+        "pos": [
+          0,
+          88.1
+        ],
+        "yaw": 1.5707963267948966,
+        "knots": 0,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": 0,
+        "afloat": true,
+        "sails": 0,
+        "flags": 1
+      },
+      "solidHits": 0,
+      "hitExample": null,
+      "crewBadTicks": 0,
+      "fixedSeatShift": 0,
+      "crewPairsBelow42cm": 0,
+      "minCrewGapM": 0.6,
+      "visibleFrames": [
+        1,
+        2
+      ],
+      "torsoProbeTicks": 11858,
+      "torsoExample": {
+        "oar": "oar-S01",
+        "phase": 0.007222222222222223,
+        "root": [
+          104.5,
+          179.5,
+          23
+        ],
+        "distanceM": 0.125
+      },
+      "minOwnShaftToFixedRootM": 0.019,
+      "bothWays": false,
+      "minTipSeaM": -0.517,
+      "maxTipSeaM": 1.727,
+      "checkedPoints": 14076720,
+      "wind": {
+        "rot": 90,
+        "s0": 1,
+        "spd": 1,
+        "knots": 19.44,
+        "to": [
+          -1.65,
+          0,
+          0.5999999999999996
+        ]
+      },
+      "phaseBins72": [
+        72,
+        72
+      ],
+      "cycles": [
+        5.2,
+        5.2
+      ],
+      "final": {
+        "t": 12,
+        "pos": [
+          -0.55,
+          40.569
+        ],
+        "yaw": 1.5974386957211213,
+        "knots": 7.7,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": 0,
+        "afloat": true,
+        "sails": 0,
+        "flags": 1,
+        "sideFraction": [
+          1,
+          1
+        ]
+      },
+      "turnDeg": 1.53,
+      "travelM": 47.54,
+      "maxKnots": 7.7
+    },
+    {
+      "label": "port_turn_full_sail",
+      "initial": {
+        "t": 12,
+        "pos": [
+          -0.55,
+          40.569
+        ],
+        "yaw": 1.5974386957211213,
+        "knots": 7.7,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": 0,
+        "afloat": true,
+        "sails": 2,
+        "flags": 1,
+        "sideFraction": [
+          1,
+          1
+        ]
+      },
+      "solidHits": 0,
+      "hitExample": null,
+      "crewBadTicks": 0,
+      "fixedSeatShift": 0,
+      "crewPairsBelow42cm": 0,
+      "minCrewGapM": 0.6,
+      "visibleFrames": [
+        1,
+        2
+      ],
+      "torsoProbeTicks": 11500,
+      "torsoExample": {
+        "oar": "oar-P01",
+        "phase": 0.17137797233851582,
+        "root": [
+          116.5,
+          153.5,
+          23
+        ],
+        "distanceM": 0.208
+      },
+      "minOwnShaftToFixedRootM": 0.019,
+      "bothWays": true,
+      "minTipSeaM": -1.012,
+      "maxTipSeaM": 1.82,
+      "checkedPoints": 14076720,
+      "wind": {
+        "rot": 90,
+        "s0": 1,
+        "spd": 1.044,
+        "knots": 20.3,
+        "to": [
+          -1.69143172088803,
+          0,
+          0.7081897198928176
+        ]
+      },
+      "phaseBins72": [
+        72,
+        72
+      ],
+      "cycles": [
+        -3.455,
+        5.2
+      ],
+      "final": {
+        "t": 24,
+        "pos": [
+          -41.311,
+          30.535
+        ],
+        "yaw": 4.609750430076378,
+        "knots": 13.242,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": 1,
+        "afloat": true,
+        "sails": 2,
+        "flags": 1,
+        "sideFraction": [
+          -0.5,
+          1
+        ]
+      },
+      "turnDeg": 172.59,
+      "travelM": 66.81,
+      "maxKnots": 13.242
+    },
+    {
+      "label": "starboard_turn_half_power",
+      "initial": {
+        "t": 24,
+        "pos": [
+          -41.311,
+          30.535
+        ],
+        "yaw": 4.609750430076378,
+        "knots": 13.242,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": 1,
+        "afloat": true,
+        "sails": 1,
+        "flags": 1,
+        "sideFraction": [
+          -0.5,
+          1
+        ]
+      },
+      "solidHits": 0,
+      "hitExample": null,
+      "crewBadTicks": 0,
+      "fixedSeatShift": 0,
+      "crewPairsBelow42cm": 0,
+      "minCrewGapM": 0.6,
+      "visibleFrames": [
+        1,
+        2
+      ],
+      "torsoProbeTicks": 6527,
+      "torsoExample": {
+        "oar": "oar-P01",
+        "phase": 0.8172572614830357,
+        "root": [
+          116.5,
+          153.5,
+          23
+        ],
+        "distanceM": 0.204
+      },
+      "minOwnShaftToFixedRootM": 0.019,
+      "bothWays": true,
+      "minTipSeaM": -1.124,
+      "maxTipSeaM": 2.121,
+      "checkedPoints": 9384480,
+      "wind": {
+        "rot": 90,
+        "s0": 1,
+        "spd": 1.077,
+        "knots": 20.94,
+        "to": [
+          -1.7212084468758266,
+          0,
+          0.7842655690647817
+        ]
+      },
+      "phaseBins72": [
+        72,
+        72
+      ],
+      "cycles": [
+        2.961,
+        -0.789
+      ],
+      "final": {
+        "t": 32,
+        "pos": [
+          -40.648,
+          73.149
+        ],
+        "yaw": 4.0044637523613895,
+        "knots": 9.25,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": -1,
+        "afloat": true,
+        "sails": 1,
+        "flags": 1,
+        "sideFraction": [
+          0.86,
+          -0.14
+        ]
+      },
+      "turnDeg": -34.68,
+      "travelM": 44.6,
+      "maxKnots": 13.227
+    },
+    {
+      "label": "reverse_furled",
+      "initial": {
+        "t": 32,
+        "pos": [
+          -40.648,
+          73.149
+        ],
+        "yaw": 4.0044637523613895,
+        "knots": 9.25,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": -1,
+        "afloat": true,
+        "sails": 0,
+        "flags": 1,
+        "sideFraction": [
+          0.86,
+          -0.14
+        ]
+      },
+      "solidHits": 0,
+      "hitExample": null,
+      "crewBadTicks": 0,
+      "fixedSeatShift": 0,
+      "crewPairsBelow42cm": 0,
+      "minCrewGapM": 0.6,
+      "visibleFrames": [
+        1,
+        2
+      ],
+      "torsoProbeTicks": 21608,
+      "torsoExample": {
+        "oar": "oar-S01",
+        "phase": 0.17010875814630344,
+        "root": [
+          104.5,
+          167.5,
+          23
+        ],
+        "distanceM": 0.205
+      },
+      "minOwnShaftToFixedRootM": 0.019,
+      "bothWays": true,
+      "minTipSeaM": -0.914,
+      "maxTipSeaM": 2.131,
+      "checkedPoints": 28153440,
+      "wind": {
+        "rot": 90,
+        "s0": 1,
+        "spd": 1.12,
+        "knots": 21.77,
+        "to": [
+          -1.7579593999556113,
+          0,
+          0.8808172089280009
+        ]
+      },
+      "phaseBins72": [
+        72,
+        72
+      ],
+      "cycles": [
+        -10.116,
+        -10.4
+      ],
+      "final": {
+        "t": 56,
+        "pos": [
+          -66.214,
+          85.318
+        ],
+        "yaw": 3.3836924410718647,
+        "knots": -2.816,
+        "sinkM": 0,
+        "oarPower": "oar",
+        "oarCap": 1,
+        "rudder": 0,
+        "afloat": true,
+        "sails": 0,
+        "flags": 1,
+        "sideFraction": [
+          -1,
+          -1
+        ]
+      },
+      "turnDeg": -35.57,
+      "travelM": 39.49,
+      "maxKnots": 9.239
+    }
+  ],
+  "source": "battle-seatrial-galea-probe.html?debug=1&prefs=0&lerp=0"
+}
