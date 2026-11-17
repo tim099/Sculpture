@@ -96,3 +96,27 @@ design/plan.json 每個數字標出處或「設計」。線形程式 lines.py �
   兩頭各一支只掃 5°／9°：Tim 2026-11-17「先保留小擺幅」⇒ 不拆樓牆、不少放凳。
 - 靠泊沒驗（要進遊戲才量得到：槳伸出舷外 9 m）⇒ 步驟 13 那一格先不勾，步驟 14 一起量。
 - view：models_drawn 100、models_broken 0、sails_broken 0、ropes_broken 0。圖：stage09_oars_view.png。
+
+## 給遊戲的 meta 與匯入（步驟 14，2026-11-17）
+- 船殼關聯 meta kind=ship、waterline_z=21；ropecheck 189 條、378 端全 ok。
+- Blockside（Blocksail external/Blockside，自己的 worktree）`admin.py import --id galeazza` ⇒ `admin.py ids`（116 件發 id、寫回作品 Sculpture e8ef84c2）⇒ game.json ships[galeazza]：
+  cfg.base 3.5（⚠ 估：加萊賽出名的慢）；geo spar [52,53]、qx 60、marines [0,0]、center 45、aim 36、aimZ [19,232]、deckAim [32,62]、rigAim [100,232]；crew top 0、marineGap 12；names Morosini／Corner／Pisani／Basadonna 的加萊賽、la nera、la rossa。
+- 讀數：shipcheck ✗ 0、⚠ 15（第一輪 70）；ladcheck 5 座 ✗ 0、⚠ 4、甲板連通 ✗ 0；槳 50 支、槳手 300／300（遊戲算的，跟 draft_oars 一樣）；火藥 32／32 門走得到取用點（最遠 16.3 m）；
+  舵跟著轉、操舵 舵 100%＋兩舷差動；艙蓋開口 70 格；showlod 41 型、預烘 50 型、srccheck 全過。ship_cards：509 t、52.9 m、一舷齊射 187。vxk_lock c:8794de1e6853af13e383ba378b625fcba0ab581c。
+- 留著的 ⚠（看過、不改）：砲班 6 門缺 8 人（艏樓下層 50／20 磅、艉樓 3 磅）；樓梯 6 筆要從旁邊繞（梯腳背後是樓牆、艉樓梯頂前是 14 磅砲）；漏水：吃水再深 1.50 m（＋705 t）才從舵柄口進水。
+- 合進 Blockside dev be052aa 並推（同時帶出 kiara f6ab413、pinnacle efa7df2）；Blocksail 896d49f1 指標＋battle.html 重套殼（⛔ 沒推）。
+
+### 給遊戲那側填 geo 的高度（格 z，0.1 m）
+| 什麼 | z |
+|---|---|
+| 設計水線 | 21 |
+| 底艙地板第一層空氣 | 6（彈藥庫 8） |
+| 主甲板第一層空氣 ／ corsia 頂 | 32 ／ 38 |
+| 槳座 pivot | 39（槳葉中心 z 23.5） |
+| 舷牆頂 | 48 |
+| 艏樓頂、艉樓平台第一層空氣 | 52 |
+| 艏樓胸牆頂 | 62 |
+| 艉樓拱頂艙頂 | 82 |
+| 帆桁轉軸（主／前／後；rig.json pivot_world_z） | 177／180／115 |
+| 桅頂（主／前／後） | 232／194／146 |
+| 船殼前後端 x | 52（艉）／632（衝角尖） |

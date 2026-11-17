@@ -1,8 +1,6 @@
-- 步驟 14 匯入後跑 admin.py ladcheck（⑤ 甲板連通、⑥ 艙底）；底艙梯現在有 hold.decks=hold,main，看它收不收。
-- 步驟 14 匯入檢查要看火藥取用點：彈藥庫在底艙（沒寫 hoist）⇒ 各層砲甲板（main／forecastle／quarter）照彈藥庫找空地 —— 艏樓頂、艉樓平台會不會疊在同一格；不行就照 Ship_Magazine §8 寫 hoist＝底艙梯＋兩座樓梯。
 - 帆用素白（紅白條紋查不到出處，Tim 要再改）。
 - 衝角在水線上（史料；Tim 2026-11-16「保持水面上」）⇒ 不做撞角（Ship_Fittings §9.11 不適用）。
 - 小艇、絞盤、廚房沒放（理由在 notes 步驟 10）；Tim 要再加。
-- 步驟 14 匯入後看「轉動」那一行有舵、__game.lostModels(0) 沒有舵；舵柄是畫在舵上的（沒有 kind=tiller 獨立模型）。
 - 步驟 13 靠泊：匯入後在遊戲裡靠一次碼頭，看伸出舷外 9 m 的槳碰不碰碼頭／怎麼收（meadow galea 有 Venice 靠泊試驗可抄）。
-- 匯入時遊戲那側 cfg.base（划槳全速）要填（Ship_Oars：沒填每支槳報 ⚠「槳不划」）。
+- 遊戲裡還沒開過：__game.lostModels(0) 沒有舵這一格要開一場才量得到（匯入檢查「轉動」那一行有舵、✗ 0）。
+- 步驟 15 交船：檢查表逐條、跟 ame 對 checksum（lock c:8794de1e…）。
