@@ -135,11 +135,11 @@ def stone_bridge(key, title, L, wet, deck, rise, clr, body_w, walk_w, face, ring
     return {'key': key, 'title': title, 'M': M, 'meta': meta, 'layers': {'body': '橋身'} if not portico else {'body': '橋身', 'roof': '門廊的頂'}}
 
 
-def drawbridge(key, title, L, deck, rise, hinge_a, hinge_b, deck_w, open_deg):
+def drawbridge(key, title, L, deck, rise, hinge_a, hinge_b, deck_w, open_deg, gal_h=9.0):
     """木造雙葉吊橋（兵工廠橋）：兩頭固定的木棧（樁＋橫樑＋板）、中間兩片橋板各掛在一座墩上（旋轉件 spin=bridge：船靠近打開）、
     墩上的吊架（兩根柱＋頂樑）拉鐵鍊到橋板的尖端（繩；會動的那一頭在橋板上）。"""
     X, Y = m2v(L), m2v(deck_w) + 8                     # ＋8：兩側吊架的柱子（各 0.8 m）
-    Z = m2v(deck + rise + 10.5)
+    Z = m2v(deck + rise + gal_h + 1.5)
     M = Model((X, Y, Z))
     yc = Y / 2.0
     y0d, y1d = 4, Y - 4                                # 橋面 [y0d, y1d)
@@ -182,10 +182,10 @@ def drawbridge(key, title, L, deck, rise, hinge_a, hinge_b, deck_w, open_deg):
             for y in range(y0d - 1, y1d + 1):
                 for z in range(0, zt - T):
                     M.put('body', x, y, z, ISTRIA if z >= zt - T - 3 else WOOD_G, force=True)
-        # 吊架：兩根柱（橋面外側）到橋面上 9 m、頂上一根橫樑
+        # 吊架：兩根柱（橋面外側）到橋面上 gal_h、頂上一根橫樑（橋板全開時尖端在鉸鏈上 板長 · sin 75° ⇒ 吊架要比它高）
         px = hx - 3 if sgn < 0 else hx + 2
         zt = top(px)
-        ztop = zt + m2v(9.0)
+        ztop = zt + m2v(gal_h)
         for y in (1, 2, Y - 3, Y - 2):
             for x in (px, px + 1):
                 for z in range(0, ztop):
@@ -199,7 +199,7 @@ def drawbridge(key, title, L, deck, rise, hinge_a, hinge_b, deck_w, open_deg):
     # 鐵鍊：吊架頂樑 ⇒ 橋板尖端（兩邊各一條）；會動的那一頭在橋板上（Blocksail tools/townmodels.py ropes_of 量端點落在哪一件）
     for (hx, tipx, sgn, nm) in ((xa, xm - 1, -1, 'a'), (xb, xm, 1, 'b')):
         px = hx - 3 if sgn < 0 else hx + 2
-        ztop = top(px) + m2v(9.0)
+        ztop = top(px) + m2v(gal_h)
         for (y, side) in ((y0d + 0.5, '左'), (y1d - 0.5, '右')):
             rope(M, '吊鍊-%s-%s' % (nm, side), (px + 1.0, y, ztop - 0.5), (tipx + 0.5, y, top(tipx) + 4.5), color=IRON, thick=0.4, slack=1.0)
     # 旋轉件的軸：橋板根部的下緣、沿 y；左片（往 +x 伸）照右手定則繞 +y 轉負角尖端往上、右片轉正角
@@ -230,9 +230,10 @@ def biasio():
 
 
 def arsenal():
-    # p-ponte-de-l-arsenal~br1：長 32.75 m（s 0～32.75）、整段落水、兩頭面高 0.3；吊橋關著的拱背 1.2 m
+    # p-ponte-de-l-arsenal~br1（第九輪：岸到岸一條，Tim「另外會需要處理這種沒跨岸的橋」）：長 61.96 m（s 0～61.96）、落水 6～55.5（49.5 m）、兩頭面高 0.57；
+    #   開口在落水那一段的正中（30.75 m）：兩片橋板各 9 m ⇒ 船過的寬 18 m；兩頭固定的木棧打樁；吊橋關著的拱背 1.2 m
     return drawbridge('venice-arsenal-draw', '兵工廠吊橋（Ponte de l\'Arsenal；水門前，木造雙葉吊橋、吊架拉鐵鍊；船靠近打開）',
-                      L=32.8, deck=1.8, rise=1.2, hinge_a=8.0, hinge_b=24.8, deck_w=4.0, open_deg=75)
+                      L=62.0, deck=2.0, rise=1.2, hinge_a=21.8, hinge_b=39.8, deck_w=4.0, open_deg=75, gal_h=10.5)
 
 
 ALL = [rialto, biasio, arsenal]
