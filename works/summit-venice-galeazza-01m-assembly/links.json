@@ -19,7 +19,12 @@
 			"enabled": true,
 			"created_at": "2026-11-16T18:12:27",
 			"persona": "summit",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 21
+			}
 		},
 		{
 			"name": "甲板-main",
@@ -43,6 +48,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "54:32,578:32",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "主甲板（划槳甲板）",
@@ -69,7 +75,10 @@
 			"enabled": true,
 			"created_at": "2026-11-16T19:03:26",
 			"persona": "summit",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "甲板-forecastle",
@@ -93,6 +102,7 @@
 			"meta": {
 				"deck": "forecastle",
 				"floor": "466:52,578:52",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "艏樓（圓形砲樓頂）",
@@ -121,6 +131,7 @@
 			"meta": {
 				"deck": "quarter",
 				"floor": "56:52,151:52",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "艉樓平台",
@@ -148,6 +159,7 @@
 			"note": "",
 			"meta": {
 				"bow-S.decks": "main,forecastle",
+				"id": "ladders-1",
 				"kind": "ladders"
 			}
 		},
@@ -172,6 +184,7 @@
 			"note": "",
 			"meta": {
 				"bow-S.decks": "main,forecastle",
+				"id": "ladders-2",
 				"kind": "ladders"
 			}
 		},
@@ -195,6 +208,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"id": "ladders-3",
 				"kind": "ladders",
 				"stern-S.decks": "main,quarter"
 			}
@@ -219,6 +233,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"id": "ladders-4",
 				"kind": "ladders",
 				"stern-S.decks": "main,quarter"
 			}
@@ -244,6 +259,7 @@
 			"note": "",
 			"meta": {
 				"hold.decks": "hold,main",
+				"id": "ladders-5",
 				"kind": "ladders"
 			}
 		},
@@ -267,6 +283,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"id": "part-2",
 				"material": "glass"
 			}
 		},
@@ -290,6 +307,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"id": "mast-1",
 				"kind": "mast",
 				"mast": "main"
 			}
@@ -314,6 +332,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"id": "mast-2",
 				"kind": "mast",
 				"mast": "fore"
 			}
@@ -338,6 +357,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"id": "mast-3",
 				"kind": "mast",
 				"mast": "mizzen"
 			}
@@ -360,7 +380,10 @@
 			"enabled": true,
 			"created_at": "2026-11-16T19:25:15",
 			"persona": "summit",
-			"note": ""
+			"note": "",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "甲板-hold",
@@ -384,6 +407,7 @@
 			"meta": {
 				"deck": "hold",
 				"floor": "100:6,454:6",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": -1,
 				"name": "底艙",
@@ -410,6 +434,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"powder_lb": 600
 			}
