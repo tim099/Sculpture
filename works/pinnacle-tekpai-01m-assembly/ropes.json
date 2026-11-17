@@ -1,0 +1,213 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "stay-main",
+			"from": "桅-main/head",
+			"to": "hull/stay-bow",
+			"color": "#2b2620",
+			"thickness": 0.5,
+			"slack": 1.0006,
+			"enabled": true,
+			"group": "standing/stays",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:49",
+			"meta": {
+				"kind": "stay"
+			}
+		},
+		{
+			"name": "shroud-P",
+			"from": "桅-main/head",
+			"to": "hull/shroud-base-P",
+			"color": "#2b2620",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:49",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-S",
+			"from": "桅-main/head",
+			"to": "hull/shroud-base-S",
+			"color": "#2b2620",
+			"thickness": 0.45,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:50",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "backstay-P",
+			"from": "桅-main/peak",
+			"to": "hull/backstay-P",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:51",
+			"meta": {
+				"kind": "backstay"
+			}
+		},
+		{
+			"name": "backstay-S",
+			"from": "桅-main/peak",
+			"to": "hull/backstay-S",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:51",
+			"meta": {
+				"kind": "backstay"
+			}
+		},
+		{
+			"name": "halyard",
+			"from": "桅-main/peak",
+			"to": "model:桅-main/yard-course/sling",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/halyards",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:52",
+			"meta": {
+				"kind": "halyard"
+			}
+		},
+		{
+			"name": "lift-P",
+			"from": "桅-main/peak",
+			"to": "model:桅-main/yard-course/arm-P",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/lifts",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:52",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "lift-S",
+			"from": "桅-main/peak",
+			"to": "model:桅-main/yard-course/arm-S",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/lifts",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:53",
+			"meta": {
+				"kind": "lift"
+			}
+		},
+		{
+			"name": "brace-P",
+			"from": "model:桅-main/yard-course/arm-P",
+			"to": "hull/sheet-base-P",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/braces",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:53",
+			"meta": {
+				"kind": "brace"
+			}
+		},
+		{
+			"name": "brace-S",
+			"from": "model:桅-main/yard-course/arm-S",
+			"to": "hull/sheet-base-S",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/braces",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:53",
+			"meta": {
+				"kind": "brace"
+			}
+		},
+		{
+			"name": "main-sheet-P",
+			"from": "model:桅-main/yard-lower/earing-P",
+			"to": "hull/sheet-base-P",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:54",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main"
+			}
+		},
+		{
+			"name": "main-sheet-S",
+			"from": "model:桅-main/yard-lower/earing-S",
+			"to": "hull/sheet-base-S",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:27:54",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main"
+			}
+		},
+		{
+			"name": "anchor-cable-S",
+			"from": "hull/hawse-S",
+			"to": "model:hull/anchor-S/ring",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing/anchor",
+			"note": "",
+			"persona": "pinnacle",
+			"created_at": "2026-11-17T22:32:08"
+		}
+	],
+	"groups": []
+}
