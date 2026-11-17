@@ -1,0 +1,461 @@
+{
+	"schema": 2,
+	"models": [
+		{
+			"name": "砲M-P01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "pinnacle-patache-01m-gun-4l",
+			"axes": "sculpt",
+			"at": [
+				180,
+				74.5,
+				23
+			],
+			"pivot": [
+				6.5,
+				30,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "y",
+			"color": "",
+			"enabled": true,
+			"note": "4 磅砲（pinnacle 的 4 磅專用元件 ×0.5）（步驟 9 TASK-1313；P 舷、main 第 1 個砲門；draft_guns.py back 3.5、砲口伸出 3.75）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:46:02",
+			"meta": {
+				"deck": "main",
+				"gun": "4l",
+				"id": "gun-1",
+				"kind": "gun",
+				"port": 1,
+				"side": "P"
+			}
+		},
+		{
+			"name": "砲M-S01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "pinnacle-patache-01m-gun-4l",
+			"axes": "sculpt",
+			"at": [
+				180,
+				118.5,
+				23
+			],
+			"pivot": [
+				6.5,
+				30,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "4 磅砲（pinnacle 的 4 磅專用元件 ×0.5）（步驟 9 TASK-1313；S 舷、main 第 1 個砲門；draft_guns.py back 3.5、砲口伸出 3.75）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:46:03",
+			"meta": {
+				"deck": "main",
+				"gun": "4l",
+				"id": "gun-2",
+				"kind": "gun",
+				"port": 1,
+				"side": "S"
+			}
+		},
+		{
+			"name": "迴旋砲M-P01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier",
+			"axes": "sculpt",
+			"at": [
+				228.5,
+				81.5,
+				35
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "y",
+			"color": "",
+			"enabled": true,
+			"note": "佛郎機迴旋砲 pierrier（皇家號共用件 ×0.5）（步驟 9 TASK-1313；P 舷、main 舷頂 sw228；draft_guns.py back 0、砲口伸出 7.5）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:46:03",
+			"meta": {
+				"arc": "-80,80",
+				"deck": "main",
+				"gun": "pierrier",
+				"id": "gun-3",
+				"kind": "gun",
+				"mount": "turret",
+				"port": "sw228",
+				"rate": 45,
+				"side": "P"
+			}
+		},
+		{
+			"name": "迴旋砲M-P01座",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier-mount",
+			"axes": "sculpt",
+			"at": [
+				228.5,
+				81.5,
+				35
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "y",
+			"color": "",
+			"enabled": true,
+			"note": "佛郎機迴旋砲的座（叉架＋插銷；Ship_Guns §4.2.1 雙生，擺法照抄 迴旋砲M-P01）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:46:04",
+			"meta": {
+				"id": "gunmount-3",
+				"kind": "gunmount",
+				"mount_of": "gun-3"
+			}
+		},
+		{
+			"name": "迴旋砲M-S01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier",
+			"axes": "sculpt",
+			"at": [
+				228.5,
+				111.5,
+				35
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "佛郎機迴旋砲 pierrier（皇家號共用件 ×0.5）（步驟 9 TASK-1313；S 舷、main 舷頂 sw228；draft_guns.py back 0、砲口伸出 7.5）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:46:04",
+			"meta": {
+				"arc": "-80,80",
+				"deck": "main",
+				"gun": "pierrier",
+				"id": "gun-4",
+				"kind": "gun",
+				"mount": "turret",
+				"port": "sw228",
+				"rate": 45,
+				"side": "S"
+			}
+		},
+		{
+			"name": "迴旋砲M-S01座",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier-mount",
+			"axes": "sculpt",
+			"at": [
+				228.5,
+				111.5,
+				35
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "佛郎機迴旋砲的座（叉架＋插銷；Ship_Guns §4.2.1 雙生，擺法照抄 迴旋砲M-S01）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:46:05",
+			"meta": {
+				"id": "gunmount-4",
+				"kind": "gunmount",
+				"mount_of": "gun-4"
+			}
+		},
+		{
+			"name": "格柵-主艙口",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kaguya-shachuan-01m-grating-main",
+			"axes": "sculpt",
+			"at": [
+				158,
+				91,
+				23
+			],
+			"pivot": [
+				0,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（draft_gear.py）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:51:56",
+			"meta": {
+				"id": "grating-1",
+				"kind": "grating"
+			}
+		},
+		{
+			"name": "舵艙門",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "gura-pinas-01m-door",
+			"axes": "sculpt",
+			"at": [
+				89,
+				92,
+				23
+			],
+			"pivot": [
+				0,
+				0,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.643,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（draft_gear.py）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:52:00",
+			"meta": {
+				"id": "door-1",
+				"kind": "door",
+				"open": "side"
+			}
+		},
+		{
+			"name": "爐灶",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "kaguya-gloire-01m-galley",
+			"axes": "sculpt",
+			"at": [
+				108,
+				82,
+				23
+			],
+			"pivot": [
+				22,
+				16,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.22,
+				0.22,
+				0.22
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（draft_gear.py）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:52:00",
+			"meta": {
+				"id": "galley-1",
+				"kind": "galley"
+			}
+		},
+		{
+			"name": "小艇",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "basecamp-ember-01m-boat",
+			"axes": "sculpt",
+			"at": [
+				195.5,
+				96.5,
+				23
+			],
+			"pivot": [
+				90,
+				26,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.13,
+				0.13,
+				0.13
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（draft_gear.py）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:52:01",
+			"meta": {
+				"boat": "sampan",
+				"id": "boat-1",
+				"kind": "boat",
+				"length_m": 2.3
+			}
+		},
+		{
+			"name": "絞盤",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "basecamp-ember-01m-capstan",
+			"axes": "sculpt",
+			"at": [
+				112.5,
+				96.5,
+				23
+			],
+			"pivot": [
+				40,
+				40,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.09,
+				0.09,
+				0.09
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（draft_gear.py）",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:52:02",
+			"meta": {
+				"id": "capstan-1",
+				"kind": "capstan"
+			}
+		}
+	]
+}

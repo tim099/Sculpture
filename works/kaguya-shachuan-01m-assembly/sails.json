@@ -1,0 +1,215 @@
+{
+	"schema": 3,
+	"wind": [
+		-4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "fore-junk",
+			"corners": [
+				{
+					"name": "throat",
+					"at": "model:桅-fore/yard-fore-gaff/fore",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:桅-fore/yard-fore-gaff/aft",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:桅-fore/yard-fore-boom/aft",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:桅-fore/yard-fore-boom/fore",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#e8dcc2",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8：中式竹篾硬篷",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:39:33",
+			"meta": {
+				"kind": "sail",
+				"mast": "fore",
+				"sail": "gaff",
+				"set": 1
+			}
+		},
+		{
+			"name": "main-junk",
+			"corners": [
+				{
+					"name": "throat",
+					"at": "model:桅-main/yard-main-gaff/fore",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:桅-main/yard-main-gaff/aft",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:桅-main/yard-main-boom/aft",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:桅-main/yard-main-boom/fore",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#e8dcc2",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8：中式竹篾硬篷",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:41:20",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff",
+				"set": 2
+			}
+		},
+		{
+			"name": "mizzen-junk",
+			"corners": [
+				{
+					"name": "throat",
+					"at": "model:桅-mizzen/yard-mizzen-gaff/fore",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:桅-mizzen/yard-mizzen-gaff/aft",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:桅-mizzen/yard-mizzen-boom/aft",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:桅-mizzen/yard-mizzen-boom/fore",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#e8dcc2",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8：中式竹篾硬篷",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:41:29",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "gaff",
+				"set": 3
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "",
+					"at": "船尾旗桿/flag-head",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "12.0,96.5,84.0",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "12.0,96.5,64.0",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "船尾旗桿/flag-foot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8：明鄭船尾戰旗",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:41:35",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"nation": "ming"
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "",
+					"at": "150.5,96.5,173.0",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "114.5,96.5,172.0",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "150.5,96.5,168.0",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8：大桅長旗",
+			"persona": "kaguya",
+			"created_at": "2026-11-17T22:41:37",
+			"texture": "textures/pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main",
+				"nation": "ming"
+			}
+		}
+	]
+}

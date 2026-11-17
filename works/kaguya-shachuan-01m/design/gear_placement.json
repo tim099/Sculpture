@@ -1,0 +1,270 @@
+{
+ "anchors": {
+  "blast": [
+   85,
+   96,
+   9
+  ],
+  "door": [
+   95,
+   96,
+   3
+  ]
+ },
+ "models": [
+  {
+   "name": "桶-01",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    85.5,
+    89.5,
+    3
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-02",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    85.5,
+    103.5,
+    3
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-03",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    90.5,
+    89.5,
+    3
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "桶-04",
+   "host": "magazine",
+   "host_link": "彈藥庫",
+   "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    90.5,
+    103.5,
+    3
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100
+   }
+  },
+  {
+   "name": "舵艙門",
+   "host": "deck-main",
+   "host_link": "甲板-main",
+   "source_work": "gura-pinas-01m-door",
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.5,
+    0.643,
+    0.5
+   ],
+   "at": [
+    89,
+    92,
+    23
+   ],
+   "meta": {
+    "kind": "door",
+    "open": "side"
+   },
+   "src": "〔設計〕尾樓前壁 x=88 舵艙入口單扇直立木門（貼門框外側 x=89，每邊壓框 1 格；Ship_Fittings §9.7）"
+  },
+  {
+   "name": "爐灶",
+   "host": "deck-main",
+   "host_link": "甲板-main",
+   "source_work": "kaguya-gloire-01m-galley",
+   "pivot": [
+    22,
+    16,
+    0
+   ],
+   "scale": 0.22,
+   "at": [
+    108,
+    82,
+    23
+   ],
+   "meta": {
+    "kind": "galley"
+   },
+   "src": "〔設計〕露天主甲板左舷前段（x=108, y=82），避開中線絞盤、舵艙門與右舷尾樓梯"
+  },
+  {
+   "name": "小艇",
+   "host": "deck-main",
+   "host_link": "甲板-main",
+   "source_work": "basecamp-ember-01m-boat",
+   "pivot": [
+    90,
+    26,
+    0
+   ],
+   "scale": 0.13,
+   "at": [
+    195.5,
+    96.5,
+    23
+   ],
+   "meta": {
+    "kind": "boat",
+    "boat": "sampan",
+    "length_m": 2.3
+   },
+   "src": "〔設計〕約 2.3 m 隨船小艇（餘燼號 cutter ×0.13），擱於前腰露天平甲板中線（x=183.8..207.2），避開 x=180 砲位與前桅"
+  },
+  {
+   "name": "絞盤",
+   "host": "deck-main",
+   "host_link": "甲板-main",
+   "source_work": "basecamp-ember-01m-capstan",
+   "pivot": [
+    40,
+    40,
+    0
+   ],
+   "scale": 0.09,
+   "at": [
+    112.5,
+    96.5,
+    23
+   ],
+   "meta": {
+    "kind": "capstan"
+   },
+   "src": "〔設計〕主甲板後段中線絞盤（x=112.5），介於舵艙門（x=89）與底艙梯井（x=124..138）之間"
+  },
+  {
+   "name": "羅經櫃",
+   "host": "deck-poop",
+   "host_link": "甲板-poop",
+   "source_work": "summit-night-falcon-01m-binnacle",
+   "pivot": [
+    9,
+    13,
+    0
+   ],
+   "scale": 0.2,
+   "at": [
+    64,
+    96.5,
+    41
+   ],
+   "meta": {
+    "kind": "binnacle"
+   },
+   "src": "〔設計〕尾樓甲板中線（尾桅 x=56 之前、x=64），對應上方操舵與航向觀察"
+  },
+  {
+   "name": "尾燈",
+   "host": "deck-poop",
+   "host_link": "甲板-poop",
+   "source_work": "gura-tridente-01m-lantern",
+   "pivot": [
+    8,
+    8,
+    0
+   ],
+   "scale": 0.25,
+   "at": [
+    43.5,
+    100.0,
+    41
+   ],
+   "meta": {
+    "kind": "light",
+    "light_color": "#ffae52"
+   },
+   "src": "〔設計〕尾樓左近旗桿側（x=43.5, y=100）航行尾燈（tridente 共用件 ×0.25，避開舷牆）"
+  }
+ ],
+ "gratings": [
+  {
+   "name": "格柵-主艙口",
+   "work": "kaguya-shachuan-01m-grating-main",
+   "title": "沙船 主艙口格柵（0.05 m；外部模型 scale 0.5）",
+   "host": "deck-main",
+   "host_link": "甲板-main",
+   "file": "masks/gear/grating-main.vox.txt",
+   "size": [
+    26,
+    22,
+    4
+   ],
+   "cells": 756,
+   "at": [
+    158,
+    91,
+    23
+   ],
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "meta": {
+    "kind": "grating"
+   }
+  }
+ ],
+ "magazine_meta": {
+  "kind": "magazine",
+  "pos": "aft",
+  "hoist": "ladders-1#lower",
+  "powder_lb": 400
+ }
+}
