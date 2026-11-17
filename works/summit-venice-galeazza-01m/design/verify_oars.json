@@ -1,0 +1,1651 @@
+{
+ "scale": 0.5323,
+ "ref": "apex-one-reale-01m-oar",
+ "per_side": 25,
+ "rowers": 6,
+ "xs": [
+  160,
+  172,
+  185,
+  197,
+  210,
+  222,
+  235,
+  247,
+  260,
+  272,
+  285,
+  297,
+  310,
+  322,
+  335,
+  347,
+  360,
+  372,
+  385,
+  397,
+  410,
+  422,
+  435,
+  447,
+  460
+ ],
+ "pivot_y_S": 218.0,
+ "pivot_z": 39.5,
+ "count": {
+  "S": 25,
+  "P": 25
+ },
+ "clash_total": 0,
+ "clash_oars": [],
+ "blade_above_wl_m": [
+  0.25,
+  0.25
+ ],
+ "hang_min": 686,
+ "rowers_standing": 300,
+ "rowers_needed": 300,
+ "stand_z": [
+  32,
+  33,
+  34
+ ],
+ "bad": [],
+ "probe_sink": 0,
+ "sweep_oars": {
+  "oar-S01": {
+   "-30/0": 48,
+   "-25/0": 61,
+   "-20/0": 74,
+   "-15/0": 107,
+   "-10/0": 4,
+   "-30/12": 45,
+   "-25/12": 58,
+   "-20/12": 77,
+   "-15/12": 104,
+   "-10/12": 10
+  },
+  "oar-S02": {
+   "-30/0": 55,
+   "-30/12": 55,
+   "-25/12": 2
+  },
+  "oar-S24": {
+   "+25/0": 47,
+   "+30/0": 85,
+   "+25/12": 62,
+   "+30/12": 81
+  },
+  "oar-S25": {
+   "+10/0": 211,
+   "+15/0": 186,
+   "+20/0": 141,
+   "+25/0": 106,
+   "+30/0": 106,
+   "+10/12": 214,
+   "+15/12": 170,
+   "+20/12": 162,
+   "+25/12": 108,
+   "+30/12": 94
+  },
+  "oar-P01": {
+   "+10/0": 4,
+   "+15/0": 107,
+   "+20/0": 74,
+   "+25/0": 61,
+   "+30/0": 48,
+   "+10/12": 10,
+   "+15/12": 104,
+   "+20/12": 77,
+   "+25/12": 58,
+   "+30/12": 45
+  },
+  "oar-P02": {
+   "+30/0": 55,
+   "+25/12": 2,
+   "+30/12": 55
+  },
+  "oar-P24": {
+   "-30/0": 85,
+   "-25/0": 47,
+   "-30/12": 81,
+   "-25/12": 62
+  },
+  "oar-P25": {
+   "-30/0": 106,
+   "-25/0": 106,
+   "-20/0": 141,
+   "-15/0": 186,
+   "-10/0": 211,
+   "-30/12": 94,
+   "-25/12": 108,
+   "-20/12": 162,
+   "-15/12": 170,
+   "-10/12": 214
+  }
+ },
+ "stroke_limited": {
+  "oar-S01": 9,
+  "oar-S02": 24,
+  "oar-S24": 22,
+  "oar-S25": 5,
+  "oar-P01": 9,
+  "oar-P02": 24,
+  "oar-P24": 22,
+  "oar-P25": 5
+ },
+ "layout": [
+  {
+   "name": "oar-S01",
+   "side": "S",
+   "at": [
+    160.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    161.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "-30/0": 48,
+    "-25/0": 61,
+    "-20/0": 74,
+    "-15/0": 107,
+    "-10/0": 4,
+    "-30/12": 45,
+    "-25/12": 58,
+    "-20/12": 77,
+    "-15/12": 104,
+    "-10/12": 10
+   },
+   "stroke_deg": 9
+  },
+  {
+   "name": "oar-S02",
+   "side": "S",
+   "at": [
+    172.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    173.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "-30/0": 55,
+    "-30/12": 55,
+    "-25/12": 2
+   },
+   "stroke_deg": 24
+  },
+  {
+   "name": "oar-S03",
+   "side": "S",
+   "at": [
+    185.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    186.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S04",
+   "side": "S",
+   "at": [
+    197.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    198.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S05",
+   "side": "S",
+   "at": [
+    210.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    211.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S06",
+   "side": "S",
+   "at": [
+    222.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    223.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S07",
+   "side": "S",
+   "at": [
+    235.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    236.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S08",
+   "side": "S",
+   "at": [
+    247.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    248.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S09",
+   "side": "S",
+   "at": [
+    260.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    261.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S10",
+   "side": "S",
+   "at": [
+    272.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    273.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S11",
+   "side": "S",
+   "at": [
+    285.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    286.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S12",
+   "side": "S",
+   "at": [
+    297.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    298.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S13",
+   "side": "S",
+   "at": [
+    310.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    311.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S14",
+   "side": "S",
+   "at": [
+    322.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    323.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S15",
+   "side": "S",
+   "at": [
+    335.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    336.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S16",
+   "side": "S",
+   "at": [
+    347.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    348.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S17",
+   "side": "S",
+   "at": [
+    360.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    361.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S18",
+   "side": "S",
+   "at": [
+    372.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    373.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S19",
+   "side": "S",
+   "at": [
+    385.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    386.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S20",
+   "side": "S",
+   "at": [
+    397.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    398.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S21",
+   "side": "S",
+   "at": [
+    410.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    411.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S22",
+   "side": "S",
+   "at": [
+    422.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    423.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S23",
+   "side": "S",
+   "at": [
+    435.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    436.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 693,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-S24",
+   "side": "S",
+   "at": [
+    447.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    448.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 686,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "+25/0": 47,
+    "+30/0": 85,
+    "+25/12": 62,
+    "+30/12": 81
+   },
+   "stroke_deg": 22
+  },
+  {
+   "name": "oar-S25",
+   "side": "S",
+   "at": [
+    460.5,
+    218.0,
+    39.5
+   ],
+   "mirror": "",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    461.56,
+    207.35,
+    36.84
+   ],
+   "hang_cells": 1127,
+   "rowers_stand": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "+10/0": 211,
+    "+15/0": 186,
+    "+20/0": 141,
+    "+25/0": 106,
+    "+30/0": 106,
+    "+10/12": 214,
+    "+15/12": 170,
+    "+20/12": 162,
+    "+25/12": 108,
+    "+30/12": 94
+   },
+   "stroke_deg": 5
+  },
+  {
+   "name": "oar-P01",
+   "side": "P",
+   "at": [
+    160.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    161.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "+10/0": 4,
+    "+15/0": 107,
+    "+20/0": 74,
+    "+25/0": 61,
+    "+30/0": 48,
+    "+10/12": 10,
+    "+15/12": 104,
+    "+20/12": 77,
+    "+25/12": 58,
+    "+30/12": 45
+   },
+   "stroke_deg": 9
+  },
+  {
+   "name": "oar-P02",
+   "side": "P",
+   "at": [
+    172.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    173.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "+30/0": 55,
+    "+25/12": 2,
+    "+30/12": 55
+   },
+   "stroke_deg": 24
+  },
+  {
+   "name": "oar-P03",
+   "side": "P",
+   "at": [
+    185.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    186.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P04",
+   "side": "P",
+   "at": [
+    197.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    198.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P05",
+   "side": "P",
+   "at": [
+    210.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    211.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P06",
+   "side": "P",
+   "at": [
+    222.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    223.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P07",
+   "side": "P",
+   "at": [
+    235.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    236.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P08",
+   "side": "P",
+   "at": [
+    247.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    248.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P09",
+   "side": "P",
+   "at": [
+    260.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    261.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P10",
+   "side": "P",
+   "at": [
+    272.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    273.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P11",
+   "side": "P",
+   "at": [
+    285.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    286.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P12",
+   "side": "P",
+   "at": [
+    297.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    298.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P13",
+   "side": "P",
+   "at": [
+    310.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    311.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P14",
+   "side": "P",
+   "at": [
+    322.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    323.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P15",
+   "side": "P",
+   "at": [
+    335.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    336.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P16",
+   "side": "P",
+   "at": [
+    347.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    348.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P17",
+   "side": "P",
+   "at": [
+    360.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    361.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P18",
+   "side": "P",
+   "at": [
+    372.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    373.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    33,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P19",
+   "side": "P",
+   "at": [
+    385.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    386.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P20",
+   "side": "P",
+   "at": [
+    397.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    398.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P21",
+   "side": "P",
+   "at": [
+    410.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    411.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P22",
+   "side": "P",
+   "at": [
+    422.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    423.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P23",
+   "side": "P",
+   "at": [
+    435.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    436.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 716,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {},
+   "stroke_deg": 30
+  },
+  {
+   "name": "oar-P24",
+   "side": "P",
+   "at": [
+    447.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    448.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 708,
+   "rowers_stand": [
+    32,
+    34,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "-30/0": 85,
+    "-25/0": 47,
+    "-30/12": 81,
+    "-25/12": 62
+   },
+   "stroke_deg": 22
+  },
+  {
+   "name": "oar-P25",
+   "side": "P",
+   "at": [
+    460.5,
+    103.0,
+    39.5
+   ],
+   "mirror": "y",
+   "clash_cells": 0,
+   "blade_z": 23.47,
+   "blade_above_wl_m": 0.25,
+   "seat": [
+    461.56,
+    113.65,
+    36.84
+   ],
+   "hang_cells": 1212,
+   "rowers_stand": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    32
+   ],
+   "sweep_hits": {
+    "-30/0": 106,
+    "-25/0": 106,
+    "-20/0": 141,
+    "-15/0": 186,
+    "-10/0": 211,
+    "-30/12": 94,
+    "-25/12": 108,
+    "-20/12": 162,
+    "-15/12": 170,
+    "-10/12": 214
+   },
+   "stroke_deg": 5
+  }
+ ]
+}
