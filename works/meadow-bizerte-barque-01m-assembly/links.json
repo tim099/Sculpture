@@ -1,0 +1,286 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "hull",
+			"work": "meadow-bizerte-barque-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:50:46",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 11
+			}
+		},
+		{
+			"name": "hold",
+			"work": "meadow-bizerte-barque-01m-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:55:59",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "hold",
+				"floor": "72:3,155:3",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 0,
+				"name": "底艙地板",
+				"thick": 1
+			}
+		},
+		{
+			"name": "deck",
+			"work": "meadow-bizerte-barque-01m-deck",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:56:00",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "main",
+				"floor": "62:17,180:17",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 1,
+				"name": "裝卸主甲板",
+				"thick": 1
+			}
+		},
+		{
+			"name": "aft-deck",
+			"work": "meadow-bizerte-barque-01m-aft-deck",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:56:01",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "aft",
+				"floor": "56:23,85:23",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 2,
+				"name": "旅客艉平台",
+				"thick": 1
+			}
+		},
+		{
+			"name": "hold-ladder",
+			"work": "meadow-bizerte-barque-01m-hold-ladder",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:56:05",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"access.decks": "hold,main",
+				"id": "ladders-1",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "aft-ladder",
+			"work": "meadow-bizerte-barque-01m-aft-ladder",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:56:08",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"access.decks": "main,aft",
+				"id": "ladders-2",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "coaming",
+			"work": "meadow-bizerte-barque-01m-coaming",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:56:10",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "part-1"
+			}
+		},
+		{
+			"name": "ends",
+			"work": "meadow-bizerte-barque-01m-ends",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:56:11",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "channels",
+			"work": "meadow-bizerte-barque-01m-channels",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:57:53",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "part-3"
+			}
+		},
+		{
+			"name": "mast-main",
+			"work": "meadow-bizerte-barque-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:58:04",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "mast-1",
+				"kind": "mast",
+				"mast": "main"
+			}
+		},
+		{
+			"name": "mast-fore",
+			"work": "meadow-bizerte-barque-01m-mast-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				260,
+				73,
+				215
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T12:58:13",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "mast-2",
+				"kind": "mast",
+				"mast": "fore"
+			}
+		}
+	]
+}

@@ -1,0 +1,314 @@
+{
+	"schema": 4,
+	"ropes": [
+		{
+			"name": "main-P1",
+			"from": "channels/main-P1",
+			"to": "mast-main/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:05",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-P2",
+			"from": "channels/main-P2",
+			"to": "mast-main/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:05",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-S1",
+			"from": "channels/main-S1",
+			"to": "mast-main/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:06",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-S2",
+			"from": "channels/main-S2",
+			"to": "mast-main/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:06",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-lateen-tack",
+			"from": "model:mast-main/yard/fore",
+			"to": "153,36,16",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:07",
+			"meta": {
+				"kind": "tack",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "main-lateen-sheet",
+			"from": "sail:main-lateen/clew",
+			"to": "90,36,16",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:08",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "main-lateen-halyard",
+			"from": "mast-main/hound",
+			"to": "model:mast-main/yard/pivot",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:08",
+			"meta": {
+				"kind": "halyard",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "fore-P1",
+			"from": "channels/fore-P1",
+			"to": "mast-fore/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:14",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-P2",
+			"from": "channels/fore-P2",
+			"to": "mast-fore/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:14",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-S1",
+			"from": "channels/fore-S1",
+			"to": "mast-fore/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:15",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-S2",
+			"from": "channels/fore-S2",
+			"to": "mast-fore/hound",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:15",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-lateen-tack",
+			"from": "model:mast-fore/yard/fore",
+			"to": "201,36,26",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:16",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore-lateen"
+			}
+		},
+		{
+			"name": "fore-lateen-sheet",
+			"from": "sail:fore-lateen/clew",
+			"to": "148,36,16",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:16",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-lateen"
+			}
+		},
+		{
+			"name": "fore-lateen-halyard",
+			"from": "mast-fore/hound",
+			"to": "model:mast-fore/yard/pivot",
+			"color": "#6f6250",
+			"thickness": 0.24,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:17",
+			"meta": {
+				"kind": "halyard",
+				"sail": "fore-lateen"
+			}
+		}
+	],
+	"groups": [],
+	"ratlines": [
+		{
+			"name": "main-ratlines-P",
+			"a": "main-P1",
+			"b": "main-P2",
+			"step": 4,
+			"start": 6,
+			"stop": 14,
+			"min_span": 4,
+			"color": "#75634b",
+			"thickness": 0.2,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": false,
+			"foot": "",
+			"head": "",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:06"
+		},
+		{
+			"name": "main-ratlines-S",
+			"a": "main-S1",
+			"b": "main-S2",
+			"step": 4,
+			"start": 6,
+			"stop": 14,
+			"min_span": 4,
+			"color": "#75634b",
+			"thickness": 0.2,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": false,
+			"foot": "",
+			"head": "",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:07"
+		},
+		{
+			"name": "fore-ratlines-P",
+			"a": "fore-P1",
+			"b": "fore-P2",
+			"step": 4,
+			"start": 6,
+			"stop": 14,
+			"min_span": 4,
+			"color": "#75634b",
+			"thickness": 0.2,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": false,
+			"foot": "",
+			"head": "",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:15"
+		},
+		{
+			"name": "fore-ratlines-S",
+			"a": "fore-S1",
+			"b": "fore-S2",
+			"step": 4,
+			"start": 6,
+			"stop": 14,
+			"min_span": 4,
+			"color": "#75634b",
+			"thickness": 0.2,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": false,
+			"foot": "",
+			"head": "",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-17T12:58:16"
+		}
+	]
+}
