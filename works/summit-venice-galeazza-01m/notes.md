@@ -93,6 +93,6 @@ design/plan.json 每個數字標出處或「設計」。線形程式 lines.py �
   | 槳 | S／P 01 | 02 | 24 | 25 | 其餘 42 支 |
   |---|---|---|---|---|---|
   | stroke_deg | 9 | 24 | 22 | 5 | 30 |
-  ⚠ 兩頭各一支只掃 5°／9°：要掃滿得拆樓牆或少放一張凳 —— 等 Tim。
+  兩頭各一支只掃 5°／9°：Tim 2026-11-17「先保留小擺幅」⇒ 不拆樓牆、不少放凳。
 - 靠泊沒驗（要進遊戲才量得到：槳伸出舷外 9 m）⇒ 步驟 13 那一格先不勾，步驟 14 一起量。
 - view：models_drawn 100、models_broken 0、sails_broken 0、ropes_broken 0。圖：stage09_oars_view.png。
