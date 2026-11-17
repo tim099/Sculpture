@@ -1,0 +1,89 @@
+{
+ "rudder": {
+  "kind": "rudder",
+  "hinge_x": 90.94,
+  "hinge_y": 160.5,
+  "hinge_z": 2.0,
+  "axis_x": -0.7865,
+  "axis_y": 0,
+  "axis_z": 0.6175,
+  "max_deg": 30,
+  "turn_axis": "hinge",
+  "spin": "rudder",
+  "spin_k": 30,
+  "spin_min": -30,
+  "spin_max": 30,
+  "spin_lag": 0.3
+ },
+ "pivot": [
+  90.94,
+  160.5,
+  2.0
+ ],
+ "stock_top": [
+  51,
+  160,
+  38
+ ],
+ "anchors": {
+  "錨-S": {
+   "at": [
+    546.74,
+    215.33,
+    48.0
+   ],
+   "rotate": [
+    0,
+    0,
+    -26
+   ],
+   "scale": 0.8,
+   "hawse": [
+    544,
+    211,
+    40
+   ]
+  },
+  "錨-P": {
+   "at": [
+    546.74,
+    105.67,
+    48.0
+   ],
+   "rotate": [
+    0,
+    0,
+    26
+   ],
+   "scale": 0.8,
+   "hawse": [
+    544,
+    108,
+    40
+   ]
+  }
+ },
+ "grapnel": {
+  "work": "kotoko-fusta-01m-anchor-grapnel",
+  "size": [
+   20,
+   20,
+   24
+  ],
+  "pivot": [
+   9.5,
+   9.5,
+   23.5
+  ],
+  "ring": [
+   9,
+   9,
+   23
+  ],
+  "crown": [
+   9,
+   9,
+   0
+  ]
+ }
+}

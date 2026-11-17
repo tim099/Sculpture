@@ -69,3 +69,15 @@ design/plan.json 每個數字標出處或「設計」。線形程式 lines.py �
 - 讀數：組裝件匯出 366,358 格 ＝ 改前 composed 343,325 ＋ 地板 20,009 ＋ 彈藥庫 3,113 − 甲板 70 − 梯子 19（沒有被裁或重疊）；元件 1、封閉空腔 0、y 鏡像差 0；models_drawn 47（36 ＋ 桶 6 ＋ 艙蓋 1 ＋ 燈 3 ＋ 羅經櫃 1）、models_broken 0。
   check_ladders.py：5 座 foot／head 站得住；反向對照 head 抬 6 格 ⇒ 5／5 報。draft_hold.py、draft_decks.py 重跑同雜湊。
 - 圖：stage07_magazine_view.png（彈藥庫子作品＋桶）、stage07_stern_lanterns_night.png（夜景，三盞燈亮）。
+
+## 舵、舵柄、錨（步驟 11，2026-11-17）
+- draft_helm.py ⇒ apply_helm.py。
+- 舵（子作品 -rudder 1,023 格，組裝件外部模型「舵」pivot ＝ at ＝ 鉸鏈點）：槳帆船的艉柱很斜（後緣 z 12 ⇒ z 36 從 x 77 退到 x 53）⇒ 舵葉前緣一層一層貼著艉柱後緣走，
+  弦長 z 2 的 1.4 m 收到 z 28 的 0.6 m、厚 0.3 m（水線下 19 層）；z 29–38 舵桿；舵柄 z 37–38 從舵桿往船頭穿過艉封板、伸進艉樓下艙到 x 72（約 2.2 m）。沒有舵輪（槳帆船用舵柄；Ship_Helm：舵柄畫在舵上不用補）。
+  舵柄口：艉封板在舵柄經過那一段刻 79 格（7 格寬、z 36–39，masks/upper/hull_cut_02.vox.txt），讓滿舵時舵柄擺得開。
+  meta kind=rudder、hinge (90.94, 160.5, 2)、axis (−0.7865, 0, 0.6175)（斜 51.9°）、max_deg 30、turn_axis=hinge、spin=rudder／spin_k 30／±30／lag 0.3；固定點 stock-top (51,160,38)，旁邊 8 格內船尾格 564。
+  ⚠ 鉸鏈是拿前緣擬合的一條直線；艉柱是彎的 ⇒ 前緣離那條線最多 5.4 格（Ship_Helm 那條「丟掉離線 1.5 格的層」在彎艉柱上會丟到只剩 9 層，所以只丟舵柄兩層）。只是畫面：滿舵時舵葉前緣會離開艉柱一點。
+- 錨（kotoko 四爪錨 grapnel，scale 0.8 ⇒ 約 1.9 m 高；組裝件外部模型「錨-S」「錨-P」，meta kind=anchor、anchor=bower、hawse）：掛在圓形艏樓外牆、艏樓中心算起 64° 方向、牆外 3 格，環 z 48、錨冠 z 29.2（水線上 0.8 m），錨爪沿牆的切線；hawse 在牆面 z 40（下層甲板高）。
+  ⚠ 大小是設計（加萊賽的錨重沒查到；meadow galea 用 0.65）；Grevenbroeck 圖上錨掛在船頭外側。
+- 讀數：船殼 222,493 ⇒ 222,414（刻 79）；組裝件匯出 366,279 ＝ 366,358 − 79；元件 1、封閉空腔 0、y 鏡像差 0；models_drawn 50（＋舵 1＋錨 2）、models_broken 0；舵格與現況（扣掉舵柄口）重疊 0；錨身 9×9 取樣點在船裡 0；check_ladders 5／5。draft_helm.py 重跑同雜湊。
+- 圖：stage08_rudder_view.png（舵子作品側面）、stage08_anchors_view.png（艏樓與 S 舷錨）。
