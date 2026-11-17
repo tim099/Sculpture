@@ -186,13 +186,15 @@ def drawbridge(key, title, L, deck, rise, hinge_a, hinge_b, deck_w, open_deg, ga
         px = hx - 3 if sgn < 0 else hx + 2
         zt = top(px)
         ztop = zt + m2v(gal_h)
-        for y in (1, 2, Y - 3, Y - 2):
-            for x in (px, px + 1):
+        #   柱、頂樑 3 × 3 格（0.6 m）：遊戲的低模 4 × 4 × 4 併一格、一塊 ≥ 12 格才留（Blocksail tools/townmodels.py LO_F、LO_FILL）——
+        #   2 × 2 的柱跨在塊的邊界上只剩 8 格 ⇒ 遠看整座吊架不見（Tim 2026-11-17「這座橋遠看只會顯示一邊」：模型寬 310 格、匯入鏡像 x 之後 B 吊架跨界）；3 × 3 最壞 2 × 2 × 4 ＝ 16 格
+        for y in (1, 2, 3, Y - 4, Y - 3, Y - 2):
+            for x in (px, px + 1, px + 2):
                 for z in range(0, ztop):
                     M.put('body', x, y, z, WOOD_D, force=True)
         for y in range(0, Y):
-            for x in (px, px + 1):
-                for z in (ztop, ztop + 1):
+            for x in (px, px + 1, px + 2):
+                for z in (ztop, ztop + 1, ztop + 2):
                     M.put('body', x, y, z, WOOD_D, force=True)
         for y in range(3, Y - 3):                      # 斜撐（柱頂兩側往裡）
             pass
