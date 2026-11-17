@@ -1,0 +1,351 @@
+{
+ "mpv": 0.2,
+ "root": "gura-venice-bridges-1666",
+ "works": {
+  "gura-venice-bridges-1666-venice-arsenal-draw": {
+   "anchors": {
+    "wall-a": [
+     0,
+     14,
+     0
+    ],
+    "wall-b": [
+     163,
+     14,
+     0
+    ]
+   },
+   "expect": "gura-venice-bridges-1666-venice-arsenal-draw.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": 1.8,
+      "draw": 1,
+      "kind": "wall",
+      "len": 32.8,
+      "part": "section",
+      "rise": 1.2,
+      "set": "venice-arsenal-draw",
+      "style": "venice",
+      "variant": "section"
+     },
+     "mirror": "",
+     "name": "固定段、墩與吊架",
+     "recolor": {},
+     "source": "gura-venice-bridges-1666-venice-arsenal-draw-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "leaf",
+      "spin": "bridge",
+      "spin_axis_x": 0,
+      "spin_axis_y": 1,
+      "spin_axis_z": 0,
+      "spin_k": -75,
+      "spin_mode": "angle",
+      "spin_pivot_x": 40.0,
+      "spin_pivot_y": 14.0,
+      "spin_pivot_z": 11.0,
+      "spin_zero": 0
+     },
+     "mirror": "",
+     "name": "左橋板（會動）",
+     "recolor": {},
+     "source": "gura-venice-bridges-1666-venice-arsenal-draw-leaf-a",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "leaf",
+      "spin": "bridge",
+      "spin_axis_x": 0,
+      "spin_axis_y": 1,
+      "spin_axis_z": 0,
+      "spin_k": 75,
+      "spin_mode": "angle",
+      "spin_pivot_x": 124.0,
+      "spin_pivot_y": 14.0,
+      "spin_pivot_z": 11.0,
+      "spin_zero": 0
+     },
+     "mirror": "",
+     "name": "右橋板（會動）",
+     "recolor": {},
+     "source": "gura-venice-bridges-1666-venice-arsenal-draw-leaf-b",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "mpv": 0.2,
+   "order": 2,
+   "ropes": [
+    {
+     "color": "#242455",
+     "from": "38,4.5,57.5",
+     "name": "吊鍊-a-左",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "81.5,4.5,19.5"
+    },
+    {
+     "color": "#242455",
+     "from": "38,23.5,57.5",
+     "name": "吊鍊-a-右",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "81.5,23.5,19.5"
+    },
+    {
+     "color": "#242455",
+     "from": "127,4.5,57.5",
+     "name": "吊鍊-b-左",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "82.5,4.5,19.5"
+    },
+    {
+     "color": "#242455",
+     "from": "127,23.5,57.5",
+     "name": "吊鍊-b-右",
+     "slack": 1.0,
+     "thickness": 0.4,
+     "to": "82.5,23.5,19.5"
+    }
+   ],
+   "size": [
+    164,
+    28,
+    68
+   ],
+   "tags": "bridge,venice",
+   "title": "兵工廠吊橋（Ponte de l'Arsenal；水門前，木造雙葉吊橋、吊架拉鐵鍊；船靠近打開）"
+  },
+  "gura-venice-bridges-1666-venice-arsenal-draw-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-bridges-1666-venice-arsenal-draw-body.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    164,
+    28,
+    68
+   ],
+   "tags": "sub",
+   "title": "兵工廠吊橋｜固定段、墩與吊架"
+  },
+  "gura-venice-bridges-1666-venice-arsenal-draw-leaf-a": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-bridges-1666-venice-arsenal-draw-leaf-a.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    164,
+    28,
+    68
+   ],
+   "tags": "sub",
+   "title": "兵工廠吊橋｜左橋板（會動）"
+  },
+  "gura-venice-bridges-1666-venice-arsenal-draw-leaf-b": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-bridges-1666-venice-arsenal-draw-leaf-b.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    164,
+    28,
+    68
+   ],
+   "tags": "sub",
+   "title": "兵工廠吊橋｜右橋板（會動）"
+  },
+  "gura-venice-bridges-1666-venice-biasio": {
+   "anchors": {
+    "wall-a": [
+     0,
+     16,
+     0
+    ],
+    "wall-b": [
+     437,
+     16,
+     0
+    ]
+   },
+   "expect": "gura-venice-bridges-1666-venice-biasio.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": 1.8,
+      "kind": "wall",
+      "len": 87.6,
+      "part": "section",
+      "rise": 11.3,
+      "set": "venice-biasio",
+      "style": "venice",
+      "variant": "section"
+     },
+     "mirror": "",
+     "name": "橋身",
+     "recolor": {},
+     "source": "gura-venice-bridges-1666-venice-biasio-body",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "mpv": 0.2,
+   "order": 2,
+   "ropes": [],
+   "size": [
+    438,
+    32,
+    78
+   ],
+   "tags": "bridge,venice",
+   "title": "San Biasio 橋（Ponte San Biasio o de le Cadene；兵工廠運河口、斯拉夫人堤岸；磚拱＋伊斯特拉石鑲邊，拱頂離水 11 m）"
+  },
+  "gura-venice-bridges-1666-venice-biasio-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-bridges-1666-venice-biasio-body.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    438,
+    32,
+    78
+   ],
+   "tags": "sub",
+   "title": "San Biasio 橋｜橋身"
+  },
+  "gura-venice-bridges-1666-venice-rialto": {
+   "anchors": {
+    "wall-a": [
+     0,
+     26,
+     0
+    ],
+    "wall-b": [
+     349,
+     26,
+     0
+    ]
+   },
+   "expect": "gura-venice-bridges-1666-venice-rialto.composite.txt",
+   "flags": [],
+   "links": [
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "deck": 3.4,
+      "kind": "wall",
+      "len": 70.0,
+      "part": "section",
+      "rise": 7.8,
+      "set": "venice-rialto",
+      "style": "venice",
+      "variant": "section"
+     },
+     "mirror": "",
+     "name": "橋身",
+     "recolor": {},
+     "source": "gura-venice-bridges-1666-venice-rialto-body",
+     "turn": 0
+    },
+    {
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "meta": {
+      "part": "roof"
+     },
+     "mirror": "",
+     "name": "門廊的頂",
+     "recolor": {},
+     "source": "gura-venice-bridges-1666-venice-rialto-roof",
+     "turn": 0
+    }
+   ],
+   "mask": null,
+   "models": [],
+   "mpv": 0.2,
+   "order": 2,
+   "ropes": [],
+   "size": [
+    350,
+    52,
+    98
+   ],
+   "tags": "bridge,venice",
+   "title": "里亞托橋（Ponte di Rialto；1591 伊斯特拉石單拱，拱頂門廊；遊戲照大運河 43 m 的河寬、拱頂離水 9 m）"
+  },
+  "gura-venice-bridges-1666-venice-rialto-body": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-bridges-1666-venice-rialto-body.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    350,
+    52,
+    98
+   ],
+   "tags": "sub",
+   "title": "里亞托橋｜橋身"
+  },
+  "gura-venice-bridges-1666-venice-rialto-roof": {
+   "anchors": {},
+   "links": [],
+   "mask": "gura-venice-bridges-1666-venice-rialto-roof.vox.txt",
+   "models": [],
+   "mpv": 0.2,
+   "order": 1,
+   "size": [
+    350,
+    52,
+    98
+   ],
+   "tags": "sub",
+   "title": "里亞托橋｜門廊的頂"
+  }
+ }
+}
