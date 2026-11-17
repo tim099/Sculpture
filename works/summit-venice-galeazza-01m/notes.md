@@ -54,3 +54,18 @@ design/plan.json 每個數字標出處或「設計」。線形程式 lines.py �
 - 為了砲改的船殼：艏樓裡舊船殼的舷頂與艏柱頭（z ≥ 32，1,364 格）刻掉（hull_cut_01）；艏樓下層前面四個砲門 z 36–45，50 磅兩門改成平行朝前（±12° 兩門在船裡撞在一起）；艉樓 x 128 側窗改成砲門（z 37–45、寬 7）；艉樓平台欄杆砲眼（x 125–131、145–149，z 55–58）；艉封板兩扇窗是 30 磅艉砲門、拿掉玻璃（玻璃 378 ⇒ 280）。
 - 讀數（draft_place_guns.py、gun_layout.json）：32 門每一門的格心＋八角零碰撞（含先擺的砲）、砲口在牆外、砲口往前 4 m 射線碰到船 0；叉架迴旋砲每 5° 量：舷牆頂 8 門 ±70°、艏樓頂 ±72° 兩門 ±10°、x 510 兩門 ±20°。view：models_drawn 36（砲 32＋帆桁 3＋金飾 1）、models_broken 0。圖：stage06_guns_view.png。
 - 遊戲砲種：Blockside 1c802fd（六種＋補 ven50／ven6 每發傷害）經 968a5af 合進 dev 並推（Tim 2026-11-16「Merge」）；Blocksail 4dc92be0 指標（沒推）。
+
+## 底艙、彈藥庫、艙蓋、艉燈、羅經櫃（步驟 10，2026-11-17）
+- 底艙梯改站在底艙地板上（draft_decks.py：梯腳 z 2 ⇒ z 6，原本落在中線那道一格寬的縫裡）；梯井往船尾移 4 格 ⇒ -deck 差分刻 70／-ladder-hold 重落 245 格，兩件改完匯出逐格等於新清單。
+- draft_hold.py ⇒ apply_hold.py：
+  - 底艙地板（子作品 -hold，關聯「甲板-hold」meta kind=deck、deck=hold、level −1、floor 100:6,454:6）：船殼裡 z ≤ 5 的空氣填實當壓艙、最上一格鋪板，20,009 格；頭頂到樑底 2.3 m。梯子「梯子-底艙」meta 補 hold.decks=hold,main。
+  - 彈藥庫（子作品 -magazine，關聯「彈藥庫」meta kind=magazine、powder_lb 600）：艏樓正下方的底艙，x 455 橡木＋x 456 銅皮兩格厚艙壁、門洞 5 格寬（z 8–25）、松木地板 z 7；3,113 格。固定點 blast (487,160,21)、door (455,160,8)。
+    火藥桶 6 個（憲法號 powder-barrel，scale 0.2，meta kind=powder、powder_lb 100）：底是 V 形（x 474 在 z 8 只剩 |dy| ≤ 3）⇒ 擠在靠門那 1.5 m：兩舷各兩桶＋中線兩桶；每桶量過腳下全實心、桶身全空氣。
+    ⚠ 位置是設計：加萊賽彈藥庫實際在哪沒查到；照 meadow galea 放艏部（大砲都在艏樓）。
+  - 底艙梯口艙蓋（子作品 -hold-hatch，16×7×1 局部座標；外部模型「底艙艙蓋」掛在 -deck，meta kind=door、open=up）：梯井每邊大一格、平貼 corsia 頂上一格 z 38；hinge-a (0,0,0) → hinge-b (15,0,0) 沿 +x、板往 +y ⇒ 往上掀。
+  - 艉燈三盞（組裝件外部模型，三叉戟號船尾燈 scale 0.5、meta kind=light）：Tim 2026-11-17「艉燈可以加(不用按照參考圖)」⇒ 威尼斯旗艦式三盞 fanò（設計）：「艉燈-中」立在拱頂艙頂 (66.5,160.5,83)、「艉燈-P」「艉燈-S」立在艉欄杆兩角 (56.5,137.5／183.5,59)。⚠ +y 是 S 舷。
+  - 羅經櫃（夜隼號 binnacle，scale 0.2、kind=binnacle）：-deck-stern 艉樓平台中線 x 140.5（舵手站的平台）。
+  - 不放的（照實）：小艇（槳帆船的 schifo 多半拖在船後，Grevenbroeck 圖上甲板沒有艇 —— 拖的說法沒查出處）、絞盤（沒查到加萊賽起錨用不用絞盤）、廚房爐灶（槳帆船 fogon 的位置沒查到；划凳區的格子要不要算走路格沒量）。
+- 讀數：組裝件匯出 366,358 格 ＝ 改前 composed 343,325 ＋ 地板 20,009 ＋ 彈藥庫 3,113 − 甲板 70 − 梯子 19（沒有被裁或重疊）；元件 1、封閉空腔 0、y 鏡像差 0；models_drawn 47（36 ＋ 桶 6 ＋ 艙蓋 1 ＋ 燈 3 ＋ 羅經櫃 1）、models_broken 0。
+  check_ladders.py：5 座 foot／head 站得住；反向對照 head 抬 6 格 ⇒ 5／5 報。draft_hold.py、draft_decks.py 重跑同雜湊。
+- 圖：stage07_magazine_view.png（彈藥庫子作品＋桶）、stage07_stern_lanterns_night.png（夜景，三盞燈亮）。

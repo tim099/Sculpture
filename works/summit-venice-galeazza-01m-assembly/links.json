@@ -243,6 +243,7 @@
 			"persona": "summit",
 			"note": "",
 			"meta": {
+				"hold.decks": "hold,main",
 				"kind": "ladders"
 			}
 		},
@@ -360,6 +361,58 @@
 			"created_at": "2026-11-16T19:25:15",
 			"persona": "summit",
 			"note": ""
+		},
+		{
+			"name": "甲板-hold",
+			"work": "summit-venice-galeazza-01m-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T14:26:23",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"deck": "hold",
+				"floor": "100:6,454:6",
+				"kind": "deck",
+				"level": -1,
+				"name": "底艙",
+				"thick": 1
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "summit-venice-galeazza-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				660,
+				321,
+				160
+			],
+			"enabled": true,
+			"created_at": "2026-11-17T14:26:28",
+			"persona": "summit",
+			"note": "",
+			"meta": {
+				"kind": "magazine",
+				"powder_lb": 600
+			}
 		}
 	]
 }

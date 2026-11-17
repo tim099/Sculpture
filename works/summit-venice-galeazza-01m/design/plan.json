@@ -45,6 +45,8 @@
     "stern_castle": {"v": {"x_front": 150, "deck_z": 51, "rail_z": 58, "cabin": {"x0": 64, "x1": 124, "top_z": 82}}, "src": "Furttenbach：艉樓比上甲板高 10 palmi（約 2.5 m）⇒ 設計 2.0 m（平台板 z 51，跟艏樓頂同高）；Coronelli／Faustina 的拱頂艙 ⇒ 拱頂到 z 82。"},
     "spur": {"v": {"x_tip": 632, "z_root": 24, "z_tip": 29}, "src": "Furttenbach 1629 sperone 30 palmi（約 7.4 m，palmo 單位未證實）⇒ 設計 7.6 m（艏柱 556 → 632），略往上翹；整根在艏樓地板（z 29）以下。"},
     "masts": {"v": {"trinchetto": 452, "maestra": 318, "mezzana": 168}, "src": "Coronelli／Grevenbroeck 三桅：前桅緊貼艏樓後、主桅在 corsia 正中（Furttenbach）、後桅貼艉樓前；高度與帆桁到步驟 7 再定（查不到 ⇒ 設計）。"},
+    "hold": {"v": {"floor_top_z": 5, "x0": 100, "x1": 512, "mag_x": 455, "mag_floor_top_z": 7, "door_half_w": 2, "door_top_z": 25, "kegs": 6}, "src": "設計（步驟 10）：底艙地板 z 5（船殼裡 z ≤ 5 的空氣填實當壓艙、最上一層鋪板），頭頂到樑底 2.3 m；彈藥庫在艏樓正下方的底艙（x 455 起往前、兩格厚艙壁、門洞 5 格寬），照 meadow galea 的艏部彈藥庫 —— 大砲都在艏樓。⚠ 加萊賽彈藥庫的實際位置沒查到；桶數 6 是設計（powder_lb ＝ 桶數 × 100，Ship_Game 表）。"},
+    "lanterns": {"v": {"centre": [66.5, 160.5, 83], "sides": [[56.5, 137.5, 59], [56.5, 183.5, 59]], "scale": 0.5}, "src": "Tim 2026-11-17「艉燈可以加(不用按照參考圖)」⇒ 設計：三盞 fanò（威尼斯旗艦式；Grevenbroeck 圖上沒畫燈）引用三叉戟號船尾燈 scale 0.5（約 1.8 m 高）：中間一盞立在拱頂艙頂、兩側兩盞立在艉欄杆兩角。"},
     "rig_table": {"v": {
       "maestra":    {"x": 318, "top_z": 232, "yard_m": 34.4, "sail": "lateen"},
       "trinchetto": {"x": 452, "top_z": 194, "yard_m": 20.8, "sail": "lateen"},

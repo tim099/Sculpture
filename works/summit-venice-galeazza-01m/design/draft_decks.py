@@ -93,9 +93,11 @@ def main():
     c_st, h_st, p_st = ladder('ladder_stern', 'stern-S', xa - 2, YC + 12, -1, DZ + 1, TZ + 1, TZ - 2)
     # 底艙：中線 y 158..162、梯腳 x 190 往 +x，頂上是 corsia 頂（第一層空氣 top_z + 1）
     xf = 190
-    zf_hold = int(max(z for z in range(NZ) if occ[xf, YC, z]) + 1)
-    for x in range(xf, xf + 26):                        # 梯子一路要踩在船殼內底上方（量最高那格）
-        zf_hold = max(zf_hold, int(max(z for z in range(NZ) if occ[x, YC, z] and z < 20) + 1))
+    # 步驟 10 起：梯腳站在底艙地板上（plan layout.hold.floor_top_z，draft_hold.py 填實到那一層）；
+    # 原本量船殼內底（z 2，落在中線那道一格寬的縫裡）。船殼內底要在地板以下，否則地板蓋不到梯腳。
+    zf_hold = lay['hold']['floor_top_z'] + 1
+    for x in range(xf, xf + 26):
+        assert max(z for z in range(NZ) if occ[x, YC, z] and z < 20) < zf_hold, x
     c_hold, h_hold, p_hold = ladder('ladder_hold', 'hold', xf, YC - 2, +1, zf_hold, cor['top_z'] + 1, DZ - 2)
     lad['bow-S'], lad['stern-S'], lad['hold'] = p_bow, p_st, p_hold
     for part, cells in (('ladder_bow', c_bow), ('ladder_stern', c_st), ('ladder_hold', c_hold)):

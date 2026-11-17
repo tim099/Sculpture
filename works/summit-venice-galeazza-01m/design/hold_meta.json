@@ -1,0 +1,173 @@
+{
+ "hold": {
+  "kind": "deck",
+  "deck": "hold",
+  "level": -1,
+  "name": "底艙",
+  "floor": "100:6,454:6",
+  "thick": 1
+ },
+ "magazine": {
+  "kind": "magazine",
+  "powder_lb": 600
+ },
+ "anchors": {
+  "blast": [
+   487,
+   160,
+   21
+  ],
+  "door": [
+   455,
+   160,
+   8
+  ]
+ },
+ "kegs": [
+  {
+   "name": "keg-1",
+   "at": [
+    460.5,
+    154.5,
+    8
+   ]
+  },
+  {
+   "name": "keg-2",
+   "at": [
+    460.5,
+    165.5,
+    8
+   ]
+  },
+  {
+   "name": "keg-3",
+   "at": [
+    465.5,
+    154.5,
+    8
+   ]
+  },
+  {
+   "name": "keg-4",
+   "at": [
+    465.5,
+    165.5,
+    8
+   ]
+  },
+  {
+   "name": "keg-5",
+   "at": [
+    465.5,
+    160.5,
+    8
+   ]
+  },
+  {
+   "name": "keg-6",
+   "at": [
+    470.5,
+    160.5,
+    8
+   ]
+  }
+ ],
+ "keg": {
+  "work": "basecamp-frigate-constitution-01m-powder-barrel",
+  "size": [
+   22,
+   22,
+   27
+  ],
+  "mpv": 0.02,
+  "scale": 0.2,
+  "pivot": [
+   11,
+   11,
+   0
+  ]
+ },
+ "hatch": {
+  "at": [
+   196,
+   157,
+   38
+  ],
+  "size": [
+   16,
+   7,
+   1
+  ],
+  "hinge_a": [
+   0,
+   0,
+   0
+  ],
+  "hinge_b": [
+   15,
+   0,
+   0
+  ]
+ },
+ "lanterns": {
+  "艉燈-中": {
+   "at": [
+    66.5,
+    160.5,
+    83
+   ],
+   "scale": 0.5
+  },
+  "艉燈-P": {
+   "at": [
+    56.5,
+    137.5,
+    59
+   ],
+   "scale": 0.5
+  },
+  "艉燈-S": {
+   "at": [
+    56.5,
+    183.5,
+    59
+   ],
+   "scale": 0.5
+  }
+ },
+ "lantern": {
+  "work": "gura-tridente-01m-lantern",
+  "size": [
+   17,
+   17,
+   36
+  ],
+  "mpv": 0.05,
+  "pivot": [
+   8.5,
+   8.5,
+   0
+  ]
+ },
+ "binnacle": {
+  "at": [
+   140.5,
+   160.5,
+   52
+  ],
+  "work": "summit-night-falcon-01m-binnacle",
+  "size": [
+   18,
+   26,
+   52
+  ],
+  "mpv": 0.02,
+  "scale": 0.2,
+  "pivot": [
+   9,
+   13,
+   0
+  ]
+ }
+}
