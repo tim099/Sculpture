@@ -1,0 +1,125 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "lateen",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "model:桅-main/yard/fore",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "model:桅-main/yard/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "36.0,50.5,19.5",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 20,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:27:52",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff",
+				"set": 1
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "head",
+					"at": "81.5,50.5,56.5",
+					"pin": true
+				},
+				{
+					"name": "fly",
+					"at": "66.5,50.5,56.0",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "81.5,50.5,53.5",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#b60000",
+			"res": 12,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:27:53",
+			"texture": "textures/pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main",
+				"nation": "ottoman"
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "head",
+					"at": "旗桿/top",
+					"pin": true
+				},
+				{
+					"name": "fly-top",
+					"at": "7.5,54.5,23.5",
+					"pin": false
+				},
+				{
+					"name": "fly-foot",
+					"at": "7.5,54.5,15.5",
+					"pin": false
+				},
+				{
+					"name": "foot",
+					"at": "旗桿/bot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#b60000",
+			"res": 10,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:27:54",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"nation": "ottoman"
+			}
+		}
+	]
+}

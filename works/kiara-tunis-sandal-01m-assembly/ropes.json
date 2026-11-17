@@ -1,0 +1,153 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "shroud-P1",
+			"from": "桅-main/hound",
+			"to": "船殼/shroud-P1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:27:55",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-P2",
+			"from": "桅-main/hound",
+			"to": "船殼/shroud-P2",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:27:57",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-S1",
+			"from": "桅-main/hound",
+			"to": "船殼/shroud-S1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:27:59",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "shroud-S2",
+			"from": "桅-main/hound",
+			"to": "船殼/shroud-S2",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:28:01",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main.halyard",
+			"from": "桅-main/calcet-halyard",
+			"to": "model:桅-main/yard/sling",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/halyards",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:28:03",
+			"meta": {
+				"kind": "halyard"
+			}
+		},
+		{
+			"name": "main.halyard-fall",
+			"from": "桅-main/calcet-halyard",
+			"to": "桅-main/mast-foot-belay",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/halyards",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:28:05",
+			"meta": {
+				"kind": "halyard"
+			}
+		},
+		{
+			"name": "lateen.tack",
+			"from": "sail:lateen/tack",
+			"to": "甲板-main/tack-main",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:28:07",
+			"meta": {
+				"kind": "tack",
+				"sail": "lateen"
+			}
+		},
+		{
+			"name": "lateen.sheet-P",
+			"from": "sail:lateen/clew",
+			"to": "船殼/belay-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:28:09",
+			"meta": {
+				"kind": "sheet",
+				"sail": "lateen"
+			}
+		},
+		{
+			"name": "lateen.sheet-S",
+			"from": "sail:lateen/clew",
+			"to": "船殼/belay-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "",
+			"persona": "kiara",
+			"created_at": "2026-11-17T13:28:10",
+			"meta": {
+				"kind": "sheet",
+				"sail": "lateen"
+			}
+		}
+	],
+	"groups": []
+}
