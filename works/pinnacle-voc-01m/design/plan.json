@@ -173,8 +173,10 @@
     {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 278, "dir": -1, "dy": -18, "head_x": 259},
     {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 278, "dir": -1, "dy": 18, "head_x": 259},
     {"name": "castillo-P", "lo": "puente", "up": "castillo", "xs": 546, "dir": 1, "dy": -24, "head_x": 563},
-    {"name": "castillo-S", "lo": "puente", "up": "castillo", "xs": 546, "dir": 1, "dy": 24, "head_x": 563}
+    {"name": "castillo-S", "lo": "puente", "up": "castillo", "xs": 546, "dir": 1, "dy": 24, "head_x": 563},
+    {"name": "hold", "lo": "hold", "up": "orlop", "xs": 395, "dir": -1, "dy": 0, "head_x": 368, "well": true, "well_a": 10, "well_b": 25}
    ],
+   "hold_src": "艙底梯（Tim 2026-11-18「目前沒有通往底艙的梯子」；程式照康塞普西翁號 TASK-1028 的 lo: hold）：koebrug（z 40）底下的艙底在中線 z 6 ⇒ 中線、梯腳 x 396（主桅 x 412 後面、閃開桅孔 r 4）往船尾爬 11 階、梯頂 x 368 站上 koebrug（閃開 koebrug 梯子 dy −14 x 322–341、後艙口 300–312、彈藥庫 222–270）；koebrug 的梯井只開上半段（well_a 10 ～ well_b 25：頭頂 14 格碰得到 koebrug 橫樑的那幾階）—— 設計決定",
    "src": "設計決定（照藍鯊號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井；船樓的梯子靠在 break 外面、頭踩上船樓甲板。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）。步驟 14 改：Blockside 樓梯自檢 ④「梯頂接不上甲板」⇒ 梯腳照修法挪、head 不動：alcazar 420 → 415（✗ 4 柱；416 的梯腳落在舷弧台階 x 417 那一階、懸空 1 格 ⇒ 再挪 1）、toldilla 283 → 278（✗ 5 柱）、castillo 543 → 546（⚠ 3 柱）—— 本船舷弧大，梯子爬的高度跟藍鯊號不同"
   }
  },

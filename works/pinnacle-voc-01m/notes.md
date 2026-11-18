@@ -74,6 +74,8 @@
 - 讀數：設計那一側：重疊 0、砲門往艙裡被擋 0、梯子點問題 0、封閉空腔 0、鏡像差 0（overloop 634 ＋ 梯子 488 ＝ koebrug 梯子靠左舷的井，照實）；`tools/check_decks.py`（每件從匯出讀）：11 件 203,992 格，缺 0、多 0、色差 0、跟船殼／彼此重疊 0；梯子點（組裝件 parts，遊戲讀的那一份）36／36、跟設計差 0、空氣／腳下／頭頂 14 格問題 0；組裝件 1 元件、空腔 0、link_overlap 0。**反向對照**：`draft_decks.py --probe=drop_ladder=castillo-S` ⇒ 8 座、bak 只剩 castillo-P（不寫檔）。
 - 預覽 preset：`藏船殼`。過程圖 `overlays/step5_decks.png`。
 
+- **補：艙底梯**（2026-11-18 下午，Tim「目前沒有通往底艙的梯子」）：draft_decks 搬康塞普西翁號（TASK-1028）的 `lo: hold` 那兩段（梯腳踩艙底 ＝ 梯腳那一柱內板頂；梯井 `well_a／well_b` 只開上半段）；plan `decks_build.ladders` 加 `hold`（中線、梯腳 x 396、往船尾爬 11 階、頭 x 368 站上 koebrug；理由在 `hold_src`）⇒ 新子作品 `-ladders-orlop`（326 格，關聯 `甲板-orlop/梯子` kind=ladders、固定點 hold.foot／lo／hi／head）、koebrug 刻梯井（delta_apply：刻 242、貼 90）。讀數：設計那一側重疊 0、梯子點問題 0、其他五層甲板清單沒變；`check_decks.py` 12 件缺 0／多 0／色差 0、問題 0；梯子點 40／40、跟設計差 0、頭頂 14 格問題 0；組裝件 1 元件、空腔 0、link_overlap 0。
+
 ## 步驟 6 裝飾、窗的玻璃（2026-11-18）
 - **船頭走道**（plan.ports.bow_gangway，同藍鯊號船頭 v2）：艏柱上緣中線刻一道 9 格寬的缺口（dy ≤ 4、z 86 起）⇒ bak 前隔板的門外（露天的 verdeck x 651–665）跨過艏柱直接走上 galjoen 平台。船殼走差量（`draft_ports.py` ⇒ `tools/hull_expected.py` ⇒ `delta_apply`，標記 `船頭走道`）：刻 603、換色 39（缺口邊描金）；船頭補實 0 格（x ≥ 666 船殼裡沒有空的格）。
 - `draft_deco.py` 照藍鯊號（galjoen v2、獅子、船尾走廊、側廊 v2、hackebort），改：船頭／船尾的範圍（藍鯊號寫死 470／210／400 ⇒ 600／260／560）、走廊與側廊的「藍」換成上層舷牆的暗綠 45、獅子放大（plan.figurehead.k 1.25；es 的金柱高度跟著 k —— 第一次沒跟 ⇒ 金柱插進獅身 3 格、figurehead 與 galjoen 重疊 3）、紋章改吃 `hackebort.emblem`、字型加 G O D N K R、圖紙的範圍。
@@ -182,7 +184,7 @@ Ship_Materials §9.5：關聯的 material 管防禦與重量；外部模型的 m
 - 不適用：槳、撞角、蒸汽、鐵甲、迴旋砲／砲塔、砲身砲座拆件、空艙房（沒隔艙）。
 
 ### todo（沒做的，照實留著）
-- 艙底（koebrug 底下 354 m²）沒有梯子：要把康塞普西翁號 draft_decks 的 `lo: hold` 梯井那一段搬過來。
+- ~~艙底（koebrug 底下 354 m²）沒有梯子~~ ⇒ 2026-11-18 下午補了（步驟 5「補：艙底梯」）。
 - 爐灶沒有 smoke 固定點（元件是 gura 的 `gura-pinas-01m-galley`，要她補；或本船另做一件）。
 - 操舵桿底下的舵柄 roerpen 沒做；錨鏈孔只登記固定點、沒開孔；shot garland、rammer／sponge 沒做。
 - 鏡板中段（走廊頂到 hackebort 底）素面；Walcheren 船尾畫（RMG PAH1782）圖本身沒看，紋章與持杖人像只照館藏說明。
