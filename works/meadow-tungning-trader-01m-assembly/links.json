@@ -1,0 +1,414 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "hull",
+			"work": "meadow-tungning-trader-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				160,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:01:47",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 38
+			}
+		},
+		{
+			"name": "deck-hold",
+			"work": "meadow-tungning-trader-01m-deck-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:00",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "hold",
+				"floor": "68:8,310:8",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 0,
+				"name": "底艙貨艙甲板",
+				"thick": 2
+			}
+		},
+		{
+			"name": "deck-main",
+			"work": "meadow-tungning-trader-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:03",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "main",
+				"floor": "53:48,327:48",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 1,
+				"name": "主甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "deck-poop",
+			"work": "meadow-tungning-trader-01m-deck-poop",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:05",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "poop",
+				"floor": "38:72,90:72",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 2,
+				"name": "尾樓甲板",
+				"thick": 3
+			}
+		},
+		{
+			"name": "deck-fore",
+			"work": "meadow-tungning-trader-01m-deck-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:08",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"deck": "fore",
+				"floor": "299:56,335:56",
+				"id": "deck-4",
+				"kind": "deck",
+				"level": 2,
+				"name": "艏平台",
+				"thick": 2
+			}
+		},
+		{
+			"name": "ladder-hold",
+			"work": "meadow-tungning-trader-01m-ladder-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:17",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"access.decks": "hold,main",
+				"id": "ladders-1",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "ladder-poop",
+			"work": "meadow-tungning-trader-01m-ladder-poop",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:20",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"access.decks": "main,poop",
+				"id": "ladders-2",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "ladder-fore",
+			"work": "meadow-tungning-trader-01m-ladder-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:23",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"access.decks": "main,fore",
+				"id": "ladders-3",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "coaming",
+			"work": "meadow-tungning-trader-01m-coaming",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:10:24",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "stern-glass",
+			"work": "meadow-tungning-trader-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:13:32",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "part-3",
+				"material": "glass"
+			}
+		},
+		{
+			"name": "mast-fore",
+			"work": "meadow-tungning-trader-01m-mast-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:17:54",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "mast-1",
+				"kind": "mast",
+				"mast": "fore"
+			}
+		},
+		{
+			"name": "mast-main",
+			"work": "meadow-tungning-trader-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:18:15",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "mast-2",
+				"kind": "mast",
+				"mast": "main"
+			}
+		},
+		{
+			"name": "mast-mizzen",
+			"work": "meadow-tungning-trader-01m-mast-mizzen",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:18:28",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "mast-3",
+				"kind": "mast",
+				"mast": "mizzen"
+			}
+		},
+		{
+			"name": "channels",
+			"work": "meadow-tungning-trader-01m-channels",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:19:29",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "part-4"
+			}
+		},
+		{
+			"name": "ladder-poop-P",
+			"work": "meadow-tungning-trader-01m-ladder-poop-p",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:25:20",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"access.decks": "main,poop",
+				"id": "ladders-4",
+				"kind": "ladders"
+			}
+		},
+		{
+			"name": "anchor-gear",
+			"work": "meadow-tungning-trader-01m-anchor-gear",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				161,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T08:31:22",
+			"persona": "meadow",
+			"note": "",
+			"meta": {
+				"id": "part-5"
+			}
+		}
+	]
+}

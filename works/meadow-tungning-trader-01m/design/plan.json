@@ -1,0 +1,60 @@
+{
+  "title": "東寧三桅洋船",
+  "work": "meadow-tungning-trader-01m",
+  "metres_per_voxel": 0.1,
+  "size": [384, 161, 384],
+  "center_y": 80,
+  "provenance": {
+    "type": "參考資料 S1 福船尖底圓腹、高艉和可升降舵，三桅為任務指定的代表型推演",
+    "scale": "設計決定，全船 0.1 m／格，X 艏正向、P=-Y、Z 由龍骨底面起算，格心 k+0.5",
+    "dimensions": "設計決定，31.2 m × 8.1 m，參照 S2 的現代復原船 29.5 × 7.26 m 加寬加長。原圖並無本船精確線型",
+    "draft": "設計決定，滿載設計水線 3.8 m。引擎 waterline_z 代表滿載、載貨替換壓艙物。原單約 3.2 m 留給船體與裝備的排水量不足，空載吃水由實際質量另算",
+    "cargo": "設計決定，目標載貨 260 t，與幾何排水量分開計算，禁止使用新聞中的 300 t 重量當載重",
+    "rig": "設計決定，三面竹篾硬帆，桅高與展帆面積根據船型重新設計。S1 臺灣船模型為雙桅，不能當作本船第三桅的直接證據",
+    "guns": "設計決定，12 門 6 磅長砲加 4 門 pierrier 自衛迴旋砲，砲碼 6l／pierrier，無本船 1666 武裝清單。以既有實際磅數元件引用，沒有以縮放改砲磅數",
+    "interior": "設計決定，三層甲板、8 道橫隔艙壁、可開關艙門、貨艙和船員艙，艙蓋與梯子提供出入",
+    "decoration": "設計決定，艏眼、浪紋、獅面、花鳥艉板、東寧名牌與媽祖龕，S1/S2 只提供風格參考",
+    "stern": "設計決定，高尾樓兩層外觀和玻璃窗，船舷以上火砲全為露天，不設下層封閉砲甲板"
+  },
+  "dimensions": {
+    "loa_m": 31.2,
+    "beam_m": 8.1,
+    "design_loaded_draft_m": 3.8,
+    "waterline_z": 38,
+    "loaded_waterline_z": 38,
+    "light_reference_z": 20,
+    "skin_cells": 2.0,
+    "cargo_target_t": 260
+  },
+  "lines": {
+    "stern_rake": [[0, 65], [12, 61], [32, 48], [48, 37], [72, 29]],
+    "stem_rake": [[0, 307], [12, 313], [32, 325], [48, 337], [72, 342]],
+    "sheer": [[28, 80], [86, 80], [90, 80], [91, 56], [288, 56], [305, 63], [342, 68]],
+    "plan_halfwidth": [[0, 0.48], [0.08, 0.68], [0.25, 0.94], [0.48, 1], [0.65, 0.95], [0.84, 0.65], [0.96, 0.22], [1, 0.025]],
+    "section_halfwidth": [[0, 0.015], [0.08, 0.23], [0.25, 0.55], [0.55, 0.89], [0.75, 0.99], [1, 1], [1.35, 0.96], [1.8, 0.90]],
+    "section_height_cells": 48,
+    "half_beam_cells": 40.6,
+    "stations": [65, 95, 140, 185, 230, 280, 320]
+  },
+  "decks": {
+    "hold": {"floor": 8, "thick": 2, "span": [68, 310], "level": 0},
+    "main": {"floor": 48, "thick": 3, "span": [53, 327], "level": 1},
+    "poop": {"floor": 72, "thick": 3, "span": [38, 90], "level": 2},
+    "fore": {"floor": 56, "thick": 2, "span": [299, 335], "level": 2}
+  },
+  "bulkheads": [94, 118, 146, 174, 202, 230, 258, 286],
+  "rig": {
+    "fore": {"x": 282, "heel": 8, "top": 212, "radius": 2.2, "lower_z": 72, "upper_z": 202, "aft": -62, "fore": 18, "battens": 7, "set": 1},
+    "main": {"x": 194, "heel": 8, "top": 295, "radius": 3.3, "lower_z": 77, "upper_z": 280, "aft": -102, "fore": 24, "battens": 9, "set": 2},
+    "mizzen": {"x": 66, "heel": 49, "top": 185, "radius": 2.0, "lower_z": 92, "upper_z": 174, "aft": -38, "fore": 15, "battens": 5, "set": 3}
+  },
+  "sail_sets": {"1": ["fore-junk"], "2": ["fore-junk", "main-junk"], "3": ["fore-junk", "main-junk", "mizzen-junk"]},
+  "guns": {"long6_x": [122, 154, 210, 235, 258, 281], "swivel_x": [63, 316], "count": 16},
+  "gun_portlids": "不適用，12 門長砲由露天主甲板舷牆頂射出，4 門迴旋砲位於前後平台舷頂",
+  "sources": {
+    "S1": "https://ship.nmmst.gov.tw/ship/detailprint/155/660",
+    "S2": "https://web.tainan.gov.tw/tnwcdo/News_Content.aspx?n=26177&s=7713060&sms=21442",
+    "S3": "https://www.nmmst.gov.tw/other/wd-20240607172025.pdf",
+    "S4": "https://ws.th.gov.tw/002/TH/tjpdf20241015/var/www/html/new_site/05publish/03publishquery/02journal/tj/401072105.pdf"
+  }
+}

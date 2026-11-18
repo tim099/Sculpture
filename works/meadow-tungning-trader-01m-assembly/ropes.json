@@ -1,0 +1,416 @@
+{
+	"schema": 4,
+	"ropes": [
+		{
+			"name": "fore-P1",
+			"from": "channels/fore-P1",
+			"to": "mast-fore/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:35",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-P2",
+			"from": "channels/fore-P2",
+			"to": "mast-fore/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:36",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-S1",
+			"from": "channels/fore-S1",
+			"to": "mast-fore/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:37",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-S2",
+			"from": "channels/fore-S2",
+			"to": "mast-fore/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:39",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-junk-halyard",
+			"from": "mast-fore/hound",
+			"to": "model:mast-fore/yard-upper/sling",
+			"color": "#a28c63",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:40",
+			"meta": {
+				"kind": "halyard",
+				"sail": "fore-junk"
+			}
+		},
+		{
+			"name": "fore-junk-sheet",
+			"from": "model:mast-fore/yard-lower/earing-aft",
+			"to": "deck-main/fore-sheet",
+			"color": "#a28c63",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:41",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-junk"
+			}
+		},
+		{
+			"name": "main-P1",
+			"from": "channels/main-P1",
+			"to": "mast-main/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:42",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-P2",
+			"from": "channels/main-P2",
+			"to": "mast-main/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:42",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-S1",
+			"from": "channels/main-S1",
+			"to": "mast-main/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:43",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-S2",
+			"from": "channels/main-S2",
+			"to": "mast-main/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:43",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-junk-halyard",
+			"from": "mast-main/hound",
+			"to": "model:mast-main/yard-upper/sling",
+			"color": "#a28c63",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:45",
+			"meta": {
+				"kind": "halyard",
+				"sail": "main-junk"
+			}
+		},
+		{
+			"name": "main-junk-sheet",
+			"from": "model:mast-main/yard-lower/earing-aft",
+			"to": "deck-main/main-sheet",
+			"color": "#a28c63",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:46",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-junk"
+			}
+		},
+		{
+			"name": "mizzen-P1",
+			"from": "channels/mizzen-P1",
+			"to": "mast-mizzen/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:47",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "mizzen-P2",
+			"from": "channels/mizzen-P2",
+			"to": "mast-mizzen/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:48",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "mizzen-S1",
+			"from": "channels/mizzen-S1",
+			"to": "mast-mizzen/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:50",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "mizzen-S2",
+			"from": "channels/mizzen-S2",
+			"to": "mast-mizzen/hound",
+			"color": "#493e2e",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:51",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "mizzen-junk-halyard",
+			"from": "mast-mizzen/hound",
+			"to": "model:mast-mizzen/yard-upper/sling",
+			"color": "#a28c63",
+			"thickness": 0.35,
+			"slack": 1,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:53",
+			"meta": {
+				"kind": "halyard",
+				"sail": "mizzen-junk"
+			}
+		},
+		{
+			"name": "mizzen-junk-sheet",
+			"from": "model:mast-mizzen/yard-lower/earing-aft",
+			"to": "deck-poop/mizzen-sheet",
+			"color": "#a28c63",
+			"thickness": 0.35,
+			"slack": 1.02,
+			"enabled": true,
+			"group": "running",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:54",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-junk"
+			}
+		}
+	],
+	"groups": [],
+	"ratlines": [
+		{
+			"name": "fore-ratlines-P",
+			"a": "fore-P1",
+			"b": "fore-P2",
+			"step": 4,
+			"start": 5,
+			"stop": 12,
+			"min_span": 4,
+			"color": "#493e2e",
+			"thickness": 0.25,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": true,
+			"foot": "290,58,48",
+			"head": "mast-fore/head-P",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:37"
+		},
+		{
+			"name": "fore-ratlines-S",
+			"a": "fore-S1",
+			"b": "fore-S2",
+			"step": 4,
+			"start": 5,
+			"stop": 12,
+			"min_span": 4,
+			"color": "#493e2e",
+			"thickness": 0.25,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": true,
+			"foot": "290,102,48",
+			"head": "mast-fore/head-S",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:40"
+		},
+		{
+			"name": "main-ratlines-P",
+			"a": "main-P1",
+			"b": "main-P2",
+			"step": 4,
+			"start": 5,
+			"stop": 12,
+			"min_span": 4,
+			"color": "#493e2e",
+			"thickness": 0.25,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": true,
+			"foot": "202,54,48",
+			"head": "mast-main/head-P",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:43"
+		},
+		{
+			"name": "main-ratlines-S",
+			"a": "main-S1",
+			"b": "main-S2",
+			"step": 4,
+			"start": 5,
+			"stop": 12,
+			"min_span": 4,
+			"color": "#493e2e",
+			"thickness": 0.25,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": true,
+			"foot": "202,106,48",
+			"head": "mast-main/head-S",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:44"
+		},
+		{
+			"name": "mizzen-ratlines-P",
+			"a": "mizzen-P1",
+			"b": "mizzen-P2",
+			"step": 4,
+			"start": 5,
+			"stop": 12,
+			"min_span": 4,
+			"color": "#493e2e",
+			"thickness": 0.25,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": true,
+			"foot": "74,65,72",
+			"head": "mast-mizzen/head-P",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:49"
+		},
+		{
+			"name": "mizzen-ratlines-S",
+			"a": "mizzen-S1",
+			"b": "mizzen-S2",
+			"step": 4,
+			"start": 5,
+			"stop": 12,
+			"min_span": 4,
+			"color": "#493e2e",
+			"thickness": 0.25,
+			"enabled": true,
+			"group": "ratlines",
+			"climb": true,
+			"foot": "74,95,72",
+			"head": "mast-mizzen/head-S",
+			"note": "",
+			"persona": "meadow",
+			"created_at": "2026-11-18T08:19:51"
+		}
+	]
+}

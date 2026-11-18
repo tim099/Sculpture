@@ -1,0 +1,610 @@
+{
+  "final_list_against_independent_events": {
+    "exported_cells": 175851,
+    "independent_replayed_cells": 175851,
+    "missing": 0,
+    "extra": 0,
+    "color_diff": 0,
+    "checksum_u32": 2262896839,
+    "checksum_matches_2262896839": true
+  },
+  "linked_topology": {
+    "linked_unique_voxels": 175851,
+    "sum_part_voxels": 175851,
+    "overlap_cells": 0,
+    "components_6": 1,
+    "closed_air_cells": 0,
+    "unsupported_links": []
+  },
+  "deck_mirrors": {
+    "hold": {
+      "difference_cells": 0,
+      "intentional_main_hatch_cells": 0,
+      "unexplained": 0,
+      "examples": []
+    },
+    "main": {
+      "difference_cells": 1197,
+      "intentional_main_hatch_cells": 1197,
+      "unexplained": 0,
+      "examples": []
+    },
+    "poop": {
+      "difference_cells": 0,
+      "intentional_main_hatch_cells": 0,
+      "unexplained": 0,
+      "examples": []
+    },
+    "fore": {
+      "difference_cells": 0,
+      "intentional_main_hatch_cells": 0,
+      "unexplained": 0,
+      "examples": []
+    }
+  },
+  "stairs": {
+    "hold": {
+      "anchors": {
+        "foot": {
+          "at": [
+            160,
+            90,
+            8
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "lo": {
+          "at": [
+            160,
+            88,
+            11
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "hi": {
+          "at": [
+            160,
+            61,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            160,
+            60,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        }
+      },
+      "columns_checked": 28,
+      "bad_columns": 0,
+      "examples": []
+    },
+    "poop": {
+      "anchors": {
+        "foot": {
+          "at": [
+            113,
+            98,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "lo": {
+          "at": [
+            111,
+            98,
+            51
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "hi": {
+          "at": [
+            88,
+            98,
+            72
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            86,
+            98,
+            72
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        }
+      },
+      "columns_checked": 24,
+      "bad_columns": 0,
+      "examples": []
+    },
+    "poop-P": {
+      "anchors": {
+        "foot": {
+          "at": [
+            113,
+            62,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "lo": {
+          "at": [
+            111,
+            62,
+            51
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "hi": {
+          "at": [
+            88,
+            62,
+            72
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            86,
+            62,
+            72
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        }
+      },
+      "columns_checked": 24,
+      "bad_columns": 0,
+      "examples": []
+    },
+    "fore": {
+      "anchors": {
+        "foot": {
+          "at": [
+            289,
+            80,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "lo": {
+          "at": [
+            291,
+            80,
+            51
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "hi": {
+          "at": [
+            299,
+            80,
+            56
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            300,
+            80,
+            56
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        }
+      },
+      "columns_checked": 9,
+      "bad_columns": 0,
+      "examples": []
+    }
+  },
+  "rooms": {
+    "cargo": {
+      "path": "deck-hold/room-cargo",
+      "min": [
+        177,
+        72,
+        8
+      ],
+      "max": [
+        190,
+        86,
+        42
+      ],
+      "all_linked_solid_voxels_including_masts": 0,
+      "examples": [],
+      "kind": "rooms"
+    },
+    "crew": {
+      "path": "deck-main/room-crew",
+      "min": [
+        72,
+        88,
+        48
+      ],
+      "max": [
+        85,
+        98,
+        68
+      ],
+      "all_linked_solid_voxels_including_masts": 0,
+      "examples": [],
+      "kind": "rooms"
+    }
+  },
+  "mast_platforms": {
+    "fore": {
+      "plane_z": 201,
+      "plane_voxels": 441,
+      "radius_cells": 12.0,
+      "head_P": {
+        "at": [
+          282,
+          75,
+          202
+        ],
+        "supported": true,
+        "headroom_blocked": []
+      },
+      "head_S": {
+        "at": [
+          282,
+          85,
+          202
+        ],
+        "supported": true,
+        "headroom_blocked": []
+      }
+    },
+    "main": {
+      "plane_z": 284,
+      "plane_voxels": 441,
+      "radius_cells": 12.0,
+      "head_P": {
+        "at": [
+          194,
+          75,
+          285
+        ],
+        "supported": true,
+        "headroom_blocked": []
+      },
+      "head_S": {
+        "at": [
+          194,
+          85,
+          285
+        ],
+        "supported": true,
+        "headroom_blocked": []
+      }
+    },
+    "mizzen": {
+      "plane_z": 174,
+      "plane_voxels": 441,
+      "radius_cells": 12.0,
+      "head_P": {
+        "at": [
+          66,
+          75,
+          175
+        ],
+        "supported": true,
+        "headroom_blocked": []
+      },
+      "head_S": {
+        "at": [
+          66,
+          85,
+          175
+        ],
+        "supported": true,
+        "headroom_blocked": []
+      }
+    }
+  },
+  "rig": {
+    "base_ropes": 18,
+    "unresolved_rope_ends": [],
+    "ratlines": {
+      "fore-ratlines-P": 28,
+      "fore-ratlines-S": 28,
+      "main-ratlines-P": 43,
+      "main-ratlines-S": 43,
+      "mizzen-ratlines-P": 18,
+      "mizzen-ratlines-S": 18
+    },
+    "total_ropes": 196,
+    "climb_points": {
+      "fore-ratlines-P": {
+        "foot": {
+          "at": [
+            290,
+            58,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            282,
+            75,
+            202
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "climb": true
+      },
+      "fore-ratlines-S": {
+        "foot": {
+          "at": [
+            290,
+            102,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            282,
+            85,
+            202
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "climb": true
+      },
+      "main-ratlines-P": {
+        "foot": {
+          "at": [
+            202,
+            54,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            194,
+            75,
+            285
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "climb": true
+      },
+      "main-ratlines-S": {
+        "foot": {
+          "at": [
+            202,
+            106,
+            48
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            194,
+            85,
+            285
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "climb": true
+      },
+      "mizzen-ratlines-P": {
+        "foot": {
+          "at": [
+            74,
+            65,
+            72
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            66,
+            75,
+            175
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "climb": true
+      },
+      "mizzen-ratlines-S": {
+        "foot": {
+          "at": [
+            74,
+            95,
+            72
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "head": {
+          "at": [
+            66,
+            85,
+            175
+          ],
+          "supported": true,
+          "headroom_blocked": []
+        },
+        "climb": true
+      }
+    },
+    "sails_and_flag": [
+      {
+        "name": "fore-junk",
+        "kind": "sail",
+        "mast": "fore",
+        "set": 1,
+        "corners": [
+          [
+            232.5,
+            78.5,
+            202.5
+          ],
+          [
+            292.5,
+            78.5,
+            192.5
+          ],
+          [
+            300.5,
+            78.5,
+            72.5
+          ],
+          [
+            220.5,
+            78.5,
+            72.5
+          ]
+        ],
+        "unresolved": [],
+        "texture": "D:\\Unity\\Valhalla\\Sculpture\\works\\meadow-tungning-trader-01m-assembly\\textures\\fore-junk.png",
+        "texture_size": [
+          128,
+          128
+        ]
+      },
+      {
+        "name": "main-junk",
+        "kind": "sail",
+        "mast": "main",
+        "set": 2,
+        "corners": [
+          [
+            104.5,
+            78.5,
+            280.5
+          ],
+          [
+            210.5,
+            78.5,
+            270.5
+          ],
+          [
+            218.5,
+            78.5,
+            77.5
+          ],
+          [
+            92.5,
+            78.5,
+            77.5
+          ]
+        ],
+        "unresolved": [],
+        "texture": "D:\\Unity\\Valhalla\\Sculpture\\works\\meadow-tungning-trader-01m-assembly\\textures\\main-junk.png",
+        "texture_size": [
+          128,
+          128
+        ]
+      },
+      {
+        "name": "mizzen-junk",
+        "kind": "sail",
+        "mast": "mizzen",
+        "set": 3,
+        "corners": [
+          [
+            40.5,
+            78.5,
+            174.5
+          ],
+          [
+            73.5,
+            78.5,
+            164.5
+          ],
+          [
+            81.5,
+            78.5,
+            92.5
+          ],
+          [
+            28.5,
+            78.5,
+            92.5
+          ]
+        ],
+        "unresolved": [],
+        "texture": "D:\\Unity\\Valhalla\\Sculpture\\works\\meadow-tungning-trader-01m-assembly\\textures\\mizzen-junk.png",
+        "texture_size": [
+          128,
+          128
+        ]
+      },
+      {
+        "name": "tungning-ensign",
+        "kind": "flag",
+        "mast": null,
+        "set": null,
+        "corners": [
+          [
+            194.5,
+            80.5,
+            294.5
+          ],
+          [
+            174.5,
+            80.5,
+            294.5
+          ],
+          [
+            174.5,
+            80.5,
+            286.5
+          ],
+          [
+            194.5,
+            80.5,
+            286.5
+          ]
+        ],
+        "unresolved": [],
+        "texture": "D:\\Unity\\Valhalla\\Sculpture\\works\\meadow-tungning-trader-01m-assembly\\textures\\tungning-ensign.png",
+        "texture_size": [
+          64,
+          32
+        ]
+      }
+    ],
+    "mast_count": 3,
+    "yard_count": 6
+  },
+  "gun_count": 16,
+  "gunmount_count": 4,
+  "gun_metadata_failures": [],
+  "ship_waterline_z": 38,
+  "method": "Fresh Sculpture CLI LIST/PARTS exported independently, compared with recursive per-part event replay. Deck symmetry, whole-linked-ship room air, four stairs, three mast platforms, raw rig references and source gun metadata checked independently. No author design/verification code imported."
+}

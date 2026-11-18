@@ -1,0 +1,317 @@
+{
+  "event_replay": {
+    "hull": {
+      "mask": 77102,
+      "actual": 77102,
+      "events": 6,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "deck-hold": {
+      "mask": 6467,
+      "actual": 6467,
+      "events": 1,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "deck-main": {
+      "mask": 49958,
+      "actual": 49958,
+      "events": 3,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "deck-poop": {
+      "mask": 7781,
+      "actual": 7781,
+      "events": 1,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "deck-fore": {
+      "mask": 1622,
+      "actual": 1622,
+      "events": 1,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "bulkheads": {
+      "mask": 15855,
+      "actual": 15855,
+      "events": 2,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "ladder-hold": {
+      "mask": 1715,
+      "actual": 1715,
+      "events": 4,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "ladder-poop": {
+      "mask": 963,
+      "actual": 963,
+      "events": 5,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "ladder-fore": {
+      "mask": 244,
+      "actual": 244,
+      "events": 3,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "coaming": {
+      "mask": 152,
+      "actual": 152,
+      "events": 1,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    },
+    "ladder-poop-P": {
+      "mask": 963,
+      "actual": 963,
+      "events": 2,
+      "missing": 0,
+      "extra": 0,
+      "color_diff": 0
+    }
+  },
+  "stairs_anchors_expected": {
+    "hold": {
+      "foot": {
+        "at": [
+          160,
+          90,
+          8
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "lo": {
+        "at": [
+          160,
+          88,
+          11
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "hi": {
+        "at": [
+          160,
+          61,
+          48
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "head": {
+        "at": [
+          160,
+          60,
+          48
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      }
+    },
+    "poop": {
+      "foot": {
+        "at": [
+          113,
+          98,
+          48
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "lo": {
+        "at": [
+          111,
+          98,
+          51
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "hi": {
+        "at": [
+          88,
+          98,
+          72
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "head": {
+        "at": [
+          86,
+          98,
+          72
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      }
+    },
+    "poop-P": {
+      "foot": {
+        "at": [
+          113,
+          62,
+          48
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "lo": {
+        "at": [
+          111,
+          62,
+          51
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "hi": {
+        "at": [
+          88,
+          62,
+          72
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "head": {
+        "at": [
+          86,
+          62,
+          72
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      }
+    },
+    "fore": {
+      "foot": {
+        "at": [
+          289,
+          80,
+          48
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "lo": {
+        "at": [
+          291,
+          80,
+          51
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "hi": {
+        "at": [
+          299,
+          80,
+          56
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      },
+      "head": {
+        "at": [
+          300,
+          80,
+          56
+        ],
+        "supported": true,
+        "matches_design": true,
+        "obstructions_1_2m": []
+      }
+    }
+  },
+  "rooms_expected": {
+    "cargo": {
+      "min": [
+        177,
+        72,
+        8
+      ],
+      "max": [
+        191,
+        86,
+        42
+      ],
+      "solid_count": 0,
+      "examples": [],
+      "deck": "hold",
+      "correct_parent_and_kind": true
+    },
+    "crew": {
+      "min": [
+        72,
+        88,
+        48
+      ],
+      "max": [
+        85,
+        98,
+        68
+      ],
+      "solid_count": 0,
+      "examples": [],
+      "deck": "main",
+      "correct_parent_and_kind": true
+    }
+  },
+  "stairs_paths_expected": {
+    "hold": {
+      "bad_columns": 0,
+      "examples": []
+    },
+    "poop": {
+      "bad_columns": 0,
+      "examples": []
+    },
+    "poop-P": {
+      "bad_columns": 0,
+      "examples": []
+    },
+    "fore": {
+      "bad_columns": 0,
+      "examples": []
+    }
+  },
+  "expected_total": 162822,
+  "actual_total": 162822,
+  "method": "Independent replay of placed_colored, placed_voxels and carved_voxels. Latest masks and anchors, no design imports. Stair bounds have a 1.2m standing clearance."
+}

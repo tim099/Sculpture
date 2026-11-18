@@ -1,0 +1,581 @@
+{
+  "parts": [
+    {
+      "path": "self",
+      "work": "meadow-tungning-trader-01m-assembly",
+      "voxels": 0,
+      "events": 0
+    },
+    {
+      "path": "hull",
+      "work": "meadow-tungning-trader-01m",
+      "voxels": 77102,
+      "events": 6
+    },
+    {
+      "path": "deck-hold",
+      "work": "meadow-tungning-trader-01m-deck-hold",
+      "voxels": 6467,
+      "events": 1
+    },
+    {
+      "path": "deck-hold/bulkheads",
+      "work": "meadow-tungning-trader-01m-bulkheads",
+      "voxels": 15855,
+      "events": 2
+    },
+    {
+      "path": "deck-hold/room-cargo",
+      "work": "meadow-tungning-trader-01m-room-cargo",
+      "voxels": 0,
+      "events": 0
+    },
+    {
+      "path": "deck-hold/magazine",
+      "work": "meadow-tungning-trader-01m-magazine",
+      "voxels": 1854,
+      "events": 2
+    },
+    {
+      "path": "deck-main",
+      "work": "meadow-tungning-trader-01m-deck-main",
+      "voxels": 49958,
+      "events": 3
+    },
+    {
+      "path": "deck-main/room-crew",
+      "work": "meadow-tungning-trader-01m-room-crew",
+      "voxels": 0,
+      "events": 0
+    },
+    {
+      "path": "deck-poop",
+      "work": "meadow-tungning-trader-01m-deck-poop",
+      "voxels": 7781,
+      "events": 1
+    },
+    {
+      "path": "deck-fore",
+      "work": "meadow-tungning-trader-01m-deck-fore",
+      "voxels": 1622,
+      "events": 1
+    },
+    {
+      "path": "ladder-hold",
+      "work": "meadow-tungning-trader-01m-ladder-hold",
+      "voxels": 1715,
+      "events": 4
+    },
+    {
+      "path": "ladder-poop",
+      "work": "meadow-tungning-trader-01m-ladder-poop",
+      "voxels": 963,
+      "events": 5
+    },
+    {
+      "path": "ladder-fore",
+      "work": "meadow-tungning-trader-01m-ladder-fore",
+      "voxels": 244,
+      "events": 3
+    },
+    {
+      "path": "coaming",
+      "work": "meadow-tungning-trader-01m-coaming",
+      "voxels": 152,
+      "events": 1
+    },
+    {
+      "path": "stern-glass",
+      "work": "meadow-tungning-trader-01m-stern-glass",
+      "voxels": 334,
+      "events": 1
+    },
+    {
+      "path": "mast-fore",
+      "work": "meadow-tungning-trader-01m-mast-fore",
+      "voxels": 1786,
+      "events": 3
+    },
+    {
+      "path": "mast-main",
+      "work": "meadow-tungning-trader-01m-mast-main",
+      "voxels": 5233,
+      "events": 3
+    },
+    {
+      "path": "mast-mizzen",
+      "work": "meadow-tungning-trader-01m-mast-mizzen",
+      "voxels": 1110,
+      "events": 1
+    },
+    {
+      "path": "channels",
+      "work": "meadow-tungning-trader-01m-channels",
+      "voxels": 106,
+      "events": 2
+    },
+    {
+      "path": "ladder-poop-P",
+      "work": "meadow-tungning-trader-01m-ladder-poop-p",
+      "voxels": 963,
+      "events": 2
+    },
+    {
+      "path": "anchor-gear",
+      "work": "meadow-tungning-trader-01m-anchor-gear",
+      "voxels": 854,
+      "events": 1
+    }
+  ],
+  "linked_unique_voxels": 174099,
+  "sum_part_voxels": 174099,
+  "overlap_cells": 0,
+  "overlaps": [],
+  "unsupported_links": [],
+  "components_6": 1,
+  "component_details": [
+    {
+      "voxels": 174099,
+      "bbox": [
+        [
+          29,
+          38,
+          0
+        ],
+        [
+          340,
+          122,
+          295
+        ]
+      ],
+      "owners": {
+        "hull": 77102,
+        "stern-glass": 334,
+        "deck-poop": 7781,
+        "deck-hold/bulkheads": 15855,
+        "deck-main": 49958,
+        "channels": 106,
+        "mast-mizzen": 1110,
+        "deck-hold": 6467,
+        "ladder-poop-P": 963,
+        "ladder-poop": 963,
+        "deck-hold/magazine": 1854,
+        "ladder-hold": 1715,
+        "coaming": 152,
+        "mast-main": 5233,
+        "mast-fore": 1786,
+        "ladder-fore": 244,
+        "deck-fore": 1622,
+        "anchor-gear": 854
+      }
+    }
+  ],
+  "closed_air_cells": 0,
+  "cavity_details": [],
+  "models_count": 60,
+  "guns": [
+    {
+      "path": "deck-main/long6-P01",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-S01",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-P02",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-S02",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-P03",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-S03",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-P04",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-S04",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-P05",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-S05",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-P06",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-main/long6-S06",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true
+      },
+      "source": "summit-stormkaap-01m-gun-6l",
+      "source_title": "\u98a8\u66b4\u89d2\u865f\uff5c6 \u78c5\u9577\u7832\uff08\u4e0a\u7532\u677f\u3001\u8239\u5c3e\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "eye-aft",
+        "eye-fwd",
+        "muzzle",
+        "train",
+        "trunnion"
+      ]
+    },
+    {
+      "path": "deck-poop/swivel-63-P",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true,
+        "mount_exists": true,
+        "mount_meta": true,
+        "mount_source": true
+      },
+      "source": "apex-one-reale-01m-gun-pierrier",
+      "source_title": "\u7687\u5bb6\u865f \u8ff4\u65cb\u7832 pierrier\uff08\u53c9\u67b6\u4e0a\u7684\u5f8c\u819b\u7832\uff0c0.05 m\uff1b\u5916\u90e8\u6a21\u578b\u7684\u4f86\u6e90\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "muzzle",
+        "pivot"
+      ]
+    },
+    {
+      "path": "deck-poop/swivel-63-S",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true,
+        "mount_exists": true,
+        "mount_meta": true,
+        "mount_source": true
+      },
+      "source": "apex-one-reale-01m-gun-pierrier",
+      "source_title": "\u7687\u5bb6\u865f \u8ff4\u65cb\u7832 pierrier\uff08\u53c9\u67b6\u4e0a\u7684\u5f8c\u819b\u7832\uff0c0.05 m\uff1b\u5916\u90e8\u6a21\u578b\u7684\u4f86\u6e90\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "muzzle",
+        "pivot"
+      ]
+    },
+    {
+      "path": "deck-fore/swivel-316-P",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true,
+        "mount_exists": true,
+        "mount_meta": true,
+        "mount_source": true
+      },
+      "source": "apex-one-reale-01m-gun-pierrier",
+      "source_title": "\u7687\u5bb6\u865f \u8ff4\u65cb\u7832 pierrier\uff08\u53c9\u67b6\u4e0a\u7684\u5f8c\u819b\u7832\uff0c0.05 m\uff1b\u5916\u90e8\u6a21\u578b\u7684\u4f86\u6e90\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "muzzle",
+        "pivot"
+      ]
+    },
+    {
+      "path": "deck-fore/swivel-316-S",
+      "checks": {
+        "exists": true,
+        "source": true,
+        "at": true,
+        "pivot": true,
+        "scale": true,
+        "mirror": true,
+        "meta": true,
+        "mount_exists": true,
+        "mount_meta": true,
+        "mount_source": true
+      },
+      "source": "apex-one-reale-01m-gun-pierrier",
+      "source_title": "\u7687\u5bb6\u865f \u8ff4\u65cb\u7832 pierrier\uff08\u53c9\u67b6\u4e0a\u7684\u5f8c\u819b\u7832\uff0c0.05 m\uff1b\u5916\u90e8\u6a21\u578b\u7684\u4f86\u6e90\uff09",
+      "source_metres_per_voxel": 0.05,
+      "effective_metres_per_source_cell": 0.05,
+      "anchors_present": [
+        "breech",
+        "cascabel",
+        "muzzle",
+        "pivot"
+      ]
+    }
+  ],
+  "gun_count": 16,
+  "gunmount_count": 4,
+  "method": "All enabled recursive link voxel events replayed independently. External models are audited separately and excluded from linked-solid topology, matching structural voxel checks."
+}
