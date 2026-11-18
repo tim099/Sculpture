@@ -13,9 +13,9 @@ WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.pat
 plan = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))
 V = json.load(open(os.path.join(design, 'verify_deco.json'), encoding='utf-8'))
 PARTS = [('galjoen', '船首喙', '金冠號 船首喙（galjoen＋cutwater＋head rail）'),
-         ('figurehead', '船首像', '金冠號 船首像「紅獅子」（W 1671：9 呎）'),
-         ('stern-deco', '船尾裝飾', '金冠號 船尾走廊與兩舷側廊（galdery）'),
-         ('hackebort', 'hackebort', '金冠號 hackebort（鏡板頂；藍鯊紋章與 BLAUWE HAAI 名帶＋船尾燈）')]
+         ('figurehead', '船首像', '金冠號 船首像「戴冠紅獅」（11 呎）'),
+         ('stern-deco', '船尾裝飾', '金冠號 船尾走廊與兩舷側廊（galderij）'),
+         ('hackebort', 'hackebort', '金冠號 hackebort（鏡板頂；Zeeland 紋章＋金冠與 GOUDEN KROON 名帶＋船尾燈）')]
 
 
 def cli(*args, ok=(0,)):

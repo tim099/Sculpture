@@ -1,0 +1,768 @@
+{
+ "parts": {
+  "mast-fore": {
+   "cells": 11627,
+   "mirror_diff": 0
+  },
+  "mast-main": {
+   "cells": 13260,
+   "mirror_diff": 0
+  },
+  "mast-mizzen": {
+   "cells": 5149,
+   "mirror_diff": 0
+  },
+  "bowsprit": {
+   "cells": 5481,
+   "mirror_diff": 0
+  }
+ },
+ "skipped_on_ship": {
+  "mast-fore": 46,
+  "bowsprit": 29
+ },
+ "bowsprit_hole_cells": 0,
+ "yard_ends": {
+  "yard-fore-course": {
+   "P": [
+    584.8,
+    49.8,
+    209.6
+   ],
+   "S": [
+    644.2,
+    271.2,
+    209.6
+   ],
+   "pivot": [
+    614.52,
+    160.5,
+    209.6
+   ]
+  },
+  "yard-fore-topsail": {
+   "P": [
+    593.1,
+    101.6,
+    346.98
+   ],
+   "S": [
+    629.1,
+    219.4,
+    346.98
+   ],
+   "pivot": [
+    611.13,
+    160.5,
+    346.98
+   ]
+  },
+  "yard-fore-topgallant": {
+   "P": [
+    597.9,
+    127.0,
+    415.85
+   ],
+   "S": [
+    620.9,
+    194.0,
+    415.85
+   ],
+   "pivot": [
+    609.42,
+    160.5,
+    415.85
+   ]
+  },
+  "yard-main-course": {
+   "P": [
+    369.4,
+    37.4,
+    233.0
+   ],
+   "S": [
+    435.4,
+    283.6,
+    233.0
+   ],
+   "pivot": [
+    402.41,
+    160.5,
+    233.0
+   ]
+  },
+  "yard-main-topsail": {
+   "P": [
+    370.8,
+    95.5,
+    386.61
+   ],
+   "S": [
+    410.5,
+    225.5,
+    386.61
+   ],
+   "pivot": [
+    390.66,
+    160.5,
+    386.61
+   ]
+  },
+  "yard-main-topgallant": {
+   "P": [
+    371.9,
+    123.0,
+    463.87
+   ],
+   "S": [
+    397.7,
+    198.0,
+    463.87
+   ],
+   "pivot": [
+    384.76,
+    160.5,
+    463.87
+   ]
+  },
+  "yard-mizzen-topsail": {
+   "P": [
+    259.3,
+    122.6,
+    327.5
+   ],
+   "S": [
+    282.4,
+    198.4,
+    327.5
+   ],
+   "pivot": [
+    270.85,
+    160.5,
+    327.5
+   ]
+  },
+  "yard-spritsail": {
+   "P": [
+    748.0,
+    92.6,
+    167.98
+   ],
+   "S": [
+    748.0,
+    228.4,
+    167.98
+   ],
+   "pivot": [
+    748.04,
+    160.5,
+    167.98
+   ]
+  },
+  "yard-sprit-topsail": {
+   "P": [
+    776.0,
+    130.8,
+    236.24
+   ],
+   "S": [
+    776.0,
+    190.2,
+    236.24
+   ],
+   "pivot": [
+    776.0,
+    160.5,
+    236.24
+   ]
+  },
+  "yard-mizzen-lateen": {
+   "fore": [
+    333.9,
+    156.2,
+    187.2
+   ],
+   "peak": [
+    174.9,
+    156.2,
+    321.2
+   ],
+   "pivot": [
+    270.92,
+    156.2,
+    240.23
+   ]
+  }
+ },
+ "yard_clash_cells": {
+  "yard-fore-course": 0,
+  "yard-fore-topsail": 0,
+  "yard-fore-topgallant": 0,
+  "yard-main-course": 0,
+  "yard-main-topsail": 0,
+  "yard-main-topgallant": 0,
+  "yard-mizzen-topsail": 0,
+  "yard-spritsail": 0,
+  "yard-sprit-topsail": 0,
+  "yard-mizzen-lateen": 0
+ },
+ "lateen_overhang_m": {
+  "yard-mizzen-lateen": 0.86
+ },
+ "yards": [
+  {
+   "name": "yard-fore-course",
+   "mast": "fore",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-crossjack",
+   "at": [
+    614.52,
+    160.5,
+    209.6
+   ],
+   "pivot": [
+    2.5,
+    115.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -15
+   ],
+   "scale": [
+    1,
+    0.9926,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "course",
+    "sail": "fore-course",
+    "length_m": 22.93,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -15
+   }
+  },
+  {
+   "name": "yard-fore-topsail",
+   "mast": "fore",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-topgallant",
+   "at": [
+    611.13,
+    160.5,
+    346.98
+   ],
+   "pivot": [
+    2.5,
+    65.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    0.9397,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "topsail",
+    "sail": "fore-topsail",
+    "length_m": 12.31,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-fore-topgallant",
+   "mast": "fore",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-royal",
+   "at": [
+    609.42,
+    160.5,
+    415.85
+   ],
+   "pivot": [
+    1.5,
+    32.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -19
+   ],
+   "scale": [
+    1,
+    1.0892,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "fore",
+    "yard": "topgallant",
+    "sail": "fore-topgallant",
+    "length_m": 7.08,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -19
+   }
+  },
+  {
+   "name": "yard-main-course",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-course",
+   "at": [
+    402.41,
+    160.5,
+    233.0
+   ],
+   "pivot": [
+    3.5,
+    124.5,
+    3.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -15
+   ],
+   "scale": [
+    1,
+    1.0233,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "course",
+    "sail": "main-course",
+    "length_m": 25.48,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -15
+   }
+  },
+  {
+   "name": "yard-main-topsail",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-topgallant",
+   "at": [
+    390.66,
+    160.5,
+    386.61
+   ],
+   "pivot": [
+    2.5,
+    65.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    1.0374,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topsail",
+    "sail": "main-topsail",
+    "length_m": 13.59,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-main-topgallant",
+   "mast": "main",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-royal",
+   "at": [
+    384.76,
+    160.5,
+    463.87
+   ],
+   "pivot": [
+    1.5,
+    43.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -19
+   ],
+   "scale": [
+    1,
+    0.9115,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "main",
+    "yard": "topgallant",
+    "sail": "main-topgallant",
+    "length_m": 7.93,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -19
+   }
+  },
+  {
+   "name": "yard-mizzen-topsail",
+   "mast": "mizzen",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-royal",
+   "at": [
+    270.85,
+    160.5,
+    327.5
+   ],
+   "pivot": [
+    1.5,
+    43.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    -17
+   ],
+   "scale": [
+    1,
+    0.9115,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "topsail",
+    "sail": "mizzen-topsail",
+    "length_m": 7.93,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": -17
+   }
+  },
+  {
+   "name": "yard-spritsail",
+   "mast": "bowsprit",
+   "work": "basecamp-frigate-constitution-01m-yard-fore-topgallant",
+   "at": [
+    748.04,
+    160.5,
+    167.98
+   ],
+   "pivot": [
+    2.5,
+    65.5,
+    2.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1.0374,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "bowsprit",
+    "yard": "spritsail",
+    "sail": "spritsail",
+    "length_m": 13.59,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-sprit-topsail",
+   "mast": "bowsprit",
+   "work": "basecamp-frigate-constitution-01m-yard-mizzen-royal",
+   "at": [
+    776.0,
+    160.5,
+    236.24
+   ],
+   "pivot": [
+    1.5,
+    32.5,
+    1.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    0.9154,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "bowsprit",
+    "yard": "sprit_topsail",
+    "sail": "sprit-topsail",
+    "length_m": 5.95,
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  },
+  {
+   "name": "yard-mizzen-lateen",
+   "mast": "mizzen",
+   "work": "pinnacle-voc-01m-yard-mizzen-lateen",
+   "at": [
+    270.92,
+    156.2,
+    240.23
+   ],
+   "pivot": [
+    99.5,
+    3.5,
+    56.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "meta": {
+    "kind": "yard",
+    "mast": "mizzen",
+    "yard": "gaff",
+    "sail": "mizzen-lateen",
+    "length_m": 20.95,
+    "rig": "lateen",
+    "pivot_anchor": "pivot",
+    "turn_axis": "z",
+    "rotate_z_deg": 0
+   }
+  }
+ ],
+ "lateen": {
+  "mizzen": {
+   "size": [
+    167,
+    7,
+    141
+   ],
+   "cells": 1382,
+   "anchors": {
+    "pivot": [
+     99,
+     3,
+     56
+    ],
+    "sling": [
+     99,
+     3,
+     58
+    ],
+    "fore": [
+     162,
+     3,
+     3
+    ],
+    "peak": [
+     3,
+     3,
+     137
+    ],
+    "jackstay-01": [
+     157,
+     3,
+     9
+    ],
+    "jackstay-02": [
+     151,
+     3,
+     14
+    ],
+    "jackstay-03": [
+     145,
+     3,
+     19
+    ],
+    "jackstay-04": [
+     138,
+     3,
+     25
+    ],
+    "jackstay-05": [
+     132,
+     3,
+     30
+    ],
+    "jackstay-06": [
+     126,
+     3,
+     35
+    ],
+    "jackstay-07": [
+     120,
+     3,
+     40
+    ],
+    "jackstay-08": [
+     114,
+     3,
+     45
+    ],
+    "jackstay-09": [
+     108,
+     3,
+     50
+    ],
+    "jackstay-10": [
+     102,
+     3,
+     55
+    ],
+    "jackstay-11": [
+     96,
+     3,
+     60
+    ],
+    "jackstay-12": [
+     89,
+     3,
+     66
+    ],
+    "jackstay-13": [
+     83,
+     3,
+     71
+    ],
+    "jackstay-14": [
+     77,
+     3,
+     76
+    ],
+    "jackstay-15": [
+     71,
+     3,
+     81
+    ],
+    "jackstay-16": [
+     65,
+     3,
+     86
+    ],
+    "jackstay-17": [
+     59,
+     3,
+     91
+    ],
+    "jackstay-18": [
+     53,
+     3,
+     96
+    ],
+    "jackstay-19": [
+     47,
+     3,
+     101
+    ],
+    "jackstay-20": [
+     40,
+     3,
+     107
+    ],
+    "jackstay-21": [
+     34,
+     3,
+     112
+    ],
+    "jackstay-22": [
+     28,
+     3,
+     117
+    ],
+    "jackstay-23": [
+     22,
+     3,
+     122
+    ],
+    "jackstay-24": [
+     16,
+     3,
+     127
+    ],
+    "jackstay-25": [
+     10,
+     3,
+     132
+    ]
+   }
+  }
+ },
+ "masts": {
+  "fore": {
+   "heel": 10.5,
+   "platform": 221.6,
+   "truck": 430.0,
+   "x": 612
+  },
+  "main": {
+   "heel": 10.0,
+   "platform": 245.0,
+   "truck": 479.7,
+   "x": 412
+  },
+  "mizzen": {
+   "heel": 67.0,
+   "platform": 255.5,
+   "truck": 343.3,
+   "x": 280
+  }
+ },
+ "lists": {
+  "mast-fore": [
+   11627,
+   "5b1cfdeac0478fe1330c987382f8ede5e0115a93e9fb6db34d1758cdca8310e1"
+  ],
+  "mast-main": [
+   13260,
+   "da36590d88061155a3cc0953c0aba629f383f274cef530255686825003048c4a"
+  ],
+  "mast-mizzen": [
+   5149,
+   "ac14ab8c70f6c32d6fe450f4779d243470a43c9fced68f7c6f5bcbe2c6f46e0f"
+  ],
+  "bowsprit": [
+   5481,
+   "179637fb17fbc7027c0d4fb825a5da7afc8d805f48c1db16323a7294b46d0346"
+  ],
+  "lateen-mizzen": [
+   1382,
+   "f941d84b5c7cfc8219bd842c0a7131e7956b6e1e384231405200b9afc2b66f0d"
+  ],
+  "bowsprit_hole": [
+   0,
+   "f5c79f64bec32fba612db100d50fc9a47eaed0ea758641fb7fefab81c8ae35ec"
+  ]
+ }
+}

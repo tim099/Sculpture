@@ -1,6 +1,6 @@
 # 出處：gura-pinas-01m/design/draft_deco.py（藍鯊號 TASK-0967；2026-11-18 pinnacle 抄給金冠號 TASK-1317，作品 id／persona／船名／作品框已換）
 # 出處：calli-cosecha-01m/design/draft_deco.py（收穫號）的框架 —— 部件換成荷蘭 pinas 的（TASK-1317 步驟 6）
-# 金冠號 步驟 6：船首喙（galjoen＋cutwater＋head rail）、船首像（紅獅子）、船尾走廊＋兩舷側廊、hackebort（藍鯊紋章＋名帶）、船尾燈
+# 金冠號 步驟 6：船首喙（galjoen＋cutwater＋head rail）、船首像（戴冠紅獅）、船尾走廊＋兩舷側廊、hackebort（Zeeland 紋章＋金冠＋名帶 GOUDEN KROON）、船尾燈
 #   輸入：plan.json（espolon、figurehead、stern_deco）＋ 組裝件現在的格子（CLI 匯出 ⇒ 船殼＋甲板＋梯子＋玻璃，佔用與貼面都照它算）
 #   輸出：masks/deco/<部件>.vox.txt（世界座標、at 0,0,0）、verify_deco.json、sheet05_deco_v1.png
 #   用法：python -I -X utf8 draft_deco.py <design> [--probe=shift=<部件>:<dy>]（反向對照：某一件整件往 y 推幾格，⛔ 不寫檔）
@@ -17,13 +17,15 @@ import layout as LY
 from draft_lines import font, palette_rgb
 from wio import export_list
 
-BLACK, GOLD, GLASS, WOOD, TRIM, DECK, BLUE = 36, 248, 87, 141, 136, 209, 6
+BLACK, GOLD, GLASS, WOOD, TRIM, DECK, BLUE = 36, 248, 87, 141, 136, 209, 45     # 金冠號：BLUE 這個名字沿用，值換成上層舷牆的暗綠 45（走廊欄杆、側廊、regelingen）
 PARTS = ('galjoen', 'figurehead', 'stern-deco', 'hackebort')
 
 FONT = {  # 3×5，列由上往下
     'B': ['XX.', 'X.X', 'XX.', 'X.X', 'XX.'], 'L': ['X..', 'X..', 'X..', 'X..', 'XXX'], 'A': ['.X.', 'X.X', 'XXX', 'X.X', 'X.X'],
     'U': ['X.X', 'X.X', 'X.X', 'X.X', 'XXX'], 'W': ['X.X', 'X.X', 'XXX', 'XXX', 'X.X'], 'E': ['XXX', 'X..', 'XX.', 'X..', 'XXX'],
     'H': ['X.X', 'X.X', 'XXX', 'X.X', 'X.X'], 'I': ['XXX', '.X.', '.X.', '.X.', 'XXX'], ' ': ['.', '.', '.', '.', '.'],
+    'G': ['XXX', 'X..', 'X.X', 'X.X', 'XXX'], 'O': ['XXX', 'X.X', 'X.X', 'X.X', 'XXX'], 'D': ['XX.', 'X.X', 'X.X', 'X.X', 'XX.'],
+    'N': ['X..X', 'XX.X', 'X.XX', 'X..X', 'X..X'], 'K': ['X.X', 'X.X', 'XX.', 'X.X', 'X.X'], 'R': ['XX.', 'X.X', 'XX.', 'X.X', 'X.X'],   # 金冠號 GOUDEN KROON
 }
 
 
@@ -53,7 +55,7 @@ def galjoen_v2(V, F, xs0, Hl, L, YC, put, both, R):
     船殼的外形只拿船殼算（Ship_Ends §4.4：拿組裝件算 ⇒ 貼到錨架外面）。回傳平台頂 z 的函式（獅子的腳踩在上面）。"""
     hout, hfwd, htop = {}, {}, {}
     for x, y, z, c in Hl.tolist():
-        if x < 470:
+        if x < 600:            # 金冠號：船頭那一段（藍鯊號 470）
             continue
         dy = abs(y - YC)
         if dy > hout.get((x, z), -1):
@@ -230,9 +232,10 @@ def galjoen_v2(V, F, xs0, Hl, L, YC, put, both, R):
     # es（W：獅子背上 2'2" 的渦卷）：獅子身體中段上 h 格一圈金環（中線兩格厚）、一根金柱接回獅背 —— regelingen 收到它底下
     ES = V['es']
     xr, ln, rs = F['x'], F['len'], F['raise']
-    zc = lambda x: ztf(x) + 4 + rs * (x - xr) / float(ln)
+    kk = F.get('k', 1.0)                                               # 金冠號：獅子放大 ⇒ 獅背的高度跟著 k（不然 es 的金柱插進獅身 3 格）
+    zc = lambda x: ztf(x) + 4 * kk + rs * (x - xr) / float(ln)
     ex = xr + ES['dx']
-    back = int(zc(ex) + 3.2)
+    back = int(zc(ex) + 3.2 * kk)
     ez = back + ES['h']
     for x in range(int(ex - ES['r'] - 2), int(ex + ES['r'] + 3)):
         for z in range(int(ez - ES['r'] - 2), int(ez + ES['r'] + 3)):
@@ -284,13 +287,13 @@ def main():
     occ = set(map(tuple, A[:, :3].tolist()))
     aft, outer, fwd = {}, {}, {}
     for x, y, z in A[:, :3].tolist():
-        if x < 210:
+        if x < 260:            # 金冠號：船尾那一段（藍鯊號 210）
             if x < aft.get((y, z), 10 ** 6):
                 aft[(y, z)] = x
         dy = abs(y - YC)
         if dy > outer.get((x, z), -1):
             outer[(x, z)] = dy
-        if x >= 400 and y == YC and x > fwd.get(z, -1):
+        if x >= 560 and y == YC and x > fwd.get(z, -1):     # 金冠號：船頭那一段（藍鯊號 400）
             fwd[z] = x
     parts = {}
     R_v2 = {}
@@ -338,26 +341,27 @@ def main():
                     both('galjoen', x, dy, z, GOLD if xf - x == 2 and dy == E['cutwater_half'] else TRIM)
     # ── 船首像：紅獅子（W p.85：長 9 呎、厚 19 duim、前端翹起 2'7"）——趴在喙尖上、往前往上翹 ──
     xr, ln, ht, rs = F['x'], F['len'], F['half_t'], F['raise']
+    kk = F.get('k', 1.0)                                                # 金冠號：獅子放大（31 格長；藍鯊號 25 格 ⇒ 身體、頭、鬃的半徑與位移 × k）
     xf_ = xr + ln
-    zc = lambda x: ztf(x) + 4 + rs * (x - xr) / float(ln)           # 身體中線的高度（v2 的平台往前升 ⇒ 跟著那一欄的平台頂）
+    zc = lambda x: ztf(x) + 4 * kk + rs * (x - xr) / float(ln)      # 身體中線的高度（v2 的平台往前升 ⇒ 跟著那一欄的平台頂）
     body, mane, crown, eye = F['body'], F['mane'], F['crown'], F['eye']
     for x in range(xr + 2, xf_ - 4):                                   # 身體（橢圓截面：半厚 ht、半高 3.2）
-        for z in range(int(zc(x) - 4), int(zc(x) + 5)):
+        for z in range(int(zc(x) - 4 * kk), int(zc(x) + 5 * kk)):
             for dy in range(0, int(ht) + 1):
-                if (dy / ht) ** 2 + ((z + 0.5 - zc(x)) / 3.2) ** 2 <= 1.0:
+                if (dy / ht) ** 2 + ((z + 0.5 - zc(x)) / (3.2 * kk)) ** 2 <= 1.0:
                     both('figurehead', x, dy, z, body)
-    hx, hz = xf_ - 3, zc(xf_) + 3                                       # 頭
-    mx, mz = xf_ - 6, zc(xf_) + 2                                       # 鬃
-    for x in range(xf_ - 11, xf_ + 1):
-        for z in range(int(mz - 5), int(hz + 5)):
-            for dy in range(0, 4):
-                in_head = ((x + 0.5 - hx) / 3.2) ** 2 + (dy / ht) ** 2 + ((z + 0.5 - hz) / 3.2) ** 2 <= 1.0
-                in_mane = ((x + 0.5 - mx) / 3.6) ** 2 + (dy / 3.0) ** 2 + ((z + 0.5 - mz) / 4.6) ** 2 <= 1.0
+    hx, hz = xf_ - 3 * kk, zc(xf_) + 3 * kk                             # 頭
+    mx, mz = xf_ - 6 * kk, zc(xf_) + 2 * kk                             # 鬃
+    for x in range(int(xf_ - 11 * kk), xf_ + 1):
+        for z in range(int(mz - 5 * kk), int(hz + 5 * kk)):
+            for dy in range(0, int(4 * kk)):
+                in_head = ((x + 0.5 - hx) / (3.2 * kk)) ** 2 + (dy / ht) ** 2 + ((z + 0.5 - hz) / (3.2 * kk)) ** 2 <= 1.0
+                in_mane = ((x + 0.5 - mx) / (3.6 * kk)) ** 2 + (dy / (3.0 * kk)) ** 2 + ((z + 0.5 - mz) / (4.6 * kk)) ** 2 <= 1.0
                 if in_head:
                     both('figurehead', x, dy, z, body)
                 elif in_mane:
                     both('figurehead', x, dy, z, mane)
-    ztop = int(hz + 3.2)                                                # 金冠：頭頂一圈、上面一排尖
+    ztop = int(hz + 3.2 * kk)                                           # 金冠：頭頂一圈、上面一排尖
     for x in range(int(hx) - 2, int(hx) + 3):
         for dy in range(0, 3):
             both('figurehead', x, dy, ztop, crown)
@@ -515,7 +519,7 @@ def main():
                     z = R_['z1'] - 1 - r
                     put('hackebort', face[(ycur + c, z)], YC + ycur + c, z, R_['text_color'])
         ycur += len(g[0]) + 1
-    SH = H['shark']                                                     # 藍鯊：頭朝左（−y）
+    SH = H.get('emblem') or H['shark']                                  # 金冠號：紋章（plan.stern_deco.hackebort.emblem）；藍鯊號：藍鯊，頭朝左（−y）
     wsh = len(SH['rows'][0])
     for r, row in enumerate(SH['rows']):
         z = SH['z_top'] - r
@@ -619,32 +623,32 @@ def main():
     sc = 6
     im = Image.new('RGB', (1560, 900), (250, 248, 240))
     d = ImageDraw.Draw(im)
-    d.text((20, 10), '金冠號 新圖紙 05：galjoen、紅獅子、船尾走廊、側廊、hackebort（藍鯊紋章）　v1', fill=(0, 0, 0), font=font(18))
+    d.text((20, 10), '金冠號 新圖紙 05：galjoen、戴冠紅獅、船尾走廊、側廊、hackebort（Zeeland 紋章＋金冠）　v1', fill=(0, 0, 0), font=font(18))
     deco = [(k, c) for nm, cells in parts.items() for k, c in cells.items()]
-    hullcells = [((x, y, z), c) for x, y, z, c in A.tolist() if x >= 480 or x <= 200]
+    hullcells = [((x, y, z), c) for x, y, z, c in A.tolist() if x >= 600 or x <= 250]     # 金冠號：船頭 600 以前、船尾 250 以後不畫（藍鯊號 480／200）
     best = {}
     for (x, y, z), c in hullcells + deco:
-        if x < 480 or y < YC:
+        if x < 600 or y < YC:
             continue
         if y > best.get((x, z), (-1, 0))[0]:
             best[(x, z)] = (y, c)
     for (x, z), (y, c) in best.items():
-        if 480 <= x <= 610 and 15 <= z <= 110:
-            X, Y = 20 + (x - 480) * sc, 50 + (110 - z) * sc
+        if 600 <= x <= 760 and 20 <= z <= 135:
+            X, Y = 20 + (x - 600) * 5, 50 + (135 - z) * 5
             d.rectangle([X, Y, X + sc - 1, Y + sc - 1], fill=palette_rgb(int(c)))
-    d.text((20, 50 + 96 * sc), '船頭（右舷側面）', fill=(0, 0, 0), font=font(14))
+    d.text((20, 50 + 118 * 5), '船頭（右舷側面）', fill=(0, 0, 0), font=font(14))
     best = {}
     for (x, y, z), c in hullcells + deco:
-        if x > 200:
+        if x > 250:
             continue
         if x < best.get((y, z), (10 ** 6, 0))[0]:
             best[(y, z)] = (x, c)
-    ox, oy, s2 = 840, 50, 6
+    ox, oy, s2 = 840, 50, 5
     for (y, z), (x, c) in best.items():
-        if 60 <= z <= 132 and 110 <= y <= 210:
-            X, Y = ox + (y - 110) * s2, oy + (132 - z) * s2
+        if 60 <= z <= 175 and 105 <= y <= 215:
+            X, Y = ox + (y - 105) * s2, oy + (175 - z) * s2
             d.rectangle([X, Y, X + s2 - 1, Y + s2 - 1], fill=palette_rgb(int(c)))
-    d.text((ox, oy + 74 * s2), '船尾正面（從船尾看，左手 ＝ −y）', fill=(0, 0, 0), font=font(14))
+    d.text((ox, oy + 118 * s2), '船尾正面（從船尾看，左手 ＝ −y）', fill=(0, 0, 0), font=font(14))
     im.save(os.path.join(design, 'sheet05_deco_v1.png'))
     with open(os.path.join(design, 'verify_deco.json'), 'w', encoding='utf-8', newline='\n') as f:
         json.dump(R, f, ensure_ascii=False, indent=1)

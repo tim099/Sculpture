@@ -86,6 +86,7 @@
    {"deck": "main", "per_side": 10, "x0s": [233, 267, 301, 335, 369, 437, 471, 505, 539, 573], "w": 8, "h": 7, "sill": 7, "ref_pad": 4, "gun": "18l", "src": "W p.113：3 × 2½ 呎 ⇒ w 8、h 7、檻 2½ 呎 ＝ 7；從船尾 x 233 起每 34 格，主桅（x 412）兩旁空一格（369 → 437：主桅腳、主艙口、絞盤那一段，設計決定）"},
    {"deck": "puente", "per_side": 8, "x0s": [222, 318, 352, 462, 496, 530, 572, 600], "w": 7, "h": 6, "sill": 6, "ref_pad": 3, "gun": "8l", "src": "W p.113：2½ × 2 呎、檻 2 呎 ⇒ w 7、h 6、檻 6；避開後桅（x 280）、主桅（x 412）、前桅（x 612）的 channels 與 shrouds（Ship_Setup §3「上甲板砲門跟 channels 一起規劃」）—— 位置是設計決定，步驟 8 畫 channels 時再核"}
   ],
+  "bow_gangway": {"dy": 4, "z0": 86, "x_from": 653, "fill_x": 666, "fill_z0": 81, "src": "同藍鯊號 TASK-0967 船頭 v2：艏柱上緣中線開一道 9 格寬的缺口（dy ≤ 4、z 86 ＝ verdeck 在船頭 85 ＋ 1 起刻到舷頂）⇒ bak 前隔板的門外（露天的 verdeck x 651–665）直接走上 galjoen 平台（頂 89，一步 4 格）；fill_x 666（verdeck 的甲板到 x 665）、fill_z0 81：艏柱那一段船殼裡面除了走道填實 ⇒ 兩旁是直的牆（設計決定）"},
   "stern_chasers": {"deck": "puente", "n": 2, "w": 7, "h": 7, "sill": 6, "gun": "8l", "src": "VD p.508（1671）：「in de camer」鐵 8 磅 ×4 ⇒ 鏡板開 2 個（另外 2 門放兩舷 overloop 最船尾那個砲門）。放 verdeck 那一層（kajuit）：本船舷弧大，overloop 在船尾是 z 75、艉橫樑 z 91 ⇒ overloop 高度的鏡板砲門會落在 heck-balk 下面圓的 billen 上（藍鯊號同一個問題，也是放上一層）—— 設計決定；w 7（鏡板的開口要奇數才對中線對稱）"}
  },
  "guns_alloc": {
@@ -177,6 +178,81 @@
    "src": "設計決定（照藍鯊號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井；船樓的梯子靠在 break 外面、頭踩上船樓甲板。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
   }
  },
+ "rig_build": {
+  "src": "設計決定（桅帆長度與位置在 plan.masts）；Ship_Masts §5：每根桅一件子作品、帆桁一開始就是外部模型、模型放在它的桅子作品裡；程式照藍鯊號 draft_masts.py",
+  "hull_mark": "側廊窗洞:end",
+  "colors": {"mast": 141, "top": 136, "rim_band": 45, "rim_cap": 248, "truck": 248},
+  "mast_r": {"fore": [3.5, 2.5], "main": [3.5, 2.5], "mizzen": [2.5, 1.8]},
+  "mast_r_src": "設計決定：VD 1697 主桅 26 palm ≈ 直徑 0.8 m（研究筆記 §6a，palm 換算 ⚠ 未核）⇒ 半徑 4；甲板桅孔 decks_build.mast_r 4／4／3 ⇒ 桅腳取 3.5、頂 2.5（同藍鯊號），比桅孔小",
+  "topmast_r": {"fore": [2.5, 1.5], "main": [2.5, 1.5], "mizzen": [1.5, 1.0]},
+  "tgallant_r": {"fore": [1.5, 1.0], "main": [1.5, 1.0]},
+  "tops": {"main": 20, "fore": 18, "mizzen": 13, "rim_h": 7, "src": "W p.94 規則（每 10 呎船長 9 duim）：主桅樓直徑 13'11\" ＝ 39 格 ⇒ 半徑 20、前桅樓 9/10 ⇒ 18；後桅 13（設計決定：遊戲的桅頂水手站在半徑 9／12 的一圈）；籃子 7 格高、暗綠腰帶、金頂"},
+  "crosstree_r": 7,
+  "bowsprit_r": [3.5, 2.5],
+  "sprit_top": {"at_from_tip": 8, "r": [1.5, 1.0], "src": "VD p.501：斜桅頂桅（boven blinde steng）立在艏斜桅前端（17 世紀的 sprit topmast，同藍鯊號）"},
+  "yards": [
+   {"name": "yard-fore-course", "mast": "fore", "yard": "course", "sail": "fore-course", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-crossjack", "src_len": 231, "brace": -15},
+   {"name": "yard-fore-topsail", "mast": "fore", "yard": "topsail", "sail": "fore-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-fore-topgallant", "src_len": 131, "brace": -17},
+   {"name": "yard-fore-topgallant", "mast": "fore", "yard": "topgallant", "sail": "fore-topgallant", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": -19},
+   {"name": "yard-main-course", "mast": "main", "yard": "course", "sail": "main-course", "src_work": "basecamp-frigate-constitution-01m-yard-fore-course", "src_len": 249, "brace": -15},
+   {"name": "yard-main-topsail", "mast": "main", "yard": "topsail", "sail": "main-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-fore-topgallant", "src_len": 131, "brace": -17},
+   {"name": "yard-main-topgallant", "mast": "main", "yard": "topgallant", "sail": "main-topgallant", "src_work": "basecamp-frigate-constitution-01m-yard-fore-royal", "src_len": 87, "brace": -19},
+   {"name": "yard-mizzen-topsail", "mast": "mizzen", "yard": "topsail", "sail": "mizzen-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-fore-royal", "src_len": 87, "brace": -17},
+   {"name": "yard-spritsail", "mast": "bowsprit", "yard": "spritsail", "sail": "spritsail", "src_work": "basecamp-frigate-constitution-01m-yard-fore-topgallant", "src_len": 131, "brace": 0, "at_t": 0.8, "drop": 5},
+   {"name": "yard-sprit-topsail", "mast": "bowsprit", "yard": "sprit_topsail", "sail": "sprit-topsail", "src_work": "basecamp-frigate-constitution-01m-yard-mizzen-royal", "src_len": 65, "brace": 0}
+  ],
+  "yards_src": "Ship_Setup §2.1：方帆桁沿用憲法號的帆桁元件，只沿長度（y）縮放到本船的長度；挑長度最近、固定點齊全的那一根（src_len ＝ arm-S − arm-P ＋ 3，同藍鯊號）。帆名：bramzeil（上桅帆）、kruiszeil（後中桅帆）、blinde（斜桅帆）、bovenblinde（斜桅頂帆）（研究筆記 §6a）",
+  "lateen": [{"mast": "mizzen", "len_m": 20.95, "angle_deg": 40, "hoist_frac": 0.4, "sail": "mizzen-lateen"}],
+  "lateen_src": "後桅三角帆桁 74 呎（Witsen 規則：後桅 ＋ 2；研究筆記 §9）；角度、吊點照藍鯊號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5）",
+  "bobstay_z": [52, 58]
+ },
  "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 68, "bottom_top_z": 48, "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同藍鯊號）；水線上焦油褐 136、水線下深褐 68（W：pik en teer 裡外上下；研究筆記 §5）"},
- "espolon": {"len_beyond_stem": 74, "src": "galjoen 長 26 呎 ＝ 74 格（設計決定：Vrede 28、1669 年船 24¼ 呎，W p.112–113）—— 步驟 6 做"}
+ "espolon": {
+  "len_beyond_stem": 74,
+  "src": "galjoen 長 26 呎 ＝ 74 格（設計決定：Vrede 28、1669 年船 24¼ 呎，W p.112–113；研究筆記 §3）",
+  "v2": {
+   "len_beyond_stem": 74,
+   "src": "照藍鯊號 TASK-0967 船頭 v2 的 galjoen 程式（Witsen 1671 的 galjoen：平台、knee、兩道 cheek 夾 kam、每側三條 regelingen、4 根 knies、mans hooft、cathead、es；考證在 gura-pinas-01m/references/research_pinas_bow_2026-10-28.md）—— 尺寸照本船放大，高度都換成本船的甲板",
+   "platform": {"top_z": 89, "rise": 10, "rise_pow": 1.0, "thick": 3, "x_from": 641, "half_root": 30, "half_tip": 4, "taper_pow": 1.3, "skirt": {"h": 5}, "src": "平台頂在艏柱 z 89 ＝ verdeck（船頭 85）＋ 4（同藍鯊號：verdeck ＋ 4、往前漸升 8 × 1.27 ≈ 10）；從 x 641 起半寬 30 往喙尖收到 4（設計決定），船殼佔的格跳過 ⇒ 圍著圓船頭接成一圈"},
+   "knee": {"from_z": 25, "back": 8, "pow": 1.6, "half": 4, "line": 3, "line_from_z": 50, "wl": 48, "below": 68, "src": "設計決定（藍鯊號 × 1.27）：knee 從首柱 z 25 填到平台底、前緣曲線掃到喙尖往後 8 格；9 格寬；水線 z 48 以下跟船底同色 68；兩側沿前下緣往裡 3 格一條金線，水線上 2 格起"},
+   "cheeks": [{"x0": 657, "x1": 684, "z0": 64, "drop": 3, "pow": 1.0}, {"x0": 659, "x1": 682, "z0": 55, "drop": 3, "pow": 1.0}],
+   "cheeks_src": "W p.60、p.86–87：船頭兩側各兩道 cheek（kniehout）夾在腰板之間〔查，藍鯊號研究筆記〕⇒ 本船夾在第 2–3 道（z 58–61、67–70）與第 1–2 道（49–52、58–61）之間；起訖點、長度 × 1.27 是設計決定",
+   "kam": {"color": 45, "dot": 248, "src": "W：兩道 cheek 中間是雕花的 kam（trailboard）〔查〕；暗綠底金點卷草（跟上層舷牆同色，設計決定）"},
+   "rails": [{"h": 1, "up": 11, "x_h": 652, "x_l": 680, "x_e": 729, "color": 45}, {"h": 4, "up": 11, "x_h": 652, "x_l": 680, "x_e": 729, "color": 45}, {"h": 7, "up": 11, "x_h": 652, "x_l": 680, "x_e": 729, "color": 45}],
+   "rails_src": "W p.86–87：每側 3 條 regelingen，後端在 cathead 下、前端收到 es 底下〔查〕；遊戲：平台上 1／4／7 格起、每條 2 格高（同藍鯊號；第一人稱踩不上去 —— Ship_Ends §4.1）；x_e ＝ 獅子後端 ＋ 12",
+   "timbers": {"n": 4, "every": 8, "color": 141, "src": "W p.87：4 根 knies，第 1 根貼艏柱、之後約每 2 呎一根〔查〕⇒ 每 8 格（遊戲尺度放寬）"},
+   "mans_head": {"dx": -1, "ddy": 1, "dz": 2, "r": 2.2},
+   "cathead": {"x": 652, "z": 108, "len": 9, "half": 1, "deg": 35, "color": 141, "src": "W：cathead 比欄杆外突 2 呎、斷面 8 × 10 吋〔查〕⇒ 舷外 9 格、3 × 3；在 bak 前角（甲板 101）上 7 格、舷頂下 4 格（同藍鯊號的位置），往前斜 35°（設計決定）"},
+   "es": {"dx": 15, "h": 8, "r": 3, "src": "W：es（渦卷）在獅子背上 2'2\"〔查〕⇒ 8 格（× 1.27）；形狀簡化成一圈金環、一根金柱接回獅背（設計決定）"}
+  }
+ },
+ "figurehead": {"x": 717, "len": 31, "half_t": 3.2, "raise": 9, "k": 1.25, "body": 224, "mane": 248, "crown": 248, "eye": 36, "src": "研究筆記 §5：VOC 1660 年代沿用獅子船首像〔估〕；長 11 呎 ＝ 31 格（藍鯊號 W p.85 的 9 呎按比例放大，設計決定）、厚與前端翹起 × 1.27、頭與鬃 × 1.25；紅身金鬃戴金冠（本船名 金冠，配色是一般認識 ⚠）。x ＝ 獅子後端：喙尖 x 744、獅子前端 748"},
+ "stern_deco": {
+  "hackebort": {
+   "z0": 146, "z1": 166, "half": 28, "arch_from": 156, "half_top": 14, "thick": 2, "field": 254, "border": 248,
+   "ribbon": {"z0": 146, "z1": 152, "color": 45, "text": "GOUDEN KROON", "text_color": 248},
+   "emblem": {
+    "z_top": 164,
+    "rows": [
+     "......G...G...G......",
+     "......GG.GGG.GG......",
+     ".....GGGGGGGGGGG.....",
+     "....KKKKKKKKKKKKK....",
+     "....KYYYYRRYYYYYK....",
+     "....KYYYRRRRYYYYK....",
+     "....KYYRRYRRRYYYK....",
+     "....KYYYYRRRRYYYK....",
+     "....KBWBWBWBWBWBK....",
+     ".....KWBWBWBWBWK.....",
+     "......KKBWBWBKK......",
+     "........KKKKK........"
+    ],
+    "G": 248, "Y": 252, "R": 224, "B": 6, "W": 255, "K": 36
+   },
+   "src": "研究筆記 §5：Walcheren 的船尾（RMG PAH1782，Van de Velde 父）tafferel 上是戴王冠盾牌的 Zeeland 紋章〔查：館藏說明〕；Zeeland 紋章 ＝ 上半金底紅獅從波浪升起、下半藍白波紋（一般常識 ⚠ 未核）⇒ 盾形紋章（像素畫）＋上面一頂金冠（本船名 金冠）；底下一條暗綠名帶寫 GOUDEN KROON 金字（船名荷文是設計決定）；hackebort 從船尾頂 z 145 往上到 166（研究筆記 §9：船尾頂 ≈ 161，取 166 讓拱頂站一盞燈，設計決定）；奶油底、金邊、頂上收成拱形；從船尾看左手 ＝ −y；紋章與字不對稱 ⇒ 這一件的鏡像差照實報"
+  },
+  "balcony": {"floor_z": 118, "depth": 6, "half": 30, "rail_h": 7, "src": "W p.83：船尾走廊（galdery）〔查，藍鯊號〕；1669 年船的船尾走廊高 9 呎（W p.112）—— 設計決定：halfdek 那排窗（z 120–125）下面、伸出鏡板 6 格；rail_h 7（Ship_Ends §4.1：第一人稱一步 6 格，扶手要 ≥ 7）"},
+  "quarter_gallery": {"x0": 189, "x1": 216, "z0": 100, "z1": 132, "out": 5, "roof_h": 6, "roof": 168, "win_rows": [[103, 108], [120, 125]], "src": "VD p.456（1603 規格）「een vierkante gallerye, puntigh gemaeckt, niet langh op de zyde」—— 方形、做尖、側邊不長〔查，OCR〕；Walcheren 的船尾畫有右舷 quarter-gallery〔查：館藏說明〕；W：側廊常用銅或鉛皮蓋頂 ⇒ 頂 168（銅）；位置與高度設計決定（kajuit 到 hut 兩層，窗對齊鏡板那兩排；前端 x 216 讓開 verdeck 第一個砲門 x 222）"},
+  "lanterns": {"source": "gura-tridente-01m-lantern", "scale": 0.5, "dy": [0], "src": "沿用現有元件（三叉戟號船尾燈，0.05 m、scale 0.5、固定點 wick／bail／base）；一盞，站在 hackebort 拱頂正中間（Walcheren 1665 年是 De Bitter 船隊的旗艦 ⇒ 史實可能三盞 ⚠；拱頂窄，先放一盞，設計決定）"}
+ }
 }

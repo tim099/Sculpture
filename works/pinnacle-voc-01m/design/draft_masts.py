@@ -304,11 +304,11 @@ def main():
         json.dump({k: {'size': v['size'], 'anchors': v['anchors'], 'len_m': round(v['len_cells'] * CELL, 2), 'angle_deg': v['angle'], 'sail': v['sail']} for k, v in lat.items()}, f, ensure_ascii=False, indent=1)
     # 圖：側面（船＋桅＋帆桁的線）
     sc = 1.4
-    im = Image.new('RGB', (int(760 * sc) + 80, int(470 * sc) + 120), (250, 248, 240))
+    im = Image.new('RGB', (int(680 * sc) + 80, int(500 * sc) + 120), (250, 248, 240))   # 金冠號：x 150–830、z 0–500
     d = ImageDraw.Draw(im)
     d.text((20, 10), '金冠號 新圖紙 06：桅、cofa、艏斜桅、帆桁（側面，從右舷看）　v1', fill=(0, 0, 0), font=font(18))
-    X = lambda x: 40 + (x - 20) * sc
-    Z = lambda z: 50 + (470 - z) * sc
+    X = lambda x: 40 + (x - 150) * sc
+    Z = lambda z: 50 + (500 - z) * sc
     best = {}
     for (x, y, z), c in list(occ.items()) + [(k, c) for cells in parts.values() for k, c in cells.items()]:
         if y >= YC and y > best.get((x, z), (-1, 0))[0]:

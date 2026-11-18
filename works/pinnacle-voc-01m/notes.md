@@ -73,3 +73,24 @@
 - 艙房：沒隔（同藍鯊號）；之後要配功能艙再加。
 - 讀數：設計那一側：重疊 0、砲門往艙裡被擋 0、梯子點問題 0、封閉空腔 0、鏡像差 0（overloop 634 ＋ 梯子 488 ＝ koebrug 梯子靠左舷的井，照實）；`tools/check_decks.py`（每件從匯出讀）：11 件 203,992 格，缺 0、多 0、色差 0、跟船殼／彼此重疊 0；梯子點（組裝件 parts，遊戲讀的那一份）36／36、跟設計差 0、空氣／腳下／頭頂 14 格問題 0；組裝件 1 元件、空腔 0、link_overlap 0。**反向對照**：`draft_decks.py --probe=drop_ladder=castillo-S` ⇒ 8 座、bak 只剩 castillo-P（不寫檔）。
 - 預覽 preset：`藏船殼`。過程圖 `overlays/step5_decks.png`。
+
+## 步驟 6 裝飾、窗的玻璃（2026-11-18）
+- **船頭走道**（plan.ports.bow_gangway，同藍鯊號船頭 v2）：艏柱上緣中線刻一道 9 格寬的缺口（dy ≤ 4、z 86 起）⇒ bak 前隔板的門外（露天的 verdeck x 651–665）跨過艏柱直接走上 galjoen 平台。船殼走差量（`draft_ports.py` ⇒ `tools/hull_expected.py` ⇒ `delta_apply`，標記 `船頭走道`）：刻 603、換色 39（缺口邊描金）；船頭補實 0 格（x ≥ 666 船殼裡沒有空的格）。
+- `draft_deco.py` 照藍鯊號（galjoen v2、獅子、船尾走廊、側廊 v2、hackebort），改：船頭／船尾的範圍（藍鯊號寫死 470／210／400 ⇒ 600／260／560）、走廊與側廊的「藍」換成上層舷牆的暗綠 45、獅子放大（plan.figurehead.k 1.25；es 的金柱高度跟著 k —— 第一次沒跟 ⇒ 金柱插進獅身 3 格、figurehead 與 galjoen 重疊 3）、紋章改吃 `hackebort.emblem`、字型加 G O D N K R、圖紙的範圍。
+  - `-galjoen`「船首喙」22,635：平台頂 z 89（verdeck ＋ 4）往前升 10、喙尖 x 743；knee 從首柱 z 25 填到平台底（水線下同船底色）；兩道 cheek 夾暗綠金點 kam；每側 3 條 regelingen（平台上 1／4／7 起）、4 根 knies、mans hooft、cathead（bak 前角 z 108）、獅背上的 es。
+  - `-figurehead`「船首像」1,636：**戴冠紅獅**（11 呎 ＝ 31 格，x 717–747，金鬃金冠）。
+  - `-stern-deco`「船尾裝飾」12,049：船尾走廊（halfdek 那排窗下 z 118、伸出 6、扶手 7）＋兩舷側廊（x 189–216、z 100–132、銅頂 168；窗是真玻璃，後面刻穿到艙裡）。
+  - `-hackebort`「hackebort」2,242：鏡板頂 z 146–166、奶油底金邊拱頂；**Zeeland 紋章（金底紅獅、藍白波紋）＋金冠**、暗綠名帶 GOUDEN KROON 金字（研究筆記 §5：Walcheren 船尾畫的 tafferel 是戴冠盾的 Zeeland 紋章；荷文船名是設計決定）⇒ 這一件鏡像差 180 照實報；拱頂正中一盞船尾燈（模型 `lantern`，三叉戟號船尾燈 scale 0.5、kind=light）。
+- **窗的玻璃**：鏡板窗 240（draft_ports）＋側廊窗 240（draft_deco）⇒ 子作品 `-stern-glass`（480）、組裝件關聯 `船尾窗玻璃` meta `material=glass`；側廊窗後面的船殼刻 960（`tools/hull_expected.py` 的「側廊窗洞」，標記 `側廊窗洞`）；240 個窗洞全部通到艙裡。
+- 能隱藏的裝飾（deco=1）：本步驟的件都是關聯（格子是船的一部分）、燈是 kind=light ⇒ 沒有要標 deco 的模型（同藍鯊號）。
+- 讀數：`tools/check_stage5.py` 四件結果帳缺 0／多 0／色差 0；設計那一側跟船重疊 0、部件之間重疊 0、跳過 0、艏斜桅那條線被擋 0；船殼差量之後 多 0／少 0／換色 0；組裝件 1 元件、空腔 0、link_overlap 0、models_broken 0。**反向對照**：`draft_deco.py --probe=shift=figurehead:3` ⇒ 獅子鏡像差 0 → 1,530。產生程式重跑兩次逐位元組相同（落格之後組裝件多了玻璃 ⇒ verify 的「貼著船的格數」跟落格前那一次不同，清單本身不變 —— check_stage5 0 差）。
+- 過程圖：`overlays/step6_{bow,stern}.png`；圖紙 `design/sheet05_deco_v1.png`。⚠ 鏡板中段（走廊頂到 hackebort 底，z 132–145）還是素面褐色 —— 先放著（同藍鯊號）。
+
+## 步驟 7 桅與帆桁（2026-11-18）
+設計 plan.json `rig_build`（長度與位置在 `masts`）；產生 `design/draft_masts.py`（照抄藍鯊號，只改圖紙的框）；落格 `design/tools/build_masts.py`。
+- 桅（每根一件子作品，關聯 `前桅`／`主桅`／`後桅`／`艏斜桅`）：前桅 11,627、主桅 13,260（下桅＋桅樓＋中桅＋十字架＋上桅）、後桅 5,149（下桅＋桅樓＋kruissteng）、艏斜桅 5,481（含斜桅頂桅）。桅樓半徑 前 18、主 20、後 13（W p.94 規則）；桅腳半徑 3.5（甲板桅孔 4）。
+- **桅的綁定**（Ship_Masts §5，TASK-1169）：四條關聯 meta `kind=mast`＋`mast=fore／main／mizzen／bowsprit`（藍鯊號造的時候還沒有這條規則，build_masts 沒標 ⇒ 用 `work sub=meta file=` 補）；帆桁 meta 的 mast 一字不差對到。
+- 艏斜桅腳在 bak 甲板（x 622、z 102，30°）⇒ 從船頭舷牆上面過去，船殼開孔 0 格。
+- 帆桁 10 根（外部模型，掛在各自的桅子作品）：方帆桁 9 根沿用憲法號的帆桁元件、只沿長度縮放（主帆桁 25.5 m ← fore-course、前 22.9 ← mizzen-crossjack、主中桅 13.6／前中桅 12.3 ← fore-topgallant、主上桅 7.9 ← fore-royal、前上桅 7.1 ← mizzen-royal、後中桅 7.9 ← fore-royal、斜桅帆桁 13.6 ← fore-topgallant、斜桅頂帆桁 6.0 ← mizzen-royal）；三角帆桁 1 根新做 `-yard-mizzen-lateen`（20.95 m、40°、吊點前端往後 40%；meta yard=gaff、rig=lateen）。方帆的下帆桁都是 course（沒有 boom）。
+- 讀數：`tools/check_stage6.py` 桅 4 件＋三角帆桁結果帳缺 0／多 0／色差 0；船殼 544,437 ＝ 設計（孔 0）0 差；帆桁模型 10 根 meta 與來源固定點問題 0；帆桁穿船 10 根全 0；三角帆桁後端伸出船尾 0.86 m；models_broken 0（畫 11 個模型）；組裝件 1 元件、空腔 0、link_overlap 0。跳過的格：前桅腳插進船頭 deadwood 46、艏斜桅腳壓到 bak 甲板 29（同藍鯊號，桅坐在船上）。**反向對照**：`--probe=pivot=yard-main-course:-150`（放到船殼的高度）⇒ 只有那一根報 62 格。產生程式重跑兩次逐位元組相同。
+- 過程圖：`overlays/step7_masts.png`、`design/sheet06_masts_v1.png`。
