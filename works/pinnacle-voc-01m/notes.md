@@ -94,3 +94,31 @@
 - 帆桁 10 根（外部模型，掛在各自的桅子作品）：方帆桁 9 根沿用憲法號的帆桁元件、只沿長度縮放（主帆桁 25.5 m ← fore-course、前 22.9 ← mizzen-crossjack、主中桅 13.6／前中桅 12.3 ← fore-topgallant、主上桅 7.9 ← fore-royal、前上桅 7.1 ← mizzen-royal、後中桅 7.9 ← fore-royal、斜桅帆桁 13.6 ← fore-topgallant、斜桅頂帆桁 6.0 ← mizzen-royal）；三角帆桁 1 根新做 `-yard-mizzen-lateen`（20.95 m、40°、吊點前端往後 40%；meta yard=gaff、rig=lateen）。方帆的下帆桁都是 course（沒有 boom）。
 - 讀數：`tools/check_stage6.py` 桅 4 件＋三角帆桁結果帳缺 0／多 0／色差 0；船殼 544,437 ＝ 設計（孔 0）0 差；帆桁模型 10 根 meta 與來源固定點問題 0；帆桁穿船 10 根全 0；三角帆桁後端伸出船尾 0.86 m；models_broken 0（畫 11 個模型）；組裝件 1 元件、空腔 0、link_overlap 0。跳過的格：前桅腳插進船頭 deadwood 46、艏斜桅腳壓到 bak 甲板 29（同藍鯊號，桅坐在船上）。**反向對照**：`--probe=pivot=yard-main-course:-150`（放到船殼的高度）⇒ 只有那一根報 62 格。產生程式重跑兩次逐位元組相同。
 - 過程圖：`overlays/step7_masts.png`、`design/sheet06_masts_v1.png`。
+
+## 步驟 8 索具、帆、旗（2026-11-18）
+設計 plan.json `rigging`；產生 `design/draft_rigging.py`（照藍鯊號，改：channel 的高度可以指定照哪一欄的舷頂 `channels.z_at`、船尾旗的字吃 `flags.text`、ensign 標 `nation`）⇒ `masks/rigging/channels.vox.txt`、`rigging_plan.json`、`textures/ensign.png`、`verify_rigging.json`；套用 `design/tools/rigging_apply.py`（3 分鐘）。
+- **channels**（`-channels`，關聯 `支索板`，兩舷一件）2,540 格：每舷 shrouds 前 7、主 8、後 5（＋中桅 backstay 前、主各 1；藍鯊號 W 的 6／7／4 各加一根，⚠ VOC 規格沒寫）、間距 6。
+  - 主桅後傾 4° ⇒ 桅頂在 x ≈ 396；shrouds 從 x 398 往後排到 350、落在 halfdek 的舷牆外 ⇒ channel 高度照 x 380 的舷頂（z_at）；後桅從 x 262 往後、照 hut 舷頂（x 250）。照桅位那一欄的舷頂 ⇒ channel 在船腰高度、支索穿過高的船樓舷牆（藍鯊號主桅那一排撞過的坑）。前桅整排在 bak 上（609–567）。
+- 固定點 149、繩 125（shrouds 40、中桅 shrouds 18、futtock 18、上桅 shrouds 8、backstays 4、stays 8、艏斜桅 4、帆自己的繩 25）；ratlines 用橫繩組 12 組（每根桅 lower／topmast × 兩舷），下桅 6 組 `climb=1` 繩梯（落腳點站得住：climb_bad 0）。
+- 帆 12：前／主 course、topsail、topgallant（bramzeil）、後中桅帆 kruiszeil、後桅三角帆 bezaan（clew 在 hut 上方、sheet 綁 hut 兩舷舷頂、tack 綁 halfdek）、斜桅帆 blinde、斜桅頂帆 bovenblinde、船尾旗（荷蘭三色、白帶 **VOC**，掛在三角帆桁後端，meta `kind=flag, flag=ensign, nation=dutch`）、主桅頂橘色長旗（pennant）。
+- **帆裝三段**（照帆的 meta 算：topsail 1、topgallant／gaff 2、course 3；斜桅帆、斜桅頂帆 set 3、三角帆 set 2）：
+
+  | 段 | 張哪幾面 |
+  |---|---|
+  | 1 收帆 | fore-topsail、main-topsail、mizzen-topsail |
+  | 2 戰鬥帆 | ＋ fore-topgallant、main-topgallant、mizzen-lateen |
+  | 3 滿帆 | ＋ fore-course、main-course、spritsail、sprit-topsail |
+
+  收帆、戰鬥帆都至少一面、三段分得出來。
+- 讀數：`tools/check_stage7.py`：channels 結果帳 0 差；CLI 繩 397（含展開的橫繩）、ropes_broken 0、帆 12、sails_broken 0；meta 帆 12／12、帆自己的繩 25／25、sail 標錯 0；帆桁 meta 的 sail 都是某一面帆的名字。**反向對照**：`draft_rigging.py --probe=nometa=main-topgallant.sheet-S`、`check_stage7.py --drop=fore-topgallant.sheet-P` ⇒ 都只報那一條。產生程式重跑兩次逐位元組相同。
+- 過程圖：`overlays/step8_full.png`。
+
+## 步驟 9 砲、砲具與砲索（2026-11-18）
+設計 plan.json `guns_build`、`gunfittings_build`；產生 `design/draft_guns.py`（照抄藍鯊號，沒改程式；4 分鐘）⇒ `guns_placement.json`、`verify_guns.json`；落格 `design/tools/build_guns.py`（名字表加 24／18 磅）。
+- **38 門 ＝ VD p.508 1671 表**（全部外部模型、沿用現有的砲、掛在所在甲板的子作品；P 舷 mirror=y；meta kind=gun、gun、deck、side、port）：
+  - overloop 每舷 10 門：從船尾往前 8 磅（camer）、18 磅 ×3、24 磅 ×2（主桅兩旁）、18 磅 ×4。
+  - verdeck 每舷 8 門：8 磅 ×6、bak 底下 4 磅 ×2；鏡板（kajuit）2 門 8 磅（camer）。
+  - 24 磅 ＝ 憲法號 `-gun-24`（0.1 m、scale 1）、18 磅 ＝ 憲法號 `-gun-long18`（scale 0.5）、8 磅 ＝ `ridge-two-centurion-01m-gun-8l`（0.5）、4 磅 ＝ `pinnacle-patache-01m-gun-4l`（0.5）—— 擺法（pivot）照康塞普西翁號／餘燼號／藍鯊號用過的那一份；砲種代碼都在遊戲砲種表。
+- 讀數（`tools/check_stage8.py`，從作品讀；Blockside 路徑改指 `Blocksail/external/Blockside` —— Valhalla 底下已經沒有）：模型 38 ＝ 設計、CLI ok 38；參數 ≠ 設計 0；外框（gunsim vs CLI）最大差 0.05；碰撞 0 門；砲口不在船殼外 0 門（伸出 1.0–8.5；最船尾 camer 那兩門船殼收得窄、只伸出 1.0–1.25）；meta 不合 0；設計那一側砲撞砲 0、兩舷不對稱 0。**反向對照**：`--push=砲M-S04:3`（往外推）⇒ 碰撞只報那一門 5,275 樣本；`--push=U-chase-stern-P:-6`（往裡拉）⇒ 只報那一門、伸出 −0.0。
+- **砲具與砲索**（Ship_Guns §4.4，照藍鯊號補做的那一套）：`draft_gunfittings.py` ⇒ `tools/build_gunfittings.py`；子作品 `-gunfittings`（關聯 `砲具`，meta `kind=gunfittings` —— 遊戲那側才改得了格子）190 格（船牆的環 152、甲板環 38）、固定點 114；繩 190 ＝ 38 門 × 5（breeching ×2、side tackle ×2、train tackle）。`tools/check_stage12.py`：結果帳 0 差、固定點不在實心上 0、砲索 CLI 不是 ok 的 0、每門五條缺 0、端點對不上 0；設計那一側浮空 0、鏡像差 0。⚠ 沒做 shot garland 與 rammer／sponge。
+- 組裝件 1 元件、空腔 0。

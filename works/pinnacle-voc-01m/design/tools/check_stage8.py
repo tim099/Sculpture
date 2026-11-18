@@ -18,10 +18,12 @@ from wio import export_list
 from gunsim import Grid, Gun, inset_offsets
 WORKS = os.environ.get('SCULPT_WORKS') or os.path.dirname(os.path.dirname(os.path.abspath(design)))   # worktree 只放 design/ ⇒ 作品資料讀共用的那一份
 VALHALLA = os.path.dirname(os.path.dirname(WORKS))
+# 金冠號：Blockside 已搬到 Blocksail/external/Blockside（Valhalla 底下沒有了）
+BS_ROOT = os.environ.get('BLOCKSIDE') or (os.path.join(VALHALLA, 'Blockside') if os.path.isdir(os.path.join(VALHALLA, 'Blockside')) else 'D:/Unity/Blocksail/external/Blockside')
 plan = json.load(open(os.path.join(design, 'plan.json'), encoding='utf-8'))
 GB = plan['guns_build']
 PL = {r['name']: r for r in json.load(open(os.path.join(design, 'guns_placement.json'), encoding='utf-8'))['rows']}
-CODES = {g['code'] for g in json.load(open(os.path.join(VALHALLA, 'Blockside', 'src', 'config', 'game.json'), encoding='utf-8'))['guns'].values()}
+CODES = {g['code'] for g in json.load(open(os.path.join(BS_ROOT, 'src', 'config', 'game.json'), encoding='utf-8'))['guns'].values()}
 
 models = {}
 cli_box, cli_ok = {}, {}

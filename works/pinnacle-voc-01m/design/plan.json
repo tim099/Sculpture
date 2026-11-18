@@ -206,6 +206,52 @@
   "lateen_src": "後桅三角帆桁 74 呎（Witsen 規則：後桅 ＋ 2；研究筆記 §9）；角度、吊點照藍鯊號（40°、前端往後 40%）；meta yard=gaff、rig=lateen（Ship_Masts §5）",
   "bobstay_z": [52, 58]
  },
+ "rigging": {
+  "src": "設計決定；數值照造船規格 Ship_Rigging §6–7（繩的色、粗、slack；預設風 4.5,−1.5,0）；程式照藍鯊號 draft_rigging（中桅、上桅、斜桅頂桅的支索與帆；ratlines 用橫繩組、下桅那組標繩梯 climb=1）",
+  "colors": {"standing": "#2b2620", "running": "#a08458", "sail": "#f2ead8", "channel": 136, "deadeye": 36},
+  "channels": {
+   "shrouds": {"fore": 7, "main": 8, "mizzen": 5},
+   "backstays": {"fore": 1, "main": 1},
+   "spacing": 6,
+   "first_aft": {"fore": 3, "main": 14, "mizzen": 18},
+   "z_at": {"main": 380, "mizzen": 250},
+   "width": 4,
+   "below_rail": 3,
+   "src": "設計決定：每舷 shrouds 前 7、主 8、後 5（藍鯊號 W p.~80 的 6／7／4 再各加一根，本船大一號；VOC 規格沒寫 ⚠）、中桅 backstay 前、主各 1；間距 6。主桅的桅頂因後傾 4° 在 x ≈ 396 ⇒ shrouds 從 x 398 往後排（9 根到 350）、channel 落在 halfdek 的舷牆外 ⇒ 高度照 x 380 的舷頂（z_at）；後桅同理：從 x 262 往後排、照 hut 舷頂（x 250）—— 照桅位那一欄的舷頂的話 channel 在船腰的高度、支索穿過高的船樓舷牆（藍鯊號 first_aft −12 那次的坑）；前桅都在 bak 上（x 609–567），照桅位"
+  },
+  "topmast_shrouds": 3,
+  "tgallant_shrouds": 2,
+  "thick": {"shroud": 1.3, "topmast_shroud": 0.9, "tgallant_shroud": 0.5, "futtock": 0.6, "backstay": 0.9, "stay": 1.5, "tm_stay": 1.0, "tg_stay": 0.6, "bobstay": 1.3, "sheet": 0.5, "course_sheet": 0.6, "tack": 0.6},
+  "ratlines": {"step": 4, "lower": {"start": 7, "stop": 16}, "topmast": {"start": 4, "stop": 10}, "min_span": 5, "th": 0.3, "tm_th": 0.25, "color": "#2b2620", "src": "Ship_Rigging §6：橫繩組、每 4 格一道、lower start 7 stop 16、topmast start 4 stop 10、短於 5 格不畫；下桅那組 climb=1"},
+  "sails": {
+   "fullness": 1.05, "course_clew_above_rail": 5, "course_in": 0.9, "clew_in": 0.1, "sprit_drop": 50, "sheet_aft": 60, "tack_fwd": 50,
+   "lateen_clew": {"mizzen": [200, 170]},
+   "lateen_tack": {"mizzen": ["alcazar", 340]},
+   "lateen_sheet_x": 195,
+   "sprit_belay_x": 610,
+   "src": "設計決定（照藍鯊號，距離 × 1.2）：course 帆腳在舷頂上 5 格；上桅帆、中桅帆的 sheet 綁下一根帆桁同舷的 earing；後中桅帆（kruiszeil）的 sheet 綁後桅桅樓邊；三角帆（bezaan）的 clew 在 hut 上方（x 200、z 170）、sheet 綁 hut 兩舷舷頂（x 195）、tack 綁 halfdek（x 340）；斜桅帆的 sheet 綁 bak 前段舷頂（x 610）；斜桅頂帆的 sheet 綁斜桅帆桁的 earing"
+  },
+  "sail_set": {"spritsail": 3, "sprit_topsail": 3, "gaff": 2},
+  "flags": {"ensign": [44, 30], "pennant": [75, 6], "pennant_color": "#ff8c1a", "text": "VOC", "nation": "dutch", "src": "設計決定：船尾旗 ＝ 荷蘭三色（紅白藍）白帶上 VOC 字樣（Vereenigde Oostindische Compagnie 的船旗；⚠ 正式的是交疊字母組，這裡是像素字）、標 nation=dutch；掛在後桅三角帆桁後端；主桅頂一條橘色長旗（親王旗的橘）；大小 × 1.2 —— ⚠ 旗的樣式是一般認識、沒逐頁讀"},
+  "wind": [4.5, -1.5, 0],
+  "sail_seconds": 3
+ },
+ "guns_build": {
+  "assembly": "pinnacle-voc-01m-assembly", "hull": "pinnacle-voc-01m",
+  "deck_works": {"main": "pinnacle-voc-01m-deck-main", "puente": "pinnacle-voc-01m-deck-puente"},
+  "prefix": {"main": "M", "puente": "U"},
+  "types": {
+   "24l": {"work": "basecamp-frigate-constitution-01m-gun-24", "scale": 1, "pivot": [7.5, 19.5, 0], "meta": {"kind": "gun", "gun": "24l"}, "src": "VD p.508（1671）：青銅 24 磅 ×4 ⇒ 憲法號 24 磅長砲（0.1 m、scale 1；餘燼號同一份擺法）"},
+   "18l": {"work": "basecamp-frigate-constitution-01m-gun-long18", "scale": 0.5, "pivot": [13.5, 38.5, 0], "meta": {"kind": "gun", "gun": "18l"}, "src": "VD p.508：鐵 18 磅 ×14 ⇒ 憲法號 18 磅長砲（0.05 m、scale 0.5；康塞普西翁號、餘燼號同一份擺法）"},
+   "8l": {"work": "ridge-two-centurion-01m-gun-8l", "scale": 0.5, "pivot": [7.5, 35, 0], "meta": {"kind": "gun", "gun": "8l"}, "src": "VD p.508：鐵 8 磅（camer ×4、上層 ×10）＋青銅 8 磅 ×2 ⇒ 8 磅通用部件（同藍鯊號；Ship_Guns §2.2 砲只跟同一種砲共用模型）"},
+   "4l": {"work": "pinnacle-patache-01m-gun-4l", "scale": 0.5, "pivot": [6.5, 28, 0], "meta": {"kind": "gun", "gun": "4l"}, "src": "VD p.508：鐵 4 磅 ×4 ⇒ 4 磅通用部件（聖羅曼號，同藍鯊號）"}
+  },
+  "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [-2, -1, 0, 1], "step": 0.5, "back_max": 45, "inset": 0.2, "src": "Ship_Guns §4.2（同藍鯊號）：從舷牆外面往裡退（每步 0.5 格），退到模型每一格的格心＋八個角都不在組裝件的實心格裡；先挑 ok（砲口伸出、砲口空、腳下有甲板）、再挑低的、再退得少；back_max 45（24 磅砲比藍鯊號的 12 磅長）"},
+  "chase": {"deck": "puente", "type": "8l", "phis": [90, 85, 95, 80, 100, 75, 105], "dl": 3, "src": "鏡板兩個砲門（plan.stern.rows port，kajuit 那一層）放 in de camer 的 8 磅 ×2；砲口朝 −x ＝ φ 90，照角度搜"},
+  "support_min": 0.5,
+  "support_src": "同藍鯊號：砲最底下那層格子正下方有實心的比例 ≥ 0.5"
+ },
+ "gunfittings_build": {"work": "pinnacle-voc-01m-gunfittings", "title": "金冠號 砲具（船牆與甲板的環）", "link": "砲具", "ring": {"offset": [8, 9, 10, 7, 11, 6, 12], "color": 73, "src": "造船規格 §4.4（同藍鯊號）：船牆的環在砲門中線往船尾／船頭 8 格（不行就換 9／10／11 …）；一格鐵釘進牆、外面一格當環；高度 ＝ 那一側 eye 的高度"}, "deck_ring": {"back": [9, 8, 10, 7, 11, 6, 12, 13, 14], "lat": [0, -3, 3, -5, 5, 8, -10, 10, -13, 12, -16], "color": 73, "src": "造船規格 §4.4：甲板的環在砲架尾（train）往船裡 9 格"}, "ropes": {"breeching": {"slack": 1.12, "thickness": 0.6, "color": "#b59a6a", "group": "guns/breeching"}, "tackle": {"slack": 1.03, "thickness": 0.35, "color": "#b59a6a", "group": "guns/tackle"}, "train": {"slack": 1.05, "thickness": 0.35, "color": "#b59a6a", "group": "guns/train"}, "src": "造船規格 §4.4 ／ §6 砲索那一列：breeching 1.12、0.6；side tackle 1.03、0.35；train tackle 1.05、0.35；#b59a6a"}, "src": "照藍鯊號（收穫號 TASK-0624 同一套）—— 船牆的環、甲板環、breeching／side tackle／train tackle；⚠ 沒做 shot garland 與 rammer／sponge"},
  "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 68, "bottom_top_z": 48, "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同藍鯊號）；水線上焦油褐 136、水線下深褐 68（W：pik en teer 裡外上下；研究筆記 §5）"},
  "espolon": {
   "len_beyond_stem": 74,

@@ -19,11 +19,12 @@ from wio import export_list
 LINK = {'fore': '前桅', 'main': '主桅', 'mizzen': '後桅', 'bowsprit': '艏斜桅'}
 MASTS = ('fore', 'main', 'mizzen')
 DECK_OF = {'fore': 'castillo', 'main': 'puente', 'mizzen': 'alcazar'}       # 下桅繩梯落腳的那一層（舷牆內側）
-FONT = {'G': ['.XX', 'X..', 'X.X', 'X.X', '.XX'], 'W': ['X.X', 'X.X', 'XXX', 'XXX', 'X.X'], 'C': ['.XX', 'X..', 'X..', 'X..', '.XX']}
+FONT = {'G': ['.XX', 'X..', 'X.X', 'X.X', '.XX'], 'W': ['X.X', 'X.X', 'XXX', 'XXX', 'X.X'], 'C': ['.XX', 'X..', 'X..', 'X..', '.XX'],
+        'V': ['X.X', 'X.X', 'X.X', 'X.X', '.X.'], 'O': ['.X.', 'X.X', 'X.X', 'X.X', '.X.']}      # 金冠號：VOC
 
 
-def ensign_png(path, W, H):
-    """荷蘭三色（紅白藍）、白帶中間 GWC 黑字（荷蘭西印度公司）。圖的左上角 ＝ 角 0（帆桁那一端）、欄 → 往飛端、列 → 往下。"""
+def ensign_png(path, W, H, text='GWC'):
+    """荷蘭三色（紅白藍）、白帶中間黑字（藍鯊號 GWC 荷蘭西印度公司；金冠號 VOC 東印度公司 —— plan.rigging.flags.text）。圖的左上角 ＝ 角 0（帆桁那一端）、欄 → 往飛端、列 → 往下。"""
     im = Image.new('RGBA', (W, H), (255, 255, 255, 255))
     px = im.load()
     for x in range(W):
@@ -32,9 +33,9 @@ def ensign_png(path, W, H):
                 px[x, y] = (174, 28, 40, 255)
             elif y >= 2 * H // 3:
                 px[x, y] = (33, 70, 139, 255)
-    x0 = W // 2 - 5
+    x0 = W // 2 - (4 * len(text) - 1) // 2
     y0 = H // 3 + (H // 3 - 5) // 2
-    for i, ch in enumerate('GWC'):
+    for i, ch in enumerate(text):
         for r, row in enumerate(FONT[ch]):
             for c, v in enumerate(row):
                 if v == 'X':
@@ -92,7 +93,7 @@ def main():
         xm = M[key]['x']
         n = CH['shrouds'][key] + CH['backstays'].get(key, 0)
         xs = [xm - CH['first_aft'][key] - i * CH['spacing'] for i in range(n)]
-        zc = top_z(xm) - CH['below_rail']
+        zc = top_z(CH.get('z_at', {}).get(key, xm)) - CH['below_rail']      # 金冠號：channel 的高度照哪一欄的舷頂（主桅、後桅的 shrouds 落在 halfdek／hut 那一段，照桅位那一欄的舷頂 ⇒ 支索穿過高的船樓舷牆）
         for x in range(min(xs) - 3, max(xs) + 4):
             o = max(hout.get((x, zc - 1), -1), hout.get((x, zc), -1))
             if o < 0:
@@ -363,13 +364,13 @@ def main():
     pk = np.array(pyp['at']) + (np.array(pk_loc, float) + 0.5 - np.array(pyp['pivot']))
     sail('ensign', ['model:%s/%s/peak' % (Lk, yn), fmt(pk - [ew, 0, 0]), fmt(pk - [ew, 0, eh]),
                     'model:%s/%s/%d,%d,%d' % (Lk, yn, pk_loc[0], pk_loc[1], pk_loc[2] - eh)],
-         [3], [2, 1], {'kind': 'flag', 'flag': 'ensign'}, None, fullness=1.04, color='#ffffff', texture='textures/ensign.png')
+         [3], [2, 1], dict({'kind': 'flag', 'flag': 'ensign'}, **({'nation': FL['nation']} if FL.get('nation') else {})), None, fullness=1.04, color='#ffffff', texture='textures/ensign.png')   # 金冠號：ensign 標 nation（Ship_Rigging §9.1，TASK-1208）
     tz = math.floor(M['main']['truck'])
     tx = ax('main', tz)
     pl_, ph = FL['pennant']
     sail('pennant', [fmt([tx + 0.5, YC + 0.5, tz - 1]), fmt([tx - pl_, YC + 0.5, tz - 2]), fmt([tx + 0.5, YC + 0.5, tz - 1 - ph])],
          [2], [1], {'kind': 'flag', 'flag': 'pennant', 'mast': 'main'}, None, fullness=1.04, color=FL['pennant_color'])
-    ensign_png(os.path.join(design, 'textures', 'ensign.png'), ew, eh)
+    ensign_png(os.path.join(design, 'textures', 'ensign.png'), ew, eh, FL.get('text', 'GWC'))
 
     metas = [['sail', s['name'], s['meta']] for s in sails] + [['rope', r['name'], r['meta']] for r in ropes if r['meta']]
     if probe:
