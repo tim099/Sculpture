@@ -19,17 +19,17 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 
 def make_sail_mat_png(out_png):
-    """64x64 像素畫：傳統台灣草蓆編紋＋水平竹骨壓條＋邊繩加固。"""
+    """60x60 像素畫：傳統台灣草蓆編紋＋4 道水平竹骨壓條（準對 5 格篷葉 v=0.2/0.4/0.6/0.8）＋邊繩加固。"""
     os.makedirs(os.path.dirname(out_png), exist_ok=True)
-    img = Image.new('RGBA', (64, 64), (214, 184, 126, 255))
+    img = Image.new('RGBA', (60, 60), (214, 184, 126, 255))
     px = img.load()
-    for y in range(64):
-        for x in range(64):
-            # 水平竹片壓骨（每 11 px 一道，頂/底各一道）
-            if y in (0, 1, 12, 24, 36, 48, 62, 63):
+    for y in range(60):
+        for x in range(60):
+            # 水平竹片壓骨（4 道內竹骨對齊 v=0.2,0.4,0.6,0.8 即 y=11..12,23..24,35..36,47..48；頂底邊框各一道）
+            if y in (0, 1, 11, 12, 23, 24, 35, 36, 47, 48, 58, 59):
                 px[x, y] = (118, 78, 36, 255)
             # 垂直拼蓆縫線（三幅併縫）
-            elif x in (0, 1, 21, 42, 62, 63):
+            elif x in (0, 1, 19, 20, 39, 40, 58, 59):
                 px[x, y] = (158, 120, 68, 255)
             # 交錯編織細紋
             elif ((x // 2 + y // 2) % 2) == 0:
@@ -169,7 +169,7 @@ def main():
 
         # 5. Apply sail & rope meta TSV
         meta_lines = []
-        meta_lines.append('sail\tmain\t' + json.dumps({'kind': 'sail', 'mast': 'main', 'sail': 'course', 'set': 1}, ensure_ascii=False))
+        meta_lines.append('sail\tmain\t' + json.dumps({'kind': 'sail', 'mast': 'main', 'sail': 'course', 'set': 1, 'battens': 4}, ensure_ascii=False))
         meta_lines.append('sail\tpennant\t' + json.dumps({'kind': 'flag', 'mast': 'main', 'flag': 'pennant', 'nation': 'none'}, ensure_ascii=False))
         for rname, *_rest, rmeta in ropes:
             meta_lines.append('rope\t' + rname + '\t' + json.dumps(rmeta, ensure_ascii=False))
