@@ -19,7 +19,7 @@ def cli(*args, ok=(0,)):
     return out
 
 
-w = PL['work']
+w = 'gura-pinas-01m-door'      # 金冠號：門板沿用藍鯊號那一件（draft_doors 產的格子逐格相同；Ship_Ends §5、Ship_Setup §2.1）⇒ 不建、不貼、固定點照它的
 path = os.path.abspath(os.path.join(design, 'masks', 'doors', 'door.vox.txt')).replace('\\', '/')
 n = sum(1 for l in open(path, encoding='utf-8') if l.strip() and not l.startswith('#'))
 if not os.path.exists(os.path.join(WORKS, w, 'work.json')):
@@ -31,7 +31,7 @@ if not os.path.exists(os.path.join(WORKS, w, 'work.json')):
     if not m or int(m.group(1).replace(',', '')) != n:
         raise SystemExit('✗ placed ≠ %d：%s' % (n, out[-800:]))
     print('✓ 建立 %s（%d 格）' % (w, n), flush=True)
-for an, at in PL['anchors'].items():
+for an, at in ({} if w.startswith('gura-') else PL['anchors']).items():
     cli('op=work', 'sub=anchor', 'persona=pinnacle', 'work=' + w, 'name=' + an, 'at=%d,%d,%d' % tuple(at), 'overwrite=1',
         'note=門的鉸鏈軸（hinge-a 在上、hinge-b 在下 ⇒ 軸朝下 ⇒ 往模型 +x 開；draft_doors.py）')
 xyz = lambda v: ','.join('%g' % c for c in v)

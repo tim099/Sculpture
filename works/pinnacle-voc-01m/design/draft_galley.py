@@ -17,9 +17,9 @@ LEAD, IRON, SOOT, EMBER, FLAME = 109, 73, 36, 240, 252
 COPPER, COPPER_D = 200, 168
 SIZE = (30, 30, 60)
 PIVOT = (15, 15, 0)
-AT = (469.5, 160.5, 62)                      # 爐的中心 x 469.5（船艏樓甲板橫樑 x 464／480 之間放得下煙囪）、中線、腳踩上甲板面（z 61 的上一格）
+AT = (599.5, 160.5, 82)                      # 金冠號：bak 底下中線、x 599.5 —— verdeck 在 x 589–612 是 81 ⇒ 腳踩 82；煙囪 x 603–605 在 bak 甲板橫樑 592–593／608–609 之間；x 581.5 那一版爐身頂撞 bak 甲板（本船 bak 底下淨高 17、藍鯊號 18）
 SCALE = 0.5
-DECK_Z = 82
+DECK_Z = 98                                  # 金冠號：bak 甲板在 x 603 的甲板面（96 ＋ 舷弧 2）
 
 
 def build():
@@ -140,6 +140,8 @@ def main():
                     world.add(tuple(int(math.floor(c)) for c in p))
     D = np.loadtxt(os.path.join(design, 'masks', 'decks', 'castillo.vox.txt'), delimiter=',', comments='#', dtype=np.int64, ndmin=2, encoding='utf-8')   # 從甲板的設計遮罩算（刻過之後重跑照樣同一份）
     hole = sorted(tuple(r) for r in D.tolist() if tuple(r[:3]) in world)
+    hs = set(tuple(r[:3]) for r in hole)      # 金冠號：煙囪是空心的（煙道）⇒ 只刻重疊的格會在煙道正中間留一格浮空的甲板 ⇒ 四鄰（同一層）都在洞裡的甲板格也刻
+    hole = sorted(set(hole) | {tuple(r) for r in D.tolist() if tuple(r[:3]) not in hs and all((r[0] + a, r[1] + b, r[2]) in hs for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1)))})
     with open(os.path.join(design, 'masks', 'galley', 'deck_hole.vox.txt'), 'w', encoding='utf-8', newline='\n') as f:
         f.write('# 船艏樓甲板讓煙囪過的洞（從甲板-castillo 刻掉；帶現在的顏色）\n')
         for r in hole:

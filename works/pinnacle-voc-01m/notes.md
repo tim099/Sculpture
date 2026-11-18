@@ -122,3 +122,28 @@
 - 讀數（`tools/check_stage8.py`，從作品讀；Blockside 路徑改指 `Blocksail/external/Blockside` —— Valhalla 底下已經沒有）：模型 38 ＝ 設計、CLI ok 38；參數 ≠ 設計 0；外框（gunsim vs CLI）最大差 0.05；碰撞 0 門；砲口不在船殼外 0 門（伸出 1.0–8.5；最船尾 camer 那兩門船殼收得窄、只伸出 1.0–1.25）；meta 不合 0；設計那一側砲撞砲 0、兩舷不對稱 0。**反向對照**：`--push=砲M-S04:3`（往外推）⇒ 碰撞只報那一門 5,275 樣本；`--push=U-chase-stern-P:-6`（往裡拉）⇒ 只報那一門、伸出 −0.0。
 - **砲具與砲索**（Ship_Guns §4.4，照藍鯊號補做的那一套）：`draft_gunfittings.py` ⇒ `tools/build_gunfittings.py`；子作品 `-gunfittings`（關聯 `砲具`，meta `kind=gunfittings` —— 遊戲那側才改得了格子）190 格（船牆的環 152、甲板環 38）、固定點 114；繩 190 ＝ 38 門 × 5（breeching ×2、side tackle ×2、train tackle）。`tools/check_stage12.py`：結果帳 0 差、固定點不在實心上 0、砲索 CLI 不是 ok 的 0、每門五條缺 0、端點對不上 0；設計那一側浮空 0、鏡像差 0。⚠ 沒做 shot garland 與 rammer／sponge。
 - 組裝件 1 元件、空腔 0。
+
+## 步驟 10 彈藥庫與甲板物件（2026-11-18）
+設計 plan.json `gear_build`；產生 `design/draft_gear.py`（照抄藍鯊號，沒改程式）；落格 `design/tools/build_gear.py`。
+- **彈藥庫**（`-magazine`，關聯 `彈藥庫`，meta `kind=magazine、pos=aft、powder_lb=6400`）8,349 格：koebrug 船尾 x 222–270（後艙口 300–312 之後）、門開在船頭那道艙壁、對著 koebrug 梯子（腳 x 340）；頂在 overloop 的樑底下（z 64）；銅皮 168、橡木框 136、松木地板 177。固定點 `blast` (249,160,53)、`door` (270,160,42)。火藥桶 **64 桶**（憲法號 `-powder-barrel` scale 0.2；⚠ VOC 1660 年代的軍需清單沒找到 ⇒ 藍鯊號 W p.282 的 32 桶 × 2，設計決定）全在底層（底層放得下 98）。
+- **小艇架**（`-boat-skids`，關聯 `小艇架`）636 格：船腰三座橫架 x 470、505、530（閃開主艙口、往 verdeck 的前梯井、前艙口）、橫樑 z 91。
+- 模型（沿用現有元件）：主絞盤（餘燼號）overloop 中線 x 428（主桅與主艙口之間；VOC 的 spil 在下層砲甲板）、羅經櫃（夜隼號）verdeck x 325（halfdek 底下的 stierplecht，舵手盯著羅盤操 kolderstok —— 研究筆記 §8）、小艇（餘燼號 cutter 9 m）擱在小艇架上 x 505、z 93。
+- **廚房爐灶**（Ship_Fittings §9.13）：沿用藍鯊號的 kombuis `gura-pinas-01m-galley`（`draft_galley.py` 產的模型格子跟它逐格相同 ⇒ 引用、不另做）：verdeck 子作品的模型 `爐灶`（scale 0.5、at 599.5,160.5,82、kind=galley），bak 底下中線，煙囪從 bak 甲板橫樑 592–593／608–609 之間穿出 ⇒ 甲板-castillo 刻 9 格（`masks/galley/deck_hole.vox.txt`；`check_decks.py` 扣掉這個洞）。
+  - 🩸 第一版擺在 x 581.5：本船 bak 底下淨高 17（藍鯊號 18）⇒ 爐身頂撞到 bak 甲板與橫樑，「洞」算成 18 格、又留一格煙道正中間浮空的甲板（組裝件 2 個元件）。補回 18 格、挪到 verdeck 平的那一段（x 589–612 都是 81）、洞只算煙囪 3×3（煙道中心也刻：四鄰都在洞裡的甲板格一起刻）⇒ 1 元件。
+- **艙壁門**（Ship_Fittings §9.7）：`draft_doors.py` 照 plan 的四道 break ⇒ 8 扇（halfdek、hut、bak 後緣 rotate 180、bak 前隔板），門板沿用藍鯊號 `gura-pinas-01m-door`（格子逐格相同；`tools/build_doors.py` 改成引用、不建），meta kind=door open=side；撞實心 0、背後都是艙壁、腳下實心。⚠ hut 那道的門洞只有 11 格高（hut 底下淨高小），門板 16 格照樣蓋得住。
+- 讀數（`tools/check_stage9.py`，從作品讀）：彈藥庫、小艇架結果帳缺 0／多 0／色差 0；模型 67 ＝ 設計、CLI ok 67；powder_lb 6,400 ＝ 64 × 100；blast 空氣、door 空氣且腳下實心；參數 ≠ 設計 0、撞實心 0、腳下 12 格內沒有實心 0、模型彼此重疊 0；新格落在實心上 0、封閉空腔 0、浮空 0、鏡像差 0。`check_decks.py` 11 件問題 0（bak 甲板扣掉煙囪洞）。組裝件 1 元件、空腔 0、link_overlap 0、models_broken 0（畫 125 個）。**反向對照**：`draft_gear.py --probe=nokind=小艇` ⇒ 只報小艇。
+
+## 步驟 11 舵、操舵桿、錨（2026-11-18）
+設計 plan.json `rudder_anchor_build`、`whipstaff`；產生 `design/draft_rudder_anchor.py`（照抄藍鯊號，沒改程式）、新寫 `design/draft_whipstaff.py`；落格 `design/tools/build_rudder_anchor.py`、操舵桿用 CLI 直接建。
+- **舵**（`-rudder` 2,879 格，組裝件的外部模型 `舵`）：沿艉柱後緣（斜 7.1°）從龍骨底到 z 85（heck-balk z 91 底下）；3 格厚、前緣兩側削 1 格；水線下焦油深褐、上船殼褐、每 15 格一道鐵箍。meta `kind=rudder`、鉸鏈 (200, 160.5, 0)、軸 (−0.1234, 0, 0.9924)、max_deg 35、turn_axis=hinge、**spin**（rudder、±35、lag 0.3）。固定點 `stock-top` (186,160,85) 離船殼 3 格。
+- **操舵桿 kolderstok**（不是舵輪）：研究筆記 §8 —— Witsen 全書只寫 kolderstok（W p.88、p.92：長 9 呎、粗 4 duim），1660 年代的荷蘭大船沒有舵輪 ⇒ 遊戲的操舵鏈有「舵柄（獨立模型）kind=tiller」那一列（Ship_Helm）⇒ 新做 `-whipstaff`（0.1 m，59 格：1 格粗的桿 z 79–103、verdeck 甲板面上一圈 rolle、頂上 3×3 握把、底下接舵柄的鐵眼），掛成 verdeck 子作品的模型 `操舵桿`（at 260.5,160.5,91、kind=tiller、spin rudder ±25°、轉軸 spin_pivot 在 rolle、spin_axis 沿船長方向）；verdeck 刻 1 格讓桿穿過（`masks/whipstaff/deck_hole.vox.txt`；`check_decks.py` 扣掉）。位置：halfdek 底下的 stierplecht、hut 前緣 262 之後、後桅 280 之前；羅經櫃從步驟 10 的 x 325 挪到它旁邊 x 270（VD p.508「by de compassen」）。⚠ 底下的舵柄 roerpen（從舵頭穿進砲手長艙）沒做；⚠ 擺角 ±25° 是挑的。藍鯊號、收穫號當時照遊戲放舵輪 —— 本船改用 tiller，遊戲的操舵鏈照樣成立（打掉操舵桿 ＝ 舵輪沒了）。
+- **錨**：共用錨元件 ×2（scale 0.85、kind=anchor、anchor=bower）吊在船頭舷外 x 619.2、ring z 121、錨臂順著船殼切線（rz ±83）、離船殼 6 格（試了 x 618–626 × z 118–124）；錨架 `-anchor-gear`（billboard 托板，關聯 `錨架`）736 格；錨鏈孔固定點 hawse-S／P (658, ±25, 97)（只登記、沒有開孔）。
+- 讀數（`tools/check_stage95.py`，從作品讀）：舵、錨架結果帳 0 差；舵模型 CLI ok、stock-top 8 格內有船殼（曼哈頓 3）、舵跟組裝件重疊 0、轉 ±35° 掃進實心 0；錨 2 隻 CLI ok、撞實心 0、腳是錨架、來源有 ring；hawse 在船殼上、在那一舷；問題 0。操舵桿：撞實心 0、鏡像差 0。遊戲讀的那一份（組裝件 `export format=parts`）：舵、操舵桿都有 spin。`check_decks.py` 問題 0；組裝件 1 元件、空腔 0、models_broken 0（畫 129 個）。**反向對照**：`check_stage95.py --drop=錨-P` ⇒ 只報 P 舷沒有錨。
+- 過程圖：`overlays/step11_helm.png`（藏船殼與後甲板以上，看 stierplecht 的操舵桿與羅經櫃）。
+
+## 步驟 13 材質（2026-11-18）
+Ship_Materials §9.5：關聯的 material 管防禦與重量；外部模型的 material 只管反光。
+- **船殼與木頭部件**：全船木頭 ⇒ 不標（遊戲預設橡木 oak）。金飾（galjoen、獅子、hackebort、側廊的金邊）是貼金的木頭 ⇒ 照木頭、不標金屬（設計決定）。
+- **窗玻璃**：關聯 `船尾窗玻璃` material=glass（步驟 6）。
+- **砲管**（模型 meta，只管反光）：青銅 24 磅 ×4 `material=bronze`（VD p.508「metale」）、鐵 18／8／4 磅 ×34 `material=iron`（⚠ VD 1671 表的 2 門青銅 8 磅「by de compassen」沒分出來，8 磅一律鐵）；錨 ×2 `material=iron`（錨在 `-anchor-gear` 子作品裡 ⇒ meta 寫在那件）。用 `work sub=meta file=` 批次標，讀回 `export format=parts`：gun 24l bronze 4、18l iron 14、8l iron 16、4l iron 4、anchor iron 2。
+- `bronze` 只在遊戲那份材質表（TASK-1294 建築用）⇒ 照規格補進雕刻那份 `Sculpture/materials.json`（metal 1、rough 0.45、smooth，跟遊戲那份同值）。

@@ -39,6 +39,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 1,
 				"side": "P"
 			}
@@ -81,6 +82,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 2,
 				"side": "P"
 			}
@@ -123,6 +125,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 3,
 				"side": "P"
 			}
@@ -165,6 +168,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 4,
 				"side": "P"
 			}
@@ -207,6 +211,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 5,
 				"side": "P"
 			}
@@ -249,6 +254,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 6,
 				"side": "P"
 			}
@@ -291,6 +297,7 @@
 				"deck": "puente",
 				"gun": "4l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 7,
 				"side": "P"
 			}
@@ -333,6 +340,7 @@
 				"deck": "puente",
 				"gun": "4l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 8,
 				"side": "P"
 			}
@@ -375,6 +383,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 1,
 				"side": "S"
 			}
@@ -417,6 +426,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 2,
 				"side": "S"
 			}
@@ -459,6 +469,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 3,
 				"side": "S"
 			}
@@ -501,6 +512,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 4,
 				"side": "S"
 			}
@@ -543,6 +555,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 5,
 				"side": "S"
 			}
@@ -585,6 +598,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 6,
 				"side": "S"
 			}
@@ -627,6 +641,7 @@
 				"deck": "puente",
 				"gun": "4l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 7,
 				"side": "S"
 			}
@@ -669,6 +684,7 @@
 				"deck": "puente",
 				"gun": "4l",
 				"kind": "gun",
+				"material": "iron",
 				"port": 8,
 				"side": "S"
 			}
@@ -711,6 +727,7 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": "stern",
 				"side": "P"
 			}
@@ -753,8 +770,174 @@
 				"deck": "puente",
 				"gun": "8l",
 				"kind": "gun",
+				"material": "iron",
 				"port": "stern",
 				"side": "S"
+			}
+		},
+		{
+			"name": "羅經櫃",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "summit-night-falcon-01m-binnacle",
+			"axes": "sculpt",
+			"at": [
+				270,
+				160.5,
+				90
+			],
+			"pivot": [
+				9,
+				13,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.2,
+				0.2,
+				0.2
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "階段九（TASK-0598；draft_gear.py）",
+			"persona": "pinnacle",
+			"created_at": "2026-11-18T13:06:04",
+			"meta": {
+				"kind": "binnacle"
+			}
+		},
+		{
+			"name": "小艇",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "basecamp-ember-01m-boat",
+			"axes": "sculpt",
+			"at": [
+				505,
+				160.5,
+				93
+			],
+			"pivot": [
+				90,
+				26,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "階段九（TASK-0598；draft_gear.py）",
+			"persona": "pinnacle",
+			"created_at": "2026-11-18T13:06:04",
+			"meta": {
+				"boat": "cutter",
+				"kind": "boat",
+				"length_m": 9
+			}
+		},
+		{
+			"name": "爐灶",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "gura-pinas-01m-galley",
+			"axes": "sculpt",
+			"at": [
+				599.5,
+				160.5,
+				82
+			],
+			"pivot": [
+				15,
+				15,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10：廚房爐灶（沿用藍鯊號 kombuis，模型格子逐格相同；bak 底下中線）",
+			"persona": "pinnacle",
+			"created_at": "2026-11-18T13:07:07",
+			"meta": {
+				"kind": "galley"
+			}
+		},
+		{
+			"name": "操舵桿",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "pinnacle-voc-01m-whipstaff",
+			"axes": "sculpt",
+			"at": [
+				260.5,
+				160.5,
+				91
+			],
+			"pivot": [
+				2.5,
+				2.5,
+				13
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 11：kolderstok（1660 年代荷蘭大船的操舵桿；kind=tiller＋spin）",
+			"persona": "pinnacle",
+			"created_at": "2026-11-18T13:14:57",
+			"meta": {
+				"kind": "tiller",
+				"spin": "rudder",
+				"spin_axis_x": 1,
+				"spin_axis_y": 0,
+				"spin_axis_z": 0,
+				"spin_k": 25,
+				"spin_lag": 0.3,
+				"spin_max": 25,
+				"spin_min": -25,
+				"spin_pivot_x": 260.5,
+				"spin_pivot_y": 160.5,
+				"spin_pivot_z": 91.0
 			}
 		}
 	]
