@@ -54,3 +54,13 @@
 - Sculpture 匯出 `pinnacle-tekpai-01m-assembly.vxk`：`10,643` 格、`checksum = c97f31c4`、`繩 13`、`帆 2`、`模型 24`（`網格 16 份`）
 - Blockside `_cache/tekpai.vxk`（含 `ids` 發配 24 件模型＋3 件關聯 ID 後）：`config/vxk_lock.json` = `c:c765f4317d`
 - Blockside 檢驗：`admin.py shipcheck --id tekpai` **`✗ 0　⚠ 0`**、`admin.py ladcheck --id tekpai` **`✗ 0　⚠ 0`**、`admin.py ropebind --id tekpai` 猜測 0 端／不靠 0 端
+
+## 6. 硬骨帆的實體竹篾桿、船身改竹（TASK-1320，2026-11-18）
+
+- Tim：「讓硬骨類似帆桁(有實體 帆會有一段黏在上面)」「用妳的台灣帆竹筏來做」「希望可以讓帆跟竹篾黏著」⇒ 規格寫在 Senate `Ship_Battens`。
+- 新元件 `pinnacle-tekpai-01m-batten`（5×45×5、0.1 m、41 格竹＋竹節；固定點 pivot、arm-P、arm-S），主桅子作品掛 4 根 `batten-1..4`：
+  meta `kind=yard, yard=batten, batten=m, sail=main, mast=main, rotate_z_deg=-18`；轉軸 z 59.7／50.9／42.1／33.3（`design/draft_battens.py`）。物件 id yard-3..6。
+- 讀數：匯入檢查「竹篾」main：4／4 根有桿、綁住 84 點（4 列 × 21）、桿離那一列最遠 0.05 格；遊戲裡帆桁追風 56.9° 後竹篾列離桿最遠 0.044 格；落篷上帆桁往下 42.2 格、竹篾照比例疊下。
+- 船身材質：Tim「另外船身材質可以改成竹子嗎」⇒ `hull`／`甲板-main`／`桅-main` 的 `oak*0.55` 換成 **`bamboo*0.55`**（`design/materials_meta.tsv`、`ship_meta.tsv`）。
+  `bamboo` 是新加的材質（Blockside 材質表：比重 0.7（竹壁）、硬度 0.9、易燃 0.6；雕刻 `Sculpture/materials.json` 同 ID，只畫外觀）⇒ 比重跟橡木一樣，排水量不變（空載 4.1／標準 5／滿載 6 噸）；
+  船殼硬度 ×0.55 → ×0.495（竹比橡木容易打穿，設計決定）、易燃 0.5 → 0.6。
