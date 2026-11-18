@@ -21,6 +21,7 @@
 			"persona": "pinnacle",
 			"note": "",
 			"meta": {
+				"id": "ship-1",
 				"kind": "ship",
 				"waterline_z": 48
 			}
@@ -47,6 +48,7 @@
 			"meta": {
 				"deck": "orlop",
 				"floor": "209:41,661:41",
+				"id": "deck-1",
 				"kind": "deck",
 				"level": 0,
 				"name": "最下層甲板（koebrug）",
@@ -75,6 +77,7 @@
 			"meta": {
 				"deck": "main",
 				"floor": "197:76,253:70,332:64,456:59,554:59,631:62,665:65",
+				"id": "deck-2",
 				"kind": "deck",
 				"level": 1,
 				"name": "下層砲甲板（overloop）",
@@ -103,6 +106,7 @@
 			"meta": {
 				"deck": "puente",
 				"floor": "192:97,332:85,456:80,554:80,631:83,665:86",
+				"id": "deck-3",
 				"kind": "deck",
 				"level": 2,
 				"name": "上層砲甲板（verdeck）",
@@ -131,6 +135,7 @@
 			"meta": {
 				"deck": "alcazar",
 				"floor": "190:116,302:105,400:100",
+				"id": "deck-4",
 				"kind": "deck",
 				"level": 4,
 				"name": "後甲板（halfdek／stierplecht）",
@@ -159,6 +164,7 @@
 			"meta": {
 				"deck": "toldilla",
 				"floor": "187:134,262:127",
+				"id": "deck-5",
 				"kind": "deck",
 				"level": 5,
 				"name": "船尾樓（hut）",
@@ -187,6 +193,7 @@
 			"meta": {
 				"deck": "castillo",
 				"floor": "560:98,612:99,650:102",
+				"id": "deck-6",
 				"kind": "deck",
 				"level": 3,
 				"name": "船艏樓（bak）",
@@ -211,7 +218,10 @@
 			"enabled": true,
 			"created_at": "2026-11-18T12:32:44",
 			"persona": "pinnacle",
-			"note": "步驟 6（TASK-1317）"
+			"note": "步驟 6（TASK-1317）",
+			"meta": {
+				"id": "part-1"
+			}
 		},
 		{
 			"name": "船首像",
@@ -231,7 +241,10 @@
 			"enabled": true,
 			"created_at": "2026-11-18T12:32:45",
 			"persona": "pinnacle",
-			"note": "步驟 6（TASK-1317）"
+			"note": "步驟 6（TASK-1317）",
+			"meta": {
+				"id": "part-2"
+			}
 		},
 		{
 			"name": "船尾裝飾",
@@ -251,7 +264,10 @@
 			"enabled": true,
 			"created_at": "2026-11-18T12:32:47",
 			"persona": "pinnacle",
-			"note": "步驟 6（TASK-1317）"
+			"note": "步驟 6（TASK-1317）",
+			"meta": {
+				"id": "part-3"
+			}
 		},
 		{
 			"name": "hackebort",
@@ -271,7 +287,10 @@
 			"enabled": true,
 			"created_at": "2026-11-18T12:32:49",
 			"persona": "pinnacle",
-			"note": "步驟 6（TASK-1317）"
+			"note": "步驟 6（TASK-1317）",
+			"meta": {
+				"id": "part-4"
+			}
 		},
 		{
 			"name": "船尾窗玻璃",
@@ -293,6 +312,7 @@
 			"persona": "pinnacle",
 			"note": "步驟 6（TASK-1317）：鏡板窗＋側廊窗",
 			"meta": {
+				"id": "part-5",
 				"material": "glass"
 			}
 		},
@@ -316,6 +336,7 @@
 			"persona": "pinnacle",
 			"note": "步驟 7（TASK-1317）",
 			"meta": {
+				"id": "mast-1",
 				"kind": "mast",
 				"mast": "fore"
 			}
@@ -340,6 +361,7 @@
 			"persona": "pinnacle",
 			"note": "步驟 7（TASK-1317）",
 			"meta": {
+				"id": "mast-2",
 				"kind": "mast",
 				"mast": "main"
 			}
@@ -364,6 +386,7 @@
 			"persona": "pinnacle",
 			"note": "步驟 7（TASK-1317）",
 			"meta": {
+				"id": "mast-3",
 				"kind": "mast",
 				"mast": "mizzen"
 			}
@@ -388,6 +411,7 @@
 			"persona": "pinnacle",
 			"note": "步驟 7（TASK-1317）",
 			"meta": {
+				"id": "mast-4",
 				"kind": "mast",
 				"mast": "bowsprit"
 			}
@@ -410,7 +434,10 @@
 			"enabled": true,
 			"created_at": "2026-11-18T12:45:08",
 			"persona": "pinnacle",
-			"note": "步驟 8（TASK-1317）"
+			"note": "步驟 8（TASK-1317）",
+			"meta": {
+				"id": "part-6"
+			}
 		},
 		{
 			"name": "砲具",
@@ -432,6 +459,7 @@
 			"persona": "pinnacle",
 			"note": "步驟 9 砲具（TASK-1317）",
 			"meta": {
+				"id": "gunfittings-1",
 				"kind": "gunfittings"
 			}
 		},
@@ -455,6 +483,7 @@
 			"persona": "pinnacle",
 			"note": "步驟 10（TASK-1317）",
 			"meta": {
+				"id": "magazine-1",
 				"kind": "magazine",
 				"pos": "aft",
 				"powder_lb": 6400
@@ -478,7 +507,10 @@
 			"enabled": true,
 			"created_at": "2026-11-18T13:06:03",
 			"persona": "pinnacle",
-			"note": "步驟 10（TASK-1317）"
+			"note": "步驟 10（TASK-1317）",
+			"meta": {
+				"id": "part-7"
+			}
 		},
 		{
 			"name": "錨架",
@@ -498,7 +530,10 @@
 			"enabled": true,
 			"created_at": "2026-11-18T13:14:43",
 			"persona": "pinnacle",
-			"note": "步驟 11（TASK-1317）"
+			"note": "步驟 11（TASK-1317）",
+			"meta": {
+				"id": "part-8"
+			}
 		}
 	]
 }

@@ -147,3 +147,43 @@ Ship_Materials §9.5：關聯的 material 管防禦與重量；外部模型的 m
 - **窗玻璃**：關聯 `船尾窗玻璃` material=glass（步驟 6）。
 - **砲管**（模型 meta，只管反光）：青銅 24 磅 ×4 `material=bronze`（VD p.508「metale」）、鐵 18／8／4 磅 ×34 `material=iron`（⚠ VD 1671 表的 2 門青銅 8 磅「by de compassen」沒分出來，8 磅一律鐵）；錨 ×2 `material=iron`（錨在 `-anchor-gear` 子作品裡 ⇒ meta 寫在那件）。用 `work sub=meta file=` 批次標，讀回 `export format=parts`：gun 24l bronze 4、18l iron 14、8l iron 16、4l iron 4、anchor iron 2。
 - `bronze` 只在遊戲那份材質表（TASK-1294 建築用）⇒ 照規格補進雕刻那份 `Sculpture/materials.json`（metal 1、rough 0.45、smooth，跟遊戲那份同值）。
+
+## 步驟 12 砲門蓋板（2026-11-18）
+工具 `design/tools/portlids.py`（照抄藍鯊號；`CLOSE_ADJ` 清空 —— 藍鯊號那兩片是照它自己的匯入檢查調的）⇒ `portlids_placement.json`、`verify_portlids.json`、蓋板子作品 `-portlid`（10×9×2：外面船殼褐 136、裡面紅 224、鉸鏈板 73；照最大的開口每邊大 1 格）。
+- 先照步驟 14 匯入＋`admin.py ids`（砲的物件 id）⇒ 回來做蓋板 ⇒ 再 reimport＋ids（蓋板 portlid-1～38）。
+- **38 片 ＝ 每個砲門一片**：overloop 20、verdeck 16、鏡板 2（藍鯊號補做時加的 `to_aft`：砲口朝 −x 的鏡板砲門照樣量）；P 舷 rotate 180 − rz、⛔ 不用 mirror=y；meta kind=portlid、lid_of ＝ 砲的物件 id（照模型 meta 對）、close_deg 68.7–111.3、house 4–10。
+- 讀數（`portlids.py check`）：開著撞船 0、撞砲 0；關著落進船殼最多 1.36%（> 5% 的 0 片）、收砲後關上撞砲 0；砲門全蓋滿（沒蓋到 0）；鉸鏈中心在鉸鏈下 3.55–4.02；掛上去 cells 180 結果帳 0 差、models_bad 0、鉸鏈最大差 0。**反向對照**：house 0（砲不收）⇒ 38 片全撞砲；mirror=y ⇒ 18 片往上開。
+
+## 步驟 14 給遊戲的 meta 與匯入（2026-11-18）
+組裝件 `-assembly` 船殼關聯 kind=ship、waterline_z 48；`work sub=ropecheck` 繩 587、1,174 端全綁好（沒有 bind／snap）；Blockside 自己的 worktree（分支 `pinnacle/1317-voc`，從 dev c24322f）`admin.py import --work pinnacle-voc-01m-assembly --id kroon --name 金冠號`（el `ship-kroon`）⇒ `ids`（155 件）⇒ 修梯子、錨 ⇒ `reimport` ⇒ 蓋板 ⇒ `reimport`＋`ids`（38 片蓋板）⇒ 填 game.json ⇒ `build`、`showlod`、`ancbake`、`shipcheck`。
+- **第一次匯入檢查 ✗ 4**：halfdek、hut 的四座梯子「梯頂接不上甲板」（hi 到 head 之間 4–5 柱懸空，本船舷弧大、船樓甲板邊跟藍鯊號不同）＋ bak 兩座 ⚠ 3 柱 ⇒ 照修法挪梯腳、head 不動（alcazar 420 → 415、toldilla 283 → 278、castillo 543 → 546；alcazar 416 那一版梯腳落在舷弧台階上懸空 1 格 ⇒ 再挪 1）、梯子子作品走差量、24 個梯子點 overwrite ⇒ 樓梯自檢 ✗ 0。錨的鐵網格做不出平滑 ⇒ 錨模型 `render=voxel`。
+- 給遊戲那側的高度（z 從龍骨底，格 ＝ 0.1 m）：水線 48；甲板 koebrug 40、overloop 58（船尾 76）、verdeck 79（船尾 97）、bak 96–101、halfdek 97（船尾 116）、hut 115（船尾 134）；下層砲軸 70–80、上層砲軸 88–105；桅樓平台 前 222、主 245、後 256；主桅頂 480（離水線 43.2 m）；船殼 x 184–669、喙尖 743、艏斜桅 ≈ 790 ⇒ game.json `geo`：`spar [80,135]`、`marines [60,190]`、`center 100`、`aim 75`、`aimZ [30,470]`、`deckAim [62,98]`、`rigAim [190,460]`；`role merchant`、`names ["金冠號"]`（geo 的鍵照 Blockside `js/05_hull.js` 的說明）。
+- 讀數：vxk checksum **3945602128**、格 835,385、模型 167（vxk 檔頭；遊戲讀的模型 138 ＝ 去掉不算的）、繩 587；匯入檢查 **✗ 0、⚠ 5**（每一筆看過）：
+  - 送藥手站得到 15／19、陸戰隊 7／12（geo.marines 照康塞普西翁號、藍鯊號推的範圍；遊戲那側可再調）；
+  - overloop 往 verdeck 前梯（main-fwd）的梯腳前 1–2 格是遊戲自動擺的木工台（家具，繞得過去）；
+  - ⑥ **艙底（koebrug 底下 x 217–655、354 m²）沒有梯子下得去** —— 本船的 draft_decks 是藍鯊號那一版，沒有康塞普西翁號的 `lo: hold` 梯井 ⇒ todo；
+  - 爐灶沒有 smoke 固定點（沿用的 `gura-pinas-01m-galley` 沒登記；那件是 gura 的作品）⇒ 用餐時不冒煙。
+  - 樓梯自檢 9 座 ✗ 0、⚠ 1；甲板連通 ✗ 0、⚠ 1（就是艙底）；超載極限：再多載 1,998 t（吃水再深 4.60 m）才從 verdeck 船殼的縫進水，比沉沒線（4.2 m）高。
+  - 材質：全船橡木 584.5 t ＋ 玻璃 480 格；模型反光 bronze 4、iron 36（錨 render=voxel）；操舵「舵令 ⇒ 甲板-puente/操舵桿 ⇒ 舵 100%」；砲門蓋板 38 片、沒有蓋板的砲 0。
+- 船卡：1,596 t、48.5 m、38 門（long4 4、long18 14、long8 16、long 4）、舷側齊射 228、帆 10、船員 231。
+- **遊戲裡**（worktree 成品、`?debug=1&ship=kroon,pinas&mode=eve`）：開局 `__game.lostModels(0)` 空；帆的 meta 照遊戲的 sailSetLevel 算三段 ＝ 步驟 8 那張表（收帆 3 面 topsail、戰鬥帆 ＋ 兩面 topgallant＋bezaan、滿帆 10 面）；開戰後以戰鬥帆側順風 13.1 節；`__game.nation(0,'spain')` ok、own {dutch}、miss []；主控台 0 錯誤。圖 `overlays/step14_ingame.jpg`。
+
+## 步驟 15 交船（2026-11-18）
+照 Ship_Game §10 換一艘船時的檢查表逐條看過（遊戲那一份：`admin.py shipcheck --id kroon` ✗ 0 ⚠ 5，見步驟 14）：
+- ✓ ropecheck 587 條、1,174 端 ok、沒有 bind／snap；組裝件名 ＝ 金冠號、船殼「金冠號 船殼」帶 sub；mpv 0.1 每件都記（子作品 0.1，沿用的元件照它自己的、模型明寫 scale）；開工前查過現有元件（步驟 2「沿用的現有元件」）。新做的：船首像、hackebort、Zeeland 紋章（個性裝飾）、後桅三角帆桁（藍鯊號那根長度不同）、**操舵桿 kolderstok**（現有元件只有舵輪；1660 年代荷蘭大船用操舵桿）、砲門蓋板（10×9，照本船最大的開口）。
+- ✓ 爐灶 ＝ 廚房 `kind=galley`（不標 deco）、廚師站得住的面 4。
+- ✓ 砲 38、帆桁 10、火藥桶 64、絞盤、羅經櫃、小艇、門 8、蓋板 38 都是外部模型帶 kind；舵 kind=rudder＋stock-top、開局 `lostModels(0)` 空；spin：舵 ±35°、操舵桿 ±25°；操舵鏈「舵令 ⇒ 甲板-puente/操舵桿 ⇒ 舵 100%」（kind=tiller，不是名字）。
+- ✓ kind=ship waterline_z 48（高度寫在步驟 14）；甲板 6 層 kind=deck（level、name、floor、thick）、梯子 9 座 kind=ladders 四個固定點；樓梯自檢 ✗ 0（⚠ 艙底沒梯子、梯腳前有木工台 —— 看過）。
+- ✓ ratlines 橫繩組 12 組、下桅 6 組繩梯；三角帆桁 yard=gaff＋rig=lateen＋fore；彈藥庫 64 桶、38／38 門送藥走得到；窗的玻璃獨立關聯 material=glass（480 格）。
+- ✓ 繩與帆的端點綁 model:、ropes_broken／sails_broken／models_broken 0；帆 12／12、帆自己的繩 25／25 meta 齊、帆桁 sail ＝ 帆名、mast 有寫；帆裝三段表在步驟 8、遊戲裡照 meta 算過一次；桅的關聯 kind=mast（四條）。
+- ✓ 組裝件 1 元件、空腔 0、link_overlap 0；一舷＋鏡像的部件兩舷對稱（hackebort 的紋章與字照實不對稱）；產生程式重跑逐位元組相同；vxk checksum 3945602128（Blockside 那份 _cache 跟它對過）。
+- ✓ 每門砲退到零碰撞、砲口在船殼外；鏡板追擊砲照角度搜；舷側＋鏡板砲門都有蓋板（P 舷 rotate 180、不用 mirror）。
+- ✓ 金屬：砲管 bronze／iron、錨 iron（模型只管反光）；全船木頭 ⇒ 不用跟遊戲那側說全船材質。
+- 不適用：槳、撞角、蒸汽、鐵甲、迴旋砲／砲塔、砲身砲座拆件、空艙房（沒隔艙）。
+
+### todo（沒做的，照實留著）
+- 艙底（koebrug 底下 354 m²）沒有梯子：要把康塞普西翁號 draft_decks 的 `lo: hold` 梯井那一段搬過來。
+- 爐灶沒有 smoke 固定點（元件是 gura 的 `gura-pinas-01m-galley`，要她補；或本船另做一件）。
+- 操舵桿底下的舵柄 roerpen 沒做；錨鏈孔只登記固定點、沒開孔；shot garland、rammer／sponge 沒做。
+- 鏡板中段（走廊頂到 hackebort 底）素面；Walcheren 船尾畫（RMG PAH1782）圖本身沒看，紋章與持杖人像只照館藏說明。
+- 遊戲那側：陸戰隊 7／12、送藥手 15／19（geo／船員配置可再調）；Blocksail 船型清單（fleet.js 的 types、hullLoa、船員）還沒接 —— 等 Tim。

@@ -168,14 +168,14 @@
     {"name": "orlop", "lo": "orlop", "up": "main", "xs": 340, "dir": -1, "dy": -14, "well": true},
     {"name": "main-aft", "lo": "main", "up": "puente", "xs": 345, "dir": -1, "dy": 0, "well": true},
     {"name": "main-fwd", "lo": "main", "up": "puente", "xs": 480, "dir": 1, "dy": 0, "well": true},
-    {"name": "alcazar-P", "lo": "puente", "up": "alcazar", "xs": 420, "dir": -1, "dy": -24, "head_x": 397},
-    {"name": "alcazar-S", "lo": "puente", "up": "alcazar", "xs": 420, "dir": -1, "dy": 24, "head_x": 397},
-    {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 283, "dir": -1, "dy": -18, "head_x": 259},
-    {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 283, "dir": -1, "dy": 18, "head_x": 259},
-    {"name": "castillo-P", "lo": "puente", "up": "castillo", "xs": 543, "dir": 1, "dy": -24, "head_x": 563},
-    {"name": "castillo-S", "lo": "puente", "up": "castillo", "xs": 543, "dir": 1, "dy": 24, "head_x": 563}
+    {"name": "alcazar-P", "lo": "puente", "up": "alcazar", "xs": 415, "dir": -1, "dy": -24, "head_x": 397},
+    {"name": "alcazar-S", "lo": "puente", "up": "alcazar", "xs": 415, "dir": -1, "dy": 24, "head_x": 397},
+    {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 278, "dir": -1, "dy": -18, "head_x": 259},
+    {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 278, "dir": -1, "dy": 18, "head_x": 259},
+    {"name": "castillo-P", "lo": "puente", "up": "castillo", "xs": 546, "dir": 1, "dy": -24, "head_x": 563},
+    {"name": "castillo-S", "lo": "puente", "up": "castillo", "xs": 546, "dir": 1, "dy": 24, "head_x": 563}
    ],
-   "src": "設計決定（照藍鯊號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井；船樓的梯子靠在 break 外面、頭踩上船樓甲板。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
+   "src": "設計決定（照藍鯊號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井；船樓的梯子靠在 break 外面、頭踩上船樓甲板。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）。步驟 14 改：Blockside 樓梯自檢 ④「梯頂接不上甲板」⇒ 梯腳照修法挪、head 不動：alcazar 420 → 415（✗ 4 柱；416 的梯腳落在舷弧台階 x 417 那一階、懸空 1 格 ⇒ 再挪 1）、toldilla 283 → 278（✗ 5 柱）、castillo 543 → 546（⚠ 3 柱）—— 本船舷弧大，梯子爬的高度跟藍鯊號不同"
   }
  },
  "rig_build": {
