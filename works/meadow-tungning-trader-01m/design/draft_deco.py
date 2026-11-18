@@ -100,17 +100,12 @@ def install():
         sculpt("carvevox",work=HULL,voxels=path,at=(0,0,0),expect_pixels=len(remove))
     glass=component("stern-glass","尾樓窗玻璃")
     link(ASSEMBLY,"stern-glass",glass,{"material":"glass"})
-    bow=component("bow-deco","獅面、艏眼與浪花彩繪")
-    for side in ("P","S"):
-        if f"bow-{side}" not in entries(ASSEMBLY,"models"):
-            args=dict(sub="model",work=ASSEMBLY,name=f"bow-{side}",source_work=bow,at=(0,80.5,0),pivot=(0,80.5,0),scale=1,meta={"deco":1})
-            if side=="P":
-                args["mirror"]="y"
-            sculpt("work",**args)
+    component("bow-deco","獅面、艏眼與浪花彩繪")
+    # The final physical bow is installed by fittings_voxels.py after gear.py.
     stern=component("stern-deco","尾樓花鳥飾板")
     model(ASSEMBLY,"stern-carving",stern,(0,0,0),(0,0,0),{"deco":1})
     board=component("nameboard","東寧名牌",(2,33,13))
-    model(ASSEMBLY,"nameboard",board,(28,64,67),(0,0,0),{"deco":1})
+    model(ASSEMBLY,"nameboard",board,(26.5,64,67),(0,0,0),{"deco":1})
     shrine=component("shrine","媽祖神龕",(12,12,18))
     model(f"{HULL}-deck-poop","mazu-shrine",shrine,(74,87,72),(0,0,0),{"deco":1})
     print("Own bow and stern artwork, glass windows, name and shrine installed",flush=True)

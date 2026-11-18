@@ -13,9 +13,10 @@ python -I draft_decks.py
 python -I draft_deco.py
 python -I draft_guns.py
 python -I draft_battens.py
+python -I fittings_voxels.py
 ```
 
-第一支可指定新輸出目錄，方便以 hash 比對 hull.vox.txt 與圖紙。其餘draft程式會更新本設計目錄的圖紙、遮罩或擺放清單，不帶--apply不改雕刻。rig.py 和 gear.py 會透過 Sculpture CLI 寫入作品，勿當成唯讀檢查執行。最新硬骨帆必須最後執行draft_battens.py --apply，覆蓋早期rig.py的斜桁與軟帆設定；不得把只重跑早期rig.py的結果當成最後交船版。
+第一支可指定新輸出目錄，方便以 hash 比對 hull.vox.txt 與圖紙。其餘draft程式會更新本設計目錄的圖紙、遮罩或擺放清單，不帶--apply不改雕刻。rig.py 和 gear.py 會透過 Sculpture CLI 寫入作品，勿當成唯讀檢查執行。最新硬骨帆必須最後執行draft_battens.py --apply，覆蓋早期rig.py的斜桁與軟帆設定；不得把只重跑早期rig.py的結果當成最後交船版。裝飾修整須在gear.py之後執行fittings_voxels.py --apply：兩舷艏飾改成358格實體關聯（含66格木底），吊錨架10格換色，移除舊bow-P/S模型，艉牌向艉移15cm。
 
 ## 雕刻正本
 
@@ -28,6 +29,7 @@ python -I draft_battens.py
 在自己的 Blockside worktree 執行：
 
 ```powershell
+python -I <本設計目錄>/fittings_voxels.py --apply
 python -I src/admin.py reimport --id tungning_trader --no-build
 python -I src/admin.py ids --id tungning_trader --no-build
 python -I <本設計目錄>/configure_game.py <Blockside worktree>
@@ -43,8 +45,8 @@ python -I src/rooms.py check --id tungning_trader
 python -I src/admin.py disp --id tungning_trader
 ```
 
-現有船已完成 import，不要再新增另一個同代號。第一次加入新資料庫時，用 admin.py import 指向上述 assembly 並指定 id=tungning_trader。船員與船卡、預烘或圖集變更後，交付前再建置並執行 srccheck；正式入口的 checksum 須為 2262896839。
+現有船已完成 import，不要再新增另一個同代號。第一次加入新資料庫時，用 admin.py import 指向上述 assembly 並指定 id=tungning_trader。船員與船卡、預烘或圖集變更後，交付前再建置並執行 srccheck；裝飾修整後正式入口的 checksum 須為 2221512735、176209格（原交船版為2262896839、175851格）。
 
 重新執行雕刻擺放工具時，保留既有 id，再跑 ids 正規化指名鍵（如 gunmount.mount_of、tiller.rudder）。只調 ratlines.foot 不改繩端依附或幾何，仍須重匯使遊戲拿到新登梯點。
 
-最終獨立覆核見 verify_final_independent.md／json；較早的 verify_* 檔保留開工階段讀數，判斷成品以 final 報告及遊戲驗收為準。
+原交船版獨立覆核見 verify_final_independent.md／json；本次艏飾與艉牌修整覆核見fittings_final.md／json。較早的verify_*檔保留開工階段讀數，判斷最新成品以fittings報告及遊戲驗收為準。
