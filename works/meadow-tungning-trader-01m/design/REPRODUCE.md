@@ -12,9 +12,10 @@ python -I draft_layout.py
 python -I draft_decks.py
 python -I draft_deco.py
 python -I draft_guns.py
+python -I draft_battens.py
 ```
 
-第一支可指定新輸出目錄，方便以 hash 比對 hull.vox.txt 與圖紙。其餘三支會更新本設計目錄的圖紙、遮罩或擺放清單，不會自行改雕刻。rig.py 和 gear.py 會透過 Sculpture CLI 寫入作品，勿當成唯讀檢查執行。
+第一支可指定新輸出目錄，方便以 hash 比對 hull.vox.txt 與圖紙。其餘draft程式會更新本設計目錄的圖紙、遮罩或擺放清單，不帶--apply不改雕刻。rig.py 和 gear.py 會透過 Sculpture CLI 寫入作品，勿當成唯讀檢查執行。最新硬骨帆必須最後執行draft_battens.py --apply，覆蓋早期rig.py的斜桁與軟帆設定；不得把只重跑早期rig.py的結果當成最後交船版。
 
 ## 雕刻正本
 
@@ -30,6 +31,9 @@ python -I draft_guns.py
 python -I src/admin.py reimport --id tungning_trader --no-build
 python -I src/admin.py ids --id tungning_trader --no-build
 python -I <本設計目錄>/configure_game.py <Blockside worktree>
+python -I <本設計目錄>/draft_battens.py --apply --game <Blockside worktree>
+python -I src/admin.py reimport --id tungning_trader --no-build
+python -I src/admin.py ids --id tungning_trader --no-build
 python -I src/admin.py build
 python -I src/admin.py ropebind --id tungning_trader
 python -I src/admin.py ancbake --id tungning_trader
