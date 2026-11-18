@@ -1,0 +1,435 @@
+{
+ "decks": {
+  "orlop": {
+   "cells": 54225,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 14610,
+    "141": 448,
+    "177": 39167
+   },
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 55195,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 15036,
+    "141": 534,
+    "177": 39625
+   },
+   "mirror_diff": 634
+  },
+  "puente": {
+   "cells": 52234,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 14351,
+    "141": 620,
+    "209": 37263
+   },
+   "mirror_diff": 0
+  },
+  "alcazar": {
+   "cells": 21869,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 4152,
+    "141": 1562,
+    "209": 16155
+   },
+   "mirror_diff": 0
+  },
+  "toldilla": {
+   "cells": 7730,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1306,
+    "141": 1486,
+    "209": 4938
+   },
+   "mirror_diff": 0
+  },
+  "castillo": {
+   "cells": 10831,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "45": 532,
+    "136": 1764,
+    "141": 1760,
+    "209": 6593,
+    "248": 182
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "main": {
+   "cells": 244,
+   "hull_overlap": 0,
+   "mirror_diff": 488
+  },
+  "puente": {
+   "cells": 452,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "alcazar": {
+   "cells": 416,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "toldilla": {
+   "cells": 424,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "castillo": {
+   "cells": 372,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "orlop": {
+   "up": "main",
+   "lo": "orlop",
+   "points": {
+    "foot": [
+     341,
+     146,
+     41
+    ],
+    "lo": [
+     338,
+     146,
+     44
+    ],
+    "hi": [
+     326,
+     146,
+     62
+    ],
+    "head": [
+     322,
+     146,
+     65
+    ]
+   },
+   "steps": 7
+  },
+  "main-aft": {
+   "up": "puente",
+   "lo": "main",
+   "points": {
+    "foot": [
+     346,
+     160,
+     64
+    ],
+    "lo": [
+     343,
+     160,
+     67
+    ],
+    "hi": [
+     331,
+     160,
+     85
+    ],
+    "head": [
+     327,
+     160,
+     86
+    ]
+   },
+   "steps": 7
+  },
+  "main-fwd": {
+   "up": "puente",
+   "lo": "main",
+   "points": {
+    "foot": [
+     479,
+     160,
+     59
+    ],
+    "lo": [
+     482,
+     160,
+     62
+    ],
+    "hi": [
+     492,
+     160,
+     77
+    ],
+    "head": [
+     498,
+     160,
+     80
+    ]
+   },
+   "steps": 6
+  },
+  "alcazar-P": {
+   "up": "alcazar",
+   "lo": "puente",
+   "points": {
+    "foot": [
+     421,
+     136,
+     81
+    ],
+    "lo": [
+     418,
+     136,
+     84
+    ],
+    "hi": [
+     408,
+     136,
+     99
+    ],
+    "head": [
+     397,
+     136,
+     100
+    ]
+   },
+   "steps": 6
+  },
+  "alcazar-S": {
+   "up": "alcazar",
+   "lo": "puente",
+   "points": {
+    "foot": [
+     421,
+     184,
+     81
+    ],
+    "lo": [
+     418,
+     184,
+     84
+    ],
+    "hi": [
+     408,
+     184,
+     99
+    ],
+    "head": [
+     397,
+     184,
+     100
+    ]
+   },
+   "steps": 6
+  },
+  "toldilla-P": {
+   "up": "toldilla",
+   "lo": "alcazar",
+   "points": {
+    "foot": [
+     284,
+     142,
+     107
+    ],
+    "lo": [
+     281,
+     142,
+     110
+    ],
+    "hi": [
+     271,
+     142,
+     125
+    ],
+    "head": [
+     259,
+     142,
+     127
+    ]
+   },
+   "steps": 6
+  },
+  "toldilla-S": {
+   "up": "toldilla",
+   "lo": "alcazar",
+   "points": {
+    "foot": [
+     284,
+     178,
+     107
+    ],
+    "lo": [
+     281,
+     178,
+     110
+    ],
+    "hi": [
+     271,
+     178,
+     125
+    ],
+    "head": [
+     259,
+     178,
+     127
+    ]
+   },
+   "steps": 6
+  },
+  "castillo-P": {
+   "up": "castillo",
+   "lo": "puente",
+   "points": {
+    "foot": [
+     542,
+     136,
+     80
+    ],
+    "lo": [
+     545,
+     136,
+     83
+    ],
+    "hi": [
+     553,
+     136,
+     95
+    ],
+    "head": [
+     563,
+     136,
+     98
+    ]
+   },
+   "steps": 5
+  },
+  "castillo-S": {
+   "up": "castillo",
+   "lo": "puente",
+   "points": {
+    "foot": [
+     542,
+     184,
+     80
+    ],
+    "lo": [
+     545,
+     184,
+     83
+    ],
+    "hi": [
+     553,
+     184,
+     95
+    ],
+    "head": [
+     563,
+     184,
+     98
+    ]
+   },
+   "steps": 5
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 9,
+ "reach": {
+  "orlop": [
+   "orlop"
+  ],
+  "main": [
+   "main-aft",
+   "main-fwd",
+   "orlop"
+  ],
+  "puente": [
+   "alcazar-P",
+   "alcazar-S",
+   "castillo-P",
+   "castillo-S",
+   "main-aft",
+   "main-fwd"
+  ],
+  "alcazar": [
+   "alcazar-P",
+   "alcazar-S",
+   "toldilla-P",
+   "toldilla-S"
+  ],
+  "toldilla": [
+   "toldilla-P",
+   "toldilla-S"
+  ],
+  "castillo": [
+   "castillo-P",
+   "castillo-S"
+  ]
+ },
+ "holes": {
+  "orlop": 1067,
+  "main": 1230,
+  "puente": 1423,
+  "alcazar": 124,
+  "toldilla": 120,
+  "castillo": 124
+ },
+ "cavities_filled": [],
+ "lists": {
+  "deck-orlop": [
+   54225,
+   "b531118d775efc24a9c6f0afe12fafd0ed0b70ce33b9b415fc185e45bec00d51"
+  ],
+  "deck-main": [
+   55195,
+   "49ea81e9e616cdf0014fa275e0581b90c965d34dea082de7e7aebde04d8548c1"
+  ],
+  "deck-puente": [
+   52234,
+   "d4e3bb7c9067c82502f43a61215fb48f3425561a75fffcbe6c8305bb9218879a"
+  ],
+  "deck-alcazar": [
+   21869,
+   "ef17e448f562c739bfab92bc4cd45a2a32762e581dc05c8cf02ec226b647df6a"
+  ],
+  "deck-toldilla": [
+   7730,
+   "334762c82d5772843e38c19608b2819b69a52cc24d81b27223915e2039d7dc66"
+  ],
+  "deck-castillo": [
+   10831,
+   "b712dac958f939c408903dfa1fac4e3b18631298e993f8ec1d74ce1ed6db5159"
+  ],
+  "ladders-main": [
+   244,
+   "e9153c732a29fafaec57808dccb5c134baba03acf9b940d1908ca9eeba9cca58"
+  ],
+  "ladders-puente": [
+   452,
+   "4d8a98af9dc2d2b362c8b89924644a004ecf0bbf67574b170d8a851af56f38f0"
+  ],
+  "ladders-alcazar": [
+   416,
+   "3c12356321cb7250a8b79cc4f1326c881053cbf76f6fcdf7f45c3e7a55237061"
+  ],
+  "ladders-toldilla": [
+   424,
+   "bfefcf2cff2c759cd8257f572603d5f0b21bedf36b67a0c354552f84b02b5a85"
+  ],
+  "ladders-castillo": [
+   372,
+   "96b4e35d764d696403630a89098a35e740d2dff2b65571c3cd81eadd3fec82e8"
+  ]
+ }
+}

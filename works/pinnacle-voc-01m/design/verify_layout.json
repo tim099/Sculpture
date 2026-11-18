@@ -1,0 +1,184 @@
+{
+ "ports": {
+  "main": {
+   "n_per_side": 10,
+   "gap_min": 26,
+   "gap_max": 60,
+   "gaps": [
+    26,
+    26,
+    26,
+    26,
+    60,
+    26,
+    26,
+    26,
+    26
+   ],
+   "clear_above_min": 4.0,
+   "half_breadth_at_port_min": 41.4,
+   "x0s": [
+    233,
+    267,
+    301,
+    335,
+    369,
+    437,
+    471,
+    505,
+    539,
+    573
+   ]
+  },
+  "puente": {
+   "n_per_side": 8,
+   "gap_min": 21,
+   "gap_max": 103,
+   "gaps": [
+    89,
+    27,
+    103,
+    27,
+    27,
+    35,
+    21
+   ],
+   "clear_above_min": 6.0,
+   "half_breadth_at_port_min": 40.3,
+   "x0s": [
+    222,
+    318,
+    352,
+    462,
+    496,
+    530,
+    572,
+    600
+   ]
+  }
+ },
+ "ports_total": 38,
+ "decks": {
+  "orlop": {
+   "z": 40,
+   "span": [
+    195,
+    665
+   ]
+  },
+  "main": {
+   "z": 58,
+   "span": [
+    193,
+    669
+   ]
+  },
+  "puente": {
+   "z": 79,
+   "span": [
+    191,
+    669
+   ]
+  },
+  "alcazar": {
+   "z": 97,
+   "span": [
+    188,
+    400
+   ]
+  },
+  "toldilla": {
+   "z": 115,
+   "span": [
+    186,
+    262
+   ]
+  },
+  "castillo": {
+   "z": 96,
+   "span": [
+    560,
+    650
+   ]
+  }
+ },
+ "masts": [
+  {
+   "key": "fore",
+   "x": 612,
+   "heel": 10.5,
+   "platform": 221.6,
+   "truck": 430.0,
+   "above_wl_m": 38.2,
+   "yards": {
+    "course": {
+     "z": 209.6,
+     "len_m": 22.93
+    },
+    "topsail": {
+     "z": 347.0,
+     "len_m": 12.31
+    },
+    "topgallant": {
+     "z": 415.8,
+     "len_m": 7.08
+    }
+   }
+  },
+  {
+   "key": "main",
+   "x": 412,
+   "heel": 10.0,
+   "platform": 245.0,
+   "truck": 479.7,
+   "above_wl_m": 43.17,
+   "yards": {
+    "course": {
+     "z": 233.0,
+     "len_m": 25.48
+    },
+    "topsail": {
+     "z": 386.6,
+     "len_m": 13.59
+    },
+    "topgallant": {
+     "z": 463.9,
+     "len_m": 7.93
+    }
+   }
+  },
+  {
+   "key": "mizzen",
+   "x": 280,
+   "heel": 67.0,
+   "platform": 255.5,
+   "truck": 343.3,
+   "above_wl_m": 29.53,
+   "yards": {
+    "lateen": {
+     "z": 240.2,
+     "len_m": 20.95
+    },
+    "topsail": {
+     "z": 327.5,
+     "len_m": 7.93
+    }
+   }
+  }
+ ],
+ "bowsprit": {
+  "x0": 622,
+  "z0": 100.0,
+  "x1": 778.9,
+  "z1": 190.6,
+  "angle": 30,
+  "len": 181.2,
+  "spritsail_len": 135.9
+ },
+ "guns_by_type": {
+  "8l": 16,
+  "18l": 14,
+  "24l": 4,
+  "4l": 4
+ }
+}

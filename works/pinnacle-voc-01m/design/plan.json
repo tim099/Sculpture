@@ -1,0 +1,182 @@
+{
+ "title": "金冠號（VOC 170 呎 spiegelretourschip，Walcheren 級）新圖紙 01：線形、側面、甲板高度、砲位表、桅帆表 —— VOC 1660 年規格 170×38×13 呎",
+ "task": "TASK-1317（母單 TASK-1311）",
+ "author": "pinnacle",
+ "date": "2026-11-18",
+ "sources": {
+  "VD": "Pieter van Dam, Beschryvinge van de Oostindische Compagnie, Boek I deel 1（RGP GS 63）—— p.470（1660-04-15 Heeren XVII 三艘返航船的 charter：170×38×13，koebrugh 5，verdeck 7¼，deurgaande overloop）、p.485（Zeeland 船廠 1660 Walcheren：170×38×13，koebrug 5¼）、p.466–468（1651／1653 規格、tumblehome 2½–3 呎）、p.493／501（1697 規格的桅位與桅桁）、p.507–508（1671 戰時 38 門）—— 研究筆記 references/research_voc_2026-11-18.md（研究代理讀的、pinnacle 讀過全文）",
+  "W": "Nicolaes Witsen, Aeloude en Hedendaegsche Scheeps-bouw en Bestier, 1671（archive.org aeloudeenhedenda00wits）—— p.65–66 比例規則、p.97 160 呎計算例、p.111–113 戰艦 Vrede 1667（170 呎）與 1669 年 160 呎有 koebrug 的戰艦（甲板寫法跟 VOC 1660 相同）、p.114 Grebber 比例表 170 呎那一列、p.128 160×40 船的實測桅桁",
+  "DAS": "Bruijn／Gaastra／Schöffer, Dutch-Asiatic Shipping：WALCHEREN 1661 建、840 ton、1666-05-02 出航 288 人（voyage 1051.3）",
+  "ft": "1 Amsterdam voet ＝ 11 duim ≈ 0.2831 m ＝ 2.831 格（沿用藍鯊號研究筆記 §1）"
+ },
+ "class": {
+  "v": "VOC 170 呎鏡艉返航船（spiegelretourschip）：Zeeland 分會 1660 年三艘之一（Walcheren 級）、840 ton（≈ 420 last）、288 人、38 門砲",
+  "src": "VD p.470、p.485；DAS voyage 1051.3；砲數照 VD p.508 的 1671 年 38 門表（1660 年代的表沒找到 ⚠）"
+ },
+ "meters_per_cell": 0.1,
+ "space": {"x": 1000, "y": 320, "z": 640, "yc": 160, "note": "中線 ＝ 第 160 格（鏡像 y ↔ 320 − y）"},
+ "witsen": {
+  "ft_cells": 2.831,
+  "length_ft": 170,
+  "keel_ft": 144,
+  "stem_rake_ft": 22,
+  "post_rake_ft": 4,
+  "stem_h_ft": 30,
+  "post_h_ft": 30,
+  "heights_from": "keel_top",
+  "beam_cells": 109,
+  "kimmen_ft": 35.17,
+  "kimmen_h_ft": 4.85,
+  "hekbalk_ft": 25.33,
+  "hals_x": 509,
+  "draught_ft": 17,
+  "draught_from": "keel_bottom",
+  "volume_m3": null,
+  "src": "長 170、寬 38〔查 VD p.470、p.485〕；龍骨 144 ＝ 170 − 22 − 4（設計決定）；首柱高 30、前傾 22（照 Vrede 1667，W p.111；設計決定 —— 1660 規格沒寫首尾柱）；艉柱高 30、後傾 4（Vrede、1669 年船 W p.111–113）；高度從龍骨頂量（研究筆記 §10.2）；寬 38 呎是外板內 ⇒ 含外板 109 格（全寬只能是奇數，設計決定）；kimmen 照 Grebber 170 呎那一列（W p.114：寬 39'3½\" 在 5'5\"，量在 42'5½\" 寬的船）× 38 ÷ 42.46 ⇒ 35.17 呎在 4.85 呎（設計決定）；heck-balk ＝ ⅔ 船寬（W p.66 ⚠ 分數字小；pinas、Vrede、1669 年船都 ≈ 0.67–0.70 佐證）；hals ＝ 離首柱 ⅓ 船長（x 670 − 161）；吃水 17 呎從龍骨底量（設計決定：Batavia 複製船 5.10 m、Decquer 1688「艙深再加 5 呎」⇒ 18 —— 研究筆記 §2d）；體積沒有原書數字 ⇒ 只讀出排水量、拿 Batavia 複製船 ≈ 1,200 t 當旁證"
+ },
+ "lines": {
+  "half_beam": {"v": 55, "src": "VD p.470：寬 38 呎（外板內）＝ 107.6 格 ＋ 外板 ⇒ 半寬 55；全寬只能是奇數（中線那一格）⇒ 量到 109（|dy| ≤ 54，最寬處 hb 略小於 55）＝ 外板內 107.6 ＋ 兩舷各 0.7"},
+  "keel_top": {"v": 6, "src": "W p.111–113：龍骨深 2 呎（Vrede 2'2\"、1669 年船 2'）＝ 5.7 ⇒ 6"},
+  "keel_half": {"v": 3, "src": "設計決定：龍骨 7 格寬（≈ 2½ 呎；pinas 2 呎 × 1.27）"},
+  "plan_half": {"v": 35, "src": "W p.114 Grebber 170 呎：船底平坦部寬 28'3¾\"（42'5½\" 寬的船）× 38 ÷ 42.46 ⇒ 25.3 呎 ＝ 71.6 格 ⇒ 半寬 35（設計決定）"},
+  "astilla": {"v": 3.6, "src": "W p.114 Grebber 170 呎：船底上升 1'5\" × 38 ÷ 42.46 ⇒ 1.27 呎 ＝ 3.6 格"},
+  "max_breadth_z": {"v": 54, "src": "設計決定：最寬處在下層砲甲板（overloop z 58）稍下 —— VOC 的寬量在 uitwatering（研究筆記 §2b）；同藍鯊號（最寬 40、overloop 42）"},
+  "tumblehome": {"v": 7, "src": "VD p.468（1653 規格）：從 schutoverloop 到 boevenet 每舷內收 2½–3 呎 ⇒ 2½ 呎 ＝ 7 格；Grebber 170 呎 2'6\"（W p.114）"},
+  "tumblehome_ref_z": {"v": 79, "src": "＝ 上層砲甲板 verdeck（boevenet）的甲板面（decks.rows puente）"},
+  "tumblehome_pow": {"v": 1.0, "src": "設計決定（同藍鯊號）"},
+  "tumblehome_above_per_cell": {"v": 0.15, "src": "設計決定（同藍鯊號）：verdeck 以上每 10 格每舷再收 1.5 格 ⇒ 船尾樓頂窄"},
+  "bilge_pow": {"v": 2.4, "src": "設計決定：調到 Grebber 的 kimmen 35.17 呎 ＝ 99.6 格（witsen_check.beam_kimmen；掃 1.8／2.4／3.0／3.6 ⇒ 93／99／103／105）"},
+  "s_aft": {"v": 0.3, "src": "設計決定：線形係數沿用藍鯊號（那一組對過 Witsen pinas 吃水 10 呎的體積 596 m³）—— 同一個造船傳統的船形"},
+  "s_fwd": {"v": 0.72, "src": "設計決定：同上；荷蘭船船頭飽滿"},
+  "sternpost_x0": {"v": 200, "src": "設計決定：艉柱腳的位置（整艘船在 X 上的擺放；船尾陽台、舵往後留 ≈ 40 格）"},
+  "sternpost_rake_deg": {"v": 7.09, "src": "W p.111–113：艉柱高 30 呎（龍骨頂起）、後傾 4 呎 ⇒ 艉柱頂 z 91 處往後 11.3 格 ⇒ atan(11.32 ÷ 91)（從龍骨底量的斜度）"},
+  "wing_transom_z": {"v": 85, "src": "艉橫樑（heck-balk）在艉柱頂 z 91（6 ＋ 30 呎 × 2.831）；lines.breadth_k 的鏡板從 z_wt − 6 開始張、z_wt ＋ 6 才全寬 ⇒ z_wt 取 85（同藍鯊號的作法：W 的艉柱頂 ＝ z_wt ＋ 6）"},
+  "transom_ratio": {"v": 0.75, "src": "設計決定：調到 heck-balk 長 25⅓ 呎 ＝ 71.7 格（witsen_check.transom_hekbalk 量在 z 91；掃 0.72／0.75／0.78 ⇒ 69／71／75 —— 全寬只能是奇數）"},
+  "forefoot_x": {"v": 607.65, "src": "龍骨 144 呎 ＝ 407.65 格 ⇒ 200 ＋ 407.65"},
+  "stem_radius": {"v": 62.28, "src": "首柱前傾 22 呎 ＝ 62.3 格 ⇒ 半徑 62.3 的圓弧（荷蘭船圓圓的船頭）；z 62.3 以上直立到首柱頂 z 91（高 30 呎）—— 首柱頂 x 669.9、到艉柱頂 x 188.7 ＝ 481.3 格 ＝ 170 呎"},
+  "deadwood_aft_z": {"v": 36, "src": "設計決定：船尾 deadwood 抬到水線（z 48）下 12 格（藍鯊號 28 ／水線 33 × 高度比 1.2 ≈ 34，取 36）"},
+  "deadwood_fwd_z": {"v": 14, "src": "設計決定（藍鯊號 12 × 1.2）"},
+  "bow_pow_low": {"v": 1.8, "src": "設計決定（同藍鯊號）"},
+  "bow_pow_high": {"v": 2.6, "src": "設計決定：上面鈍（荷蘭船飽滿的船頭；同藍鯊號）"},
+  "aft_pow": {"v": 3.0, "src": "設計決定：荷蘭船船尾水線下飽滿（同藍鯊號）"},
+  "top": [[150, 127], [262, 127], [274, 109], [400, 109], [412, 96], [548, 96], [560, 107], [652, 107], [700, 96]],
+  "top_curve": {
+   "knots": [[150, 127], [262, 127], [274, 109], [400, 109], [412, 96], [548, 96], [560, 107], [652, 107], [670, 96], [700, 96]],
+   "rise": [{"from": 509, "to": 189, "dz": 18, "pow": 2}, {"from": 509, "to": 670, "dz": 6, "pow": 2}],
+   "src": "舷頂（不含舷弧的底高）：船尾樓 hut 115 ＋ 12、halfdek 97 ＋ 12、船腰 verdeck 79 ＋ 17（上層砲門頂 90 之上要有舷牆與舷頂）、bak 96 ＋ 11；落差照 Ship_Ends §2 放在矮的那一邊（hut 前緣 262–274、halfdek 前緣 400–412、bak 後緣 548–560 都 smoothstep）；rise ＝ 甲板舷弧（decks.sheer：hals x 509 往船尾 18、往船頭 6，平方 ⇒ 舷頂跟甲板一起翹）；bak 前角 652 → 首柱 670 降 11 格往 galjoen（步驟 6 再細修）—— 都是設計決定；top 折線只留給還沒吃 top_curve 的程式"
+  }
+ },
+ "waterline": {"z": 48, "src": "設計決定：吃水 17 呎從龍骨底量 ＝ 48.1 格（研究筆記 §2d：Batavia 複製船 5.10 m；Decquer 公式 18 呎）—— 下層砲門檻（overloop 58 ＋ 7 ＝ 65）離水 17 格 ≈ 6 呎"},
+ "readings_at": {"deck_z": 58, "rail_z": 96, "hold_beams_z": 58, "puente_z": 79},
+ "decks": {
+  "src": "VD p.470（1660）：hol 13（龍骨頂到 koebrug）、koebrug 到 overloop 5（Walcheren 實測 5¼，VD p.485）、overloop 到 verdeck 7¼；koebrug ＝ 最下層、overloop ＝ 下層砲甲板（貫通全長）、verdeck ＝ 上層砲甲板（讀法照 W p.111–112 兩份同寫法的戰艦規格；研究筆記 §1）。程式沿用收穫號的甲板代號：orlop ＝ koebrug、main ＝ overloop、puente ＝ verdeck、alcazar ＝ halfdek（stierplecht）、toldilla ＝ hut、castillo ＝ bak。高度都是 hals（x 509）的甲板面、從龍骨底量",
+  "rows": [
+   {"key": "orlop", "name": "最下層甲板（koebrug）", "z": 40, "src": "VD p.470：hol 13 ＋ 龍骨 2 ＝ 15 呎 ＝ 42.5 格 ⇒ 設計 40：koebrug 到 overloop 只有 5¼ 呎（14.9 格），遊戲站人要頭頂 14 格（甲板板 1 ＋ 樑 3）⇒ 間距要 18 ⇒ koebrug 降 2 格、overloop 升 1 格（兩個都在 1 呎以內，設計決定）"},
+   {"key": "main", "name": "下層砲甲板（overloop）", "z": 58, "src": "VD p.485：15 ＋ 5¼ ＝ 20¼ 呎 ＝ 57.3 格 ⇒ 58（見 orlop）"},
+   {"key": "puente", "name": "上層砲甲板（verdeck）", "z": 79, "src": "VD p.470：overloop 上 7¼ 呎 ＝ 20.5 格 ⇒ 58 ＋ 21 ＝ 79"},
+   {"key": "alcazar", "name": "後甲板（halfdek／stierplecht）", "z": 97, "x_to": 400, "sheer": true, "src": "VD p.466（1651 規格）：stuyrplegt 高 6½ 呎 ＝ 18.4 格 ⇒ verdeck ＋ 18；前緣在主桅（x 412）後面（設計決定）；跟著甲板舷弧（荷蘭船的船樓順著舷弧，設計決定 —— 藍鯊號是平的，本船舷弧 18 格太大，平的話船尾那端只剩 7 格）"},
+   {"key": "toldilla", "name": "船尾樓（hut）", "z": 115, "x_to": 262, "sheer": true, "src": "W p.97：hut 6–6½ 呎 ⇒ halfdek ＋ 18；長 24½ 呎（W p.112 1669 年船）＝ 69 格 ⇒ 從船尾（≈ x 193）到 x 262（設計決定）"},
+   {"key": "castillo", "name": "船艏樓（bak）", "z": 96, "x_from": 560, "x_to": 650, "sheer": true, "src": "VD p.467（1652）：back 6 呎 ＝ 17 格 ⇒ verdeck ＋ 17；從前桅後面 x 560 到前隔板 x 650（離首柱頂 x 670 ≈ 7 呎；藍鯊號照 W p.89 是 6½ 呎）—— 範圍是設計決定"}
+  ],
+  "sheer": {"aft": 18, "fwd": 6, "x_mid": 509, "x_aft": 189, "x_fwd": 670, "src": "W p.97（160 呎計算例）：甲板舷弧往船尾 6½ 呎、往船頭 2 呎 ⇒ 18 ／ 6 格（研究筆記 §3；VOC 1660 規格沒寫）；最低點在 hals（離首柱 ⅓ 船長 x 509）；量到艉柱頂 x 189、艏柱頂 x 670"}
+ },
+ "ports": {
+  "src": "W p.113（1669 年 160 呎有 koebrug 的戰艦，跟 VOC 1660 同一套甲板）：overloop 層砲門寬 3、高 2½、檻 2½ 呎；上一層寬 2½、高 2、檻 2 呎（研究筆記 §4）；間距 ≈ 12 呎 ＝ 34 格（設計決定：pinas 8½–11 呎、本船砲大一號）",
+  "tiers": [
+   {"deck": "main", "per_side": 10, "x0s": [233, 267, 301, 335, 369, 437, 471, 505, 539, 573], "w": 8, "h": 7, "sill": 7, "ref_pad": 4, "gun": "18l", "src": "W p.113：3 × 2½ 呎 ⇒ w 8、h 7、檻 2½ 呎 ＝ 7；從船尾 x 233 起每 34 格，主桅（x 412）兩旁空一格（369 → 437：主桅腳、主艙口、絞盤那一段，設計決定）"},
+   {"deck": "puente", "per_side": 8, "x0s": [222, 318, 352, 462, 496, 530, 572, 600], "w": 7, "h": 6, "sill": 6, "ref_pad": 3, "gun": "8l", "src": "W p.113：2½ × 2 呎、檻 2 呎 ⇒ w 7、h 6、檻 6；避開後桅（x 280）、主桅（x 412）、前桅（x 612）的 channels 與 shrouds（Ship_Setup §3「上甲板砲門跟 channels 一起規劃」）—— 位置是設計決定，步驟 8 畫 channels 時再核"}
+  ],
+  "stern_chasers": {"deck": "puente", "n": 2, "w": 7, "h": 7, "sill": 6, "gun": "8l", "src": "VD p.508（1671）：「in de camer」鐵 8 磅 ×4 ⇒ 鏡板開 2 個（另外 2 門放兩舷 overloop 最船尾那個砲門）。放 verdeck 那一層（kajuit）：本船舷弧大，overloop 在船尾是 z 75、艉橫樑 z 91 ⇒ overloop 高度的鏡板砲門會落在 heck-balk 下面圓的 billen 上（藍鯊號同一個問題，也是放上一層）—— 設計決定；w 7（鏡板的開口要奇數才對中線對稱）"}
+ },
+ "guns_alloc": {
+  "src": "VD p.508（1671 戰時，145 呎以上 38 門；1660 年代的表沒找到 ⚠）：青銅 24 磅 ×4、鐵 18 磅 ×14、in de camer 鐵 8 磅 ×4、上層鐵 8 磅 ×10、青銅 8 磅 by de compassen ×2、鐵 4 磅 ×4；「最重的放中段」同藍鯊號",
+  "main": ["8l", "18l", "18l", "18l", "24l", "24l", "18l", "18l", "18l", "18l"],
+  "puente": ["8l", "8l", "8l", "8l", "8l", "8l", "4l", "4l"],
+  "stern": "8l",
+  "note": "每舷：overloop 從船尾往前 10 門（最船尾 8 磅 ＝ camer、主桅兩旁 24 磅 ×2、其餘 18 磅 ×7）、verdeck 8 門（8 磅 ×6 在 halfdek 底下與船腰，羅盤旁那 2 門青銅也算在裡面；bak 底下 4 磅 ×2）；鏡板 8 磅 ×2 ⇒ 兩舷 24 磅 4、18 磅 14、8 磅 16、4 磅 4 ＝ 38 ＝ VD 1671"
+ },
+ "masts": {
+  "src": "桅長、桁長照 W p.128（Witsen 實測的 160×40 船）；中、上桅與 kruis 照 VD p.501（1697 規格 160 呎）× 0.96；桅頂（top）長、桅樓照藍鯊號 × 1.14（主桅 91 ÷ 80）—— 研究筆記 §6、§9",
+  "rows": [
+   {"key": "fore", "x_step": 612, "rake_deg": 1, "lower_m": 23.21, "head_m": 2.1, "top_m": 15.29, "tgallant_m": 7.08, "tops_r": 18, "yards": {"course": 22.93, "topsail": 12.31, "topgallant": 7.08}, "src": "前桅 82 呎、前中桅 54（W p.128）、前上桅 25（VD p.501 × 0.96）；前桁 81（W p.128：比主桁少 3 kleet）、前中桅桁 43½（半長 ＋ 3）、前上桅桁 25；桅樓直徑 12½ 呎（W p.94 規則，主桅樓的 9/10）＝ 35 格 ⇒ r 18；前緣離首柱 19 呎（1/9 船長）＝ x 616、桅心 612；後傾 1°（同藍鯊號）"},
+   {"key": "main", "x_step": 412, "rake_deg": 4, "lower_m": 25.76, "head_m": 2.26, "top_m": 17.27, "tgallant_m": 7.93, "tops_r": 20, "yards": {"course": 25.48, "topsail": 13.59, "topgallant": 7.93}, "src": "主桅 91 呎、主中桅 61（W p.128）、主上桅 28（VD p.501 × 0.96）；主桁 90（W p.128：30 kleet × 3 呎）、主中桅桁 48（半長 ＋ 3）、主上桅桁 28；桅樓直徑 13'11\"（W p.94：每 10 呎船長 9 duim）＝ 39 格 ⇒ r 20；離首柱 91 呎（VD p.493：全長中點往後 6 呎）⇒ 670 − 258 ＝ 412；後傾 4°（同藍鯊號）"},
+   {"key": "mizzen", "x_step": 280, "rake_deg": 3, "lower_m": 20.38, "head_m": 1.53, "top_m": 8.78, "tops_r": 13, "yards": {"lateen": 20.95, "topsail": 7.93}, "src": "後桅 72 呎（W p.128）、kruysstengh 31（VD p.501 × 0.96）；後桅三角帆桁 74（Witsen 規則：後桅 ＋ 2；VD 1697 寫 84½）、後中桅桁（kruis）28；離龍骨後端 28 呎（VD p.493）⇒ 200 ＋ 79 ＝ 279 ⇒ 280；桅樓 r 13（設計決定：遊戲桅頂水手站半徑 9／12 的一圈）；腳在下層砲甲板"},
+   {"key": "bowsprit", "x_step": 622, "deck": "castillo", "angle_deg": 30, "len_m": 18.12, "sprit_top_m": 5.95, "yards": {"spritsail": 13.59, "sprit_topsail": 5.95}, "src": "斜桅 64 呎、伸出首柱外 43（VD p.501）；斜桅頂桅 21（× 0.96）；blinde 帆桁 48（斜桅 × ¾）、bovenblinde 帆桁 21（× ⅓）；腳在 bak 甲板、前桅前面（同藍鯊號步驟 7）；仰角 30° 設計決定 ⇒ 伸出首柱 ≈ 126 格（要的 122）"}
+  ],
+  "check": "主桅頂（上桅頂）離水線 —— 讀數在 verify_layout"
+ },
+ "paint": {
+  "base": 136, "band": 36, "gold": 248, "reveal": 224, "glass": 87,
+  "src": "設計決定（研究筆記 §5：Witsen 合約範本「pik en teer，裡外上下」⇒ 船身焦油褐；腰板黑；上層舷牆 Van de Velde 畫作常見暗綠／藍綠底配黃飾線；砲門蓋內側與舷內紅 —— ⚠ 沒有原文，配色是一般認識）：船殼焦油褐 136、腰板黑 36、上層舷牆暗綠 45（RGB 36,109,85）配金邊、砲門外一圈紅 224、舷頂金 248、玻璃 87",
+  "wales": {
+   "rows": [
+    {"deck": "main", "dz": -15, "h": 4, "edge": false, "src": "W p.113（1669 年 160 呎船）：下層砲門下面 3 道腰板、各寬 15 duim（3.9 格 ⇒ 4）、中間填板 19 duim（4.9 ⇒ 5）—— 最上一道頂在砲門檻下一格（overloop ＋ 6）⇒ 往下 4／5／4／5／4"},
+    {"deck": "main", "dz": -6, "h": 4, "edge": false, "src": "同上：第二道"},
+    {"deck": "main", "dz": 3, "h": 4, "edge": false, "src": "同上：第三道（頂 ＝ overloop ＋ 6，砲門檻 ＋ 7）"},
+    {"deck": "main", "dz": 17, "h": 3, "edge": false, "src": "W p.113：下層砲門帶（schutvulling）3½ 呎 ＝ 10 格（overloop ＋ 7 .. ＋ 16）之上一道腰板 14 duim（3.6 ⇒ 3）"},
+    {"deck": "puente", "dz": 1, "h": 3, "edge": false, "src": "W p.113：填板 15 duim 之上一道腰板 13 duim（3.3 ⇒ 3）—— 落在 verdeck ＋ 1（上層砲門檻 ＋ 6 底下）"},
+    {"deck": "puente", "dz": 13, "h": 2, "edge": false, "src": "W p.113：上層砲門帶 2'4\" 之上的 raa-hout 12 duim（3.1 ⇒ 2；上層砲門頂 ＝ verdeck ＋ 11）"}
+   ],
+   "src": "每條：黑 h 列、跟著甲板舷弧；荷蘭船的腰板不描金（edge false，同藍鯊號）"
+  },
+  "lozenge": {
+   "color": 45, "period": 10, "radius": -1,
+   "rows": [
+    {"deck": "puente", "dz0": 4, "dz1": 12, "bg": 45, "src": "上層砲門帶（verdeck ＋ 4 .. ＋ 12，兩道腰板之間）整片暗綠"},
+    {"deck": "alcazar", "dz0": 2, "dz1": 10, "bg": 45, "src": "halfdek 的舷牆（舷頂 ＝ halfdek ＋ 12）"},
+    {"deck": "toldilla", "dz0": 2, "dz1": 10, "bg": 45, "src": "hut 的舷牆"},
+    {"deck": "castillo", "dz0": 2, "dz1": 9, "bg": 45, "src": "bak 的舷牆（舷頂 ＝ bak ＋ 11）"}
+   ],
+   "src": "設計決定：上層舷牆一整片暗綠（radius −1 ＝ 不畫菱格、整片 bg 色）、上下金邊；dz0／dz1 跟著那一層甲板的舷弧（draft_ports 金冠號改）"
+  },
+  "cap_gold": {"src": "設計決定：舷頂最上一格外板換金（整條舷頂）"}
+ },
+ "stern": {
+  "src": "設計決定：船尾鏡板（spiegel，艉橫樑 z 91 以上）kajuit（verdeck 那一層）兩個砲門＋三扇窗、halfdek 那一層五扇窗；鏡板的 Zeeland 紋章、hekstutten、側廊在步驟 6（研究筆記 §5：Walcheren 船尾畫 RMG PAH1782）",
+  "face_x_max": 215,
+  "z_ref_x": 202,
+  "rows": [
+   {"deck": "puente", "kind": "port", "n": 2, "w": 7, "h": 7, "sill": 6, "half": 22, "src": "ports.stern_chasers：8 磅 in de camer ×2；砲門中心 ±18.5（鏡板半寬 ≈ 35，兩舷的牆 4 格，留 8 磅砲架的寬）"},
+   {"deck": "puente", "kind": "window", "n": 3, "w": 5, "h": 6, "sill": 7, "half": 11, "src": "kajuit 三扇窗（兩個砲門之間；設計決定，同藍鯊號 W p.~80 的 kajuit 窗放大到遊戲尺度）"},
+   {"deck": "alcazar", "kind": "window", "n": 5, "w": 5, "h": 6, "sill": 6, "half": 26, "src": "halfdek 底下的艙（舵手艙之後的 hut 艙）五扇窗（設計決定，同藍鯊號）"}
+  ]
+ },
+ "decks_build": {
+  "src": "設計決定（遊戲用的大致構造，照造船規格 Ship_Decks §9.2–9.3；結構照藍鯊號 draft_decks）。VOC 的艙室（konstapelskamer 在 overloop 船尾、kajuit 在 halfdek 底下、stierplecht、hut）只做甲板與 break，艙壁之後要配功能艙再加",
+  "plank": {"interior": 177, "weather": 209, "weather_decks": ["puente", "alcazar", "toldilla", "castillo"]},
+  "beam": {"every": 16, "w": 2, "depth": {"orlop": 3, "main": 3, "puente": 3, "alcazar": 2, "toldilla": 2, "castillo": 2}, "color": 136, "src": "設計決定（同藍鯊號）：每 16 格一根（W p.112 的 1669 年船 overloop 樑距 4 呎 ＝ 11 格，遊戲尺度放寬）、寬 2；艙裡 3 格深、船樓 2 格深（遊戲頭頂 14 格：甲板間 18 ＝ 板 1 ＋ 樑 3 ＋ 14）"},
+  "trim": 141,
+  "hatches": [
+   {"name": "後艙口", "x0": 300, "x1": 312, "half": 8, "decks": ["orlop", "main", "puente"]},
+   {"name": "主艙口", "x0": 440, "x1": 462, "half": 11, "decks": ["orlop", "main", "puente"]},
+   {"name": "前艙口", "x0": 540, "x1": 552, "half": 8, "decks": ["orlop", "main", "puente"]}
+  ],
+  "hatch_src": "設計決定：閃開後桅 280、主桅 412、前桅 612；主艙口在主桅前面（荷蘭船的 groote luik）；三個都通到 koebrug（貨艙在 koebrug 底下，步驟 10 再看要不要開到艙底）",
+  "coaming_h": 2,
+  "mast_r": {"fore": 4, "main": 4, "mizzen": 3},
+  "breaks": [
+   {"name": "後甲板（halfdek）前緣", "x": 400, "lo": "puente", "up": "alcazar", "doors_dy": [12], "rail_h": 7, "rail_side": "aft"},
+   {"name": "船尾樓（hut）前緣", "x": 262, "lo": "alcazar", "up": "toldilla", "doors_dy": [9], "rail_h": 7, "rail_side": "aft"},
+   {"name": "船艏樓（bak）後緣", "x": 560, "lo": "puente", "up": "castillo", "doors_dy": [10], "rail_h": 7, "rail_side": "fwd"},
+   {"name": "船艏樓（bak）前隔板", "x": 650, "lo": "puente", "up": "castillo", "doors_dy": [6], "rail_h": 7, "rail_side": "aft", "face": {"color": 45, "gold": 248}, "door_tag": "前", "src": "同藍鯊號 TASK-0967 船頭 v2：bak 前隔板兩道門（W p.89、II p.483），門外是露天的 verdeck（x 651–669）、跨過艏柱上緣就是 galjoen 平台（步驟 6）；暗綠底金框（跟上層舷牆同色）"}
+  ],
+  "break_src": "設計決定（同藍鯊號）：halfdek、hut、bak 的前（後）緣一道艙壁（兩扇門 寬 5 高 15）＋船樓甲板邊上一道 7 格高的胸牆（梯子頭留口）",
+  "ladders": {
+   "rise": 3, "run": 2, "tread_half": 3, "color": 136,
+   "list": [
+    {"name": "orlop", "lo": "orlop", "up": "main", "xs": 340, "dir": -1, "dy": -14, "well": true},
+    {"name": "main-aft", "lo": "main", "up": "puente", "xs": 345, "dir": -1, "dy": 0, "well": true},
+    {"name": "main-fwd", "lo": "main", "up": "puente", "xs": 480, "dir": 1, "dy": 0, "well": true},
+    {"name": "alcazar-P", "lo": "puente", "up": "alcazar", "xs": 420, "dir": -1, "dy": -24, "head_x": 397},
+    {"name": "alcazar-S", "lo": "puente", "up": "alcazar", "xs": 420, "dir": -1, "dy": 24, "head_x": 397},
+    {"name": "toldilla-P", "lo": "alcazar", "up": "toldilla", "xs": 283, "dir": -1, "dy": -18, "head_x": 259},
+    {"name": "toldilla-S", "lo": "alcazar", "up": "toldilla", "xs": 283, "dir": -1, "dy": 18, "head_x": 259},
+    {"name": "castillo-P", "lo": "puente", "up": "castillo", "xs": 543, "dir": 1, "dy": -24, "head_x": 563},
+    {"name": "castillo-S", "lo": "puente", "up": "castillo", "xs": 543, "dir": 1, "dy": 24, "head_x": 563}
+   ],
+   "src": "設計決定（照藍鯊號）：每 3 格一階、每階 2 格、踏板 7 寬；艙裡的梯子在上一層開井；船樓的梯子靠在 break 外面、頭踩上船樓甲板。每一層要讓人走得到的甲板都有梯子（Ship_Decks §9.3）"
+  }
+ },
+ "hull_build": {"wall": 4, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 68, "bottom_top_z": 48, "src": "設計決定：牆 4 格（外板 1、肋骨 2、內板 1，同藍鯊號）；水線上焦油褐 136、水線下深褐 68（W：pik en teer 裡外上下；研究筆記 §5）"},
+ "espolon": {"len_beyond_stem": 74, "src": "galjoen 長 26 呎 ＝ 74 格（設計決定：Vrede 28、1669 年船 24¼ 呎，W p.112–113）—— 步驟 6 做"}
+}
