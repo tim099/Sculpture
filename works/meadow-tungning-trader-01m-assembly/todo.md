@@ -1,0 +1,1 @@
+本次裝飾修整已完成；舊verify_final_independent與原交船照片保留作歷史對照，最新幾何以fittings_final及新checksum為準。
