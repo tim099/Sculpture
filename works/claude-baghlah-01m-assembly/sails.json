@@ -1,0 +1,204 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "main-lateen",
+			"corners": [
+				{
+					"name": "fore",
+					"at": "model:主桅/yard-main-lateen/fore",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:主桅/yard-main-lateen/29,3,98",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "224.50,46.50,94.50",
+					"pin": false
+				},
+				{
+					"name": "tack",
+					"at": "373.50,77.50,76.50",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-18T04:58:44",
+			"meta": {
+				"kind": "sail",
+				"mast": "main",
+				"sail": "gaff"
+			}
+		},
+		{
+			"name": "mizzen-lateen",
+			"corners": [
+				{
+					"name": "fore",
+					"at": "model:後桅/yard-mizzen-lateen/fore",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:後桅/yard-mizzen-lateen/peak",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "13.50,50.50,111.50",
+					"pin": false
+				},
+				{
+					"name": "tack",
+					"at": "172.50,42.50,100.50",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-18T04:58:45",
+			"meta": {
+				"kind": "sail",
+				"mast": "mizzen",
+				"sail": "gaff",
+				"set": "3"
+			}
+		},
+		{
+			"name": "foc",
+			"corners": [
+				{
+					"name": "tack",
+					"at": "foc桿/tip",
+					"pin": true
+				},
+				{
+					"name": "head",
+					"at": "291.35,83.65,172.20",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "290.50,106.50,98.50",
+					"pin": false
+				}
+			],
+			"bind": [
+				0
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-18T04:58:45",
+			"meta": {
+				"kind": "sail",
+				"mast": "bowsprit",
+				"sail": "jib"
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "",
+					"at": "25.15,80.50,116.50",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "49.15,80.50,116.50",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "49.15,80.50,100.50",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "25.15,80.50,100.50",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#b4121e",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-18T04:58:46",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"nation": "oman"
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "",
+					"at": "194.15,80.50,283.50",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "234.15,80.50,281.50",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "194.15,80.50,279.50",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#b4121e",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-18T04:58:46",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main",
+				"nation": "none"
+			}
+		}
+	]
+}

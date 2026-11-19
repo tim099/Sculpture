@@ -1,0 +1,111 @@
+{
+ "parts": {
+  "deck-orlop": {
+   "work": 16874,
+   "design": 16874,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 3
+  },
+  "deck-main": {
+   "work": 27573,
+   "design": 27573,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  },
+  "deck-poop": {
+   "work": 11641,
+   "design": 11641,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  },
+  "ladders-main": {
+   "work": 208,
+   "design": 208,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  },
+  "ladders-orlop": {
+   "work": 430,
+   "design": 430,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 4
+  },
+  "ladders-poop": {
+   "work": 296,
+   "design": 296,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  }
+ },
+ "problems_total": 0,
+ "assembled": {
+  "cells": 209653,
+  "components_6": 1,
+  "cavities": 0,
+  "mirror_diff": 0
+ },
+ "ladder_point_problems": [],
+ "anchors": {
+  "want": 16,
+  "found": 16,
+  "diff": [],
+  "unexpected": []
+ },
+ "links": {
+  "assembly": [
+   "船殼",
+   "甲板-orlop",
+   "甲板-main",
+   "甲板-poop"
+  ],
+  "deck_meta_diff_vs_tsv": [],
+  "not_at_origin_or_disabled": [],
+  "ladder_links": {
+   "orlop/梯子": [
+    "claude-baghlah-01m-ladders-orlop",
+    {
+     "kind": "ladders"
+    }
+   ],
+   "main/梯子": [
+    "claude-baghlah-01m-ladders-main",
+    {
+     "kind": "ladders",
+     "orlop.decks": "orlop,main"
+    }
+   ],
+   "poop/梯子": [
+    "claude-baghlah-01m-ladders-poop",
+    {
+     "kind": "ladders",
+     "quarter-P.decks": "main,poop",
+     "quarter-S.decks": "main,poop"
+    }
+   ]
+  }
+ }
+}

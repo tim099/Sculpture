@@ -1,0 +1,2143 @@
+{
+ "anchors": {
+  "hull": {
+   "tack-main": [
+    376,
+    80,
+    72
+   ],
+   "sheet-main-P": [
+    210,
+    33,
+    67
+   ],
+   "tack-mizzen-P": [
+    172,
+    33,
+    67
+   ]
+  },
+  "mast-main": {
+   "hound-S": [
+    191,
+    84,
+    250
+   ],
+   "sheave-1-fore": [
+    194,
+    80,
+    268
+   ],
+   "sheave-1-aft": [
+    188,
+    80,
+    268
+   ],
+   "sheave-2-fore": [
+    194,
+    80,
+    276
+   ],
+   "sheave-2-aft": [
+    188,
+    80,
+    276
+   ],
+   "foc-stay": [
+    195,
+    80,
+    250
+   ],
+   "parrel": [
+    191,
+    77,
+    257
+   ]
+  },
+  "mast-mizzen": {
+   "hound-S": [
+    108,
+    83,
+    182
+   ],
+   "sheave-fore": [
+    110,
+    80,
+    195
+   ],
+   "sheave-aft": [
+    106,
+    80,
+    195
+   ],
+   "parrel": [
+    108,
+    78,
+    187
+   ]
+  },
+  "jibboom": {
+   "tip": [
+    408,
+    87,
+    76
+   ]
+  },
+  "deck-poop": {},
+  "rings": {
+   "ring-S-84": [
+    84,
+    120,
+    80
+   ],
+   "ring-P-84": [
+    84,
+    40,
+    80
+   ],
+   "ring-S-96": [
+    96,
+    122,
+    80
+   ],
+   "ring-P-96": [
+    96,
+    38,
+    80
+   ],
+   "ring-S-104": [
+    104,
+    123,
+    80
+   ],
+   "ring-P-104": [
+    104,
+    37,
+    80
+   ],
+   "ring-S-118": [
+    118,
+    125,
+    80
+   ],
+   "ring-P-118": [
+    118,
+    35,
+    80
+   ],
+   "ring-S-166": [
+    166,
+    130,
+    64
+   ],
+   "ring-P-166": [
+    166,
+    30,
+    64
+   ],
+   "ring-S-185": [
+    185,
+    130,
+    64
+   ],
+   "ring-P-185": [
+    185,
+    30,
+    64
+   ],
+   "ring-S-204": [
+    204,
+    130,
+    64
+   ],
+   "ring-P-204": [
+    204,
+    30,
+    64
+   ],
+   "ring-S-223": [
+    223,
+    129,
+    64
+   ],
+   "ring-P-223": [
+    223,
+    31,
+    64
+   ],
+   "ring-S-300": [
+    300,
+    120,
+    66
+   ],
+   "ring-P-300": [
+    300,
+    40,
+    66
+   ],
+   "ring-S-314": [
+    314,
+    117,
+    66
+   ],
+   "ring-P-314": [
+    314,
+    43,
+    66
+   ]
+  },
+  "stern-spars": {
+   "bumkin-tip": [
+    10,
+    56,
+    90
+   ],
+   "flag-top": [
+    24,
+    80,
+    116
+   ]
+  },
+  "halyard-bitt": {
+   "halyard": [
+    178,
+    80,
+    63
+   ],
+   "halyard-mizzen": [
+    99,
+    80,
+    79
+   ]
+  },
+  "cable-beam": {
+   "foc-sheet": [
+    296,
+    113,
+    68
+   ]
+  }
+ },
+ "anchor_works": {
+  "hull": "claude-baghlah-01m",
+  "mast-main": "claude-baghlah-01m-mast-main",
+  "mast-mizzen": "claude-baghlah-01m-mast-mizzen",
+  "jibboom": "claude-baghlah-01m-jibboom",
+  "deck-poop": "claude-baghlah-01m-deck-poop",
+  "rings": "claude-baghlah-01m-rings",
+  "stern-spars": "claude-baghlah-01m-stern-spars",
+  "halyard-bitt": "claude-baghlah-01m-halyard-bitt",
+  "cable-beam": "claude-baghlah-01m-cable-beam"
+ },
+ "links": {
+  "hull": "船殼",
+  "mast-main": "主桅",
+  "mast-mizzen": "後桅",
+  "jibboom": "foc桿",
+  "deck-poop": "甲板-poop",
+  "rings": "支索環",
+  "stern-spars": "船尾桿",
+  "halyard-bitt": "升降索柱",
+  "cable-beam": "錨纜橫樑"
+ },
+ "ropes": [
+  {
+   "name": "main-shroud-S-1-pendant",
+   "from": "主桅/hound-S",
+   "to": "275.14,106.94,125.38",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#d8cfb8",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-1-block",
+   "from": "275.14,106.94,125.38",
+   "to": "276.79,107.38,122.91",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-1-fall-1",
+   "from": "276.63,107.96,122.91",
+   "to": "支索環/ring-S-314",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-1-fall-2",
+   "from": "276.94,106.80,122.91",
+   "to": "支索環/ring-S-314",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-2-pendant",
+   "from": "主桅/hound-S",
+   "to": "265.62,108.98,125.38",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#d8cfb8",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-2-block",
+   "from": "265.62,108.98,125.38",
+   "to": "267.13,109.48,122.83",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-2-fall-1",
+   "from": "266.94,110.05,122.83",
+   "to": "支索環/ring-S-300",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-2-fall-2",
+   "from": "267.32,108.91,122.83",
+   "to": "支索環/ring-S-300",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-3-pendant",
+   "from": "主桅/hound-S",
+   "to": "201.10,98.00,194.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-3-block",
+   "from": "201.10,98.00,194.70",
+   "to": "201.59,98.70,191.82",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-3-fall-1",
+   "from": "201.11,99.04,191.82",
+   "to": "支索環/ring-S-223",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-3-fall-2",
+   "from": "202.08,98.35,191.82",
+   "to": "支索環/ring-S-223",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-4-pendant",
+   "from": "主桅/hound-S",
+   "to": "195.40,98.30,194.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-4-block",
+   "from": "195.40,98.30,194.70",
+   "to": "195.60,99.02,191.79",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-4-fall-1",
+   "from": "195.03,99.18,191.79",
+   "to": "支索環/ring-S-204",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-4-fall-2",
+   "from": "196.18,98.86,191.79",
+   "to": "支索環/ring-S-204",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-5-pendant",
+   "from": "主桅/hound-S",
+   "to": "189.70,98.30,194.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-5-block",
+   "from": "189.70,98.30,194.70",
+   "to": "189.61,99.02,191.79",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-5-fall-1",
+   "from": "189.01,98.94,191.79",
+   "to": "支索環/ring-S-185",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-5-fall-2",
+   "from": "190.20,99.10,191.79",
+   "to": "支索環/ring-S-185",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-6-pendant",
+   "from": "主桅/hound-S",
+   "to": "184.00,98.30,194.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-6-block",
+   "from": "184.00,98.30,194.70",
+   "to": "183.61,99.01,191.81",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "main-shroud-S-6-fall-1",
+   "from": "183.08,98.73,191.81",
+   "to": "支索環/ring-S-166",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-shroud-S-6-fall-2",
+   "from": "184.14,99.30,191.81",
+   "to": "支索環/ring-S-166",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-1-pendant",
+   "from": "後桅/hound-S",
+   "to": "112.50,100.30,141.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-1-block",
+   "from": "112.50,100.30,141.70",
+   "to": "112.77,101.44,138.94",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-S-1-fall-1",
+   "from": "112.19,101.58,138.94",
+   "to": "支索環/ring-S-118",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-1-fall-2",
+   "from": "113.35,101.30,138.94",
+   "to": "支索環/ring-S-118",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-2-pendant",
+   "from": "後桅/hound-S",
+   "to": "106.90,99.50,141.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-2-block",
+   "from": "106.90,99.50,141.70",
+   "to": "106.79,100.59,138.91",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-S-2-fall-1",
+   "from": "106.19,100.53,138.91",
+   "to": "支索環/ring-S-104",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-2-fall-2",
+   "from": "107.39,100.65,138.91",
+   "to": "支索環/ring-S-104",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-3-pendant",
+   "from": "後桅/hound-S",
+   "to": "103.70,99.10,141.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-3-block",
+   "from": "103.70,99.10,141.70",
+   "to": "103.37,100.17,138.91",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-S-3-fall-1",
+   "from": "102.80,99.99,138.91",
+   "to": "支索環/ring-S-96",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-3-fall-2",
+   "from": "103.95,100.34,138.91",
+   "to": "支索環/ring-S-96",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-4-pendant",
+   "from": "後桅/hound-S",
+   "to": "98.90,98.30,141.70",
+   "group": "standing/shrouds",
+   "thickness": 1.2,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-4-block",
+   "from": "98.90,98.30,141.70",
+   "to": "98.25,99.30,138.95",
+   "group": "standing/blocks",
+   "thickness": 2.4,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "mizzen-shroud-S-4-fall-1",
+   "from": "97.75,98.97,138.95",
+   "to": "支索環/ring-S-84",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "mizzen-shroud-S-4-fall-2",
+   "from": "98.76,99.63,138.95",
+   "to": "支索環/ring-S-84",
+   "group": "standing/shroud-tackles",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "shroud"
+   }
+  },
+  {
+   "name": "main-itague-1-up",
+   "from": "model:主桅/yard-main-lateen/sling",
+   "to": "195.50,77.00,265.50",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-itague-1-lead",
+   "from": "195.50,77.00,265.50",
+   "to": "主桅/sheave-1-fore",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-itague-1-out",
+   "from": "主桅/sheave-1-aft",
+   "to": "186.50,80.50,266.50",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-itague-1-down",
+   "from": "186.50,80.50,266.50",
+   "to": "185.50,80.50,209.80",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-itague-2-up",
+   "from": "model:主桅/yard-main-lateen/sling",
+   "to": "195.50,77.00,273.50",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-itague-2-lead",
+   "from": "195.50,77.00,273.50",
+   "to": "主桅/sheave-2-fore",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-itague-2-out",
+   "from": "主桅/sheave-2-aft",
+   "to": "186.50,80.50,274.50",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-itague-2-down",
+   "from": "186.50,80.50,274.50",
+   "to": "185.50,80.50,209.80",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-halyard-block",
+   "from": "185.50,80.50,209.80",
+   "to": "185.31,80.50,205.80",
+   "group": "running/blocks",
+   "thickness": 3.12,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "main-halyard-fall-1",
+   "from": "185.31,79.60,205.80",
+   "to": "升降索柱/halyard",
+   "group": "running/halyards",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-halyard-fall-2",
+   "from": "185.31,80.50,205.80",
+   "to": "升降索柱/halyard",
+   "group": "running/halyards",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-halyard-fall-3",
+   "from": "185.31,81.40,205.80",
+   "to": "升降索柱/halyard",
+   "group": "running/halyards",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "mizzen-itague-1-up",
+   "from": "model:後桅/yard-mizzen-lateen/sling",
+   "to": "111.50,77.00,192.50",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "mizzen-itague-1-lead",
+   "from": "111.50,77.00,192.50",
+   "to": "後桅/sheave-fore",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "mizzen-itague-1-out",
+   "from": "後桅/sheave-aft",
+   "to": "104.50,80.50,193.50",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "mizzen-itague-1-down",
+   "from": "104.50,80.50,193.50",
+   "to": "104.05,80.50,154.90",
+   "group": "running/halyards",
+   "thickness": 1.0,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "mizzen-halyard-block",
+   "from": "104.05,80.50,154.90",
+   "to": "103.81,80.50,150.91",
+   "group": "running/blocks",
+   "thickness": 3.12,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "mizzen-halyard-fall-1",
+   "from": "103.81,79.80,150.91",
+   "to": "升降索柱/halyard-mizzen",
+   "group": "running/halyards",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "mizzen-halyard-fall-2",
+   "from": "103.81,81.20,150.91",
+   "to": "升降索柱/halyard-mizzen",
+   "group": "running/halyards",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "halyard"
+   }
+  },
+  {
+   "name": "main-parrel",
+   "from": "model:主桅/yard-main-lateen/pivot",
+   "to": "主桅/parrel",
+   "group": "running/parrels",
+   "thickness": 2.0,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "mizzen-parrel",
+   "from": "model:後桅/yard-mizzen-lateen/pivot",
+   "to": "後桅/parrel",
+   "group": "running/parrels",
+   "thickness": 2.0,
+   "slack": 1.0,
+   "color": "#4a3a2a",
+   "meta": null
+  },
+  {
+   "name": "foc-stay",
+   "from": "foc桿/tip",
+   "to": "主桅/foc-stay",
+   "group": "standing/stays",
+   "thickness": 0.9,
+   "slack": 1.0,
+   "color": "#2b2620",
+   "meta": {
+    "kind": "stay"
+   }
+  },
+  {
+   "name": "main-lateen.sheet",
+   "from": "sail:main-lateen/clew",
+   "to": "船殼/sheet-main-P",
+   "group": "running/sheets",
+   "thickness": 0.5,
+   "slack": 1.03,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "main-lateen"
+   }
+  },
+  {
+   "name": "main-lateen.tack",
+   "from": "sail:main-lateen/tack",
+   "to": "船殼/tack-main",
+   "group": "running/tacks",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "tack",
+    "sail": "main-lateen"
+   }
+  },
+  {
+   "name": "mizzen-lateen.sheet",
+   "from": "sail:mizzen-lateen/clew",
+   "to": "船尾桿/bumkin-tip",
+   "group": "running/sheets",
+   "thickness": 0.5,
+   "slack": 1.03,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "mizzen-lateen"
+   }
+  },
+  {
+   "name": "mizzen-lateen.tack",
+   "from": "sail:mizzen-lateen/tack",
+   "to": "船殼/tack-mizzen-P",
+   "group": "running/tacks",
+   "thickness": 0.6,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "tack",
+    "sail": "mizzen-lateen"
+   }
+  },
+  {
+   "name": "foc.sheet",
+   "from": "sail:foc/clew",
+   "to": "錨纜橫樑/foc-sheet",
+   "group": "running/sheets",
+   "thickness": 0.5,
+   "slack": 1.0,
+   "color": "#a08458",
+   "meta": {
+    "kind": "sheet",
+    "sail": "foc"
+   }
+  }
+ ],
+ "sails": [
+  {
+   "name": "main-lateen",
+   "corners": [
+    "model:主桅/yard-main-lateen/fore",
+    "model:主桅/yard-main-lateen/29,3,98",
+    "224.50,46.50,94.50",
+    "373.50,77.50,76.50"
+   ],
+   "corner_names": [
+    "fore",
+    "peak",
+    "clew",
+    "tack"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew",
+    "tack"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "main",
+    "sail": "gaff"
+   },
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "mizzen-lateen",
+   "corners": [
+    "model:後桅/yard-mizzen-lateen/fore",
+    "model:後桅/yard-mizzen-lateen/peak",
+    "13.50,50.50,111.50",
+    "172.50,42.50,100.50"
+   ],
+   "corner_names": [
+    "fore",
+    "peak",
+    "clew",
+    "tack"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew",
+    "tack"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "mizzen",
+    "sail": "gaff",
+    "set": "3"
+   },
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "foc",
+   "corners": [
+    "foc桿/tip",
+    "291.35,83.65,172.20",
+    "290.50,106.50,98.50"
+   ],
+   "corner_names": [
+    "tack",
+    "head",
+    "clew"
+   ],
+   "bind": [
+    0
+   ],
+   "free": [
+    "clew"
+   ],
+   "meta": {
+    "kind": "sail",
+    "mast": "bowsprit",
+    "sail": "jib"
+   },
+   "fullness": 1.05,
+   "color": "#f2ead8",
+   "texture": null
+  },
+  {
+   "name": "ensign",
+   "corners": [
+    "25.15,80.50,116.50",
+    "49.15,80.50,116.50",
+    "49.15,80.50,100.50",
+    "25.15,80.50,100.50"
+   ],
+   "corner_names": null,
+   "bind": [
+    3
+   ],
+   "free": [
+    1,
+    2
+   ],
+   "meta": {
+    "kind": "flag",
+    "flag": "ensign",
+    "nation": "oman"
+   },
+   "fullness": 1.04,
+   "color": "#b4121e",
+   "texture": "textures/ensign.png"
+  },
+  {
+   "name": "pennant",
+   "corners": [
+    "194.15,80.50,283.50",
+    "234.15,80.50,281.50",
+    "194.15,80.50,279.50"
+   ],
+   "corner_names": null,
+   "bind": [
+    2
+   ],
+   "free": [
+    1
+   ],
+   "meta": {
+    "kind": "flag",
+    "flag": "pennant",
+    "mast": "main",
+    "nation": "none"
+   },
+   "fullness": 1.04,
+   "color": "#b4121e",
+   "texture": null
+  }
+ ],
+ "meta": [
+  [
+   "sail",
+   "main-lateen",
+   {
+    "kind": "sail",
+    "mast": "main",
+    "sail": "gaff"
+   }
+  ],
+  [
+   "sail",
+   "mizzen-lateen",
+   {
+    "kind": "sail",
+    "mast": "mizzen",
+    "sail": "gaff",
+    "set": "3"
+   }
+  ],
+  [
+   "sail",
+   "foc",
+   {
+    "kind": "sail",
+    "mast": "bowsprit",
+    "sail": "jib"
+   }
+  ],
+  [
+   "sail",
+   "ensign",
+   {
+    "kind": "flag",
+    "flag": "ensign",
+    "nation": "oman"
+   }
+  ],
+  [
+   "sail",
+   "pennant",
+   {
+    "kind": "flag",
+    "flag": "pennant",
+    "mast": "main",
+    "nation": "none"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-1-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-1-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-1-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-2-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-2-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-2-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-3-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-3-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-3-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-4-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-4-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-4-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-5-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-5-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-5-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-6-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-6-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-shroud-S-6-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-1-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-1-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-1-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-2-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-2-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-2-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-3-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-3-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-3-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-4-pendant",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-4-fall-1",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-shroud-S-4-fall-2",
+   {
+    "kind": "shroud"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-1-up",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-1-lead",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-1-out",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-1-down",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-2-up",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-2-lead",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-2-out",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-itague-2-down",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-halyard-fall-1",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-halyard-fall-2",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "main-halyard-fall-3",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-itague-1-up",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-itague-1-lead",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-itague-1-out",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-itague-1-down",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-halyard-fall-1",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-halyard-fall-2",
+   {
+    "kind": "halyard"
+   }
+  ],
+  [
+   "rope",
+   "foc-stay",
+   {
+    "kind": "stay"
+   }
+  ],
+  [
+   "rope",
+   "main-lateen.sheet",
+   {
+    "kind": "sheet",
+    "sail": "main-lateen"
+   }
+  ],
+  [
+   "rope",
+   "main-lateen.tack",
+   {
+    "kind": "tack",
+    "sail": "main-lateen"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-lateen.sheet",
+   {
+    "kind": "sheet",
+    "sail": "mizzen-lateen"
+   }
+  ],
+  [
+   "rope",
+   "mizzen-lateen.tack",
+   {
+    "kind": "tack",
+    "sail": "mizzen-lateen"
+   }
+  ],
+  [
+   "rope",
+   "foc.sheet",
+   {
+    "kind": "sheet",
+    "sail": "foc"
+   }
+  ]
+ ],
+ "wind": [
+  4.5,
+  -1.5,
+  0
+ ],
+ "sail_seconds": 3,
+ "points": {
+  "主桅/hound-S": [
+   191.5,
+   84.5,
+   250.5
+  ],
+  "275.14,106.94,125.38": [
+   275.14,
+   106.94,
+   125.38
+  ],
+  "276.79,107.38,122.91": [
+   276.7889983597706,
+   107.38241419408479,
+   122.91320570570906
+  ],
+  "276.63,107.96,122.91": [
+   276.63352122011815,
+   107.96191989642558,
+   122.91320570570906
+  ],
+  "支索環/ring-S-314": [
+   314.5,
+   117.5,
+   66.5
+  ],
+  "276.94,106.80,122.91": [
+   276.944475499423,
+   106.80290849174399,
+   122.91320570570906
+  ],
+  "265.62,108.98,125.38": [
+   265.62,
+   108.98,
+   125.38
+  ],
+  "267.13,109.48,122.83": [
+   267.1278092807095,
+   109.47799205601416,
+   122.83470726926096
+  ],
+  "266.94,110.05,122.83": [
+   266.9396414066717,
+   110.04772256351757,
+   122.83470726926096
+  ],
+  "支索環/ring-S-300": [
+   300.5,
+   120.5,
+   66.5
+  ],
+  "267.32,108.91,122.83": [
+   267.3159771547474,
+   108.90826154851075,
+   122.83470726926096
+  ],
+  "201.10,98.00,194.70": [
+   201.1,
+   98.0,
+   194.7
+  ],
+  "201.59,98.70,191.82": [
+   201.59478620456937,
+   98.69579310017569,
+   191.8240551859405
+  ],
+  "201.11,99.04,191.82": [
+   201.10581300982813,
+   99.0435073719917,
+   191.8240551859405
+  ],
+  "支索環/ring-S-223": [
+   223.5,
+   129.5,
+   64.5
+  ],
+  "202.08,98.35,191.82": [
+   202.08375939931062,
+   98.34807882835969,
+   191.8240551859405
+  ],
+  "195.40,98.30,194.70": [
+   195.4,
+   98.3,
+   194.7
+  ],
+  "195.60,99.02,191.79": [
+   195.60307818018745,
+   99.01858432989401,
+   191.79441988347205
+  ],
+  "195.03,99.18,191.79": [
+   195.02569253832314,
+   99.18175853302958,
+   191.79441988347205
+  ],
+  "支索環/ring-S-204": [
+   204.5,
+   130.5,
+   64.5
+  ],
+  "196.18,98.86,191.79": [
+   196.18046382205176,
+   98.85541012675844,
+   191.79441988347205
+  ],
+  "189.70,98.30,194.70": [
+   189.7,
+   98.3,
+   194.7
+  ],
+  "189.61,99.02,191.79": [
+   189.60610214934937,
+   99.01988352165485,
+   191.78916662983036
+  ],
+  "189.01,98.94,191.79": [
+   189.01114190263763,
+   98.94228001121418,
+   191.78916662983036
+  ],
+  "支索環/ring-S-185": [
+   185.5,
+   130.5,
+   64.5
+  ],
+  "190.20,99.10,191.79": [
+   190.2010623960611,
+   99.09748703209551,
+   191.78916662983036
+  ],
+  "184.00,98.30,194.70": [
+   184.0,
+   98.3,
+   194.7
+  ],
+  "183.61,99.01,191.81": [
+   183.6118571829867,
+   99.01418278330445,
+   191.8122174414211
+  ],
+  "183.08,98.73,191.81": [
+   183.08468247724318,
+   98.72767479105254,
+   191.8122174414211
+  ],
+  "支索環/ring-S-166": [
+   166.5,
+   130.5,
+   64.5
+  ],
+  "184.14,99.30,191.81": [
+   184.13903188873024,
+   99.30069077555636,
+   191.8122174414211
+  ],
+  "後桅/hound-S": [
+   108.5,
+   83.5,
+   182.5
+  ],
+  "112.50,100.30,141.70": [
+   112.5,
+   100.3,
+   141.7
+  ],
+  "112.77,101.44,138.94": [
+   112.77085344954679,
+   101.43758448809655,
+   138.93729481462267
+  ],
+  "112.19,101.58,138.94": [
+   112.18716972073557,
+   101.57655680448018,
+   138.93729481462267
+  ],
+  "支索環/ring-S-118": [
+   118.5,
+   125.5,
+   80.5
+  ],
+  "113.35,101.30,138.94": [
+   113.35453717835802,
+   101.29861217171292,
+   138.93729481462267
+  ],
+  "106.90,99.50,141.70": [
+   106.9,
+   99.5,
+   141.7
+  ],
+  "106.79,100.59,138.91": [
+   106.79054666164127,
+   100.59453338358728,
+   138.90893987185243
+  ],
+  "106.19,100.53,138.91": [
+   106.19352434751528,
+   100.53483115217468,
+   138.90893987185243
+  ],
+  "支索環/ring-S-104": [
+   104.5,
+   123.5,
+   80.5
+  ],
+  "107.39,100.65,138.91": [
+   107.38756897576727,
+   100.65423561499988,
+   138.90893987185243
+  ],
+  "103.70,99.10,141.70": [
+   103.7,
+   99.1,
+   141.7
+  ],
+  "103.37,100.17,138.91": [
+   103.37230723179239,
+   100.16500149667475,
+   138.91461147023526
+  ],
+  "102.80,99.99,138.91": [
+   102.79883982655922,
+   99.98854998737224,
+   138.91461147023526
+  ],
+  "支索環/ring-S-96": [
+   96.5,
+   122.5,
+   80.5
+  ],
+  "103.95,100.34,138.91": [
+   103.94577463702556,
+   100.34145300597726,
+   138.91461147023526
+  ],
+  "98.90,98.30,141.70": [
+   98.9,
+   98.3,
+   141.7
+  ],
+  "98.25,99.30,138.95": [
+   98.25208713842022,
+   99.29886566160216,
+   138.9463703382859
+  ],
+  "97.75,98.97,138.95": [
+   97.74871036620362,
+   98.97235099854275,
+   138.9463703382859
+  ],
+  "支索環/ring-S-84": [
+   84.5,
+   120.5,
+   80.5
+  ],
+  "98.76,99.63,138.95": [
+   98.75546391063682,
+   99.62538032466158,
+   138.9463703382859
+  ],
+  "升降索柱/halyard": [
+   178.5,
+   80.5,
+   63.5
+  ],
+  "model:主桅/yard-main-lateen/sling": [
+   191.5,
+   74.5,
+   259.5
+  ],
+  "195.50,77.00,265.50": [
+   195.5,
+   77.0,
+   265.5
+  ],
+  "主桅/sheave-1-fore": [
+   194.5,
+   80.5,
+   268.5
+  ],
+  "主桅/sheave-1-aft": [
+   188.5,
+   80.5,
+   268.5
+  ],
+  "186.50,80.50,266.50": [
+   186.5,
+   80.5,
+   266.5
+  ],
+  "185.50,80.50,209.80": [
+   185.5,
+   80.5,
+   209.8
+  ],
+  "195.50,77.00,273.50": [
+   195.5,
+   77.0,
+   273.5
+  ],
+  "主桅/sheave-2-fore": [
+   194.5,
+   80.5,
+   276.5
+  ],
+  "主桅/sheave-2-aft": [
+   188.5,
+   80.5,
+   276.5
+  ],
+  "186.50,80.50,274.50": [
+   186.5,
+   80.5,
+   274.5
+  ],
+  "185.31,80.50,205.80": [
+   185.30883113890965,
+   80.5,
+   205.8045708032116
+  ],
+  "185.31,79.60,205.80": [
+   185.30883113890965,
+   79.6,
+   205.8045708032116
+  ],
+  "185.31,81.40,205.80": [
+   185.30883113890965,
+   81.4,
+   205.8045708032116
+  ],
+  "升降索柱/halyard-mizzen": [
+   99.5,
+   80.5,
+   79.5
+  ],
+  "model:後桅/yard-mizzen-lateen/sling": [
+   108.5,
+   76.5,
+   189.5
+  ],
+  "111.50,77.00,192.50": [
+   111.5,
+   77.0,
+   192.5
+  ],
+  "後桅/sheave-fore": [
+   110.5,
+   80.5,
+   195.5
+  ],
+  "後桅/sheave-aft": [
+   106.5,
+   80.5,
+   195.5
+  ],
+  "104.50,80.50,193.50": [
+   104.5,
+   80.5,
+   193.5
+  ],
+  "104.05,80.50,154.90": [
+   104.05,
+   80.5,
+   154.9
+  ],
+  "103.81,80.50,150.91": [
+   103.80905898414535,
+   80.5,
+   150.90726316583738
+  ],
+  "103.81,79.80,150.91": [
+   103.80905898414535,
+   79.8,
+   150.90726316583738
+  ],
+  "103.81,81.20,150.91": [
+   103.80905898414535,
+   81.2,
+   150.90726316583738
+  ],
+  "model:主桅/yard-main-lateen/pivot": [
+   191.5,
+   74.5,
+   257.5
+  ],
+  "主桅/parrel": [
+   191.5,
+   77.5,
+   257.5
+  ],
+  "model:後桅/yard-mizzen-lateen/pivot": [
+   108.5,
+   76.5,
+   187.5
+  ],
+  "後桅/parrel": [
+   108.5,
+   78.5,
+   187.5
+  ],
+  "foc桿/tip": [
+   408.5,
+   87.5,
+   76.5
+  ],
+  "主桅/foc-stay": [
+   195.5,
+   80.5,
+   250.5
+  ],
+  "model:主桅/yard-main-lateen/fore": [
+   342.5,
+   74.5,
+   208.5
+  ],
+  "model:主桅/yard-main-lateen/29,3,98": [
+   48.5,
+   74.5,
+   303.5
+  ],
+  "224.50,46.50,94.50": [
+   224.5,
+   46.5,
+   94.5
+  ],
+  "373.50,77.50,76.50": [
+   373.5,
+   77.5,
+   76.5
+  ],
+  "船殼/sheet-main-P": [
+   210.5,
+   33.5,
+   67.5
+  ],
+  "船殼/tack-main": [
+   376.5,
+   80.5,
+   72.5
+  ],
+  "sail:main-lateen/clew": [
+   224.5,
+   46.5,
+   94.5
+  ],
+  "sail:main-lateen/tack": [
+   373.5,
+   77.5,
+   76.5
+  ],
+  "model:後桅/yard-mizzen-lateen/fore": [
+   171.5,
+   76.5,
+   154.5
+  ],
+  "model:後桅/yard-mizzen-lateen/peak": [
+   13.5,
+   76.5,
+   238.5
+  ],
+  "13.50,50.50,111.50": [
+   13.5,
+   50.5,
+   111.5
+  ],
+  "172.50,42.50,100.50": [
+   172.5,
+   42.5,
+   100.5
+  ],
+  "船尾桿/bumkin-tip": [
+   10.5,
+   56.5,
+   90.5
+  ],
+  "船殼/tack-mizzen-P": [
+   172.5,
+   33.5,
+   67.5
+  ],
+  "sail:mizzen-lateen/clew": [
+   13.5,
+   50.5,
+   111.5
+  ],
+  "sail:mizzen-lateen/tack": [
+   172.5,
+   42.5,
+   100.5
+  ],
+  "291.35,83.65,172.20": [
+   291.35,
+   83.65,
+   172.2
+  ],
+  "290.50,106.50,98.50": [
+   290.5,
+   106.5,
+   98.5
+  ],
+  "錨纜橫樑/foc-sheet": [
+   296.5,
+   113.5,
+   68.5
+  ],
+  "sail:foc/clew": [
+   290.5,
+   106.5,
+   98.5
+  ],
+  "25.15,80.50,116.50": [
+   25.15,
+   80.5,
+   116.5
+  ],
+  "49.15,80.50,116.50": [
+   49.15,
+   80.5,
+   116.5
+  ],
+  "49.15,80.50,100.50": [
+   49.15,
+   80.5,
+   100.5
+  ],
+  "25.15,80.50,100.50": [
+   25.15,
+   80.5,
+   100.5
+  ],
+  "194.15,80.50,283.50": [
+   194.15,
+   80.5,
+   283.5
+  ],
+  "234.15,80.50,281.50": [
+   234.15,
+   80.5,
+   281.5
+  ],
+  "194.15,80.50,279.50": [
+   194.15,
+   80.5,
+   279.5
+  ]
+ }
+}

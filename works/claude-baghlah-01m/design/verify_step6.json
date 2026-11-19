@@ -1,0 +1,230 @@
+{
+ "probe": null,
+ "works": {
+  "stern-glass": {
+   "have": 140,
+   "want": 140,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "quarter-gallery": {
+   "have": 4381,
+   "want": 4381,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "quarter-gallery-glass": {
+   "have": 108,
+   "want": 108,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "quarter-rail": {
+   "have": 529,
+   "want": 529,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "stern-carving": {
+   "have": 529,
+   "want": 529,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 3
+  },
+  "stem-head": {
+   "have": 233,
+   "want": 233,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "hull": {
+   "have": 152691,
+   "want": 152691,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 4
+  }
+ },
+ "assembly_export_vs_design": {
+  "have": 219360,
+  "want": 219360,
+  "missing": 0,
+  "extra": 0,
+  "colour_diff": 0
+ },
+ "assembly_export_structure": {
+  "cells": 219360,
+  "components_6": 1,
+  "cavities": 0,
+  "mirror_diff": 0
+ },
+ "links": {
+  "船尾窗玻璃": {
+   "work": "claude-baghlah-01m-stern-glass",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "material": "glass"
+   },
+   "enabled": true
+  },
+  "側廊-P": {
+   "work": "claude-baghlah-01m-quarter-gallery",
+   "at": [
+    0,
+    30,
+    0
+   ],
+   "mirror": "",
+   "meta": null,
+   "enabled": true
+  },
+  "側廊-S": {
+   "work": "claude-baghlah-01m-quarter-gallery",
+   "at": [
+    0,
+    91,
+    0
+   ],
+   "mirror": "y",
+   "meta": null,
+   "enabled": true
+  },
+  "舵手台欄杆": {
+   "work": "claude-baghlah-01m-quarter-rail",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": null,
+   "enabled": true
+  },
+  "側廊/窗玻璃": {
+   "work": "claude-baghlah-01m-quarter-gallery-glass",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "material": "glass"
+   }
+  }
+ },
+ "models": {
+  "船尾雕花": {
+   "work": "claude-baghlah-01m-stern-carving",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "deco": 1
+   },
+   "enabled": true
+  },
+  "艏柱頭": {
+   "work": "claude-baghlah-01m-stem-head",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "deco": 1
+   },
+   "enabled": true
+  }
+ },
+ "work_sizes": {
+  "stern-glass": [
+   420,
+   160,
+   120,
+   0.1
+  ],
+  "quarter-gallery": [
+   420,
+   40,
+   120,
+   0.1
+  ],
+  "quarter-gallery-glass": [
+   420,
+   40,
+   120,
+   0.1
+  ],
+  "quarter-rail": [
+   420,
+   160,
+   120,
+   0.1
+  ],
+  "stern-carving": [
+   420,
+   160,
+   120,
+   0.1
+  ],
+  "stem-head": [
+   420,
+   160,
+   120,
+   0.1
+  ]
+ },
+ "problems_total": 0
+}

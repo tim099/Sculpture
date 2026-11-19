@@ -1,0 +1,282 @@
+{
+ "probe": null,
+ "works": {
+  "mast-main": {
+   "have": 9556,
+   "want": 9556,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 3
+  },
+  "mast-mizzen": {
+   "have": 2839,
+   "want": 2839,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "jibboom": {
+   "have": 817,
+   "want": 817,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 3
+  },
+  "cable-beam": {
+   "have": 1731,
+   "want": 1731,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 3
+  },
+  "yard-main-lateen": {
+   "have": 4352,
+   "want": 4352,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "yard-mizzen-lateen": {
+   "have": 1302,
+   "want": 1302,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "hull": {
+   "have": 152691,
+   "want": 152691,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 4
+  },
+  "deck-orlop": {
+   "have": 16874,
+   "want": 16874,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 3
+  },
+  "ladders-orlop": {
+   "have": 430,
+   "want": 430,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 4
+  },
+  "deck-main": {
+   "have": 27573,
+   "want": 27573,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "ladders-main": {
+   "have": 208,
+   "want": 208,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "deck-poop": {
+   "have": 11641,
+   "want": 11641,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "ladders-poop": {
+   "have": 296,
+   "want": 296,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "stern-glass": {
+   "have": 140,
+   "want": 140,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "quarter-rail": {
+   "have": 529,
+   "want": 529,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "stern-carving": {
+   "have": 529,
+   "want": 529,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 3
+  },
+  "stem-head": {
+   "have": 233,
+   "want": 233,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "quarter-gallery": {
+   "have": 4381,
+   "want": 4381,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "quarter-gallery-glass": {
+   "have": 108,
+   "want": 108,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  }
+ },
+ "assembly_export_vs_design": {
+  "have": 234303,
+  "want": 234303,
+  "missing": 0,
+  "extra": 0,
+  "colour_diff": 0
+ },
+ "assembly_export_structure": {
+  "cells": 234303,
+  "components_6": 1,
+  "cavities": 0,
+  "mirror_diff_excl_jibboom": 0
+ },
+ "links": {
+  "主桅": {
+   "work": "claude-baghlah-01m-mast-main",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "turn": 0,
+   "mirror": "",
+   "meta": {
+    "kind": "mast",
+    "mast": "main"
+   },
+   "enabled": true
+  },
+  "後桅": {
+   "work": "claude-baghlah-01m-mast-mizzen",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "turn": 0,
+   "mirror": "",
+   "meta": {
+    "kind": "mast",
+    "mast": "mizzen"
+   },
+   "enabled": true
+  },
+  "foc桿": {
+   "work": "claude-baghlah-01m-jibboom",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "turn": 0,
+   "mirror": "",
+   "meta": {
+    "kind": "mast",
+    "mast": "bowsprit"
+   },
+   "enabled": true
+  },
+  "錨纜橫樑": {
+   "work": "claude-baghlah-01m-cable-beam",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "turn": 0,
+   "mirror": "",
+   "meta": null,
+   "enabled": true
+  }
+ },
+ "models": {
+  "yard-main-lateen": {
+   "host": "claude-baghlah-01m-mast-main",
+   "work": "claude-baghlah-01m-yard-main-lateen",
+   "diff_vs_placement": [],
+   "meta_diff": [],
+   "enabled": true
+  },
+  "yard-mizzen-lateen": {
+   "host": "claude-baghlah-01m-mast-mizzen",
+   "work": "claude-baghlah-01m-yard-mizzen-lateen",
+   "diff_vs_placement": [],
+   "meta_diff": [],
+   "enabled": true
+  }
+ },
+ "anchors": {
+  "claude-baghlah-01m-yard-main-lateen": {
+   "count": 45,
+   "want": 45,
+   "diff": [],
+   "on_yard_cell": 45
+  },
+  "claude-baghlah-01m-yard-mizzen-lateen": {
+   "count": 25,
+   "want": 25,
+   "diff": [],
+   "on_yard_cell": 25
+  }
+ },
+ "shipcheck_mast": {
+  "yard-main-lateen": {
+   "yard_mast": "main",
+   "kind_mast_links_named": 1,
+   "pivot_at": [
+    191.5,
+    74.5,
+    257.5
+   ],
+   "mast_cells_in_band": 651
+  },
+  "yard-mizzen-lateen": {
+   "yard_mast": "mizzen",
+   "kind_mast_links_named": 1,
+   "pivot_at": [
+    108.5,
+    84.5,
+    187.5
+   ],
+   "mast_cells_in_band": 403
+  }
+ },
+ "problems_total": 0
+}

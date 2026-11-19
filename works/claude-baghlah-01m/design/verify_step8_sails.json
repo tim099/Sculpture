@@ -1,0 +1,193 @@
+{
+ "obj": "a.obj",
+ "wind": "work default",
+ "sails": {
+  "main-lateen": {
+   "triangles": 2304,
+   "cells_entered": {
+    "yard-main": 1037
+   },
+   "ropes_through_cloth": [],
+   "ropes_within_2_cells": [
+    [
+     -0.8,
+     "main-parrel"
+    ],
+    [
+     1.59,
+     "main-itague-1-up"
+    ],
+    [
+     1.59,
+     "main-itague-2-up"
+    ]
+   ],
+   "bbox": [
+    [
+     48.5,
+     18.0,
+     75.4
+    ],
+    [
+     376.2,
+     76.5,
+     303.5
+    ]
+   ]
+  },
+  "mizzen-lateen": {
+   "triangles": 2304,
+   "cells_entered": {
+    "yard-mizzen": 526
+   },
+   "ropes_through_cloth": [],
+   "ropes_within_2_cells": [
+    [
+     -0.62,
+     "mizzen-parrel"
+    ],
+    [
+     0.78,
+     "mizzen-itague-1-up"
+    ]
+   ],
+   "bbox": [
+    [
+     13.5,
+     32.2,
+     97.2
+    ],
+    [
+     179.2,
+     77.0,
+     238.5
+    ]
+   ]
+  },
+  "foc": {
+   "triangles": 1152,
+   "cells_entered": {
+    "jibboom": 1
+   },
+   "ropes_through_cloth": [],
+   "ropes_within_2_cells": [],
+   "bbox": [
+    [
+     290.9,
+     68.8,
+     76.5
+    ],
+    [
+     408.5,
+     100.7,
+     172.2
+    ]
+   ]
+  },
+  "ensign": {
+   "triangles": 768,
+   "cells_entered": {},
+   "ropes_through_cloth": [],
+   "ropes_within_2_cells": [],
+   "bbox": [
+    [
+     25.1,
+     71.1,
+     97.3
+    ],
+    [
+     47.6,
+     87.3,
+     116.5
+    ]
+   ]
+  },
+  "pennant": {
+   "triangles": 242,
+   "cells_entered": {},
+   "ropes_through_cloth": [],
+   "ropes_within_2_cells": [],
+   "bbox": [
+    [
+     194.1,
+     69.7,
+     259.3
+    ],
+    [
+     226.3,
+     80.5,
+     283.5
+    ]
+   ]
+  }
+ },
+ "sail_sail_nearest_surface": [
+  [
+   4.21,
+   "foc",
+   "main-lateen",
+   [
+    375.1,
+    74.7,
+    85.6
+   ],
+   [
+    375.6,
+    71.0,
+    83.6
+   ]
+  ],
+  [
+   13.08,
+   "main-lateen",
+   "pennant",
+   [
+    219.1,
+    74.5,
+    248.4
+   ],
+   [
+    222.9,
+    70.9,
+    260.4
+   ]
+  ],
+  [
+   29.69,
+   "ensign",
+   "mizzen-lateen",
+   "vertices (> 15, not densified)"
+  ],
+  [
+   42.71,
+   "main-lateen",
+   "mizzen-lateen",
+   "vertices (> 15, not densified)"
+  ],
+  [
+   109.64,
+   "foc",
+   "pennant",
+   "vertices (> 15, not densified)"
+  ],
+  [
+   117.54,
+   "mizzen-lateen",
+   "pennant",
+   "vertices (> 15, not densified)"
+  ]
+ ],
+ "cloth_to_stem_head_finial": {
+  "foc": 3.32,
+  "main-lateen": 4.79
+ },
+ "cloth_above_swivel_stations_m": {
+  "mizzen-lateen@40": 2.03,
+  "main-lateen@75": 18.97,
+  "mizzen-lateen@75": 2.05,
+  "main-lateen@110": 15.67,
+  "mizzen-lateen@110": 1.96,
+  "main-lateen@330": 0.97
+ },
+ "problems": {}
+}

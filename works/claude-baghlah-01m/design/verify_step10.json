@@ -1,0 +1,308 @@
+{
+ "works": {
+  "magazine": {
+   "have": 5026,
+   "want": 5026,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "skids": {
+   "have": 460,
+   "want": 460,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "hearth": {
+   "have": 4146,
+   "want": 4146,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  }
+ },
+ "problems": [],
+ "anchors": {
+  "claude-baghlah-01m-magazine": {
+   "have": {
+    "blast": [
+     111,
+     80,
+     46
+    ],
+    "door": [
+     122,
+     80,
+     37
+    ]
+   },
+   "diff": []
+  },
+  "claude-baghlah-01m-hearth": {
+   "have": {
+    "smoke": [
+     12,
+     10,
+     15
+    ]
+   },
+   "diff": []
+  },
+  "meadow-monitor-01m-hatch": {
+   "hinges": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     16,
+     0,
+     0
+    ]
+   ]
+  },
+  "gura-pinas-01m-door": {
+   "hinges": [
+    [
+     1,
+     0,
+     31
+    ],
+    [
+     1,
+     0,
+     0
+    ]
+   ]
+  }
+ },
+ "links": {
+  "彈藥庫": {
+   "work": "claude-baghlah-01m-magazine",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "enabled": true,
+   "meta": {
+    "hoist": "甲板-main/梯子/orlop,甲板-poop/梯子/quarter-S",
+    "kind": "magazine",
+    "pos": "aft",
+    "powder_lb": 2400
+   }
+  },
+  "小艇架": {
+   "work": "claude-baghlah-01m-boat-skids",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "enabled": true,
+   "meta": {}
+  }
+ },
+ "models": {
+  "爐灶": {
+   "host": "claude-baghlah-01m-deck-main",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "艙蓋-主艙口": {
+   "host": "claude-baghlah-01m-deck-main",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "艙蓋-orlop梯": {
+   "host": "claude-baghlah-01m-deck-main",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "門-船尾艙": {
+   "host": "claude-baghlah-01m-deck-main",
+   "diff": [],
+   "box_err": 0.002
+  },
+  "小艇": {
+   "host": "claude-baghlah-01m-deck-main",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "羅經櫃": {
+   "host": "claude-baghlah-01m-deck-poop",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-001": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-002": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-003": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-004": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-005": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-006": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-007": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-008": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-009": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-010": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-011": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-012": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-013": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-014": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-015": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-016": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-017": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-018": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-019": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-020": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-021": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-022": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-023": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  },
+  "桶-024": {
+   "host": "claude-baghlah-01m-magazine",
+   "diff": [],
+   "box_err": 0.0
+  }
+ },
+ "missing": [],
+ "count": {
+  "want": 30,
+  "have": 30,
+  "barrels": 24
+ },
+ "box_err_max": 0.002,
+ "cloth_clearance": {
+  "艙蓋-主艙口": [
+   54.71,
+   "main-lateen"
+  ],
+  "艙蓋-orlop梯": [
+   54.92,
+   "mizzen-lateen"
+  ],
+  "門-船尾艙": [
+   50.09,
+   "mizzen-lateen"
+  ],
+  "小艇": [
+   44.25,
+   "foc"
+  ],
+  "羅經櫃": [
+   48.45,
+   "mizzen-lateen"
+  ],
+  "爐灶": [
+   33.84,
+   "foc"
+  ]
+ },
+ "cloth_clearance_min": [
+  33.84,
+  "foc"
+ ],
+ "cloth_sails": [
+  "ensign",
+  "foc",
+  "main-lateen",
+  "mizzen-lateen",
+  "pennant"
+ ],
+ "problems_total": 0
+}
