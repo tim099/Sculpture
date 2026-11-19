@@ -89,17 +89,17 @@ def main():
                 y_max_hull = max(y_max_hull, int(ys.max() + ylo))
     dy_lb = (y_max_hull - YC) + 1  # 緊貼最寬處外 1 格
 
-    # ── 3. 方艏彩繪牌額與艏角（deco_bow，局部座標寬 y: 0..22, x: 0..4, z: 0..10）──
-    # 掛於方艏正面 x=245..246 處（虎頭牌飾＋兩側牛頭角）
+    # ── 3. 方艏彩繪牌額與艏角（deco_bow，局部座標寬 y: 0..16, x: 0..2, z: 0..8）──
+    # 沿方艏逐層外緣（bow_x_by_z[z] + 1）貼齊斜艏柱，避免 z>=30 前傾與船殼 x=244 重疊穿模
     bow_vox = []
-    # 先量船頭 z=26..34 實際前緣 x
     bow_x_by_z = {}
     for z in range(25, 36):
         xs = np.nonzero(occ_hull[:, YC - ylo, z])[0]
         if len(xs):
             bow_x_by_z[z] = int(xs.max() + x0)
-    # 做成獨立面板模型（局部 x=0..3, y=0..16, z=0..9，pivot=(0,8,0)）
+    bow_at_x = min(bow_x_by_z.get(z, 243) + 1 for z in range(26, 35))
     for z in range(9):
+        dx = (bow_x_by_z.get(26 + z, 243) + 1) - bow_at_x
         for y in range(17):
             dy = abs(y - 8)
             if z in (0, 8) or dy == 8:
@@ -108,20 +108,28 @@ def main():
                 col = 248 if (dy == 1 and z in (3, 5)) else 196  # 朱紅底嵌金虎紋
             else:
                 col = 196 if (z % 2 == 0) else 68
-            bow_vox.append((0, y, z, col))
-    # 兩側頭伏獅延伸木角（y=0,16 往前多伸 1 格）
-    for y in (0, 1, 15, 16):
-        bow_vox.append((1, y, 7, 136))
-        bow_vox.append((1, y, 8, 248))
+            bow_vox.append((dx, y, z, col))
+    # 兩側頭伏獅延伸木角（y=0,1,15,16 往前多伸 1 格）
+    for z_h, col_h in ((7, 136), (8, 248)):
+        dx = (bow_x_by_z.get(26 + z_h, 244) + 1) - bow_at_x
+        for y in (0, 1, 15, 16):
+            bow_vox.append((dx + 1, y, z_h, col_h))
     bow_path = os.path.join(design, 'masks', 'deco', 'deco_bow.vox.txt')
     with open(bow_path, 'w', encoding='utf-8', newline='\n') as f:
-        f.write('# 沙船 方艏彩繪牌額（局部座標，pivot=(0,8,0)）x,y,z,color\n')
+        f.write('# 沙船 方艏彩繪牌額（局部座標，pivot=(0,8,0)，貼齊斜艏柱 0 重疊）x,y,z,color\n')
         for x, y, z, c in bow_vox:
             f.write(f'{x},{y},{z},{c}\n')
 
-    # ── 4. 船尾牌飾（deco_stern，局部座標 x: 0..1, y: 0..16, z: 0..5，掛於艉樓正後方）──
+    # ── 4. 船尾牌飾（deco_stern，局部座標 x: 0..1, y: 0..16, z: 0..4，貼齊斜艉柱）──
+    stern_x_by_z = {}
+    for z in range(33, 41):
+        xs = np.nonzero(occ_hull[:, YC - ylo, z])[0]
+        if len(xs):
+            stern_x_by_z[z] = int(xs.min() + x0)
+    stern_at_x = min(stern_x_by_z.get(z, 40) - 1 for z in range(34, 39))
     stern_vox = []
     for z in range(5):
+        dx = (stern_x_by_z.get(34 + z, 40) - 1) - stern_at_x
         for y in range(17):
             dy = abs(y - 8)
             if z in (0, 4) or dy == 8:
@@ -130,17 +138,14 @@ def main():
                 col = 248  # 金色篆飾
             else:
                 col = 36   # 黑漆牌底
-            stern_vox.append((0, y, z, col))
+            stern_vox.append((dx, y, z, col))
     stern_path = os.path.join(design, 'masks', 'deco', 'deco_stern.vox.txt')
     with open(stern_path, 'w', encoding='utf-8', newline='\n') as f:
-        f.write('# 沙船 船尾牌飾（局部座標，pivot=(0,8,0)）x,y,z,color\n')
+        f.write('# 沙船 船尾牌飾（局部座標，pivot=(0,8,0)，貼齊斜艉柱 0 重疊）x,y,z,color\n')
         for x, y, z, c in stern_vox:
             f.write(f'{x},{y},{z},{c}\n')
 
     # 計算方艏、方艉與護舷的實際貼面位置
-    bow_at_x = bow_x_by_z.get(26, 244) + 1
-    xs_st = np.nonzero(occ_hull[:, YC - ylo, 35])[0]
-    stern_at_x = int(xs_st.min() + x0) - 1
 
     # 護舷（共用 kiara-tunis-sandal-01m-fender，size 3×1×4，min=[1,1,1] max=[3,1,4]）
     # 掛於船腰前後（x=114、x=196），貼在最寬處外側 1 格
