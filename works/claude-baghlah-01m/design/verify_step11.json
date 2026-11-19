@@ -1,0 +1,239 @@
+{
+ "works": {
+  "claude-baghlah-01m-rudder": {
+   "have": 1832,
+   "want": 1832,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "claude-baghlah-01m-tiller": {
+   "have": 399,
+   "want": 399,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "claude-baghlah-01m-helm-fittings": {
+   "have": 48,
+   "want": 48,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "claude-baghlah-01m-stem-rollers": {
+   "have": 80,
+   "want": 80,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 1
+  },
+  "claude-baghlah-01m": {
+   "have": 152576,
+   "want": 152576,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 5
+  },
+  "claude-baghlah-01m-deck-poop": {
+   "have": 11620,
+   "want": 11620,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 2
+  },
+  "claude-baghlah-01m-stern-carving": {
+   "have": 525,
+   "want": 525,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "events": 4
+  }
+ },
+ "problems": [],
+ "carved_still_there": {
+  "claude-baghlah-01m": 0,
+  "claude-baghlah-01m-deck-poop": 0,
+  "claude-baghlah-01m-stern-carving": 0
+ },
+ "anchors": {
+  "claude-baghlah-01m-rudder": {
+   "stock-top": [
+    35,
+    80,
+    82
+   ]
+  },
+  "claude-baghlah-01m": {
+   "hawse-S": [
+    370,
+    82,
+    76
+   ],
+   "hawse-P": [
+    370,
+    78,
+    76
+   ]
+  }
+ },
+ "links": {
+  "舵頭圈": {
+   "work": "claude-baghlah-01m-helm-fittings",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "enabled": true,
+   "mirror": ""
+  },
+  "艏柱滾輪": {
+   "work": "claude-baghlah-01m-stem-rollers",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "enabled": true,
+   "mirror": ""
+  }
+ },
+ "models": {
+  "舵": {
+   "host": "claude-baghlah-01m-assembly",
+   "diff": [],
+   "box_err": 0.0,
+   "cli": [
+    "✓",
+    "ok"
+   ]
+  },
+  "舵柄": {
+   "host": "claude-baghlah-01m-assembly",
+   "diff": [],
+   "box_err": 0.0,
+   "cli": [
+    "✓",
+    "ok"
+   ]
+  },
+  "錨-S": {
+   "host": "claude-baghlah-01m-deck-main",
+   "diff": [],
+   "box_err": 0.0,
+   "cli": [
+    "✓",
+    "ok"
+   ]
+  },
+  "錨-P": {
+   "host": "claude-baghlah-01m-deck-main",
+   "diff": [],
+   "box_err": 0.0,
+   "cli": [
+    "✓",
+    "ok"
+   ]
+  }
+ },
+ "stern_carving_model_cli": {
+  "船尾雕花": [
+   "✓",
+   "ok"
+  ]
+ },
+ "parts_export": {
+  "rudder": [
+   {
+    "name": "舵",
+    "spin": "rudder",
+    "spin_k": 35,
+    "hawse": null,
+    "pivot": [
+     null,
+     null
+    ]
+   }
+  ],
+  "tiller": [
+   {
+    "name": "舵柄",
+    "spin": "rudder",
+    "spin_k": 35,
+    "hawse": null,
+    "pivot": [
+     60.0,
+     0.0
+    ]
+   }
+  ],
+  "anchor": [
+   {
+    "name": "錨-S",
+    "spin": null,
+    "spin_k": null,
+    "hawse": "370,82,76",
+    "pivot": [
+     null,
+     null
+    ]
+   },
+   {
+    "name": "錨-P",
+    "spin": null,
+    "spin_k": null,
+    "hawse": "370,78,76",
+    "pivot": [
+     null,
+     null
+    ]
+   }
+  ]
+ },
+ "cloth_clearance": {
+  "rudder": [
+   17.75,
+   "ensign"
+  ],
+  "tiller": [
+   15.78,
+   "ensign"
+  ],
+  "collar": [
+   22.6,
+   "ensign"
+  ],
+  "rollers": [
+   2.46,
+   "main-lateen"
+  ],
+  "錨-S": [
+   29.05,
+   "foc"
+  ],
+  "錨-P": [
+   26.66,
+   "foc"
+  ]
+ },
+ "cloth_clearance_min": [
+  2.46,
+  "main-lateen"
+ ],
+ "cloth_sails": [
+  "ensign",
+  "foc",
+  "main-lateen",
+  "mizzen-lateen",
+  "pennant"
+ ],
+ "problems_total": 0
+}

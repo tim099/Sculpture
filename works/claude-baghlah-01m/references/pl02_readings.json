@@ -1,0 +1,68 @@
+{
+ "source": "paris1843_pl02_baggala_lines.jpg (Paris 1843 v.2 Pl. 2, Internet Archive essaisurlaconstr02pris n12, 2251x3375 px); fig. 7 profile, fig. 8 half-breadth plan, fig. 9 body plan",
+ "read_by": "Claude-Ojousama, 2026-11-18, TASK-0019 step 3 (pixel scans in .work/FAR-75/read/ + gridded zooms); verifier pass still to do",
+ "calibration": {
+  "scale_bar_row_px": 3028,
+  "ticks_x_px": {"0": 309.5, "1": 383.5, "2": 455.5, "3": 530.0, "4": 602.0, "5": 674.5, "10": 1039.0},
+  "px_per_m": 73.0,
+  "note": "0..10 m = 729.5 px (72.95 px/m); 0..5 m = 365 px (73.0). Plate is 1:100 ('0m01 pour metre'). The bar is horizontal only; vertical scale assumed equal (engraved on one plate, fig. 8/9 beam agree with each other to 1 px)."
+ },
+ "frame": "plate px; fig. 7 bow is LEFT (small x), stern RIGHT. Heights z_m measured up from the keel bottom (fig. 7 py 1427, fig. 9 py 2190).",
+ "fig7_profile": {
+  "keel_bottom_py": 1427,
+  "keel_top_rabbet_py": 1412,
+  "forefoot_px": [905, 1427],
+  "stem_head_at_rail_px": [235, 1072],
+  "stem_head_ornament_knob_px": [140, 1005],
+  "sternpost_foot_px": [1820, 1428],
+  "sternpost_top_px": [1898, 1165],
+  "sternpost_note": "v2 (verifier): the sternpost is a band between two parallel lines ~17 px apart, both raking 16.6 deg (fore line 1802.5@1428 -> 1881@1165, aft line 1820 -> 1898). v1 mixed the aft-line foot with the fore-line top (12.5 deg, wrong). Hull aft edge = aft line. The rudder lies aft of it (after edge 1897@1428 -> 1929@1165).",
+  "taffrail_top_px": [2020, 1002],
+  "quarter_gallery_px": {"x": [1765, 1975], "y": [1070, 1145], "note": "windowed panel seen in profile; carved bracket below it at py 1145-1180"},
+  "main_rail_py": {"260": 1072, "320": 1076, "380": 1080, "440": 1083, "500": 1086, "560": 1088, "620": 1091, "680": 1092, "740": 1094, "800": 1096, "860": 1098, "920": 1099, "980": 1099, "1040": 1100, "1220": 1101, "1280": 1101, "1340": 1100},
+  "poop_break_px": [1345, 1100],
+  "quarter_rail_py": {"1380": 1058, "1440": 1058, "1500": 1057, "1620": 1056, "1740": 1054, "1830": 1051},
+  "upper_poop_rail_py": {"1530": 1023, "1620": 1021, "1710": 1018, "1800": 1015, "1890": 1012, "1950": 1008, "2010": 1007},
+  "upper_poop_start_px": 1515,
+  "main_deck_py": 1155,
+  "load_waterline_py": 1228,
+  "main_mast_at_deck_px": 1170,
+  "mizzen_post_px": 1580,
+  "gunport_example_px": {"x": [825, 870], "y": [1102, 1142]}
+ },
+ "fig7_metres": {
+  "keel_length_bottom": 12.56,
+  "keel_depth": 0.21,
+  "stem_run_forefoot_to_head": 9.18,
+  "stem_head_height": 4.86,
+  "stem_angle_from_horizontal_deg": 27.9,
+  "sternpost_rake_deg": 16.5,
+  "sternpost_top_height": 3.59,
+  "upper_poop_start_px_verifier": 1507,
+  "taffrail_aft_of_sternpost_foot": 2.71,
+  "taffrail_height": 5.80,
+  "length_stemhead_to_taffrail": 24.45,
+  "rail_height_midship": 4.48,
+  "quarter_rail_height": 5.04,
+  "upper_poop_rail_height": "5.50 (fwd end) .. 5.71 (taffrail)",
+  "main_deck_height": 3.73,
+  "load_waterline_height": 2.73
+ },
+ "fig8_half_breadth": {
+  "centreline_py": 1479,
+  "note": "outer line = rail plan; px from centreline. Bow tip px 235, stern end px 2015 (same x as fig. 7). Lower-curve hits at px 1604-1824 were noisy (waterline crossings) and are left out.",
+  "hb_px": {"284": 41, "328": 67, "416": 111, "460": 127, "548": 152, "592": 162, "636": 171, "680": 179, "724": 185, "768": 190, "812": 194, "856": 198, "900": 201, "944": 203, "988": 206, "1032": 208, "1076": 210, "1120": 211, "1164": 212, "1208": 212, "1252": 212, "1296": 211, "1340": 209, "1384": 205, "1428": 202, "1472": 198, "1516": 193, "1560": 187, "1736": 157, "1868": 129, "1912": 118, "1956": 105, "2000": 89},
+  "max_half_breadth_m": 2.90,
+  "beam_m": 5.81
+ },
+ "fig9_midship_section": {
+  "centreline_px": 1191,
+  "keel_bottom_py": 2190,
+  "note": "outermost section (v2, see points_v1_superseded); z_m above keel bottom, hb_m half-breadth",
+  "points_z_hb_m": [[0.27, 0.14], [0.41, 0.4], [0.55, 0.64], [0.68, 0.9], [0.82, 1.22], [0.96, 1.48], [1.1, 1.69], [1.23, 1.92], [1.37, 2.09], [1.51, 2.23], [1.64, 2.34], [1.78, 2.45], [1.92, 2.55], [2.05, 2.62], [2.19, 2.68], [2.33, 2.74], [2.47, 2.77], [2.74, 2.84], [3.29, 2.88], [3.97, 2.9], [4.32, 2.9]],
+  "points_v1_superseded": "v1 eye readings from the 2x zoom were 6-8 px too narrow at the bilge (verifier); v2 = mean of both halves from a background-subtracted row scan, y 2010-2170 every 10 px; above z 2.6 m the outer line runs into the frame line at x 980, so those points take the verifier readings (210/213 px at y 1900)",
+  "waterlines_py": [1995, 2054, 2110],
+  "top_waterline_z_m": 2.67,
+  "aft_sections_hollow_up_to_z_m": 1.8
+ }
+}

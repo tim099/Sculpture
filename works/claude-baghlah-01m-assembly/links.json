@@ -1,0 +1,495 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "claude-baghlah-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				160,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T01:01:00",
+			"persona": "Claude-Ojousama",
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 41
+			}
+		},
+		{
+			"name": "甲板-orlop",
+			"work": "claude-baghlah-01m-deck-orlop",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T02:25:54",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "orlop",
+				"floor": "96:36,290:36",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 0,
+				"name": "底艙平台（hold platform）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "claude-baghlah-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T02:25:54",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "main",
+				"floor": "46:56,259:56,260:57,279:57,280:58,281:58,282:57,283:57,284:56,285:55,286:54,287:53,288:52,289:52,290:51,332:51,333:52,334:52,335:53,336:53,337:54,338:55,339:55,340:56,341:56,342:57,343:57,344:58,345:58,346:59,347:59,348:60,349:60,350:61,351:62,352:62,353:63,354:63,355:64,356:64,357:65,358:65,359:66,360:66,361:67,362:67,363:68,364:69,365:69,366:70,367:70,368:71,369:71,370:72,371:72,372:73,373:73",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 1,
+				"name": "主甲板（main deck）",
+				"thick": 4
+			}
+		},
+		{
+			"name": "甲板-poop",
+			"work": "claude-baghlah-01m-deck-poop",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T02:25:55",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "poop",
+				"floor": "33:74,124:74,125:72,127:72,128:70,150:70",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 2,
+				"name": "船尾樓（dunette）",
+				"thick": 3
+			}
+		},
+		{
+			"name": "船尾窗玻璃",
+			"work": "claude-baghlah-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:02:33",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 6（TASK-0019；design/draft_deco.py）：船尾五扇窗的玻璃",
+			"meta": {
+				"id": "part-1",
+				"material": "glass"
+			}
+		},
+		{
+			"name": "舵手台欄杆",
+			"work": "claude-baghlah-01m-quarter-rail",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:02:34",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 6（TASK-0019；design/draft_deco.py）：舵手台兩舷的舷牆布＋扶手、前緣小柱",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "側廊-P",
+			"work": "claude-baghlah-01m-quarter-gallery",
+			"at": [
+				0,
+				30,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				40,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:04:06",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 6（TASK-0019；design/draft_deco.py）：左舷船尾側廊（側廊作品框 420×40×120、放在 y 30）",
+			"meta": {
+				"id": "part-3"
+			}
+		},
+		{
+			"name": "側廊-S",
+			"work": "claude-baghlah-01m-quarter-gallery",
+			"at": [
+				0,
+				91,
+				0
+			],
+			"turn": 0,
+			"mirror": "y",
+			"pivot": [
+				420,
+				40,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:04:06",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 6（TASK-0019；design/draft_deco.py）：右舷船尾側廊（左舷 mirror=y；at.y ＝ 161 − 30 − 40 ＝ 91）",
+			"meta": {
+				"id": "part-5"
+			}
+		},
+		{
+			"name": "主桅",
+			"work": "claude-baghlah-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				160,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:50:26",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 7（TASK-0019；design/draft_masts.py）：星辰號 主桅（柚木一整根，28 m）",
+			"meta": {
+				"id": "mast-1",
+				"kind": "mast",
+				"mast": "main"
+			}
+		},
+		{
+			"name": "後桅",
+			"work": "claude-baghlah-01m-mast-mizzen",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				160,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:50:26",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 7（TASK-0019；design/draft_masts.py）：星辰號 後桅（17 m）",
+			"meta": {
+				"id": "mast-2",
+				"kind": "mast",
+				"mast": "mizzen"
+			}
+		},
+		{
+			"name": "foc桿",
+			"work": "claude-baghlah-01m-jibboom",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				480,
+				160,
+				400
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:50:27",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 7（TASK-0019；design/draft_masts.py）：星辰號 foc 的桿子（bâton-volant，11.5 m）",
+			"meta": {
+				"id": "part-6"
+			}
+		},
+		{
+			"name": "錨纜橫樑",
+			"work": "claude-baghlah-01m-cable-beam",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T03:50:27",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 7（TASK-0019；design/draft_masts.py）：星辰號 錨纜橫樑",
+			"meta": {
+				"id": "part-7"
+			}
+		},
+		{
+			"name": "支索環",
+			"work": "claude-baghlah-01m-rings",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T04:58:03",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）：星辰號 支索的環（船外兩舷）",
+			"meta": {
+				"id": "part-8"
+			}
+		},
+		{
+			"name": "船尾桿",
+			"work": "claude-baghlah-01m-stern-spars",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T04:58:04",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）：星辰號 船尾的桿（國旗桿＋bumkin）",
+			"meta": {
+				"id": "part-9"
+			}
+		},
+		{
+			"name": "升降索柱",
+			"work": "claude-baghlah-01m-halyard-bitt",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T04:58:06",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 8（TASK-0019；design/draft_rigging.py）：星辰號 升降索柱 e",
+			"meta": {
+				"id": "part-10"
+			}
+		},
+		{
+			"name": "砲具",
+			"work": "claude-baghlah-01m-gunfittings",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T07:30:12",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 9 砲具（TASK-0019；design/draft_gunfittings.py）",
+			"meta": {
+				"id": "gunfittings-1",
+				"kind": "gunfittings"
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "claude-baghlah-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T09:58:10",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 10（TASK-0019；design/draft_gear.py）：彈藥庫（Ship_Magazine §8；hoist ＝ 主甲板 orlop 梯、舵手台 quarter-S 梯）",
+			"meta": {
+				"hoist": "ladders-2#orlop,ladders-3#quarter-S",
+				"id": "magazine-1",
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 2400
+			}
+		},
+		{
+			"name": "小艇架",
+			"work": "claude-baghlah-01m-boat-skids",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T09:58:11",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 10（TASK-0019；design/draft_gear.py）：主艙口上的小艇架（三座橫架）",
+			"meta": {
+				"id": "part-11"
+			}
+		},
+		{
+			"name": "舵頭圈",
+			"work": "claude-baghlah-01m-helm-fittings",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T11:05:13",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 11（TASK-0019；design/draft_helm.py）：星辰號 舵頭圈（船尾樓甲板）",
+			"meta": {
+				"id": "part-12"
+			}
+		},
+		{
+			"name": "艏柱滾輪",
+			"work": "claude-baghlah-01m-stem-rollers",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				420,
+				160,
+				120
+			],
+			"enabled": true,
+			"created_at": "2026-11-18T11:05:14",
+			"persona": "Claude-Ojousama",
+			"note": "步驟 11（TASK-0019；design/draft_helm.py）：星辰號 艏柱滾輪（兩舷）",
+			"meta": {
+				"id": "part-13"
+			}
+		}
+	]
+}

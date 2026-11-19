@@ -1,0 +1,493 @@
+{
+ "read": {
+  "solid_cells": 241515,
+  "gun_cells": 6720,
+  "component_sha256": {
+   "basecamp-ember-01m-boat.vox.txt": "b985184031bef580",
+   "basecamp-frigate-constitution-01m-powder-barrel.vox.txt": "7de18fe3e54da474",
+   "gura-pinas-01m-door.vox.txt": "62878f89f0b730d5",
+   "meadow-monitor-01m-hatch.vox.txt": "546aaa556a8a7adf",
+   "summit-night-falcon-01m-binnacle.vox.txt": "e47acc832194c60f"
+  }
+ },
+ "magazine": {
+  "cells": 5026,
+  "colors": {
+   "136": 816,
+   "168": 2708,
+   "177": 1502
+  },
+  "air_inside": 31606,
+  "x": [
+   96,
+   122
+  ],
+  "barrels": 24,
+  "cap": 24,
+  "capacity_per_tier": [
+   58
+  ],
+  "tiers": [
+   24,
+   0,
+   0,
+   0
+  ],
+  "rack": 0,
+  "powder_lb": 2400,
+  "blast": [
+   111,
+   80,
+   46
+  ],
+  "door": [
+   122,
+   80,
+   37
+  ],
+  "pillar_x": [
+   106,
+   107,
+   108,
+   109,
+   110
+  ],
+  "x_skipped": [],
+  "vs_waterline": {
+   "floor": 36,
+   "ztop": 54,
+   "waterline_z": 41,
+   "air_rows_below_wl": 4,
+   "air_rows_above_wl": 14
+  }
+ },
+ "skids": {
+  "cells": 460
+ },
+ "hearth": {
+  "cells": 4146,
+  "size": [
+   24,
+   20,
+   15
+  ],
+  "components": 1,
+  "smoke": [
+   12,
+   10,
+   15
+  ],
+  "smoke_air": true,
+  "smoke_over_pot_bottom": true,
+  "colors": {
+   "36": 17,
+   "104": 126,
+   "109": 69,
+   "140": 1040,
+   "146": 20,
+   "168": 136,
+   "172": 26,
+   "213": 2681,
+   "224": 3,
+   "236": 1,
+   "248": 27
+  }
+ },
+ "new_on_solid": 0,
+ "mag_skids_clash": 0,
+ "sealed": [],
+ "floating": [],
+ "models": 30,
+ "kinds": {
+  "door": 3,
+  "boat": 1,
+  "binnacle": 1,
+  "galley": 1,
+  "powder": 24
+ },
+ "model_collisions": {},
+ "no_foot_within_12": [],
+ "no_kind": [],
+ "model_overlap_pairs": 0,
+ "model_overlap": [],
+ "gear": {
+  "艙蓋-主艙口": {
+   "at": [
+    232.0,
+    70.0,
+    58.0
+   ],
+   "scale": [
+    1.2352941,
+    1.6153846,
+    1
+   ],
+   "bbox": [
+    [
+     232.0,
+     70.0,
+     58.0
+    ],
+    [
+     253.0,
+     91.0,
+     61.0
+    ]
+   ],
+   "foot_gap": null,
+   "support": 0.186,
+   "rope_clear": [
+    39.89,
+    "main-shroud-S-3-fall-2"
+   ],
+   "gun_box_overlap": [],
+   "ladder_pts_in_box": []
+  },
+  "艙蓋-orlop梯": {
+   "at": [
+    206.0,
+    74.0,
+    58.0
+   ],
+   "scale": [
+    0.8235,
+    1,
+    1
+   ],
+   "bbox": [
+    [
+     206.0,
+     74.0,
+     58.0
+    ],
+    [
+     220.0,
+     87.0,
+     61.0
+    ]
+   ],
+   "foot_gap": 10,
+   "support": 0.215,
+   "rope_clear": [
+    27.76,
+    "main-halyard-fall-1"
+   ],
+   "gun_box_overlap": [],
+   "ladder_pts_in_box": [
+    [
+     "orlop",
+     "hi"
+    ]
+   ]
+  },
+  "門-船尾艙": {
+   "at": [
+    125.5,
+    80.5,
+    56.0
+   ],
+   "scale": [
+    0.5,
+    0.7857,
+    0.4062
+   ],
+   "bbox": [
+    [
+     125.0,
+     75.0,
+     56.0
+    ],
+    [
+     126.0,
+     86.0,
+     68.998
+    ]
+   ],
+   "foot_gap": 0,
+   "support": 1.0,
+   "rope_clear": [
+    27.4,
+    "mizzen-halyard-fall-1"
+   ],
+   "gun_box_overlap": [],
+   "ladder_pts_in_box": []
+  },
+  "小艇": {
+   "at": [
+    254.0,
+    80.5,
+    64.0
+   ],
+   "scale": [
+    0.25,
+    0.25,
+    0.25
+   ],
+   "bbox": [
+    [
+     231.5,
+     74.0,
+     64.0
+    ],
+    [
+     276.5,
+     87.0,
+     69.5
+    ]
+   ],
+   "foot_gap": 0,
+   "support": 0.141,
+   "rope_clear": [
+    36.08,
+    "foc.sheet"
+   ],
+   "gun_box_overlap": [],
+   "ladder_pts_in_box": []
+  },
+  "羅經櫃": {
+   "at": [
+    93.5,
+    80.5,
+    74.0
+   ],
+   "scale": [
+    0.2,
+    0.2,
+    0.2
+   ],
+   "bbox": [
+    [
+     91.7,
+     77.9,
+     74.0
+    ],
+    [
+     95.3,
+     83.1,
+     83.6
+    ]
+   ],
+   "foot_gap": 0,
+   "support": 1.0,
+   "rope_clear": [
+    4.05,
+    "mizzen-halyard-fall-1"
+   ],
+   "gun_box_overlap": [],
+   "ladder_pts_in_box": []
+  },
+  "爐灶": {
+   "at": [
+    308.0,
+    65.0,
+    51.0
+   ],
+   "scale": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "bbox": [
+    [
+     302.0,
+     60.0,
+     51.0
+    ],
+    [
+     314.0,
+     70.0,
+     58.5
+    ]
+   ],
+   "foot_gap": 0,
+   "support": 1.0,
+   "rope_clear": [
+    45.62,
+    "foc.sheet"
+   ],
+   "gun_box_overlap": [],
+   "ladder_pts_in_box": []
+  }
+ },
+ "barrels_min_rope_clear": 37.03,
+ "galley_faces": {
+  "爐灶": {
+   "-x": [
+    0.0,
+    [
+     300,
+     65,
+     51
+    ]
+   ],
+   "+x": [
+    0.0,
+    [
+     316,
+     65,
+     51
+    ]
+   ],
+   "-y": [
+    0.0,
+    [
+     308,
+     58,
+     51
+    ]
+   ],
+   "+y": [
+    0.0,
+    [
+     308,
+     72,
+     51
+    ]
+   ]
+  }
+ },
+ "hoist": {
+  "甲板-main/梯子/orlop": {
+   "foot": [
+    204,
+    80,
+    36
+   ],
+   "head": [
+    221,
+    80,
+    56
+   ],
+   "decks": "orlop,main",
+   "up": "main",
+   "flat9_nearest": [
+    4.0,
+    [
+     196,
+     76,
+     36
+    ]
+   ],
+   "head_stand": [
+    0.0,
+    [
+     221,
+     80,
+     56
+    ]
+   ]
+  },
+  "甲板-poop/梯子/quarter-S": {
+   "foot": [
+    161,
+    92,
+    56
+   ],
+   "head": [
+    148,
+    92,
+    70
+   ],
+   "decks": "main,poop",
+   "up": "poop",
+   "flat9_nearest": [
+    4.0,
+    [
+     161,
+     88,
+     56
+    ]
+   ],
+   "head_stand": [
+    0.0,
+    [
+     148,
+     92,
+     70
+    ]
+   ]
+  }
+ },
+ "doors": {
+  "艙蓋-主艙口": {
+   "box_cells": [
+    232,
+    252,
+    70,
+    90,
+    58,
+    60
+   ],
+   "margin": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "air_under_in_deck_layer": 361,
+   "opening_cells": 361,
+   "opening_all_air": true,
+   "air_under_outside_opening": 0,
+   "rests_on": 0.186
+  },
+  "艙蓋-orlop梯": {
+   "box_cells": [
+    206,
+    219,
+    74,
+    86,
+    58,
+    60
+   ],
+   "margin": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "air_under_in_deck_layer": 132,
+   "opening_cells": 132,
+   "opening_all_air": true,
+   "air_under_outside_opening": 0,
+   "rests_on": 0.215
+  },
+  "門-船尾艙": {
+   "panel_cells": [
+    125,
+    75,
+    85,
+    56,
+    68
+   ],
+   "height": 13,
+   "frame_cols_wall": true,
+   "hole_cells": 117,
+   "hole_rows": 13,
+   "hole_y": [
+    76,
+    84
+   ],
+   "floor_under": true,
+   "gap_to_wall": 0
+  }
+ },
+ "mirror_diff": {
+  "magazine": 0,
+  "skids": 0,
+  "barrels": 0
+ },
+ "lists": {
+  "magazine": [
+   5026,
+   "2864c0810d18b3d2e71af7e72021e3c2111100bec9294f3f52ac8a0b3ec8d9e3"
+  ],
+  "skids": [
+   460,
+   "fc5b628799460f399a8bab5147cc4fb175e0bdc02a1a000c1cfc0a373503756f"
+  ],
+  "hearth": [
+   4146,
+   "ba2a72d0845992f9cfffb4df3b4745fa241cd78be9fd4dd99a423e122165ec32"
+  ]
+ }
+}

@@ -1,0 +1,280 @@
+{
+ "probe": null,
+ "overlaps": {},
+ "assembled_links": {
+  "cells": 219360,
+  "components_6": 1,
+  "cavities": 0,
+  "mirror_diff": 0
+ },
+ "models": {
+  "stern-carving": {
+   "cells": 529,
+   "components_6": 63,
+   "components_not_touching_ship": 0,
+   "mirror_diff": 0,
+   "over_window_openings": 0
+  },
+  "stem-head": {
+   "cells": 233,
+   "components_6": 1,
+   "components_not_touching_ship": 0,
+   "mirror_diff": 0,
+   "over_window_openings": 0
+  }
+ },
+ "stern_windows": [
+  {
+   "j": 1,
+   "y": [
+    60,
+    64
+   ],
+   "z": [
+    62,
+    69
+   ],
+   "hole_cells": 140,
+   "unreached": 0,
+   "depth_max": 4,
+   "glass": 28,
+   "sash": 12,
+   "reveal_recoloured": 86
+  },
+  {
+   "j": 2,
+   "y": [
+    69,
+    73
+   ],
+   "z": [
+    62,
+    69
+   ],
+   "hole_cells": 140,
+   "unreached": 0,
+   "depth_max": 4,
+   "glass": 28,
+   "sash": 12,
+   "reveal_recoloured": 86
+  },
+  {
+   "j": 3,
+   "y": [
+    78,
+    82
+   ],
+   "z": [
+    62,
+    69
+   ],
+   "hole_cells": 140,
+   "unreached": 0,
+   "depth_max": 4,
+   "glass": 28,
+   "sash": 12,
+   "reveal_recoloured": 86
+  },
+  {
+   "j": 4,
+   "y": [
+    87,
+    91
+   ],
+   "z": [
+    62,
+    69
+   ],
+   "hole_cells": 140,
+   "unreached": 0,
+   "depth_max": 4,
+   "glass": 28,
+   "sash": 12,
+   "reveal_recoloured": 86
+  },
+  {
+   "j": 5,
+   "y": [
+    96,
+    100
+   ],
+   "z": [
+    62,
+    69
+   ],
+   "hole_cells": 140,
+   "unreached": 0,
+   "depth_max": 4,
+   "glass": 28,
+   "sash": 12,
+   "reveal_recoloured": 86
+  }
+ ],
+ "glass_seal": [
+  {
+   "window_y": [
+    60,
+    64
+   ],
+   "glass": 28,
+   "behind_open": 40,
+   "leak_cells": 0,
+   "removed": null
+  },
+  {
+   "window_y": [
+    69,
+    73
+   ],
+   "glass": 28,
+   "behind_open": 40,
+   "leak_cells": 0,
+   "removed": null
+  },
+  {
+   "window_y": [
+    78,
+    82
+   ],
+   "glass": 28,
+   "behind_open": 40,
+   "leak_cells": 0,
+   "removed": null
+  },
+  {
+   "window_y": [
+    87,
+    91
+   ],
+   "glass": 28,
+   "behind_open": 40,
+   "leak_cells": 0,
+   "removed": null
+  },
+  {
+   "window_y": [
+    96,
+    100
+   ],
+   "glass": 28,
+   "behind_open": 40,
+   "leak_cells": 0,
+   "removed": null
+  }
+ ],
+ "reveal_wood_left": 0,
+ "rail_cap_fix": {
+  "cells": 289,
+  "x_span": [
+   24,
+   371
+  ],
+  "left_after": 0
+ },
+ "gallery": {
+  "frames_x": [
+   41,
+   50,
+   59,
+   68
+  ],
+  "window_cells": 1027,
+  "glass": 108,
+  "pendant_yc": 45.5,
+  "x_span": [
+   30,
+   72
+  ],
+  "y_span": [
+   39,
+   57
+  ],
+  "z_span": [
+   50,
+   74
+  ]
+ },
+ "quarter_rail": {
+  "side_x": [
+   122,
+   150
+  ],
+  "breast_top_z": 73,
+  "breast_y_cells": 69,
+  "breast_segment_ends": [
+   37,
+   63,
+   73,
+   87,
+   97,
+   123
+  ],
+  "corner_cells": 12
+ },
+ "stem_head": {
+  "stem_top": [
+   378,
+   80,
+   72
+  ],
+  "knob_centre": [
+   391.24,
+   80.5,
+   79.93
+  ]
+ },
+ "ladder_point_problems": [],
+ "walk_cells_lost": {
+  "cells": 69,
+  "on_top_of_breast_rail": 69,
+  "other": []
+ },
+ "new_cells_near_swivel_stations": {
+  "40": 0,
+  "75": 0,
+  "110": 0
+ },
+ "new_cells_in_front_of_gun_ports": 0,
+ "carving_dropped_under_gallery": [
+  [
+   30,
+   57,
+   73
+  ],
+  [
+   30,
+   57,
+   74
+  ],
+  [
+   30,
+   103,
+   73
+  ],
+  [
+   30,
+   103,
+   74
+  ]
+ ],
+ "counts": {
+  "hull_recolor": 719,
+  "hull_add": 60,
+  "stern_glass": 140,
+  "gallery_P": 4381,
+  "gallery_glass_P": 108,
+  "quarter_rail": 529,
+  "stern_carving": 529,
+  "stem_head": 233
+ },
+ "sha256": {
+  "step6/hull_recolor.vox.txt": "19cb833fdfd5432fee6e21a60858a69329b9047e6153b48db9c1c797c55d8767",
+  "step6/hull_add.vox.txt": "d12b0dbfbaf9e14e0e202e2165415e56b7b3b0e10add275de0caf5233cb80451",
+  "deco/stern_glass.vox.txt": "982e78045e502fe9a65d7482bfa9e201c50bc25d28047c1cd258dec92a44c7c7",
+  "deco/quarter_gallery.vox.txt": "42dd1d324ac109737574acd02f0933111325aea00f6fc3aa963e8f46631fef4b",
+  "deco/gallery_glass.vox.txt": "5307df61df620505908cae4dee2bee112d22e9e4094841c192a220faeedbf92d",
+  "deco/quarter_rail.vox.txt": "84cfaa80ce1b63e7716f90f495f3366376e21e9e4f0cf9c6588d0b3eac6a204e",
+  "deco/stern_carving.vox.txt": "6ebffb36fe4761e279d89fc4f77cd4e770f3a4df238baef9ee3845a69add3047",
+  "deco/stem_head.vox.txt": "ce953cc8c55b710d982eb7cdd2f43878e9cf146c092c84fe84056907a59d56e0"
+ }
+}

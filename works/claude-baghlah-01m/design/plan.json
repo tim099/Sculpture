@@ -1,0 +1,275 @@
+{
+ "title": "Star (al-Najm) baghlah, new sheet 01: lines",
+ "title_zh": "星辰號（al-Najm）武裝巴格拉 新圖紙 01：線形",
+ "task": "TASK-0019",
+ "author": "Claude-Ojousama",
+ "date": "2026-11-18",
+ "sources": {
+  "P2": "F.-E. Pâris 1843, Essai sur la construction navale des peuples extra-européens, v.2 Pl. 2 fig. 7–9（Baggala，1:100）；讀數 references/pl02_readings.json",
+  "P3": "同書 Pl. 3「Baggalas dans le port de Mascate」（船尾正面）",
+  "PT": "同書 v.1 正文 Arabie／Baggala（references/paris1843_v1_arabie_baggala_ocr.txt）",
+  "TIM": "Tim 2026-11-18 01:16 UTC FAR-75 問題卡：寬 9～10 m、長 32～36 m"
+ },
+ "class": "baghlah",
+ "meters_per_cell": 0.1,
+ "space": {"x": 480, "y": 160, "z": 400, "yc": 80, "note": "中線 ＝ 第 80 格（鏡像 y ↔ 160 − y）"},
+ "scale_from_P2": {
+  "sx": 1.4724, "sy": 1.6380, "sz": 1.5,
+  "src": "設計決定（TIM）：fig. 7 是「低於平均」的船（PT）。長照 TIM 的 32～36 m 取 36.0 m（艏柱頭到 taffrail，fig. 7 是 24.45 m ⇒ sx 1.4724）；寬取 9.5 m（fig. 8/9 是 5.81 m ⇒ sy 1.638，比長放得多：PT 說大船寬 11.5 m「幾乎是 fig. 7 的兩倍」，大船比較胖）；高 sz 1.5（主甲板 3.73 → 5.6 m、水線 2.73 → 4.1 m）。換算：格 x ＝ 60 ＋ (1822 − px) × 0.2017、格 z ＝ (1427 − py) × 0.2055（fig. 7 的 px／py，73.0 px/m）"
+ },
+ "paris": {
+  "beam_m": 5.81, "length_m": 24.45, "keel_m": 12.56,
+  "stem_head": [380.0, 72.9], "taffrail": [20.1, 87.3],
+  "midship_x": 184, "midship_x_src": "P2 fig. 8 最寬處 px 1164–1252 的中間 px 1208 ⇒ 格 x 183.8（fig. 9 的船中剖面量在這一站）",
+  "waterline_z_m": 2.73, "rail_mid_z_m": 4.48, "deck_z_m": 3.73,
+  "midship_z_hb_m": [[0.27, 0.14], [0.41, 0.4], [0.55, 0.64], [0.68, 0.9], [0.82, 1.22], [0.96, 1.48], [1.1, 1.69], [1.23, 1.92], [1.37, 2.09], [1.51, 2.23], [1.64, 2.34], [1.78, 2.45], [1.92, 2.55], [2.05, 2.62], [2.19, 2.68], [2.33, 2.74], [2.47, 2.77], [2.74, 2.84], [3.29, 2.88], [3.97, 2.9], [4.32, 2.9]],
+  "rail_hb_px": {"284": 41, "328": 67, "416": 111, "460": 127, "548": 152, "592": 162, "636": 171, "680": 179, "724": 185, "768": 190, "812": 194, "856": 198, "900": 201, "944": 203, "988": 206, "1032": 208, "1076": 210, "1120": 211, "1164": 212, "1208": 212, "1252": 212, "1296": 211, "1340": 209, "1384": 205, "1428": 202, "1472": 198, "1516": 193, "1560": 187, "1736": 157, "1868": 129, "1912": 118, "1956": 105, "2000": 89},
+  "src": "P2 讀數（references/pl02_readings.json 的子集）；draft_lines.py 拿來跟設計比（paris_check）"
+ },
+ "lines": {
+  "half_beam": {"v": 47.5, "src": "TIM＋設計決定：全寬 9.5 m ⇒ |dy| ≤ 47（95 格）"},
+  "keel_top": {"v": 3, "src": "P2：fig. 7 龍骨深 0.21 m × sz 1.5 ＝ 3.2 格"},
+  "keel_half": {"v": 2, "src": "設計決定：龍骨寬 5 格（0.5 m）"},
+  "plan_half": {"v": 20, "src": "P2 fig. 9 擬合（v2 讀數，x 184 那一站）：plan_half／astilla／bilge_pow／max_breadth_z 四個一起格點搜尋（192 組），取最大差最小的：V 形船底外緣 (20, 12) ＝ 半寬 1.22 m、高 0.82 m（讀數同一點）"},
+  "astilla": {"v": 9, "src": "同 plan_half 的格點搜尋：V 形船底外緣 z 12 ＝ 龍骨頂 3 ＋ 9"},
+  "max_breadth_z": {"v": 44, "src": "同 plan_half 的格點搜尋：圓舭在 z 44（2.9 m）到最寬；P2 fig. 9 半寬 2.6 m 高處已 2.84 m、3.3 m 高處 2.88 m"},
+  "tumblehome": {"v": 0, "src": "P2 fig. 9：船中兩舷直到舷頂，沒有內收"},
+  "tumblehome_ref_z": {"v": 67, "src": "＝ 船中舷頂（readings_at.rail_z）"},
+  "tumblehome_pow": {"v": 1.0, "src": "設計決定（tumblehome 0，用不到）"},
+  "tumblehome_above_per_cell": {"v": 0.06, "src": "設計決定（P3 船尾正面：船尾樓兩舷往裡倒）：z 67 以上每 10 格每舷收 0.6 格 ⇒ taffrail（z 87）每舷收 1.2 格"},
+  "bilge_pow": {"v": 1.7, "src": "同 plan_half 的格點搜尋（1.7／1.9／2.1／2.3）：每個讀數高度差 ≤ 1.04 格、平均 0.42（讀數 paris_check.midship）"},
+  "s_aft": {"v": 0.41, "src": "P2 fig. 8：最寬處在 px 1164–1252（格 x 177–195）；舷頂高度的 s ＝ 0.41–0.46"},
+  "s_fwd": {"v": 0.46, "src": "同上"},
+  "sternpost_x0": {"v": 60, "src": "設計決定：艉柱腳的位置（taffrail 在 x 20、作品框 x 0..479）"},
+  "sternpost_rake_deg": {"v": 16.23, "src": "P2 fig. 7（v2，verifier 重量）：艉柱是兩條平行線夾的一條帶，後緣那條 (1820,1428) → (1898,1165)，tan 0.2966（16.5°）；× sx／sz ⇒ tan 0.2911。v1 把前後兩條線混在一起量成 12.5°（錯）"},
+  "wing_transom_z": {"v": 54, "src": "P2 fig. 7：艉柱頂 3.59 m × 1.5 ＝ z 53.8；counter 從這裡開始"},
+  "transom_ratio": {"v": 0.52, "src": "P2 fig. 8 擬合＋P3：fig. 8 俯視外緣在 taffrail 是最寬的 0.42（px 2000）；船尾那一段（x 24..148）跟 aft_pow 一起擬合（0.5／0.52／0.55／0.6 × 1.6–2.6）⇒ 0.52（平均差 0.3 格、最差 −0.6）；P3 的船尾正面也寬、上緣拱形"},
+  "forefoot_x": {"v": 244.9, "src": "P2 fig. 7：龍骨（底面）長 12.56 m × sx ⇒ 184.9 格 ⇒ 60 ＋ 184.9"},
+  "stem_run_per_z": {"v": 1.8546, "src": "P2 fig. 7：艏柱從龍骨前端 px 905 直線到舷頂的艏柱頭 px (235,1072)：往前 9.18 m、往上 4.86 m ⇒ × sx／sz ＝ 135.2 ÷ 72.9（離水平 28.4°）"},
+  "deadwood_aft_z": {"v": 27, "src": "P2 fig. 9 右半（船尾的站）：凹的 S 形剖面沿龍骨上到約 1.8 m ⇒ × 1.5 ＝ 27"},
+  "deadwood_fwd_z": {"v": 8, "src": "設計決定：船頭的龍骨很早就往上斜成艏柱（stem_run_per_z），前段 deadwood 只抬一點"},
+  "bow_pow_low": {"v": 1.3, "src": "設計決定：水線下的船頭比較尖（P2 fig. 9 左半的站是 V 形）"},
+  "bow_pow_high": {"v": 1.9, "src": "P2 fig. 8 擬合（俯視外緣）：k 1.7／1.9／2.2 試過，1.9 時 x 200 以前平均差 0.03 格（v2 剖面重擬合後再量）；只有艏柱頭往後 1 m 內 fig. 8 是凹的，這裡寬 4–5 格（設計決定：不另做凹線，艏柱頭的裝飾會蓋住）"},
+  "aft_pow": {"v": 2.2, "src": "P2 fig. 8 擬合：船尾那一段 rt ＋ (1 − rt)(1 − ua^q)，跟 transom_ratio 一起擬合 ⇒ 2.2"},
+  "counter": {"c": 14.5, "z0": 54, "z1": 87, "shape": "ramp", "round": 0.3, "src": "P2 fig. 7：艉柱頂 (x 44.7, z 53.8) 到 taffrail (x 20.1, z 87.3) 是一條直線（PT：舵桿穿過「低而斜」的 counter）⇒ z 54..87 直線外伸到 14.5 格（87 處艉柱線 x 34.7）；俯視兩角收 30%（設計決定，圓一點的船尾）"},
+  "stern_tumble": {"z0": 67, "k": 0.08, "pow": 2, "src": "設計決定（P3：船尾樓上窄）：船尾那一段 z 67 以上每 10 格每舷再收 0.8 格 × ua²"},
+  "top_curve": {
+   "knots": [[15, 87.3], [22, 86.3], [34, 86.1], [46, 85.3], [64, 84.7], [83, 84.0], [101, 83.4], [119, 83.0], [126, 76.0], [148, 75.8], [158, 67.0], [218, 67.2], [254, 67.6], [290, 68.8], [327, 70.1], [351, 71.3], [380, 72.9]],
+   "smooth": [7, 9],
+   "src": "P2 fig. 7 讀數換算（pl02_readings.json）：主舷頂 px 260..1340、船尾樓前緣 px 1345（x 156）往上到 quarter rail z 75.8、上層船尾樓 px 1515（x 122）往上到 z 83 再翹到 taffrail z 87.3；兩個落差（節點 7→8、9→10）走 smoothstep，其他段直線"
+  }
+ },
+ "decks": {
+  "src": "PT：主甲板一層連續（砲只有主甲板每舷 12–14 門的位置）；船尾樓（dunette）很高、前面開敞（柱子或兩側小艙之間空出來放羅盤、站舵手）；船頭約 4 m 處甲板往下凹 0.70 m 成一個積水的「水槽」，水從兩舷的孔慢慢流掉。遊戲站人要頭頂 14 格空（甲板板 1 ＋ 樑 3）⇒ 甲板間距至少 18",
+  "rows": [
+   {"key": "orlop", "name": "hold platform", "z": 36, "x_from": 96, "x_to": 290, "src": "設計決定：主甲板下 20 格鋪一段平台（彈藥庫、儲藏；步驟 10 的火藥桶放這裡）；PT：最大的船後桅腳下到 entre-pont。步驟 5 改 x_from 120 → 96：後桅 x 108 的腳（masts.mizzen.heel_deck ＝ orlop）要踩在平台上"},
+   {"key": "main", "name": "main deck", "z": 56, "src": "P2 fig. 7：主甲板 3.73 m × sz 1.5 ＝ z 55.9"},
+   {"key": "quarter", "name": "half deck (steering platform)", "z": 70, "x_from": 125, "x_to": 150, "src": "P2 fig. 7：px 1345（x 156）舷頂從 67 升到 75.8，到 px 1515（x 122）⇒ 一段升高的半層甲板。PT：船尾樓前面開敞、柱子之間放羅盤、站舵手 ⇒ 舵手台（設計決定）。步驟 5 改甲板面 68 → 70：v1 的 68（板在 67）底下只剩 56..66 ＝ 11 格，遊戲走路要頭上 1.2 m ⇒ 主甲板在 x 125–158 被切斷、砲門 4、5 的砲沒人走得到；70（板 69、不放樑 ⇒ thick 1）底下 56..68 ＝ 13 格。代價：舷牆剩 4–6 格（舷頂 74.4–76），步驟 6 加欄杆／舷牆布（PT：船尾樓四周掛紅色舷牆布）。x_from 124 → 125：x 124 是船尾艙前壁（break），前壁上面是船尾樓甲板的邊。x_to 158 → 150：從格子量舷頂，x 125–149 是 75、x 150 起往船頭斜下去（150: 74、153: 70、156: 67）⇒ 甲板面 70 的舵手台只能鋪到 x 150（舷牆 70..74 ＝ 5 格），再往前就高過舷側"},
+   {"key": "poop", "name": "dunette (poop)", "z": 74, "x_to": 124, "src": "P2 fig. 7：px 1515（x 122）以後舷牆升到 z 83–87（PT：船尾樓很高、四周掛紅色舷牆布）⇒ 甲板面 74（底下艙房 56 → 74 ＝ 18，遊戲站得下；舷牆 9–13 格）；前緣 x 124（PT：後桅 x 108 穿過船尾樓前緣附近）"}
+  ],
+  "sheer": {"x_flat_to": 250, "rise_to_x": 290, "rise": 2, "src": "P2 fig. 7：主舷頂從 x 250（z 67.6）到 x 290（z 68.8）抬約 1.5 格，甲板跟著抬 2（設計決定，取整）"},
+  "fore_well": {"x_from": 280, "x_full": 292, "drop": 7, "src": "PT：甲板往船頭降 0.70 m，到離艏柱約 4 m（× sx ＝ 59 格：主甲板高度的艏柱 x 349 − 59 ＝ 290）成水槽 ⇒ x 280→292 smoothstep 降 7 格（0.7 m 照實寸、不放大：是排水的水槽，不是比例）、x 292 到艏柱維持低的那一層；兩舷開排水孔（步驟 4）"}
+ },
+ "decks_build": {
+  "src": "步驟 5（Ship_Decks §9.3）：甲板子作品每件一層遊戲甲板；結構照收穫號 calli-cosecha-01m/design/draft_decks.py（板＋樑＋艙口圍欄、break 艙壁、梯子踏板與 stringer、封閉空腔），座標慣例照本船 layout.deck_z（甲板面 ＝ 站人那一格、板在下面一格）",
+  "groups": [
+   {"key": "orlop", "rows": ["orlop"], "level": 0, "name": "底艙平台（hold platform）", "thick": 3},
+   {"key": "main", "rows": ["main"], "level": 1, "name": "主甲板（main deck）", "thick": 4},
+   {"key": "poop", "rows": ["poop", "quarter"], "level": 2, "name": "船尾樓（dunette）", "thick": 3, "src": "設計決定：舵手台（70）跟船尾樓（74）差 4 格，中間 x 125–127 一道 2 格高的台階（70 → 72 → 74，每步 ≤ 3 格）⇒ 遊戲裡同一層甲板（floor 在 x 124→125 往下接）"}
+  ],
+  "plank": {"weather": 209, "interior": 177, "weather_rows": ["main", "poop", "quarter"], "src": "設計決定：露天的甲板淺色柚木 209、底艙平台 177（同內板）"},
+  "beam": {"every": 16, "w": 2, "depth": {"orlop": 2, "main": 3, "poop": 2, "quarter": 0}, "color": 136, "src": "設計決定：每 16 格一根、寬 2；主甲板 3 格深 ⇒ 底艙平台站人頭上 36..51 ＝ 16 格；船尾樓 2 格（71–72，船尾窗頂 69 以上）；舵手台不放樑（底下要留 13 格給主甲板走路）"},
+  "trim": 141,
+  "coaming_h": 2,
+  "hatches": [{"name": "主艙口", "x0": 233, "x1": 251, "half": 9, "rows": ["main"], "src": "設計決定：主桅與水槽之間一個貨艙口（1.9 × 1.9 m），底下是底艙平台"}],
+  "mast_r": {"main": 4, "mizzen": 2.5},
+  "breaks": [{"name": "船尾艙前壁", "x": 124, "lo": "main", "up": "poop", "door_half": 4, "door_h": 13, "src": "設計決定：船尾艙（主甲板 56 到船尾樓板 73）前面一道艙壁，中線一扇 0.9 × 1.3 m 的門（舵手台底下只有 13 格高）；PT：船尾樓前面開敞 ⇒ 舵手台前緣不放艙壁"}],
+  "bow_from_x": 320,
+  "bow_src": "步驟 5 設計決定：水槽甲板（板 z 50）只鋪得到 x 332，再往前是斜艏柱內側往上翹的楔形空間（x 333–373、z 51–72，約 15 m²）—— v1 沒鋪 ⇒ 走路格把它算成「艙底」、沒有梯子（Ship_Decks ⑥ 10 m² 以上報 ⚠）⇒ x 320 以後、艏柱內側比主甲板高的那幾欄，主甲板板順著楔形底一欄一欄往上鋪（每欄 1–2 格的台階）",
+  "step": {"x0": 125, "x1": 127, "z0": 70, "z1": 71, "src": "舵手台 → 船尾樓的台階（2 格高）"},
+  "breast_rail": {"x": 150, "z0": 70, "h": 4, "src": "舵手台前緣胸牆（梯子頭留口）"},
+  "ladders": {
+   "rise": 3, "run": 2, "tread_half": 3, "color": 136, "head_back": 3, "sole_back": 3, "sole_treads": 2, "sole_src": "步驟 5 verifier：hold 梯子 v1 的腳站在龍骨旁 1 格寬的槽裡、兩側斜樑有 4 格穿出船底 ⇒ 梯腳改在艙底寬到 |dy| ≤ 5 的那一層，底下（梯腳後 3 格到第 2 階）用艙底板填平；梯子的格一律只留在艙裡",
+   "src": "設計決定：照收穫號每 3 格一階、每階 2 格、踏板 7 寬；梯頂最後一階貼著上一層的邊（Ship_Decks ④），head 在邊內 2 格；艙裡的梯子（well）只在上一層開「頭頂會撞到」那一段到梯頂（Ship_Decks「開梯口的做法」）。每一層都有梯子；底艙平台底下的貨艙用 hold 梯子（Ship_Decks ⑥：康塞普西翁號的補法）",
+   "list": [
+    {"name": "hold", "lo": "hold", "up": "orlop", "xs": 165, "dir": -1, "dy": 0, "well": true},
+    {"name": "orlop", "lo": "orlop", "up": "main", "xs": 205, "dir": 1, "dy": 0, "well": true, "decks": "orlop,main"},
+    {"name": "quarter-P", "lo": "main", "up": "quarter", "xs": 160, "dir": -1, "dy": -12, "decks": "main,poop"},
+    {"name": "quarter-S", "lo": "main", "up": "quarter", "xs": 160, "dir": -1, "dy": 12, "decks": "main,poop"}
+   ]
+  }
+ },
+ "ports": {
+  "src": "PT：船身畫兩排砲門，實際只有主甲板每舷 12–14 門的位置；船尾樓也可放小砲。P2 fig. 7：砲門開在主甲板的舷牆上（例：px 825–870 寬 0.62 m、高 0.55 m），船尾樓底下也有（px 1370–1420、1570–1620）",
+  "tiers": [
+   {"deck": "main", "per_side": 11, "x_from": 80, "x_to": 276, "w": 5, "h": 5, "sill": 3, "gun": "4l", "src": "設計決定：PT 的 12–14 取 11（x 80 以後 ＝ 讓開船尾側廊 x 29–71）；步驟 4 改 x_to 316 → 276：v1 的最後兩門（x 292、316）落在船頭水槽裡（甲板低 7 格）而且壓在錨纜橫樑 x 296 底下 ⇒ 砲列收在水槽前緣 x 280 以前；x_from／x_to 是砲門外緣、中心間距約 19.1 格（1.9 m）；砲門 0.5 m 見方（P2 的 0.62 × 0.55 m 照實寸、4 磅砲用）；z 照甲板面 ＋ sill 3（船中 59–63）、舷頂 67 下面留 3 格"}
+  ],
+  "scuppers": {"x": [300, 316], "w": 3, "h": 1, "src": "PT：水槽的水從兩舷的孔慢慢流掉 ⇒ 水槽（x 292 以後）兩舷各 2 個排水孔，貼著水槽甲板面、寬 3 高 1（設計決定）"},
+  "swivels": {"n_per_side": 3, "x": [40, 75, 110], "deck": "poop", "gun": "pierrier", "bow": {"n_per_side": 1, "x": 330}, "src": "PT：船尾樓可放小砲 ⇒ 船尾樓舷牆每舷 3 門迴旋砲；船頭水槽兩舷各 1（設計決定）。合計 22 門 4 磅 ＋ 8 門迴旋砲 ＝ 30（PT：葡萄牙人退出後阿拉伯人武裝了 30 甚至 50 門砲的船）"}
+ },
+ "masts": {
+  "src": "PT：兩根桅，主桅一整根柚木、直徑可到 0.75 m；長度中型船＝船長、大船比較短且直立（小船前傾 8–10°）；後桅跟主桅平行、在主桅到船尾的一半，穿過船尾樓前緣，大船的腳下到 entre-pont；帆桁幾乎＝船全長、兩段綁成；帆是梯形（前緣是後緣的一半）、棉布；主帆下緣從艏柱到船尾樓前 4–5 m；艏柱上有三角帆（foc），它的桿子綁在船頭和錨纜橫樑上；每根桅 4–6 條帶滑車的支索（像 xebec）",
+  "rows": [
+   {"key": "main", "x_step": 191, "rake_deg": 0, "heel_z": 3, "len_m": 28.0, "diam_m": 0.75, "shrouds_per_side": 5, "yards": {"lateen": 34.0}, "src": "x：P2 fig. 7 主桅在主甲板 px 1170 ⇒ x 191.5；rake 0（PT：大船直立；P2 那艘「低於平均」的船畫成前傾約 7°）；腳在龍骨頂（PT：進 carlingue）；長 28 m（設計決定：PT 說大船短於船長 ⇒ 0.78 × 36 m）；直徑 0.75 m（PT 的上限）；帆桁 34 m（PT：幾乎＝船全長 36 m）；支索每舷 5（PT 4–6）"},
+   {"key": "mizzen", "x_step": 108, "rake_deg": 0, "heel_deck": "orlop", "len_m": 17.0, "diam_m": 0.45, "shrouds_per_side": 3, "yards": {"lateen": 18.0}, "src": "x：P2 fig. 7 後桅 px 1580 ⇒ x 108.8（PT：主桅到船尾的一半 ＝ (191 ＋ 20)／2 ＝ 105.5）；跟主桅平行（rake 0）；腳在 hold platform（PT：大船下到 entre-pont）；長 17 m（設計決定：主桅的 0.6）；帆桁 18 m（步驟 7 從 20 改小，原因見 rig_build.yards.mizzen）"},
+   {"key": "jibboom", "heel_x": 296, "over_x": 380, "angle_deg": null, "len_m": 11.5, "yards": {}, "sail": "foc", "src": "PT：foc 的桿子（bâton-volant）綁在船頭與錨纜橫樑；錨纜橫樑在船頭到主桅的 1/3（349 − (349 − 191)／3 ≈ 296）⇒ 腳綁在 x 296、從艏柱頭（x 380）上方伸出去約 3 m；仰角步驟 7 改成由產生程式解（v0 寫 12° 是設計決定：腳在錨纜橫樑頂 z 68 時，12° 到船頭會離船頭 1 m 多、綁不到；見 rig_build.jibboom）"}
+  ],
+  "sails": {"lateen_luff_to_leech": 0.5, "main_foot_from_x": 380, "main_foot_to_x": 224, "src": "PT：梯形帆前緣 ＝ 後緣的一半；主帆下緣從艏柱（x 380）到船尾樓前 4.5 m（158 ＋ 4.5 × 14.72 ≈ 224）；收帆、戰鬥帆的帆裝表在步驟 8"}
+ },
+ "gear": {"capstan": false, "cable_beam_x": 296, "stem_rollers": 2, "pumps": false, "helm": "tiller", "src": "PT：沒有絞盤，用大滑車組起錨；錨纜繞在主桅前 1/3 的粗橫樑（x 296）；艏柱裡兩個滾輪代替錨鏈孔；錨很小、出海要收上甲板；大船也不用幫浦（水桶接力）；多數用很長的舵柄（少數用歐式舵輪）、舵桿穿過低而斜的 counter；舵手和羅盤在船尾樓前面開敞的地方（步驟 10、11）"},
+ "stern": {
+  "src": "Wikipedia「Baghlah」（沒逐頁讀）：船尾五扇窗；P3 船尾正面：寬、上緣拱形、窗一排排、雕花；P2 fig. 7：船尾側邊一個有窗的側廊（px 1765–1975、py 1070–1145 ⇒ x 29–71、z 58–73），底下一個雕花托架；PT：船尾雕刻是阿拉伯和歐洲的風格，漆黑白",
+  "rows": [{"deck": "main", "kind": "window", "n": 5, "w": 5, "h": 8, "sill": 6, "pitch": 9, "src": "設計決定：船尾艙（主甲板 56 → 船尾樓 74）一排 5 扇窗，z 62–69；步驟 4 寬 6 → 5（奇數才對中線 y 80 對稱）、中心間距 9 ⇒ 外緣 dy ±20.5（船尾面在 z 60–66 平的那一段 dy ±25，兩角留 4 格）；窗洞整段刻穿到艙裡，玻璃與窗框步驟 6 做"}],
+  "quarter_gallery": {"x_from": 29, "x_to": 71, "z_from": 58, "z_to": 73, "windows": 3, "src": "P2 fig. 7 讀數 × 縮放；步驟 6 做（裝飾、能隱藏就標 deco=1）"}
+ },
+ "waterline": {"z": 41, "src": "P2：fig. 7 水線 2.73 m（fig. 9 2.67 m）× 1.5 ＝ z 41"},
+ "readings_at": {"deck_z": 56, "rail_z": 67, "src": "P2 fig. 7：主甲板 3.73 m × 1.5 ＝ 56；船中舷頂 z 67"},
+ "decks_preview": {"orlop": 36, "main": 56, "quarter": 68, "poop": 74},
+ "paint": {"black": 36, "white": 182, "rail_cap": 36, "wale": {"deck": "main", "dz": -3, "h": 2}, "port_ring": 182, "stern_face": {"z_from": 55, "color": 36}, "src": "設計決定（PT：船尾雕刻漆黑白；船身上油的柚木 ⇒ 舷側保留柚木褐 136、不整片上漆）：舷頂最上一格黑（rail cap）、主甲板面下 3 格起一條 2 格高的黑帶（照甲板舷弧）、砲門外一圈白、船尾 counter 面（艉柱線後面、z 55 以上的外板）黑底 ⇒ 步驟 6 的白色雕花與窗框貼在黑底上；黑 36、白 182（同水線下的白，少一種顏色）"},
+ "hull_build": {"wall": 3, "frame_color": 141, "inner_color": 177, "side_color": 136, "bottom_color": 182, "bottom_top_z": 42, "src": "設計決定：牆 3 格（外板 1、肋骨 1、內板 1；船比康塞普西翁號小）；水線上上油的柚木褐 136、水線下白 182（dhow 船底塗石灰＋脂的白漆）；漆線在水線上 1 格"},
+ "deco": {
+  "src": "步驟 6（新圖紙 04）：P3 船尾正面（五扇上緣尖拱的高窗、窗間壁柱、窗下一排方格板、每格一個十字花、上面兩道拱形邊）、P2 fig. 7（船尾側廊三扇窗、底下雕花托架；艏柱頭一顆瓜形頂飾）、PT（船尾雕刻阿拉伯與歐洲風格、漆黑白；船尾樓四周掛紅色舷牆布；船尾樓前面開敞、有小柱）；Ship_Fittings §9.9、Ship_Materials「窗的玻璃」、Ship_Ends §3–§4",
+  "colors": {"white": 182, "black": 36, "glass": 155, "dark": 37, "red": 160, "src": "白 182、黑 36 同步驟 4 的塗裝；玻璃 155 淡藍灰（同憲法號）；側廊玻璃後面的暗色 37；舷牆布紅 160（PT：紅色）"},
+  "stern_windows": {"recess": 1, "sash_z": 66, "src": "Ship_Ends §3「窗」：窗洞裡照離船外的 6 連通距離，距離 1 那層空著（窗框凹進去 1 格）、距離 2 那層是玻璃、再往裡通到艙裡；窗格（白）在玻璃那一層：中間一直、z 66 一橫（設計決定）；窗洞四面切面（窗洞旁邊的船殼格）全部塗白 ＝ 窗框（步驟 4 留下的 141／177 切面蓋掉）"},
+  "stern_carving": {"z_band": [55, 61], "z_moulding": 75, "pilaster_w": 1, "arch_rise": 3, "star": {"y": 80, "z": 80, "r": 3}, "rosettes_dy": 12, "border_inset": 2, "src": "P3：窗間壁柱（v2：窗框本身就是白的，窗框之間 2 格留黑；方格板那一段與窗框上面 3 格各補一段白柱；最外兩根壁柱 1 格寬、跟窗框隔 1 格黑 —— v1 2 格寬的壁柱把窗框之間填滿，整排窗變成一整塊白）、每扇窗頂一道尖拱（窗框上緣往上 3 格到尖、裡面留黑、尖上一顆頂飾）、窗下 z 55–61 一排方格板（上下兩道線腳、每格一個十字花＋四點）、z 75 一道橫線腳、上面沿船尾面外緣往裡 2 格一道邊；正中一顆八角星（設計決定：船名 al-Najm ＝ 星）、兩旁各一朵十字花。外部模型 meta deco=1（Ship_Fittings §9.9：純看的；Tim：裝飾可以隱藏、不算重量）；浮雕貼在船尾面外 1 格，斜面上下兩排差 1 格的地方往後補 1 格（6 連通）"},
+  "quarter_gallery": {"dep": 6, "z_base": 58, "z_top": 73, "x_front_top": 71, "front_slope": 0.15, "win_x0": 41, "win_n": 3, "win_w": 8, "win_z": [63, 69], "transom_z": 66, "mullion_every": 3, "roof_z": 74, "pendant": {"xc": 57, "ax": 8, "z_top": 57, "az": 7, "dep": 5}, "frame": {"at_y": 30, "size": [420, 40, 120], "src": "側廊作品（與它的玻璃）框 420×40×120、左舷關聯 at 0,30,0、右舷 mirror=y at 0,91,0（161 − 30 − 40）：mirror 的關聯要整件放得進組裝件，框若是整個船寬（160）從 y 0 放，鏡像那一份會多出 1 格 ⇒ 擋下（2026-11-18 落格時撞到，改成這個框；清單照框內座標寫）"}, "src": "P2 fig. 7：x 29–71、z 58–73、三扇窗（每扇 3 欄 × 2 排窗格）、底下雕花托架（px 195–275 ⇒ x 49–65）；dep 6（0.6 m，設計決定：P3 船尾看過去側廊伸出船尾寬的約 1／8）；前緣上面在 x 71、往下每格往後 0.15；三扇窗共用窗框（窗內寬 8 ＝ 2＋1＋2＋1＋2、高 7 ＝ 3＋1＋3），從 x 41 起（z 62 船殼從 x 41 起才有）。外面漆黑、窗框與上下線腳白（PT 黑白）；外 1 格凹進去、第 2 格玻璃（子作品，關聯 meta material=glass）、後面實心暗色（側廊不通艙裡 ⇒ 不會多封閉空腔）。關聯（不是模型）：側廊是船的一部分（重量、會被打），玻璃要 material 只有關聯能帶。只做左舷，右舷 mirror=y（Ship_Setup：at.y ＝ 161 − 0 − 160 ＝ 1）"},
+  "quarter_rail": {"x_from": 118, "x_to": 150, "top_z": 80, "post_every": 4, "breast_x": 150, "baluster_every": 3, "src": "PT：船尾樓四周掛紅色舷牆布、前面開敞有小柱 ⇒ 舵手台兩舷：舷頂（z 75）上面一道舷牆布（紅）＋黑柱（每 4 格）＋黑扶手 z 80；舵手台前緣（x 150 的胸牆，頂 73）上面白色小柱（每 3 格、從中線對稱排）＋黑扶手 z 80，梯子口（y 64–72、88–96）不擋。扶手頂離舵手台面 10 格（Ship_Ends：rail_h 至少 7；柱子之間 2 格空 ⇒ 第一人稱鑽不過去）；步驟 5 把舵手台抬到 70 之後舷牆剩 5 格，這裡補到 1.0 m。x_from 118：船尾樓舷牆往上翹的那一段（舷頂 < 80）也補到 80，跟舵手台接成一道。關聯（擋人要真的格；裝飾不擋人）"},
+  "stem_head": {"post_len": 6, "post_w": 3, "rake_x_per_z": 1.85, "knob_r": 3, "src": "P2 fig. 7（g）：艏柱照原本的斜度伸出舷頂一段、頂上一顆有瓣的瓜形頂飾；post_len 6 格（0.6 m）、頂飾半徑 3（直徑約 0.7 m）、瓣黑白相間（設計決定，PT 船頭不裝飾 ⇒ 只做頂飾）；斜度 1.85 ＝ 量到的艏柱（z 62→72、x 360→378）。外部模型 deco=1。⚠ 步驟 7 的 foc 桿子在 x 380 約 z 69–70 經過艏柱頭 ⇒ 要放在艏柱旁邊（偏 y），不穿過頂飾"},
+  "rail_cap_fix": {"src": "步驟 4 verifier：舷頂內緣露出內板 177 的頂面 ⇒ 舷頂附近（z ≥ 那一欄舷頂 − 2）上面是空的 177 格改成舷頂黑 36"}
+ },
+ "rig_build": {
+  "src": "步驟 7（Ship_Masts §5）：每根桅、foc 的桿子、錨纜橫樑各一件子作品（框同組裝件、at 0,0,0）；三角帆桁各一件子作品、外部模型放在它那根桅的子作品裡。帆桁照收穫號 calli-cosecha-01m/design/draft_masts.py：在格子裡就做成斜的（前端低、後端高），模型 rotate 0、pivot 在吊點那一格，放在桅的左舷側不穿過桅（ame 2026-10-15 酒館 seq 24919 確認遊戲照 yard=gaff、rig=lateen 畫）。⛔ 不用塔爾塔納那種 rotate_y（Ship_Masts 只寫了 rotate z）",
+  "colors": {"mast": 141, "sheave": 36, "cap": 36, "lashing": 68, "yard": 177, "jibboom": 177, "cable_beam": 136, "src": "設計決定：PT 主桅是上油的柚木 ⇒ 141（比舷側 136 灰一點）；帆桁、foc 的桿子淺色 177；綁紮的繩 68；桅頂滑輪槽、桅頂帽黑 36（跟舷頂黑同色）；錨纜橫樑同甲板樑 136"},
+  "masts": {
+   "main": {"hole_r": 4, "hole_to_z": 57, "coat": true, "r_lo": 3.75, "r_hi": 2.6, "hounds_z": 251, "hounds_r": 3.2, "head_z0": 253, "head_half": 2, "sheaves": [[266, 270], [274, 278]], "cap_h": 2, "pivot_z": 257, "src": "桅孔照甲板（decks_build.mast_r 4，整數格心 x 191、y 80 的圓盤）⇒ 腳到 z 57（主甲板面 56 ＋ 1）截面就是那個圓盤（孔一格不漏地填滿）、甲板面上那 2 格比桅身粗的那一圈塗綁紮色當桅領（mast coat）；v1 到 z 61，主甲板上面 0.6 m 一道 9 → 7 格寬的台階（步驟 7 verifier）；⚠ 艙裡那段 0.9 m 寬是甲板孔（半徑 4）定的，比 PT 的 0.75 m 粗；往上收到 hounds 半徑 2.6（設計決定：桅頂約 0.5 m）；hounds 一圈綁紮（支索的 pantoire 掛在這裡，步驟 8）；桅頂 z 253–283 方形 5×5，兩道滑輪槽（PT：兩條 itague 穿過桅頂的 clans）黑；頂端 2 格黑帽。帆桁吊點 z 257：下面那道槽底下 0.9 m（PT：帆桁由穿過桅頂的 itague 吊起）"},
+   "mizzen": {"hole_r": 2.5, "hole_to_z": 77, "r_lo": 2.4, "r_hi": 2.0, "hounds_z": 183, "hounds_r": 2.6, "head_z0": 185, "head_half": 1, "sheaves": [[193, 197]], "cap_h": 2, "pivot_z": 187, "src": "桅孔 decks_build.mast_r 2.5 ⇒ 腳（底艙平台面 z 36）到 z 77（船尾樓面 74 ＋ 3）截面就是那個圓盤；桅頂 z 185–206 方形 3×3、一道滑輪槽（設計決定：後桅比較小，一條 itague）；吊點 z 187"}
+  },
+  "yards": {
+   "main": {"sail": "main-lateen", "len_m": 34.0, "tilt_deg": 18, "hoist_frac": 0.47, "r_max": 2.75, "r_end": 1.25, "y_off": -6, "lash_half": 30, "lash_every": 6, "peak_piece": {"len_m": 3.0, "extra_deg": 14, "r": 1.25}, "src": "長 34 m（masts.rows main）；兩段綁成（PT）⇒ 吊點前後各 3 m 每 0.6 m 一道綁紮；PT：常在上端再接第三段、往上翹讓帆更緊 ⇒ 後端最後 3 m 多翹 14°（設計決定）。傾角 18°、吊點在前端往後 47%（設計決定，解出來的）：前端到 x 343、後端到 x 20（剛好在 taffrail 正上方）、PT 的「前緣 ＝ 後緣的一半」：前緣（帆桁前端 → 艏柱頂 x 380）跟後緣（後端 → 帆腳後角 x 224）的比在 verify_masts.json；遊戲 rig=lateen 擺角 asin(2.5 m ÷ 吊點到前端的水平距離)。半徑 2.75（直徑 0.55 m，設計決定）收到兩端 1.25。放在主桅左舷側：中心 y 74（桅頂 y 78–82、中間空 1 格）"},
+   "mizzen": {"sail": "mizzen-lateen", "len_m": 18.0, "tilt_deg": 28, "hoist_frac": 0.40, "r_max": 1.75, "r_end": 1.1, "y_off": -4, "lash_half": 16, "lash_every": 6, "src": "步驟 7 改 20 → 18 m（設計決定）：20 m 照主帆桁的傾角，後端會伸出作品框（x < 0）、前端碰到主桅；18 m、傾角 28°、吊點在前端往後 40% ⇒ 前端 x 172（主桅邊 x 187 前面 1.5 m）、後端 x 13（taffrail x 20 後面 0.7 m）。半徑 1.75 收到 1.1；放在後桅右舷側，中心 y 84（桅頂 y 79–81、中間空 1 格）：v1 放左舷 y 76，前端 x 143–172 側面看落在主帆裡、跟主帆桁（y 72–76）幾乎同一個面 ⇒ 掛帆後帆布會穿過它（步驟 7 verifier）；換到右舷跟主帆分開兩邊；步驟 8 v4 換回左舷 y_off −4（中心 y 76）：掛帆之後在預設風（4.5,−1.5,0）下右舷的後桅帆是在桅的上風那一側，帆布往左舷鼓 39 格、整片包住後桅（verify_step8_sails v3：75 點在桅裡）⇒ 兩面帆都放下風的左舷（三角帆的「好舷」）；v1 擔心的主帆穿過後桅帆桁，改用掛好的帆布量（verify_step8_sails）"}
+  },
+  "jibboom": {"y_off": 7, "r0": 1.6, "r1": 1.3, "lash_at_rest": true, "src": "PT：foc 的桿子（bâton-volant）綁在船頭與錨纜橫樑上 ⇒ 腳躺在錨纜橫樑頂上、往前伸 11.5 m，仰角由產生程式解：桿子底面剛好壓在船頭最高的那一格上（綁在那裡），途中不碰任何格；偏到右舷 y 87（艏柱頭頂飾 y 77–83，步驟 6 提醒）。半徑 1.6 收到 1.3（設計決定；v1 收到 1.0，仰角只有 3° 時截面在 1 格與 3 格寬之間跳，從上面看是一節粗一節細）"},
+  "cable_beam": {"x0": 294, "x1": 298, "z0": 64, "z1": 68, "src": "PT：沒有絞盤，錨纜繞在船頭到主桅 1/3 的一根粗橫樑上（gear.cable_beam_x 296）⇒ 0.5 m 見方（PT：主桅那根是 0.5–0.7 m）的橫樑兩頭頂到舷牆內面；放在水槽甲板（面 z 51）上面 13 格（z 64–68）：底下留 1.3 m 給人走過去（Ship_Decks 走路要頭上 1.2 m；v1 z 63–67 剛好 12 格、0 餘裕，步驟 7 verifier），頂 68 低於舷頂 69。foc 的桿子腳綁在它上面"}
+ },
+ "rigging": {
+  "src": "步驟 8（Ship_Rigging §6、§7、§9.1）。PT 第 118–140 行：每根桅 4–6 條帶滑車的 shroud（像 xebec），前兩條的 pantoire 很長、包著布防磨，全部勾在船外的環上、照需要換位置；帆桁由兩條粗 itague 穿過桅頂的 clans 吊起，下面掛一個 3–5 輪的大滑車，升降索往後拉到一根穿過甲板的大木塊 e（P2 fig. 7 e→e′）；帆是棉布梯形、前緣是後緣的一半，主帆下緣從艏柱到船尾樓前 4–5 m，tack 與 sheet 都是單條、沒有收帆索也沒有縮帆；船頭的 foc 綁在 foc 的桿子上，天氣太壞時改升到桅上。P3（馬斯開特港）：主桅的 shroud 大多往後落在船尾樓前、前面兩條拉到船頭；桅頂下一段看得到滑車。",
+  "colors": {"standing": "#2b2620", "linen": "#d8cfb8", "running": "#a08458", "block": "#4a3a2a", "sail": "#f2ead8", "flag": "#b4121e", "ring": 73, "spar": 177, "cap": 36, "lash": 68, "bitt": 136, "sheave": 36,
+   "src": "Ship_Rigging §6：靜索 #2b2620、動索 #a08458、帆布 #f2ead8；前兩條 pantoire 包布（PT）⇒ 亞麻色 #d8cfb8（設計決定）；滑車塊深木色（設計決定）；船外的環 73（RGB332 深灰，鐵）；旗 #b4121e（設計決定：阿曼的旗到 1970 年都是一整面紅，Wikipedia「Flag of Oman」）；船尾的桿、木塊照帆桁 177、甲板樑 136"},
+  "shrouds": {
+   "main": {"side": "S", "hound": [191, 84, 250], "rings_x": [166, 185, 204, 223, 300, 314], "long_pendant": [300, 314], "block_frac": 0.3, "long_block_frac": 0.68},
+   "mizzen": {"side": "S", "hound": [108, 83, 182], "rings_x": [84, 96, 104, 118], "long_pendant": [], "block_frac": 0.4, "long_block_frac": 0.68},
+   "ring_below_rail": 2, "ring_out": 3, "falls": 2, "fall_spread": 0.6, "block_len": 3,
+   "src": "PT：4–6 條帶滑車（haubans à palans）、勾在船外的環、照需要換位置 ⇒ 主桅 5、後桅 3（plan.masts 的 shrouds_per_side）；v5：PT 原文是「quatre ou six」（4 或 6，不是 4–6），verifier 指出 5 不在裡面 ⇒ 主桅 6（加 x 223，砲門 8／9 之間）、後桅 4（x 84、96、104、118，讓開 x 75、110 迴旋砲 ±4；v5 第一版 84、90 太近、兩個滑車疊在一起 ⇒ 拉開、後桅滑車放 40%）；船頭會往外張（舷頂比環那一層寬）⇒ 環的眼伸到「環到舷頂這幾層最外那一格」再往外 2 格（v5；v4 x 314 那條 fall 擦過舷頂 (311,115,69)，verifier）；PT 前兩條 pantoire 長 ⇒ 主桅前兩條（x 300、314，P3：拉到船頭）滑車在 68% 處、其他在 30%（P3 看得到滑車在桅頂下一段，設計決定）。⚠ 只在帆的另一舷拉緊（設計決定，照 PT「照需要換位置」）：主帆在主桅左舷，左舷的 shroud 從 hounds（帆桁右邊）拉到左舷舷外一定穿過主帆 ⇒ 主桅的拉在右舷；後桅帆在右舷 ⇒ 後桅的拉在左舷（v4：後桅帆桁換回左舷 ⇒ 後桅的也拉在右舷）。環兩舷都做（換舷時用）。環的 x：主桅照 todo 放 x ≥ 166（後桅帆桁擺到 23.4° 前端到 x 167）、在砲門之間（中心 166、185、204 在砲門 5／6、6／7、7／8 之間）；船頭兩條在排水孔上方、讓開 x 330 的迴旋砲；後桅讓開 x 110 的迴旋砲（±4）；v1 後桅最前一個在 x 126，舷頂在 x 124 從 83 掉到 76、上面又有舵手台欄杆的紅布 ⇒ fall 往後上拉會穿過 x 123 的舷頂（verify_rigging v2）⇒ 改 x 118。環在舷頂下 2 格：貼船側一條 1 × 1 × 3 的鐵片、中間再往外 2 格當眼（ring_out 3，繩綁在眼上）；v1 只有 1 格厚，fall 從上面斜下來會擦過舷頂外角（verify_rigging v1：16 條 fall 都穿過舷頂那一格；v2 眼伸出 1 格還有船頭 x 314 那條擦過：船頭往後變寬，繩往後上拉會碰到舷牆）"},
+  "halyards": {
+   "main": {"itagues": [[194, 80, 268, 188, 80, 268], [194, 80, 276, 188, 80, 276]], "lead": [195.5, 77.0, 265.5], "block_frac": 0.3, "falls": 3, "fall_spread": 0.9, "to": "bitt"},
+   "mizzen": {"itagues": [[110, 80, 195, 106, 80, 195]], "lead": [111.5, 77.0, 192.5], "block_frac": 0.35, "falls": 2, "fall_spread": 0.7, "to": "kevel"},
+   "aft_lead": [-2, 0, -2],
+   "src": "PT：兩條粗 itague 穿過桅頂的 clans、下面掛 3–5 輪的大滑車，升降索往後拉到穿過甲板的大木塊 e ⇒ 主桅兩條 itague 穿過步驟 7 的兩道滑輪槽（z 266–270、274–278；槽是前後向，帆桁在桅的左舷 ⇒ 先繞到桅頂左前角再進槽）、大滑車在槽到 e 的 30% 處、3 條 fall 到 e；後桅一道槽、一條 itague（設計決定）、fall 拉到船尾樓甲板中線 x 70（設計決定）。v5：itague 出槽後先往後下 2 格再到大滑車（aft_lead；v4 出槽那段管子擦到主桅 hounds 的綁紮 (188,80,251)，verifier）；主桅 fall 綁進 e 的滑輪槽那一格（v4 停在 e 前面一格）；後桅 fall 綁在船尾樓甲板上一根小繫索柱（kevel，v4 綁在光板上，verifier）"},
+  "bitt": {"x0": 174, "x1": 178, "y0": 78, "y1": 82, "z0": 56, "z1": 69, "top_from": 66, "sheave_z": [62, 64], "pin_z": 68, "anchor": [178, 80, 63],
+   "kevel": {"x0": 100, "x1": 102, "y0": 79, "y1": 81, "z0": 74, "z1": 80, "anchor": [99, 80, 79], "src": "v5：後桅升降索的 fall 要有東西綁 ⇒ 船尾樓甲板（面 z 74）中線一根 0.3 m 見方、高 0.7 m 的小繫索柱（設計決定）。步驟 11 從 x 69–71（fall 綁在它前面頂上）搬到 x 100–102：長舵柄（PT：très-longue barre）從舵頭 x 37 沿中線伸到 x 88，會穿過舊的繫索柱與 fall ⇒ 搬到後桅（x 107–111）後面、羅經櫃前面；大滑車在 x 93.5 ⇒ fall 往前下來、綁在它後面頂上 (99, 80, 79)"},
+   "src": "P2 fig. 7 的 e 在主甲板、上層船尾樓前緣往後 0.8 m（px 1552 ⇒ x 114），本船那裡是船尾艙。v1 放在舵手台 x 129–133：升降索從主桅頂往後下來會穿過後桅帆桁擺動的範圍（後桅帆桁擺到 −9.7° 時離 fall 只剩 −0.14 格，verify_rigging v1）⇒ v2 改放主甲板（面 z 56）中線、主桅後面 x 174–178（後桅帆桁前端最遠到 x 171.5，設計決定）：PT 說主桅後面要留空間給水桶接力 ⇒ 離桅領（x 187）留 0.8 m。0.5 m 見方、高 1.4 m，上面 0.4 m 收細（PT：上半段收細、穿一根 cabillot 繞升降索），一道滑輪槽（PT：clans）；PT 說它往下穿到 carlingue ⇒ 只做甲板上面那段（設計決定）"},
+  "stern_spars": {
+   "flagstaff": {"x": 23, "y": 80, "z0": 87, "z1": 118, "cap": 2, "src": "P3：船尾頂上一根短的直桿 ⇒ 國旗桿（設計決定），立在 taffrail 頂（z 86）上、3.2 m"},
+   "bumkin": {"heel": [28, 68, 87], "tip": [10, 56, 89], "r": 1.0, "lash_x": [21, 22], "src": "P2 fig. 7：taffrail 後面那根細桿 (2020,1002)→(2073,992)，長 0.73 m × sx 1.47 ＝ 1.07 m、往後翹 10° ⇒ 讀成 bumkin（往後伸、給後桅帆的 sheet 走，設計決定；旗桿要直立）；放在右舷（後桅帆在右舷，sheet 從右舷拉帆腳離桅遠一點，設計決定；P2 是側面看不出 y）；v1 y 88 帆腳還是被風吹到 y 82、帆布繞過後桅 ⇒ v2 y 96（taffrail 右舷角，x 22 的舷頂到 y 98），sheet 綁在 y 96 帆腳照樣被吹到 y 89 ⇒ v3 從右舷船尾角（x 28, y 92）斜斜往後往外伸到 x 10、y 104（俯視往外 34°，設計決定；P2 側面量的長度 1.07 m 是伸出 taffrail 的那段）；v4 後桅帆換到左舷 ⇒ bumkin 照鏡像放左舷（x 28, y 68 → x 10, y 56）"}
+  },
+  "sails": {
+   "main": {"name": "main-lateen", "head_aft": [29, 3, 98], "clew": [224.5, 46.5, 94.5], "tack": [373.5, 77.5, 76.5], "sheet_to": [210, "P"], "tack_to": [376, 80], "meta": {"kind": "sail", "mast": "main", "sail": "gaff"},
+    "src": "PT：梯形、主帆下緣從艏柱到船尾樓前 4–5 m（plan.masts.sails main_foot 380 → 224）；tack 與 sheet 都是單條 ⇒ 前下角 tack 綁艏柱頂、後下角 clew 用一條 sheet 綁左舷舷頂 x 210（往後拉）；帆在主桅左舷 ⇒ clew 放左舷 y 46（todo：帆後下角綁左舷避開主桅）；meta：Harvest 的三角帆照 sail=gaff（ame 2026-10-15 確認遊戲照 gaff 畫）。v2：上緣（邊 0）的後角從帆桁尖端 peak 改成第三段開始那一點（帆桁 local 29,3,98）：引擎只會把一條邊釘在兩個角之間的直線上，v1 從 fore 拉到 peak 的直線在帆桁中段浮在帆桁上面（第三段往上翹 14°），帆布上緣跑到帆桁上面、兩條 itague 從帆布裡穿出來（verify_step8_sails v1）⇒ 第三段那 3 m 不掛帆（設計決定）；前緣：後緣 1:2.32 → 1:2.10（PT 1:2）。v5：clew z 78 → 94：帆腳在 x 330 左舷船頭迴旋砲上面只有 0.42 m（tools/check_sails_sim.py 密取樣量的）⇒ 抬高 1.6 m；後緣跟著變短，比例 ≈ 1:2"},
+   "mizzen": {"name": "mizzen-lateen", "clew": [13.5, 50.5, 111.5], "tack": [172.5, 42.5, 100.5], "sheet_to": "bumkin", "tack_to": [172, "P"], "meta": {"kind": "sail", "mast": "mizzen", "sail": "gaff", "set": "3"},
+    "src": "同主帆的做法（PT 帆都是梯形）；前緣 ＝ 後緣的一半 ⇒ tack 放在帆桁前端下面約 7 m（z 90）、用 tack 拉到右舷舷頂 x 176；clew 在 bumkin 上面、sheet 綁 bumkin 尖端（右舷）；set 3：帆裝三段要分得出來（Ship_Rigging §9.1），見 sail_set。v2：v1 帆布在預設風（4.5,−1.5,0）下往左舷鼓 40 格、繞過後桅（6 點在桅裡）又穿過後桅的 itague（verify_step8_sails v1）⇒ clew 往右舷移到 y 101（bumkin 跟著移到右舷角 y 96）、tack 移到 y 118、z 94（前緣照樣約後緣的一半）；v2 的 tack 繩 2.9 m 幾乎垂直、sheet 綁 y 96 ⇒ 兩個角都被風吹回左舷（tack y 118 → 106、clew 101 → 89）⇒ v3 tack 繩縮短、往右舷舷頂 x 172 斜拉（擺不回來），clew 跟著斜出去的 bumkin 放 y 109；fullness 1.03（後桅帆在桅的上風那一側，鼓太多會包住桅，設計決定）——量了沒用（只差幾格，Ship_Rigging 也這麼說）、帆布照樣包住桅（75 點）⇒ v4 後桅帆桁換回左舷、帆跟主帆一樣在下風；clew、tack、bumkin 照鏡像換到左舷，fullness 回 1.05。v5：帆腳在左舷三門迴旋砲（x 40、75、110）上面只有 0.73–1.03 m（verifier）⇒ clew、tack 都抬 1.2 m"},
+   "foc": {"name": "foc", "head_frac": 0.55, "clew": [290.5, 106.5, 98.5], "sheet_to": ["cable-beam", [296, 113, 68]], "sheet_slack": 1.0, "stay_to": [195, 80, 250], "meta": {"kind": "sail", "mast": "bowsprit", "sail": "jib"},
+    "src": "PT：船頭的 foc 綁在 foc 的桿子上 ⇒ tack 在桿子尖端、luff 沿一條從尖端拉到主桅 hounds 前面的 stay（Ship_Rigging §7 三角帆：luff 沿 stay、stay 拉直）；head 在 stay 的 55%（設計決定：Ship_Rigging 寫 70–80% 是給從前桅拉下來的 stay，這條 stay 長 27 m，70% 帆會比主帆前半還高）；clew 用 sheet 拉到右舷舷頂（foc 的桿子在右舷 y 87）。v2：v1 clew y 104、sheet 綁 x 290，帆腳被風吹回左舷、碰到艏柱頭頂飾（3 點，verify_step8_sails v1）⇒ v2 clew y 108、sheet 綁 x 300，帆腳還是擦到頂飾（4 點）⇒ v3 clew y 113、sheet 綁 x 298：沒用（帆腳是自由邊、被風吹到左舷 10 格）⇒ v4 在作品上試了 5 組（tools/check_sails_sim.py 量）：clew 往後往上（x 290、z 98）、sheet 往後拉到右舷舷頂 x 266（順著帆腳的方向拉緊）⇒ 帆布離頂飾 2.8 格（v3 −0.2）；fullness 1.03 反而更糟（−0.23），留 1.05。v5：verifier 量到 sheet（slack 1.03、垂 0.6 m）在頭的高度橫過右舷前甲板、穿過第 11 門砲（x 271–275）的後座區，而且帆布離頂飾其實是 2.32 格（作者只量頂點）⇒ 在作品上試了兩組：sheet 綁錨纜橫樑右舷端頂上（x 296、y 113）、拉直 ⇒ 離頂飾 3.32 格、不過甲板走道（設計決定：錨纜橫樑就在 clew 正下方）"},
+   "fullness": 1.05, "wind": [4.5, -1.5, 0], "sail_seconds": 3,
+   "sail_set": {"src": "Ship_Rigging §9.1：預設 jib 1、gaff 2 ⇒ 不寫 set 的話戰鬥帆＝滿帆（分不出來）。PT：大風時主帆太大只能降下、改用小帆 ⇒ 收帆只張 foc；戰鬥帆 foc＋主帆；滿帆再加後桅帆（mizzen set 3，設計決定）"}
+  },
+  "flags": {
+   "ensign": {"hoist": 16, "fly": 24, "texture": [24, 16], "meta": {"kind": "flag", "flag": "ensign", "nation": "oman"}, "src": "Ship_Rigging §9.1：國旗掛船尾旗桿、一定標 nation（Blockside 沒有阿曼的預設旗 ⇒ 照寫 oman）、要有貼圖才換得了 ⇒ 一整面紅的貼圖 24 × 16；2.4 × 1.6 m"},
+   "pennant": {"len": 40, "hoist": 4, "meta": {"kind": "flag", "flag": "pennant", "mast": "main", "nation": "none"}, "src": "設計決定：主桅頂一條 4 m 的紅色長旗，掛在桅頂前面（帆桁在左舷、風往 +x，掛後面會吹進桅頂）"}
+  },
+  "thick": {"pendant": 1.2, "fall": 0.5, "block": 2.4, "itague": 1.0, "halyard_fall": 0.6, "stay": 0.9, "sheet": 0.5, "tack": 0.6,
+   "src": "Ship_Rigging §6 的範圍（靜索 0.4–1.5、動索 0.35–0.5）；itague PT 說「fortes」⇒ 1.0（v1 1.4：從滑輪槽出來那段管子半徑 0.7 會切進桅頂 0.2 格，設計決定改細）；滑車用一段短而粗的繩畫（§6 上 deadeye 的做法）"},
+  "slack": {"standing": 1.0, "sheet": 1.03, "tack": 1.0, "halyard": 1.0, "src": "Ship_Rigging §6：shroud 1.0、stay 拉直 1.0（三角帆的 luff）；sheet 1.03 微垂"}
+ },
+ "guns_build": {
+  "src": "步驟 9（Ship_Guns §4.1–§4.3、§2.2；Ship_Turrets §4.5）：一門砲一個外部模型、掛在所在甲板的子作品上；擺法照聖羅曼號 pinnacle-patache-01m/design/draft_guns.py（同樣是 4 磅砲＋pierrier 這兩件元件）",
+  "deck_works": {"main": "claude-baghlah-01m-deck-main", "poop": "claude-baghlah-01m-deck-poop"},
+  "deck_links": {"main": "甲板-main", "poop": "甲板-poop"},
+  "prefix": {"main": "M", "poop": "Q"},
+  "types": {
+   "4l": {"work": "pinnacle-patache-01m-gun-4l", "scale": 0.443, "pivot": [6.5, 28, 0], "meta": {"kind": "gun", "gun": "4l"},
+    "src": "砲種：4 磅（plan.ports.tiers.gun；Ship_Guns §2.2「砲只跟同一種砲共用模型」⇒ 用聖羅曼號做的通用部件 -gun-4l，砲種表已有 4l）。scale 0.443 照拉貝爾號、澤漢號（Ship_Guns §2.2：0.5 時砲身頂到 5 格高的砲門上楣）：本船砲門 5 × 5、sill 3（draft_guns.py --probe=scale 量的）：0.5 ⇒ 穿過船牆那段砲管離上楣 0.1 格（取樣點往裡縮 0.1 ⇒ 表面貼著）、砲口只伸出 1.75–2.75 格；0.55 ⇒ 砲管穿不過砲門；0.443 ⇒ 離上楣 0.56、離窗台 2.4、砲口伸出 2.3–4.3 格；砲管 1.9 m（4 磅砲約 2 m）。pivot ＝ 砲架前緣中間、甲板面那一層（照聖羅曼號）"},
+   "pierrier": {"work": "apex-one-reale-01m-gun-pierrier", "mount_work": "apex-one-reale-01m-gun-pierrier-mount", "scale": 0.39, "pivot": [5.5, 18.5, 0],
+    "meta": {"kind": "gun", "gun": "pierrier", "mount": "turret", "arc": "-80,80", "rate": 45},
+    "src": "皇家號的叉架後膛迴旋砲（通用部件 0.05 m；2026-10-28 叉架拆成 -mount）；scale、pivot、meta 照拉貝爾號、聖羅曼號（0.39 ⇒ 1.48 m）。Ship_Guns §4.2.1：新船引用拆過的砲件要自己補 `<名>座` 雙生（kind=gunmount）；mount_of 是砲的物件 id，要等步驟 14 admin.py ids 發號才寫得出來"}
+  },
+  "swivels": {"type": "pierrier",
+   "rows": [{"deck": "poop", "x": 40}, {"deck": "poop", "x": 75}, {"deck": "poop", "x": 110, "arc": "-60,60", "arc_src": "步驟 9 量的：x 110 夾在後桅支索環 x 104 與 x 118 中間，砲管轉到 −63° 以外、+72° 以外會穿過 fall（直線量；−80° 差 0.53、+80° 差 0.63 格；v1 寫成「±65°」不準，verifier 9 量出來是 −63／+72）⇒ 這一對只轉 ±60°（−60° 離繩 0.25、+60° 1.05 格；引擎畫的繩管 0.47），兩舷同一組（P 舷沒有 shroud，但換舷時 shroud 會換過來）"}, {"deck": "poop", "x": 140}],
+   "src": "plan.ports.swivels：船尾樓每舷 3 門（x 40、75、110）照舊。船頭那一對（x 330）步驟 9 改到舵手台欄杆 x 140：量過 x 330 水槽甲板面 51、舷頂 70 ⇒ 迴旋砲的砲軸離站的地方 2.3 m，人搆不到；船頭那段甲板一階一階往上（x 340 才 56），也沒有站得到舷頂的地方。x 140 的舵手台甲板面 70、欄杆扶手頂 80 ⇒ 砲軸離甲板約 1.4 m（PT：船尾樓也可放小砲；位置是設計決定）。合計照舊 22 ＋ 8 ＝ 30"},
+  "search": {"dx": [0, 0.5, -0.5, 1, -1], "dz": [0, 1, 2], "step": 0.5, "back_max": 40, "inset": 0.2,
+   "src": "Ship_Guns §4.2（同聖羅曼號）：從船殼外面沿砲軸往裡每 0.5 格退，退到每一格的格心＋八個角（往裡縮 0.2）都不在實心裡；dz 只往上找（往下會壓進甲板板）"},
+  "support_min": 0.5,
+  "support_src": "同聖羅曼號：砲最底下那層格子正下方有實心的比例 ≥ 0.5",
+  "sweep_step_deg": 5,
+  "sweep_src": "Ship_Turrets §4.5：turret 是連續轉 ⇒ arc 裡每 5° 量一次零碰撞、砲口射線、離繩多遠",
+  "recoil": {"k": 0.3, "min": 4, "src": "Ship_Guns §4.2「後座」：沒寫 recoil ⇒ 砲管長（muzzle → breech）× 0.3、至少 4 格；迴旋砲拆了座 ⇒ 只退砲身"},
+  "ray_len": 60,
+  "ray_src": "Ship_Guns §2.2 表「砲口射線不碰到自己的船」：從砲口沿砲軸往外 6 m"
+ },
+ "gunfittings_build": {"work": "claude-baghlah-01m-gunfittings", "title": "星辰號 砲具（船牆與甲板的環）", "link": "砲具", "link_meta": {"kind": "gunfittings"},
+  "ring": {"offset": [8, 9, 10, 7, 11, 6, 12, 5, 4, 3], "color": 73, "src": "Ship_Guns §4.4：船牆的環在砲門中線往船尾／船頭 8 格（不行換 9／10／11…）；一格鐵釘進牆、裡面一格當環；高度 ＝ 那一側 eye 的高度；色 73 跟支索的環同一個鐵色。5、4、3 是步驟 9 加的：第 3 門砲門 x 118–122 緊貼船尾艙前壁 x 124，船頭側 6–12 格都在艙壁另一邊（繩穿牆）⇒ 最後才試貼著砲門的 x 123"},
+  "deck_ring": {"back": [9, 8, 10, 7, 11, 6, 12, 13, 14], "lat": [0, -3, 3, -5, 5, 8, -10, 10, -13, 12, -16], "color": 73, "src": "Ship_Guns §4.4：甲板的環在砲架尾（train）往船裡 9 格；撞到就沿砲的側向挪（藍鯊號 plan deck_ring.lat，兩舷同一個 lat）"},
+  "ropes": {"breeching": {"slack": 1.12, "thickness": 0.6, "color": "#b59a6a", "group": "guns/breeching"}, "tackle": {"slack": 1.03, "thickness": 0.35, "color": "#b59a6a", "group": "guns/tackle"}, "train": {"slack": 1.02, "thickness": 0.35, "color": "#b59a6a", "group": "guns/train"},
+   "src": "Ship_Guns §4.4：breeching（cascabel → 兩側船牆的環）1.12、0.6；side tackle（eye → 同側的環）1.03、0.35；train tackle（train → 甲板的環）1.05、0.35；#b59a6a。步驟 9 改 train 1.05 → 1.02：引擎畫出來的繩（export obj）1.05 垂進甲板板，22 條每條 15–24 個頂點在板裡、最低 z 55.77（甲板面 56）"},
+  "src": "步驟 9「要的話砲具與砲索」：只給 22 門 4 磅砲（迴旋砲插在叉架上、沒有砲架，不掛）。照藍鯊號 gura-pinas-01m/design/draft_gunfittings.py（收穫號 TASK-0624 那一套，藍鯊號真的建過、120 條繩）。⚠ 沒做 shot garland 與 rammer／sponge（PT 沒寫；這艘的砲在露天甲板、上面沒有樑可以掛）"},
+ "gear_build": {"assembly": "claude-baghlah-01m-assembly",
+  "deck_works": {"orlop": "claude-baghlah-01m-deck-orlop", "main": "claude-baghlah-01m-deck-main", "poop": "claude-baghlah-01m-deck-poop"},
+  "magazine": {"work": "claude-baghlah-01m-magazine", "link": "彈藥庫", "title": "星辰號 彈藥庫（底艙平台船尾段；Ship_Magazine §8）",
+   "x0": 96, "x1": 122, "floor": 36, "ztop": 54, "door": "fore", "door_w": 5, "door_head": 3, "pos": "aft", "cap": 24,
+   "cap_src": "設計決定（換算，⚠ 不是史料）：4 磅砲一發約 2 磅藥（17 世紀裝藥約彈重一半）× 22 門 × 40 發 ≈ 1,760 磅、迴旋砲 8 門 × 40 發 × 0.5 磅 ≈ 160 磅 ⇒ 約 1,900 磅 ⇒ 24 桶（2,400 磅，多留兩成）；每門 40 發也是假設",
+   "colors": {"copper": 168, "oak": 136, "dark": 104, "pine": 177},
+   "barrel": {"work": "basecamp-frigate-constitution-01m-powder-barrel", "scale": 0.2, "pivot": [11, 11, 0], "d": 22, "h": 27, "mpv": 0.02, "pitch": 4.6, "tier": 7, "aisle": 3},
+   "hoist": "甲板-main/梯子/orlop,甲板-poop/梯子/quarter-S",
+   "hoist_src": "Ship_Magazine §8「火藥從艙口吊上去」：主甲板（22 門 4 磅砲）用梯頭落在主甲板的 orlop 梯（桶在底艙平台、梯腳旁）；船尾樓＋舵手台（8 門迴旋砲）用梯頭落在舵手台的 quarter-S（桶在主甲板、梯腳旁）—— 不寫的話船尾樓會在露天甲板找空地擺桶。每一層只寫一座。梯腳旁 9×9 平地由 draft_gear 量。⚠ 巴貝多商人號寫路徑、百夫長號寫 id（Blockside admin.py ids 不拆逗號清單）⇒ 步驟 14 發 id 後改成 ladders-N#<梯名>",
+   "hoist_ids": "ladders-2#orlop,ladders-3#quarter-S",
+   "hoist_ids_src": "步驟 14：Blockside admin.py ids 發號（甲板-main/梯子 ＝ ladders-2、甲板-poop/梯子 ＝ ladders-3）；ids 換不了逗號清單 ⇒ 手寫成 id 寫法、寫進彈藥庫的 meta。上面的 hoist 路徑留給 draft_gear 量梯腳旁的平地",
+   "src": "設計決定：底艙平台（plan.decks.orlop：彈藥庫、儲藏）最後面一段 x 96–122；地板在水線（z 41）下 0.5 m、房間跨在水線上（Ship_Magazine §8 寫憲法號在水線下；這裡底下只剩 V 形貨艙，再往下放門要比貨艙底高 1.3 m —— 跟收穫號 46–61／水線 52、聖羅曼號 13–28／24、康塞普西翁號 55–70／60 一樣跨在水線上，⚠ 被打到的機會比憲法號大）；後桅腳 x 108 在房間裡當柱子（百夫長號的後桅腳也穿過火藥庫）；後牆 x 96 ＝ 平台後緣（後面沒有走得到的平台，不用開後門），前牆 x 122 開門、對著 hold 梯頂（head x 143）。房間頂到主甲板板底（z 54），主甲板的樑照留。做法照收穫號 calli-cosecha-01m/design/draft_gear.py（夜燈號、餘燼號那一套：銅皮 168、松木地板 177、每 6 格橡木壓條 136、門洞 5 寬；固定點 blast、door）。⚠ PT 沒寫火藥放哪"},
+  "skids": {"work": "claude-baghlah-01m-boat-skids", "link": "小艇架", "title": "星辰號 小艇架（主艙口上三座橫架）", "xs": [236, 253, 269], "y_half": 13, "post_dy": 12, "beam_z": 62, "color": 136,
+   "src": "設計決定：船腰（主桅 x 187–195、orlop 梯頭 x 221、主艙口 x 233–251、水槽 x 280）沒有連續 45 格的空甲板 ⇒ 小艇擱在三座橫架上、跨過主艙口與艙蓋（收穫號同法）；橫樑底 z 62 ＝ 艙蓋頂（z 58–60）上面空一格；立柱 dy ±12–13 落在艙蓋外框（y 70–90）外面的甲板上；中間那座 x 253–254 在小艇外框中心 x 254 正下方（遊戲的『腳』＝ 外框中心往下第一格實心，收穫號引 Blockside/src/js/10_ship.js:47）"},
+  "hearth": {"work": "claude-baghlah-01m-hearth", "title": "星辰號 廚房爐灶（甲板上的沙箱灶：柚木箱裡鋪沙、三石灶、銅鍋、黃銅咖啡壺 dallah；0.05 m，外部模型的來源，kind=galley）", "mpv": 0.05, "size": [24, 20, 16],
+   "colors": {"box": 140, "rim": 104, "sand": 213, "stone": 109, "ash": 146, "char": 36, "ember": 236, "ember2": 224, "pot": 168, "food": 172, "brass": 248, "wood": 104},
+   "smoke": [12, 10, 15],
+   "src": "設計決定（⚠ 沒查到 1666 年巴格拉的出處，PT 沒寫廚房）：印度洋的 dhow 一般在甲板上用裝沙的木箱生火 ⇒ 不用現成的光榮號鐵爐（19 世紀歐式）；三石灶、銅鍋、dallah 是阿拉伯味的設計。smoke 固定點在鍋口正上方（Ship_Fittings §9.13）"},
+  "models": [
+   {"name": "小艇", "host": "main", "work": "basecamp-ember-01m-boat", "at": [254, 80.5, null], "pivot": [90, 26, 0], "scale": 0.25, "rotate": 0, "meta": {"kind": "boat", "boat": "cutter", "length_m": 4.5},
+    "src": "沿用餘燼號 cutter（收穫號、三叉戟號也在用），縮 0.25 ⇒ 4.5 m × 1.3 m（⚠ 長度是設計決定，沒查到巴格拉的小艇）；擱在小艇架上"},
+   {"name": "羅經櫃", "host": "poop", "work": "summit-night-falcon-01m-binnacle", "at": [93.5, 80.5, null], "pivot": [9, 13, 0], "scale": 0.2, "rotate": 0, "meta": {"kind": "binnacle"},
+    "src": "沿用夜隼號羅經櫃（收穫號也在用）；PT：羅盤和舵手在一起（la boussole et l'homme qui gouverne）。步驟 10 放在舵手台中線 x 135.5；步驟 11 的長舵柄被後桅（x 107–111）擋住、只伸得到 x 88，舵手站在舵柄前端 ⇒ 搬到船尾樓中線 x 93.5（舵柄尖端前 0.37 m）"},
+   {"name": "爐灶", "host": "main", "work": "claude-baghlah-01m-hearth", "at": [308, 65, null], "pivot": [12, 10, 0], "scale": 0.5, "rotate": 0, "meta": {"kind": "galley"},
+    "src": "船頭水槽左舷（x 302–314、y 60–70）：右舷有主桅前兩組支索的環（x 300／314）和 foc 的 sheet，中線留給步驟 11 的錨纜；PT：水槽會積水、從兩舷排水孔慢慢流掉 —— 沙箱灶本來就擱在甲板上（設計決定）"},
+   {"name": "艙蓋-主艙口", "host": "main", "work": "meadow-monitor-01m-hatch", "at": [232, 70, null], "pivot": [0, 0, 0], "scale": [1.2352941, 1.6153846, 1], "rotate": 0, "meta": {"kind": "door", "open": "up"}, "door": "hatch", "opening": [233, 251, 71, 89],
+    "src": "主艙口 x 233–251、y 71–89 ＋ 圍欄一圈（x 232／252、y 70／90、z 56–57）⇒ 21 × 21、放在圍欄頂（巴貝多商人號同法，沿用莫尼特號艙蓋 17 × 13 × 3）；鉸鏈在左舷那一邊（y 70、沿 +x）⇒ 往上掀。scale 取 21/17、21/13 往下截到 7 位（verifier 10 O4：v1 的 1.2353／1.6154 外框到 253.0001／91.0002，遊戲進位取格會變 22 × 22）"},
+   {"name": "艙蓋-orlop梯", "host": "main", "work": "meadow-monitor-01m-hatch", "at": [206, 74, null], "pivot": [0, 0, 0], "scale": [0.8235, 1, 1], "rotate": 0, "meta": {"kind": "door", "open": "up"}, "door": "hatch", "opening": [207, 218, 75, 85],
+    "src": "orlop 梯的梯口 x 207–218、y 75–85 ＋ 三面圍欄（x 206、y 74／86；船頭那面開著讓梯子出來）⇒ 14 × 13、放在圍欄頂；露天的出入口都該有門（Ship_Fittings §9.7：沒有門的開口遊戲不當進水口）"},
+   {"name": "門-船尾艙", "host": "main", "work": "gura-pinas-01m-door", "at": [125.5, 80.5, 56], "pivot": [1, 7, 0], "scale": [0.5, 0.7857, null], "rotate": 0, "meta": {"kind": "door", "open": "side"}, "door": "wall", "opening": [76, 84, 56, 68], "wall_x": 124,
+    "src": "船尾艙前壁 x 124 的門洞 y 76–84、z 56–68（plan.decks_build.breaks：door_half 4、door_h 13）⇒ 門板貼在前壁船頭那一面 x 125、左右各大一格 11 寬（y 75–85），高度量到上面第一格實心為止（scale z 由 draft_gear 算），底邊站在主甲板上（直立的門，Ship_Fittings §9.7）；沿用藍鯊號艙壁門（2 × 14 × 32、0.05 m；收穫號同法只縮放）；鉸鏈在 y 75 那一邊、往船頭開"}],
+  "foot_reach": 12,
+  "foot_src": "遊戲判斷模型掉不掉：外框中心往下 12 格內要有實心（收穫號引 Blockside/src/js/10_ship.js:47）",
+  "capstan_src": "⛔ 不放絞盤：PT 寫巴格拉沒有絞盤、用大滑車組起錨（plan.gear.capstan false；錨纜橫樑步驟 7 已做）",
+  "src": "步驟 10（Ship_Magazine §8、Ship_Fittings §9.7／§9.13／§9.14）：彈藥庫＋火藥桶、小艇（＋小艇架）、羅經櫃、門與艙蓋、廚房；不放絞盤（PT）。§9.14 blow：沒有哪一件要跟它那一類不一樣（帆桁照 kind 預設 fall），一件都不標"},
+ "helm_build": {"assembly": "claude-baghlah-01m-assembly",
+  "rudder": {"work": "claude-baghlah-01m-rudder", "title": "星辰號 舵（舵葉＋舵桿）", "model": "舵", "z_top": 52, "width": [[0, 15.5], [53.9, 6.25]], "half_t": 1, "bevel": 1, "straps": [7, 24, 41], "arc_step": 2.5,
+   "colors": {"below": 182, "above": 136, "iron": 73}, "max_deg": 35,
+   "src": "P2 fig. 7：舵在艉柱後緣後面，後緣 px 1897@1428 → 1929@1165（verifier 讀，pl02_readings sternpost_note），艉柱後緣 1820 → 1898 ⇒ 舵寬底 77 px、頂 31 px ÷ 73.0 px/m × sx 1.4724 ＝ 15.5／6.25 格（後緣往後倒約 7°）；頂 ＝ 艉柱頂 3.59 m × 1.5 ＝ z 53.9，舵葉做到 z 52（上面 2 格空著接 counter 下緣，轉舵時舵葉頂不擦 counter）；三道鐵箍（P2 fig. 7 量到 px y 430／345／265，龍骨 462、counter 200 ⇒ z 7、24、41）；厚 3 格（0.3 m，設計決定，P2 沒有舵的俯視）、兩側前緣削 1 格（照收穫號，轉舵不掃進艉柱）；顏色照船殼的漆線（hull_build.bottom_top_z：z 42 以下白、以上柚木）；max_deg 35（Ship_Helm §9.8.1 的範本）"},
+  "stock": {"z0": 53, "z1": 82, "r": 1.5, "color": 136, "cap": 36, "hoops": [78], "trunk_r": 2.3, "trunk_z1": 73,
+   "src": "PT：舵桿一直是直的（toujours droite），穿過低而斜的 counter 進到船裡 ⇒ 舵桿沿鉸鏈軸（艉柱後緣的斜度）從舵葉頂 z 53 往上：穿過艉柱頭與 counter（z 53–61）、船尾艙（在中間那扇船尾窗後面）、船尾樓甲板（板 z 73），頭在甲板上 z 82；半徑 1.5（0.3 m）、舵桿以鉸鏈軸為中心（轉舵只掃它自己那一圈）；舵孔：z 53–73 每層水平距離軸 2.3 格內的舊格＋舵桿轉 ±35° 會掃到的格（多 6 格，有 2 格在 z 52）刻掉；舵桿外留一圈縫，縫從船尾樓甲板一路通到 counter 下面（水線上，不進水；verifier 11）；z 78 一道鐵箍（舵柄插在 79–81）、頂一格黑"},
+  "fittings": {"work": "claude-baghlah-01m-helm-fittings", "title": "星辰號 舵頭圈（船尾樓甲板）", "link": "舵頭圈", "z": [74, 75], "r_out": 3.6, "color": 141,
+   "src": "設計決定：船尾樓甲板開了舵孔 ⇒ 孔邊一圈 0.2 m 高的木圈（舵頭的 partner）；stock-top 旁邊 8 格內本來就有船尾的船殼（(30, 80, 77) 7.07 格，verifier 11；v1 說明寫「船尾樓板在 9 格外」只看了甲板板），舵頭圈是 7.0"},
+  "tiller": {"work": "claude-baghlah-01m-tiller", "title": "星辰號 舵柄", "model": "舵柄", "x_tip": 88, "z": [79, 80, 81], "taper": 14, "grip": 5, "color": 141, "grip_color": 36, "bands": [39],
+   "src": "PT：多數巴格拉只用一根很長的舵柄（très-longue barre）⇒ 舵柄做成獨立模型（kind=tiller，Ship_Helm §9.8.1 操舵鏈：打掉舵柄算操作端那一節），沿船尾樓中線從舵頭往船頭伸到 x 88（設計決定：後桅 x 107–111 擋住，留羅經櫃和舵手站的地方）⇒ 離鉸鏈軸約 5.2 m；高 z 79–81（甲板面 z 74 上 0.5–0.8 m，舵手站著握），最後 14 格收成 2 格高、最後 5 格是 1 格寬的握把（黑）；繞舵的鉸鏈軸轉（spin_pivot／spin_axis ＝ 舵的 hinge／axis，spin_k 35）。為了它：步驟 8 的後桅繫索柱從 x 69–71 搬到 x 100–102、步驟 10 的羅經櫃從舵手台搬到船尾樓 x 93.5"},
+  "rollers": {"work": "claude-baghlah-01m-stem-rollers", "title": "星辰號 艏柱滾輪（兩舷）", "link": "艏柱滾輪", "y_in": 82, "cheek_w": 2, "len": 5, "x_try": [360, 378], "rail_step_max": 2, "rope_clear_min": 1.0, "cheek_color": 141, "roller_color": 73,
+   "src": "PT：巴格拉沒有錨鏈孔，艏柱伸出來那段裡有一個滾輪、常常另一側再釘一塊夾板 g 放第二個（P2 fig. 10，plan 俯視）；錨纜一直壓在滾輪上；沒有吊錨架。本船艏柱伸出舷頂那段是裝飾模型（deco=1，畫質設定會隱藏）⇒ 兩個滾輪都做成實心格：船頭舷頂上艏柱兩側各一塊夾板（2 格寬、5 格長、2 格高），滾輪在靠艏柱那一格的槽裡（3 格圓、頂一格）；位置由程式找：舷頂撐得住、不碰任何東西、離繩 ≥ 1 格裡最靠船頭的（主帆的 tack 綁在艏柱頂左舷）。hawse-S／P 登記在滾輪頂"},
+  "anchors": {"work": "kotoko-fusta-01m-anchor-grapnel", "host": "main", "scale": 0.5, "pivot": [10, 10, 0], "rotate": 0, "meta": {"kind": "anchor", "anchor": "bower"},
+   "x_try": [318, 345], "y_try": [81, 100], "rope_clear_min": 1.0,
+   "src": "PT：錨很小、沒有吊錨架，出海時錨要收到甲板上 ⇒ 兩隻錨擺在船頭水槽的甲板上（預設是航行中）；用共用四爪錨（kotoko-fusta-01m-anchor-grapnel，0.05 m）× 0.5 ⇒ 0.9 × 0.9 × 1.2 m（設計決定：步驟 2 記過印度洋 dhow 四爪錨與有桿錨都有；PT「très-petit」沒有尺寸）；右舷一隻、左舷鏡像一隻（mirror=y），位置由程式找：從爐灶前面（x 318）往船頭、右舷那隻從舷邊往裡，第一個兩隻都放得下、離船殼至少 1 格、離繩 ≥ 1 格的位置；meta hawse 寫滾輪頂"},
+  "src": "步驟 11（Ship_Helm §9.8、§9.8.1；Ship_Game §9 rudder／anchor 列）：舵（模型）、舵柄（模型）、舵頭圈、艏柱滾輪、兩隻錨；沒有舵輪（PT：多數用舵柄）"}
+}

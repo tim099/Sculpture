@@ -1,0 +1,871 @@
+{
+ "probe": null,
+ "parts": {
+  "rings": {
+   "cells": 98,
+   "skipped_on_ship": 0,
+   "components_6": 20,
+   "cells_touching_ship": 48,
+   "components_not_touching_ship": 0,
+   "colours": {
+    "73": 98
+   },
+   "mirror_diff": 0
+  },
+  "stern-spars": {
+   "cells": 233,
+   "skipped_on_ship": 0,
+   "components_6": 2,
+   "cells_touching_ship": 9,
+   "components_not_touching_ship": 0,
+   "colours": {
+    "177": 215,
+    "36": 10,
+    "68": 8
+   },
+   "mirror_diff": 73
+  },
+  "halyard-bitt": {
+   "cells": 355,
+   "skipped_on_ship": 0,
+   "components_6": 2,
+   "cells_touching_ship": 34,
+   "components_not_touching_ship": 0,
+   "colours": {
+    "136": 325,
+    "36": 24,
+    "177": 6
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ship_with_new_parts": {
+  "cells": 241405,
+  "components_6": 3,
+  "components_6_before": 3,
+  "note": "the two yards are models one cell off their masts ⇒ 3 components before step 8"
+ },
+ "new_cells_near_swivel_stations": {
+  "40": 0,
+  "75": 0,
+  "110": 0,
+  "330": 0
+ },
+ "new_cells_in_gun_port_fields": 0,
+ "anchors": {
+  "hull": 3,
+  "mast-main": 7,
+  "mast-mizzen": 4,
+  "jibboom": 1,
+  "deck-poop": 0,
+  "rings": 20,
+  "stern-spars": 2,
+  "halyard-bitt": 2,
+  "cable-beam": 1
+ },
+ "anchor_cells": {
+  "hull/tack-main": "solid",
+  "hull/sheet-main-P": "solid",
+  "hull/tack-mizzen-P": "solid",
+  "mast-main/hound-S": "air-next-to-work",
+  "mast-main/sheave-1-fore": "air-next-to-work",
+  "mast-main/sheave-1-aft": "air-next-to-work",
+  "mast-main/sheave-2-fore": "air-next-to-work",
+  "mast-main/sheave-2-aft": "air-next-to-work",
+  "mast-main/foc-stay": "air-next-to-work",
+  "mast-main/parrel": "air-next-to-work",
+  "mast-mizzen/hound-S": "air-next-to-work",
+  "mast-mizzen/sheave-fore": "air-next-to-work",
+  "mast-mizzen/sheave-aft": "air-next-to-work",
+  "mast-mizzen/parrel": "air-next-to-work",
+  "jibboom/tip": "solid",
+  "rings/ring-S-84": "solid",
+  "rings/ring-P-84": "solid",
+  "rings/ring-S-96": "solid",
+  "rings/ring-P-96": "solid",
+  "rings/ring-S-104": "solid",
+  "rings/ring-P-104": "solid",
+  "rings/ring-S-118": "solid",
+  "rings/ring-P-118": "solid",
+  "rings/ring-S-166": "solid",
+  "rings/ring-P-166": "solid",
+  "rings/ring-S-185": "solid",
+  "rings/ring-P-185": "solid",
+  "rings/ring-S-204": "solid",
+  "rings/ring-P-204": "solid",
+  "rings/ring-S-223": "solid",
+  "rings/ring-P-223": "solid",
+  "rings/ring-S-300": "solid",
+  "rings/ring-P-300": "solid",
+  "rings/ring-S-314": "solid",
+  "rings/ring-P-314": "solid",
+  "stern-spars/bumkin-tip": "solid",
+  "stern-spars/flag-top": "solid",
+  "halyard-bitt/halyard": "solid",
+  "halyard-bitt/halyard-mizzen": "air-next-to-work",
+  "cable-beam/foc-sheet": "solid"
+ },
+ "anchors_far_from_their_work": [],
+ "ropes_through_solid": [],
+ "rope_min_clearance": [
+  [
+   0.36,
+   "mizzen-halyard-fall-1"
+  ],
+  [
+   0.36,
+   "mizzen-halyard-fall-2"
+  ],
+  [
+   0.43,
+   "main-halyard-fall-1"
+  ],
+  [
+   0.43,
+   "main-halyard-fall-2"
+  ],
+  [
+   0.43,
+   "main-halyard-fall-3"
+  ],
+  [
+   0.47,
+   "main-itague-1-lead"
+  ],
+  [
+   0.47,
+   "main-itague-2-lead"
+  ],
+  [
+   0.48,
+   "mizzen-itague-1-lead"
+  ]
+ ],
+ "ropes_tube_touching_solid": [],
+ "rope_rope_closest": [
+  [
+   0.5,
+   "main-itague-1-up",
+   "main-parrel"
+  ],
+  [
+   0.5,
+   "main-itague-2-up",
+   "main-parrel"
+  ],
+  [
+   0.5,
+   "mizzen-itague-1-up",
+   "mizzen-parrel"
+  ],
+  [
+   0.82,
+   "mizzen-shroud-S-2-block",
+   "mizzen-shroud-S-3-block"
+  ],
+  [
+   1.39,
+   "mizzen-shroud-S-2-fall-1",
+   "mizzen-shroud-S-3-block"
+  ],
+  [
+   1.41,
+   "mizzen-shroud-S-2-block",
+   "mizzen-shroud-S-3-fall-2"
+  ]
+ ],
+ "ropes_through_flat_sails": [],
+ "yard_sweep_vs_ropes": {
+  "main": {
+   "limit_deg": 9.5,
+   "min_axis_to_rope": 6.9,
+   "rope": "foc-stay",
+   "at_deg": 9.5,
+   "min_to_other_mast_shrouds": 98.67,
+   "other_rope": "mizzen-shroud-S-1-pendant"
+  },
+  "mizzen": {
+   "limit_deg": 23.4,
+   "min_axis_to_rope": 6.55,
+   "rope": "mizzen-shroud-S-1-pendant",
+   "at_deg": 23.4,
+   "min_to_other_mast_shrouds": 13.32,
+   "other_rope": "main-shroud-S-6-fall-1"
+  }
+ },
+ "sail_set": {
+  "1": [
+   "foc"
+  ],
+  "2": [
+   "foc",
+   "main-lateen"
+  ],
+  "3": [
+   "foc",
+   "main-lateen",
+   "mizzen-lateen"
+  ]
+ },
+ "sail_set_ok": true,
+ "sail_ropes_without_meta": [],
+ "sail_rope_meta_wrong": [],
+ "dup_rope_names": 0,
+ "counts": {
+  "ropes": 67,
+  "sails": 3,
+  "flags": 2,
+  "groups": {
+   "running/blocks": 2,
+   "running/halyards": 17,
+   "running/parrels": 2,
+   "running/sheets": 3,
+   "running/tacks": 2,
+   "standing/blocks": 10,
+   "standing/shroud-tackles": 20,
+   "standing/shrouds": 10,
+   "standing/stays": 1
+  },
+  "meta_sails": 5,
+  "meta_ropes": 53
+ },
+ "lateen_shape": {
+  "main-lateen": {
+   "luff_m": 13.6,
+   "leech_m": 27.5,
+   "leech_over_luff": 2.03,
+   "foot_m": 15.3
+  },
+  "mizzen-lateen": {
+   "luff_m": 6.4,
+   "leech_m": 13.0,
+   "leech_over_luff": 2.03,
+   "foot_m": 16.0
+  }
+ },
+ "halyard_blocks": {
+  "main": [
+   185.5,
+   80.5,
+   209.8
+  ],
+  "mizzen": [
+   104.0,
+   80.5,
+   154.9
+  ]
+ },
+ "sha256": {
+  "rings": "4dff17a7b502e12081d8c7c78b4edb7bb580a90ebab9c8d42a274780fd82f7f0",
+  "stern_spars": "8c1477f4172eeccb154c406663e2e6ca0a7c9698a2cf0130b9af37ebc28fed84",
+  "halyard_bitt": "c56a8c234c0069fa47773e82b017a37428d16a978a92e60193a0e35032fc5ef8"
+ },
+ "rope_clearance": {
+  "main-shroud-S-1-pendant": {
+   "len_cells": 152.2,
+   "samples_in_solid": 0,
+   "min_clearance": 0.79,
+   "at": [
+    192.6,
+    84.8,
+    248.9
+   ]
+  },
+  "main-shroud-S-1-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-shroud-S-1-fall-1": {
+   "len_cells": 68.6,
+   "samples_in_solid": 0,
+   "min_clearance": 0.65,
+   "at": [
+    312.1,
+    116.9,
+    70.1
+   ]
+  },
+  "main-shroud-S-1-fall-2": {
+   "len_cells": 68.6,
+   "samples_in_solid": 0,
+   "min_clearance": 0.58,
+   "at": [
+    312.1,
+    116.8,
+    70.1
+   ]
+  },
+  "main-shroud-S-2-pendant": {
+   "len_cells": 147.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.86,
+   "at": [
+    192.5,
+    84.8,
+    248.8
+   ]
+  },
+  "main-shroud-S-2-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-shroud-S-2-fall-1": {
+   "len_cells": 66.4,
+   "samples_in_solid": 0,
+   "min_clearance": 0.63,
+   "at": [
+    298.3,
+    119.8,
+    70.2
+   ]
+  },
+  "main-shroud-S-2-fall-2": {
+   "len_cells": 66.4,
+   "samples_in_solid": 0,
+   "min_clearance": 0.57,
+   "at": [
+    298.3,
+    119.7,
+    70.2
+   ]
+  },
+  "main-shroud-S-3-pendant": {
+   "len_cells": 58.2,
+   "samples_in_solid": 0,
+   "min_clearance": 1.11,
+   "at": [
+    191.8,
+    85.0,
+    248.6
+   ]
+  },
+  "main-shroud-S-3-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-shroud-S-3-fall-1": {
+   "len_cells": 132.8,
+   "samples_in_solid": 0,
+   "min_clearance": 1.07,
+   "at": [
+    223.1,
+    128.9,
+    67.0
+   ]
+  },
+  "main-shroud-S-3-fall-2": {
+   "len_cells": 132.8,
+   "samples_in_solid": 0,
+   "min_clearance": 1.07,
+   "at": [
+    223.1,
+    128.9,
+    67.0
+   ]
+  },
+  "main-shroud-S-4-pendant": {
+   "len_cells": 57.6,
+   "samples_in_solid": 0,
+   "min_clearance": 1.14,
+   "at": [
+    191.6,
+    85.0,
+    248.6
+   ]
+  },
+  "main-shroud-S-4-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-shroud-S-4-fall-1": {
+   "len_cells": 131.4,
+   "samples_in_solid": 0,
+   "min_clearance": 1.15,
+   "at": [
+    204.3,
+    129.9,
+    67.1
+   ]
+  },
+  "main-shroud-S-4-fall-2": {
+   "len_cells": 131.4,
+   "samples_in_solid": 0,
+   "min_clearance": 1.14,
+   "at": [
+    204.3,
+    129.9,
+    67.1
+   ]
+  },
+  "main-shroud-S-5-pendant": {
+   "len_cells": 57.5,
+   "samples_in_solid": 0,
+   "min_clearance": 1.14,
+   "at": [
+    191.4,
+    85.0,
+    248.6
+   ]
+  },
+  "main-shroud-S-5-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-shroud-S-5-fall-1": {
+   "len_cells": 131.2,
+   "samples_in_solid": 0,
+   "min_clearance": 1.15,
+   "at": [
+    185.6,
+    129.9,
+    67.1
+   ]
+  },
+  "main-shroud-S-5-fall-2": {
+   "len_cells": 131.2,
+   "samples_in_solid": 0,
+   "min_clearance": 1.15,
+   "at": [
+    185.6,
+    129.9,
+    67.1
+   ]
+  },
+  "main-shroud-S-6-pendant": {
+   "len_cells": 58.0,
+   "samples_in_solid": 0,
+   "min_clearance": 1.13,
+   "at": [
+    191.2,
+    85.0,
+    248.6
+   ]
+  },
+  "main-shroud-S-6-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-shroud-S-6-fall-1": {
+   "len_cells": 132.3,
+   "samples_in_solid": 0,
+   "min_clearance": 1.18,
+   "at": [
+    166.8,
+    129.8,
+    67.2
+   ]
+  },
+  "main-shroud-S-6-fall-2": {
+   "len_cells": 132.3,
+   "samples_in_solid": 0,
+   "min_clearance": 1.19,
+   "at": [
+    166.9,
+    129.8,
+    67.2
+   ]
+  },
+  "mizzen-shroud-S-1-pendant": {
+   "len_cells": 44.3,
+   "samples_in_solid": 0,
+   "min_clearance": 0.66,
+   "at": [
+    108.7,
+    84.3,
+    180.7
+   ]
+  },
+  "mizzen-shroud-S-1-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "mizzen-shroud-S-1-fall-1": {
+   "len_cells": 63.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.74,
+   "at": [
+    118.1,
+    123.9,
+    84.4
+   ]
+  },
+  "mizzen-shroud-S-1-fall-2": {
+   "len_cells": 63.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.72,
+   "at": [
+    118.2,
+    123.9,
+    84.4
+   ]
+  },
+  "mizzen-shroud-S-2-pendant": {
+   "len_cells": 43.9,
+   "samples_in_solid": 0,
+   "min_clearance": 0.63,
+   "at": [
+    108.4,
+    84.2,
+    180.6
+   ]
+  },
+  "mizzen-shroud-S-2-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "mizzen-shroud-S-2-fall-1": {
+   "len_cells": 62.8,
+   "samples_in_solid": 0,
+   "min_clearance": 0.8,
+   "at": [
+    104.6,
+    121.9,
+    84.5
+   ]
+  },
+  "mizzen-shroud-S-2-fall-2": {
+   "len_cells": 62.8,
+   "samples_in_solid": 0,
+   "min_clearance": 0.81,
+   "at": [
+    104.7,
+    121.9,
+    84.5
+   ]
+  },
+  "mizzen-shroud-S-3-pendant": {
+   "len_cells": 43.9,
+   "samples_in_solid": 0,
+   "min_clearance": 0.61,
+   "at": [
+    108.3,
+    84.2,
+    180.6
+   ]
+  },
+  "mizzen-shroud-S-3-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "mizzen-shroud-S-3-fall-1": {
+   "len_cells": 62.9,
+   "samples_in_solid": 0,
+   "min_clearance": 0.82,
+   "at": [
+    96.9,
+    121.0,
+    84.4
+   ]
+  },
+  "mizzen-shroud-S-3-fall-2": {
+   "len_cells": 62.9,
+   "samples_in_solid": 0,
+   "min_clearance": 0.85,
+   "at": [
+    97.0,
+    121.0,
+    84.4
+   ]
+  },
+  "mizzen-shroud-S-4-pendant": {
+   "len_cells": 44.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.57,
+   "at": [
+    108.1,
+    84.2,
+    180.7
+   ]
+  },
+  "mizzen-shroud-S-4-block": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "mizzen-shroud-S-4-fall-1": {
+   "len_cells": 63.7,
+   "samples_in_solid": 0,
+   "min_clearance": 0.88,
+   "at": [
+    85.1,
+    119.6,
+    83.0
+   ]
+  },
+  "mizzen-shroud-S-4-fall-2": {
+   "len_cells": 63.7,
+   "samples_in_solid": 0,
+   "min_clearance": 0.9,
+   "at": [
+    85.1,
+    119.6,
+    83.0
+   ]
+  },
+  "main-itague-1-up": {
+   "len_cells": 7.6,
+   "samples_in_solid": 0,
+   "min_clearance": 1.16,
+   "at": [
+    192.9,
+    75.4,
+    261.7
+   ]
+  },
+  "main-itague-1-lead": {
+   "len_cells": 4.7,
+   "samples_in_solid": 0,
+   "min_clearance": 0.47,
+   "at": [
+    195.0,
+    78.9,
+    267.1
+   ]
+  },
+  "main-itague-1-out": {
+   "len_cells": 2.8,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-itague-1-down": {
+   "len_cells": 56.7,
+   "samples_in_solid": 0,
+   "min_clearance": 1.26,
+   "at": [
+    186.2,
+    80.5,
+    252.0
+   ]
+  },
+  "main-itague-2-up": {
+   "len_cells": 14.8,
+   "samples_in_solid": 0,
+   "min_clearance": 1.14,
+   "at": [
+    194.9,
+    76.6,
+    271.3
+   ]
+  },
+  "main-itague-2-lead": {
+   "len_cells": 4.7,
+   "samples_in_solid": 0,
+   "min_clearance": 0.47,
+   "at": [
+    195.0,
+    78.9,
+    275.1
+   ]
+  },
+  "main-itague-2-out": {
+   "len_cells": 2.8,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "main-itague-2-down": {
+   "len_cells": 64.7,
+   "samples_in_solid": 0,
+   "min_clearance": 1.35,
+   "at": [
+    186.2,
+    80.5,
+    252.0
+   ]
+  },
+  "main-halyard-block": {
+   "len_cells": 4.0,
+   "samples_in_solid": 0,
+   "min_clearance": 7.44,
+   "at": [
+    185.4,
+    80.5,
+    207.8
+   ]
+  },
+  "main-halyard-fall-1": {
+   "len_cells": 142.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.43,
+   "at": [
+    178.7,
+    80.5,
+    68.2
+   ]
+  },
+  "main-halyard-fall-2": {
+   "len_cells": 142.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.43,
+   "at": [
+    178.7,
+    80.5,
+    68.2
+   ]
+  },
+  "main-halyard-fall-3": {
+   "len_cells": 142.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.43,
+   "at": [
+    178.7,
+    80.5,
+    68.2
+   ]
+  },
+  "mizzen-itague-1-up": {
+   "len_cells": 4.3,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "mizzen-itague-1-lead": {
+   "len_cells": 4.7,
+   "samples_in_solid": 0,
+   "min_clearance": 0.48,
+   "at": [
+    111.0,
+    78.9,
+    194.1
+   ]
+  },
+  "mizzen-itague-1-out": {
+   "len_cells": 2.8,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "mizzen-itague-1-down": {
+   "len_cells": 38.6,
+   "samples_in_solid": 0,
+   "min_clearance": 1.1,
+   "at": [
+    104.4,
+    80.5,
+    185.0
+   ]
+  },
+  "mizzen-halyard-block": {
+   "len_cells": 4.0,
+   "samples_in_solid": 0,
+   "min_clearance": 0.51,
+   "at": [
+    103.9,
+    80.5,
+    152.9
+   ]
+  },
+  "mizzen-halyard-fall-1": {
+   "len_cells": 71.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.36,
+   "at": [
+    99.6,
+    80.5,
+    81.5
+   ]
+  },
+  "mizzen-halyard-fall-2": {
+   "len_cells": 71.5,
+   "samples_in_solid": 0,
+   "min_clearance": 0.36,
+   "at": [
+    99.6,
+    80.5,
+    81.5
+   ]
+  },
+  "main-parrel": {
+   "len_cells": 3.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "mizzen-parrel": {
+   "len_cells": 2.0,
+   "samples_in_solid": 0,
+   "min_clearance": null,
+   "at": null
+  },
+  "foc-stay": {
+   "len_cells": 275.1,
+   "samples_in_solid": 0,
+   "min_clearance": 0.95,
+   "at": [
+    406.2,
+    87.4,
+    78.4
+   ]
+  },
+  "main-lateen.sheet": {
+   "len_cells": 33.1,
+   "samples_in_solid": 0,
+   "min_clearance": 1.56,
+   "at": [
+    211.7,
+    34.6,
+    69.8
+   ]
+  },
+  "main-lateen.tack": {
+   "len_cells": 5.8,
+   "samples_in_solid": 0,
+   "min_clearance": 1.14,
+   "at": [
+    375.0,
+    79.0,
+    74.4
+   ]
+  },
+  "mizzen-lateen.sheet": {
+   "len_cells": 22.0,
+   "samples_in_solid": 0,
+   "min_clearance": 1.68,
+   "at": [
+    10.8,
+    55.8,
+    92.9
+   ]
+  },
+  "mizzen-lateen.tack": {
+   "len_cells": 34.2,
+   "samples_in_solid": 0,
+   "min_clearance": 1.81,
+   "at": [
+    172.5,
+    34.2,
+    70.1
+   ]
+  },
+  "foc.sheet": {
+   "len_cells": 31.4,
+   "samples_in_solid": 0,
+   "min_clearance": 1.77,
+   "at": [
+    296.0,
+    112.9,
+    71.0
+   ]
+  }
+ }
+}

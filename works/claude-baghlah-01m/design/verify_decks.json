@@ -1,0 +1,365 @@
+{
+ "groups": {
+  "orlop": {
+   "cells": 16874,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 3390,
+    "141": 74,
+    "177": 13410
+   },
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 27573,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 7170,
+    "141": 234,
+    "209": 20169
+   },
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 11641,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "colors": {
+    "136": 1340,
+    "141": 2086,
+    "209": 8215
+   },
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "orlop": {
+   "cells": 430,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 208,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 296,
+   "hull_overlap": 0,
+   "mirror_diff": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "parts_outside_inside": 0,
+ "structure_all": {
+  "components_6": 1,
+  "cavities": 0,
+  "mirror_diff": 0
+ },
+ "deck_meta": {
+  "orlop": {
+   "kind": "deck",
+   "deck": "orlop",
+   "level": 0,
+   "name": "底艙平台（hold platform）",
+   "floor": "96:36,290:36",
+   "thick": 3
+  },
+  "main": {
+   "kind": "deck",
+   "deck": "main",
+   "level": 1,
+   "name": "主甲板（main deck）",
+   "floor": "46:56,259:56,260:57,279:57,280:58,281:58,282:57,283:57,284:56,285:55,286:54,287:53,288:52,289:52,290:51,332:51,333:52,334:52,335:53,336:53,337:54,338:55,339:55,340:56,341:56,342:57,343:57,344:58,345:58,346:59,347:59,348:60,349:60,350:61,351:62,352:62,353:63,354:63,355:64,356:64,357:65,358:65,359:66,360:66,361:67,362:67,363:68,364:69,365:69,366:70,367:70,368:71,369:71,370:72,371:72,372:73,373:73",
+   "thick": 4
+  },
+  "poop": {
+   "kind": "deck",
+   "deck": "poop",
+   "level": 2,
+   "name": "船尾樓（dunette）",
+   "floor": "33:74,124:74,125:72,127:72,128:70,150:70",
+   "thick": 3
+  }
+ },
+ "ladder_point_problems": [],
+ "walk": {
+  "orlop": {
+   "m2": 148.32,
+   "reached_m2": 148.32,
+   "unreached_chunks_ge_2m2": []
+  },
+  "main": {
+   "m2": 229.23,
+   "reached_m2": 228.89,
+   "unreached_chunks_ge_2m2": []
+  },
+  "poop": {
+   "m2": 80.49,
+   "reached_m2": 79.8,
+   "unreached_chunks_ge_2m2": []
+  },
+  "hold": {
+   "m2": 115.01,
+   "reached_m2": 107.5,
+   "unreached_chunks_ge_2m2": [
+    {
+     "m2": 3.56,
+     "x": [
+      291,
+      304
+     ],
+     "z": [
+      28,
+      38
+     ]
+    }
+   ]
+  }
+ },
+ "ladder_links": {
+  "hold": {
+   "foot_to_walk": 3.7416573867739413,
+   "head_to_walk": 0.0
+  },
+  "orlop": {
+   "foot_to_walk": 0.0,
+   "head_to_walk": 0.0
+  },
+  "quarter-P": {
+   "foot_to_walk": 0.0,
+   "head_to_walk": 0.0
+  },
+  "quarter-S": {
+   "foot_to_walk": 0.0,
+   "head_to_walk": 0.0
+  }
+ },
+ "ports_blocked_inside": [],
+ "scuppers_flush": [
+  {
+   "i": 1,
+   "scupper_z0": 51,
+   "deck_first_air": 51
+  },
+  {
+   "i": 2,
+   "scupper_z0": 51,
+   "deck_first_air": 51
+  }
+ ],
+ "holes": {
+  "orlop": 181,
+  "main": 563,
+  "poop": 21,
+  "quarter": 0
+ },
+ "cavities_filled": [
+  {
+   "group": "main",
+   "cells": 22,
+   "x": [
+    47,
+    47
+   ],
+   "z": [
+    53,
+    54
+   ]
+  }
+ ],
+ "ladders_geo": {
+  "hold": {
+   "n": 9,
+   "zl": 8,
+   "zu": 36,
+   "top_end": 146,
+   "head_x": 143,
+   "well": [
+    157,
+    146
+   ]
+  },
+  "orlop": {
+   "n": 6,
+   "zl": 36,
+   "zu": 56,
+   "top_end": 218,
+   "head_x": 221,
+   "well": [
+    207,
+    218
+   ]
+  },
+  "quarter-P": {
+   "n": 4,
+   "zl": 56,
+   "zu": 70,
+   "top_end": 151,
+   "head_x": 148,
+   "well": null
+  },
+  "quarter-S": {
+   "n": 4,
+   "zl": 56,
+   "zu": 70,
+   "top_end": 151,
+   "head_x": 148,
+   "well": null
+  }
+ },
+ "ladder_points": {
+  "hold": {
+   "up": "orlop",
+   "lo": "hold",
+   "group_up": "orlop",
+   "steps": 9,
+   "decks": null,
+   "points": {
+    "foot": [
+     166,
+     80,
+     8
+    ],
+    "lo": [
+     163,
+     80,
+     11
+    ],
+    "hi": [
+     147,
+     80,
+     35
+    ],
+    "head": [
+     143,
+     80,
+     36
+    ]
+   },
+   "top_gap_cols": 0
+  },
+  "orlop": {
+   "up": "main",
+   "lo": "orlop",
+   "group_up": "main",
+   "steps": 6,
+   "decks": "orlop,main",
+   "points": {
+    "foot": [
+     204,
+     80,
+     36
+    ],
+    "lo": [
+     207,
+     80,
+     39
+    ],
+    "hi": [
+     217,
+     80,
+     54
+    ],
+    "head": [
+     221,
+     80,
+     56
+    ]
+   },
+   "top_gap_cols": 0
+  },
+  "quarter-P": {
+   "up": "quarter",
+   "lo": "main",
+   "group_up": "poop",
+   "steps": 4,
+   "decks": "main,poop",
+   "points": {
+    "foot": [
+     161,
+     68,
+     56
+    ],
+    "lo": [
+     158,
+     68,
+     59
+    ],
+    "hi": [
+     152,
+     68,
+     68
+    ],
+    "head": [
+     148,
+     68,
+     70
+    ]
+   },
+   "top_gap_cols": 0
+  },
+  "quarter-S": {
+   "up": "quarter",
+   "lo": "main",
+   "group_up": "poop",
+   "steps": 4,
+   "decks": "main,poop",
+   "points": {
+    "foot": [
+     161,
+     92,
+     56
+    ],
+    "lo": [
+     158,
+     92,
+     59
+    ],
+    "hi": [
+     152,
+     92,
+     68
+    ],
+    "head": [
+     148,
+     92,
+     70
+    ]
+   },
+   "top_gap_cols": 0
+  }
+ },
+ "mast_heel_z": {
+  "main": 3,
+  "mizzen": 36
+ },
+ "lists": {
+  "deck-orlop": [
+   16874,
+   "e9a143536d2c834f466fb9a1bf874a9629276eed3f4c831ca5beda47d1233e57"
+  ],
+  "deck-main": [
+   27573,
+   "e17ee1119dde8d39cf27f15f06204a0fed0046f42aef75a021a378df405712da"
+  ],
+  "deck-poop": [
+   11641,
+   "9f073c895790228058728fe075c64b9d55f570bbd4752a5ee80a5d51cca3e4cd"
+  ],
+  "ladders-orlop": [
+   430,
+   "747b8a64d31bcc018f0a5fbaa488110aa4309c4d25ea505c3bfbc523f3321868"
+  ],
+  "ladders-main": [
+   208,
+   "3ad6e38135eec9985ddc7770f3702168c7e4563641004e46ef4523fa7a87f684"
+  ],
+  "ladders-poop": [
+   296,
+   "3a25246b732065125d264dc77743ae2bd918c4182604ade647b4eed681275bd9"
+  ]
+ }
+}
