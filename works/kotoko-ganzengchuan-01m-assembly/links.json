@@ -1,0 +1,339 @@
+{
+	"schema": 3,
+	"links": [
+		{
+			"name": "船殼",
+			"work": "kotoko-ganzengchuan-01m",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:05:25",
+			"persona": "kotoko",
+			"note": "",
+			"meta": {
+				"id": "ship-1",
+				"kind": "ship",
+				"waterline_z": 24
+			}
+		},
+		{
+			"name": "甲板-hold",
+			"work": "kotoko-ganzengchuan-01m-deck-hold",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:24:03",
+			"persona": "kotoko",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "hold",
+				"floor": "82:9,300:9",
+				"id": "deck-1",
+				"kind": "deck",
+				"level": 0,
+				"name": "底艙甲板",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-main",
+			"work": "kotoko-ganzengchuan-01m-deck-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:24:03",
+			"persona": "kotoko",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "main",
+				"floor": "68:35,282:35",
+				"id": "deck-2",
+				"kind": "deck",
+				"level": 1,
+				"name": "主甲板",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-fore",
+			"work": "kotoko-ganzengchuan-01m-deck-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:24:04",
+			"persona": "kotoko",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "fore",
+				"floor": "282:44,318:44",
+				"id": "deck-3",
+				"kind": "deck",
+				"level": 2,
+				"name": "艏平台",
+				"thick": 2
+			}
+		},
+		{
+			"name": "甲板-poop",
+			"work": "kotoko-ganzengchuan-01m-deck-poop",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:24:04",
+			"persona": "kotoko",
+			"note": "步驟 5",
+			"meta": {
+				"deck": "poop",
+				"floor": "62:54,112:54",
+				"id": "deck-4",
+				"kind": "deck",
+				"level": 2,
+				"name": "尾樓甲板",
+				"thick": 2
+			}
+		},
+		{
+			"name": "船尾窗玻璃",
+			"work": "kotoko-ganzengchuan-01m-stern-glass",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:34:11",
+			"persona": "kotoko",
+			"note": "步驟 6：兩扇花格艉窗玻璃（Ship_Materials）",
+			"meta": {
+				"id": "part-1",
+				"material": "glass"
+			}
+		},
+		{
+			"name": "尾樓陽台欄杆",
+			"work": "kotoko-ganzengchuan-01m-stern-balcony",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:34:14",
+			"persona": "kotoko",
+			"note": "步驟 6：高尾懸挑陽台與上層望樓欄杆",
+			"meta": {
+				"id": "part-2"
+			}
+		},
+		{
+			"name": "桅-fore",
+			"work": "kotoko-ganzengchuan-01m-mast-fore",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:42:14",
+			"persona": "kotoko",
+			"note": "步驟 7：fore 下桅（Ship_Masts）",
+			"meta": {
+				"id": "mast-1",
+				"kind": "mast",
+				"mast": "fore"
+			}
+		},
+		{
+			"name": "桅-main",
+			"work": "kotoko-ganzengchuan-01m-mast-main",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:42:17",
+			"persona": "kotoko",
+			"note": "步驟 7：main 下桅（Ship_Masts）",
+			"meta": {
+				"id": "mast-2",
+				"kind": "mast",
+				"mast": "main"
+			}
+		},
+		{
+			"name": "船尾旗桿",
+			"work": "kotoko-ganzengchuan-01m-ensign-staff",
+			"at": [
+				61,
+				95,
+				68
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				3,
+				3,
+				32
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T13:47:06",
+			"persona": "kotoko",
+			"note": "步驟 8：船尾旗桿（與翔龍牌飾 0 重疊）",
+			"meta": {
+				"id": "part-3"
+			}
+		},
+		{
+			"name": "彈藥庫",
+			"work": "kotoko-ganzengchuan-01m-magazine",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T14:01:35",
+			"persona": "kotoko",
+			"note": "步驟 10：底艙艉端銅襯彈藥庫",
+			"meta": {
+				"hoist": "ladders-1#hold,ladders-3#poop,ladders-2#fore",
+				"id": "magazine-1",
+				"kind": "magazine",
+				"pos": "aft",
+				"powder_lb": 400
+			}
+		},
+		{
+			"name": "錨架",
+			"work": "kotoko-ganzengchuan-01m-anchor-gear",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T14:15:50",
+			"persona": "kotoko",
+			"note": "步驟 11（TASK-1314）：艏錨架與將軍柱",
+			"meta": {
+				"id": "part-4"
+			}
+		},
+		{
+			"name": "櫓座",
+			"work": "kotoko-ganzengchuan-01m-oar-locks",
+			"at": [
+				0,
+				0,
+				0
+			],
+			"turn": 0,
+			"mirror": "",
+			"pivot": [
+				384,
+				192,
+				384
+			],
+			"enabled": true,
+			"created_at": "2026-11-21T14:21:28",
+			"persona": "kotoko",
+			"note": "步驟 13（TASK-1314）：兩舷輔佐長櫓櫓座",
+			"meta": {
+				"id": "part-5"
+			}
+		}
+	]
+}

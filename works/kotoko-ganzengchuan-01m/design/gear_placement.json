@@ -1,0 +1,298 @@
+{
+  "magazine_wall_cells": 774,
+  "magazine_anchors": {
+    "blast": [
+      102,
+      96,
+      16
+    ],
+    "door": [
+      111,
+      96,
+      9
+    ]
+  },
+  "magazine_meta": {
+    "kind": "magazine",
+    "pos": "aft",
+    "powder_lb": 400,
+    "hoist": "甲板-main/梯子#hold,甲板-poop/梯子#poop,甲板-fore/梯子#fore"
+  },
+  "hatch": {
+    "work": "kotoko-ganzengchuan-01m-cargo-hatch",
+    "title": "福建趕繒船 主艙口格柵蓋（0.05 m）",
+    "name": "貨艙蓋",
+    "host": "deck-main",
+    "size": [
+      30,
+      26,
+      3
+    ],
+    "cells": 1334,
+    "vox_file": "masks/gear/cargo_hatch.vox.txt",
+    "at": [
+      207.0,
+      90.0,
+      37.0
+    ],
+    "pivot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": 0.5,
+    "anchors": {
+      "hinge-a": [
+        0,
+        0,
+        0
+      ],
+      "hinge-b": [
+        29,
+        0,
+        0
+      ]
+    },
+    "meta": {
+      "kind": "door",
+      "open": "up",
+      "open_deg": 100
+    }
+  },
+  "models": [
+    {
+      "name": "桶-01",
+      "host": "magazine",
+      "host_link": "彈藥庫",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "at": [
+        99.5,
+        89.5,
+        9.0
+      ],
+      "pivot": [
+        11.0,
+        11.0,
+        0.0
+      ],
+      "scale": 0.2,
+      "meta": {
+        "kind": "powder",
+        "powder_lb": 100
+      }
+    },
+    {
+      "name": "桶-02",
+      "host": "magazine",
+      "host_link": "彈藥庫",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "at": [
+        99.5,
+        103.5,
+        9.0
+      ],
+      "pivot": [
+        11.0,
+        11.0,
+        0.0
+      ],
+      "scale": 0.2,
+      "meta": {
+        "kind": "powder",
+        "powder_lb": 100
+      }
+    },
+    {
+      "name": "桶-03",
+      "host": "magazine",
+      "host_link": "彈藥庫",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "at": [
+        105.5,
+        89.5,
+        9.0
+      ],
+      "pivot": [
+        11.0,
+        11.0,
+        0.0
+      ],
+      "scale": 0.2,
+      "meta": {
+        "kind": "powder",
+        "powder_lb": 100
+      }
+    },
+    {
+      "name": "桶-04",
+      "host": "magazine",
+      "host_link": "彈藥庫",
+      "source_work": "basecamp-frigate-constitution-01m-powder-barrel",
+      "at": [
+        105.5,
+        103.5,
+        9.0
+      ],
+      "pivot": [
+        11.0,
+        11.0,
+        0.0
+      ],
+      "scale": 0.2,
+      "meta": {
+        "kind": "powder",
+        "powder_lb": 100
+      }
+    },
+    {
+      "name": "舵艙門",
+      "host": "deck-main",
+      "host_link": "甲板-main",
+      "source_work": "gura-pinas-01m-door",
+      "at": [
+        113.0,
+        92.0,
+        35.0
+      ],
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.5,
+        0.6429,
+        0.5313
+      ],
+      "meta": {
+        "kind": "door",
+        "open": "side",
+        "open_deg": 100
+      }
+    },
+    {
+      "name": "廚房大灶",
+      "host": "deck-main",
+      "host_link": "甲板-main",
+      "source_work": "kaguya-gloire-01m-galley",
+      "at": [
+        152.5,
+        83.5,
+        35.0
+      ],
+      "pivot": [
+        22.0,
+        16.0,
+        0.0
+      ],
+      "scale": 0.3,
+      "meta": {
+        "kind": "galley"
+      }
+    },
+    {
+      "name": "舢舨",
+      "host": "deck-main",
+      "host_link": "甲板-main",
+      "source_work": "basecamp-ember-01m-boat",
+      "at": [
+        244.5,
+        96.5,
+        35.0
+      ],
+      "pivot": [
+        90.0,
+        26.0,
+        0.0
+      ],
+      "scale": 0.22,
+      "meta": {
+        "kind": "boat",
+        "boat": "cutter",
+        "length_m": 4
+      }
+    },
+    {
+      "name": "絞盤",
+      "host": "deck-main",
+      "host_link": "甲板-main",
+      "source_work": "basecamp-ember-01m-capstan",
+      "at": [
+        128.5,
+        96.5,
+        35.0
+      ],
+      "pivot": [
+        40.0,
+        40.0,
+        0.0
+      ],
+      "scale": 0.14,
+      "meta": {
+        "kind": "capstan"
+      }
+    },
+    {
+      "name": "羅經櫃",
+      "host": "deck-poop",
+      "host_link": "甲板-poop",
+      "source_work": "summit-night-falcon-01m-binnacle",
+      "at": [
+        93.5,
+        96.5,
+        54.0
+      ],
+      "pivot": [
+        9.0,
+        13.0,
+        0.0
+      ],
+      "scale": 0.2,
+      "meta": {
+        "kind": "binnacle"
+      }
+    },
+    {
+      "name": "尾燈-P",
+      "host": "deck-poop",
+      "host_link": "甲板-poop",
+      "source_work": "gura-tridente-01m-lantern",
+      "at": [
+        70.5,
+        76.5,
+        73.0
+      ],
+      "pivot": [
+        8.5,
+        8.5,
+        0.0
+      ],
+      "scale": 0.3,
+      "meta": {
+        "kind": "light",
+        "light_color": "#ffae52"
+      }
+    },
+    {
+      "name": "尾燈-S",
+      "host": "deck-poop",
+      "host_link": "甲板-poop",
+      "source_work": "gura-tridente-01m-lantern",
+      "at": [
+        70.5,
+        116.5,
+        73.0
+      ],
+      "pivot": [
+        8.5,
+        8.5,
+        0.0
+      ],
+      "scale": 0.3,
+      "meta": {
+        "kind": "light",
+        "light_color": "#ffae52"
+      }
+    }
+  ]
+}

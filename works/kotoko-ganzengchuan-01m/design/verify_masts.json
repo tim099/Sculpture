@@ -1,0 +1,698 @@
+{
+  "masts": {
+    "fore": {
+      "work": "kotoko-ganzengchuan-01m-mast-fore",
+      "cells": 1582,
+      "z_heel": 9,
+      "z_top": 174,
+      "top_x": 291.342,
+      "anchors": {
+        "heel": [
+          274,
+          96,
+          9
+        ],
+        "hounds": [
+          290,
+          96,
+          163
+        ],
+        "cap": [
+          291,
+          96,
+          172
+        ],
+        "top": [
+          291,
+          96,
+          174
+        ],
+        "head": [
+          291,
+          96,
+          174
+        ]
+      },
+      "stats": {
+        "count": 1582,
+        "components_6": 1,
+        "cavities": 0,
+        "mirror_diff": 0
+      },
+      "sha256": "c6d92f9b38edcf4ecb0717bb8194cb3d49ab0d67de53fdb37e71f67ee2981dfa"
+    },
+    "main": {
+      "work": "kotoko-ganzengchuan-01m-mast-main",
+      "cells": 3897,
+      "z_heel": 9,
+      "z_top": 234,
+      "top_x": 178.143,
+      "anchors": {
+        "heel": [
+          186,
+          96,
+          9
+        ],
+        "hounds": [
+          179,
+          96,
+          223
+        ],
+        "cap": [
+          178,
+          96,
+          232
+        ],
+        "top": [
+          178,
+          96,
+          234
+        ],
+        "head": [
+          178,
+          96,
+          234
+        ]
+      },
+      "stats": {
+        "count": 3897,
+        "components_6": 1,
+        "cavities": 0,
+        "mirror_diff": 0
+      },
+      "sha256": "f01b366ef5028a73999404a79965b5f46caba7a42bad0adfdb524530939e394d"
+    }
+  },
+  "yards": {
+    "fore-upper": {
+      "work": "kotoko-ganzengchuan-01m-yard-fore-upper",
+      "host_mast": "kotoko-ganzengchuan-01m-mast-fore",
+      "model_name": "yard-fore-upper",
+      "size": "77,5,5",
+      "vox_file": "masks/masts/yard_fore-upper.vox.txt",
+      "cells": 245,
+      "at": [
+        290.081,
+        96.5,
+        162.0
+      ],
+      "pivot": [
+        56.5,
+        2.5,
+        2.5
+      ],
+      "rotate": [
+        0,
+        15.0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": {
+        "pivot": [
+          56,
+          2,
+          2
+        ],
+        "sling": [
+          56,
+          2,
+          2
+        ],
+        "aft": [
+          2,
+          2,
+          2
+        ],
+        "fore": [
+          74,
+          2,
+          2
+        ],
+        "arm-P": [
+          2,
+          2,
+          2
+        ],
+        "arm-S": [
+          74,
+          2,
+          2
+        ],
+        "earing-P": [
+          2,
+          2,
+          2
+        ],
+        "earing-S": [
+          74,
+          2,
+          2
+        ],
+        "jackstay-1": [
+          6,
+          2,
+          2
+        ],
+        "jackstay-2": [
+          14,
+          2,
+          2
+        ],
+        "jackstay-3": [
+          22,
+          2,
+          2
+        ],
+        "jackstay-4": [
+          30,
+          2,
+          2
+        ],
+        "jackstay-5": [
+          38,
+          2,
+          3
+        ],
+        "jackstay-6": [
+          46,
+          2,
+          3
+        ],
+        "jackstay-7": [
+          54,
+          2,
+          3
+        ],
+        "jackstay-8": [
+          62,
+          2,
+          3
+        ],
+        "jackstay-9": [
+          70,
+          2,
+          3
+        ]
+      },
+      "meta": {
+        "kind": "yard",
+        "yard": "course",
+        "mast": "fore",
+        "sail": "fore-junk",
+        "pivot_anchor": "pivot",
+        "turn_axis": "z",
+        "rotate_z_deg": 0,
+        "diameter_in": 6,
+        "length_ft": 23.62
+      },
+      "sha256": "3da740e78fc4bfd6ef3f0712605c256668ac282a46e98f63ebe9b38a3978cc51"
+    },
+    "fore-lower": {
+      "work": "kotoko-ganzengchuan-01m-yard-fore-lower",
+      "host_mast": "kotoko-ganzengchuan-01m-mast-fore",
+      "model_name": "yard-fore-lower",
+      "size": "79,5,5",
+      "vox_file": "masks/masts/yard_fore-lower.vox.txt",
+      "cells": 247,
+      "at": [
+        279.36,
+        96.5,
+        60.0
+      ],
+      "pivot": [
+        57.5,
+        2.5,
+        2.5
+      ],
+      "rotate": [
+        0,
+        -0.0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": {
+        "pivot": [
+          57,
+          2,
+          2
+        ],
+        "sling": [
+          57,
+          2,
+          2
+        ],
+        "aft": [
+          2,
+          2,
+          2
+        ],
+        "fore": [
+          76,
+          2,
+          2
+        ],
+        "arm-P": [
+          2,
+          2,
+          2
+        ],
+        "arm-S": [
+          76,
+          2,
+          2
+        ],
+        "earing-P": [
+          2,
+          2,
+          2
+        ],
+        "earing-S": [
+          76,
+          2,
+          2
+        ],
+        "jackstay-1": [
+          6,
+          2,
+          2
+        ],
+        "jackstay-2": [
+          14,
+          2,
+          2
+        ],
+        "jackstay-3": [
+          22,
+          2,
+          2
+        ],
+        "jackstay-4": [
+          30,
+          2,
+          2
+        ],
+        "jackstay-5": [
+          38,
+          2,
+          3
+        ],
+        "jackstay-6": [
+          46,
+          2,
+          3
+        ],
+        "jackstay-7": [
+          54,
+          2,
+          3
+        ],
+        "jackstay-8": [
+          62,
+          2,
+          3
+        ],
+        "jackstay-9": [
+          70,
+          2,
+          3
+        ]
+      },
+      "meta": {
+        "kind": "yard",
+        "yard": "course",
+        "mast": "fore",
+        "sail": "fore-junk",
+        "pivot_anchor": "pivot",
+        "turn_axis": "z",
+        "rotate_z_deg": 0,
+        "diameter_in": 6,
+        "length_ft": 24.28
+      },
+      "sha256": "261f88525cd1da1c55378be6edd121ec4f85a1847f3bda95b276704e30dc343c"
+    },
+    "main-upper": {
+      "work": "kotoko-ganzengchuan-01m-yard-main-upper",
+      "host_mast": "kotoko-ganzengchuan-01m-mast-main",
+      "model_name": "yard-main-upper",
+      "size": "105,5,5",
+      "vox_file": "masks/masts/yard_main-upper.vox.txt",
+      "cells": 337,
+      "at": [
+        178.771,
+        96.5,
+        216.0
+      ],
+      "pivot": [
+        76.5,
+        2.5,
+        2.5
+      ],
+      "rotate": [
+        0,
+        16.0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": {
+        "pivot": [
+          76,
+          2,
+          2
+        ],
+        "sling": [
+          76,
+          2,
+          2
+        ],
+        "aft": [
+          2,
+          2,
+          2
+        ],
+        "fore": [
+          102,
+          2,
+          2
+        ],
+        "arm-P": [
+          2,
+          2,
+          2
+        ],
+        "arm-S": [
+          102,
+          2,
+          2
+        ],
+        "earing-P": [
+          2,
+          2,
+          2
+        ],
+        "earing-S": [
+          102,
+          2,
+          2
+        ],
+        "jackstay-1": [
+          6,
+          2,
+          2
+        ],
+        "jackstay-2": [
+          14,
+          2,
+          2
+        ],
+        "jackstay-3": [
+          22,
+          2,
+          2
+        ],
+        "jackstay-4": [
+          30,
+          2,
+          2
+        ],
+        "jackstay-5": [
+          38,
+          2,
+          2
+        ],
+        "jackstay-6": [
+          46,
+          2,
+          3
+        ],
+        "jackstay-7": [
+          54,
+          2,
+          3
+        ],
+        "jackstay-8": [
+          62,
+          2,
+          3
+        ],
+        "jackstay-9": [
+          70,
+          2,
+          3
+        ],
+        "jackstay-10": [
+          78,
+          2,
+          3
+        ],
+        "jackstay-11": [
+          86,
+          2,
+          3
+        ],
+        "jackstay-12": [
+          94,
+          2,
+          3
+        ]
+      },
+      "meta": {
+        "kind": "yard",
+        "yard": "course",
+        "mast": "main",
+        "sail": "main-junk",
+        "pivot_anchor": "pivot",
+        "turn_axis": "z",
+        "rotate_z_deg": 0,
+        "diameter_in": 8,
+        "length_ft": 32.81
+      },
+      "sha256": "f2582c24194b862a2d35b6df6dcbf7fb8ef20206f56e5903d34648326db89cfb"
+    },
+    "main-lower": {
+      "work": "kotoko-ganzengchuan-01m-yard-main-lower",
+      "host_mast": "kotoko-ganzengchuan-01m-mast-main",
+      "model_name": "yard-main-lower",
+      "size": "109,5,5",
+      "vox_file": "masks/masts/yard_main-lower.vox.txt",
+      "cells": 349,
+      "at": [
+        183.87,
+        96.5,
+        70.0
+      ],
+      "pivot": [
+        79.5,
+        2.5,
+        2.5
+      ],
+      "rotate": [
+        0,
+        -0.0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": {
+        "pivot": [
+          79,
+          2,
+          2
+        ],
+        "sling": [
+          79,
+          2,
+          2
+        ],
+        "aft": [
+          2,
+          2,
+          2
+        ],
+        "fore": [
+          106,
+          2,
+          2
+        ],
+        "arm-P": [
+          2,
+          2,
+          2
+        ],
+        "arm-S": [
+          106,
+          2,
+          2
+        ],
+        "earing-P": [
+          2,
+          2,
+          2
+        ],
+        "earing-S": [
+          106,
+          2,
+          2
+        ],
+        "jackstay-1": [
+          6,
+          2,
+          2
+        ],
+        "jackstay-2": [
+          14,
+          2,
+          2
+        ],
+        "jackstay-3": [
+          22,
+          2,
+          2
+        ],
+        "jackstay-4": [
+          30,
+          2,
+          2
+        ],
+        "jackstay-5": [
+          38,
+          2,
+          2
+        ],
+        "jackstay-6": [
+          46,
+          2,
+          3
+        ],
+        "jackstay-7": [
+          54,
+          2,
+          3
+        ],
+        "jackstay-8": [
+          62,
+          2,
+          3
+        ],
+        "jackstay-9": [
+          70,
+          2,
+          3
+        ],
+        "jackstay-10": [
+          78,
+          2,
+          3
+        ],
+        "jackstay-11": [
+          86,
+          2,
+          3
+        ],
+        "jackstay-12": [
+          94,
+          2,
+          3
+        ],
+        "jackstay-13": [
+          102,
+          2,
+          3
+        ]
+      },
+      "meta": {
+        "kind": "yard",
+        "yard": "course",
+        "mast": "main",
+        "sail": "main-junk",
+        "pivot_anchor": "pivot",
+        "turn_axis": "z",
+        "rotate_z_deg": 0,
+        "diameter_in": 8,
+        "length_ft": 34.12
+      },
+      "sha256": "8a5cdaecea48ba7a05a5d77b4dbce5e672219af737686ae10a2ee76f1bc9438b"
+    }
+  },
+  "batten_templates": {
+    "fore": {
+      "work": "kotoko-ganzengchuan-01m-batten-fore",
+      "size": "98,5,5",
+      "vox_file": "masks/masts/batten_fore.vox.txt",
+      "cells": 94,
+      "aft_base": 68,
+      "fore_base": 25,
+      "pivot": [
+        70.5,
+        2.5,
+        2.5
+      ],
+      "anchors": {
+        "pivot": [
+          70,
+          2,
+          2
+        ],
+        "arm-P": [
+          2,
+          2,
+          2
+        ],
+        "arm-S": [
+          95,
+          2,
+          2
+        ]
+      },
+      "sha256": "d5b337b19f76f1e52085aaf011db619a3575174b46bec4666eedf36fb34bace9"
+    },
+    "main": {
+      "work": "kotoko-ganzengchuan-01m-batten-main",
+      "size": "133,5,5",
+      "vox_file": "masks/masts/batten_main.vox.txt",
+      "cells": 129,
+      "aft_base": 94,
+      "fore_base": 34,
+      "pivot": [
+        96.5,
+        2.5,
+        2.5
+      ],
+      "anchors": {
+        "pivot": [
+          96,
+          2,
+          2
+        ],
+        "arm-P": [
+          2,
+          2,
+          2
+        ],
+        "arm-S": [
+          130,
+          2,
+          2
+        ]
+      },
+      "sha256": "a586cf9165bdc3d6823c7af961bc2f524da915cf59fea773c1ed7c8956c3bf2d"
+    }
+  },
+  "batten_count": 16,
+  "min_overhang_cells": 1.995,
+  "roach": "0.05,0.16"
+}

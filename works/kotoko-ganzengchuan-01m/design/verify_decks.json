@@ -1,0 +1,140 @@
+{
+  "decks": {
+    "hold": {
+      "cells": 23951,
+      "hull_overlap": 0,
+      "outside_hull": 0,
+      "mirror_diff": 0
+    },
+    "main": {
+      "cells": 12831,
+      "hull_overlap": 0,
+      "outside_hull": 0,
+      "mirror_diff": 0
+    },
+    "fore": {
+      "cells": 1634,
+      "hull_overlap": 0,
+      "outside_hull": 0,
+      "mirror_diff": 84
+    },
+    "poop": {
+      "cells": 3371,
+      "hull_overlap": 0,
+      "outside_hull": 0,
+      "mirror_diff": 56
+    }
+  },
+  "ladders": {
+    "main": {
+      "cells": 228,
+      "hull_overlap": 0,
+      "mirror_diff": 0
+    },
+    "poop": {
+      "cells": 167,
+      "hull_overlap": 0,
+      "mirror_diff": 334
+    },
+    "fore": {
+      "cells": 85,
+      "hull_overlap": 0,
+      "mirror_diff": 170
+    }
+  },
+  "overlap_between_parts": 0,
+  "ladder_point_problems": [],
+  "ladder_count": 3,
+  "rooms_check": {
+    "cabin-aft": {
+      "solid_inside": 0,
+      "floor_all_solid": true,
+      "headroom": 17
+    },
+    "hold-cargo": {
+      "solid_inside": 0,
+      "floor_all_solid": true,
+      "headroom": 24
+    }
+  },
+  "cavities_filled": [
+    {
+      "deck": "hold",
+      "cells": 9839,
+      "x": [
+        86,
+        300
+      ],
+      "z": [
+        3,
+        7
+      ]
+    }
+  ],
+  "combined_components": 1,
+  "combined_cavities": 0,
+  "decks_meta": {
+    "hold": {
+      "kind": "deck",
+      "deck": "hold",
+      "level": 0,
+      "name": "底艙甲板",
+      "floor": "82:9,300:9",
+      "thick": 2
+    },
+    "main": {
+      "kind": "deck",
+      "deck": "main",
+      "level": 1,
+      "name": "主甲板",
+      "floor": "68:35,282:35",
+      "thick": 2
+    },
+    "fore": {
+      "kind": "deck",
+      "deck": "fore",
+      "level": 2,
+      "name": "艏平台",
+      "floor": "282:44,318:44",
+      "thick": 2
+    },
+    "poop": {
+      "kind": "deck",
+      "deck": "poop",
+      "level": 2,
+      "name": "尾樓甲板",
+      "floor": "62:54,112:54",
+      "thick": 2
+    }
+  },
+  "lists": {
+    "deck-hold": [
+      23951,
+      "b2455080c3eba05417e2ec0b7bed2446f3f882fb4c9ce5d5ba52e51e7bb5c534"
+    ],
+    "deck-main": [
+      12831,
+      "80a3524a7f7ba0951afb9a8c9705c81443d72942b8aa552d248a6e7e0a3d2cc3"
+    ],
+    "deck-fore": [
+      1634,
+      "1881f48f9bdeec69ddc483bc3a8ccf450359a20f66e2a01704cbf6cf6df39b86"
+    ],
+    "deck-poop": [
+      3371,
+      "dfa20343d0aab8dcb0b37f5105b61f794bf02769261a238da1b78dcfe87dacc0"
+    ],
+    "ladders-main": [
+      228,
+      "51afdb872ae538014c0935d9ba5ad75d5a1abb72765f0d447947cbde00726851"
+    ],
+    "ladders-poop": [
+      167,
+      "f197caf4c6807d6a643ffabe38b7c6d59a86ee4d383fd563d6ebe48e61fbe08d"
+    ],
+    "ladders-fore": [
+      85,
+      "1663d0f9a2a1017b618c0c09641f57542a3a59107eed4cfe683af99019d6dfdd"
+    ]
+  }
+}

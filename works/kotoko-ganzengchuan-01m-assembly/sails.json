@@ -1,0 +1,179 @@
+{
+	"schema": 3,
+	"wind": [
+		-4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "fore-junk",
+			"corners": [
+				{
+					"name": "throat",
+					"at": "model:桅-fore/yard-fore-upper/fore",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:桅-fore/yard-fore-upper/aft",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:桅-fore/yard-fore-lower/aft",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:桅-fore/yard-fore-lower/fore",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#ffffff",
+			"res": 32,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8：中式竹篾扇形硬篷",
+			"persona": "kotoko",
+			"created_at": "2026-11-21T13:47:30",
+			"texture": "textures/fore-junk.png",
+			"meta": {
+				"battens": 7,
+				"kind": "sail",
+				"mast": "fore",
+				"roach": "0.05,0.16",
+				"sail": "gaff",
+				"set": 2
+			}
+		},
+		{
+			"name": "main-junk",
+			"corners": [
+				{
+					"name": "throat",
+					"at": "model:桅-main/yard-main-upper/fore",
+					"pin": true
+				},
+				{
+					"name": "peak",
+					"at": "model:桅-main/yard-main-upper/aft",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:桅-main/yard-main-lower/aft",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:桅-main/yard-main-lower/fore",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#ffffff",
+			"res": 40,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8：中式竹篾扇形硬篷",
+			"persona": "kotoko",
+			"created_at": "2026-11-21T13:47:35",
+			"texture": "textures/main-junk.png",
+			"meta": {
+				"battens": 9,
+				"kind": "sail",
+				"mast": "main",
+				"roach": "0.05,0.16",
+				"sail": "gaff",
+				"set": 1
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "",
+					"at": "船尾旗桿/flag-head",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "38.0,96.5,97.0",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "38.0,96.5,81.0",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "船尾旗桿/flag-foot",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8：明鄭船尾戰旗",
+			"persona": "kotoko",
+			"created_at": "2026-11-21T13:47:40",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"nation": "ming"
+			}
+		},
+		{
+			"name": "pennant",
+			"corners": [
+				{
+					"name": "",
+					"at": "178.5,96.5,234.0",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "140.5,96.5,233.0",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "178.5,96.5,229.5",
+					"pin": true
+				}
+			],
+			"bind": [
+				2
+			],
+			"color": "#f2ead8",
+			"res": 0,
+			"fullness": 1.04,
+			"enabled": true,
+			"note": "步驟 8：大桅長旒",
+			"persona": "kotoko",
+			"created_at": "2026-11-21T13:47:41",
+			"texture": "textures/pennant.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag",
+				"mast": "main",
+				"nation": "ming"
+			}
+		}
+	]
+}
