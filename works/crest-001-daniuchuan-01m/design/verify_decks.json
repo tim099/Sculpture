@@ -1,0 +1,273 @@
+{
+ "decks": {
+  "hold": {
+   "cells": 90259,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "mirror_diff": 0
+  },
+  "main": {
+   "cells": 30318,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "mirror_diff": 0
+  },
+  "upper": {
+   "cells": 33740,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "mirror_diff": 0
+  },
+  "poop": {
+   "cells": 7027,
+   "hull_overlap": 0,
+   "outside_hull": 0,
+   "mirror_diff": 0
+  }
+ },
+ "ladders": {
+  "main": {
+   "cells": 308,
+   "hull_overlap": 0
+  },
+  "upper": {
+   "cells": 412,
+   "hull_overlap": 0
+  },
+  "poop": {
+   "cells": 388,
+   "hull_overlap": 0
+  }
+ },
+ "rooms": {
+  "upper": {
+   "cells": 2002,
+   "hull_overlap": 0
+  },
+  "hold": {
+   "cells": 204,
+   "hull_overlap": 0
+  }
+ },
+ "overlap_between_parts": 0,
+ "post_cavities": 0,
+ "ports_blocked_inside": [],
+ "ladder_points": {
+  "hold": {
+   "up": "main",
+   "lo": "hold",
+   "points": {
+    "foot": [
+     181,
+     128,
+     12
+    ],
+    "lo": [
+     184,
+     128,
+     16
+    ],
+    "hi": [
+     204,
+     128,
+     46
+    ],
+    "head": [
+     207,
+     128,
+     48
+    ]
+   },
+   "steps": 11
+  },
+  "upper-aft": {
+   "up": "upper",
+   "lo": "main",
+   "points": {
+    "foot": [
+     147,
+     128,
+     48
+    ],
+    "lo": [
+     150,
+     128,
+     52
+    ],
+    "hi": [
+     162,
+     128,
+     70
+    ],
+    "head": [
+     165,
+     128,
+     70
+    ]
+   },
+   "steps": 7
+  },
+  "upper-fwd": {
+   "up": "upper",
+   "lo": "main",
+   "points": {
+    "foot": [
+     357,
+     128,
+     48
+    ],
+    "lo": [
+     354,
+     128,
+     52
+    ],
+    "hi": [
+     342,
+     128,
+     70
+    ],
+    "head": [
+     339,
+     128,
+     70
+    ]
+   },
+   "steps": 7
+  },
+  "poop-S": {
+   "up": "poop",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     149,
+     148,
+     70
+    ],
+    "lo": [
+     146,
+     148,
+     74
+    ],
+    "hi": [
+     134,
+     148,
+     92
+    ],
+    "head": [
+     130,
+     148,
+     92
+    ]
+   },
+   "steps": 7
+  },
+  "poop-P": {
+   "up": "poop",
+   "lo": "upper",
+   "points": {
+    "foot": [
+     149,
+     108,
+     70
+    ],
+    "lo": [
+     146,
+     108,
+     74
+    ],
+    "hi": [
+     134,
+     108,
+     92
+    ],
+    "head": [
+     130,
+     108,
+     92
+    ]
+   },
+   "steps": 7
+  }
+ },
+ "ladder_point_problems": [],
+ "ladder_count": 5,
+ "room_problems": [],
+ "reach": {
+  "hold": [
+   "hold"
+  ],
+  "main": [
+   "hold",
+   "upper-aft",
+   "upper-fwd"
+  ],
+  "upper": [
+   "poop-P",
+   "poop-S",
+   "upper-aft",
+   "upper-fwd"
+  ],
+  "poop": [
+   "poop-P",
+   "poop-S"
+  ]
+ },
+ "holes": {
+  "hold": 0,
+  "main": 370,
+  "upper": 453,
+  "poop": 95
+ },
+ "cavities_filled": [
+  {
+   "deck": "hold",
+   "cells": 37986,
+   "x": [
+    94,
+    419
+   ],
+   "z": [
+    3,
+    10
+   ]
+  }
+ ],
+ "lists": {
+  "deck-hold": [
+   90259,
+   "88f80f3ea0b1b14981f65173474b1b6dd6bf20b2afbfd3d01fe7d0791868bd87"
+  ],
+  "deck-main": [
+   30318,
+   "739f2875848a41d7b0e01ae3d3c3c4d38009a588134fb8bf01833f52d887d8e6"
+  ],
+  "deck-upper": [
+   33740,
+   "f3dae1dda9c6b7e9a190f0cb352c7d1d827c5d3be11e1b4d9b587d8e15a2435e"
+  ],
+  "deck-poop": [
+   7027,
+   "79f66505c4582d770bfb92ea59b8c611ef762b464f3370027a57d0440d6b66cb"
+  ],
+  "ladders-main": [
+   308,
+   "089aa4dd4e3599ee31d648f868d3fa0acdd1a15abb390250e5ba3b40ef70d5f0"
+  ],
+  "ladders-upper": [
+   412,
+   "436750ccabab83e7d0d63bad41ed3ca8689918bfcb9ad04d320e567d9c2cc7cb"
+  ],
+  "ladders-poop": [
+   388,
+   "89e842585e83051c18029292bcd7b120baa9c18c25f0e2e90ea9ea94bdf497b4"
+  ],
+  "rooms-upper": [
+   2002,
+   "f0958566fae2ba4cd37a3850433f2a9ca3ccca2d0945529079ffc3dd6e9f05eb"
+  ],
+  "rooms-hold": [
+   204,
+   "4e4095969bd2a416fa0bfc45eebd3f7fd9f750a9fa00bab202273673a0289ef0"
+  ]
+ }
+}

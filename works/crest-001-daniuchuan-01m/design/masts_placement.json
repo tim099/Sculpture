@@ -1,0 +1,1900 @@
+{
+ "masts": {
+  "fore": {
+   "work": "crest-001-daniuchuan-01m-mast-fore",
+   "link": "前桅",
+   "title": "明鄭一號大鳥船 前桅（0.1 m）",
+   "mask": "mast-fore.vox.txt",
+   "anchors": {
+    "heel": [
+     374,
+     128,
+     12
+    ],
+    "hound": [
+     393,
+     128,
+     232
+    ],
+    "top": [
+     395,
+     128,
+     248
+    ],
+    "cap": [
+     395,
+     128,
+     249
+    ],
+    "yard-upper": [
+     393,
+     128,
+     228
+    ],
+    "yard-lower": [
+     381,
+     128,
+     94
+    ]
+   },
+   "meta": {
+    "kind": "mast",
+    "mast": "fore"
+   }
+  },
+  "main": {
+   "work": "crest-001-daniuchuan-01m-mast-main",
+   "link": "主桅",
+   "title": "明鄭一號大鳥船 主桅（0.1 m）",
+   "mask": "mast-main.vox.txt",
+   "anchors": {
+    "heel": [
+     246,
+     128,
+     12
+    ],
+    "hound": [
+     236,
+     128,
+     300
+    ],
+    "top": [
+     235,
+     128,
+     320
+    ],
+    "cap": [
+     235,
+     128,
+     321
+    ],
+    "yard-upper": [
+     236,
+     128,
+     296
+    ],
+    "yard-lower": [
+     242,
+     128,
+     112
+    ]
+   },
+   "meta": {
+    "kind": "mast",
+    "mast": "main"
+   }
+  },
+  "mizzen": {
+   "work": "crest-001-daniuchuan-01m-mast-mizzen",
+   "link": "尾桅",
+   "title": "明鄭一號大鳥船 尾桅（0.1 m）",
+   "mask": "mast-mizzen.vox.txt",
+   "anchors": {
+    "heel": [
+     96,
+     128,
+     48
+    ],
+    "hound": [
+     85,
+     128,
+     202
+    ],
+    "top": [
+     84,
+     128,
+     212
+    ],
+    "cap": [
+     84,
+     128,
+     213
+    ],
+    "yard-upper": [
+     85,
+     128,
+     198
+    ],
+    "yard-lower": [
+     91,
+     128,
+     116
+    ]
+   },
+   "meta": {
+    "kind": "mast",
+    "mast": "mizzen"
+   }
+  }
+ },
+ "yard_templates": {
+  "fore-upper": {
+   "work": "crest-001-daniuchuan-01m-yard-fore-upper",
+   "title": "明鄭一號大鳥船 前桅上桁（0.1 m）",
+   "size": [
+    81,
+    4,
+    5
+   ],
+   "voxels": 308,
+   "anchors": {
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     78,
+     1,
+     2
+    ],
+    "earing-aft": [
+     2,
+     1,
+     2
+    ],
+    "earing-fore": [
+     78,
+     1,
+     2
+    ],
+    "sling": [
+     58,
+     1,
+     2
+    ],
+    "pivot": [
+     58,
+     1,
+     2
+    ]
+   },
+   "span": 76,
+   "aft_len": 56,
+   "fore_len": 20,
+   "mask": "yard-fore-upper.vox.txt"
+  },
+  "fore-lower": {
+   "work": "crest-001-daniuchuan-01m-yard-fore-lower",
+   "title": "明鄭一號大鳥船 前桅下桁（0.1 m）",
+   "size": [
+    102,
+    4,
+    5
+   ],
+   "voxels": 392,
+   "anchors": {
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     99,
+     1,
+     2
+    ],
+    "earing-aft": [
+     2,
+     1,
+     2
+    ],
+    "earing-fore": [
+     99,
+     1,
+     2
+    ],
+    "sling": [
+     74,
+     1,
+     2
+    ],
+    "pivot": [
+     74,
+     1,
+     2
+    ]
+   },
+   "span": 97,
+   "aft_len": 72,
+   "fore_len": 25,
+   "mask": "yard-fore-lower.vox.txt"
+  },
+  "main-upper": {
+   "work": "crest-001-daniuchuan-01m-yard-main-upper",
+   "title": "明鄭一號大鳥船 主桅上桁（0.1 m）",
+   "size": [
+    105,
+    4,
+    5
+   ],
+   "voxels": 404,
+   "anchors": {
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     102,
+     1,
+     2
+    ],
+    "earing-aft": [
+     2,
+     1,
+     2
+    ],
+    "earing-fore": [
+     102,
+     1,
+     2
+    ],
+    "sling": [
+     76,
+     1,
+     2
+    ],
+    "pivot": [
+     76,
+     1,
+     2
+    ]
+   },
+   "span": 100,
+   "aft_len": 74,
+   "fore_len": 26,
+   "mask": "yard-main-upper.vox.txt"
+  },
+  "main-lower": {
+   "work": "crest-001-daniuchuan-01m-yard-main-lower",
+   "title": "明鄭一號大鳥船 主桅下桁（0.1 m）",
+   "size": [
+    135,
+    4,
+    5
+   ],
+   "voxels": 524,
+   "anchors": {
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     132,
+     1,
+     2
+    ],
+    "earing-aft": [
+     2,
+     1,
+     2
+    ],
+    "earing-fore": [
+     132,
+     1,
+     2
+    ],
+    "sling": [
+     98,
+     1,
+     2
+    ],
+    "pivot": [
+     98,
+     1,
+     2
+    ]
+   },
+   "span": 130,
+   "aft_len": 96,
+   "fore_len": 34,
+   "mask": "yard-main-lower.vox.txt"
+  },
+  "mizzen-upper": {
+   "work": "crest-001-daniuchuan-01m-yard-mizzen-upper",
+   "title": "明鄭一號大鳥船 尾桅上桁（0.1 m）",
+   "size": [
+    54,
+    4,
+    5
+   ],
+   "voxels": 200,
+   "anchors": {
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     51,
+     1,
+     2
+    ],
+    "earing-aft": [
+     2,
+     1,
+     2
+    ],
+    "earing-fore": [
+     51,
+     1,
+     2
+    ],
+    "sling": [
+     38,
+     1,
+     2
+    ],
+    "pivot": [
+     38,
+     1,
+     2
+    ]
+   },
+   "span": 49,
+   "aft_len": 36,
+   "fore_len": 13,
+   "mask": "yard-mizzen-upper.vox.txt"
+  },
+  "mizzen-lower": {
+   "work": "crest-001-daniuchuan-01m-yard-mizzen-lower",
+   "title": "明鄭一號大鳥船 尾桅下桁（0.1 m）",
+   "size": [
+    68,
+    4,
+    5
+   ],
+   "voxels": 256,
+   "anchors": {
+    "arm-P": [
+     2,
+     1,
+     2
+    ],
+    "arm-S": [
+     65,
+     1,
+     2
+    ],
+    "earing-aft": [
+     2,
+     1,
+     2
+    ],
+    "earing-fore": [
+     65,
+     1,
+     2
+    ],
+    "sling": [
+     48,
+     1,
+     2
+    ],
+    "pivot": [
+     48,
+     1,
+     2
+    ]
+   },
+   "span": 63,
+   "aft_len": 46,
+   "fore_len": 17,
+   "mask": "yard-mizzen-lower.vox.txt"
+  }
+ },
+ "batten_templates": {
+  "fore": {
+   "work": "crest-001-daniuchuan-01m-batten-fore",
+   "title": "明鄭一號大鳥船 前桅硬篷竹篾（0.1 m；material=bamboo）",
+   "size": [
+    110,
+    5,
+    5
+   ],
+   "voxels": 106,
+   "anchors": {
+    "pivot": [
+     78,
+     2,
+     2
+    ],
+    "arm-P": [
+     2,
+     2,
+     2
+    ],
+    "arm-S": [
+     107,
+     2,
+     2
+    ]
+   },
+   "left_span": 76.0,
+   "right_span": 29.0,
+   "pivot": [
+    78.5,
+    2.5,
+    2.5
+   ],
+   "mask": "batten-fore.vox.txt"
+  },
+  "main": {
+   "work": "crest-001-daniuchuan-01m-batten-main",
+   "title": "明鄭一號大鳥船 主桅硬篷竹篾（0.1 m；material=bamboo）",
+   "size": [
+    143,
+    5,
+    5
+   ],
+   "voxels": 139,
+   "anchors": {
+    "pivot": [
+     102,
+     2,
+     2
+    ],
+    "arm-P": [
+     2,
+     2,
+     2
+    ],
+    "arm-S": [
+     140,
+     2,
+     2
+    ]
+   },
+   "left_span": 100.0,
+   "right_span": 38.0,
+   "pivot": [
+    102.5,
+    2.5,
+    2.5
+   ],
+   "mask": "batten-main.vox.txt"
+  },
+  "mizzen": {
+   "work": "crest-001-daniuchuan-01m-batten-mizzen",
+   "title": "明鄭一號大鳥船 尾桅硬篷竹篾（0.1 m；material=bamboo）",
+   "size": [
+    76,
+    5,
+    5
+   ],
+   "voxels": 72,
+   "anchors": {
+    "pivot": [
+     52,
+     2,
+     2
+    ],
+    "arm-P": [
+     2,
+     2,
+     2
+    ],
+    "arm-S": [
+     73,
+     2,
+     2
+    ]
+   },
+   "left_span": 50.0,
+   "right_span": 21.0,
+   "pivot": [
+    52.5,
+    2.5,
+    2.5
+   ],
+   "mask": "batten-mizzen.vox.txt"
+  }
+ },
+ "placements": {
+  "fore": {
+   "mast_name": "前桅",
+   "sail": "fore-junk",
+   "set": 2,
+   "battens": 7,
+   "roach": [
+    0.16,
+    0.05
+   ],
+   "area_m2": 127.5,
+   "corners": [
+    [
+     338.84915372781217,
+     128.5,
+     242.99386652574117
+    ],
+    [
+     412.25951652578135,
+     128.5,
+     223.32361909794957
+    ],
+    [
+     406.218,
+     128.5,
+     94.5
+    ],
+    [
+     309.218,
+     128.5,
+     94.5
+    ]
+   ],
+   "frames": {
+    "upper": {
+     "label": "yard-upper",
+     "work": "crest-001-daniuchuan-01m-yard-fore-upper",
+     "at": [
+      392.941,
+      128.5,
+      228.5
+     ],
+     "pivot": [
+      58.5,
+      1.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      15.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ends": [
+      [
+       338.84915372781217,
+       128.5,
+       242.99386652574117
+      ],
+      [
+       412.25951652578135,
+       128.5,
+       223.32361909794957
+      ]
+     ],
+     "meta": {
+      "kind": "yard",
+      "mast": "fore",
+      "yard": "course",
+      "sail": "fore-junk",
+      "length_ft": 24.93,
+      "diameter_in": 8,
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0
+     }
+    },
+    "lower": {
+     "label": "yard-lower",
+     "work": "crest-001-daniuchuan-01m-yard-fore-lower",
+     "at": [
+      381.218,
+      128.5,
+      94.5
+     ],
+     "pivot": [
+      74.5,
+      1.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ends": [
+      [
+       309.218,
+       128.5,
+       94.5
+      ],
+      [
+       406.218,
+       128.5,
+       94.5
+      ]
+     ],
+     "meta": {
+      "kind": "yard",
+      "mast": "fore",
+      "yard": "course",
+      "sail": "fore-junk",
+      "length_ft": 31.82,
+      "diameter_in": 10,
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0
+     }
+    }
+   },
+   "rods": [
+    {
+     "label": "batten-01",
+     "work": "crest-001-daniuchuan-01m-batten-fore",
+     "at": [
+      391.875,
+      128.5,
+      211.645
+     ],
+     "pivot": [
+      78.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      12.702,
+      0.0
+     ],
+     "scale": [
+      0.9716,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      9.289,
+      6.055
+     ],
+     "span": [
+      73.843,
+      28.177
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 1,
+      "mast": "fore",
+      "sail": "fore-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 33.47,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-02",
+     "work": "crest-001-daniuchuan-01m-batten-fore",
+     "at": [
+      390.375,
+      128.5,
+      194.908
+     ],
+     "pivot": [
+      78.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      10.538,
+      0.0
+     ],
+     "scale": [
+      0.973,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      3.381,
+      4.173
+     ],
+     "span": [
+      73.949,
+      28.217
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 2,
+      "mast": "fore",
+      "sail": "fore-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 33.52,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-03",
+     "work": "crest-001-daniuchuan-01m-batten-fore",
+     "at": [
+      388.858,
+      128.5,
+      178.174
+     ],
+     "pivot": [
+      78.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      8.5,
+      0.0
+     ],
+     "scale": [
+      1.0056,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.72
+     ],
+     "span": [
+      76.425,
+      29.162
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 3,
+      "mast": "fore",
+      "sail": "fore-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 34.64,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-04",
+     "work": "crest-001-daniuchuan-01m-batten-fore",
+     "at": [
+      387.33,
+      128.5,
+      161.441
+     ],
+     "pivot": [
+      78.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      6.584,
+      0.0
+     ],
+     "scale": [
+      1.0373,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.803
+     ],
+     "span": [
+      78.837,
+      30.083
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 4,
+      "mast": "fore",
+      "sail": "fore-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 35.73,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-05",
+     "work": "crest-001-daniuchuan-01m-batten-fore",
+     "at": [
+      385.797,
+      128.5,
+      144.707
+     ],
+     "pivot": [
+      78.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      4.783,
+      0.0
+     ],
+     "scale": [
+      1.0456,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.754
+     ],
+     "span": [
+      79.465,
+      30.322
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 5,
+      "mast": "fore",
+      "sail": "fore-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 36.02,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-06",
+     "work": "crest-001-daniuchuan-01m-batten-fore",
+     "at": [
+      384.265,
+      128.5,
+      127.972
+     ],
+     "pivot": [
+      78.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      3.09,
+      0.0
+     ],
+     "scale": [
+      1.0333,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.596
+     ],
+     "span": [
+      78.534,
+      29.967
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 6,
+      "mast": "fore",
+      "sail": "fore-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 35.6,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-07",
+     "work": "crest-001-daniuchuan-01m-batten-fore",
+     "at": [
+      382.738,
+      128.5,
+      111.237
+     ],
+     "pivot": [
+      78.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      1.498,
+      0.0
+     ],
+     "scale": [
+      1.0055,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.361
+     ],
+     "span": [
+      76.419,
+      29.16
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 7,
+      "mast": "fore",
+      "sail": "fore-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 34.64,
+      "diameter_in": 4
+     }
+    }
+   ]
+  },
+  "main": {
+   "mast_name": "主桅",
+   "sail": "main-junk",
+   "set": 1,
+   "battens": 9,
+   "roach": [
+    0.16,
+    0.05
+   ],
+   "area_m2": 232.8,
+   "corners": [
+    [
+     164.9316345005644,
+     128.5,
+     316.89716433045794
+    ],
+    [
+     261.05780409439626,
+     128.5,
+     289.333428748758
+    ],
+    [
+     276.49,
+     128.5,
+     112.5
+    ],
+    [
+     146.49,
+     128.5,
+     112.5
+    ]
+   ],
+   "frames": {
+    "upper": {
+     "label": "yard-upper",
+     "work": "crest-001-daniuchuan-01m-yard-main-upper",
+     "at": [
+      236.065,
+      128.5,
+      296.5
+     ],
+     "pivot": [
+      76.5,
+      1.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      16.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ends": [
+      [
+       164.9316345005644,
+       128.5,
+       316.89716433045794
+      ],
+      [
+       261.05780409439626,
+       128.5,
+       289.333428748758
+      ]
+     ],
+     "meta": {
+      "kind": "yard",
+      "mast": "main",
+      "yard": "course",
+      "sail": "main-junk",
+      "length_ft": 32.81,
+      "diameter_in": 8,
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0
+     }
+    },
+    "lower": {
+     "label": "yard-lower",
+     "work": "crest-001-daniuchuan-01m-yard-main-lower",
+     "at": [
+      242.49,
+      128.5,
+      112.5
+     ],
+     "pivot": [
+      98.5,
+      1.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ends": [
+      [
+       146.49,
+       128.5,
+       112.5
+      ],
+      [
+       276.49,
+       128.5,
+       112.5
+      ]
+     ],
+     "meta": {
+      "kind": "yard",
+      "mast": "main",
+      "yard": "course",
+      "sail": "main-junk",
+      "length_ft": 42.65,
+      "diameter_in": 10,
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0
+     }
+    }
+   },
+   "rods": [
+    {
+     "label": "batten-01",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      236.479,
+      128.5,
+      278.162
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      13.998,
+      0.0
+     ],
+     "scale": [
+      0.9774,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      15.055,
+      8.018
+     ],
+     "span": [
+      97.738,
+      37.14
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 1,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 44.25,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-02",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      237.135,
+      128.5,
+      259.755
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      12.095,
+      0.0
+     ],
+     "scale": [
+      0.9789,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      8.201,
+      5.803
+     ],
+     "span": [
+      97.893,
+      37.199
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 2,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 44.32,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-03",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      237.797,
+      128.5,
+      241.346
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      10.289,
+      0.0
+     ],
+     "scale": [
+      0.9799,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      2.688,
+      4.008
+     ],
+     "span": [
+      97.992,
+      37.237
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 3,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 44.37,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-04",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      238.465,
+      128.5,
+      222.938
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      8.575,
+      0.0
+     ],
+     "scale": [
+      1.0102,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.799
+     ],
+     "span": [
+      101.024,
+      38.389
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 4,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 45.74,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-05",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      239.136,
+      128.5,
+      204.529
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      6.95,
+      0.0
+     ],
+     "scale": [
+      1.036,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.899
+     ],
+     "span": [
+      103.598,
+      39.367
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 5,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 46.9,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-06",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      239.809,
+      128.5,
+      186.122
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      5.409,
+      0.0
+     ],
+     "scale": [
+      1.0466,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.897
+     ],
+     "span": [
+      104.661,
+      39.771
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 6,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 47.39,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-07",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      240.482,
+      128.5,
+      167.715
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      3.947,
+      0.0
+     ],
+     "scale": [
+      1.0434,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.799
+     ],
+     "span": [
+      104.343,
+      39.65
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 7,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 47.24,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-08",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      241.154,
+      128.5,
+      149.309
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      2.562,
+      0.0
+     ],
+     "scale": [
+      1.0286,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.619
+     ],
+     "span": [
+      102.86,
+      39.087
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 8,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 46.57,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-09",
+     "work": "crest-001-daniuchuan-01m-batten-main",
+     "at": [
+      241.823,
+      128.5,
+      130.904
+     ],
+     "pivot": [
+      102.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      1.247,
+      0.0
+     ],
+     "scale": [
+      1.005,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.375
+     ],
+     "span": [
+      100.499,
+      38.19
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 9,
+      "mast": "main",
+      "sail": "main-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 45.5,
+      "diameter_in": 4
+     }
+    }
+   ]
+  },
+  "mizzen": {
+   "mast_name": "尾桅",
+   "sail": "mizzen-junk",
+   "set": 3,
+   "battens": 6,
+   "roach": [
+    0.16,
+    0.05
+   ],
+   "area_m2": 50.5,
+   "corners": [
+    [
+     50.70267025359354,
+     128.5,
+     207.81748562369074
+    ],
+    [
+     98.03303574175789,
+     128.5,
+     195.13535241366722
+    ],
+    [
+     108.21,
+     128.5,
+     116.5
+    ],
+    [
+     45.209999999999994,
+     128.5,
+     116.5
+    ]
+   ],
+   "frames": {
+    "upper": {
+     "label": "yard-upper",
+     "work": "crest-001-daniuchuan-01m-yard-mizzen-upper",
+     "at": [
+      85.476,
+      128.5,
+      198.5
+     ],
+     "pivot": [
+      38.5,
+      1.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      15.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ends": [
+      [
+       50.70267025359354,
+       128.5,
+       207.81748562369074
+      ],
+      [
+       98.03303574175789,
+       128.5,
+       195.13535241366722
+      ]
+     ],
+     "meta": {
+      "kind": "yard",
+      "mast": "mizzen",
+      "yard": "course",
+      "sail": "mizzen-junk",
+      "length_ft": 16.08,
+      "diameter_in": 8,
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0
+     }
+    },
+    "lower": {
+     "label": "yard-lower",
+     "work": "crest-001-daniuchuan-01m-yard-mizzen-lower",
+     "at": [
+      91.21,
+      128.5,
+      116.5
+     ],
+     "pivot": [
+      48.5,
+      1.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ends": [
+      [
+       45.209999999999994,
+       128.5,
+       116.5
+      ],
+      [
+       108.21,
+       128.5,
+       116.5
+      ]
+     ],
+     "meta": {
+      "kind": "yard",
+      "mast": "mizzen",
+      "yard": "course",
+      "sail": "mizzen-junk",
+      "length_ft": 20.67,
+      "diameter_in": 10,
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0
+     }
+    }
+   },
+   "rods": [
+    {
+     "label": "batten-01",
+     "work": "crest-001-daniuchuan-01m-batten-mizzen",
+     "at": [
+      86.093,
+      128.5,
+      186.839
+     ],
+     "pivot": [
+      52.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      12.369,
+      0.0
+     ],
+     "scale": [
+      0.9558,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      6.166,
+      4.926
+     ],
+     "span": [
+      47.792,
+      20.073
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 1,
+      "mast": "mizzen",
+      "sail": "mizzen-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 22.27,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-02",
+     "work": "crest-001-daniuchuan-01m-batten-mizzen",
+     "at": [
+      86.935,
+      128.5,
+      175.117
+     ],
+     "pivot": [
+      52.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      9.918,
+      0.0
+     ],
+     "scale": [
+      0.9577,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      2.077,
+      3.571
+     ],
+     "span": [
+      47.886,
+      20.112
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 2,
+      "mast": "mizzen",
+      "sail": "mizzen-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 22.31,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-03",
+     "work": "crest-001-daniuchuan-01m-batten-mizzen",
+     "at": [
+      87.787,
+      128.5,
+      163.393
+     ],
+     "pivot": [
+      52.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      7.637,
+      0.0
+     ],
+     "scale": [
+      1.0022,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.583
+     ],
+     "span": [
+      50.108,
+      21.045
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 3,
+      "mast": "mizzen",
+      "sail": "mizzen-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 23.34,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-04",
+     "work": "crest-001-daniuchuan-01m-batten-mizzen",
+     "at": [
+      88.644,
+      128.5,
+      151.669
+     ],
+     "pivot": [
+      52.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      5.516,
+      0.0
+     ],
+     "scale": [
+      1.0254,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.633
+     ],
+     "span": [
+      51.268,
+      21.532
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 4,
+      "mast": "mizzen",
+      "sail": "mizzen-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 23.88,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-05",
+     "work": "crest-001-daniuchuan-01m-batten-mizzen",
+     "at": [
+      89.502,
+      128.5,
+      139.945
+     ],
+     "pivot": [
+      52.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      3.543,
+      0.0
+     ],
+     "scale": [
+      1.0202,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.53
+     ],
+     "span": [
+      51.012,
+      21.425
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 5,
+      "mast": "mizzen",
+      "sail": "mizzen-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 23.77,
+      "diameter_in": 4
+     }
+    },
+    {
+     "label": "batten-06",
+     "work": "crest-001-daniuchuan-01m-batten-mizzen",
+     "at": [
+      90.359,
+      128.5,
+      128.223
+     ],
+     "pivot": [
+      52.5,
+      2.5,
+      2.5
+     ],
+     "rotate": [
+      0.0,
+      1.708,
+      0.0
+     ],
+     "scale": [
+      0.9929,
+      1.0,
+      1.0
+     ],
+     "overhang": [
+      1.6,
+      3.302
+     ],
+     "span": [
+      49.644,
+      20.85
+     ],
+     "meta": {
+      "kind": "yard",
+      "yard": "batten",
+      "batten": 6,
+      "mast": "mizzen",
+      "sail": "mizzen-junk",
+      "material": "bamboo",
+      "pivot_anchor": "pivot",
+      "turn_axis": "z",
+      "rotate_z_deg": 0,
+      "length_ft": 23.13,
+      "diameter_in": 4
+     }
+    }
+   ]
+  }
+ }
+}

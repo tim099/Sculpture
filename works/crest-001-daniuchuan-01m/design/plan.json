@@ -1,0 +1,406 @@
+{
+  "title": "明鄭一號大鳥船／戰座大福船（1666 亞洲船⑤ Daniuchuan，約 500–650 噸）—— 新圖紙",
+  "task": "TASK-1316",
+  "author": "crest-001",
+  "date": "2026-11-21",
+  "sources": "design/sources.md（〔查〕〔摘〕〔推〕〔設計〕四類出處標記與證據限度）",
+  "meters_per_cell": 0.1,
+  "space": {
+    "hull": [512, 256, 512],
+    "assembly": [512, 256, 512],
+    "yc": 128,
+    "note": "X 船長(+X 艏)、Y 船寬(中線 y=128，鏡像 y ↔ 256−y，P<128<S)、Z 高度(z=0 龍骨底面)；格 k 佔 [k, k+1)、格心 k+0.5"
+  },
+  "waterline": {
+    "z": 42,
+    "src": "〔推＋設計〕《武備志》「吃水一丈一二尺」暨 TASK-1316 設計吃水 4.2 m（z=0..41 在水下，DWL 底面 z=42）"
+  },
+  "lines": {
+    "x_keel_aft": {
+      "v": 96,
+      "src": "〔設計〕龍骨後端踵部 x=96（自 x=96..420 龍骨長 32.4 m）"
+    },
+    "x_keel_fwd": {
+      "v": 420,
+      "src": "〔設計〕龍骨前端起翹點 x=420"
+    },
+    "stern_rake": {
+      "v": [[0, 96], [18, 86], [42, 74], [62, 64], [86, 58], [108, 56]],
+      "src": "〔設計〕艉柱與高大尾樓折線 [z, x]：龍骨踵 x=96(z=0) → 水線 x=74(z=42) → 主砲甲板艉封板 x=64(z=62) → 高尾樓 x=56(z=108)"
+    },
+    "stem_rake": {
+      "v": [[0, 420], [18, 430], [42, 442], [66, 449], [92, 455]],
+      "src": "〔設計〕高昂巨型福船艏柱折線 [z, x]：龍骨前端 x=420(z=0) → 水線 x=442(z=42) → 高昂艏端 x=455(z=92)，全長 56..455 = 400 格 (40.0 m，TASK-1316 38–42 m)"
+    },
+    "x_mid": {
+      "v": 264,
+      "src": "〔設計〕最大船寬站設於舯略偏前 x=264（福船前豐後收線形）"
+    },
+    "half_beam": {
+      "v": 50.5,
+      "src": "〔推＋設計〕半寬 50.5 格 ⇒ 最大全寬 101 格 = 10.1 m（對齊《水師輯要》樑頭三丈餘 ≈ 10.08 m 及 TASK-1316 9.5–10.5 m）"
+    },
+    "keel_half": {
+      "v": 1.5,
+      "src": "〔設計〕尖底巨艦龍骨半寬 1.5 格（中線 3–4 格實心重龍骨）"
+    },
+    "section_halfwidth": {
+      "v": [[0.0, 0.030], [0.06, 0.24], [0.16, 0.54], [0.32, 0.79], [0.52, 0.93], [0.74, 0.99], [1.0, 1.0], [1.35, 0.99], [1.80, 0.96]],
+      "src": "〔設計〕《武備志》「其底尖，其上闊」尖底圓舭剖面因子 [s=(z-zb)/(zs_base-zb), halfwidth/Bx]"
+    },
+    "plan_halfwidth_aft": {
+      "v": [[0.0, 1.0], [0.28, 0.97], [0.58, 0.87], [0.82, 0.72], [1.0, 0.56]],
+      "src": "〔設計〕舯往艉平面收斂因子（高大尾樓寬敞展平）"
+    },
+    "plan_halfwidth_fwd": {
+      "v": [[0.0, 1.0], [0.28, 0.97], [0.58, 0.85], [0.82, 0.56], [0.95, 0.30], [1.0, 0.14]],
+      "src": "〔設計〕舯往艏平面收斂因子（前腹渾圓、破浪尖艏）"
+    },
+    "depth_mid": {
+      "v": 78,
+      "src": "〔設計〕舯上戰棚舷頂參考高 z=78（上戰棚站面 z=70 + 0.8 m 舷牆；吃水 4.2 m + 乾舷 3.6 m）"
+    },
+    "sheer_z_aft": {
+      "v": 86,
+      "src": "〔設計〕基礎舷弧在艉端抬至 z=86"
+    },
+    "sheer_z_fwd": {
+      "v": 92,
+      "src": "〔設計〕高昂船首舷弧升至 z=92"
+    },
+    "sheer_pow_aft": {
+      "v": 1.6,
+      "src": "〔設計〕艉段基礎舷弧起翹冪次"
+    },
+    "sheer_pow_fwd": {
+      "v": 1.8,
+      "src": "〔設計〕艏段基礎舷弧起翹冪次"
+    },
+    "top": [
+      [56, 108],
+      [96, 106],
+      [132, 102],
+      [133, 82],
+      [196, 79],
+      [264, 78],
+      [332, 79],
+      [391, 82],
+      [424, 87],
+      [455, 92]
+    ],
+    "top_src": "〔設計〕高尾樓（x=56..132, z=108→102）、斷層下階至上戰棚腰舷牆（x=133..391, z=82→78→82）、高昂艏端（x=392..455, z=84→92）",
+    "stations": [84, 132, 188, 264, 340, 398, 434]
+  },
+  "hull_build": {
+    "wall": {
+      "v": 2,
+      "src": "〔設計〕重型福船殼壁厚 2 格（0.20 m：外板＋內襯）"
+    },
+    "colors": {
+      "hull": {"v": 177, "src": "〔設計〕閩粵樟杉外板本色（RGB332 177 = #B69155）"},
+      "inner": {"v": 141, "src": "〔設計〕內板與水密隔艙深杉木色（RGB332 141 = #916D55）"},
+      "below": {"v": 218, "src": "〔摘＋設計〕水線下桐油石灰白底（RGB332 218 = #DADAAA）"},
+      "wale": {"v": 36, "src": "〔設計〕黑漆主護木帶（RGB332 36 = #242400）"},
+      "trim": {"v": 104, "src": "〔設計〕硬木舷頂壓條與梁木（RGB332 104 = #6D4800）"},
+      "red": {"v": 192, "src": "〔設計〕明鄭水師戰棚朱漆飾帶與砲門框（RGB332 192 = #DA0000）"},
+      "gold": {"v": 212, "src": "〔設計〕旗艦金黃龍徽與祥紋（RGB332 212 = #DAB600）"},
+      "teal": {"v": 53, "src": "〔設計〕尾樓彩繪青綠雲紋（RGB332 53 = #24B655）"}
+    }
+  },
+  "bulkheads": {
+    "x": [110, 124, 138, 152, 166, 180, 206, 220, 234, 258, 276, 290, 304, 318, 332, 346, 360, 388, 404, 418],
+    "src": "〔設計〕20 道橫向水密隔艙壁（x=110..418，含艉端與艏尖空間合計劃分 21 艙「二十餘水密艙」；避開底艙梯井 180..206、大桅 246、頭桅 374 及貨艙口 262..272）"
+  },
+  "decks": {
+    "hold": {
+      "floor": 12,
+      "thick": 2,
+      "x0": 92,
+      "x1": 422,
+      "level": 0,
+      "src": "〔設計〕底艙站面 z=12（鋪板 z=11、樑 z=10；其下 z=1..9 尖底壓艙底肋填實防空腔）；至主砲甲板樑底 z=45 淨高 3.3 m"
+    },
+    "main": {
+      "floor": 48,
+      "thick": 2,
+      "x0": 74,
+      "x1": 434,
+      "level": 1,
+      "src": "〔設計〕封閉下層主砲甲板站面 z=48（板 z=47、樑 z=46；至上戰棚樑底 z=67 淨高 1.9 m ≥ 18 格）"
+    },
+    "upper": {
+      "floor": 70,
+      "thick": 2,
+      "x0": 66,
+      "x1": 444,
+      "level": 2,
+      "src": "〔設計〕上戰棚（露天重戰棚＋尾樓下舵艙）站面 z=70（板 z=69、樑 z=68；至尾樓樑底 z=89 淨高 1.9 m ≥ 18 格）"
+    },
+    "poop": {
+      "floor": 92,
+      "thick": 2,
+      "x0": 58,
+      "x1": 132,
+      "level": 3,
+      "src": "〔設計〕高尾樓甲板站面 z=92（板 z=91、樑 z=90），高尾樓舷牆頂 z=102..108"
+    }
+  },
+  "decks_build": {
+    "spans": {
+      "hold": [92, 422],
+      "main": [74, 434],
+      "upper": [66, 444],
+      "poop": [58, 132]
+    },
+    "levels": {"hold": 0, "main": 1, "upper": 2, "poop": 3},
+    "names": {"hold": "底艙", "main": "主砲甲板", "upper": "上戰棚", "poop": "尾樓甲板"},
+    "thick": {"hold": 2, "main": 2, "upper": 2, "poop": 2},
+    "plank": {"weather": 177, "interior": 141, "weather_decks": ["upper", "poop"]},
+    "trim": 104,
+    "coaming_h": 2,
+    "beam": {
+      "color": 104,
+      "every": 14,
+      "w": 2,
+      "phase": 132,
+      "depth": {"hold": 1, "main": 1, "upper": 1, "poop": 1}
+    },
+    "bulkhead": {
+      "x": [110, 124, 138, 152, 166, 180, 206, 220, 234, 258, 276, 290, 304, 318, 332, 346, 360, 388, 404, 418],
+      "end_sealed": [],
+      "door_half": 2,
+      "door_h": 18,
+      "color": 141
+    },
+    "breaks": [
+      {"x": 132, "lo": "upper", "up": "poop", "doors_dy": [0], "door_half": 4, "door_h": 17, "rail_h": 6, "color": 141, "rail_color": 104}
+    ],
+    "hatches": [
+      {"name": "cargo-main", "x0": 261, "x1": 273, "half": 5, "decks": ["main", "upper"]}
+    ],
+    "mast_r": {"fore": 3.0, "main": 4.0, "mizzen": 2.6},
+    "ladders": {
+      "tread_half": 2,
+      "rise": 3,
+      "run": 2,
+      "color": 104,
+      "list": [
+        {"name": "hold", "lo": "hold", "up": "main", "xs": 182, "dy": 0, "dir": 1, "head_x": 207, "well": true, "well_a": 7, "well_b": 23},
+        {"name": "upper-aft", "lo": "main", "up": "upper", "xs": 148, "dy": 0, "dir": 1, "head_x": 165, "well": true, "well_a": 4, "well_b": 15},
+        {"name": "upper-fwd", "lo": "main", "up": "upper", "xs": 356, "dy": 0, "dir": -1, "head_x": 339, "well": true, "well_a": 4, "well_b": 15},
+        {"name": "poop-S", "lo": "upper", "up": "poop", "xs": 148, "dy": 20, "dir": -1, "head_x": 130, "well": false},
+        {"name": "poop-P", "lo": "upper", "up": "poop", "xs": 148, "dy": -20, "dir": -1, "head_x": 130, "well": false}
+      ]
+    },
+    "rooms": {
+      "cabin-aft": {"deck": "upper", "x0": 102, "x1": 131, "y0": 108, "y1": 148, "z0": 70, "z1": 89, "door": [132, 128, 70]},
+      "hold-cargo": {"deck": "hold", "x0": 259, "x1": 275, "y0": 110, "y1": 146, "z0": 12, "z1": 45, "door": [258, 128, 12]}
+    }
+  },
+  "ports": {
+    "enclosed": {
+      "x": [154, 188, 222, 282, 316, 350],
+      "w": 8,
+      "h": 7,
+      "sill": 5,
+      "gun": "hongyi",
+      "src": "〔設計〕下層封閉主砲甲板（floor=48）兩舷 6 對共 12 門紅夷大銅砲砲門（w=8, sill=5 ⇒ z=53..59，步驟 12 做 12 片砲門蓋板）"
+    },
+    "upper_hongyi": {
+      "x": [398],
+      "w": 8,
+      "sill": 4,
+      "gun": "hongyi",
+      "src": "〔摘 S2＋設計〕上戰棚船首兩舷 1 對 2 門紅夷大銅砲露天砲門（w=8, sill=4 ⇒ z=74 起切通舷頂）"
+    },
+    "upper_fagong": {
+      "x": [166, 200, 232, 296, 330],
+      "w": 8,
+      "sill": 4,
+      "gun": "fagong",
+      "src": "〔摘 S2＋設計〕上戰棚兩舷 5 對共 10 門明清發熕露天砲門（w=8, sill=4 ⇒ z=74 起切通舷頂）"
+    },
+    "swivels": [
+      {"x": 422, "deck": "upper", "gun": "pierrier"},
+      {"x": 112, "deck": "poop", "gun": "pierrier"},
+      {"x": 80, "deck": "poop", "gun": "pierrier"}
+    ],
+    "swivels_src": "〔設計〕戰棚與高尾樓 3 對共 6 門佛郎機迴旋砲（gun:pierrier）；全船火砲合計 12 + 2 + 10 + 6 = 30 門（符合 TASK-1316 28–36 門）",
+    "stern_windows": {
+      "tiers": [
+        {"name": "main", "x_min": 60, "x_max": 76, "z_lo": 54, "z_hi": 59, "ys": [[106, 113], [143, 150]]},
+        {"name": "upper", "x_min": 56, "x_max": 70, "z_lo": 76, "z_hi": 81, "ys": [[109, 116], [140, 147]]}
+      ],
+      "glass_color": 155,
+      "src": "〔設計〕主砲甲板（z=54..59）與上戰棚舵艙（z=76..81）艉封板各開 2 扇共 4 扇花格艉窗"
+    }
+  },
+  "masts": {
+    "_src": "〔摘 S1/S3＋設計〕三桅竹篾扇形硬篷（頭桅＋大桅＋尾桅）；頭桅前傾 +5°、大桅微後傾 -2°、尾桅後傾 -4°；每桅於步驟 7–8 依 Ship_Battens 建實體竹篾（yard=batten）",
+    "fore": {
+      "x": 374,
+      "rake_deg": 5.0,
+      "heel_z": 12,
+      "len": 236,
+      "r": [2.6, 1.4],
+      "src": "〔設計〕頭桅於 x=374 踩實底艙地板 z=12 前傾 +5°，總長 23.6 m（桅頂 x≈394.6, z≈247.1）"
+    },
+    "main": {
+      "x": 246,
+      "rake_deg": -2.0,
+      "heel_z": 12,
+      "len": 308,
+      "r": [3.6, 1.8],
+      "src": "〔設計〕大桅於 x=246 踩實底艙地板 z=12 微後傾 -2°，總長 30.8 m（桅頂 x≈235.3, z≈319.8 ≈ 0.80 × LOA）"
+    },
+    "mizzen": {
+      "x": 96,
+      "rake_deg": -4.0,
+      "heel_z": 48,
+      "len": 164,
+      "r": [2.2, 1.1],
+      "src": "〔設計〕尾桅於 x=96 踩實主砲甲板 z=48（貼齊 z=47 鋪板）後傾 -4°，總長 16.4 m（桅頂 x≈84.6, z≈211.6）"
+    },
+    "yards": {
+      "fore_gaff": {"len": 98, "fore_len": 25, "aft_len": 73, "on": "fore", "z": 228.0, "angle_deg": -15.0, "kind": "course"},
+      "fore_boom": {"len": 102, "fore_len": 26, "aft_len": 76, "on": "fore", "z": 94.0, "angle_deg": 0.0, "kind": "course"},
+      "main_gaff": {"len": 136, "fore_len": 34, "aft_len": 102, "on": "main", "z": 296.0, "angle_deg": -16.0, "kind": "course"},
+      "main_boom": {"len": 142, "fore_len": 36, "aft_len": 106, "on": "main", "z": 112.0, "angle_deg": 0.0, "kind": "course"},
+      "mizzen_gaff": {"len": 72, "fore_len": 18, "aft_len": 54, "on": "mizzen", "z": 198.0, "angle_deg": -15.0, "kind": "course"},
+      "mizzen_boom": {"len": 74, "fore_len": 19, "aft_len": 55, "on": "mizzen", "z": 116.0, "angle_deg": 0.0, "kind": "course"}
+    },
+    "battens": {
+      "fore": 7,
+      "main": 9,
+      "mizzen": 6,
+      "src": "〔設計〕頭桅 7 根竹篾、大桅 9 根竹篾、尾桅 6 根竹篾（合計 22 根實體竹篾桿）"
+    },
+    "sail_sets": {
+      "1": ["main-junk"],
+      "2": ["main-junk", "fore-junk"],
+      "3": ["main-junk", "fore-junk", "mizzen-junk"],
+      "src": "〔設計〕三桅三段帆裝表：set 1（收帆 Reef）張 main-junk；set 2（戰鬥帆）加張 fore-junk；set 3（滿帆）三桅全張"
+    }
+  },
+  "guns_build": {
+    "src": "〔設計〕步驟 9：12 門封閉下層主砲甲板紅夷大銅砲（hongyi）＋ 2 門船首戰棚紅夷大銅砲 ＋ 10 門上戰棚發熕（fagong）＋ 6 門佛郎機迴旋砲（pierrier ＋ -mount）；合計 30 門",
+    "assembly": "crest-001-daniuchuan-01m-assembly",
+    "hull": "crest-001-daniuchuan-01m",
+    "deck_works": {
+      "main": "crest-001-daniuchuan-01m-deck-main",
+      "upper": "crest-001-daniuchuan-01m-deck-upper",
+      "poop": "crest-001-daniuchuan-01m-deck-poop"
+    },
+    "prefix": {"main": "M", "upper": "U", "poop": "P"},
+    "types": {
+      "hongyi": {
+        "work": "crest-001-daniuchuan-01m-gun-hongyi",
+        "scale": 0.5,
+        "pivot": [7.5, 31.0, 0.0],
+        "meta": {"kind": "gun", "gun": "hongyi", "material": "bronze"},
+        "src": "〔設計〕紅夷大銅砲（三千斤級青銅長砲，新建通用部件，0.05 m ⇒ scale 0.5）"
+      },
+      "fagong": {
+        "work": "crest-001-daniuchuan-01m-gun-fagong",
+        "scale": 0.5,
+        "pivot": [6.5, 25.0, 0.0],
+        "meta": {"kind": "gun", "gun": "fagong", "material": "iron"},
+        "src": "〔設計〕明清發熕（鐵箍中型火砲，新建通用部件，0.05 m ⇒ scale 0.5）"
+      },
+      "pierrier": {
+        "work": "apex-one-reale-01m-gun-pierrier",
+        "mount_work": "apex-one-reale-01m-gun-pierrier-mount",
+        "scale": 0.5,
+        "pivot": [5.5, 18.5, 0.0],
+        "meta": {"kind": "gun", "gun": "pierrier", "mount": "turret", "arc": "-80,80", "rate": 45, "material": "iron"},
+        "src": "〔設計〕6 門佛郎機迴旋砲 pierrier（apex 共用件 ×0.5 ＋ -mount 雙生 kind=gunmount）"
+      }
+    },
+    "swivels": [
+      {"deck": "upper", "x": 422, "cut_x0": 414, "cut_x1": 430, "z_rail": 76},
+      {"deck": "poop", "x": 112, "cut_x0": 104, "cut_x1": 120, "z_rail": 98},
+      {"deck": "poop", "x": 80, "cut_x0": 72, "cut_x1": 88, "z_rail": 98}
+    ],
+    "search": {
+      "dx": [0, 0.5, -0.5, 1, -1],
+      "dz": [0, 0.5, -0.5],
+      "step": 0.5,
+      "back_max": 36,
+      "inset": 0.2
+    },
+    "support_min": 0.5
+  },
+  "gunfittings_build": {
+    "work": "crest-001-daniuchuan-01m-gunfittings",
+    "link": "砲具",
+    "title": "明鄭一號大鳥船 砲具（環、甲板環，0.1 m）",
+    "ring": {"color": 104, "offset": [8, 9, 10, 11, 7, 12]},
+    "deck_ring": {"color": 104, "back": [8, 9, 10, 7, 11, 6, 12, 5, 13], "lat": [0, 3, -3, 5, -5, 8, -8, 10, -10]},
+    "ropes": {
+      "breeching": {"slack": 1.12, "thickness": 0.6, "color": "#b59a6a", "group": "guns/breeching"},
+      "tackle": {"slack": 1.03, "thickness": 0.35, "color": "#a89060", "group": "guns/tackle"},
+      "train": {"slack": 1.05, "thickness": 0.35, "color": "#a89060", "group": "guns/train"}
+    }
+  },
+  "rudder_anchor_build": {
+    "rudder": {
+      "work": "crest-001-daniuchuan-01m-rudder",
+      "title": "明鄭一號大鳥船 巨型開孔升降舵（0.1 m）",
+      "x_stock": 48,
+      "y_mid": 128,
+      "z_bot": 2,
+      "z_top": 95,
+      "x_aft_bot": 24,
+      "x_aft_top": 30,
+      "x_fwd_bot": 59,
+      "z_chin": 50,
+      "z_shoulder": 62,
+      "max_deg": 35,
+      "spin": "rudder",
+      "spin_lag": 0.3,
+      "stock_top": [48, 128, 95]
+    },
+    "tiller": {
+      "work": "crest-001-daniuchuan-01m-tiller",
+      "title": "明鄭一號大鳥船 舵柄（tiller，0.1 m）",
+      "x_start": 50,
+      "x_bend": 68,
+      "x_end": 82,
+      "z_pass": 93,
+      "z_grip": 94,
+      "spin_a": [48, 128, 93],
+      "spin_b": [48, 128, 94],
+      "carve_balcony_z": [92, 94],
+      "carve_balcony_y": [125, 131],
+      "carve_balcony_x": [52, 54],
+      "carve_hull_z": [93, 94],
+      "carve_hull_y": [119, 137],
+      "carve_hull_x": [56, 61]
+    },
+    "anchor_gear": {
+      "work": "crest-001-daniuchuan-01m-anchor-gear",
+      "title": "明鄭一號大鳥船 雙舷貓頭錨架（0.1 m）",
+      "x_cat": 390,
+      "x_len": 3,
+      "y_in": 156,
+      "y_out": 171,
+      "z_in_bot": 70,
+      "z_beam": 82,
+      "z_tip_drop": 81
+    },
+    "anchors": {
+      "source": "kotoko-fusta-01m-anchor-grapnel",
+      "scale": 0.65,
+      "pivot": [10.0, 10.0, 0.0],
+      "x": 391.5,
+      "y_center": 128.5,
+      "y_off": 44.0,
+      "z": 64.5,
+      "yaw_s": 74.0,
+      "kind": "anchor",
+      "anchor": "bower",
+      "hawse_s": [406, 159, 76],
+      "hawse_p": [406, 97, 76]
+    }
+  }
+}

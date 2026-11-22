@@ -1,0 +1,267 @@
+{
+	"schema": 3,
+	"wind": [
+		4.5,
+		-1.5,
+		0
+	],
+	"seconds": 3,
+	"sails": [
+		{
+			"name": "fore-junk",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:前桅/yard-upper/earing-aft",
+					"pin": true
+				},
+				{
+					"name": "throat",
+					"at": "model:前桅/yard-upper/earing-fore",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:前桅/yard-lower/earing-fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:前桅/yard-lower/earing-aft",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#ffffff",
+			"res": 32,
+			"fullness": 1.025,
+			"enabled": true,
+			"note": "步驟 8：明鄭竹篾硬帆（Ship_Battens）",
+			"persona": "crest-001",
+			"created_at": "2026-11-21T22:41:21",
+			"texture": "textures/fore-junk.png",
+			"meta": {
+				"battens": 7,
+				"kind": "sail",
+				"mast": "fore",
+				"roach": "0.16,0.05",
+				"sail": "course",
+				"set": 2
+			}
+		},
+		{
+			"name": "main-junk",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:主桅/yard-upper/earing-aft",
+					"pin": true
+				},
+				{
+					"name": "throat",
+					"at": "model:主桅/yard-upper/earing-fore",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:主桅/yard-lower/earing-fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:主桅/yard-lower/earing-aft",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#ffffff",
+			"res": 40,
+			"fullness": 1.025,
+			"enabled": true,
+			"note": "步驟 8：明鄭竹篾硬帆（Ship_Battens）",
+			"persona": "crest-001",
+			"created_at": "2026-11-21T22:41:37",
+			"texture": "textures/main-junk.png",
+			"meta": {
+				"battens": 9,
+				"kind": "sail",
+				"mast": "main",
+				"roach": "0.16,0.05",
+				"sail": "course",
+				"set": 1
+			}
+		},
+		{
+			"name": "mizzen-junk",
+			"corners": [
+				{
+					"name": "peak",
+					"at": "model:尾桅/yard-upper/earing-aft",
+					"pin": true
+				},
+				{
+					"name": "throat",
+					"at": "model:尾桅/yard-upper/earing-fore",
+					"pin": true
+				},
+				{
+					"name": "tack",
+					"at": "model:尾桅/yard-lower/earing-fore",
+					"pin": true
+				},
+				{
+					"name": "clew",
+					"at": "model:尾桅/yard-lower/earing-aft",
+					"pin": true
+				}
+			],
+			"bind": [
+				0,
+				2
+			],
+			"color": "#ffffff",
+			"res": 28,
+			"fullness": 1.025,
+			"enabled": true,
+			"note": "步驟 8：明鄭竹篾硬帆（Ship_Battens）",
+			"persona": "crest-001",
+			"created_at": "2026-11-21T22:41:47",
+			"texture": "textures/mizzen-junk.png",
+			"meta": {
+				"battens": 6,
+				"kind": "sail",
+				"mast": "mizzen",
+				"roach": "0.16,0.05",
+				"sail": "course",
+				"set": 3
+			}
+		},
+		{
+			"name": "ensign",
+			"corners": [
+				{
+					"name": "",
+					"at": "旗桿/peak",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "10,128,118",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "10,128,104",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "旗桿/hoist-lo",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#ffffff",
+			"res": 16,
+			"fullness": 1.06,
+			"enabled": true,
+			"note": "步驟 8：明鄭國姓戰旗 (flag=ensign)",
+			"persona": "crest-001",
+			"created_at": "2026-11-21T22:42:04",
+			"texture": "textures/ensign.png",
+			"meta": {
+				"flag": "ensign",
+				"kind": "flag",
+				"nation": "mingzheng"
+			}
+		},
+		{
+			"name": "pennant-main",
+			"corners": [
+				{
+					"name": "",
+					"at": "主桅/cap",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "212,128,320",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "212,128,314",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "主桅/top",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#ffffff",
+			"res": 12,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8：主桅長幡",
+			"persona": "crest-001",
+			"created_at": "2026-11-21T22:42:06",
+			"texture": "textures/pennant-main.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag"
+			}
+		},
+		{
+			"name": "pennant-fore",
+			"corners": [
+				{
+					"name": "",
+					"at": "前桅/cap",
+					"pin": true
+				},
+				{
+					"name": "",
+					"at": "376,128,249",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "376,128,243",
+					"pin": false
+				},
+				{
+					"name": "",
+					"at": "前桅/top",
+					"pin": true
+				}
+			],
+			"bind": [
+				3
+			],
+			"color": "#ffffff",
+			"res": 12,
+			"fullness": 1.05,
+			"enabled": true,
+			"note": "步驟 8：前桅長幡",
+			"persona": "crest-001",
+			"created_at": "2026-11-21T22:42:07",
+			"texture": "textures/pennant-fore.png",
+			"meta": {
+				"flag": "pennant",
+				"kind": "flag"
+			}
+		}
+	]
+}
