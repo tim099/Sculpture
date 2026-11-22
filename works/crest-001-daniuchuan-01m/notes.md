@@ -34,7 +34,7 @@
 - 生成與落格：`design/draft_deco.py`（雙趟 SHA-256 一致；反證 `--probe=shift_balcony=+3` 報 296 格衝突）→ `design/tools/build_deco.py`：
   - `艉樓窗玻璃`（`crest-001-daniuchuan-01m-stern-glass`，關聯 `meta={"material":"glass"}`）：於斜艉牆補齊上下階連通格後計 `272` 格（`4` 塊獨立 6 連通整片窗、`overlap=0`）。
   - `艉迴廊`（`crest-001-daniuchuan-01m-stern-balcony`）：`3,358` 格（高尾樓懸挑迴廊＋預留舵柄槽＋高尾樓飛簷冠框＋上戰棚與高尾樓雙層朱漆戰棚女牆與箭窗；`overlap=0, mirror_diff=0`）。
-  - 可隱藏裝飾模型（8 件 `meta={"deco":1}`）：新建 0.05 m/voxel `船首飾`（`crest-001-daniuchuan-01m-deco-bow`，2,266 格、鳥喙鳳首雙翼彩繪）與 `船尾飾`（`crest-001-daniuchuan-01m-deco-stern`，2,456 格、朱金雲紋牌匾），另複用 6 具 `kiara-tunis-sandal-01m-fender`（`護舷-S1..S3／P1..P3` 貼於黑護木帶下）。
+  - 可隱藏裝飾模型（8 件 `meta={"deco":1}`）：新建 0.05 m/voxel `船首飾`（`crest-001-daniuchuan-01m-deco-bow`，5,524 格，雙翼底緣緊貼 `x=442..454` 船首舷緣 `z_top+1` 並以胸甲跨艏封壁接通中線鳥喙鳳首，`components_6=1, cavities=0, mirror_diff=0, post_hits=0, adj_hull=746, side_gap_cols=0`）與 `船尾飾`（`crest-001-daniuchuan-01m-deco-stern`，2,456 格、朱金雲紋牌匾），另複用 6 具 `kiara-tunis-sandal-01m-fender`（`護舷-S1..S3／P1..P3` 貼於黑護木帶下）。
 - 驗收：`stats` 全船 `381,454` 格（`link_overlap=0, components=1, cavities=0, models_drawn=8, models_broken=0`）；比對 `stage6_deco.png`／`stage6_deco_aft.png`（`models=1`）與 `stage6_deco_off.png`（`models=0` 隱藏 8 件裝飾）確認無錯位與遮擋。
 
 ## 三桅、硬骨帆桁與實體竹篾（步驟 7；2026-11-21）
@@ -140,5 +140,5 @@
 - [x] 3 面中式硬骨帆（`set=1/2/3`, `roach="0.16,0.05"`, `battens=7/9/6` 誤差 ≤ `0.05` 格）與 3 面旗（`nation=mingzheng`）全數含完整 `meta` 與帆索綁定，`sails_broken=0, ropes_broken=0, models_broken=0`。
 - [x] 整組 `components=1`（393,907 格單一 6 連通塊）、`cavities=0`、`link_overlap=0`，雙舷完全鏡像對稱（僅上甲板為避讓尾桅之既有走廊不對稱 153 格）。
 - [x] Checksum 與檔案指紋對拍：
-  - Sculpture `exports/crest-001-daniuchuan-01m-assembly.vxk`：`560,034` bytes，SHA-256 `98386439be0aa6a3687d0c691413484e453d7c8e27c75d9e3193cbf36591f221`（voxel checksum `83987995`）。
-  - Blockside `VoxelKit/_cache/daniuchuan.vxk`（含 `ropebind` 196 條繩端綁定檔頭）：`538,012` bytes，SHA-256 `d1c3aea54019ad86297d5dd51c1ca2ee878b5bb1f5bea3e4c20724972f84861d`，`lock` 指紋 `c:b63315775c`；與拆檔成品 `ships/ship-daniuchuan.js` 經 `admin.py verify` 與 `admin.py cache` 逐格逐三角形驗證一致。
+  - Sculpture `exports/crest-001-daniuchuan-01m-assembly.vxk`：`562,691` bytes，SHA-256 `f4ae969a0311fc318bda4fadb79c9e133881acfe1ff7f83254edd1cfb9d4cd63`（voxel checksum `83987995`）。
+  - Blockside `VoxelKit/_cache/daniuchuan.vxk`（含 `ropebind` 196 條繩端綁定檔頭）：`541,593` bytes，SHA-256 `095c62e39e107e37ce84fe2cf79305aef67f8ae80930c71066662594e95f2be8`，`lock` 指紋 `c:4dcb830cdb`；與拆檔成品 `ships/ship-daniuchuan.js`、`shipcheck`（含 `floatCheck` 浮空檢查）✗ 0 ⚠ 0、`shipcheck --selftest` 6/6 全數驗證一致。

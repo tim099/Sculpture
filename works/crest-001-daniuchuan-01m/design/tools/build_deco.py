@@ -40,6 +40,32 @@ def fmt_vec(v):
     return ','.join(f'{x:g}' for x in v)
 
 
+def restamp_if_changed(work, mask_path, size_list, mpv='0.05'):
+    wjson_p = os.path.join(WORKS, work, 'work.json')
+    n = sum(1 for l in open(mask_path, encoding='utf-8') if l.strip() and not l.startswith('#'))
+    if not os.path.exists(wjson_p):
+        sz = ','.join(map(str, size_list))
+        make(work, work, size=sz, mpv=mpv)
+        stamp(work, mask_path)
+        return
+    st_out = cli('op=stats', f'work={work}')
+    m_s = re.search(r'space_size\s*=\s*(\d+),(\d+),(\d+)', st_out)
+    old_sz = [int(m_s.group(1)), int(m_s.group(2)), int(m_s.group(3))] if m_s else list(size_list)
+    m_v = re.search(r'voxels[^\d]*(\d[\d,]*)', st_out)
+    old_n = int(m_v.group(1).replace(',', '')) if m_v else -1
+    if old_sz == size_list and old_n == n:
+        print(f'· 沒變 {work} ({old_n} 格)')
+        return
+    if old_n != 0:
+        cli('op=carve', f'persona={PERSONA}', f'work={work}',
+            'x1=0', f'x2={old_sz[0] - 1}', 'y1=0', f'y2={old_sz[1] - 1}', 'z1=0', f'z2={old_sz[2] - 1}')
+    if old_sz != size_list:
+        cli('op=work', 'sub=update', f'persona={PERSONA}', f'work={work}',
+            f"size={','.join(map(str, size_list))}", f'meters_per_voxel={mpv}')
+    stamp(work, mask_path)
+    print(f'✓ 更新 {work} ({old_n} -> {n} 格, size {old_sz} -> {size_list})')
+
+
 def main():
     spec = json.load(open(os.path.join(DESIGN, 'deco_spec.json'), encoding='utf-8'))
     od = os.path.join(DESIGN, 'masks', 'deco')
@@ -56,16 +82,33 @@ def main():
         cli(*args, ok=(0, 2))
         print(f"  link {lk['name']} -> {w}")
 
+    models_p = os.path.join(WORKS, ASM, 'models.json')
+    existing_models = {}
+    if os.path.exists(models_p):
+        for m in json.load(open(models_p, encoding='utf-8')).get('models', []):
+            existing_models[m['name']] = m
+
     for cm in spec['custom_models']:
         w = cm['work']
         sz = ','.join(map(str, cm['size']))
+        mask_p = os.path.join(od, cm['mask'])
         if make(w, cm['title'], size=sz, mpv='0.05'):
-            stamp(w, os.path.join(od, cm['mask']))
+            stamp(w, mask_p)
+        else:
+            restamp_if_changed(w, mask_p, cm['size'], mpv='0.05')
+        ex = existing_models.get(cm['name'])
+        meta = dict(cm['meta'])
+        if ex and isinstance(ex.get('meta'), dict):
+            for k_m, v_m in ex['meta'].items():
+                if k_m not in meta:
+                    meta[k_m] = v_m
+        if ex and (ex.get('at') != cm['at'] or ex.get('pivot') != cm['pivot'] or ex.get('rotate') != cm['rotate'] or ex.get('scale') != [cm['scale']] * 3):
+            cli('op=work', 'sub=unmodel', f'persona={PERSONA}', f'work={ASM}', f"name={cm['name']}")
         cli('op=work', 'sub=model', f'persona={PERSONA}', f'work={ASM}',
             f"name={cm['name']}", f'source_work={w}',
             'at=' + fmt_vec(cm['at']), 'pivot=' + fmt_vec(cm['pivot']),
             'rotate=' + fmt_vec(cm['rotate']), f"scale={cm['scale']:g}",
-            'meta=' + json.dumps(cm['meta'], ensure_ascii=False, separators=(',', ':')),
+            'meta=' + json.dumps(meta, ensure_ascii=False, separators=(',', ':')),
             'note=步驟 6：deco=1 裝飾模型', ok=(0, 2))
         print(f"  model {cm['name']} -> {w}")
 
