@@ -1,0 +1,172 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "main-shroud-S1",
+			"from": "主桅/hound-S",
+			"to": "船殼/shroud-main-S1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:51",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-shroud-S2",
+			"from": "主桅/hound-S",
+			"to": "船殼/shroud-main-S2",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:52",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-lateen.sheet-P",
+			"from": "sail:main-lateen/clew",
+			"to": "船殼/belay-main-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:53",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "main-lateen.sheet-S",
+			"from": "sail:main-lateen/clew",
+			"to": "船殼/belay-main-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:53",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "fore-lateen.sheet-P",
+			"from": "sail:fore-lateen/clew",
+			"to": "船殼/belay-fore-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:54",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-lateen"
+			}
+		},
+		{
+			"name": "fore-lateen.sheet-S",
+			"from": "sail:fore-lateen/clew",
+			"to": "船殼/belay-fore-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.35,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:54",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-lateen"
+			}
+		},
+		{
+			"name": "main-lateen.tack",
+			"from": "model:主桅/yard-main-lateen/fore",
+			"to": "甲板-main/tack-main",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:54",
+			"meta": {
+				"kind": "tack",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "fore-lateen.tack",
+			"from": "model:前桅/yard-fore-lateen/fore",
+			"to": "船頭桿/tack-fore",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:35:55",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore-lateen"
+			}
+		},
+		{
+			"name": "fore-shroud-S1",
+			"from": "前桅/hound-S",
+			"to": "船殼/shroud-fore-S1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:38:29",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-shroud-S2",
+			"from": "前桅/hound-S",
+			"to": "船殼/shroud-fore-S2",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0024；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-21T07:38:30",
+			"meta": {
+				"kind": "shroud"
+			}
+		}
+	],
+	"groups": []
+}

@@ -1,0 +1,92 @@
+{
+ "probe": null,
+ "chest": {
+  "cells": 144,
+  "x": [
+   30,
+   36
+  ],
+  "y": [
+   71,
+   77
+  ],
+  "z": [
+   10,
+   15
+  ],
+  "overlap_ship": 0,
+  "stands_on_board": true
+ },
+ "barrel": {
+  "bbox": [
+   [
+    31.3,
+    72.3,
+    10.0
+   ],
+   [
+    35.7,
+    76.7,
+    15.4
+   ]
+  ],
+  "cells_in_bbox": 0,
+  "inside_chest": true
+ },
+ "hearth": {
+  "bbox": [
+   [
+    108.0,
+    80.0,
+    10.0
+   ],
+   [
+    120.0,
+    90.0,
+    17.5
+   ]
+  ],
+  "cells_in_bbox": 0,
+  "on_board": true
+ },
+ "access_9x9_on_stern_platform": {
+  "count": 27,
+  "x_range": [
+   19,
+   36
+  ],
+  "y_range": [
+   75,
+   89
+  ]
+ },
+ "hearth_faces_standing_cells_within_0.6m": {
+  "-x": 24,
+  "+x": 80,
+  "-y": 68,
+  "+y": 23
+ },
+ "walk_with_model_boxes": {
+  "groups": 1,
+  "area_m2": [
+   27.88
+  ]
+ },
+ "anchors": {
+  "blast": [
+   33,
+   74,
+   12
+  ],
+  "door": [
+   33,
+   78,
+   10
+  ]
+ },
+ "anchor_blast_is_air": true,
+ "sha256": {
+  "masks/magazine/chest.vox.txt": "4a93b1469a6d3bc453d86008cd8c25c089560833d41cac2b957a18957c960ace",
+  "magazine_placement.json": "6c016e81c383165babefdbc55cd75dd036d820f2a79dc8e6b3aa4ff6a0944a41"
+ }
+}

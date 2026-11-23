@@ -1,0 +1,110 @@
+{
+ "rudder": {
+  "work": "claude-felucca-01m-rudder",
+  "title": "海鷗號 舵（艉柱舵：舵葉＋舵桿）",
+  "model": "舵",
+  "at": [
+   18.0,
+   80.5,
+   0.5
+  ],
+  "pivot": [
+   18.0,
+   80.5,
+   0.5
+  ],
+  "anchors": {
+   "stock-top": [
+    5,
+    80,
+    24
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "max_deg": 35,
+   "turn_axis": "hinge",
+   "id": "rudder-1",
+   "hinge_x": 18.0,
+   "hinge_y": 80.5,
+   "hinge_z": 0.5,
+   "axis_x": -0.4472,
+   "axis_y": 0.0,
+   "axis_z": 0.8944,
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  }
+ },
+ "tiller": {
+  "work": "claude-felucca-01m-tiller",
+  "title": "海鷗號 舵柄",
+  "model": "舵柄",
+  "at": [
+   18.0,
+   80.5,
+   0.5
+  ],
+  "pivot": [
+   18.0,
+   80.5,
+   0.5
+  ],
+  "anchors": {
+   "tiller-end": [
+    26,
+    80,
+    23
+   ]
+  },
+  "meta": {
+   "kind": "tiller",
+   "spin_pivot_x": 18.0,
+   "spin_pivot_y": 80.5,
+   "spin_pivot_z": 0.5,
+   "spin_axis_x": -0.4472,
+   "spin_axis_y": 0.0,
+   "spin_axis_z": 0.8944,
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  }
+ },
+ "anchor": {
+  "name": "錨-P",
+  "host": "claude-felucca-01m-deck-main",
+  "work": "kotoko-fusta-01m-anchor-grapnel",
+  "at": [
+   108.5,
+   61.0,
+   17.0
+  ],
+  "pivot": [
+   9.5,
+   9.5,
+   24.0
+  ],
+  "scale": 0.4,
+  "rotate": [
+   0,
+   0,
+   0
+  ],
+  "meta": {
+   "kind": "anchor",
+   "anchor": "bower",
+   "id": "anchor-1"
+  }
+ },
+ "hull_anchors": {
+  "hawse-P": [
+   108,
+   65,
+   14
+  ]
+ }
+}

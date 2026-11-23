@@ -1,0 +1,332 @@
+{
+ "floor": {
+  "board_z": 6,
+  "stand_z": 7,
+  "x": [
+   30,
+   112
+  ],
+  "cells": 1765,
+  "columns_not_inside": [],
+  "width_mid_m": 2.3
+ },
+ "benches": [
+  {
+   "x": 44,
+   "seat_top_z": 10,
+   "step_above_floor": 3,
+   "dy_span": [
+    [
+     -12,
+     12
+    ],
+    [
+     -13,
+     13
+    ]
+   ],
+   "rail_above_seat_m": 0.5
+  },
+  {
+   "x": 54,
+   "seat_top_z": 10,
+   "step_above_floor": 3,
+   "dy_span": [
+    [
+     -13,
+     13
+    ],
+    [
+     -13,
+     13
+    ]
+   ],
+   "rail_above_seat_m": 0.4
+  },
+  {
+   "x": 64,
+   "seat_top_z": 10,
+   "step_above_floor": 3,
+   "dy_span": [
+    [
+     -13,
+     13
+    ],
+    [
+     -13,
+     13
+    ]
+   ],
+   "rail_above_seat_m": 0.4
+  },
+  {
+   "x": 74,
+   "seat_top_z": 10,
+   "step_above_floor": 3,
+   "dy_span": [
+    [
+     -13,
+     13
+    ],
+    [
+     -13,
+     13
+    ]
+   ],
+   "rail_above_seat_m": 0.4
+  },
+  {
+   "x": 84,
+   "seat_top_z": 10,
+   "step_above_floor": 3,
+   "dy_span": [
+    [
+     -13,
+     13
+    ],
+    [
+     -13,
+     13
+    ]
+   ],
+   "rail_above_seat_m": 0.4
+  },
+  {
+   "x": 94,
+   "seat_top_z": 10,
+   "step_above_floor": 3,
+   "dy_span": [
+    [
+     -13,
+     13
+    ],
+    [
+     -13,
+     13
+    ]
+   ],
+   "rail_above_seat_m": 0.4
+  },
+  {
+   "x": 104,
+   "seat_top_z": 10,
+   "step_above_floor": 3,
+   "dy_span": [
+    [
+     -13,
+     13
+    ],
+    [
+     -12,
+     12
+    ]
+   ],
+   "rail_above_seat_m": 0.5
+  }
+ ],
+ "tholes": [
+  {
+   "x": 46,
+   "dy": 15,
+   "z": [
+    15,
+    17
+   ],
+   "under_is_hull": true,
+   "cell_free": true,
+   "pivot": [
+    46.5,
+    96.0,
+    15.0
+   ]
+  },
+  {
+   "x": 56,
+   "dy": 16,
+   "z": [
+    14,
+    16
+   ],
+   "under_is_hull": true,
+   "cell_free": true,
+   "pivot": [
+    56.5,
+    97.0,
+    14.0
+   ]
+  },
+  {
+   "x": 66,
+   "dy": 16,
+   "z": [
+    14,
+    16
+   ],
+   "under_is_hull": true,
+   "cell_free": true,
+   "pivot": [
+    66.5,
+    97.0,
+    14.0
+   ]
+  },
+  {
+   "x": 76,
+   "dy": 16,
+   "z": [
+    14,
+    16
+   ],
+   "under_is_hull": true,
+   "cell_free": true,
+   "pivot": [
+    76.5,
+    97.0,
+    14.0
+   ]
+  },
+  {
+   "x": 86,
+   "dy": 16,
+   "z": [
+    14,
+    16
+   ],
+   "under_is_hull": true,
+   "cell_free": true,
+   "pivot": [
+    86.5,
+    97.0,
+    14.0
+   ]
+  },
+  {
+   "x": 96,
+   "dy": 16,
+   "z": [
+    14,
+    16
+   ],
+   "under_is_hull": true,
+   "cell_free": true,
+   "pivot": [
+    96.5,
+    97.0,
+    14.0
+   ]
+  },
+  {
+   "x": 106,
+   "dy": 15,
+   "z": [
+    15,
+    17
+   ],
+   "under_is_hull": true,
+   "cell_free": true,
+   "pivot": [
+    106.5,
+    96.0,
+    15.0
+   ]
+  }
+ ],
+ "thole_pitch_m": [
+  1.0
+ ],
+ "bow_platform": {
+  "board_z": 9,
+  "stand_z": 10,
+  "x": [
+   108,
+   141
+  ],
+  "cells": 570,
+  "columns_not_inside": [],
+  "step_above_floor": 3,
+  "bulwark_above_stand_m": {
+   "108": 0.5,
+   "112": 0.6,
+   "116": 0.7,
+   "120": 0.8,
+   "124": 0.9,
+   "128": 1.0,
+   "132": 1.1,
+   "136": 1.2,
+   "140": 1.3
+  }
+ },
+ "stern_platform": {
+  "board_z": 9,
+  "stand_z": 10,
+  "x": [
+   18,
+   36
+  ],
+  "cells": 291,
+  "columns_not_inside": [],
+  "step_above_floor": 3,
+  "bulwark_above_stand_m": {
+   "20": 1.0,
+   "24": 0.9,
+   "28": 0.8,
+   "32": 0.7,
+   "36": 0.7
+  }
+ },
+ "masts": {
+  "main": {
+   "x": 84,
+   "heel_z": 2,
+   "rake_deg": 0,
+   "deck_level": "floor",
+   "top_z": 94.0
+  },
+  "fore": {
+   "x": 136,
+   "heel_z": 5,
+   "rake_deg": 8,
+   "deck_level": "bow_platform",
+   "top_z": 70.0
+  }
+ },
+ "mast_spacing_m": 5.2,
+ "guns": [
+  {
+   "id": "bow",
+   "kind": "pierrier",
+   "x": 123,
+   "dy": 0,
+   "stands_on": "bow_platform",
+   "post_foot_z": 10
+  },
+  {
+   "id": "bowq-S",
+   "kind": "pierrier",
+   "x": 114,
+   "dy": 13,
+   "stands_on": "rail",
+   "rail_top_z": 16
+  },
+  {
+   "id": "bowq-P",
+   "kind": "pierrier",
+   "x": 114,
+   "dy": -13,
+   "stands_on": "rail",
+   "rail_top_z": 16
+  },
+  {
+   "id": "stern-S",
+   "kind": "pierrier",
+   "x": 32,
+   "dy": 11,
+   "stands_on": "rail",
+   "rail_top_z": 9
+  }
+ ],
+ "oar_clearance_cells": {
+  "last_thole_to_bow_platform": 2,
+  "first_thole_to_stern_platform": 10
+ }
+}

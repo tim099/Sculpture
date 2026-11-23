@@ -1,0 +1,219 @@
+{
+ "probe": null,
+ "rows": {
+  "main": {
+   "x": 84,
+   "heel_z": 2,
+   "top_z": 94,
+   "rake_deg": 0,
+   "r": 1.25
+  },
+  "fore": {
+   "x": 136,
+   "heel_z": 5,
+   "top_z": 70,
+   "rake_deg": 8,
+   "r": 1.25
+  }
+ },
+ "skipped_on_ship": {
+  "mast-main": 2,
+  "mast-fore": 5
+ },
+ "heel_slivers_trimmed": {},
+ "tack_spar": {
+  "alpha_deg": 4.45,
+  "heel_axis": [
+   133.0,
+   82.5,
+   24.0
+  ],
+  "rest_x": [
+   150,
+   151
+  ],
+  "touch_fore_mast_x": [
+   138,
+   139
+  ],
+  "tip": [
+   178.9,
+   82.5,
+   27.6
+  ]
+ },
+ "parts": {
+  "mast-main": {
+   "cells": 482,
+   "components_6": 1,
+   "x": [
+    83,
+    85
+   ],
+   "z": [
+    2,
+    93
+   ],
+   "mirror_diff": 0,
+   "colours": {
+    "36": 15,
+    "177": 467
+   }
+  },
+  "mast-fore": {
+   "cells": 373,
+   "components_6": 1,
+   "x": [
+    135,
+    146
+   ],
+   "z": [
+    5,
+    69
+   ],
+   "mirror_diff": 0,
+   "colours": {
+    "36": 15,
+    "177": 358
+   }
+  },
+  "tack-spar": {
+   "cells": 73,
+   "components_6": 1,
+   "x": [
+    133,
+    178
+   ],
+   "z": [
+    23,
+    27
+   ],
+   "mirror_diff": null,
+   "colours": {
+    "36": 3,
+    "173": 70
+   }
+  }
+ },
+ "yards": {
+  "main": {
+   "size": [
+    121,
+    7,
+    103
+   ],
+   "cells": 696,
+   "components_6": 1,
+   "anchors": 22,
+   "overlap_world": 0,
+   "min_gap_cells": 1.0,
+   "world_x": [
+    15,
+    130
+   ],
+   "world_z": [
+    47,
+    144
+   ],
+   "world_y": [
+    75,
+    77
+   ],
+   "pivot_world": [
+    84,
+    76,
+    86
+   ],
+   "fore_world": [
+    129,
+    76,
+    48
+   ],
+   "peak_world": [
+    15,
+    76,
+    143
+   ],
+   "mast_cells_in_shipcheck_band": 155,
+   "band_z": [
+    46,
+    76
+   ],
+   "lateen_swing_deg": 33.7,
+   "inside_assembly_box": true
+  },
+  "fore": {
+   "size": [
+    87,
+    7,
+    74
+   ],
+   "cells": 340,
+   "components_6": 1,
+   "anchors": 16,
+   "overlap_world": 0,
+   "min_gap_cells": 1.0,
+   "world_x": [
+    96,
+    177
+   ],
+   "world_z": [
+    35,
+    103
+   ],
+   "world_y": [
+    75,
+    77
+   ],
+   "pivot_world": [
+    144,
+    76,
+    62
+   ],
+   "fore_world": [
+    176,
+    76,
+    36
+   ],
+   "peak_world": [
+    97,
+    76,
+    102
+   ],
+   "mast_cells_in_shipcheck_band": 174,
+   "band_z": [
+    22,
+    52
+   ],
+   "lateen_swing_deg": 51.4,
+   "inside_assembly_box": true
+  }
+ },
+ "overlap_ship": 0,
+ "overlap_between_parts": 0,
+ "mast_holes": {
+  "main": {
+   "hole_cells": 9,
+   "mast": 9,
+   "empty": 0
+  },
+  "fore": {
+   "hole_cells": 6,
+   "mast": 6,
+   "empty": 0
+  }
+ },
+ "ship_with_rig": {
+  "cells": 15495,
+  "components_6": 1,
+  "cavities": 0
+ },
+ "problems": 0,
+ "sha256": {
+  "masts/main": "0b8b565ab2b68b9209a3aaec08f72bfc0ebdc508ddeb04f492201e2d0939cfc4",
+  "masts/fore": "c5fdb084a55971e7f5b717e15c2b41eeec31c120bce6fd63f57063a4be535e73",
+  "masts/tack_spar": "43ddce616ba359b9299458b84a2f2b15c9d20ab35736431c54b7137970c449be",
+  "yards/lateen-main": "b729f74f649035ee73b9b09f2157aecbff0db325fea946124284c92dda876c2c",
+  "yards/lateen-fore": "7db1666464af04552a78bcefbeb40946e36bdc273438741a190dd5a8616a58fd"
+ }
+}

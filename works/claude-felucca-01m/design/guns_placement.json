@@ -1,0 +1,236 @@
+{
+ "hosts": {
+  "deck": "claude-felucca-01m-deck-main",
+  "hull": "claude-felucca-01m"
+ },
+ "models": [
+  {
+   "at": [
+    123.5,
+    75.5,
+    21.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "host": "deck",
+   "name": "迴旋砲-F01",
+   "work": "apex-one-reale-01m-gun-pierrier",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "deck": "main",
+    "id": "gun-1",
+    "mount": "turret",
+    "arc": "-90,5",
+    "rate": 45,
+    "port": "bow"
+   }
+  },
+  {
+   "at": [
+    123.5,
+    75.5,
+    21.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "host": "deck",
+   "name": "迴旋砲-F01座",
+   "work": "apex-one-reale-01m-gun-pierrier-mount",
+   "meta": {
+    "kind": "gunmount",
+    "id": "gunmount-1",
+    "mount_of": "gun-1"
+   }
+  },
+  {
+   "at": [
+    114.5,
+    94.5,
+    17.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "host": "deck",
+   "name": "迴旋砲-Q02",
+   "work": "apex-one-reale-01m-gun-pierrier",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "deck": "main",
+    "id": "gun-2",
+    "mount": "turret",
+    "arc": "-90,90",
+    "rate": 45,
+    "port": "bow"
+   }
+  },
+  {
+   "at": [
+    114.5,
+    94.5,
+    17.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "host": "deck",
+   "name": "迴旋砲-Q02座",
+   "work": "apex-one-reale-01m-gun-pierrier-mount",
+   "meta": {
+    "kind": "gunmount",
+    "id": "gunmount-2",
+    "mount_of": "gun-2"
+   }
+  },
+  {
+   "at": [
+    114.5,
+    66.5,
+    17.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "host": "deck",
+   "name": "迴旋砲-Q03",
+   "work": "apex-one-reale-01m-gun-pierrier",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "deck": "main",
+    "id": "gun-3",
+    "mount": "turret",
+    "arc": "-90,90",
+    "rate": 45,
+    "port": "bow"
+   }
+  },
+  {
+   "at": [
+    114.5,
+    66.5,
+    17.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "host": "deck",
+   "name": "迴旋砲-Q03座",
+   "work": "apex-one-reale-01m-gun-pierrier-mount",
+   "meta": {
+    "kind": "gunmount",
+    "id": "gunmount-3",
+    "mount_of": "gun-3"
+   }
+  },
+  {
+   "at": [
+    32.5,
+    94.5,
+    17.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "host": "deck",
+   "name": "迴旋砲-A04",
+   "work": "apex-one-reale-01m-gun-pierrier",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "deck": "main",
+    "id": "gun-4",
+    "mount": "turret",
+    "arc": "-90,90",
+    "rate": 45,
+    "port": "aft"
+   }
+  },
+  {
+   "at": [
+    32.5,
+    94.5,
+    17.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0.0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "host": "deck",
+   "name": "迴旋砲-A04座",
+   "work": "apex-one-reale-01m-gun-pierrier-mount",
+   "meta": {
+    "kind": "gunmount",
+    "id": "gunmount-4",
+    "mount_of": "gun-4"
+   }
+  }
+ ]
+}

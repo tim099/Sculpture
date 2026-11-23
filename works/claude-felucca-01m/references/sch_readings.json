@@ -1,0 +1,104 @@
+{
+ "source": "Willem Schellinks, Boot te Malta. Een faloek, 1664-10-17 ad vivum, Rijksmuseum RP-T-1909-34 (public domain / CC0). Read on the Wikimedia Commons 3840 x 2401 px rendition (File:Boot te Malta Een faloek, RP-T-1909-34.jpg). Coordinates below are in that 3840 px image; the 1600 px copy in this folder is the same image scaled by 1600/3840.",
+ "orientation": "bow to the left (foremast raked forward, gun and grapnel at the bow end), stern to the right (rudder, raised stern)",
+ "scale": "no scale bar on the drawing; only ratios are used. Design length 14.0 m over stem head to stern top (3140 px) => 0.1 m cell = 22.4 px",
+ "points_px": {
+  "stem_head_scroll_top": [
+   620,
+   1370
+  ],
+  "stem_at_waterline": [
+   865,
+   1810
+  ],
+  "waterline_y": 1810,
+  "bow_panelled_bulwark_top_fwd": [
+   970,
+   1465
+  ],
+  "bow_panelled_bulwark_aft_end": [
+   1550,
+   1610
+  ],
+  "waist_gunwale_y_at_mainmast": 1650,
+  "mainmast_x": 2145,
+  "stern_top": [
+   3760,
+   1480
+  ],
+  "stern_at_waterline": [
+   3660,
+   1810
+  ],
+  "stern_sheer_starts_rising_x": 2300,
+  "bow_gun_muzzle": [
+   1270,
+   1350
+  ],
+  "grapnel_hanging": [
+   1600,
+   1620
+  ],
+  "stern_rail_profile": [
+   [
+    2300,
+    1660
+   ],
+   [
+    2570,
+    1650
+   ],
+   [
+    2690,
+    1640
+   ],
+   [
+    2910,
+    1610
+   ],
+   [
+    3120,
+    1600
+   ],
+   [
+    3320,
+    1580
+   ]
+  ],
+  "tack_spar": {
+   "fwd_at_paper_edge": [
+    50,
+    1395
+   ],
+   "aft_end": [
+    1050,
+    1480
+   ]
+  }
+ },
+ "derived": {
+  "length_stemhead_to_sterntop_px": 3140,
+  "lwl_px": 2795,
+  "freeboard_waist_px": 160,
+  "freeboard_waist_cells": 7.1,
+  "stern_top_above_wl_cells": 14.7,
+  "stem_head_above_wl_cells": 19.6,
+  "bow_bulwark_top_above_wl_cells_fwd": 15.4,
+  "bow_bulwark_top_above_wl_cells_aft": 8.9,
+  "stem_rake_from_vertical_deg": 29.1,
+  "sternpost_rake_from_vertical_deg": 16.9,
+  "mainmast_from_stem_head_cells": 68.1,
+  "stem_head_to_bulwark_aft_end_cells": 41.5
+ },
+ "not_read": "beam, draught, underwater body, oar count (oars are stowed inboard), hoisted sail geometry (both lateen yards are lowered), mast heights (both masts run off the top edge of the paper; mainmast is at least 1597 px = 71 cells above the waist gunwale)",
+ "verifier3": {
+  "by": "independent read-only verifier (sub-agent), 2026-11-21 07:09-07:21 UTC; crops in Paperclip .work/FAR-87/verifier3/",
+  "holds": "orientation (bow left), waterline y 1808, stem at waterline (856,1808), stern top (3752,1478), stern at waterline (3658,1800), sternpost rake 16.3 deg, waist rail 1655 / mainmast 2140-2145, bow bulwark (968,1458)/(1555,1598), fore mast foot 978 rake 7.9 deg, gun muzzle (1281,1352), grapnel (1615,1620)",
+  "minor": "stem rake 31.1 deg (23-point fit of the front edge), not 29.1; the curl above the stem (top ~(600,1345)) may be a scroll or a hanging rope coil - the clear stem front edge only reaches (630,1435)",
+  "overturned": [
+   "main yard visible arc about 3313 px (148 cells), not >= 3480 px; its after end does run off the paper",
+   "the spar forward of the stem starts at the left paper edge (50,1395) and ends aft at (1000-1100,1480): it reaches at least 25 cells (2.5 m) past the stem head and rises about 4.8 deg going forward"
+  ],
+  "other": "stern sheer seems to start rising gradually from about px 2300 (low confidence, visual) - re-read by the author on the thole-pin marks under the rail (stern_rail_profile above, rail = marks - 40 px): confirmed; stern_sheer_starts_rising_x changed 3300 -> 2300"
+ }
+}
