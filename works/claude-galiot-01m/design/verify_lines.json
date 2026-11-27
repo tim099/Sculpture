@@ -1,0 +1,206 @@
+{
+ "length_bp_cells": 351,
+ "length_bp_m": 35.1,
+ "stem_head_x_max": 370,
+ "sternpost_head_x_min": 20,
+ "keel_cells_z0": [
+  60,
+  336
+ ],
+ "keel_length_m": 27.7,
+ "hull_x_range": [
+  20,
+  370
+ ],
+ "beam_cells": 47,
+ "beam_m": 4.7,
+ "waterline_z": 10,
+ "draught_m": 1.1,
+ "waterline_length_m": 31.7,
+ "waterline_beam_m": 4.3,
+ "displacement_t": 65.9,
+ "block_coefficient": 0.429,
+ "sheer_mid_z": 18.0,
+ "depth_keel_to_deck_edge_m": 1.9,
+ "depth_keel_top_to_deck_edge_m": 1.7,
+ "freeboard_mid_m": 0.8,
+ "length_beam_ratio": 7.47,
+ "cells": 34328,
+ "colors": {
+  "36": 5016,
+  "141": 15373,
+  "196": 1386,
+  "218": 11867,
+  "244": 686
+ },
+ "half_breadth_table": {
+  "20": {
+   "3": null,
+   "6": null,
+   "10": null,
+   "18": null
+  },
+  "40": {
+   "3": null,
+   "6": null,
+   "10": null,
+   "18": 6
+  },
+  "60": {
+   "3": 1,
+   "6": 1,
+   "10": 2,
+   "18": 10
+  },
+  "80": {
+   "3": 1,
+   "6": 1,
+   "10": 7,
+   "18": 13
+  },
+  "100": {
+   "3": 1,
+   "6": 6,
+   "10": 11,
+   "18": 16
+  },
+  "120": {
+   "3": 1,
+   "6": 11,
+   "10": 15,
+   "18": 18
+  },
+  "140": {
+   "3": 9,
+   "6": 15,
+   "10": 18,
+   "18": 20
+  },
+  "160": {
+   "3": 13,
+   "6": 17,
+   "10": 20,
+   "18": 22
+  },
+  "180": {
+   "3": 14,
+   "6": 18,
+   "10": 21,
+   "18": 23
+  },
+  "200": {
+   "3": 14,
+   "6": 18,
+   "10": 21,
+   "18": 23
+  },
+  "220": {
+   "3": 14,
+   "6": 18,
+   "10": 21,
+   "18": 23
+  },
+  "240": {
+   "3": 14,
+   "6": 18,
+   "10": 21,
+   "18": 23
+  },
+  "260": {
+   "3": 13,
+   "6": 18,
+   "10": 21,
+   "18": 22
+  },
+  "280": {
+   "3": 9,
+   "6": 17,
+   "10": 20,
+   "18": 22
+  },
+  "300": {
+   "3": 1,
+   "6": 13,
+   "10": 18,
+   "18": 21
+  },
+  "320": {
+   "3": 1,
+   "6": 7,
+   "10": 13,
+   "18": 19
+  },
+  "340": {
+   "3": 1,
+   "6": 1,
+   "10": 7,
+   "18": 15
+  },
+  "360": {
+   "3": null,
+   "6": null,
+   "10": null,
+   "18": 8
+  }
+ },
+ "source_checks": {
+  "length stem-sternpost (m)": {
+   "source": 35.08,
+   "work": 35.1,
+   "unit": "m",
+   "src": "JAL 轉引 Dortières 108 pieds"
+  },
+  "beam (m)": {
+   "source": 4.68,
+   "work": 4.7,
+   "unit": "m",
+   "src": "JAL 轉引 Dortières 14 pieds 5 pouces"
+  },
+  "creux keel top-rail (m)": {
+   "source": 1.705,
+   "work": 1.7,
+   "unit": "m",
+   "src": "JAL 轉引 Dortières 5 pieds 3 pouces"
+  },
+  "keel length (m)": {
+   "source": 26.96,
+   "work": 27.7,
+   "unit": "m",
+   "src": "FUR p.26 龍骨 146 ÷ p.19 船長 190 ＝ 0.768 × 35.1；作品讀的是 z 0 那一層（多算艏柱圓弧最底下 6 格、艉柱圓弧 1 格，格數頭尾都算 ⇒ 27.7），直的那段 61 → 330 ＝ 26.9"
+  },
+  "FUR V line (bow deck 16/25)": {
+   "x": 344,
+   "z": 18,
+   "source_ratio": 0.64,
+   "work_ratio": 0.644,
+   "work_width_m": 2.9,
+   "mid_width_m": 4.5,
+   "src": "FUR p.19：船首尖 H 往後 14½ palmi（0.076 L ⇒ 艏柱頂往後 27 格）的 V 線甲板寬 16 palmi ＝ 最大寬 25 的 0.64；Giogo di Proda 放在這裡"
+  },
+  "FUR X station (poop start 13.25/25)": {
+   "x": 64,
+   "z": 20,
+   "source_ratio": 0.53,
+   "work_ratio": 0.511,
+   "work_width_m": 2.3,
+   "mid_width_m": 4.5,
+   "src": "FUR p.20、p.23：X 站寬 13¼ palmi ＝ 0.53，Poppa 從這裡開始、Giogo della Poppa 放在這裡 ⇒ 對本船舷外槳架的後端 x 64"
+  },
+  "FUR A-B stern end (5/25)": {
+   "x": 25,
+   "z": 25,
+   "source_ratio": 0.2,
+   "work_ratio": 0.2,
+   "work_width_m": 0.9,
+   "mid_width_m": 4.5,
+   "src": "FUR p.20：船尾最後一根 forchaza 上緣 A–B 寬 5 palmi ＝ 0.2"
+  }
+ },
+ "lists": [
+  {
+   "file": "masks/hull/hull_01.vox.txt",
+   "cells": 34328,
+   "sha256": "4a90ad8267402ecbed423b19ba8dda4022cd9e02cf3b629c35a7a91df846bcd6"
+  }
+ ]
+}

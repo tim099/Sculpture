@@ -1,0 +1,166 @@
+{
+ "probe": null,
+ "room": {
+  "cells": 1036,
+  "x": [
+   282,
+   303
+  ],
+  "y": [
+   113,
+   127
+  ],
+  "floor_z": [
+   5,
+   7
+  ],
+  "inner_air": 2834,
+  "door_cells": 30,
+  "overlap_ship": 0,
+  "interior_height_m": [
+   0.9,
+   1.2
+  ],
+  "inner_reaches_outside": true,
+  "mirror_diff": 0
+ },
+ "barrels": [
+  {
+   "name": "桶-001",
+   "bbox": [
+    286.3,
+    118.3,
+    7.0,
+    290.7,
+    122.7,
+    12.4
+   ],
+   "cells_hit": 0,
+   "inside_room": true
+  },
+  {
+   "name": "桶-002",
+   "bbox": [
+    294.3,
+    118.3,
+    7.0,
+    298.7,
+    122.7,
+    12.4
+   ],
+   "cells_hit": 0,
+   "inside_room": true
+  }
+ ],
+ "lantern": {
+  "bbox": [
+   20.75,
+   116.75,
+   62.0,
+   28.25,
+   124.25,
+   80.0
+  ],
+  "cells_hit": 0,
+  "on_pole_top": true
+ },
+ "hatch": {
+  "coaming_top_z": 23,
+  "at": [
+   57.02,
+   116.0,
+   24.0
+  ],
+  "scale": [
+   0.2918,
+   0.6923,
+   0.5
+  ],
+  "bbox": [
+   57.02,
+   116.0,
+   24.0,
+   61.98,
+   125.0,
+   25.5
+  ],
+  "corner_hits": 0,
+  "opening_cells_under_lid": 37,
+  "hinge_world": [
+   [
+    57.02,
+    116.0,
+    24.0
+   ],
+   [
+    61.689,
+    116.0,
+    24.0
+   ]
+  ],
+  "neighbours_x": [
+   [
+    56,
+    120,
+    25
+   ],
+   [
+    62,
+    120,
+    24
+   ]
+  ]
+ },
+ "structure": {
+  "components": 1,
+  "cavities": 0,
+  "cavity_cells": 0
+ },
+ "game_pickup": {
+  "zr": [
+   18,
+   31
+  ],
+  "mag_box_x_from_barrels": [
+   286.3,
+   298.7
+  ],
+  "search_from_x": {
+   "fore": 315,
+   "aft": 270
+  },
+  "stations": {
+   "fore": [
+    327,
+    126.5,
+    26
+   ],
+   "aft": [
+    268,
+    126.5,
+    19
+   ]
+  },
+  "fore_margin_to_8l_box_y_cells": 0.25,
+  "fore_to_8l_m": 1.6,
+  "aft_to_8l_m": 7.1
+ },
+ "anchors": {
+  "blast": [
+   292,
+   120,
+   12
+  ],
+  "door": [
+   282,
+   120,
+   6
+  ]
+ },
+ "anchor_blast_is_air": true,
+ "problems": 0,
+ "sha256": {
+  "masks/magazine/room.vox.txt": "77ddd3eeae984489051b788ed3f5cc3d54ef8d6d8cadfd43a493b8bbb4de349b",
+  "magazine_placement.json": "12ca22b04999d2e0843a518727f9131f45525060c2e7aaa58d4347b6e9d4481e"
+ }
+}

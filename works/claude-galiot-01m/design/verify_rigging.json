@@ -1,0 +1,174 @@
+{
+ "probe": null,
+ "anchors": 7,
+ "ropes": 6,
+ "sails": 2,
+ "head_anchor": "jackstay-36",
+ "sail_sides_m": {
+  "luff": 28.71,
+  "leech": 23.55,
+  "foot": 16.51
+ },
+ "sail_sides_design_m": {
+  "luff": 28.98,
+  "leech": 23.76,
+  "foot": 16.66
+ },
+ "clew_above_deck_m": 2.3,
+ "sail_plane": {
+  "main-lateen": {
+   "corners": [
+    [
+     335.5,
+     116.5,
+     99.5
+    ],
+    [
+     100.5,
+     116.5,
+     264.5
+    ],
+    [
+     180.4,
+     116.5,
+     43.0
+    ]
+   ],
+   "min_dist_to_ship_cells": 3.0,
+   "samples_in_yard_cells": 108,
+   "area_m2": 194.34
+  },
+  "pennant": {
+   "corners": [
+    [
+     78.5,
+     116.5,
+     279.5
+    ],
+    [
+     118.5,
+     116.5,
+     279.0
+    ],
+    [
+     86.5,
+     116.5,
+     274.5
+    ]
+   ],
+   "min_dist_to_ship_cells": 150.51,
+   "samples_in_yard_cells": 199,
+   "area_m2": 0.98
+  }
+ },
+ "rope_ends": {
+  "main-shroud-S1": {
+   "from": [
+    232.5,
+    121.5,
+    165.5
+   ],
+   "to": [
+    208.5,
+    143.5,
+    18.5
+   ],
+   "len_m": 15.06,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 4
+  },
+  "main-shroud-S2": {
+   "from": [
+    232.5,
+    121.5,
+    165.5
+   ],
+   "to": [
+    221.5,
+    143.5,
+    18.5
+   ],
+   "len_m": 14.9,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 3
+  },
+  "main-shroud-S3": {
+   "from": [
+    232.5,
+    121.5,
+    165.5
+   ],
+   "to": [
+    234.5,
+    143.5,
+    18.5
+   ],
+   "len_m": 14.87,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 3
+  },
+  "main-lateen.sheet-P": {
+   "from": [
+    180.4,
+    116.5,
+    43.0
+   ],
+   "to": [
+    151.5,
+    99.5,
+    18.5
+   ],
+   "len_m": 4.15,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1
+  },
+  "main-lateen.sheet-S": {
+   "from": [
+    180.4,
+    116.5,
+    43.0
+   ],
+   "to": [
+    151.5,
+    141.5,
+    18.5
+   ],
+   "len_m": 4.54,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 0
+  },
+  "main-lateen.tack": {
+   "from": [
+    335.5,
+    116.5,
+    99.5
+   ],
+   "to": [
+    327.5,
+    114.5,
+    25.5
+   ],
+   "len_m": 7.45,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1
+  }
+ },
+ "rope_feet_on_bench": [],
+ "sail_sets": {
+  "收帆": [
+   "main-lateen"
+  ],
+  "戰鬥帆": [
+   "main-lateen"
+  ],
+  "滿帆": [
+   "main-lateen"
+  ]
+ },
+ "ropes_through_flat_sail": {},
+ "problems": 0,
+ "sha256": {
+  "rig_plan.json": "37d364d984ac7dd4301f289badcc78593129e48d58d55a70328c95e8ea17905a",
+  "rig_meta.tsv": "53efbc5ef3c03bc7fff5b43b431259665b7a8ce86a70a2e50dc14d29c817b33e"
+ }
+}

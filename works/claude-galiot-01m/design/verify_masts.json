@@ -1,0 +1,251 @@
+{
+ "probe": null,
+ "mast_axis": [
+  232.5,
+  120.5
+ ],
+ "r": 1.5,
+ "top_z": 179,
+ "mast": {
+  "cells": 1641,
+  "components_6": 1,
+  "z": [
+   2,
+   178
+  ],
+  "length_m": 17.7,
+  "heel_z_by_column": {
+   "-1,-1": 3,
+   "-1,0": 2,
+   "-1,1": 3,
+   "0,-1": 3,
+   "0,0": 2,
+   "0,1": 3,
+   "1,-1": 3,
+   "1,0": 2,
+   "1,1": 3
+  },
+  "section_cells": 9,
+  "section_y": [
+   119,
+   121
+  ],
+  "mirror_diff": 0,
+  "colours": {
+   "36": 4,
+   "177": 1622,
+   "244": 15
+  },
+  "overlap_hull": 0
+ },
+ "deck_hole": {
+  "cells": 75,
+  "colours": {
+   "136": 3,
+   "141": 45,
+   "177": 27
+  },
+  "z": [
+   17,
+   25
+  ],
+  "filled_by_mast": 75
+ },
+ "overlap": {
+  "mast_ship": 0,
+  "mast_awning": 0
+ },
+ "ship_with_mast": {
+  "cells": 73948,
+  "components_6": 1,
+  "cavities": 0
+ },
+ "yard": {
+  "size": [
+   265,
+   7,
+   187
+  ],
+  "cells": 1645,
+  "components_6": 1,
+  "anchors": 42,
+  "colours": {
+   "36": 58,
+   "173": 1587
+  },
+  "overlap_world": 0,
+  "min_gap_cells": 1.0,
+  "world_x": [
+   77,
+   336
+  ],
+  "world_y": [
+   115,
+   117
+  ],
+  "world_z": [
+   98,
+   279
+  ],
+  "pivot_world": [
+   232,
+   116,
+   171
+  ],
+  "fore_world": [
+   335,
+   116,
+   99
+  ],
+  "peak_world": [
+   78,
+   116,
+   279
+  ],
+  "sling_world": [
+   232,
+   116,
+   172
+  ],
+  "mast_cells_in_shipcheck_band": 279,
+  "band_z": [
+   131,
+   161
+  ],
+  "empty_cells_between_yard_and_mast_y": 1,
+  "lateen_swing_deg": 14.0,
+  "inside_assembly_box": true,
+  "pivot_inside_mast_frame": true
+ },
+ "nav": {
+  "game_sampling": "NAV_C 2, x0 16 (hx0 20 - 4), y even; 8-neighbour, step <= 3, head 12",
+  "before_mast": {
+   "x0": 16,
+   "points": 3104,
+   "groups": 12,
+   "main_points": 2682,
+   "groups_ge_minreg": 12,
+   "others_ge_minreg": [
+    52,
+    47,
+    47,
+    43,
+    43,
+    36,
+    36,
+    35
+   ]
+  },
+  "after_mast": {
+   "x0": 16,
+   "points": 3103,
+   "groups": 12,
+   "main_points": 2681,
+   "groups_ge_minreg": 12,
+   "others_ge_minreg": [
+    52,
+    47,
+    47,
+    43,
+    43,
+    36,
+    36,
+    35
+   ]
+  },
+  "points_lost": 1,
+  "probes_after": {
+   "corsia_aft_of_mast": {
+    "sample": [
+     226,
+     120
+    ],
+    "z": 26,
+    "in_main_group": true
+   },
+   "corsia_fwd_of_mast": {
+    "sample": [
+     238,
+     120
+    ],
+    "z": 26,
+    "in_main_group": true
+   },
+   "corsia_beside_mast_P": {
+    "sample": [
+     232,
+     118
+    ],
+    "z": 26,
+    "in_main_group": true
+   },
+   "corsia_beside_mast_S": {
+    "sample": [
+     232,
+     122
+    ],
+    "z": 26,
+    "in_main_group": true
+   },
+   "corsia_aft_end": {
+    "sample": [
+     66,
+     120
+    ],
+    "z": 28,
+    "in_main_group": true
+   },
+   "corsia_fwd_end": {
+    "sample": [
+     324,
+     120
+    ],
+    "z": 25,
+    "in_main_group": true
+   },
+   "bow_platform": {
+    "sample": [
+     340,
+     120
+    ],
+    "z": 26,
+    "in_main_group": true
+   },
+   "poop": {
+    "sample": [
+     40,
+     120
+    ],
+    "z": 27,
+    "in_main_group": true
+   }
+  },
+  "probes_before": {
+   "corsia_aft_of_mast": true,
+   "corsia_fwd_of_mast": true,
+   "corsia_beside_mast_P": true,
+   "corsia_beside_mast_S": true,
+   "corsia_aft_end": true,
+   "corsia_fwd_end": true,
+   "bow_platform": true,
+   "poop": true
+  },
+  "corsia_only": {
+   "y": [
+    118,
+    122
+   ],
+   "points": 509,
+   "groups_ge_minreg": 2,
+   "main_points": 491,
+   "aft_end_and_fwd_end_connected": true,
+   "fore_and_aft_of_mast_connected": true
+  }
+ },
+ "problems": 0,
+ "sha256": {
+  "masts/main": "a0c3e7904541190d5881983275565bbd7891446127e3e1d5044914b543dc7aa0",
+  "masts/deck_hole": "14de54a5e0be59ae2f54d269075fda7d69e0b8e266ca017f2d684e99efa1a38b",
+  "yards/lateen-main": "39216b4cda8c38c7924aca2f66978b50ee28f0ff6d886462fd6a7bf3ff50234f"
+ }
+}

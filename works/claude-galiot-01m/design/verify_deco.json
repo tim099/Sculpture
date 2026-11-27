@@ -1,0 +1,75 @@
+{
+ "cells": {
+  "spur": 686,
+  "poop": 1254,
+  "awning": 1614
+ },
+ "overlap": {
+  "spur": 0,
+  "poop": 0,
+  "awning": 0,
+  "poop_awning": 0
+ },
+ "components": {
+  "spur": 1,
+  "poop": 2,
+  "awning": 1
+ },
+ "mirror_diff": {
+  "spur": 0,
+  "poop": 0,
+  "awning": 0
+ },
+ "cells_hull_deck_bow_spur_poop": {
+  "cells": 72382,
+  "components": 1,
+  "cavity_cells": 0
+ },
+ "awning_cells_touching_ship": 8,
+ "paint": {
+  "cells": 28,
+  "colors": {
+   "196": 2,
+   "244": 26
+  },
+  "skipped": [],
+  "hull_mirror_diff_after": 0,
+  "all_outer": true,
+  "all_were_black": true
+ },
+ "spur_x": [
+  366,
+  413
+ ],
+ "lantern": {
+  "pole_top_z": 61,
+  "lamp_at": [
+   24,
+   120,
+   62
+  ],
+  "lamp_air": true
+ },
+ "lists": [
+  {
+   "file": "masks/deco/spur.vox.txt",
+   "cells": 686,
+   "sha256": "ebcba94442b4e19691b892eaf65caad394df75f3c6b6f2a2b3dfc91596d2bf52"
+  },
+  {
+   "file": "masks/deco/poop.vox.txt",
+   "cells": 1254,
+   "sha256": "826adcf4c819d0075b7ff9265a64f7e3b76c7016a5a88206605c23d6a342ad0f"
+  },
+  {
+   "file": "masks/deco/awning.vox.txt",
+   "cells": 1614,
+   "sha256": "c6b90f5f629700ca66b40b820c776ce1c51b011bc1e49cd433e21355d5190eee"
+  },
+  {
+   "file": "masks/step6/hull_paint.vox.txt",
+   "cells": 28,
+   "sha256": "5fea13bc8eec27bbfbc06d3dd1b13c70b8c0f8b64e6a7d4813aaf889479be3bc"
+  }
+ ]
+}

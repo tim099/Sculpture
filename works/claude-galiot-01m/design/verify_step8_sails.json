@@ -1,0 +1,67 @@
+{
+ "wind": "default",
+ "sails": {
+  "main-lateen": {
+   "vertices": 650,
+   "vertices_inside_solid": {
+    "yard-main": 50
+   },
+   "min_dist_cells": 0.05,
+   "nearest_part": "yard-main",
+   "x_range": [
+    100.5,
+    335.5
+   ],
+   "y_range": [
+    85.3,
+    118.1
+   ],
+   "z_range": [
+    43.5,
+    264.5
+   ]
+  },
+  "pennant": {
+   "vertices": 156,
+   "vertices_inside_solid": {
+    "yard-main": 25
+   },
+   "min_dist_cells": 0.05,
+   "nearest_part": "yard-main",
+   "x_range": [
+    78.5,
+    108.4
+   ],
+   "y_range": [
+    108.5,
+    116.5
+   ],
+   "z_range": [
+    253.3,
+    279.5
+   ]
+  }
+ },
+ "min_dist_by_part": {
+  "main-lateen": {
+   "awning(deco)": 115.73,
+   "bow": 62.39,
+   "deck": 18.19,
+   "hull": 30.62,
+   "mast-main": 4.05,
+   "poop": 123.79,
+   "spur": 79.31,
+   "yard-main": 0.05
+  },
+  "pennant": {
+   "awning(deco)": 215.98,
+   "bow": 312.61,
+   "deck": 228.24,
+   "hull": 230.34,
+   "mast-main": 143.46,
+   "poop": 208.25,
+   "spur": 343.67,
+   "yard-main": 0.05
+  }
+ }
+}

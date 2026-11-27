@@ -1,0 +1,138 @@
+{
+ "hosts": {
+  "magazine": "claude-galiot-01m-magazine",
+  "poop": "claude-galiot-01m-poop",
+  "deck": "claude-galiot-01m-deck-main"
+ },
+ "link": {
+  "name": "彈藥庫",
+  "parent": "",
+  "meta": {
+   "kind": "magazine",
+   "pos": "fore",
+   "powder_lb": 200,
+   "id": "magazine-1"
+  }
+ },
+ "anchors": {
+  "blast": [
+   292,
+   120,
+   12
+  ],
+  "door": [
+   282,
+   120,
+   6
+  ]
+ },
+ "models": [
+  {
+   "host": "magazine",
+   "name": "桶-001",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    288.5,
+    120.5,
+    7.0
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100,
+    "id": "powder-1"
+   }
+  },
+  {
+   "host": "magazine",
+   "name": "桶-002",
+   "work": "basecamp-frigate-constitution-01m-powder-barrel",
+   "at": [
+    296.5,
+    120.5,
+    7.0
+   ],
+   "pivot": [
+    11,
+    11,
+    0
+   ],
+   "scale": 0.2,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "powder",
+    "powder_lb": 100,
+    "id": "powder-2"
+   }
+  },
+  {
+   "host": "poop",
+   "name": "艉燈",
+   "work": "gura-tridente-01m-lantern",
+   "at": [
+    24.5,
+    120.5,
+    62.0
+   ],
+   "pivot": [
+    8.5,
+    8.5,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "light",
+    "id": "light-1"
+   }
+  },
+  {
+   "host": "deck",
+   "name": "艙蓋-艙口",
+   "work": "meadow-monitor-01m-hatch",
+   "at": [
+    57.02,
+    116.0,
+    24.0
+   ],
+   "pivot": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.2918,
+    0.6923,
+    0.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "meta": {
+    "kind": "door",
+    "open": "up",
+    "id": "door-1"
+   }
+  }
+ ]
+}

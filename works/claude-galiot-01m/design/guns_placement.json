@@ -1,0 +1,149 @@
+{
+ "hosts": {
+  "bow": "claude-galiot-01m-bow"
+ },
+ "models": [
+  {
+   "host": "bow",
+   "name": "8磅砲-F01",
+   "work": "ridge-two-centurion-01m-gun-8l",
+   "at": [
+    328,
+    120.5,
+    26.0
+   ],
+   "pivot": [
+    7.5,
+    0,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    -90
+   ],
+   "meta": {
+    "kind": "gun",
+    "gun": "8l",
+    "deck": "main",
+    "id": "gun-1",
+    "port": "bow"
+   }
+  },
+  {
+   "host": "bow",
+   "at": [
+    338.5,
+    130.5,
+    34.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "name": "迴旋砲-F02",
+   "work": "apex-one-reale-01m-gun-pierrier",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "deck": "main",
+    "id": "gun-2",
+    "mount": "turret",
+    "arc": "-90,40",
+    "rate": 45,
+    "port": "bow"
+   }
+  },
+  {
+   "host": "bow",
+   "at": [
+    338.5,
+    130.5,
+    34.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "name": "迴旋砲-F02座",
+   "work": "apex-one-reale-01m-gun-pierrier-mount",
+   "meta": {
+    "kind": "gunmount",
+    "id": "gunmount-2",
+    "mount_of": "gun-2"
+   }
+  },
+  {
+   "host": "bow",
+   "at": [
+    338.5,
+    110.5,
+    34.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "name": "迴旋砲-F03",
+   "work": "apex-one-reale-01m-gun-pierrier",
+   "meta": {
+    "kind": "gun",
+    "gun": "pierrier",
+    "deck": "main",
+    "id": "gun-3",
+    "mount": "turret",
+    "arc": "-40,90",
+    "rate": 45,
+    "port": "bow"
+   }
+  },
+  {
+   "host": "bow",
+   "at": [
+    338.5,
+    110.5,
+    34.0
+   ],
+   "pivot": [
+    5.5,
+    18.5,
+    0
+   ],
+   "scale": 0.5,
+   "rotate": [
+    0,
+    0,
+    180
+   ],
+   "name": "迴旋砲-F03座",
+   "work": "apex-one-reale-01m-gun-pierrier-mount",
+   "meta": {
+    "kind": "gunmount",
+    "id": "gunmount-3",
+    "mount_of": "gun-3"
+   }
+  }
+ ]
+}

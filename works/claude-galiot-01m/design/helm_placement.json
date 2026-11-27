@@ -1,0 +1,156 @@
+{
+ "rudder": {
+  "work": "claude-galiot-01m-rudder",
+  "title": "蠍子號 舵（艉柱舵：舵葉＋舵頭）",
+  "model": "舵",
+  "at": [
+   44.5,
+   120.5,
+   3.0
+  ],
+  "pivot": [
+   44.5,
+   120.5,
+   3.0
+  ],
+  "anchors": {
+   "stock-top": [
+    6,
+    120,
+    40
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "max_deg": 35,
+   "turn_axis": "hinge",
+   "id": "rudder-1",
+   "hinge_x": 44.5,
+   "hinge_y": 120.5,
+   "hinge_z": 3.0,
+   "axis_x": -0.7071,
+   "axis_y": 0.0,
+   "axis_z": 0.7071,
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  }
+ },
+ "tiller": {
+  "work": "claude-galiot-01m-tiller",
+  "title": "蠍子號 舵柄",
+  "model": "舵柄",
+  "at": [
+   44.5,
+   120.5,
+   3.0
+  ],
+  "pivot": [
+   44.5,
+   120.5,
+   3.0
+  ],
+  "anchors": {
+   "tiller-end": [
+    22,
+    120,
+    40
+   ]
+  },
+  "meta": {
+   "kind": "tiller",
+   "id": "tiller-1",
+   "spin_pivot_x": 44.5,
+   "spin_pivot_y": 120.5,
+   "spin_pivot_z": 3.0,
+   "spin_axis_x": -0.7071,
+   "spin_axis_y": 0.0,
+   "spin_axis_z": 0.7071,
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  }
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "bow",
+   "work": "kotoko-fusta-01m-anchor-grapnel",
+   "at": [
+    332.5,
+    142.0,
+    29.98
+   ],
+   "pivot": [
+    9.5,
+    9.5,
+    24
+   ],
+   "scale": 0.6,
+   "rotate": [
+    0,
+    0,
+    45
+   ],
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower",
+    "id": "anchor-1"
+   }
+  },
+  {
+   "name": "錨-P",
+   "host": "bow",
+   "work": "kotoko-fusta-01m-anchor-grapnel",
+   "at": [
+    332.5,
+    98.5,
+    29.98
+   ],
+   "pivot": [
+    9.5,
+    9.5,
+    24
+   ],
+   "scale": 0.6,
+   "rotate": [
+    0,
+    0,
+    -45
+   ],
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower",
+    "id": "anchor-2"
+   }
+  }
+ ],
+ "hosts": {
+  "bow": "claude-galiot-01m-bow",
+  "poop": "claude-galiot-01m-poop"
+ },
+ "hull_anchors": {
+  "hawse-S": [
+   332,
+   138,
+   29
+  ],
+  "hawse-P": [
+   332,
+   102,
+   29
+  ]
+ },
+ "strap": {
+  "host": "poop",
+  "cells": 48
+ },
+ "cathead": {
+  "host": "bow",
+  "cells": 10
+ }
+}

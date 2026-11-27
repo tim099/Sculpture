@@ -1,0 +1,2323 @@
+{
+ "apostis": {
+  "cells": 3508,
+  "overlap_ship": 0,
+  "clipped_by_layout": 96,
+  "mirror_diff": 0
+ },
+ "components": {
+  "main": {
+   "work": "claude-galiot-01m-oar",
+   "seat": [
+    3,
+    22,
+    15
+   ],
+   "seat_dy": 15,
+   "rowers": 3,
+   "ref_bench": 111
+  },
+  "aft": {
+   "work": "claude-galiot-01m-oar-aft",
+   "seat": [
+    3,
+    11,
+    12
+   ],
+   "seat_dy": 9,
+   "rowers": 2,
+   "ref_bench": 72
+  }
+ },
+ "component": {
+  "size": [
+   7,
+   166,
+   47
+  ],
+  "cells": 683,
+  "anchors": {
+   "pivot": [
+    3,
+    52,
+    29
+   ],
+   "blade": [
+    3,
+    164,
+    4
+   ],
+   "seat": [
+    3,
+    22,
+    15
+   ]
+  },
+  "length_m": 8.2,
+  "inboard_m": 2.6,
+  "outboard_m": 5.6
+ },
+ "per_side": {
+  "S": 20,
+  "P": 20
+ },
+ "total_hits": 0,
+ "model_hits": 0,
+ "oar_oar_shared_cells": 0,
+ "rowers": {
+  "want": 114,
+  "per_oar": {
+   "1": 0,
+   "2": 6,
+   "3": 34
+  },
+  "placed": 114,
+  "on_deck": 114,
+  "moved_max": 0
+ },
+ "blade_above_water_m_range": [
+  0.0,
+  0.0
+ ],
+ "rot_x_range": [
+  -5.393,
+  -1.897
+ ],
+ "thole_gap_min_cells": 0.5,
+ "hang_min_cells_near_pivot": 89,
+ "rope_min_cells": 1.16,
+ "problems": 0,
+ "sha256": {
+  "masks/oars/apostis.vox.txt": "a93394f5dadf536e5ecb4053a4837b9d953e3f6401dd4ff7d0a3d4e1227179f4",
+  "masks/oars/oar.vox.txt": "7ce3caedbb85116583c39dd237490559b8cf9ad563a35cab60e927de6ae4f07d",
+  "oars_placement.json": "5ab909179d0008d913b4c1f5f2542191c400168238af33ff65a4ede0f59782f8"
+ },
+ "oars": {
+  "oar-S01": {
+   "bench_x": 72,
+   "component": "claude-galiot-01m-oar-aft",
+   "at": [
+    68.5,
+    150.5,
+    27.0
+   ],
+   "rot_x": -5.393,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    70,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    68.5,
+    129.29,
+    20.46
+   ],
+   "rowers": [
+    {
+     "at": [
+      68,
+      129,
+      21
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      68,
+      123,
+      22
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 2,
+   "hull_cells_near_pivot": 89,
+   "rope_min_cells": 83.2,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S02": {
+   "bench_x": 85,
+   "component": "claude-galiot-01m-oar-aft",
+   "at": [
+    81.5,
+    150.5,
+    26.0
+   ],
+   "rot_x": -4.22,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    83,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    81.5,
+    129.43,
+    19.03
+   ],
+   "rowers": [
+    {
+     "at": [
+      81,
+      129,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      81,
+      123,
+      21
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 2,
+   "hull_cells_near_pivot": 99,
+   "rope_min_cells": 70.18,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S03": {
+   "bench_x": 98,
+   "component": "claude-galiot-01m-oar-aft",
+   "at": [
+    94.5,
+    150.5,
+    25.0
+   ],
+   "rot_x": -3.055,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": -0.0,
+   "thole": [
+    96,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    94.5,
+    129.58,
+    17.6
+   ],
+   "rowers": [
+    {
+     "at": [
+      94,
+      129,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      94,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 2,
+   "hull_cells_near_pivot": 99,
+   "rope_min_cells": 57.15,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S04": {
+   "bench_x": 111,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    107.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    109,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    107.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      107,
+      135,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      107,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      107,
+      123,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 100,
+   "rope_min_cells": 44.14,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S05": {
+   "bench_x": 124,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    120.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    122,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    120.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      120,
+      135,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      120,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      120,
+      123,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 101,
+   "rope_min_cells": 31.41,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S06": {
+   "bench_x": 137,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    133.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    135,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    133.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      133,
+      135,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      133,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      133,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 101,
+   "rope_min_cells": 19.05,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S07": {
+   "bench_x": 150,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    146.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    148,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    146.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      146,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      146,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      146,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 99,
+   "rope_min_cells": 8.76,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S08": {
+   "bench_x": 163,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    159.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    161,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    159.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      159,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      159,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      159,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 104,
+   "rope_min_cells": 2.13,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S09": {
+   "bench_x": 176,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    172.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    174,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    172.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      172,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      172,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      172,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 117,
+   "rope_min_cells": 3.48,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S10": {
+   "bench_x": 189,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    185.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    187,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    185.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      185,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      185,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      185,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 117,
+   "rope_min_cells": 12.74,
+   "rope_min_name": "main-lateen.sheet-S"
+  },
+  "oar-S11": {
+   "bench_x": 202,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    198.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    200,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    198.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      198,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      198,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      198,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 117,
+   "rope_min_cells": 10.58,
+   "rope_min_name": "main-shroud-S1"
+  },
+  "oar-S12": {
+   "bench_x": 215,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    211.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    213,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    211.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      211,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      211,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      211,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 117,
+   "rope_min_cells": 1.16,
+   "rope_min_name": "main-shroud-S1"
+  },
+  "oar-S13": {
+   "bench_x": 228,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    224.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    226,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    224.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      224,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      224,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      224,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 117,
+   "rope_min_cells": 1.88,
+   "rope_min_name": "main-shroud-S2"
+  },
+  "oar-S14": {
+   "bench_x": 241,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    237.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    239,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    237.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      237,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      237,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      237,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 117,
+   "rope_min_cells": 2.62,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-S15": {
+   "bench_x": 254,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    250.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    252,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    250.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      250,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      250,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      250,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 117,
+   "rope_min_cells": 15.61,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-S16": {
+   "bench_x": 267,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    263.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    265,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    263.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      263,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      263,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      263,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 104,
+   "rope_min_cells": 28.6,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-S17": {
+   "bench_x": 280,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    276.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    278,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    276.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      276,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      276,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      276,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 101,
+   "rope_min_cells": 41.6,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-S18": {
+   "bench_x": 293,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    289.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    291,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    289.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      289,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      289,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      289,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 101,
+   "rope_min_cells": 39.2,
+   "rope_min_name": "main-lateen.tack"
+  },
+  "oar-S19": {
+   "bench_x": 306,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    302.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    304,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    302.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      302,
+      135,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      302,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      302,
+      123,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 99,
+   "rope_min_cells": 26.92,
+   "rope_min_name": "main-lateen.tack"
+  },
+  "oar-S20": {
+   "bench_x": 319,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    315.5,
+    150.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    317,
+    150
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    315.5,
+    135.28,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      315,
+      135,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      315,
+      129,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      315,
+      123,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 101,
+   "rope_min_cells": 15.69,
+   "rope_min_name": "main-lateen.tack"
+  },
+  "oar-P01": {
+   "bench_x": 72,
+   "component": "claude-galiot-01m-oar-aft",
+   "at": [
+    68.5,
+    90.5,
+    27.0
+   ],
+   "rot_x": -5.393,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    70,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    68.5,
+    111.71,
+    20.46
+   ],
+   "rowers": [
+    {
+     "at": [
+      68,
+      111,
+      21
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      68,
+      117,
+      22
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 2,
+   "hull_cells_near_pivot": 93,
+   "rope_min_cells": 83.2,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P02": {
+   "bench_x": 85,
+   "component": "claude-galiot-01m-oar-aft",
+   "at": [
+    81.5,
+    90.5,
+    26.0
+   ],
+   "rot_x": -4.22,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    83,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    81.5,
+    111.57,
+    19.03
+   ],
+   "rowers": [
+    {
+     "at": [
+      81,
+      111,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      81,
+      117,
+      21
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 2,
+   "hull_cells_near_pivot": 103,
+   "rope_min_cells": 70.18,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P03": {
+   "bench_x": 98,
+   "component": "claude-galiot-01m-oar-aft",
+   "at": [
+    94.5,
+    90.5,
+    25.0
+   ],
+   "rot_x": -3.055,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": -0.0,
+   "thole": [
+    96,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    94.5,
+    111.42,
+    17.6
+   ],
+   "rowers": [
+    {
+     "at": [
+      94,
+      111,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      94,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 2,
+   "hull_cells_near_pivot": 104,
+   "rope_min_cells": 57.15,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P04": {
+   "bench_x": 111,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    107.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    109,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    107.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      107,
+      105,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      107,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      107,
+      117,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 105,
+   "rope_min_cells": 44.14,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P05": {
+   "bench_x": 124,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    120.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    122,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    120.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      120,
+      105,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      120,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      120,
+      117,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 105,
+   "rope_min_cells": 31.41,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P06": {
+   "bench_x": 137,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    133.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    135,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    133.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      133,
+      105,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      133,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      133,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 105,
+   "rope_min_cells": 19.05,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P07": {
+   "bench_x": 150,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    146.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    148,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    146.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      146,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      146,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      146,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 111,
+   "rope_min_cells": 8.76,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P08": {
+   "bench_x": 163,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    159.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    161,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    159.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      159,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      159,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      159,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 153,
+   "rope_min_cells": 1.46,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P09": {
+   "bench_x": 176,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    172.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    174,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    172.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      172,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      172,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      172,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 167,
+   "rope_min_cells": 4.53,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P10": {
+   "bench_x": 189,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    185.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    187,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    185.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      185,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      185,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      185,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 167,
+   "rope_min_cells": 11.91,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P11": {
+   "bench_x": 202,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    198.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    200,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    198.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      198,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      198,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      198,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 167,
+   "rope_min_cells": 21.1,
+   "rope_min_name": "main-lateen.sheet-P"
+  },
+  "oar-P12": {
+   "bench_x": 215,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    211.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    213,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    211.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      211,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      211,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      211,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 167,
+   "rope_min_cells": 25.03,
+   "rope_min_name": "main-shroud-S1"
+  },
+  "oar-P13": {
+   "bench_x": 228,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    224.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    226,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    224.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      224,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      224,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      224,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 167,
+   "rope_min_cells": 25.06,
+   "rope_min_name": "main-shroud-S2"
+  },
+  "oar-P14": {
+   "bench_x": 241,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    237.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    239,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    237.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      237,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      237,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      237,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 167,
+   "rope_min_cells": 25.18,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-P15": {
+   "bench_x": 254,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    250.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    252,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    250.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      250,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      250,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      250,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 167,
+   "rope_min_cells": 29.56,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-P16": {
+   "bench_x": 267,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    263.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    265,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    263.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      263,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      263,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      263,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 154,
+   "rope_min_cells": 38.1,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-P17": {
+   "bench_x": 280,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    276.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    278,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    276.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      276,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      276,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      276,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 151,
+   "rope_min_cells": 48.65,
+   "rope_min_name": "main-shroud-S3"
+  },
+  "oar-P18": {
+   "bench_x": 293,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    289.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    291,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    289.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      289,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      289,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      289,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 127,
+   "rope_min_cells": 37.78,
+   "rope_min_name": "main-lateen.tack"
+  },
+  "oar-P19": {
+   "bench_x": 306,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    302.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    304,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    302.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      302,
+      105,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      302,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      302,
+      117,
+      20
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 103,
+   "rope_min_cells": 24.87,
+   "rope_min_name": "main-lateen.tack"
+  },
+  "oar-P20": {
+   "bench_x": 319,
+   "component": "claude-galiot-01m-oar",
+   "at": [
+    315.5,
+    90.5,
+    24.0
+   ],
+   "rot_x": -1.897,
+   "hits": 0,
+   "hit_cells": [],
+   "model_hits": [],
+   "blade_center_above_water_m": 0.0,
+   "thole": [
+    317,
+    90
+   ],
+   "thole_gap_cells": 0.5,
+   "seat_world": [
+    315.5,
+    105.72,
+    17.5
+   ],
+   "rowers": [
+    {
+     "at": [
+      315,
+      105,
+      18
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      315,
+      111,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    },
+    {
+     "at": [
+      315,
+      117,
+      19
+     ],
+     "moved": 0,
+     "on": "deck"
+    }
+   ],
+   "rowers_meta": 3,
+   "hull_cells_near_pivot": 105,
+   "rope_min_cells": 11.95,
+   "rope_min_name": "main-lateen.tack"
+  }
+ }
+}

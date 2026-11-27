@@ -1,0 +1,137 @@
+{
+ "cells": {
+  "deck_main": 34104,
+  "bow": 2010,
+  "poop": 1254
+ },
+ "colors": {
+  "deck_main": {
+   "104": 929,
+   "136": 1523,
+   "141": 6608,
+   "173": 2000,
+   "177": 23044
+  },
+  "bow": {
+   "36": 114,
+   "104": 226,
+   "177": 1584,
+   "196": 86
+  }
+ },
+ "overlap": {
+  "deck_hull": 0,
+  "bow_hull": 0,
+  "deck_bow": 0,
+  "poop_hull": 0,
+  "poop_deck": 0
+ },
+ "hull_deck_bow": {
+  "cells": 71696,
+  "components": 1,
+  "cavity_cells": 0,
+  "mirror_diff_cells": 0
+ },
+ "grating": {
+  "x": [
+   57,
+   61
+  ],
+  "half": 3,
+  "holes": 8
+ },
+ "floor": "25:26,27:29,31:29,32:28,37:28,38:27,41:27,42:28,44:28,45:27,52:27,53:26,56:26,57:23,60:23,61:22,70:22,71:21,81:21,82:20,96:20,97:19,131:19,132:20,311:20,312:19,325:19,326:26,352:26,353:20,360:20,361:19,364:19",
+ "walk": "62:25,64:25,65:28,70:28,71:27,81:27,82:26,96:26,97:25,131:25,132:26,311:26,312:25,325:25,326:26,352:26",
+ "walk_y": "118:122",
+ "corsia_top_to_platform_step": 1,
+ "nav": {
+  "groups": 5,
+  "cells": 11889,
+  "main_m2": 116.88,
+  "others_m2_top5": [
+   1.92,
+   0.07,
+   0.01,
+   0.01
+  ],
+  "others_over_1m2": 1
+ },
+ "probes": {
+  "corsia_mid": {
+   "at": [
+    195,
+    120,
+    26
+   ],
+   "in_main_group": true
+  },
+  "corsia_aft_step": {
+   "at": [
+    63,
+    120,
+    25
+   ],
+   "in_main_group": true
+  },
+  "bow_platform_mid": {
+   "at": [
+    339,
+    120,
+    26
+   ],
+   "in_main_group": true
+  },
+  "deck_beside_grating": {
+   "at": [
+    59,
+    126,
+    22
+   ],
+   "in_main_group": true
+  },
+  "poop_mid": {
+   "at": [
+    40,
+    120,
+    27
+   ],
+   "in_main_group": true
+  },
+  "gun_gun-1": {
+   "at": [
+    344,
+    120,
+    26
+   ],
+   "in_main_group": true
+  },
+  "gun_gun-2": {
+   "at": [
+    338,
+    129,
+    26
+   ],
+   "in_main_group": true
+  },
+  "gun_gun-3": {
+   "at": [
+    338,
+    111,
+    26
+   ],
+   "in_main_group": true
+  }
+ },
+ "lists": [
+  {
+   "file": "masks/decks/deck_main.vox.txt",
+   "cells": 34104,
+   "sha256": "9c2ebf49babae07f6cb95afe43150451a034cabf5843b66b98f32c7a80f0b03f"
+  },
+  {
+   "file": "masks/decks/bow.vox.txt",
+   "cells": 2010,
+   "sha256": "722a7e6360522a7b7521bdccc34c3b00a52bbdfda446c5429b5af3eea014c873"
+  }
+ ]
+}

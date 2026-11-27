@@ -1,0 +1,860 @@
+{
+ "title": "蠍子號（al-ʿAqrab）—— 1666 年的黎波里的加利奧特（galiot，單桅三角帆槳船）",
+ "title_en": "al-Aqrab (Tripoli galiot, 1666)",
+ "task": "TASK-0023（Paperclip FAR-92）",
+ "author": "Claude-Ojousama",
+ "date": "2026-11-23",
+ "name": {
+  "v": "蠍子號 al-ʿAqrab（العقرب）",
+  "src": "設計決定（FAR-87 規劃）：史料沒有留下的黎波里哪一艘 galiot 的名字"
+ },
+ "status": "步驟 3 v3（2026-11-23）：數字換成史料讀數、換算或設計決定（v1 全部是暫定）；v3 照 verifier3 兩輪改 src 與艉柱頂 41 → 39",
+ "sources": {
+  "R": "references/research_galiot_1666_2026-11-23.md（研究報告：三份子報告的整理；每一條的原文、頁碼、單位換算、可信度在裡面）",
+  "HAE": "Diego de Haedo《Topographia e historia general de Argel》Valladolid 1612（寫 1578–81 年的阿爾及爾），IA topographiaehist00ha：f15v galeota 每舷 14–24 bancos；f16r 每槳 3 人（船尾段常 4 人）；f16v 士兵 ＝ 2 × 每舷 bancos；f17r 不設 arrumbadas；f18r 1581 年 36 艘 galeota 15–24 bancos、中位數 20（雙峰：18 座 10 艘、22 座 11 艘）",
+  "DAN": "Pierre Dan《Histoire de Barbarie et de ses corsaires》Paris 1649，IA histoiredebarbar00danp：p.307–308 北非海盜的槳帆船只有一根桅、一門船首中線砲（canon de coursier）、沒有船首堡、船尾艙可拆；p.315 的黎波里 1618 年起改用帆船",
+  "FUR": "Joseph Furttenbach《Architectura Navalis》Ulm 1629，BSB bsb10862644：p.19–31 普通 galea 的尺寸（palmo ＝ 紐倫堡工尺的 10 吋 ≈ 0.2532 m）；p.52–57 桅、帆桁、槳；p.80 Galeotta（半艘 galea、每舷 15 槳各 2 人、corsia 2¼ palmi 寬且同高、船首 3 門砲、2 錨）",
+  "PAN": "Pantero Pantera《L'armata navale》Roma 1614，IA bub_gb_QWc4VQj-kqIC：p.47 主桅在離船首 1/3；p.48 北非的 galeotta 常跟普通 galea 一樣大、不設 rembate、不立前桅；p.148 galeotta 16–18 banchi 每槳 2 人、18–22 banchi 每槳 3 人",
+  "CRE": "Bartolomeo Crescentio《Nautica Mediterranea》Roma 1607（拿坡里 palmo 0.26367 m），IA nauticamediterra00cres：p.13–27 galea 的龍骨、telaro、corsia、槳座間距 5 palmi、槳 45½ palmi（舷內 14）、深度",
+  "FOU": "Georges Fournier《Hydrographie》Paris 1643，IA bub_gb_TpiRM6s3KmAC：p.49–50 galiote 16–25 bancs、每槳 3 人、只有主桅（Arbre de Maistre）、小砲；北非的 galère 常把船尾放低、只有一門中線砲。講的是一般 galiote，不是專講北非",
+  "DAS": "Dassié《L'architecture navale》Paris 1677，IA larchitecturenav00dass：p.10 同 Fournier（照抄 Fournier，跟 FOU 算同一個來源）；p.117–154 galère 的尺寸、桅、桁、砲（對比用）",
+  "JAL": "Auguste Jal《Glossaire nautique》Paris 1848（IA bub_gb_xZw_AAAAcAAJ）的 GALIOTE 條（p.760，verifier3 對過頁面圖）轉引 Dortières：「La Galiote à 20 rames」（OCR 的 70 是誤讀）長 108 pieds（35.08 m）、寬 14 pieds 5 pouces（4.68 m）、creux 5 pieds 3 pouces（1.705 m，Jal 自己寫 1m70）—— 這是法國約 1680 年、每槳 1 人的 galiote；同段寫北非的 galiote 25–26 bancs、單桅",
+  "AUB": "Aubin《Dictionnaire de Marine》Amsterdam 1702（IA bub_gb_KJ2Xb1rZUsEC，⚠ 只讀 OCR）：galiote 每舷 16 或 20 bancs、一根桅、2–3 門 pierriers",
+  "NOO": "Reinier Nooms〈Gezicht op Tripolis〉1662–68，Rijksmuseum SK-A-1398（公有領域）：港外一艘槳帆船，單桅、主桅在離船首 0.43 船身、桅高 0.47–0.49 船身、帆桁約 0.97 船身（研究子代理讀成 1.05，後端點找錯；verifier3 重量 0.93–1.04）、spur 0.12–0.13 船身、船首低平台；⚠ 沒有比例尺、透視，只當比例；裁圖 references/nooms_1662-68_SK-A-1398_galley.jpg",
+  "NOO2": "Nooms〈Algiers 1662〉Rijksmuseum SK-A-1396：三艘槳帆船都單桅，可見每舷約 16–18 槳；帆桁 0.79 全長",
+  "LUY": "Jan Luyken〈Barbarÿsche Galeÿen〉1684，Rijksmuseum RP-P-1896-A-19368-451（Dan 荷文版插圖）：單桅、船首低平台上一門中線砲、拱頂船尾篷、大艉燈；比例畫得誇張，只看樣子",
+  "DEW": "Frederik de Wit〈Tripoli in Barbaria〉1670–72 地圖邊景，Rijksmuseum NG-20-B：畫成雙桅（可信度低，小景可能轉抄）—— 跟其他史料衝突，不採用",
+  "UNIT": "度量衡：Doursther《Dictionnaire universel des poids et mesures》1840（紐倫堡工尺 303.86 mm、pied de roi 324.84 mm、拿坡里 palmo 262.0 mm）；《Tavole di ragguaglio》1877（拿坡里 palmo 0.26367 m、熱那亞 palmo 0.248083 m）",
+  "GAME": "Blockside（tim099/Blockside dev）：42_hands.js NAV_DZ ＝ 3（船員一步最多跨 3 格）；40_crew.js 站的那一格往上 14 格要空；Ship_Oars §9.10 沿槳柄每 0.6 m 一個槳手",
+  "SIB": "同一家族的作品：越嶺號 kotoko-fusta-01m（1453 fusta）、海鷗號 claude-felucca-01m、皇家號 apex-one-reale-01m 的線形與配置程式（設計決定照抄的出處）",
+  "PLAN": "Paperclip FAR-87 的 plan 文件（2026-11-21）：北非船隊第 5 艘、設計目標約 28 m／4.5 m／80 t、兩桅、約 9 門砲 —— 都是推測，步驟 3 照上面的史料重定"
+ },
+ "meters_per_cell": 0.1,
+ "space": {
+  "hull": [
+   420,
+   241,
+   90
+  ],
+  "assembly": [
+   420,
+   241,
+   300
+  ],
+  "yc": 120,
+  "mid_x": 195,
+  "src": "v2 放大（v1 400 × 241 × 90／280）：長 420 ＝ 艉柱頂 x 20 ＋ 船身 351 ＋ spur 伸出 43 ＋ 留 6；高 300 ＝ 帆桁上端 z ≈ 281（桅頂 z ≈ 180、帆桁 31.5 m 斜 35°）＋ 留；寬 241 不變（槳尖約 dy 86，鏡像要奇數寬）；船中 x 195 ＝ 兩柱頂的中點。還沒落格，調尺寸免費"
+ },
+ "waterline": {
+  "z": 10,
+  "src": "設計決定：吃水 1.1 m（DWL 那一格頂 z 11），船中乾舷 0.8 m。史料都沒寫 galiote 的吃水；取 creux 1.705 m（JAL）的 0.65 倍，讓槳栓離水約 1.2 m（槳 8.2 m、舷外 5.6 m ⇒ 入水約 12°，皇家號 11°）"
+ },
+ "lines": {
+  "sternpost_head_x": {
+   "v": 20,
+   "src": "設計決定：艉柱頂的位置（後面 20 格給舵葉、艉燈桿）"
+  },
+  "stem_head_x": {
+   "v": 371,
+   "src": "換算：兩柱頂之間 35.1 m（JAL 轉引 Dortières：20 bancs 的 galiote 長 108 pieds ＝ 35.08 m；pied de roi 0.32484 m，UNIT）⇒ 351 格（20 → 371）"
+  },
+  "keel_aft_x": {
+   "v": 61,
+   "src": "換算：FUR p.28 艏柱、艉柱各水平伸出 22 palmi，p.26 龍骨 146 palmi；146 ＋ 22 ＋ 22 ＝ 190 ＝ p.19 示範船長（本小姐的推論，原文沒加；艉柱另有 4 palmi 榫頭疊進龍骨（艏柱原文沒寫），不算）⇒ 兩柱各 22／190 ＝ 0.116 L ＝ 40.6 → 41 格（20 ＋ 41）"
+  },
+  "keel_fwd_x": {
+   "v": 330,
+   "src": "同上：371 − 41；直的龍骨 61 → 330 ＝ 26.9 m ＝ 0.768 L（FUR 146／190）。330 是艏柱圓弧跟龍骨的切點 ⇒ z 0 那一層多算艏柱圓弧最底下 6 格、艉柱圓弧 1 格（x 60），格數頭尾都算 ⇒ 讀數 27.7 m（checks 的 keel length）"
+  },
+  "keel_top": {
+   "v": 2,
+   "src": "設計決定：龍骨 0.2 m 深（FUR p.26 龍骨斷面 ⅔ × ½ palmo ＝ 0.17 × 0.13 m，格子取 2 格深）"
+  },
+  "keel_half": {
+   "v": 1,
+   "src": "設計決定：龍骨 3 格寬（0.3 m；對稱最小寬）"
+  },
+  "stem_head_z": {
+   "v": 27,
+   "src": "設計決定（照 FUR 換算的兩個解讀取一個）：FUR p.28 艏柱高 12 palmi（量的基準原文沒寫）÷ 龍骨底到舷頂 8⅚ palmi（p.31 肋材總高 8⅓ 從龍骨頂量 ＋ 龍骨 ½）× 19 格（本船龍骨底到船中舷頂）＝ 25.8 → 26；12 若從龍骨頂量 ⇒ 26.9 → 27 ⇒ 取後者 27"
+  },
+  "sternpost_head_z": {
+   "v": 39,
+   "src": "換算：FUR p.28 艉柱處總高 18 palmi「biß auff den untersten Gradt der Carena」（量到龍骨底）÷ 龍骨底到舷頂 8⅚ palmi ＝ 2.04 × 19 格 ＝ 38.7 → 39（v2 初稿拿龍骨頂起算的 8⅓ 去除，得 41；verifier3 抓到基準不一致）"
+  },
+  "half_beam": {
+   "v": 23,
+   "src": "換算：寬 14 pieds 5 pouces ＝ 4.68 m（JAL 轉引 Dortières）⇒ 47 格（中線兩側各 23）＝ 4.7 m；L／B 7.47（FUR galea 180／25 ＝ 7.2、DAS galère 7.25）"
+  },
+  "deck_side_z": {
+   "v": 18,
+   "src": "換算：creux 5 pieds 3 pouces ＝ 1.705 m（JAL 轉引 Dortières；Jal 自己寫 1m70）解讀成「龍骨頂到船中舷頂」⇒ 龍骨頂 z 2 ＋ 17 格 ⇒ 舷頂那一格 z 18（頂 19）"
+  },
+  "floor_half": {
+   "v": 11,
+   "src": "設計決定：平底半寬 11 格（船中半寬的 0.48；槳帆船平底寬，越嶺號、皇家號同一套剖面）"
+  },
+  "floor_rise": {
+   "v": 1,
+   "src": "設計決定：平底外緣比龍骨頂高 1 格（SIB）"
+  },
+  "bilge_pow": {
+   "v": 2.0,
+   "src": "設計決定：圓舭的指數（SIB 越嶺號同）"
+  },
+  "s_aft": {
+   "v": 0.4,
+   "src": "照 FUR 調：船尾從兩柱間 0.4 開始收（v1 0.3）——格點掃 s_aft × aft_pow × s_fwd × fwd_pow（5×5×5×5），取 X 站、V 線兩個站寬（checks）誤差和最小的一組"
+  },
+  "s_fwd": {
+   "v": 0.68,
+   "src": "照 FUR 調（同 s_aft）：船頭從 0.68 開始收"
+  },
+  "deadwood_aft_z": {
+   "v": 10,
+   "src": "設計決定：船尾 deadwood 抬到 z 10（剖面往 V 形收；SIB）"
+  },
+  "deadwood_fwd_z": {
+   "v": 9,
+   "src": "設計決定：船頭 deadwood 抬到 z 9（SIB）"
+  },
+  "aft_pow": {
+   "v": 1.2,
+   "src": "照 FUR 調（同 s_aft）：船尾平面收得像槳帆船的梭形，X 站（槳架後端 x 64）寬 0.51（FUR 0.53；格子寬是奇數，0.51 與 0.56 之間取近的）"
+  },
+  "fwd_pow": {
+   "v": 2.0,
+   "src": "照 FUR 調（同 s_aft）：V 線（艏柱頂往後 27 格）寬 0.64（FUR 16／25 ＝ 0.64；v1 1.8 只有 0.56）"
+  },
+  "stern_top_ratio": {
+   "v": 0.16,
+   "src": "照 FUR 調：p.20 船尾最後一根 forchaza 上緣 A–B 寬 5 palmi ＝ 最大寬 25 的 0.2；格子上 0.16 時船尾端（舷頂下一層的最後一欄 x 25；v2 艉柱頂 41 時是 x 26）寬 9 格 ＝ 0.20（填 0.2 是 11 格 0.24；v1 照皇家號 0.3）"
+  },
+  "sheer_aft": {
+   "v": 8,
+   "src": "換算：CRE p.23 深度船中 6¼、Poppa 8¾(?) palmi ⇒ 船尾舷頂比船中高 0.4 倍深 ＝ 0.4 × 19 ≈ 8 格（⚠ 分數讀得不清）；FOU p.49 北非的船常把船尾放低 ⇒ 不再加高"
+  },
+  "sheer_fwd": {
+   "v": 2,
+   "src": "設計決定：CRE p.23 Proda 6⅔ palmi ＝ 船中 1.07 倍 ⇒ 換算是 +1.27 格；取 2（多抬 0.07 m，只影響 x 342 以前的船頭；中線甲板在平台後半段 x 326–340 仍是 z 18，比船中 z 19 低 1 格）"
+  },
+  "sheer_s_aft": {
+   "v": 0.3,
+   "src": "設計決定：船尾舷頂從 0.3 開始抬（跟平面收縮同一點）"
+  },
+  "sheer_s_fwd": {
+   "v": 0.75,
+   "src": "設計決定：船頭舷頂從 0.75 開始抬"
+  },
+  "sheer_fwd_pow": {
+   "v": 2.0,
+   "src": "設計決定：二次（越嶺號同）"
+  }
+ },
+ "hull_build": {
+  "wall": {
+   "v": 2,
+   "src": "設計決定：外板＋肋骨 2 格（0.2 m；SIB）"
+  },
+  "post_mould": {
+   "v": 3,
+   "src": "設計決定：兩柱舷頂以上那段 3 格厚（SIB）"
+  },
+  "colors": {
+   "bottom": {
+    "v": 218,
+    "src": "設計決定：水線下牛脂白 (218,218,170)（槳帆船船底塗脂；海鷗號同）"
+   },
+   "topside": {
+    "v": 36,
+    "src": "NOO 讀數：船殼深色 ⇒ 黑 (36,36,0)"
+   },
+   "inner": {
+    "v": 141,
+    "src": "設計決定：船殼裡面原木 (145,109,85)"
+   },
+   "band_red": {
+    "v": 196,
+    "src": "設計決定：舷頂紅帶 (218,36,0)（NOO 船上部紅褐、桅頂紅旗）"
+   },
+   "band_gold": {
+    "v": 244,
+    "src": "設計決定：舷頂下第 2 格金帶 (255,182,0)（越嶺號同）"
+   }
+  },
+  "bands": {
+   "v": [
+    [
+     0,
+     "band_red"
+    ],
+    [
+     -2,
+     "band_gold"
+    ]
+   ],
+   "src": "設計決定：舷頂那一格紅、往下第 2 格金"
+  }
+ },
+ "checks": [
+  {
+   "name": "length stem-sternpost (m)",
+   "kind": "reading",
+   "key": "length_bp_m",
+   "value": 35.08,
+   "unit": "m",
+   "src": "JAL 轉引 Dortières 108 pieds"
+  },
+  {
+   "name": "beam (m)",
+   "kind": "reading",
+   "key": "beam_m",
+   "value": 4.68,
+   "unit": "m",
+   "src": "JAL 轉引 Dortières 14 pieds 5 pouces"
+  },
+  {
+   "name": "creux keel top-rail (m)",
+   "kind": "reading",
+   "key": "depth_keel_top_to_deck_edge_m",
+   "value": 1.705,
+   "unit": "m",
+   "src": "JAL 轉引 Dortières 5 pieds 3 pouces"
+  },
+  {
+   "name": "keel length (m)",
+   "kind": "reading",
+   "key": "keel_length_m",
+   "value": 26.96,
+   "unit": "m",
+   "src": "FUR p.26 龍骨 146 ÷ p.19 船長 190 ＝ 0.768 × 35.1；作品讀的是 z 0 那一層（多算艏柱圓弧最底下 6 格、艉柱圓弧 1 格，格數頭尾都算 ⇒ 27.7），直的那段 61 → 330 ＝ 26.9"
+  },
+  {
+   "name": "FUR V line (bow deck 16/25)",
+   "kind": "hb_ratio@x",
+   "x": 344,
+   "ratio": 0.64,
+   "src": "FUR p.19：船首尖 H 往後 14½ palmi（0.076 L ⇒ 艏柱頂往後 27 格）的 V 線甲板寬 16 palmi ＝ 最大寬 25 的 0.64；Giogo di Proda 放在這裡"
+  },
+  {
+   "name": "FUR X station (poop start 13.25/25)",
+   "kind": "hb_ratio@x",
+   "x": 64,
+   "ratio": 0.53,
+   "src": "FUR p.20、p.23：X 站寬 13¼ palmi ＝ 0.53，Poppa 從這裡開始、Giogo della Poppa 放在這裡 ⇒ 對本船舷外槳架的後端 x 64"
+  },
+  {
+   "name": "FUR A-B stern end (5/25)",
+   "kind": "hb_ratio@x",
+   "x": 25,
+   "ratio": 0.2,
+   "src": "FUR p.20：船尾最後一根 forchaza 上緣 A–B 寬 5 palmi ＝ 0.2"
+  }
+ ],
+ "sheet01_rows": [
+  [
+   "stem head - sternpost head",
+   "%.1f m",
+   "length_bp_m",
+   "Dortieres (Jal 1848): 35.08 m"
+  ],
+  [
+   "keel (z 0 layer)",
+   "%.1f m",
+   "keel_length_m",
+   "Furttenbach 1629: 0.768 L"
+  ],
+  [
+   "beam (outside)",
+   "%.1f m",
+   "beam_m",
+   "Dortieres (Jal 1848): 4.68 m"
+  ],
+  [
+   "keel top - rail (midship)",
+   "%.1f m",
+   "depth_keel_top_to_deck_edge_m",
+   "Dortieres (Jal 1848): creux 1.71 m"
+  ],
+  [
+   "DWL draught",
+   "%.1f m",
+   "draught_m",
+   "design decision"
+  ],
+  [
+   "freeboard (midship rail)",
+   "%.1f m",
+   "freeboard_mid_m",
+   "design decision"
+  ],
+  [
+   "waterline length",
+   "%.1f m",
+   "waterline_length_m",
+   "read from the cells"
+  ],
+  [
+   "displacement (solid below DWL)",
+   "%.1f t",
+   "displacement_t",
+   "read from the cells"
+  ],
+  [
+   "L / B",
+   "%.2f",
+   "length_beam_ratio",
+   "Furttenbach galea 7.2, Dassie galere 7.25"
+  ]
+ ],
+ "sheet01_footer": "v3: every number in plan.json carries src (source reading, conversion, or design decision); sources: plan.json sources, references/research_galiot_1666_2026-11-23.md",
+ "decks": {
+  "v": {
+   "main": {
+    "deck": "main",
+    "level": 0,
+    "name": "甲板（中央走道、划手座、船首低平台）",
+    "thick": 2
+   },
+   "walk_y_half": 2
+  },
+  "src": "步驟 5 設計決定：只有一層甲板 main —— 艙底不做（艙口在船尾 V 形船底上方、梯子下不去；船中雖然深 1.2 m，上面是整排划手座，開不了艙口）；船首低平台的板面比中央走道末端高 1 格，掛在甲板-main 底下（同一層，不用梯子）；thick 2 ＝ 甲板板兩層；walk ＝ 中央走道頂＋1、走道兩頭的台階與船首低平台（Ship_Decks §9.3 槳帆船的 walk，皇家號、越嶺號同），walk_y 只管走道那 5 欄（dy ±2）"
+ },
+ "deco": {
+  "v": {
+   "emblem": {
+    "x": 38,
+    "z": 12
+   },
+   "figurehead": null
+  },
+  "src": "步驟 6 設計決定：船名 ＝ 天蠍座（al-ʿAqrab 是天蠍座的阿拉伯名）的星，點在兩舷船尾的黑舷側 x 38–49、z 12–19（水線那一格上面第一格起、舷頂金帶下面隔一格；v1 z 13–20 頭頂那顆跟 x 49 的金帶只差一格、側面看黏成一根金條，verifier456 抓到），金 244、心宿二紅 196，頭朝船頭（星辰號用八角星代表 al-Najm，同一個做法）；不做船首像：NOO、LUY 畫的北非槳帆船船首都看不到船首像；篷做成外部模型 deco=1（Ship_Fittings §9.9 純看的、上面不掛東西）"
+ },
+ "layout": {
+  "deck": {
+   "v": {
+    "camber": 2,
+    "side_below_sheer": 1,
+    "beam_every": 7,
+    "hatches": [
+     {
+      "x0": 57,
+      "x1": 61,
+      "half": 3,
+      "grating": 2
+     }
+    ]
+   },
+   "src": "甲板拱 2 格：FUR p.23 甲板橫樑中間抬 1¼ palmi（寬 25 的 5% ⇒ 4.7 m 的 0.24 m）；舷側低於舷頂 1 格（設計決定，SIB）；橫樑每 7 格：CRE p.26 late 間距 2½ palmi ＝ 0.66 m；艙口 x 57–61 在艉台前、中央走道後（設計決定：v1 的艙口被中央走道蓋住，船艙變成 84,246 格的封閉空腔）；步驟 5 加格柵（每 2 格一根條、1 格的孔）：艙口底下是船尾 V 形的船底、梯子下不去 ⇒ 不做艙底層，格柵讓船艙通氣（不成封閉空腔）、人掉不進去（Ship_Decks「第一人稱：掉得進去的地方都要爬得出來」）"
+  },
+  "corsia": {
+   "v": {
+    "half": 2,
+    "h": 6,
+    "x0": 65,
+    "x1": 325
+   },
+   "src": "FUR p.80 galeotta 的 corsia 2¼ palmi 寬、一樣高（＝ 0.57 m，不照一半）⇒ 5 格寬（0.5 m，奇數寬最近的）、6 格高；從第一張座前 7 格到船首低平台（設計決定）；兩頭各一級 3 格台階（GAME NAV_DZ 3）"
+  },
+  "benches": {
+   "v": {
+    "n": 20,
+    "first_x": 72,
+    "pitch": 13.0,
+    "dy": [
+     4,
+     28
+    ],
+    "w": 2,
+    "above_sheer": 4,
+    "posts_dy": [
+     8,
+     18
+    ],
+    "footrest_back": 5,
+    "footrest_h": 2,
+    "footrest_post_dy": 12
+   },
+   "src": "每舷 20 座：HAE f18r 1581 年阿爾及爾 36 艘 galeota 中位數 20（雙峰 18／22）、AUB 16 或 20；JAL 的 20 bancs 是法國約 1680 年、每槳 1 人的（Jal 寫北非的 25–26；PAN 16–23、FOU 16–25）⇒ 取 HAE；間距 13 格 ＝ 1.3 m：CRE p.24–25 5 palmi ＝ 1.32 m、FUR p.54 5½ palmi ＝ 1.39 m（人的尺寸，不跟船縮）；座面 dy 4–28（兩頭各留 1 格：走道外 dy 3、縱樑內 dy 29，座靠柱子撐）；座高、柱、腳踏照越嶺號（設計決定）"
+  },
+  "apostis": {
+   "v": {
+    "x": [
+     64,
+     327
+    ],
+    "half": 31,
+    "rail_w": 2,
+    "rail_h": 2,
+    "above_sheer": 4,
+    "bracket_dx": 6,
+    "walkway": null
+   },
+   "src": "設計決定（落在史料的範圍裡）：槳架外緣總寬 63 格 ＝ 6.3 m ＝ 船寬 1.34 倍 —— FUR p.23 Giogo 32 palmi ÷ 25 ＝ 1.28（推定是外緣）；CRE p.24 的 telaro 28 palmi 是扣掉兩根 aposticcio 與中央走道的淨寬（每舷 14），外緣約 28 ＋ 3⅓ ＋ 2 ＝ 33⅓ ÷ 甲板寬 21 ≈ 1.59；每舷划槳淨寬 2.7 m 夠 3 人（CRE galea 每舷 14 palmi ＝ 3.69 m；galea 每槳 5 人是 PAN p.148、DAS 的數字 ⇒ 每人約 0.74 m ⇒ 3 人 2.2 m）；兩頭的 giogo 在第一張座後 8 格、最後一張座前 8 格（設計決定；後端對 FUR 的 X 站，見 checks）；縱樑比舷頂高 4 格（設計決定，SIB）"
+  },
+  "tholes": {
+   "v": {
+    "dx": [
+     -2
+    ],
+    "h": 3,
+    "dy_in_rail": 0
+   },
+   "src": "設計決定：每座一支槳（a scaloccio：一支槳 3 人，HAE f16r）⇒ 一根槳栓，在座的船尾側 2 格（SIB 皇家號）"
+  },
+  "oars": {
+   "v": {
+    "rowers": 3,
+    "outboard_m": 5.6,
+    "inboard_m": 2.6
+   },
+   "src": "每槳 3 人：HAE f16r「casi todos lleuan a tres por cada remo」、FOU p.49、DAS p.10、PAN p.148（18–22 banchi 每槳 3 人）；舷內 2.6 m ＝ 槳栓到中央走道邊 2.7 m 留 0.1 m（GAME 沿槳柄每 0.6 m 一人，3 人 1.8 m，放得下）；舷內佔全長 0.32（FUR p.56–57 32%、CRE p.26 31%）⇒ 全長約 8.1–8.2 m，取舷外 5.6 m（入水約 12°）、全長 8.2 m（舷內佔 0.317）"
+  },
+  "rambade": {
+   "v": {
+    "x": [
+     326,
+     352
+    ],
+    "clear": 6,
+    "dy": [
+     0,
+     20,
+     12
+    ],
+    "parapet_h": 4,
+    "post_every": 6,
+    "port_half": 3,
+    "ladder": null
+   },
+   "src": "船首不做高的 rambade：HAE f17r「no lleuan … arrumbadas」、DAN p.308「sans chasteau de prouë」、PAN p.48 北非的 galeotta 不設 rembate；做成 NOO、LUY 畫的低平台：板面離甲板 6 格（比中央走道末端高 1 格：z 25 對 z 24，GAME 一步最多 3 格）、從中央走道直接走上去、不做梯子；胸牆 0.4 m、中線留 7 格砲口（設計決定）"
+  },
+  "spur": {
+   "v": {
+    "x0": 366,
+    "x1": 413,
+    "z0": 23,
+    "z1": 27,
+    "h0": 5,
+    "h1": 2,
+    "w0": 2,
+    "w1": 0,
+    "tip": 4,
+    "brace": {
+     "z_stem": 18,
+     "dx": 14
+    }
+   },
+   "src": "伸出艏柱頂 4.3 m（尖格 x 413）≈ 0.12 船身：NOO 讀數 0.12–0.13、FUR p.19 sperone 22½／180 ＝ 0.125、CRE p.25 24／174 ＝ 0.138（LUY 0.24、DEW 0.22 畫得誇張，不採用）；往前上揚約 5°、粗細與斜撐照越嶺號（設計決定）"
+  },
+  "stern": {
+   "v": {
+    "poop_x": [
+     22,
+     56
+    ],
+    "poop_above_deck": 3,
+    "canopy_x": [
+     24,
+     60
+    ],
+    "canopy_eave": 6,
+    "canopy_ridge": 20,
+    "rib_every": 6,
+    "canopy_posts": [
+     30,
+     42,
+     54
+    ],
+    "lantern": {
+     "x": 24,
+     "top_z": 62
+    }
+   },
+   "src": "艉台到艙口前（設計決定）；篷做骨架加布的拱篷：DAN p.308 北非的船常把船尾艙拆掉、FUR p.80 Poppa 照 galea 但小一點、LUY 有拱頂篷與大艉燈；篷頂離甲板 2.0 m（站在艉台中線，頭上到篷最低一格 1.5 m、兩側更低：verifier456 量；篷是 deco 模型，遊戲不拿它擋人）；艉燈照 LUY（設計決定）"
+  },
+  "rig": {
+   "v": {
+    "masts": {
+     "main": {
+      "x": 232,
+      "rake_deg": 0,
+      "above_deck_m": 16.0,
+      "yard_m": 31.5,
+      "pivot_frac": 0.4,
+      "sail": {
+       "luff_frac": 0.92,
+       "leech_ratio": 0.82,
+       "foot_ratio": 0.575
+      }
+     }
+    },
+    "yard_angle_deg": 35,
+    "sling_below_top": 8,
+    "states": {
+     "furled": [],
+     "reduced": [
+      "main"
+     ],
+     "battle": [
+      "main"
+     ],
+     "full": [
+      "main"
+     ]
+    },
+    "gunports": "none - open-deck galley; guns on the low bow platform"
+   },
+   "src": "單桅：FOU p.49「n'ont que l'Arbre de Maistre」（DAS p.10 照抄）、PAN p.48 北非的不立前桅、DAN p.308、JAL、AUB、NOO、NOO2、LUY 都單桅（DEW 雙桅，可信度低）—— 改掉 PLAN 的兩桅；桅在離艏柱頂 0.40 船身（x 232，第 13、14 張座之間）：NOO 0.43、PAN p.47 與 CRE p.25 1/3；直立（NOO、LUY 看不出前傾）；甲板以上 16.0 m ＝ 0.46 船身：NOO 0.47–0.49、FUR p.52 主桅 90 palmi ÷ 他那艘 190 ＝ 0.47（含甲板下）；帆桁 31.5 m ＝ 0.9 船身：NOO 約 0.97（verifier3 重量；研究讀成 1.05 是錯的）、NOO2 0.79（÷ 含 spur 的全長）、FUR 185／190 ＝ 0.97、CRE 50 cubiti／58 ＝ 0.86；傾角 35°、吊點離前端 0.4、三角帆三邊比例照皇家號（設計決定，SIB）；只有一面帆 ⇒ 收帆、戰鬥帆、滿帆都是這一面"
+  },
+  "guns": {
+   "v": [
+    {
+     "id": "gun-1",
+     "gun": "8l",
+     "x": 344,
+     "dy": 0,
+     "on": "rambade"
+    },
+    {
+     "id": "gun-2",
+     "gun": "pierrier",
+     "x": 338,
+     "dy": 9,
+     "on": "rambade"
+    },
+    {
+     "id": "gun-3",
+     "gun": "pierrier",
+     "x": 338,
+     "dy": -9,
+     "on": "rambade"
+    }
+   ],
+   "src": "FUR p.80「Bey der Proda … allein 3 stuck grob Geschütz / nemblich das gröste in mitten der Corsia: Darneben und auff beden Seiten ein Cammerstücklin / darauß Ketten oder Hagel kan geschossen werden」⇒ 中線 8l ×1（最大那門；HAE「cañón de crujía」、DAN／FOU 一門 coursier 砲）＋ 兩旁後膛小砲 ×2 ＝ pierrier（遊戲砲種表裡的後膛迴旋砲）；AUB 寫 2–3 門 pierriers。PLAN 的 4l ×2、舷側與船尾 pierrier ×6 沒有史料，拿掉。位置是設計決定（步驟 9 再退到零碰撞）"
+  },
+  "colors": {
+   "v": {
+    "deck": {
+     "v": 177,
+     "src": "設計決定：甲板 (182,145,85)"
+    },
+    "beam": {
+     "v": 136,
+     "src": "設計決定：橫樑 (145,72,0)"
+    },
+    "wood": {
+     "v": 141,
+     "src": "設計決定：木 (145,109,85)"
+    },
+    "dark": {
+     "v": 104,
+     "src": "設計決定：深色木 (109,72,0)"
+    },
+    "seat": {
+     "v": 173,
+     "src": "設計決定：划手座 (182,109,85)"
+    },
+    "rail": {
+     "v": 36,
+     "src": "設計決定：槳架縱樑黑（跟船殼同色，NOO）"
+    },
+    "rail_top": {
+     "v": 196,
+     "src": "設計決定：縱樑頂紅（跟舷頂紅帶同色）"
+    },
+    "spur": {
+     "v": 36,
+     "src": "設計決定：spur 黑"
+    },
+    "spur_tip": {
+     "v": 73,
+     "src": "設計決定：spur 尖包鐵 (72,72,85)"
+    },
+    "cloth": {
+     "v": 192,
+     "src": "設計決定：篷布紅 (218,0,0)（NOO 紅旗、北非的紅）"
+    },
+    "cloth_edge": {
+     "v": 16,
+     "src": "設計決定：篷布邊 (0,145,0)"
+    },
+    "iron": {
+     "v": 73,
+     "src": "設計決定：鐵 (72,72,85)"
+    }
+   },
+   "src": "顏色：史料只有 NOO 的深色船殼、紅旗；其他是設計決定"
+  }
+ },
+ "rig_build": {
+  "colors": {
+   "v": {
+    "mast": 177,
+    "yard": 173,
+    "lashing": 36,
+    "sheave": 36,
+    "cap": 244
+   },
+   "src": "設計決定：桅 177 (182,145,85)（跟甲板同一種木色）、帆桁 173 (182,109,85)、綁紮與滑輪槽黑 36、桅頂帽金 244（跟舷頂下的金帶同色；皇家號桅頂兩格金）"
+  },
+  "mast": {
+   "v": {
+    "r": 1.5,
+    "heel": "hull",
+    "hole_from_deck": "deck-main"
+   },
+   "src": "位置、高照 layout.rig（x 232、甲板以上 16.0 m ⇒ 頂 z 179）；腳：從船殼最上一格往上（中線龍骨頂 z 2、兩旁 z 3；跟船殼重疊的格不放 ⇒ 坐在船殼上，皇家號同）⇒ 桅全長 17.7 m。粗：截面 3 × 3 格 ＝ 0.3 m（r 1.5：格心離軸 ≤ 1.5）。史料 DAS p.135 galère 主桅 30 goües（21.93 m）、周長粗端 60 pouces、細端 40 pouces ⇒ 直徑 0.52／0.34 m；照桅長 17.7 ÷ 21.93 縮 ⇒ 0.42／0.28 m。不做 0.42 m（5 格）是設計決定：中央走道只有 5 格寬（dy ±2），遊戲走路格每 2 格取一點、y 取偶數（42_hands.js navBuild，NAV_C 2）⇒ 5 格寬的桅把走道在桅那裡的取樣點 y 118／120／122 全佔掉，只走中央走道就過不了桅（反向對照 --probe=r=2.1）；整張走路格不會斷，但前後要翻過第 13、14 張划手座（座 z 23 → 甲板 z 20 → 座 → 走道 z 26，每步 ≤ 3），送藥、走動都得從划手身上過。3 格寬留下 y 118、122 兩條，走道本身照樣通。桅孔：甲板-main 被桅穿過的格（甲板板、橫樑、中央走道）刻掉，由桅填滿（皇家號、越嶺號同）"
+  },
+  "masthead": {
+   "v": {
+    "h": 9,
+    "half_x": 2,
+    "half_y": 1,
+    "sheave": [
+     2,
+     3
+    ],
+    "cap_h": 1
+   },
+   "src": "設計決定：桅頂 9 格是 calcet（滑輪箱，皇家號「頂上 9 格粗一格的 calcet」）：比桅身往前後各多 1 格（5 × 3 格，y 不加寬 ⇒ 帆桁貼在左舷側照樣空 1 格）；離頂 2–3 格中線一道滑輪槽（三角帆桁的 halyard 從這裡過）；頂上 1 格金帽"
+  },
+  "yard": {
+   "v": {
+    "len_m": 31.5,
+    "tilt_deg": 35,
+    "hoist_frac": 0.4,
+    "r_max": 1.5,
+    "r_end": 0.9,
+    "y_off": -4,
+    "below_top": 8,
+    "lash_half": 25,
+    "lash_every": 6,
+    "sail": "main-lateen"
+   },
+   "src": "長、傾角、吊點照 layout.rig（31.5 m、35°、吊點離前端 0.4、吊點在桅頂下 8 格）；粗：中段 0.3 m（r 1.5，3 格）、兩端 r 0.9（1 格）—— 皇家號 41 m 的帆桁中段 0.36 m，照長度縮 ⇒ 0.28 m；兩段綁成（DAS p.135 主桅 antenne 分 peine、quart 兩根，搭接長度沒寫）⇒ 吊點前後各 2.5 m 每 6 格一道黑綁紮（設計決定；越嶺號、海鷗號同）；掛在桅的左舷側 y_off −4（跟桅之間空 1 格；海鷗號、皇家號、越嶺號都在左舷側）"
+  },
+  "src": "步驟 7（TASK-0023）；程式 design/draft_masts.py；落格 design/tools/build_masts.py"
+ },
+ "rigging": {
+  "shrouds": {
+   "v": {
+    "side": 1,
+    "hound_below_top": 14,
+    "feet_x": [
+     209,
+     222,
+     235
+    ]
+   },
+   "src": "設計決定：主桅每舷的 sartie 皇家號 3 條（Ship_Masts 例）；三角帆船只拉帆的另一舷（帆桁在左舷 ⇒ 靜索拉右舷，海鷗號步驟 8：帆那一舷的會穿過帆）；上端 hound 在 calcet 底下（桅頂下 14 格，z 165）、桅右舷那一面；下端舷頂最外一格，x 209／222／235 各取最近的「兩張划手座中間」那一欄（一條在桅旁、兩條在桅後，扯住往前的帆力）"
+  },
+  "tack": {
+   "v": {
+    "x": 327,
+    "dy": -6
+   },
+   "src": "設計決定（v3）：tack 往下綁船首低平台的板 (327, 114)：8l 左舷、在 8l 砲架尾後面一點（8l 從 x 328.5 起）、在左舷 pierrier（v2 插在平台上的砲柱 x 338、dy −10）的掃掠圈外；v1 落在帆桁 fore 正下方 (335,116)，離 8l 1.0 格；v2 (330,114) 在 pierrier 搬到 dy −10 之後離它的掃掠圈 0.38 格"
+  },
+  "sheet_aft": {
+   "v": 25,
+   "src": "設計決定：sheet 從 clew 往後約 2.5 m 綁兩舷舷頂，取最近「緊接在一張座後面」那一欄（往船頭 7 格沒有座與腳踏；v1 取兩張座中間，左舷 sheet 的直線穿過下一張座的腳踏 x 158）"
+  },
+  "pennant": {
+   "v": {
+    "len_m": 4.0,
+    "hoist_cells": 10
+   },
+   "src": "設計決定：紅長旗 4 m（NOO 的畫上北非的船掛紅旗；皇家號 8 m 是 57 m 的旗艦）；掛在帆桁尖（penna），hoist 沿帆桁最後 1 m（越嶺號的旗也掛帆桁尖）—— v1 掛桅頂，桅頂正下方 8 格就是帆桁吊點，照預設風掛好之後長旗垂到離帆桁 0.98 格；不是國旗 ⇒ 不寫 nation；也不寫 mast（v2：遊戲看到作品自己有 mast=main 的旗，船掛國籍時就把主桅頂的國旗收起來，這面又換不成國旗 ⇒ 整艘船沒國旗，verifier8 照 77_colours.js 查到）"
+  },
+  "src": "步驟 8（TASK-0023）；程式 design/draft_rigging.py；帆形照 layout.rig.sail（步驟 3 的桅帆表）"
+ },
+ "guns_build": {
+  "types": {
+   "v": {
+    "8l": {
+     "work": "ridge-two-centurion-01m-gun-8l",
+     "scale": 0.5,
+     "pivot": [
+      7.5,
+      0,
+      0
+     ],
+     "muzzle": [
+      7,
+      58,
+      16
+     ],
+     "breech": [
+      7,
+      5,
+      16
+     ]
+    },
+    "pierrier": {
+     "work": "apex-one-reale-01m-gun-pierrier",
+     "mount_work": "apex-one-reale-01m-gun-pierrier-mount",
+     "scale": 0.5,
+     "pivot": [
+      5.5,
+      18.5,
+      0
+     ],
+     "muzzle": [
+      5,
+      36,
+      9
+     ],
+     "breech": [
+      5,
+      5,
+      9
+     ]
+    }
+   },
+   "src": "共用件（Ship_Guns §2.2：砲只跟同一種砲共用模型）：8l ＝ ridge-two-centurion-01m-gun-8l（8 磅長砲、兩軸四輪砲架，0.05 m ⇒ scale 0.5；皇家號、牛津號同；pivot 砲架尾底中心、固定點 muzzle／breech 照元件）；pierrier ＝ apex-one-reale-01m-gun-pierrier＋拆好的 -mount（叉架後膛迴旋砲，0.05 m ⇒ scale 0.5；pivot 叉架插銷底，海鷗號、杉心號同）"
+  },
+  "gun8": {
+   "v": {
+    "muzzle_out": 2,
+    "gap": 3
+   },
+   "src": "設計決定：8l 在中線、砲口朝船頭（rotate −90）；砲架尾離中央走道末端至少 gap 3 格（遊戲把砲的外框外擴 1 格當障礙，走路格每 2 格一點 ⇒ 走道末端前面要留一排取樣點，人才上得了平台、繞到砲旁），從那裡往船頭找第一個零碰撞、輪子都踩在平台上、砲口出了船首胸牆 muzzle_out 2 格的位置（v1 從胸牆往後退，x_rear 326 就零碰撞，但砲架尾貼著走道末端）；砲口從胸牆中線的砲口（rambade.port_half 3）出去；固定、不標 mount（galère 的 coursier 砲沿中央走道後座、不轉；HAE「cañón de crujía」）"
+  },
+  "pierrier": {
+   "v": {
+    "x": 338,
+    "dy": 10,
+    "post_h": 8,
+    "post_color": 132,
+    "arc_fwd": 90,
+    "arc_aft": 45,
+    "rate": 45
+   },
+   "src": "設計決定（v2）：兩門 pierrier 插在船首平台上的砲柱頂（x 338、dy ±10、柱高 8 格 ⇒ 轉軸 z 34；柱色 132 ＝ Ship_Guns §4.1 的砲架色；海鷗號船首那門也立在砲柱上）。為什麼不插胸牆頂（v1 dy ±16）：遊戲照砲的外框排砲手站位，砲手會站在 1 格寬的胸牆頂上，砲一轉、砲手跟著繞轉軸、腳下 3×3 都空就掉（轉過 ±17° 掉下平台、朝船頭 68° 以上落海；verifier9 照 40_crew.js、21_gunnery.js mountStep、32_hull.js svRest 量到）。柱頂 z 34 ⇒ 砲尾最低 z 37，掃過 8l（頂 z 36.5）上方不撞；砲手站在平台板上，繞轉軸的圈整個在平台上。FUR p.80 只說「兩旁」。arc：從正橫往船頭最多 arc_fwd 90、往船尾最多 arc_aft 45（v1 ±90 的船尾那一端沿著自己的船上空開，verifier9），再扣掉撞到、射線被擋、砲手腳下踩空的角度（每 10° 量）；rate 45（海鷗號同）"
+  },
+  "src": "步驟 9（TASK-0023）；程式 design/draft_guns.py；Tim 11-24 04:41 UTC 在 FAR-92 選「照史料：8l ×1 加 pierrier ×2」"
+ },
+ "magazine": {
+  "v": {
+   "x": [
+    282,
+    303
+   ],
+   "half": 7,
+   "door_h": 6,
+   "pos": "fore",
+   "colors": {
+    "wall": 168,
+    "floor": 177,
+    "rim": 136
+   },
+   "barrels_x": [
+    288,
+    296
+   ],
+   "barrel": {
+    "work": "basecamp-frigate-constitution-01m-powder-barrel",
+    "scale": 0.2,
+    "pivot": [
+     11,
+     11,
+     0
+    ],
+    "powder_lb": 100
+   },
+   "lantern": {
+    "work": "gura-tridente-01m-lantern",
+    "scale": 0.5,
+    "pivot": [
+     8.5,
+     8.5,
+     0
+    ],
+    "at": [
+     24.5,
+     120.5,
+     62
+    ]
+   },
+   "hatch": {
+    "work": "meadow-monitor-01m-hatch",
+    "x": [
+     57,
+     61
+    ],
+    "half": 3,
+    "scale_z": 0.5
+   }
+  },
+  "src": "步驟 10 設計決定：甲板上排滿每舷 20 張划手座、中央走道、船首平台的三門砲，放不下藥箱 ⇒ 照 Ship_Magazine「甲板沒有地方放的找船底的藏藥艙」做在艙底（越嶺號的彈藥庫也在艙底）；放在船首那段（x 282–303，第 17–19 張座底下）：三門砲都在船首平台，遊戲照藥艙的位置找取用點 ⇒ 送藥路最短（史料沒有寫 galiot 的藥艙在哪一段；這一條是為了遊戲取的設計決定）；寬 1.5 m（中線 ±7）：兩舷離船殼留空，艙底前後照樣接得通；地板照每一片的船底高度一階一階往前抬；門洞 5 格寬（Ship_Magazine §8）、0.6 m 高、在後牆；牆銅皮 168、松木地板 177、橡木壓條 136（Ship_Magazine §8 的色）；火藥桶 2 桶（引用憲法號的 powder-barrel，scale 0.2、pivot 11,11,0、每桶 100 lb，Ship_Magazine §8）；艉燈：步驟 6 留在艉燈桿頂的位置 (24,120,62)，引用三叉戟號的 gura-tridente-01m-lantern（皇家號船尾燈桿同一件：scale 0.5、pivot 8.5,8.5,0、meta kind=light）；艙蓋：Ship_Fittings §9.7「低乾舷的船露天的出入口都該有門」（沒有門的開口遊戲不當進水口）⇒ 步驟 5 的艙口格柵上蓋一片共用艙蓋 meadow-monitor-01m-hatch（kind=door open=up），沿 y 每邊比開口大一格；沿 x 被艉台（x 56）與中央走道台階（x 62）夾住，只能跟開口一樣長（設計決定）、z 縮成 0.2 m 厚；不做的（設計決定）：小艇（甲板排滿划手座，槳帆船的小艇拖在船後）、絞盤（三角帆桁用滑車吊、兩隻四爪錨用人力起）、羅經櫃（地中海槳船的羅經 bussola 是放在艉台的小盒，不是固定的羅經櫃；共用的羅經櫃是 18 世紀的樣子）、廚房：甲板上放得下 1.2 × 1.0 m 灶的只有船首平台兩舷（verifier10 量到），可是那裡是三門砲的砲台、迴旋砲砲手的站位（333.5,±11）與遊戲的火藥取用點 ⇒ 不在火藥旁放明火、不擠掉砲手 ⇒ 不做廚房（槳帆船的灶 fogon 一般放在左舷中段、佔掉一張划手座——verifier11 提的，沒查史料；這艘照史料每舷排滿 20 座，不拿掉座）"
+ },
+ "helm": {
+  "v": {
+   "gap": 2,
+   "z": [
+    3,
+    38
+   ],
+   "chord": 9,
+   "chord_top": 3,
+   "stock_top": 40,
+   "tiller_x": 22,
+   "colors": {
+    "below": 218,
+    "above": 173,
+    "stock": 177
+   },
+   "anchor": {
+    "work": "kotoko-fusta-01m-anchor-grapnel",
+    "scale": 0.6,
+    "pivot": [
+     9.5,
+     9.5,
+     24
+    ],
+    "x": 332,
+    "ring_above": -0.02,
+    "cathead_color": 104
+   },
+   "strap": {
+    "z": [
+     37,
+     38
+    ],
+    "clear": 3,
+    "color": 36
+   }
+  },
+  "src": "步驟 11 設計決定：艉柱舵（galley 的 timone，DAS p.129 寫 galère 的舵 25 pieds ＝ 8.1 m；本船 35 m，舵沿鉸鏈約 5 m）；鉸鏈 ＝ 艉柱中線 z 3–38 每一層都在艉柱後面 2 格以上的支撐直線（艉柱往後凸 ⇒ 兩頭留縫；gap 1 時舵葉前緣的格角斜著碰到 45° 的艉柱，每個角度 8 格 ⇒ 2）；舵葉弦長水線以下 0.9 m、往上收到 0.3 m（設計決定，海鷗號 0.7／0.3 m 照船長放大）；舵頭 2 × 3 格、頂 z 40；舵柄從舵頭頂往船頭伸到 x 22（艉柱頭上方，離艉台站面 1.1 m）：艉台只有 0.9 m 寬、上面有船尾篷，艉燈桿立在 x 24 ⇒ 舵柄再長就會在 ±35° 掃到燈桿與篷（量的）；錨：FUR p.80 galeotta 只有 2 個錨 ⇒ 兩隻四爪錨（越嶺號、海鷗號同一件 kotoko-fusta-01m-anchor-grapnel；scale 0.6 ⇒ 1.4 m，設計決定：越嶺號 0.5、海鷗號 0.4，這艘大一號），照越嶺號掛在船首平台兩舷胸牆外（x 332，pierrier 砲柱後面 6 格）、rotate ±45、錨環頂比胸牆頂高 1 格，往舷外推到零碰撞；船殼登記 hawse-S／P（胸牆頂外緣那一格）；舵頭鐵箍（gudgeon 臂）：舵頭在艉柱頭後面約 0.8 m，遊戲照 stock-top 旁 8 格內的船格當舵的「腳」（Blockside 10_ship.js anchorNear r 8；找不到 ⇒ 開局就掉） ⇒ 從艉柱頭往後伸一條黑鐵臂（3 格寬、z 37–38、末端停在鉸鏈前 3 格：2 格時舵頭轉到 −30° 以上格角碰到它，量的），落在艉台子作品（艉台子作品是船的一部分：舵被打掉它還在；它被打掉，舵與舵柄都會掉——遊戲的舵柄也是往下找到它當腳，verifier11）；吊錨木：錨環在胸牆外 3.5 格，從胸牆頂外緣往舷外伸一根 1 格見方的深色木（104）到錨環正上方、錨環貼在它底下（verifier11 抓到錨看起來懸空），落在船首平台子作品；舵手：遊戲照舵柄外框船頭那一端往前 2 格排舵手（40_crew.js），站在艉台頂 (25.5,120.5,29)，艉燈桿 x 24 夾在他和舵柄末端中間（照實記；燈桿是步驟 6 放的）"
+ },
+ "oars_build": {
+  "v": {
+   "work": "claude-galiot-01m-oar",
+   "inboard_m": 2.6,
+   "outboard_m": 5.6,
+   "angle_deg": 13,
+   "blade_m": 1.2,
+   "blade_w_m": 0.16,
+   "loom_d_m": [
+    0.14,
+    0.09
+   ],
+   "grip_cells": 8,
+   "colors": {
+    "grip": 104,
+    "loom": 141,
+    "blade": 141
+   },
+   "scale": 0.5,
+   "x_off": -4,
+   "loom_r_cells": 2.0,
+   "seat_dy": 15,
+   "rowers": 3,
+   "stroke_deg": 30,
+   "dip_deg": 12,
+   "seat_dy_aft": 9
+  },
+  "src": "步驟 13：槳長照步驟 3 的 layout.oars（每支 3 人、舷內 2.6 m、舷外 5.6 m ⇒ 8.2 m；HAE f16r、FOU、PAN 每槳 3 人；遊戲沿槳柄每 0.6 m 排一人 ⇒ 3 人要 1.8 m）；槳葉 1.2 × 0.16 m、槳柄徑 0.14 → 0.09 m（設計決定：皇家號 13 m 的槳 1.6 × 0.18 m、0.153 → 0.09 m 照長度縮）；元件畫在 13°（中間那幾支的入水角），每支用 rotate 的 x 角補到槳葉中心落在水面（左舷反號，海鷗號同）；槳的 x ＝ 座的中心 −4（槳柄在座與腳踏中間、槳手坐在座上往船尾拉；槳栓在 x −2 ⇒ 在槳的船頭側 2 格，划的時候槳柄往前頂著它；皇家號 v1 槳栓穿過槳柄的教訓）；槳柄底離縱樑頂 1 格（loom_r_cells 2.0 × 0.5；1.7 時第 1、2 支在船尾舷弧最陡的地方擦到縱樑 1 格，量的）；seat：遊戲從元件的 seat 起往船裡每 6 格排一人 ⇒ 一般的元件 seat 在 dy 15（3 人站 dy 15／9／3，停在中央走道 dy ≤ 2 以外）；船尾第 1–3 張座甲板內緣半寬只有 0.9–1.3 m（< 1.5 m）⇒ 另一件同樣的槳元件 -aft、seat 在 dy 9、2 人（站得下的人數；HAE f16r 寫船尾段常 4 人，這艘船尾太窄排不下，設計決定）；全船槳手 114 人（步驟 3 寫 120）"
+ }
+}

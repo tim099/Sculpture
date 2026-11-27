@@ -1,0 +1,118 @@
+{
+ "assembly": {
+  "have": 73948,
+  "want": 73948,
+  "missing": 0,
+  "extra": 0,
+  "color_diff": 0,
+  "components_6": 1,
+  "cavities": 0,
+  "mast_cells_in_export": 1641
+ },
+ "mast_links": [
+  {
+   "name": "主桅",
+   "work": "claude-galiot-01m-mast-main",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "turn": 0,
+   "mirror": "",
+   "meta": {
+    "kind": "mast",
+    "mast": "main"
+   }
+  }
+ ],
+ "yard_models": [
+  {
+   "name": "yard-main-lateen",
+   "work": "claude-galiot-01m-yard-main",
+   "at": [
+    232.5,
+    116.5,
+    171.5
+   ],
+   "pivot": [
+    158.5,
+    3.5,
+    75.5
+   ],
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "meta": {
+    "diameter_in": 11.8,
+    "kind": "yard",
+    "length_ft": 103.3,
+    "length_m": 31.5,
+    "mast": "main",
+    "pivot_anchor": "pivot",
+    "rig": "lateen",
+    "rotate_z_deg": 0,
+    "sail": "main-lateen",
+    "turn_axis": "z",
+    "yard": "gaff"
+   }
+  }
+ ],
+ "sub_works": {
+  "mast-main": {
+   "size_x": 420,
+   "size_y": 241,
+   "size_z": 300,
+   "meters_per_voxel": 0.1,
+   "tags": [
+    "sub"
+   ],
+   "parent_work": "claude-galiot-01m"
+  },
+  "yard-main": {
+   "size_x": 265,
+   "size_y": 7,
+   "size_z": 187,
+   "meters_per_voxel": 0.1,
+   "tags": [
+    "sub"
+   ],
+   "parent_work": "claude-galiot-01m"
+  }
+ },
+ "yard_anchors": {
+  "count": 42,
+  "design": 42,
+  "same_cells": 42,
+  "pivot": [
+   158,
+   3,
+   75
+  ],
+  "fore": [
+   261,
+   3,
+   3
+  ],
+  "peak": [
+   4,
+   3,
+   183
+  ]
+ },
+ "checks": {
+  "one_kind_mast_link": true,
+  "yard_meta_mast_matches_link": true,
+  "yard_meta_equals_design": true,
+  "yard_at_pivot_equal_design": true,
+  "yard_anchors_equal_design": true,
+  "mast_link_turn0_no_mirror": true
+ }
+}
