@@ -1,0 +1,511 @@
+{
+ "probe": null,
+ "anchors": 21,
+ "ropes": 18,
+ "sails": 4,
+ "sail_geo": {
+  "mizzen": {
+   "head_anchor": "jackstay-20",
+   "luff_m": 16.07,
+   "leech_m": 8.03,
+   "foot_m": 11.25,
+   "clew": [
+    48.1,
+    126.5,
+    90.6
+   ]
+  },
+  "main": {
+   "head_anchor": "jackstay-48",
+   "luff_m": 38.4,
+   "leech_m": 31.49,
+   "foot_m": 22.08,
+   "clew": [
+    199.2,
+    123.5,
+    61.5
+   ]
+  },
+  "fore": {
+   "head_anchor": "jackstay-42",
+   "luff_m": 33.57,
+   "leech_m": 27.52,
+   "foot_m": 19.3,
+   "clew": [
+    391.4,
+    136.5,
+    70.4
+   ]
+  }
+ },
+ "sail_plane": {
+  "mizzen-lateen": {
+   "corners": [
+    [
+     159.5,
+     126.5,
+     75.5
+    ],
+    [
+     28.5,
+     126.5,
+     168.5
+    ],
+    [
+     48.1,
+     126.5,
+     90.6
+    ]
+   ],
+   "min_dist_to_ship_cells": 3.0,
+   "nearest_ship": {
+    "sail": [
+     102.5,
+     126.5,
+     114.5
+    ],
+    "cell": [
+     102,
+     129,
+     114
+    ]
+   },
+   "min_dist_to_other_yards_cells": 171.54,
+   "min_dist_to_awning_deco_cells": 0.37,
+   "area_m2": 41.91
+  },
+  "main-lateen": {
+   "corners": [
+    [
+     399.5,
+     123.5,
+     154.5
+    ],
+    [
+     67.5,
+     123.5,
+     347.5
+    ],
+    [
+     199.2,
+     123.5,
+     61.5
+    ]
+   ],
+   "min_dist_to_ship_cells": 4.0,
+   "nearest_ship": {
+    "sail": [
+     253.5,
+     123.5,
+     133.5
+    ],
+    "cell": [
+     253,
+     127,
+     133
+    ]
+   },
+   "min_dist_to_other_yards_cells": 29.07,
+   "min_dist_to_awning_deco_cells": 83.18,
+   "area_m2": 347.67
+  },
+  "fore-lateen": {
+   "corners": [
+    [
+     566.5,
+     136.5,
+     151.5
+    ],
+    [
+     276.5,
+     136.5,
+     320.5
+    ],
+    [
+     391.4,
+     136.5,
+     70.4
+    ]
+   ],
+   "min_dist_to_ship_cells": 4.0,
+   "nearest_ship": {
+    "sail": [
+     434.4,
+     136.5,
+     158.5
+    ],
+    "cell": [
+     434,
+     132,
+     158
+    ]
+   },
+   "min_dist_to_other_yards_cells": 11.0,
+   "min_dist_to_awning_deco_cells": 261.6,
+   "area_m2": 265.55
+  },
+  "pennant": {
+   "corners": [
+    [
+     36.5,
+     123.5,
+     364.5
+    ],
+    [
+     86.5,
+     123.5,
+     364.0
+    ],
+    [
+     46.5,
+     123.5,
+     359.5
+    ]
+   ],
+   "min_dist_to_ship_cells": 198.4,
+   "nearest_ship": {
+    "sail": [
+     86.5,
+     123.5,
+     364.0
+    ],
+    "cell": [
+     250,
+     129,
+     252
+    ]
+   },
+   "min_dist_to_other_yards_cells": 163.94,
+   "min_dist_to_awning_deco_cells": 259.81,
+   "area_m2": 1.23
+  }
+ },
+ "rope_ends": {
+  "mizzen-shroud-S1": {
+   "from": [
+    103.5,
+    132.5,
+    116.5
+   ],
+   "to": [
+    84.5,
+    146.5,
+    72.5
+   ],
+   "len_m": 4.99,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.21
+  },
+  "mizzen-shroud-S2": {
+   "from": [
+    103.5,
+    132.5,
+    116.5
+   ],
+   "to": [
+    102.5,
+    162.5,
+    69.5
+   ],
+   "len_m": 5.58,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.78
+  },
+  "mizzen-shroud-S3": {
+   "from": [
+    103.5,
+    132.5,
+    116.5
+   ],
+   "to": [
+    116.5,
+    173.5,
+    68.5
+   ],
+   "len_m": 6.45,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.72
+  },
+  "mizzen-lateen.sheet-P": {
+   "from": [
+    48.1,
+    126.5,
+    90.6
+   ],
+   "to": [
+    30.5,
+    108.5,
+    89.5
+   ],
+   "len_m": 2.52,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.62
+  },
+  "mizzen-lateen.sheet-S": {
+   "from": [
+    48.1,
+    126.5,
+    90.6
+   ],
+   "to": [
+    30.5,
+    152.5,
+    89.5
+   ],
+   "len_m": 3.14,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.98
+  },
+  "mizzen-lateen.tack": {
+   "from": [
+    159.5,
+    126.5,
+    75.5
+   ],
+   "to": [
+    159.5,
+    124.5,
+    42.5
+   ],
+   "len_m": 3.31,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 4,
+   "hit_sample": [],
+   "surface_clear_cells": 0.48
+  },
+  "main-shroud-S1": {
+   "from": [
+    254.5,
+    134.5,
+    240.5
+   ],
+   "to": [
+    242.5,
+    182.5,
+    52.5
+   ],
+   "len_m": 19.44,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.0
+  },
+  "main-shroud-S2": {
+   "from": [
+    254.5,
+    134.5,
+    240.5
+   ],
+   "to": [
+    254.5,
+    182.5,
+    51.5
+   ],
+   "len_m": 19.5,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.0
+  },
+  "main-shroud-S3": {
+   "from": [
+    254.5,
+    134.5,
+    240.5
+   ],
+   "to": [
+    266.5,
+    182.5,
+    51.5
+   ],
+   "len_m": 19.54,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 1.0
+  },
+  "main-lateen.sheet-P": {
+   "from": [
+    199.2,
+    123.5,
+    61.5
+   ],
+   "to": [
+    180.5,
+    78.5,
+    54.5
+   ],
+   "len_m": 4.92,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 3,
+   "hit_sample": [],
+   "surface_clear_cells": 0.87
+  },
+  "main-lateen.sheet-S": {
+   "from": [
+    199.2,
+    123.5,
+    61.5
+   ],
+   "to": [
+    180.5,
+    182.5,
+    54.5
+   ],
+   "len_m": 6.23,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 2,
+   "hit_sample": [],
+   "surface_clear_cells": 0.83
+  },
+  "main-lateen.tack": {
+   "from": [
+    399.5,
+    123.5,
+    154.5
+   ],
+   "to": [
+    415.5,
+    139.5,
+    43.5
+   ],
+   "len_m": 11.33,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 4,
+   "hit_sample": [],
+   "surface_clear_cells": 0.43
+  },
+  "fore-shroud-P1": {
+   "from": [
+    440.5,
+    127.5,
+    226.5
+   ],
+   "to": [
+    380.5,
+    85.5,
+    54.5
+   ],
+   "len_m": 18.69,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 0.98
+  },
+  "fore-shroud-P2": {
+   "from": [
+    440.5,
+    127.5,
+    226.5
+   ],
+   "to": [
+    392.5,
+    87.5,
+    55.5
+   ],
+   "len_m": 18.21,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 0.96
+  },
+  "fore-shroud-P3": {
+   "from": [
+    440.5,
+    127.5,
+    226.5
+   ],
+   "to": [
+    404.5,
+    92.5,
+    52.5
+   ],
+   "len_m": 18.11,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 1,
+   "hit_sample": [],
+   "surface_clear_cells": 0.88
+  },
+  "fore-lateen.sheet-P": {
+   "from": [
+    391.4,
+    136.5,
+    70.4
+   ],
+   "to": [
+    350.5,
+    78.5,
+    53.5
+   ],
+   "len_m": 7.3,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 3,
+   "hit_sample": [],
+   "surface_clear_cells": 0.91
+  },
+  "fore-lateen.sheet-S": {
+   "from": [
+    391.4,
+    136.5,
+    70.4
+   ],
+   "to": [
+    350.5,
+    182.5,
+    53.5
+   ],
+   "len_m": 6.38,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 3,
+   "hit_sample": [],
+   "surface_clear_cells": 0.71
+  },
+  "fore-lateen.tack": {
+   "from": [
+    566.5,
+    136.5,
+    151.5
+   ],
+   "to": [
+    515.5,
+    130.5,
+    63.5
+   ],
+   "len_m": 10.19,
+   "straight_line_solid_cells": 0,
+   "own_part_cells_near_end": 4,
+   "hit_sample": [],
+   "surface_clear_cells": 0.92
+  }
+ },
+ "sail_sets": {
+  "收帆": [
+   "main-lateen"
+  ],
+  "戰鬥帆": [
+   "main-lateen",
+   "fore-lateen"
+  ],
+  "滿帆": [
+   "mizzen-lateen",
+   "main-lateen",
+   "fore-lateen"
+  ]
+ },
+ "ropes_through_flat_sail": {},
+ "problems": 0,
+ "sha256": {
+  "rig_plan.json": "cfb3d030a4cfe4a2a384a72ad01088282aa78bd37dce66cc376bdb6665d6c601",
+  "rig_meta.tsv": "f8193044991ecfea9764b8349452474302298a75d57f85cd9701d764d2015158"
+ }
+}

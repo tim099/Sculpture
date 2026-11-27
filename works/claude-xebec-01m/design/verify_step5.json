@@ -1,0 +1,99 @@
+{
+ "parts": {
+  "deck-hold": {
+   "work": 18508,
+   "design": 18508,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  },
+  "deck-main": {
+   "work": 37010,
+   "design": 37010,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  },
+  "deck-quarter": {
+   "work": 4245,
+   "design": 4245,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 2
+  },
+  "ladders-main": {
+   "work": 528,
+   "design": 528,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  },
+  "ladders-quarter": {
+   "work": 280,
+   "design": 280,
+   "missing": 0,
+   "extra": 0,
+   "colour_diff": 0,
+   "hull_overlap": 0,
+   "overlap_with_earlier_parts": 0,
+   "events": 1
+  }
+ },
+ "problems_total": 0,
+ "assembled": {
+  "cells": 153625,
+  "components_6": 1,
+  "cavities": 0,
+  "mirror_diff": 0
+ },
+ "ladder_point_problems": [],
+ "anchors": {
+  "want": 16,
+  "found": 16,
+  "diff": [],
+  "unexpected": []
+ },
+ "links": {
+  "assembly": [
+   "船殼",
+   "甲板-hold",
+   "甲板-main",
+   "甲板-quarter",
+   "長喙",
+   "船尾平台",
+   "窗玻璃"
+  ],
+  "deck_meta_diff_vs_tsv": [],
+  "not_at_origin_or_disabled": [],
+  "ladder_links": {
+   "main/梯子": [
+    "claude-xebec-01m-ladders-main",
+    {
+     "hold-aft.decks": "hold,main",
+     "hold-fore.decks": "hold,main",
+     "kind": "ladders"
+    }
+   ],
+   "quarter/梯子": [
+    "claude-xebec-01m-ladders-quarter",
+    {
+     "kind": "ladders",
+     "quarter-P.decks": "main,quarter",
+     "quarter-S.decks": "main,quarter"
+    }
+   ]
+  }
+ }
+}

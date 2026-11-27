@@ -1,0 +1,302 @@
+{
+	"schema": 2,
+	"models": [
+		{
+			"name": "砲Q-S01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "claude-xebec-01m-gun-3l",
+			"axes": "sculpt",
+			"at": [
+				90,
+				146,
+				67
+			],
+			"pivot": [
+				6.5,
+				19,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 9（TASK-0022；design/draft_guns.py）：3 磅砲（本船做的通用部件，縮 0.5 ＝ 原尺寸）（S 舷、quarter 甲板 x 90（quarter）；draft_guns.py 退 6 格）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T18:04:04",
+			"meta": {
+				"deck": "quarter",
+				"gun": "3l",
+				"id": "gun-25",
+				"kind": "gun",
+				"port": "quarter",
+				"side": "S"
+			}
+		},
+		{
+			"name": "砲Q-P01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "claude-xebec-01m-gun-3l",
+			"axes": "sculpt",
+			"at": [
+				90,
+				115,
+				67
+			],
+			"pivot": [
+				6.5,
+				19,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "y",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 9（TASK-0022；design/draft_guns.py）：3 磅砲（本船做的通用部件，縮 0.5 ＝ 原尺寸）（P 舷、quarter 甲板 x 90（quarter）；draft_guns.py 退 6 格）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T18:04:04",
+			"meta": {
+				"deck": "quarter",
+				"gun": "3l",
+				"id": "gun-26",
+				"kind": "gun",
+				"port": "quarter",
+				"side": "P"
+			}
+		},
+		{
+			"name": "迴旋砲-S01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier",
+			"axes": "sculpt",
+			"at": [
+				121.5,
+				169.5,
+				69
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 9（TASK-0022；design/draft_guns.py）：迴旋砲 pierrier（補放不下的 12 磅、3 磅；皇家號的通用部件，縮 0.5）（S 舷、quarter 甲板 x 121（swivel）；draft_guns.py 退 0 格）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T18:04:06",
+			"meta": {
+				"arc": "-55,25",
+				"deck": "quarter",
+				"gun": "pierrier",
+				"id": "gun-27",
+				"kind": "gun",
+				"mount": "turret",
+				"port": "swivel",
+				"rate": 45,
+				"side": "S"
+			}
+		},
+		{
+			"name": "迴旋砲-S01座",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier-mount",
+			"axes": "sculpt",
+			"at": [
+				121.5,
+				169.5,
+				69
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 9（TASK-0022；design/draft_guns.py）：迴旋砲-S01的叉架（拆件雙生，Ship_Guns §4.2.1；mount_of 等步驟 14 發 id 後補）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T18:04:06",
+			"meta": {
+				"id": "gunmount-7",
+				"kind": "gunmount",
+				"mount_of": "gun-27"
+			}
+		},
+		{
+			"name": "迴旋砲-P01",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier",
+			"axes": "sculpt",
+			"at": [
+				121.5,
+				91.5,
+				69
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "y",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 9（TASK-0022；design/draft_guns.py）：迴旋砲 pierrier（補放不下的 12 磅、3 磅；皇家號的通用部件，縮 0.5）（P 舷、quarter 甲板 x 121（swivel）；draft_guns.py 退 0 格）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T18:04:07",
+			"meta": {
+				"arc": "-25,90",
+				"deck": "quarter",
+				"gun": "pierrier",
+				"id": "gun-28",
+				"kind": "gun",
+				"mount": "turret",
+				"port": "swivel",
+				"rate": 45,
+				"side": "P"
+			}
+		},
+		{
+			"name": "迴旋砲-P01座",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "apex-one-reale-01m-gun-pierrier-mount",
+			"axes": "sculpt",
+			"at": [
+				121.5,
+				91.5,
+				69
+			],
+			"pivot": [
+				5.5,
+				18.5,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"mirror": "y",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 9（TASK-0022；design/draft_guns.py）：迴旋砲-P01的叉架（拆件雙生，Ship_Guns §4.2.1；mount_of 等步驟 14 發 id 後補）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T18:04:07",
+			"meta": {
+				"id": "gunmount-8",
+				"kind": "gunmount",
+				"mount_of": "gun-28"
+			}
+		},
+		{
+			"name": "羅經櫃",
+			"source": "work",
+			"file": "",
+			"bytes": 0,
+			"sha256": "",
+			"work": "summit-night-falcon-01m-binnacle",
+			"axes": "sculpt",
+			"at": [
+				111.5,
+				136.5,
+				62
+			],
+			"pivot": [
+				9,
+				13,
+				0
+			],
+			"rotate": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.2,
+				0.2,
+				0.2
+			],
+			"mirror": "",
+			"color": "",
+			"enabled": true,
+			"note": "步驟 10（TASK-0022；design/draft_gear.py）：羅經櫃",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-27T12:01:41",
+			"meta": {
+				"id": "binnacle-1",
+				"kind": "binnacle"
+			}
+		}
+	]
+}

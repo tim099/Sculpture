@@ -1,0 +1,3533 @@
+{
+ "plate": "Chapman, Architectura Navalis Mercatoria (1768), Pl. LVIII, No. 17 \"Algerisk Chebeque\"",
+ "scan": "../plans_agent/sources/Chapman_1768_PlLVIII_SMM_ArchitecturanLVIII_4000px.jpg",
+ "units": "metres; X fwd of AP, Z above plate baseline, Y half-breadth from centreline",
+ "calibration": {
+  "px_per_swedish_ft": 20.537,
+  "swedish_ft_m": 0.2969,
+  "m_per_px": 0.014457,
+  "px_per_english_ft_bar_E": 21.0614,
+  "check_S_over_E_measured_vs_expected": [
+   0.9751,
+   0.9741
+  ],
+  "vertical_scale": "no vertical scale bar on the plate; vertical assumed equal to horizontal (checked: body-plan draught and profile draught agree within 2 px)",
+  "scan_rotation": "none measurable: 20 station lines and both perpendiculars are vertical in the scan to |dx/dy| <= 0.004 (median 0.001). The engraved scale bars slope dy/dx = -0.0075 and the dashed baseline slopes -0.00247; both are engraving/printing, not scan rotation.",
+  "AP_x_px": 526.07,
+  "FP_x_px": 3220.49,
+  "baseline": "plate dashed baseline, y = -0.002473*x + 1149.082 px (y=1147.78 at AP, 1141.12 at FP). It is tangent to the underside of the keel near midship, i.e. Z=0 = underside of keel at its lowest point. The keel bottom is drawn rockered: it rises toward both ends (see profile.keel_bottom).",
+  "LWL": {
+   "fit_px": "y = 0.005516*x + 933.409",
+   "Z_at_AP": 3.057,
+   "Z_at_midship_station": 2.892,
+   "Z_at_FP": 2.746,
+   "note": "LWL is not parallel to the baseline: drawn with drag (deeper aft)."
+  },
+  "Lpp": {
+   "px": 2694.42,
+   "ft": 131.2,
+   "m": 38.953,
+   "table_ft": 130.333,
+   "table_m": 38.696,
+   "diff_pct": 0.66
+  },
+  "draught": {
+   "mean_ft": 9.77,
+   "midship_ft": 9.74,
+   "aft_ft": 10.3,
+   "fwd_ft": 9.25,
+   "table_ft": 9.667,
+   "diff_pct_mean": 1.1
+  },
+  "alt_scale_if_fitted_to_table_Lpp": {
+   "px_per_ft": 20.6733,
+   "factor_to_multiply_all_metres": 0.99341
+  },
+  "provenance": {
+   "scale_bar": "S bar ticks detected as grey minima along the bar centre row (y=367.7 at x=420, slope -0.0075); 30 ticks 0..30 ft fitted linearly, rms 0.56 px; zero at x=408.99",
+   "AP_FP": "grey-centroid of the dashed/solid perpendicular in every row y=700..1140, robust linear fit, x at y=1000 (AP n=382 rows, FP n=251 rows)",
+   "baseline": "grey-centroid of the dashed baseline in columns 540..999 and 2950..3199 (clear of the keel), linear fit, 399 columns",
+   "LWL": "grey-centroid of the LWL in every 2nd column x=600..3148, linear fit with 1.5 px outlier rejection, 1213 columns",
+   "script": "m1_calibration.py"
+  }
+ },
+ "stations": [
+  {
+   "label": "17",
+   "X": 1.952,
+   "x_px": 661.09,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (102 rows); label read on plate above keel"
+  },
+  {
+   "label": "16",
+   "X": 3.053,
+   "x_px": 737.23,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (139 rows); label read on plate above keel"
+  },
+  {
+   "label": "15",
+   "X": 4.162,
+   "x_px": 813.93,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "14",
+   "X": 5.25,
+   "x_px": 889.22,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "12",
+   "X": 7.442,
+   "x_px": 1040.85,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "10",
+   "X": 9.64,
+   "x_px": 1192.86,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "8",
+   "X": 11.838,
+   "x_px": 1344.9,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "6",
+   "X": 14.02,
+   "x_px": 1495.86,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (139 rows); label read on plate above keel"
+  },
+  {
+   "label": "4",
+   "X": 16.23,
+   "x_px": 1648.73,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (128 rows); label read on plate above keel"
+  },
+  {
+   "label": "2",
+   "X": 18.436,
+   "x_px": 1801.31,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (134 rows); label read on plate above keel"
+  },
+  {
+   "label": "midship",
+   "X": 20.632,
+   "x_px": 1953.2,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (132 rows); label read on plate above keel"
+  },
+  {
+   "label": "B",
+   "X": 22.842,
+   "x_px": 2106.09,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (135 rows); label read on plate above keel"
+  },
+  {
+   "label": "D",
+   "X": 25.056,
+   "x_px": 2259.22,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (138 rows); label read on plate above keel"
+  },
+  {
+   "label": "F",
+   "X": 27.262,
+   "x_px": 2411.8,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (138 rows); label read on plate above keel"
+  },
+  {
+   "label": "H",
+   "X": 29.456,
+   "x_px": 2563.58,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (139 rows); label read on plate above keel"
+  },
+  {
+   "label": "K",
+   "X": 31.665,
+   "x_px": 2716.41,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "M",
+   "X": 33.852,
+   "x_px": 2867.69,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "N",
+   "X": 34.947,
+   "x_px": 2943.38,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (140 rows); label read on plate above keel"
+  },
+  {
+   "label": "O",
+   "X": 36.041,
+   "x_px": 3019.09,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (135 rows); label read on plate above keel"
+  },
+  {
+   "label": "P",
+   "X": 37.142,
+   "x_px": 3095.25,
+   "provenance": "vertical line x from grey-centroid fit over rows 960..1100 (104 rows); label read on plate above keel"
+  }
+ ],
+ "stations_note": "Even-numbered stations aft of midship (17,16,15,14,12,...,2), midship frame (plate symbol), lettered stations forward (B,D,F,H,K,M,N,O,P). Spacing 152.0 px = 7.40 ft = 2.20 m between drawn stations (17-16-15-14 and M-N-O-P at half spacing).",
+ "profile": {
+  "keel_bottom": {
+   "description": "keel bottom (underside of keel)",
+   "points_XZ_every_0.5m": [
+    [
+     2.0,
+     0.324
+    ],
+    [
+     2.5,
+     0.283
+    ],
+    [
+     3.0,
+     0.242
+    ],
+    [
+     3.5,
+     0.205
+    ],
+    [
+     4.0,
+     0.207
+    ],
+    [
+     4.5,
+     0.159
+    ],
+    [
+     5.0,
+     0.129
+    ],
+    [
+     5.5,
+     0.113
+    ],
+    [
+     6.0,
+     0.098
+    ],
+    [
+     6.5,
+     0.082
+    ],
+    [
+     7.0,
+     0.066
+    ],
+    [
+     7.5,
+     0.007
+    ],
+    [
+     8.0,
+     0.039
+    ],
+    [
+     8.5,
+     0.041
+    ],
+    [
+     9.0,
+     0.027
+    ],
+    [
+     9.5,
+     0.024
+    ],
+    [
+     10.0,
+     0.015
+    ],
+    [
+     10.5,
+     0.014
+    ],
+    [
+     11.0,
+     0.013
+    ],
+    [
+     11.5,
+     0.013
+    ],
+    [
+     12.0,
+     0.011
+    ],
+    [
+     12.5,
+     0.014
+    ],
+    [
+     13.0,
+     0.02
+    ],
+    [
+     13.5,
+     0.014
+    ],
+    [
+     14.0,
+     0.016
+    ],
+    [
+     14.5,
+     0.019
+    ],
+    [
+     15.0,
+     0.018
+    ],
+    [
+     15.5,
+     0.016
+    ],
+    [
+     16.0,
+     0.015
+    ],
+    [
+     16.5,
+     0.014
+    ],
+    [
+     17.0,
+     0.013
+    ],
+    [
+     17.5,
+     0.011
+    ],
+    [
+     18.0,
+     0.013
+    ],
+    [
+     18.5,
+     0.002
+    ],
+    [
+     19.0,
+     0.006
+    ],
+    [
+     19.5,
+     0.006
+    ],
+    [
+     20.0,
+     0.012
+    ],
+    [
+     20.5,
+     0.011
+    ],
+    [
+     21.0,
+     0.01
+    ],
+    [
+     21.5,
+     0.009
+    ],
+    [
+     22.0,
+     0.015
+    ],
+    [
+     22.5,
+     0.006
+    ],
+    [
+     23.0,
+     0.005
+    ],
+    [
+     23.5,
+     0.004
+    ],
+    [
+     24.0,
+     0.017
+    ],
+    [
+     24.5,
+     0.023
+    ],
+    [
+     25.0,
+     0.022
+    ],
+    [
+     25.5,
+     0.028
+    ],
+    [
+     26.0,
+     0.027
+    ],
+    [
+     26.5,
+     0.029
+    ],
+    [
+     27.0,
+     0.03
+    ],
+    [
+     27.5,
+     0.03
+    ],
+    [
+     28.0,
+     0.036
+    ],
+    [
+     28.5,
+     0.035
+    ],
+    [
+     29.0,
+     0.041
+    ],
+    [
+     29.5,
+     0.044
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     850.0,
+     1137.0
+    ],
+    "x_range_px": [
+     644.0,
+     2584.0
+    ],
+    "n_px_points": 935,
+    "method": "column tracker (ctrack in m3_profile.py): every 2 px in x, ink run nearest to linear prediction within +-1.5..2.5 px, runs wider than 4-6 px (crossings) rejected; resampled at 0.5 m by linear interpolation"
+   }
+  },
+  "keel_top_rabbet": {
+   "description": "top of keel / rabbet line (continues up the inner edge of the stem)",
+   "points_XZ_every_0.5m": [
+    [
+     2.0,
+     1.385
+    ],
+    [
+     2.5,
+     0.887
+    ],
+    [
+     3.0,
+     0.627
+    ],
+    [
+     3.5,
+     0.494
+    ],
+    [
+     4.0,
+     0.418
+    ],
+    [
+     4.5,
+     0.378
+    ],
+    [
+     5.0,
+     0.353
+    ],
+    [
+     5.5,
+     0.321
+    ],
+    [
+     6.0,
+     0.307
+    ],
+    [
+     6.5,
+     0.292
+    ],
+    [
+     7.0,
+     0.276
+    ],
+    [
+     7.5,
+     0.256
+    ],
+    [
+     8.0,
+     0.259
+    ],
+    [
+     8.5,
+     0.25
+    ],
+    [
+     9.0,
+     0.242
+    ],
+    [
+     9.5,
+     0.234
+    ],
+    [
+     10.0,
+     0.225
+    ],
+    [
+     10.5,
+     0.224
+    ],
+    [
+     11.0,
+     0.223
+    ],
+    [
+     11.5,
+     0.221
+    ],
+    [
+     12.0,
+     0.22
+    ],
+    [
+     12.5,
+     0.226
+    ],
+    [
+     13.0,
+     0.227
+    ],
+    [
+     13.5,
+     0.224
+    ],
+    [
+     14.0,
+     0.221
+    ],
+    [
+     14.5,
+     0.228
+    ],
+    [
+     15.0,
+     0.226
+    ],
+    [
+     15.5,
+     0.226
+    ],
+    [
+     16.0,
+     0.225
+    ],
+    [
+     16.5,
+     0.223
+    ],
+    [
+     17.0,
+     0.222
+    ],
+    [
+     17.5,
+     0.221
+    ],
+    [
+     18.0,
+     0.234
+    ],
+    [
+     18.5,
+     0.233
+    ],
+    [
+     19.0,
+     0.232
+    ],
+    [
+     19.5,
+     0.231
+    ],
+    [
+     20.0,
+     0.229
+    ],
+    [
+     20.5,
+     0.228
+    ],
+    [
+     21.0,
+     0.229
+    ],
+    [
+     21.5,
+     0.235
+    ],
+    [
+     22.0,
+     0.232
+    ],
+    [
+     22.5,
+     0.238
+    ],
+    [
+     23.0,
+     0.236
+    ],
+    [
+     23.5,
+     0.235
+    ],
+    [
+     24.0,
+     0.234
+    ],
+    [
+     24.5,
+     0.233
+    ],
+    [
+     25.0,
+     0.243
+    ],
+    [
+     25.5,
+     0.245
+    ],
+    [
+     26.0,
+     0.243
+    ],
+    [
+     26.5,
+     0.242
+    ],
+    [
+     27.0,
+     0.247
+    ],
+    [
+     27.5,
+     0.247
+    ],
+    [
+     28.0,
+     0.253
+    ],
+    [
+     28.5,
+     0.252
+    ],
+    [
+     29.0,
+     0.265
+    ],
+    [
+     29.5,
+     0.273
+    ],
+    [
+     30.0,
+     0.277
+    ],
+    [
+     30.5,
+     0.29
+    ],
+    [
+     31.0,
+     0.309
+    ],
+    [
+     31.5,
+     0.331
+    ],
+    [
+     32.0,
+     0.344
+    ],
+    [
+     32.5,
+     0.358
+    ],
+    [
+     33.0,
+     0.385
+    ],
+    [
+     33.5,
+     0.413
+    ],
+    [
+     34.0,
+     0.44
+    ],
+    [
+     34.5,
+     0.483
+    ],
+    [
+     35.0,
+     0.521
+    ],
+    [
+     35.5,
+     0.581
+    ],
+    [
+     36.0,
+     0.689
+    ],
+    [
+     36.5,
+     0.881
+    ],
+    [
+     37.0,
+     1.181
+    ],
+    [
+     37.5,
+     1.617
+    ],
+    [
+     38.0,
+     2.245
+    ],
+    [
+     38.5,
+     2.932
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     850.0,
+     1121.5
+    ],
+    "x_range_px": [
+     632.0,
+     3196.0
+    ],
+    "n_px_points": 1265,
+    "method": "column tracker (ctrack in m3_profile.py): every 2 px in x, ink run nearest to linear prediction within +-1.5..2.5 px, runs wider than 4-6 px (crossings) rejected; resampled at 0.5 m by linear interpolation"
+   }
+  },
+  "lower_wale": {
+   "description": "lower wale (thick strake above LWL)",
+   "points_XZ_every_0.5m": [
+    [
+     16.0,
+     3.372
+    ],
+    [
+     16.5,
+     3.353
+    ],
+    [
+     17.0,
+     3.338
+    ],
+    [
+     17.5,
+     3.329
+    ],
+    [
+     18.0,
+     3.314
+    ],
+    [
+     18.5,
+     3.306
+    ],
+    [
+     19.0,
+     3.304
+    ],
+    [
+     19.5,
+     3.295
+    ],
+    [
+     20.0,
+     3.294
+    ],
+    [
+     20.5,
+     3.293
+    ],
+    [
+     21.0,
+     3.292
+    ],
+    [
+     21.5,
+     3.298
+    ],
+    [
+     22.0,
+     3.296
+    ],
+    [
+     22.5,
+     3.301
+    ],
+    [
+     23.0,
+     3.301
+    ],
+    [
+     23.5,
+     3.313
+    ],
+    [
+     24.0,
+     3.313
+    ],
+    [
+     24.5,
+     3.326
+    ],
+    [
+     25.0,
+     3.337
+    ],
+    [
+     25.5,
+     3.349
+    ],
+    [
+     26.0,
+     3.366
+    ],
+    [
+     26.5,
+     3.388
+    ],
+    [
+     27.0,
+     3.407
+    ],
+    [
+     27.5,
+     3.435
+    ],
+    [
+     28.0,
+     3.455
+    ],
+    [
+     28.5,
+     3.488
+    ],
+    [
+     29.0,
+     3.518
+    ],
+    [
+     29.5,
+     3.555
+    ],
+    [
+     30.0,
+     3.602
+    ],
+    [
+     30.5,
+     3.644
+    ],
+    [
+     31.0,
+     3.695
+    ],
+    [
+     31.5,
+     3.753
+    ],
+    [
+     32.0,
+     3.814
+    ],
+    [
+     32.5,
+     3.885
+    ],
+    [
+     33.0,
+     4.025
+    ],
+    [
+     33.5,
+     4.15
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     1700.0,
+     913.5
+    ],
+    "x_range_px": [
+     1616.0,
+     2858.0
+    ],
+    "n_px_points": 521,
+    "method": "column tracker (ctrack in m3_profile.py): every 2 px in x, ink run nearest to linear prediction within +-1.5..2.5 px, runs wider than 4-6 px (crossings) rejected; resampled at 0.5 m by linear interpolation"
+   }
+  },
+  "wale_top": {
+   "description": "main wale upper edge (under the ports)",
+   "points_XZ_every_0.5m": [
+    [
+     15.0,
+     4.268
+    ],
+    [
+     15.5,
+     4.245
+    ],
+    [
+     16.0,
+     4.229
+    ],
+    [
+     16.5,
+     4.214
+    ],
+    [
+     17.0,
+     4.198
+    ],
+    [
+     17.5,
+     4.189
+    ],
+    [
+     18.0,
+     4.181
+    ],
+    [
+     18.5,
+     4.18
+    ],
+    [
+     19.0,
+     4.177
+    ],
+    [
+     19.5,
+     4.17
+    ],
+    [
+     20.0,
+     4.165
+    ],
+    [
+     20.5,
+     4.16
+    ],
+    [
+     21.0,
+     4.17
+    ],
+    [
+     21.5,
+     4.165
+    ],
+    [
+     22.0,
+     4.171
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     1700.0,
+     854.5
+    ],
+    "x_range_px": [
+     1536.0,
+     2054.0
+    ],
+    "n_px_points": 233,
+    "method": "column tracker (ctrack in m3_profile.py): every 2 px in x, ink run nearest to linear prediction within +-1.5..2.5 px, runs wider than 4-6 px (crossings) rejected; resampled at 0.5 m by linear interpolation"
+   }
+  },
+  "deck_at_side": {
+   "description": "deck at side (dashed line)",
+   "points_XZ_every_0.5m": [
+    [
+     17.0,
+     3.923
+    ],
+    [
+     17.5,
+     3.909
+    ],
+    [
+     18.0,
+     3.901
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     1700.0,
+     873.5
+    ],
+    "x_range_px": [
+     1686.0,
+     1796.0
+    ],
+    "n_px_points": 30,
+    "method": "column tracker (ctrack in m3_profile.py): every 2 px in x, ink run nearest to linear prediction within +-1.5..2.5 px, runs wider than 4-6 px (crossings) rejected; resampled at 0.5 m by linear interpolation"
+   }
+  },
+  "rail_lower_edge": {
+   "description": "lower edge of rail band (line through gun-port tops)",
+   "points_XZ_every_0.5m": [
+    [
+     5.5,
+     5.882
+    ],
+    [
+     6.0,
+     5.79
+    ],
+    [
+     6.5,
+     5.735
+    ],
+    [
+     7.0,
+     5.661
+    ],
+    [
+     7.5,
+     5.609
+    ],
+    [
+     8.0,
+     5.557
+    ],
+    [
+     8.5,
+     5.506
+    ],
+    [
+     9.0,
+     5.466
+    ],
+    [
+     9.5,
+     5.416
+    ],
+    [
+     10.0,
+     5.379
+    ],
+    [
+     10.5,
+     5.347
+    ],
+    [
+     11.0,
+     5.311
+    ],
+    [
+     11.5,
+     5.281
+    ],
+    [
+     12.0,
+     5.258
+    ],
+    [
+     12.5,
+     5.23
+    ],
+    [
+     13.0,
+     5.205
+    ],
+    [
+     13.5,
+     5.182
+    ],
+    [
+     14.0,
+     5.166
+    ],
+    [
+     14.5,
+     5.151
+    ],
+    [
+     15.0,
+     5.135
+    ],
+    [
+     15.5,
+     5.12
+    ],
+    [
+     16.0,
+     5.097
+    ],
+    [
+     16.5,
+     5.088
+    ],
+    [
+     17.0,
+     5.08
+    ],
+    [
+     17.5,
+     5.064
+    ],
+    [
+     18.0,
+     5.056
+    ],
+    [
+     18.5,
+     5.047
+    ],
+    [
+     19.0,
+     5.039
+    ],
+    [
+     19.5,
+     5.03
+    ],
+    [
+     20.0,
+     5.024
+    ],
+    [
+     20.5,
+     5.028
+    ],
+    [
+     21.0,
+     5.026
+    ],
+    [
+     21.5,
+     5.025
+    ],
+    [
+     22.0,
+     5.024
+    ],
+    [
+     22.5,
+     5.03
+    ],
+    [
+     23.0,
+     5.029
+    ],
+    [
+     23.5,
+     5.035
+    ],
+    [
+     24.0,
+     5.041
+    ],
+    [
+     24.5,
+     5.047
+    ],
+    [
+     25.0,
+     5.055
+    ],
+    [
+     25.5,
+     5.066
+    ],
+    [
+     26.0,
+     5.079
+    ],
+    [
+     26.5,
+     5.092
+    ],
+    [
+     27.0,
+     5.113
+    ],
+    [
+     27.5,
+     5.126
+    ],
+    [
+     28.0,
+     5.147
+    ],
+    [
+     28.5,
+     5.16
+    ],
+    [
+     29.0,
+     5.18
+    ],
+    [
+     29.5,
+     5.21
+    ],
+    [
+     30.0,
+     5.236
+    ],
+    [
+     30.5,
+     5.256
+    ],
+    [
+     31.0,
+     5.284
+    ],
+    [
+     31.5,
+     5.322
+    ],
+    [
+     32.0,
+     5.353
+    ],
+    [
+     32.5,
+     5.396
+    ],
+    [
+     33.0,
+     5.404
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     1878.0,
+     796.5
+    ],
+    "x_range_px": [
+     898.0,
+     2834.0
+    ],
+    "n_px_points": 943,
+    "method": "column tracker (ctrack in m3_profile.py): every 2 px in x, ink run nearest to linear prediction within +-1.5..2.5 px, runs wider than 4-6 px (crossings) rejected; resampled at 0.5 m by linear interpolation"
+   }
+  },
+  "bulwark_top": {
+   "description": "top of the waist bulwark rail",
+   "points_XZ_every_0.5m": [
+    [
+     16.5,
+     5.327
+    ],
+    [
+     17.0,
+     5.311
+    ],
+    [
+     17.5,
+     5.303
+    ],
+    [
+     18.0,
+     5.294
+    ],
+    [
+     18.5,
+     5.279
+    ],
+    [
+     19.0,
+     5.277
+    ],
+    [
+     19.5,
+     5.276
+    ],
+    [
+     20.0,
+     5.262
+    ],
+    [
+     20.5,
+     5.259
+    ],
+    [
+     21.0,
+     5.26
+    ],
+    [
+     21.5,
+     5.259
+    ],
+    [
+     22.0,
+     5.263
+    ],
+    [
+     22.5,
+     5.261
+    ],
+    [
+     23.0,
+     5.267
+    ],
+    [
+     23.5,
+     5.273
+    ],
+    [
+     24.0,
+     5.279
+    ],
+    [
+     24.5,
+     5.278
+    ],
+    [
+     25.0,
+     5.291
+    ],
+    [
+     25.5,
+     5.304
+    ],
+    [
+     26.0,
+     5.318
+    ],
+    [
+     26.5,
+     5.331
+    ],
+    [
+     27.0,
+     5.364
+    ],
+    [
+     27.5,
+     5.365
+    ],
+    [
+     28.0,
+     5.385
+    ],
+    [
+     28.5,
+     5.398
+    ],
+    [
+     29.0,
+     5.419
+    ],
+    [
+     29.5,
+     5.444
+    ],
+    [
+     30.0,
+     5.467
+    ],
+    [
+     30.5,
+     5.495
+    ],
+    [
+     31.0,
+     5.522
+    ],
+    [
+     31.5,
+     5.557
+    ],
+    [
+     32.0,
+     5.592
+    ],
+    [
+     32.5,
+     5.62
+    ],
+    [
+     33.0,
+     5.663
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     2000.0,
+     780.5
+    ],
+    "x_range_px": [
+     1638.0,
+     2820.0
+    ],
+    "n_px_points": 585,
+    "method": "column tracker (ctrack in m3_profile.py): every 2 px in x, ink run nearest to linear prediction within +-1.5..2.5 px, runs wider than 4-6 px (crossings) rejected; resampled at 0.5 m by linear interpolation"
+   }
+  },
+  "stem_outer": {
+   "description": "stem outer (fore) edge; below Z~0.6 m it is the forefoot/keel bottom",
+   "points_XZ_every_0.25m_of_Z": [
+    [
+     34.472,
+     0.25
+    ],
+    [
+     36.12,
+     0.5
+    ],
+    [
+     36.709,
+     0.75
+    ],
+    [
+     37.115,
+     1.0
+    ],
+    [
+     37.441,
+     1.25
+    ],
+    [
+     37.713,
+     1.5
+    ],
+    [
+     37.953,
+     1.75
+    ],
+    [
+     38.172,
+     2.0
+    ],
+    [
+     38.365,
+     2.25
+    ],
+    [
+     38.551,
+     2.5
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     3168.5,
+     1000.0
+    ],
+    "n_px_points": 522,
+    "method": "curve tracer (tracer.py): 2 px steps, snap to nearest ink run on the normal within +-3 px; sampled where Z crosses each 0.25 m"
+   }
+  },
+  "sternpost_outer": {
+   "description": "sternpost outer (aft) edge, curved and raked",
+   "points_XZ_every_0.25m_of_Z": [
+    [
+     1.746,
+     0.75
+    ],
+    [
+     1.626,
+     1.0
+    ],
+    [
+     1.531,
+     1.25
+    ],
+    [
+     1.443,
+     1.5
+    ],
+    [
+     1.363,
+     1.75
+    ],
+    [
+     1.286,
+     2.0
+    ],
+    [
+     1.211,
+     2.25
+    ],
+    [
+     1.138,
+     2.5
+    ],
+    [
+     1.064,
+     2.75
+    ],
+    [
+     0.993,
+     3.0
+    ],
+    [
+     0.921,
+     3.25
+    ],
+    [
+     0.846,
+     3.5
+    ],
+    [
+     0.775,
+     3.75
+    ],
+    [
+     0.707,
+     4.0
+    ],
+    [
+     0.637,
+     4.25
+    ],
+    [
+     0.568,
+     4.5
+    ],
+    [
+     0.495,
+     4.75
+    ],
+    [
+     0.424,
+     5.0
+    ],
+    [
+     0.355,
+     5.25
+    ],
+    [
+     0.286,
+     5.5
+    ],
+    [
+     0.217,
+     5.75
+    ]
+   ],
+   "provenance": {
+    "seed_px": [
+     612.5,
+     1000.0
+    ],
+    "n_px_points": 170,
+    "method": "curve tracer (tracer.py): 2 px steps, snap to nearest ink run on the normal within +-3 px; sampled where Z crosses each 0.25 m"
+   },
+   "rake_deg_from_vertical_overall": 17.2
+  },
+  "keel_depth": {
+   "m": 0.23,
+   "provenance": "profile at x=1878 px: baseline (=keel bottom) to the upper thin line (top of keel/rabbet) = 15.9 px; body plan: dashed baseline y=773.14 to rabbet line y=753.00 = 20.1 px"
+  },
+  "beak": {
+   "tip_of_carved_figure": {
+    "X": 45.712,
+    "Z": 6.635,
+    "px": [
+     3688.0,
+     681.0
+    ],
+    "method": "rightmost ink pixel in box x3550-3760, y640-740 (carved figure at beak end)"
+   },
+   "outline_columns_X_Ztop_Zbottom": [
+    [
+     42.126,
+     5.748,
+     5.126
+    ],
+    [
+     42.415,
+     5.819,
+     4.099
+    ],
+    [
+     42.705,
+     5.891,
+     4.329
+    ],
+    [
+     42.994,
+     5.962,
+     5.471
+    ],
+    [
+     43.283,
+     6.034,
+     5.586
+    ],
+    [
+     43.572,
+     6.106,
+     5.686
+    ],
+    [
+     43.861,
+     6.177,
+     5.801
+    ],
+    [
+     44.15,
+     6.249,
+     5.916
+    ],
+    [
+     44.439,
+     6.306,
+     6.031
+    ],
+    [
+     44.728,
+     6.421,
+     6.16
+    ],
+    [
+     45.018,
+     6.565,
+     6.261
+    ],
+    [
+     45.307,
+     6.593,
+     6.347
+    ],
+    [
+     45.596,
+     6.635,
+     6.534
+    ]
+   ],
+   "provenance": "per column: first ink (upper outline) and last ink (lower outline) in y640..860; right of x~3330 the No.18 drawing intrudes below y~850. Only columns x>=3440 px (beyond the stem head and clear of the No.18 drawing) are reported; between FP and x=3440 the beak overlaps the stem-head structure and the outline was not separated (not measured)."
+  },
+  "stern_platform": {
+   "aft_tip_of_platform_rail": {
+    "X": -5.292,
+    "Z": 9.551,
+    "px": [
+     160.0,
+     488.0
+    ],
+    "method": "leftmost column in x100..260 having >=3 ink pixels in y470..600 (end of balustraded stern platform rail); y = centre of that ink"
+   },
+   "aft_tip_of_awning_spar": {
+    "X": -6.044,
+    "Z": 10.291,
+    "px": [
+     108.0,
+     437.0
+    ],
+    "method": "leftmost ink pixel in box x60-200, y420-460 (awning/outrigger spar over stern platform)"
+   },
+   "spar_XZ": [
+    [
+     -5.292,
+     9.551
+    ],
+    [
+     -5.003,
+     9.421
+    ],
+    [
+     -4.714,
+     9.803
+    ],
+    [
+     -4.425,
+     9.181
+    ],
+    [
+     -4.136,
+     9.809
+    ],
+    [
+     -3.847,
+     9.75
+    ],
+    [
+     -3.557,
+     9.807
+    ],
+    [
+     -3.268,
+     9.749
+    ],
+    [
+     -2.979,
+     9.69
+    ],
+    [
+     -2.69,
+     9.617
+    ],
+    [
+     -2.401,
+     9.552
+    ],
+    [
+     -2.112,
+     9.486
+    ],
+    [
+     -1.823,
+     9.695
+    ],
+    [
+     -1.533,
+     9.354
+    ],
+    [
+     -1.244,
+     9.288
+    ],
+    [
+     -0.955,
+     9.215
+    ],
+    [
+     -0.666,
+     9.15
+    ],
+    [
+     -0.377,
+     9.084
+    ],
+    [
+     -0.088,
+     9.018
+    ]
+   ],
+   "rail_top_XZ_linear_fit": [
+    [
+     -4.425,
+     9.191
+    ],
+    [
+     -3.847,
+     9.01
+    ],
+    [
+     -3.268,
+     8.828
+    ],
+    [
+     -2.69,
+     8.647
+    ],
+    [
+     -2.112,
+     8.465
+    ],
+    [
+     -1.533,
+     8.284
+    ],
+    [
+     -0.955,
+     8.102
+    ],
+    [
+     -0.377,
+     7.921
+    ]
+   ],
+   "underside_XZ": [
+    [
+     -4.714,
+     8.798
+    ],
+    [
+     -4.425,
+     8.364
+    ],
+    [
+     -4.136,
+     8.233
+    ],
+    [
+     -3.847,
+     8.102
+    ],
+    [
+     -3.557,
+     7.971
+    ],
+    [
+     -3.268,
+     7.841
+    ],
+    [
+     -2.979,
+     7.71
+    ],
+    [
+     -2.69,
+     7.579
+    ],
+    [
+     -2.401,
+     7.462
+    ],
+    [
+     -2.112,
+     7.332
+    ],
+    [
+     -1.823,
+     7.215
+    ],
+    [
+     -1.533,
+     7.099
+    ],
+    [
+     -1.244,
+     6.983
+    ],
+    [
+     -0.955,
+     6.866
+    ],
+    [
+     -0.666,
+     6.75
+    ],
+    [
+     -0.377,
+     6.633
+    ],
+    [
+     -0.088,
+     6.532
+    ]
+   ],
+   "deck_floor": "not separated on the plate from the balustrade (not measured)",
+   "provenance": "per column x: [x, spar centre y (first ink), rail top y (first thick run >15 px below the spar), underside y (last ink in y470..700)]; rail top = linear fit to per-column rail-top runs (balusters rejected as >8 px outliers)"
+  },
+  "quarterdeck": {
+   "status": "NOT MEASURED in this pass (time); quarterdeck bulwark with rectangular openings spans roughly x=533..947 px on the plate (earlier agent); no pixel trace by this agent"
+  },
+  "forecastle": {
+   "status": "NOT MEASURED in this pass (time)"
+  }
+ },
+ "ports": {
+  "list": [
+   {
+    "kind": "oar",
+    "X_centre": 9.598,
+    "Z_sill": 4.657,
+    "Z_top": 4.903,
+    "width": 0.275,
+    "px": [
+     1181.0,
+     807.0,
+     1199.0,
+     824.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 11.904,
+    "Z_sill": 4.55,
+    "Z_top": 4.81,
+    "width": 0.26,
+    "px": [
+     1341.0,
+     813.0,
+     1358.0,
+     831.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 14.225,
+    "Z_sill": 4.472,
+    "Z_top": 4.732,
+    "width": 0.275,
+    "px": [
+     1501.0,
+     818.0,
+     1519.0,
+     836.0
+    ]
+   },
+   {
+    "kind": "gun",
+    "X_centre": 15.374,
+    "Z_sill": 4.368,
+    "Z_top": 5.019,
+    "width": 0.694,
+    "px": [
+     1566.0,
+     798.0,
+     1613.0,
+     843.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 16.74,
+    "Z_sill": 4.408,
+    "Z_top": 4.668,
+    "width": 0.275,
+    "px": [
+     1675.0,
+     822.0,
+     1693.0,
+     840.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 18.497,
+    "Z_sill": 4.375,
+    "Z_top": 4.635,
+    "width": 0.26,
+    "px": [
+     1797.0,
+     824.0,
+     1814.0,
+     842.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 20.983,
+    "Z_sill": 4.354,
+    "Z_top": 4.615,
+    "width": 0.26,
+    "px": [
+     1969.0,
+     825.0,
+     1986.0,
+     843.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 23.607,
+    "Z_sill": 4.362,
+    "Z_top": 4.622,
+    "width": 0.246,
+    "px": [
+     2151.0,
+     824.0,
+     2167.0,
+     842.0
+    ]
+   },
+   {
+    "kind": "gun",
+    "X_centre": 24.395,
+    "Z_sill": 4.302,
+    "Z_top": 4.953,
+    "width": 0.665,
+    "px": [
+     2191.0,
+     801.0,
+     2236.0,
+     846.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 25.739,
+    "Z_sill": 4.4,
+    "Z_top": 4.646,
+    "width": 0.289,
+    "px": [
+     2297.0,
+     822.0,
+     2316.0,
+     839.0
+    ]
+   },
+   {
+    "kind": "oar",
+    "X_centre": 28.146,
+    "Z_sill": 4.467,
+    "Z_top": 4.698,
+    "width": 0.275,
+    "px": [
+     2464.0,
+     818.0,
+     2482.0,
+     834.0
+    ]
+   }
+  ],
+  "provenance": "closed rectangles found from horizontal ink runs (13-21 px = oar port, 40-52 px = gun port) in rows 786..856 that recur at top and bottom of the same x-span and have side strokes; top/sill = outer edge rows of the frame lines (outside of the ink)",
+  "missing": "Only 2 of the 8 waist gun ports were found automatically: on the other 6 the port top merges with the rail-band line, so the top edge run is longer than 52 px and the detector rejected them. Not measured here."
+ },
+ "masts": {
+  "mizzen": {
+   "X_centre_at_rows": [
+    [
+     3.516,
+     7.91
+    ],
+    [
+     3.541,
+     7.188
+    ]
+   ],
+   "diameter": 0.314,
+   "rake_deg_positive_forward_at_top": -2.0,
+   "provenance": "mast-stub side edges (ink runs <=5 px) on rows 600 and 650 px: [[600, 758.5, 780.0], [650, 760.0, 782.0]]"
+  },
+  "main": {
+   "X_centre_at_rows": [
+    [
+     18.54,
+     6.428
+    ],
+    [
+     18.536,
+     5.56
+    ]
+   ],
+   "diameter": 0.632,
+   "rake_deg_positive_forward_at_top": 0.2,
+   "provenance": "mast-stub side edges (ink runs <=5 px) on rows 700 and 760 px: [[700, 1786.5, 1830.5], [760, 1786.5, 1830.0]]"
+  },
+  "fore": {
+   "X_centre_at_rows": [
+    [
+     36.203,
+     7.251
+    ],
+    [
+     36.145,
+     6.384
+    ]
+   ],
+   "diameter": 0.455,
+   "rake_deg_positive_forward_at_top": 3.8,
+   "provenance": "mast-stub side edges (ink runs <=5 px) on rows 640 and 700 px: [[640, 3014.5, 3046.0], [700, 3010.5, 3042.0]]"
+  }
+ },
+ "body_plan": {
+  "centreline_x_px": 2125.5,
+  "baseline_y_px": 773.14,
+  "rabbet_y_px": 753.0,
+  "Z_datum": "body-plan dashed baseline = underside of keel (keel drawn 2116..2133 px wide, rabbet line at y=753.0)",
+  "which_half": "LEFT half = AFT body (sections cross the left diagonal at labels 4..16 = numbered stations, which are aft of midship in the profile); RIGHT half = FORE body (labels D..P = lettered stations forward).",
+  "flare": "all sections flare strongly outward above the LWL; the midship section reaches the rail cap far outboard of the waterline breadth (see largest Y of the outermost sections)",
+  "labelling_caveat": "labels are assigned by ORDER from the outside (midship first). The tracer found fewer distinct curves than the plate has sections and some merged groups may combine two neighbouring sections; check body_plan overlay before using a label.",
+  "sections": [
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 0,
+    "label_by_order": "midship",
+    "X": 20.632,
+    "Z_top": 4.929,
+    "Z_bottom_traced": 0.674,
+    "points_ZY_every_0.25m": [
+     [
+      0.75,
+      2.568
+     ],
+     [
+      1.0,
+      2.826
+     ],
+     [
+      1.25,
+      3.028
+     ],
+     [
+      1.5,
+      3.195
+     ],
+     [
+      1.75,
+      3.348
+     ],
+     [
+      2.0,
+      3.485
+     ],
+     [
+      2.25,
+      3.612
+     ],
+     [
+      2.5,
+      3.729
+     ],
+     [
+      2.75,
+      3.848
+     ],
+     [
+      3.0,
+      3.971
+     ],
+     [
+      3.25,
+      4.099
+     ],
+     [
+      3.5,
+      4.235
+     ],
+     [
+      3.75,
+      4.382
+     ],
+     [
+      4.0,
+      4.536
+     ],
+     [
+      4.25,
+      4.704
+     ],
+     [
+      4.5,
+      4.897
+     ],
+     [
+      4.75,
+      5.103
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 146,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 1,
+    "label_by_order": "2",
+    "X": 18.436,
+    "Z_top": 4.986,
+    "Z_bottom_traced": 0.694,
+    "points_ZY_every_0.25m": [
+     [
+      0.75,
+      2.314
+     ],
+     [
+      1.0,
+      2.634
+     ],
+     [
+      1.25,
+      2.875
+     ],
+     [
+      1.5,
+      3.064
+     ],
+     [
+      1.75,
+      3.23
+     ],
+     [
+      2.0,
+      3.375
+     ],
+     [
+      2.25,
+      3.504
+     ],
+     [
+      2.5,
+      3.628
+     ],
+     [
+      2.75,
+      3.745
+     ],
+     [
+      3.0,
+      3.866
+     ],
+     [
+      3.25,
+      4.001
+     ],
+     [
+      3.5,
+      4.137
+     ],
+     [
+      3.75,
+      4.284
+     ],
+     [
+      4.0,
+      4.442
+     ],
+     [
+      4.25,
+      4.612
+     ],
+     [
+      4.5,
+      4.798
+     ],
+     [
+      4.75,
+      5.005
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 157,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 2,
+    "label_by_order": "4",
+    "X": 16.23,
+    "Z_top": 5.066,
+    "Z_bottom_traced": 0.29,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      1.145
+     ],
+     [
+      0.75,
+      1.886
+     ],
+     [
+      1.0,
+      2.304
+     ],
+     [
+      1.25,
+      2.583
+     ],
+     [
+      1.5,
+      2.814
+     ],
+     [
+      1.75,
+      2.998
+     ],
+     [
+      2.0,
+      3.17
+     ],
+     [
+      2.25,
+      3.327
+     ],
+     [
+      2.5,
+      3.474
+     ],
+     [
+      2.75,
+      3.608
+     ],
+     [
+      3.0,
+      3.736
+     ],
+     [
+      3.25,
+      3.871
+     ],
+     [
+      3.5,
+      4.012
+     ],
+     [
+      3.75,
+      4.163
+     ],
+     [
+      4.0,
+      4.329
+     ],
+     [
+      4.25,
+      4.509
+     ],
+     [
+      4.5,
+      4.69
+     ],
+     [
+      4.75,
+      4.903
+     ],
+     [
+      5.0,
+      5.133
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 2,
+     "n_px_points": 269,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 3,
+    "label_by_order": "6",
+    "X": 14.02,
+    "Z_top": 5.194,
+    "Z_bottom_traced": 0.287,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      0.564
+     ],
+     [
+      0.75,
+      1.207
+     ],
+     [
+      1.0,
+      1.744
+     ],
+     [
+      1.25,
+      2.156
+     ],
+     [
+      1.5,
+      2.444
+     ],
+     [
+      1.75,
+      2.68
+     ],
+     [
+      2.0,
+      2.873
+     ],
+     [
+      2.25,
+      3.046
+     ],
+     [
+      2.5,
+      3.208
+     ],
+     [
+      2.75,
+      3.364
+     ],
+     [
+      3.0,
+      3.506
+     ],
+     [
+      3.25,
+      3.642
+     ],
+     [
+      3.5,
+      3.789
+     ],
+     [
+      3.75,
+      3.957
+     ],
+     [
+      4.0,
+      4.134
+     ],
+     [
+      4.25,
+      4.324
+     ],
+     [
+      4.5,
+      4.524
+     ],
+     [
+      4.75,
+      4.736
+     ],
+     [
+      5.0,
+      4.962
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 223,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 4,
+    "label_by_order": "8",
+    "X": 11.838,
+    "Z_top": 5.551,
+    "Z_bottom_traced": 1.699,
+    "points_ZY_every_0.25m": [
+     [
+      1.75,
+      1.538
+     ],
+     [
+      2.0,
+      1.826
+     ],
+     [
+      2.25,
+      2.074
+     ],
+     [
+      2.5,
+      2.31
+     ],
+     [
+      2.75,
+      2.494
+     ],
+     [
+      3.0,
+      2.66
+     ],
+     [
+      3.25,
+      2.813
+     ],
+     [
+      3.5,
+      2.96
+     ],
+     [
+      3.75,
+      3.2
+     ],
+     [
+      4.0,
+      3.436
+     ],
+     [
+      4.25,
+      3.672
+     ],
+     [
+      4.5,
+      3.908
+     ],
+     [
+      4.75,
+      4.15
+     ],
+     [
+      5.0,
+      4.39
+     ],
+     [
+      5.25,
+      4.627
+     ],
+     [
+      5.5,
+      4.868
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 152,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 5,
+    "label_by_order": "10",
+    "X": 9.64,
+    "Z_top": 2.153,
+    "Z_bottom_traced": 0.226,
+    "points_ZY_every_0.25m": [
+     [
+      0.25,
+      0.04
+     ],
+     [
+      0.5,
+      0.34
+     ],
+     [
+      0.75,
+      0.697
+     ],
+     [
+      1.0,
+      1.125
+     ],
+     [
+      1.25,
+      1.536
+     ],
+     [
+      1.5,
+      1.902
+     ],
+     [
+      1.75,
+      2.195
+     ],
+     [
+      2.0,
+      2.427
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 95,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 6,
+    "label_by_order": "12",
+    "X": 7.442,
+    "Z_top": 1.693,
+    "Z_bottom_traced": 0.244,
+    "points_ZY_every_0.25m": [
+     [
+      0.25,
+      0.019
+     ],
+     [
+      0.5,
+      0.201
+     ],
+     [
+      0.75,
+      0.408
+     ],
+     [
+      1.0,
+      0.645
+     ],
+     [
+      1.25,
+      0.926
+     ],
+     [
+      1.5,
+      1.229
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 60,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 7,
+    "label_by_order": "14",
+    "X": 5.25,
+    "Z_top": 3.748,
+    "Z_bottom_traced": 0.231,
+    "points_ZY_every_0.25m": [
+     [
+      0.25,
+      0.023
+     ],
+     [
+      0.5,
+      0.123
+     ],
+     [
+      0.75,
+      0.209
+     ],
+     [
+      1.0,
+      0.332
+     ],
+     [
+      1.25,
+      0.488
+     ],
+     [
+      1.5,
+      0.668
+     ],
+     [
+      1.75,
+      0.874
+     ],
+     [
+      2.0,
+      1.104
+     ],
+     [
+      2.25,
+      1.329
+     ],
+     [
+      2.5,
+      1.559
+     ],
+     [
+      2.75,
+      1.776
+     ],
+     [
+      3.0,
+      1.964
+     ],
+     [
+      3.25,
+      2.136
+     ],
+     [
+      3.5,
+      2.275
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 129,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 8,
+    "label_by_order": "16",
+    "X": 3.053,
+    "Z_top": 3.942,
+    "Z_bottom_traced": 0.359,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      0.066
+     ],
+     [
+      0.75,
+      0.141
+     ],
+     [
+      1.0,
+      0.213
+     ],
+     [
+      1.25,
+      0.308
+     ],
+     [
+      1.5,
+      0.434
+     ],
+     [
+      1.75,
+      0.577
+     ],
+     [
+      2.0,
+      0.736
+     ],
+     [
+      2.25,
+      0.922
+     ],
+     [
+      2.5,
+      1.112
+     ],
+     [
+      2.75,
+      1.299
+     ],
+     [
+      3.0,
+      1.479
+     ],
+     [
+      3.25,
+      1.646
+     ],
+     [
+      3.5,
+      1.798
+     ],
+     [
+      3.75,
+      1.93
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 125,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 9,
+    "label_by_order": "17",
+    "X": 1.952,
+    "Z_top": 4.154,
+    "Z_bottom_traced": 0.645,
+    "points_ZY_every_0.25m": [
+     [
+      0.75,
+      0.077
+     ],
+     [
+      1.0,
+      0.111
+     ],
+     [
+      1.25,
+      0.158
+     ],
+     [
+      1.5,
+      0.222
+     ],
+     [
+      1.75,
+      0.31
+     ],
+     [
+      2.0,
+      0.417
+     ],
+     [
+      2.25,
+      0.538
+     ],
+     [
+      2.5,
+      0.664
+     ],
+     [
+      2.75,
+      0.815
+     ],
+     [
+      3.0,
+      0.971
+     ],
+     [
+      3.25,
+      1.117
+     ],
+     [
+      3.5,
+      1.256
+     ],
+     [
+      3.75,
+      1.38
+     ],
+     [
+      4.0,
+      1.497
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 121,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 10,
+    "label_by_order": null,
+    "X": null,
+    "Z_top": 4.454,
+    "Z_bottom_traced": 1.569,
+    "points_ZY_every_0.25m": [
+     [
+      1.75,
+      0.099
+     ],
+     [
+      2.0,
+      0.145
+     ],
+     [
+      2.25,
+      0.199
+     ],
+     [
+      2.5,
+      0.267
+     ],
+     [
+      2.75,
+      0.353
+     ],
+     [
+      3.0,
+      0.437
+     ],
+     [
+      3.25,
+      0.526
+     ],
+     [
+      3.5,
+      0.621
+     ],
+     [
+      3.75,
+      0.722
+     ],
+     [
+      4.0,
+      0.82
+     ],
+     [
+      4.25,
+      0.917
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 96,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "aft_left",
+    "order_from_outside": 11,
+    "label_by_order": null,
+    "X": null,
+    "Z_top": 5.36,
+    "Z_bottom_traced": 2.149,
+    "points_ZY_every_0.25m": [
+     [
+      2.25,
+      2.639
+     ],
+     [
+      2.5,
+      2.816
+     ],
+     [
+      2.75,
+      2.979
+     ],
+     [
+      3.0,
+      3.141
+     ],
+     [
+      3.25,
+      3.289
+     ],
+     [
+      3.5,
+      3.462
+     ],
+     [
+      3.75,
+      3.645
+     ],
+     [
+      4.0,
+      3.839
+     ],
+     [
+      4.25,
+      4.045
+     ],
+     [
+      4.5,
+      4.26
+     ],
+     [
+      4.75,
+      4.484
+     ],
+     [
+      5.0,
+      4.715
+     ],
+     [
+      5.25,
+      4.955
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 117,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "fore_right",
+    "order_from_outside": 0,
+    "label_by_order": "midship",
+    "X": 20.632,
+    "Z_top": 5.028,
+    "Z_bottom_traced": 0.362,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      1.269
+     ],
+     [
+      0.75,
+      1.973
+     ],
+     [
+      1.0,
+      2.347
+     ],
+     [
+      1.25,
+      2.615
+     ],
+     [
+      1.5,
+      2.837
+     ],
+     [
+      1.75,
+      3.019
+     ],
+     [
+      2.0,
+      3.181
+     ],
+     [
+      2.25,
+      3.328
+     ],
+     [
+      2.5,
+      3.458
+     ],
+     [
+      2.75,
+      3.58
+     ],
+     [
+      3.0,
+      3.697
+     ],
+     [
+      3.25,
+      3.815
+     ],
+     [
+      3.5,
+      3.947
+     ],
+     [
+      3.75,
+      4.081
+     ],
+     [
+      4.0,
+      4.235
+     ],
+     [
+      4.25,
+      4.404
+     ],
+     [
+      4.5,
+      4.596
+     ],
+     [
+      4.75,
+      4.815
+     ],
+     [
+      5.0,
+      5.073
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 2,
+     "n_px_points": 261,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "fore_right",
+    "order_from_outside": 1,
+    "label_by_order": "B",
+    "X": 22.842,
+    "Z_top": 5.28,
+    "Z_bottom_traced": 0.353,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      0.61
+     ],
+     [
+      0.75,
+      1.31
+     ],
+     [
+      1.0,
+      1.785
+     ],
+     [
+      1.25,
+      2.156
+     ],
+     [
+      1.5,
+      2.431
+     ],
+     [
+      1.75,
+      2.659
+     ],
+     [
+      2.0,
+      2.853
+     ],
+     [
+      2.25,
+      3.018
+     ],
+     [
+      2.5,
+      3.172
+     ],
+     [
+      2.75,
+      3.312
+     ],
+     [
+      3.0,
+      3.448
+     ],
+     [
+      3.25,
+      3.575
+     ],
+     [
+      3.5,
+      3.699
+     ],
+     [
+      3.75,
+      3.827
+     ],
+     [
+      4.0,
+      3.968
+     ],
+     [
+      4.25,
+      4.124
+     ],
+     [
+      4.5,
+      4.304
+     ],
+     [
+      4.75,
+      4.527
+     ],
+     [
+      5.0,
+      4.79
+     ],
+     [
+      5.25,
+      5.103
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 2,
+     "n_px_points": 253,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "fore_right",
+    "order_from_outside": 2,
+    "label_by_order": "D",
+    "X": 25.056,
+    "Z_top": 4.529,
+    "Z_bottom_traced": 0.402,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      0.27
+     ],
+     [
+      0.75,
+      0.687
+     ],
+     [
+      1.0,
+      1.103
+     ],
+     [
+      1.25,
+      1.459
+     ],
+     [
+      1.5,
+      1.781
+     ],
+     [
+      1.75,
+      2.056
+     ],
+     [
+      2.0,
+      2.302
+     ],
+     [
+      2.25,
+      2.504
+     ],
+     [
+      2.5,
+      2.684
+     ],
+     [
+      2.75,
+      2.845
+     ],
+     [
+      3.0,
+      2.995
+     ],
+     [
+      3.25,
+      3.142
+     ],
+     [
+      3.5,
+      3.275
+     ],
+     [
+      3.75,
+      3.413
+     ],
+     [
+      4.0,
+      3.543
+     ],
+     [
+      4.25,
+      3.699
+     ],
+     [
+      4.5,
+      3.875
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 174,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "fore_right",
+    "order_from_outside": 3,
+    "label_by_order": "F",
+    "X": 27.262,
+    "Z_top": 5.039,
+    "Z_bottom_traced": 0.474,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      0.109
+     ],
+     [
+      0.75,
+      0.274
+     ],
+     [
+      1.0,
+      0.479
+     ],
+     [
+      1.25,
+      0.7
+     ],
+     [
+      1.5,
+      0.941
+     ],
+     [
+      1.75,
+      1.189
+     ],
+     [
+      2.0,
+      1.436
+     ],
+     [
+      2.25,
+      1.678
+     ],
+     [
+      2.5,
+      1.891
+     ],
+     [
+      2.75,
+      2.092
+     ],
+     [
+      3.0,
+      2.272
+     ],
+     [
+      3.25,
+      2.434
+     ],
+     [
+      3.5,
+      2.589
+     ],
+     [
+      3.75,
+      2.743
+     ],
+     [
+      4.0,
+      2.877
+     ],
+     [
+      4.25,
+      3.024
+     ],
+     [
+      4.5,
+      3.196
+     ],
+     [
+      4.75,
+      3.415
+     ],
+     [
+      5.0,
+      3.675
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 178,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "fore_right",
+    "order_from_outside": 4,
+    "label_by_order": "H",
+    "X": 29.456,
+    "Z_top": 4.828,
+    "Z_bottom_traced": 0.164,
+    "points_ZY_every_0.25m": [
+     [
+      0.25,
+      0.085
+     ],
+     [
+      0.5,
+      0.032
+     ],
+     [
+      0.75,
+      0.15
+     ],
+     [
+      1.0,
+      0.255
+     ],
+     [
+      1.25,
+      0.4
+     ],
+     [
+      1.5,
+      0.557
+     ],
+     [
+      1.75,
+      0.736
+     ],
+     [
+      2.0,
+      0.944
+     ],
+     [
+      2.25,
+      1.159
+     ],
+     [
+      2.5,
+      1.384
+     ],
+     [
+      2.75,
+      1.595
+     ],
+     [
+      3.0,
+      1.787
+     ],
+     [
+      3.25,
+      1.966
+     ],
+     [
+      3.5,
+      2.123
+     ],
+     [
+      3.75,
+      2.259
+     ],
+     [
+      4.0,
+      2.381
+     ],
+     [
+      4.25,
+      2.496
+     ],
+     [
+      4.5,
+      2.627
+     ],
+     [
+      4.75,
+      2.782
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 158,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "fore_right",
+    "order_from_outside": 5,
+    "label_by_order": "K",
+    "X": 31.665,
+    "Z_top": 4.646,
+    "Z_bottom_traced": 0.363,
+    "points_ZY_every_0.25m": [
+     [
+      0.5,
+      0.09
+     ],
+     [
+      0.75,
+      0.086
+     ],
+     [
+      1.0,
+      0.113
+     ],
+     [
+      1.25,
+      0.193
+     ],
+     [
+      1.5,
+      0.291
+     ],
+     [
+      1.75,
+      0.405
+     ],
+     [
+      2.0,
+      0.537
+     ],
+     [
+      2.25,
+      0.68
+     ],
+     [
+      2.5,
+      0.837
+     ],
+     [
+      2.75,
+      1.004
+     ],
+     [
+      3.0,
+      1.179
+     ],
+     [
+      3.25,
+      1.352
+     ],
+     [
+      3.5,
+      1.524
+     ],
+     [
+      3.75,
+      1.676
+     ],
+     [
+      4.0,
+      1.806
+     ],
+     [
+      4.25,
+      1.924
+     ],
+     [
+      4.5,
+      2.027
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 143,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   },
+   {
+    "side_on_plate": "fore_right",
+    "order_from_outside": 6,
+    "label_by_order": "M",
+    "X": 33.852,
+    "Z_top": 5.282,
+    "Z_bottom_traced": 0.172,
+    "points_ZY_every_0.25m": [
+     [
+      0.25,
+      0.109
+     ],
+     [
+      0.5,
+      0.096
+     ],
+     [
+      0.75,
+      0.083
+     ],
+     [
+      1.0,
+      0.084
+     ],
+     [
+      1.25,
+      0.078
+     ],
+     [
+      1.5,
+      0.095
+     ],
+     [
+      1.75,
+      0.135
+     ],
+     [
+      2.0,
+      0.198
+     ],
+     [
+      2.25,
+      0.28
+     ],
+     [
+      2.5,
+      0.375
+     ],
+     [
+      2.75,
+      0.487
+     ],
+     [
+      3.0,
+      0.598
+     ],
+     [
+      3.25,
+      0.719
+     ],
+     [
+      3.5,
+      0.85
+     ],
+     [
+      3.75,
+      0.986
+     ],
+     [
+      4.0,
+      1.101
+     ],
+     [
+      4.25,
+      1.206
+     ],
+     [
+      4.5,
+      1.297
+     ],
+     [
+      4.75,
+      1.378
+     ],
+     [
+      5.0,
+      1.439
+     ],
+     [
+      5.25,
+      1.492
+     ]
+    ],
+    "provenance": {
+     "n_fragments": 1,
+     "n_px_points": 157,
+     "method": "curve tracer from seeds on rows 600/650 and columns (m2_bodyplan.py); fragments merged if they cross a common row within 3 px; Y at each Z = median x of fragments where the polyline first crosses that row walking from keel up"
+    }
+   }
+  ]
+ },
+ "half_breadth_plan": {
+  "status": "PRESENT on the plate directly below the No.17 profile (about y=1150..1450 px), but its lower part is overlapped by the No.18 deck plan. NOT MEASURED in this pass."
+ }
+}

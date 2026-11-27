@@ -1,0 +1,531 @@
+{
+ "note": "draft_oars.py 的結果：外部模型掛在 host 作品裡（船殼的框 ⇒ 世界座標）；at ＝ pivot 的落點、pivot ＝ 元件 pivot 那一格的中心；右舷原樣、左舷 mirror=y（先翻再轉）、rotate x 補到槳葉中心落在水面",
+ "host": "claude-xebec-01m",
+ "component": {
+  "work": "claude-galiot-01m-oar",
+  "anchors": {
+   "pivot": [
+    3,
+    52,
+    29
+   ],
+   "blade": [
+    3,
+    164,
+    4
+   ],
+   "seat": [
+    3,
+    22,
+    15
+   ]
+  },
+  "src_sha256": "a674651a3be0e5707aedf85f379995098b95bb4896b4dd5fb4dca7dae6364bf2"
+ },
+ "models": [
+  {
+   "name": "oar-S01",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    165.5,
+    172.0,
+    47.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -7.537,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 15,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S02",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    188.5,
+    174.0,
+    46.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -6.363,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 23,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S03",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    211.5,
+    175.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -5.196,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S04",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    236.5,
+    176.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -5.196,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S05",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    253.5,
+    176.0,
+    44.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -4.037,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S06",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    278.5,
+    176.0,
+    44.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -4.037,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S07",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    304.5,
+    176.0,
+    44.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -4.037,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 17,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S08",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    325.5,
+    175.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -5.196,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-S09",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    349.5,
+    173.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    -5.196,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "S",
+    "stroke_deg": 8,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P01",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    165.5,
+    89.0,
+    47.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    7.537,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 15,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P02",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    188.5,
+    87.0,
+    46.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    6.363,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 23,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P03",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    211.5,
+    86.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    5.196,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P04",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    236.5,
+    85.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    5.196,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P05",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    253.5,
+    85.0,
+    44.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    4.037,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P06",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    278.5,
+    85.0,
+    44.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    4.037,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P07",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    304.5,
+    85.0,
+    44.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    4.037,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 17,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P08",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    325.5,
+    86.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    5.196,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 22,
+    "dip_deg": 12
+   }
+  },
+  {
+   "name": "oar-P09",
+   "work": "claude-galiot-01m-oar",
+   "at": [
+    349.5,
+    88.0,
+    45.0
+   ],
+   "pivot": [
+    3.5,
+    52.5,
+    29.5
+   ],
+   "scale": 0.5,
+   "rotate": [
+    5.196,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "oar",
+    "rowers": 3,
+    "side": "P",
+    "stroke_deg": 8,
+    "dip_deg": 12
+   }
+  }
+ ]
+}

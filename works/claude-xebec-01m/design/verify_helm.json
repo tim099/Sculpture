@@ -1,0 +1,1140 @@
+{
+ "probe": null,
+ "read": {
+  "labels": {
+   "hull": 93054,
+   "deck": 59763,
+   "ladder": 808,
+   "beak": 1146,
+   "platform": 8034,
+   "glass": 556,
+   "mast": 15542,
+   "gun-post": 66,
+   "magazine": 6060,
+   "awning": 413,
+   "yard": 12000,
+   "gun": 10756,
+   "gear": 1777
+  },
+  "recoil_cells": 13633,
+  "swivel_sweep_cells": 3292,
+  "gun_rays": 165,
+  "crew_spots": 68,
+  "cloth_files": {
+   "../../../../../../../FAR-92/sayf/tackfix/sim/default.obj": "3ff703d3e583c933",
+   "../../../../../../../FAR-92/sayf/tackfix/sim/rev.obj": "9c32cda97be1c5c9"
+  },
+  "ropes": 18,
+  "anchor_src_sha256": "7f75ce5e45acf724"
+ },
+ "hinge": {
+  "hinge": [
+   84.757,
+   130.5,
+   3.0
+  ],
+  "axis": [
+   -0.2678,
+   0.0,
+   0.9635
+  ],
+  "rake_deg": 15.5,
+  "post_aft_x_by_z": {
+   "3": 89,
+   "9": 86,
+   "15": 84,
+   "21": 82,
+   "27": 81,
+   "33": 79,
+   "39": 77,
+   "45": 75,
+   "51": 74,
+   "57": 72,
+   "63": 71,
+   "69": 70,
+   "75": 70
+  },
+  "gap_post_to_hinge_cells": {
+   "min": 2.0,
+   "max": 5.4,
+   "by_z": {
+    "3": 4.38,
+    "9": 3.05,
+    "15": 2.72,
+    "21": 2.39,
+    "27": 3.05,
+    "33": 2.72,
+    "39": 2.39,
+    "45": 2.06,
+    "51": 2.73,
+    "57": 2.39,
+    "63": 3.06,
+    "69": 3.73,
+    "75": 5.4
+   }
+  }
+ },
+ "rudder": {
+  "cells": 1022,
+  "z": [
+   3,
+   78
+  ],
+  "stock_top": [
+   63,
+   130,
+   78
+  ],
+  "below_wl_cells": 444,
+  "length_along_axis_m": 7.89,
+  "chord_by_z": {
+   "3": 8,
+   "10": 8,
+   "20": 8,
+   "28": 8,
+   "34": 6,
+   "39": 4,
+   "50": 4,
+   "62": 4,
+   "78": 3
+  },
+  "thick_y": [
+   -1,
+   1
+  ],
+  "components": 1,
+  "mirror_diff": 0,
+  "at_rest_hits": 0,
+  "sweep_1deg_hits_max": 0,
+  "sweep_5deg": [
+   {
+    "deg": -35,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -30,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -25,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -20,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -15,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -10,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -5,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 0,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 5,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 10,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 15,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 20,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 25,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 30,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 35,
+    "hits": 0,
+    "by": {}
+   }
+  ],
+  "sweep_1deg_nonzero": [],
+  "rope_clear": [
+   17.59,
+   "mizzen-lateen.sheet-P",
+   -5
+  ],
+  "cloth_clear": [
+   9.39,
+   "sail:mizzen-lateen",
+   -35
+  ]
+ },
+ "stock_top_foot": {
+  "game_anchorNear_r8_found": true,
+  "nearest": [
+   60,
+   130,
+   71
+  ],
+  "nearest_tag": "platform",
+  "nearest_dist": 7.62
+ },
+ "platform_carve": {
+  "work": "claude-xebec-01m-stern-platform",
+  "cells": 82,
+  "x": [
+   62,
+   67
+  ],
+  "y": [
+   127,
+   133
+  ],
+  "z": [
+   65,
+   70
+  ],
+  "platform_cells_before_after": [
+   8116,
+   8034
+  ],
+  "platform_components_after": 1,
+  "mirror_diff": 0
+ },
+ "tiller": {
+  "cells": 57,
+  "x": [
+   60,
+   85
+  ],
+  "z": [
+   77,
+   78
+  ],
+  "end": [
+   85,
+   130,
+   77
+  ],
+  "length_from_axis_m": 2.2,
+  "z_over_quarterdeck_floor_m": {
+   "74": 0.9,
+   "80": 1.0,
+   "88": 1.1,
+   "85": 1.0
+  },
+  "search_tried": [
+   [
+    100,
+    0,
+    -0.51,
+    7.05,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    99,
+    0,
+    -0.51,
+    7.07,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    98,
+    0,
+    -0.51,
+    7.07,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    97,
+    0,
+    -0.51,
+    7.07,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    96,
+    0,
+    -0.51,
+    7.17,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    95,
+    0,
+    -0.51,
+    7.4,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    94,
+    0,
+    -0.51,
+    7.43,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    93,
+    0,
+    -0.51,
+    7.43,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    92,
+    0,
+    -0.51,
+    7.43,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    91,
+    0,
+    -0.51,
+    7.53,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    90,
+    0,
+    -0.51,
+    7.75,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    89,
+    0,
+    0.46,
+    7.75,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    88,
+    0,
+    1.45,
+    7.75,
+    0.52,
+    "砲Q-S01",
+    true
+   ],
+   [
+    87,
+    0,
+    2.44,
+    7.75,
+    0.94,
+    "砲Q-P01",
+    true
+   ],
+   [
+    86,
+    0,
+    3.43,
+    7.86,
+    1.87,
+    "砲Q-P01",
+    true
+   ],
+   [
+    85,
+    0,
+    4.43,
+    8.09,
+    2.84,
+    "砲Q-S01",
+    true
+   ]
+  ],
+  "chosen": {
+   "tip": 85,
+   "rope_clear": [
+    4.43,
+    "mizzen-shroud-S1",
+    35
+   ],
+   "cloth_clear": [
+    8.09,
+    "sail:mizzen-lateen",
+    15
+   ],
+   "crew_clear": [
+    2.84,
+    "砲Q-S01",
+    [
+     84.5,
+     143.5,
+     70.0
+    ]
+   ]
+  },
+  "mirror_diff": 0,
+  "components_with_rudder": 1,
+  "sweep_1deg_hits_max": 0,
+  "sweep_5deg": [
+   {
+    "deg": -35,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -30,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -25,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -20,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -15,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -10,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": -5,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 0,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 5,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 10,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 15,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 20,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 25,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 30,
+    "hits": 0,
+    "by": {}
+   },
+   {
+    "deg": 35,
+    "hits": 0,
+    "by": {}
+   }
+  ],
+  "end_at_-max_0_+max": [
+   [
+    82.314,
+    118.368,
+    76.475
+   ],
+   [
+    86.0,
+    130.5,
+    77.5
+   ],
+   [
+    82.314,
+    142.632,
+    76.475
+   ]
+  ]
+ },
+ "helmsman": {
+  "grip": [
+   86,
+   130,
+   79.0
+  ],
+  "z_range": [
+   65,
+   79
+  ],
+  "spot": [
+   88.5,
+   130.5,
+   66
+  ],
+  "ring": 0
+ },
+ "binnacle_sight": {
+  "eye": [
+   88.5,
+   130.5,
+   82.0
+  ],
+  "binnacle_top": [
+   111.5,
+   136.5,
+   72.1
+  ],
+  "dist_m": 2.38,
+  "cells_in_between": {},
+  "binnacle_bbox": [
+   [
+    109.7,
+    133.9,
+    62.0
+   ],
+   [
+    113.3,
+    139.1,
+    71.6
+   ]
+  ]
+ },
+ "anchors": {
+  "model": {
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "scale": 0.4,
+   "pivot": [
+    23.5,
+    16.5,
+    57.0
+   ],
+   "rotate": 0,
+   "shank_m": 2.2,
+   "stock_m": 1.72,
+   "arms_m": 1.16
+  },
+  "tried": [
+   [
+    452,
+    8.5,
+    8.5,
+    0.81,
+    0.81,
+    []
+   ],
+   [
+    450,
+    7.5,
+    7.5,
+    0.71,
+    0.71,
+    []
+   ],
+   [
+    448,
+    7.5,
+    7.5,
+    0.71,
+    0.71,
+    [
+     "S:rays"
+    ]
+   ],
+   [
+    446,
+    7.5,
+    7.5,
+    0.61,
+    0.61,
+    [
+     "S:rays",
+     "P:rays"
+    ]
+   ],
+   [
+    444,
+    7.5,
+    7.5,
+    0.51,
+    0.51,
+    [
+     "S:swivel-arc",
+     "S:rays",
+     "P:swivel-arc"
+    ]
+   ],
+   [
+    442,
+    8.5,
+    8.5,
+    0.41,
+    0.41,
+    [
+     "S:rays"
+    ]
+   ],
+   [
+    440,
+    7.5,
+    7.5,
+    0.31,
+    0.31,
+    []
+   ],
+   [
+    438,
+    7.5,
+    7.5,
+    0.31,
+    0.31,
+    []
+   ],
+   [
+    436,
+    6.5,
+    6.5,
+    0.21,
+    0.21,
+    []
+   ],
+   [
+    434,
+    6.5,
+    6.5,
+    0.11,
+    0.11,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    432,
+    6.5,
+    6.5,
+    0.01,
+    0.01,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    430,
+    5.5,
+    5.5,
+    0.01,
+    0.01,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    428,
+    4.5,
+    4.5,
+    -0.09,
+    -0.09,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    426,
+    4.5,
+    4.5,
+    -0.19,
+    -0.19,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    424,
+    4.5,
+    4.5,
+    -0.19,
+    -0.19,
+    [
+     "S:swivel-arc",
+     "S:crown",
+     "P:swivel-arc",
+     "P:crown"
+    ]
+   ],
+   [
+    422,
+    4.5,
+    4.5,
+    -0.19,
+    -0.19,
+    [
+     "S:swivel-arc",
+     "S:crown",
+     "P:swivel-arc",
+     "P:crown"
+    ]
+   ],
+   [
+    420,
+    5.5,
+    5.5,
+    -0.29,
+    -0.29,
+    [
+     "S:swivel-arc",
+     "S:crown",
+     "P:swivel-arc",
+     "P:crown"
+    ]
+   ],
+   [
+    418,
+    4.5,
+    4.5,
+    -0.19,
+    -0.19,
+    [
+     "S:swivel-arc",
+     "S:crown",
+     "P:swivel-arc",
+     "P:crown"
+    ]
+   ],
+   [
+    416,
+    4.5,
+    4.5,
+    -0.19,
+    -0.19,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    414,
+    4.5,
+    4.5,
+    -0.19,
+    -0.19,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    412,
+    3.5,
+    3.5,
+    -0.19,
+    -0.19,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    410,
+    3.5,
+    3.5,
+    -0.09,
+    -0.09,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    408,
+    2.5,
+    2.5,
+    0.01,
+    0.01,
+    [
+     "S:crown",
+     "P:crown"
+    ]
+   ],
+   [
+    406,
+    2.0,
+    2.0,
+    0.01,
+    0.01,
+    [
+     "S:crown",
+     "P:crown",
+     "P:rope"
+    ]
+   ],
+   [
+    404,
+    2.0,
+    2.0,
+    0.21,
+    0.21,
+    [
+     "P:rope"
+    ]
+   ],
+   [
+    402,
+    2.0,
+    2.0,
+    0.31,
+    0.31,
+    [
+     "S:rays",
+     "P:rays"
+    ]
+   ],
+   [
+    400,
+    2.0,
+    2.0,
+    0.51,
+    0.51,
+    [
+     "S:rays",
+     "P:rays"
+    ]
+   ],
+   [
+    398,
+    2.0,
+    2.0,
+    0.51,
+    0.51,
+    []
+   ]
+  ],
+  "S": {
+   "x": 398,
+   "at": [
+    398.5,
+    174.5,
+    56.0
+   ],
+   "off_rail_cells": 2.0,
+   "rail_cell": [
+    398,
+    172,
+    55
+   ],
+   "hits_solid_or_model": 0,
+   "hits_recoil": 0,
+   "hits_swivel_arc": 0,
+   "cathead_cells": 30,
+   "cathead_on_rail": true,
+   "anchor_hits_cathead": 0,
+   "gun_rays_blocked": [],
+   "crown_z": 34.08,
+   "crown_above_wl_m": 0.51,
+   "height_m": 2.18,
+   "bbox": [
+    [
+     389.9,
+     168.7,
+     34.0
+    ],
+    [
+     407.1,
+     180.3,
+     56.0
+    ]
+   ],
+   "rope_clear": [
+    25.27,
+    "fore-lateen.sheet-S"
+   ],
+   "cloth_clear": [
+    35.06,
+    "sail:fore-lateen"
+   ],
+   "oar_port_x1": 350,
+   "aft_end_minus_oar": 39.9,
+   "hawse": [
+    398,
+    166,
+    47
+   ],
+   "ok": true,
+   "ring_world": [
+    398.5,
+    174.5,
+    55.8
+   ],
+   "nearest_ship_cells": 0.81,
+   "game_ring_foot_r8": true
+  },
+  "P": {
+   "x": 398,
+   "at": [
+    398.5,
+    86.5,
+    56.0
+   ],
+   "off_rail_cells": 2.0,
+   "rail_cell": [
+    398,
+    88,
+    55
+   ],
+   "hits_solid_or_model": 0,
+   "hits_recoil": 0,
+   "hits_swivel_arc": 0,
+   "cathead_cells": 30,
+   "cathead_on_rail": true,
+   "anchor_hits_cathead": 0,
+   "gun_rays_blocked": [],
+   "crown_z": 34.08,
+   "crown_above_wl_m": 0.51,
+   "height_m": 2.18,
+   "bbox": [
+    [
+     389.9,
+     80.7,
+     34.0
+    ],
+    [
+     407.1,
+     92.3,
+     56.0
+    ]
+   ],
+   "rope_clear": [
+    2.6,
+    "fore-shroud-P2"
+   ],
+   "cloth_clear": [
+    44.36,
+    "sail:fore-lateen"
+   ],
+   "oar_port_x1": 350,
+   "aft_end_minus_oar": 39.9,
+   "hawse": [
+    398,
+    94,
+    47
+   ],
+   "ok": true,
+   "ring_world": [
+    398.5,
+    86.5,
+    55.8
+   ],
+   "nearest_ship_cells": 0.81,
+   "game_ring_foot_r8": true
+  },
+  "hawse": {
+   "hawse-S": [
+    398,
+    166,
+    47
+   ],
+   "hawse-P": [
+    398,
+    94,
+    47
+   ]
+  },
+  "mirror_diff_cells": 0,
+  "cathead_mirror_diff": 0,
+  "cathead_components": 2
+ },
+ "overlap_new": [],
+ "cathead_on_old_solid": 0,
+ "nav": {
+  "odd_game": {
+   "x0": 5,
+   "hold": {
+    "points_before": 3553,
+    "main_before": 3553,
+    "points_after": 3553,
+    "main_after": 3553,
+    "groups_ge12_before": 1,
+    "groups_ge12_after": 1,
+    "crew_spots_not_in_main": [],
+    "crew_spots_not_in_main_before": [],
+    "ladder_points_not_in_main": [],
+    "hoist_heads_not_in_main": [],
+    "helmsman_in_main": null
+   },
+   "main": {
+    "points_before": 5319,
+    "main_before": 5319,
+    "points_after": 5319,
+    "main_after": 5319,
+    "groups_ge12_before": 1,
+    "groups_ge12_after": 1,
+    "crew_spots_not_in_main": [
+     [
+      "迴旋砲-P04",
+      [
+       429.5,
+       109.5,
+       50.0
+      ]
+     ]
+    ],
+    "crew_spots_not_in_main_before": [
+     [
+      "迴旋砲-P04",
+      [
+       429.5,
+       109.5,
+       50.0
+      ]
+     ]
+    ],
+    "ladder_points_not_in_main": [],
+    "hoist_heads_not_in_main": [],
+    "helmsman_in_main": null
+   },
+   "quarter": {
+    "points_before": 672,
+    "main_before": 668,
+    "points_after": 672,
+    "main_after": 668,
+    "groups_ge12_before": 1,
+    "groups_ge12_after": 1,
+    "crew_spots_not_in_main": [],
+    "crew_spots_not_in_main_before": [],
+    "ladder_points_not_in_main": [],
+    "hoist_heads_not_in_main": [],
+    "helmsman_in_main": true
+   }
+  },
+  "even": {
+   "x0": 4,
+   "hold": {
+    "points_before": 3579,
+    "main_before": 3579,
+    "points_after": 3579,
+    "main_after": 3579,
+    "groups_ge12_before": 1,
+    "groups_ge12_after": 1,
+    "crew_spots_not_in_main": [],
+    "crew_spots_not_in_main_before": [],
+    "ladder_points_not_in_main": [],
+    "hoist_heads_not_in_main": [],
+    "helmsman_in_main": null
+   },
+   "main": {
+    "points_before": 5345,
+    "main_before": 5345,
+    "points_after": 5345,
+    "main_after": 5345,
+    "groups_ge12_before": 1,
+    "groups_ge12_after": 1,
+    "crew_spots_not_in_main": [],
+    "crew_spots_not_in_main_before": [],
+    "ladder_points_not_in_main": [],
+    "hoist_heads_not_in_main": [],
+    "helmsman_in_main": null
+   },
+   "quarter": {
+    "points_before": 674,
+    "main_before": 670,
+    "points_after": 674,
+    "main_after": 670,
+    "groups_ge12_before": 1,
+    "groups_ge12_after": 1,
+    "crew_spots_not_in_main": [],
+    "crew_spots_not_in_main_before": [],
+    "ladder_points_not_in_main": [],
+    "hoist_heads_not_in_main": [],
+    "helmsman_in_main": true
+   }
+  }
+ },
+ "hx0": 9,
+ "ladder_points_blocked": [],
+ "ship_components_after": 1,
+ "problems": 0,
+ "lists": {
+  "masks/helm/rudder.vox.txt": [
+   1022,
+   "3d5fbeedd08bc6b40dbb548f1181213e5aa237efefadcacc09563519ea9ba9ae"
+  ],
+  "masks/helm/tiller.vox.txt": [
+   57,
+   "32073fca50d4a4d6a9dcde2b375c244f6005d1866d4784c290feba9cbe2b7e42"
+  ],
+  "masks/helm/cathead.vox.txt": [
+   60,
+   "7eb736eb037c63f0b5fbec843675f61ab19bde3608a9344c1c8b8a450a94a638"
+  ],
+  "masks/helm/platform_carve.vox.txt": [
+   82,
+   "bc2a0f9e2f66f2fc3ed0e1d7b38ad142854e7e4e6143089385fdd7f13a54e177"
+  ],
+  "helm_placement.json": [
+   null,
+   "440c7bbb21325c41bb49068edfdf1db3faa614c440ca6698486198b3ffa0cffe"
+  ]
+ }
+}

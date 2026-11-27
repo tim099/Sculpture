@@ -1,0 +1,262 @@
+{
+ "probe": null,
+ "guns": 28,
+ "by_type": {
+  "6l": 16,
+  "12l": 2,
+  "3l": 2,
+  "pierrier": 8
+ },
+ "placed_none": [],
+ "read": {
+  "solid_stand_cells": 179051,
+  "awning_cells": 413,
+  "yard_cells": 12000,
+  "post_cells": 66,
+  "component_sha256": {
+   "apex-one-reale-01m-gun-pierrier-mount.vox.txt": "991ce90067eb9cc3",
+   "apex-one-reale-01m-gun-pierrier.vox.txt": "6ce42a9d9c0c9737",
+   "claude-xebec-01m-gun-3l.vox.txt": "a63847da9712280e",
+   "summit-stormkaap-01m-gun-12l.vox.txt": "22ebdd153fc7f8aa",
+   "summit-stormkaap-01m-gun-6l.vox.txt": "a7af6f0025a1b4b1"
+  }
+ },
+ "not_ok": [],
+ "hit_samples": {},
+ "gun_gun_clash": [],
+ "asymmetric_pairs": [],
+ "broadside_barrel_sill_lintel_gap_min": [
+  2.6,
+  1.1
+ ],
+ "broadside_barrel_not_in_port": [],
+ "recoil_hit_samples": {},
+ "crew_short": {},
+ "crew_below_min": [],
+ "crew_total": [
+  68,
+  68
+ ],
+ "swivel_arcs": {
+  "迴旋砲-S01": {
+   "arc": "-55,25",
+   "min_foot_in_arc": 1,
+   "first_bad": {
+    "-60": [
+     0,
+     null,
+     1,
+     [
+      0.58,
+      "mizzen-shroud-S3"
+     ]
+    ],
+    "30": [
+     0,
+     null,
+     0,
+     [
+      3.31,
+      "mizzen-shroud-S3"
+     ]
+    ]
+   }
+  },
+  "迴旋砲-P01": {
+   "arc": "-25,90",
+   "min_foot_in_arc": 1,
+   "first_bad": {
+    "-30": [
+     0,
+     null,
+     0,
+     null
+    ],
+    "95": [
+     0,
+     null,
+     4,
+     null
+    ]
+   }
+  },
+  "迴旋砲-S02": {
+   "arc": "-60,20",
+   "min_foot_in_arc": 1,
+   "first_bad": {
+    "-65": [
+     0,
+     null,
+     0,
+     null
+    ],
+    "25": [
+     0,
+     null,
+     0,
+     null
+    ]
+   }
+  },
+  "迴旋砲-P02": {
+   "arc": "-20,60",
+   "min_foot_in_arc": 1,
+   "first_bad": {
+    "-25": [
+     0,
+     null,
+     0,
+     [
+      29.53,
+      "fore-shroud-P3"
+     ]
+    ],
+    "65": [
+     0,
+     null,
+     0,
+     [
+      34.37,
+      "fore-shroud-P3"
+     ]
+    ]
+   }
+  },
+  "迴旋砲-S03": {
+   "arc": "-65,25",
+   "min_foot_in_arc": 1,
+   "first_bad": {
+    "-70": [
+     0,
+     null,
+     0,
+     null
+    ],
+    "30": [
+     0,
+     8.25,
+     9,
+     null
+    ]
+   }
+  },
+  "迴旋砲-P03": {
+   "arc": "-25,20",
+   "min_foot_in_arc": 2,
+   "first_bad": {
+    "-30": [
+     0,
+     8.25,
+     9,
+     [
+      2.18,
+      "fore-shroud-P3"
+     ]
+    ],
+    "25": [
+     0,
+     null,
+     0,
+     [
+      6.57,
+      "fore-shroud-P3"
+     ]
+    ]
+   }
+  },
+  "迴旋砲-S04": {
+   "arc": "-90,35",
+   "min_foot_in_arc": 4,
+   "first_bad": {
+    "-95": [
+     0,
+     null,
+     9,
+     null
+    ],
+    "40": [
+     0,
+     12.25,
+     5,
+     [
+      11.98,
+      "main-lateen.tack"
+     ]
+    ]
+   }
+  },
+  "迴旋砲-P04": {
+   "arc": "-35,35",
+   "min_foot_in_arc": 1,
+   "first_bad": {
+    "-40": [
+     0,
+     12.25,
+     0,
+     [
+      16.32,
+      "fore-shroud-P3"
+     ]
+    ],
+    "40": [
+     0,
+     null,
+     0,
+     [
+      23.15,
+      "fore-shroud-P3"
+     ]
+    ]
+   }
+  }
+ },
+ "rope_clearance_min": [
+  1.07,
+  "mizzen-shroud-S3",
+  -55
+ ],
+ "rope_clearance_below_min": {},
+ "nav": {
+  "hold": {
+   "points_before": 3745,
+   "main_before": 3745,
+   "points_after": 3745,
+   "main_after": 3745,
+   "groups_ge12_before": 1,
+   "groups_ge12_after": 1,
+   "crew_spots_not_in_main": [],
+   "ladder_points_not_in_main": []
+  },
+  "main": {
+   "points_before": 6699,
+   "main_before": 6699,
+   "points_after": 5477,
+   "main_after": 5477,
+   "groups_ge12_before": 1,
+   "groups_ge12_after": 1,
+   "crew_spots_not_in_main": [],
+   "ladder_points_not_in_main": []
+  },
+  "quarter": {
+   "points_before": 769,
+   "main_before": 765,
+   "points_after": 694,
+   "main_after": 690,
+   "groups_ge12_before": 1,
+   "groups_ge12_after": 1,
+   "crew_spots_not_in_main": [],
+   "ladder_points_not_in_main": []
+  }
+ },
+ "problems": 0,
+ "post_cells_by_deck": {
+  "main": 50,
+  "quarter": 16
+ },
+ "outputs": [
+  "guns_placement.json",
+  "sheet07_guns_v1.png",
+  "masks/guns/posts_main.vox.txt",
+  "masks/guns/posts_quarter.vox.txt"
+ ]
+}

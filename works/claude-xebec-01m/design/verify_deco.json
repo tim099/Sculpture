@@ -1,0 +1,255 @@
+{
+ "parts": {
+  "beak": {
+   "cells": 1146,
+   "overlap_ship": 0,
+   "mirror_diff": 0,
+   "x": [
+    457,
+    524
+   ],
+   "z": [
+    36,
+    66
+   ],
+   "colors": {
+    "36": 984,
+    "177": 102,
+    "244": 60
+   }
+  },
+  "platform": {
+   "cells": 8116,
+   "overlap_ship": 0,
+   "mirror_diff": 0,
+   "x": [
+    17,
+    76
+   ],
+   "z": [
+    60,
+    94
+   ],
+   "colors": {
+    "141": 7505,
+    "196": 302,
+    "213": 309
+   }
+  },
+  "awning": {
+   "cells": 413,
+   "overlap_ship": 0,
+   "mirror_diff": 0,
+   "x": [
+    9,
+    97
+   ],
+   "z": [
+    66,
+    102
+   ],
+   "colors": {
+    "140": 413
+   }
+  },
+  "glass": {
+   "cells": 556,
+   "overlap_ship": 0,
+   "mirror_diff": 0,
+   "x": [
+    80,
+    127
+   ],
+   "z": [
+    53,
+    65
+   ],
+   "colors": {
+    "155": 556
+   }
+  }
+ },
+ "overlap_between": {
+  "beak/platform": 0,
+  "beak/awning": 0,
+  "beak/glass": 0,
+  "platform/awning": 0,
+  "platform/glass": 0,
+  "awning/glass": 0
+ },
+ "structure_linked": {
+  "cells": 163443,
+  "components_6": 1,
+  "cavities": 0,
+  "mirror_diff": 0
+ },
+ "awning_feet_touching": 6,
+ "awning_components": 1,
+ "glass_windows": [
+  {
+   "X_m": 1.421,
+   "side": "S",
+   "cells": 57,
+   "components": 1,
+   "in_hole": 57,
+   "columns": 32,
+   "thick_hist": {
+    "1": 7,
+    "2": 25
+   }
+  },
+  {
+   "X_m": 1.421,
+   "side": "P",
+   "cells": 57,
+   "components": 1,
+   "in_hole": 57,
+   "columns": 32,
+   "thick_hist": {
+    "1": 7,
+    "2": 25
+   }
+  },
+  {
+   "X_m": 2.479,
+   "side": "S",
+   "cells": 67,
+   "components": 1,
+   "in_hole": 67,
+   "columns": 36,
+   "thick_hist": {
+    "1": 5,
+    "2": 31
+   }
+  },
+  {
+   "X_m": 2.479,
+   "side": "P",
+   "cells": 67,
+   "components": 1,
+   "in_hole": 67,
+   "columns": 36,
+   "thick_hist": {
+    "1": 5,
+    "2": 31
+   }
+  },
+  {
+   "X_m": 3.576,
+   "side": "S",
+   "cells": 62,
+   "components": 1,
+   "in_hole": 62,
+   "columns": 36,
+   "thick_hist": {
+    "1": 10,
+    "2": 26
+   }
+  },
+  {
+   "X_m": 3.576,
+   "side": "P",
+   "cells": 62,
+   "components": 1,
+   "in_hole": 62,
+   "columns": 36,
+   "thick_hist": {
+    "1": 10,
+    "2": 26
+   }
+  },
+  {
+   "X_m": 4.679,
+   "side": "S",
+   "cells": 59,
+   "components": 1,
+   "in_hole": 59,
+   "columns": 36,
+   "thick_hist": {
+    "1": 13,
+    "2": 23
+   }
+  },
+  {
+   "X_m": 4.679,
+   "side": "P",
+   "cells": 59,
+   "components": 1,
+   "in_hole": 59,
+   "columns": 36,
+   "thick_hist": {
+    "1": 13,
+    "2": 23
+   }
+  },
+  {
+   "X_m": 5.583,
+   "side": "S",
+   "cells": 33,
+   "components": 1,
+   "in_hole": 33,
+   "columns": 20,
+   "thick_hist": {
+    "1": 7,
+    "2": 13
+   }
+  },
+  {
+   "X_m": 5.583,
+   "side": "P",
+   "cells": 33,
+   "components": 1,
+   "in_hole": 33,
+   "columns": 20,
+   "thick_hist": {
+    "1": 7,
+    "2": 13
+   }
+  }
+ ],
+ "paint": {
+  "cells": 434,
+  "skipped": [],
+  "was_color": {
+   "36": 62,
+   "177": 372
+  },
+  "new_color": {
+   "36": 336,
+   "196": 16,
+   "244": 82
+  },
+  "hull_mirror_diff_after": 0
+ },
+ "platform_top_first_air": {
+  "17": 90,
+  "27": 88,
+  "37": 83,
+  "47": 78,
+  "57": 73,
+  "67": 68
+ },
+ "beak_tip_x": 524,
+ "lists": {
+  "beak": [
+   1146,
+   "db1b97e24939526bad0414144aa94d8e62a1b4901a58760d7764900f09c6bde6"
+  ],
+  "platform": [
+   8116,
+   "9c565bace4c472f7e37cf2de00bb298af94dbd1df279be55cd27ea542a9a3af5"
+  ],
+  "awning": [
+   413,
+   "a89c9142c128e15910281564891daad2221f078107b17fc2c079f3a7728cb617"
+  ],
+  "glass": [
+   556,
+   "c8085bf0f17a02e240dd76b54e891ead70c15d1a6696b4766feb407db2f69b6a"
+  ],
+  "hull_paint": [
+   434,
+   "73099291afe6680788cc79197e7ecc45f1a5519a979150d5bd912baef00e4ba3"
+  ]
+ }
+}

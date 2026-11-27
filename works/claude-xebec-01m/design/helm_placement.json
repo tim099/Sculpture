@@ -1,0 +1,188 @@
+{
+ "note": "draft_helm.py 的結果（世界座標；子作品都用船殼的框、at 0,0,0 ⇒ 模型 at ＝ pivot ＝ 鉸鏈點）",
+ "rudder": {
+  "work": "claude-xebec-01m-rudder",
+  "title": "利劍號 舵（艉柱舵：舵葉＋舵頭）",
+  "model": "舵",
+  "host": "claude-xebec-01m-assembly",
+  "at": [
+   84.757,
+   130.5,
+   3.0
+  ],
+  "pivot": [
+   84.757,
+   130.5,
+   3.0
+  ],
+  "scale": 1,
+  "anchors": {
+   "stock-top": [
+    63,
+    130,
+    78
+   ]
+  },
+  "meta": {
+   "kind": "rudder",
+   "max_deg": 35,
+   "turn_axis": "hinge",
+   "hinge_x": 84.757,
+   "hinge_y": 130.5,
+   "hinge_z": 3.0,
+   "axis_x": -0.2678,
+   "axis_y": 0.0,
+   "axis_z": 0.9635,
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  },
+  "list": "helm/rudder"
+ },
+ "tiller": {
+  "work": "claude-xebec-01m-tiller",
+  "title": "利劍號 舵柄",
+  "model": "舵柄",
+  "host": "claude-xebec-01m-assembly",
+  "at": [
+   84.757,
+   130.5,
+   3.0
+  ],
+  "pivot": [
+   84.757,
+   130.5,
+   3.0
+  ],
+  "scale": 1,
+  "anchors": {
+   "tiller-end": [
+    85,
+    130,
+    77
+   ]
+  },
+  "meta": {
+   "kind": "tiller",
+   "spin_pivot_x": 84.757,
+   "spin_pivot_y": 130.5,
+   "spin_pivot_z": 3.0,
+   "spin_axis_x": -0.2678,
+   "spin_axis_y": 0.0,
+   "spin_axis_z": 0.9635,
+   "spin": "rudder",
+   "spin_k": 35,
+   "spin_min": -35,
+   "spin_max": 35,
+   "spin_lag": 0.3
+  },
+  "list": "helm/tiller"
+ },
+ "anchors": [
+  {
+   "name": "錨-S",
+   "host": "main",
+   "host_work": "claude-xebec-01m-deck-main",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    398.5,
+    174.5,
+    56.0
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    57.0
+   ],
+   "scale": 0.4,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "mirror": "",
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   },
+   "bbox": [
+    [
+     389.9,
+     168.7,
+     34.0
+    ],
+    [
+     407.1,
+     180.3,
+     56.0
+    ]
+   ]
+  },
+  {
+   "name": "錨-P",
+   "host": "main",
+   "host_work": "claude-xebec-01m-deck-main",
+   "work": "basecamp-frigate-constitution-01m-anchor",
+   "at": [
+    398.5,
+    86.5,
+    56.0
+   ],
+   "pivot": [
+    23.5,
+    16.5,
+    57.0
+   ],
+   "scale": 0.4,
+   "rotate": [
+    0,
+    0,
+    0
+   ],
+   "mirror": "y",
+   "meta": {
+    "kind": "anchor",
+    "anchor": "bower"
+   },
+   "bbox": [
+    [
+     389.9,
+     80.7,
+     34.0
+    ],
+    [
+     407.1,
+     92.3,
+     56.0
+    ]
+   ]
+  }
+ ],
+ "hull_anchors": {
+  "work": "claude-xebec-01m",
+  "points": {
+   "hawse-S": [
+    398,
+    166,
+    47
+   ],
+   "hawse-P": [
+    398,
+    94,
+    47
+   ]
+  }
+ },
+ "cathead": {
+  "work": "claude-xebec-01m-deck-main",
+  "list": "helm/cathead",
+  "cells": 60
+ },
+ "carve": {
+  "work": "claude-xebec-01m-stern-platform",
+  "list": "helm/platform_carve",
+  "cells": 82
+ }
+}

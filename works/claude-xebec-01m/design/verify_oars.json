@@ -1,0 +1,2752 @@
+{
+ "probe": null,
+ "component": {
+  "work": "claude-galiot-01m-oar",
+  "src_list": "masks/oars_src/claude-galiot-01m-oar.vox.txt",
+  "src_sha256": "a674651a3be0e5707aedf85f379995098b95bb4896b4dd5fb4dca7dae6364bf2",
+  "cells": 683,
+  "size_cells": [
+   5,
+   165,
+   43
+  ],
+  "anchors": {
+   "pivot": [
+    3,
+    52,
+    29
+   ],
+   "blade": [
+    3,
+    164,
+    4
+   ],
+   "seat": [
+    3,
+    22,
+    15
+   ]
+  },
+  "length_m": 8.25,
+  "inboard_m": 2.62,
+  "outboard_m": 5.62,
+  "blade_rows_from_y": 141,
+  "blade_m": 1.2,
+  "blade_center": [
+   3.5,
+   153.558,
+   6.558
+  ],
+  "angle_pivot_to_blade_center_deg": 12.79,
+  "pivot_to_blade_center_world_cells": 51.815,
+  "loom_below_pivot_world": 0.25,
+  "loom_above_pivot_world": 0.75
+ },
+ "stroke_search": {
+  "max": 30.0,
+  "min": 5.0,
+  "chosen": {
+   "1": 15.0,
+   "2": 23.0,
+   "3": 22.0,
+   "4": 22.0,
+   "5": 22.0,
+   "6": 22.0,
+   "7": 17.0,
+   "8": 22.0,
+   "9": 8.0
+  },
+  "tried_first_hit": {
+   "1": [
+    [
+     16.0,
+     1
+    ]
+   ],
+   "2": [
+    [
+     24.0,
+     2
+    ]
+   ],
+   "3": [
+    [
+     23.0,
+     1
+    ]
+   ],
+   "4": [
+    [
+     23.0,
+     1
+    ]
+   ],
+   "5": [
+    [
+     23.0,
+     1
+    ]
+   ],
+   "6": [
+    [
+     23.0,
+     1
+    ]
+   ],
+   "7": [
+    [
+     18.0,
+     2
+    ]
+   ],
+   "8": [
+    [
+     23.0,
+     1
+    ]
+   ],
+   "9": [
+    [
+     9.0,
+     2
+    ]
+   ]
+  },
+  "tried": {
+   "1": [
+    [
+     30.0,
+     223
+    ],
+    [
+     29.0,
+     142
+    ],
+    [
+     28.0,
+     79
+    ],
+    [
+     27.0,
+     42
+    ],
+    [
+     26.0,
+     25
+    ],
+    [
+     25.0,
+     18
+    ],
+    [
+     24.0,
+     16
+    ],
+    [
+     23.0,
+     14
+    ],
+    [
+     22.0,
+     11
+    ],
+    [
+     21.0,
+     9
+    ],
+    [
+     20.0,
+     6
+    ],
+    [
+     19.0,
+     6
+    ],
+    [
+     18.0,
+     4
+    ],
+    [
+     17.0,
+     4
+    ],
+    [
+     16.0,
+     1
+    ],
+    [
+     15.0,
+     0
+    ]
+   ],
+   "2": [
+    [
+     30.0,
+     9
+    ],
+    [
+     29.0,
+     9
+    ],
+    [
+     28.0,
+     9
+    ],
+    [
+     27.0,
+     8
+    ],
+    [
+     26.0,
+     6
+    ],
+    [
+     25.0,
+     2
+    ],
+    [
+     24.0,
+     2
+    ],
+    [
+     23.0,
+     0
+    ]
+   ],
+   "3": [
+    [
+     30.0,
+     20
+    ],
+    [
+     29.0,
+     9
+    ],
+    [
+     28.0,
+     9
+    ],
+    [
+     27.0,
+     7
+    ],
+    [
+     26.0,
+     7
+    ],
+    [
+     25.0,
+     2
+    ],
+    [
+     24.0,
+     2
+    ],
+    [
+     23.0,
+     1
+    ],
+    [
+     22.0,
+     0
+    ]
+   ],
+   "4": [
+    [
+     30.0,
+     11
+    ],
+    [
+     29.0,
+     9
+    ],
+    [
+     28.0,
+     9
+    ],
+    [
+     27.0,
+     7
+    ],
+    [
+     26.0,
+     7
+    ],
+    [
+     25.0,
+     2
+    ],
+    [
+     24.0,
+     2
+    ],
+    [
+     23.0,
+     1
+    ],
+    [
+     22.0,
+     0
+    ]
+   ],
+   "5": [
+    [
+     30.0,
+     11
+    ],
+    [
+     29.0,
+     10
+    ],
+    [
+     28.0,
+     8
+    ],
+    [
+     27.0,
+     8
+    ],
+    [
+     26.0,
+     7
+    ],
+    [
+     25.0,
+     2
+    ],
+    [
+     24.0,
+     2
+    ],
+    [
+     23.0,
+     1
+    ],
+    [
+     22.0,
+     0
+    ]
+   ],
+   "6": [
+    [
+     30.0,
+     169
+    ],
+    [
+     29.0,
+     120
+    ],
+    [
+     28.0,
+     68
+    ],
+    [
+     27.0,
+     32
+    ],
+    [
+     26.0,
+     14
+    ],
+    [
+     25.0,
+     4
+    ],
+    [
+     24.0,
+     2
+    ],
+    [
+     23.0,
+     1
+    ],
+    [
+     22.0,
+     0
+    ]
+   ],
+   "7": [
+    [
+     30.0,
+     1128
+    ],
+    [
+     29.0,
+     1047
+    ],
+    [
+     28.0,
+     933
+    ],
+    [
+     27.0,
+     797
+    ],
+    [
+     26.0,
+     661
+    ],
+    [
+     25.0,
+     523
+    ],
+    [
+     24.0,
+     388
+    ],
+    [
+     23.0,
+     263
+    ],
+    [
+     22.0,
+     173
+    ],
+    [
+     21.0,
+     94
+    ],
+    [
+     20.0,
+     42
+    ],
+    [
+     19.0,
+     11
+    ],
+    [
+     18.0,
+     2
+    ],
+    [
+     17.0,
+     0
+    ]
+   ],
+   "8": [
+    [
+     30.0,
+     52
+    ],
+    [
+     29.0,
+     27
+    ],
+    [
+     28.0,
+     13
+    ],
+    [
+     27.0,
+     7
+    ],
+    [
+     26.0,
+     7
+    ],
+    [
+     25.0,
+     2
+    ],
+    [
+     24.0,
+     2
+    ],
+    [
+     23.0,
+     1
+    ],
+    [
+     22.0,
+     0
+    ]
+   ],
+   "9": [
+    [
+     30.0,
+     1654
+    ],
+    [
+     29.0,
+     1645
+    ],
+    [
+     28.0,
+     1632
+    ],
+    [
+     27.0,
+     1605
+    ],
+    [
+     26.0,
+     1590
+    ],
+    [
+     25.0,
+     1568
+    ],
+    [
+     24.0,
+     1522
+    ],
+    [
+     23.0,
+     1483
+    ],
+    [
+     22.0,
+     1399
+    ],
+    [
+     21.0,
+     1277
+    ],
+    [
+     20.0,
+     1106
+    ],
+    [
+     19.0,
+     922
+    ],
+    [
+     18.0,
+     713
+    ],
+    [
+     17.0,
+     520
+    ],
+    [
+     16.0,
+     368
+    ],
+    [
+     15.0,
+     260
+    ],
+    [
+     14.0,
+     197
+    ],
+    [
+     13.0,
+     138
+    ],
+    [
+     12.0,
+     87
+    ],
+    [
+     11.0,
+     46
+    ],
+    [
+     10.0,
+     19
+    ],
+    [
+     9.0,
+     2
+    ],
+    [
+     8.0,
+     0
+    ]
+   ]
+  }
+ },
+ "params": {
+  "stroke_deg_max": 30.0,
+  "dip_deg": 12.0,
+  "rowers": 3,
+  "pivot_lift": 0.75,
+  "scale": 0.5,
+  "surface_z": 29.0,
+  "phase_step_deg": 5,
+  "poses": 73
+ },
+ "read": {
+  "labels": {
+   "hull": 93054,
+   "deck": 59763,
+   "ladder": 808,
+   "beak": 1146,
+   "platform": 8034,
+   "glass": 556,
+   "mast": 15542,
+   "gun-post": 66,
+   "magazine": 6060,
+   "awning": 413,
+   "yard": 12000,
+   "gun": 10756,
+   "gear": 1777,
+   "cathead": 60,
+   "rudder": 1022,
+   "tiller": 57,
+   "anchor": 194
+  },
+  "recoil_cells": 13633,
+  "swivel_sweep_cells": 3292,
+  "ray_cells": 7980,
+  "crew_spots": 68,
+  "cloth_files": {
+   "../../../../../../../FAR-92/sayf/tackfix/sim/default.obj": "3ff703d3e583c933",
+   "../../../../../../../FAR-92/sayf/tackfix/sim/rev.obj": "9c32cda97be1c5c9"
+  },
+  "ropes": 18,
+  "hx0": 9
+ },
+ "per_side": {
+  "S": 9,
+  "P": 9
+ },
+ "rest": {
+  "hits_total": 0,
+  "oar_oar_overlap": [],
+  "mirror_diff_cells": 0
+ },
+ "stroke": {
+  "hits_max": 0,
+  "by_tag_worst": {},
+  "oar_oar_overlap_same_side": [],
+  "nonzero": []
+ },
+ "hole": {
+  "cells_each": [
+   18
+  ],
+  "not_empty": [],
+  "oar_cells_in_hole_min": 7
+ },
+ "clearance": {
+  "rope_min": [
+   2.41,
+   "main-lateen.sheet-S",
+   100,
+   "oar-S02"
+  ],
+  "cloth_min": [
+   14.36,
+   "sail:main-lateen",
+   "rest",
+   "oar-P03"
+  ],
+  "anchor_cathead_min": [
+   40.55,
+   180,
+   "oar-S09"
+  ],
+  "gun_cells_min": [
+   2.26,
+   215,
+   "oar-S07"
+  ],
+  "muzzle_min": [
+   6.15,
+   335,
+   "oar-S07"
+  ],
+  "gun_ray_cells": {}
+ },
+ "water": {
+  "pivot_above_water_m": [
+   1.5,
+   1.8
+  ],
+  "blade_center_minus_water_m": [
+   0.0,
+   0.0
+  ],
+  "blade_low_minus_water_m_rest": [
+   -0.29,
+   -0.257
+  ],
+  "blade_top_minus_water_m_rest": [
+   0.255,
+   0.291
+  ],
+  "blade_low_minus_water_m_full_dip": [
+   0.874,
+   0.922
+  ],
+  "tilt_deg": [
+   4.037,
+   7.537
+  ],
+  "entry_angle_deg": [
+   16.83,
+   20.33
+  ]
+ },
+ "hang": {
+  "hull_cells_r8_min": 446
+ },
+ "rowers": {
+  "want": 54,
+  "placed": 54,
+  "moved_max": 0,
+  "dy_range": [
+   14.0,
+   30.0
+  ],
+  "z": [
+   39,
+   40,
+   41,
+   43
+  ],
+  "checks": {
+   "not_on_main_deck": [],
+   "near_ladder_or_hoist": [],
+   "in_hoist_lane": [],
+   "in_gear_box": [],
+   "in_monkey_ring": [],
+   "on_gun_drop": [],
+   "on_gun_crew": []
+  },
+  "nearest_gun_crew": [
+   1.0,
+   "oar-P07",
+   "砲M-P06"
+  ],
+  "nav_main": {
+   "odd_game": {
+    "x0": 5,
+    "main_points": 5319,
+    "groups_ge12": 1,
+    "rowers_not_in_main": []
+   },
+   "even": {
+    "x0": 4,
+    "main_points": 5345,
+    "groups_ge12": 1,
+    "rowers_not_in_main": []
+   }
+  },
+  "monkey_targets": [
+   [
+    "main",
+    155,
+    121
+   ],
+   [
+    "main",
+    176,
+    139
+   ],
+   [
+    "main",
+    200,
+    121
+   ],
+   [
+    "main",
+    223,
+    139
+   ],
+   [
+    "main",
+    288,
+    121
+   ],
+   [
+    "main",
+    312,
+    139
+   ],
+   [
+    "main",
+    336,
+    121
+   ],
+   [
+    "main",
+    356,
+    139
+   ],
+   [
+    "main",
+    425,
+    121
+   ],
+   [
+    "main",
+    436,
+    139
+   ],
+   [
+    "main",
+    410,
+    121
+   ],
+   [
+    "main",
+    424,
+    139
+   ]
+  ]
+ },
+ "problems": 0,
+ "oars": {
+  "oar-S01": {
+   "port_x": [
+    164,
+    166
+   ],
+   "port_z": [
+    46,
+    48
+   ],
+   "wall_y": [
+    171,
+    172
+   ],
+   "at": [
+    165.5,
+    172.0,
+    47.0
+   ],
+   "tilt_deg": 7.537,
+   "rotate_x": -7.537,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.8,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.29,
+   "blade_low_at_full_dip_m": 0.874,
+   "seat_world": [
+    165.5,
+    156.211,
+    42.028
+   ],
+   "blade_world": [
+    165.5,
+    225.877,
+    27.263
+   ],
+   "rowers": [
+    {
+     "at": [
+      165.5,
+      156.5,
+      43
+     ],
+     "target": [
+      165,
+      156
+     ],
+     "moved": 0,
+     "dy": 26.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      165.5,
+      150.5,
+      43
+     ],
+     "target": [
+      165,
+      150
+     ],
+     "moved": 0,
+     "dy": 20.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      165.5,
+      144.5,
+      43
+     ],
+     "target": [
+      165,
+      144
+     ],
+     "moved": 0,
+     "dy": 14.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 525,
+   "rope": [
+    14.91,
+    "main-lateen.sheet-S",
+    325
+   ],
+   "cloth": [
+    28.02,
+    "sail:mizzen-lateen",
+    50
+   ],
+   "anchor_cathead": [
+    218.02,
+    355
+   ],
+   "gun_cells": [
+    3.81,
+    345
+   ],
+   "muzzle": [
+    9.13,
+    335
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P01": {
+   "port_x": [
+    164,
+    166
+   ],
+   "port_z": [
+    46,
+    48
+   ],
+   "wall_y": [
+    171,
+    172
+   ],
+   "at": [
+    165.5,
+    89.0,
+    47.0
+   ],
+   "tilt_deg": 7.537,
+   "rotate_x": 7.537,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.8,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.29,
+   "blade_low_at_full_dip_m": 0.874,
+   "seat_world": [
+    165.5,
+    104.789,
+    42.028
+   ],
+   "blade_world": [
+    165.5,
+    35.123,
+    27.263
+   ],
+   "rowers": [
+    {
+     "at": [
+      165.5,
+      104.5,
+      43
+     ],
+     "target": [
+      165,
+      104
+     ],
+     "moved": 0,
+     "dy": 26.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      165.5,
+      110.5,
+      43
+     ],
+     "target": [
+      165,
+      110
+     ],
+     "moved": 0,
+     "dy": 20.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      165.5,
+      116.5,
+      43
+     ],
+     "target": [
+      165,
+      116
+     ],
+     "moved": 0,
+     "dy": 14.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 492,
+   "rope": [
+    9.52,
+    "mizzen-lateen.tack",
+    295
+   ],
+   "cloth": [
+    22.73,
+    "sail:mizzen-lateen",
+    40
+   ],
+   "anchor_cathead": [
+    218.02,
+    355
+   ],
+   "gun_cells": [
+    3.81,
+    345
+   ],
+   "muzzle": [
+    9.13,
+    335
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S02": {
+   "port_x": [
+    187,
+    189
+   ],
+   "port_z": [
+    45,
+    47
+   ],
+   "wall_y": [
+    173,
+    174
+   ],
+   "at": [
+    188.5,
+    174.0,
+    46.0
+   ],
+   "tilt_deg": 6.363,
+   "rotate_x": -6.363,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.7,
+   "blade_center_minus_water_m": -0.0,
+   "blade_low_minus_water_m": -0.279,
+   "blade_low_at_full_dip_m": 0.89,
+   "seat_world": [
+    188.5,
+    158.317,
+    40.706
+   ],
+   "blade_world": [
+    188.5,
+    228.27,
+    27.371
+   ],
+   "rowers": [
+    {
+     "at": [
+      188.5,
+      158.5,
+      41
+     ],
+     "target": [
+      188,
+      158
+     ],
+     "moved": 0,
+     "dy": 28.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      188.5,
+      152.5,
+      41
+     ],
+     "target": [
+      188,
+      152
+     ],
+     "moved": 0,
+     "dy": 22.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      188.5,
+      146.5,
+      41
+     ],
+     "target": [
+      188,
+      146
+     ],
+     "moved": 0,
+     "dy": 16.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 534,
+   "rope": [
+    2.41,
+    "main-lateen.sheet-S",
+    100
+   ],
+   "cloth": [
+    24.23,
+    "sail:main-lateen",
+    115
+   ],
+   "anchor_cathead": [
+    188.83,
+    355
+   ],
+   "gun_cells": [
+    3.29,
+    345
+   ],
+   "muzzle": [
+    7.89,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P02": {
+   "port_x": [
+    187,
+    189
+   ],
+   "port_z": [
+    45,
+    47
+   ],
+   "wall_y": [
+    173,
+    174
+   ],
+   "at": [
+    188.5,
+    87.0,
+    46.0
+   ],
+   "tilt_deg": 6.363,
+   "rotate_x": 6.363,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.7,
+   "blade_center_minus_water_m": -0.0,
+   "blade_low_minus_water_m": -0.279,
+   "blade_low_at_full_dip_m": 0.89,
+   "seat_world": [
+    188.5,
+    102.683,
+    40.706
+   ],
+   "blade_world": [
+    188.5,
+    32.73,
+    27.371
+   ],
+   "rowers": [
+    {
+     "at": [
+      188.5,
+      102.5,
+      41
+     ],
+     "target": [
+      188,
+      102
+     ],
+     "moved": 0,
+     "dy": 28.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      188.5,
+      108.5,
+      41
+     ],
+     "target": [
+      188,
+      108
+     ],
+     "moved": 0,
+     "dy": 22.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      188.5,
+      114.5,
+      41
+     ],
+     "target": [
+      188,
+      114
+     ],
+     "moved": 0,
+     "dy": 16.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 507,
+   "rope": [
+    3.5,
+    "main-lateen.sheet-P",
+    120
+   ],
+   "cloth": [
+    16.21,
+    "sail:main-lateen",
+    150
+   ],
+   "anchor_cathead": [
+    188.83,
+    355
+   ],
+   "gun_cells": [
+    3.29,
+    345
+   ],
+   "muzzle": [
+    7.89,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S03": {
+   "port_x": [
+    210,
+    212
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    174,
+    175
+   ],
+   "at": [
+    211.5,
+    175.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": -5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    211.5,
+    159.428,
+    39.387
+   ],
+   "blade_world": [
+    211.5,
+    229.638,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      211.5,
+      159.5,
+      40
+     ],
+     "target": [
+      211,
+      159
+     ],
+     "moved": 0,
+     "dy": 29.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      211.5,
+      153.5,
+      40
+     ],
+     "target": [
+      211,
+      153
+     ],
+     "moved": 0,
+     "dy": 23.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      211.5,
+      147.5,
+      40
+     ],
+     "target": [
+      211,
+      147
+     ],
+     "moved": 0,
+     "dy": 17.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 538,
+   "rope": [
+    11.05,
+    "main-lateen.sheet-S",
+    0
+   ],
+   "cloth": [
+    24.39,
+    "sail:main-lateen",
+    115
+   ],
+   "anchor_cathead": [
+    168.15,
+    355
+   ],
+   "gun_cells": [
+    3.73,
+    350
+   ],
+   "muzzle": [
+    8.31,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P03": {
+   "port_x": [
+    210,
+    212
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    174,
+    175
+   ],
+   "at": [
+    211.5,
+    86.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": 5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    211.5,
+    101.572,
+    39.387
+   ],
+   "blade_world": [
+    211.5,
+    31.362,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      211.5,
+      101.5,
+      40
+     ],
+     "target": [
+      211,
+      101
+     ],
+     "moved": 0,
+     "dy": 29.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      211.5,
+      107.5,
+      40
+     ],
+     "target": [
+      211,
+      107
+     ],
+     "moved": 0,
+     "dy": 23.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      211.5,
+      113.5,
+      40
+     ],
+     "target": [
+      211,
+      113
+     ],
+     "moved": 0,
+     "dy": 17.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 538,
+   "rope": [
+    8.92,
+    "main-lateen.sheet-P",
+    0
+   ],
+   "cloth": [
+    14.36,
+    "sail:main-lateen",
+    "rest"
+   ],
+   "anchor_cathead": [
+    168.15,
+    355
+   ],
+   "gun_cells": [
+    3.73,
+    350
+   ],
+   "muzzle": [
+    8.31,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S04": {
+   "port_x": [
+    235,
+    237
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    236.5,
+    176.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": -5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    236.5,
+    160.428,
+    39.387
+   ],
+   "blade_world": [
+    236.5,
+    230.638,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      236.5,
+      160.5,
+      39
+     ],
+     "target": [
+      236,
+      160
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      236.5,
+      154.5,
+      39
+     ],
+     "target": [
+      236,
+      154
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      236.5,
+      148.5,
+      39
+     ],
+     "target": [
+      236,
+      148
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 526,
+   "rope": [
+    8.19,
+    "main-shroud-S1",
+    315
+   ],
+   "cloth": [
+    23.79,
+    "sail:main-lateen",
+    "rest"
+   ],
+   "anchor_cathead": [
+    145.09,
+    355
+   ],
+   "gun_cells": [
+    5.84,
+    345
+   ],
+   "muzzle": [
+    10.22,
+    195
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P04": {
+   "port_x": [
+    235,
+    237
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    236.5,
+    85.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": 5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    236.5,
+    100.572,
+    39.387
+   ],
+   "blade_world": [
+    236.5,
+    30.362,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      236.5,
+      100.5,
+      39
+     ],
+     "target": [
+      236,
+      100
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      236.5,
+      106.5,
+      39
+     ],
+     "target": [
+      236,
+      106
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      236.5,
+      112.5,
+      39
+     ],
+     "target": [
+      236,
+      112
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 526,
+   "rope": [
+    31.2,
+    "main-lateen.sheet-P",
+    0
+   ],
+   "cloth": [
+    17.07,
+    "sail:main-lateen",
+    35
+   ],
+   "anchor_cathead": [
+    145.09,
+    355
+   ],
+   "gun_cells": [
+    5.84,
+    345
+   ],
+   "muzzle": [
+    10.22,
+    195
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S05": {
+   "port_x": [
+    252,
+    254
+   ],
+   "port_z": [
+    43,
+    45
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    253.5,
+    176.0,
+    44.0
+   ],
+   "tilt_deg": 4.037,
+   "rotate_x": -4.037,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.5,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.257,
+   "blade_low_at_full_dip_m": 0.922,
+   "seat_world": [
+    253.5,
+    160.544,
+    38.073
+   ],
+   "blade_world": [
+    253.5,
+    230.981,
+    27.589
+   ],
+   "rowers": [
+    {
+     "at": [
+      253.5,
+      160.5,
+      39
+     ],
+     "target": [
+      253,
+      160
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      253.5,
+      154.5,
+      39
+     ],
+     "target": [
+      253,
+      154
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      253.5,
+      148.5,
+      39
+     ],
+     "target": [
+      253,
+      148
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 540,
+   "rope": [
+    6.55,
+    "main-shroud-S2",
+    275
+   ],
+   "cloth": [
+    26.8,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    128.87,
+    180
+   ],
+   "gun_cells": [
+    20.28,
+    350
+   ],
+   "muzzle": [
+    25.84,
+    190
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P05": {
+   "port_x": [
+    252,
+    254
+   ],
+   "port_z": [
+    43,
+    45
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    253.5,
+    85.0,
+    44.0
+   ],
+   "tilt_deg": 4.037,
+   "rotate_x": 4.037,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.5,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.257,
+   "blade_low_at_full_dip_m": 0.922,
+   "seat_world": [
+    253.5,
+    100.456,
+    38.073
+   ],
+   "blade_world": [
+    253.5,
+    30.019,
+    27.589
+   ],
+   "rowers": [
+    {
+     "at": [
+      253.5,
+      100.5,
+      39
+     ],
+     "target": [
+      253,
+      100
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      253.5,
+      106.5,
+      39
+     ],
+     "target": [
+      253,
+      106
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      253.5,
+      112.5,
+      39
+     ],
+     "target": [
+      253,
+      112
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 540,
+   "rope": [
+    46.98,
+    "main-lateen.sheet-S",
+    0
+   ],
+   "cloth": [
+    22.07,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    128.87,
+    180
+   ],
+   "gun_cells": [
+    20.28,
+    350
+   ],
+   "muzzle": [
+    25.84,
+    190
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S06": {
+   "port_x": [
+    277,
+    279
+   ],
+   "port_z": [
+    43,
+    45
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    278.5,
+    176.0,
+    44.0
+   ],
+   "tilt_deg": 4.037,
+   "rotate_x": -4.037,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.5,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.257,
+   "blade_low_at_full_dip_m": 0.922,
+   "seat_world": [
+    278.5,
+    160.544,
+    38.073
+   ],
+   "blade_world": [
+    278.5,
+    230.981,
+    27.589
+   ],
+   "rowers": [
+    {
+     "at": [
+      278.5,
+      160.5,
+      39
+     ],
+     "target": [
+      278,
+      160
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      278.5,
+      154.5,
+      39
+     ],
+     "target": [
+      278,
+      154
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      278.5,
+      148.5,
+      39
+     ],
+     "target": [
+      278,
+      148
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 498,
+   "rope": [
+    11.62,
+    "main-shroud-S3",
+    210
+   ],
+   "cloth": [
+    32.85,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    104.32,
+    180
+   ],
+   "gun_cells": [
+    3.04,
+    195
+   ],
+   "muzzle": [
+    7.06,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P06": {
+   "port_x": [
+    277,
+    279
+   ],
+   "port_z": [
+    43,
+    45
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    278.5,
+    85.0,
+    44.0
+   ],
+   "tilt_deg": 4.037,
+   "rotate_x": 4.037,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.5,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.257,
+   "blade_low_at_full_dip_m": 0.922,
+   "seat_world": [
+    278.5,
+    100.456,
+    38.073
+   ],
+   "blade_world": [
+    278.5,
+    30.019,
+    27.589
+   ],
+   "rowers": [
+    {
+     "at": [
+      278.5,
+      100.5,
+      39
+     ],
+     "target": [
+      278,
+      100
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      278.5,
+      106.5,
+      39
+     ],
+     "target": [
+      278,
+      106
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      278.5,
+      112.5,
+      39
+     ],
+     "target": [
+      278,
+      112
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 498,
+   "rope": [
+    65.64,
+    "fore-lateen.sheet-P",
+    350
+   ],
+   "cloth": [
+    31.4,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    104.32,
+    180
+   ],
+   "gun_cells": [
+    3.04,
+    195
+   ],
+   "muzzle": [
+    7.06,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S07": {
+   "port_x": [
+    303,
+    305
+   ],
+   "port_z": [
+    43,
+    45
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    304.5,
+    176.0,
+    44.0
+   ],
+   "tilt_deg": 4.037,
+   "rotate_x": -4.037,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.5,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.257,
+   "blade_low_at_full_dip_m": 0.922,
+   "seat_world": [
+    304.5,
+    160.544,
+    38.073
+   ],
+   "blade_world": [
+    304.5,
+    230.981,
+    27.589
+   ],
+   "rowers": [
+    {
+     "at": [
+      304.5,
+      160.5,
+      39
+     ],
+     "target": [
+      304,
+      160
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      304.5,
+      154.5,
+      39
+     ],
+     "target": [
+      304,
+      154
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      304.5,
+      148.5,
+      39
+     ],
+     "target": [
+      304,
+      148
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 470,
+   "rope": [
+    35.05,
+    "main-shroud-S3",
+    195
+   ],
+   "cloth": [
+    43.64,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    81.31,
+    180
+   ],
+   "gun_cells": [
+    2.26,
+    215
+   ],
+   "muzzle": [
+    6.15,
+    335
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P07": {
+   "port_x": [
+    303,
+    305
+   ],
+   "port_z": [
+    43,
+    45
+   ],
+   "wall_y": [
+    175,
+    176
+   ],
+   "at": [
+    304.5,
+    85.0,
+    44.0
+   ],
+   "tilt_deg": 4.037,
+   "rotate_x": 4.037,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.5,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.257,
+   "blade_low_at_full_dip_m": 0.922,
+   "seat_world": [
+    304.5,
+    100.456,
+    38.073
+   ],
+   "blade_world": [
+    304.5,
+    30.019,
+    27.589
+   ],
+   "rowers": [
+    {
+     "at": [
+      304.5,
+      100.5,
+      39
+     ],
+     "target": [
+      304,
+      100
+     ],
+     "moved": 0,
+     "dy": 30.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      304.5,
+      106.5,
+      39
+     ],
+     "target": [
+      304,
+      106
+     ],
+     "moved": 0,
+     "dy": 24.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      304.5,
+      112.5,
+      39
+     ],
+     "target": [
+      304,
+      112
+     ],
+     "moved": 0,
+     "dy": 18.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 470,
+   "rope": [
+    43.23,
+    "fore-lateen.sheet-P",
+    345
+   ],
+   "cloth": [
+    43.8,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    81.31,
+    180
+   ],
+   "gun_cells": [
+    2.26,
+    215
+   ],
+   "muzzle": [
+    6.15,
+    335
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S08": {
+   "port_x": [
+    324,
+    326
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    174,
+    175
+   ],
+   "at": [
+    325.5,
+    175.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": -5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    325.5,
+    159.428,
+    39.387
+   ],
+   "blade_world": [
+    325.5,
+    229.638,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      325.5,
+      159.5,
+      39
+     ],
+     "target": [
+      325,
+      159
+     ],
+     "moved": 0,
+     "dy": 29.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      325.5,
+      153.5,
+      39
+     ],
+     "target": [
+      325,
+      153
+     ],
+     "moved": 0,
+     "dy": 23.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      325.5,
+      147.5,
+      39
+     ],
+     "target": [
+      325,
+      147
+     ],
+     "moved": 0,
+     "dy": 17.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 498,
+   "rope": [
+    22.7,
+    "fore-lateen.sheet-S",
+    340
+   ],
+   "cloth": [
+    50.49,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    59.58,
+    180
+   ],
+   "gun_cells": [
+    3.07,
+    200
+   ],
+   "muzzle": [
+    7.39,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P08": {
+   "port_x": [
+    324,
+    326
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    174,
+    175
+   ],
+   "at": [
+    325.5,
+    86.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": 5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    325.5,
+    101.572,
+    39.387
+   ],
+   "blade_world": [
+    325.5,
+    31.362,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      325.5,
+      101.5,
+      39
+     ],
+     "target": [
+      325,
+      101
+     ],
+     "moved": 0,
+     "dy": 29.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      325.5,
+      107.5,
+      39
+     ],
+     "target": [
+      325,
+      107
+     ],
+     "moved": 0,
+     "dy": 23.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      325.5,
+      113.5,
+      39
+     ],
+     "target": [
+      325,
+      113
+     ],
+     "moved": 0,
+     "dy": 17.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 498,
+   "rope": [
+    22.7,
+    "fore-lateen.sheet-P",
+    340
+   ],
+   "cloth": [
+    50.74,
+    "sail:main-lateen",
+    0
+   ],
+   "anchor_cathead": [
+    59.58,
+    180
+   ],
+   "gun_cells": [
+    3.07,
+    200
+   ],
+   "muzzle": [
+    7.39,
+    340
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-S09": {
+   "port_x": [
+    348,
+    350
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    172,
+    173
+   ],
+   "at": [
+    349.5,
+    173.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": -5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    349.5,
+    157.428,
+    39.387
+   ],
+   "blade_world": [
+    349.5,
+    227.638,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      349.5,
+      157.5,
+      40
+     ],
+     "target": [
+      349,
+      157
+     ],
+     "moved": 0,
+     "dy": 27.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      349.5,
+      151.5,
+      40
+     ],
+     "target": [
+      349,
+      151
+     ],
+     "moved": 0,
+     "dy": 21.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      349.5,
+      145.5,
+      40
+     ],
+     "target": [
+      349,
+      145
+     ],
+     "moved": 0,
+     "dy": 15.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 479,
+   "rope": [
+    8.17,
+    "fore-lateen.sheet-S",
+    275
+   ],
+   "cloth": [
+    44.34,
+    "sail:fore-lateen",
+    180
+   ],
+   "anchor_cathead": [
+    40.55,
+    180
+   ],
+   "gun_cells": [
+    2.36,
+    210
+   ],
+   "muzzle": [
+    6.39,
+    315
+   ],
+   "gun_ray_cells": {}
+  },
+  "oar-P09": {
+   "port_x": [
+    348,
+    350
+   ],
+   "port_z": [
+    44,
+    46
+   ],
+   "wall_y": [
+    172,
+    173
+   ],
+   "at": [
+    349.5,
+    88.0,
+    45.0
+   ],
+   "tilt_deg": 5.196,
+   "rotate_x": 5.196,
+   "rest_hits": 0,
+   "stroke_hits_max": 0,
+   "worst_by": {},
+   "pivot_above_water_m": 1.6,
+   "blade_center_minus_water_m": 0.0,
+   "blade_low_minus_water_m": -0.268,
+   "blade_low_at_full_dip_m": 0.906,
+   "seat_world": [
+    349.5,
+    103.572,
+    39.387
+   ],
+   "blade_world": [
+    349.5,
+    33.362,
+    27.48
+   ],
+   "rowers": [
+    {
+     "at": [
+      349.5,
+      103.5,
+      40
+     ],
+     "target": [
+      349,
+      103
+     ],
+     "moved": 0,
+     "dy": 27.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      349.5,
+      109.5,
+      40
+     ],
+     "target": [
+      349,
+      109
+     ],
+     "moved": 0,
+     "dy": 21.0,
+     "under": "deck"
+    },
+    {
+     "at": [
+      349.5,
+      115.5,
+      40
+     ],
+     "target": [
+      349,
+      115
+     ],
+     "moved": 0,
+     "dy": 15.0,
+     "under": "deck"
+    }
+   ],
+   "hole_cells": 18,
+   "oar_cells_in_hole": 7,
+   "hull_cells_r8": 446,
+   "rope": [
+    8.17,
+    "fore-lateen.sheet-P",
+    275
+   ],
+   "cloth": [
+    47.01,
+    "sail:fore-lateen",
+    180
+   ],
+   "anchor_cathead": [
+    40.55,
+    180
+   ],
+   "gun_cells": [
+    2.36,
+    210
+   ],
+   "muzzle": [
+    6.39,
+    315
+   ],
+   "gun_ray_cells": {}
+  }
+ },
+ "lists": {
+  "masks/oars/oars_rest.vox.txt": [
+   4118,
+   "960af54b0ecfc0254155cbf55de2d5074780688db37560ae57a2e9bcf3c6feac"
+  ],
+  "oars_placement.json": [
+   18,
+   "fb7004999b62b887b421beee316248f49975ebe39c67ed50abcdfb8bade64780"
+  ],
+  "sheet10_oars_v1.png": [
+   null,
+   "94c3fc4789ecba47fe261db5238e7e8fdf51810fa2ba4d0e63bdb49f1a762d51"
+  ]
+ }
+}

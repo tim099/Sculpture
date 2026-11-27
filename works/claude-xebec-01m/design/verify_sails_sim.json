@@ -1,0 +1,175 @@
+{
+ "wind": "default",
+ "sails": {
+  "fore-lateen": {
+   "vertices": 650,
+   "vertices_inside_solid": {
+    "yard-fore": 50,
+    "mast-fore": 2
+   },
+   "inside_not_yard_at": {
+    "mast-fore": [
+     [
+      439.3,
+      131.6,
+      219.1,
+      1.36
+     ],
+     [
+      439.3,
+      131.7,
+      219.1,
+      1.31
+     ]
+    ]
+   },
+   "min_dist_cells": 0.05,
+   "nearest_part": "yard-fore",
+   "x_range": [
+    276.5,
+    566.5
+   ],
+   "y_range": [
+    102.4,
+    138.1
+   ],
+   "z_range": [
+    73.5,
+    320.5
+   ]
+  },
+  "main-lateen": {
+   "vertices": 650,
+   "vertices_inside_solid": {
+    "yard-main": 50
+   },
+   "inside_not_yard_at": {},
+   "min_dist_cells": 0.05,
+   "nearest_part": "yard-main",
+   "x_range": [
+    67.5,
+    399.5
+   ],
+   "y_range": [
+    87.6,
+    125.6
+   ],
+   "z_range": [
+    64.1,
+    347.5
+   ]
+  },
+  "mizzen-lateen": {
+   "vertices": 650,
+   "vertices_inside_solid": {
+    "yard-mizzen": 59
+   },
+   "inside_not_yard_at": {},
+   "min_dist_cells": 0.05,
+   "nearest_part": "yard-mizzen",
+   "x_range": [
+    28.5,
+    159.5
+   ],
+   "y_range": [
+    114.4,
+    126.8
+   ],
+   "z_range": [
+    75.5,
+    168.5
+   ]
+  },
+  "pennant": {
+   "vertices": 210,
+   "vertices_inside_solid": {
+    "yard-main": 52
+   },
+   "inside_not_yard_at": {},
+   "min_dist_cells": 0.05,
+   "nearest_part": "yard-main",
+   "x_range": [
+    36.5,
+    71.2
+   ],
+   "y_range": [
+    111.7,
+    123.5
+   ],
+   "z_range": [
+    329.4,
+    364.5
+   ]
+  }
+ },
+ "min_dist_by_part": {
+  "fore-lateen": {
+   "awning(deco)": 265.83,
+   "beak": 41.47,
+   "deck-hold": 52.29,
+   "deck-main": 31.06,
+   "deck-quarter": 240.89,
+   "glass": 248.72,
+   "hull": 23.14,
+   "ladders": 77.33,
+   "mast-fore": 0.42,
+   "mast-main": 56.61,
+   "mast-mizzen": 243.69,
+   "platform": 291.76,
+   "yard-fore": 0.05,
+   "yard-main": 8.57,
+   "yard-mizzen": 210.95
+  },
+  "main-lateen": {
+   "awning(deco)": 85.16,
+   "beak": 118.83,
+   "deck-hold": 50.57,
+   "deck-main": 22.62,
+   "deck-quarter": 60.19,
+   "glass": 69.36,
+   "hull": 35.76,
+   "ladders": 28.34,
+   "mast-fore": 33.73,
+   "mast-main": 6.5,
+   "mast-mizzen": 71.28,
+   "platform": 112.48,
+   "yard-fore": 79.3,
+   "yard-main": 0.05,
+   "yard-mizzen": 36.68
+  },
+  "mizzen-lateen": {
+   "awning(deco)": 1.03,
+   "beak": 299.62,
+   "deck-hold": 50.45,
+   "deck-main": 32.13,
+   "deck-quarter": 15.7,
+   "glass": 19.66,
+   "hull": 12.09,
+   "ladders": 25.13,
+   "mast-fore": 267.29,
+   "mast-main": 92.02,
+   "mast-mizzen": 3.0,
+   "platform": 12.71,
+   "yard-fore": 262.08,
+   "yard-main": 171.24,
+   "yard-mizzen": 0.05
+  },
+  "pennant": {
+   "awning(deco)": 234.42,
+   "beak": 476.94,
+   "deck-hold": 296.11,
+   "deck-main": 278.34,
+   "deck-quarter": 262.19,
+   "glass": 264.14,
+   "hull": 254.22,
+   "ladders": 277.32,
+   "mast-fore": 377.73,
+   "mast-main": 195.73,
+   "mast-mizzen": 203.64,
+   "platform": 240.57,
+   "yard-fore": 177.69,
+   "yard-main": 0.05,
+   "yard-mizzen": 163.18
+  }
+ }
+}

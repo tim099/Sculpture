@@ -1,0 +1,303 @@
+{
+	"schema": 3,
+	"ropes": [
+		{
+			"name": "mizzen-shroud-S1",
+			"from": "後桅/hound-S",
+			"to": "船殼/shroud-mizzen-S1",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:12",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "mizzen-shroud-S2",
+			"from": "後桅/hound-S",
+			"to": "船殼/shroud-mizzen-S2",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:13",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "mizzen-shroud-S3",
+			"from": "後桅/hound-S",
+			"to": "船殼/shroud-mizzen-S3",
+			"color": "#2b2620",
+			"thickness": 0.4,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:13",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "mizzen-lateen.sheet-P",
+			"from": "sail:mizzen-lateen/clew",
+			"to": "船尾平台/mizzen-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:14",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-lateen"
+			}
+		},
+		{
+			"name": "mizzen-lateen.sheet-S",
+			"from": "sail:mizzen-lateen/clew",
+			"to": "船尾平台/mizzen-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:14",
+			"meta": {
+				"kind": "sheet",
+				"sail": "mizzen-lateen"
+			}
+		},
+		{
+			"name": "mizzen-lateen.tack",
+			"from": "model:後桅/yard-mizzen-lateen/fore",
+			"to": "甲板-main/tack-mizzen",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:15",
+			"meta": {
+				"kind": "tack",
+				"sail": "mizzen-lateen"
+			}
+		},
+		{
+			"name": "main-shroud-S1",
+			"from": "主桅/hound-S",
+			"to": "船殼/shroud-main-S1",
+			"color": "#2b2620",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:15",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-shroud-S2",
+			"from": "主桅/hound-S",
+			"to": "船殼/shroud-main-S2",
+			"color": "#2b2620",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:16",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-shroud-S3",
+			"from": "主桅/hound-S",
+			"to": "船殼/shroud-main-S3",
+			"color": "#2b2620",
+			"thickness": 0.6,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:16",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "main-lateen.sheet-P",
+			"from": "sail:main-lateen/clew",
+			"to": "船殼/main-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:16",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "main-lateen.sheet-S",
+			"from": "sail:main-lateen/clew",
+			"to": "船殼/main-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:17",
+			"meta": {
+				"kind": "sheet",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "main-lateen.tack",
+			"from": "model:主桅/yard-main-lateen/fore",
+			"to": "甲板-main/tack-main",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:17",
+			"meta": {
+				"kind": "tack",
+				"sail": "main-lateen"
+			}
+		},
+		{
+			"name": "fore-shroud-P1",
+			"from": "前桅/hound-P",
+			"to": "船殼/shroud-fore-P1",
+			"color": "#2b2620",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:18",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-shroud-P2",
+			"from": "前桅/hound-P",
+			"to": "船殼/shroud-fore-P2",
+			"color": "#2b2620",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:18",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-shroud-P3",
+			"from": "前桅/hound-P",
+			"to": "船殼/shroud-fore-P3",
+			"color": "#2b2620",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "standing/shrouds",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:18",
+			"meta": {
+				"kind": "shroud"
+			}
+		},
+		{
+			"name": "fore-lateen.sheet-P",
+			"from": "sail:fore-lateen/clew",
+			"to": "船殼/fore-sheet-P",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:19",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-lateen"
+			}
+		},
+		{
+			"name": "fore-lateen.sheet-S",
+			"from": "sail:fore-lateen/clew",
+			"to": "船殼/fore-sheet-S",
+			"color": "#a08458",
+			"thickness": 0.4,
+			"slack": 1.03,
+			"enabled": true,
+			"group": "running/sheets",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:20",
+			"meta": {
+				"kind": "sheet",
+				"sail": "fore-lateen"
+			}
+		},
+		{
+			"name": "fore-lateen.tack",
+			"from": "model:前桅/yard-fore-lateen/fore",
+			"to": "長喙/tack-fore",
+			"color": "#a08458",
+			"thickness": 0.5,
+			"slack": 1,
+			"enabled": true,
+			"group": "running/tacks",
+			"note": "步驟 8（TASK-0022；design/draft_rigging.py）",
+			"persona": "Claude-Ojousama",
+			"created_at": "2026-11-24T16:58:20",
+			"meta": {
+				"kind": "tack",
+				"sail": "fore-lateen"
+			}
+		}
+	],
+	"groups": []
+}
